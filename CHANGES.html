@@ -26,6 +26,35 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-04-28 07:58 - vaultwares-cli</strong> <span class="kind">code-change</span> - Implemented CLI/TUI enhancement slice from TUI-ENHANCEMENT-PLAN.md: added real /search and /undo slash command variants, conversation-history search, safe originalFile-backed un...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Implemented CLI/TUI enhancement slice from TUI-ENHANCEMENT-PLAN.md: added real /search and /undo slash command variants, conversation-history search, safe originalFile-backed undo with drift checks, TTY-only pager wrapper for long reports, tool timeline footer, styled permission prompt, colored diff parity in tui module, and tests for parser/search/undo/timeline/pager/prompt behavior. Verification passed for cargo check -p vaultwares-cli --quiet, cargo test -p commands --quiet, cargo test -p vaultwares-cli --bin vaultwares-cli --quiet, resume_slash_commands, output_format_contract, diff/tool focused tests. cargo fmt --check still fails only on pre-existing unrelated formatting drift in runtime oauth and integration tests.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>cargo check -p vaultwares-cli --quiet</code></li>
+        <li><code>cargo test -p commands --quiet</code></li>
+        <li><code>cargo test -p vaultwares-cli --bin vaultwares-cli --quiet</code></li>
+        <li><code>cargo test -p vaultwares-cli --test resume_slash_commands --quiet</code></li>
+        <li><code>cargo test -p vaultwares-cli --test output_format_contract --quiet</code></li>
+        <li><code>cargo fmt --check</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/commands/src/lib.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/session_mgr.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/pager.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/diff_view.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/mod.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/tool_panel.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=4d322b2</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-04-28 07:44 - vaultwares-cli</strong> <span class="kind">verification</span> - Read-only inspection of vaultwares-cli status/HUD and renderer support. Mapped main.rs startup/run_turn, render.rs renderer/spinner/streaming, tui/status_bar.rs status formattin...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> verification</p>

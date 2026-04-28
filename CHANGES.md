@@ -3,6 +3,32 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-28 07:58 - vaultwares-cli</strong> <code>code-change</code> - Implemented CLI/TUI enhancement slice from TUI-ENHANCEMENT-PLAN.md: added real /search and /undo slash command variants, conversation-history search, safe originalFile-backed un...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Implemented CLI/TUI enhancement slice from TUI-ENHANCEMENT-PLAN.md: added real /search and /undo slash command variants, conversation-history search, safe originalFile-backed undo with drift checks, TTY-only pager wrapper for long reports, tool timeline footer, styled permission prompt, colored diff parity in tui module, and tests for parser/search/undo/timeline/pager/prompt behavior. Verification passed for cargo check -p vaultwares-cli --quiet, cargo test -p commands --quiet, cargo test -p vaultwares-cli --bin vaultwares-cli --quiet, resume_slash_commands, output_format_contract, diff/tool focused tests. cargo fmt --check still fails only on pre-existing unrelated formatting drift in runtime oauth and integration tests.
+- Commands:
+  - `cargo check -p vaultwares-cli --quiet`
+  - `cargo test -p commands --quiet`
+  - `cargo test -p vaultwares-cli --bin vaultwares-cli --quiet`
+  - `cargo test -p vaultwares-cli --test resume_slash_commands --quiet`
+  - `cargo test -p vaultwares-cli --test output_format_contract --quiet`
+  - `cargo fmt --check`
+- Files:
+  - `crates/commands/src/lib.rs`
+  - `crates/vaultwares-cli/src/main.rs`
+  - `crates/vaultwares-cli/src/session_mgr.rs`
+  - `crates/vaultwares-cli/src/tui/pager.rs`
+  - `crates/vaultwares-cli/src/tui/diff_view.rs`
+  - `crates/vaultwares-cli/src/tui/mod.rs`
+  - `crates/vaultwares-cli/src/tui/status_bar.rs`
+  - `crates/vaultwares-cli/src/tui/tool_panel.rs`
+- Git: repo=vaultwares-cli, branch=main, head=4d322b2
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 07:44 - vaultwares-cli</strong> <code>verification</code> - Read-only inspection of vaultwares-cli status/HUD and renderer support. Mapped main.rs startup/run_turn, render.rs renderer/spinner/streaming, tui/status_bar.rs status formattin...</summary>
 
 - Kind: verification
