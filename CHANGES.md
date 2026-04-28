@@ -3,6 +3,16 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-28 09:41 - vaultwares-cli</strong> <code>handoff</code> - Fixed tasks not picking up by resolving regex and path issues. Agents are now correctly transitioning to RELAXING and finding TASKS.md.</summary>
+
+- Kind: handoff
+- Actor: AI Agent
+- Summary: Fixed tasks not picking up by resolving regex and path issues. Agents are now correctly transitioning to RELAXING and finding TASKS.md.
+- Git: repo=vaultwares-cli, branch=main, head=5892d01
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 09:36 - vaultwares-cli</strong> <code>verification</code> - Investigating why tasks stalled. Found that agents were in WAITING_FOR_INPUT and assign_tasks.py only looks for RELAXING. Also ensuring global ExtrovertAgent correctly updates T...</summary>
 
 - Kind: verification
