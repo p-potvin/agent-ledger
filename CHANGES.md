@@ -2,6 +2,21 @@
 
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
+## 2026-04-28 02:30 - General Tasks
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Updated the PowerShell backup system from timestamped snapshots to two fixed backup slots. AutoBackup.ps1 now writes changed-source backups to Scheduled_Backups\latest\<source-name>-<hash> and writes a safety copy to Scheduled_Backups\daily\<source-name>-<hash> once per calendar day. Switched fixed-slot copies to robocopy /MIR so the overwritten backup reflects deletions. State now tracks lastDailyBackupDate per source. Updated CreateScheduledTask.ps1 to run every 5 minutes and re-registered the hidden wscript-based AutoDirectoryBackup task. Verified PowerShell syntax, task action, PT5M repetition interval, and sample destination paths.
+- Commands:
+  - `PowerShell parser checks for AutoBackup.ps1 and CreateScheduledTask.ps1`
+  - `& C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1`
+  - `Get-ScheduledTask -TaskName AutoDirectoryBackup -TaskPath \\AutoBackup\\`
+  - `Checked repetition interval PT5M and sample latest/daily paths`
+- Files:
+  - `C:\Users\Administrator\Desktop\pwsh\AutoBackup.ps1`
+  - `C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1`
+  - `C:\Users\Administrator\Desktop\pwsh\RunAutoBackupHidden.vbs`
+
 ## 2026-04-28 02:13 - General Tasks
 
 - Kind: code-change
