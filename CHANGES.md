@@ -2,6 +2,20 @@
 
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
+## 2026-04-28 02:13 - General Tasks
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Applied requested PowerShell backup changes in C:\Users\Administrator\Desktop\pwsh. Updated AutoBackup.ps1 to use collision-safe destination folder names like workflows-1F5642C9 instead of preserving absolute C\Users\... paths. Added RunAutoBackupHidden.vbs to launch AutoBackup.ps1 with WScript.Shell window style 0 and wait for completion. Updated CreateScheduledTask.ps1 to generate/use the hidden VBS launcher and re-registered the AutoDirectoryBackup scheduled task to execute wscript.exe instead of PowerShell.exe directly. Verified both PowerShell scripts parse and confirmed the registered task action.
+- Commands:
+  - `PowerShell parser checks for AutoBackup.ps1 and CreateScheduledTask.ps1`
+  - `& C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1`
+  - `Get-ScheduledTask -TaskName AutoDirectoryBackup -TaskPath \\AutoBackup\\`
+- Files:
+  - `C:\Users\Administrator\Desktop\pwsh\AutoBackup.ps1`
+  - `C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1`
+  - `C:\Users\Administrator\Desktop\pwsh\RunAutoBackupHidden.vbs`
+
 ## 2026-04-28 02:09 - General Tasks
 
 - Kind: general
