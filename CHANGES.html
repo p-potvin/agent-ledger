@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Ledger</title>
+  <style>
+    :root { color-scheme: light dark; font-family: "Segoe UI", system-ui, sans-serif; }
+    body { margin: 0; padding: 32px; background: Canvas; color: CanvasText; }
+    main { max-width: 1120px; margin: 0 auto; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    .meta { margin: 0 0 24px; color: color-mix(in srgb, CanvasText 68%, transparent); }
+    details { border: 1px solid color-mix(in srgb, CanvasText 16%, transparent); border-radius: 8px; margin: 10px 0; background: color-mix(in srgb, Canvas 94%, CanvasText 6%); }
+    details[open] { background: Canvas; }
+    summary { cursor: pointer; padding: 12px 14px; line-height: 1.45; }
+    summary:hover { background: color-mix(in srgb, CanvasText 7%, transparent); }
+    .entry-body { padding: 0 14px 14px 34px; }
+    .kind { font-family: Consolas, monospace; font-size: 12px; padding: 2px 6px; border-radius: 999px; background: color-mix(in srgb, CanvasText 11%, transparent); }
+    .summary { margin: 10px 0; }
+    code { font-family: Consolas, monospace; font-size: 13px; }
+    li { margin: 4px 0; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Agent Ledger</h1>
+  <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
+  <details>
+    <summary><strong>2026-04-28 02:44 - agent-ledger</strong> <span class="kind">code-change</span> - Fixed the ledger sync script after manual sync hit &#39;Cannot rebase onto multiple branches&#39;. sync-agent-ledger.ps1 now fetches origin and rebases explicitly onto origin/main inste...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Fixed the ledger sync script after manual sync hit &#39;Cannot rebase onto multiple branches&#39;. sync-agent-ledger.ps1 now fetches origin and rebases explicitly onto origin/main instead of using ambiguous git pull --rebase --autostash. Also added CHANGES.html to the sync add list so the browser-ready quick-glance view is committed and pushed with the Markdown ledger.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git status --short --branch</code></li>
+        <li><code>git branch -vv</code></li>
+        <li><code>git config branch.main.merge</code></li>
+        <li><code>PowerShell parser checks for sync-agent-ledger.ps1 and render-agent-ledger.ps1</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/sync-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/CHANGES.html</code></li>
+        <li><code>CHANGES.html</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 02:42 - agent-ledger</strong> <span class="kind">code-change</span> - Added browser-ready ledger output for users who open the ledger in Firefox. render-agent-ledger.ps1 now writes CHANGES.html alongside CHANGES.md in both agent-ledger and the wor...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Added browser-ready ledger output for users who open the ledger in Firefox. render-agent-ledger.ps1 now writes CHANGES.html alongside CHANGES.md in both agent-ledger and the workspace root, using native HTML details/summary sections for clickable expand/collapse. README now documents opening C:\Users\Administrator\Desktop\Github Repos\CHANGES.html in Firefox for the quick-glance expandable view. Verified the renderer parses and generated both HTML files.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>PowerShell parser check for render-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/scripts/render-agent-ledger.ps1</code></li>
+        <li><code>Get-Content CHANGES.html -TotalCount 45</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/render-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/README.md</code></li>
+        <li><code>agent-ledger/CHANGES.html</code></li>
+        <li><code>CHANGES.html</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 02:33 - agent-ledger</strong> <span class="kind">code-change</span> - Confirmed AgentLedgerSync already auto-fetches via git pull --rebase --autostash every five minutes. Updated render-agent-ledger.ps1 so generated CHANGES.md files use clickable ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Confirmed AgentLedgerSync already auto-fetches via git pull --rebase --autostash every five minutes. Updated render-agent-ledger.ps1 so generated CHANGES.md files use clickable HTML details/summary sections: each event is visible as a compact one-line quick glance, with commands/files/full details expandable on click. Re-rendered both agent-ledger\CHANGES.md and workspace CHANGES.md and verified the sync scheduled task action and PT5M interval.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Get-ScheduledTask -TaskName AgentLedgerSync</code></li>
+        <li><code>PowerShell parser check for render-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/scripts/render-agent-ledger.ps1</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/render-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/CHANGES.md</code></li>
+        <li><code>CHANGES.md</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 02:30 - General Tasks</strong> <span class="kind">code-change</span> - Updated the PowerShell backup system from timestamped snapshots to two fixed backup slots. AutoBackup.ps1 now writes changed-source backups to Scheduled_Backups\latest\&lt;source-n...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Updated the PowerShell backup system from timestamped snapshots to two fixed backup slots. AutoBackup.ps1 now writes changed-source backups to Scheduled_Backups\latest\&lt;source-name&gt;-&lt;hash&gt; and writes a safety copy to Scheduled_Backups\daily\&lt;source-name&gt;-&lt;hash&gt; once per calendar day. Switched fixed-slot copies to robocopy /MIR so the overwritten backup reflects deletions. State now tracks lastDailyBackupDate per source. Updated CreateScheduledTask.ps1 to run every 5 minutes and re-registered the hidden wscript-based AutoDirectoryBackup task. Verified PowerShell syntax, task action, PT5M repetition interval, and sample destination paths.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>PowerShell parser checks for AutoBackup.ps1 and CreateScheduledTask.ps1</code></li>
+        <li><code>&amp; C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1</code></li>
+        <li><code>Get-ScheduledTask -TaskName AutoDirectoryBackup -TaskPath \\AutoBackup\\</code></li>
+        <li><code>Checked repetition interval PT5M and sample latest/daily paths</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\AutoBackup.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\RunAutoBackupHidden.vbs</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 02:13 - General Tasks</strong> <span class="kind">code-change</span> - Applied requested PowerShell backup changes in C:\Users\Administrator\Desktop\pwsh. Updated AutoBackup.ps1 to use collision-safe destination folder names like workflows-1F5642C9...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Applied requested PowerShell backup changes in C:\Users\Administrator\Desktop\pwsh. Updated AutoBackup.ps1 to use collision-safe destination folder names like workflows-1F5642C9 instead of preserving absolute C\Users\... paths. Added RunAutoBackupHidden.vbs to launch AutoBackup.ps1 with WScript.Shell window style 0 and wait for completion. Updated CreateScheduledTask.ps1 to generate/use the hidden VBS launcher and re-registered the AutoDirectoryBackup scheduled task to execute wscript.exe instead of PowerShell.exe directly. Verified both PowerShell scripts parse and confirmed the registered task action.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>PowerShell parser checks for AutoBackup.ps1 and CreateScheduledTask.ps1</code></li>
+        <li><code>&amp; C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1</code></li>
+        <li><code>Get-ScheduledTask -TaskName AutoDirectoryBackup -TaskPath \\AutoBackup\\</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\AutoBackup.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\RunAutoBackupHidden.vbs</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 02:09 - General Tasks</strong> <span class="kind">general</span> - Followed up on PowerShell backup script destination layout. Explained that the previous safe path helper intentionally mirrored the absolute source path, causing nested C\Users\...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Followed up on PowerShell backup script destination layout. Explained that the previous safe path helper intentionally mirrored the absolute source path, causing nested C\Users\... folders under the timestamp. Provided replacement Get-SafeBackupPath logic that uses only the source folder leaf name, with an optional short hash suffix to prevent collisions when multiple source directories share the same final folder name.</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 01:57 - General Tasks</strong> <span class="kind">general</span> - Debugged pasted PowerShell auto-backup script. Identified undefined timestamp, JSON state loading as PSCustomObject instead of hashtable, incorrect backup destination constructi...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Debugged pasted PowerShell auto-backup script. Identified undefined timestamp, JSON state loading as PSCustomObject instead of hashtable, incorrect backup destination construction for absolute/relative paths, robocopy output being mistaken for exit code, /LOG overwriting the same log file, and interactive Read-Host prompts blocking scheduled runs. Prepared corrected script with safe destination naming, state save/load fixes, robocopy LASTEXITCODE handling, and noninteractive scheduled behavior.</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 01:07 - agent-ledger</strong> <span class="kind">verification</span> - Verified ledger recording and rendering, added repo-local agent instructions for cloud workers in agent-ledger, and registered the AgentLedgerSync Windows scheduled task to run ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Verified ledger recording and rendering, added repo-local agent instructions for cloud workers in agent-ledger, and registered the AgentLedgerSync Windows scheduled task to run the sync script every five minutes.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>record-agent-change.ps1 smoke test</code></li>
+        <li><code>render-agent-ledger.ps1 smoke test</code></li>
+        <li><code>setup-agent-ledger-scheduler.ps1</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/AGENTS.md</code></li>
+        <li><code>agent-ledger/.github/copilot-instructions.md</code></li>
+        <li><code>agent-ledger/events/2026/04/20260428-010627-414-agent-ledger-b72267df.json</code></li>
+        <li><code>agent-ledger/CHANGES.md</code></li>
+        <li><code>CHANGES.md</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 01:06 - agent-ledger</strong> <span class="kind">code-change</span> - Implemented the local-first agent ledger: append-only JSON event capture, generated CHANGES.md rendering, GitHub sync script, Windows scheduler helper, workspace/provider instru...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Implemented the local-first agent ledger: append-only JSON event capture, generated CHANGES.md rendering, GitHub sync script, Windows scheduler helper, workspace/provider instruction files, and global Codex/Gemini/Claude/OpenClaw instruction hooks.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>gh repo clone p-potvin/agent-ledger agent-ledger</code></li>
+        <li><code>apply_patch added ledger scripts and instruction files</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/record-agent-change.ps1</code></li>
+        <li><code>agent-ledger/scripts/render-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/scripts/sync-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/scripts/setup-agent-ledger-scheduler.ps1</code></li>
+        <li><code>agent-ledger/AGENT_LEDGER_INSTRUCTIONS.md</code></li>
+        <li><code>AGENTS.md</code></li>
+        <li><code>GEMINI.md</code></li>
+        <li><code>CLAUDE.md</code></li>
+        <li><code>.github/copilot-instructions.md</code></li>
+        <li><code>.github/instructions/agent-ledger.instructions.md</code></li>
+        <li><code>.vscode/settings.json</code></li>
+        <li><code>C:/Users/Administrator/.codex/AGENTS.md</code></li>
+        <li><code>C:/Users/Administrator/.gemini/GEMINI.md</code></li>
+        <li><code>C:/Users/Administrator/.claude/CLAUDE.md</code></li>
+        <li><code>C:/Users/Administrator/.openclaw/workspace/AGENTS.md</code></li>
+      </ul>
+    </div>
+  </details>
+</main>
+</body>
+</html>
+

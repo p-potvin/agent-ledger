@@ -3,6 +3,42 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-28 02:44 - agent-ledger</strong> <code>code-change</code> - Fixed the ledger sync script after manual sync hit &#39;Cannot rebase onto multiple branches&#39;. sync-agent-ledger.ps1 now fetches origin and rebases explicitly onto origin/main inste...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed the ledger sync script after manual sync hit 'Cannot rebase onto multiple branches'. sync-agent-ledger.ps1 now fetches origin and rebases explicitly onto origin/main instead of using ambiguous git pull --rebase --autostash. Also added CHANGES.html to the sync add list so the browser-ready quick-glance view is committed and pushed with the Markdown ledger.
+- Commands:
+  - `git status --short --branch`
+  - `git branch -vv`
+  - `git config branch.main.merge`
+  - `PowerShell parser checks for sync-agent-ledger.ps1 and render-agent-ledger.ps1`
+- Files:
+  - `agent-ledger/scripts/sync-agent-ledger.ps1`
+  - `agent-ledger/CHANGES.html`
+  - `CHANGES.html`
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 02:42 - agent-ledger</strong> <code>code-change</code> - Added browser-ready ledger output for users who open the ledger in Firefox. render-agent-ledger.ps1 now writes CHANGES.html alongside CHANGES.md in both agent-ledger and the wor...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Added browser-ready ledger output for users who open the ledger in Firefox. render-agent-ledger.ps1 now writes CHANGES.html alongside CHANGES.md in both agent-ledger and the workspace root, using native HTML details/summary sections for clickable expand/collapse. README now documents opening C:\Users\Administrator\Desktop\Github Repos\CHANGES.html in Firefox for the quick-glance expandable view. Verified the renderer parses and generated both HTML files.
+- Commands:
+  - `PowerShell parser check for render-agent-ledger.ps1`
+  - `agent-ledger/scripts/render-agent-ledger.ps1`
+  - `Get-Content CHANGES.html -TotalCount 45`
+- Files:
+  - `agent-ledger/scripts/render-agent-ledger.ps1`
+  - `agent-ledger/README.md`
+  - `agent-ledger/CHANGES.html`
+  - `CHANGES.html`
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 02:33 - agent-ledger</strong> <code>code-change</code> - Confirmed AgentLedgerSync already auto-fetches via git pull --rebase --autostash every five minutes. Updated render-agent-ledger.ps1 so generated CHANGES.md files use clickable ...</summary>
 
 - Kind: code-change

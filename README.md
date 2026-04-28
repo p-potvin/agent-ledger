@@ -6,7 +6,9 @@ This repo is the append-only ledger for AI-agent activity across local and cloud
 
 - `events/YYYY/MM/*.json` - source-of-truth event records. These are conflict-resistant because every entry gets its own file.
 - `CHANGES.md` - generated readable ledger for this repo.
+- `CHANGES.html` - generated browser-ready ledger with expandable sections.
 - `..\CHANGES.md` - generated mirror at the parent workspace root for local agents.
+- `..\CHANGES.html` - generated browser-ready mirror at the parent workspace root.
 - `scripts/record-agent-change.ps1` - local intake command for agents and hooks.
 - `scripts/render-agent-ledger.ps1` - rebuilds readable ledgers from event files.
 - `scripts/sync-agent-ledger.ps1` - pulls, renders, commits, and pushes queued ledger changes.
@@ -39,3 +41,7 @@ To automate sync every five minutes:
 ```
 
 The sync script pulls with rebase, renders `CHANGES.md`, commits queued ledger files, and pushes to `main`.
+
+## View the ledger
+
+Open `C:\Users\Administrator\Desktop\Github Repos\CHANGES.html` in Firefox for a quick-glance ledger with clickable expandable entries. Use `CHANGES.md` when viewing on GitHub or in a Markdown previewer such as VS Code.
