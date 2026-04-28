@@ -3,6 +3,19 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-28 10:13 - vault-explorer</strong> <code>code-change</code> - Fixed critical ReferenceError in main.js _processFileNodes: &#39;name&#39; and &#39;baseName&#39; were used without being declared. Added const name = path.basename(res) and const baseName = pa...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed critical ReferenceError in main.js _processFileNodes: 'name' and 'baseName' were used without being declared. Added const name = path.basename(res) and const baseName = path.basename(res, ext) after dir derivation. This fixes preview generation for all files including (n)-suffixed duplicates. Full UI overhaul in index.html: (1) Added --vault-card-bg and --vault-card-border CSS tokens; (2) Added 8 complete vault-themes preset theme definitions (vintage-velvet, cyberpunk-cinder, modern-monolith, crimson-bloom, ocean-mist, neon-void, royal-tangerine, amethyst-frost) with full CSS variable overrides including light-mode paper/text flips; (3) Added theme picker button to titlebar with palette SVG icon and -webkit-app-region:no-drag; (4) Added #theme-panel with dynamic theme swatch grid built from vaultThemes array; (5) Removed all inline styles from sorting-bar, replaced with .sorting-bar CSS class and .btn-sm utility; (6) Added applyTheme() JS function with persistence to appSettings.theme; (7) init() now calls applyTheme on startup to restore saved theme; (8) Added smooth body background/color transitions (0.45s ease).
+- Files:
+  - `main.js`
+  - `index.html`
+- Git: repo=vault-explorer, branch=main, head=bb481f6
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 09:41 - vaultwares-cli</strong> <code>handoff</code> - Fixed tasks not picking up by resolving regex and path issues. Agents are now correctly transitioning to RELAXING and finding TASKS.md.</summary>
 
 - Kind: handoff

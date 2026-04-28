@@ -1,0 +1,26 @@
+{
+  "id": "20260428-101306-062-vault-explorer-045ab5e0",
+  "createdAt": "2026-04-28T14:13:06.0623214Z",
+  "createdAtLocal": "2026-04-28 10:13",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Fixed critical ReferenceError in main.js _processFileNodes: 'name' and 'baseName' were used without being declared. Added const name = path.basename(res) and const baseName = path.basename(res, ext) after dir derivation. This fixes preview generation for all files including (n)-suffixed duplicates. Full UI overhaul in index.html: (1) Added --vault-card-bg and --vault-card-border CSS tokens; (2) Added 8 complete vault-themes preset theme definitions (vintage-velvet, cyberpunk-cinder, modern-monolith, crimson-bloom, ocean-mist, neon-void, royal-tangerine, amethyst-frost) with full CSS variable overrides including light-mode paper/text flips; (3) Added theme picker button to titlebar with palette SVG icon and -webkit-app-region:no-drag; (4) Added #theme-panel with dynamic theme swatch grid built from vaultThemes array; (5) Removed all inline styles from sorting-bar, replaced with .sorting-bar CSS class and .btn-sm utility; (6) Added applyTheme() JS function with persistence to appSettings.theme; (7) init() now calls applyTheme on startup to restore saved theme; (8) Added smooth body background/color transitions (0.45s ease).",
+  "commands": [],
+  "files": [
+    "main.js",
+    "index.html"
+  ],
+  "planPath": "",
+  "contentHash": "045ab5e0d606c332584954a91653f711d85776e544001448ea17dd1f88551768",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "bb481f6",
+    "hasChanges": true
+  }
+}
