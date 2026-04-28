@@ -19,6 +19,29 @@ function ConvertTo-MarkdownLine {
     return ($Value -replace "`r?`n", ' ').Trim()
 }
 
+function ConvertTo-HtmlText {
+    param([AllowNull()][string]$Value)
+    if ([string]::IsNullOrWhiteSpace($Value)) {
+        return ''
+    }
+
+    return [System.Net.WebUtility]::HtmlEncode((ConvertTo-MarkdownLine $Value))
+}
+
+function Limit-Line {
+    param(
+        [AllowNull()][string]$Value,
+        [int]$MaxLength = 180
+    )
+
+    $line = ConvertTo-MarkdownLine $Value
+    if ($line.Length -le $MaxLength) {
+        return $line
+    }
+
+    return "$($line.Substring(0, $MaxLength - 3))..."
+}
+
 if (-not $ParentChangesPath) {
     $ParentChangesPath = Join-Path (Split-Path $LedgerRoot -Parent) 'CHANGES.md'
 }
@@ -57,8 +80,17 @@ else {
         $created = if ($event.createdAtLocal) { $event.createdAtLocal } else { $event.createdAt }
         $kind = if ($event.kind) { $event.kind } else { 'general' }
         $summary = ConvertTo-MarkdownLine $event.summary
+        $summaryPreview = ConvertTo-HtmlText (Limit-Line $event.summary)
+        $projectPreview = ConvertTo-HtmlText $project
+        $createdPreview = ConvertTo-HtmlText $created
+        $kindPreview = ConvertTo-HtmlText $kind
 
-        $lines.Add("## $created - $project")
+        if ($summaryPreview) {
+            $summaryPreview = " - $summaryPreview"
+        }
+
+        $lines.Add('<details>')
+        $lines.Add("<summary><strong>$createdPreview - $projectPreview</strong> <code>$kindPreview</code>$summaryPreview</summary>")
         $lines.Add('')
         $lines.Add("- Kind: $kind")
         if ($event.actor) {
@@ -91,6 +123,8 @@ else {
                 $lines.Add("- Git: $($gitBits -join ', ')")
             }
         }
+        $lines.Add('')
+        $lines.Add('</details>')
         $lines.Add('')
     }
 }

@@ -2,7 +2,25 @@
 
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
-## 2026-04-28 02:30 - General Tasks
+<details>
+<summary><strong>2026-04-28 02:33 - agent-ledger</strong> <code>code-change</code> - Confirmed AgentLedgerSync already auto-fetches via git pull --rebase --autostash every five minutes. Updated render-agent-ledger.ps1 so generated CHANGES.md files use clickable ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Confirmed AgentLedgerSync already auto-fetches via git pull --rebase --autostash every five minutes. Updated render-agent-ledger.ps1 so generated CHANGES.md files use clickable HTML details/summary sections: each event is visible as a compact one-line quick glance, with commands/files/full details expandable on click. Re-rendered both agent-ledger\CHANGES.md and workspace CHANGES.md and verified the sync scheduled task action and PT5M interval.
+- Commands:
+  - `Get-ScheduledTask -TaskName AgentLedgerSync`
+  - `PowerShell parser check for render-agent-ledger.ps1`
+  - `agent-ledger/scripts/render-agent-ledger.ps1`
+- Files:
+  - `agent-ledger/scripts/render-agent-ledger.ps1`
+  - `agent-ledger/CHANGES.md`
+  - `CHANGES.md`
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 02:30 - General Tasks</strong> <code>code-change</code> - Updated the PowerShell backup system from timestamped snapshots to two fixed backup slots. AutoBackup.ps1 now writes changed-source backups to Scheduled_Backups\latest\&lt;source-n...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -17,7 +35,10 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1`
   - `C:\Users\Administrator\Desktop\pwsh\RunAutoBackupHidden.vbs`
 
-## 2026-04-28 02:13 - General Tasks
+</details>
+
+<details>
+<summary><strong>2026-04-28 02:13 - General Tasks</strong> <code>code-change</code> - Applied requested PowerShell backup changes in C:\Users\Administrator\Desktop\pwsh. Updated AutoBackup.ps1 to use collision-safe destination folder names like workflows-1F5642C9...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -31,19 +52,28 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1`
   - `C:\Users\Administrator\Desktop\pwsh\RunAutoBackupHidden.vbs`
 
-## 2026-04-28 02:09 - General Tasks
+</details>
+
+<details>
+<summary><strong>2026-04-28 02:09 - General Tasks</strong> <code>general</code> - Followed up on PowerShell backup script destination layout. Explained that the previous safe path helper intentionally mirrored the absolute source path, causing nested C\Users\...</summary>
 
 - Kind: general
 - Actor: AI Agent
 - Summary: Followed up on PowerShell backup script destination layout. Explained that the previous safe path helper intentionally mirrored the absolute source path, causing nested C\Users\... folders under the timestamp. Provided replacement Get-SafeBackupPath logic that uses only the source folder leaf name, with an optional short hash suffix to prevent collisions when multiple source directories share the same final folder name.
 
-## 2026-04-28 01:57 - General Tasks
+</details>
+
+<details>
+<summary><strong>2026-04-28 01:57 - General Tasks</strong> <code>general</code> - Debugged pasted PowerShell auto-backup script. Identified undefined timestamp, JSON state loading as PSCustomObject instead of hashtable, incorrect backup destination constructi...</summary>
 
 - Kind: general
 - Actor: AI Agent
 - Summary: Debugged pasted PowerShell auto-backup script. Identified undefined timestamp, JSON state loading as PSCustomObject instead of hashtable, incorrect backup destination construction for absolute/relative paths, robocopy output being mistaken for exit code, /LOG overwriting the same log file, and interactive Read-Host prompts blocking scheduled runs. Prepared corrected script with safe destination naming, state save/load fixes, robocopy LASTEXITCODE handling, and noninteractive scheduled behavior.
 
-## 2026-04-28 01:07 - agent-ledger
+</details>
+
+<details>
+<summary><strong>2026-04-28 01:07 - agent-ledger</strong> <code>verification</code> - Verified ledger recording and rendering, added repo-local agent instructions for cloud workers in agent-ledger, and registered the AgentLedgerSync Windows scheduled task to run ...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -59,7 +89,10 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `agent-ledger/CHANGES.md`
   - `CHANGES.md`
 
-## 2026-04-28 01:06 - agent-ledger
+</details>
+
+<details>
+<summary><strong>2026-04-28 01:06 - agent-ledger</strong> <code>code-change</code> - Implemented the local-first agent ledger: append-only JSON event capture, generated CHANGES.md rendering, GitHub sync script, Windows scheduler helper, workspace/provider instru...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -83,5 +116,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `C:/Users/Administrator/.gemini/GEMINI.md`
   - `C:/Users/Administrator/.claude/CLAUDE.md`
   - `C:/Users/Administrator/.openclaw/workspace/AGENTS.md`
+
+</details>
 
 
