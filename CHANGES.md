@@ -3,6 +3,21 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-28 17:55 - No More Groceries</strong> <code>code-change</code> - Fixed Tailwind CSS unstyled render by restoring styles.css from git, patching missing @reference ./tailwind.css for v4 compiler, and correcting user&#39;s assumption regarding vault...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed Tailwind CSS unstyled render by restoring styles.css from git, patching missing @reference ./tailwind.css for v4 compiler, and correcting user's assumption regarding vaultwares database (app uses local SQLite).
+- Commands:
+  - `git checkout styles.css`
+  - `npm run electron:pack`
+- Files:
+  - `styles.css`
+- Git: repo=no-more-groceries, branch=main, head=c734db4
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 10:13 - vault-explorer</strong> <code>code-change</code> - Fixed critical ReferenceError in main.js _processFileNodes: &#39;name&#39; and &#39;baseName&#39; were used without being declared. Added const name = path.basename(res) and const baseName = pa...</summary>
 
 - Kind: code-change

@@ -26,6 +26,24 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-04-28 17:55 - No More Groceries</strong> <span class="kind">code-change</span> - Fixed Tailwind CSS unstyled render by restoring styles.css from git, patching missing @reference ./tailwind.css for v4 compiler, and correcting user&#39;s assumption regarding vault...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Fixed Tailwind CSS unstyled render by restoring styles.css from git, patching missing @reference ./tailwind.css for v4 compiler, and correcting user&#39;s assumption regarding vaultwares database (app uses local SQLite).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git checkout styles.css</code></li>
+        <li><code>npm run electron:pack</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>styles.css</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=no-more-groceries, branch=main, head=c734db4</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-04-28 10:13 - vault-explorer</strong> <span class="kind">code-change</span> - Fixed critical ReferenceError in main.js _processFileNodes: &#39;name&#39; and &#39;baseName&#39; were used without being declared. Added const name = path.basename(res) and const baseName = pa...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
