@@ -3,6 +3,18 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-28 09:13 - vaultwares-cli</strong> <code>commands</code> - Triggered python assign_tasks.py utilizing the updated vaultwares-pipelines architecture to distribute the TUI extraction jobs to the waiting worker cluster.</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Summary: Triggered python assign_tasks.py utilizing the updated vaultwares-pipelines architecture to distribute the TUI extraction jobs to the waiting worker cluster.
+- Commands:
+  - `python assign_tasks.py`
+- Git: repo=vaultwares-cli, branch=main, head=5892d01
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 09:00 - vaultwares-cli</strong> <code>commands</code> - Started the coordinated subagent team system and populated TODO.md with the TUI Refactoring Phase 0-1 tickets.</summary>
 
 - Kind: commands
