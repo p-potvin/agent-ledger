@@ -3,6 +3,69 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-28 07:21 - vaultwares-cli</strong> <code>handoff</code> - Read-only inspection of tool call and diff visualization. Reviewed crates/vaultwares-cli/src/tui/tool_panel.rs and diff_view.rs, compared them with duplicate active implementati...</summary>
+
+- Kind: handoff
+- Actor: AI Agent
+- Summary: Read-only inspection of tool call and diff visualization. Reviewed crates/vaultwares-cli/src/tui/tool_panel.rs and diff_view.rs, compared them with duplicate active implementations and tests in crates/vaultwares-cli/src/main.rs plus resume path in session_mgr.rs. Identified implemented behaviors, Phase 3/4 gaps, and a small readability-only dedupe slice.
+- Commands:
+  - `rg --files .`
+  - `rg -n format_tool_call_start crates/vaultwares-cli/src`
+  - `Get-Content TUI-ENHANCEMENT-PLAN.md`
+- Files:
+  - `crates/vaultwares-cli/src/tui/tool_panel.rs`
+  - `crates/vaultwares-cli/src/tui/diff_view.rs`
+  - `crates/vaultwares-cli/src/main.rs`
+  - `crates/vaultwares-cli/src/session_mgr.rs`
+  - `crates/vaultwares-cli/tests/mock_parity_harness.rs`
+  - `TUI-ENHANCEMENT-PLAN.md`
+- Git: repo=vaultwares-cli, branch=main, head=4d322b2
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 07:20 - vaultwares-cli</strong> <code>commands</code> - Read-only inspection of the Rust crate test surface around crates/vaultwares-cli CLI/TUI modules. Mapped existing unit and integration tests relevant to status bar, tool renderi...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Summary: Read-only inspection of the Rust crate test surface around crates/vaultwares-cli CLI/TUI modules. Mapped existing unit and integration tests relevant to status bar, tool rendering, and diff rendering. Confirmed there are no direct tests in src/tui/status_bar.rs, src/tui/tool_panel.rs, or src/tui/diff_view.rs, and identified the narrow cargo test commands in the bin crate and integration tests that verify adjacent rendering behavior without running full workspace suites.
+- Commands:
+  - `cargo metadata --no-deps --format-version 1`
+  - `cargo test -p vaultwares-cli --bin vaultwares-cli -- --list`
+  - `rg -n 'status_line_reports_model_and_token_totals|render_diff_report|tool_rendering|describe_tool_progress' crates\\vaultwares-cli\\src\\main.rs`
+- Files:
+  - `crates/vaultwares-cli/src/tui/status_bar.rs`
+  - `crates/vaultwares-cli/src/tui/tool_panel.rs`
+  - `crates/vaultwares-cli/src/tui/diff_view.rs`
+  - `crates/vaultwares-cli/src/main.rs`
+  - `crates/vaultwares-cli/tests/cli_flags_and_config_defaults.rs`
+  - `crates/vaultwares-cli/tests/resume_slash_commands.rs`
+- Git: repo=vaultwares-cli, branch=main, head=4d322b2
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 07:20 - vaultwares-cli</strong> <code>verification</code> - Read-only inspection of Rust CLI/TUI HUD status implementation. Reviewed crates/vaultwares-cli/src/tui/status_bar.rs and call sites in app.rs, main.rs, and format.rs. Determined...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Summary: Read-only inspection of Rust CLI/TUI HUD status implementation. Reviewed crates/vaultwares-cli/src/tui/status_bar.rs and call sites in app.rs, main.rs, and format.rs. Determined current implementation is snapshot/reporting oriented, not a persistent live status bar; identified remaining Phase 1 gaps and the smallest safe next implementation slice.
+- Commands:
+  - `rg --files -g AGENTS.md`
+  - `rg -n 'TUI-ENHANCEMENT-PLAN|Phase 1|status bar|HUD' -S .`
+  - `Get-Content crates/vaultwares-cli/src/tui/status_bar.rs`
+  - `Get-Content crates/vaultwares-cli/src/main.rs | Select-Object -Skip 3468 -First 26`
+- Files:
+  - `crates/vaultwares-cli/src/tui/status_bar.rs`
+  - `crates/vaultwares-cli/src/app.rs`
+  - `crates/vaultwares-cli/src/main.rs`
+  - `crates/vaultwares-cli/src/format.rs`
+  - `TUI-ENHANCEMENT-PLAN.md`
+- Git: repo=vaultwares-cli, branch=main, head=4d322b2
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 02:44 - agent-ledger</strong> <code>code-change</code> - Fixed the ledger sync script after manual sync hit &#39;Cannot rebase onto multiple branches&#39;. sync-agent-ledger.ps1 now fetches origin and rebases explicitly onto origin/main inste...</summary>
 
 - Kind: code-change
