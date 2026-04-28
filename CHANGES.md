@@ -2,6 +2,12 @@
 
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
+## 2026-04-28 01:57 - General Tasks
+
+- Kind: general
+- Actor: AI Agent
+- Summary: Debugged pasted PowerShell auto-backup script. Identified undefined timestamp, JSON state loading as PSCustomObject instead of hashtable, incorrect backup destination construction for absolute/relative paths, robocopy output being mistaken for exit code, /LOG overwriting the same log file, and interactive Read-Host prompts blocking scheduled runs. Prepared corrected script with safe destination naming, state save/load fixes, robocopy LASTEXITCODE handling, and noninteractive scheduled behavior.
+
 ## 2026-04-28 01:07 - agent-ledger
 
 - Kind: verification
