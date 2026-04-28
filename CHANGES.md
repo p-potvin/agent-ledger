@@ -3,6 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-28 09:00 - vaultwares-cli</strong> <code>commands</code> - Started the coordinated subagent team system and populated TODO.md with the TUI Refactoring Phase 0-1 tickets.</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Summary: Started the coordinated subagent team system and populated TODO.md with the TUI Refactoring Phase 0-1 tickets.
+- Commands:
+  - `python run_coordinated_system.py`
+- Files:
+  - `TODO.md`
+- Git: repo=vaultwares-cli, branch=main, head=5892d01
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 08:58 - vaultwares-cli</strong> <code>plan</code> - Triggered the managed-team workflow and executed subagent communications for TUI Enhancement Plan (alternate-screen TUI, live bottom HUD, session picker, theme config, main.rs e...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Triggered the managed-team workflow and executed subagent communications for TUI Enhancement Plan (alternate-screen TUI, live bottom HUD, session picker, theme config, main.rs extraction).
+- Commands:
+  - `redis-server redis.conf`
+  - `python manager_demo.py`
+- Files:
+  - `crates/vaultwares-cli/src/main.rs`
+- Git: repo=vaultwares-cli, branch=main, head=5892d01
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 07:58 - vaultwares-cli</strong> <code>code-change</code> - Implemented CLI/TUI enhancement slice from TUI-ENHANCEMENT-PLAN.md: added real /search and /undo slash command variants, conversation-history search, safe originalFile-backed un...</summary>
 
 - Kind: code-change
