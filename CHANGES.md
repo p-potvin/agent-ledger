@@ -2,6 +2,12 @@
 
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
+## 2026-04-28 02:09 - General Tasks
+
+- Kind: general
+- Actor: AI Agent
+- Summary: Followed up on PowerShell backup script destination layout. Explained that the previous safe path helper intentionally mirrored the absolute source path, causing nested C\Users\... folders under the timestamp. Provided replacement Get-SafeBackupPath logic that uses only the source folder leaf name, with an optional short hash suffix to prevent collisions when multiple source directories share the same final folder name.
+
 ## 2026-04-28 01:57 - General Tasks
 
 - Kind: general
