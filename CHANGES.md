@@ -3,6 +3,25 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-28 07:25 - vaultwares-cli</strong> <code>code-change</code> - Resumed CLI/TUI work with superpowers dispatch. Added active REPL turn footer showing model, permission mode, session id, elapsed time, token totals, and estimated cost after ea...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Resumed CLI/TUI work with superpowers dispatch. Added active REPL turn footer showing model, permission mode, session id, elapsed time, token totals, and estimated cost after each successful turn; request failures now include elapsed time. Mirrored the formatter into tui/status_bar.rs for extraction parity and added focused unit tests for turn footer and duration formatting. Verified with cargo check and targeted status/footer tests. cargo fmt --check was attempted but reports pre-existing formatting drift in unrelated files, so only touched files were rustfmt'ed.
+- Commands:
+  - `cargo check -p vaultwares-cli --quiet`
+  - `cargo test -p vaultwares-cli --bin vaultwares-cli tests::turn_footer_reports_elapsed_usage_and_session_context -- --exact`
+  - `cargo test -p vaultwares-cli --bin vaultwares-cli tests::compact_duration_formats_minutes_after_sixty_seconds -- --exact`
+  - `cargo test -p vaultwares-cli --bin vaultwares-cli tests::status_line_reports_model_and_token_totals -- --exact`
+  - `cargo test -p vaultwares-cli --bin vaultwares-cli tests::status_context_reads_real_workspace_metadata -- --exact`
+- Files:
+  - `crates/vaultwares-cli/src/main.rs`
+  - `crates/vaultwares-cli/src/tui/status_bar.rs`
+- Git: repo=vaultwares-cli, branch=main, head=4d322b2
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 07:21 - vaultwares-cli</strong> <code>handoff</code> - Read-only inspection of tool call and diff visualization. Reviewed crates/vaultwares-cli/src/tui/tool_panel.rs and diff_view.rs, compared them with duplicate active implementati...</summary>
 
 - Kind: handoff
