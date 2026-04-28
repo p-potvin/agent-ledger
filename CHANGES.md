@@ -3,6 +3,16 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-28 09:36 - vaultwares-cli</strong> <code>verification</code> - Investigating why tasks stalled. Found that agents were in WAITING_FOR_INPUT and assign_tasks.py only looks for RELAXING. Also ensuring global ExtrovertAgent correctly updates T...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Summary: Investigating why tasks stalled. Found that agents were in WAITING_FOR_INPUT and assign_tasks.py only looks for RELAXING. Also ensuring global ExtrovertAgent correctly updates TASKS.md.
+- Git: repo=vaultwares-cli, branch=main, head=5892d01
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 09:28 - vaultwares-cli</strong> <code>code-change</code> - Renamed TODO.md to TASKS.md and reformatted it to match the pipelines standard. Updated run_coordinated_system.py to recognize TASKS.md.</summary>
 
 - Kind: code-change
