@@ -3,6 +3,23 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-28 09:28 - vaultwares-cli</strong> <code>code-change</code> - Renamed TODO.md to TASKS.md and reformatted it to match the pipelines standard. Updated run_coordinated_system.py to recognize TASKS.md.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Renamed TODO.md to TASKS.md and reformatted it to match the pipelines standard. Updated run_coordinated_system.py to recognize TASKS.md.
+- Commands:
+  - `Remove-Item TODO.md`
+  - `python run_coordinated_system.py`
+  - `python assign_tasks.py`
+- Files:
+  - `TASKS.md`
+  - `run_coordinated_system.py`
+- Git: repo=vaultwares-cli, branch=main, head=5892d01
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 09:13 - vaultwares-cli</strong> <code>commands</code> - Triggered python assign_tasks.py utilizing the updated vaultwares-pipelines architecture to distribute the TUI extraction jobs to the waiting worker cluster.</summary>
 
 - Kind: commands
