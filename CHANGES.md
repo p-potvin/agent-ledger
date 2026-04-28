@@ -3,6 +3,74 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-28 07:44 - vaultwares-cli</strong> <code>verification</code> - Read-only inspection of vaultwares-cli status/HUD and renderer support. Mapped main.rs startup/run_turn, render.rs renderer/spinner/streaming, tui/status_bar.rs status formattin...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Summary: Read-only inspection of vaultwares-cli status/HUD and renderer support. Mapped main.rs startup/run_turn, render.rs renderer/spinner/streaming, tui/status_bar.rs status formatting, runtime config shape, theme plumbing, and current dirty diff. Verified cargo check and a targeted footer test pass. Conclusion: minimal safe path is width-aware status/footer helpers plus theme wiring through existing renderer/config seams, without streaming rewrites.
+- Commands:
+  - `git status --short`
+  - `git diff -- crates/vaultwares-cli/src/main.rs`
+  - `git diff -- crates/vaultwares-cli/src/tui/status_bar.rs`
+  - `cargo check -p vaultwares-cli --quiet`
+  - `cargo test -p vaultwares-cli turn_footer_reports_elapsed_usage_and_session_context --quiet`
+- Files:
+  - `crates/vaultwares-cli/src/main.rs`
+  - `crates/vaultwares-cli/src/render.rs`
+  - `crates/vaultwares-cli/src/tui/status_bar.rs`
+  - `crates/runtime/src/config.rs`
+  - `crates/theme-gen/src/lib.rs`
+- Git: repo=vaultwares-cli, branch=main, head=4d322b2
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 07:44 - vaultwares-cli</strong> <code>handoff</code> - Read-only analysis of slash-command/parser surface for adding /search and /undo. Inspected crates/commands, crates/vaultwares-cli/src/main.rs, session/runtime structures, tool s...</summary>
+
+- Kind: handoff
+- Actor: AI Agent
+- Summary: Read-only analysis of slash-command/parser surface for adding /search and /undo. Inspected crates/commands, crates/vaultwares-cli/src/main.rs, session/runtime structures, tool surfaces, and stub/help/completion filtering. Found /search and /undo exist in shared slash-command specs but not as SlashCommand enum variants or parser arms; both are filtered as stubs in CLI/TUI. Mapped minimal safe implementation seams and required tests.
+- Commands:
+  - `rg -n SlashCommand /search /undo STUB_COMMANDS under crates/commands and crates/vaultwares-cli/src`
+  - `Select-String on crates/runtime/src/file_ops.rs for write_file edit_file original_file old_string`
+  - `Select-String on crates/runtime/src/session.rs for ToolResult tool_name output Session`
+- Files:
+  - `crates/commands/src/lib.rs`
+  - `crates/vaultwares-cli/src/main.rs`
+  - `crates/vaultwares-cli/src/session_mgr.rs`
+  - `crates/vaultwares-cli/src/tui/tool_panel.rs`
+  - `crates/runtime/src/session.rs`
+  - `crates/runtime/src/file_ops.rs`
+  - `crates/runtime/src/conversation.rs`
+- Git: repo=vaultwares-cli, branch=main, head=4d322b2
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 07:42 - vaultwares-cli</strong> <code>plan</code> - Read-only inspection of crates/vaultwares-cli TUI/report code paths. Identified duplicated diff/tool-render logic between main.rs and src/tui modules, confirmed report commands ...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Read-only inspection of crates/vaultwares-cli TUI/report code paths. Identified duplicated diff/tool-render logic between main.rs and src/tui modules, confirmed report commands still print directly via print_status/print_config/print_memory/print_diff, and mapped safest implementation order for diff parity, pager wrapping, tool timeline summaries, permission prompt styling, and optional syntax-highlighted snippets with exact existing tests to preserve and new tests to add.
+- Commands:
+  - `rg -n tool_panel|diff_view|pager|status|config|memory|diff|permission crates/vaultwares-cli -S`
+  - `Get-Content crates/vaultwares-cli/src/tui/tool_panel.rs`
+  - `Get-Content crates/vaultwares-cli/src/tui/diff_view.rs`
+  - `Get-Content crates/vaultwares-cli/src/render.rs`
+  - `Get-Content crates/vaultwares-cli/src/main.rs | Select-Object -Skip 4700 -First 720`
+- Files:
+  - `crates/vaultwares-cli/src/tui/tool_panel.rs`
+  - `crates/vaultwares-cli/src/tui/diff_view.rs`
+  - `crates/vaultwares-cli/src/render.rs`
+  - `crates/vaultwares-cli/src/main.rs`
+  - `crates/vaultwares-cli/tests/resume_slash_commands.rs`
+  - `crates/vaultwares-cli/tests/output_format_contract.rs`
+  - `crates/vaultwares-cli/tests/mock_parity_harness.rs`
+- Git: repo=vaultwares-cli, branch=main, head=4d322b2
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 07:25 - vaultwares-cli</strong> <code>code-change</code> - Resumed CLI/TUI work with superpowers dispatch. Added active REPL turn footer showing model, permission mode, session id, elapsed time, token totals, and estimated cost after ea...</summary>
 
 - Kind: code-change
