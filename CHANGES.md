@@ -3,6 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 11:01 - No More Groceries</strong> <code>code-change</code> - Fixed local DB ABI collision by routing npm run dev backend commands through the Electron VM using ELECTRON_RUN_AS_NODE=1, eliminating the need to dual-compile better-sqlite3.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed local DB ABI collision by routing npm run dev backend commands through the Electron VM using ELECTRON_RUN_AS_NODE=1, eliminating the need to dual-compile better-sqlite3.
+- Commands:
+  - `npm install cross-env --save-dev`
+- Files:
+  - `package.json`
+- Git: repo=no-more-groceries, branch=main, head=c734db4
+
+</details>
+
+<details>
+<summary><strong>2026-04-29 10:57 - vaultwares-cli</strong> <code>code-change</code> - Implemented live token counters for HUD by adding usage_callback to AnthropicRuntimeClient and tracking live usage in LiveCli. Modernized the interactive session picker with a f...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Implemented live token counters for HUD by adding usage_callback to AnthropicRuntimeClient and tracking live usage in LiveCli. Modernized the interactive session picker with a framed layout and metadata display. Defined modern color themes (Space, Neon, Catppuccin) in TerminalRenderer and wired them for dynamic selection.
+- Files:
+  - `crates/vaultwares-cli/src/app.rs`
+  - `crates/vaultwares-cli/src/tui/session_picker.rs`
+  - `crates/vaultwares-cli/src/render.rs`
+  - `TASKS.md`
+- Git: repo=vaultwares-cli, branch=main, head=f834013
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 10:53 - vaultwares-cli</strong> <code>plan</code> - Starting Task 3: Terminal-size-aware Status Line (HUD). Plan includes enhancing status_bar.rs to support separate input/output token counts and wiring the AnthropicRuntimeClient...</summary>
 
 - Kind: plan
