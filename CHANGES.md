@@ -3,6 +3,19 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 11:20 - no-more-groceries</strong> <code>code-change</code> - Checked off final pending ops task from TASKS.md by making stale jobs and fail refreshes visible in /api/health endpoint. Verified all roadmap tasks read &#39;done&#39;.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Checked off final pending ops task from TASKS.md by making stale jobs and fail refreshes visible in /api/health endpoint. Verified all roadmap tasks read 'done'.
+- Files:
+  - `TASKS.md`
+  - `server.mjs`
+- Git: repo=no-more-groceries, branch=main, head=c734db4
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 11:01 - No More Groceries</strong> <code>code-change</code> - Fixed local DB ABI collision by routing npm run dev backend commands through the Electron VM using ELECTRON_RUN_AS_NODE=1, eliminating the need to dual-compile better-sqlite3.</summary>
 
 - Kind: code-change
