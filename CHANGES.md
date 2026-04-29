@@ -3,6 +3,24 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 10:39 - vaultwares-cli</strong> <code>handoff</code> - Stabilized PQC implementation in pqc.rs, fixing type mismatches with fips203 SerDes trait. Validated end-to-end multi-agent pipeline using run_coordinated_system.py. Updated TAS...</summary>
+
+- Kind: handoff
+- Actor: AI Agent
+- Summary: Stabilized PQC implementation in pqc.rs, fixing type mismatches with fips203 SerDes trait. Validated end-to-end multi-agent pipeline using run_coordinated_system.py. Updated TASKS.md and PQC_GUIDELINES.md to reflect completion of Task 6 (ML-KEM integration). Created HE feasibility study.
+- Commands:
+  - `cargo check`
+  - `python -u run_coordinated_system.py`
+- Files:
+  - `crates/vaultwares-cli/src/pqc.rs`
+  - `TASKS.md`
+  - `PQC_GUIDELINES.md`
+  - `HE_FEASIBILITY_STUDY.md`
+- Git: repo=vaultwares-cli, branch=main, head=f834013
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 10:25 - vaultwares-cli</strong> <code>plan</code> - Starting final stabilization of PQC-secured CLI pipeline. Plan includes linting cleanup, E2E validation with run_coordinated_system.py, documentation formalization, and homomorp...</summary>
 
 - Kind: plan
