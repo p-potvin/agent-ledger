@@ -3,6 +3,21 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 02:04 - General Tasks</strong> <code>code-change</code> - Converted 20 OMX agent TOML definitions to Markdown format. Created corresponding skill directories in .gemini/skills with SKILL.md files and generated .md mirrors in .gemini/ag...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Converted 20 OMX agent TOML definitions to Markdown format. Created corresponding skill directories in .gemini/skills with SKILL.md files and generated .md mirrors in .gemini/agents. This migration enables the AI assistant to utilize these agent personas as modular skills, rules, or workflows.
+- Commands:
+  - `python scratch/convert_agents.py`
+- Files:
+  - `C:\Users\Administrator\.gemini\agents\*.md`
+  - `C:\Users\Administrator\.gemini\skills\*\SKILL.md`
+- Git: repo=vaultwares-cli, branch=main, head=80ba342
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 17:55 - No More Groceries</strong> <code>code-change</code> - Fixed Tailwind CSS unstyled render by restoring styles.css from git, patching missing @reference ./tailwind.css for v4 compiler, and correcting user&#39;s assumption regarding vault...</summary>
 
 - Kind: code-change
