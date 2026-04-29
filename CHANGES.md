@@ -3,6 +3,23 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 13:15 - vaultwares-cli</strong> <code>code-change</code> - Stabilized vaultwares-cli build by replacing glob imports with explicit re-exports in main.rs. Resolved visibility (E0603), missing symbols (E0425), and type inference (E0282) e...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Stabilized vaultwares-cli build by replacing glob imports with explicit re-exports in main.rs. Resolved visibility (E0603), missing symbols (E0425), and type inference (E0282) errors. Restored accidentally deleted session management functions and standard library imports. Build is now green with zero errors.
+- Commands:
+  - `cargo check -p vaultwares-cli`
+- Files:
+  - `crates/vaultwares-cli/src/main.rs`
+  - `crates/vaultwares-cli/src/app.rs`
+  - `crates/vaultwares-cli/src/session_mgr.rs`
+  - `crates/vaultwares-cli/src/tui/status_bar.rs`
+- Git: repo=vaultwares-cli, branch=main, head=f834013
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 12:54 - vaultwares-cli</strong> <code>code-change</code> - Consolidated STUB_COMMANDS into args.rs and removed duplicates from app.rs and tool_panel.rs. Fixed syntax errors in tool_panel.rs header.</summary>
 
 - Kind: code-change

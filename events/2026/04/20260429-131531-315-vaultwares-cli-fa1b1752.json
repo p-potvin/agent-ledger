@@ -1,0 +1,30 @@
+﻿{
+    "id":  "20260429-131531-315-vaultwares-cli-fa1b1752",
+    "createdAt":  "2026-04-29T17:15:31.3152769Z",
+    "createdAtLocal":  "2026-04-29 13:15",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-cli",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-cli",
+    "summary":  "Stabilized vaultwares-cli build by replacing glob imports with explicit re-exports in main.rs. Resolved visibility (E0603), missing symbols (E0425), and type inference (E0282) errors. Restored accidentally deleted session management functions and standard library imports. Build is now green with zero errors.",
+    "commands":  [
+                     "cargo check -p vaultwares-cli"
+                 ],
+    "files":  [
+                  "crates/vaultwares-cli/src/main.rs",
+                  "crates/vaultwares-cli/src/app.rs",
+                  "crates/vaultwares-cli/src/session_mgr.rs",
+                  "crates/vaultwares-cli/src/tui/status_bar.rs"
+              ],
+    "planPath":  "",
+    "contentHash":  "fa1b1752d5e449e8aa8a78a6b5c502716b0dd203427469dcb0931567f51294f1",
+    "git":  {
+                "repo":  "vaultwares-cli",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-cli",
+                "branch":  "main",
+                "head":  "f834013",
+                "hasChanges":  true
+            }
+}
