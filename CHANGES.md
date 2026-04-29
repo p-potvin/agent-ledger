@@ -3,6 +3,19 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 16:47 - no-more-groceries</strong> <code>code-change</code> - Implement prefix-based geographic sorting for postal code store fetching in SQLite DB and PC Express integration mocks.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Implement prefix-based geographic sorting for postal code store fetching in SQLite DB and PC Express integration mocks.
+- Files:
+  - `packages/db/queries.js`
+  - `packages/integrations/pc-express/store-search.js`
+- Git: repo=no-more-groceries, branch=main, head=5fefd5e
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 13:27 - vaultwares-cli</strong> <code>code-change</code> - Implemented TUI enhancement phase 1: (1) Replaced single-line cyan HUD with a terminal-size-aware dual-row HUD in status_bar.rs. Row 1 (dark navy) shows CLAW branding, model, pe...</summary>
 
 - Kind: code-change
