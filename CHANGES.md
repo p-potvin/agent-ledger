@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 10:53 - vaultwares-cli</strong> <code>plan</code> - Starting Task 3: Terminal-size-aware Status Line (HUD). Plan includes enhancing status_bar.rs to support separate input/output token counts and wiring the AnthropicRuntimeClient...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Starting Task 3: Terminal-size-aware Status Line (HUD). Plan includes enhancing status_bar.rs to support separate input/output token counts and wiring the AnthropicRuntimeClient to update the HUD during streaming.
+- Files:
+  - `crates/vaultwares-cli/src/tui/status_bar.rs`
+  - `crates/vaultwares-cli/src/app.rs`
+  - `TASKS.md`
+- Git: repo=vaultwares-cli, branch=main, head=f834013
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 10:50 - vaultwares-cli</strong> <code>code-change</code> - Implemented Homomorphic Encryption (HE) proof-of-concept for encrypted token summation. Created crates/vaultwares-fhe using tfhe-rs 0.7.2. Enabled seeder_x86_64_rdseed for Windo...</summary>
 
 - Kind: code-change

@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260429-105326-200-vaultwares-cli-cab028f5",
+    "createdAt":  "2026-04-29T14:53:26.2006869Z",
+    "createdAtLocal":  "2026-04-29 10:53",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-cli",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-cli",
+    "summary":  "Starting Task 3: Terminal-size-aware Status Line (HUD). Plan includes enhancing status_bar.rs to support separate input/output token counts and wiring the AnthropicRuntimeClient to update the HUD during streaming.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "crates/vaultwares-cli/src/tui/status_bar.rs",
+                  "crates/vaultwares-cli/src/app.rs",
+                  "TASKS.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "cab028f536bd8f18a8e8823d7db51954e423997c38d1a8976ead3c01e1cac93f",
+    "git":  {
+                "repo":  "vaultwares-cli",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-cli",
+                "branch":  "main",
+                "head":  "f834013",
+                "hasChanges":  true
+            }
+}
