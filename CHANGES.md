@@ -3,6 +3,22 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 12:54 - vaultwares-cli</strong> <code>code-change</code> - Consolidated STUB_COMMANDS into args.rs and removed duplicates from app.rs and tool_panel.rs. Fixed syntax errors in tool_panel.rs header.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Consolidated STUB_COMMANDS into args.rs and removed duplicates from app.rs and tool_panel.rs. Fixed syntax errors in tool_panel.rs header.
+- Commands:
+  - `cargo clippy`
+- Files:
+  - `crates/vaultwares-cli/src/args.rs`
+  - `crates/vaultwares-cli/src/app.rs`
+  - `crates/vaultwares-cli/src/tui/tool_panel.rs`
+- Git: repo=vaultwares-cli, branch=main, head=f834013
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 12:43 - vaultwares-agentciation</strong> <code>plan</code> - Expanded TASKS.md roadmap significantly with security audits, tests, QA, scaling, and GUI enhancements. Fixed unicode crashes in assign_tasks.py. Deployed the full multi-agent t...</summary>
 
 - Kind: plan
