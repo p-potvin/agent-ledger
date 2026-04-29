@@ -3,6 +3,25 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 02:25 - vaultwares-cli</strong> <code>code-change</code> - Decomposed the monolithic main.rs by extracting LiveCli into app.rs and parse_args into args.rs. Systematically resolved visibility issues and deduplicated redundant functions a...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Decomposed the monolithic main.rs by extracting LiveCli into app.rs and parse_args into args.rs. Systematically resolved visibility issues and deduplicated redundant functions across modules. Standardized visibility of structs and methods to pub(crate) to maintain internal access while modularizing. Restored missing session types to session_mgr.rs.
+- Commands:
+  - `python scratch/refactor_main.py`
+  - `python scratch/final_sweep.py`
+  - `cargo check`
+- Files:
+  - `crates/vaultwares-cli/src/main.rs`
+  - `crates/vaultwares-cli/src/app.rs`
+  - `crates/vaultwares-cli/src/args.rs`
+  - `crates/vaultwares-cli/src/session_mgr.rs`
+- Git: repo=vaultwares-cli, branch=main, head=f834013
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 02:12 - vaultwares-cli</strong> <code>plan</code> - Orchestrating TUI enhancement refactor: 1) Formatting TASKS.md and TUI-ENHANCEMENT-PLAN.md for consistency. 2) Initializing the multi-agent coordination system via run_coordinat...</summary>
 
 - Kind: plan
