@@ -3,6 +3,22 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 02:44 - vaultwares-cli</strong> <code>plan</code> - Integrated Post-Quantum Cryptography (PQC) and Homomorphic Encryption (HE) guidelines into the TUI Enhancement Plan and TASKS.md. Defined ML-KEM as the mandatory standard for ke...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Integrated Post-Quantum Cryptography (PQC) and Homomorphic Encryption (HE) guidelines into the TUI Enhancement Plan and TASKS.md. Defined ML-KEM as the mandatory standard for key encapsulation. Initiated the multi-agent coordination system to automate the remaining phases.
+- Commands:
+  - `python vaultwares-agentciation/run_coordinated_system.py`
+  - `python vaultwares-agentciation/assign_tasks.py`
+- Files:
+  - `TUI-ENHANCEMENT-PLAN.md`
+  - `TASKS.md`
+- Git: repo=vaultwares-cli, branch=main, head=f834013
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 02:25 - vaultwares-cli</strong> <code>code-change</code> - Decomposed the monolithic main.rs by extracting LiveCli into app.rs and parse_args into args.rs. Systematically resolved visibility issues and deduplicated redundant functions a...</summary>
 
 - Kind: code-change
