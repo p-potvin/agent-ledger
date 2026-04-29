@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 04:03 - vaultwares-cli</strong> <code>plan</code> - Created PQC guidelines and implemented client-side ML-KEM Key Encapsulation in pqc.rs. Registered pqc module in main.rs. Preparing for autonomous execution via run_coordinated_s...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Created PQC guidelines and implemented client-side ML-KEM Key Encapsulation in pqc.rs. Registered pqc module in main.rs. Preparing for autonomous execution via run_coordinated_system.py.
+- Files:
+  - `PQC_GUIDELINES.md`
+  - `crates/vaultwares-cli/src/pqc.rs`
+  - `crates/vaultwares-cli/src/main.rs`
+- Git: repo=vaultwares-cli, branch=main, head=f834013
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 02:44 - vaultwares-cli</strong> <code>plan</code> - Integrated Post-Quantum Cryptography (PQC) and Homomorphic Encryption (HE) guidelines into the TUI Enhancement Plan and TASKS.md. Defined ML-KEM as the mandatory standard for ke...</summary>
 
 - Kind: plan
