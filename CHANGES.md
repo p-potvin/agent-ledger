@@ -3,6 +3,22 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 10:50 - vaultwares-cli</strong> <code>code-change</code> - Implemented Homomorphic Encryption (HE) proof-of-concept for encrypted token summation. Created crates/vaultwares-fhe using tfhe-rs 0.7.2. Enabled seeder_x86_64_rdseed for Windo...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Implemented Homomorphic Encryption (HE) proof-of-concept for encrypted token summation. Created crates/vaultwares-fhe using tfhe-rs 0.7.2. Enabled seeder_x86_64_rdseed for Windows compatibility. Verified homomorphic addition of encrypted u64 values.
+- Commands:
+  - `cargo test -p vaultwares-fhe`
+- Files:
+  - `crates/vaultwares-fhe/Cargo.toml`
+  - `crates/vaultwares-fhe/src/lib.rs`
+  - `TASKS.md`
+- Git: repo=vaultwares-cli, branch=main, head=f834013
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 10:39 - vaultwares-cli</strong> <code>handoff</code> - Stabilized PQC implementation in pqc.rs, fixing type mismatches with fips203 SerDes trait. Validated end-to-end multi-agent pipeline using run_coordinated_system.py. Updated TAS...</summary>
 
 - Kind: handoff
