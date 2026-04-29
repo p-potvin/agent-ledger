@@ -3,6 +3,22 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 12:43 - vaultwares-agentciation</strong> <code>plan</code> - Expanded TASKS.md roadmap significantly with security audits, tests, QA, scaling, and GUI enhancements. Fixed unicode crashes in assign_tasks.py. Deployed the full multi-agent t...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Expanded TASKS.md roadmap significantly with security audits, tests, QA, scaling, and GUI enhancements. Fixed unicode crashes in assign_tasks.py. Deployed the full multi-agent team (Manager + Security, QA, Dev subagents) using a PowerShell script to tackle the expanded scope.
+- Commands:
+  - `powershell.exe -ExecutionPolicy Bypass -File .\launch_full_team.ps1`
+- Files:
+  - `TASKS.md`
+  - `vaultwares-agentciation/assign_tasks.py`
+  - `launch_full_team.ps1`
+- Git: repo=vaultwares-cli, branch=main, head=f834013
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 11:20 - no-more-groceries</strong> <code>code-change</code> - Checked off final pending ops task from TASKS.md by making stale jobs and fail refreshes visible in /api/health endpoint. Verified all roadmap tasks read &#39;done&#39;.</summary>
 
 - Kind: code-change
