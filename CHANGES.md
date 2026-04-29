@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 10:25 - vaultwares-cli</strong> <code>plan</code> - Starting final stabilization of PQC-secured CLI pipeline. Plan includes linting cleanup, E2E validation with run_coordinated_system.py, documentation formalization, and homomorp...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Starting final stabilization of PQC-secured CLI pipeline. Plan includes linting cleanup, E2E validation with run_coordinated_system.py, documentation formalization, and homomorphic encryption feasibility study.
+- Files:
+  - `crates/vaultwares-cli/src/pqc.rs`
+  - `crates/vaultwares-cli/src/main.rs`
+  - `crates/vaultwares-cli/src/session_mgr.rs`
+- Git: repo=vaultwares-cli, branch=main, head=f834013
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 04:03 - vaultwares-cli</strong> <code>plan</code> - Created PQC guidelines and implemented client-side ML-KEM Key Encapsulation in pqc.rs. Registered pqc module in main.rs. Preparing for autonomous execution via run_coordinated_s...</summary>
 
 - Kind: plan
