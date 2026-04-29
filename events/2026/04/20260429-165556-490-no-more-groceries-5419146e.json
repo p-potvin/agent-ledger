@@ -1,0 +1,28 @@
+{
+  "id": "20260429-165556-490-no-more-groceries-5419146e",
+  "createdAt": "2026-04-29T20:55:56.4906354Z",
+  "createdAtLocal": "2026-04-29 16:55",
+  "timezone": "Eastern Standard Time",
+  "project": "no-more-groceries",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\no-more-groceries",
+  "summary": "Integrated Apify for dynamically fetching Loblaws/PC Express grocery stores via Google Maps and Loblaws Actor",
+  "commands": [
+    "npm i apify-client"
+  ],
+  "files": [
+    "packages/integrations/pc-express/store-search.js",
+    "packages/integrations/pc-express/product-search.js"
+  ],
+  "planPath": "",
+  "contentHash": "5419146eaeffc6ae4422773c59f8aa9c0f2060db853369d2db35c94d40475ef9",
+  "git": {
+    "repo": "no-more-groceries",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/no-more-groceries",
+    "branch": "main",
+    "head": "5fefd5e",
+    "hasChanges": true
+  }
+}

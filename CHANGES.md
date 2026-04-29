@@ -3,6 +3,21 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 16:55 - no-more-groceries</strong> <code>code-change</code> - Integrated Apify for dynamically fetching Loblaws/PC Express grocery stores via Google Maps and Loblaws Actor</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Integrated Apify for dynamically fetching Loblaws/PC Express grocery stores via Google Maps and Loblaws Actor
+- Commands:
+  - `npm i apify-client`
+- Files:
+  - `packages/integrations/pc-express/store-search.js`
+  - `packages/integrations/pc-express/product-search.js`
+- Git: repo=no-more-groceries, branch=main, head=5fefd5e
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 16:47 - no-more-groceries</strong> <code>code-change</code> - Implement prefix-based geographic sorting for postal code store fetching in SQLite DB and PC Express integration mocks.</summary>
 
 - Kind: code-change
