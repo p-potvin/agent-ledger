@@ -3,6 +3,34 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-29 13:27 - vaultwares-cli</strong> <code>code-change</code> - Implemented TUI enhancement phase 1: (1) Replaced single-line cyan HUD with a terminal-size-aware dual-row HUD in status_bar.rs. Row 1 (dark navy) shows CLAW branding, model, pe...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Implemented TUI enhancement phase 1: (1) Replaced single-line cyan HUD with a terminal-size-aware dual-row HUD in status_bar.rs. Row 1 (dark navy) shows CLAW branding, model, permission mode with icon, abbreviated session ID, git branch and dirty status, sandbox indicator. Row 2 (slate) shows turns, message count, token I/O, cache, estimated tokens, and cost. Narrow terminals (<60 cols) fall back to a single compact row. (2) Added HudAnimator struct — a background braille-spinner thread (80ms cadence, amber color) that pulses row 2 in an amber 'thinking…' state during turns. (3) Wired HudAnimator.start/stop around run_turn in app.rs. Build remains green (0 errors).
+- Commands:
+  - `cargo check -p vaultwares-cli`
+- Files:
+  - `crates/vaultwares-cli/src/tui/status_bar.rs`
+  - `crates/vaultwares-cli/src/app.rs`
+- Git: repo=vaultwares-cli, branch=main, head=f834013
+
+</details>
+
+<details>
+<summary><strong>2026-04-29 13:23 - vaultwares-cli</strong> <code>plan</code> - Planning TUI enhancement phase: (1) Dual-row terminal-size-aware HUD replacing the single-line status bar, with top row showing model/session/git and bottom row showing live tok...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Planning TUI enhancement phase: (1) Dual-row terminal-size-aware HUD replacing the single-line status bar, with top row showing model/session/git and bottom row showing live token cost. (2) Animated progress indicators via a thin HudAnimator thread that pulses the cost counter during turns. (3) Clean HUD teardown on exit/compaction.
+- Files:
+  - `crates/vaultwares-cli/src/tui/status_bar.rs`
+  - `crates/vaultwares-cli/src/app.rs`
+- Git: repo=vaultwares-cli, branch=main, head=f834013
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 13:15 - vaultwares-cli</strong> <code>code-change</code> - Stabilized vaultwares-cli build by replacing glob imports with explicit re-exports in main.rs. Resolved visibility (E0603), missing symbols (E0425), and type inference (E0282) e...</summary>
 
 - Kind: code-change

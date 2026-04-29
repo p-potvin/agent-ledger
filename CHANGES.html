@@ -26,6 +26,38 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-04-29 13:27 - vaultwares-cli</strong> <span class="kind">code-change</span> - Implemented TUI enhancement phase 1: (1) Replaced single-line cyan HUD with a terminal-size-aware dual-row HUD in status_bar.rs. Row 1 (dark navy) shows CLAW branding, model, pe...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Implemented TUI enhancement phase 1: (1) Replaced single-line cyan HUD with a terminal-size-aware dual-row HUD in status_bar.rs. Row 1 (dark navy) shows CLAW branding, model, permission mode with icon, abbreviated session ID, git branch and dirty status, sandbox indicator. Row 2 (slate) shows turns, message count, token I/O, cache, estimated tokens, and cost. Narrow terminals (&lt;60 cols) fall back to a single compact row. (2) Added HudAnimator struct — a background braille-spinner thread (80ms cadence, amber color) that pulses row 2 in an amber &#39;thinking…&#39; state during turns. (3) Wired HudAnimator.start/stop around run_turn in app.rs. Build remains green (0 errors).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>cargo check -p vaultwares-cli</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/app.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 13:23 - vaultwares-cli</strong> <span class="kind">plan</span> - Planning TUI enhancement phase: (1) Dual-row terminal-size-aware HUD replacing the single-line status bar, with top row showing model/session/git and bottom row showing live tok...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Planning TUI enhancement phase: (1) Dual-row terminal-size-aware HUD replacing the single-line status bar, with top row showing model/session/git and bottom row showing live token cost. (2) Animated progress indicators via a thin HudAnimator thread that pulses the cost counter during turns. (3) Clean HUD teardown on exit/compaction.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/app.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-04-29 13:15 - vaultwares-cli</strong> <span class="kind">code-change</span> - Stabilized vaultwares-cli build by replacing glob imports with explicit re-exports in main.rs. Resolved visibility (E0603), missing symbols (E0425), and type inference (E0282) e...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>

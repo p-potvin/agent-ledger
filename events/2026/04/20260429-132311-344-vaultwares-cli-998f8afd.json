@@ -1,0 +1,28 @@
+﻿{
+    "id":  "20260429-132311-344-vaultwares-cli-998f8afd",
+    "createdAt":  "2026-04-29T17:23:11.3444512Z",
+    "createdAtLocal":  "2026-04-29 13:23",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-cli",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-cli",
+    "summary":  "Planning TUI enhancement phase: (1) Dual-row terminal-size-aware HUD replacing the single-line status bar, with top row showing model/session/git and bottom row showing live token cost. (2) Animated progress indicators via a thin HudAnimator thread that pulses the cost counter during turns. (3) Clean HUD teardown on exit/compaction.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "crates/vaultwares-cli/src/tui/status_bar.rs",
+                  "crates/vaultwares-cli/src/app.rs"
+              ],
+    "planPath":  "",
+    "contentHash":  "998f8afdb4710784acb1faa5b34115ead00930ef8d4053051159527f52c63257",
+    "git":  {
+                "repo":  "vaultwares-cli",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-cli",
+                "branch":  "main",
+                "head":  "f834013",
+                "hasChanges":  true
+            }
+}
