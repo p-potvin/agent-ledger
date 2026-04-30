@@ -3,6 +3,30 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-04-30 15:51 - business workspace</strong> <code>plan</code> - Familiarized with C:\Users\Administrator\Desktop\business repos for monetization planning. Mapped link-sharing, prelanding-page, qa-automation, and tube-site. Verified prelandin...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Familiarized with C:\Users\Administrator\Desktop\business repos for monetization planning. Mapped link-sharing, prelanding-page, qa-automation, and tube-site. Verified prelanding-page is the main product hub with lead capture, affiliate link CRUD/redirect tracking, tube routes/admin, Mailchimp helper, and Drizzle schema. Identified link-sharing as mostly README-only, qa-automation as Playwright support repo, and tube-site as a WordPress affiliate tube plugin with CrakRevenue ad zones and adult video fetcher. Ran npm run check and npm test in prelanding-page; both failed because node_modules is incomplete/missing packages such as vitest, @types/react, @trpc/client, wouter, and drizzle-orm. Browsed current official guidance for FTC affiliate disclosures, Stripe adult-content restrictions, Mailchimp acceptable-use risk, and CrakRevenue promotion tools before recommending monetization steps.
+- Commands:
+  - `Get-ChildItem -Force in business workspace`
+  - `git status/log across four repos`
+  - `PowerShell Select-String repo monetization scan`
+  - `npm run check`
+  - `npm test`
+- Files:
+  - `C:\Users\Administrator\Desktop\business\prelanding-page\package.json`
+  - `C:\Users\Administrator\Desktop\business\prelanding-page\server\routers.ts`
+  - `C:\Users\Administrator\Desktop\business\prelanding-page\drizzle\schema.ts`
+  - `C:\Users\Administrator\Desktop\business\prelanding-page\client\src\pages\Home.tsx`
+  - `C:\Users\Administrator\Desktop\business\prelanding-page\client\src\pages\LinkSharing.tsx`
+  - `C:\Users\Administrator\Desktop\business\prelanding-page\server\mailchimp.ts`
+  - `C:\Users\Administrator\Desktop\business\tube-site\promking-tube\includes\video-fetcher.php`
+  - `C:\Users\Administrator\Desktop\business\qa-automation\playwright.config.ts`
+
+</details>
+
+<details>
 <summary><strong>2026-04-29 17:01 - no-more-groceries</strong> <code>code-change</code> - Added local 7-day disk caching to Apify integrations in store-search.js and product-search.js to avoid excessive token costs.</summary>
 
 - Kind: code-change
