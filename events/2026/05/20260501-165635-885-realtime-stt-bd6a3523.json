@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260501-165635-885-realtime-stt-bd6a3523",
+    "createdAt":  "2026-05-01T20:56:35.8858100Z",
+    "createdAtLocal":  "2026-05-01 16:56",
+    "timezone":  "Eastern Standard Time",
+    "project":  "realtime-stt",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+    "summary":  "Conducted deep code analysis of main_app.py and identified architecture, threading, and performance improvements. Created code_analysis.md at project root.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt\\code_analysis.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "bd6a3523bf3dcc409c87544481ef0097588f32857a83278f4295ed6273de823b",
+    "git":  {
+                "repo":  "realtime-stt",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+                "branch":  "main",
+                "head":  "4c8e14b",
+                "hasChanges":  true
+            }
+}
