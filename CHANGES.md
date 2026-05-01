@@ -3,6 +3,24 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-01 01:56 - business</strong> <code>verification</code> - Checked whether the WordPress admin panel for prom-king.xyz is reachable. Searched the business workspace for WordPress config/admin references, found no wp-config.php and no lo...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Summary: Checked whether the WordPress admin panel for prom-king.xyz is reachable. Searched the business workspace for WordPress config/admin references, found no wp-config.php and no local WordPress admin credentials. Verified https://prom-king.xyz/wp-admin/ returns 302 to wp-login.php and https://prom-king.xyz/wp-login.php returns 200.
+- Commands:
+  - `Get-ChildItem -Recurse -Force -Filter wp-config.php`
+  - `Select-String for wp-admin/wordpress references`
+  - `Invoke-WebRequest https://prom-king.xyz/wp-admin/`
+  - `Invoke-WebRequest https://prom-king.xyz/wp-login.php`
+- Files:
+  - `C:\Users\Administrator\Desktop\business\qa-automation\.env.example`
+  - `C:\Users\Administrator\Desktop\business\prelanding-page\.env.local`
+  - `C:\Users\Administrator\Desktop\business\tube-site\promking-tube\README.md`
+
+</details>
+
+<details>
 <summary><strong>2026-04-30 15:51 - business workspace</strong> <code>plan</code> - Familiarized with C:\Users\Administrator\Desktop\business repos for monetization planning. Mapped link-sharing, prelanding-page, qa-automation, and tube-site. Verified prelandin...</summary>
 
 - Kind: plan

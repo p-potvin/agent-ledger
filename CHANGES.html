@@ -26,6 +26,27 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-01 01:56 - business</strong> <span class="kind">verification</span> - Checked whether the WordPress admin panel for prom-king.xyz is reachable. Searched the business workspace for WordPress config/admin references, found no wp-config.php and no lo...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Checked whether the WordPress admin panel for prom-king.xyz is reachable. Searched the business workspace for WordPress config/admin references, found no wp-config.php and no local WordPress admin credentials. Verified https://prom-king.xyz/wp-admin/ returns 302 to wp-login.php and https://prom-king.xyz/wp-login.php returns 200.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Get-ChildItem -Recurse -Force -Filter wp-config.php</code></li>
+        <li><code>Select-String for wp-admin/wordpress references</code></li>
+        <li><code>Invoke-WebRequest https://prom-king.xyz/wp-admin/</code></li>
+        <li><code>Invoke-WebRequest https://prom-king.xyz/wp-login.php</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\qa-automation\.env.example</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\prelanding-page\.env.local</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\promking-tube\README.md</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-04-30 15:51 - business workspace</strong> <span class="kind">plan</span> - Familiarized with C:\Users\Administrator\Desktop\business repos for monetization planning. Mapped link-sharing, prelanding-page, qa-automation, and tube-site. Verified prelandin...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> plan</p>
