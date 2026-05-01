@@ -1,4 +1,4 @@
-# Agent Ledger
+﻿# Agent Ledger
 
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
