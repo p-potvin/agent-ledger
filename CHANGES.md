@@ -3,6 +3,24 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-01 03:36 - business tube sites</strong> <code>code-change</code> - Updated Tube Shell theme and both WordPress tube plugins for prom-king.xyz and fullxxx.video. Removed header navigation while keeping the sticky brand bar, added contact footer ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Updated Tube Shell theme and both WordPress tube plugins for prom-king.xyz and fullxxx.video. Removed header navigation while keeping the sticky brand bar, added contact footer links/pages, improved UI polish, added tag/source-slug metadata scraping and REST meta registration, enabled PromKing remote animated hover previews, improved FullXXX thumbnail fallback scraping, and backfilled existing post source slugs/tags/thumbnails where available. Uploaded theme/plugin ZIPs through WP admin and verified public pages.
+- Commands:
+  - `Compress-Archive theme and plugin zips`
+  - `Upload replacement WordPress theme/plugin packages via WP admin`
+  - `Authenticated REST upsert contact pages and metadata backfill`
+  - `Invoke-WebRequest public page verification`
+- Files:
+  - `C:\Users\Administrator\Desktop\business\tube-shell-theme\tube-shell`
+  - `C:\Users\Administrator\Desktop\business\tube-site\promking-tube`
+  - `C:\Users\Administrator\Desktop\business\fullxxx-video-work\fullxxx-video`
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 03:19 - vault-central</strong> <code>verification</code> - Expanded Firefox Playwright coverage to the full 12-test suite by replacing skipped live-site extension tests with deterministic Firefox-safe extension scenarios. The Firefox fi...</summary>
 
 - Kind: verification
