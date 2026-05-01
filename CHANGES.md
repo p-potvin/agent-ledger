@@ -3,6 +3,38 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-01 17:44 - qa-automation</strong> <code>code-change</code> - Reworked the qa-automation Playwright suite for the Prom King monetization roadmap: replaced obsolete PropPaths specs with configurable funnel/legal/redirect/postback/age-gate/o...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Reworked the qa-automation Playwright suite for the Prom King monetization roadmap: replaced obsolete PropPaths specs with configurable funnel/legal/redirect/postback/age-gate/optional-WordPress coverage, tightened Playwright artifact capture, added env-driven weekly smoke reporting, and repaired the TypeScript/Playwright baseline so install plus test discovery succeed.
+- Commands:
+  - `npm install`
+  - `npx tsc --noEmit`
+  - `npm run test:list`
+  - `npx playwright install chromium`
+  - `npx playwright test tests/funnel.spec.ts --project=chromium -g "root funnel shell"`
+  - `npm run report:weekly`
+- Files:
+  - `package.json`
+  - `playwright.config.ts`
+  - `tests/funnel.spec.ts`
+  - `tests/legal.spec.ts`
+  - `tests/redirects.spec.ts`
+  - `tests/postback.spec.ts`
+  - `tests/age-gate-wordpress.spec.ts`
+  - `tests/weekly-smoke.spec.ts`
+  - `tests/support/config.ts`
+  - `tests/support/site.ts`
+  - `scripts/run-weekly-smoke.mjs`
+  - `README.md`
+  - `.env.example`
+  - `tsconfig.json`
+- Git: repo=qa-automation, branch=main, head=756e140
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 17:42 - prelanding-page</strong> <code>code-change</code> - Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookie...</summary>
 
 - Kind: code-change
