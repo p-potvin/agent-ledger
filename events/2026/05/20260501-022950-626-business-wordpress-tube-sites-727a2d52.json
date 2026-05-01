@@ -1,0 +1,32 @@
+{
+  "id": "20260501-022950-626-business-wordpress-tube-sites-727a2d52",
+  "createdAt": "2026-05-01T06:29:50.6261574Z",
+  "createdAtLocal": "2026-05-01 02:29",
+  "timezone": "Eastern Standard Time",
+  "project": "business WordPress tube sites",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Set up prom-king.xyz and fullxxx.video WordPress sites. Uploaded and activated a minimal shared Tube Shell theme on both domains, created shortcode-driven homepages, configured static front pages, flushed permalinks, created/verified FullXXX DMCA and 2257 pages, updated FullXXX plugin package to include missing CSS/JS assets and remote-only thumbnail fixes, updated PromKing plugin parser/enqueue/REST meta support, ran fetchers, and verified live pages. No secrets logged.",
+  "commands": [
+    "Uploaded Tube Shell theme through WordPress admin",
+    "Uploaded fixed FullXXX plugin package through WordPress admin",
+    "Uploaded fixed PromKing plugin package through WordPress admin",
+    "Ran WordPress fetchers and permalink flushes",
+    "Verified public pages with Invoke-WebRequest"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-shell-theme\\tube-shell\\style.css",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-shell-theme\\tube-shell\\functions.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\fullxxx-video-work\\fullxxx-video\\includes\\video-fetcher.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\fullxxx-video-work\\fullxxx-video\\includes\\shortcodes.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\fullxxx-video-work\\fullxxx-video\\assets\\css\\tube.css",
+    "C:\\Users\\Administrator\\Desktop\\business\\fullxxx-video-work\\fullxxx-video\\assets\\js\\tube.js",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\promking-tube.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\video-fetcher.php"
+  ],
+  "planPath": "",
+  "contentHash": "727a2d5294d83bfe0a430fd452b5901868967624e2ceaf12b77990997eddcedb",
+  "git": null
+}

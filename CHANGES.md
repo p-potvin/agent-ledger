@@ -3,6 +3,30 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-01 02:29 - business WordPress tube sites</strong> <code>code-change</code> - Set up prom-king.xyz and fullxxx.video WordPress sites. Uploaded and activated a minimal shared Tube Shell theme on both domains, created shortcode-driven homepages, configured ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Set up prom-king.xyz and fullxxx.video WordPress sites. Uploaded and activated a minimal shared Tube Shell theme on both domains, created shortcode-driven homepages, configured static front pages, flushed permalinks, created/verified FullXXX DMCA and 2257 pages, updated FullXXX plugin package to include missing CSS/JS assets and remote-only thumbnail fixes, updated PromKing plugin parser/enqueue/REST meta support, ran fetchers, and verified live pages. No secrets logged.
+- Commands:
+  - `Uploaded Tube Shell theme through WordPress admin`
+  - `Uploaded fixed FullXXX plugin package through WordPress admin`
+  - `Uploaded fixed PromKing plugin package through WordPress admin`
+  - `Ran WordPress fetchers and permalink flushes`
+  - `Verified public pages with Invoke-WebRequest`
+- Files:
+  - `C:\Users\Administrator\Desktop\business\tube-shell-theme\tube-shell\style.css`
+  - `C:\Users\Administrator\Desktop\business\tube-shell-theme\tube-shell\functions.php`
+  - `C:\Users\Administrator\Desktop\business\fullxxx-video-work\fullxxx-video\includes\video-fetcher.php`
+  - `C:\Users\Administrator\Desktop\business\fullxxx-video-work\fullxxx-video\includes\shortcodes.php`
+  - `C:\Users\Administrator\Desktop\business\fullxxx-video-work\fullxxx-video\assets\css\tube.css`
+  - `C:\Users\Administrator\Desktop\business\fullxxx-video-work\fullxxx-video\assets\js\tube.js`
+  - `C:\Users\Administrator\Desktop\business\tube-site\promking-tube\promking-tube.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\promking-tube\includes\video-fetcher.php`
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 01:56 - business</strong> <code>verification</code> - Checked whether the WordPress admin panel for prom-king.xyz is reachable. Searched the business workspace for WordPress config/admin references, found no wp-config.php and no lo...</summary>
 
 - Kind: verification
