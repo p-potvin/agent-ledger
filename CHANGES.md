@@ -3,6 +3,27 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-01 03:19 - vault-central</strong> <code>verification</code> - Expanded Firefox Playwright coverage to the full 12-test suite by replacing skipped live-site extension tests with deterministic Firefox-safe extension scenarios. The Firefox fi...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Summary: Expanded Firefox Playwright coverage to the full 12-test suite by replacing skipped live-site extension tests with deterministic Firefox-safe extension scenarios. The Firefox fixture now shares storage across pages, persists process_capture payloads, dispatches runtime messages to listeners, opens the dashboard via open_dashboard, and serves a same-origin blank test host for content-script injection. Verified the entire Firefox suite passes.
+- Commands:
+  - `npx playwright test --project=firefox --reporter=line --retries=0`
+  - `npx playwright test tests/extension.spec.ts --project=firefox --reporter=line --retries=0`
+- Files:
+  - `testing/fixture.ts`
+  - `tests/firefox-utils.ts`
+  - `tests/extension.spec.ts`
+  - `tests/capture.spec.ts`
+  - `tests/capture.test.ts`
+  - `tests/bunkr.spec.ts`
+  - `tests/pornxp.spec.ts`
+- Git: repo=vault-central, branch=main, head=cc6d354
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 02:34 - vault-central</strong> <code>code-change</code> - Fixed Firefox Playwright coverage by replacing the Firefox extension fixture path with a deterministic local dashboard harness that serves dist/, injects browser/chrome extensio...</summary>
 
 - Kind: code-change
