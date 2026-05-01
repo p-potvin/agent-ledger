@@ -3,6 +3,50 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-01 17:42 - prelanding-page</strong> <code>code-change</code> - Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookie...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookies, affiliate disclosure, DMCA, 2257), reusable legal footer/disclosure components, client-side 18+ gate for /tube and /tube/watch/:slug, tracked /r/:slug outbound offer routing on /links and tube ad/offer CTAs when active public links exist, and lead-form attribution metadata encoded into the existing message field for backend compatibility.
+- Commands:
+  - `npm run check`
+  - `npm run build`
+- Files:
+  - `client/index.html`
+  - `client/src/App.tsx`
+  - `client/src/pages/Home.tsx`
+  - `client/src/pages/LinkSharing.tsx`
+  - `client/src/pages/TubeSite.tsx`
+  - `client/src/pages/TubeWatch.tsx`
+  - `client/src/pages/LegalPage.tsx`
+  - `client/src/components/AdultAgeGate.tsx`
+  - `client/src/components/AffiliateDisclosure.tsx`
+  - `client/src/components/PublicLegalFooter.tsx`
+  - `client/src/hooks/useAdultContentGate.ts`
+  - `client/src/hooks/usePageTitle.ts`
+  - `client/src/lib/brand.ts`
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:41 - realtime-stt</strong> <code>verification</code> - Audit of TASKS.md TODO list. Fixed critical bugs: processing loop crash, stop() corruption, rolling subtitle visual duplication, and @Slot signature. Implemented dynamic AGC and...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Summary: Audit of TASKS.md TODO list. Fixed critical bugs: processing loop crash, stop() corruption, rolling subtitle visual duplication, and @Slot signature. Implemented dynamic AGC and basic unit tests.
+- Commands:
+  - `python tests/test_audio_flow.py`
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\main_app.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\gui_overlay\overlay_window.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\stt_engine\audio_capture.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\tests\test_audio_flow.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TASKS.md`
+- Git: repo=realtime-stt, branch=main, head=4c8e14b
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 17:31 - realtime-stt</strong> <code>code-change</code> - Marked all active refactoring issues as completed across TODO.md and TASKS.md.</summary>
 
 - Kind: code-change

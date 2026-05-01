@@ -26,6 +26,56 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-01 17:42 - prelanding-page</strong> <span class="kind">code-change</span> - Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookie...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookies, affiliate disclosure, DMCA, 2257), reusable legal footer/disclosure components, client-side 18+ gate for /tube and /tube/watch/:slug, tracked /r/:slug outbound offer routing on /links and tube ad/offer CTAs when active public links exist, and lead-form attribution metadata encoded into the existing message field for backend compatibility.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run check</code></li>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>client/index.html</code></li>
+        <li><code>client/src/App.tsx</code></li>
+        <li><code>client/src/pages/Home.tsx</code></li>
+        <li><code>client/src/pages/LinkSharing.tsx</code></li>
+        <li><code>client/src/pages/TubeSite.tsx</code></li>
+        <li><code>client/src/pages/TubeWatch.tsx</code></li>
+        <li><code>client/src/pages/LegalPage.tsx</code></li>
+        <li><code>client/src/components/AdultAgeGate.tsx</code></li>
+        <li><code>client/src/components/AffiliateDisclosure.tsx</code></li>
+        <li><code>client/src/components/PublicLegalFooter.tsx</code></li>
+        <li><code>client/src/hooks/useAdultContentGate.ts</code></li>
+        <li><code>client/src/hooks/usePageTitle.ts</code></li>
+        <li><code>client/src/lib/brand.ts</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 17:41 - realtime-stt</strong> <span class="kind">verification</span> - Audit of TASKS.md TODO list. Fixed critical bugs: processing loop crash, stop() corruption, rolling subtitle visual duplication, and @Slot signature. Implemented dynamic AGC and...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Audit of TASKS.md TODO list. Fixed critical bugs: processing loop crash, stop() corruption, rolling subtitle visual duplication, and @Slot signature. Implemented dynamic AGC and basic unit tests.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python tests/test_audio_flow.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\main_app.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\gui_overlay\overlay_window.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\stt_engine\audio_capture.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\tests\test_audio_flow.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TASKS.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=realtime-stt, branch=main, head=4c8e14b</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-01 17:31 - realtime-stt</strong> <span class="kind">code-change</span> - Marked all active refactoring issues as completed across TODO.md and TASKS.md.</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>

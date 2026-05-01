@@ -1,0 +1,31 @@
+﻿{
+    "id":  "20260501-174146-471-realtime-stt-da6504e6",
+    "createdAt":  "2026-05-01T21:41:46.4715986Z",
+    "createdAtLocal":  "2026-05-01 17:41",
+    "timezone":  "Eastern Standard Time",
+    "project":  "realtime-stt",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+    "summary":  "Audit of TASKS.md TODO list. Fixed critical bugs: processing loop crash, stop() corruption, rolling subtitle visual duplication, and @Slot signature. Implemented dynamic AGC and basic unit tests.",
+    "commands":  [
+                     "python tests/test_audio_flow.py"
+                 ],
+    "files":  [
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt\\main_app.py",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt\\gui_overlay\\overlay_window.py",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt\\stt_engine\\audio_capture.py",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt\\tests\\test_audio_flow.py",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt\\TASKS.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "da6504e6e6ef81109511f2e5f23679bf320b2096d55370bc84dd74809ee58ed0",
+    "git":  {
+                "repo":  "realtime-stt",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+                "branch":  "main",
+                "head":  "4c8e14b",
+                "hasChanges":  true
+            }
+}
