@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260501-155105-716-fastmcp-fb454a84",
+    "createdAt":  "2026-05-01T19:51:05.7167310Z",
+    "createdAtLocal":  "2026-05-01 15:51",
+    "timezone":  "Eastern Standard Time",
+    "project":  "fastmcp",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp",
+    "summary":  "Translating .skill YAML files into agent-readable Markdown files in the fastmcp/skills_md directory.",
+    "commands":  [
+                     "Get-ChildItem -Path skills -Filter *.skill"
+                 ],
+    "files":  [
+                  "skills/*.skill"
+              ],
+    "planPath":  "",
+    "contentHash":  "fb454a844c545e840d5752a0abf583343e53e0bb22429f58788b02b12349915d",
+    "git":  {
+                "repo":  "fastmcp",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/fastmcp",
+                "branch":  "main",
+                "head":  "ea2980f",
+                "hasChanges":  false
+            }
+}

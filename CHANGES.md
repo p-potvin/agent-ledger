@@ -3,6 +3,34 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-01 15:51 - fastmcp</strong> <code>code-change</code> - Successfully translated 40 .skill files into agent-readable Markdown files with YAML frontmatter in skills_md/.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Successfully translated 40 .skill files into agent-readable Markdown files with YAML frontmatter in skills_md/.
+- Commands:
+  - `python convert_skills.py`
+- Files:
+  - `skills_md/*.md`
+- Git: repo=fastmcp, branch=main, head=ea2980f
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 15:51 - fastmcp</strong> <code>plan</code> - Translating .skill YAML files into agent-readable Markdown files in the fastmcp/skills_md directory.</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Translating .skill YAML files into agent-readable Markdown files in the fastmcp/skills_md directory.
+- Commands:
+  - `Get-ChildItem -Path skills -Filter *.skill`
+- Files:
+  - `skills/*.skill`
+- Git: repo=fastmcp, branch=main, head=ea2980f
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 03:36 - business tube sites</strong> <code>code-change</code> - Updated Tube Shell theme and both WordPress tube plugins for prom-king.xyz and fullxxx.video. Removed header navigation while keeping the sticky brand bar, added contact footer ...</summary>
 
 - Kind: code-change
