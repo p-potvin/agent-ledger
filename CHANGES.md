@@ -3,6 +3,19 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-01 17:31 - realtime-stt</strong> <code>code-change</code> - Marked all active refactoring issues as completed across TODO.md and TASKS.md.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Marked all active refactoring issues as completed across TODO.md and TASKS.md.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TODO.md`
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TASKS.md`
+- Git: repo=realtime-stt, branch=main, head=4c8e14b
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 17:27 - realtime-stt</strong> <code>code-change</code> - Decoupled architecture: Extracted STT strategies to stt_engine/stt_strategies.py and VaultWaresGUIController to gui_overlay/gui_controller.py. Cleaned up main_app.py imports.</summary>
 
 - Kind: code-change
