@@ -3,6 +3,23 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-01 02:34 - vault-central</strong> <code>code-change</code> - Fixed Firefox Playwright coverage by replacing the Firefox extension fixture path with a deterministic local dashboard harness that serves dist/, injects browser/chrome extensio...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed Firefox Playwright coverage by replacing the Firefox extension fixture path with a deterministic local dashboard harness that serves dist/, injects browser/chrome extension API mocks, preserves legacy extensionId fixture compatibility, and skips the live topvid shortcut capture spec on Firefox where direct extension automation is not reliable. Verified with Playwright Firefox runs for dashboard.spec.ts and the full suite.
+- Commands:
+  - `npx playwright test tests/dashboard.spec.ts --project=firefox --reporter=line --retries=0`
+  - `npx playwright test --project=firefox --reporter=line --retries=0`
+  - `npx tsc -p tsconfig.json --noEmit`
+- Files:
+  - `testing/fixture.ts`
+  - `tests/capture.test.ts`
+- Git: repo=vault-central, branch=main, head=cc6d354
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 02:29 - business WordPress tube sites</strong> <code>code-change</code> - Set up prom-king.xyz and fullxxx.video WordPress sites. Uploaded and activated a minimal shared Tube Shell theme on both domains, created shortcode-driven homepages, configured ...</summary>
 
 - Kind: code-change

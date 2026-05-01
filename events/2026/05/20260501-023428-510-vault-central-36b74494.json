@@ -1,0 +1,30 @@
+{
+  "id": "20260501-023428-510-vault-central-36b74494",
+  "createdAt": "2026-05-01T06:34:28.5103912Z",
+  "createdAtLocal": "2026-05-01 02:34",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Fixed Firefox Playwright coverage by replacing the Firefox extension fixture path with a deterministic local dashboard harness that serves dist/, injects browser/chrome extension API mocks, preserves legacy extensionId fixture compatibility, and skips the live topvid shortcut capture spec on Firefox where direct extension automation is not reliable. Verified with Playwright Firefox runs for dashboard.spec.ts and the full suite.",
+  "commands": [
+    "npx playwright test tests/dashboard.spec.ts --project=firefox --reporter=line --retries=0",
+    "npx playwright test --project=firefox --reporter=line --retries=0",
+    "npx tsc -p tsconfig.json --noEmit"
+  ],
+  "files": [
+    "testing/fixture.ts",
+    "tests/capture.test.ts"
+  ],
+  "planPath": "",
+  "contentHash": "36b744945b3ad9a1b3dbcc7df7945c9fd2f2e72dcc8e8c991301dc2217498aae",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "cc6d354",
+    "hasChanges": true
+  }
+}
