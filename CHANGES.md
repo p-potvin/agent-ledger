@@ -3,6 +3,38 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-01 16:07 - General Tasks</strong> <code>code-change</code> - Finalized PowerShell scripts for local deployment as Windows Services. Added WeeklyMenu-Service. All scripts are now ready in C:\Users\Administrator\Desktop\pwsh\</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Finalized PowerShell scripts for local deployment as Windows Services. Added WeeklyMenu-Service. All scripts are now ready in C:\Users\Administrator\Desktop\pwsh\
+- Commands:
+  - `Out-File`
+- Files:
+  - `C:\Users\Administrator\Desktop\pwsh\Install-WeeklyMenu-Service.ps1`
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 16:07 - General Tasks</strong> <code>plan</code> - Identified deployable repositories (fastmcp, vault-central, realtime-stt, video-transcriber-translator, automation-suite) and generated PowerShell scripts to create Windows Serv...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Identified deployable repositories (fastmcp, vault-central, realtime-stt, video-transcriber-translator, automation-suite) and generated PowerShell scripts to create Windows Services for them using NSSM. Scripts placed in C:\Users\Administrator\Desktop\pwsh\
+- Commands:
+  - `ls`
+  - `Get-ChildItem`
+  - `Out-File`
+- Files:
+  - `C:\Users\Administrator\Desktop\pwsh\Install-FastMCP-Service.ps1`
+  - `C:\Users\Administrator\Desktop\pwsh\Install-VaultCentral-Service.ps1`
+  - `C:\Users\Administrator\Desktop\pwsh\Install-RealtimeSTT-Service.ps1`
+  - `C:\Users\Administrator\Desktop\pwsh\Install-VideoTranscriber-Service.ps1`
+  - `C:\Users\Administrator\Desktop\pwsh\Install-AutomationSuite-Service.ps1`
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 15:55 - fastmcp</strong> <code>commands</code> - Providing nssm commands to install fastmcp server as a Windows service.</summary>
 
 - Kind: commands

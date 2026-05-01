@@ -1,0 +1,21 @@
+﻿{
+    "id":  "20260501-160737-654-general-tasks-c0b55e78",
+    "createdAt":  "2026-05-01T20:07:37.6549100Z",
+    "createdAtLocal":  "2026-05-01 16:07",
+    "timezone":  "Eastern Standard Time",
+    "project":  "General Tasks",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "summary":  "Finalized PowerShell scripts for local deployment as Windows Services. Added WeeklyMenu-Service. All scripts are now ready in C:\\Users\\Administrator\\Desktop\\pwsh\\",
+    "commands":  [
+                     "Out-File"
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\Desktop\\pwsh\\Install-WeeklyMenu-Service.ps1"
+              ],
+    "planPath":  "",
+    "contentHash":  "c0b55e7801ec238aa4368c1eda3d275e537e296018cfbc418d5eddf99bf60fba",
+    "git":  null
+}
