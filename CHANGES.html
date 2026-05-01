@@ -26,6 +26,39 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-01 17:27 - realtime-stt</strong> <span class="kind">code-change</span> - Decoupled architecture: Extracted STT strategies to stt_engine/stt_strategies.py and VaultWaresGUIController to gui_overlay/gui_controller.py. Cleaned up main_app.py imports.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Decoupled architecture: Extracted STT strategies to stt_engine/stt_strategies.py and VaultWaresGUIController to gui_overlay/gui_controller.py. Cleaned up main_app.py imports.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\main_app.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\stt_engine\stt_strategies.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\gui_overlay\gui_controller.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=realtime-stt, branch=main, head=4c8e14b</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 17:24 - realtime-stt</strong> <span class="kind">code-change</span> - Autopilot completion: Extracted VaultWaresGUIController to decouple PySide6 UI logic from audio orchestration. Added robust graceful threading stop routines to RealTimeSTTApp.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Autopilot completion: Extracted VaultWaresGUIController to decouple PySide6 UI logic from audio orchestration. Added robust graceful threading stop routines to RealTimeSTTApp.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python main_app.py --help</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\main_app.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TODO.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=realtime-stt, branch=main, head=4c8e14b</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-01 17:15 - realtime-stt</strong> <span class="kind">code-change</span> - Ultrawork execution: Refactored stt engines to Strategy Pattern, replaced semaphore busy-wait with queue.Queue, converted chunk arrays to bytearrays for performance, and extract...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>

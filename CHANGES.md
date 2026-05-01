@@ -3,6 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-01 17:27 - realtime-stt</strong> <code>code-change</code> - Decoupled architecture: Extracted STT strategies to stt_engine/stt_strategies.py and VaultWaresGUIController to gui_overlay/gui_controller.py. Cleaned up main_app.py imports.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Decoupled architecture: Extracted STT strategies to stt_engine/stt_strategies.py and VaultWaresGUIController to gui_overlay/gui_controller.py. Cleaned up main_app.py imports.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\main_app.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\stt_engine\stt_strategies.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\gui_overlay\gui_controller.py`
+- Git: repo=realtime-stt, branch=main, head=4c8e14b
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:24 - realtime-stt</strong> <code>code-change</code> - Autopilot completion: Extracted VaultWaresGUIController to decouple PySide6 UI logic from audio orchestration. Added robust graceful threading stop routines to RealTimeSTTApp.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Autopilot completion: Extracted VaultWaresGUIController to decouple PySide6 UI logic from audio orchestration. Added robust graceful threading stop routines to RealTimeSTTApp.
+- Commands:
+  - `python main_app.py --help`
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\main_app.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TODO.md`
+- Git: repo=realtime-stt, branch=main, head=4c8e14b
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 17:15 - realtime-stt</strong> <code>code-change</code> - Ultrawork execution: Refactored stt engines to Strategy Pattern, replaced semaphore busy-wait with queue.Queue, converted chunk arrays to bytearrays for performance, and extract...</summary>
 
 - Kind: code-change
