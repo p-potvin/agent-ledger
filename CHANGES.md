@@ -3,6 +3,18 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-01 15:55 - fastmcp</strong> <code>commands</code> - Providing nssm commands to install fastmcp server as a Windows service.</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Summary: Providing nssm commands to install fastmcp server as a Windows service.
+- Commands:
+  - `nssm install fastmcp ...`
+- Git: repo=fastmcp, branch=main, head=3d6a9ad
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 15:51 - fastmcp</strong> <code>code-change</code> - Successfully translated 40 .skill files into agent-readable Markdown files with YAML frontmatter in skills_md/.</summary>
 
 - Kind: code-change
