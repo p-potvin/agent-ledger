@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260428-094117-957-vaultwares-cli-7a3e5369",
+    "createdAt":  "2026-04-28T13:41:17.9579333Z",
+    "createdAtLocal":  "2026-04-28 09:41",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-cli",
+    "kind":  "handoff",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-cli",
+    "summary":  "Fixed tasks not picking up by resolving regex and path issues. Agents are now correctly transitioning to RELAXING and finding TASKS.md.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "7a3e536908f373637c5329d84786c27916ff5f5ada752098ce427e761c45e91b",
+    "git":  {
+                "repo":  "vaultwares-cli",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-cli",
+                "branch":  "main",
+                "head":  "5892d01",
+                "hasChanges":  true
+            }
+}

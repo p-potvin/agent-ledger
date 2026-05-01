@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260428-010705-557-agent-ledger-6b22596c",
+    "createdAt":  "2026-04-28T05:07:05.5579898Z",
+    "createdAtLocal":  "2026-04-28 01:07",
+    "timezone":  "Eastern Standard Time",
+    "project":  "agent-ledger",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "summary":  "Verified ledger recording and rendering, added repo-local agent instructions for cloud workers in agent-ledger, and registered the AgentLedgerSync Windows scheduled task to run the sync script every five minutes.",
+    "commands":  [
+                     "record-agent-change.ps1 smoke test",
+                     "render-agent-ledger.ps1 smoke test",
+                     "setup-agent-ledger-scheduler.ps1"
+                 ],
+    "files":  [
+                  "agent-ledger/AGENTS.md",
+                  "agent-ledger/.github/copilot-instructions.md",
+                  "agent-ledger/events/2026/04/20260428-010627-414-agent-ledger-b72267df.json",
+                  "agent-ledger/CHANGES.md",
+                  "CHANGES.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "6b22596c76654609fb49efa5df4fc547636ad767dc939ffa8739a1adbd2f3468",
+    "git":  null
+}

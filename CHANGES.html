@@ -1,0 +1,1309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Ledger</title>
+  <style>
+    :root { color-scheme: light dark; font-family: "Segoe UI", system-ui, sans-serif; }
+    body { margin: 0; padding: 32px; background: Canvas; color: CanvasText; }
+    main { max-width: 1120px; margin: 0 auto; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    .meta { margin: 0 0 24px; color: color-mix(in srgb, CanvasText 68%, transparent); }
+    details { border: 1px solid color-mix(in srgb, CanvasText 16%, transparent); border-radius: 8px; margin: 10px 0; background: color-mix(in srgb, Canvas 94%, CanvasText 6%); }
+    details[open] { background: Canvas; }
+    summary { cursor: pointer; padding: 12px 14px; line-height: 1.45; }
+    summary:hover { background: color-mix(in srgb, CanvasText 7%, transparent); }
+    .entry-body { padding: 0 14px 14px 34px; }
+    .kind { font-family: Consolas, monospace; font-size: 12px; padding: 2px 6px; border-radius: 999px; background: color-mix(in srgb, CanvasText 11%, transparent); }
+    .summary { margin: 10px 0; }
+    code { font-family: Consolas, monospace; font-size: 13px; }
+    li { margin: 4px 0; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Agent Ledger</h1>
+  <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
+  <details>
+    <summary><strong>2026-05-01 17:47 - tube-site</strong> <span class="kind">code-change</span> - Implemented the FullXXX production tube plugin slice: added shared settings/helpers, canonical /r/&lt;slug&gt; redirect plumbing with optional slug map and ad-code token expansion, fe...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Implemented the FullXXX production tube plugin slice: added shared settings/helpers, canonical /r/&lt;slug&gt; redirect plumbing with optional slug map and ad-code token expansion, fetcher disabled-by-default safeguards with allowlist/cache/run-lock/logging and admin result surfaces, DMCA/legal copy fixes with conditional registration claim, and theme-wrapped archive/category/watch templates plus VideoObject/CollectionPage schema and new frontend assets.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git -C C:\Users\Administrator\Desktop\business\tube-site diff -- fullxxx-video</code></li>
+        <li><code>Get-Command php -ErrorAction SilentlyContinue</code></li>
+        <li><code>Select-String -Path C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\templates\*.php -Pattern &#39;&lt;!DOCTYPE html&gt;|&lt;html|&lt;head&gt;|&lt;body&gt;&#39;</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\fullxxx-video.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\helpers.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\admin-settings.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\video-fetcher.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\dmca.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\template-loader.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\templates\single-fxv_video.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\templates\archive-fxv_video.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\templates\taxonomy-fxv_category.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\assets\css\tube.css</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\assets\js\tube.js</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 17:44 - qa-automation</strong> <span class="kind">code-change</span> - Reworked the qa-automation Playwright suite for the Prom King monetization roadmap: replaced obsolete PropPaths specs with configurable funnel/legal/redirect/postback/age-gate/o...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Reworked the qa-automation Playwright suite for the Prom King monetization roadmap: replaced obsolete PropPaths specs with configurable funnel/legal/redirect/postback/age-gate/optional-WordPress coverage, tightened Playwright artifact capture, added env-driven weekly smoke reporting, and repaired the TypeScript/Playwright baseline so install plus test discovery succeed.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm install</code></li>
+        <li><code>npx tsc --noEmit</code></li>
+        <li><code>npm run test:list</code></li>
+        <li><code>npx playwright install chromium</code></li>
+        <li><code>npx playwright test tests/funnel.spec.ts --project=chromium -g &quot;root funnel shell&quot;</code></li>
+        <li><code>npm run report:weekly</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>package.json</code></li>
+        <li><code>playwright.config.ts</code></li>
+        <li><code>tests/funnel.spec.ts</code></li>
+        <li><code>tests/legal.spec.ts</code></li>
+        <li><code>tests/redirects.spec.ts</code></li>
+        <li><code>tests/postback.spec.ts</code></li>
+        <li><code>tests/age-gate-wordpress.spec.ts</code></li>
+        <li><code>tests/weekly-smoke.spec.ts</code></li>
+        <li><code>tests/support/config.ts</code></li>
+        <li><code>tests/support/site.ts</code></li>
+        <li><code>scripts/run-weekly-smoke.mjs</code></li>
+        <li><code>README.md</code></li>
+        <li><code>.env.example</code></li>
+        <li><code>tsconfig.json</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=qa-automation, branch=main, head=756e140</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 17:42 - prelanding-page</strong> <span class="kind">code-change</span> - Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookie...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookies, affiliate disclosure, DMCA, 2257), reusable legal footer/disclosure components, client-side 18+ gate for /tube and /tube/watch/:slug, tracked /r/:slug outbound offer routing on /links and tube ad/offer CTAs when active public links exist, and lead-form attribution metadata encoded into the existing message field for backend compatibility.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run check</code></li>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>client/index.html</code></li>
+        <li><code>client/src/App.tsx</code></li>
+        <li><code>client/src/pages/Home.tsx</code></li>
+        <li><code>client/src/pages/LinkSharing.tsx</code></li>
+        <li><code>client/src/pages/TubeSite.tsx</code></li>
+        <li><code>client/src/pages/TubeWatch.tsx</code></li>
+        <li><code>client/src/pages/LegalPage.tsx</code></li>
+        <li><code>client/src/components/AdultAgeGate.tsx</code></li>
+        <li><code>client/src/components/AffiliateDisclosure.tsx</code></li>
+        <li><code>client/src/components/PublicLegalFooter.tsx</code></li>
+        <li><code>client/src/hooks/useAdultContentGate.ts</code></li>
+        <li><code>client/src/hooks/usePageTitle.ts</code></li>
+        <li><code>client/src/lib/brand.ts</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 17:41 - realtime-stt</strong> <span class="kind">verification</span> - Audit of TASKS.md TODO list. Fixed critical bugs: processing loop crash, stop() corruption, rolling subtitle visual duplication, and @Slot signature. Implemented dynamic AGC and...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Audit of TASKS.md TODO list. Fixed critical bugs: processing loop crash, stop() corruption, rolling subtitle visual duplication, and @Slot signature. Implemented dynamic AGC and basic unit tests.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python tests/test_audio_flow.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\main_app.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\gui_overlay\overlay_window.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\stt_engine\audio_capture.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\tests\test_audio_flow.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TASKS.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=realtime-stt, branch=main, head=4c8e14b</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 17:31 - realtime-stt</strong> <span class="kind">code-change</span> - Marked all active refactoring issues as completed across TODO.md and TASKS.md.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Marked all active refactoring issues as completed across TODO.md and TASKS.md.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TODO.md</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TASKS.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=realtime-stt, branch=main, head=4c8e14b</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 17:27 - realtime-stt</strong> <span class="kind">code-change</span> - Decoupled architecture: Extracted STT strategies to stt_engine/stt_strategies.py and VaultWaresGUIController to gui_overlay/gui_controller.py. Cleaned up main_app.py imports.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Decoupled architecture: Extracted STT strategies to stt_engine/stt_strategies.py and VaultWaresGUIController to gui_overlay/gui_controller.py. Cleaned up main_app.py imports.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\main_app.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\stt_engine\stt_strategies.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\gui_overlay\gui_controller.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=realtime-stt, branch=main, head=4c8e14b</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 17:24 - realtime-stt</strong> <span class="kind">code-change</span> - Autopilot completion: Extracted VaultWaresGUIController to decouple PySide6 UI logic from audio orchestration. Added robust graceful threading stop routines to RealTimeSTTApp.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Autopilot completion: Extracted VaultWaresGUIController to decouple PySide6 UI logic from audio orchestration. Added robust graceful threading stop routines to RealTimeSTTApp.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python main_app.py --help</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\main_app.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TODO.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=realtime-stt, branch=main, head=4c8e14b</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 17:15 - realtime-stt</strong> <span class="kind">code-change</span> - Ultrawork execution: Refactored stt engines to Strategy Pattern, replaced semaphore busy-wait with queue.Queue, converted chunk arrays to bytearrays for performance, and extract...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Ultrawork execution: Refactored stt engines to Strategy Pattern, replaced semaphore busy-wait with queue.Queue, converted chunk arrays to bytearrays for performance, and extracted magic constants.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\main_app.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TODO.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=realtime-stt, branch=main, head=4c8e14b</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 17:13 - realtime-stt</strong> <span class="kind">code-change</span> - Ultrawork execution: Fixed duplicate imports, redundant variables, and implemented threading.Event replacing sleep() in processing loop.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Ultrawork execution: Fixed duplicate imports, redundant variables, and implemented threading.Event replacing sleep() in processing loop.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\main_app.py</code></li>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TODO.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=realtime-stt, branch=main, head=4c8e14b</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 17:03 - realtime-stt</strong> <span class="kind">plan</span> - Broke down deep analysis into actionable tasks in TODO.md for the manage-team workflow.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Broke down deep analysis into actionable tasks in TODO.md for the manage-team workflow.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TODO.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=realtime-stt, branch=main, head=4c8e14b</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 16:56 - realtime-stt</strong> <span class="kind">plan</span> - Conducted deep code analysis of main_app.py and identified architecture, threading, and performance improvements. Created code_analysis.md at project root.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Conducted deep code analysis of main_app.py and identified architecture, threading, and performance improvements. Created code_analysis.md at project root.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>c:\Users\Administrator\Desktop\Github Repos\realtime-stt\code_analysis.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=realtime-stt, branch=main, head=4c8e14b</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 16:07 - General Tasks</strong> <span class="kind">code-change</span> - Finalized PowerShell scripts for local deployment as Windows Services. Added WeeklyMenu-Service. All scripts are now ready in C:\Users\Administrator\Desktop\pwsh\</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Finalized PowerShell scripts for local deployment as Windows Services. Added WeeklyMenu-Service. All scripts are now ready in C:\Users\Administrator\Desktop\pwsh\</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Out-File</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\Install-WeeklyMenu-Service.ps1</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 16:07 - General Tasks</strong> <span class="kind">plan</span> - Identified deployable repositories (fastmcp, vault-central, realtime-stt, video-transcriber-translator, automation-suite) and generated PowerShell scripts to create Windows Serv...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Identified deployable repositories (fastmcp, vault-central, realtime-stt, video-transcriber-translator, automation-suite) and generated PowerShell scripts to create Windows Services for them using NSSM. Scripts placed in C:\Users\Administrator\Desktop\pwsh\</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ls</code></li>
+        <li><code>Get-ChildItem</code></li>
+        <li><code>Out-File</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\Install-FastMCP-Service.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\Install-VaultCentral-Service.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\Install-RealtimeSTT-Service.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\Install-VideoTranscriber-Service.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\Install-AutomationSuite-Service.ps1</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 15:55 - fastmcp</strong> <span class="kind">commands</span> - Providing nssm commands to install fastmcp server as a Windows service.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> commands</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Providing nssm commands to install fastmcp server as a Windows service.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>nssm install fastmcp ...</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=fastmcp, branch=main, head=3d6a9ad</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 15:51 - fastmcp</strong> <span class="kind">code-change</span> - Successfully translated 40 .skill files into agent-readable Markdown files with YAML frontmatter in skills_md/.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Successfully translated 40 .skill files into agent-readable Markdown files with YAML frontmatter in skills_md/.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python convert_skills.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>skills_md/*.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=fastmcp, branch=main, head=ea2980f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 15:51 - fastmcp</strong> <span class="kind">plan</span> - Translating .skill YAML files into agent-readable Markdown files in the fastmcp/skills_md directory.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Translating .skill YAML files into agent-readable Markdown files in the fastmcp/skills_md directory.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Get-ChildItem -Path skills -Filter *.skill</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>skills/*.skill</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=fastmcp, branch=main, head=ea2980f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 03:36 - business tube sites</strong> <span class="kind">code-change</span> - Updated Tube Shell theme and both WordPress tube plugins for prom-king.xyz and fullxxx.video. Removed header navigation while keeping the sticky brand bar, added contact footer ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Updated Tube Shell theme and both WordPress tube plugins for prom-king.xyz and fullxxx.video. Removed header navigation while keeping the sticky brand bar, added contact footer links/pages, improved UI polish, added tag/source-slug metadata scraping and REST meta registration, enabled PromKing remote animated hover previews, improved FullXXX thumbnail fallback scraping, and backfilled existing post source slugs/tags/thumbnails where available. Uploaded theme/plugin ZIPs through WP admin and verified public pages.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Compress-Archive theme and plugin zips</code></li>
+        <li><code>Upload replacement WordPress theme/plugin packages via WP admin</code></li>
+        <li><code>Authenticated REST upsert contact pages and metadata backfill</code></li>
+        <li><code>Invoke-WebRequest public page verification</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-shell-theme\tube-shell</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\promking-tube</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\fullxxx-video-work\fullxxx-video</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 03:19 - vault-central</strong> <span class="kind">verification</span> - Expanded Firefox Playwright coverage to the full 12-test suite by replacing skipped live-site extension tests with deterministic Firefox-safe extension scenarios. The Firefox fi...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Expanded Firefox Playwright coverage to the full 12-test suite by replacing skipped live-site extension tests with deterministic Firefox-safe extension scenarios. The Firefox fixture now shares storage across pages, persists process_capture payloads, dispatches runtime messages to listeners, opens the dashboard via open_dashboard, and serves a same-origin blank test host for content-script injection. Verified the entire Firefox suite passes.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npx playwright test --project=firefox --reporter=line --retries=0</code></li>
+        <li><code>npx playwright test tests/extension.spec.ts --project=firefox --reporter=line --retries=0</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>testing/fixture.ts</code></li>
+        <li><code>tests/firefox-utils.ts</code></li>
+        <li><code>tests/extension.spec.ts</code></li>
+        <li><code>tests/capture.spec.ts</code></li>
+        <li><code>tests/capture.test.ts</code></li>
+        <li><code>tests/bunkr.spec.ts</code></li>
+        <li><code>tests/pornxp.spec.ts</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=cc6d354</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 02:34 - vault-central</strong> <span class="kind">code-change</span> - Fixed Firefox Playwright coverage by replacing the Firefox extension fixture path with a deterministic local dashboard harness that serves dist/, injects browser/chrome extensio...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Fixed Firefox Playwright coverage by replacing the Firefox extension fixture path with a deterministic local dashboard harness that serves dist/, injects browser/chrome extension API mocks, preserves legacy extensionId fixture compatibility, and skips the live topvid shortcut capture spec on Firefox where direct extension automation is not reliable. Verified with Playwright Firefox runs for dashboard.spec.ts and the full suite.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npx playwright test tests/dashboard.spec.ts --project=firefox --reporter=line --retries=0</code></li>
+        <li><code>npx playwright test --project=firefox --reporter=line --retries=0</code></li>
+        <li><code>npx tsc -p tsconfig.json --noEmit</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>testing/fixture.ts</code></li>
+        <li><code>tests/capture.test.ts</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=cc6d354</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 02:29 - business WordPress tube sites</strong> <span class="kind">code-change</span> - Set up prom-king.xyz and fullxxx.video WordPress sites. Uploaded and activated a minimal shared Tube Shell theme on both domains, created shortcode-driven homepages, configured ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Set up prom-king.xyz and fullxxx.video WordPress sites. Uploaded and activated a minimal shared Tube Shell theme on both domains, created shortcode-driven homepages, configured static front pages, flushed permalinks, created/verified FullXXX DMCA and 2257 pages, updated FullXXX plugin package to include missing CSS/JS assets and remote-only thumbnail fixes, updated PromKing plugin parser/enqueue/REST meta support, ran fetchers, and verified live pages. No secrets logged.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Uploaded Tube Shell theme through WordPress admin</code></li>
+        <li><code>Uploaded fixed FullXXX plugin package through WordPress admin</code></li>
+        <li><code>Uploaded fixed PromKing plugin package through WordPress admin</code></li>
+        <li><code>Ran WordPress fetchers and permalink flushes</code></li>
+        <li><code>Verified public pages with Invoke-WebRequest</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-shell-theme\tube-shell\style.css</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-shell-theme\tube-shell\functions.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\fullxxx-video-work\fullxxx-video\includes\video-fetcher.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\fullxxx-video-work\fullxxx-video\includes\shortcodes.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\fullxxx-video-work\fullxxx-video\assets\css\tube.css</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\fullxxx-video-work\fullxxx-video\assets\js\tube.js</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\promking-tube\promking-tube.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\promking-tube\includes\video-fetcher.php</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-01 01:56 - business</strong> <span class="kind">verification</span> - Checked whether the WordPress admin panel for prom-king.xyz is reachable. Searched the business workspace for WordPress config/admin references, found no wp-config.php and no lo...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Checked whether the WordPress admin panel for prom-king.xyz is reachable. Searched the business workspace for WordPress config/admin references, found no wp-config.php and no local WordPress admin credentials. Verified https://prom-king.xyz/wp-admin/ returns 302 to wp-login.php and https://prom-king.xyz/wp-login.php returns 200.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Get-ChildItem -Recurse -Force -Filter wp-config.php</code></li>
+        <li><code>Select-String for wp-admin/wordpress references</code></li>
+        <li><code>Invoke-WebRequest https://prom-king.xyz/wp-admin/</code></li>
+        <li><code>Invoke-WebRequest https://prom-king.xyz/wp-login.php</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\qa-automation\.env.example</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\prelanding-page\.env.local</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\promking-tube\README.md</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-30 15:51 - business workspace</strong> <span class="kind">plan</span> - Familiarized with C:\Users\Administrator\Desktop\business repos for monetization planning. Mapped link-sharing, prelanding-page, qa-automation, and tube-site. Verified prelandin...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Familiarized with C:\Users\Administrator\Desktop\business repos for monetization planning. Mapped link-sharing, prelanding-page, qa-automation, and tube-site. Verified prelanding-page is the main product hub with lead capture, affiliate link CRUD/redirect tracking, tube routes/admin, Mailchimp helper, and Drizzle schema. Identified link-sharing as mostly README-only, qa-automation as Playwright support repo, and tube-site as a WordPress affiliate tube plugin with CrakRevenue ad zones and adult video fetcher. Ran npm run check and npm test in prelanding-page; both failed because node_modules is incomplete/missing packages such as vitest, @types/react, @trpc/client, wouter, and drizzle-orm. Browsed current official guidance for FTC affiliate disclosures, Stripe adult-content restrictions, Mailchimp acceptable-use risk, and CrakRevenue promotion tools before recommending monetization steps.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Get-ChildItem -Force in business workspace</code></li>
+        <li><code>git status/log across four repos</code></li>
+        <li><code>PowerShell Select-String repo monetization scan</code></li>
+        <li><code>npm run check</code></li>
+        <li><code>npm test</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\prelanding-page\package.json</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\prelanding-page\server\routers.ts</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\prelanding-page\drizzle\schema.ts</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\prelanding-page\client\src\pages\Home.tsx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\prelanding-page\client\src\pages\LinkSharing.tsx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\prelanding-page\server\mailchimp.ts</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\promking-tube\includes\video-fetcher.php</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\qa-automation\playwright.config.ts</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 17:01 - no-more-groceries</strong> <span class="kind">code-change</span> - Added local 7-day disk caching to Apify integrations in store-search.js and product-search.js to avoid excessive token costs.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Added local 7-day disk caching to Apify integrations in store-search.js and product-search.js to avoid excessive token costs.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm install node-cache</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>packages/integrations/pc-express/store-search.js</code></li>
+        <li><code>packages/integrations/pc-express/product-search.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=no-more-groceries, branch=main, head=5fefd5e</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 16:55 - no-more-groceries</strong> <span class="kind">code-change</span> - Integrated Apify for dynamically fetching Loblaws/PC Express grocery stores via Google Maps and Loblaws Actor</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Integrated Apify for dynamically fetching Loblaws/PC Express grocery stores via Google Maps and Loblaws Actor</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm i apify-client</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>packages/integrations/pc-express/store-search.js</code></li>
+        <li><code>packages/integrations/pc-express/product-search.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=no-more-groceries, branch=main, head=5fefd5e</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 16:47 - no-more-groceries</strong> <span class="kind">code-change</span> - Implement prefix-based geographic sorting for postal code store fetching in SQLite DB and PC Express integration mocks.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Implement prefix-based geographic sorting for postal code store fetching in SQLite DB and PC Express integration mocks.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>packages/db/queries.js</code></li>
+        <li><code>packages/integrations/pc-express/store-search.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=no-more-groceries, branch=main, head=5fefd5e</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 13:27 - vaultwares-cli</strong> <span class="kind">code-change</span> - Implemented TUI enhancement phase 1: (1) Replaced single-line cyan HUD with a terminal-size-aware dual-row HUD in status_bar.rs. Row 1 (dark navy) shows CLAW branding, model, pe...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Implemented TUI enhancement phase 1: (1) Replaced single-line cyan HUD with a terminal-size-aware dual-row HUD in status_bar.rs. Row 1 (dark navy) shows CLAW branding, model, permission mode with icon, abbreviated session ID, git branch and dirty status, sandbox indicator. Row 2 (slate) shows turns, message count, token I/O, cache, estimated tokens, and cost. Narrow terminals (&lt;60 cols) fall back to a single compact row. (2) Added HudAnimator struct — a background braille-spinner thread (80ms cadence, amber color) that pulses row 2 in an amber &#39;thinking…&#39; state during turns. (3) Wired HudAnimator.start/stop around run_turn in app.rs. Build remains green (0 errors).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>cargo check -p vaultwares-cli</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/app.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 13:23 - vaultwares-cli</strong> <span class="kind">plan</span> - Planning TUI enhancement phase: (1) Dual-row terminal-size-aware HUD replacing the single-line status bar, with top row showing model/session/git and bottom row showing live tok...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Planning TUI enhancement phase: (1) Dual-row terminal-size-aware HUD replacing the single-line status bar, with top row showing model/session/git and bottom row showing live token cost. (2) Animated progress indicators via a thin HudAnimator thread that pulses the cost counter during turns. (3) Clean HUD teardown on exit/compaction.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/app.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 13:15 - vaultwares-cli</strong> <span class="kind">code-change</span> - Stabilized vaultwares-cli build by replacing glob imports with explicit re-exports in main.rs. Resolved visibility (E0603), missing symbols (E0425), and type inference (E0282) e...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Stabilized vaultwares-cli build by replacing glob imports with explicit re-exports in main.rs. Resolved visibility (E0603), missing symbols (E0425), and type inference (E0282) errors. Restored accidentally deleted session management functions and standard library imports. Build is now green with zero errors.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>cargo check -p vaultwares-cli</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/app.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/session_mgr.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 12:54 - vaultwares-cli</strong> <span class="kind">code-change</span> - Consolidated STUB_COMMANDS into args.rs and removed duplicates from app.rs and tool_panel.rs. Fixed syntax errors in tool_panel.rs header.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Consolidated STUB_COMMANDS into args.rs and removed duplicates from app.rs and tool_panel.rs. Fixed syntax errors in tool_panel.rs header.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>cargo clippy</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/args.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/app.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/tool_panel.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 12:43 - vaultwares-agentciation</strong> <span class="kind">plan</span> - Expanded TASKS.md roadmap significantly with security audits, tests, QA, scaling, and GUI enhancements. Fixed unicode crashes in assign_tasks.py. Deployed the full multi-agent t...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Expanded TASKS.md roadmap significantly with security audits, tests, QA, scaling, and GUI enhancements. Fixed unicode crashes in assign_tasks.py. Deployed the full multi-agent team (Manager + Security, QA, Dev subagents) using a PowerShell script to tackle the expanded scope.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>powershell.exe -ExecutionPolicy Bypass -File .\launch_full_team.ps1</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>TASKS.md</code></li>
+        <li><code>vaultwares-agentciation/assign_tasks.py</code></li>
+        <li><code>launch_full_team.ps1</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 11:20 - no-more-groceries</strong> <span class="kind">code-change</span> - Checked off final pending ops task from TASKS.md by making stale jobs and fail refreshes visible in /api/health endpoint. Verified all roadmap tasks read &#39;done&#39;.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Checked off final pending ops task from TASKS.md by making stale jobs and fail refreshes visible in /api/health endpoint. Verified all roadmap tasks read &#39;done&#39;.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>TASKS.md</code></li>
+        <li><code>server.mjs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=no-more-groceries, branch=main, head=c734db4</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 11:01 - No More Groceries</strong> <span class="kind">code-change</span> - Fixed local DB ABI collision by routing npm run dev backend commands through the Electron VM using ELECTRON_RUN_AS_NODE=1, eliminating the need to dual-compile better-sqlite3.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Fixed local DB ABI collision by routing npm run dev backend commands through the Electron VM using ELECTRON_RUN_AS_NODE=1, eliminating the need to dual-compile better-sqlite3.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm install cross-env --save-dev</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>package.json</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=no-more-groceries, branch=main, head=c734db4</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 10:57 - vaultwares-cli</strong> <span class="kind">code-change</span> - Implemented live token counters for HUD by adding usage_callback to AnthropicRuntimeClient and tracking live usage in LiveCli. Modernized the interactive session picker with a f...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Implemented live token counters for HUD by adding usage_callback to AnthropicRuntimeClient and tracking live usage in LiveCli. Modernized the interactive session picker with a framed layout and metadata display. Defined modern color themes (Space, Neon, Catppuccin) in TerminalRenderer and wired them for dynamic selection.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/app.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/session_picker.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/render.rs</code></li>
+        <li><code>TASKS.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 10:53 - vaultwares-cli</strong> <span class="kind">plan</span> - Starting Task 3: Terminal-size-aware Status Line (HUD). Plan includes enhancing status_bar.rs to support separate input/output token counts and wiring the AnthropicRuntimeClient...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Starting Task 3: Terminal-size-aware Status Line (HUD). Plan includes enhancing status_bar.rs to support separate input/output token counts and wiring the AnthropicRuntimeClient to update the HUD during streaming.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/app.rs</code></li>
+        <li><code>TASKS.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 10:50 - vaultwares-cli</strong> <span class="kind">code-change</span> - Implemented Homomorphic Encryption (HE) proof-of-concept for encrypted token summation. Created crates/vaultwares-fhe using tfhe-rs 0.7.2. Enabled seeder_x86_64_rdseed for Windo...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Implemented Homomorphic Encryption (HE) proof-of-concept for encrypted token summation. Created crates/vaultwares-fhe using tfhe-rs 0.7.2. Enabled seeder_x86_64_rdseed for Windows compatibility. Verified homomorphic addition of encrypted u64 values.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>cargo test -p vaultwares-fhe</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-fhe/Cargo.toml</code></li>
+        <li><code>crates/vaultwares-fhe/src/lib.rs</code></li>
+        <li><code>TASKS.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 10:39 - vaultwares-cli</strong> <span class="kind">handoff</span> - Stabilized PQC implementation in pqc.rs, fixing type mismatches with fips203 SerDes trait. Validated end-to-end multi-agent pipeline using run_coordinated_system.py. Updated TAS...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> handoff</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Stabilized PQC implementation in pqc.rs, fixing type mismatches with fips203 SerDes trait. Validated end-to-end multi-agent pipeline using run_coordinated_system.py. Updated TASKS.md and PQC_GUIDELINES.md to reflect completion of Task 6 (ML-KEM integration). Created HE feasibility study.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>cargo check</code></li>
+        <li><code>python -u run_coordinated_system.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/pqc.rs</code></li>
+        <li><code>TASKS.md</code></li>
+        <li><code>PQC_GUIDELINES.md</code></li>
+        <li><code>HE_FEASIBILITY_STUDY.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 10:25 - vaultwares-cli</strong> <span class="kind">plan</span> - Starting final stabilization of PQC-secured CLI pipeline. Plan includes linting cleanup, E2E validation with run_coordinated_system.py, documentation formalization, and homomorp...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Starting final stabilization of PQC-secured CLI pipeline. Plan includes linting cleanup, E2E validation with run_coordinated_system.py, documentation formalization, and homomorphic encryption feasibility study.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/pqc.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/session_mgr.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 04:03 - vaultwares-cli</strong> <span class="kind">plan</span> - Created PQC guidelines and implemented client-side ML-KEM Key Encapsulation in pqc.rs. Registered pqc module in main.rs. Preparing for autonomous execution via run_coordinated_s...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Created PQC guidelines and implemented client-side ML-KEM Key Encapsulation in pqc.rs. Registered pqc module in main.rs. Preparing for autonomous execution via run_coordinated_system.py.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>PQC_GUIDELINES.md</code></li>
+        <li><code>crates/vaultwares-cli/src/pqc.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 02:44 - vaultwares-cli</strong> <span class="kind">plan</span> - Integrated Post-Quantum Cryptography (PQC) and Homomorphic Encryption (HE) guidelines into the TUI Enhancement Plan and TASKS.md. Defined ML-KEM as the mandatory standard for ke...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Integrated Post-Quantum Cryptography (PQC) and Homomorphic Encryption (HE) guidelines into the TUI Enhancement Plan and TASKS.md. Defined ML-KEM as the mandatory standard for key encapsulation. Initiated the multi-agent coordination system to automate the remaining phases.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python vaultwares-agentciation/run_coordinated_system.py</code></li>
+        <li><code>python vaultwares-agentciation/assign_tasks.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>TUI-ENHANCEMENT-PLAN.md</code></li>
+        <li><code>TASKS.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 02:25 - vaultwares-cli</strong> <span class="kind">code-change</span> - Decomposed the monolithic main.rs by extracting LiveCli into app.rs and parse_args into args.rs. Systematically resolved visibility issues and deduplicated redundant functions a...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Decomposed the monolithic main.rs by extracting LiveCli into app.rs and parse_args into args.rs. Systematically resolved visibility issues and deduplicated redundant functions across modules. Standardized visibility of structs and methods to pub(crate) to maintain internal access while modularizing. Restored missing session types to session_mgr.rs.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python scratch/refactor_main.py</code></li>
+        <li><code>python scratch/final_sweep.py</code></li>
+        <li><code>cargo check</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/app.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/args.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/session_mgr.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 02:12 - vaultwares-cli</strong> <span class="kind">plan</span> - Orchestrating TUI enhancement refactor: 1) Formatting TASKS.md and TUI-ENHANCEMENT-PLAN.md for consistency. 2) Initializing the multi-agent coordination system via run_coordinat...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Orchestrating TUI enhancement refactor: 1) Formatting TASKS.md and TUI-ENHANCEMENT-PLAN.md for consistency. 2) Initializing the multi-agent coordination system via run_coordinated_system.py. 3) Iteratively resolving structural weaknesses in the CLI codebase (monolith extraction, argument parsing) based on the task roadmap.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python vaultwares-agentciation/run_coordinated_system.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>TASKS.md</code></li>
+        <li><code>TUI-ENHANCEMENT-PLAN.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=f834013</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-29 02:04 - General Tasks</strong> <span class="kind">code-change</span> - Converted 20 OMX agent TOML definitions to Markdown format. Created corresponding skill directories in .gemini/skills with SKILL.md files and generated .md mirrors in .gemini/ag...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Converted 20 OMX agent TOML definitions to Markdown format. Created corresponding skill directories in .gemini/skills with SKILL.md files and generated .md mirrors in .gemini/agents. This migration enables the AI assistant to utilize these agent personas as modular skills, rules, or workflows.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python scratch/convert_agents.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\.gemini\agents\*.md</code></li>
+        <li><code>C:\Users\Administrator\.gemini\skills\*\SKILL.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=80ba342</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 17:55 - No More Groceries</strong> <span class="kind">code-change</span> - Fixed Tailwind CSS unstyled render by restoring styles.css from git, patching missing @reference ./tailwind.css for v4 compiler, and correcting user&#39;s assumption regarding vault...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Fixed Tailwind CSS unstyled render by restoring styles.css from git, patching missing @reference ./tailwind.css for v4 compiler, and correcting user&#39;s assumption regarding vaultwares database (app uses local SQLite).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git checkout styles.css</code></li>
+        <li><code>npm run electron:pack</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>styles.css</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=no-more-groceries, branch=main, head=c734db4</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 10:13 - vault-explorer</strong> <span class="kind">code-change</span> - Fixed critical ReferenceError in main.js _processFileNodes: &#39;name&#39; and &#39;baseName&#39; were used without being declared. Added const name = path.basename(res) and const baseName = pa...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Fixed critical ReferenceError in main.js _processFileNodes: &#39;name&#39; and &#39;baseName&#39; were used without being declared. Added const name = path.basename(res) and const baseName = path.basename(res, ext) after dir derivation. This fixes preview generation for all files including (n)-suffixed duplicates. Full UI overhaul in index.html: (1) Added --vault-card-bg and --vault-card-border CSS tokens; (2) Added 8 complete vault-themes preset theme definitions (vintage-velvet, cyberpunk-cinder, modern-monolith, crimson-bloom, ocean-mist, neon-void, royal-tangerine, amethyst-frost) with full CSS variable overrides including light-mode paper/text flips; (3) Added theme picker button to titlebar with palette SVG icon and -webkit-app-region:no-drag; (4) Added #theme-panel with dynamic theme swatch grid built from vaultThemes array; (5) Removed all inline styles from sorting-bar, replaced with .sorting-bar CSS class and .btn-sm utility; (6) Added applyTheme() JS function with persistence to appSettings.theme; (7) init() now calls applyTheme on startup to restore saved theme; (8) Added smooth body background/color transitions (0.45s ease).</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>main.js</code></li>
+        <li><code>index.html</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=bb481f6</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 09:41 - vaultwares-cli</strong> <span class="kind">handoff</span> - Fixed tasks not picking up by resolving regex and path issues. Agents are now correctly transitioning to RELAXING and finding TASKS.md.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> handoff</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Fixed tasks not picking up by resolving regex and path issues. Agents are now correctly transitioning to RELAXING and finding TASKS.md.</p>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=5892d01</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 09:36 - vaultwares-cli</strong> <span class="kind">verification</span> - Investigating why tasks stalled. Found that agents were in WAITING_FOR_INPUT and assign_tasks.py only looks for RELAXING. Also ensuring global ExtrovertAgent correctly updates T...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Investigating why tasks stalled. Found that agents were in WAITING_FOR_INPUT and assign_tasks.py only looks for RELAXING. Also ensuring global ExtrovertAgent correctly updates TASKS.md.</p>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=5892d01</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 09:28 - vaultwares-cli</strong> <span class="kind">code-change</span> - Renamed TODO.md to TASKS.md and reformatted it to match the pipelines standard. Updated run_coordinated_system.py to recognize TASKS.md.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Renamed TODO.md to TASKS.md and reformatted it to match the pipelines standard. Updated run_coordinated_system.py to recognize TASKS.md.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Remove-Item TODO.md</code></li>
+        <li><code>python run_coordinated_system.py</code></li>
+        <li><code>python assign_tasks.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>TASKS.md</code></li>
+        <li><code>run_coordinated_system.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=5892d01</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 09:13 - vaultwares-cli</strong> <span class="kind">commands</span> - Triggered python assign_tasks.py utilizing the updated vaultwares-pipelines architecture to distribute the TUI extraction jobs to the waiting worker cluster.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> commands</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Triggered python assign_tasks.py utilizing the updated vaultwares-pipelines architecture to distribute the TUI extraction jobs to the waiting worker cluster.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python assign_tasks.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=5892d01</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 09:00 - vaultwares-cli</strong> <span class="kind">commands</span> - Started the coordinated subagent team system and populated TODO.md with the TUI Refactoring Phase 0-1 tickets.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> commands</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Started the coordinated subagent team system and populated TODO.md with the TUI Refactoring Phase 0-1 tickets.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python run_coordinated_system.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>TODO.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=5892d01</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 08:58 - vaultwares-cli</strong> <span class="kind">plan</span> - Triggered the managed-team workflow and executed subagent communications for TUI Enhancement Plan (alternate-screen TUI, live bottom HUD, session picker, theme config, main.rs e...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Triggered the managed-team workflow and executed subagent communications for TUI Enhancement Plan (alternate-screen TUI, live bottom HUD, session picker, theme config, main.rs extraction).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>redis-server redis.conf</code></li>
+        <li><code>python manager_demo.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=5892d01</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 07:58 - vaultwares-cli</strong> <span class="kind">code-change</span> - Implemented CLI/TUI enhancement slice from TUI-ENHANCEMENT-PLAN.md: added real /search and /undo slash command variants, conversation-history search, safe originalFile-backed un...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Implemented CLI/TUI enhancement slice from TUI-ENHANCEMENT-PLAN.md: added real /search and /undo slash command variants, conversation-history search, safe originalFile-backed undo with drift checks, TTY-only pager wrapper for long reports, tool timeline footer, styled permission prompt, colored diff parity in tui module, and tests for parser/search/undo/timeline/pager/prompt behavior. Verification passed for cargo check -p vaultwares-cli --quiet, cargo test -p commands --quiet, cargo test -p vaultwares-cli --bin vaultwares-cli --quiet, resume_slash_commands, output_format_contract, diff/tool focused tests. cargo fmt --check still fails only on pre-existing unrelated formatting drift in runtime oauth and integration tests.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>cargo check -p vaultwares-cli --quiet</code></li>
+        <li><code>cargo test -p commands --quiet</code></li>
+        <li><code>cargo test -p vaultwares-cli --bin vaultwares-cli --quiet</code></li>
+        <li><code>cargo test -p vaultwares-cli --test resume_slash_commands --quiet</code></li>
+        <li><code>cargo test -p vaultwares-cli --test output_format_contract --quiet</code></li>
+        <li><code>cargo fmt --check</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/commands/src/lib.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/session_mgr.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/pager.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/diff_view.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/mod.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/tool_panel.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=4d322b2</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 07:44 - vaultwares-cli</strong> <span class="kind">verification</span> - Read-only inspection of vaultwares-cli status/HUD and renderer support. Mapped main.rs startup/run_turn, render.rs renderer/spinner/streaming, tui/status_bar.rs status formattin...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Read-only inspection of vaultwares-cli status/HUD and renderer support. Mapped main.rs startup/run_turn, render.rs renderer/spinner/streaming, tui/status_bar.rs status formatting, runtime config shape, theme plumbing, and current dirty diff. Verified cargo check and a targeted footer test pass. Conclusion: minimal safe path is width-aware status/footer helpers plus theme wiring through existing renderer/config seams, without streaming rewrites.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git status --short</code></li>
+        <li><code>git diff -- crates/vaultwares-cli/src/main.rs</code></li>
+        <li><code>git diff -- crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+        <li><code>cargo check -p vaultwares-cli --quiet</code></li>
+        <li><code>cargo test -p vaultwares-cli turn_footer_reports_elapsed_usage_and_session_context --quiet</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/render.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+        <li><code>crates/runtime/src/config.rs</code></li>
+        <li><code>crates/theme-gen/src/lib.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=4d322b2</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 07:44 - vaultwares-cli</strong> <span class="kind">handoff</span> - Read-only analysis of slash-command/parser surface for adding /search and /undo. Inspected crates/commands, crates/vaultwares-cli/src/main.rs, session/runtime structures, tool s...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> handoff</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Read-only analysis of slash-command/parser surface for adding /search and /undo. Inspected crates/commands, crates/vaultwares-cli/src/main.rs, session/runtime structures, tool surfaces, and stub/help/completion filtering. Found /search and /undo exist in shared slash-command specs but not as SlashCommand enum variants or parser arms; both are filtered as stubs in CLI/TUI. Mapped minimal safe implementation seams and required tests.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>rg -n SlashCommand /search /undo STUB_COMMANDS under crates/commands and crates/vaultwares-cli/src</code></li>
+        <li><code>Select-String on crates/runtime/src/file_ops.rs for write_file edit_file original_file old_string</code></li>
+        <li><code>Select-String on crates/runtime/src/session.rs for ToolResult tool_name output Session</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/commands/src/lib.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/session_mgr.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/tool_panel.rs</code></li>
+        <li><code>crates/runtime/src/session.rs</code></li>
+        <li><code>crates/runtime/src/file_ops.rs</code></li>
+        <li><code>crates/runtime/src/conversation.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=4d322b2</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 07:42 - vaultwares-cli</strong> <span class="kind">plan</span> - Read-only inspection of crates/vaultwares-cli TUI/report code paths. Identified duplicated diff/tool-render logic between main.rs and src/tui modules, confirmed report commands ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Read-only inspection of crates/vaultwares-cli TUI/report code paths. Identified duplicated diff/tool-render logic between main.rs and src/tui modules, confirmed report commands still print directly via print_status/print_config/print_memory/print_diff, and mapped safest implementation order for diff parity, pager wrapping, tool timeline summaries, permission prompt styling, and optional syntax-highlighted snippets with exact existing tests to preserve and new tests to add.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>rg -n tool_panel|diff_view|pager|status|config|memory|diff|permission crates/vaultwares-cli -S</code></li>
+        <li><code>Get-Content crates/vaultwares-cli/src/tui/tool_panel.rs</code></li>
+        <li><code>Get-Content crates/vaultwares-cli/src/tui/diff_view.rs</code></li>
+        <li><code>Get-Content crates/vaultwares-cli/src/render.rs</code></li>
+        <li><code>Get-Content crates/vaultwares-cli/src/main.rs | Select-Object -Skip 4700 -First 720</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/tui/tool_panel.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/diff_view.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/render.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+        <li><code>crates/vaultwares-cli/tests/resume_slash_commands.rs</code></li>
+        <li><code>crates/vaultwares-cli/tests/output_format_contract.rs</code></li>
+        <li><code>crates/vaultwares-cli/tests/mock_parity_harness.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=4d322b2</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 07:25 - vaultwares-cli</strong> <span class="kind">code-change</span> - Resumed CLI/TUI work with superpowers dispatch. Added active REPL turn footer showing model, permission mode, session id, elapsed time, token totals, and estimated cost after ea...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Resumed CLI/TUI work with superpowers dispatch. Added active REPL turn footer showing model, permission mode, session id, elapsed time, token totals, and estimated cost after each successful turn; request failures now include elapsed time. Mirrored the formatter into tui/status_bar.rs for extraction parity and added focused unit tests for turn footer and duration formatting. Verified with cargo check and targeted status/footer tests. cargo fmt --check was attempted but reports pre-existing formatting drift in unrelated files, so only touched files were rustfmt&#39;ed.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>cargo check -p vaultwares-cli --quiet</code></li>
+        <li><code>cargo test -p vaultwares-cli --bin vaultwares-cli tests::turn_footer_reports_elapsed_usage_and_session_context -- --exact</code></li>
+        <li><code>cargo test -p vaultwares-cli --bin vaultwares-cli tests::compact_duration_formats_minutes_after_sixty_seconds -- --exact</code></li>
+        <li><code>cargo test -p vaultwares-cli --bin vaultwares-cli tests::status_line_reports_model_and_token_totals -- --exact</code></li>
+        <li><code>cargo test -p vaultwares-cli --bin vaultwares-cli tests::status_context_reads_real_workspace_metadata -- --exact</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=4d322b2</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 07:21 - vaultwares-cli</strong> <span class="kind">handoff</span> - Read-only inspection of tool call and diff visualization. Reviewed crates/vaultwares-cli/src/tui/tool_panel.rs and diff_view.rs, compared them with duplicate active implementati...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> handoff</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Read-only inspection of tool call and diff visualization. Reviewed crates/vaultwares-cli/src/tui/tool_panel.rs and diff_view.rs, compared them with duplicate active implementations and tests in crates/vaultwares-cli/src/main.rs plus resume path in session_mgr.rs. Identified implemented behaviors, Phase 3/4 gaps, and a small readability-only dedupe slice.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>rg --files .</code></li>
+        <li><code>rg -n format_tool_call_start crates/vaultwares-cli/src</code></li>
+        <li><code>Get-Content TUI-ENHANCEMENT-PLAN.md</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/tui/tool_panel.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/diff_view.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/session_mgr.rs</code></li>
+        <li><code>crates/vaultwares-cli/tests/mock_parity_harness.rs</code></li>
+        <li><code>TUI-ENHANCEMENT-PLAN.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=4d322b2</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 07:20 - vaultwares-cli</strong> <span class="kind">commands</span> - Read-only inspection of the Rust crate test surface around crates/vaultwares-cli CLI/TUI modules. Mapped existing unit and integration tests relevant to status bar, tool renderi...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> commands</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Read-only inspection of the Rust crate test surface around crates/vaultwares-cli CLI/TUI modules. Mapped existing unit and integration tests relevant to status bar, tool rendering, and diff rendering. Confirmed there are no direct tests in src/tui/status_bar.rs, src/tui/tool_panel.rs, or src/tui/diff_view.rs, and identified the narrow cargo test commands in the bin crate and integration tests that verify adjacent rendering behavior without running full workspace suites.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>cargo metadata --no-deps --format-version 1</code></li>
+        <li><code>cargo test -p vaultwares-cli --bin vaultwares-cli -- --list</code></li>
+        <li><code>rg -n &#39;status_line_reports_model_and_token_totals|render_diff_report|tool_rendering|describe_tool_progress&#39; crates\\vaultwares-cli\\src\\main.rs</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/tool_panel.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/tui/diff_view.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+        <li><code>crates/vaultwares-cli/tests/cli_flags_and_config_defaults.rs</code></li>
+        <li><code>crates/vaultwares-cli/tests/resume_slash_commands.rs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=4d322b2</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 07:20 - vaultwares-cli</strong> <span class="kind">verification</span> - Read-only inspection of Rust CLI/TUI HUD status implementation. Reviewed crates/vaultwares-cli/src/tui/status_bar.rs and call sites in app.rs, main.rs, and format.rs. Determined...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Read-only inspection of Rust CLI/TUI HUD status implementation. Reviewed crates/vaultwares-cli/src/tui/status_bar.rs and call sites in app.rs, main.rs, and format.rs. Determined current implementation is snapshot/reporting oriented, not a persistent live status bar; identified remaining Phase 1 gaps and the smallest safe next implementation slice.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>rg --files -g AGENTS.md</code></li>
+        <li><code>rg -n &#39;TUI-ENHANCEMENT-PLAN|Phase 1|status bar|HUD&#39; -S .</code></li>
+        <li><code>Get-Content crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+        <li><code>Get-Content crates/vaultwares-cli/src/main.rs | Select-Object -Skip 3468 -First 26</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>crates/vaultwares-cli/src/tui/status_bar.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/app.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/main.rs</code></li>
+        <li><code>crates/vaultwares-cli/src/format.rs</code></li>
+        <li><code>TUI-ENHANCEMENT-PLAN.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-cli, branch=main, head=4d322b2</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 02:44 - agent-ledger</strong> <span class="kind">code-change</span> - Fixed the ledger sync script after manual sync hit &#39;Cannot rebase onto multiple branches&#39;. sync-agent-ledger.ps1 now fetches origin and rebases explicitly onto origin/main inste...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Fixed the ledger sync script after manual sync hit &#39;Cannot rebase onto multiple branches&#39;. sync-agent-ledger.ps1 now fetches origin and rebases explicitly onto origin/main instead of using ambiguous git pull --rebase --autostash. Also added CHANGES.html to the sync add list so the browser-ready quick-glance view is committed and pushed with the Markdown ledger.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git status --short --branch</code></li>
+        <li><code>git branch -vv</code></li>
+        <li><code>git config branch.main.merge</code></li>
+        <li><code>PowerShell parser checks for sync-agent-ledger.ps1 and render-agent-ledger.ps1</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/sync-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/CHANGES.html</code></li>
+        <li><code>CHANGES.html</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 02:42 - agent-ledger</strong> <span class="kind">code-change</span> - Added browser-ready ledger output for users who open the ledger in Firefox. render-agent-ledger.ps1 now writes CHANGES.html alongside CHANGES.md in both agent-ledger and the wor...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Added browser-ready ledger output for users who open the ledger in Firefox. render-agent-ledger.ps1 now writes CHANGES.html alongside CHANGES.md in both agent-ledger and the workspace root, using native HTML details/summary sections for clickable expand/collapse. README now documents opening C:\Users\Administrator\Desktop\Github Repos\CHANGES.html in Firefox for the quick-glance expandable view. Verified the renderer parses and generated both HTML files.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>PowerShell parser check for render-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/scripts/render-agent-ledger.ps1</code></li>
+        <li><code>Get-Content CHANGES.html -TotalCount 45</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/render-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/README.md</code></li>
+        <li><code>agent-ledger/CHANGES.html</code></li>
+        <li><code>CHANGES.html</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 02:33 - agent-ledger</strong> <span class="kind">code-change</span> - Confirmed AgentLedgerSync already auto-fetches via git pull --rebase --autostash every five minutes. Updated render-agent-ledger.ps1 so generated CHANGES.md files use clickable ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Confirmed AgentLedgerSync already auto-fetches via git pull --rebase --autostash every five minutes. Updated render-agent-ledger.ps1 so generated CHANGES.md files use clickable HTML details/summary sections: each event is visible as a compact one-line quick glance, with commands/files/full details expandable on click. Re-rendered both agent-ledger\CHANGES.md and workspace CHANGES.md and verified the sync scheduled task action and PT5M interval.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Get-ScheduledTask -TaskName AgentLedgerSync</code></li>
+        <li><code>PowerShell parser check for render-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/scripts/render-agent-ledger.ps1</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/render-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/CHANGES.md</code></li>
+        <li><code>CHANGES.md</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 02:30 - General Tasks</strong> <span class="kind">code-change</span> - Updated the PowerShell backup system from timestamped snapshots to two fixed backup slots. AutoBackup.ps1 now writes changed-source backups to Scheduled_Backups\latest\&lt;source-n...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Updated the PowerShell backup system from timestamped snapshots to two fixed backup slots. AutoBackup.ps1 now writes changed-source backups to Scheduled_Backups\latest\&lt;source-name&gt;-&lt;hash&gt; and writes a safety copy to Scheduled_Backups\daily\&lt;source-name&gt;-&lt;hash&gt; once per calendar day. Switched fixed-slot copies to robocopy /MIR so the overwritten backup reflects deletions. State now tracks lastDailyBackupDate per source. Updated CreateScheduledTask.ps1 to run every 5 minutes and re-registered the hidden wscript-based AutoDirectoryBackup task. Verified PowerShell syntax, task action, PT5M repetition interval, and sample destination paths.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>PowerShell parser checks for AutoBackup.ps1 and CreateScheduledTask.ps1</code></li>
+        <li><code>&amp; C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1</code></li>
+        <li><code>Get-ScheduledTask -TaskName AutoDirectoryBackup -TaskPath \\AutoBackup\\</code></li>
+        <li><code>Checked repetition interval PT5M and sample latest/daily paths</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\AutoBackup.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\RunAutoBackupHidden.vbs</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 02:13 - General Tasks</strong> <span class="kind">code-change</span> - Applied requested PowerShell backup changes in C:\Users\Administrator\Desktop\pwsh. Updated AutoBackup.ps1 to use collision-safe destination folder names like workflows-1F5642C9...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Applied requested PowerShell backup changes in C:\Users\Administrator\Desktop\pwsh. Updated AutoBackup.ps1 to use collision-safe destination folder names like workflows-1F5642C9 instead of preserving absolute C\Users\... paths. Added RunAutoBackupHidden.vbs to launch AutoBackup.ps1 with WScript.Shell window style 0 and wait for completion. Updated CreateScheduledTask.ps1 to generate/use the hidden VBS launcher and re-registered the AutoDirectoryBackup scheduled task to execute wscript.exe instead of PowerShell.exe directly. Verified both PowerShell scripts parse and confirmed the registered task action.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>PowerShell parser checks for AutoBackup.ps1 and CreateScheduledTask.ps1</code></li>
+        <li><code>&amp; C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1</code></li>
+        <li><code>Get-ScheduledTask -TaskName AutoDirectoryBackup -TaskPath \\AutoBackup\\</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\AutoBackup.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\CreateScheduledTask.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\pwsh\RunAutoBackupHidden.vbs</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 02:09 - General Tasks</strong> <span class="kind">general</span> - Followed up on PowerShell backup script destination layout. Explained that the previous safe path helper intentionally mirrored the absolute source path, causing nested C\Users\...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Followed up on PowerShell backup script destination layout. Explained that the previous safe path helper intentionally mirrored the absolute source path, causing nested C\Users\... folders under the timestamp. Provided replacement Get-SafeBackupPath logic that uses only the source folder leaf name, with an optional short hash suffix to prevent collisions when multiple source directories share the same final folder name.</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 01:57 - General Tasks</strong> <span class="kind">general</span> - Debugged pasted PowerShell auto-backup script. Identified undefined timestamp, JSON state loading as PSCustomObject instead of hashtable, incorrect backup destination constructi...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Debugged pasted PowerShell auto-backup script. Identified undefined timestamp, JSON state loading as PSCustomObject instead of hashtable, incorrect backup destination construction for absolute/relative paths, robocopy output being mistaken for exit code, /LOG overwriting the same log file, and interactive Read-Host prompts blocking scheduled runs. Prepared corrected script with safe destination naming, state save/load fixes, robocopy LASTEXITCODE handling, and noninteractive scheduled behavior.</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 01:07 - agent-ledger</strong> <span class="kind">verification</span> - Verified ledger recording and rendering, added repo-local agent instructions for cloud workers in agent-ledger, and registered the AgentLedgerSync Windows scheduled task to run ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Verified ledger recording and rendering, added repo-local agent instructions for cloud workers in agent-ledger, and registered the AgentLedgerSync Windows scheduled task to run the sync script every five minutes.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>record-agent-change.ps1 smoke test</code></li>
+        <li><code>render-agent-ledger.ps1 smoke test</code></li>
+        <li><code>setup-agent-ledger-scheduler.ps1</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/AGENTS.md</code></li>
+        <li><code>agent-ledger/.github/copilot-instructions.md</code></li>
+        <li><code>agent-ledger/events/2026/04/20260428-010627-414-agent-ledger-b72267df.json</code></li>
+        <li><code>agent-ledger/CHANGES.md</code></li>
+        <li><code>CHANGES.md</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-28 01:06 - agent-ledger</strong> <span class="kind">code-change</span> - Implemented the local-first agent ledger: append-only JSON event capture, generated CHANGES.md rendering, GitHub sync script, Windows scheduler helper, workspace/provider instru...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Implemented the local-first agent ledger: append-only JSON event capture, generated CHANGES.md rendering, GitHub sync script, Windows scheduler helper, workspace/provider instruction files, and global Codex/Gemini/Claude/OpenClaw instruction hooks.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>gh repo clone p-potvin/agent-ledger agent-ledger</code></li>
+        <li><code>apply_patch added ledger scripts and instruction files</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/record-agent-change.ps1</code></li>
+        <li><code>agent-ledger/scripts/render-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/scripts/sync-agent-ledger.ps1</code></li>
+        <li><code>agent-ledger/scripts/setup-agent-ledger-scheduler.ps1</code></li>
+        <li><code>agent-ledger/AGENT_LEDGER_INSTRUCTIONS.md</code></li>
+        <li><code>AGENTS.md</code></li>
+        <li><code>GEMINI.md</code></li>
+        <li><code>CLAUDE.md</code></li>
+        <li><code>.github/copilot-instructions.md</code></li>
+        <li><code>.github/instructions/agent-ledger.instructions.md</code></li>
+        <li><code>.vscode/settings.json</code></li>
+        <li><code>C:/Users/Administrator/.codex/AGENTS.md</code></li>
+        <li><code>C:/Users/Administrator/.gemini/GEMINI.md</code></li>
+        <li><code>C:/Users/Administrator/.claude/CLAUDE.md</code></li>
+        <li><code>C:/Users/Administrator/.openclaw/workspace/AGENTS.md</code></li>
+      </ul>
+    </div>
+  </details>
+</main>
+</body>
+</html>
+

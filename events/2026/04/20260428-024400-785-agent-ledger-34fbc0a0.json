@@ -1,0 +1,26 @@
+{
+  "id": "20260428-024400-785-agent-ledger-34fbc0a0",
+  "createdAt": "2026-04-28T06:44:00.7850486Z",
+  "createdAtLocal": "2026-04-28 02:44",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fixed the ledger sync script after manual sync hit 'Cannot rebase onto multiple branches'. sync-agent-ledger.ps1 now fetches origin and rebases explicitly onto origin/main instead of using ambiguous git pull --rebase --autostash. Also added CHANGES.html to the sync add list so the browser-ready quick-glance view is committed and pushed with the Markdown ledger.",
+  "commands": [
+    "git status --short --branch",
+    "git branch -vv",
+    "git config branch.main.merge",
+    "PowerShell parser checks for sync-agent-ledger.ps1 and render-agent-ledger.ps1"
+  ],
+  "files": [
+    "agent-ledger/scripts/sync-agent-ledger.ps1",
+    "agent-ledger/CHANGES.html",
+    "CHANGES.html"
+  ],
+  "planPath": "",
+  "contentHash": "34fbc0a07fb06c3d540f39f47b42b889f898c2eb01a982eef2c6d68c9635ed2e",
+  "git": null
+}

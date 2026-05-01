@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260501-172749-761-realtime-stt-e41a8edf",
+    "createdAt":  "2026-05-01T21:27:49.7616249Z",
+    "createdAtLocal":  "2026-05-01 17:27",
+    "timezone":  "Eastern Standard Time",
+    "project":  "realtime-stt",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+    "summary":  "Decoupled architecture: Extracted STT strategies to stt_engine/stt_strategies.py and VaultWaresGUIController to gui_overlay/gui_controller.py. Cleaned up main_app.py imports.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt\\main_app.py",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt\\stt_engine\\stt_strategies.py",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt\\gui_overlay\\gui_controller.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "e41a8edfdb8f02234a498bbba6ae751782101acc0e7cd1b7e2992231952ee8f7",
+    "git":  {
+                "repo":  "realtime-stt",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+                "branch":  "main",
+                "head":  "4c8e14b",
+                "hasChanges":  true
+            }
+}

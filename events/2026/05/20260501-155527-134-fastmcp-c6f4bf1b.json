@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260501-155527-134-fastmcp-c6f4bf1b",
+    "createdAt":  "2026-05-01T19:55:27.1349082Z",
+    "createdAtLocal":  "2026-05-01 15:55",
+    "timezone":  "Eastern Standard Time",
+    "project":  "fastmcp",
+    "kind":  "commands",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp",
+    "summary":  "Providing nssm commands to install fastmcp server as a Windows service.",
+    "commands":  [
+                     "nssm install fastmcp ..."
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "c6f4bf1b3748324d1c3d9cffe7d24c978de0491129f446595db8fb35970cb885",
+    "git":  {
+                "repo":  "fastmcp",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/fastmcp",
+                "branch":  "main",
+                "head":  "3d6a9ad",
+                "hasChanges":  false
+            }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "20260428-072513-429-vaultwares-cli-89dd7f45",
+  "createdAt": "2026-04-28T11:25:13.4294790Z",
+  "createdAtLocal": "2026-04-28 07:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-cli",
+  "summary": "Resumed CLI/TUI work with superpowers dispatch. Added active REPL turn footer showing model, permission mode, session id, elapsed time, token totals, and estimated cost after each successful turn; request failures now include elapsed time. Mirrored the formatter into tui/status_bar.rs for extraction parity and added focused unit tests for turn footer and duration formatting. Verified with cargo check and targeted status/footer tests. cargo fmt --check was attempted but reports pre-existing formatting drift in unrelated files, so only touched files were rustfmt'ed.",
+  "commands": [
+    "cargo check -p vaultwares-cli --quiet",
+    "cargo test -p vaultwares-cli --bin vaultwares-cli tests::turn_footer_reports_elapsed_usage_and_session_context -- --exact",
+    "cargo test -p vaultwares-cli --bin vaultwares-cli tests::compact_duration_formats_minutes_after_sixty_seconds -- --exact",
+    "cargo test -p vaultwares-cli --bin vaultwares-cli tests::status_line_reports_model_and_token_totals -- --exact",
+    "cargo test -p vaultwares-cli --bin vaultwares-cli tests::status_context_reads_real_workspace_metadata -- --exact"
+  ],
+  "files": [
+    "crates/vaultwares-cli/src/main.rs",
+    "crates/vaultwares-cli/src/tui/status_bar.rs"
+  ],
+  "planPath": "",
+  "contentHash": "89dd7f45230fda7189231e585b0dbea068b8721a5737573beead531bfecfb0a8",
+  "git": {
+    "repo": "vaultwares-cli",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-cli",
+    "branch": "main",
+    "head": "4d322b2",
+    "hasChanges": true
+  }
+}

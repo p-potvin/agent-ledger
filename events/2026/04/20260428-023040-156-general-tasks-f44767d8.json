@@ -1,0 +1,26 @@
+{
+  "id": "20260428-023040-156-general-tasks-f44767d8",
+  "createdAt": "2026-04-28T06:30:40.1561912Z",
+  "createdAtLocal": "2026-04-28 02:30",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Updated the PowerShell backup system from timestamped snapshots to two fixed backup slots. AutoBackup.ps1 now writes changed-source backups to Scheduled_Backups\\latest\\<source-name>-<hash> and writes a safety copy to Scheduled_Backups\\daily\\<source-name>-<hash> once per calendar day. Switched fixed-slot copies to robocopy /MIR so the overwritten backup reflects deletions. State now tracks lastDailyBackupDate per source. Updated CreateScheduledTask.ps1 to run every 5 minutes and re-registered the hidden wscript-based AutoDirectoryBackup task. Verified PowerShell syntax, task action, PT5M repetition interval, and sample destination paths.",
+  "commands": [
+    "PowerShell parser checks for AutoBackup.ps1 and CreateScheduledTask.ps1",
+    "& C:\\Users\\Administrator\\Desktop\\pwsh\\CreateScheduledTask.ps1",
+    "Get-ScheduledTask -TaskName AutoDirectoryBackup -TaskPath \\\\AutoBackup\\\\",
+    "Checked repetition interval PT5M and sample latest/daily paths"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\pwsh\\AutoBackup.ps1",
+    "C:\\Users\\Administrator\\Desktop\\pwsh\\CreateScheduledTask.ps1",
+    "C:\\Users\\Administrator\\Desktop\\pwsh\\RunAutoBackupHidden.vbs"
+  ],
+  "planPath": "",
+  "contentHash": "f44767d8181f711a0e004655bbb57ecb28bc10a9101bb2cd6cd1a80a6d6af42d",
+  "git": null
+}

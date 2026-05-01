@@ -1,0 +1,34 @@
+{
+  "id": "20260501-174202-413-prelanding-page-ce67cd44",
+  "createdAt": "2026-05-01T21:42:02.4135799Z",
+  "createdAtLocal": "2026-05-01 17:42",
+  "timezone": "Eastern Standard Time",
+  "project": "prelanding-page",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookies, affiliate disclosure, DMCA, 2257), reusable legal footer/disclosure components, client-side 18+ gate for /tube and /tube/watch/:slug, tracked /r/:slug outbound offer routing on /links and tube ad/offer CTAs when active public links exist, and lead-form attribution metadata encoded into the existing message field for backend compatibility.",
+  "commands": [
+    "npm run check",
+    "npm run build"
+  ],
+  "files": [
+    "client/index.html",
+    "client/src/App.tsx",
+    "client/src/pages/Home.tsx",
+    "client/src/pages/LinkSharing.tsx",
+    "client/src/pages/TubeSite.tsx",
+    "client/src/pages/TubeWatch.tsx",
+    "client/src/pages/LegalPage.tsx",
+    "client/src/components/AdultAgeGate.tsx",
+    "client/src/components/AffiliateDisclosure.tsx",
+    "client/src/components/PublicLegalFooter.tsx",
+    "client/src/hooks/useAdultContentGate.ts",
+    "client/src/hooks/usePageTitle.ts",
+    "client/src/lib/brand.ts"
+  ],
+  "planPath": "",
+  "contentHash": "ce67cd44b3317467c543107fca57ea838cc5046a3d3fb7d81838832bea5b5527",
+  "git": null
+}

@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260429-040326-146-vaultwares-cli-d2474e30",
+    "createdAt":  "2026-04-29T08:03:26.1462770Z",
+    "createdAtLocal":  "2026-04-29 04:03",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-cli",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-cli",
+    "summary":  "Created PQC guidelines and implemented client-side ML-KEM Key Encapsulation in pqc.rs. Registered pqc module in main.rs. Preparing for autonomous execution via run_coordinated_system.py.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "PQC_GUIDELINES.md",
+                  "crates/vaultwares-cli/src/pqc.rs",
+                  "crates/vaultwares-cli/src/main.rs"
+              ],
+    "planPath":  "",
+    "contentHash":  "d2474e30eca85d7f6b87815547df6d27846b2a4bdd98ad7a3fef997a996276f5",
+    "git":  {
+                "repo":  "vaultwares-cli",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-cli",
+                "branch":  "main",
+                "head":  "f834013",
+                "hasChanges":  true
+            }
+}

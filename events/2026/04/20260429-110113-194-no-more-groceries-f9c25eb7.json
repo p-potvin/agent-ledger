@@ -1,0 +1,27 @@
+{
+  "id": "20260429-110113-194-no-more-groceries-f9c25eb7",
+  "createdAt": "2026-04-29T15:01:13.1947492Z",
+  "createdAtLocal": "2026-04-29 11:01",
+  "timezone": "Eastern Standard Time",
+  "project": "No More Groceries",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\no-more-groceries",
+  "summary": "Fixed local DB ABI collision by routing npm run dev backend commands through the Electron VM using ELECTRON_RUN_AS_NODE=1, eliminating the need to dual-compile better-sqlite3.",
+  "commands": [
+    "npm install cross-env --save-dev"
+  ],
+  "files": [
+    "package.json"
+  ],
+  "planPath": "",
+  "contentHash": "f9c25eb7e206d8108061799828f1530b4310db78f8f30b11780c9792a8329c94",
+  "git": {
+    "repo": "no-more-groceries",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/no-more-groceries",
+    "branch": "main",
+    "head": "c734db4",
+    "hasChanges": true
+  }
+}

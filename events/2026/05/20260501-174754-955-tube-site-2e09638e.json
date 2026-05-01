@@ -1,0 +1,33 @@
+{
+  "id": "20260501-174754-955-tube-site-2e09638e",
+  "createdAt": "2026-05-01T21:47:54.9552777Z",
+  "createdAtLocal": "2026-05-01 17:47",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Implemented the FullXXX production tube plugin slice: added shared settings/helpers, canonical /r/<slug> redirect plumbing with optional slug map and ad-code token expansion, fetcher disabled-by-default safeguards with allowlist/cache/run-lock/logging and admin result surfaces, DMCA/legal copy fixes with conditional registration claim, and theme-wrapped archive/category/watch templates plus VideoObject/CollectionPage schema and new frontend assets.",
+  "commands": [
+    "git -C C:\\Users\\Administrator\\Desktop\\business\\tube-site diff -- fullxxx-video",
+    "Get-Command php -ErrorAction SilentlyContinue",
+    "Select-String -Path C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\templates\\*.php -Pattern '<!DOCTYPE html>|<html|<head>|<body>'"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\fullxxx-video.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\helpers.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\admin-settings.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\video-fetcher.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\dmca.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\template-loader.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\templates\\single-fxv_video.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\templates\\archive-fxv_video.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\templates\\taxonomy-fxv_category.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\assets\\css\\tube.css",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\assets\\js\\tube.js"
+  ],
+  "planPath": "",
+  "contentHash": "2e09638eb43335d507a999a9a18648cb7776731d21a47e1048e84272c6f49210",
+  "git": null
+}

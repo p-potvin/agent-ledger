@@ -1,0 +1,34 @@
+{
+  "id": "20260501-031939-042-vault-central-045ab6aa",
+  "createdAt": "2026-05-01T07:19:39.0424570Z",
+  "createdAtLocal": "2026-05-01 03:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Expanded Firefox Playwright coverage to the full 12-test suite by replacing skipped live-site extension tests with deterministic Firefox-safe extension scenarios. The Firefox fixture now shares storage across pages, persists process_capture payloads, dispatches runtime messages to listeners, opens the dashboard via open_dashboard, and serves a same-origin blank test host for content-script injection. Verified the entire Firefox suite passes.",
+  "commands": [
+    "npx playwright test --project=firefox --reporter=line --retries=0",
+    "npx playwright test tests/extension.spec.ts --project=firefox --reporter=line --retries=0"
+  ],
+  "files": [
+    "testing/fixture.ts",
+    "tests/firefox-utils.ts",
+    "tests/extension.spec.ts",
+    "tests/capture.spec.ts",
+    "tests/capture.test.ts",
+    "tests/bunkr.spec.ts",
+    "tests/pornxp.spec.ts"
+  ],
+  "planPath": "",
+  "contentHash": "045ab6aa041fa544dd60522387b8b5fda73e5e3d3a4054511217dc18918490b8",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "cc6d354",
+    "hasChanges": true
+  }
+}

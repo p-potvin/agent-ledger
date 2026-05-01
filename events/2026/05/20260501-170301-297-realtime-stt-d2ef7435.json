@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260501-170301-297-realtime-stt-d2ef7435",
+    "createdAt":  "2026-05-01T21:03:01.2978728Z",
+    "createdAtLocal":  "2026-05-01 17:03",
+    "timezone":  "Eastern Standard Time",
+    "project":  "realtime-stt",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+    "summary":  "Broke down deep analysis into actionable tasks in TODO.md for the manage-team workflow.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt\\TODO.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "d2ef7435d4c05cd5345b501c3c6ebbf68b6449191157636b80531811b4caa537",
+    "git":  {
+                "repo":  "realtime-stt",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+                "branch":  "main",
+                "head":  "4c8e14b",
+                "hasChanges":  true
+            }
+}

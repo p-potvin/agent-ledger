@@ -1,0 +1,28 @@
+﻿{
+    "id":  "20260429-020446-887-general-tasks-d64707f0",
+    "createdAt":  "2026-04-29T06:04:46.8877624Z",
+    "createdAtLocal":  "2026-04-29 02:04",
+    "timezone":  "Eastern Standard Time",
+    "project":  "General Tasks",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-cli",
+    "summary":  "Converted 20 OMX agent TOML definitions to Markdown format. Created corresponding skill directories in .gemini/skills with SKILL.md files and generated .md mirrors in .gemini/agents. This migration enables the AI assistant to utilize these agent personas as modular skills, rules, or workflows.",
+    "commands":  [
+                     "python scratch/convert_agents.py"
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\.gemini\\agents\\*.md",
+                  "C:\\Users\\Administrator\\.gemini\\skills\\*\\SKILL.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "d64707f05d582e5d8f370750ced38d10effb109ab46d29a776aced65e83c3675",
+    "git":  {
+                "repo":  "vaultwares-cli",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-cli",
+                "branch":  "main",
+                "head":  "80ba342",
+                "hasChanges":  true
+            }
+}
