@@ -3,6 +3,32 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-01 17:15 - realtime-stt</strong> <code>code-change</code> - Ultrawork execution: Refactored stt engines to Strategy Pattern, replaced semaphore busy-wait with queue.Queue, converted chunk arrays to bytearrays for performance, and extract...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Ultrawork execution: Refactored stt engines to Strategy Pattern, replaced semaphore busy-wait with queue.Queue, converted chunk arrays to bytearrays for performance, and extracted magic constants.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\main_app.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TODO.md`
+- Git: repo=realtime-stt, branch=main, head=4c8e14b
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:13 - realtime-stt</strong> <code>code-change</code> - Ultrawork execution: Fixed duplicate imports, redundant variables, and implemented threading.Event replacing sleep() in processing loop.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Ultrawork execution: Fixed duplicate imports, redundant variables, and implemented threading.Event replacing sleep() in processing loop.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\main_app.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\realtime-stt\TODO.md`
+- Git: repo=realtime-stt, branch=main, head=4c8e14b
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 17:03 - realtime-stt</strong> <code>plan</code> - Broke down deep analysis into actionable tasks in TODO.md for the manage-team workflow.</summary>
 
 - Kind: plan
