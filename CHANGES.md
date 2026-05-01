@@ -1,6 +1,31 @@
-﻿# Agent Ledger
+# Agent Ledger
 
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
+
+<details>
+<summary><strong>2026-05-01 17:47 - tube-site</strong> <code>code-change</code> - Implemented the FullXXX production tube plugin slice: added shared settings/helpers, canonical /r/&lt;slug&gt; redirect plumbing with optional slug map and ad-code token expansion, fe...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Implemented the FullXXX production tube plugin slice: added shared settings/helpers, canonical /r/<slug> redirect plumbing with optional slug map and ad-code token expansion, fetcher disabled-by-default safeguards with allowlist/cache/run-lock/logging and admin result surfaces, DMCA/legal copy fixes with conditional registration claim, and theme-wrapped archive/category/watch templates plus VideoObject/CollectionPage schema and new frontend assets.
+- Commands:
+  - `git -C C:\Users\Administrator\Desktop\business\tube-site diff -- fullxxx-video`
+  - `Get-Command php -ErrorAction SilentlyContinue`
+  - `Select-String -Path C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\templates\*.php -Pattern '<!DOCTYPE html>|<html|<head>|<body>'`
+- Files:
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\fullxxx-video.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\helpers.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\admin-settings.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\video-fetcher.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\dmca.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\template-loader.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\templates\single-fxv_video.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\templates\archive-fxv_video.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\templates\taxonomy-fxv_category.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\assets\css\tube.css`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\assets\js\tube.js`
+
+</details>
 
 <details>
 <summary><strong>2026-05-01 17:44 - qa-automation</strong> <code>code-change</code> - Reworked the qa-automation Playwright suite for the Prom King monetization roadmap: replaced obsolete PropPaths specs with configurable funnel/legal/redirect/postback/age-gate/o...</summary>
