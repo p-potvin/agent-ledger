@@ -3,6 +3,21 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-02 04:10 - vault-central</strong> <code>plan</code> - Starting to fix VaultDashboard and other build errors. Identifying files and build scripts.</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Starting to fix VaultDashboard and other build errors. Identifying files and build scripts.
+- Commands:
+  - `npm run build`
+- Files:
+  - `src/components/VaultDashboard.js`
+  - `src/components/VaultDashboard.tsx`
+- Git: repo=vault-central, branch=main, head=b075968
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 17:47 - tube-site</strong> <code>code-change</code> - Implemented the FullXXX production tube plugin slice: added shared settings/helpers, canonical /r/&lt;slug&gt; redirect plumbing with optional slug map and ad-code token expansion, fe...</summary>
 
 - Kind: code-change
