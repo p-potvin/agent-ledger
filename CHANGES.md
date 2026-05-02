@@ -3,6 +3,23 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-02 04:13 - vault-central</strong> <code>code-change</code> - Fixed critical build errors. Resolved syntax error in VaultDashboard.tsx PreviewThumb component. Removed conflicting backup/temp TS files in root. Restored missing doTabExtracti...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed critical build errors. Resolved syntax error in VaultDashboard.tsx PreviewThumb component. Removed conflicting backup/temp TS files in root. Restored missing doTabExtraction, openDashboard, and setupOffscreenDocument functions in background.ts. Fixed multiple TypeScript 'implicit any' errors.
+- Commands:
+  - `npm run build`
+- Files:
+  - `src/components/VaultDashboard.tsx`
+  - `background/scripts/background.ts`
+  - `background_backup.ts`
+  - `temp.ts`
+- Git: repo=vault-central, branch=main, head=b075968
+
+</details>
+
+<details>
 <summary><strong>2026-05-02 04:10 - vault-central</strong> <code>plan</code> - Starting to fix VaultDashboard and other build errors. Identifying files and build scripts.</summary>
 
 - Kind: plan
