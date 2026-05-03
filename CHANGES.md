@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 09:36 - vault-video-enhancer</strong> <code>code-change</code> - Updated the application logo and window icon to the gold-filled minimal logo as requested. Centralized the icon path to vault-themes/Brand/minimal-logos/vaultwares-minimal-gold-...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Updated the application logo and window icon to the gold-filled minimal logo as requested. Centralized the icon path to vault-themes/Brand/minimal-logos/vaultwares-minimal-gold-filled.png and added the necessary QIcon imports to vault_gui.py.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_gui.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 09:31 - vault-video-enhancer</strong> <code>code-change</code> - Major environment restoration: 1) Force-reinstalled PyTorch stack with CUDA 12.1 support to resolve the &#39;+cpu&#39; performance bottleneck (fixing the 4s/s vs 34s/s speed issue). 2) ...</summary>
 
 - Kind: code-change
