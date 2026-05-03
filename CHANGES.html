@@ -26,6 +26,24 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-03 06:58 - vault-video-enhancer</strong> <span class="kind">commands</span> - Identified GUI startup crash due to missing &#39;faster_whisper&#39; dependency in requirements.txt. Added faster-whisper to requirements, installed it in .venv, and successfully restar...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> commands</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Identified GUI startup crash due to missing &#39;faster_whisper&#39; dependency in requirements.txt. Added faster-whisper to requirements, installed it in .venv, and successfully restarted the GUI.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>.venv\Scripts\python -m pip install faster-whisper</code></li>
+        <li><code>Start-Process .venv\Scripts\python -ArgumentList &#39;vault_gui.py&#39;</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>requirements.txt</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-video-enhancer, branch=main, head=1694980</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-03 06:54 - vault-video-enhancer</strong> <span class="kind">commands</span> - Fixed PySide6 ModuleNotFoundError by upgrading pip and installing all dependencies from requirements.txt explicitly inside the .venv. Started the GUI using the .venv Python exec...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> commands</p>

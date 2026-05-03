@@ -3,6 +3,21 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 06:58 - vault-video-enhancer</strong> <code>commands</code> - Identified GUI startup crash due to missing &#39;faster_whisper&#39; dependency in requirements.txt. Added faster-whisper to requirements, installed it in .venv, and successfully restar...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Summary: Identified GUI startup crash due to missing 'faster_whisper' dependency in requirements.txt. Added faster-whisper to requirements, installed it in .venv, and successfully restarted the GUI.
+- Commands:
+  - `.venv\Scripts\python -m pip install faster-whisper`
+  - `Start-Process .venv\Scripts\python -ArgumentList 'vault_gui.py'`
+- Files:
+  - `requirements.txt`
+- Git: repo=vault-video-enhancer, branch=main, head=1694980
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 06:54 - vault-video-enhancer</strong> <code>commands</code> - Fixed PySide6 ModuleNotFoundError by upgrading pip and installing all dependencies from requirements.txt explicitly inside the .venv. Started the GUI using the .venv Python exec...</summary>
 
 - Kind: commands
