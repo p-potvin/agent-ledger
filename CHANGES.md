@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 04:03 - video-transcriber-translator</strong> <code>code-change</code> - Finalized GUI implementation using PySide6. The app features a native VaultWares theme (Solarized Dark base, Gold accents), multi-threaded transcription worker, and full parity ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Finalized GUI implementation using PySide6. The app features a native VaultWares theme (Solarized Dark base, Gold accents), multi-threaded transcription worker, and full parity with the CLI options. Removed previous Electron/FastAPI boilerplate to maintain a clean Python-native project.
+- Commands:
+  - `python gui.py`
+- Files:
+  - `gui.py`
+- Git: repo=video-transcriber-translator, branch=main, head=8c67c60
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 04:02 - video-transcriber-translator</strong> <code>code-change</code> - Implemented Electron + FastAPI GUI. Configured vault-themes with 3D LiquidGlass background, glassmorphism panels, and bilingual EN/FR support. Backend server gui_server.py creat...</summary>
 
 - Kind: code-change
