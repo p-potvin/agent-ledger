@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 05:41 - vault-video-enhancer</strong> <code>code-change</code> - Added vault-themes as a submodule. Updated README.md to document the use of minimal logos (V part only) for favicons or when space is limited. Specified that -ink-filled, -mono-...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Added vault-themes as a submodule. Updated README.md to document the use of minimal logos (V part only) for favicons or when space is limited. Specified that -ink-filled, -mono-filled, and gold-filled versions should be defaults.
+- Commands:
+  - `git submodule add https://github.com/p-potvin/vault-themes vault-themes`
+- Files:
+  - `README.md`
+- Git: repo=vault-video-enhancer, branch=main, head=8c67c60
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 04:57 - vault-video-enhancer</strong> <code>code-change</code> - Renamed all project files and packages to align with Vault Video Enhancer branding. Updated all internal imports, script references, and documentation. Entry points are now enha...</summary>
 
 - Kind: code-change
