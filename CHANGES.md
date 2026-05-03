@@ -3,6 +3,21 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 07:10 - vault-video-enhancer</strong> <code>code-change</code> - Added &#39;Codex Solarized Light Revisited&#39; to VaultThemeManager and set it as the default theme for all projects. Updated vault_gui.py to default to this theme at index 0.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Added 'Codex Solarized Light Revisited' to VaultThemeManager and set it as the default theme for all projects. Updated vault_gui.py to default to this theme at index 0.
+- Commands:
+  - `Start-Process .venv\Scripts\python -ArgumentList 'vault_gui.py'`
+- Files:
+  - `vault-themes\theme_manager.py`
+  - `vault_gui.py`
+- Git: repo=vault-video-enhancer, branch=main, head=1694980
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 07:04 - vault-video-enhancer</strong> <code>code-change</code> - Created qt_exporter.py in vault-themes submodule to generate PySide6 QSS from VaultTheme presets and fixed QComboBox line-height/padding issues. Updated vault_gui.py to import t...</summary>
 
 - Kind: code-change
