@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 10:19 - vault-video-enhancer</strong> <code>code-change</code> - Corrected model selection: Switched default ASR engine to &#39;nvidia/parakeet-tdt-0.6b-v3&#39;. This model provides the best of both worlds: the multi-lingual support (25 European lang...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Corrected model selection: Switched default ASR engine to 'nvidia/parakeet-tdt-0.6b-v3'. This model provides the best of both worlds: the multi-lingual support (25 European languages) requested by the user and the superior timestamp accuracy of the TDT (Token Duration Training) decoder.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 10:15 - vault-video-enhancer</strong> <code>code-change</code> - Upgraded ASR engine and progress tracking: 1) Switched default model to &#39;nvidia/parakeet-ctc-0.6b-v3&#39; for multi-lingual support (English-only Parakeet-TDT removed). 2) Implement...</summary>
 
 - Kind: code-change
