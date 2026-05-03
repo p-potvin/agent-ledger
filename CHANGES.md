@@ -3,6 +3,18 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 14:31 - vault-video-enhancer</strong> <code>code-change</code> - Optimized NVENC encoding in media.py to recover ~20x RTX speed. Three changes: 1) p7-&gt;p6 (skips the slowest sub-pixel motion-estimation pass, near-zero perceptual difference). 2...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Optimized NVENC encoding in media.py to recover ~20x RTX speed. Three changes: 1) p7->p6 (skips the slowest sub-pixel motion-estimation pass, near-zero perceptual difference). 2) Removed -tune hq (disables spatial_aq and temporal_aq lookahead that was stalling the GPU pipeline). 3) -rc vbr -cq -> -rc constqp -qp (same perceptual quality as CQ mode but no variable bitrate overhead). Updated CPU fallback arg removal list to match.
+- Files:
+  - `vault_enhancer\media.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 14:26 - vault-video-enhancer</strong> <code>code-change</code> - Fixed Lhotse audio backend name. The API does not use friendly aliases — KNOWN_BACKENDS is keyed by full class names. Corrected &#39;soundfile&#39; to &#39;LibsndfileBackend&#39;, which is the ...</summary>
 
 - Kind: code-change
