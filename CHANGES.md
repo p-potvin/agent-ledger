@@ -3,6 +3,23 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 12:07 - vault-video-enhancer</strong> <code>code-change</code> - Major theme system and UI overhaul. 1) Expanded VaultTheme dataclass from 5 fields to 19 fully semantic color tokens: primary, surface, surface_alt, accent, accent_muted, text, ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Major theme system and UI overhaul. 1) Expanded VaultTheme dataclass from 5 fields to 19 fully semantic color tokens: primary, surface, surface_alt, accent, accent_muted, text, text_muted, text_inverse, border, error, error_bg, warning, warning_bg, success, success_bg, info, info_bg, muted. 2) All 10 themes redesigned using color theory (analogous/complementary) with unique, harmonious semantic palettes. 3) qt_exporter.py QSS fully rewritten with 3-tier surface hierarchy, semantic banner frames (ErrorBanner/WarningBanner/SuccessBanner/InfoBanner), styled scrollbars, tooltips, disabled states, and DangerBtn. 4) vault_gui.py restructured with status badge, separate progress label, color-coded log output, and improved layout. 5) AGENTS.md fully rewritten to document all 19 tokens, minimal-logos directory, Qt QSS usage rules, and color harmony guidelines for new themes.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault-themes\theme_manager.py`
+  - `vault-themes\qt_exporter.py`
+  - `vault-themes\AGENTS.md`
+  - `vault_gui.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 11:56 - vault-video-enhancer</strong> <code>code-change</code> - Finalized logging, progress indicators, and default SRT generation. 1) Updated core.py to unconditionally output a &#39;.en.srt&#39; file alongside the original &#39;.srt&#39; file, serving as ...</summary>
 
 - Kind: code-change
