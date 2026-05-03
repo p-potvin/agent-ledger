@@ -3,6 +3,23 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 08:09 - vault-video-enhancer</strong> <code>code-change</code> - Added semantic color fields (error, success, muted) to VaultTheme and updated all presets with theme-specific matching colors. Updated vault-themes/README.md with minimal logo/f...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Added semantic color fields (error, success, muted) to VaultTheme and updated all presets with theme-specific matching colors. Updated vault-themes/README.md with minimal logo/favicon documentation. Fixed GUI logo resizing by applying smooth scaling to the 25x25 minimal icon.
+- Commands:
+  - `Start-Process .venv\Scripts\python -ArgumentList 'vault_gui.py'`
+- Files:
+  - `vault-themes\theme_manager.py`
+  - `vault-themes\qt_exporter.py`
+  - `vault_gui.py`
+  - `vault-themes\README.md`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 07:41 - vault-video-enhancer</strong> <code>code-change</code> - Added Audio Delay (ms) input to the GUI and wired it through the transcription pipeline to the fix_audio_and_reencode function. Reverted panel padding in the QSS to resolve alig...</summary>
 
 - Kind: code-change
