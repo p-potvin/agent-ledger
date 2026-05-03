@@ -3,6 +3,21 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 11:11 - vault-video-enhancer</strong> <code>code-change</code> - Bypassed the buggy torchaudio FFmpeg extension entirely. Added a new &#39;extract_wav_for_asr&#39; helper in media.py that extracts a 16kHz mono WAV file from the video right before tra...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Bypassed the buggy torchaudio FFmpeg extension entirely. Added a new 'extract_wav_for_asr' helper in media.py that extracts a 16kHz mono WAV file from the video right before transcription. Updated core.py to feed this WAV file to the Parakeet model. This forces Lhotse to use its highly stable, built-in 'soundfile' backend, ensuring the pipeline never crashes due to Windows DLL load failures again.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\media.py`
+  - `vault_enhancer\core.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 11:04 - vault-video-enhancer</strong> <code>code-change</code> - Resolved torio FFmpeg DLL loading error on Windows. The winget installation of FFmpeg puts a shim in the PATH, but Python 3.8+ does not search the PATH for DLLs by default (secu...</summary>
 
 - Kind: code-change

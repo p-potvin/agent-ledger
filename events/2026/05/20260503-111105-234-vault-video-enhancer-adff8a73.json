@@ -1,0 +1,28 @@
+﻿{
+    "id":  "20260503-111105-234-vault-video-enhancer-adff8a73",
+    "createdAt":  "2026-05-03T15:11:05.2344797Z",
+    "createdAtLocal":  "2026-05-03 11:11",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Bypassed the buggy torchaudio FFmpeg extension entirely. Added a new \u0027extract_wav_for_asr\u0027 helper in media.py that extracts a 16kHz mono WAV file from the video right before transcription. Updated core.py to feed this WAV file to the Parakeet model. This forces Lhotse to use its highly stable, built-in \u0027soundfile\u0027 backend, ensuring the pipeline never crashes due to Windows DLL load failures again.",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_enhancer\\media.py",
+                  "vault_enhancer\\core.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "adff8a730b01a58233acd29aad6f48c5b2d9e4e2eb8537373906206cf1512580",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}
