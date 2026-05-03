@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 10:05 - vault-video-enhancer</strong> <code>code-change</code> - Resolved FFmpeg version mismatch: Downgraded system FFmpeg from 8.x to 6.1.1. Current torchaudio/torio builds on Windows only support FFmpeg versions 4, 5, and 6. Verified that ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Resolved FFmpeg version mismatch: Downgraded system FFmpeg from 8.x to 6.1.1. Current torchaudio/torio builds on Windows only support FFmpeg versions 4, 5, and 6. Verified that libavcodec 60 (FFmpeg 6) is now active, ensuring stability for both Demucs and NeMo media loaders.
+- Commands:
+  - `winget install Gyan.FFmpeg --version 6.1.1 --force`
+- Files:
+  - `system`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 09:53 - vault-video-enhancer</strong> <code>code-change</code> - Enhanced GUI observability and pipeline transparency: 1) Implemented thread-safe stdout/stderr redirection to the GUI Activity Monitor using a LogStream proxy. 2) Added granular...</summary>
 
 - Kind: code-change

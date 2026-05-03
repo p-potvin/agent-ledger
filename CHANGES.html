@@ -26,6 +26,23 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-03 10:05 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Resolved FFmpeg version mismatch: Downgraded system FFmpeg from 8.x to 6.1.1. Current torchaudio/torio builds on Windows only support FFmpeg versions 4, 5, and 6. Verified that ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Resolved FFmpeg version mismatch: Downgraded system FFmpeg from 8.x to 6.1.1. Current torchaudio/torio builds on Windows only support FFmpeg versions 4, 5, and 6. Verified that libavcodec 60 (FFmpeg 6) is now active, ensuring stability for both Demucs and NeMo media loaders.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>winget install Gyan.FFmpeg --version 6.1.1 --force</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>system</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-video-enhancer, branch=main, head=39d2f85</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-03 09:53 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Enhanced GUI observability and pipeline transparency: 1) Implemented thread-safe stdout/stderr redirection to the GUI Activity Monitor using a LogStream proxy. 2) Added granular...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
