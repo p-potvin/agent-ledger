@@ -3,6 +3,21 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 08:43 - vault-video-enhancer</strong> <code>code-change</code> - Enabled unbuffered startup logs and inserted granular DEBUG checkpoints at app entry, worker startup, and pipeline entry. This allows us to track exactly where the hang or crash...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Enabled unbuffered startup logs and inserted granular DEBUG checkpoints at app entry, worker startup, and pipeline entry. This allows us to track exactly where the hang or crash occurs during the execution flow, even if the GUI becomes unresponsive.
+- Commands:
+  - `python -u vault_gui.py`
+- Files:
+  - `vault_gui.py`
+  - `vault_enhancer\core.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 08:37 - vault-video-enhancer</strong> <code>code-change</code> - Deferred model initialization in core.py. Heavy imports (NeMo, Whisper) are now performed only when needed in Step 2, allowing Step 1 (Audio Fix/Demucs) to run independently. Th...</summary>
 
 - Kind: code-change

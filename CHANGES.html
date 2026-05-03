@@ -26,6 +26,24 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-03 08:43 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Enabled unbuffered startup logs and inserted granular DEBUG checkpoints at app entry, worker startup, and pipeline entry. This allows us to track exactly where the hang or crash...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Enabled unbuffered startup logs and inserted granular DEBUG checkpoints at app entry, worker startup, and pipeline entry. This allows us to track exactly where the hang or crash occurs during the execution flow, even if the GUI becomes unresponsive.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python -u vault_gui.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault_gui.py</code></li>
+        <li><code>vault_enhancer\core.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-video-enhancer, branch=main, head=39d2f85</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-03 08:37 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Deferred model initialization in core.py. Heavy imports (NeMo, Whisper) are now performed only when needed in Step 2, allowing Step 1 (Audio Fix/Demucs) to run independently. Th...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
