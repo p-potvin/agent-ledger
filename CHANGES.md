@@ -3,6 +3,22 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 09:02 - vault-video-enhancer</strong> <code>code-change</code> - Resolved 3 critical pipeline failures: 1) Installed &#39;torchcodec&#39; to fix Demucs HTDemucs saving errors in Step 1. 2) Reverted transcription model to &#39;nvidia/parakeet-tdt-1.1b&#39; be...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Resolved 3 critical pipeline failures: 1) Installed 'torchcodec' to fix Demucs HTDemucs saving errors in Step 1. 2) Reverted transcription model to 'nvidia/parakeet-tdt-1.1b' because 'canary-1b' lacks standard timestamp support for the SRT pipeline. 3) Cleaned up debug instrumentation and re-silenced logs for production use. The system is now stabilized for end-to-end video enhancement on Windows.
+- Commands:
+  - `pip3 install torchcodec hf_xet`
+- Files:
+  - `vault_enhancer\core.py`
+  - `vault_gui.py`
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 08:43 - vault-video-enhancer</strong> <code>code-change</code> - Enabled unbuffered startup logs and inserted granular DEBUG checkpoints at app entry, worker startup, and pipeline entry. This allows us to track exactly where the hang or crash...</summary>
 
 - Kind: code-change
