@@ -3,6 +3,22 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 10:15 - vault-video-enhancer</strong> <code>code-change</code> - Upgraded ASR engine and progress tracking: 1) Switched default model to &#39;nvidia/parakeet-ctc-0.6b-v3&#39; for multi-lingual support (English-only Parakeet-TDT removed). 2) Implement...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Upgraded ASR engine and progress tracking: 1) Switched default model to 'nvidia/parakeet-ctc-0.6b-v3' for multi-lingual support (English-only Parakeet-TDT removed). 2) Implemented live stderr parsing for Demucs to provide a real-time percentage in the GUI progress bar (mapped to 10-45% range). 3) Added a 5% initial progress pulse to confirm pipeline start. 4) Verified CTC timestamp extraction logic remains compatible.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+  - `vault_enhancer\media.py`
+  - `vault_enhancer\core.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 10:12 - vault-video-enhancer</strong> <code>code-change</code> - Restored Lhotse auto-detection for audio backends. Removed the hardcoded &#39;ffmpeg&#39; backend override which was incompatible with the current Lhotse version. Now that FFmpeg 6.1.1 ...</summary>
 
 - Kind: code-change
