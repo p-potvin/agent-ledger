@@ -26,6 +26,19 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-03 14:47 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Replaced double loudnorm filters with dynaudnorm to eliminate NVENC audio pipeline stall. loudnorm uses buffered look-ahead analysis that prevented FFmpeg from delivering audio ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Replaced double loudnorm filters with dynaudnorm to eliminate NVENC audio pipeline stall. loudnorm uses buffered look-ahead analysis that prevented FFmpeg from delivering audio frames at the rate NVENC expects, dropping encoding speed from ~20x to 9x RTX and the total pipeline to 5x RTX. dynaudnorm (f=250 frame window, g=31 Gaussian smoothing, p=0.95 peak target, m=100 max gain) is a fully streaming normalizer with zero lookahead, allowing NVENC to run at full hardware throughput.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault_enhancer\media.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-video-enhancer, branch=main, head=39d2f85</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-03 14:31 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Optimized NVENC encoding in media.py to recover ~20x RTX speed. Three changes: 1) p7-&gt;p6 (skips the slowest sub-pixel motion-estimation pass, near-zero perceptual difference). 2...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
