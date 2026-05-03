@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 05:56 - vault-video-enhancer</strong> <code>commands</code> - Updated global agent rule at &#39;C:\Users\Administrator\.gemini\rules\build-and-start.md&#39; to specify that GUIs (Electron, Win native, PySide) must be started visibly, while backgro...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Summary: Updated global agent rule at 'C:\Users\Administrator\.gemini\rules\build-and-start.md' to specify that GUIs (Electron, Win native, PySide) must be started visibly, while background servers/APIs remain hidden. Added instruction to adapt startup routines to the current project's context. Restarted vault_gui.py visibly.
+- Commands:
+  - `Start-Process python -ArgumentList 'vault_gui.py'`
+- Files:
+  - `C:\Users\Administrator\.gemini\rules\build-and-start.md`
+- Git: repo=vault-video-enhancer, branch=main, head=1694980
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 05:50 - vault-video-enhancer</strong> <code>commands</code> - Added global agent rule to &#39;C:\Users\Administrator\.gemini\rules\build-and-start.md&#39; ensuring all agents automatically build and start the project/UI quietly after changes. Init...</summary>
 
 - Kind: commands

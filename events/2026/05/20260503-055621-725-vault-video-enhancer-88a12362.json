@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-055621-725-vault-video-enhancer-88a12362",
+    "createdAt":  "2026-05-03T09:56:21.7252725Z",
+    "createdAtLocal":  "2026-05-03 05:56",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "commands",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Updated global agent rule at \u0027C:\\Users\\Administrator\\.gemini\\rules\\build-and-start.md\u0027 to specify that GUIs (Electron, Win native, PySide) must be started visibly, while background servers/APIs remain hidden. Added instruction to adapt startup routines to the current project\u0027s context. Restarted vault_gui.py visibly.",
+    "commands":  [
+                     "Start-Process python -ArgumentList \u0027vault_gui.py\u0027"
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\.gemini\\rules\\build-and-start.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "88a1236216598402c1133f3caee681e403ef8c5ae32eb0bc1d69653a788a4e31",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "1694980",
+                "hasChanges":  false
+            }
+}
