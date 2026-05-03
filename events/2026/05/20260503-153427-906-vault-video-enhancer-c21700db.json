@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-153427-906-vault-video-enhancer-c21700db",
+    "createdAt":  "2026-05-03T19:34:27.9060776Z",
+    "createdAtLocal":  "2026-05-03 15:34",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Added max_chars hard-split post-processing to parakeet_wrapper.py. After silence-based segmentation, any segment exceeding 180 characters is split at word boundaries via the new _split_long_segments method. The splitter prefers to break at sentence-ending punctuation (. ! ? , ;) within the last 5 words before the limit. Timestamps for sub-segments are distributed proportionally by character count from the parent segment\u0027s start/end.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "c21700dbe0e4922c532edb84491e48a61c8f50e3c677c3184eab63e89f951255",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

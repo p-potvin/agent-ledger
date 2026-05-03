@@ -3,6 +3,18 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 15:34 - vault-video-enhancer</strong> <code>code-change</code> - Added max_chars hard-split post-processing to parakeet_wrapper.py. After silence-based segmentation, any segment exceeding 180 characters is split at word boundaries via the new...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Added max_chars hard-split post-processing to parakeet_wrapper.py. After silence-based segmentation, any segment exceeding 180 characters is split at word boundaries via the new _split_long_segments method. The splitter prefers to break at sentence-ending punctuation (. ! ? , ;) within the last 5 words before the limit. Timestamps for sub-segments are distributed proportionally by character count from the parent segment's start/end.
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 15:10 - vault-video-enhancer</strong> <code>code-change</code> - Pre-warm the Parakeet ASR model before Demucs starts in core.py. Previously the model loaded AFTER Demucs finished, creating a dead-GPU gap (VRAM swap) visible as a drop in GPU ...</summary>
 
 - Kind: code-change
