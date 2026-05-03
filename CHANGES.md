@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 10:59 - vault-video-enhancer</strong> <code>code-change</code> - Enabled global DEBUG logging for torchaudio, torio, and NeMo. This is intended to diagnose why the FFmpeg 6.1.1 extension is failing to initialize despite being installed. The G...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Enabled global DEBUG logging for torchaudio, torio, and NeMo. This is intended to diagnose why the FFmpeg 6.1.1 extension is failing to initialize despite being installed. The GUI Activity Monitor will now display the full stack trace and DLL loading attempts from torio.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 10:56 - vault-video-enhancer</strong> <code>code-change</code> - Fixed a NameError in the media pipeline: Relocated the run_command_with_progress definition to the top of the function to ensure it is defined before its first use by Demucs. Al...</summary>
 
 - Kind: code-change
