@@ -26,6 +26,24 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-03 07:36 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Integrated fixaudio pre-processing logic. Replaced legacy Demucs/normalization functions in media.py with fix_audio_and_reencode that runs demucs then ffmpeg to isolate vocals, ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Integrated fixaudio pre-processing logic. Replaced legacy Demucs/normalization functions in media.py with fix_audio_and_reencode that runs demucs then ffmpeg to isolate vocals, normalize, mix and re-encode to h264_nvenc. Updated core.py to run this as Step 1 before transcription.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Start-Process .venv\Scripts\python -ArgumentList &#39;vault_gui.py&#39;</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault_enhancer\media.py</code></li>
+        <li><code>vault_enhancer\core.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-video-enhancer, branch=main, head=39d2f85</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-03 07:15 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Cleaned up hardcoded theme tokens from vault_gui.py and moved styling logic entirely to vault-themes/qt_exporter.py. Fixed UI alignment issues: increased spacing in pipeline con...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>

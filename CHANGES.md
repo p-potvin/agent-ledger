@@ -3,6 +3,21 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 07:36 - vault-video-enhancer</strong> <code>code-change</code> - Integrated fixaudio pre-processing logic. Replaced legacy Demucs/normalization functions in media.py with fix_audio_and_reencode that runs demucs then ffmpeg to isolate vocals, ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Integrated fixaudio pre-processing logic. Replaced legacy Demucs/normalization functions in media.py with fix_audio_and_reencode that runs demucs then ffmpeg to isolate vocals, normalize, mix and re-encode to h264_nvenc. Updated core.py to run this as Step 1 before transcription.
+- Commands:
+  - `Start-Process .venv\Scripts\python -ArgumentList 'vault_gui.py'`
+- Files:
+  - `vault_enhancer\media.py`
+  - `vault_enhancer\core.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 07:15 - vault-video-enhancer</strong> <code>code-change</code> - Cleaned up hardcoded theme tokens from vault_gui.py and moved styling logic entirely to vault-themes/qt_exporter.py. Fixed UI alignment issues: increased spacing in pipeline con...</summary>
 
 - Kind: code-change
