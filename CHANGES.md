@@ -3,6 +3,36 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 08:26 - vault-video-enhancer</strong> <code>code-change</code> - Diagnosing UI crash. Removed Halo decorators (problematic in GUIs), added stabilization environment variables for Torch on Windows (KMP_DUPLICATE_LIB_OK, OMP_NUM_THREADS=1), and...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Diagnosing UI crash. Removed Halo decorators (problematic in GUIs), added stabilization environment variables for Torch on Windows (KMP_DUPLICATE_LIB_OK, OMP_NUM_THREADS=1), and enhanced TranscriptionWorker error handling with traceback logging to capture silent failures.
+- Commands:
+  - `Start-Process .venv\Scripts\python -ArgumentList 'vault_gui.py'`
+- Files:
+  - `vault_gui.py`
+  - `vault_enhancer\core.py`
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
+<summary><strong>2026-05-03 08:23 - vault-video-enhancer</strong> <code>code-change</code> - Suppressed noisy NeMo, PyTorch, and Megatron startup warnings in parakeet_wrapper.py. Set NEMO_LOGGING_LEVEL to ERROR and disabled torch warnings to prevent console clutter duri...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Suppressed noisy NeMo, PyTorch, and Megatron startup warnings in parakeet_wrapper.py. Set NEMO_LOGGING_LEVEL to ERROR and disabled torch warnings to prevent console clutter during model initialization. This ensures the UI log remains clean while the 1B+ parameter model loads into VRAM.
+- Commands:
+  - `Start-Process .venv\Scripts\python -ArgumentList 'vault_gui.py'`
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 08:21 - vault-video-enhancer</strong> <code>code-change</code> - Integrated max_duration parameter into the fix_audio_and_reencode pipeline. Passed the user-defined max_duration from the GUI through core.py to media.py, ensuring re-encoding a...</summary>
 
 - Kind: code-change
