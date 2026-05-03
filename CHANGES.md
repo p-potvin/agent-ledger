@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 05:50 - vault-video-enhancer</strong> <code>commands</code> - Added global agent rule to &#39;C:\Users\Administrator\.gemini\rules\build-and-start.md&#39; ensuring all agents automatically build and start the project/UI quietly after changes. Init...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Summary: Added global agent rule to 'C:\Users\Administrator\.gemini\rules\build-and-start.md' ensuring all agents automatically build and start the project/UI quietly after changes. Initiated vault_gui.py silently.
+- Commands:
+  - `Start-Process python -ArgumentList 'vault_gui.py' -WindowStyle Hidden`
+- Files:
+  - `C:\Users\Administrator\.gemini\rules\build-and-start.md`
+- Git: repo=vault-video-enhancer, branch=main, head=1694980
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 05:41 - vault-video-enhancer</strong> <code>code-change</code> - Added vault-themes as a submodule. Updated README.md to document the use of minimal logos (V part only) for favicons or when space is limited. Specified that -ink-filled, -mono-...</summary>
 
 - Kind: code-change
