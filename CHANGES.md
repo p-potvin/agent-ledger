@@ -3,6 +3,21 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 07:04 - vault-video-enhancer</strong> <code>code-change</code> - Created qt_exporter.py in vault-themes submodule to generate PySide6 QSS from VaultTheme presets and fixed QComboBox line-height/padding issues. Updated vault_gui.py to import t...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Created qt_exporter.py in vault-themes submodule to generate PySide6 QSS from VaultTheme presets and fixed QComboBox line-height/padding issues. Updated vault_gui.py to import the exporter, added a Theme Picker dropdown to the header, and replaced static styling with dynamic theme generation.
+- Commands:
+  - `Start-Process .venv\Scripts\python -ArgumentList 'vault_gui.py'`
+- Files:
+  - `vault-themes\qt_exporter.py`
+  - `vault_gui.py`
+- Git: repo=vault-video-enhancer, branch=main, head=1694980
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 06:58 - vault-video-enhancer</strong> <code>commands</code> - Identified GUI startup crash due to missing &#39;faster_whisper&#39; dependency in requirements.txt. Added faster-whisper to requirements, installed it in .venv, and successfully restar...</summary>
 
 - Kind: commands
