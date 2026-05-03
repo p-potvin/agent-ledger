@@ -3,6 +3,18 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 14:26 - vault-video-enhancer</strong> <code>code-change</code> - Fixed Lhotse audio backend name. The API does not use friendly aliases — KNOWN_BACKENDS is keyed by full class names. Corrected &#39;soundfile&#39; to &#39;LibsndfileBackend&#39;, which is the ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed Lhotse audio backend name. The API does not use friendly aliases — KNOWN_BACKENDS is keyed by full class names. Corrected 'soundfile' to 'LibsndfileBackend', which is the registered key for the libsndfile (soundfile) reader that handles WAV files natively without the FFmpeg C++ extension.
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 12:07 - vault-video-enhancer</strong> <code>code-change</code> - Major theme system and UI overhaul. 1) Expanded VaultTheme dataclass from 5 fields to 19 fully semantic color tokens: primary, surface, surface_alt, accent, accent_muted, text, ...</summary>
 
 - Kind: code-change
