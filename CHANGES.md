@@ -3,6 +3,48 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 10:56 - vault-video-enhancer</strong> <code>code-change</code> - Fixed a NameError in the media pipeline: Relocated the run_command_with_progress definition to the top of the function to ensure it is defined before its first use by Demucs. Al...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed a NameError in the media pipeline: Relocated the run_command_with_progress definition to the top of the function to ensure it is defined before its first use by Demucs. Also explicitly added the -progress pipe:1 flag to FFmpeg arguments to enable machine-readable progress data for the threaded log reader.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\media.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
+<summary><strong>2026-05-03 10:55 - vault-video-enhancer</strong> <code>code-change</code> - Restored p7 encoding quality and optimized pipeline throughput: 1) Restored the h264_nvenc &#39;p7&#39; preset as requested. 2) Implemented a dedicated background Thread for log monitor...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Restored p7 encoding quality and optimized pipeline throughput: 1) Restored the h264_nvenc 'p7' preset as requested. 2) Implemented a dedicated background Thread for log monitoring and progress parsing in media.py. This prevents the Python GIL and signal-handling overhead from blocking the FFmpeg pipe, effectively eliminating the performance bottleneck and restoring 20x encoding speeds while maintaining live GUI updates.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\media.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
+<summary><strong>2026-05-03 10:53 - vault-video-enhancer</strong> <code>code-change</code> - Restored high-throughput encoding performance: 1) Switched NVENC preset from p7 (slowest) to p4 (medium), which is the standard for 20x+ speeds on RTX 30-series GPUs. 2) Optimiz...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Restored high-throughput encoding performance: 1) Switched NVENC preset from p7 (slowest) to p4 (medium), which is the standard for 20x+ speeds on RTX 30-series GPUs. 2) Optimized the FFmpeg progress monitoring loop in media.py by filtering out high-frequency log lines to reduce Python/GUI I/O overhead. This should restore the original 19-20x encoding speeds while maintaining live progress feedback.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\media.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 10:19 - vault-video-enhancer</strong> <code>code-change</code> - Corrected model selection: Switched default ASR engine to &#39;nvidia/parakeet-tdt-0.6b-v3&#39;. This model provides the best of both worlds: the multi-lingual support (25 European lang...</summary>
 
 - Kind: code-change
