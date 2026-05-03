@@ -3,6 +3,18 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 17:09 - vault-video-enhancer</strong> <code>code-change</code> - Fixed CUDA &#39;illegal memory access&#39; error in parakeet_wrapper.py. Added torch.cuda.synchronize() before empty_cache() to ensure all kernels complete before the allocator is modif...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed CUDA 'illegal memory access' error in parakeet_wrapper.py. Added torch.cuda.synchronize() before empty_cache() to ensure all kernels complete before the allocator is modified. Also fixed batch_size to match current group size exactly to avoid potential NeMo edge cases.
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=3d61dd9
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 16:42 - vault-video-enhancer</strong> <code>code-change</code> - Fixed transcription degradation on long videos by adding explicit CUDA cache flushing between chunk groups in parakeet_wrapper.py. Previously all audio chunks were passed in a s...</summary>
 
 - Kind: code-change
