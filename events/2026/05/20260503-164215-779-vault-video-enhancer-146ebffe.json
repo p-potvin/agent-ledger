@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-164215-779-vault-video-enhancer-146ebffe",
+    "createdAt":  "2026-05-03T20:42:15.7792349Z",
+    "createdAtLocal":  "2026-05-03 16:42",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Fixed transcription degradation on long videos by adding explicit CUDA cache flushing between chunk groups in parakeet_wrapper.py. Previously all audio chunks were passed in a single model.transcribe() call; NeMo processed batch N with whatever fragmented VRAM remained after batches 1..N-1, causing missed words after ~10 minutes. Now processes chunks in explicit groups of 4, calls torch.cuda.empty_cache() and gc.collect() between groups to fully defragment VRAM before each new group.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "146ebffe2f52430bcdfbfca9e00c7a14f37795c405170ee84049291dbe7b70ca",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

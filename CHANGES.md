@@ -3,6 +3,18 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 16:42 - vault-video-enhancer</strong> <code>code-change</code> - Fixed transcription degradation on long videos by adding explicit CUDA cache flushing between chunk groups in parakeet_wrapper.py. Previously all audio chunks were passed in a s...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed transcription degradation on long videos by adding explicit CUDA cache flushing between chunk groups in parakeet_wrapper.py. Previously all audio chunks were passed in a single model.transcribe() call; NeMo processed batch N with whatever fragmented VRAM remained after batches 1..N-1, causing missed words after ~10 minutes. Now processes chunks in explicit groups of 4, calls torch.cuda.empty_cache() and gc.collect() between groups to fully defragment VRAM before each new group.
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 15:34 - vault-video-enhancer</strong> <code>code-change</code> - Added max_chars hard-split post-processing to parakeet_wrapper.py. After silence-based segmentation, any segment exceeding 180 characters is split at word boundaries via the new...</summary>
 
 - Kind: code-change

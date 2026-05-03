@@ -26,6 +26,19 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-03 16:42 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Fixed transcription degradation on long videos by adding explicit CUDA cache flushing between chunk groups in parakeet_wrapper.py. Previously all audio chunks were passed in a s...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Fixed transcription degradation on long videos by adding explicit CUDA cache flushing between chunk groups in parakeet_wrapper.py. Previously all audio chunks were passed in a single model.transcribe() call; NeMo processed batch N with whatever fragmented VRAM remained after batches 1..N-1, causing missed words after ~10 minutes. Now processes chunks in explicit groups of 4, calls torch.cuda.empty_cache() and gc.collect() between groups to fully defragment VRAM before each new group.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault_enhancer\parakeet_wrapper.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-video-enhancer, branch=main, head=39d2f85</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-03 15:34 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Added max_chars hard-split post-processing to parakeet_wrapper.py. After silence-based segmentation, any segment exceeding 180 characters is split at word boundaries via the new...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
