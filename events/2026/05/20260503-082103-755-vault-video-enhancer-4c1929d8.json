@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260503-082103-755-vault-video-enhancer-4c1929d8",
+    "createdAt":  "2026-05-03T12:21:03.7559392Z",
+    "createdAtLocal":  "2026-05-03 08:21",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Integrated max_duration parameter into the fix_audio_and_reencode pipeline. Passed the user-defined max_duration from the GUI through core.py to media.py, ensuring re-encoding and transcription respect the specified duration limit. Synced manual UI logo scaling changes (Qt.IgnoreAspectRatio) with the underlying logic.",
+    "commands":  [
+                     "Start-Process .venv\\Scripts\\python -ArgumentList \u0027vault_gui.py\u0027"
+                 ],
+    "files":  [
+                  "vault_enhancer\\media.py",
+                  "vault_enhancer\\core.py",
+                  "vault_gui.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "4c1929d8180ac6403c39661ee8e3e5a8903277237757f13b7e1d1e012904fca2",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

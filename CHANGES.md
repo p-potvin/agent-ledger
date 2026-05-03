@@ -3,6 +3,22 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 08:21 - vault-video-enhancer</strong> <code>code-change</code> - Integrated max_duration parameter into the fix_audio_and_reencode pipeline. Passed the user-defined max_duration from the GUI through core.py to media.py, ensuring re-encoding a...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Integrated max_duration parameter into the fix_audio_and_reencode pipeline. Passed the user-defined max_duration from the GUI through core.py to media.py, ensuring re-encoding and transcription respect the specified duration limit. Synced manual UI logo scaling changes (Qt.IgnoreAspectRatio) with the underlying logic.
+- Commands:
+  - `Start-Process .venv\Scripts\python -ArgumentList 'vault_gui.py'`
+- Files:
+  - `vault_enhancer\media.py`
+  - `vault_enhancer\core.py`
+  - `vault_gui.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 08:09 - vault-video-enhancer</strong> <code>code-change</code> - Added semantic color fields (error, success, muted) to VaultTheme and updated all presets with theme-specific matching colors. Updated vault-themes/README.md with minimal logo/f...</summary>
 
 - Kind: code-change
