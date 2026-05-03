@@ -3,6 +3,18 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 15:10 - vault-video-enhancer</strong> <code>code-change</code> - Pre-warm the Parakeet ASR model before Demucs starts in core.py. Previously the model loaded AFTER Demucs finished, creating a dead-GPU gap (VRAM swap) visible as a drop in GPU ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Pre-warm the Parakeet ASR model before Demucs starts in core.py. Previously the model loaded AFTER Demucs finished, creating a dead-GPU gap (VRAM swap) visible as a drop in GPU utilization between stages. Now the model loads concurrently during the ~27s Demucs phase. The _PARAKEET_MODEL singleton ensures it only loads once per session.
+- Files:
+  - `vault_enhancer\core.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 14:47 - vault-video-enhancer</strong> <code>code-change</code> - Replaced double loudnorm filters with dynaudnorm to eliminate NVENC audio pipeline stall. loudnorm uses buffered look-ahead analysis that prevented FFmpeg from delivering audio ...</summary>
 
 - Kind: code-change
