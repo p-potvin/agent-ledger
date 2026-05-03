@@ -3,6 +3,22 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 11:56 - vault-video-enhancer</strong> <code>code-change</code> - Finalized logging, progress indicators, and default SRT generation. 1) Updated core.py to unconditionally output a &#39;.en.srt&#39; file alongside the original &#39;.srt&#39; file, serving as ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Finalized logging, progress indicators, and default SRT generation. 1) Updated core.py to unconditionally output a '.en.srt' file alongside the original '.srt' file, serving as an English default regardless of translation parameters. 2) Cleaned up parakeet_wrapper.py to permanently set Lhotse to use the 'soundfile' backend, entirely avoiding the legacy FFmpeg DLL discovery code. 3) Muted NeMo/Torchaudio debug spam. 4) Modified the GUI progress callback to deduplicate console logs while allowing the QProgressBar to smoothly track FFmpeg rendering percentages.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\core.py`
+  - `vault_enhancer\parakeet_wrapper.py`
+  - `vault_gui.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 11:40 - vault-video-enhancer</strong> <code>code-change</code> - Fixed AttributeError by resolving a Python scope issue in parakeet_wrapper.py. The private helper methods _extract_word_timestamps and _group_into_segments were incorrectly inde...</summary>
 
 - Kind: code-change
