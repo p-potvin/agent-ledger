@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260503-095338-251-vault-video-enhancer-608ef7b7",
+    "createdAt":  "2026-05-03T13:53:38.2512203Z",
+    "createdAtLocal":  "2026-05-03 09:53",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Enhanced GUI observability and pipeline transparency: 1) Implemented thread-safe stdout/stderr redirection to the GUI Activity Monitor using a LogStream proxy. 2) Added granular progress bar support for Step 1 (Demucs isolation) and Step 1.2 (FFmpeg encoding) by parsing live subprocess output. 3) Added support for loading local .nemo model files in parakeet_wrapper.py. 4) Confirmed that NeMo standard behavior uses the local HuggingFace cache to avoid redundant downloads.",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_gui.py",
+                  "vault_enhancer\\media.py",
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "608ef7b704cbb16acd9f5758b183cc2d5df7232be5e4c4ab377603204439f3a8",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

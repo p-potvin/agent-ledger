@@ -26,6 +26,25 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-03 09:53 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Enhanced GUI observability and pipeline transparency: 1) Implemented thread-safe stdout/stderr redirection to the GUI Activity Monitor using a LogStream proxy. 2) Added granular...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Enhanced GUI observability and pipeline transparency: 1) Implemented thread-safe stdout/stderr redirection to the GUI Activity Monitor using a LogStream proxy. 2) Added granular progress bar support for Step 1 (Demucs isolation) and Step 1.2 (FFmpeg encoding) by parsing live subprocess output. 3) Added support for loading local .nemo model files in parakeet_wrapper.py. 4) Confirmed that NeMo standard behavior uses the local HuggingFace cache to avoid redundant downloads.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python vault_gui.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault_gui.py</code></li>
+        <li><code>vault_enhancer\media.py</code></li>
+        <li><code>vault_enhancer\parakeet_wrapper.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-video-enhancer, branch=main, head=39d2f85</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-03 09:44 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Optimized terminal output by globally monkey-patching tqdm to be silent. Forced Lhotse to use the FFmpeg backend as a fallback to bypass torchaudio.io initialization failures on...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
