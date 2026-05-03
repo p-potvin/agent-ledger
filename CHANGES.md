@@ -3,6 +3,24 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 04:57 - vault-video-enhancer</strong> <code>code-change</code> - Renamed all project files and packages to align with Vault Video Enhancer branding. Updated all internal imports, script references, and documentation. Entry points are now enha...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Renamed all project files and packages to align with Vault Video Enhancer branding. Updated all internal imports, script references, and documentation. Entry points are now enhancer.py and vault_gui.py. Core logic moved to vault_enhancer package.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `enhancer.py`
+  - `vault_gui.py`
+  - `vault_enhancer/core.py`
+  - `README.md`
+  - `.gitignore`
+- Git: repo=vault-video-enhancer, branch=main, head=8c67c60
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 04:26 - video-transcriber-translator</strong> <code>code-change</code> - Updated README.md documentation and PySide6 GUI to include all advanced transcription options. Changed default engine to parakeet and target language to en across CLI and GUI.</summary>
 
 - Kind: code-change

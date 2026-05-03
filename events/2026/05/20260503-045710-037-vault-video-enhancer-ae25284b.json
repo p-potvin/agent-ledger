@@ -1,0 +1,31 @@
+﻿{
+    "id":  "20260503-045710-037-vault-video-enhancer-ae25284b",
+    "createdAt":  "2026-05-03T08:57:10.0373636Z",
+    "createdAtLocal":  "2026-05-03 04:57",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Renamed all project files and packages to align with Vault Video Enhancer branding. Updated all internal imports, script references, and documentation. Entry points are now enhancer.py and vault_gui.py. Core logic moved to vault_enhancer package.",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "enhancer.py",
+                  "vault_gui.py",
+                  "vault_enhancer/core.py",
+                  "README.md",
+                  ".gitignore"
+              ],
+    "planPath":  "",
+    "contentHash":  "ae25284b6be962e1cdf021c49c780e2910f1183e4077a3a77aba1a149882efd2",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "8c67c60",
+                "hasChanges":  true
+            }
+}
