@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-174006-365-vault-video-enhancer-b3e9f865",
+    "createdAt":  "2026-05-03T21:40:06.3654450Z",
+    "createdAtLocal":  "2026-05-03 17:40",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Reverted manual transcription loop and switched to a single model.transcribe() call with batch_size=1. Grouped processing in a manual loop was triggering CUDA illegal memory access errors. Using batch_size=1 within a single NeMo call ensures sequential processing (fixing the \u0027missed words\u0027 issue) without the overhead/stability issues of manual cache-clearing loops on Windows.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "b3e9f86575bfa1c8e3ddc5185fd02b1a2957328d04296e125f4d3ed38303bd58",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "3d61dd9",
+                "hasChanges":  true
+            }
+}

@@ -3,6 +3,18 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 17:40 - vault-video-enhancer</strong> <code>code-change</code> - Reverted manual transcription loop and switched to a single model.transcribe() call with batch_size=1. Grouped processing in a manual loop was triggering CUDA illegal memory acc...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Reverted manual transcription loop and switched to a single model.transcribe() call with batch_size=1. Grouped processing in a manual loop was triggering CUDA illegal memory access errors. Using batch_size=1 within a single NeMo call ensures sequential processing (fixing the 'missed words' issue) without the overhead/stability issues of manual cache-clearing loops on Windows.
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=3d61dd9
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 17:23 - vault-video-enhancer</strong> <code>code-change</code> - Reduced transcription group size to 2 and added a 1-second sleep between batches in parakeet_wrapper.py. This addresses the CUDA &#39;illegal memory access&#39; and WinError 32 (temp fi...</summary>
 
 - Kind: code-change
