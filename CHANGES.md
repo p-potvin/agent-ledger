@@ -3,6 +3,23 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 04:02 - video-transcriber-translator</strong> <code>code-change</code> - Implemented Electron + FastAPI GUI. Configured vault-themes with 3D LiquidGlass background, glassmorphism panels, and bilingual EN/FR support. Backend server gui_server.py creat...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Implemented Electron + FastAPI GUI. Configured vault-themes with 3D LiquidGlass background, glassmorphism panels, and bilingual EN/FR support. Backend server gui_server.py created to bridge UI with Whisper/Demucs pipeline.
+- Commands:
+  - `npm run dev`
+  - `python gui_server.py`
+- Files:
+  - `gui_server.py`
+  - `gui/src/renderer/src/App.tsx`
+  - `gui/tailwind.config.js`
+- Git: repo=video-transcriber-translator, branch=main, head=8c67c60
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 03:49 - video-transcriber-translator</strong> <code>plan</code> - Initial planning for GUI implementation. Exploring repository structure and researching vault-themes guidelines.</summary>
 
 - Kind: plan
