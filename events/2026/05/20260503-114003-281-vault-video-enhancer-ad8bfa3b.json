@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-114003-281-vault-video-enhancer-ad8bfa3b",
+    "createdAt":  "2026-05-03T15:40:03.2816901Z",
+    "createdAtLocal":  "2026-05-03 11:40",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Fixed AttributeError by resolving a Python scope issue in parakeet_wrapper.py. The private helper methods _extract_word_timestamps and _group_into_segments were incorrectly indented under the ParakeetV3Wrapper class, but were being called by the ParakeetTranscriber class. Reordered the classes to restore correct method ownership. Additionally, fixed a dictionary unpacking bug in the new timestamp stitching logic that would have thrown a ValueError.",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "ad8bfa3bf71f17b441daf0f0f42f38e75b0dd92c3a66092f0437d606293b8c5e",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

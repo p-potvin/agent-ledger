@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 11:40 - vault-video-enhancer</strong> <code>code-change</code> - Fixed AttributeError by resolving a Python scope issue in parakeet_wrapper.py. The private helper methods _extract_word_timestamps and _group_into_segments were incorrectly inde...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed AttributeError by resolving a Python scope issue in parakeet_wrapper.py. The private helper methods _extract_word_timestamps and _group_into_segments were incorrectly indented under the ParakeetV3Wrapper class, but were being called by the ParakeetTranscriber class. Reordered the classes to restore correct method ownership. Additionally, fixed a dictionary unpacking bug in the new timestamp stitching logic that would have thrown a ValueError.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 11:33 - vault-video-enhancer</strong> <code>code-change</code> - Implemented a robust 60-second audio chunking mechanism for the Parakeet model to completely eliminate CUDA OOM errors on long-form (20+ min) videos. 1) Slices the full audio in...</summary>
 
 - Kind: code-change
