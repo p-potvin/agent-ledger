@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 09:31 - vault-video-enhancer</strong> <code>code-change</code> - Major environment restoration: 1) Force-reinstalled PyTorch stack with CUDA 12.1 support to resolve the &#39;+cpu&#39; performance bottleneck (fixing the 4s/s vs 34s/s speed issue). 2) ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Major environment restoration: 1) Force-reinstalled PyTorch stack with CUDA 12.1 support to resolve the '+cpu' performance bottleneck (fixing the 4s/s vs 34s/s speed issue). 2) Fixed the 'torchaudio.io' ModuleNotFoundError by ensuring the full binary build of torchaudio is installed. 3) Removed the problematic 'torchcodec' library which had unresolved FFmpeg DLL dependencies on Windows. 4) Aligned 'fsspec' with NeMo requirements. The pipeline is now verified to have CUDA access and full media decoding capabilities.
+- Commands:
+  - `pip3 install --force-reinstall torch torchaudio torchvision --index-url https://download.pytorch.org/whl/cu121`
+- Files:
+  - `.venv`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 09:02 - vault-video-enhancer</strong> <code>code-change</code> - Resolved 3 critical pipeline failures: 1) Installed &#39;torchcodec&#39; to fix Demucs HTDemucs saving errors in Step 1. 2) Reverted transcription model to &#39;nvidia/parakeet-tdt-1.1b&#39; be...</summary>
 
 - Kind: code-change
