@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 08:28 - vault-video-enhancer</strong> <code>code-change</code> - Fixed silent crash by switching to generic ASRModel.from_pretrained to support architectural differences in Canary-1b. Removed aggressive subprocess.Popen monkey-patching which ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed silent crash by switching to generic ASRModel.from_pretrained to support architectural differences in Canary-1b. Removed aggressive subprocess.Popen monkey-patching which was interfering with NeMo/Hydra internal process management on Windows.
+- Commands:
+  - `Start-Process .venv\Scripts\python -ArgumentList 'vault_gui.py'`
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 08:26 - vault-video-enhancer</strong> <code>code-change</code> - Diagnosing UI crash. Removed Halo decorators (problematic in GUIs), added stabilization environment variables for Torch on Windows (KMP_DUPLICATE_LIB_OK, OMP_NUM_THREADS=1), and...</summary>
 
 - Kind: code-change
