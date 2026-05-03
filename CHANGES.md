@@ -3,6 +3,22 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 07:41 - vault-video-enhancer</strong> <code>code-change</code> - Added Audio Delay (ms) input to the GUI and wired it through the transcription pipeline to the fix_audio_and_reencode function. Reverted panel padding in the QSS to resolve alig...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Added Audio Delay (ms) input to the GUI and wired it through the transcription pipeline to the fix_audio_and_reencode function. Reverted panel padding in the QSS to resolve alignment issues as requested.
+- Commands:
+  - `Start-Process .venv\Scripts\python -ArgumentList 'vault_gui.py'`
+- Files:
+  - `vault_gui.py`
+  - `vault_enhancer\core.py`
+  - `vault-themes\qt_exporter.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 07:36 - vault-video-enhancer</strong> <code>code-change</code> - Integrated fixaudio pre-processing logic. Replaced legacy Demucs/normalization functions in media.py with fix_audio_and_reencode that runs demucs then ffmpeg to isolate vocals, ...</summary>
 
 - Kind: code-change
