@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-113303-220-vault-video-enhancer-fb6e64e3",
+    "createdAt":  "2026-05-03T15:33:03.2205146Z",
+    "createdAtLocal":  "2026-05-03 11:33",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Implemented a robust 60-second audio chunking mechanism for the Parakeet model to completely eliminate CUDA OOM errors on long-form (20+ min) videos. 1) Slices the full audio into 60s temporary WAV files using soundfile. 2) Transcribes the chunks in small batches, guaranteeing VRAM limits are respected. 3) Merges the resulting token timestamps back together by applying the exact temporal offset of each chunk. 4) Automatically cleans up the chunk files to avoid Windows file locks.",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "fb6e64e378bdf5b1060bdf9a5bd48bb86b41e55c40f2331b37496d44dc12475b",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

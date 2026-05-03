@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 11:33 - vault-video-enhancer</strong> <code>code-change</code> - Implemented a robust 60-second audio chunking mechanism for the Parakeet model to completely eliminate CUDA OOM errors on long-form (20+ min) videos. 1) Slices the full audio in...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Implemented a robust 60-second audio chunking mechanism for the Parakeet model to completely eliminate CUDA OOM errors on long-form (20+ min) videos. 1) Slices the full audio into 60s temporary WAV files using soundfile. 2) Transcribes the chunks in small batches, guaranteeing VRAM limits are respected. 3) Merges the resulting token timestamps back together by applying the exact temporal offset of each chunk. 4) Automatically cleans up the chunk files to avoid Windows file locks.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 11:23 - vault-video-enhancer</strong> <code>code-change</code> - Fixed two major pipeline blockers. 1) Removed a hardcoded model instantiation in core.py that was incorrectly forcing the English-only 1.1b model instead of the desired multi-li...</summary>
 
 - Kind: code-change
