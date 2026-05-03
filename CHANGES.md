@@ -3,6 +3,21 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 11:23 - vault-video-enhancer</strong> <code>code-change</code> - Fixed two major pipeline blockers. 1) Removed a hardcoded model instantiation in core.py that was incorrectly forcing the English-only 1.1b model instead of the desired multi-li...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed two major pipeline blockers. 1) Removed a hardcoded model instantiation in core.py that was incorrectly forcing the English-only 1.1b model instead of the desired multi-lingual 0.6b-v3 model. 2) Fixed a CUDA Out-Of-Memory (OOM) error that triggered a cascading Windows file locking error (WinError 32). This was solved by passing batch_size=4 to NeMo's transcribe method to reduce VRAM usage, and setting num_workers=0 to disable dataloader multiprocessing, preventing orphaned processes from locking temp files.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\core.py`
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 11:11 - vault-video-enhancer</strong> <code>code-change</code> - Bypassed the buggy torchaudio FFmpeg extension entirely. Added a new &#39;extract_wav_for_asr&#39; helper in media.py that extracts a 16kHz mono WAV file from the video right before tra...</summary>
 
 - Kind: code-change
