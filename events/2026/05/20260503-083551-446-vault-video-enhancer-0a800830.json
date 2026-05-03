@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-083551-446-vault-video-enhancer-0a800830",
+    "createdAt":  "2026-05-03T12:35:51.4466940Z",
+    "createdAtLocal":  "2026-05-03 08:35",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Unhiding logs for debugging. Set NEMO_LOGGING_LEVEL to DEBUG and enabled all Python warnings. Running the GUI directly in the terminal session to capture output and diagnose the persistent silent crash.",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "0a800830ea2a9fce0dff2e75410f4bffb76a000f399c69810eb580da76cae8af",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

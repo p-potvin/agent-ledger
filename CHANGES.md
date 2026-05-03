@@ -3,6 +3,48 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 08:37 - vault-video-enhancer</strong> <code>code-change</code> - Deferred model initialization in core.py. Heavy imports (NeMo, Whisper) are now performed only when needed in Step 2, allowing Step 1 (Audio Fix/Demucs) to run independently. Th...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Deferred model initialization in core.py. Heavy imports (NeMo, Whisper) are now performed only when needed in Step 2, allowing Step 1 (Audio Fix/Demucs) to run independently. This isolates whether the crash is happening during pre-processing or model loading, and helps manage VRAM more effectively on Windows.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\core.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
+<summary><strong>2026-05-03 08:35 - vault-video-enhancer</strong> <code>code-change</code> - Unhiding logs for debugging. Set NEMO_LOGGING_LEVEL to DEBUG and enabled all Python warnings. Running the GUI directly in the terminal session to capture output and diagnose the...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Unhiding logs for debugging. Set NEMO_LOGGING_LEVEL to DEBUG and enabled all Python warnings. Running the GUI directly in the terminal session to capture output and diagnose the persistent silent crash.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
+<summary><strong>2026-05-03 08:33 - vault-video-enhancer</strong> <code>code-change</code> - Identified and resolved a critical dependency conflict causing the silent crash. The &#39;datasets&#39; library (NeMo dependency) had an &#39;AttributeError&#39; on &#39;httpx.RequestError&#39; due to ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Identified and resolved a critical dependency conflict causing the silent crash. The 'datasets' library (NeMo dependency) had an 'AttributeError' on 'httpx.RequestError' due to an outdated 'httpx' version (0.13.3) pinned by 'googletrans'. Upgraded 'httpx' to 0.28.1 to satisfy NeMo requirements, and verified that the model download now proceeds correctly in the background.
+- Commands:
+  - `pip3 install --upgrade httpx`
+- Files:
+  - `requirements.txt`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 08:28 - vault-video-enhancer</strong> <code>code-change</code> - Fixed silent crash by switching to generic ASRModel.from_pretrained to support architectural differences in Canary-1b. Removed aggressive subprocess.Popen monkey-patching which ...</summary>
 
 - Kind: code-change
