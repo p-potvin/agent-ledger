@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 11:04 - vault-video-enhancer</strong> <code>code-change</code> - Resolved torio FFmpeg DLL loading error on Windows. The winget installation of FFmpeg puts a shim in the PATH, but Python 3.8+ does not search the PATH for DLLs by default (secu...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Resolved torio FFmpeg DLL loading error on Windows. The winget installation of FFmpeg puts a shim in the PATH, but Python 3.8+ does not search the PATH for DLLs by default (security restriction). I added code to parakeet_wrapper.py that dynamically resolves the true location of ffmpeg.exe using os.path.realpath and adds its 'bin' directory to the Python DLL search path using os.add_dll_directory(). This ensures torio can successfully find and load libtorio_ffmpeg6.pyd's dependencies (avcodec-60.dll, etc).
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 10:59 - vault-video-enhancer</strong> <code>code-change</code> - Enabled global DEBUG logging for torchaudio, torio, and NeMo. This is intended to diagnose why the FFmpeg 6.1.1 extension is failing to initialize despite being installed. The G...</summary>
 
 - Kind: code-change

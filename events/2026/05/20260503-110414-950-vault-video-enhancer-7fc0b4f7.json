@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-110414-950-vault-video-enhancer-7fc0b4f7",
+    "createdAt":  "2026-05-03T15:04:14.9509244Z",
+    "createdAtLocal":  "2026-05-03 11:04",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Resolved torio FFmpeg DLL loading error on Windows. The winget installation of FFmpeg puts a shim in the PATH, but Python 3.8+ does not search the PATH for DLLs by default (security restriction). I added code to parakeet_wrapper.py that dynamically resolves the true location of ffmpeg.exe using os.path.realpath and adds its \u0027bin\u0027 directory to the Python DLL search path using os.add_dll_directory(). This ensures torio can successfully find and load libtorio_ffmpeg6.pyd\u0027s dependencies (avcodec-60.dll, etc).",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "7fc0b4f742f2c74c91bd3af5cf1078c4de9aee5ecbd5338c6c9fd1637ed4f0b9",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}
