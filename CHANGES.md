@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 10:12 - vault-video-enhancer</strong> <code>code-change</code> - Restored Lhotse auto-detection for audio backends. Removed the hardcoded &#39;ffmpeg&#39; backend override which was incompatible with the current Lhotse version. Now that FFmpeg 6.1.1 ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Restored Lhotse auto-detection for audio backends. Removed the hardcoded 'ffmpeg' backend override which was incompatible with the current Lhotse version. Now that FFmpeg 6.1.1 is active, the standard torchaudio/torio integration should work seamlessly without manual intervention.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 10:05 - vault-video-enhancer</strong> <code>code-change</code> - Resolved FFmpeg version mismatch: Downgraded system FFmpeg from 8.x to 6.1.1. Current torchaudio/torio builds on Windows only support FFmpeg versions 4, 5, and 6. Verified that ...</summary>
 
 - Kind: code-change
