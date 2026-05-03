@@ -3,6 +3,22 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 06:54 - vault-video-enhancer</strong> <code>commands</code> - Fixed PySide6 ModuleNotFoundError by upgrading pip and installing all dependencies from requirements.txt explicitly inside the .venv. Started the GUI using the .venv Python exec...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Summary: Fixed PySide6 ModuleNotFoundError by upgrading pip and installing all dependencies from requirements.txt explicitly inside the .venv. Started the GUI using the .venv Python executable.
+- Commands:
+  - `.venv\Scripts\python -m ensurepip --upgrade`
+  - `.venv\Scripts\python -m pip install -r requirements.txt`
+  - `Start-Process .venv\Scripts\python -ArgumentList 'vault_gui.py'`
+- Files:
+  - `requirements.txt`
+- Git: repo=vault-video-enhancer, branch=main, head=1694980
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 05:56 - vault-video-enhancer</strong> <code>commands</code> - Updated global agent rule at &#39;C:\Users\Administrator\.gemini\rules\build-and-start.md&#39; to specify that GUIs (Electron, Win native, PySide) must be started visibly, while backgro...</summary>
 
 - Kind: commands
