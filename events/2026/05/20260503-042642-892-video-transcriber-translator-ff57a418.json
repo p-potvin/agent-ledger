@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260503-042642-892-video-transcriber-translator-ff57a418",
+    "createdAt":  "2026-05-03T08:26:42.8928229Z",
+    "createdAtLocal":  "2026-05-03 04:26",
+    "timezone":  "Eastern Standard Time",
+    "project":  "video-transcriber-translator",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\video-transcriber-translator",
+    "summary":  "Updated README.md documentation and PySide6 GUI to include all advanced transcription options. Changed default engine to parakeet and target language to en across CLI and GUI.",
+    "commands":  [
+                     "python gui.py"
+                 ],
+    "files":  [
+                  "README.md",
+                  "gui.py",
+                  "generate-srt.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "ff57a41849715529c4e90b920a06a09c2d5663cf7238c4552803dd5f039aea68",
+    "git":  {
+                "repo":  "video-transcriber-translator",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/video-transcriber-translator",
+                "branch":  "main",
+                "head":  "8c67c60",
+                "hasChanges":  true
+            }
+}

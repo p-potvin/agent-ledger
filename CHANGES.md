@@ -3,6 +3,22 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 04:26 - video-transcriber-translator</strong> <code>code-change</code> - Updated README.md documentation and PySide6 GUI to include all advanced transcription options. Changed default engine to parakeet and target language to en across CLI and GUI.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Updated README.md documentation and PySide6 GUI to include all advanced transcription options. Changed default engine to parakeet and target language to en across CLI and GUI.
+- Commands:
+  - `python gui.py`
+- Files:
+  - `README.md`
+  - `gui.py`
+  - `generate-srt.py`
+- Git: repo=video-transcriber-translator, branch=main, head=8c67c60
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 04:03 - video-transcriber-translator</strong> <code>code-change</code> - Finalized GUI implementation using PySide6. The app features a native VaultWares theme (Solarized Dark base, Gold accents), multi-threaded transcription worker, and full parity ...</summary>
 
 - Kind: code-change
