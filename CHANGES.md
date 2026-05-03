@@ -3,6 +3,21 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 07:15 - vault-video-enhancer</strong> <code>code-change</code> - Cleaned up hardcoded theme tokens from vault_gui.py and moved styling logic entirely to vault-themes/qt_exporter.py. Fixed UI alignment issues: increased spacing in pipeline con...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Cleaned up hardcoded theme tokens from vault_gui.py and moved styling logic entirely to vault-themes/qt_exporter.py. Fixed UI alignment issues: increased spacing in pipeline configuration, added padding to panels, and correctly styled section titles and footers via object names.
+- Commands:
+  - `Start-Process .venv\Scripts\python -ArgumentList 'vault_gui.py'`
+- Files:
+  - `vault_gui.py`
+  - `vault-themes\qt_exporter.py`
+- Git: repo=vault-video-enhancer, branch=main, head=1694980
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 07:10 - vault-video-enhancer</strong> <code>code-change</code> - Added &#39;Codex Solarized Light Revisited&#39; to VaultThemeManager and set it as the default theme for all projects. Updated vault_gui.py to default to this theme at index 0.</summary>
 
 - Kind: code-change
