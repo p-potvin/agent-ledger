@@ -3,6 +3,37 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-02 22:58 - vault-flows</strong> <code>code-change</code> - Implemented first local node-editor phase: added IMPROVEMENTS product note for guest preset/catalog and authenticated personal workspace direction; added workflow graph schema/n...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Implemented first local node-editor phase: added IMPROVEMENTS product note for guest preset/catalog and authenticated personal workspace direction; added workflow graph schema/node registry/tests; normalized graph documents onto workflows; wired create/modify-copy flows into /workflows/:id editor; replaced placeholder editor with node registry, draggable canvas nodes, port linking, inspector config editing, edge deletion, and save; aligned Tailwind vault colors; fixed ESLint ignores for vendored folders; added Playwright TLS-disable path and updated smoke test for create-to-editor flow. Verification passed: npm test, npm run lint, npm run build, npx playwright test tests/e2e/basic-smoke.spec.js --project=chromium. Dev server running at http://127.0.0.1:5173/.
+- Commands:
+  - `npm test`
+  - `npm run lint`
+  - `npm run build`
+  - `npx playwright test tests/e2e/basic-smoke.spec.js --project=chromium`
+  - `npm run dev -- --host 127.0.0.1 --port 5173`
+- Files:
+  - `IMPROVEMENTS.md`
+  - `src/lib/workflowGraph.js`
+  - `src/lib/workflowGraph.test.js`
+  - `src/api.js`
+  - `src/validation.js`
+  - `src/App.jsx`
+  - `src/components/features/AdvancedWorkflowCreator.jsx`
+  - `src/components/ui/WorkflowPage.jsx`
+  - `src/components/ui/WorkflowList.jsx`
+  - `tailwind.config.js`
+  - `eslint.config.js`
+  - `vite.config.js`
+  - `playwright.config.js`
+  - `tests/e2e/basic-smoke.spec.js`
+- Git: repo=vault-flows, branch=main, head=ed096a3
+
+</details>
+
+<details>
 <summary><strong>2026-05-02 04:13 - vault-central</strong> <code>code-change</code> - Fixed critical build errors. Resolved syntax error in VaultDashboard.tsx PreviewThumb component. Removed conflicting backup/temp TS files in root. Restored missing doTabExtracti...</summary>
 
 - Kind: code-change
