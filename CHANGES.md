@@ -3,6 +3,22 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 09:44 - vault-video-enhancer</strong> <code>code-change</code> - Optimized terminal output by globally monkey-patching tqdm to be silent. Forced Lhotse to use the FFmpeg backend as a fallback to bypass torchaudio.io initialization failures on...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Optimized terminal output by globally monkey-patching tqdm to be silent. Forced Lhotse to use the FFmpeg backend as a fallback to bypass torchaudio.io initialization failures on Windows. Updated requirements.txt with hf_xet for faster model downloads.
+- Commands:
+  - `python vault_gui.py`
+- Files:
+  - `vault_enhancer\core.py`
+  - `vault_enhancer\parakeet_wrapper.py`
+  - `requirements.txt`
+- Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 09:36 - vault-video-enhancer</strong> <code>code-change</code> - Updated the application logo and window icon to the gold-filled minimal logo as requested. Centralized the icon path to vault-themes/Brand/minimal-logos/vaultwares-minimal-gold-...</summary>
 
 - Kind: code-change
