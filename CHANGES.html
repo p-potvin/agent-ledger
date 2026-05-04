@@ -26,6 +26,23 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-04 06:58 - scripts</strong> <span class="kind">commands</span> - Scaffolded folder structure under scripts/: models/diffusion/, models/upscale/, input/, output/. Created symlinks: models/diffusion/flux1-dev-fp8-e4m3fn.safetensors -&gt; D:\comfyU...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> commands</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Scaffolded folder structure under scripts/: models/diffusion/, models/upscale/, input/, output/. Created symlinks: models/diffusion/flux1-dev-fp8-e4m3fn.safetensors -&gt; D:\comfyUI\resources\ComfyUI\models\diffusion_models\flux1-dev-fp8-e4m3fn.safetensors and models/upscale/4xUltrasharp_4xUltrasharpV10.pth -&gt; D:\comfyUI\resources\ComfyUI\models\upscale_models\4xUltrasharp_4xUltrasharpV10.pth. Updated frame_extractor.py default model paths to use os.path.join(__file__) relative paths pointing to the local models/ folder.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>New-Item -ItemType SymbolicLink</code></li>
+        <li><code>New-Item -ItemType Directory</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>frame_extractor.py</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-04 06:55 - scripts</strong> <span class="kind">code-change</span> - Enforced fully local model usage in frame_extractor.py: (1) Set HF_HUB_OFFLINE, TRANSFORMERS_OFFLINE, DIFFUSERS_OFFLINE env vars before all imports to prevent any HuggingFace ne...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>

@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-04 06:58 - scripts</strong> <code>commands</code> - Scaffolded folder structure under scripts/: models/diffusion/, models/upscale/, input/, output/. Created symlinks: models/diffusion/flux1-dev-fp8-e4m3fn.safetensors -&gt; D:\comfyU...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Summary: Scaffolded folder structure under scripts/: models/diffusion/, models/upscale/, input/, output/. Created symlinks: models/diffusion/flux1-dev-fp8-e4m3fn.safetensors -> D:\comfyUI\resources\ComfyUI\models\diffusion_models\flux1-dev-fp8-e4m3fn.safetensors and models/upscale/4xUltrasharp_4xUltrasharpV10.pth -> D:\comfyUI\resources\ComfyUI\models\upscale_models\4xUltrasharp_4xUltrasharpV10.pth. Updated frame_extractor.py default model paths to use os.path.join(__file__) relative paths pointing to the local models/ folder.
+- Commands:
+  - `New-Item -ItemType SymbolicLink`
+  - `New-Item -ItemType Directory`
+- Files:
+  - `frame_extractor.py`
+
+</details>
+
+<details>
 <summary><strong>2026-05-04 06:55 - scripts</strong> <code>code-change</code> - Enforced fully local model usage in frame_extractor.py: (1) Set HF_HUB_OFFLINE, TRANSFORMERS_OFFLINE, DIFFUSERS_OFFLINE env vars before all imports to prevent any HuggingFace ne...</summary>
 
 - Kind: code-change
