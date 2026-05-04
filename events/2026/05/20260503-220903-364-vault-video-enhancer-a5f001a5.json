@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-220903-364-vault-video-enhancer-a5f001a5",
+    "createdAt":  "2026-05-04T02:09:03.3641696Z",
+    "createdAtLocal":  "2026-05-03 22:09",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Fixed TypeError in vault_gui.py where \u0027continue_on_error\u0027 was being passed to core.transcribe_video. The parameter is now popped from current_params before the core call.",
+    "commands":  [
+                     "python -m py_compile vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_gui.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "a5f001a506f91b204b3a2db44b43ef29e252fc282ceeaea357dea2e44b2b6a67",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "a66734d",
+                "hasChanges":  true
+            }
+}

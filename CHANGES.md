@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 22:09 - vault-video-enhancer</strong> <code>code-change</code> - Fixed TypeError in vault_gui.py where &#39;continue_on_error&#39; was being passed to core.transcribe_video. The parameter is now popped from current_params before the core call.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed TypeError in vault_gui.py where 'continue_on_error' was being passed to core.transcribe_video. The parameter is now popped from current_params before the core call.
+- Commands:
+  - `python -m py_compile vault_gui.py`
+- Files:
+  - `vault_gui.py`
+- Git: repo=vault-video-enhancer, branch=main, head=a66734d
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 22:05 - vault-video-enhancer</strong> <code>verification</code> - Verified vault_gui.py and vault_enhancer/core.py with py_compile. Verified that the folder scanning logic matches enhancer.py. The GUI now handles both single file and directory...</summary>
 
 - Kind: verification
