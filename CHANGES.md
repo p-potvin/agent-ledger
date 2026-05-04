@@ -3,6 +3,16 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-04 02:21 - vault-central</strong> <code>plan</code> - Networking task started: expose user&#39;s local API to internet through Brume 2 gateway acting as reverse proxy / load balancer. Constraints: NAT-behind-NAT (ISP router + Brume 2),...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Networking task started: expose user's local API to internet through Brume 2 gateway acting as reverse proxy / load balancer. Constraints: NAT-behind-NAT (ISP router + Brume 2), residential dynamic IP, Brume 2 reports 'no internet'. Requirements: Let's Encrypt TLS (or trusted CA), TLS always on, security hardening per VaultWares philosophy. Phase 1 in progress (info gathering & ledger init). Skills loaded: persistent-computing, security-best-practices.
+- Git: repo=vault-central, branch=main, head=d78ef95
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 22:55 - vault-video-enhancer</strong> <code>code-change</code> - Deep stabilization for CUDA illegal memory access. Monkey-patched Lhotse random seeding to avoid the crashing call. Added defensive synchronizations before transcription and aft...</summary>
 
 - Kind: code-change
