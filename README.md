@@ -58,3 +58,18 @@ This writes:
 
 - `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\WORK_IMPACT.html`
 - `C:\Users\Administrator\Desktop\Github Repos\WORK_IMPACT.html`
+
+## Vercel (protected)
+
+This repo includes a minimal Vercel Serverless Function (`api/index.js`) that serves `WORK_IMPACT.html` behind HTTP Basic Auth.
+
+Required Vercel environment variables:
+
+- `WORK_IMPACT_USER`
+- `WORK_IMPACT_PASS`
+
+A GitHub Actions workflow is included at `.github/workflows/deploy-work-impact.yml`. It expects repository secrets:
+
+- `VERCEL_TOKEN`
+- `VERCEL_ORG_ID`
+- `VERCEL_PROJECT_ID`
