@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-04 18:37 - link-sharing</strong> <code>plan</code> - Researched file-host terms (KatFile, Rapidgator, K2S) and analyzed prelanding-page stack for bootstrapping link-sharing service. Proposed pnpm + TypeScript + Fastify/Express + V...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Researched file-host terms (KatFile, Rapidgator, K2S) and analyzed prelanding-page stack for bootstrapping link-sharing service. Proposed pnpm + TypeScript + Fastify/Express + Vite + React stack.
+- Commands:
+  - `search_web`
+  - `list_dir`
+  - `view_file`
+- Git: repo=link-sharing, branch=main, head=7984759
+
+</details>
+
+<details>
 <summary><strong>2026-05-04 07:12 - scripts</strong> <code>code-change</code> - Completed full Flux pipeline assembly from local ComfyUI files. Fixed setup_detailer_pipeline: replaced nonexistent CLIPTextModel/T5EncoderModel.from_single_file calls with from...</summary>
 
 - Kind: code-change
