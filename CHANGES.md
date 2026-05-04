@@ -3,6 +3,45 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 22:05 - vault-video-enhancer</strong> <code>verification</code> - Verified vault_gui.py and vault_enhancer/core.py with py_compile. Verified that the folder scanning logic matches enhancer.py. The GUI now handles both single file and directory...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Summary: Verified vault_gui.py and vault_enhancer/core.py with py_compile. Verified that the folder scanning logic matches enhancer.py. The GUI now handles both single file and directory processing with batch progress monitoring.
+- Commands:
+  - `python -m py_compile vault_gui.py`
+- Files:
+  - `vault_gui.py`
+- Git: repo=vault-video-enhancer, branch=main, head=a66734d
+
+</details>
+
+<details>
+<summary><strong>2026-05-03 22:05 - vault-video-enhancer</strong> <code>code-change</code> - Implemented folder processing in vault_gui.py. Added File/Folder browse buttons, updated TranscriptionWorker to iterate over files in a directory, and added batch progress scaling.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Implemented folder processing in vault_gui.py. Added File/Folder browse buttons, updated TranscriptionWorker to iterate over files in a directory, and added batch progress scaling.
+- Files:
+  - `vault_gui.py`
+- Git: repo=vault-video-enhancer, branch=main, head=a66734d
+
+</details>
+
+<details>
+<summary><strong>2026-05-03 22:04 - vault-video-enhancer</strong> <code>plan</code> - Plan to add folder processing to the GUI. This involves adding a folder selection button, updating the worker thread to handle multiple files, and improving the progress UI to s...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Plan to add folder processing to the GUI. This involves adding a folder selection button, updating the worker thread to handle multiple files, and improving the progress UI to show batch status.
+- Files:
+  - `vault_gui.py`
+  - `vault_enhancer/core.py`
+- Git: repo=vault-video-enhancer, branch=main, head=a66734d
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 17:40 - vault-video-enhancer</strong> <code>code-change</code> - Reverted manual transcription loop and switched to a single model.transcribe() call with batch_size=1. Grouped processing in a manual loop was triggering CUDA illegal memory acc...</summary>
 
 - Kind: code-change
