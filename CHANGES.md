@@ -3,6 +3,16 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-04 02:54 - vault-central</strong> <code>plan</code> - Completed Phase 3: Architecture Design. Drafted API_Exposure_Architecture_Plan.md on Desktop. Addressed Brume 2 &#39;no internet&#39; issue (mwan3 tracking). Proposed two options: Optio...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Completed Phase 3: Architecture Design. Drafted API_Exposure_Architecture_Plan.md on Desktop. Addressed Brume 2 'no internet' issue (mwan3 tracking). Proposed two options: Option A (Cloudflare Tunnel - Zero Trust, no port forwarding, recommended per VaultWares) and Option B (Traditional Reverse Proxy via Brume 2 with acme.sh DNS-01 challenge). Ready to deliver to user.
+- Git: repo=vault-central, branch=main, head=d78ef95
+
+</details>
+
+<details>
 <summary><strong>2026-05-04 02:21 - vault-central</strong> <code>plan</code> - Networking task started: expose user&#39;s local API to internet through Brume 2 gateway acting as reverse proxy / load balancer. Constraints: NAT-behind-NAT (ISP router + Brume 2),...</summary>
 
 - Kind: plan
