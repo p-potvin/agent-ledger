@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-04 19:05 - General Tasks</strong> <code>code-change</code> - Converted all 20 oh-my-codex agent TOML files in ~/.gemini/agents to equivalent YAML files. Used Python (tomllib + pyyaml) with a literal block scalar representer so developer_i...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Converted all 20 oh-my-codex agent TOML files in ~/.gemini/agents to equivalent YAML files. Used Python (tomllib + pyyaml) with a literal block scalar representer so developer_instructions multiline strings use '|' block style. Preserved the '# oh-my-codex agent: <name>' comment header in each output file. All fields (name, description, model, model_reasoning_effort, developer_instructions) are present and correctly formatted.
+- Files:
+  - `C:\Users\Administrator\.gemini\agents\analyst.yaml`
+  - `C:\Users\Administrator\.gemini\agents\architect.yaml`
+  - `C:\Users\Administrator\.gemini\agents\vision.yaml`
+  - `(+17 more .yaml files)`
+
+</details>
+
+<details>
 <summary><strong>2026-05-04 18:41 - link-sharing</strong> <code>code-change</code> - Bootstrapped link-sharing project with pnpm workspaces. Initialized server (Fastify), client (React/Vite), and shared schemas. Configured Drizzle ORM and premium Vanilla CSS sty...</summary>
 
 - Kind: code-change

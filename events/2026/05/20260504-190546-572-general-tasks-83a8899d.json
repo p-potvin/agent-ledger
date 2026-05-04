@@ -1,0 +1,22 @@
+{
+  "id": "20260504-190546-572-general-tasks-83a8899d",
+  "createdAt": "2026-05-04T23:05:46.5728936Z",
+  "createdAtLocal": "2026-05-04 19:05",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts",
+  "summary": "Converted all 20 oh-my-codex agent TOML files in ~/.gemini/agents to equivalent YAML files. Used Python (tomllib + pyyaml) with a literal block scalar representer so developer_instructions multiline strings use '|' block style. Preserved the '# oh-my-codex agent: <name>' comment header in each output file. All fields (name, description, model, model_reasoning_effort, developer_instructions) are present and correctly formatted.",
+  "commands": [],
+  "files": [
+    "C:\\Users\\Administrator\\.gemini\\agents\\analyst.yaml",
+    "C:\\Users\\Administrator\\.gemini\\agents\\architect.yaml",
+    "C:\\Users\\Administrator\\.gemini\\agents\\vision.yaml",
+    "(+17 more .yaml files)"
+  ],
+  "planPath": "",
+  "contentHash": "83a8899d947ee9411e61ac0d375988efae85fdea54731e39870a50fa0593377d",
+  "git": null
+}
