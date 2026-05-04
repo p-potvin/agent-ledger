@@ -3,6 +3,31 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-04 06:34 - Prom King monetization projects</strong> <code>code-change</code> - Implemented Prom King tube pagination and back-catalog retention: added video source/remote/takedown fields and migration, active/not-removed filtering, paginated tRPC endpoints...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Implemented Prom King tube pagination and back-catalog retention: added video source/remote/takedown fields and migration, active/not-removed filtering, paginated tRPC endpoints, URL-aware /tube pagination, redesigned React tube headers/watch surfaces with remote-only copy, removed stale Vite config that made builds use the wrong root app, removed WordPress scrape-on-browse, added WP preview metadata and tag archive routing, clarified FullXXX DMCA/retention language, rendered shared tube-shell header nav, added link-sharing plan with May 2026 host comparison, and expanded QA/docs. Verified prelanding check/test/build, QA list/tsc, and Playwright smoke against /tube?page=2. PHP CLI unavailable for native lint.
+- Commands:
+  - `corepack pnpm run check`
+  - `corepack pnpm test`
+  - `corepack pnpm run build`
+  - `npm run test:list`
+  - `npm exec tsc -- --noEmit`
+  - `BASE_URL=http://127.0.0.1:5173 npm run test:wordpress -- --project=chromium --grep 'Adult age gate route'`
+- Files:
+  - `prelanding-page/client/src/pages/TubeSite.tsx`
+  - `prelanding-page/server/tubeRouter.ts`
+  - `prelanding-page/drizzle/0004_tube_back_catalog.sql`
+  - `tube-site/promking-tube/includes/video-fetcher.php`
+  - `tube-site/fullxxx-video/includes/dmca.php`
+  - `tube-shell-theme/tube-shell/header.php`
+  - `link-sharing/README.md`
+  - `qa-automation/tests/age-gate-wordpress.spec.ts`
+
+</details>
+
+<details>
 <summary><strong>2026-05-04 04:42 - vaultwares-docs</strong> <code>plan</code> - Completed Phase 3: Updated API_Exposure_Architecture_Plan.md on Desktop. Designed Tailscale Funnel + Caddy reverse proxy architecture for noddit.org (vault-flows) and vaultwares...</summary>
 
 - Kind: plan

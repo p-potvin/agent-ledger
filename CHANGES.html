@@ -26,6 +26,34 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-04 06:34 - Prom King monetization projects</strong> <span class="kind">code-change</span> - Implemented Prom King tube pagination and back-catalog retention: added video source/remote/takedown fields and migration, active/not-removed filtering, paginated tRPC endpoints...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Implemented Prom King tube pagination and back-catalog retention: added video source/remote/takedown fields and migration, active/not-removed filtering, paginated tRPC endpoints, URL-aware /tube pagination, redesigned React tube headers/watch surfaces with remote-only copy, removed stale Vite config that made builds use the wrong root app, removed WordPress scrape-on-browse, added WP preview metadata and tag archive routing, clarified FullXXX DMCA/retention language, rendered shared tube-shell header nav, added link-sharing plan with May 2026 host comparison, and expanded QA/docs. Verified prelanding check/test/build, QA list/tsc, and Playwright smoke against /tube?page=2. PHP CLI unavailable for native lint.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>corepack pnpm run check</code></li>
+        <li><code>corepack pnpm test</code></li>
+        <li><code>corepack pnpm run build</code></li>
+        <li><code>npm run test:list</code></li>
+        <li><code>npm exec tsc -- --noEmit</code></li>
+        <li><code>BASE_URL=http://127.0.0.1:5173 npm run test:wordpress -- --project=chromium --grep &#39;Adult age gate route&#39;</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>prelanding-page/client/src/pages/TubeSite.tsx</code></li>
+        <li><code>prelanding-page/server/tubeRouter.ts</code></li>
+        <li><code>prelanding-page/drizzle/0004_tube_back_catalog.sql</code></li>
+        <li><code>tube-site/promking-tube/includes/video-fetcher.php</code></li>
+        <li><code>tube-site/fullxxx-video/includes/dmca.php</code></li>
+        <li><code>tube-shell-theme/tube-shell/header.php</code></li>
+        <li><code>link-sharing/README.md</code></li>
+        <li><code>qa-automation/tests/age-gate-wordpress.spec.ts</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-04 04:42 - vaultwares-docs</strong> <span class="kind">plan</span> - Completed Phase 3: Updated API_Exposure_Architecture_Plan.md on Desktop. Designed Tailscale Funnel + Caddy reverse proxy architecture for noddit.org (vault-flows) and vaultwares...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> plan</p>
