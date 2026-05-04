@@ -1,0 +1,19 @@
+{
+  "id": "20260504-065539-650-scripts-b7eda623",
+  "createdAt": "2026-05-04T10:55:39.6500307Z",
+  "createdAtLocal": "2026-05-04 06:55",
+  "timezone": "Eastern Standard Time",
+  "project": "scripts",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts",
+  "summary": "Enforced fully local model usage in frame_extractor.py: (1) Set HF_HUB_OFFLINE, TRANSFORMERS_OFFLINE, DIFFUSERS_OFFLINE env vars before all imports to prevent any HuggingFace network calls; (2) Replaced AutoPipelineForImage2Image (no from_single_file support) with FluxImg2ImgPipeline from diffusers.pipelines.flux.pipeline_flux_img2img, which supports loading from a local .safetensors file.",
+  "commands": [],
+  "files": [
+    "frame_extractor.py"
+  ],
+  "planPath": "",
+  "contentHash": "b7eda623569c7f13c11f1832214c04bed08ad554636cac0c86165229749541fa",
+  "git": null
+}

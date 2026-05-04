@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260503-074107-665-vault-video-enhancer-777f644b",
+    "createdAt":  "2026-05-03T11:41:07.6650409Z",
+    "createdAtLocal":  "2026-05-03 07:41",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Added Audio Delay (ms) input to the GUI and wired it through the transcription pipeline to the fix_audio_and_reencode function. Reverted panel padding in the QSS to resolve alignment issues as requested.",
+    "commands":  [
+                     "Start-Process .venv\\Scripts\\python -ArgumentList \u0027vault_gui.py\u0027"
+                 ],
+    "files":  [
+                  "vault_gui.py",
+                  "vault_enhancer\\core.py",
+                  "vault-themes\\qt_exporter.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "777f644b21753b199e60d39647b2b34665f08f8651d20b1061ea6fb59ec90794",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

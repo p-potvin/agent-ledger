@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260503-101558-404-vault-video-enhancer-47b88484",
+    "createdAt":  "2026-05-03T14:15:58.4043972Z",
+    "createdAtLocal":  "2026-05-03 10:15",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Upgraded ASR engine and progress tracking: 1) Switched default model to \u0027nvidia/parakeet-ctc-0.6b-v3\u0027 for multi-lingual support (English-only Parakeet-TDT removed). 2) Implemented live stderr parsing for Demucs to provide a real-time percentage in the GUI progress bar (mapped to 10-45% range). 3) Added a 5% initial progress pulse to confirm pipeline start. 4) Verified CTC timestamp extraction logic remains compatible.",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_enhancer\\parakeet_wrapper.py",
+                  "vault_enhancer\\media.py",
+                  "vault_enhancer\\core.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "47b88484d2b8f07bb63ee1e99b12642fbd91754cbd40c02211f52f2d3cd4c36d",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

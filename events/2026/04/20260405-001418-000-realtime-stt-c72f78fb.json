@@ -1,0 +1,29 @@
+{
+  "id": "20260405-001418-000-realtime-stt-c72f78fb",
+  "createdAt": "2026-04-05T04:14:18.0000000Z",
+  "createdAtLocal": "2026-04-05 00:14",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit e92dd9d (2026-04-05T04:14:18Z) - fix: reset silence_counter unconditionally after flush, reset _proc_counter on loop start | files=1 +2 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: e92dd9d7888417e85e0127e671db35afe54be003",
+    "git show --numstat --pretty=format: e92dd9d7888417e85e0127e671db35afe54be003"
+  ],
+  "files": [
+    "main_app.py"
+  ],
+  "planPath": "",
+  "contentHash": "c72f78fbe124c3539f334902160220cb5a6012a71bed62ce820fc88bbed9cdab",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

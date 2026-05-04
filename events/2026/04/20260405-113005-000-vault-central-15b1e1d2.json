@@ -1,0 +1,38 @@
+{
+  "id": "20260405-113005-000-vault-central-15b1e1d2",
+  "createdAt": "2026-04-05T15:30:05.0000000Z",
+  "createdAtLocal": "2026-04-05 11:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit 5c31aa9 (2026-04-05T11:30:05-04:00) - fix: implement proper self→parent→children→parents→siblings link-finding and background video extraction pipeline (#3) | files=10 +708 -222",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 5c31aa984439efbf8a20af52d149517c517dd5a0",
+    "git show --numstat --pretty=format: 5c31aa984439efbf8a20af52d149517c517dd5a0"
+  ],
+  "files": [
+    "background/scripts/background.ts",
+    "dist/background/scripts/background.js",
+    "dist/content.js",
+    "dist/dashboard-v2.html",
+    "dist/dashboard.js.map",
+    "dist/pin-entry.html",
+    "dist/pin.js.map",
+    "package-lock.json",
+    "package.json",
+    "src/scripts/content.ts"
+  ],
+  "planPath": "",
+  "contentHash": "15b1e1d2a041122aa8f7321d05bd6fe33392951f61ef9c1eea248954d5289b9a",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

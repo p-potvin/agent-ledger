@@ -1,0 +1,30 @@
+{
+  "id": "20260424-000822-000-glass-ui-ab009e70",
+  "createdAt": "2026-04-24T04:08:22.0000000Z",
+  "createdAtLocal": "2026-04-24 00:08",
+  "timezone": "Eastern Standard Time",
+  "project": "glass-ui",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\glass-ui",
+  "summary": "Backfill: commit b0d2b7c (2026-04-24T04:08:22Z) - fix: replace HTML entities with plain & in markdown and JSX | files=2 +4 -4",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: b0d2b7c3829f5f5b3571aefa55764903fd10c4d0",
+    "git show --numstat --pretty=format: b0d2b7c3829f5f5b3571aefa55764903fd10c4d0"
+  ],
+  "files": [
+    "README.md",
+    "src/preview.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "ab009e70d3b94545e6ad54122e1c619b1583496776a36f68033e2b8d680c93cf",
+  "git": {
+    "repo": "glass-ui",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/glass-ui",
+    "branch": "main",
+    "head": "b2f2866",
+    "hasChanges": false
+  }
+}

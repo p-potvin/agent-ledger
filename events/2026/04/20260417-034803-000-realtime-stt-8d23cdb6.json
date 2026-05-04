@@ -1,0 +1,31 @@
+{
+  "id": "20260417-034803-000-realtime-stt-8d23cdb6",
+  "createdAt": "2026-04-17T07:48:03.0000000Z",
+  "createdAtLocal": "2026-04-17 03:48",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit 8c28ccd (2026-04-17T07:48:03Z) - ⚡ Bolt: Fix duplicated STT processing | files=3 +11 -4",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 8c28ccd35cb2cdcd0271cbc2ae9d138beb5f4e47",
+    "git show --numstat --pretty=format: 8c28ccd35cb2cdcd0271cbc2ae9d138beb5f4e47"
+  ],
+  "files": [
+    ".jules/bolt.md",
+    "main_app.py",
+    "plan.md"
+  ],
+  "planPath": "",
+  "contentHash": "8d23cdb64198c36ab2810037f822409d887cbe8d68e96b2665a9a06097a5263d",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

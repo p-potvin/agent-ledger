@@ -1,0 +1,28 @@
+﻿{
+    "id":  "20260503-073605-931-vault-video-enhancer-f5b0e2a8",
+    "createdAt":  "2026-05-03T11:36:05.9318805Z",
+    "createdAtLocal":  "2026-05-03 07:36",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Integrated fixaudio pre-processing logic. Replaced legacy Demucs/normalization functions in media.py with fix_audio_and_reencode that runs demucs then ffmpeg to isolate vocals, normalize, mix and re-encode to h264_nvenc. Updated core.py to run this as Step 1 before transcription.",
+    "commands":  [
+                     "Start-Process .venv\\Scripts\\python -ArgumentList \u0027vault_gui.py\u0027"
+                 ],
+    "files":  [
+                  "vault_enhancer\\media.py",
+                  "vault_enhancer\\core.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "f5b0e2a8ad85ac460d76c51b284125ad3f220ecb99977451747c44c7cf6b3f1e",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

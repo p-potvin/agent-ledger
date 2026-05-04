@@ -1,0 +1,30 @@
+{
+  "id": "20260422-234245-000-vault-flows-35fdba5f",
+  "createdAt": "2026-04-23T03:42:45.0000000Z",
+  "createdAtLocal": "2026-04-22 23:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Backfill: commit 3adf350 (2026-04-22T23:42:45-04:00) - 🛡️ Sentinel: [CRITICAL] Fix command injection in local bridge (#26) | files=2 +39 -4",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 3adf3502e7b325d1bf06e63511efd1fcc698883a",
+    "git show --numstat --pretty=format: 3adf3502e7b325d1bf06e63511efd1fcc698883a"
+  ],
+  "files": [
+    ".jules/sentinel.md",
+    "run_local_runtime_bridge.py"
+  ],
+  "planPath": "",
+  "contentHash": "35fdba5f74ed31ac32960c4b1c5657efa3d253e80093c67120480cca1996e4be",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "ed096a3",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260503-115644-735-vault-video-enhancer-d970c184",
+    "createdAt":  "2026-05-03T15:56:44.7354558Z",
+    "createdAtLocal":  "2026-05-03 11:56",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Finalized logging, progress indicators, and default SRT generation. 1) Updated core.py to unconditionally output a \u0027.en.srt\u0027 file alongside the original \u0027.srt\u0027 file, serving as an English default regardless of translation parameters. 2) Cleaned up parakeet_wrapper.py to permanently set Lhotse to use the \u0027soundfile\u0027 backend, entirely avoiding the legacy FFmpeg DLL discovery code. 3) Muted NeMo/Torchaudio debug spam. 4) Modified the GUI progress callback to deduplicate console logs while allowing the QProgressBar to smoothly track FFmpeg rendering percentages.",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_enhancer\\core.py",
+                  "vault_enhancer\\parakeet_wrapper.py",
+                  "vault_gui.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "d970c1843a29d696fb89651c043a75f415154857d6a646e3d124dbe0c6ba56d0",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

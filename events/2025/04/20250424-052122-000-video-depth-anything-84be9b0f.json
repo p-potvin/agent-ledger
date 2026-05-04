@@ -1,0 +1,49 @@
+{
+  "id": "20250424-052122-000-video-depth-anything-84be9b0f",
+  "createdAt": "2025-04-24T09:21:22.0000000Z",
+  "createdAtLocal": "2025-04-24 05:21",
+  "timezone": "Eastern Standard Time",
+  "project": "video-depth-anything",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\video-depth-anything",
+  "summary": "Backfill: commit e28a746 (2025-04-24T17:21:22+08:00) - support metric | files=21 +2760 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: e28a746bad05479314ea3ca9c9a1455232aff4bc",
+    "git show --numstat --pretty=format: e28a746bad05479314ea3ca9c9a1455232aff4bc"
+  ],
+  "files": [
+    "README.md",
+    "metric_depth/README.md",
+    "metric_depth/run.py",
+    "metric_depth/utils/dc_utils.py",
+    "metric_depth/utils/util.py",
+    "metric_depth/video_depth_anything/dinov2.py",
+    "metric_depth/video_depth_anything/dinov2_layers/__init__.py",
+    "metric_depth/video_depth_anything/dinov2_layers/attention.py",
+    "metric_depth/video_depth_anything/dinov2_layers/block.py",
+    "metric_depth/video_depth_anything/dinov2_layers/drop_path.py",
+    "metric_depth/video_depth_anything/dinov2_layers/layer_scale.py",
+    "metric_depth/video_depth_anything/dinov2_layers/mlp.py",
+    "metric_depth/video_depth_anything/dinov2_layers/patch_embed.py",
+    "metric_depth/video_depth_anything/dinov2_layers/swiglu_ffn.py",
+    "metric_depth/video_depth_anything/dpt.py",
+    "metric_depth/video_depth_anything/dpt_temporal.py",
+    "metric_depth/video_depth_anything/motion_module/attention.py",
+    "metric_depth/video_depth_anything/motion_module/motion_module.py",
+    "metric_depth/video_depth_anything/util/blocks.py",
+    "metric_depth/video_depth_anything/util/transform.py",
+    "metric_depth/video_depth_anything/video_depth.py"
+  ],
+  "planPath": "",
+  "contentHash": "84be9b0f2b49d7805b410de2064ee6cd2c9e8daa2a942d4d461909e271de00c0",
+  "git": {
+    "repo": "video-depth-anything",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/video-depth-anything",
+    "branch": "main",
+    "head": "aa85ca7",
+    "hasChanges": false
+  }
+}

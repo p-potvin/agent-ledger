@@ -1,0 +1,20 @@
+{
+  "id": "20260504-065257-607-scripts-f20c62fb",
+  "createdAt": "2026-05-04T10:52:57.6073358Z",
+  "createdAtLocal": "2026-05-04 06:52",
+  "timezone": "Eastern Standard Time",
+  "project": "scripts",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts",
+  "summary": "Fixed frame_extractor.py: (1) Changed raw string paths to use r-strings to prevent \\\\r carriage-return escape corruption in Windows paths; (2) Replaced AutoPipelineForImage2Image.from_pretrained() with from_single_file() since model_path points to a .safetensors file, not a directory/Hub ID; (3) Added Pillow to requirements.txt since the script imports from PIL but it was missing.",
+  "commands": [],
+  "files": [
+    "frame_extractor.py",
+    "requirements.txt"
+  ],
+  "planPath": "",
+  "contentHash": "f20c62fbddd33d6c232ddbe80251a3b0710d3d6babc1910df929298130cf003d",
+  "git": null
+}

@@ -1,0 +1,33 @@
+{
+  "id": "20260504-063408-355-prom-king-monetization-projects-a2c14268",
+  "createdAt": "2026-05-04T10:34:08.3559652Z",
+  "createdAtLocal": "2026-05-04 06:34",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom King monetization projects",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Implemented Prom King tube pagination and back-catalog retention: added video source/remote/takedown fields and migration, active/not-removed filtering, paginated tRPC endpoints, URL-aware /tube pagination, redesigned React tube headers/watch surfaces with remote-only copy, removed stale Vite config that made builds use the wrong root app, removed WordPress scrape-on-browse, added WP preview metadata and tag archive routing, clarified FullXXX DMCA/retention language, rendered shared tube-shell header nav, added link-sharing plan with May 2026 host comparison, and expanded QA/docs. Verified prelanding check/test/build, QA list/tsc, and Playwright smoke against /tube?page=2. PHP CLI unavailable for native lint.",
+  "commands": [
+    "corepack pnpm run check",
+    "corepack pnpm test",
+    "corepack pnpm run build",
+    "npm run test:list",
+    "npm exec tsc -- --noEmit",
+    "BASE_URL=http://127.0.0.1:5173 npm run test:wordpress -- --project=chromium --grep 'Adult age gate route'"
+  ],
+  "files": [
+    "prelanding-page/client/src/pages/TubeSite.tsx",
+    "prelanding-page/server/tubeRouter.ts",
+    "prelanding-page/drizzle/0004_tube_back_catalog.sql",
+    "tube-site/promking-tube/includes/video-fetcher.php",
+    "tube-site/fullxxx-video/includes/dmca.php",
+    "tube-shell-theme/tube-shell/header.php",
+    "link-sharing/README.md",
+    "qa-automation/tests/age-gate-wordpress.spec.ts"
+  ],
+  "planPath": "",
+  "contentHash": "a2c1426860190818c16e15d2204c66294ff6442f63305c9f39d9852d6bc81b7e",
+  "git": null
+}

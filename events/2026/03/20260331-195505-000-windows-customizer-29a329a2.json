@@ -1,0 +1,29 @@
+{
+  "id": "20260331-195505-000-windows-customizer-29a329a2",
+  "createdAt": "2026-03-31T23:55:05.0000000Z",
+  "createdAtLocal": "2026-03-31 19:55",
+  "timezone": "Eastern Standard Time",
+  "project": "windows-customizer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\windows-customizer",
+  "summary": "Backfill: commit c26fee3 (2026-03-31T19:55:05-04:00) - cleanup: remove orphaned BloatwarePage (replaced by BloatwareRemovalPage) | files=1 +0 -43",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: c26fee313d05026df296fcaff44e5409fbcfc973",
+    "git show --numstat --pretty=format: c26fee313d05026df296fcaff44e5409fbcfc973"
+  ],
+  "files": [
+    "Views/BloatwarePage.xaml"
+  ],
+  "planPath": "",
+  "contentHash": "29a329a26f65d0a905e29741558c77d6ad5f956a132b7779cb6268989718f87b",
+  "git": {
+    "repo": "windows-customizer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/windows-customizer",
+    "branch": "main",
+    "head": "1e55523",
+    "hasChanges": false
+  }
+}

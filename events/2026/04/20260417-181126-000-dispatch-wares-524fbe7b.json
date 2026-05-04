@@ -1,0 +1,33 @@
+{
+  "id": "20260417-181126-000-dispatch-wares-524fbe7b",
+  "createdAt": "2026-04-17T22:11:26.0000000Z",
+  "createdAtLocal": "2026-04-17 18:11",
+  "timezone": "Eastern Standard Time",
+  "project": "dispatch-wares",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\dispatch-wares",
+  "summary": "Backfill: commit c55a8c3 (2026-04-17T18:11:26-04:00) - Automated commit: Updated files in dispatch-wares | files=5 +52 -12",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: c55a8c3c6c53d399eb085d621cdcbcfaa51cac80",
+    "git show --numstat --pretty=format: c55a8c3c6c53d399eb085d621cdcbcfaa51cac80"
+  ],
+  "files": [
+    ".github/README.md",
+    ".github/instructions.md",
+    "deploy_dispatch_wares.ps1",
+    "frontend/react-src/.gitignore",
+    "readme.md"
+  ],
+  "planPath": "",
+  "contentHash": "524fbe7b58daf10ede66d1db02373f2fd12b0922c2c5755fb3afe5a1612be6ac",
+  "git": {
+    "repo": "dispatch-wares",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/dispatch-wares",
+    "branch": "main",
+    "head": "1d2fe2b",
+    "hasChanges": false
+  }
+}

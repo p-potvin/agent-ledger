@@ -1,0 +1,42 @@
+{
+  "id": "20250306-080132-000-video-depth-anything-45d2c6ef",
+  "createdAt": "2025-03-06T13:01:32.0000000Z",
+  "createdAtLocal": "2025-03-06 08:01",
+  "timezone": "Eastern Standard Time",
+  "project": "video-depth-anything",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\video-depth-anything",
+  "summary": "Backfill: commit bbb2b91 (2025-03-06T21:01:32+08:00) - benchmark | files=14 +1733 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: bbb2b91f909c1c8aa3d5d000a4305447d0c54660",
+    "git show --numstat --pretty=format: bbb2b91f909c1c8aa3d5d000a4305447d0c54660"
+  ],
+  "files": [
+    "benchmark/__init__.py",
+    "benchmark/dataset_extract/dataset_extract_bonn.py",
+    "benchmark/dataset_extract/dataset_extract_kitti.py",
+    "benchmark/dataset_extract/dataset_extract_nyuv2.py",
+    "benchmark/dataset_extract/dataset_extract_scannet.py",
+    "benchmark/dataset_extract/dataset_extract_sintel.py",
+    "benchmark/eval/eval.py",
+    "benchmark/eval/eval.sh",
+    "benchmark/eval/eval_500.sh",
+    "benchmark/eval/eval_tae.py",
+    "benchmark/eval/eval_tae.sh",
+    "benchmark/eval/metric.py",
+    "benchmark/infer/infer.py",
+    "benchmark/infer/infer.sh"
+  ],
+  "planPath": "",
+  "contentHash": "45d2c6ef2a6a3df6dab5077cbcdc55481a4f203195213302635e1d2387f0b69a",
+  "git": {
+    "repo": "video-depth-anything",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/video-depth-anything",
+    "branch": "main",
+    "head": "aa85ca7",
+    "hasChanges": false
+  }
+}

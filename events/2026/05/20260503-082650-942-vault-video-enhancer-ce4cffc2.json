@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260503-082650-942-vault-video-enhancer-ce4cffc2",
+    "createdAt":  "2026-05-03T12:26:50.9420704Z",
+    "createdAtLocal":  "2026-05-03 08:26",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Diagnosing UI crash. Removed Halo decorators (problematic in GUIs), added stabilization environment variables for Torch on Windows (KMP_DUPLICATE_LIB_OK, OMP_NUM_THREADS=1), and enhanced TranscriptionWorker error handling with traceback logging to capture silent failures.",
+    "commands":  [
+                     "Start-Process .venv\\Scripts\\python -ArgumentList \u0027vault_gui.py\u0027"
+                 ],
+    "files":  [
+                  "vault_gui.py",
+                  "vault_enhancer\\core.py",
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "ce4cffc251070a0cfadd92eddeac1fb1618c27f05f75beba1d6d4783b83d9f8e",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

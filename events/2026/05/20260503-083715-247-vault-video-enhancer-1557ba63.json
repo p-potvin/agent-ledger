@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-083715-247-vault-video-enhancer-1557ba63",
+    "createdAt":  "2026-05-03T12:37:15.2471149Z",
+    "createdAtLocal":  "2026-05-03 08:37",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Deferred model initialization in core.py. Heavy imports (NeMo, Whisper) are now performed only when needed in Step 2, allowing Step 1 (Audio Fix/Demucs) to run independently. This isolates whether the crash is happening during pre-processing or model loading, and helps manage VRAM more effectively on Windows.",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_enhancer\\core.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "1557ba63b0f9e59461e5cce0ee34de32e441edb5b99cb1ecb70174c3790d8a67",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

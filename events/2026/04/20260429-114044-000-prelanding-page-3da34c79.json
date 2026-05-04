@@ -1,0 +1,41 @@
+{
+  "id": "20260429-114044-000-prelanding-page-3da34c79",
+  "createdAt": "2026-04-29T15:40:44.0000000Z",
+  "createdAtLocal": "2026-04-29 11:40",
+  "timezone": "Eastern Standard Time",
+  "project": "prelanding-page",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business\\prelanding-page",
+  "summary": "Backfill: commit c534a73 (2026-04-29T11:40:44-04:00) - Checkpoint: Phase 4 complete: Full tube-site video platform with dark zinc/red theme, video grid homepage, video watch/player page with embed support, category browsing, CrakRevenue ad zones (banner + sidebar), admin panel for video/category management, and 13 vitest tests. All 23 server tests passing. Routes: /tube, /tube/watch/:slug, /tube/admin. DB tables: videos, video_categories. | files=13 +2037 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: c534a732b0013ffd861c0f3f5f090fff8d9e8ff2",
+    "git show --numstat --pretty=format: c534a732b0013ffd861c0f3f5f090fff8d9e8ff2"
+  ],
+  "files": [
+    "client/src/App.tsx",
+    "client/src/pages/TubeAdmin.tsx",
+    "client/src/pages/TubeSite.tsx",
+    "client/src/pages/TubeWatch.tsx",
+    "drizzle/0002_groovy_nick_fury.sql",
+    "drizzle/meta/0002_snapshot.json",
+    "drizzle/meta/_journal.json",
+    "drizzle/schema.ts",
+    "server/db.ts",
+    "server/routers.ts",
+    "server/routers.ts.tmp",
+    "server/tube.test.ts",
+    "server/tubeRouter.ts"
+  ],
+  "planPath": "",
+  "contentHash": "3da34c794a9b25c64e041a5eae77d5b62858d1ec814f4c97d2b33b3fdf0bae98",
+  "git": {
+    "repo": "prelanding-page",
+    "root": "C:/Users/Administrator/Desktop/business/prelanding-page",
+    "branch": "main",
+    "head": "3dfcdd2",
+    "hasChanges": false
+  }
+}

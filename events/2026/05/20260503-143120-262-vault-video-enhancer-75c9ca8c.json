@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-143120-262-vault-video-enhancer-75c9ca8c",
+    "createdAt":  "2026-05-03T18:31:20.2623728Z",
+    "createdAtLocal":  "2026-05-03 14:31",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Optimized NVENC encoding in media.py to recover ~20x RTX speed. Three changes: 1) p7-\u003ep6 (skips the slowest sub-pixel motion-estimation pass, near-zero perceptual difference). 2) Removed -tune hq (disables spatial_aq and temporal_aq lookahead that was stalling the GPU pipeline). 3) -rc vbr -cq -\u003e -rc constqp -qp (same perceptual quality as CQ mode but no variable bitrate overhead). Updated CPU fallback arg removal list to match.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vault_enhancer\\media.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "75c9ca8cfcf1b6143b6bfe974e5bfe0f198d4384a752545bc598ea51bf6d95b2",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

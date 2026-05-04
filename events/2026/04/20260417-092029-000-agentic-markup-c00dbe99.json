@@ -1,0 +1,29 @@
+{
+  "id": "20260417-092029-000-agentic-markup-c00dbe99",
+  "createdAt": "2026-04-17T13:20:29.0000000Z",
+  "createdAtLocal": "2026-04-17 09:20",
+  "timezone": "Eastern Standard Time",
+  "project": "agentic-markup",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agentic-markup",
+  "summary": "Backfill: commit d8bdb4f (2026-04-17T09:20:29-04:00) - Merge pull request #4 from p-potvin/fix-prototype-pollution-parse-attributes-7302579990965293704 | files=1 +24 -1",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: d8bdb4ff1d6d96de12694780835762b5f16db0b2",
+    "git show --numstat --pretty=format: d8bdb4ff1d6d96de12694780835762b5f16db0b2"
+  ],
+  "files": [
+    "src/tokenizer.js"
+  ],
+  "planPath": "",
+  "contentHash": "c00dbe993431e46c7c13dce3b8bdfda107421667f6ac4332f7d02dddc3f6d45a",
+  "git": {
+    "repo": "agentic-markup",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agentic-markup",
+    "branch": "main",
+    "head": "5184c31",
+    "hasChanges": false
+  }
+}

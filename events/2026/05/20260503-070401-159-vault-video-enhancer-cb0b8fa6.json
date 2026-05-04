@@ -1,0 +1,28 @@
+﻿{
+    "id":  "20260503-070401-159-vault-video-enhancer-cb0b8fa6",
+    "createdAt":  "2026-05-03T11:04:01.1598633Z",
+    "createdAtLocal":  "2026-05-03 07:04",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Created qt_exporter.py in vault-themes submodule to generate PySide6 QSS from VaultTheme presets and fixed QComboBox line-height/padding issues. Updated vault_gui.py to import the exporter, added a Theme Picker dropdown to the header, and replaced static styling with dynamic theme generation.",
+    "commands":  [
+                     "Start-Process .venv\\Scripts\\python -ArgumentList \u0027vault_gui.py\u0027"
+                 ],
+    "files":  [
+                  "vault-themes\\qt_exporter.py",
+                  "vault_gui.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "cb0b8fa6a0fb5844ffbdb28438ae6313d62bc26277bf8672b5acec783712810c",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "1694980",
+                "hasChanges":  true
+            }
+}

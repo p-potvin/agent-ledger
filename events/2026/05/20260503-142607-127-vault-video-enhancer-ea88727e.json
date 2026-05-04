@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-142607-127-vault-video-enhancer-ea88727e",
+    "createdAt":  "2026-05-03T18:26:07.1275480Z",
+    "createdAtLocal":  "2026-05-03 14:26",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Fixed Lhotse audio backend name. The API does not use friendly aliases — KNOWN_BACKENDS is keyed by full class names. Corrected \u0027soundfile\u0027 to \u0027LibsndfileBackend\u0027, which is the registered key for the libsndfile (soundfile) reader that handles WAV files natively without the FFmpeg C++ extension.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "ea88727e1c8ebf1dc8914c557ec15ef16a981cb8ebd7526ab3698fc085de0863",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

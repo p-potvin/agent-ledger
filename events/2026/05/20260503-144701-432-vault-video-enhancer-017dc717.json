@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-144701-432-vault-video-enhancer-017dc717",
+    "createdAt":  "2026-05-03T18:47:01.4323863Z",
+    "createdAtLocal":  "2026-05-03 14:47",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Replaced double loudnorm filters with dynaudnorm to eliminate NVENC audio pipeline stall. loudnorm uses buffered look-ahead analysis that prevented FFmpeg from delivering audio frames at the rate NVENC expects, dropping encoding speed from ~20x to 9x RTX and the total pipeline to 5x RTX. dynaudnorm (f=250 frame window, g=31 Gaussian smoothing, p=0.95 peak target, m=100 max gain) is a fully streaming normalizer with zero lookahead, allowing NVENC to run at full hardware throughput.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vault_enhancer\\media.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "017dc717bdafcf3f2a16295e919d3cff5fa29483472805cb0610a8b6737a0ab7",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

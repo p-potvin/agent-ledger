@@ -1,0 +1,31 @@
+{
+  "id": "20260406-225102-000-weekly-menu-e3b376e4",
+  "createdAt": "2026-04-07T02:51:02.0000000Z",
+  "createdAtLocal": "2026-04-06 22:51",
+  "timezone": "Eastern Standard Time",
+  "project": "weekly-menu",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\weekly-menu",
+  "summary": "Backfill: commit 109da52 (2026-04-06T22:51:02-04:00) - feat: implement task dispatching from TODO.md to agents and add VSCode settings | files=3 +49 -19",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 109da521a53235ae14b8acfb95b3664515e93053",
+    "git show --numstat --pretty=format: 109da521a53235ae14b8acfb95b3664515e93053"
+  ],
+  "files": [
+    ".vscode/settings.json",
+    "run_coordinated_system.py",
+    "vaultwares-agentciation"
+  ],
+  "planPath": "",
+  "contentHash": "e3b376e4da0109c9386325b08ec70aed1aa3fc1c063c0d856ed8b83485df6acf",
+  "git": {
+    "repo": "weekly-menu",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/weekly-menu",
+    "branch": "main",
+    "head": "6bebcc8",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-105613-749-vault-video-enhancer-b43803ea",
+    "createdAt":  "2026-05-03T14:56:13.7495360Z",
+    "createdAtLocal":  "2026-05-03 10:56",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Fixed a NameError in the media pipeline: Relocated the run_command_with_progress definition to the top of the function to ensure it is defined before its first use by Demucs. Also explicitly added the -progress pipe:1 flag to FFmpeg arguments to enable machine-readable progress data for the threaded log reader.",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_enhancer\\media.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "b43803ea1838de28b7ecfaf7b86be14f1a17461bc1e84f67181c9d66c9500605",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

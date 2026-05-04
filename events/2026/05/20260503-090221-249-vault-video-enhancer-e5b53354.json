@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260503-090221-249-vault-video-enhancer-e5b53354",
+    "createdAt":  "2026-05-03T13:02:21.2490201Z",
+    "createdAtLocal":  "2026-05-03 09:02",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Resolved 3 critical pipeline failures: 1) Installed \u0027torchcodec\u0027 to fix Demucs HTDemucs saving errors in Step 1. 2) Reverted transcription model to \u0027nvidia/parakeet-tdt-1.1b\u0027 because \u0027canary-1b\u0027 lacks standard timestamp support for the SRT pipeline. 3) Cleaned up debug instrumentation and re-silenced logs for production use. The system is now stabilized for end-to-end video enhancement on Windows.",
+    "commands":  [
+                     "pip3 install torchcodec hf_xet"
+                 ],
+    "files":  [
+                  "vault_enhancer\\core.py",
+                  "vault_gui.py",
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "e5b533542843da6ca19a5bf2ce65e565b0d998958e66413fedc2582dee656aec",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

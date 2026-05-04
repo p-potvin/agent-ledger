@@ -1,0 +1,32 @@
+{
+  "id": "20260320-121908-000-vault-central-5859acd1",
+  "createdAt": "2026-03-20T16:19:08.0000000Z",
+  "createdAtLocal": "2026-03-20 12:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit d9e9e76 (2026-03-20T12:19:08-04:00) - Enhance video source extraction and playback functionality across the extension | files=4 +210 -40",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: d9e9e76ac77e976fdef2f0cd8dc91ad30823bab5",
+    "git show --numstat --pretty=format: d9e9e76ac77e976fdef2f0cd8dc91ad30823bab5"
+  ],
+  "files": [
+    "background.js",
+    "content.js",
+    "dashboard.js",
+    "manifest.json"
+  ],
+  "planPath": "",
+  "contentHash": "5859acd193b32e9f0f079e98685d807db85666e7694b762902005ccb8274b6f2",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

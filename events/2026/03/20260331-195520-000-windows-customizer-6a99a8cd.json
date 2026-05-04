@@ -1,0 +1,29 @@
+{
+  "id": "20260331-195520-000-windows-customizer-6a99a8cd",
+  "createdAt": "2026-03-31T23:55:20.0000000Z",
+  "createdAtLocal": "2026-03-31 19:55",
+  "timezone": "Eastern Standard Time",
+  "project": "windows-customizer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\windows-customizer",
+  "summary": "Backfill: commit 3d0bfca (2026-03-31T19:55:20-04:00) - cleanup: remove orphaned BloatwareViewModel (replaced by BloatwareRemovalViewModel) | files=1 +0 -39",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 3d0bfca70ec157fbceaf35151f85e67b7fbc4748",
+    "git show --numstat --pretty=format: 3d0bfca70ec157fbceaf35151f85e67b7fbc4748"
+  ],
+  "files": [
+    "ViewModels/BloatwareViewModel.cs"
+  ],
+  "planPath": "",
+  "contentHash": "6a99a8cd201c6786938c43bad31928f435779bc856ccc10eec935c50d7ba0c6f",
+  "git": {
+    "repo": "windows-customizer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/windows-customizer",
+    "branch": "main",
+    "head": "1e55523",
+    "hasChanges": false
+  }
+}

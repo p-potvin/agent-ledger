@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-170909-827-vault-video-enhancer-acf67aa8",
+    "createdAt":  "2026-05-03T21:09:09.8271661Z",
+    "createdAtLocal":  "2026-05-03 17:09",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Fixed CUDA \u0027illegal memory access\u0027 error in parakeet_wrapper.py. Added torch.cuda.synchronize() before empty_cache() to ensure all kernels complete before the allocator is modified. Also fixed batch_size to match current group size exactly to avoid potential NeMo edge cases.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "acf67aa889f8329e80a3f5290a1654b64ec098f0ded0cfd926d8fb5ad65fbc44",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "3d61dd9",
+                "hasChanges":  true
+            }
+}

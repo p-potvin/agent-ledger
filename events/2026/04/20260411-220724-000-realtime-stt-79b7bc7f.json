@@ -1,0 +1,32 @@
+{
+  "id": "20260411-220724-000-realtime-stt-79b7bc7f",
+  "createdAt": "2026-04-12T02:07:24.0000000Z",
+  "createdAtLocal": "2026-04-11 22:07",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit 2af93bf (2026-04-11T22:07:24-04:00) - Merge branch 'main' of https://github.com/p-potvin/realtime-stt | files=4 +75 -37",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 2af93bf834219a14f968ace2e8cf197a2b9e5e2c",
+    "git show --numstat --pretty=format: 2af93bf834219a14f968ace2e8cf197a2b9e5e2c"
+  ],
+  "files": [
+    "gui_overlay/overlay_window.py",
+    "main_app.py",
+    "stt_engine/audio_capture.py",
+    "stt_engine/vad_logic.py"
+  ],
+  "planPath": "",
+  "contentHash": "79b7bc7ff7c2a2f21f90cd8110eccb35161d8b3be487e6b2eeb539fe400b791a",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

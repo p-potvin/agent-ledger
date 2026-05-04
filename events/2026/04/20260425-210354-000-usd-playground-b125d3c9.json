@@ -1,0 +1,42 @@
+{
+  "id": "20260425-210354-000-usd-playground-b125d3c9",
+  "createdAt": "2026-04-26T01:03:54.0000000Z",
+  "createdAtLocal": "2026-04-25 21:03",
+  "timezone": "Eastern Standard Time",
+  "project": "usd-playground",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\usd-playground",
+  "summary": "Backfill: commit 458eeb1 (2026-04-25T21:03:54-04:00) - feat: implement studio_core pipeline logic with job manifest management and add GUI fallback support | files=14 +358 -86",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 458eeb12705b812e48a307d288689030a913a0e7",
+    "git show --numstat --pretty=format: 458eeb12705b812e48a307d288689030a913a0e7"
+  ],
+  "files": [
+    ".omx/metrics.json",
+    ".omx/state/hud-state.json",
+    ".omx/state/notify-hook-state.json",
+    ".omx/state/ralph-state.json",
+    ".omx/state/skill-active-state.json",
+    ".omx/state/tmux-hook-state.json",
+    "README.md",
+    "ROADMAP.md",
+    "TESTING.md",
+    "TODO.md",
+    "gui_app.py",
+    "studio_core/__init__.py",
+    "studio_core/pipeline.py",
+    "tests/test_studio_core.py"
+  ],
+  "planPath": "",
+  "contentHash": "b125d3c962aad9c0a34800250967db4de049e0165acf046d3c6d1077294e3a18",
+  "git": {
+    "repo": "usd-playground",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/usd-playground",
+    "branch": "main",
+    "head": "5db47bc",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "20260312-181626-000-vaultwares-website-0f9731cc",
+  "createdAt": "2026-03-12T22:16:26.0000000Z",
+  "createdAtLocal": "2026-03-12 18:16",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-website",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website",
+  "summary": "Backfill: commit a541ad4 (2026-03-12T18:16:26-04:00) - unified dockerFile so that backend now serves the frontend when it is built | files=8 +77 -123",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: a541ad412a0198bbf0cc220cbca18533bca407f3",
+    "git show --numstat --pretty=format: a541ad412a0198bbf0cc220cbca18533bca407f3"
+  ],
+  "files": [
+    "Dockerfile",
+    "cfg/backend/Dockerfile",
+    "cfg/frontend/Dockerfile",
+    "cfg/frontend/nginx.conf",
+    "cloudbuild-backend.yaml",
+    "cloudbuild-frontend.yaml",
+    "cloudbuild.yaml",
+    "server.ts"
+  ],
+  "planPath": "",
+  "contentHash": "0f9731cc8207ea323227bb06084df3081e183b895c3fd724c938ab27b7c8ed9c",
+  "git": {
+    "repo": "vaultwares-website",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website",
+    "branch": "main",
+    "head": "55b66eb",
+    "hasChanges": false
+  }
+}

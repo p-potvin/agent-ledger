@@ -1,0 +1,30 @@
+{
+  "id": "20260428-043709-000-realtime-stt-0de61deb",
+  "createdAt": "2026-04-28T08:37:09.0000000Z",
+  "createdAtLocal": "2026-04-28 04:37",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit ff274df (2026-04-28T08:37:09Z) - Remove redundant PyTorch tensor allocation in Parakeet wrapper | files=2 +7 -2",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: ff274dff587ead750919556ed99d287971bbef21",
+    "git show --numstat --pretty=format: ff274dff587ead750919556ed99d287971bbef21"
+  ],
+  "files": [
+    ".jules/bolt.md",
+    "stt_engine/parakeet_wrapper.py"
+  ],
+  "planPath": "",
+  "contentHash": "0de61debeaf2e5a0a2f372377ccb4e3da04e42db0a7428145d8daff84945fa05",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

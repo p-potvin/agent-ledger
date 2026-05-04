@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260503-094432-610-vault-video-enhancer-04b380af",
+    "createdAt":  "2026-05-03T13:44:32.6101672Z",
+    "createdAtLocal":  "2026-05-03 09:44",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Optimized terminal output by globally monkey-patching tqdm to be silent. Forced Lhotse to use the FFmpeg backend as a fallback to bypass torchaudio.io initialization failures on Windows. Updated requirements.txt with hf_xet for faster model downloads.",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_enhancer\\core.py",
+                  "vault_enhancer\\parakeet_wrapper.py",
+                  "requirements.txt"
+              ],
+    "planPath":  "",
+    "contentHash":  "04b380af33d3c90034d807ad39d1cb5d2172ef3af5c3b06d41993ff9a2da61dd",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

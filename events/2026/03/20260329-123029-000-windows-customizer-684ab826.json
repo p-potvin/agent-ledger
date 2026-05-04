@@ -1,0 +1,49 @@
+{
+  "id": "20260329-123029-000-windows-customizer-684ab826",
+  "createdAt": "2026-03-29T16:30:29.0000000Z",
+  "createdAtLocal": "2026-03-29 12:30",
+  "timezone": "Eastern Standard Time",
+  "project": "windows-customizer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\windows-customizer",
+  "summary": "Backfill: commit cec7ff3 (2026-03-29T12:30:29-04:00) - feat: initialize test project and add ExplorerViewModel unit tests | files=21 +602 -26",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: cec7ff3a3eb82ff861219be634b098a4102cbcee",
+    "git show --numstat --pretty=format: cec7ff3a3eb82ff861219be634b098a4102cbcee"
+  ],
+  "files": [
+    ".vscode/settings.json",
+    "MainWindow.xaml.cs",
+    "Models/InvasiveService.cs",
+    "ViewModels/ExplorerViewModel.cs",
+    "ViewModels/InvasiveServicesViewModel.cs",
+    "Views/InvasiveServicesPage.xaml",
+    "Views/InvasiveServicesPage.xaml.cs",
+    "WindowsCustomizer.Tests/EssentialProgramTests.cs",
+    "WindowsCustomizer.Tests/EssentialsViewModelTests.cs",
+    "WindowsCustomizer.Tests/ExplorerViewModelTests.cs",
+    "WindowsCustomizer.Tests/InvasiveServicesViewModelTests.cs",
+    "WindowsCustomizer.Tests/WindowsCustomizer.Tests.csproj",
+    "WindowsCustomizer.csproj",
+    "WindowsCustomizer.sln",
+    "build.log",
+    "obj/Debug/net8.0-windows10.0.19041.0/input.json",
+    "obj/Debug/net8.0-windows10.0.19041.0/output.json",
+    "obj/WindowsCustomizer.csproj.nuget.dgspec.json",
+    "obj/project.nuget.cache",
+    "test.log",
+    "todo.md"
+  ],
+  "planPath": "",
+  "contentHash": "684ab826a75b98cfb85cff2de25f8c63434ecd7222da9cb0fe6ecd33a7c88b10",
+  "git": {
+    "repo": "windows-customizer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/windows-customizer",
+    "branch": "main",
+    "head": "1e55523",
+    "hasChanges": false
+  }
+}

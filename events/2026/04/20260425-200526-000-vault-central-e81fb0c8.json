@@ -1,0 +1,30 @@
+{
+  "id": "20260425-200526-000-vault-central-e81fb0c8",
+  "createdAt": "2026-04-26T00:05:26.0000000Z",
+  "createdAtLocal": "2026-04-25 20:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit cef3b82 (2026-04-26T00:05:26Z) - fix: return 'Unknown' (capitalised) from getDomainFromUrl and add invalid-URL tests | files=2 +44 -4",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: cef3b82b495e39b2051bcccdecc587008efcb14f",
+    "git show --numstat --pretty=format: cef3b82b495e39b2051bcccdecc587008efcb14f"
+  ],
+  "files": [
+    "src/components/Dashboard.test.tsx",
+    "src/components/VaultDashboard.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "e81fb0c8e5699bd7b4b10349389952e55cb4033f0d3095f03c48567c3bc21f3b",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

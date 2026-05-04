@@ -1,0 +1,52 @@
+{
+  "id": "20260427-191916-000-vault-central-db5d481e",
+  "createdAt": "2026-04-27T23:19:16.0000000Z",
+  "createdAtLocal": "2026-04-27 19:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit 23b0543 (2026-04-27T19:19:16-04:00) - feat: integrate browser sync functionality for video storage | files=24 +656 -145",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 23b054394a41839bfc58fcbd39196da5dfa62165",
+    "git show --numstat --pretty=format: 23b054394a41839bfc58fcbd39196da5dfa62165"
+  ],
+  "files": [
+    "dist/background/scripts/background.js",
+    "dist/dashboard.js",
+    "dist/dashboard.js.map",
+    "dist/ffmpeg-core/ffmpeg-core.js",
+    "dist/ffmpeg-core/ffmpeg-core.wasm",
+    "dist/globals.css",
+    "dist/globals.js",
+    "dist/globals.js.map",
+    "dist/pin.js",
+    "dist/pin.js.map",
+    "dist/src/offscreen/processor.js",
+    "package-extension.cjs",
+    "package-lock.json",
+    "package.json",
+    "src/components/Dashboard.test.js",
+    "src/components/Dashboard.test.tsx",
+    "src/components/VaultDashboard.js",
+    "src/components/VaultDashboard.tsx",
+    "src/lib/storage-vault.js",
+    "src/lib/storage-vault.ts",
+    "src/offscreen/processor.js",
+    "src/offscreen/processor.ts",
+    "vite.config.js",
+    "vite.config.ts"
+  ],
+  "planPath": "",
+  "contentHash": "db5d481e40349c5d36acf926d560e23c6effee8061f4517c9c3f19c78d2546c9",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

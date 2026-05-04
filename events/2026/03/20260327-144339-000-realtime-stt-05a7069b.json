@@ -1,0 +1,35 @@
+{
+  "id": "20260327-144339-000-realtime-stt-05a7069b",
+  "createdAt": "2026-03-27T18:43:39.0000000Z",
+  "createdAtLocal": "2026-03-27 14:43",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit 31f6f38 (2026-03-27T14:43:39-04:00) - feat: Enhance real-time STT functionality with audio device detection and transcription improvements | files=7 +421 -145",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 31f6f38921eda1929163788f944256914c6ba1e7",
+    "git show --numstat --pretty=format: 31f6f38921eda1929163788f944256914c6ba1e7"
+  ],
+  "files": [
+    ".gitignore",
+    "INSTRUCTIONS.md",
+    "agent_manifest.md",
+    "gui_overlay/overlay_window.py",
+    "main_app.py",
+    "stt_engine/engine_orchestrator.py",
+    "vault_themes"
+  ],
+  "planPath": "",
+  "contentHash": "05a7069bc03f4d633e59724e6e0ef671d4a2c7adaa534ce40da8e96074a70c7f",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

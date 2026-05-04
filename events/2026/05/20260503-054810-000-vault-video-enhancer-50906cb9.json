@@ -1,0 +1,45 @@
+{
+  "id": "20260503-054810-000-vault-video-enhancer-50906cb9",
+  "createdAt": "2026-05-03T09:48:10.0000000Z",
+  "createdAtLocal": "2026-05-03 05:48",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-video-enhancer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+  "summary": "Backfill: commit 1694980 (2026-05-03T05:48:10-04:00) - feat: add PySide6 GUI, implement translation mocking tool, and integrate vault-themes via git submodule | files=17 +424 -52",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 1694980b370babec09c6708e50d973c0dd1f06f4",
+    "git show --numstat --pretty=format: 1694980b370babec09c6708e50d973c0dd1f06f4"
+  ],
+  "files": [
+    ".gitignore",
+    ".gitmodules",
+    "README.md",
+    "enhancer.py",
+    "requirements.txt",
+    "tools/test_translation_mock.py",
+    "vault-themes",
+    "vault_enhancer/core.py",
+    "vault_enhancer/media.py",
+    "vault_enhancer/parakeet_wrapper.py",
+    "vault_enhancer/test_core_integration.py",
+    "vault_enhancer/test_translation.py",
+    "vault_enhancer/test_utils.py",
+    "vault_enhancer/translation.py",
+    "vault_enhancer/utils.py",
+    "vault_gui.py",
+    "video_transcriber/__pycache__/__init__.pyc"
+  ],
+  "planPath": "",
+  "contentHash": "50906cb9688a23259e7be6c7f92916801dbfbe4e408600d317c9ab923d1911a9",
+  "git": {
+    "repo": "vault-video-enhancer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+    "branch": "main",
+    "head": "fe14010",
+    "hasChanges": false
+  }
+}

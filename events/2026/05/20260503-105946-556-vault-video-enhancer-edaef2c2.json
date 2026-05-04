@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-105946-556-vault-video-enhancer-edaef2c2",
+    "createdAt":  "2026-05-03T14:59:46.5567548Z",
+    "createdAtLocal":  "2026-05-03 10:59",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Enabled global DEBUG logging for torchaudio, torio, and NeMo. This is intended to diagnose why the FFmpeg 6.1.1 extension is failing to initialize despite being installed. The GUI Activity Monitor will now display the full stack trace and DLL loading attempts from torio.",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "edaef2c296eef113d2b43c02b2b3f606a5ba8251ad074ba81786b6e2a839573e",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,30 @@
+﻿{
+    "id":  "20260503-080912-602-vault-video-enhancer-dd015b22",
+    "createdAt":  "2026-05-03T12:09:12.6023231Z",
+    "createdAtLocal":  "2026-05-03 08:09",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Added semantic color fields (error, success, muted) to VaultTheme and updated all presets with theme-specific matching colors. Updated vault-themes/README.md with minimal logo/favicon documentation. Fixed GUI logo resizing by applying smooth scaling to the 25x25 minimal icon.",
+    "commands":  [
+                     "Start-Process .venv\\Scripts\\python -ArgumentList \u0027vault_gui.py\u0027"
+                 ],
+    "files":  [
+                  "vault-themes\\theme_manager.py",
+                  "vault-themes\\qt_exporter.py",
+                  "vault_gui.py",
+                  "vault-themes\\README.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "dd015b224b4fd88f099b994ddf1f068f2e83b753f7800e1a41a2bb5ca53d8bc2",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

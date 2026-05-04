@@ -1,0 +1,28 @@
+﻿{
+    "id":  "20260502-041020-866-vault-central-213cccba",
+    "createdAt":  "2026-05-02T08:10:20.8665062Z",
+    "createdAtLocal":  "2026-05-02 04:10",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-central",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+    "summary":  "Starting to fix VaultDashboard and other build errors. Identifying files and build scripts.",
+    "commands":  [
+                     "npm run build"
+                 ],
+    "files":  [
+                  "src/components/VaultDashboard.js",
+                  "src/components/VaultDashboard.tsx"
+              ],
+    "planPath":  "",
+    "contentHash":  "213cccba10940c5702719adc9ede9f2b03e06654b2d0a80ae46b885770b7f2ed",
+    "git":  {
+                "repo":  "vault-central",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+                "branch":  "main",
+                "head":  "b075968",
+                "hasChanges":  true
+            }
+}

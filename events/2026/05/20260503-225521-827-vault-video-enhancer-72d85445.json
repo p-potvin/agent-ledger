@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260503-225521-827-vault-video-enhancer-72d85445",
+    "createdAt":  "2026-05-04T02:55:21.8276979Z",
+    "createdAtLocal":  "2026-05-03 22:55",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Deep stabilization for CUDA illegal memory access. Monkey-patched Lhotse random seeding to avoid the crashing call. Added defensive synchronizations before transcription and after model loading. Hardened GUI cleanup loop to ignore already-corrupted contexts and increased cooldown to 2s.",
+    "commands":  [
+                     "python -m py_compile vault_gui.py vault_enhancer/core.py vault_enhancer/parakeet_wrapper.py"
+                 ],
+    "files":  [
+                  "vault_gui.py",
+                  "vault_enhancer/core.py",
+                  "vault_enhancer/parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "72d85445625a0e4bacfb0624981237fe120744dd242306d5fe7703a7e4d3e547",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "a66734d",
+                "hasChanges":  true
+            }
+}

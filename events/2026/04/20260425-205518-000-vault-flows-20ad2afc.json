@@ -1,0 +1,36 @@
+{
+  "id": "20260425-205518-000-vault-flows-20ad2afc",
+  "createdAt": "2026-04-26T00:55:18.0000000Z",
+  "createdAtLocal": "2026-04-25 20:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Backfill: commit 0fa6c2f (2026-04-25T20:55:18-04:00) - chore: stop tracking logs | files=8 +0 -19642",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 0fa6c2f77932db0db503f3f9af556ffa49b0449c",
+    "git show --numstat --pretty=format: 0fa6c2f77932db0db503f3f9af556ffa49b0449c"
+  ],
+  "files": [
+    ".omx/logs/coordination-runtime.log",
+    ".omx/logs/tmux-hook-2026-04-13.jsonl",
+    ".omx/logs/tmux-hook-2026-04-14.jsonl",
+    ".omx/logs/tmux-hook-2026-04-25.jsonl",
+    ".omx/logs/turns-2026-04-13.jsonl",
+    ".omx/logs/turns-2026-04-14.jsonl",
+    ".omx/logs/turns-2026-04-25.jsonl",
+    ".omx/logs/vite-coordination.log"
+  ],
+  "planPath": "",
+  "contentHash": "20ad2afc01c7c12409bd83376ef3923d72f3e134702964bb8552f49855491313",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "ed096a3",
+    "hasChanges": true
+  }
+}

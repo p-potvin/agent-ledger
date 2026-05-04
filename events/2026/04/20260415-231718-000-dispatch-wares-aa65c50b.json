@@ -1,0 +1,29 @@
+{
+  "id": "20260415-231718-000-dispatch-wares-aa65c50b",
+  "createdAt": "2026-04-16T03:17:18.0000000Z",
+  "createdAtLocal": "2026-04-15 23:17",
+  "timezone": "Eastern Standard Time",
+  "project": "dispatch-wares",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\dispatch-wares",
+  "summary": "Backfill: commit c97d7f0 (2026-04-15T23:17:18-04:00) - remove test key and deleted it | files=1 +1 -1",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: c97d7f07651bc4b175e5d217570974163fc9c489",
+    "git show --numstat --pretty=format: c97d7f07651bc4b175e5d217570974163fc9c489"
+  ],
+  "files": [
+    "frontend/.env"
+  ],
+  "planPath": "",
+  "contentHash": "aa65c50b2a7e0758b9c355de9ba2a1dca38fc34ffd15d7614b056ff280c7ab1f",
+  "git": {
+    "repo": "dispatch-wares",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/dispatch-wares",
+    "branch": "main",
+    "head": "1d2fe2b",
+    "hasChanges": false
+  }
+}

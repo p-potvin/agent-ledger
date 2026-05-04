@@ -1,0 +1,30 @@
+{
+  "id": "20260320-100534-000-vault-central-561d26c5",
+  "createdAt": "2026-03-20T14:05:34.0000000Z",
+  "createdAtLocal": "2026-03-20 10:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit cd63d4e (2026-03-20T10:05:34-04:00) - Implement iframe fallback and video source extraction for non-standard generic video links | files=2 +47 -5",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: cd63d4e6998c8b1758a3d3bb229f6698937d380a",
+    "git show --numstat --pretty=format: cd63d4e6998c8b1758a3d3bb229f6698937d380a"
+  ],
+  "files": [
+    "dashboard.js",
+    "manifest.json"
+  ],
+  "planPath": "",
+  "contentHash": "561d26c559076aefc5c8055b6d9d5aeb8c91cb9c9050735264d2018efa388766",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-082341-576-vault-video-enhancer-027163d7",
+    "createdAt":  "2026-05-03T12:23:41.5767656Z",
+    "createdAtLocal":  "2026-05-03 08:23",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Suppressed noisy NeMo, PyTorch, and Megatron startup warnings in parakeet_wrapper.py. Set NEMO_LOGGING_LEVEL to ERROR and disabled torch warnings to prevent console clutter during model initialization. This ensures the UI log remains clean while the 1B+ parameter model loads into VRAM.",
+    "commands":  [
+                     "Start-Process .venv\\Scripts\\python -ArgumentList \u0027vault_gui.py\u0027"
+                 ],
+    "files":  [
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "027163d72ad9f7bf2e70571185bf4eaf9cec08190653d9a3e7a7ebb8b4cb74de",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

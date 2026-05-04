@@ -1,0 +1,40 @@
+{
+  "id": "20260429-132032-000-tube-site-6400701a",
+  "createdAt": "2026-04-29T17:20:32.0000000Z",
+  "createdAtLocal": "2026-04-29 13:20",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+  "summary": "Backfill: commit 622bb00 (2026-04-29T13:20:32-04:00) - Add PromKing Tube WordPress plugin v1.0.0 - full tube site with CrakRevenue ad zones, affiliate link integration, and video management | files=12 +1341 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 622bb002e0ed69b9a59de7ef140dcf8952aed3ea",
+    "git show --numstat --pretty=format: 622bb002e0ed69b9a59de7ef140dcf8952aed3ea"
+  ],
+  "files": [
+    "promking-tube.zip",
+    "promking-tube/README.md",
+    "promking-tube/assets/css/tube.css",
+    "promking-tube/assets/js/tube.js",
+    "promking-tube/includes/admin-settings.php",
+    "promking-tube/includes/post-types.php",
+    "promking-tube/includes/shortcodes.php",
+    "promking-tube/includes/template-loader.php",
+    "promking-tube/promking-tube.php",
+    "promking-tube/templates/archive-pkt_video.php",
+    "promking-tube/templates/single-pkt_video.php",
+    "promking-tube/templates/taxonomy-pkt_category.php"
+  ],
+  "planPath": "",
+  "contentHash": "6400701a7354cb3a716047133a64b639ce1afe45c53fb78face5cce1faaa7ce9",
+  "git": {
+    "repo": "tube-site",
+    "root": "C:/Users/Administrator/Desktop/business/tube-site",
+    "branch": "main",
+    "head": "ca526cf",
+    "hasChanges": false
+  }
+}

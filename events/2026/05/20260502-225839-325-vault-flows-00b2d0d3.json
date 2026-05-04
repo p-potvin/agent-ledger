@@ -1,0 +1,44 @@
+{
+  "id": "20260502-225839-325-vault-flows-00b2d0d3",
+  "createdAt": "2026-05-03T02:58:39.3259575Z",
+  "createdAtLocal": "2026-05-02 22:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Implemented first local node-editor phase: added IMPROVEMENTS product note for guest preset/catalog and authenticated personal workspace direction; added workflow graph schema/node registry/tests; normalized graph documents onto workflows; wired create/modify-copy flows into /workflows/:id editor; replaced placeholder editor with node registry, draggable canvas nodes, port linking, inspector config editing, edge deletion, and save; aligned Tailwind vault colors; fixed ESLint ignores for vendored folders; added Playwright TLS-disable path and updated smoke test for create-to-editor flow. Verification passed: npm test, npm run lint, npm run build, npx playwright test tests/e2e/basic-smoke.spec.js --project=chromium. Dev server running at http://127.0.0.1:5173/.",
+  "commands": [
+    "npm test",
+    "npm run lint",
+    "npm run build",
+    "npx playwright test tests/e2e/basic-smoke.spec.js --project=chromium",
+    "npm run dev -- --host 127.0.0.1 --port 5173"
+  ],
+  "files": [
+    "IMPROVEMENTS.md",
+    "src/lib/workflowGraph.js",
+    "src/lib/workflowGraph.test.js",
+    "src/api.js",
+    "src/validation.js",
+    "src/App.jsx",
+    "src/components/features/AdvancedWorkflowCreator.jsx",
+    "src/components/ui/WorkflowPage.jsx",
+    "src/components/ui/WorkflowList.jsx",
+    "tailwind.config.js",
+    "eslint.config.js",
+    "vite.config.js",
+    "playwright.config.js",
+    "tests/e2e/basic-smoke.spec.js"
+  ],
+  "planPath": "",
+  "contentHash": "00b2d0d36ed579153ffbccdd0515ad6ffa927defd4c958b9a014d30c05e0e96e",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "ed096a3",
+    "hasChanges": true
+  }
+}

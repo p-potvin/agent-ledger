@@ -1,0 +1,53 @@
+{
+  "id": "20260403-111541-000-realtime-stt-8e5c7181",
+  "createdAt": "2026-04-03T15:15:41.0000000Z",
+  "createdAtLocal": "2026-04-03 11:15",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit 01b36ec (2026-04-03T11:15:41-04:00) - feat: Enhance Real-Time STT with native audio capture and improved logging | files=25 +822 -589",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 01b36ec8bbbd32d853bb6e5465d4f5d57c419fb4",
+    "git show --numstat --pretty=format: 01b36ec8bbbd32d853bb6e5465d4f5d57c419fb4"
+  ],
+  "files": [
+    ".copilot/skills/cleanup.md",
+    ".copilot/skills/env-isolation.md",
+    ".copilot/skills/response-quality.md",
+    ".copilot/skills/skill-selection.md",
+    ".copilot/skills/task-tracking.md",
+    ".copilot/skills/testing-cleanup.md",
+    ".copilot/skills/update-docs.md",
+    ".gitignore",
+    ".vscode/settings.json",
+    "ROADMAP.md",
+    "TODO.md",
+    "check_httpx.txt",
+    "config.json",
+    "docs/INSTRUCTIONS.md",
+    "docs/ROADMAP.md",
+    "gui_overlay/overlay_window.py",
+    "main_app.py",
+    "readme.md",
+    "realtime-stt.cmd",
+    "requirements.txt",
+    "stt_engine/audio_capture.py",
+    "stt_engine/parakeet_wrapper.py",
+    "stt_engine/vad_logic.py",
+    "vault_skins/__init__.py",
+    "vault_skins/skin_manager.py"
+  ],
+  "planPath": "",
+  "contentHash": "8e5c7181a6c014b73e68b4776932ff62f6252e84338997f15acc4dab7ce69458",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

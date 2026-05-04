@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-151000-932-vault-video-enhancer-535277e9",
+    "createdAt":  "2026-05-03T19:10:00.9328081Z",
+    "createdAtLocal":  "2026-05-03 15:10",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Pre-warm the Parakeet ASR model before Demucs starts in core.py. Previously the model loaded AFTER Demucs finished, creating a dead-GPU gap (VRAM swap) visible as a drop in GPU utilization between stages. Now the model loads concurrently during the ~27s Demucs phase. The _PARAKEET_MODEL singleton ensures it only loads once per session.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vault_enhancer\\core.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "535277e9c85dc9708419fbdaf9ab0c08f413bb89423486fb60630a97a4fbb6fa",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

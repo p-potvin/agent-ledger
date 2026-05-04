@@ -1,0 +1,29 @@
+{
+  "id": "20260327-122408-000-realtime-stt-849f57f8",
+  "createdAt": "2026-03-27T16:24:08.0000000Z",
+  "createdAtLocal": "2026-03-27 12:24",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit 004ea2f (2026-03-27T12:24:08-04:00) - Delete theme_manager.py | files=1 +0 -42",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 004ea2f19826e10c9e6bd8d7586b7d19454bb30b",
+    "git show --numstat --pretty=format: 004ea2f19826e10c9e6bd8d7586b7d19454bb30b"
+  ],
+  "files": [
+    "theme_manager.py"
+  ],
+  "planPath": "",
+  "contentHash": "849f57f88d31c8933d2dfd3ae0ced58db7cb3e74f60d4b58d114877b9b05db84",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

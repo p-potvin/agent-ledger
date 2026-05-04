@@ -1,0 +1,29 @@
+{
+  "id": "20260416-050439-000-dispatch-wares-9cf17838",
+  "createdAt": "2026-04-16T09:04:39.0000000Z",
+  "createdAtLocal": "2026-04-16 05:04",
+  "timezone": "Eastern Standard Time",
+  "project": "dispatch-wares",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\dispatch-wares",
+  "summary": "Backfill: commit 49bbfe3 (2026-04-16T09:04:39Z) - fix: exclude backend from root tsconfig to fix prisma/config TS2307 error | files=1 +5 -1",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 49bbfe39cc971be3769457fa07c5ced676ab5cfc",
+    "git show --numstat --pretty=format: 49bbfe39cc971be3769457fa07c5ced676ab5cfc"
+  ],
+  "files": [
+    "tsconfig.json"
+  ],
+  "planPath": "",
+  "contentHash": "9cf17838b544798346f158ab15439880104aa29977d33659c86e3ac4dcc2ed88",
+  "git": {
+    "repo": "dispatch-wares",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/dispatch-wares",
+    "branch": "main",
+    "head": "1d2fe2b",
+    "hasChanges": false
+  }
+}

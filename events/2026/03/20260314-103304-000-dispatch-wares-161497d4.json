@@ -1,0 +1,29 @@
+{
+  "id": "20260314-103304-000-dispatch-wares-161497d4",
+  "createdAt": "2026-03-14T14:33:04.0000000Z",
+  "createdAtLocal": "2026-03-14 10:33",
+  "timezone": "Eastern Standard Time",
+  "project": "dispatch-wares",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\dispatch-wares",
+  "summary": "Backfill: commit aac8f61 (2026-03-14T10:33:04-04:00) - added map.js | files=1 +0 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: aac8f6118be979d4cfc28c4434d3ac7b2b4e1c7f",
+    "git show --numstat --pretty=format: aac8f6118be979d4cfc28c4434d3ac7b2b4e1c7f"
+  ],
+  "files": [
+    "frontend/src/components/Map/map.js"
+  ],
+  "planPath": "",
+  "contentHash": "161497d4065733b51560504fa81481472a95d7758b2b747e309334733163fbda",
+  "git": {
+    "repo": "dispatch-wares",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/dispatch-wares",
+    "branch": "main",
+    "head": "1d2fe2b",
+    "hasChanges": false
+  }
+}

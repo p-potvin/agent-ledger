@@ -1,0 +1,27 @@
+{
+  "id": "20260419-220314-000-vault-flows-dfb93c4b",
+  "createdAt": "2026-04-20T02:03:14.0000000Z",
+  "createdAtLocal": "2026-04-19 22:03",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Backfill: commit 8485b05 (2026-04-19T22:03:14-04:00) - Merge pull request #12 from p-potvin/test-lonely-manager-error-path-14441594475173365783 | files=0 +59 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 8485b0581147bc9016834b7b086586b4c40a4217",
+    "git show --numstat --pretty=format: 8485b0581147bc9016834b7b086586b4c40a4217"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "dfb93c4b25eb37e4bfb73b1b3364fb80be033c86fe1fa3f95bb121e7d2764276",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "ed096a3",
+    "hasChanges": true
+  }
+}

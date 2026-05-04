@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-172345-136-vault-video-enhancer-2e9c7631",
+    "createdAt":  "2026-05-03T21:23:45.1367718Z",
+    "createdAtLocal":  "2026-05-03 17:23",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Reduced transcription group size to 2 and added a 1-second sleep between batches in parakeet_wrapper.py. This addresses the CUDA \u0027illegal memory access\u0027 and WinError 32 (temp file locking) by giving the GPU driver and NeMo\u0027s internal cleanup more time to finalize resources between batch iterations.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vault_enhancer\\parakeet_wrapper.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "2e9c76310c59caced404b7c16a59c594b2d68c206fe236982eab6a38ff474051",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "3d61dd9",
+                "hasChanges":  true
+            }
+}

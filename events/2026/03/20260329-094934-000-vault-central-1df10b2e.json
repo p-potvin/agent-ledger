@@ -1,0 +1,38 @@
+{
+  "id": "20260329-094934-000-vault-central-1df10b2e",
+  "createdAt": "2026-03-29T13:49:34.0000000Z",
+  "createdAtLocal": "2026-03-29 09:49",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit 7dc6a77 (2026-03-29T09:49:34-04:00) - Refactor dashboard opening logic in background scripts and update pin entry UI | files=10 +134 -23",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 7dc6a774c63e37f52b4c60ec1374fe15d6429421",
+    "git show --numstat --pretty=format: 7dc6a774c63e37f52b4c60ec1374fe15d6429421"
+  ],
+  "files": [
+    "background/scripts/background.js",
+    "background/scripts/background.ts",
+    "dist/background/scripts/background.js",
+    "dist/pin.js",
+    "dist/pin.js.map",
+    "fix.py",
+    "patch-singleton.js",
+    "patch.js",
+    "src/pin-entry.js",
+    "src/pin-entry.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "1df10b2e7a1ade812f670681b41709067574f10d40687ec4347b787850be5fbe",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

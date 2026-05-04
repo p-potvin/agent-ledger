@@ -1,0 +1,39 @@
+{
+  "id": "20260413-155153-000-vault-central-f0075d6d",
+  "createdAt": "2026-04-13T19:51:53.0000000Z",
+  "createdAtLocal": "2026-04-13 15:51",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit 116650f (2026-04-13T15:51:53-04:00) - merge changes | files=11 +41 -48",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 116650fa20576d72c548b390eb0142a4690a1ccf",
+    "git show --numstat --pretty=format: 116650fa20576d72c548b390eb0142a4690a1ccf"
+  ],
+  "files": [
+    "README.md",
+    "dist/content.js",
+    "package-extension.cjs",
+    "package.json",
+    "src/scripts/content.js",
+    "src/scripts/content.ts",
+    "src/styles/fix-icons-in-buttons.css",
+    "tests/capture.test.ts",
+    "tests/dashboard.spec.ts",
+    "tests/extension.fixture.ts",
+    "tests/extension.spec.ts"
+  ],
+  "planPath": "",
+  "contentHash": "f0075d6dd2b49a03b4efbca77865d54e42037eba6e72bafbb2c66178680231cc",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

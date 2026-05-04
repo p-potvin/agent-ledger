@@ -1,0 +1,43 @@
+{
+  "id": "20260327-124747-000-realtime-stt-96a3b752",
+  "createdAt": "2026-03-27T16:47:47.0000000Z",
+  "createdAtLocal": "2026-03-27 12:47",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit d959fc8 (2026-03-27T12:47:47-04:00) - feat: Enhance GUI overlay with theme management and control panel | files=15 +862 -174",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: d959fc81ae9e0e70aca201d46d6a848aa0a8914f",
+    "git show --numstat --pretty=format: d959fc81ae9e0e70aca201d46d6a848aa0a8914f"
+  ],
+  "files": [
+    ".github/INSTRUCTIONS.md",
+    ".gitignore",
+    "TODO.md",
+    "VAULT_DEPENDENCIES.txt",
+    "agent_manifest.md",
+    "gui_overlay/overlay_window.py",
+    "main_app.py",
+    "realtime-stt.cmd",
+    "requirements.txt",
+    "stt_engine/audio_capture.py",
+    "stt_engine/faster_whisper_wrapper.py",
+    "stt_engine/vad_logic.py",
+    "vault_skins/__init__.py",
+    "vault_skins/skin_manager.py",
+    "vault_sync.py"
+  ],
+  "planPath": "",
+  "contentHash": "96a3b752bc5fec9a3cad00977a0d56408186e4f274d3a81494cc4980b163c2b7",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

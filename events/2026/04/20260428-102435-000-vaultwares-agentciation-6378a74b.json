@@ -1,0 +1,41 @@
+{
+  "id": "20260428-102435-000-vaultwares-agentciation-6378a74b",
+  "createdAt": "2026-04-28T14:24:35.0000000Z",
+  "createdAtLocal": "2026-04-28 10:24",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-agentciation",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-agentciation",
+  "summary": "Backfill: commit 2a96c0d (2026-04-28T14:24:35Z) - feat: migrate agent dispatcher, coordination scripts, and docs from vaultwares-pipelines | files=13 +874 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 2a96c0dcc0044355c591a5712cc4ee2679936260",
+    "git show --numstat --pretty=format: 2a96c0dcc0044355c591a5712cc4ee2679936260"
+  ],
+  "files": [
+    "AGENT_MANIFEST.md",
+    "COLLABORATION.md",
+    "COORDINATION_PLAN.md",
+    "MULTI_AGENT_TODO.md",
+    "agent_registry.py",
+    "assign_spa_tasks.py",
+    "assign_tasks.py",
+    "demo_active_coordination.py",
+    "dispatcher/__init__.py",
+    "dispatcher/dispatcher_agent.py",
+    "dispatcher/dispatcher_gui.py",
+    "dispatcher/worker_agent.py",
+    "run_coordinated_system.py"
+  ],
+  "planPath": "",
+  "contentHash": "6378a74bfe0b1e8fb8f083989cb293b7271cca69f651fe7ab2ed2bb28b960066",
+  "git": {
+    "repo": "vaultwares-agentciation",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-agentciation",
+    "branch": "main",
+    "head": "ae703d0",
+    "hasChanges": false
+  }
+}

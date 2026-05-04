@@ -1,0 +1,29 @@
+{
+  "id": "20260417-181243-000-weekly-menu-e8f15138",
+  "createdAt": "2026-04-17T22:12:43.0000000Z",
+  "createdAtLocal": "2026-04-17 18:12",
+  "timezone": "Eastern Standard Time",
+  "project": "weekly-menu",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\weekly-menu",
+  "summary": "Backfill: commit add70e3 (2026-04-17T18:12:43-04:00) - Automated commit: Updated files in weekly-menu | files=1 +16 -2",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: add70e339ed4ca473a4ec413838471b90e39d888",
+    "git show --numstat --pretty=format: add70e339ed4ca473a4ec413838471b90e39d888"
+  ],
+  "files": [
+    ".github/INSTRUCTIONS.md"
+  ],
+  "planPath": "",
+  "contentHash": "e8f1513865ac96c263dd6293b0ef19112f1391916dc9576075900c5159957e35",
+  "git": {
+    "repo": "weekly-menu",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/weekly-menu",
+    "branch": "main",
+    "head": "6bebcc8",
+    "hasChanges": false
+  }
+}

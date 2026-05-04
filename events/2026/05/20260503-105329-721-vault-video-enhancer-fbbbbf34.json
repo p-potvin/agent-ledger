@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260503-105329-721-vault-video-enhancer-fbbbbf34",
+    "createdAt":  "2026-05-03T14:53:29.7211530Z",
+    "createdAtLocal":  "2026-05-03 10:53",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Restored high-throughput encoding performance: 1) Switched NVENC preset from p7 (slowest) to p4 (medium), which is the standard for 20x+ speeds on RTX 30-series GPUs. 2) Optimized the FFmpeg progress monitoring loop in media.py by filtering out high-frequency log lines to reduce Python/GUI I/O overhead. This should restore the original 19-20x encoding speeds while maintaining live progress feedback.",
+    "commands":  [
+                     "python vault_gui.py"
+                 ],
+    "files":  [
+                  "vault_enhancer\\media.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "fbbbbf34ee6745bdfd9f710363353317a86988326680fa15191d5cabc528cee5",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "39d2f85",
+                "hasChanges":  true
+            }
+}

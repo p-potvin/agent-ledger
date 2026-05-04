@@ -1,0 +1,31 @@
+{
+  "id": "20260504-194540-224-agent-ledger-a6702683",
+  "createdAt": "2026-05-04T23:45:40.2247511Z",
+  "createdAtLocal": "2026-05-04 19:45",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Added a self-contained bilingual (EN/FR) WORK_IMPACT.html visualization generated from agent-ledger/events. New render-work-impact.ps1 parses events, recomputes clean/raw line stats from referenced git commits (excluding dependency/build/cache/generated paths), and emits a GitHub-style activity heatmap plus monthly/kind/project breakdowns and per-project evidence table. Updated README with regeneration instructions. Generated WORK_IMPACT.html in both agent-ledger and workspace root.",
+  "commands": [
+    "agent-ledger/scripts/render-work-impact.ps1",
+    "git show --numstat (per referenced commit)",
+    "agent-ledger/scripts/record-agent-change.ps1"
+  ],
+  "files": [
+    "scripts/render-work-impact.ps1",
+    "WORK_IMPACT.html",
+    "README.md"
+  ],
+  "planPath": "",
+  "contentHash": "a6702683acb91870d26876ec04c553156767e659ab6fca30f6fd30a3c7a11ad5",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "1a55467",
+    "hasChanges": true
+  }
+}

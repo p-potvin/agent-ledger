@@ -1,0 +1,45 @@
+{
+  "id": "20260418-195042-000-vault-central-4b4ac847",
+  "createdAt": "2026-04-18T23:50:42.0000000Z",
+  "createdAtLocal": "2026-04-18 19:50",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit 3ad933e (2026-04-18T19:50:42-04:00) - fix: align pin popup and dashboard with STYLE.md — remove hardcoded hex values, apply theme tokens, cap transitions (#8) | files=17 +61 -106",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 3ad933e3fed44c1d4db6a9cfc6b3ca88fd45a9dd",
+    "git show --numstat --pretty=format: 3ad933e3fed44c1d4db6a9cfc6b3ca88fd45a9dd"
+  ],
+  "files": [
+    "dist/dashboard-v2.html",
+    "dist/dashboard.css",
+    "dist/dashboard.js",
+    "dist/dashboard.js.map",
+    "dist/globals.css",
+    "dist/globals.js.map",
+    "dist/pin-entry.html",
+    "dist/pin.js",
+    "dist/pin.js.map",
+    "dist/vault-themes.css",
+    "dist/vault-themes.js",
+    "dist/vault-themes.js.map",
+    "src/components/VaultDashboard.tsx",
+    "src/lib/themes.ts",
+    "src/pin-entry.tsx",
+    "src/styles/globals.css",
+    "src/types/css.d.ts"
+  ],
+  "planPath": "",
+  "contentHash": "4b4ac847929e746404676071fb230f7e5e63d3427ac6b7a9a5fc9ff38684473a",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "20260502-030514-000-tube-site-1a230458",
+  "createdAt": "2026-05-02T07:05:14.0000000Z",
+  "createdAtLocal": "2026-05-02 03:05",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+  "summary": "Backfill: commit bf41e82 (2026-05-02T07:05:14Z) - feat: add pagination and bulk scrape to both plugins | files=2 +156 -74",
+  "commands": [
+    "git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s",
+    "git show --name-only --pretty=format: bf41e828402041582589345a2b04a88fe95be0e1",
+    "git show --numstat --pretty=format: bf41e828402041582589345a2b04a88fe95be0e1"
+  ],
+  "files": [
+    "fullxxx-video/includes/admin-settings.php",
+    "promking-tube/includes/video-fetcher.php"
+  ],
+  "planPath": "",
+  "contentHash": "1a230458d088eeffc7106f6cba42b09568ba40d34bd21ccde204e45700e607a1",
+  "git": {
+    "repo": "tube-site",
+    "root": "C:/Users/Administrator/Desktop/business/tube-site",
+    "branch": "main",
+    "head": "ca526cf",
+    "hasChanges": false
+  }
+}

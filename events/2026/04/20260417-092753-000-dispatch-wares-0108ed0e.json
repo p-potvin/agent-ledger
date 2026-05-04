@@ -1,0 +1,53 @@
+{
+  "id": "20260417-092753-000-dispatch-wares-0108ed0e",
+  "createdAt": "2026-04-17T13:27:53.0000000Z",
+  "createdAtLocal": "2026-04-17 09:27",
+  "timezone": "Eastern Standard Time",
+  "project": "dispatch-wares",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\dispatch-wares",
+  "summary": "Backfill: commit 1989c6f (2026-04-17T13:27:53Z) - Merge remote-tracking branch 'origin/main' into jules-14558258200679654617-cbb13ad6 | files=25 +1013 -68",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 1989c6fcd9f9ea9601e97e754a77002ae00bc596",
+    "git show --numstat --pretty=format: 1989c6fcd9f9ea9601e97e754a77002ae00bc596"
+  ],
+  "files": [
+    "src/api/client.js",
+    "src/components/chat/ChatPanel.jsx",
+    "src/components/layout/TopBar.jsx",
+    "src/hooks/useAuth.js",
+    "src/hooks/useDispatchBoard.js",
+    "src/hooks/useSocket.js",
+    "src/logic/hoursCalculator.js",
+    "src/logic/optimizer.js",
+    "src/pages/Admin.jsx",
+    "src/pages/Dashboard.jsx",
+    "src/pages/Drivers.jsx",
+    "src/pages/Settings.jsx",
+    "src/pages/Trucks.jsx",
+    "src/store/index.js",
+    "src/store/slices/authSlice.js",
+    "src/store/slices/chatSlice.js",
+    "src/store/slices/driversSlice.js",
+    "src/store/slices/jobsSlice.js",
+    "src/store/slices/notificationsSlice.js",
+    "src/store/slices/routesSlice.js",
+    "src/store/slices/settingsSlice.js",
+    "src/store/slices/trucksSlice.js",
+    "src/store/slices/uiSlice.js",
+    "src/utils/constants.js",
+    "src/utils/formatters.js"
+  ],
+  "planPath": "",
+  "contentHash": "0108ed0e79b790d5c45f7bd503acc3cfc02c73ceb2e03e4ad62478a1ac7f5480",
+  "git": {
+    "repo": "dispatch-wares",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/dispatch-wares",
+    "branch": "main",
+    "head": "1d2fe2b",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,29 @@
+﻿{
+    "id":  "20260503-065446-573-vault-video-enhancer-47301a97",
+    "createdAt":  "2026-05-03T10:54:46.5734715Z",
+    "createdAtLocal":  "2026-05-03 06:54",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "commands",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Fixed PySide6 ModuleNotFoundError by upgrading pip and installing all dependencies from requirements.txt explicitly inside the .venv. Started the GUI using the .venv Python executable.",
+    "commands":  [
+                     ".venv\\Scripts\\python -m ensurepip --upgrade",
+                     ".venv\\Scripts\\python -m pip install -r requirements.txt",
+                     "Start-Process .venv\\Scripts\\python -ArgumentList \u0027vault_gui.py\u0027"
+                 ],
+    "files":  [
+                  "requirements.txt"
+              ],
+    "planPath":  "",
+    "contentHash":  "47301a97a218fbb1e3a7d9f74a363150bd45903a8460f472ab178bec71f43116",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "1694980",
+                "hasChanges":  false
+            }
+}

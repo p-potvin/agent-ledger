@@ -1,0 +1,28 @@
+﻿{
+    "id":  "20260503-220439-295-vault-video-enhancer-bd718eb7",
+    "createdAt":  "2026-05-04T02:04:39.2951126Z",
+    "createdAtLocal":  "2026-05-03 22:04",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-video-enhancer",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+    "summary":  "Plan to add folder processing to the GUI. This involves adding a folder selection button, updating the worker thread to handle multiple files, and improving the progress UI to show batch status.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vault_gui.py",
+                  "vault_enhancer/core.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "bd718eb7aa61d6f68e1801c102a45963f989fb71f807cde06aa860ee73681748",
+    "git":  {
+                "repo":  "vault-video-enhancer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+                "branch":  "main",
+                "head":  "a66734d",
+                "hasChanges":  false
+            }
+}

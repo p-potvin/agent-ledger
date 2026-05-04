@@ -1,0 +1,33 @@
+{
+  "id": "20260429-131258-000-prelanding-page-e2a65986",
+  "createdAt": "2026-04-29T17:12:58.0000000Z",
+  "createdAtLocal": "2026-04-29 13:12",
+  "timezone": "Eastern Standard Time",
+  "project": "prelanding-page",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business\\prelanding-page",
+  "summary": "Backfill: commit 004f0f6 (2026-04-29T13:12:58-04:00) - Checkpoint: Phase 5 complete: Both registration forms (hero contact form + bottom CTA form) are wired to Mailchimp via trpc.leads.subscribe. Server-side Mailchimp helper with MD5 subscriber hash, merge fields (FNAME, LNAME, PHONE, MMERGE6), and tags. Owner notification on each new lead. Success/error toasts on both forms. Loading/disabled states during submission. 29 vitest tests all passing across 4 test suites. | files=5 +477 -12",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 004f0f66cf5b71f496f82a1c4c15e6d63f491074",
+    "git show --numstat --pretty=format: 004f0f66cf5b71f496f82a1c4c15e6d63f491074"
+  ],
+  "files": [
+    "client/src/pages/Home.tsx",
+    "server/leads.test.ts",
+    "server/mailchimp.ts",
+    "server/routers.ts",
+    "todo.md"
+  ],
+  "planPath": "",
+  "contentHash": "e2a65986d61f6c3d931c0bfe18115ccc9aa52d00c00d21c85919bf7aee157a4c",
+  "git": {
+    "repo": "prelanding-page",
+    "root": "C:/Users/Administrator/Desktop/business/prelanding-page",
+    "branch": "main",
+    "head": "3dfcdd2",
+    "hasChanges": false
+  }
+}

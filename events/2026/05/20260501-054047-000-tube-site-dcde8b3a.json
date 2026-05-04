@@ -1,0 +1,34 @@
+{
+  "id": "20260501-054047-000-tube-site-dcde8b3a",
+  "createdAt": "2026-05-01T09:40:47.0000000Z",
+  "createdAtLocal": "2026-05-01 05:40",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+  "summary": "Backfill: commit 1bbd1b0 (2026-05-01T09:40:47Z) - feat: Tube plugins monetization and scraper enhancements | files=6 +221 -41",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 1bbd1b003c9d0325089eca986a90a103d9384911",
+    "git show --numstat --pretty=format: 1bbd1b003c9d0325089eca986a90a103d9384911"
+  ],
+  "files": [
+    "fullxxx-video/includes/admin-settings.php",
+    "fullxxx-video/includes/video-fetcher.php",
+    "fullxxx-video/templates/single-fxv_video.php",
+    "promking-tube/includes/admin-settings.php",
+    "promking-tube/includes/video-fetcher.php",
+    "promking-tube/templates/single-pkt_video.php"
+  ],
+  "planPath": "",
+  "contentHash": "dcde8b3a74606c715d8ab1cbddec0a878125b51c49045af6b2ad18f639666f8f",
+  "git": {
+    "repo": "tube-site",
+    "root": "C:/Users/Administrator/Desktop/business/tube-site",
+    "branch": "main",
+    "head": "ca526cf",
+    "hasChanges": false
+  }
+}

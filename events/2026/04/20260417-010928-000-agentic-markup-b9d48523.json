@@ -1,0 +1,29 @@
+{
+  "id": "20260417-010928-000-agentic-markup-b9d48523",
+  "createdAt": "2026-04-17T05:09:28.0000000Z",
+  "createdAtLocal": "2026-04-17 01:09",
+  "timezone": "Eastern Standard Time",
+  "project": "agentic-markup",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agentic-markup",
+  "summary": "Backfill: commit 456279c (2026-04-17T05:09:28Z) - perf: cache attribute regex compilation in parseAttributes | files=1 +10 -6",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 456279cc8ae0d5566fcc6a29514a7d3a33de3046",
+    "git show --numstat --pretty=format: 456279cc8ae0d5566fcc6a29514a7d3a33de3046"
+  ],
+  "files": [
+    "src/tokenizer.js"
+  ],
+  "planPath": "",
+  "contentHash": "b9d485234b2eb4c808b0a8bb96e8eb5a0374bfb36af1c364142d818de38521c7",
+  "git": {
+    "repo": "agentic-markup",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agentic-markup",
+    "branch": "main",
+    "head": "5184c31",
+    "hasChanges": false
+  }
+}
