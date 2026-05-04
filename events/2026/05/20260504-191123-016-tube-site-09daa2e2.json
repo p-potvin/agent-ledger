@@ -1,0 +1,30 @@
+{
+  "id": "20260504-191123-016-tube-site-09daa2e2",
+  "createdAt": "2026-05-04T23:11:23.0166621Z",
+  "createdAtLocal": "2026-05-04 19:11",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+  "summary": "Backfill: commit 089b95d (2026-05-02T07:06:11Z) - fix: address code review feedback (accessibility labels, bulk_done guard, direct function call) | files=2 +4 -4",
+  "commands": [
+    "git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s",
+    "git show --name-only --pretty=format: 089b95d3d51a91e6fc46139a879be4fa0c56aa33",
+    "git show --numstat --pretty=format: 089b95d3d51a91e6fc46139a879be4fa0c56aa33"
+  ],
+  "files": [
+    "fullxxx-video/includes/admin-settings.php",
+    "promking-tube/includes/video-fetcher.php"
+  ],
+  "planPath": "",
+  "contentHash": "09daa2e29d5514514f9b247a882ac536f233ad17b472b07ed708852e62b0b5cf",
+  "git": {
+    "repo": "tube-site",
+    "root": "C:/Users/Administrator/Desktop/business/tube-site",
+    "branch": "main",
+    "head": "ca526cf",
+    "hasChanges": false
+  }
+}

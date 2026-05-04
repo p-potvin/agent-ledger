@@ -1,0 +1,31 @@
+{
+  "id": "20260504-191225-442-vault-video-enhancer-beac1aa0",
+  "createdAt": "2026-05-04T23:12:25.4423274Z",
+  "createdAtLocal": "2026-05-04 19:12",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-video-enhancer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+  "summary": "Backfill: commit fe14010 (2026-05-04T02:37:37-04:00) - feat: implement Parakeet-TDT ASR pipeline with word-level timestamp segmentation for improved subtitle accuracy. | files=3 +108 -27",
+  "commands": [
+    "git log --since=2026-05-04T02:55:21.8276979Z --pretty=format:%H^%cI^%s",
+    "git show --name-only --pretty=format: fe14010f3fb42e6523242d038059f3e376f8213e",
+    "git show --numstat --pretty=format: fe14010f3fb42e6523242d038059f3e376f8213e"
+  ],
+  "files": [
+    "vault_enhancer/core.py",
+    "vault_enhancer/parakeet_wrapper.py",
+    "vault_gui.py"
+  ],
+  "planPath": "",
+  "contentHash": "beac1aa0f895214b92448f15485324d53887906ec4b441b53924e66657371fc1",
+  "git": {
+    "repo": "vault-video-enhancer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+    "branch": "main",
+    "head": "fe14010",
+    "hasChanges": false
+  }
+}

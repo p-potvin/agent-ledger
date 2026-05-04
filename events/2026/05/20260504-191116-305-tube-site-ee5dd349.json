@@ -1,0 +1,30 @@
+{
+  "id": "20260504-191116-305-tube-site-ee5dd349",
+  "createdAt": "2026-05-04T23:11:16.3054493Z",
+  "createdAtLocal": "2026-05-04 19:11",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+  "summary": "Backfill: commit 3204668 (2026-05-01T21:51:08Z) - Fix en-dash in workflow error messages | files=2 +2 -2",
+  "commands": [
+    "git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s",
+    "git show --name-only --pretty=format: 3204668f93c3b97d43301d3f86d93ad6b87616c4",
+    "git show --numstat --pretty=format: 3204668f93c3b97d43301d3f86d93ad6b87616c4"
+  ],
+  "files": [
+    ".github/workflows/deploy-fullxxx-video.yml",
+    ".github/workflows/deploy-promking-tube.yml"
+  ],
+  "planPath": "",
+  "contentHash": "ee5dd34928a3e6f2ddb8b5072c8ac10f856fee63024aa06c7a75c562300628e7",
+  "git": {
+    "repo": "tube-site",
+    "root": "C:/Users/Administrator/Desktop/business/tube-site",
+    "branch": "main",
+    "head": "ca526cf",
+    "hasChanges": false
+  }
+}
