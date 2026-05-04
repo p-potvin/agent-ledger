@@ -3,6 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 22:55 - vault-video-enhancer</strong> <code>code-change</code> - Deep stabilization for CUDA illegal memory access. Monkey-patched Lhotse random seeding to avoid the crashing call. Added defensive synchronizations before transcription and aft...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Deep stabilization for CUDA illegal memory access. Monkey-patched Lhotse random seeding to avoid the crashing call. Added defensive synchronizations before transcription and after model loading. Hardened GUI cleanup loop to ignore already-corrupted contexts and increased cooldown to 2s.
+- Commands:
+  - `python -m py_compile vault_gui.py vault_enhancer/core.py vault_enhancer/parakeet_wrapper.py`
+- Files:
+  - `vault_gui.py`
+  - `vault_enhancer/core.py`
+  - `vault_enhancer/parakeet_wrapper.py`
+- Git: repo=vault-video-enhancer, branch=main, head=a66734d
+
+</details>
+
+<details>
+<summary><strong>2026-05-03 22:54 - vault-video-enhancer</strong> <code>plan</code> - Attempting to resolve persistent CUDA illegal memory access errors by patching Lhotse&#39;s random seeding (a known source of instability on Windows) and adding pre-transcription GP...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Attempting to resolve persistent CUDA illegal memory access errors by patching Lhotse's random seeding (a known source of instability on Windows) and adding pre-transcription GPU synchronization. Re-evaluating model initialization timing to minimize VRAM contention during heavy encoding phases.
+- Files:
+  - `vault_enhancer/parakeet_wrapper.py`
+  - `vault_enhancer/core.py`
+- Git: repo=vault-video-enhancer, branch=main, head=a66734d
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 22:17 - vault-video-enhancer</strong> <code>code-change</code> - Implemented GPU context stabilization. Moved model warm-loading to Step 0 in core.py to establish CUDA context before subprocesses. Added synchronization, cache clearing, and co...</summary>
 
 - Kind: code-change
