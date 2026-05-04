@@ -3,6 +3,29 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-04 06:55 - scripts</strong> <code>code-change</code> - Enforced fully local model usage in frame_extractor.py: (1) Set HF_HUB_OFFLINE, TRANSFORMERS_OFFLINE, DIFFUSERS_OFFLINE env vars before all imports to prevent any HuggingFace ne...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Enforced fully local model usage in frame_extractor.py: (1) Set HF_HUB_OFFLINE, TRANSFORMERS_OFFLINE, DIFFUSERS_OFFLINE env vars before all imports to prevent any HuggingFace network calls; (2) Replaced AutoPipelineForImage2Image (no from_single_file support) with FluxImg2ImgPipeline from diffusers.pipelines.flux.pipeline_flux_img2img, which supports loading from a local .safetensors file.
+- Files:
+  - `frame_extractor.py`
+
+</details>
+
+<details>
+<summary><strong>2026-05-04 06:52 - scripts</strong> <code>code-change</code> - Fixed frame_extractor.py: (1) Changed raw string paths to use r-strings to prevent \\r carriage-return escape corruption in Windows paths; (2) Replaced AutoPipelineForImage2Imag...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed frame_extractor.py: (1) Changed raw string paths to use r-strings to prevent \\r carriage-return escape corruption in Windows paths; (2) Replaced AutoPipelineForImage2Image.from_pretrained() with from_single_file() since model_path points to a .safetensors file, not a directory/Hub ID; (3) Added Pillow to requirements.txt since the script imports from PIL but it was missing.
+- Files:
+  - `frame_extractor.py`
+  - `requirements.txt`
+
+</details>
+
+<details>
 <summary><strong>2026-05-04 06:34 - Prom King monetization projects</strong> <code>code-change</code> - Implemented Prom King tube pagination and back-catalog retention: added video source/remote/takedown fields and migration, active/not-removed filtering, paginated tRPC endpoints...</summary>
 
 - Kind: code-change
