@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-04 07:12 - scripts</strong> <code>code-change</code> - Completed full Flux pipeline assembly from local ComfyUI files. Fixed setup_detailer_pipeline: replaced nonexistent CLIPTextModel/T5EncoderModel.from_single_file calls with from...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Completed full Flux pipeline assembly from local ComfyUI files. Fixed setup_detailer_pipeline: replaced nonexistent CLIPTextModel/T5EncoderModel.from_single_file calls with from_pretrained(local_dir) pointing to clip_encoder/ and t5_encoder/ dirs. Both dirs have config.json + model.safetensors symlink. Verified both encoders load offline (CLIP-L 123M, T5-XXL 4762M). Created setup_tokenizers.py for one-time CLIP tokenizer download. T5 tokenizer copied from WanVideoWrapper. Pipeline is fully offline.
+- Files:
+  - `frame_extractor.py`
+  - `setup_tokenizers.py`
+  - `models/clip_encoder/config.json`
+  - `models/t5_encoder/config.json`
+
+</details>
+
+<details>
 <summary><strong>2026-05-04 06:58 - scripts</strong> <code>commands</code> - Scaffolded folder structure under scripts/: models/diffusion/, models/upscale/, input/, output/. Created symlinks: models/diffusion/flux1-dev-fp8-e4m3fn.safetensors -&gt; D:\comfyU...</summary>
 
 - Kind: commands

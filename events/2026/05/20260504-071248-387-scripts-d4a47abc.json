@@ -1,0 +1,22 @@
+{
+  "id": "20260504-071248-387-scripts-d4a47abc",
+  "createdAt": "2026-05-04T11:12:48.3874258Z",
+  "createdAtLocal": "2026-05-04 07:12",
+  "timezone": "Eastern Standard Time",
+  "project": "scripts",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts",
+  "summary": "Completed full Flux pipeline assembly from local ComfyUI files. Fixed setup_detailer_pipeline: replaced nonexistent CLIPTextModel/T5EncoderModel.from_single_file calls with from_pretrained(local_dir) pointing to clip_encoder/ and t5_encoder/ dirs. Both dirs have config.json + model.safetensors symlink. Verified both encoders load offline (CLIP-L 123M, T5-XXL 4762M). Created setup_tokenizers.py for one-time CLIP tokenizer download. T5 tokenizer copied from WanVideoWrapper. Pipeline is fully offline.",
+  "commands": [],
+  "files": [
+    "frame_extractor.py",
+    "setup_tokenizers.py",
+    "models/clip_encoder/config.json",
+    "models/t5_encoder/config.json"
+  ],
+  "planPath": "",
+  "contentHash": "d4a47abc6d319e59d03c5ed822a8f32389ee05a542299ce9113bda9c71ac1dfb",
+  "git": null
+}
