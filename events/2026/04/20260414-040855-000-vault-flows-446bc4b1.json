@@ -1,0 +1,48 @@
+{
+  "id": "20260414-040855-000-vault-flows-446bc4b1",
+  "createdAt": "2026-04-14T08:08:55.0000000Z",
+  "createdAtLocal": "2026-04-14 04:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Backfill: commit 6cd3ac7 (2026-04-14T04:08:55-04:00) - feat: implement backend structure with user authentication, API key management, and database setup; add frontend components for advanced workflows, captioning, and dataset management | files=20 +369 -62",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 6cd3ac7b3ca7ee9bf3dc83d370010c418a06f910",
+    "git show --numstat --pretty=format: 6cd3ac7b3ca7ee9bf3dc83d370010c418a06f910"
+  ],
+  "files": [
+    "LIBRARIES.md",
+    "ROADMAP.md",
+    "TODO.md",
+    "backend/__init__.py",
+    "backend/api_key_middleware.py",
+    "backend/auth.py",
+    "backend/db.py",
+    "backend/lora_training.py",
+    "backend/main.py",
+    "backend/test_api_key.py",
+    "package-lock.json",
+    "package.json",
+    "requirements.txt",
+    "run_local_runtime_bridge.py",
+    "src/api.js",
+    "src/components/features/AdvancedWorkflowCreator.jsx",
+    "src/components/features/CaptioningUI.jsx",
+    "src/components/features/DatasetManager.jsx",
+    "src/components/ui/MaskWidget.jsx",
+    "tests/e2e/e2e_new_features.spec.js"
+  ],
+  "planPath": "",
+  "contentHash": "446bc4b1b99963b7fb5c4aa08e743b5276fc9e778076ac4adf096f92e7b94e5e",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "ed096a3",
+    "hasChanges": true
+  }
+}

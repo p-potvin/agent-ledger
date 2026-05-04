@@ -1,0 +1,32 @@
+{
+  "id": "20260424-081029-001-no-more-groceries-116edbeb",
+  "createdAt": "2026-04-24T12:10:29.0000000Z",
+  "createdAtLocal": "2026-04-24 08:10",
+  "timezone": "Eastern Standard Time",
+  "project": "no-more-groceries",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\no-more-groceries",
+  "summary": "Backfill: commit 5656364 (2026-04-24T08:10:29-04:00) - chore: sync workspace changes and resolve PR templates | files=4 +87 -1",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 56563643926aa1840df4251e855eda790a78ecf3",
+    "git show --numstat --pretty=format: 56563643926aa1840df4251e855eda790a78ecf3"
+  ],
+  "files": [
+    ".cursor/rules/vault-themes-submodule.mdc",
+    "CLAUDE.md",
+    "TASKS.md",
+    "docs/ADRs/REN-01-Renaming-Plan.md"
+  ],
+  "planPath": "",
+  "contentHash": "116edbebbd41bd799c4d2264bdca278f3cf9ca63a5d8cabffee804952fa5d920",
+  "git": {
+    "repo": "no-more-groceries",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/no-more-groceries",
+    "branch": "main",
+    "head": "88c3476",
+    "hasChanges": false
+  }
+}

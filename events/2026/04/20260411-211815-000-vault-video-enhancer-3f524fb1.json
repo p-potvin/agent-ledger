@@ -1,0 +1,32 @@
+{
+  "id": "20260411-211815-000-vault-video-enhancer-3f524fb1",
+  "createdAt": "2026-04-12T01:18:15.0000000Z",
+  "createdAtLocal": "2026-04-11 21:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-video-enhancer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+  "summary": "Backfill: commit 011d86a (2026-04-11T21:18:15-04:00) - Enhance transcription capabilities: add support for Parakeet engine, improve vocal isolation with htdemucs, and update argument parsing for engine selection | files=4 +123 -22",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 011d86ae7ee41a1c0bcd048a8932131b5da1eb46",
+    "git show --numstat --pretty=format: 011d86ae7ee41a1c0bcd048a8932131b5da1eb46"
+  ],
+  "files": [
+    "generate-srt.py",
+    "video_transcriber/core.py",
+    "video_transcriber/media.py",
+    "video_transcriber/parakeet_wrapper.py"
+  ],
+  "planPath": "",
+  "contentHash": "3f524fb106dbf39dc5f3b58b025c4837b025108f4fa2f5f1e88c3faddcf4c2ed",
+  "git": {
+    "repo": "vault-video-enhancer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+    "branch": "main",
+    "head": "fe14010",
+    "hasChanges": false
+  }
+}

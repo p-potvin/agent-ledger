@@ -1,0 +1,45 @@
+{
+  "id": "20260410-075651-000-agentic-markup-d6d51a10",
+  "createdAt": "2026-04-10T11:56:51.0000000Z",
+  "createdAtLocal": "2026-04-10 07:56",
+  "timezone": "Eastern Standard Time",
+  "project": "agentic-markup",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agentic-markup",
+  "summary": "Backfill: commit 8d32360 (2026-04-10T11:56:51Z) - refactor: FSM tokenizer, AST parser, {key=\"value\"} attribute syntax | files=17 +1281 -351",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 8d32360d015714cfd0ea44f56ac1be2d80d9704d",
+    "git show --numstat --pretty=format: 8d32360d015714cfd0ea44f56ac1be2d80d9704d"
+  ],
+  "files": [
+    "README.md",
+    "extension/content.js",
+    "extension/popup/popup.html",
+    "src/observer.js",
+    "src/parser.js",
+    "src/tokenizer.js",
+    "src/widgets/badge.js",
+    "src/widgets/callout.js",
+    "src/widgets/collapse.js",
+    "src/widgets/tabs.js",
+    "tests/observer.test.js",
+    "tests/parser.test.js",
+    "tests/tokenizer.test.js",
+    "tests/widgets/badge.test.js",
+    "tests/widgets/callout.test.js",
+    "tests/widgets/collapse.test.js",
+    "tests/widgets/tabs.test.js"
+  ],
+  "planPath": "",
+  "contentHash": "d6d51a1062c4658c5142950fa92a6ab2ae91eecc01e11f825048fafa845f5cf8",
+  "git": {
+    "repo": "agentic-markup",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agentic-markup",
+    "branch": "main",
+    "head": "5184c31",
+    "hasChanges": false
+  }
+}

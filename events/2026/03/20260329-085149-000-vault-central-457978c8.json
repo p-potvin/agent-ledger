@@ -1,0 +1,51 @@
+{
+  "id": "20260329-085149-000-vault-central-457978c8",
+  "createdAt": "2026-03-29T12:51:49.0000000Z",
+  "createdAtLocal": "2026-03-29 08:51",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit 9bd2346 (2026-03-29T08:51:49-04:00) - feat: add video management features to VaultDashboard | files=23 +315 -71",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 9bd2346b05448d9f042c55298f4d8a001cee7968",
+    "git show --numstat --pretty=format: 9bd2346b05448d9f042c55298f4d8a001cee7968"
+  ],
+  "files": [
+    ".gitignore",
+    ".gitmodules",
+    "TODO.md",
+    "dist/dashboard.js",
+    "dist/dashboard.js.map",
+    "dist/globals.css",
+    "dist/icons/icon128.png",
+    "dist/icons/icon16.png",
+    "dist/icons/icon32.png",
+    "dist/icons/icon48.png",
+    "package.json",
+    "patch.py",
+    "scripts/generate-themes.py",
+    "scripts/patch-css.js",
+    "scripts/patch-themes.js",
+    "src/components/VaultDashboard.js",
+    "src/components/VaultDashboard.tsx",
+    "src/lib/themes.js",
+    "src/lib/themes.ts",
+    "src/styles/vault-themes.css",
+    "vault-themes",
+    "vite.config.js",
+    "vite.config.ts"
+  ],
+  "planPath": "",
+  "contentHash": "457978c865f901a75b7f6148c81edb1ce2663a31ba7d51de9d658061997d46b1",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

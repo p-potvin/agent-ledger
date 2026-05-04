@@ -1,0 +1,32 @@
+{
+  "id": "20260405-001316-000-realtime-stt-22b2563c",
+  "createdAt": "2026-04-05T04:13:16.0000000Z",
+  "createdAtLocal": "2026-04-05 00:13",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit 18487c9 (2026-04-05T04:13:16Z) - fix: silence threshold, subtitle updates, buffer logic, noise floor amplification, stop() timeout | files=4 +70 -64",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 18487c92379a81208e22d68167d505f30e33880d",
+    "git show --numstat --pretty=format: 18487c92379a81208e22d68167d505f30e33880d"
+  ],
+  "files": [
+    "gui_overlay/overlay_window.py",
+    "main_app.py",
+    "stt_engine/audio_capture.py",
+    "stt_engine/vad_logic.py"
+  ],
+  "planPath": "",
+  "contentHash": "22b2563c83152adcc7a5db218c2d555d1f8da2fc8e76ec68d2cf282ae2e3c020",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

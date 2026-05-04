@@ -1,0 +1,29 @@
+{
+  "id": "20260316-173210-000-glass-ui-ba395694",
+  "createdAt": "2026-03-16T21:32:10.0000000Z",
+  "createdAtLocal": "2026-03-16 17:32",
+  "timezone": "Eastern Standard Time",
+  "project": "glass-ui",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\glass-ui",
+  "summary": "Backfill: commit dee0649 (2026-03-16T17:32:10-04:00) - Added more demo options | files=1 +216 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: dee06495efa441f9e47bdb22e10956203245982e",
+    "git show --numstat --pretty=format: dee06495efa441f9e47bdb22e10956203245982e"
+  ],
+  "files": [
+    "src/preview.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "ba395694395b035abd3f003954ed71cef684d7d62cbbc120f8a023ad49931c15",
+  "git": {
+    "repo": "glass-ui",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/glass-ui",
+    "branch": "main",
+    "head": "b2f2866",
+    "hasChanges": false
+  }
+}

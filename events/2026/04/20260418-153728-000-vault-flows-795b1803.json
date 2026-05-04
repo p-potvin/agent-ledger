@@ -1,0 +1,29 @@
+{
+  "id": "20260418-153728-000-vault-flows-795b1803",
+  "createdAt": "2026-04-18T19:37:28.0000000Z",
+  "createdAtLocal": "2026-04-18 15:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Backfill: commit bcef350 (2026-04-18T19:37:28Z) - feat(ui): add aria-label and focus states to Modal close button | files=1 +7 -1",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: bcef3509688366945ff59729eb6b1c20e01bc47f",
+    "git show --numstat --pretty=format: bcef3509688366945ff59729eb6b1c20e01bc47f"
+  ],
+  "files": [
+    "src/components/ui/Modal.jsx"
+  ],
+  "planPath": "",
+  "contentHash": "795b18031ba7e285b69680bb93d6cced1f38ef1b993b95e1e2e55a68192c4c9c",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "ed096a3",
+    "hasChanges": true
+  }
+}

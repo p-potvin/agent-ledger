@@ -1,0 +1,32 @@
+{
+  "id": "20260315-012126-000-glass-ui-16b2eea9",
+  "createdAt": "2026-03-15T05:21:26.0000000Z",
+  "createdAtLocal": "2026-03-15 01:21",
+  "timezone": "Eastern Standard Time",
+  "project": "glass-ui",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\glass-ui",
+  "summary": "Backfill: commit ab2ddc5 (2026-03-15T01:21:26-04:00) - added the bones | files=4 +1036 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: ab2ddc5e7043833a43d207a706c4ea4ac68c2325",
+    "git show --numstat --pretty=format: ab2ddc5e7043833a43d207a706c4ea4ac68c2325"
+  ],
+  "files": [
+    "package-lock.json",
+    "package.json",
+    "src/components/glass/GlassPane.jsx",
+    "src/shaders/refraction.glsl.js"
+  ],
+  "planPath": "",
+  "contentHash": "16b2eea93ac11fbfd42a5f70f26fce64616bed658a8721a16ff4d85bd89d07e7",
+  "git": {
+    "repo": "glass-ui",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/glass-ui",
+    "branch": "main",
+    "head": "b2f2866",
+    "hasChanges": false
+  }
+}

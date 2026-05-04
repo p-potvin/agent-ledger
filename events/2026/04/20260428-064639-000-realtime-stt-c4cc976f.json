@@ -1,0 +1,27 @@
+{
+  "id": "20260428-064639-000-realtime-stt-c4cc976f",
+  "createdAt": "2026-04-28T10:46:39.0000000Z",
+  "createdAtLocal": "2026-04-28 06:46",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit a58f444 (2026-04-28T06:46:39-04:00) - Merge pull request #22 from p-potvin/bolt/remove-nemo-tensor-overhead-446953840832485255 | files=0 +7 -2",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: a58f4449a7e7912bf02d7a74a7c2387f3d9cf413",
+    "git show --numstat --pretty=format: a58f4449a7e7912bf02d7a74a7c2387f3d9cf413"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "c4cc976f856bd0246c553e272b5554de19f86fdc28e2089dec6909ba88dc3eb5",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

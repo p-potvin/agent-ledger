@@ -1,0 +1,31 @@
+{
+  "id": "20260418-050050-000-dispatch-wares-f3b4b4b6",
+  "createdAt": "2026-04-18T09:00:50.0000000Z",
+  "createdAtLocal": "2026-04-18 05:00",
+  "timezone": "Eastern Standard Time",
+  "project": "dispatch-wares",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\dispatch-wares",
+  "summary": "Backfill: commit afba0e9 (2026-04-18T05:00:50-04:00) - Automated commit: Updated files in dispatch-wares | files=3 +15574 -21328",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: afba0e9f6093f39464efb6d903cf16bc4c742cf2",
+    "git show --numstat --pretty=format: afba0e9f6093f39464efb6d903cf16bc4c742cf2"
+  ],
+  "files": [
+    "backend/prisma.config.js",
+    "index.js",
+    "readme.md"
+  ],
+  "planPath": "",
+  "contentHash": "f3b4b4b6480cbdce88785c79130b87888ab5e59407232d6a30211252f4d521d1",
+  "git": {
+    "repo": "dispatch-wares",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/dispatch-wares",
+    "branch": "main",
+    "head": "1d2fe2b",
+    "hasChanges": false
+  }
+}

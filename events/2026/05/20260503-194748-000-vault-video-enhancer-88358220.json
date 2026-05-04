@@ -1,0 +1,29 @@
+{
+  "id": "20260503-194748-000-vault-video-enhancer-88358220",
+  "createdAt": "2026-05-03T23:47:48.0000000Z",
+  "createdAtLocal": "2026-05-03 19:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-video-enhancer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+  "summary": "Backfill: commit a66734d (2026-05-03T19:47:48-04:00) - feat: implement ParakeetTranscriber wrapper for NVIDIA NeMo-based ASR with word-level timestamp segmentation | files=1 +13 -18",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: a66734d145da1fa99aa94a7d7c1ee39277cd9a6b",
+    "git show --numstat --pretty=format: a66734d145da1fa99aa94a7d7c1ee39277cd9a6b"
+  ],
+  "files": [
+    "vault_enhancer/parakeet_wrapper.py"
+  ],
+  "planPath": "",
+  "contentHash": "8835822038d089c30677fd8ffa38b352493f159f2faa7ee07acda8d20982f69e",
+  "git": {
+    "repo": "vault-video-enhancer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+    "branch": "main",
+    "head": "fe14010",
+    "hasChanges": false
+  }
+}

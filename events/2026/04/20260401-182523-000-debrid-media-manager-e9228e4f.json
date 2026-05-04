@@ -1,0 +1,46 @@
+{
+  "id": "20260401-182523-000-debrid-media-manager-e9228e4f",
+  "createdAt": "2026-04-01T22:25:23.0000000Z",
+  "createdAtLocal": "2026-04-01 18:25",
+  "timezone": "Eastern Standard Time",
+  "project": "debrid-media-manager",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\debrid-media-manager",
+  "summary": "Backfill: commit bdb2306 (2026-04-01T18:25:23-04:00) - Initial commit | files=18 +888 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: bdb23061052c6f7f7ce6d11a55d6c7446f8f4d3e",
+    "git show --numstat --pretty=format: bdb23061052c6f7f7ce6d11a55d6c7446f8f4d3e"
+  ],
+  "files": [
+    ".copilot/skills/cleanup.md",
+    ".copilot/skills/env-isolation.md",
+    ".copilot/skills/response-quality.md",
+    ".copilot/skills/skill-selection.md",
+    ".copilot/skills/task-tracking.md",
+    ".copilot/skills/testing-cleanup.md",
+    ".copilot/skills/update-docs.md",
+    ".github/CONTRIBUTING.md",
+    ".github/INSTRUCTIONS.md",
+    ".github/STYLE.md",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "ROADMAP.md",
+    "TODO.md",
+    "VAULT_DEPENDENCIES.txt",
+    "agent_manifest.md",
+    "requirements.txt"
+  ],
+  "planPath": "",
+  "contentHash": "e9228e4fd6c0f95e69f8567a3ef738386edba191e60a2da0491240f1125aeb4b",
+  "git": {
+    "repo": "debrid-media-manager",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/debrid-media-manager",
+    "branch": "main",
+    "head": "c6ce8b5",
+    "hasChanges": false
+  }
+}

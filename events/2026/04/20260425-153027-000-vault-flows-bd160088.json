@@ -1,0 +1,30 @@
+{
+  "id": "20260425-153027-000-vault-flows-bd160088",
+  "createdAt": "2026-04-25T19:30:27.0000000Z",
+  "createdAtLocal": "2026-04-25 15:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Backfill: commit 2a7c292 (2026-04-25T19:30:27Z) - 🛡️ Sentinel: [CRITICAL] Fix Path Traversal in run_local_runtime_bridge.py | files=2 +16 -1",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 2a7c292a53549b0659df8bc069172bf6a0b88975",
+    "git show --numstat --pretty=format: 2a7c292a53549b0659df8bc069172bf6a0b88975"
+  ],
+  "files": [
+    ".jules/sentinel.md",
+    "run_local_runtime_bridge.py"
+  ],
+  "planPath": "",
+  "contentHash": "bd1600886c4914e5bb311cc20f999a4b5e53889fb87eebbc76be9d310c418617",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "ed096a3",
+    "hasChanges": true
+  }
+}

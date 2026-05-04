@@ -1,0 +1,34 @@
+{
+  "id": "20260424-072110-000-agentic-markup-77265600",
+  "createdAt": "2026-04-24T11:21:10.0000000Z",
+  "createdAtLocal": "2026-04-24 07:21",
+  "timezone": "Eastern Standard Time",
+  "project": "agentic-markup",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agentic-markup",
+  "summary": "Backfill: commit 5184c31 (2026-04-24T07:21:10-04:00) - feat: implement content script observer and extension popup UI | files=6 +102 -93",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 5184c316ef48d837aef4c5c4debb6c4086fdd4ed",
+    "git show --numstat --pretty=format: 5184c316ef48d837aef4c5c4debb6c4086fdd4ed"
+  ],
+  "files": [
+    "README.md",
+    "extension/popup/popup.css",
+    "extension/popup/popup.html",
+    "extension/popup/popup.js",
+    "src/index.js",
+    "src/tokenizer.js"
+  ],
+  "planPath": "",
+  "contentHash": "77265600069c7a45c579f8b9c0e33666910ffd22e7ad93aa871c64ff5e8b5036",
+  "git": {
+    "repo": "agentic-markup",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agentic-markup",
+    "branch": "main",
+    "head": "5184c31",
+    "hasChanges": false
+  }
+}

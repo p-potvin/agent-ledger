@@ -1,0 +1,29 @@
+{
+  "id": "20260417-111330-000-realtime-stt-f805e79c",
+  "createdAt": "2026-04-17T15:13:30.0000000Z",
+  "createdAtLocal": "2026-04-17 11:13",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit f8f9dce (2026-04-17T15:13:30Z) - fix: remove redundant audio buffering and transcription queueing | files=1 +0 -5",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: f8f9dce175c6aa8172c36706cd74b5252aa40515",
+    "git show --numstat --pretty=format: f8f9dce175c6aa8172c36706cd74b5252aa40515"
+  ],
+  "files": [
+    "main_app.py"
+  ],
+  "planPath": "",
+  "contentHash": "f805e79c417c8b990ee9651fdb594715d753d70152e3a6568d45f9184624e069",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

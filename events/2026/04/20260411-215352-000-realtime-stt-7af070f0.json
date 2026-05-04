@@ -1,0 +1,36 @@
+{
+  "id": "20260411-215352-000-realtime-stt-7af070f0",
+  "createdAt": "2026-04-12T01:53:52.0000000Z",
+  "createdAtLocal": "2026-04-11 21:53",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit 4c15a5b (2026-04-11T21:53:52-04:00) - feat: Implement audio volume normalization and enhance STT engine configuration | files=8 +230 -140",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 4c15a5bf8ae75f602dc697f2ed0ce3ab0370bba7",
+    "git show --numstat --pretty=format: 4c15a5bf8ae75f602dc697f2ed0ce3ab0370bba7"
+  ],
+  "files": [
+    "TODO.md",
+    "config.json",
+    "gui_overlay/overlay_window.py",
+    "main_app.py",
+    "stt_engine/audio_capture.py",
+    "stt_engine/engine_orchestrator.py",
+    "stt_engine/faster_whisper_wrapper.py",
+    "stt_engine/vad_logic.py"
+  ],
+  "planPath": "",
+  "contentHash": "7af070f02e02a4c501d096327e2c45726480a33e66dc5d917e627eb7503dae9e",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

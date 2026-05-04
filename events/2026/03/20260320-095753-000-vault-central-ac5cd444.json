@@ -1,0 +1,34 @@
+{
+  "id": "20260320-095753-000-vault-central-ac5cd444",
+  "createdAt": "2026-03-20T13:57:53.0000000Z",
+  "createdAtLocal": "2026-03-20 09:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit 6c0ade6 (2026-03-20T09:57:53-04:00) - Fix video embed playback logic to relax type restriction via getEmbedUrl resolution directly | files=6 +1279 -63",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 6c0ade6886f4bccdb189074beb629e5fc0ab0102",
+    "git show --numstat --pretty=format: 6c0ade6886f4bccdb189074beb629e5fc0ab0102"
+  ],
+  "files": [
+    "README.md",
+    "background.js",
+    "content.js",
+    "dashboard.html",
+    "dashboard.js",
+    "manifest.json"
+  ],
+  "planPath": "",
+  "contentHash": "ac5cd444c24c3da46721d8b067f26b1ad7c6632393b542e5be8ef2c419a9a3fb",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

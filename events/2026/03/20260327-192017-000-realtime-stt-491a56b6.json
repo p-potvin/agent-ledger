@@ -1,0 +1,35 @@
+{
+  "id": "20260327-192017-000-realtime-stt-491a56b6",
+  "createdAt": "2026-03-27T23:20:17.0000000Z",
+  "createdAtLocal": "2026-03-27 19:20",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit a940504 (2026-03-27T19:20:17-04:00) - feat: Update model parameters and improve audio processing settings for enhanced performance | files=7 +40 -28",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: a940504f6ab32c473c63d160bccdde3a7a8f3e33",
+    "git show --numstat --pretty=format: a940504f6ab32c473c63d160bccdde3a7a8f3e33"
+  ],
+  "files": [
+    "gui_overlay/overlay_window.py",
+    "main_app.py",
+    "realtime-stt.cmd",
+    "requirements.txt",
+    "stt_engine/audio_capture.py",
+    "stt_engine/faster_whisper_wrapper.py",
+    "stt_engine/vad_logic.py"
+  ],
+  "planPath": "",
+  "contentHash": "491a56b64efb14313efb141e570e3c3857245500e9d052ea8002cd39cc7f4616",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

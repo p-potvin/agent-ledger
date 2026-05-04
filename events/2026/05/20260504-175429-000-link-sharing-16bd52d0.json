@@ -1,0 +1,30 @@
+{
+  "id": "20260504-175429-000-link-sharing-16bd52d0",
+  "createdAt": "2026-05-04T21:54:29.0000000Z",
+  "createdAtLocal": "2026-05-04 17:54",
+  "timezone": "Eastern Standard Time",
+  "project": "link-sharing",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business\\link-sharing",
+  "summary": "Backfill: commit 7984759 (2026-05-04T17:54:29-04:00) - docs: document link-sharing service strategy and project roadmap | files=2 +107 -2",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 79847596cb0674c62655b82aa9ad527e50d088fa",
+    "git show --numstat --pretty=format: 79847596cb0674c62655b82aa9ad527e50d088fa"
+  ],
+  "files": [
+    "README.md",
+    "ROADMAP.md"
+  ],
+  "planPath": "",
+  "contentHash": "16bd52d09358ca584e7fcab7cd1134665e12afe6f0e58674acd619060d3e1f11",
+  "git": {
+    "repo": "link-sharing",
+    "root": "C:/Users/Administrator/Desktop/business/link-sharing",
+    "branch": "main",
+    "head": "7984759",
+    "hasChanges": true
+  }
+}

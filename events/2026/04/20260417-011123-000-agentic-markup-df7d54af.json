@@ -1,0 +1,30 @@
+{
+  "id": "20260417-011123-000-agentic-markup-df7d54af",
+  "createdAt": "2026-04-17T05:11:23.0000000Z",
+  "createdAtLocal": "2026-04-17 01:11",
+  "timezone": "Eastern Standard Time",
+  "project": "agentic-markup",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agentic-markup",
+  "summary": "Backfill: commit e3b8180 (2026-04-17T05:11:23Z) - 🔒 fix: prototype pollution in parseAttributes | files=2 +24 -1",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: e3b81809850a03919b8dfbc1b7045c45a89c99e3",
+    "git show --numstat --pretty=format: e3b81809850a03919b8dfbc1b7045c45a89c99e3"
+  ],
+  "files": [
+    "src/tokenizer.js",
+    "tests/security.test.js"
+  ],
+  "planPath": "",
+  "contentHash": "df7d54af1ffe44679b648f8140e419f1b0dcca612d449b596b9e578893268ac6",
+  "git": {
+    "repo": "agentic-markup",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agentic-markup",
+    "branch": "main",
+    "head": "5184c31",
+    "hasChanges": false
+  }
+}

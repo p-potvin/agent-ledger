@@ -1,0 +1,42 @@
+{
+  "id": "20260328-125208-000-vault-central-28a1339e",
+  "createdAt": "2026-03-28T16:52:08.0000000Z",
+  "createdAtLocal": "2026-03-28 12:52",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit ca569bb (2026-03-28T12:52:08-04:00) - feat: Add video capture functionality for Bunkr and Topvid, including export/import features for Vault | files=14 +858 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: ca569bb15091a0e605a8b1594e7f42d91d7c55ea",
+    "git show --numstat --pretty=format: ca569bb15091a0e605a8b1594e7f42d91d7c55ea"
+  ],
+  "files": [
+    "src/components/VaultDashboard.tsx",
+    "temp.cjs",
+    "temp.js",
+    "temp_patch_bg.js",
+    "temp_patch_export.js",
+    "temp_patch_settings.cjs",
+    "temp_todo.js",
+    "test-results/.last-run.json",
+    "test_topvid.cjs",
+    "test_topvid2.cjs",
+    "test_topvid3.cjs",
+    "test_topvid4.cjs",
+    "tests/bunkr.spec.ts",
+    "tests/topvid.spec.ts"
+  ],
+  "planPath": "",
+  "contentHash": "28a1339eb5b7ed8e8b42a8b8e0555cbaea298f146cad10e1578198b303933b4d",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

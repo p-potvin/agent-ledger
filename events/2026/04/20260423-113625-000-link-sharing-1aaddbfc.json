@@ -1,0 +1,29 @@
+{
+  "id": "20260423-113625-000-link-sharing-1aaddbfc",
+  "createdAt": "2026-04-23T15:36:25.0000000Z",
+  "createdAtLocal": "2026-04-23 11:36",
+  "timezone": "Eastern Standard Time",
+  "project": "link-sharing",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business\\link-sharing",
+  "summary": "Backfill: commit 8e74933 (2026-04-23T11:36:25-04:00) - Initial commit | files=1 +2 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 8e749338eb01c139be0d1acf64b913061d2c4a27",
+    "git show --numstat --pretty=format: 8e749338eb01c139be0d1acf64b913061d2c4a27"
+  ],
+  "files": [
+    "README.md"
+  ],
+  "planPath": "",
+  "contentHash": "1aaddbfc65e098066a20becdb73581832749290c20f55cbbcbff473ed2383810",
+  "git": {
+    "repo": "link-sharing",
+    "root": "C:/Users/Administrator/Desktop/business/link-sharing",
+    "branch": "main",
+    "head": "7984759",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "20260402-230726-000-vault-video-enhancer-34defd23",
+  "createdAt": "2026-04-03T03:07:26.0000000Z",
+  "createdAtLocal": "2026-04-02 23:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-video-enhancer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+  "summary": "Backfill: commit d7b8ac8 (2026-04-02T23:07:26-04:00) - dvvv | files=8 +314 -298",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: d7b8ac859661ca96bf10ee4b983a20181c46e564",
+    "git show --numstat --pretty=format: d7b8ac859661ca96bf10ee4b983a20181c46e564"
+  ],
+  "files": [
+    "generate-srt.py",
+    "requirements.txt",
+    "tools/test_translation_mock.py",
+    "video_transcriber/core.py",
+    "video_transcriber/media.py",
+    "video_transcriber/parakeet_wrapper.py",
+    "video_transcriber/translation.py",
+    "video_transcriber/utils.py"
+  ],
+  "planPath": "",
+  "contentHash": "34defd23dc06049f0515f3040c6b76b42b02825a80bb7a06cc32fbf9c0dac15b",
+  "git": {
+    "repo": "vault-video-enhancer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+    "branch": "main",
+    "head": "fe14010",
+    "hasChanges": false
+  }
+}

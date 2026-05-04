@@ -1,0 +1,31 @@
+{
+  "id": "20260423-202914-000-usd-playground-e092aead",
+  "createdAt": "2026-04-24T00:29:14.0000000Z",
+  "createdAtLocal": "2026-04-23 20:29",
+  "timezone": "Eastern Standard Time",
+  "project": "usd-playground",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\usd-playground",
+  "summary": "Backfill: commit 894aee0 (2026-04-23T20:29:14-04:00) - feat: ship guided digital twin studio and HTTPS API defaults | files=3 +740 -50",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 894aee025a8386d619f87faaea22a5939bb1f649",
+    "git show --numstat --pretty=format: 894aee025a8386d619f87faaea22a5939bb1f649"
+  ],
+  "files": [
+    ".gitignore",
+    "demo_launcher.py",
+    "gui_app.py"
+  ],
+  "planPath": "",
+  "contentHash": "e092aeadf6231c3069116f885240fa62687ed3ff273098ae5f8df93e91ae9a33",
+  "git": {
+    "repo": "usd-playground",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/usd-playground",
+    "branch": "main",
+    "head": "5db47bc",
+    "hasChanges": false
+  }
+}

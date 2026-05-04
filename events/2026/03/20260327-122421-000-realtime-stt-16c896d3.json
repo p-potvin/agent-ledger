@@ -1,0 +1,29 @@
+{
+  "id": "20260327-122421-000-realtime-stt-16c896d3",
+  "createdAt": "2026-03-27T16:24:21.0000000Z",
+  "createdAtLocal": "2026-03-27 12:24",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit 38987bd (2026-03-27T12:24:21-04:00) - Delete __pycache__ directory | files=1 +0 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 38987bdf389604c15648d5757aa14b0093976b82",
+    "git show --numstat --pretty=format: 38987bdf389604c15648d5757aa14b0093976b82"
+  ],
+  "files": [
+    "__pycache__/__init__.cpython-312.pyc"
+  ],
+  "planPath": "",
+  "contentHash": "16c896d39d02ff0e980ba8dd72163da47a78d5e292f94fa1e479e9feca8f32ea",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "20260320-102620-000-vault-central-97ea9595",
+  "createdAt": "2026-03-20T14:26:20.0000000Z",
+  "createdAtLocal": "2026-03-20 10:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit 6804970 (2026-03-20T10:26:20-04:00) - Route raw DOM fetch through background script to bypass dashboard CORS strictness | files=2 +20 -10",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 6804970dd15fb58444553db3dae8f969c0bccdb8",
+    "git show --numstat --pretty=format: 6804970dd15fb58444553db3dae8f969c0bccdb8"
+  ],
+  "files": [
+    "background.js",
+    "dashboard.js"
+  ],
+  "planPath": "",
+  "contentHash": "97ea95952b89e53615b59f0afb892fe695487081a5c47dfdf81d8527c9223132",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

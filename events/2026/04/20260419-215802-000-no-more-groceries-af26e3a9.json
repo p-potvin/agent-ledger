@@ -1,0 +1,29 @@
+{
+  "id": "20260419-215802-000-no-more-groceries-af26e3a9",
+  "createdAt": "2026-04-20T01:58:02.0000000Z",
+  "createdAtLocal": "2026-04-19 21:58",
+  "timezone": "Eastern Standard Time",
+  "project": "no-more-groceries",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\no-more-groceries",
+  "summary": "Backfill: commit 3a8d594 (2026-04-19T21:58:02-04:00) - docs: add PRD and benchmark basket spec | files=1 +504 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 3a8d59424e5f5e732823922242df745380af4b01",
+    "git show --numstat --pretty=format: 3a8d59424e5f5e732823922242df745380af4b01"
+  ],
+  "files": [
+    "docs/PRD.md"
+  ],
+  "planPath": "",
+  "contentHash": "af26e3a99f1bb665869c5129c55fda4c3ea59f026b2e61d017b66f88baa7ba87",
+  "git": {
+    "repo": "no-more-groceries",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/no-more-groceries",
+    "branch": "main",
+    "head": "88c3476",
+    "hasChanges": false
+  }
+}

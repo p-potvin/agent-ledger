@@ -1,0 +1,34 @@
+{
+  "id": "20260501-040543-000-tube-site-d8e11048",
+  "createdAt": "2026-05-01T08:05:43.0000000Z",
+  "createdAtLocal": "2026-05-01 04:05",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+  "summary": "Backfill: commit 3615591 (2026-05-01T04:05:43-04:00) - pushing claude changes | files=6 +265 -12",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 361559196bebc91dc6bea8b11deee80cfa5217fa",
+    "git show --numstat --pretty=format: 361559196bebc91dc6bea8b11deee80cfa5217fa"
+  ],
+  "files": [
+    "promking-tube/assets/css/tube.css",
+    "promking-tube/assets/js/tube.js",
+    "promking-tube/includes/post-types.php",
+    "promking-tube/includes/shortcodes.php",
+    "promking-tube/includes/video-fetcher.php",
+    "promking-tube/promking-tube.php"
+  ],
+  "planPath": "",
+  "contentHash": "d8e11048398af3363d9d09810472093e8f23b3c9c9dead85aa181be891b8e0da",
+  "git": {
+    "repo": "tube-site",
+    "root": "C:/Users/Administrator/Desktop/business/tube-site",
+    "branch": "main",
+    "head": "ca526cf",
+    "hasChanges": false
+  }
+}

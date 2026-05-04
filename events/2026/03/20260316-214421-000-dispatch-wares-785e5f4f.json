@@ -1,0 +1,31 @@
+{
+  "id": "20260316-214421-000-dispatch-wares-785e5f4f",
+  "createdAt": "2026-03-17T01:44:21.0000000Z",
+  "createdAtLocal": "2026-03-16 21:44",
+  "timezone": "Eastern Standard Time",
+  "project": "dispatch-wares",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\dispatch-wares",
+  "summary": "Backfill: commit a87c023 (2026-03-16T21:44:21-04:00) - added db | files=3 +68 -1",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: a87c0237c9783d1c7580d0791c4677b3b0f0f265",
+    "git show --numstat --pretty=format: a87c0237c9783d1c7580d0791c4677b3b0f0f265"
+  ],
+  "files": [
+    "backend/prisma/migrations/20260314160416_init/migration.sql",
+    "backend/prisma/migrations/migration_lock.toml",
+    "frontend/.env"
+  ],
+  "planPath": "",
+  "contentHash": "785e5f4f9216d3854c5b5069af741e52f2677f63c4af7577a2f293c01436a7b0",
+  "git": {
+    "repo": "dispatch-wares",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/dispatch-wares",
+    "branch": "main",
+    "head": "1d2fe2b",
+    "hasChanges": false
+  }
+}

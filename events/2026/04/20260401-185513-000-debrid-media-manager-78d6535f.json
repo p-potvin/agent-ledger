@@ -1,0 +1,27 @@
+{
+  "id": "20260401-185513-000-debrid-media-manager-78d6535f",
+  "createdAt": "2026-04-01T22:55:13.0000000Z",
+  "createdAtLocal": "2026-04-01 18:55",
+  "timezone": "Eastern Standard Time",
+  "project": "debrid-media-manager",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\debrid-media-manager",
+  "summary": "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: bbdb2560dadbb02b0043314bc240f047fea3ed6e",
+    "git show --numstat --pretty=format: bbdb2560dadbb02b0043314bc240f047fea3ed6e"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "78d6535ff7ff4d7f1582599d5e6832118ffa96164dfaa750ff3039e01858b09f",
+  "git": {
+    "repo": "debrid-media-manager",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/debrid-media-manager",
+    "branch": "main",
+    "head": "c6ce8b5",
+    "hasChanges": false
+  }
+}

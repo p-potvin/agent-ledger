@@ -1,0 +1,49 @@
+{
+  "id": "20260416-174532-000-dispatch-wares-82cd896f",
+  "createdAt": "2026-04-16T21:45:32.0000000Z",
+  "createdAtLocal": "2026-04-16 17:45",
+  "timezone": "Eastern Standard Time",
+  "project": "dispatch-wares",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\dispatch-wares",
+  "summary": "Backfill: commit c5b7b93 (2026-04-16T21:45:32Z) - fix: add missing frontend source files (store, hooks, utils, logic, api) and fix .gitignore | files=21 +745 -1",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: c5b7b93b7f380e5851714aacebc82cb0bfd20bb7",
+    "git show --numstat --pretty=format: c5b7b93b7f380e5851714aacebc82cb0bfd20bb7"
+  ],
+  "files": [
+    ".gitignore",
+    "frontend/react-src/postcss.config.js",
+    "frontend/react-src/src/api/client.js",
+    "frontend/react-src/src/hooks/useAuth.js",
+    "frontend/react-src/src/hooks/useDispatchBoard.js",
+    "frontend/react-src/src/hooks/useSocket.js",
+    "frontend/react-src/src/logic/hoursCalculator.js",
+    "frontend/react-src/src/logic/optimizer.js",
+    "frontend/react-src/src/store/index.js",
+    "frontend/react-src/src/store/slices/authSlice.js",
+    "frontend/react-src/src/store/slices/chatSlice.js",
+    "frontend/react-src/src/store/slices/driversSlice.js",
+    "frontend/react-src/src/store/slices/jobsSlice.js",
+    "frontend/react-src/src/store/slices/notificationsSlice.js",
+    "frontend/react-src/src/store/slices/routesSlice.js",
+    "frontend/react-src/src/store/slices/settingsSlice.js",
+    "frontend/react-src/src/store/slices/trucksSlice.js",
+    "frontend/react-src/src/store/slices/uiSlice.js",
+    "frontend/react-src/src/utils/constants.js",
+    "frontend/react-src/src/utils/formatters.js",
+    "frontend/react-src/tailwind.config.js"
+  ],
+  "planPath": "",
+  "contentHash": "82cd896f57fd157abd0d09c881474e20a80ffbc51b398697f4b911149be59671",
+  "git": {
+    "repo": "dispatch-wares",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/dispatch-wares",
+    "branch": "main",
+    "head": "1d2fe2b",
+    "hasChanges": false
+  }
+}

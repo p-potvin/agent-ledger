@@ -1,0 +1,44 @@
+{
+  "id": "20260428-014521-000-vault-explorer-c767e3fe",
+  "createdAt": "2026-04-28T05:45:21.0000000Z",
+  "createdAtLocal": "2026-04-28 01:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Backfill: commit bb481f6 (2026-04-28T01:45:21-04:00) - Add binaries for Real-ESRGAN and Visual C++ runtime libraries | files=16 +1578 -21",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: bb481f63b01849cf07889b6d9f46e6790625de6c",
+    "git show --numstat --pretty=format: bb481f63b01849cf07889b6d9f46e6790625de6c"
+  ],
+  "files": [
+    "index.html",
+    "preload.js",
+    "test-exec.js",
+    "tools/models/realesr-animevideov3-x2.bin",
+    "tools/models/realesr-animevideov3-x2.param",
+    "tools/models/realesr-animevideov3-x3.bin",
+    "tools/models/realesr-animevideov3-x3.param",
+    "tools/models/realesr-animevideov3-x4.bin",
+    "tools/models/realesr-animevideov3-x4.param",
+    "tools/models/realesrgan-x4plus-anime.bin",
+    "tools/models/realesrgan-x4plus-anime.param",
+    "tools/models/realesrgan-x4plus.bin",
+    "tools/models/realesrgan-x4plus.param",
+    "tools/realesrgan-ncnn-vulkan.exe",
+    "tools/vcomp140.dll",
+    "tools/vcomp140d.dll"
+  ],
+  "planPath": "",
+  "contentHash": "c767e3fec54fe07568a20fb4c508dcb7410d9c0b8c848c96e178e925c1a17ad1",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "5376b0e",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "20260405-112632-000-realtime-stt-de114b39",
+  "createdAt": "2026-04-05T15:26:32.0000000Z",
+  "createdAtLocal": "2026-04-05 11:26",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit 3fcbb98 (2026-04-05T11:26:32-04:00) - Merge pull request #1 from p-potvin/copilot/optimize-asr-vad-transcription | files=0 +72 -64",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 3fcbb9854b7a10b31dba71ea32daa54520c204d8",
+    "git show --numstat --pretty=format: 3fcbb9854b7a10b31dba71ea32daa54520c204d8"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "de114b39e443fbba2f62e5dea77e28fbd43ee0bc6d7361469e0504a4bb7c8df7",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

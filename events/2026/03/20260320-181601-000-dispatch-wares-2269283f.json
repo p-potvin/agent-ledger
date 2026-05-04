@@ -1,0 +1,36 @@
+{
+  "id": "20260320-181601-000-dispatch-wares-2269283f",
+  "createdAt": "2026-03-20T22:16:01.0000000Z",
+  "createdAtLocal": "2026-03-20 18:16",
+  "timezone": "Eastern Standard Time",
+  "project": "dispatch-wares",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\dispatch-wares",
+  "summary": "Backfill: commit f3ee5db (2026-03-20T18:16:01-04:00) - fixed db and configs | files=8 +5594 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: f3ee5db871711d4ce3f6ce3d54bc84dbaa4ec37a",
+    "git show --numstat --pretty=format: f3ee5db871711d4ce3f6ce3d54bc84dbaa4ec37a"
+  ],
+  "files": [
+    ".eslintrc.json",
+    ".gcloudignore",
+    ".gitignore",
+    "app.yaml",
+    "index.ts",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "planPath": "",
+  "contentHash": "2269283f98791d8b5d5d5dcd397a8e54e8f6f472611ce5ae1a3be660b17ed529",
+  "git": {
+    "repo": "dispatch-wares",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/dispatch-wares",
+    "branch": "main",
+    "head": "1d2fe2b",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "20260326-173923-000-realtime-stt-9b0e8fcc",
+  "createdAt": "2026-03-26T21:39:23.0000000Z",
+  "createdAtLocal": "2026-03-26 17:39",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit 7309bba (2026-03-26T17:39:23-04:00) - feat: Initial commit of Real-Time Speech-to-Text project | files=14 +1419 -1",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 7309bbacaa2ccc1721f0a0ab8cc27e0738477175",
+    "git show --numstat --pretty=format: 7309bbacaa2ccc1721f0a0ab8cc27e0738477175"
+  ],
+  "files": [
+    ".github/CONTRIBUTING.md",
+    ".github/INSTRUCTIONS.md",
+    ".github/STYLE.md",
+    ".gitignore",
+    "LICENSE",
+    "ROADMAP.md",
+    "gui_overlay/overlay_window.py",
+    "main_app.py",
+    "readme.md",
+    "realtime-stt.cmd",
+    "requirements.txt",
+    "stt_engine/audio_capture.py",
+    "stt_engine/faster_whisper_wrapper.py",
+    "stt_engine/vad_logic.py"
+  ],
+  "planPath": "",
+  "contentHash": "9b0e8fcc65555efe5204f78e686b6add90eb855f8e77724b9405cf1787358ae9",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

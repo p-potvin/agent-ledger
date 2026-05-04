@@ -1,0 +1,41 @@
+{
+  "id": "20260416-001121-000-dispatch-wares-8cf8dd2f",
+  "createdAt": "2026-04-16T04:11:21.0000000Z",
+  "createdAtLocal": "2026-04-16 00:11",
+  "timezone": "Eastern Standard Time",
+  "project": "dispatch-wares",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\dispatch-wares",
+  "summary": "Backfill: commit 82b7b8d (2026-04-16T04:11:21Z) - feat: scaffold full dispatch SPA — store, utils, hooks, layout, chat, notifications, login, job card | files=13 +1496 -113",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 82b7b8d4eacfaf06069789324c4dfc048b9c3e10",
+    "git show --numstat --pretty=format: 82b7b8d4eacfaf06069789324c4dfc048b9c3e10"
+  ],
+  "files": [
+    "frontend/react-src/package-lock.json",
+    "frontend/react-src/package.json",
+    "frontend/react-src/public/index.html",
+    "frontend/react-src/src/App.js",
+    "frontend/react-src/src/components/chat/ChatPanel.jsx",
+    "frontend/react-src/src/components/dispatch/JobCard.jsx",
+    "frontend/react-src/src/components/layout/Layout.jsx",
+    "frontend/react-src/src/components/layout/Sidebar.jsx",
+    "frontend/react-src/src/components/layout/TopBar.jsx",
+    "frontend/react-src/src/components/notifications/NotificationsPanel.jsx",
+    "frontend/react-src/src/index.css",
+    "frontend/react-src/src/index.js",
+    "frontend/react-src/src/pages/Login.jsx"
+  ],
+  "planPath": "",
+  "contentHash": "8cf8dd2fdefa1c653c409ec5eaf3f41667750877bea3ecfbb5c1f0182c00359b",
+  "git": {
+    "repo": "dispatch-wares",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/dispatch-wares",
+    "branch": "main",
+    "head": "1d2fe2b",
+    "hasChanges": false
+  }
+}

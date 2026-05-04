@@ -1,0 +1,29 @@
+{
+  "id": "20260419-222523-000-no-more-groceries-2262ced5",
+  "createdAt": "2026-04-20T02:25:23.0000000Z",
+  "createdAtLocal": "2026-04-19 22:25",
+  "timezone": "Eastern Standard Time",
+  "project": "no-more-groceries",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\no-more-groceries",
+  "summary": "Backfill: commit 5917d93 (2026-04-19T22:25:23-04:00) - docs: add deal scoring spec | files=1 +473 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 5917d9335e61883b41d244a7ee54499fd19d1cc0",
+    "git show --numstat --pretty=format: 5917d9335e61883b41d244a7ee54499fd19d1cc0"
+  ],
+  "files": [
+    "docs/scoring.md"
+  ],
+  "planPath": "",
+  "contentHash": "2262ced51b464e805cecbf4df9693a0adab762029820d694dce34036b1d793e7",
+  "git": {
+    "repo": "no-more-groceries",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/no-more-groceries",
+    "branch": "main",
+    "head": "88c3476",
+    "hasChanges": false
+  }
+}

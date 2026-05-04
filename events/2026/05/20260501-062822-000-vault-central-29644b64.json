@@ -1,0 +1,45 @@
+{
+  "id": "20260501-062822-000-vault-central-29644b64",
+  "createdAt": "2026-05-01T10:28:22.0000000Z",
+  "createdAtLocal": "2026-05-01 06:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit 2a4f6af (2026-05-01T06:28:22-04:00) - Fix preview retry, PIN setup modal, popup theme sync, icon hover, sync button style (#19) | files=17 +381 -232",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 2a4f6af9f05eab9dd6b8dcdc1124600e80c5fc4b",
+    "git show --numstat --pretty=format: 2a4f6af9f05eab9dd6b8dcdc1124600e80c5fc4b"
+  ],
+  "files": [
+    "dist/dashboard-v2.html",
+    "dist/dashboard.css",
+    "dist/dashboard.js",
+    "dist/dashboard.js.map",
+    "dist/ffmpeg-core/ffmpeg-core.wasm",
+    "dist/globals.css",
+    "dist/globals.js.map",
+    "dist/pin-entry.html",
+    "dist/pin.js",
+    "dist/pin.js.map",
+    "dist/vault-themes.css",
+    "dist/vault-themes.js",
+    "dist/vault-themes.js.map",
+    "src/components/VaultDashboard.js",
+    "src/components/VaultDashboard.tsx",
+    "src/pin-entry.js",
+    "src/pin-entry.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "29644b644442a5a22c33d313a2fcf3ea6432c4d0c995a9cb3f85c2c8c4f15804",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

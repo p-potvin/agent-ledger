@@ -1,0 +1,30 @@
+{
+  "id": "20260416-174442-000-dispatch-wares-2cced842",
+  "createdAt": "2026-04-16T21:44:42.0000000Z",
+  "createdAtLocal": "2026-04-16 17:44",
+  "timezone": "Eastern Standard Time",
+  "project": "dispatch-wares",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\dispatch-wares",
+  "summary": "Backfill: commit 3200b28 (2026-04-16T21:44:42Z) - fix: add all missing frontend source files and vercel.json for correct deployment | files=2 +5 -14",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 3200b28b990e531c3fec3694f2e457e2397df38d",
+    "git show --numstat --pretty=format: 3200b28b990e531c3fec3694f2e457e2397df38d"
+  ],
+  "files": [
+    "frontend/react-src/package-lock.json",
+    "vercel.json"
+  ],
+  "planPath": "",
+  "contentHash": "2cced8427c367a7737b0efbd49ca7619f7bb94050bcef261dbfcd8e9b485fead",
+  "git": {
+    "repo": "dispatch-wares",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/dispatch-wares",
+    "branch": "main",
+    "head": "1d2fe2b",
+    "hasChanges": false
+  }
+}

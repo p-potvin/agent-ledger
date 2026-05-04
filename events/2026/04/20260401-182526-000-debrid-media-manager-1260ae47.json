@@ -1,0 +1,27 @@
+{
+  "id": "20260401-182526-000-debrid-media-manager-1260ae47",
+  "createdAt": "2026-04-01T22:25:26.0000000Z",
+  "createdAtLocal": "2026-04-01 18:25",
+  "timezone": "Eastern Standard Time",
+  "project": "debrid-media-manager",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\debrid-media-manager",
+  "summary": "Backfill: commit ac6ac87 (2026-04-01T22:25:26Z) - Initial plan | files=0 +0 -0",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: ac6ac87f38f057eb787bf05b6f6b2c0e550c5f7f",
+    "git show --numstat --pretty=format: ac6ac87f38f057eb787bf05b6f6b2c0e550c5f7f"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "1260ae472ae27b0b1d7a8319e99dd9819d3e3feb41b611fbaec6d0c1fec2da10",
+  "git": {
+    "repo": "debrid-media-manager",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/debrid-media-manager",
+    "branch": "main",
+    "head": "c6ce8b5",
+    "hasChanges": false
+  }
+}

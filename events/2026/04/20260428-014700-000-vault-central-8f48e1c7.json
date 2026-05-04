@@ -1,0 +1,48 @@
+{
+  "id": "20260428-014700-000-vault-central-8f48e1c7",
+  "createdAt": "2026-04-28T05:47:00.0000000Z",
+  "createdAtLocal": "2026-04-28 01:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit cc6d354 (2026-04-28T01:47:00-04:00) - feat: implement full local backup functionality with daily scheduling | files=20 +765 -26",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: cc6d354f2894be0bcae88c0d02940d2c51529b35",
+    "git show --numstat --pretty=format: cc6d354f2894be0bcae88c0d02940d2c51529b35"
+  ],
+  "files": [
+    "background/scripts/background.js",
+    "background/scripts/background.ts",
+    "dist/background/scripts/background.js",
+    "dist/dashboard.js",
+    "dist/dashboard.js.map",
+    "dist/globals.css",
+    "dist/globals.js",
+    "dist/globals.js.map",
+    "dist/pin.js",
+    "dist/src/offscreen/processor.js",
+    "src/components/Dashboard.test.js",
+    "src/components/Dashboard.test.tsx",
+    "src/components/VaultDashboard.js",
+    "src/components/VaultDashboard.tsx",
+    "src/lib/backup-vault.js",
+    "src/lib/backup-vault.ts",
+    "src/lib/dexie-store.js",
+    "src/lib/dexie-store.ts",
+    "src/lib/storage-vault.js",
+    "src/lib/storage-vault.ts"
+  ],
+  "planPath": "",
+  "contentHash": "8f48e1c784cc7ec629be875e6f9eed0dd89aab8f160343581715346359e21a0d",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

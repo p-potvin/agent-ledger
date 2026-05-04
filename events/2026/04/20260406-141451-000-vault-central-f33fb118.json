@@ -1,0 +1,49 @@
+{
+  "id": "20260406-141451-000-vault-central-f33fb118",
+  "createdAt": "2026-04-06T18:14:51.0000000Z",
+  "createdAtLocal": "2026-04-06 14:14",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Backfill: commit 148c077 (2026-04-06T14:14:51-04:00) - Refactor VaultDashboard and related components for improved icon usage and functionality | files=21 +464 -197",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 148c0779647d2b602aeb0afe2fbc5d5bee994581",
+    "git show --numstat --pretty=format: 148c0779647d2b602aeb0afe2fbc5d5bee994581"
+  ],
+  "files": [
+    "background/scripts/background.ts",
+    "dist/background/scripts/background.js",
+    "dist/content.js",
+    "dist/dashboard-v2.html",
+    "dist/dashboard.js",
+    "dist/dashboard.js.map",
+    "dist/globals.css",
+    "dist/globals.js",
+    "dist/globals.js.map",
+    "dist/pin-entry.html",
+    "dist/pin.js",
+    "dist/pin.js.map",
+    "src/components/VaultDashboard.js",
+    "src/components/VaultDashboard.tsx",
+    "src/lib/icons.tsx",
+    "src/pin-entry.tsx",
+    "src/scripts/content.js",
+    "src/styles/fix-icons-in-buttons.css",
+    "src/styles/globals.css",
+    "test-results/.last-run.json",
+    "tests/extension.spec.ts"
+  ],
+  "planPath": "",
+  "contentHash": "f33fb118250fe191bf90df8b3ab51dd8fb39c6a7120041c20e3b1e991cae9a11",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d78ef95",
+    "hasChanges": true
+  }
+}

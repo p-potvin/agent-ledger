@@ -1,0 +1,30 @@
+{
+  "id": "20260502-035619-000-tube-site-ac81d448",
+  "createdAt": "2026-05-02T07:56:19.0000000Z",
+  "createdAtLocal": "2026-05-02 03:56",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+  "summary": "Backfill: commit a6e479e (2026-05-02T07:56:19Z) - Fix deploy workflows: add fallback plugins-page verification and response diagnostics | files=2 +30 -6",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: a6e479ea9c5d114d57c952995fd00264ab1429f2",
+    "git show --numstat --pretty=format: a6e479ea9c5d114d57c952995fd00264ab1429f2"
+  ],
+  "files": [
+    ".github/workflows/deploy-fullxxx-video.yml",
+    ".github/workflows/deploy-promking-tube.yml"
+  ],
+  "planPath": "",
+  "contentHash": "ac81d448592fe2c5f37db2b2c0b23a3f63f0824491042ef9efd8da2a72696d98",
+  "git": {
+    "repo": "tube-site",
+    "root": "C:/Users/Administrator/Desktop/business/tube-site",
+    "branch": "main",
+    "head": "ca526cf",
+    "hasChanges": false
+  }
+}

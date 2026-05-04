@@ -1,0 +1,34 @@
+{
+  "id": "20260327-213436-000-realtime-stt-00a21652",
+  "createdAt": "2026-03-28T01:34:36.0000000Z",
+  "createdAtLocal": "2026-03-27 21:34",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Backfill: commit 1e54d11 (2026-03-27T21:34:36-04:00) - feat: Add support for Parakeet V3 engine and VAD bypass option in GUI | files=6 +179 -29",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 1e54d115487909d287707624eb6858a2e74e3744",
+    "git show --numstat --pretty=format: 1e54d115487909d287707624eb6858a2e74e3744"
+  ],
+  "files": [
+    "check_httpx.txt",
+    "gui_overlay/overlay_window.py",
+    "main_app.py",
+    "requirements.txt",
+    "stt_engine/parakeet_wrapper.py",
+    "stt_engine/vad_logic.py"
+  ],
+  "planPath": "",
+  "contentHash": "00a21652a5687b4f3ba4d9367e17fedb4f7310a4824d4a1b827225caaad7e748",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "f4fc103",
+    "hasChanges": false
+  }
+}

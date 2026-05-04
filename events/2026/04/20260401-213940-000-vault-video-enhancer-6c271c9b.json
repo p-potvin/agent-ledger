@@ -1,0 +1,31 @@
+{
+  "id": "20260401-213940-000-vault-video-enhancer-6c271c9b",
+  "createdAt": "2026-04-02T01:39:40.0000000Z",
+  "createdAtLocal": "2026-04-01 21:39",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-video-enhancer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-video-enhancer",
+  "summary": "Backfill: commit 8f80fc8 (2026-04-01T21:39:40-04:00) - Refactor transcription and translation processes: optimize vocal isolation, enhance VAD integration, and improve language detection in segments | files=3 +102 -105",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 8f80fc86b6252a308c15c508a9b6701951eae583",
+    "git show --numstat --pretty=format: 8f80fc86b6252a308c15c508a9b6701951eae583"
+  ],
+  "files": [
+    "video_transcriber/core.py",
+    "video_transcriber/media.py",
+    "video_transcriber/translation.py"
+  ],
+  "planPath": "",
+  "contentHash": "6c271c9be783fff475223134daba8e31028b05b60c1436fe4877ef9402467d0d",
+  "git": {
+    "repo": "vault-video-enhancer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-video-enhancer",
+    "branch": "main",
+    "head": "fe14010",
+    "hasChanges": false
+  }
+}
