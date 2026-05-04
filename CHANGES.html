@@ -26,6 +26,27 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-04 19:45 - agent-ledger</strong> <span class="kind">code-change</span> - Added a self-contained bilingual (EN/FR) WORK_IMPACT.html visualization generated from agent-ledger/events. New render-work-impact.ps1 parses events, recomputes clean/raw line s...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Added a self-contained bilingual (EN/FR) WORK_IMPACT.html visualization generated from agent-ledger/events. New render-work-impact.ps1 parses events, recomputes clean/raw line stats from referenced git commits (excluding dependency/build/cache/generated paths), and emits a GitHub-style activity heatmap plus monthly/kind/project breakdowns and per-project evidence table. Updated README with regeneration instructions. Generated WORK_IMPACT.html in both agent-ledger and workspace root.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/render-work-impact.ps1</code></li>
+        <li><code>git show --numstat (per referenced commit)</code></li>
+        <li><code>agent-ledger/scripts/record-agent-change.ps1</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>scripts/render-work-impact.ps1</code></li>
+        <li><code>WORK_IMPACT.html</code></li>
+        <li><code>README.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=agent-ledger, branch=main, head=1a55467</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-04 19:24 - agent-ledger</strong> <span class="kind">commands</span> - Historical backfill pass: generated ledger events for p-potvin and Prom-King/prom-king repos for all commits since 2025-03-01 (or repo creation if newer). Skipped commits alread...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> commands</p>

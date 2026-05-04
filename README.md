@@ -45,3 +45,16 @@ The sync script pulls with rebase, renders `CHANGES.md`, commits queued ledger f
 ## View the ledger
 
 Open `C:\Users\Administrator\Desktop\Github Repos\CHANGES.html` in Firefox for a quick-glance ledger with clickable expandable entries. Use `CHANGES.md` when viewing on GitHub or in a Markdown previewer such as VS Code.
+
+## Work impact visualization
+
+Generate a non-technical, bilingual (EN/FR) work-impact report from the ledger events:
+
+```powershell
+& "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\render-work-impact.ps1"
+```
+
+This writes:
+
+- `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\WORK_IMPACT.html`
+- `C:\Users\Administrator\Desktop\Github Repos\WORK_IMPACT.html`

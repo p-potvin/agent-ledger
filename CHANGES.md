@@ -3,6 +3,24 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-04 19:45 - agent-ledger</strong> <code>code-change</code> - Added a self-contained bilingual (EN/FR) WORK_IMPACT.html visualization generated from agent-ledger/events. New render-work-impact.ps1 parses events, recomputes clean/raw line s...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Added a self-contained bilingual (EN/FR) WORK_IMPACT.html visualization generated from agent-ledger/events. New render-work-impact.ps1 parses events, recomputes clean/raw line stats from referenced git commits (excluding dependency/build/cache/generated paths), and emits a GitHub-style activity heatmap plus monthly/kind/project breakdowns and per-project evidence table. Updated README with regeneration instructions. Generated WORK_IMPACT.html in both agent-ledger and workspace root.
+- Commands:
+  - `agent-ledger/scripts/render-work-impact.ps1`
+  - `git show --numstat (per referenced commit)`
+  - `agent-ledger/scripts/record-agent-change.ps1`
+- Files:
+  - `scripts/render-work-impact.ps1`
+  - `WORK_IMPACT.html`
+  - `README.md`
+- Git: repo=agent-ledger, branch=main, head=1a55467
+
+</details>
+
+<details>
 <summary><strong>2026-05-04 19:24 - agent-ledger</strong> <code>commands</code> - Historical backfill pass: generated ledger events for p-potvin and Prom-King/prom-king repos for all commits since 2025-03-01 (or repo creation if newer). Skipped commits alread...</summary>
 
 - Kind: commands
