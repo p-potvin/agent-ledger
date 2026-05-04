@@ -3,6 +3,20 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-04 18:41 - link-sharing</strong> <code>code-change</code> - Bootstrapped link-sharing project with pnpm workspaces. Initialized server (Fastify), client (React/Vite), and shared schemas. Configured Drizzle ORM and premium Vanilla CSS sty...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Bootstrapped link-sharing project with pnpm workspaces. Initialized server (Fastify), client (React/Vite), and shared schemas. Configured Drizzle ORM and premium Vanilla CSS styling.
+- Commands:
+  - `corepack enable`
+  - `pnpm init`
+  - `pnpm install`
+- Git: repo=link-sharing, branch=main, head=7984759
+
+</details>
+
+<details>
 <summary><strong>2026-05-04 18:37 - link-sharing</strong> <code>plan</code> - Researched file-host terms (KatFile, Rapidgator, K2S) and analyzed prelanding-page stack for bootstrapping link-sharing service. Proposed pnpm + TypeScript + Fastify/Express + V...</summary>
 
 - Kind: plan
