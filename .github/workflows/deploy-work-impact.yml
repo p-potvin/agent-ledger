@@ -1,0 +1,34 @@
+name: Deploy WORK_IMPACT (Protected)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "WORK_IMPACT.html"
+      - "api/**"
+      - "vercel.json"
+      - ".vercelignore"
+      - ".github/workflows/deploy-work-impact.yml"
+
+concurrency:
+  group: vercel-work-impact-prod
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Vercel (Production)
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: "--prod --confirm"
+          working-directory: ./
+
