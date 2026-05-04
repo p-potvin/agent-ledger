@@ -1,0 +1,30 @@
+{
+  "id": "20260504-191642-892-agent-ledger-89ee9643",
+  "createdAt": "2026-05-04T23:16:42.8929633Z",
+  "createdAtLocal": "2026-05-04 19:16",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Rewrote newly-created Backfill ledger events so their createdAt/createdAtLocal timestamps match the actual underlying change times (commit timestamps parsed from the Backfill summary; uncommitted-change events use latest mtime among listed files). Updated event ids/filenames and moved events into the correct year/month folders, then re-rendered CHANGES.md/CHANGES.html.",
+  "commands": [
+    "rewrite backfill events: parse commit ISO from summary; set createdAt; rename/move files",
+    "scripts/render-agent-ledger.ps1"
+  ],
+  "files": [
+    "events/2026/*/*.json",
+    "CHANGES.md",
+    "CHANGES.html"
+  ],
+  "planPath": "",
+  "contentHash": "89ee96434e05c95551c159c2f8c3a89cc5c74131c1d89ff6353ac059316e22d2",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "d7aff7a",
+    "hasChanges": true
+  }
+}

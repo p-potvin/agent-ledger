@@ -3,1501 +3,39 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-04 19:12 - link-sharing</strong> <code>code-change</code> - Backfill: uncommitted working tree changes present (post-cutoff 2026-05-04T22:41:05.5424093Z).</summary>
+<summary><strong>2026-05-04 19:16 - agent-ledger</strong> <code>code-change</code> - Rewrote newly-created Backfill ledger events so their createdAt/createdAtLocal timestamps match the actual underlying change times (commit timestamps parsed from the Backfill su...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
-- Summary: Backfill: uncommitted working tree changes present (post-cutoff 2026-05-04T22:41:05.5424093Z).
+- Summary: Rewrote newly-created Backfill ledger events so their createdAt/createdAtLocal timestamps match the actual underlying change times (commit timestamps parsed from the Backfill summary; uncommitted-change events use latest mtime among listed files). Updated event ids/filenames and moved events into the correct year/month folders, then re-rendered CHANGES.md/CHANGES.html.
 - Commands:
+  - `rewrite backfill events: parse commit ISO from summary; set createdAt; rename/move files`
+  - `scripts/render-agent-ledger.ps1`
+- Files:
+  - `events/2026/*/*.json`
+  - `CHANGES.md`
+  - `CHANGES.html`
+- Git: repo=agent-ledger, branch=main, head=d7aff7a
+
+</details>
+
+<details>
+<summary><strong>2026-05-04 19:13 - agent-ledger</strong> <code>commands</code> - Backfilled agent-ledger entries for all local repos with remotes under p-potvin and Prom-King/prom-king by scanning ledger timestamps and recording one code-change event per com...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Summary: Backfilled agent-ledger entries for all local repos with remotes under p-potvin and Prom-King/prom-king by scanning ledger timestamps and recording one code-change event per commit since each repo's last ledger event (or since ledger start 2026-04-28), plus one event per repo with uncommitted working-tree changes. Regenerated CHANGES.md/CHANGES.html as part of each record.
+- Commands:
+  - `git remote -v (per repo)`
+  - `git log --since=<cutoff> --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: <hash>`
+  - `git show --numstat --pretty=format: <hash>`
   - `git status --porcelain`
 - Files:
-  - `.gitignore`
-  - `client/`
-  - `drizzle.config.ts`
-  - `drizzle/`
-  - `node_modules/`
-  - `package.json`
-  - `pnpm-workspace.yaml`
-  - `server/`
-  - `shared/`
-  - `tsconfig.json`
-- Git: repo=link-sharing, branch=main, head=7984759
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-flows</strong> <code>code-change</code> - Backfill: uncommitted working tree changes present (post-cutoff 2026-05-03T02:58:39.3259575Z).</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: uncommitted working tree changes present (post-cutoff 2026-05-03T02:58:39.3259575Z).
-- Commands:
-  - `git status --porcelain`
-- Files:
-  - `.omx/metrics.json`
-  - `.omx/state/hud-state.json`
-  - `.omx/state/notify-hook-state.json`
-  - `.omx/state/tmux-hook-state.json`
-  - `eslint.config.js`
-  - `playwright.config.js`
-  - `src/App.jsx`
-  - `src/api.js`
-  - `src/api.test.js`
-  - `src/components/features/AdvancedWorkflowCreator.jsx`
-  - `src/components/ui/WorkflowList.jsx`
-  - `src/components/ui/WorkflowPage.jsx`
-  - `src/validation.js`
-  - `tailwind.config.js`
-  - `tests/e2e/basic-smoke.spec.js`
-  - `vite.config.js`
-  - `IMPROVEMENTS.md`
-  - `src/lib/workflowGraph.js`
-  - `src/lib/workflowGraph.test.js`
-- Git: repo=vault-flows, branch=main, head=ed096a3
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-central</strong> <code>code-change</code> - Backfill: uncommitted working tree changes present (post-cutoff 2026-05-04T06:54:07.1889312Z).</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: uncommitted working tree changes present (post-cutoff 2026-05-04T06:54:07.1889312Z).
-- Commands:
-  - `git status --porcelain`
-- Files:
-  - `dist/dashboard.js`
-  - `dist/dashboard.js.map`
-  - `src/components/VaultDashboard.js`
-- Git: repo=vault-central, branch=main, head=d78ef95
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - weekly-menu</strong> <code>code-change</code> - Backfill: commit 6bebcc8 (2026-05-01T17:52:47-04:00) - Automated commit: Updated files in weekly-menu | files=1 +1 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 6bebcc8 (2026-05-01T17:52:47-04:00) - Automated commit: Updated files in weekly-menu | files=1 +1 -1
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 6bebcc8d691430bf824cbbfb4d574ccc639fab82`
-  - `git show --numstat --pretty=format: 6bebcc8d691430bf824cbbfb4d574ccc639fab82`
-- Files:
-  - `vaultwares_agentciation`
-- Git: repo=weekly-menu, branch=main, head=6bebcc8
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - automation-suite</strong> <code>code-change</code> - Backfill: commit 7be29d9 (2026-05-01T17:52:12-04:00) - Automated commit: Updated files in automation-suite | files=2 +2 -2</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 7be29d9 (2026-05-01T17:52:12-04:00) - Automated commit: Updated files in automation-suite | files=2 +2 -2
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 7be29d9e5ac3abd84161b4c8ef9e96a1c5355e30`
-  - `git show --numstat --pretty=format: 7be29d9e5ac3abd84161b4c8ef9e96a1c5355e30`
-- Files:
-  - `vault-themes`
-  - `vaultwares_agentciation`
-- Git: repo=automation-suite, branch=main, head=7be29d9
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - cultural-rhythm</strong> <code>code-change</code> - Backfill: commit ee41dce (2026-05-01T17:52:14-04:00) - Automated commit: Updated files in cultural-rhythm | files=1 +0 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit ee41dce (2026-05-01T17:52:14-04:00) - Automated commit: Updated files in cultural-rhythm | files=1 +0 -1
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: ee41dcea327328e7d1b887246b20ec7cf4df1a66`
-  - `git show --numstat --pretty=format: ee41dcea327328e7d1b887246b20ec7cf4df1a66`
-- Files:
-  - `vault-themes`
-- Git: repo=cultural-rhythm, branch=main, head=ee41dce
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - deconstructed-website-a-la-mode</strong> <code>code-change</code> - Backfill: commit efb1628 (2026-05-01T17:52:16-04:00) - Automated commit: Updated files in deconstructed-website-a-la-mode | files=2 +0 -2</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit efb1628 (2026-05-01T17:52:16-04:00) - Automated commit: Updated files in deconstructed-website-a-la-mode | files=2 +0 -2
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: efb1628e568117402a9f023e8dcd446814f68cac`
-  - `git show --numstat --pretty=format: efb1628e568117402a9f023e8dcd446814f68cac`
-- Files:
-  - `vault-themes`
-  - `vaultwares-agentciation`
-- Git: repo=deconstructed-website-a-la-mode, branch=main, head=efb1628
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - dispatch-wares</strong> <code>code-change</code> - Backfill: commit 1d2fe2b (2026-05-01T17:52:18-04:00) - Automated commit: Updated files in dispatch-wares | files=1 +0 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 1d2fe2b (2026-05-01T17:52:18-04:00) - Automated commit: Updated files in dispatch-wares | files=1 +0 -1
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 1d2fe2b9116efca0f3bd4db94afe18a44b3ecb33`
-  - `git show --numstat --pretty=format: 1d2fe2b9116efca0f3bd4db94afe18a44b3ecb33`
-- Files:
-  - `vault-themes`
-- Git: repo=dispatch-wares, branch=main, head=1d2fe2b
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - gallery-scraper</strong> <code>code-change</code> - Backfill: commit d55eb37 (2026-05-01T17:52:19-04:00) - Automated commit: Updated files in gallery-scraper | files=1 +0 -0</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit d55eb37 (2026-05-01T17:52:19-04:00) - Automated commit: Updated files in gallery-scraper | files=1 +0 -0
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: d55eb37c6a680d96c4b075340e8f110845cc619a`
-  - `git show --numstat --pretty=format: d55eb37c6a680d96c4b075340e8f110845cc619a`
-- Files:
-  - `gallery-scraper.zip`
-- Git: repo=gallery-scraper, branch=main, head=d55eb37
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - realtime-stt</strong> <code>code-change</code> - Backfill: commit f4fc103 (2026-05-01T17:52:24-04:00) - Automated commit: Updated files in realtime-stt | files=11 +390 -244</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit f4fc103 (2026-05-01T17:52:24-04:00) - Automated commit: Updated files in realtime-stt | files=11 +390 -244
-- Commands:
-  - `git log --since=2026-05-01T21:41:46.4715986Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: f4fc103b824466b2e1b74054c7c644481b480d63`
-  - `git show --numstat --pretty=format: f4fc103b824466b2e1b74054c7c644481b480d63`
-- Files:
-  - `TASKS.md`
-  - `TODO.md`
-  - `code_analysis.md`
-  - `gui_overlay/gui_controller.py`
-  - `gui_overlay/overlay_window.py`
-  - `main_app.py`
-  - `plan.md`
-  - `stt_engine/audio_capture.py`
-  - `stt_engine/stt_strategies.py`
-  - `tests/test_audio_flow.py`
-  - `vault_themes`
-- Git: repo=realtime-stt, branch=main, head=f4fc103
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - windows-customizer</strong> <code>code-change</code> - Backfill: commit 1e55523 (2026-05-01T17:52:49-04:00) - Automated commit: Updated files in windows-customizer | files=1 +1 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 1e55523 (2026-05-01T17:52:49-04:00) - Automated commit: Updated files in windows-customizer | files=1 +1 -1
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 1e55523837e330b9d4aea6ee3022075c37883e57`
-  - `git show --numstat --pretty=format: 1e55523837e330b9d4aea6ee3022075c37883e57`
-- Files:
-  - `External/VaultThemes`
-- Git: repo=windows-customizer, branch=main, head=1e55523
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - usd-playground</strong> <code>code-change</code> - Backfill: commit 5db47bc (2026-05-01T17:52:28-04:00) - Automated commit: Updated files in usd-playground | files=3 +3 -3</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 5db47bc (2026-05-01T17:52:28-04:00) - Automated commit: Updated files in usd-playground | files=3 +3 -3
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 5db47bcfab9aeeab9c2a071862ae88907ee30dd4`
-  - `git show --numstat --pretty=format: 5db47bcfab9aeeab9c2a071862ae88907ee30dd4`
-- Files:
-  - `cosmos-reason2`
-  - `vault-themes`
-  - `vaultwares_agentciation`
-- Git: repo=usd-playground, branch=main, head=5db47bc
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-video-enhancer</strong> <code>code-change</code> - Backfill: commit fe14010 (2026-05-04T02:37:37-04:00) - feat: implement Parakeet-TDT ASR pipeline with word-level timestamp segmentation for improved subtitle accuracy. | files=3...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit fe14010 (2026-05-04T02:37:37-04:00) - feat: implement Parakeet-TDT ASR pipeline with word-level timestamp segmentation for improved subtitle accuracy. | files=3 +108 -27
-- Commands:
-  - `git log --since=2026-05-04T02:55:21.8276979Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: fe14010f3fb42e6523242d038059f3e376f8213e`
-  - `git show --numstat --pretty=format: fe14010f3fb42e6523242d038059f3e376f8213e`
-- Files:
-  - `vault_enhancer/core.py`
-  - `vault_enhancer/parakeet_wrapper.py`
-  - `vault_gui.py`
-- Git: repo=vault-video-enhancer, branch=main, head=fe14010
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-template</strong> <code>code-change</code> - Backfill: commit c1d59a8 (2026-05-01T17:52:43-04:00) - Automated commit: Updated files in vaultwares-template | files=1 +1 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit c1d59a8 (2026-05-01T17:52:43-04:00) - Automated commit: Updated files in vaultwares-template | files=1 +1 -1
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: c1d59a8f3b76b567dca1db6165dc649eca9b16d9`
-  - `git show --numstat --pretty=format: c1d59a8f3b76b567dca1db6165dc649eca9b16d9`
-- Files:
-  - `vaultwares-agentciation`
-- Git: repo=vaultwares-template, branch=main, head=c1d59a8
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-identity-manager</strong> <code>code-change</code> - Backfill: commit 672a338 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +0 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 672a338 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +0 -1
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 672a338253a6f481aecc009cb20ce0275115c3b2`
-  - `git show --numstat --pretty=format: 672a338253a6f481aecc009cb20ce0275115c3b2`
-- Files:
-  - `vault-themes`
-- Git: repo=vaultwares-identity-manager, branch=main, head=672a338
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-agentciation</strong> <code>code-change</code> - Backfill: commit ae703d0 (2026-04-30T20:18:15-04:00) - Please provide the diff or list of changes you would like summarized. | files=2 +30 -5</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit ae703d0 (2026-04-30T20:18:15-04:00) - Please provide the diff or list of changes you would like summarized. | files=2 +30 -5
-- Commands:
-  - `git log --since=2026-04-29T16:43:23.2566353Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: ae703d0c40630a839314460e08f781b187c674ba`
-  - `git show --numstat --pretty=format: ae703d0c40630a839314460e08f781b187c674ba`
-- Files:
-  - `assign_tasks.py`
-  - `start_extrovert.py`
-- Git: repo=vaultwares-agentciation, branch=main, head=ae703d0
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - traffic-pulse</strong> <code>code-change</code> - Backfill: commit 6372673 (2026-05-01T17:52:26-04:00) - Automated commit: Updated files in traffic-pulse | files=2 +1 -2</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 6372673 (2026-05-01T17:52:26-04:00) - Automated commit: Updated files in traffic-pulse | files=2 +1 -2
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 63726730b8da8b4319ca647ab2ba2f2a97f94dbd`
-  - `git show --numstat --pretty=format: 63726730b8da8b4319ca647ab2ba2f2a97f94dbd`
-- Files:
-  - `vault-themes`
-  - `vaultwares_agentciation`
-- Git: repo=traffic-pulse, branch=main, head=6372673
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - glass-ui</strong> <code>code-change</code> - Backfill: commit b2f2866 (2026-04-30T19:17:46-04:00) - Merge pull request #4 from p-potvin/palette-ux-improvements-4342842582149570691 | files=0 +20 -11</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit b2f2866 (2026-04-30T19:17:46-04:00) - Merge pull request #4 from p-potvin/palette-ux-improvements-4342842582149570691 | files=0 +20 -11
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: b2f2866ab0d1c6964ef0428e5de7391a4c922f43`
-  - `git show --numstat --pretty=format: b2f2866ab0d1c6964ef0428e5de7391a4c922f43`
-- Git: repo=glass-ui, branch=main, head=b2f2866
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - glass-ui</strong> <code>code-change</code> - Backfill: commit 84c902f (2026-04-30T00:29:22Z) - &#240;ŸŽ&#168; Palette: Enhance form accessibility and button focus states | files=2 +20 -11</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 84c902f (2026-04-30T00:29:22Z) - ðŸŽ¨ Palette: Enhance form accessibility and button focus states | files=2 +20 -11
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 84c902f1b8d8c9af3fb76bd798dc3cf2855de0df`
-  - `git show --numstat --pretty=format: 84c902f1b8d8c9af3fb76bd798dc3cf2855de0df`
-- Files:
-  - `.Jules/palette.md`
-  - `src/preview.tsx`
-- Git: repo=glass-ui, branch=main, head=b2f2866
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - no-more-groceries</strong> <code>code-change</code> - Backfill: commit 88c3476 (2026-05-01T17:52:22-04:00) - Automated commit: Updated files in no-more-groceries | files=2 +2 -2</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 88c3476 (2026-05-01T17:52:22-04:00) - Automated commit: Updated files in no-more-groceries | files=2 +2 -2
-- Commands:
-  - `git log --since=2026-04-29T21:01:05.3717464Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 88c34766dea84e880b2530e8eece70fa689b681a`
-  - `git show --numstat --pretty=format: 88c34766dea84e880b2530e8eece70fa689b681a`
-- Files:
-  - `vault-themes`
-  - `vaultwares-agentciation`
-- Git: repo=no-more-groceries, branch=main, head=88c3476
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - no-more-groceries</strong> <code>code-change</code> - Backfill: commit 8670186 (2026-04-29T17:58:41-04:00) - feat: integrate Apify for product and store searches with caching | files=5 +715 -83</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 8670186 (2026-04-29T17:58:41-04:00) - feat: integrate Apify for product and store searches with caching | files=5 +715 -83
-- Commands:
-  - `git log --since=2026-04-29T21:01:05.3717464Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 867018602a5d93469a1455aa96df2e52caf6e9c8`
-  - `git show --numstat --pretty=format: 867018602a5d93469a1455aa96df2e52caf6e9c8`
-- Files:
-  - `package-lock.json`
-  - `package.json`
-  - `packages/db/queries.js`
-  - `packages/integrations/pc-express/product-search.js`
-  - `packages/integrations/pc-express/store-search.js`
-- Git: repo=no-more-groceries, branch=main, head=88c3476
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-website</strong> <code>code-change</code> - Backfill: commit 55b66eb (2026-05-01T17:52:45-04:00) - Automated commit: Updated files in vaultwares-website | files=1 +1 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 55b66eb (2026-05-01T17:52:45-04:00) - Automated commit: Updated files in vaultwares-website | files=1 +1 -1
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 55b66eb45436cfb8edf0c2ce6b8644909299db62`
-  - `git show --numstat --pretty=format: 55b66eb45436cfb8edf0c2ce6b8644909299db62`
-- Files:
-  - `vault-themes`
-- Git: repo=vaultwares-website, branch=main, head=55b66eb
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-website</strong> <code>code-change</code> - Backfill: commit f83ce1f (2026-05-01T16:34:50-04:00) - chore: remove unused files and associated references | files=3 +2 -3</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit f83ce1f (2026-05-01T16:34:50-04:00) - chore: remove unused files and associated references | files=3 +2 -3
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: f83ce1f6417148d8de6a93462574aab3712daa46`
-  - `git show --numstat --pretty=format: f83ce1f6417148d8de6a93462574aab3712daa46`
-- Files:
-  - `vault-themes`
-  - `vaultwares-pipelines`
-  - `vaultwares_agentciation`
-- Git: repo=vaultwares-website, branch=main, head=55b66eb
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - qa-automation</strong> <code>code-change</code> - Backfill: commit fe2c299 (2026-05-04T18:34:30-04:00) - Automated commit: Updated files in qa-automation | files=2 +54 -4</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit fe2c299 (2026-05-04T18:34:30-04:00) - Automated commit: Updated files in qa-automation | files=2 +54 -4
-- Commands:
-  - `git log --since=2026-05-01T21:44:22.5805591Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: fe2c29952df22f71251b73ddd6f92be4bf4879c2`
-  - `git show --numstat --pretty=format: fe2c29952df22f71251b73ddd6f92be4bf4879c2`
-- Files:
-  - `README.md`
-  - `tests/age-gate-wordpress.spec.ts`
-- Git: repo=qa-automation, branch=main, head=fe2c299
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - qa-automation</strong> <code>code-change</code> - Backfill: commit fc4216c (2026-05-01T17:55:31-04:00) - Automated commit: Updated files in qa-automation | files=21 +2097 -529</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit fc4216c (2026-05-01T17:55:31-04:00) - Automated commit: Updated files in qa-automation | files=21 +2097 -529
-- Commands:
-  - `git log --since=2026-05-01T21:44:22.5805591Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: fc4216cf6980afd817ce98a94a8549815ae39930`
-  - `git show --numstat --pretty=format: fc4216cf6980afd817ce98a94a8549815ae39930`
-- Files:
-  - `.env.example`
-  - `.gitignore`
-  - `README.md`
-  - `package.json`
-  - `playwright.config.ts`
-  - `qa-automation`
-  - `scripts/run-weekly-smoke.mjs`
-  - `sim_testers.py`
-  - `tests/admin.spec.ts`
-  - `tests/age-gate-wordpress.spec.ts`
-  - `tests/funnel.spec.ts`
-  - `tests/legal.spec.ts`
-  - `tests/link-sharing.spec.ts`
-  - `tests/postback.spec.ts`
-  - `tests/prelanding.spec.ts`
-  - `tests/redirects.spec.ts`
-  - `tests/support/config.ts`
-  - `tests/support/site.ts`
-  - `tests/tube-site.spec.ts`
-  - `tests/weekly-smoke.spec.ts`
-  - `tsconfig.json`
-- Git: repo=qa-automation, branch=main, head=fe2c299
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - prelanding-page</strong> <code>code-change</code> - Backfill: commit 3dfcdd2 (2026-05-04T18:34:27-04:00) - Automated commit: Updated files in prelanding-page | files=13 +386 -93</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 3dfcdd2 (2026-05-04T18:34:27-04:00) - Automated commit: Updated files in prelanding-page | files=13 +386 -93
-- Commands:
-  - `git log --since=2026-05-01T21:42:02.4135799Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 3dfcdd208089901d99cd7461d5f93967e85be077`
-  - `git show --numstat --pretty=format: 3dfcdd208089901d99cd7461d5f93967e85be077`
-- Files:
-  - `README.md`
-  - `artifacts-tube-smoke.png`
-  - `client/index.html`
-  - `client/src/pages/TubeSite.tsx`
-  - `client/src/pages/TubeWatch.tsx`
-  - `drizzle/0004_tube_back_catalog.sql`
-  - `drizzle/meta/_journal.json`
-  - `drizzle/schema.ts`
-  - `server/db.ts`
-  - `server/links.test.ts`
-  - `server/tube.test.ts`
-  - `server/tubeRouter.ts`
-  - `vite.config.js`
-- Git: repo=prelanding-page, branch=main, head=3dfcdd2
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - prelanding-page</strong> <code>code-change</code> - Backfill: commit 31fcbb5 (2026-05-01T17:55:28-04:00) - Automated commit: Updated files in prelanding-page | files=39 +4809 -157</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 31fcbb5 (2026-05-01T17:55:28-04:00) - Automated commit: Updated files in prelanding-page | files=39 +4809 -157
-- Commands:
-  - `git log --since=2026-05-01T21:42:02.4135799Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 31fcbb5012c86a9b24d550cb9ae984c502b3e241`
-  - `git show --numstat --pretty=format: 31fcbb5012c86a9b24d550cb9ae984c502b3e241`
-- Files:
-  - `.env.example`
-  - `.omx/metrics.json`
-  - `.omx/state/hud-state.json`
-  - `.omx/state/notify-hook-state.json`
-  - `.omx/state/team-leader-nudge.json`
-  - `.omx/state/tmux-hook-state.json`
-  - `README.md`
-  - `client/index.html`
-  - `client/src/App.tsx`
-  - `client/src/components/AdultAgeGate.tsx`
-  - `client/src/components/AffiliateDisclosure.tsx`
-  - `client/src/components/PublicLegalFooter.tsx`
-  - `client/src/hooks/useAdultContentGate.ts`
-  - `client/src/hooks/usePageTitle.ts`
-  - `client/src/lib/brand.ts`
-  - `client/src/pages/Home.tsx`
-  - `client/src/pages/LegalPage.tsx`
-  - `client/src/pages/LinkSharing.tsx`
-  - `client/src/pages/TubeSite.tsx`
-  - `client/src/pages/TubeWatch.tsx`
-  - `drizzle/0003_monetization_attribution.sql`
-  - `drizzle/meta/_journal.json`
-  - `drizzle/schema.ts`
-  - `index.html`
-  - `package-lock.json`
-  - `server/_core/index.ts`
-  - `server/db.ts`
-  - `server/links.test.ts`
-  - `server/postbacks.test.ts`
-  - `server/postbacks.ts`
-  - `server/redirects.ts`
-  - `server/routers.ts`
-  - `server/tracking.test.ts`
-  - `server/tracking.ts`
-  - `src/App.jsx`
-  - `src/index.css`
-  - `src/lib/analytics.js`
-  - `src/main.jsx`
-  - `vite.config.js`
-- Git: repo=prelanding-page, branch=main, head=3dfcdd2
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-cli</strong> <code>code-change</code> - Backfill: commit aabba39 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-cli | files=2 +342 -5</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit aabba39 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-cli | files=2 +342 -5
-- Commands:
-  - `git log --since=2026-04-29T17:27:08.6374597Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: aabba3916dc992f99879e2184b7b8160c97fa1c1`
-  - `git show --numstat --pretty=format: aabba3916dc992f99879e2184b7b8160c97fa1c1`
-- Files:
-  - `Cargo.lock`
-  - `vault-themes`
-- Git: repo=vaultwares-cli, branch=main, head=aabba39
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-cli</strong> <code>code-change</code> - Backfill: commit 2aecc69 (2026-04-30T20:18:27-04:00) - feat: implement TUI session picker, FHE-based token aggregation, and ML-KEM-768 key encapsulation | files=6 +239 -2</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 2aecc69 (2026-04-30T20:18:27-04:00) - feat: implement TUI session picker, FHE-based token aggregation, and ML-KEM-768 key encapsulation | files=6 +239 -2
-- Commands:
-  - `git log --since=2026-04-29T17:27:08.6374597Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 2aecc69931ca79f1e270009f1ff6a90332e67457`
-  - `git show --numstat --pretty=format: 2aecc69931ca79f1e270009f1ff6a90332e67457`
-- Files:
-  - `.gitignore`
-  - `crates/vaultwares-cli/src/pqc.rs`
-  - `crates/vaultwares-cli/src/tui/session_picker.rs`
-  - `crates/vaultwares-fhe/Cargo.toml`
-  - `crates/vaultwares-fhe/src/lib.rs`
-  - `vaultwares-agentciation`
-- Git: repo=vaultwares-cli, branch=main, head=aabba39
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-cli</strong> <code>code-change</code> - Backfill: commit 3d1a0ad (2026-04-30T20:17:43-04:00) - refactor: modularize codebase by extracting CLI logic into dedicated runtime and TUI crates while implementing PQC securit...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 3d1a0ad (2026-04-30T20:17:43-04:00) - refactor: modularize codebase by extracting CLI logic into dedicated runtime and TUI crates while implementing PQC security guidelines. | files=34 +8501 -8441
-- Commands:
-  - `git log --since=2026-04-29T17:27:08.6374597Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 3d1a0adcc70bf1cec42049157ad8fe772f4531de`
-  - `git show --numstat --pretty=format: 3d1a0adcc70bf1cec42049157ad8fe772f4531de`
-- Files:
-  - `.gitignore`
-  - `PQC_GUIDELINES.md`
-  - `TASKS.md`
-  - `TUI-ENHANCEMENT-PLAN.md`
-  - `crates/plugins/src/hooks.rs`
-  - `crates/runtime/src/config.rs`
-  - `crates/runtime/src/config_validate.rs`
-  - `crates/runtime/src/file_ops.rs`
-  - `crates/runtime/src/hooks.rs`
-  - `crates/runtime/src/oauth.rs`
-  - `crates/storage/src/lib.rs`
-  - `crates/supervisor/src/manager.rs`
-  - `crates/theme-gen/src/lib.rs`
-  - `crates/vaultwares-cli/Cargo.toml`
-  - `crates/vaultwares-cli/src/app.rs`
-  - `crates/vaultwares-cli/src/args.rs`
-  - `crates/vaultwares-cli/src/format.rs`
-  - `crates/vaultwares-cli/src/main.rs`
-  - `crates/vaultwares-cli/src/render.rs`
-  - `crates/vaultwares-cli/src/session_mgr.rs`
-  - `crates/vaultwares-cli/src/tui/mod.rs`
-  - `crates/vaultwares-cli/src/tui/status_bar.rs`
-  - `crates/vaultwares-cli/src/tui/tool_panel.rs`
-  - `fix_encoding.py`
-  - `launch_full_team.ps1`
-  - `run_coordinated_system.py`
-  - `scratch/deduplicate.py`
-  - `scratch/final_sweep.py`
-  - `scratch/fix_impl_syntax.py`
-  - `scratch/fix_trait_vis.py`
-  - `scratch/fix_visibility.py`
-  - `scratch/refactor_main.py`
-  - `scratch/surgical_cleanup.py`
-  - `scratch/surgical_dedup.py`
-- Git: repo=vaultwares-cli, branch=main, head=aabba39
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-themes</strong> <code>code-change</code> - Backfill: commit ee16543 (2026-05-03T07:53:25-04:00) - added minimal icons | files=7 +0 -3</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit ee16543 (2026-05-03T07:53:25-04:00) - added minimal icons | files=7 +0 -3
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: ee16543ca903a4ddaadbd094b867b2f8b323a124`
-  - `git show --numstat --pretty=format: ee16543ca903a4ddaadbd094b867b2f8b323a124`
-- Files:
-  - `Brand/minimal-logos/vaultwares-minimal-gold-filled.png`
-  - `Brand/minimal-logos/vaultwares-minimal-ink-filled.png`
-  - `Brand/minimal-logos/vaultwares-minimal-mono-filled.png`
-  - `Brand/minimal-logos/vaultwares-minimal-mono-v2.png`
-  - `Brand/minimal-logos/vaultwares-minimal-mono.png`
-  - `Brand/vaultwares-logo.svg`
-  - `Brand/vaultwares_logo_gold.jpg`
-- Git: repo=vault-themes, branch=main, head=ee16543
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-themes</strong> <code>code-change</code> - Backfill: commit 240155e (2026-05-03T07:19:07-04:00) - added qt pyside6 theme exporter | files=2 +115 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 240155e (2026-05-03T07:19:07-04:00) - added qt pyside6 theme exporter | files=2 +115 -1
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 240155ec04796c2c93c8fe509efab39415636e5c`
-  - `git show --numstat --pretty=format: 240155ec04796c2c93c8fe509efab39415636e5c`
-- Files:
-  - `qt_exporter.py`
-  - `theme_manager.py`
-- Git: repo=vault-themes, branch=main, head=ee16543
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-themes</strong> <code>code-change</code> - Backfill: commit 5121b89 (2026-05-01T16:36:09-04:00) - feat: add brand favicon assets in various formats and resolutions | files=22 +0 -0</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 5121b89 (2026-05-01T16:36:09-04:00) - feat: add brand favicon assets in various formats and resolutions | files=22 +0 -0
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 5121b89de0e685bb9aac423c3fd8a8a6fdf17ed8`
-  - `git show --numstat --pretty=format: 5121b89de0e685bb9aac423c3fd8a8a6fdf17ed8`
-- Files:
-  - `Brand/favicons/vaultwares-favicon-dark.psd`
-  - `Brand/favicons/vaultwares-favicon-gold-filled-128.png`
-  - `Brand/favicons/vaultwares-favicon-gold-filled-256.png`
-  - `Brand/favicons/vaultwares-favicon-gold-filled-64.png`
-  - `Brand/favicons/vaultwares-favicon-gold-filled.psd`
-  - `Brand/favicons/vaultwares-favicon-ink-128.png`
-  - `Brand/favicons/vaultwares-favicon-ink-256.png`
-  - `Brand/favicons/vaultwares-favicon-ink-64.png`
-  - `Brand/favicons/vaultwares-favicon-ink.psd`
-  - `Brand/favicons/vaultwares-favicon-light.psd`
-  - `Brand/favicons/vaultwares-favicon-mono-128.png`
-  - `Brand/favicons/vaultwares-favicon-mono-256.png`
-  - `Brand/favicons/vaultwares-favicon-mono-64.png`
-  - `Brand/favicons/vaultwares-favicon-mono-filled-128.png`
-  - `Brand/favicons/vaultwares-favicon-mono-filled-256.png`
-  - `Brand/favicons/vaultwares-favicon-mono-filled-64.png`
-  - `Brand/favicons/vaultwares-favicon-mono-filled.psd`
-  - `Brand/favicons/vaultwares-favicon-mono-v2-128.png`
-  - `Brand/favicons/vaultwares-favicon-mono-v2-256.png`
-  - `Brand/favicons/vaultwares-favicon-mono-v2-64.png`
-  - `Brand/favicons/vaultwares-favicon-mono-v2.psd`
-  - `Brand/favicons/vaultwares-favicon-mono.psd`
-- Git: repo=vault-themes, branch=main, head=ee16543
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-themes</strong> <code>code-change</code> - Backfill: commit f17d09f (2026-04-28T10:31:16-04:00) - docs: update privacy and security guidelines for clarity and emphasis on priorities | files=1 +2 -0</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit f17d09f (2026-04-28T10:31:16-04:00) - docs: update privacy and security guidelines for clarity and emphasis on priorities | files=1 +2 -0
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: f17d09fbf6865cc9393fd8b702049d35df8243f0`
-  - `git show --numstat --pretty=format: f17d09fbf6865cc9393fd8b702049d35df8243f0`
-- Files:
-  - `.github/INSTRUCTIONS.md`
-- Git: repo=vault-themes, branch=main, head=ee16543
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-explorer</strong> <code>code-change</code> - Backfill: commit 5376b0e (2026-05-01T17:52:33-04:00) - Automated commit: Updated files in vault-explorer | files=1 +1 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 5376b0e (2026-05-01T17:52:33-04:00) - Automated commit: Updated files in vault-explorer | files=1 +1 -1
-- Commands:
-  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 5376b0ed54a1ec74199b719d0754e995ebe3547a`
-  - `git show --numstat --pretty=format: 5376b0ed54a1ec74199b719d0754e995ebe3547a`
-- Files:
-  - `vault-themes`
-- Git: repo=vault-explorer, branch=main, head=5376b0e
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-explorer</strong> <code>code-change</code> - Backfill: commit 658d2c1 (2026-04-30T21:20:44-04:00) - Merge pull request #3 from p-potvin/palette-empty-states-17860079820416914185 | files=0 +41 -5</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 658d2c1 (2026-04-30T21:20:44-04:00) - Merge pull request #3 from p-potvin/palette-empty-states-17860079820416914185 | files=0 +41 -5
-- Commands:
-  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 658d2c1948ca1213c143ac5c942d212e0ada6059`
-  - `git show --numstat --pretty=format: 658d2c1948ca1213c143ac5c942d212e0ada6059`
-- Git: repo=vault-explorer, branch=main, head=5376b0e
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-explorer</strong> <code>code-change</code> - Backfill: commit 7980252 (2026-04-30T23:48:36Z) - &#240;ŸŽ&#168; Palette: Added empty states for vault and search | files=2 +41 -5</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 7980252 (2026-04-30T23:48:36Z) - ðŸŽ¨ Palette: Added empty states for vault and search | files=2 +41 -5
-- Commands:
-  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 79802525fa7b43e7558dbd600fc442e9ee669350`
-  - `git show --numstat --pretty=format: 79802525fa7b43e7558dbd600fc442e9ee669350`
-- Files:
-  - `.Jules/palette.md`
-  - `index.html`
-- Git: repo=vault-explorer, branch=main, head=5376b0e
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-explorer</strong> <code>code-change</code> - Backfill: commit 7f19fbf (2026-04-30T19:17:03-04:00) - Merge pull request #2 from p-potvin/palette-ux-improvements-884884236906409268 | files=0 +15 -12</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 7f19fbf (2026-04-30T19:17:03-04:00) - Merge pull request #2 from p-potvin/palette-ux-improvements-884884236906409268 | files=0 +15 -12
-- Commands:
-  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 7f19fbfdf2a94a8e19f0b533d87102926b510292`
-  - `git show --numstat --pretty=format: 7f19fbfdf2a94a8e19f0b533d87102926b510292`
-- Git: repo=vault-explorer, branch=main, head=5376b0e
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-explorer</strong> <code>code-change</code> - Backfill: commit a559c40 (2026-04-30T00:14:04Z) - feat: UX accessibility enhancements | files=2 +15 -12</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit a559c40 (2026-04-30T00:14:04Z) - feat: UX accessibility enhancements | files=2 +15 -12
-- Commands:
-  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: a559c40203c9f7ebf8b9dcefbd672092e31e8062`
-  - `git show --numstat --pretty=format: a559c40203c9f7ebf8b9dcefbd672092e31e8062`
-- Files:
-  - `.Jules/palette.md`
-  - `index.html`
-- Git: repo=vault-explorer, branch=main, head=5376b0e
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-explorer</strong> <code>code-change</code> - Backfill: commit c21f67c (2026-04-28T20:07:29-04:00) - Merge pull request #1 from p-potvin/palette-aria-labels-14493885854049112492 | files=0 +10 -7</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit c21f67c (2026-04-28T20:07:29-04:00) - Merge pull request #1 from p-potvin/palette-aria-labels-14493885854049112492 | files=0 +10 -7
-- Commands:
-  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: c21f67c90cc32f093f8c2434eaef5e114ec40ee9`
-  - `git show --numstat --pretty=format: c21f67c90cc32f093f8c2434eaef5e114ec40ee9`
-- Git: repo=vault-explorer, branch=main, head=5376b0e
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-explorer</strong> <code>code-change</code> - Backfill: commit 4abc6c5 (2026-04-28T23:41:01Z) - &#240;ŸŽ&#168; Palette: Add ARIA labels to icon-only buttons | files=2 +10 -7</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 4abc6c5 (2026-04-28T23:41:01Z) - ðŸŽ¨ Palette: Add ARIA labels to icon-only buttons | files=2 +10 -7
-- Commands:
-  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 4abc6c544974b0ed3d762ca2a0aa1d3a5145383d`
-  - `git show --numstat --pretty=format: 4abc6c544974b0ed3d762ca2a0aa1d3a5145383d`
-- Files:
-  - `.Jules/palette.md`
-  - `index.html`
-- Git: repo=vault-explorer, branch=main, head=5376b0e
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-explorer</strong> <code>code-change</code> - Backfill: commit 4f4ff20 (2026-04-28T10:31:38-04:00) - feat: Enhance UI with new theme system and styling updates | files=3 +399 -67</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 4f4ff20 (2026-04-28T10:31:38-04:00) - feat: Enhance UI with new theme system and styling updates | files=3 +399 -67
-- Commands:
-  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 4f4ff2048320cbe8d355944b8f40648ebaa3bc27`
-  - `git show --numstat --pretty=format: 4f4ff2048320cbe8d355944b8f40648ebaa3bc27`
-- Files:
-  - `index.html`
-  - `main.js`
-  - `vault-themes`
-- Git: repo=vault-explorer, branch=main, head=5376b0e
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit 465e017 (2026-05-01T17:52:41-04:00) - Automated commit: Updated files in vaultwares-pipelines | files=2 +2 -2</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 465e017 (2026-05-01T17:52:41-04:00) - Automated commit: Updated files in vaultwares-pipelines | files=2 +2 -2
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 465e017db715237751641291337ec651841480e9`
-  - `git show --numstat --pretty=format: 465e017db715237751641291337ec651841480e9`
-- Files:
-  - `vault-themes`
-  - `vaultwares_agentciation`
-- Git: repo=vaultwares-pipelines, branch=main, head=465e017
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit d68766d (2026-05-01T15:47:49-04:00) - Merge pull request #31 from p-potvin/sentinel/api-key-bcrypt-dos-39214615738646647 | files=0 +38 -8</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit d68766d (2026-05-01T15:47:49-04:00) - Merge pull request #31 from p-potvin/sentinel/api-key-bcrypt-dos-39214615738646647 | files=0 +38 -8
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: d68766d142dd995679d0e45e4070bfacbcd04a78`
-  - `git show --numstat --pretty=format: d68766d142dd995679d0e45e4070bfacbcd04a78`
-- Git: repo=vaultwares-pipelines, branch=main, head=465e017
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit e75c1a6 (2026-05-01T19:45:09Z) - fix: export AgentRegistry from __init__.py in vaultwares_agentciation submodule | files=0 +0 -0</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit e75c1a6 (2026-05-01T19:45:09Z) - fix: export AgentRegistry from __init__.py in vaultwares_agentciation submodule | files=0 +0 -0
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: e75c1a669ff8d3ef4244af512d43bcbbbd4cdcf1`
-  - `git show --numstat --pretty=format: e75c1a669ff8d3ef4244af512d43bcbbbd4cdcf1`
-- Git: repo=vaultwares-pipelines, branch=main, head=465e017
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit 2f21751 (2026-05-01T19:33:29Z) - fix: resolve CPU DoS vulnerability and broken API key authentication | files=2 +38 -8</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 2f21751 (2026-05-01T19:33:29Z) - fix: resolve CPU DoS vulnerability and broken API key authentication | files=2 +38 -8
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 2f21751063aaa0cdeb8e266a28cd64e0c39cebfa`
-  - `git show --numstat --pretty=format: 2f21751063aaa0cdeb8e266a28cd64e0c39cebfa`
-- Files:
-  - `.jules/sentinel.md`
-  - `api_server.py`
-- Git: repo=vaultwares-pipelines, branch=main, head=465e017
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit 5f94b5f (2026-04-28T10:11:57-04:00) - fix: update vaultwares_agentciation submodule reference to latest commit | files=1 +1 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 5f94b5f (2026-04-28T10:11:57-04:00) - fix: update vaultwares_agentciation submodule reference to latest commit | files=1 +1 -1
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 5f94b5fe7693e156520d9d1b3fa5468830eafd09`
-  - `git show --numstat --pretty=format: 5f94b5fe7693e156520d9d1b3fa5468830eafd09`
-- Files:
-  - `vaultwares_agentciation`
-- Git: repo=vaultwares-pipelines, branch=main, head=465e017
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit b5e3b83 (2026-04-28T10:09:33-04:00) - Merge pull request #30 from p-potvin/copilot/move-agent-dispatcher-to-vaultwares-agentciation | files=0 +3 -1098</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit b5e3b83 (2026-04-28T10:09:33-04:00) - Merge pull request #30 from p-potvin/copilot/move-agent-dispatcher-to-vaultwares-agentciation | files=0 +3 -1098
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: b5e3b83a2896ee3a93d2ae08d371cb18dc6203a0`
-  - `git show --numstat --pretty=format: b5e3b83a2896ee3a93d2ae08d371cb18dc6203a0`
-- Git: repo=vaultwares-pipelines, branch=main, head=465e017
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit 5a9fd6e (2026-04-28T14:03:44Z) - fix: update vaultwares_agentciation submodule reference to new dispatcher branch commit (a70f00c) | files=1 +1 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 5a9fd6e (2026-04-28T14:03:44Z) - fix: update vaultwares_agentciation submodule reference to new dispatcher branch commit (a70f00c) | files=1 +1 -1
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 5a9fd6ee43451218e9f448b9640995866f354e10`
-  - `git show --numstat --pretty=format: 5a9fd6ee43451218e9f448b9640995866f354e10`
-- Files:
-  - `vaultwares_agentciation`
-- Git: repo=vaultwares-pipelines, branch=main, head=465e017
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit d96f669 (2026-04-28T13:36:26Z) - feat: move agent dispatcher routine and multi-agent team files to vaultwares_agentciation | files=20 +3 -1098</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit d96f669 (2026-04-28T13:36:26Z) - feat: move agent dispatcher routine and multi-agent team files to vaultwares_agentciation | files=20 +3 -1098
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: d96f66937ca511adef33af7a3ddfd2523341116e`
-  - `git show --numstat --pretty=format: d96f66937ca511adef33af7a3ddfd2523341116e`
-- Files:
-  - `agent_collaboration_instructions.md`
-  - `agent_image.md`
-  - `agent_manifest.md`
-  - `agent_text.md`
-  - `agent_video.md`
-  - `agent_workflow.md`
-  - `ai_model/__init__.py`
-  - `ai_model/agent_registry.py`
-  - `ai_model/redis_coordination.py`
-  - `ai_model/workflow_export_agent.py`
-  - `app/scripts/dispatcher_agent.py`
-  - `app/scripts/dispatcher_gui.py`
-  - `app/scripts/worker_agent.py`
-  - `assign_spa_tasks.py`
-  - `assign_tasks.py`
-  - `coordination_plan.md`
-  - `demo_active_coordination.py`
-  - `multi_agent_todo.md`
-  - `run_coordinated_system.py`
-  - `vaultwares_agentciation`
-- Git: repo=vaultwares-pipelines, branch=main, head=465e017
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit 59a693f (2026-04-28T06:40:50-04:00) - Merge pull request #29 from p-potvin/sentinel-command-injection-fix-4016544384366992294 | files=0 +3 -71</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 59a693f (2026-04-28T06:40:50-04:00) - Merge pull request #29 from p-potvin/sentinel-command-injection-fix-4016544384366992294 | files=0 +3 -71
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 59a693fa38baac9b1b12f05a5b90dadf4356c4d3`
-  - `git show --numstat --pretty=format: 59a693fa38baac9b1b12f05a5b90dadf4356c4d3`
-- Git: repo=vaultwares-pipelines, branch=main, head=465e017
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-player</strong> <code>code-change</code> - Backfill: commit 58d1933 (2026-05-01T17:52:37-04:00) - Automated commit: Updated files in vault-player | files=1 +1 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 58d1933 (2026-05-01T17:52:37-04:00) - Automated commit: Updated files in vault-player | files=1 +1 -1
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 58d19334b1410ff23d1cfd3955d07f574126beb4`
-  - `git show --numstat --pretty=format: 58d19334b1410ff23d1cfd3955d07f574126beb4`
-- Files:
-  - `vault-themes`
-- Git: repo=vault-player, branch=main, head=58d1933
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-player</strong> <code>code-change</code> - Backfill: commit cf3e76b (2026-05-01T16:36:22-04:00) - Please provide the specific file changes or a description of the modifications you have made so I can generate the commit ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit cf3e76b (2026-05-01T16:36:22-04:00) - Please provide the specific file changes or a description of the modifications you have made so I can generate the commit message for you. | files=1 +1 -1
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: cf3e76b1f3b3b2a46bc34e1824a00ff4c8aa0936`
-  - `git show --numstat --pretty=format: cf3e76b1f3b3b2a46bc34e1824a00ff4c8aa0936`
-- Files:
-  - `vault-themes`
-- Git: repo=vault-player, branch=main, head=58d1933
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-player</strong> <code>code-change</code> - Backfill: commit 756d638 (2026-04-28T14:49:10-04:00) - Merge pull request #5 from p-potvin/copilot/decrypt-data-and-ui-ux-sweep | files=0 +638 -46</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 756d638 (2026-04-28T14:49:10-04:00) - Merge pull request #5 from p-potvin/copilot/decrypt-data-and-ui-ux-sweep | files=0 +638 -46
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 756d6386eded117fe5a9205ae57c6562441af59b`
-  - `git show --numstat --pretty=format: 756d6386eded117fe5a9205ae57c6562441af59b`
-- Git: repo=vault-player, branch=main, head=58d1933
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-player</strong> <code>code-change</code> - Backfill: commit 613b48b (2026-04-28T18:34:38Z) - fix: accessibility improvements to aria-labels in video_player.html | files=1 +3 -3</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 613b48b (2026-04-28T18:34:38Z) - fix: accessibility improvements to aria-labels in video_player.html | files=1 +3 -3
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 613b48b9859d1b6319d89ad951296a58f41d67f7`
-  - `git show --numstat --pretty=format: 613b48b9859d1b6319d89ad951296a58f41d67f7`
-- Files:
-  - `components/video_player.html`
-- Git: repo=vault-player, branch=main, head=58d1933
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:12 - vault-player</strong> <code>code-change</code> - Backfill: commit f2d15ab (2026-04-28T18:33:41Z) - fix: remove orphaned old class body from video_player.js | files=1 +0 -239</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit f2d15ab (2026-04-28T18:33:41Z) - fix: remove orphaned old class body from video_player.js | files=1 +0 -239
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: f2d15ab75c26016662db31aa511095309e584367`
-  - `git show --numstat --pretty=format: f2d15ab75c26016662db31aa511095309e584367`
-- Files:
-  - `components/video_player.js`
-- Git: repo=vault-player, branch=main, head=58d1933
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - vault-player</strong> <code>code-change</code> - Backfill: commit 67254d6 (2026-04-28T18:31:44Z) - feat: integrate PQC decryption pipeline into video player + vault-themes UI/UX sweep | files=5 +870 -39</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 67254d6 (2026-04-28T18:31:44Z) - feat: integrate PQC decryption pipeline into video player + vault-themes UI/UX sweep | files=5 +870 -39
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 67254d6e8c8b4aa0b3ee7a56f56faf7923e442cf`
-  - `git show --numstat --pretty=format: 67254d6e8c8b4aa0b3ee7a56f56faf7923e442cf`
-- Files:
-  - `ROADMAP.md`
-  - `TODO.md`
-  - `components/pqc_crypto.py`
-  - `components/video_player.html`
-  - `components/video_player.js`
-- Git: repo=vault-player, branch=main, head=58d1933
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - vault-player</strong> <code>code-change</code> - Backfill: commit b75360b (2026-04-28T14:24:42-04:00) - Merge pull request #4 from p-potvin/copilot/implement-post-quantum-encryption | files=0 +1028 -11</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit b75360b (2026-04-28T14:24:42-04:00) - Merge pull request #4 from p-potvin/copilot/implement-post-quantum-encryption | files=0 +1028 -11
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: b75360b7e6799a85943364aa3553a890c466eacb`
-  - `git show --numstat --pretty=format: b75360b7e6799a85943364aa3553a890c466eacb`
-- Git: repo=vault-player, branch=main, head=58d1933
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - vault-player</strong> <code>code-change</code> - Backfill: commit e9b163d (2026-04-28T15:45:56Z) - feat: implement Post-Quantum Cryptography (PQC) layer and SecurityAgent | files=9 +1028 -11</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit e9b163d (2026-04-28T15:45:56Z) - feat: implement Post-Quantum Cryptography (PQC) layer and SecurityAgent | files=9 +1028 -11
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: e9b163d6fd79437725dbcdf6cdf62614b85cc8af`
-  - `git show --numstat --pretty=format: e9b163d6fd79437725dbcdf6cdf62614b85cc8af`
-- Files:
-  - `ROADMAP.md`
-  - `TODO.md`
-  - `agent_manifest.md`
-  - `agent_security.md`
-  - `agents/__init__.py`
-  - `agents/security_agent.py`
-  - `components/pqc_crypto.py`
-  - `requirements.txt`
-  - `run_coordinated_system.py`
-- Git: repo=vault-player, branch=main, head=58d1933
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - vault-player</strong> <code>code-change</code> - Backfill: commit 024aeff (2026-04-28T11:32:35-04:00) - Merge pull request #3 from p-potvin/feat/reusable-video-player-282919941480644833 | files=0 +290 -0</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 024aeff (2026-04-28T11:32:35-04:00) - Merge pull request #3 from p-potvin/feat/reusable-video-player-282919941480644833 | files=0 +290 -0
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 024aeff09af42314c3400d9fbb9a614ada6d8e7e`
-  - `git show --numstat --pretty=format: 024aeff09af42314c3400d9fbb9a614ada6d8e7e`
-- Git: repo=vault-player, branch=main, head=58d1933
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - vault-player</strong> <code>code-change</code> - Backfill: commit 9803d2f (2026-04-28T14:37:05Z) - feat: Extract vault-explorer video player as a reusable component | files=3 +290 -0</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 9803d2f (2026-04-28T14:37:05Z) - feat: Extract vault-explorer video player as a reusable component | files=3 +290 -0
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 9803d2ffac9927c9ab23c45af53b5d7c92858b3c`
-  - `git show --numstat --pretty=format: 9803d2ffac9927c9ab23c45af53b5d7c92858b3c`
-- Files:
-  - `.gitignore`
-  - `components/video_player.html`
-  - `components/video_player.js`
-- Git: repo=vault-player, branch=main, head=58d1933
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit 40efb52 (2026-05-02T03:32:21-04:00) - Remove empty line from README.md | files=1 +0 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 40efb52 (2026-05-02T03:32:21-04:00) - Remove empty line from README.md | files=1 +0 -1
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 40efb527cfa05a1089a15d350554ce058cf29d8e`
-  - `git show --numstat --pretty=format: 40efb527cfa05a1089a15d350554ce058cf29d8e`
-- Files:
-  - `fullxxx-video/README.md`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit bdccaa5 (2026-05-02T03:30:28-04:00) - Merge pull request #5 from Prom-King/copilot/fix-deployment-issues-tube-sites | files=0 +4 -4</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit bdccaa5 (2026-05-02T03:30:28-04:00) - Merge pull request #5 from Prom-King/copilot/fix-deployment-issues-tube-sites | files=0 +4 -4
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: bdccaa5667835f411a3f895fbe6ed749c877bfec`
-  - `git show --numstat --pretty=format: bdccaa5667835f411a3f895fbe6ed749c877bfec`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit 83b2007 (2026-05-02T07:15:57Z) - Fix WordPress plugin upload nonce fetch URL in both deploy workflows | files=2 +4 -4</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 83b2007 (2026-05-02T07:15:57Z) - Fix WordPress plugin upload nonce fetch URL in both deploy workflows | files=2 +4 -4
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 83b2007b2a249817880c8f656a62187fdfc779b3`
-  - `git show --numstat --pretty=format: 83b2007b2a249817880c8f656a62187fdfc779b3`
-- Files:
-  - `.github/workflows/deploy-fullxxx-video.yml`
-  - `.github/workflows/deploy-promking-tube.yml`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit da4276f (2026-05-02T03:13:17-04:00) - Merge pull request #4 from Prom-King/copilot/modify-plugins-for-pagination | files=0 +156 -74</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit da4276f (2026-05-02T03:13:17-04:00) - Merge pull request #4 from Prom-King/copilot/modify-plugins-for-pagination | files=0 +156 -74
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: da4276fb3872229d42da31f7c15fc41705a9c68d`
-  - `git show --numstat --pretty=format: da4276fb3872229d42da31f7c15fc41705a9c68d`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit 089b95d (2026-05-02T07:06:11Z) - fix: address code review feedback (accessibility labels, bulk_done guard, direct function call) | files=2 +4 -4</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 089b95d (2026-05-02T07:06:11Z) - fix: address code review feedback (accessibility labels, bulk_done guard, direct function call) | files=2 +4 -4
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 089b95d3d51a91e6fc46139a879be4fa0c56aa33`
-  - `git show --numstat --pretty=format: 089b95d3d51a91e6fc46139a879be4fa0c56aa33`
-- Files:
-  - `fullxxx-video/includes/admin-settings.php`
-  - `promking-tube/includes/video-fetcher.php`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit bf41e82 (2026-05-02T07:05:14Z) - feat: add pagination and bulk scrape to both plugins | files=2 +156 -74</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit bf41e82 (2026-05-02T07:05:14Z) - feat: add pagination and bulk scrape to both plugins | files=2 +156 -74
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: bf41e828402041582589345a2b04a88fe95be0e1`
-  - `git show --numstat --pretty=format: bf41e828402041582589345a2b04a88fe95be0e1`
-- Files:
-  - `fullxxx-video/includes/admin-settings.php`
-  - `promking-tube/includes/video-fetcher.php`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit 9832ec1 (2026-05-02T02:59:49-04:00) - Merge pull request #3 from Prom-King/copilot/fix-failed-deployment | files=0 +22 -16</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 9832ec1 (2026-05-02T02:59:49-04:00) - Merge pull request #3 from Prom-King/copilot/fix-failed-deployment | files=0 +22 -16
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 9832ec1d6b555cd784efbf31ecbb84b3dcc022d6`
-  - `git show --numstat --pretty=format: 9832ec1d6b555cd784efbf31ecbb84b3dcc022d6`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit 2c9c436 (2026-05-02T04:32:57Z) - Add || true to all grep pipelines in deploy error paths | files=2 +4 -4</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 2c9c436 (2026-05-02T04:32:57Z) - Add || true to all grep pipelines in deploy error paths | files=2 +4 -4
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 2c9c436f609e1d439136ef35aedd0bf591c03694`
-  - `git show --numstat --pretty=format: 2c9c436f609e1d439136ef35aedd0bf591c03694`
-- Files:
-  - `.github/workflows/deploy-fullxxx-video.yml`
-  - `.github/workflows/deploy-promking-tube.yml`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit 0766766 (2026-05-02T04:32:12Z) - Touch promking-tube/README.md to retrigger deployment on merge | files=1 +1 -0</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 0766766 (2026-05-02T04:32:12Z) - Touch promking-tube/README.md to retrigger deployment on merge | files=1 +1 -0
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 07667668bf5ffda9d372a5fe633233c7306bcfe7`
-  - `git show --numstat --pretty=format: 07667668bf5ffda9d372a5fe633233c7306bcfe7`
-- Files:
-  - `promking-tube/README.md`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit 8167dfa (2026-05-02T04:31:43Z) - Fix silent deploy failures and trigger fullxxx.video deployment | files=3 +19 -14</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 8167dfa (2026-05-02T04:31:43Z) - Fix silent deploy failures and trigger fullxxx.video deployment | files=3 +19 -14
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 8167dfa6cb05c2422cc554340061cc2402986fb2`
-  - `git show --numstat --pretty=format: 8167dfa6cb05c2422cc554340061cc2402986fb2`
-- Files:
-  - `.github/workflows/deploy-fullxxx-video.yml`
-  - `.github/workflows/deploy-promking-tube.yml`
-  - `fullxxx-video/README.md`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit ae3bf9b (2026-05-02T00:22:38-04:00) - Fix header formatting in README.md | files=1 +1 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit ae3bf9b (2026-05-02T00:22:38-04:00) - Fix header formatting in README.md | files=1 +1 -1
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: ae3bf9b04aed315691254350527e962000f7d89b`
-  - `git show --numstat --pretty=format: ae3bf9b04aed315691254350527e962000f7d89b`
-- Files:
-  - `promking-tube/README.md`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit c2eed18 (2026-05-02T00:21:26-04:00) - Rename project from &#39;tube-site&#39; to &#39;Prom King&#39; | files=1 +2 -2</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit c2eed18 (2026-05-02T00:21:26-04:00) - Rename project from 'tube-site' to 'Prom King' | files=1 +2 -2
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: c2eed183c35368fd57414374e3ebaf8136fee1ce`
-  - `git show --numstat --pretty=format: c2eed183c35368fd57414374e3ebaf8136fee1ce`
-- Files:
-  - `README.md`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit 6ce26a7 (2026-05-01T18:49:19-04:00) - Merge pull request #2 from Prom-King/copilot/automate-plugin-deployment | files=0 +468 -0</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 6ce26a7 (2026-05-01T18:49:19-04:00) - Merge pull request #2 from Prom-King/copilot/automate-plugin-deployment | files=0 +468 -0
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 6ce26a710b6b27a24af05d1e46325269bb2eaa24`
-  - `git show --numstat --pretty=format: 6ce26a710b6b27a24af05d1e46325269bb2eaa24`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit 2d21fca (2026-05-01T18:43:20-04:00) - Automated commit: Updated files in tube-site | files=3 +404 -36</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 2d21fca (2026-05-01T18:43:20-04:00) - Automated commit: Updated files in tube-site | files=3 +404 -36
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 2d21fcaa69f9369b5d2f9f5d8ca4f18e0eb4f1c1`
-  - `git show --numstat --pretty=format: 2d21fcaa69f9369b5d2f9f5d8ca4f18e0eb4f1c1`
-- Files:
-  - `fullxxx-video/includes/admin-settings.php`
-  - `fullxxx-video/includes/video-fetcher.php`
-  - `fullxxx-video/templates/single-fxv_video.php`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit 353fe6d (2026-05-01T22:38:08Z) - Add WP_URL shell variable and returncode checks per code review | files=2 +20 -6</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 353fe6d (2026-05-01T22:38:08Z) - Add WP_URL shell variable and returncode checks per code review | files=2 +20 -6
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 353fe6d3ffa9029f0d063aa90f0901be3f94f9d5`
-  - `git show --numstat --pretty=format: 353fe6d3ffa9029f0d063aa90f0901be3f94f9d5`
-- Files:
-  - `.github/workflows/deploy-fullxxx-video.yml`
-  - `.github/workflows/deploy-promking-tube.yml`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit c9f9506 (2026-05-01T22:36:45Z) - Use correct secret names, hardcode URLs, add settings backup/restore steps | files=2 +320 -28</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit c9f9506 (2026-05-01T22:36:45Z) - Use correct secret names, hardcode URLs, add settings backup/restore steps | files=2 +320 -28
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: c9f95062a2ba5fbf4a2b65dbff4cd548bdd95a3a`
-  - `git show --numstat --pretty=format: c9f95062a2ba5fbf4a2b65dbff4cd548bdd95a3a`
-- Files:
-  - `.github/workflows/deploy-fullxxx-video.yml`
-  - `.github/workflows/deploy-promking-tube.yml`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit de6268d (2026-05-01T17:55:33-04:00) - Automated commit: Updated files in tube-site | files=11 +1662 -609</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit de6268d (2026-05-01T17:55:33-04:00) - Automated commit: Updated files in tube-site | files=11 +1662 -609
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: de6268dd1b86477ede6053ba272faf9abcfa9d48`
-  - `git show --numstat --pretty=format: de6268dd1b86477ede6053ba272faf9abcfa9d48`
-- Files:
-  - `fullxxx-video/assets/css/tube.css`
-  - `fullxxx-video/assets/js/tube.js`
-  - `fullxxx-video/fullxxx-video.php`
-  - `fullxxx-video/includes/admin-settings.php`
-  - `fullxxx-video/includes/dmca.php`
-  - `fullxxx-video/includes/helpers.php`
-  - `fullxxx-video/includes/template-loader.php`
-  - `fullxxx-video/includes/video-fetcher.php`
-  - `fullxxx-video/templates/archive-fxv_video.php`
-  - `fullxxx-video/templates/single-fxv_video.php`
-  - `fullxxx-video/templates/taxonomy-fxv_category.php`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit 3204668 (2026-05-01T21:51:08Z) - Fix en-dash in workflow error messages | files=2 +2 -2</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 3204668 (2026-05-01T21:51:08Z) - Fix en-dash in workflow error messages | files=2 +2 -2
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 3204668f93c3b97d43301d3f86d93ad6b87616c4`
-  - `git show --numstat --pretty=format: 3204668f93c3b97d43301d3f86d93ad6b87616c4`
-- Files:
-  - `.github/workflows/deploy-fullxxx-video.yml`
-  - `.github/workflows/deploy-promking-tube.yml`
-- Git: repo=tube-site, branch=main, head=ca526cf
-
-</details>
-
-<details>
-<summary><strong>2026-05-04 19:11 - tube-site</strong> <code>code-change</code> - Backfill: commit 5349522 (2026-05-01T21:50:35Z) - Add GitHub Actions workflows for WordPress plugin deployment | files=2 +162 -0</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 5349522 (2026-05-01T21:50:35Z) - Add GitHub Actions workflows for WordPress plugin deployment | files=2 +162 -0
-- Commands:
-  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 5349522dbd224977c2972ee7e1a2d58eb57007c8`
-  - `git show --numstat --pretty=format: 5349522dbd224977c2972ee7e1a2d58eb57007c8`
-- Files:
-  - `.github/workflows/deploy-fullxxx-video.yml`
-  - `.github/workflows/deploy-promking-tube.yml`
-- Git: repo=tube-site, branch=main, head=ca526cf
+  - `events/2026/05/*.json`
+  - `CHANGES.md`
+  - `CHANGES.html`
+- Git: repo=agent-ledger, branch=main, head=d7aff7a
 
 </details>
 
@@ -1530,6 +68,29 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
+<summary><strong>2026-05-04 18:40 - link-sharing</strong> <code>code-change</code> - Backfill: uncommitted working tree changes present (post-cutoff 2026-05-04T22:41:05.5424093Z).</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: uncommitted working tree changes present (post-cutoff 2026-05-04T22:41:05.5424093Z).
+- Commands:
+  - `git status --porcelain`
+- Files:
+  - `.gitignore`
+  - `client/`
+  - `drizzle.config.ts`
+  - `drizzle/`
+  - `node_modules/`
+  - `package.json`
+  - `pnpm-workspace.yaml`
+  - `server/`
+  - `shared/`
+  - `tsconfig.json`
+- Git: repo=link-sharing, branch=main, head=7984759
+
+</details>
+
+<details>
 <summary><strong>2026-05-04 18:37 - link-sharing</strong> <code>plan</code> - Researched file-host terms (KatFile, Rapidgator, K2S) and analyzed prelanding-page stack for bootstrapping link-sharing service. Proposed pnpm + TypeScript + Fastify/Express + V...</summary>
 
 - Kind: plan
@@ -1540,6 +101,51 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `list_dir`
   - `view_file`
 - Git: repo=link-sharing, branch=main, head=7984759
+
+</details>
+
+<details>
+<summary><strong>2026-05-04 18:34 - qa-automation</strong> <code>code-change</code> - Backfill: commit fe2c299 (2026-05-04T18:34:30-04:00) - Automated commit: Updated files in qa-automation | files=2 +54 -4</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit fe2c299 (2026-05-04T18:34:30-04:00) - Automated commit: Updated files in qa-automation | files=2 +54 -4
+- Commands:
+  - `git log --since=2026-05-01T21:44:22.5805591Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: fe2c29952df22f71251b73ddd6f92be4bf4879c2`
+  - `git show --numstat --pretty=format: fe2c29952df22f71251b73ddd6f92be4bf4879c2`
+- Files:
+  - `README.md`
+  - `tests/age-gate-wordpress.spec.ts`
+- Git: repo=qa-automation, branch=main, head=fe2c299
+
+</details>
+
+<details>
+<summary><strong>2026-05-04 18:34 - prelanding-page</strong> <code>code-change</code> - Backfill: commit 3dfcdd2 (2026-05-04T18:34:27-04:00) - Automated commit: Updated files in prelanding-page | files=13 +386 -93</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 3dfcdd2 (2026-05-04T18:34:27-04:00) - Automated commit: Updated files in prelanding-page | files=13 +386 -93
+- Commands:
+  - `git log --since=2026-05-01T21:42:02.4135799Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 3dfcdd208089901d99cd7461d5f93967e85be077`
+  - `git show --numstat --pretty=format: 3dfcdd208089901d99cd7461d5f93967e85be077`
+- Files:
+  - `README.md`
+  - `artifacts-tube-smoke.png`
+  - `client/index.html`
+  - `client/src/pages/TubeSite.tsx`
+  - `client/src/pages/TubeWatch.tsx`
+  - `drizzle/0004_tube_back_catalog.sql`
+  - `drizzle/meta/_journal.json`
+  - `drizzle/schema.ts`
+  - `server/db.ts`
+  - `server/links.test.ts`
+  - `server/tube.test.ts`
+  - `server/tubeRouter.ts`
+  - `vite.config.js`
+- Git: repo=prelanding-page, branch=main, head=3dfcdd2
 
 </details>
 
@@ -1630,12 +236,62 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
+<summary><strong>2026-05-04 03:20 - vault-flows</strong> <code>code-change</code> - Backfill: uncommitted working tree changes present (post-cutoff 2026-05-03T02:58:39.3259575Z).</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: uncommitted working tree changes present (post-cutoff 2026-05-03T02:58:39.3259575Z).
+- Commands:
+  - `git status --porcelain`
+- Files:
+  - `.omx/metrics.json`
+  - `.omx/state/hud-state.json`
+  - `.omx/state/notify-hook-state.json`
+  - `.omx/state/tmux-hook-state.json`
+  - `eslint.config.js`
+  - `playwright.config.js`
+  - `src/App.jsx`
+  - `src/api.js`
+  - `src/api.test.js`
+  - `src/components/features/AdvancedWorkflowCreator.jsx`
+  - `src/components/ui/WorkflowList.jsx`
+  - `src/components/ui/WorkflowPage.jsx`
+  - `src/validation.js`
+  - `tailwind.config.js`
+  - `tests/e2e/basic-smoke.spec.js`
+  - `vite.config.js`
+  - `IMPROVEMENTS.md`
+  - `src/lib/workflowGraph.js`
+  - `src/lib/workflowGraph.test.js`
+- Git: repo=vault-flows, branch=main, head=ed096a3
+
+</details>
+
+<details>
 <summary><strong>2026-05-04 02:54 - vault-central</strong> <code>plan</code> - Completed Phase 3: Architecture Design. Drafted API_Exposure_Architecture_Plan.md on Desktop. Addressed Brume 2 &#39;no internet&#39; issue (mwan3 tracking). Proposed two options: Optio...</summary>
 
 - Kind: plan
 - Actor: AI Agent
 - Summary: Completed Phase 3: Architecture Design. Drafted API_Exposure_Architecture_Plan.md on Desktop. Addressed Brume 2 'no internet' issue (mwan3 tracking). Proposed two options: Option A (Cloudflare Tunnel - Zero Trust, no port forwarding, recommended per VaultWares) and Option B (Traditional Reverse Proxy via Brume 2 with acme.sh DNS-01 challenge). Ready to deliver to user.
 - Git: repo=vault-central, branch=main, head=d78ef95
+
+</details>
+
+<details>
+<summary><strong>2026-05-04 02:37 - vault-video-enhancer</strong> <code>code-change</code> - Backfill: commit fe14010 (2026-05-04T02:37:37-04:00) - feat: implement Parakeet-TDT ASR pipeline with word-level timestamp segmentation for improved subtitle accuracy. | files=3...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit fe14010 (2026-05-04T02:37:37-04:00) - feat: implement Parakeet-TDT ASR pipeline with word-level timestamp segmentation for improved subtitle accuracy. | files=3 +108 -27
+- Commands:
+  - `git log --since=2026-05-04T02:55:21.8276979Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: fe14010f3fb42e6523242d038059f3e376f8213e`
+  - `git show --numstat --pretty=format: fe14010f3fb42e6523242d038059f3e376f8213e`
+- Files:
+  - `vault_enhancer/core.py`
+  - `vault_enhancer/parakeet_wrapper.py`
+  - `vault_gui.py`
+- Git: repo=vault-video-enhancer, branch=main, head=fe14010
 
 </details>
 
@@ -1675,6 +331,22 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `vault_enhancer/parakeet_wrapper.py`
   - `vault_enhancer/core.py`
 - Git: repo=vault-video-enhancer, branch=main, head=a66734d
+
+</details>
+
+<details>
+<summary><strong>2026-05-03 22:27 - vault-central</strong> <code>code-change</code> - Backfill: uncommitted working tree changes present (post-cutoff 2026-05-04T06:54:07.1889312Z).</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: uncommitted working tree changes present (post-cutoff 2026-05-04T06:54:07.1889312Z).
+- Commands:
+  - `git status --porcelain`
+- Files:
+  - `dist/dashboard.js`
+  - `dist/dashboard.js.map`
+  - `src/components/VaultDashboard.js`
+- Git: repo=vault-central, branch=main, head=d78ef95
 
 </details>
 
@@ -2297,6 +969,28 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
+<summary><strong>2026-05-03 07:53 - vault-themes</strong> <code>code-change</code> - Backfill: commit ee16543 (2026-05-03T07:53:25-04:00) - added minimal icons | files=7 +0 -3</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit ee16543 (2026-05-03T07:53:25-04:00) - added minimal icons | files=7 +0 -3
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: ee16543ca903a4ddaadbd094b867b2f8b323a124`
+  - `git show --numstat --pretty=format: ee16543ca903a4ddaadbd094b867b2f8b323a124`
+- Files:
+  - `Brand/minimal-logos/vaultwares-minimal-gold-filled.png`
+  - `Brand/minimal-logos/vaultwares-minimal-ink-filled.png`
+  - `Brand/minimal-logos/vaultwares-minimal-mono-filled.png`
+  - `Brand/minimal-logos/vaultwares-minimal-mono-v2.png`
+  - `Brand/minimal-logos/vaultwares-minimal-mono.png`
+  - `Brand/vaultwares-logo.svg`
+  - `Brand/vaultwares_logo_gold.jpg`
+- Git: repo=vault-themes, branch=main, head=ee16543
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 07:41 - vault-video-enhancer</strong> <code>code-change</code> - Added Audio Delay (ms) input to the GUI and wired it through the transcription pipeline to the fix_audio_and_reencode function. Reverted panel padding in the QSS to resolve alig...</summary>
 
 - Kind: code-change
@@ -2324,6 +1018,23 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `vault_enhancer\media.py`
   - `vault_enhancer\core.py`
 - Git: repo=vault-video-enhancer, branch=main, head=39d2f85
+
+</details>
+
+<details>
+<summary><strong>2026-05-03 07:19 - vault-themes</strong> <code>code-change</code> - Backfill: commit 240155e (2026-05-03T07:19:07-04:00) - added qt pyside6 theme exporter | files=2 +115 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 240155e (2026-05-03T07:19:07-04:00) - added qt pyside6 theme exporter | files=2 +115 -1
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 240155ec04796c2c93c8fe509efab39415636e5c`
+  - `git show --numstat --pretty=format: 240155ec04796c2c93c8fe509efab39415636e5c`
+- Files:
+  - `qt_exporter.py`
+  - `theme_manager.py`
+- Git: repo=vault-themes, branch=main, head=ee16543
 
 </details>
 
@@ -2584,6 +1295,720 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
+<summary><strong>2026-05-02 03:32 - tube-site</strong> <code>code-change</code> - Backfill: commit 40efb52 (2026-05-02T03:32:21-04:00) - Remove empty line from README.md | files=1 +0 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 40efb52 (2026-05-02T03:32:21-04:00) - Remove empty line from README.md | files=1 +0 -1
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 40efb527cfa05a1089a15d350554ce058cf29d8e`
+  - `git show --numstat --pretty=format: 40efb527cfa05a1089a15d350554ce058cf29d8e`
+- Files:
+  - `fullxxx-video/README.md`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-02 03:30 - tube-site</strong> <code>code-change</code> - Backfill: commit bdccaa5 (2026-05-02T03:30:28-04:00) - Merge pull request #5 from Prom-King/copilot/fix-deployment-issues-tube-sites | files=0 +4 -4</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit bdccaa5 (2026-05-02T03:30:28-04:00) - Merge pull request #5 from Prom-King/copilot/fix-deployment-issues-tube-sites | files=0 +4 -4
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: bdccaa5667835f411a3f895fbe6ed749c877bfec`
+  - `git show --numstat --pretty=format: bdccaa5667835f411a3f895fbe6ed749c877bfec`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-02 03:15 - tube-site</strong> <code>code-change</code> - Backfill: commit 83b2007 (2026-05-02T07:15:57Z) - Fix WordPress plugin upload nonce fetch URL in both deploy workflows | files=2 +4 -4</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 83b2007 (2026-05-02T07:15:57Z) - Fix WordPress plugin upload nonce fetch URL in both deploy workflows | files=2 +4 -4
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 83b2007b2a249817880c8f656a62187fdfc779b3`
+  - `git show --numstat --pretty=format: 83b2007b2a249817880c8f656a62187fdfc779b3`
+- Files:
+  - `.github/workflows/deploy-fullxxx-video.yml`
+  - `.github/workflows/deploy-promking-tube.yml`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-02 03:13 - tube-site</strong> <code>code-change</code> - Backfill: commit da4276f (2026-05-02T03:13:17-04:00) - Merge pull request #4 from Prom-King/copilot/modify-plugins-for-pagination | files=0 +156 -74</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit da4276f (2026-05-02T03:13:17-04:00) - Merge pull request #4 from Prom-King/copilot/modify-plugins-for-pagination | files=0 +156 -74
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: da4276fb3872229d42da31f7c15fc41705a9c68d`
+  - `git show --numstat --pretty=format: da4276fb3872229d42da31f7c15fc41705a9c68d`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-02 03:06 - tube-site</strong> <code>code-change</code> - Backfill: commit 089b95d (2026-05-02T07:06:11Z) - fix: address code review feedback (accessibility labels, bulk_done guard, direct function call) | files=2 +4 -4</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 089b95d (2026-05-02T07:06:11Z) - fix: address code review feedback (accessibility labels, bulk_done guard, direct function call) | files=2 +4 -4
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 089b95d3d51a91e6fc46139a879be4fa0c56aa33`
+  - `git show --numstat --pretty=format: 089b95d3d51a91e6fc46139a879be4fa0c56aa33`
+- Files:
+  - `fullxxx-video/includes/admin-settings.php`
+  - `promking-tube/includes/video-fetcher.php`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-02 03:05 - tube-site</strong> <code>code-change</code> - Backfill: commit bf41e82 (2026-05-02T07:05:14Z) - feat: add pagination and bulk scrape to both plugins | files=2 +156 -74</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit bf41e82 (2026-05-02T07:05:14Z) - feat: add pagination and bulk scrape to both plugins | files=2 +156 -74
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: bf41e828402041582589345a2b04a88fe95be0e1`
+  - `git show --numstat --pretty=format: bf41e828402041582589345a2b04a88fe95be0e1`
+- Files:
+  - `fullxxx-video/includes/admin-settings.php`
+  - `promking-tube/includes/video-fetcher.php`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-02 02:59 - tube-site</strong> <code>code-change</code> - Backfill: commit 9832ec1 (2026-05-02T02:59:49-04:00) - Merge pull request #3 from Prom-King/copilot/fix-failed-deployment | files=0 +22 -16</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 9832ec1 (2026-05-02T02:59:49-04:00) - Merge pull request #3 from Prom-King/copilot/fix-failed-deployment | files=0 +22 -16
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 9832ec1d6b555cd784efbf31ecbb84b3dcc022d6`
+  - `git show --numstat --pretty=format: 9832ec1d6b555cd784efbf31ecbb84b3dcc022d6`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-02 00:32 - tube-site</strong> <code>code-change</code> - Backfill: commit 2c9c436 (2026-05-02T04:32:57Z) - Add || true to all grep pipelines in deploy error paths | files=2 +4 -4</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 2c9c436 (2026-05-02T04:32:57Z) - Add || true to all grep pipelines in deploy error paths | files=2 +4 -4
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 2c9c436f609e1d439136ef35aedd0bf591c03694`
+  - `git show --numstat --pretty=format: 2c9c436f609e1d439136ef35aedd0bf591c03694`
+- Files:
+  - `.github/workflows/deploy-fullxxx-video.yml`
+  - `.github/workflows/deploy-promking-tube.yml`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-02 00:32 - tube-site</strong> <code>code-change</code> - Backfill: commit 0766766 (2026-05-02T04:32:12Z) - Touch promking-tube/README.md to retrigger deployment on merge | files=1 +1 -0</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 0766766 (2026-05-02T04:32:12Z) - Touch promking-tube/README.md to retrigger deployment on merge | files=1 +1 -0
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 07667668bf5ffda9d372a5fe633233c7306bcfe7`
+  - `git show --numstat --pretty=format: 07667668bf5ffda9d372a5fe633233c7306bcfe7`
+- Files:
+  - `promking-tube/README.md`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-02 00:31 - tube-site</strong> <code>code-change</code> - Backfill: commit 8167dfa (2026-05-02T04:31:43Z) - Fix silent deploy failures and trigger fullxxx.video deployment | files=3 +19 -14</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 8167dfa (2026-05-02T04:31:43Z) - Fix silent deploy failures and trigger fullxxx.video deployment | files=3 +19 -14
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 8167dfa6cb05c2422cc554340061cc2402986fb2`
+  - `git show --numstat --pretty=format: 8167dfa6cb05c2422cc554340061cc2402986fb2`
+- Files:
+  - `.github/workflows/deploy-fullxxx-video.yml`
+  - `.github/workflows/deploy-promking-tube.yml`
+  - `fullxxx-video/README.md`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-02 00:22 - tube-site</strong> <code>code-change</code> - Backfill: commit ae3bf9b (2026-05-02T00:22:38-04:00) - Fix header formatting in README.md | files=1 +1 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit ae3bf9b (2026-05-02T00:22:38-04:00) - Fix header formatting in README.md | files=1 +1 -1
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: ae3bf9b04aed315691254350527e962000f7d89b`
+  - `git show --numstat --pretty=format: ae3bf9b04aed315691254350527e962000f7d89b`
+- Files:
+  - `promking-tube/README.md`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-02 00:21 - tube-site</strong> <code>code-change</code> - Backfill: commit c2eed18 (2026-05-02T00:21:26-04:00) - Rename project from &#39;tube-site&#39; to &#39;Prom King&#39; | files=1 +2 -2</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit c2eed18 (2026-05-02T00:21:26-04:00) - Rename project from 'tube-site' to 'Prom King' | files=1 +2 -2
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: c2eed183c35368fd57414374e3ebaf8136fee1ce`
+  - `git show --numstat --pretty=format: c2eed183c35368fd57414374e3ebaf8136fee1ce`
+- Files:
+  - `README.md`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 18:49 - tube-site</strong> <code>code-change</code> - Backfill: commit 6ce26a7 (2026-05-01T18:49:19-04:00) - Merge pull request #2 from Prom-King/copilot/automate-plugin-deployment | files=0 +468 -0</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 6ce26a7 (2026-05-01T18:49:19-04:00) - Merge pull request #2 from Prom-King/copilot/automate-plugin-deployment | files=0 +468 -0
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 6ce26a710b6b27a24af05d1e46325269bb2eaa24`
+  - `git show --numstat --pretty=format: 6ce26a710b6b27a24af05d1e46325269bb2eaa24`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 18:43 - tube-site</strong> <code>code-change</code> - Backfill: commit 2d21fca (2026-05-01T18:43:20-04:00) - Automated commit: Updated files in tube-site | files=3 +404 -36</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 2d21fca (2026-05-01T18:43:20-04:00) - Automated commit: Updated files in tube-site | files=3 +404 -36
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 2d21fcaa69f9369b5d2f9f5d8ca4f18e0eb4f1c1`
+  - `git show --numstat --pretty=format: 2d21fcaa69f9369b5d2f9f5d8ca4f18e0eb4f1c1`
+- Files:
+  - `fullxxx-video/includes/admin-settings.php`
+  - `fullxxx-video/includes/video-fetcher.php`
+  - `fullxxx-video/templates/single-fxv_video.php`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 18:38 - tube-site</strong> <code>code-change</code> - Backfill: commit 353fe6d (2026-05-01T22:38:08Z) - Add WP_URL shell variable and returncode checks per code review | files=2 +20 -6</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 353fe6d (2026-05-01T22:38:08Z) - Add WP_URL shell variable and returncode checks per code review | files=2 +20 -6
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 353fe6d3ffa9029f0d063aa90f0901be3f94f9d5`
+  - `git show --numstat --pretty=format: 353fe6d3ffa9029f0d063aa90f0901be3f94f9d5`
+- Files:
+  - `.github/workflows/deploy-fullxxx-video.yml`
+  - `.github/workflows/deploy-promking-tube.yml`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 18:36 - tube-site</strong> <code>code-change</code> - Backfill: commit c9f9506 (2026-05-01T22:36:45Z) - Use correct secret names, hardcode URLs, add settings backup/restore steps | files=2 +320 -28</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit c9f9506 (2026-05-01T22:36:45Z) - Use correct secret names, hardcode URLs, add settings backup/restore steps | files=2 +320 -28
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: c9f95062a2ba5fbf4a2b65dbff4cd548bdd95a3a`
+  - `git show --numstat --pretty=format: c9f95062a2ba5fbf4a2b65dbff4cd548bdd95a3a`
+- Files:
+  - `.github/workflows/deploy-fullxxx-video.yml`
+  - `.github/workflows/deploy-promking-tube.yml`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:55 - tube-site</strong> <code>code-change</code> - Backfill: commit de6268d (2026-05-01T17:55:33-04:00) - Automated commit: Updated files in tube-site | files=11 +1662 -609</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit de6268d (2026-05-01T17:55:33-04:00) - Automated commit: Updated files in tube-site | files=11 +1662 -609
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: de6268dd1b86477ede6053ba272faf9abcfa9d48`
+  - `git show --numstat --pretty=format: de6268dd1b86477ede6053ba272faf9abcfa9d48`
+- Files:
+  - `fullxxx-video/assets/css/tube.css`
+  - `fullxxx-video/assets/js/tube.js`
+  - `fullxxx-video/fullxxx-video.php`
+  - `fullxxx-video/includes/admin-settings.php`
+  - `fullxxx-video/includes/dmca.php`
+  - `fullxxx-video/includes/helpers.php`
+  - `fullxxx-video/includes/template-loader.php`
+  - `fullxxx-video/includes/video-fetcher.php`
+  - `fullxxx-video/templates/archive-fxv_video.php`
+  - `fullxxx-video/templates/single-fxv_video.php`
+  - `fullxxx-video/templates/taxonomy-fxv_category.php`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:55 - qa-automation</strong> <code>code-change</code> - Backfill: commit fc4216c (2026-05-01T17:55:31-04:00) - Automated commit: Updated files in qa-automation | files=21 +2097 -529</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit fc4216c (2026-05-01T17:55:31-04:00) - Automated commit: Updated files in qa-automation | files=21 +2097 -529
+- Commands:
+  - `git log --since=2026-05-01T21:44:22.5805591Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: fc4216cf6980afd817ce98a94a8549815ae39930`
+  - `git show --numstat --pretty=format: fc4216cf6980afd817ce98a94a8549815ae39930`
+- Files:
+  - `.env.example`
+  - `.gitignore`
+  - `README.md`
+  - `package.json`
+  - `playwright.config.ts`
+  - `qa-automation`
+  - `scripts/run-weekly-smoke.mjs`
+  - `sim_testers.py`
+  - `tests/admin.spec.ts`
+  - `tests/age-gate-wordpress.spec.ts`
+  - `tests/funnel.spec.ts`
+  - `tests/legal.spec.ts`
+  - `tests/link-sharing.spec.ts`
+  - `tests/postback.spec.ts`
+  - `tests/prelanding.spec.ts`
+  - `tests/redirects.spec.ts`
+  - `tests/support/config.ts`
+  - `tests/support/site.ts`
+  - `tests/tube-site.spec.ts`
+  - `tests/weekly-smoke.spec.ts`
+  - `tsconfig.json`
+- Git: repo=qa-automation, branch=main, head=fe2c299
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:55 - prelanding-page</strong> <code>code-change</code> - Backfill: commit 31fcbb5 (2026-05-01T17:55:28-04:00) - Automated commit: Updated files in prelanding-page | files=39 +4809 -157</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 31fcbb5 (2026-05-01T17:55:28-04:00) - Automated commit: Updated files in prelanding-page | files=39 +4809 -157
+- Commands:
+  - `git log --since=2026-05-01T21:42:02.4135799Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 31fcbb5012c86a9b24d550cb9ae984c502b3e241`
+  - `git show --numstat --pretty=format: 31fcbb5012c86a9b24d550cb9ae984c502b3e241`
+- Files:
+  - `.env.example`
+  - `.omx/metrics.json`
+  - `.omx/state/hud-state.json`
+  - `.omx/state/notify-hook-state.json`
+  - `.omx/state/team-leader-nudge.json`
+  - `.omx/state/tmux-hook-state.json`
+  - `README.md`
+  - `client/index.html`
+  - `client/src/App.tsx`
+  - `client/src/components/AdultAgeGate.tsx`
+  - `client/src/components/AffiliateDisclosure.tsx`
+  - `client/src/components/PublicLegalFooter.tsx`
+  - `client/src/hooks/useAdultContentGate.ts`
+  - `client/src/hooks/usePageTitle.ts`
+  - `client/src/lib/brand.ts`
+  - `client/src/pages/Home.tsx`
+  - `client/src/pages/LegalPage.tsx`
+  - `client/src/pages/LinkSharing.tsx`
+  - `client/src/pages/TubeSite.tsx`
+  - `client/src/pages/TubeWatch.tsx`
+  - `drizzle/0003_monetization_attribution.sql`
+  - `drizzle/meta/_journal.json`
+  - `drizzle/schema.ts`
+  - `index.html`
+  - `package-lock.json`
+  - `server/_core/index.ts`
+  - `server/db.ts`
+  - `server/links.test.ts`
+  - `server/postbacks.test.ts`
+  - `server/postbacks.ts`
+  - `server/redirects.ts`
+  - `server/routers.ts`
+  - `server/tracking.test.ts`
+  - `server/tracking.ts`
+  - `src/App.jsx`
+  - `src/index.css`
+  - `src/lib/analytics.js`
+  - `src/main.jsx`
+  - `vite.config.js`
+- Git: repo=prelanding-page, branch=main, head=3dfcdd2
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - windows-customizer</strong> <code>code-change</code> - Backfill: commit 1e55523 (2026-05-01T17:52:49-04:00) - Automated commit: Updated files in windows-customizer | files=1 +1 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 1e55523 (2026-05-01T17:52:49-04:00) - Automated commit: Updated files in windows-customizer | files=1 +1 -1
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 1e55523837e330b9d4aea6ee3022075c37883e57`
+  - `git show --numstat --pretty=format: 1e55523837e330b9d4aea6ee3022075c37883e57`
+- Files:
+  - `External/VaultThemes`
+- Git: repo=windows-customizer, branch=main, head=1e55523
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - weekly-menu</strong> <code>code-change</code> - Backfill: commit 6bebcc8 (2026-05-01T17:52:47-04:00) - Automated commit: Updated files in weekly-menu | files=1 +1 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 6bebcc8 (2026-05-01T17:52:47-04:00) - Automated commit: Updated files in weekly-menu | files=1 +1 -1
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 6bebcc8d691430bf824cbbfb4d574ccc639fab82`
+  - `git show --numstat --pretty=format: 6bebcc8d691430bf824cbbfb4d574ccc639fab82`
+- Files:
+  - `vaultwares_agentciation`
+- Git: repo=weekly-menu, branch=main, head=6bebcc8
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - vaultwares-website</strong> <code>code-change</code> - Backfill: commit 55b66eb (2026-05-01T17:52:45-04:00) - Automated commit: Updated files in vaultwares-website | files=1 +1 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 55b66eb (2026-05-01T17:52:45-04:00) - Automated commit: Updated files in vaultwares-website | files=1 +1 -1
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 55b66eb45436cfb8edf0c2ce6b8644909299db62`
+  - `git show --numstat --pretty=format: 55b66eb45436cfb8edf0c2ce6b8644909299db62`
+- Files:
+  - `vault-themes`
+- Git: repo=vaultwares-website, branch=main, head=55b66eb
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - vaultwares-template</strong> <code>code-change</code> - Backfill: commit c1d59a8 (2026-05-01T17:52:43-04:00) - Automated commit: Updated files in vaultwares-template | files=1 +1 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit c1d59a8 (2026-05-01T17:52:43-04:00) - Automated commit: Updated files in vaultwares-template | files=1 +1 -1
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: c1d59a8f3b76b567dca1db6165dc649eca9b16d9`
+  - `git show --numstat --pretty=format: c1d59a8f3b76b567dca1db6165dc649eca9b16d9`
+- Files:
+  - `vaultwares-agentciation`
+- Git: repo=vaultwares-template, branch=main, head=c1d59a8
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit 465e017 (2026-05-01T17:52:41-04:00) - Automated commit: Updated files in vaultwares-pipelines | files=2 +2 -2</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 465e017 (2026-05-01T17:52:41-04:00) - Automated commit: Updated files in vaultwares-pipelines | files=2 +2 -2
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 465e017db715237751641291337ec651841480e9`
+  - `git show --numstat --pretty=format: 465e017db715237751641291337ec651841480e9`
+- Files:
+  - `vault-themes`
+  - `vaultwares_agentciation`
+- Git: repo=vaultwares-pipelines, branch=main, head=465e017
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - vaultwares-cli</strong> <code>code-change</code> - Backfill: commit aabba39 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-cli | files=2 +342 -5</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit aabba39 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-cli | files=2 +342 -5
+- Commands:
+  - `git log --since=2026-04-29T17:27:08.6374597Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: aabba3916dc992f99879e2184b7b8160c97fa1c1`
+  - `git show --numstat --pretty=format: aabba3916dc992f99879e2184b7b8160c97fa1c1`
+- Files:
+  - `Cargo.lock`
+  - `vault-themes`
+- Git: repo=vaultwares-cli, branch=main, head=aabba39
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - vaultwares-identity-manager</strong> <code>code-change</code> - Backfill: commit 672a338 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +0 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 672a338 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +0 -1
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 672a338253a6f481aecc009cb20ce0275115c3b2`
+  - `git show --numstat --pretty=format: 672a338253a6f481aecc009cb20ce0275115c3b2`
+- Files:
+  - `vault-themes`
+- Git: repo=vaultwares-identity-manager, branch=main, head=672a338
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - vault-player</strong> <code>code-change</code> - Backfill: commit 58d1933 (2026-05-01T17:52:37-04:00) - Automated commit: Updated files in vault-player | files=1 +1 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 58d1933 (2026-05-01T17:52:37-04:00) - Automated commit: Updated files in vault-player | files=1 +1 -1
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 58d19334b1410ff23d1cfd3955d07f574126beb4`
+  - `git show --numstat --pretty=format: 58d19334b1410ff23d1cfd3955d07f574126beb4`
+- Files:
+  - `vault-themes`
+- Git: repo=vault-player, branch=main, head=58d1933
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - vault-explorer</strong> <code>code-change</code> - Backfill: commit 5376b0e (2026-05-01T17:52:33-04:00) - Automated commit: Updated files in vault-explorer | files=1 +1 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 5376b0e (2026-05-01T17:52:33-04:00) - Automated commit: Updated files in vault-explorer | files=1 +1 -1
+- Commands:
+  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 5376b0ed54a1ec74199b719d0754e995ebe3547a`
+  - `git show --numstat --pretty=format: 5376b0ed54a1ec74199b719d0754e995ebe3547a`
+- Files:
+  - `vault-themes`
+- Git: repo=vault-explorer, branch=main, head=5376b0e
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - usd-playground</strong> <code>code-change</code> - Backfill: commit 5db47bc (2026-05-01T17:52:28-04:00) - Automated commit: Updated files in usd-playground | files=3 +3 -3</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 5db47bc (2026-05-01T17:52:28-04:00) - Automated commit: Updated files in usd-playground | files=3 +3 -3
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 5db47bcfab9aeeab9c2a071862ae88907ee30dd4`
+  - `git show --numstat --pretty=format: 5db47bcfab9aeeab9c2a071862ae88907ee30dd4`
+- Files:
+  - `cosmos-reason2`
+  - `vault-themes`
+  - `vaultwares_agentciation`
+- Git: repo=usd-playground, branch=main, head=5db47bc
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - traffic-pulse</strong> <code>code-change</code> - Backfill: commit 6372673 (2026-05-01T17:52:26-04:00) - Automated commit: Updated files in traffic-pulse | files=2 +1 -2</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 6372673 (2026-05-01T17:52:26-04:00) - Automated commit: Updated files in traffic-pulse | files=2 +1 -2
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 63726730b8da8b4319ca647ab2ba2f2a97f94dbd`
+  - `git show --numstat --pretty=format: 63726730b8da8b4319ca647ab2ba2f2a97f94dbd`
+- Files:
+  - `vault-themes`
+  - `vaultwares_agentciation`
+- Git: repo=traffic-pulse, branch=main, head=6372673
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - realtime-stt</strong> <code>code-change</code> - Backfill: commit f4fc103 (2026-05-01T17:52:24-04:00) - Automated commit: Updated files in realtime-stt | files=11 +390 -244</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit f4fc103 (2026-05-01T17:52:24-04:00) - Automated commit: Updated files in realtime-stt | files=11 +390 -244
+- Commands:
+  - `git log --since=2026-05-01T21:41:46.4715986Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: f4fc103b824466b2e1b74054c7c644481b480d63`
+  - `git show --numstat --pretty=format: f4fc103b824466b2e1b74054c7c644481b480d63`
+- Files:
+  - `TASKS.md`
+  - `TODO.md`
+  - `code_analysis.md`
+  - `gui_overlay/gui_controller.py`
+  - `gui_overlay/overlay_window.py`
+  - `main_app.py`
+  - `plan.md`
+  - `stt_engine/audio_capture.py`
+  - `stt_engine/stt_strategies.py`
+  - `tests/test_audio_flow.py`
+  - `vault_themes`
+- Git: repo=realtime-stt, branch=main, head=f4fc103
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - no-more-groceries</strong> <code>code-change</code> - Backfill: commit 88c3476 (2026-05-01T17:52:22-04:00) - Automated commit: Updated files in no-more-groceries | files=2 +2 -2</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 88c3476 (2026-05-01T17:52:22-04:00) - Automated commit: Updated files in no-more-groceries | files=2 +2 -2
+- Commands:
+  - `git log --since=2026-04-29T21:01:05.3717464Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 88c34766dea84e880b2530e8eece70fa689b681a`
+  - `git show --numstat --pretty=format: 88c34766dea84e880b2530e8eece70fa689b681a`
+- Files:
+  - `vault-themes`
+  - `vaultwares-agentciation`
+- Git: repo=no-more-groceries, branch=main, head=88c3476
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - gallery-scraper</strong> <code>code-change</code> - Backfill: commit d55eb37 (2026-05-01T17:52:19-04:00) - Automated commit: Updated files in gallery-scraper | files=1 +0 -0</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit d55eb37 (2026-05-01T17:52:19-04:00) - Automated commit: Updated files in gallery-scraper | files=1 +0 -0
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: d55eb37c6a680d96c4b075340e8f110845cc619a`
+  - `git show --numstat --pretty=format: d55eb37c6a680d96c4b075340e8f110845cc619a`
+- Files:
+  - `gallery-scraper.zip`
+- Git: repo=gallery-scraper, branch=main, head=d55eb37
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - dispatch-wares</strong> <code>code-change</code> - Backfill: commit 1d2fe2b (2026-05-01T17:52:18-04:00) - Automated commit: Updated files in dispatch-wares | files=1 +0 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 1d2fe2b (2026-05-01T17:52:18-04:00) - Automated commit: Updated files in dispatch-wares | files=1 +0 -1
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 1d2fe2b9116efca0f3bd4db94afe18a44b3ecb33`
+  - `git show --numstat --pretty=format: 1d2fe2b9116efca0f3bd4db94afe18a44b3ecb33`
+- Files:
+  - `vault-themes`
+- Git: repo=dispatch-wares, branch=main, head=1d2fe2b
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - deconstructed-website-a-la-mode</strong> <code>code-change</code> - Backfill: commit efb1628 (2026-05-01T17:52:16-04:00) - Automated commit: Updated files in deconstructed-website-a-la-mode | files=2 +0 -2</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit efb1628 (2026-05-01T17:52:16-04:00) - Automated commit: Updated files in deconstructed-website-a-la-mode | files=2 +0 -2
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: efb1628e568117402a9f023e8dcd446814f68cac`
+  - `git show --numstat --pretty=format: efb1628e568117402a9f023e8dcd446814f68cac`
+- Files:
+  - `vault-themes`
+  - `vaultwares-agentciation`
+- Git: repo=deconstructed-website-a-la-mode, branch=main, head=efb1628
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - cultural-rhythm</strong> <code>code-change</code> - Backfill: commit ee41dce (2026-05-01T17:52:14-04:00) - Automated commit: Updated files in cultural-rhythm | files=1 +0 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit ee41dce (2026-05-01T17:52:14-04:00) - Automated commit: Updated files in cultural-rhythm | files=1 +0 -1
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: ee41dcea327328e7d1b887246b20ec7cf4df1a66`
+  - `git show --numstat --pretty=format: ee41dcea327328e7d1b887246b20ec7cf4df1a66`
+- Files:
+  - `vault-themes`
+- Git: repo=cultural-rhythm, branch=main, head=ee41dce
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - automation-suite</strong> <code>code-change</code> - Backfill: commit 7be29d9 (2026-05-01T17:52:12-04:00) - Automated commit: Updated files in automation-suite | files=2 +2 -2</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 7be29d9 (2026-05-01T17:52:12-04:00) - Automated commit: Updated files in automation-suite | files=2 +2 -2
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 7be29d9e5ac3abd84161b4c8ef9e96a1c5355e30`
+  - `git show --numstat --pretty=format: 7be29d9e5ac3abd84161b4c8ef9e96a1c5355e30`
+- Files:
+  - `vault-themes`
+  - `vaultwares_agentciation`
+- Git: repo=automation-suite, branch=main, head=7be29d9
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:51 - tube-site</strong> <code>code-change</code> - Backfill: commit 3204668 (2026-05-01T21:51:08Z) - Fix en-dash in workflow error messages | files=2 +2 -2</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 3204668 (2026-05-01T21:51:08Z) - Fix en-dash in workflow error messages | files=2 +2 -2
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 3204668f93c3b97d43301d3f86d93ad6b87616c4`
+  - `git show --numstat --pretty=format: 3204668f93c3b97d43301d3f86d93ad6b87616c4`
+- Files:
+  - `.github/workflows/deploy-fullxxx-video.yml`
+  - `.github/workflows/deploy-promking-tube.yml`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:50 - tube-site</strong> <code>code-change</code> - Backfill: commit 5349522 (2026-05-01T21:50:35Z) - Add GitHub Actions workflows for WordPress plugin deployment | files=2 +162 -0</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 5349522 (2026-05-01T21:50:35Z) - Add GitHub Actions workflows for WordPress plugin deployment | files=2 +162 -0
+- Commands:
+  - `git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 5349522dbd224977c2972ee7e1a2d58eb57007c8`
+  - `git show --numstat --pretty=format: 5349522dbd224977c2972ee7e1a2d58eb57007c8`
+- Files:
+  - `.github/workflows/deploy-fullxxx-video.yml`
+  - `.github/workflows/deploy-promking-tube.yml`
+- Git: repo=tube-site, branch=main, head=ca526cf
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 17:47 - tube-site</strong> <code>code-change</code> - Implemented the FullXXX production tube plugin slice: added shared settings/helpers, canonical /r/&lt;slug&gt; redirect plumbing with optional slug map and ad-code token expansion, fe...</summary>
 
 - Kind: code-change
@@ -2777,6 +2202,77 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
+<summary><strong>2026-05-01 16:36 - vault-player</strong> <code>code-change</code> - Backfill: commit cf3e76b (2026-05-01T16:36:22-04:00) - Please provide the specific file changes or a description of the modifications you have made so I can generate the commit ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit cf3e76b (2026-05-01T16:36:22-04:00) - Please provide the specific file changes or a description of the modifications you have made so I can generate the commit message for you. | files=1 +1 -1
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: cf3e76b1f3b3b2a46bc34e1824a00ff4c8aa0936`
+  - `git show --numstat --pretty=format: cf3e76b1f3b3b2a46bc34e1824a00ff4c8aa0936`
+- Files:
+  - `vault-themes`
+- Git: repo=vault-player, branch=main, head=58d1933
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 16:36 - vault-themes</strong> <code>code-change</code> - Backfill: commit 5121b89 (2026-05-01T16:36:09-04:00) - feat: add brand favicon assets in various formats and resolutions | files=22 +0 -0</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 5121b89 (2026-05-01T16:36:09-04:00) - feat: add brand favicon assets in various formats and resolutions | files=22 +0 -0
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 5121b89de0e685bb9aac423c3fd8a8a6fdf17ed8`
+  - `git show --numstat --pretty=format: 5121b89de0e685bb9aac423c3fd8a8a6fdf17ed8`
+- Files:
+  - `Brand/favicons/vaultwares-favicon-dark.psd`
+  - `Brand/favicons/vaultwares-favicon-gold-filled-128.png`
+  - `Brand/favicons/vaultwares-favicon-gold-filled-256.png`
+  - `Brand/favicons/vaultwares-favicon-gold-filled-64.png`
+  - `Brand/favicons/vaultwares-favicon-gold-filled.psd`
+  - `Brand/favicons/vaultwares-favicon-ink-128.png`
+  - `Brand/favicons/vaultwares-favicon-ink-256.png`
+  - `Brand/favicons/vaultwares-favicon-ink-64.png`
+  - `Brand/favicons/vaultwares-favicon-ink.psd`
+  - `Brand/favicons/vaultwares-favicon-light.psd`
+  - `Brand/favicons/vaultwares-favicon-mono-128.png`
+  - `Brand/favicons/vaultwares-favicon-mono-256.png`
+  - `Brand/favicons/vaultwares-favicon-mono-64.png`
+  - `Brand/favicons/vaultwares-favicon-mono-filled-128.png`
+  - `Brand/favicons/vaultwares-favicon-mono-filled-256.png`
+  - `Brand/favicons/vaultwares-favicon-mono-filled-64.png`
+  - `Brand/favicons/vaultwares-favicon-mono-filled.psd`
+  - `Brand/favicons/vaultwares-favicon-mono-v2-128.png`
+  - `Brand/favicons/vaultwares-favicon-mono-v2-256.png`
+  - `Brand/favicons/vaultwares-favicon-mono-v2-64.png`
+  - `Brand/favicons/vaultwares-favicon-mono-v2.psd`
+  - `Brand/favicons/vaultwares-favicon-mono.psd`
+- Git: repo=vault-themes, branch=main, head=ee16543
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 16:34 - vaultwares-website</strong> <code>code-change</code> - Backfill: commit f83ce1f (2026-05-01T16:34:50-04:00) - chore: remove unused files and associated references | files=3 +2 -3</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit f83ce1f (2026-05-01T16:34:50-04:00) - chore: remove unused files and associated references | files=3 +2 -3
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: f83ce1f6417148d8de6a93462574aab3712daa46`
+  - `git show --numstat --pretty=format: f83ce1f6417148d8de6a93462574aab3712daa46`
+- Files:
+  - `vault-themes`
+  - `vaultwares-pipelines`
+  - `vaultwares_agentciation`
+- Git: repo=vaultwares-website, branch=main, head=55b66eb
+
+</details>
+
+<details>
 <summary><strong>2026-05-01 16:07 - General Tasks</strong> <code>code-change</code> - Finalized PowerShell scripts for local deployment as Windows Services. Added WeeklyMenu-Service. All scripts are now ready in C:\Users\Administrator\Desktop\pwsh\</summary>
 
 - Kind: code-change
@@ -2845,6 +2341,51 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Files:
   - `skills/*.skill`
 - Git: repo=fastmcp, branch=main, head=ea2980f
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 15:47 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit d68766d (2026-05-01T15:47:49-04:00) - Merge pull request #31 from p-potvin/sentinel/api-key-bcrypt-dos-39214615738646647 | files=0 +38 -8</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit d68766d (2026-05-01T15:47:49-04:00) - Merge pull request #31 from p-potvin/sentinel/api-key-bcrypt-dos-39214615738646647 | files=0 +38 -8
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: d68766d142dd995679d0e45e4070bfacbcd04a78`
+  - `git show --numstat --pretty=format: d68766d142dd995679d0e45e4070bfacbcd04a78`
+- Git: repo=vaultwares-pipelines, branch=main, head=465e017
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 15:45 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit e75c1a6 (2026-05-01T19:45:09Z) - fix: export AgentRegistry from __init__.py in vaultwares_agentciation submodule | files=0 +0 -0</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit e75c1a6 (2026-05-01T19:45:09Z) - fix: export AgentRegistry from __init__.py in vaultwares_agentciation submodule | files=0 +0 -0
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: e75c1a669ff8d3ef4244af512d43bcbbbd4cdcf1`
+  - `git show --numstat --pretty=format: e75c1a669ff8d3ef4244af512d43bcbbbd4cdcf1`
+- Git: repo=vaultwares-pipelines, branch=main, head=465e017
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 15:33 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit 2f21751 (2026-05-01T19:33:29Z) - fix: resolve CPU DoS vulnerability and broken API key authentication | files=2 +38 -8</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 2f21751 (2026-05-01T19:33:29Z) - fix: resolve CPU DoS vulnerability and broken API key authentication | files=2 +38 -8
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 2f21751063aaa0cdeb8e266a28cd64e0c39cebfa`
+  - `git show --numstat --pretty=format: 2f21751063aaa0cdeb8e266a28cd64e0c39cebfa`
+- Files:
+  - `.jules/sentinel.md`
+  - `api_server.py`
+- Git: repo=vaultwares-pipelines, branch=main, head=465e017
 
 </details>
 
@@ -2947,6 +2488,152 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
+<summary><strong>2026-04-30 21:20 - vault-explorer</strong> <code>code-change</code> - Backfill: commit 658d2c1 (2026-04-30T21:20:44-04:00) - Merge pull request #3 from p-potvin/palette-empty-states-17860079820416914185 | files=0 +41 -5</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 658d2c1 (2026-04-30T21:20:44-04:00) - Merge pull request #3 from p-potvin/palette-empty-states-17860079820416914185 | files=0 +41 -5
+- Commands:
+  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 658d2c1948ca1213c143ac5c942d212e0ada6059`
+  - `git show --numstat --pretty=format: 658d2c1948ca1213c143ac5c942d212e0ada6059`
+- Git: repo=vault-explorer, branch=main, head=5376b0e
+
+</details>
+
+<details>
+<summary><strong>2026-04-30 20:18 - vaultwares-cli</strong> <code>code-change</code> - Backfill: commit 2aecc69 (2026-04-30T20:18:27-04:00) - feat: implement TUI session picker, FHE-based token aggregation, and ML-KEM-768 key encapsulation | files=6 +239 -2</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 2aecc69 (2026-04-30T20:18:27-04:00) - feat: implement TUI session picker, FHE-based token aggregation, and ML-KEM-768 key encapsulation | files=6 +239 -2
+- Commands:
+  - `git log --since=2026-04-29T17:27:08.6374597Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 2aecc69931ca79f1e270009f1ff6a90332e67457`
+  - `git show --numstat --pretty=format: 2aecc69931ca79f1e270009f1ff6a90332e67457`
+- Files:
+  - `.gitignore`
+  - `crates/vaultwares-cli/src/pqc.rs`
+  - `crates/vaultwares-cli/src/tui/session_picker.rs`
+  - `crates/vaultwares-fhe/Cargo.toml`
+  - `crates/vaultwares-fhe/src/lib.rs`
+  - `vaultwares-agentciation`
+- Git: repo=vaultwares-cli, branch=main, head=aabba39
+
+</details>
+
+<details>
+<summary><strong>2026-04-30 20:18 - vaultwares-agentciation</strong> <code>code-change</code> - Backfill: commit ae703d0 (2026-04-30T20:18:15-04:00) - Please provide the diff or list of changes you would like summarized. | files=2 +30 -5</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit ae703d0 (2026-04-30T20:18:15-04:00) - Please provide the diff or list of changes you would like summarized. | files=2 +30 -5
+- Commands:
+  - `git log --since=2026-04-29T16:43:23.2566353Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: ae703d0c40630a839314460e08f781b187c674ba`
+  - `git show --numstat --pretty=format: ae703d0c40630a839314460e08f781b187c674ba`
+- Files:
+  - `assign_tasks.py`
+  - `start_extrovert.py`
+- Git: repo=vaultwares-agentciation, branch=main, head=ae703d0
+
+</details>
+
+<details>
+<summary><strong>2026-04-30 20:17 - vaultwares-cli</strong> <code>code-change</code> - Backfill: commit 3d1a0ad (2026-04-30T20:17:43-04:00) - refactor: modularize codebase by extracting CLI logic into dedicated runtime and TUI crates while implementing PQC securit...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 3d1a0ad (2026-04-30T20:17:43-04:00) - refactor: modularize codebase by extracting CLI logic into dedicated runtime and TUI crates while implementing PQC security guidelines. | files=34 +8501 -8441
+- Commands:
+  - `git log --since=2026-04-29T17:27:08.6374597Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 3d1a0adcc70bf1cec42049157ad8fe772f4531de`
+  - `git show --numstat --pretty=format: 3d1a0adcc70bf1cec42049157ad8fe772f4531de`
+- Files:
+  - `.gitignore`
+  - `PQC_GUIDELINES.md`
+  - `TASKS.md`
+  - `TUI-ENHANCEMENT-PLAN.md`
+  - `crates/plugins/src/hooks.rs`
+  - `crates/runtime/src/config.rs`
+  - `crates/runtime/src/config_validate.rs`
+  - `crates/runtime/src/file_ops.rs`
+  - `crates/runtime/src/hooks.rs`
+  - `crates/runtime/src/oauth.rs`
+  - `crates/storage/src/lib.rs`
+  - `crates/supervisor/src/manager.rs`
+  - `crates/theme-gen/src/lib.rs`
+  - `crates/vaultwares-cli/Cargo.toml`
+  - `crates/vaultwares-cli/src/app.rs`
+  - `crates/vaultwares-cli/src/args.rs`
+  - `crates/vaultwares-cli/src/format.rs`
+  - `crates/vaultwares-cli/src/main.rs`
+  - `crates/vaultwares-cli/src/render.rs`
+  - `crates/vaultwares-cli/src/session_mgr.rs`
+  - `crates/vaultwares-cli/src/tui/mod.rs`
+  - `crates/vaultwares-cli/src/tui/status_bar.rs`
+  - `crates/vaultwares-cli/src/tui/tool_panel.rs`
+  - `fix_encoding.py`
+  - `launch_full_team.ps1`
+  - `run_coordinated_system.py`
+  - `scratch/deduplicate.py`
+  - `scratch/final_sweep.py`
+  - `scratch/fix_impl_syntax.py`
+  - `scratch/fix_trait_vis.py`
+  - `scratch/fix_visibility.py`
+  - `scratch/refactor_main.py`
+  - `scratch/surgical_cleanup.py`
+  - `scratch/surgical_dedup.py`
+- Git: repo=vaultwares-cli, branch=main, head=aabba39
+
+</details>
+
+<details>
+<summary><strong>2026-04-30 19:48 - vault-explorer</strong> <code>code-change</code> - Backfill: commit 7980252 (2026-04-30T23:48:36Z) - &#240;ŸŽ&#168; Palette: Added empty states for vault and search | files=2 +41 -5</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 7980252 (2026-04-30T23:48:36Z) - ðŸŽ¨ Palette: Added empty states for vault and search | files=2 +41 -5
+- Commands:
+  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 79802525fa7b43e7558dbd600fc442e9ee669350`
+  - `git show --numstat --pretty=format: 79802525fa7b43e7558dbd600fc442e9ee669350`
+- Files:
+  - `.Jules/palette.md`
+  - `index.html`
+- Git: repo=vault-explorer, branch=main, head=5376b0e
+
+</details>
+
+<details>
+<summary><strong>2026-04-30 19:17 - glass-ui</strong> <code>code-change</code> - Backfill: commit b2f2866 (2026-04-30T19:17:46-04:00) - Merge pull request #4 from p-potvin/palette-ux-improvements-4342842582149570691 | files=0 +20 -11</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit b2f2866 (2026-04-30T19:17:46-04:00) - Merge pull request #4 from p-potvin/palette-ux-improvements-4342842582149570691 | files=0 +20 -11
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: b2f2866ab0d1c6964ef0428e5de7391a4c922f43`
+  - `git show --numstat --pretty=format: b2f2866ab0d1c6964ef0428e5de7391a4c922f43`
+- Git: repo=glass-ui, branch=main, head=b2f2866
+
+</details>
+
+<details>
+<summary><strong>2026-04-30 19:17 - vault-explorer</strong> <code>code-change</code> - Backfill: commit 7f19fbf (2026-04-30T19:17:03-04:00) - Merge pull request #2 from p-potvin/palette-ux-improvements-884884236906409268 | files=0 +15 -12</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 7f19fbf (2026-04-30T19:17:03-04:00) - Merge pull request #2 from p-potvin/palette-ux-improvements-884884236906409268 | files=0 +15 -12
+- Commands:
+  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 7f19fbfdf2a94a8e19f0b533d87102926b510292`
+  - `git show --numstat --pretty=format: 7f19fbfdf2a94a8e19f0b533d87102926b510292`
+- Git: repo=vault-explorer, branch=main, head=5376b0e
+
+</details>
+
+<details>
 <summary><strong>2026-04-30 15:51 - business workspace</strong> <code>plan</code> - Familiarized with C:\Users\Administrator\Desktop\business repos for monetization planning. Mapped link-sharing, prelanding-page, qa-automation, and tube-site. Verified prelandin...</summary>
 
 - Kind: plan
@@ -2967,6 +2654,60 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `C:\Users\Administrator\Desktop\business\prelanding-page\server\mailchimp.ts`
   - `C:\Users\Administrator\Desktop\business\tube-site\promking-tube\includes\video-fetcher.php`
   - `C:\Users\Administrator\Desktop\business\qa-automation\playwright.config.ts`
+
+</details>
+
+<details>
+<summary><strong>2026-04-29 20:29 - glass-ui</strong> <code>code-change</code> - Backfill: commit 84c902f (2026-04-30T00:29:22Z) - &#240;ŸŽ&#168; Palette: Enhance form accessibility and button focus states | files=2 +20 -11</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 84c902f (2026-04-30T00:29:22Z) - ðŸŽ¨ Palette: Enhance form accessibility and button focus states | files=2 +20 -11
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 84c902f1b8d8c9af3fb76bd798dc3cf2855de0df`
+  - `git show --numstat --pretty=format: 84c902f1b8d8c9af3fb76bd798dc3cf2855de0df`
+- Files:
+  - `.Jules/palette.md`
+  - `src/preview.tsx`
+- Git: repo=glass-ui, branch=main, head=b2f2866
+
+</details>
+
+<details>
+<summary><strong>2026-04-29 20:14 - vault-explorer</strong> <code>code-change</code> - Backfill: commit a559c40 (2026-04-30T00:14:04Z) - feat: UX accessibility enhancements | files=2 +15 -12</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit a559c40 (2026-04-30T00:14:04Z) - feat: UX accessibility enhancements | files=2 +15 -12
+- Commands:
+  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: a559c40203c9f7ebf8b9dcefbd672092e31e8062`
+  - `git show --numstat --pretty=format: a559c40203c9f7ebf8b9dcefbd672092e31e8062`
+- Files:
+  - `.Jules/palette.md`
+  - `index.html`
+- Git: repo=vault-explorer, branch=main, head=5376b0e
+
+</details>
+
+<details>
+<summary><strong>2026-04-29 17:58 - no-more-groceries</strong> <code>code-change</code> - Backfill: commit 8670186 (2026-04-29T17:58:41-04:00) - feat: integrate Apify for product and store searches with caching | files=5 +715 -83</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 8670186 (2026-04-29T17:58:41-04:00) - feat: integrate Apify for product and store searches with caching | files=5 +715 -83
+- Commands:
+  - `git log --since=2026-04-29T21:01:05.3717464Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 867018602a5d93469a1455aa96df2e52caf6e9c8`
+  - `git show --numstat --pretty=format: 867018602a5d93469a1455aa96df2e52caf6e9c8`
+- Files:
+  - `package-lock.json`
+  - `package.json`
+  - `packages/db/queries.js`
+  - `packages/integrations/pc-express/product-search.js`
+  - `packages/integrations/pc-express/store-search.js`
+- Git: repo=no-more-groceries, branch=main, head=88c3476
 
 </details>
 
@@ -3274,6 +3015,37 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
+<summary><strong>2026-04-28 20:07 - vault-explorer</strong> <code>code-change</code> - Backfill: commit c21f67c (2026-04-28T20:07:29-04:00) - Merge pull request #1 from p-potvin/palette-aria-labels-14493885854049112492 | files=0 +10 -7</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit c21f67c (2026-04-28T20:07:29-04:00) - Merge pull request #1 from p-potvin/palette-aria-labels-14493885854049112492 | files=0 +10 -7
+- Commands:
+  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: c21f67c90cc32f093f8c2434eaef5e114ec40ee9`
+  - `git show --numstat --pretty=format: c21f67c90cc32f093f8c2434eaef5e114ec40ee9`
+- Git: repo=vault-explorer, branch=main, head=5376b0e
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 19:41 - vault-explorer</strong> <code>code-change</code> - Backfill: commit 4abc6c5 (2026-04-28T23:41:01Z) - &#240;ŸŽ&#168; Palette: Add ARIA labels to icon-only buttons | files=2 +10 -7</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 4abc6c5 (2026-04-28T23:41:01Z) - ðŸŽ¨ Palette: Add ARIA labels to icon-only buttons | files=2 +10 -7
+- Commands:
+  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 4abc6c544974b0ed3d762ca2a0aa1d3a5145383d`
+  - `git show --numstat --pretty=format: 4abc6c544974b0ed3d762ca2a0aa1d3a5145383d`
+- Files:
+  - `.Jules/palette.md`
+  - `index.html`
+- Git: repo=vault-explorer, branch=main, head=5376b0e
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 17:55 - No More Groceries</strong> <code>code-change</code> - Fixed Tailwind CSS unstyled render by restoring styles.css from git, patching missing @reference ./tailwind.css for v4 compiler, and correcting user&#39;s assumption regarding vault...</summary>
 
 - Kind: code-change
@@ -3285,6 +3057,176 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Files:
   - `styles.css`
 - Git: repo=no-more-groceries, branch=main, head=c734db4
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 14:49 - vault-player</strong> <code>code-change</code> - Backfill: commit 756d638 (2026-04-28T14:49:10-04:00) - Merge pull request #5 from p-potvin/copilot/decrypt-data-and-ui-ux-sweep | files=0 +638 -46</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 756d638 (2026-04-28T14:49:10-04:00) - Merge pull request #5 from p-potvin/copilot/decrypt-data-and-ui-ux-sweep | files=0 +638 -46
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 756d6386eded117fe5a9205ae57c6562441af59b`
+  - `git show --numstat --pretty=format: 756d6386eded117fe5a9205ae57c6562441af59b`
+- Git: repo=vault-player, branch=main, head=58d1933
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 14:34 - vault-player</strong> <code>code-change</code> - Backfill: commit 613b48b (2026-04-28T18:34:38Z) - fix: accessibility improvements to aria-labels in video_player.html | files=1 +3 -3</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 613b48b (2026-04-28T18:34:38Z) - fix: accessibility improvements to aria-labels in video_player.html | files=1 +3 -3
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 613b48b9859d1b6319d89ad951296a58f41d67f7`
+  - `git show --numstat --pretty=format: 613b48b9859d1b6319d89ad951296a58f41d67f7`
+- Files:
+  - `components/video_player.html`
+- Git: repo=vault-player, branch=main, head=58d1933
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 14:33 - vault-player</strong> <code>code-change</code> - Backfill: commit f2d15ab (2026-04-28T18:33:41Z) - fix: remove orphaned old class body from video_player.js | files=1 +0 -239</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit f2d15ab (2026-04-28T18:33:41Z) - fix: remove orphaned old class body from video_player.js | files=1 +0 -239
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: f2d15ab75c26016662db31aa511095309e584367`
+  - `git show --numstat --pretty=format: f2d15ab75c26016662db31aa511095309e584367`
+- Files:
+  - `components/video_player.js`
+- Git: repo=vault-player, branch=main, head=58d1933
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 14:31 - vault-player</strong> <code>code-change</code> - Backfill: commit 67254d6 (2026-04-28T18:31:44Z) - feat: integrate PQC decryption pipeline into video player + vault-themes UI/UX sweep | files=5 +870 -39</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 67254d6 (2026-04-28T18:31:44Z) - feat: integrate PQC decryption pipeline into video player + vault-themes UI/UX sweep | files=5 +870 -39
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 67254d6e8c8b4aa0b3ee7a56f56faf7923e442cf`
+  - `git show --numstat --pretty=format: 67254d6e8c8b4aa0b3ee7a56f56faf7923e442cf`
+- Files:
+  - `ROADMAP.md`
+  - `TODO.md`
+  - `components/pqc_crypto.py`
+  - `components/video_player.html`
+  - `components/video_player.js`
+- Git: repo=vault-player, branch=main, head=58d1933
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 14:24 - vault-player</strong> <code>code-change</code> - Backfill: commit b75360b (2026-04-28T14:24:42-04:00) - Merge pull request #4 from p-potvin/copilot/implement-post-quantum-encryption | files=0 +1028 -11</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit b75360b (2026-04-28T14:24:42-04:00) - Merge pull request #4 from p-potvin/copilot/implement-post-quantum-encryption | files=0 +1028 -11
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: b75360b7e6799a85943364aa3553a890c466eacb`
+  - `git show --numstat --pretty=format: b75360b7e6799a85943364aa3553a890c466eacb`
+- Git: repo=vault-player, branch=main, head=58d1933
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 11:45 - vault-player</strong> <code>code-change</code> - Backfill: commit e9b163d (2026-04-28T15:45:56Z) - feat: implement Post-Quantum Cryptography (PQC) layer and SecurityAgent | files=9 +1028 -11</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit e9b163d (2026-04-28T15:45:56Z) - feat: implement Post-Quantum Cryptography (PQC) layer and SecurityAgent | files=9 +1028 -11
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: e9b163d6fd79437725dbcdf6cdf62614b85cc8af`
+  - `git show --numstat --pretty=format: e9b163d6fd79437725dbcdf6cdf62614b85cc8af`
+- Files:
+  - `ROADMAP.md`
+  - `TODO.md`
+  - `agent_manifest.md`
+  - `agent_security.md`
+  - `agents/__init__.py`
+  - `agents/security_agent.py`
+  - `components/pqc_crypto.py`
+  - `requirements.txt`
+  - `run_coordinated_system.py`
+- Git: repo=vault-player, branch=main, head=58d1933
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 11:32 - vault-player</strong> <code>code-change</code> - Backfill: commit 024aeff (2026-04-28T11:32:35-04:00) - Merge pull request #3 from p-potvin/feat/reusable-video-player-282919941480644833 | files=0 +290 -0</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 024aeff (2026-04-28T11:32:35-04:00) - Merge pull request #3 from p-potvin/feat/reusable-video-player-282919941480644833 | files=0 +290 -0
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 024aeff09af42314c3400d9fbb9a614ada6d8e7e`
+  - `git show --numstat --pretty=format: 024aeff09af42314c3400d9fbb9a614ada6d8e7e`
+- Git: repo=vault-player, branch=main, head=58d1933
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 10:37 - vault-player</strong> <code>code-change</code> - Backfill: commit 9803d2f (2026-04-28T14:37:05Z) - feat: Extract vault-explorer video player as a reusable component | files=3 +290 -0</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 9803d2f (2026-04-28T14:37:05Z) - feat: Extract vault-explorer video player as a reusable component | files=3 +290 -0
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 9803d2ffac9927c9ab23c45af53b5d7c92858b3c`
+  - `git show --numstat --pretty=format: 9803d2ffac9927c9ab23c45af53b5d7c92858b3c`
+- Files:
+  - `.gitignore`
+  - `components/video_player.html`
+  - `components/video_player.js`
+- Git: repo=vault-player, branch=main, head=58d1933
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 10:31 - vault-explorer</strong> <code>code-change</code> - Backfill: commit 4f4ff20 (2026-04-28T10:31:38-04:00) - feat: Enhance UI with new theme system and styling updates | files=3 +399 -67</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 4f4ff20 (2026-04-28T10:31:38-04:00) - feat: Enhance UI with new theme system and styling updates | files=3 +399 -67
+- Commands:
+  - `git log --since=2026-04-28T14:13:06.0623214Z --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 4f4ff2048320cbe8d355944b8f40648ebaa3bc27`
+  - `git show --numstat --pretty=format: 4f4ff2048320cbe8d355944b8f40648ebaa3bc27`
+- Files:
+  - `index.html`
+  - `main.js`
+  - `vault-themes`
+- Git: repo=vault-explorer, branch=main, head=5376b0e
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 10:31 - vault-themes</strong> <code>code-change</code> - Backfill: commit f17d09f (2026-04-28T10:31:16-04:00) - docs: update privacy and security guidelines for clarity and emphasis on priorities | files=1 +2 -0</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit f17d09f (2026-04-28T10:31:16-04:00) - docs: update privacy and security guidelines for clarity and emphasis on priorities | files=1 +2 -0
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: f17d09fbf6865cc9393fd8b702049d35df8243f0`
+  - `git show --numstat --pretty=format: f17d09fbf6865cc9393fd8b702049d35df8243f0`
+- Files:
+  - `.github/INSTRUCTIONS.md`
+- Git: repo=vault-themes, branch=main, head=ee16543
 
 </details>
 
@@ -3302,12 +3244,93 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
+<summary><strong>2026-04-28 10:11 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit 5f94b5f (2026-04-28T10:11:57-04:00) - fix: update vaultwares_agentciation submodule reference to latest commit | files=1 +1 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 5f94b5f (2026-04-28T10:11:57-04:00) - fix: update vaultwares_agentciation submodule reference to latest commit | files=1 +1 -1
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 5f94b5fe7693e156520d9d1b3fa5468830eafd09`
+  - `git show --numstat --pretty=format: 5f94b5fe7693e156520d9d1b3fa5468830eafd09`
+- Files:
+  - `vaultwares_agentciation`
+- Git: repo=vaultwares-pipelines, branch=main, head=465e017
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 10:09 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit b5e3b83 (2026-04-28T10:09:33-04:00) - Merge pull request #30 from p-potvin/copilot/move-agent-dispatcher-to-vaultwares-agentciation | files=0 +3 -1098</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit b5e3b83 (2026-04-28T10:09:33-04:00) - Merge pull request #30 from p-potvin/copilot/move-agent-dispatcher-to-vaultwares-agentciation | files=0 +3 -1098
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: b5e3b83a2896ee3a93d2ae08d371cb18dc6203a0`
+  - `git show --numstat --pretty=format: b5e3b83a2896ee3a93d2ae08d371cb18dc6203a0`
+- Git: repo=vaultwares-pipelines, branch=main, head=465e017
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 10:03 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit 5a9fd6e (2026-04-28T14:03:44Z) - fix: update vaultwares_agentciation submodule reference to new dispatcher branch commit (a70f00c) | files=1 +1 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 5a9fd6e (2026-04-28T14:03:44Z) - fix: update vaultwares_agentciation submodule reference to new dispatcher branch commit (a70f00c) | files=1 +1 -1
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 5a9fd6ee43451218e9f448b9640995866f354e10`
+  - `git show --numstat --pretty=format: 5a9fd6ee43451218e9f448b9640995866f354e10`
+- Files:
+  - `vaultwares_agentciation`
+- Git: repo=vaultwares-pipelines, branch=main, head=465e017
+
+</details>
+
+<details>
 <summary><strong>2026-04-28 09:41 - vaultwares-cli</strong> <code>handoff</code> - Fixed tasks not picking up by resolving regex and path issues. Agents are now correctly transitioning to RELAXING and finding TASKS.md.</summary>
 
 - Kind: handoff
 - Actor: AI Agent
 - Summary: Fixed tasks not picking up by resolving regex and path issues. Agents are now correctly transitioning to RELAXING and finding TASKS.md.
 - Git: repo=vaultwares-cli, branch=main, head=5892d01
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 09:36 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit d96f669 (2026-04-28T13:36:26Z) - feat: move agent dispatcher routine and multi-agent team files to vaultwares_agentciation | files=20 +3 -1098</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit d96f669 (2026-04-28T13:36:26Z) - feat: move agent dispatcher routine and multi-agent team files to vaultwares_agentciation | files=20 +3 -1098
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: d96f66937ca511adef33af7a3ddfd2523341116e`
+  - `git show --numstat --pretty=format: d96f66937ca511adef33af7a3ddfd2523341116e`
+- Files:
+  - `agent_collaboration_instructions.md`
+  - `agent_image.md`
+  - `agent_manifest.md`
+  - `agent_text.md`
+  - `agent_video.md`
+  - `agent_workflow.md`
+  - `ai_model/__init__.py`
+  - `ai_model/agent_registry.py`
+  - `ai_model/redis_coordination.py`
+  - `ai_model/workflow_export_agent.py`
+  - `app/scripts/dispatcher_agent.py`
+  - `app/scripts/dispatcher_gui.py`
+  - `app/scripts/worker_agent.py`
+  - `assign_spa_tasks.py`
+  - `assign_tasks.py`
+  - `coordination_plan.md`
+  - `demo_active_coordination.py`
+  - `multi_agent_todo.md`
+  - `run_coordinated_system.py`
+  - `vaultwares_agentciation`
+- Git: repo=vaultwares-pipelines, branch=main, head=465e017
 
 </details>
 
@@ -3552,6 +3575,20 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `crates/vaultwares-cli/src/format.rs`
   - `TUI-ENHANCEMENT-PLAN.md`
 - Git: repo=vaultwares-cli, branch=main, head=4d322b2
+
+</details>
+
+<details>
+<summary><strong>2026-04-28 06:40 - vaultwares-pipelines</strong> <code>code-change</code> - Backfill: commit 59a693f (2026-04-28T06:40:50-04:00) - Merge pull request #29 from p-potvin/sentinel-command-injection-fix-4016544384366992294 | files=0 +3 -71</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 59a693f (2026-04-28T06:40:50-04:00) - Merge pull request #29 from p-potvin/sentinel-command-injection-fix-4016544384366992294 | files=0 +3 -71
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 59a693fa38baac9b1b12f05a5b90dadf4356c4d3`
+  - `git show --numstat --pretty=format: 59a693fa38baac9b1b12f05a5b90dadf4356c4d3`
+- Git: repo=vaultwares-pipelines, branch=main, head=465e017
 
 </details>
 

@@ -1,0 +1,33 @@
+{
+  "id": "20260429-175841-000-no-more-groceries-dccbbe30",
+  "createdAt": "2026-04-29T21:58:41.0000000Z",
+  "createdAtLocal": "2026-04-29 17:58",
+  "timezone": "Eastern Standard Time",
+  "project": "no-more-groceries",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\no-more-groceries",
+  "summary": "Backfill: commit 8670186 (2026-04-29T17:58:41-04:00) - feat: integrate Apify for product and store searches with caching | files=5 +715 -83",
+  "commands": [
+    "git log --since=2026-04-29T21:01:05.3717464Z --pretty=format:%H^%cI^%s",
+    "git show --name-only --pretty=format: 867018602a5d93469a1455aa96df2e52caf6e9c8",
+    "git show --numstat --pretty=format: 867018602a5d93469a1455aa96df2e52caf6e9c8"
+  ],
+  "files": [
+    "package-lock.json",
+    "package.json",
+    "packages/db/queries.js",
+    "packages/integrations/pc-express/product-search.js",
+    "packages/integrations/pc-express/store-search.js"
+  ],
+  "planPath": "",
+  "contentHash": "dccbbe302295422434775cf6343cc9267d9b010726fa504c06c6e5d36c84ebc6",
+  "git": {
+    "repo": "no-more-groceries",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/no-more-groceries",
+    "branch": "main",
+    "head": "88c3476",
+    "hasChanges": false
+  }
+}

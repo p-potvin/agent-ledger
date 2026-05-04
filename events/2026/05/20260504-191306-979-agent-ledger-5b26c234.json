@@ -1,0 +1,33 @@
+{
+  "id": "20260504-191306-979-agent-ledger-5b26c234",
+  "createdAt": "2026-05-04T23:13:06.9792733Z",
+  "createdAtLocal": "2026-05-04 19:13",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Backfilled agent-ledger entries for all local repos with remotes under p-potvin and Prom-King/prom-king by scanning ledger timestamps and recording one code-change event per commit since each repo's last ledger event (or since ledger start 2026-04-28), plus one event per repo with uncommitted working-tree changes. Regenerated CHANGES.md/CHANGES.html as part of each record.",
+  "commands": [
+    "git remote -v (per repo)",
+    "git log --since=<cutoff> --pretty=format:%H^%cI^%s",
+    "git show --name-only --pretty=format: <hash>",
+    "git show --numstat --pretty=format: <hash>",
+    "git status --porcelain"
+  ],
+  "files": [
+    "events/2026/05/*.json",
+    "CHANGES.md",
+    "CHANGES.html"
+  ],
+  "planPath": "",
+  "contentHash": "5b26c234d90bd9496447b1c26efb246a5feabd584148f2ab4d51e1109c7317d2",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "d7aff7a",
+    "hasChanges": false
+  }
+}
