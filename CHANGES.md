@@ -3,6 +3,16 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-04 04:42 - vaultwares-docs</strong> <code>plan</code> - Completed Phase 3: Updated API_Exposure_Architecture_Plan.md on Desktop. Designed Tailscale Funnel + Caddy reverse proxy architecture for noddit.org (vault-flows) and vaultwares...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Completed Phase 3: Updated API_Exposure_Architecture_Plan.md on Desktop. Designed Tailscale Funnel + Caddy reverse proxy architecture for noddit.org (vault-flows) and vaultwares-pipelines.com (API). Bypassed Cloudflare to align with privacy-first principles. Also created products-and-services.mdx catalog in vaultwares-docs and committed to feature branch.
+- Git: repo=vaultwares-docs, branch=feature/products-catalog, head=2f5b420
+
+</details>
+
+<details>
 <summary><strong>2026-05-04 02:54 - vault-central</strong> <code>plan</code> - Completed Phase 3: Architecture Design. Drafted API_Exposure_Architecture_Plan.md on Desktop. Addressed Brume 2 &#39;no internet&#39; issue (mwan3 tracking). Proposed two options: Optio...</summary>
 
 - Kind: plan
