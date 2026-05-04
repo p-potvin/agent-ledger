@@ -3,6 +3,34 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-03 22:17 - vault-video-enhancer</strong> <code>code-change</code> - Implemented GPU context stabilization. Moved model warm-loading to Step 0 in core.py to establish CUDA context before subprocesses. Added synchronization, cache clearing, and co...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Implemented GPU context stabilization. Moved model warm-loading to Step 0 in core.py to establish CUDA context before subprocesses. Added synchronization, cache clearing, and cooldown between batch items in vault_gui.py.
+- Commands:
+  - `python -m py_compile vault_gui.py vault_enhancer/core.py`
+- Files:
+  - `vault_gui.py`
+  - `vault_enhancer/core.py`
+- Git: repo=vault-video-enhancer, branch=main, head=a66734d
+
+</details>
+
+<details>
+<summary><strong>2026-05-03 22:16 - vault-video-enhancer</strong> <code>plan</code> - Addressing CUDA illegal memory access error by implementing the &#39;Warm-loading&#39; objective. Moving model initialization to the start of the pipeline in core.py to stabilize the GP...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Summary: Addressing CUDA illegal memory access error by implementing the 'Warm-loading' objective. Moving model initialization to the start of the pipeline in core.py to stabilize the GPU context before subprocess execution. Also adding GPU state cleanup between files in the GUI batch loop.
+- Files:
+  - `vault_enhancer/core.py`
+  - `vault_gui.py`
+- Git: repo=vault-video-enhancer, branch=main, head=a66734d
+
+</details>
+
+<details>
 <summary><strong>2026-05-03 22:09 - vault-video-enhancer</strong> <code>code-change</code> - Fixed TypeError in vault_gui.py where &#39;continue_on_error&#39; was being passed to core.transcribe_video. The parameter is now popped from current_params before the core call.</summary>
 
 - Kind: code-change
