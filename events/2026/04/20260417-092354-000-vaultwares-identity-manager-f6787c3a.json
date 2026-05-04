@@ -1,0 +1,38 @@
+{
+  "id": "20260417-092354-000-vaultwares-identity-manager-f6787c3a",
+  "createdAt": "2026-04-17T13:23:54.0000000Z",
+  "createdAtLocal": "2026-04-17 09:23",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-identity-manager",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager",
+  "summary": "Backfill: commit 0159bce (2026-04-17T09:23:54-04:00) - feat: EPIC-01 semantic token layer + 3 candidate skins; EPIC-02 domain normalization (#3) | files=10 +468 -214",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 0159bceaf2a99aab800a64c802f780b6e11ed71c",
+    "git show --numstat --pretty=format: 0159bceaf2a99aab800a64c802f780b6e11ed71c"
+  ],
+  "files": [
+    "src/content/content.ts",
+    "src/popup/popup.css",
+    "src/popup/popup.ts",
+    "src/styles/tokens.css",
+    "src/types/index.ts",
+    "src/utils/domain.ts",
+    "src/utils/storage.ts",
+    "src/vault/vault.css",
+    "src/vault/vault.html",
+    "src/vault/vault.ts"
+  ],
+  "planPath": "",
+  "contentHash": "f6787c3aade44fac6fcae12a6a8355a2f99931b0333d2a1b70e927e506968605",
+  "git": {
+    "repo": "vaultwares-identity-manager",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-identity-manager",
+    "branch": "main",
+    "head": "672a338",
+    "hasChanges": false
+  }
+}

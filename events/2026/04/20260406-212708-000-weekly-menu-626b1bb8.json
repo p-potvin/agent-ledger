@@ -1,0 +1,27 @@
+{
+  "id": "20260406-212708-000-weekly-menu-626b1bb8",
+  "createdAt": "2026-04-07T01:27:08.0000000Z",
+  "createdAtLocal": "2026-04-06 21:27",
+  "timezone": "Eastern Standard Time",
+  "project": "weekly-menu",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\weekly-menu",
+  "summary": "Backfill: commit dd2effb (2026-04-06T21:27:08-04:00) - Merge pull request #1 from p-potvin/copilot/create-weekly-menu-app | files=0 +2166 -58",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: dd2effb2d31fb7ef84dd19e6f1e6e97ec4bbde7d",
+    "git show --numstat --pretty=format: dd2effb2d31fb7ef84dd19e6f1e6e97ec4bbde7d"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "626b1bb88d8f3ae961959567221fa6bba080031514830a1591cab8ba1538ed0a",
+  "git": {
+    "repo": "weekly-menu",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/weekly-menu",
+    "branch": "main",
+    "head": "6bebcc8",
+    "hasChanges": false
+  }
+}

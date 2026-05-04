@@ -1,0 +1,43 @@
+{
+  "id": "20260421-162031-000-vaultwares-pipelines-4b55f0aa",
+  "createdAt": "2026-04-21T20:20:31.0000000Z",
+  "createdAtLocal": "2026-04-21 16:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-pipelines",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines",
+  "summary": "Backfill: commit 83fc41b (2026-04-21T16:20:31-04:00) - chore(rename): systematic string replacement vaultwares-pipelines -> vault-server (Phase 1) | files=15 +128 -14",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 83fc41b47fc8a91cd2f0126c338af7f96e2f9beb",
+    "git show --numstat --pretty=format: 83fc41b47fc8a91cd2f0126c338af7f96e2f9beb"
+  ],
+  "files": [
+    ".cursor/rules/vault-themes-submodule.mdc",
+    ".github/agents/README.md",
+    ".github/workflows/bootstrap-vault-flows.yml",
+    ".gitignore",
+    "AGENTS.md",
+    "API_START.md",
+    "CLAUDE.md",
+    "README.md",
+    "api_server.py",
+    "frontend/.vercel/project.json",
+    "generate_local_tls_certs.ps1",
+    "package-lock.json",
+    "package.json",
+    "requirements.txt",
+    "start_https_dev.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "4b55f0aa43fab1e24e347649a7146b9f99621c086173d08ad82e4f2e8d31ef55",
+  "git": {
+    "repo": "vaultwares-pipelines",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-pipelines",
+    "branch": "main",
+    "head": "465e017",
+    "hasChanges": false
+  }
+}

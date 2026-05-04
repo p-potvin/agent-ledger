@@ -1,0 +1,44 @@
+{
+  "id": "20260312-182616-000-vaultwares-website-1d270613",
+  "createdAt": "2026-03-12T22:26:16.0000000Z",
+  "createdAtLocal": "2026-03-12 18:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-website",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website",
+  "summary": "Backfill: commit 954c2bf (2026-03-12T18:26:16-04:00) - feat: Localize application content to French | files=16 +186 -263",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 954c2bf1f36119f2b65dcff126e9098f6397cb6a",
+    "git show --numstat --pretty=format: 954c2bf1f36119f2b65dcff126e9098f6397cb6a"
+  ],
+  "files": [
+    "Dockerfile",
+    "cloudbuild.yaml",
+    "server.ts",
+    "src/App.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ProductCard.tsx",
+    "src/pages/Blog.tsx",
+    "src/pages/BlogPost.tsx",
+    "src/pages/Cart.tsx",
+    "src/pages/Checkout.tsx",
+    "src/pages/Home.tsx",
+    "src/pages/ProductDetail.tsx",
+    "src/pages/Store.tsx",
+    "src/store/blogData.ts",
+    "src/store/mockData.ts"
+  ],
+  "planPath": "",
+  "contentHash": "1d27061376cde0bd647f2cc7de4d52be9a9a1ff51e0d9296d34cee10bcea1dbf",
+  "git": {
+    "repo": "vaultwares-website",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website",
+    "branch": "main",
+    "head": "55b66eb",
+    "hasChanges": false
+  }
+}

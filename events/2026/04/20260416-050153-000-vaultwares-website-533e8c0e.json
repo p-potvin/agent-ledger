@@ -1,0 +1,46 @@
+{
+  "id": "20260416-050153-000-vaultwares-website-533e8c0e",
+  "createdAt": "2026-04-16T09:01:53.0000000Z",
+  "createdAtLocal": "2026-04-16 05:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-website",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website",
+  "summary": "Backfill: commit 11417ea (2026-04-16T09:01:53Z) - feat: add auth system, language persistence, API-driven products, Vercel config, bilingual DB schema | files=18 +837 -73",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 11417ead347c4bd0ecd5836096d735ca142b9cac",
+    "git show --numstat --pretty=format: 11417ead347c4bd0ecd5836096d735ca142b9cac"
+  ],
+  "files": [
+    ".env.example",
+    "api/index.ts",
+    "database/migration_add_i18n.sql",
+    "database/schema.sql",
+    "package-lock.json",
+    "package.json",
+    "server.ts",
+    "src/App.tsx",
+    "src/components/Navbar.tsx",
+    "src/context/AuthContext.tsx",
+    "src/i18n.ts",
+    "src/pages/Account.tsx",
+    "src/pages/Checkout.tsx",
+    "src/pages/Home.tsx",
+    "src/pages/Login.tsx",
+    "src/store/mockData.ts",
+    "src/types/blog.ts",
+    "vercel.json"
+  ],
+  "planPath": "",
+  "contentHash": "533e8c0e4a629828fe13ec77df4a7586fd30ef9728afdfe6c28cda38de2a97a9",
+  "git": {
+    "repo": "vaultwares-website",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website",
+    "branch": "main",
+    "head": "55b66eb",
+    "hasChanges": false
+  }
+}

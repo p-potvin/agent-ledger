@@ -1,0 +1,40 @@
+{
+  "id": "20260406-212202-000-weekly-menu-e760588c",
+  "createdAt": "2026-04-07T01:22:02.0000000Z",
+  "createdAtLocal": "2026-04-06 21:22",
+  "timezone": "Eastern Standard Time",
+  "project": "weekly-menu",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\weekly-menu",
+  "summary": "Backfill: commit c917eaf (2026-04-07T01:22:02Z) - feat: implement Weekly Menu Android app with full agent structure and comprehensive task plan | files=12 +2166 -58",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: c917eaf4438046d3c48c8a9b8ecae1694e15d98e",
+    "git show --numstat --pretty=format: c917eaf4438046d3c48c8a9b8ecae1694e15d98e"
+  ],
+  "files": [
+    "README.md",
+    "ROADMAP.md",
+    "TODO.md",
+    "agent_manifest.md",
+    "agents/__init__.py",
+    "agents/android_agent.py",
+    "agents/backend_agent.py",
+    "agents/data_agent.py",
+    "agents/doc_agent.py",
+    "agents/planner_agent.py",
+    "agents/uiux_agent.py",
+    "run_coordinated_system.py"
+  ],
+  "planPath": "",
+  "contentHash": "e760588c3e86b7d4048141a7c65423ffcd99f8af1fbfaa737fd3cdea8c9faaa4",
+  "git": {
+    "repo": "weekly-menu",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/weekly-menu",
+    "branch": "main",
+    "head": "6bebcc8",
+    "hasChanges": false
+  }
+}

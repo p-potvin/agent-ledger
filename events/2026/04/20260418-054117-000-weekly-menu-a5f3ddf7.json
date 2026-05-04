@@ -1,0 +1,31 @@
+{
+  "id": "20260418-054117-000-weekly-menu-a5f3ddf7",
+  "createdAt": "2026-04-18T09:41:17.0000000Z",
+  "createdAtLocal": "2026-04-18 05:41",
+  "timezone": "Eastern Standard Time",
+  "project": "weekly-menu",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\weekly-menu",
+  "summary": "Backfill: commit 8ce474f (2026-04-18T05:41:17-04:00) - merge conflicts | files=3 +5 -87",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 8ce474fa70d7d16895128cfdade768cf769765ef",
+    "git show --numstat --pretty=format: 8ce474fa70d7d16895128cfdade768cf769765ef"
+  ],
+  "files": [
+    ".gitmodules",
+    "vaultwares_agentciation",
+    "vaultwares_agentciation/__init__.py"
+  ],
+  "planPath": "",
+  "contentHash": "a5f3ddf7df244553069d042896fe372743927768b400df3b94cbfc683116d449",
+  "git": {
+    "repo": "weekly-menu",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/weekly-menu",
+    "branch": "main",
+    "head": "6bebcc8",
+    "hasChanges": false
+  }
+}

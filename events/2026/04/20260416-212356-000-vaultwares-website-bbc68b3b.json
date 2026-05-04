@@ -1,0 +1,48 @@
+{
+  "id": "20260416-212356-000-vaultwares-website-bbc68b3b",
+  "createdAt": "2026-04-17T01:23:56.0000000Z",
+  "createdAtLocal": "2026-04-16 21:23",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-website",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website",
+  "summary": "Backfill: commit 5552126 (2026-04-17T01:23:56Z) - refactor: use server-side locale resource files instead of DB language columns; proxy vercel to pipeline API | files=20 +2067 -173",
+  "commands": [
+    "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
+    "git show --name-only --pretty=format: 5552126e668b2d8a1c240b9f45bb2c48927c1de7",
+    "git show --numstat --pretty=format: 5552126e668b2d8a1c240b9f45bb2c48927c1de7"
+  ],
+  "files": [
+    ".env.example",
+    "api/index.ts",
+    "api/proxy.ts",
+    "database/migration_add_i18n.sql",
+    "database/migration_remove_i18n_cols.sql",
+    "database/schema.sql",
+    "locales/products.en.json",
+    "locales/products.fr.json",
+    "package-lock.json",
+    "package.json",
+    "server.ts",
+    "src/components/ProductCard.tsx",
+    "src/lib/apiFetch.ts",
+    "src/pages/Cart.tsx",
+    "src/pages/Checkout.tsx",
+    "src/pages/Home.tsx",
+    "src/pages/ProductDetail.tsx",
+    "src/pages/Store.tsx",
+    "src/store/mockData.ts",
+    "vercel.json"
+  ],
+  "planPath": "",
+  "contentHash": "bbc68b3bd269baeddf545259b106688e3197112d54aadf9553aa19ebc05a1dd0",
+  "git": {
+    "repo": "vaultwares-website",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website",
+    "branch": "main",
+    "head": "55b66eb",
+    "hasChanges": false
+  }
+}
