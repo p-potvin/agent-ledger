@@ -1,0 +1,22 @@
+{
+  "id": "20260505-004109-419-agent-ledger-d107e35d",
+  "createdAt": "2026-05-05T04:41:09.4192821Z",
+  "createdAtLocal": "2026-05-05 00:41",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Registered local Windows scheduled task AgentLedgerWorkImpactRefresh to run every 15 minutes and refresh WORK_IMPACT.html incrementally (no git sync/push).",
+  "commands": [
+    "pwsh -File scripts/setup-work-impact-scheduler.ps1 -EveryMinutes 15",
+    "Get-ScheduledTask -TaskName AgentLedgerWorkImpactRefresh"
+  ],
+  "files": [
+    "scripts/setup-work-impact-scheduler.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "d107e35dcdbb1e23d61e541ab3f5ff5d824737fa2fd38fcfa6af54c43923a4b5",
+  "git": null
+}
