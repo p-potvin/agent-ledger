@@ -1,0 +1,24 @@
+{
+  "id": "20260504-201934-662-agent-ledger-003f5702",
+  "createdAt": "2026-05-05T00:19:34.6623789Z",
+  "createdAtLocal": "2026-05-04 20:19",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Hardened WORK_IMPACT i18n to avoid broken HTML when editing translations: i18n is now emitted as JSON via New-I18nTable + ConvertTo-Json (no more hand-written JS string literals). Updated French translations to proper accented versions (Généré/Période, Entrées, Activité, etc.) with correct apostrophes, then re-rendered WORK_IMPACT.html (from 2026-03-10) and verified FR toggle renders without console errors.",
+  "commands": [
+    "render-work-impact.ps1 -StartDate 2026-03-10",
+    "Browser verify: toggle FR"
+  ],
+  "files": [
+    "agent-ledger/scripts/render-work-impact.ps1",
+    "agent-ledger/WORK_IMPACT.html",
+    "WORK_IMPACT.html"
+  ],
+  "planPath": "",
+  "contentHash": "003f57024ed711efd42aeec217d823c0ac339fedd587f8248492ab0e2319cdf9",
+  "git": null
+}

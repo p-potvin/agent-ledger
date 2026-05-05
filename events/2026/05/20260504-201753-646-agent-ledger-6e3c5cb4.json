@@ -1,0 +1,24 @@
+{
+  "id": "20260504-201753-646-agent-ledger-6e3c5cb4",
+  "createdAt": "2026-05-05T00:17:53.6466186Z",
+  "createdAtLocal": "2026-05-04 20:17",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fixed WORK_IMPACT.html rendering failure caused by manually edited translation strings introducing unescaped quotes in the JS i18n block. Updated render-work-impact.ps1 to generate i18n as JSON (New-I18nTable + ConvertTo-Json) so translations cannot break JS parsing. Re-rendered WORK_IMPACT.html (start 2026-03-10) and verified EN/FR toggle works and there are no console errors/warnings.",
+  "commands": [
+    "render-work-impact.ps1 -StartDate 2026-03-10",
+    "Browser verify: domSnapshot + language toggle"
+  ],
+  "files": [
+    "agent-ledger/scripts/render-work-impact.ps1",
+    "agent-ledger/WORK_IMPACT.html",
+    "WORK_IMPACT.html"
+  ],
+  "planPath": "",
+  "contentHash": "6e3c5cb4fcf34a9362aa144783fab6027bdc889d6ca453d805ba730f9a6fe905",
+  "git": null
+}
