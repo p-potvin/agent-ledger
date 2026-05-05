@@ -1,0 +1,23 @@
+{
+  "id": "20260505-041119-291-general-tasks-072c0a7e",
+  "createdAt": "2026-05-05T08:11:19.2910095Z",
+  "createdAtLocal": "2026-05-05 04:11",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Merged agent-ledger instruction content into a single canonical AGENTS.md and duplicated it into both workspace root and agent-ledger repo. Added mandatory 'Agent Header' requirement (agent name/role, model, thinking complexity, mode, permissions, tools used, MCP servers accessed, time) with optional extra disclosure fields. Removed redundant agent-ledger/AGENT_LEDGER_INSTRUCTIONS.md file.",
+  "commands": [
+    "edit AGENTS.md (root + agent-ledger)",
+    "remove agent-ledger/AGENT_LEDGER_INSTRUCTIONS.md"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\AGENTS.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\AGENTS.md"
+  ],
+  "planPath": "",
+  "contentHash": "072c0a7ed1d0353980b5ed07bcdbad79db1b96c98fcbd38c63946bc104a89d61",
+  "git": null
+}
