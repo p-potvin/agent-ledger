@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260505-070626-335-general-tasks-65ceba55",
+    "createdAt":  "2026-05-05T11:06:26.3350662Z",
+    "createdAtLocal":  "2026-05-05 07:06",
+    "timezone":  "Eastern Standard Time",
+    "project":  "General Tasks",
+    "kind":  "general",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\link-sharing",
+    "summary":  "Established persistent interaction rules in .gemini/rules/prom-king-ledger.md. These rules codify the shared ledger protocol, grounding requirements, and communication style for all future sessions.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\.gemini\\rules\\prom-king-ledger.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "65ceba55441d111f8c904e6ce540272eec682982fdac8950afd66b5b25b98f27",
+    "git":  {
+                "repo":  "link-sharing",
+                "root":  "C:/Users/Administrator/Desktop/business/link-sharing",
+                "branch":  "main",
+                "head":  "987119a",
+                "hasChanges":  true
+            }
+}

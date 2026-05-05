@@ -1,0 +1,30 @@
+{
+  "id": "20260505-055828-426-vault-themes-637f0c3a",
+  "createdAt": "2026-05-05T09:58:28.4263309Z",
+  "createdAtLocal": "2026-05-05 05:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-themes",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Implemented vault-themes cleanup plan: reorganized brand/assets/theme-manager/components/docs/examples layout; converted generated brand guide into maintainable docs plus lightweight React/Tailwind demo; centralized tokens/i18n/CSS variables; merged instruction surfaces into AGENTS.md with Copilot pointer; replaced sync_submodule_rules.py with multi-target managed-block sync; updated initialized consumer repos with compatibility pointers; added consumer update roadmap for future full migration; verified Python compile, demo build, Playwright smoke checks, and consumer pointer checks.",
+  "commands": [
+    "python -m py_compile theme-manager/**/*.py",
+    "npm install",
+    "npm run build",
+    "python theme-manager/tools/sync_submodule_rules.py <consumer> --check --targets codex claude copilot cursor",
+    "Playwright desktop/mobile smoke checks against http://127.0.0.1:5179/"
+  ],
+  "files": [
+    "vault-themes/AGENTS.md",
+    "vault-themes/brand/brand-guide.md",
+    "vault-themes/brand/tokens/tokens.ts",
+    "vault-themes/theme-manager/tools/sync_submodule_rules.py",
+    "vault-themes/examples/brand-guide/src/App.tsx",
+    "vault-themes/docs/consumer-update-roadmap.md"
+  ],
+  "planPath": "",
+  "contentHash": "637f0c3a557372c6b4b89a3a4d852aaaa703c56b2648bb76cb570b3c4405591b",
+  "git": null
+}

@@ -1,0 +1,27 @@
+﻿{
+    "id":  "20260505-070754-036-general-tasks-bb07162a",
+    "createdAt":  "2026-05-05T11:07:54.0364614Z",
+    "createdAtLocal":  "2026-05-05 07:07",
+    "timezone":  "Eastern Standard Time",
+    "project":  "General Tasks",
+    "kind":  "general",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\link-sharing",
+    "summary":  "Renamed prom-king-ledger.md to unified-agent-rules.md to reflect applicability across both Prom King and VaultWares ecosystems. Reformatted for markdown lint compliance.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\.gemini\\rules\\unified-agent-rules.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "bb07162a4ae522eba6333b4d1cacf6ff2364dcdef768cdd54e358740077db43a",
+    "git":  {
+                "repo":  "link-sharing",
+                "root":  "C:/Users/Administrator/Desktop/business/link-sharing",
+                "branch":  "main",
+                "head":  "987119a",
+                "hasChanges":  true
+            }
+}

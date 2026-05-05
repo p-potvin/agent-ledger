@@ -1,0 +1,25 @@
+{
+  "id": "20260505-070853-673-usd-playground-341cb998",
+  "createdAt": "2026-05-05T11:08:53.6731860Z",
+  "createdAtLocal": "2026-05-05 07:08",
+  "timezone": "Eastern Standard Time",
+  "project": "usd-playground",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\usd-playground",
+  "summary": "Added agent-ledger mandatory instructions block to .github/copilot-instructions.md so GitHub Copilot in VS Code reads and enforces ledger logging on every prompt. Block is wrapped in AGENT-LEDGER:START/END markers for future scriptable updates.",
+  "commands": [],
+  "files": [
+    ".github/copilot-instructions.md"
+  ],
+  "planPath": "",
+  "contentHash": "341cb998e7848fedb7f0f98707c6bc2e6711ac08215e9137e942c7f9d5a70a21",
+  "git": {
+    "repo": "usd-playground",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/usd-playground",
+    "branch": "main",
+    "head": "0a13f83",
+    "hasChanges": true
+  }
+}
