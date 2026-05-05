@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "startDate": "2026-03-11",
+  "languageModes": ["en", "qc"],
+  "primaryCommitMetric": "cleanChurnLines",
+  "excludePathRegex": "(^|/|\\\\)(node_modules|\\.venv|venv|env|vendor|dist|build|target|obj|bin|__pycache__|\\.next|\\.nuxt|\\.turbo|\\.cache|coverage)(/|\\\\|$)|\\.(pyc|pyo|class|dll|exe|obj|cache|map)$"
+}
+
