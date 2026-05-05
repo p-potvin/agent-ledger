@@ -107,49 +107,49 @@ function New-I18nTable {
         }
         qc = [ordered]@{
             title = 'Impact du travail'
-            subtitle = "Une vue simple du travail enregistre dans ton agent ledger."
-            generated = 'Genere'
-            range = 'Periode'
+            subtitle = "Une vue simple du travail enregistr$([char]0x00e9) dans ton agent ledger."
+            generated = "G$([char]0x00e9)n$([char]0x00e9)r$([char]0x00e9)"
+            range = "P$([char]0x00e9)riode"
             langLabel = 'Langue'
-            intro = "Ce rapport aide des gens non-tech a comprendre l'effort: a quelle frequence tu as travaille, sur combien de projets, et comment le rythme a evolue."
-            metricEvents = 'Entrees de travail'
+            intro = "Ce rapport aide des gens non-tech $([char]0x00e0) comprendre l$([char]0x2019)effort$([char]0x00a0): $([char]0x00e0) quelle fr$([char]0x00e9)quence tu as travaill$([char]0x00e9), sur combien de projets, et comment le rythme a $([char]0x00e9)volu$([char]0x00e9)."
+            metricEvents = "Entr$([char]0x00e9)es de travail"
             metricDays = 'Jours actifs'
-            metricProjects = 'Projets touches'
-            metricStreak = 'Serie en cours'
-            metricLongestStreak = 'Plus longue serie'
+            metricProjects = "Projets touch$([char]0x00e9)s"
+            metricStreak = "S$([char]0x00e9)rie en cours"
+            metricLongestStreak = "Plus longue s$([char]0x00e9)rie"
             metricBusiestDay = 'Jour le plus actif'
             metricBusiestWeek = 'Semaine la plus active'
-            calendarTitle = 'Activite de travail par jour'
-            calendarHint = "Survole un carre pour voir la journee."
+            calendarTitle = "Activit$([char]0x00e9) de travail par jour"
+            calendarHint = "Survole un carr$([char]0x00e9) pour voir la journ$([char]0x00e9)e."
             less = 'Moins'
             more = 'Plus'
-            monthlyTitle = 'Travail enregistre par mois'
+            monthlyTitle = "Travail enregistr$([char]0x00e9) par mois"
             kindsTitle = "Type de travail"
             projectsTitle = 'Projets les plus actifs'
-            projectsNote = 'Les noms bruts des repos sont affiches.'
+            projectsNote = "Les noms bruts des repos sont affich$([char]0x00e9)s."
             commitSizeTitle = 'Taille des commits (churn propre)'
-            commitSizeHint = "La taille des commits est calculee a partir des commits references par des evenements de backfill. Churn propre = ajouts propres + suppressions propres."
+            commitSizeHint = "La taille des commits est calcul$([char]0x00e9)e $([char]0x00e0) partir des commits r$([char]0x00e9)f$([char]0x00e9)renc$([char]0x00e9)s par des $([char]0x00e9)v$([char]0x00e9)nements de backfill. Churn propre = ajouts propres + suppressions propres."
             commitStatMean = 'Moyenne'
-            commitStatMedian = 'Mediane'
+            commitStatMedian = "M$([char]0x00e9)diane"
             commitStatMode = 'Mode (tranche)'
-            commitStatSamples = 'Commits mesures'
+            commitStatSamples = "Commits mesur$([char]0x00e9)s"
             commitHistTitle = 'Distribution'
             commitBoxTitle = 'Par mois (quartiles)'
             commitOutliersTitle = 'Plus gros commits'
             techTitle = 'Volume technique (propre vs brut)'
             techHint = "Le nombre de lignes est juste un indice (pas une mesure parfaite)."
-            statType = 'Metrique'
+            statType = "M$([char]0x00e9)trique"
             statAdds = 'Ajouts'
             statDels = 'Suppressions'
             statFiles = 'Fichiers'
             statChurn = 'Churn (ajouts + suppr)'
             statNet = 'Net (ajouts - suppr)'
             statExcluded = 'Churn exclu'
-            filesTouchedTitle = 'Fichiers touches par commit'
+            filesTouchedTitle = "Fichiers touch$([char]0x00e9)s par commit"
             concentrationTitle = 'Concentration du travail'
-            concentrationHint = "Montre a quel point l'activite est concentree dans les projets les plus actifs."
+            concentrationHint = "Montre $([char]0x00e0) quel point l$([char]0x2019)activit$([char]0x00e9) est concentr$([char]0x00e9)e dans les projets les plus actifs."
             highlightsTitle = 'Faits saillants'
-            highlightsHint = 'Quelques pointes et jalons personnels pour la periode.'
+            highlightsHint = "Quelques pointes et jalons personnels pour la p$([char]0x00e9)riode."
             hlMostConsistentMonth = 'Mois le plus constant'
             hlWidestProjectDay = 'Jour avec le plus de projets'
             hlStrongestWeek = 'Semaine la plus forte'
@@ -160,23 +160,23 @@ function New-I18nTable {
             labelRaw = 'Brut'
             labelExcluded = 'Exclu'
             evidenceTitle = 'Preuves par projet'
-            evidenceHint = 'Utile pour verifier avant de partager.'
+            evidenceHint = "Utile pour v$([char]0x00e9)rifier avant de partager."
             colProject = 'Projet'
-            colEntries = 'Entrees'
+            colEntries = "Entr$([char]0x00e9)es"
             colFirst = 'Premier'
             colLast = 'Dernier'
             colExamples = 'Exemples'
             kindLabels = [ordered]@{
-                'code-change' = 'Construit ou modifie'
+                'code-change' = "Construit ou modifi$([char]0x00e9)"
                 'plan' = 'Planification'
-                'verification' = 'Verification'
-                'commands' = 'Operations lancees'
+                'verification' = "V$([char]0x00e9)rification"
+                'commands' = "Op$([char]0x00e9)rations lanc$([char]0x00e9)es"
                 'handoff' = 'Passations'
                 'general' = 'Autre'
             }
             units = [ordered]@{
                 days = 'jours'
-                entries = 'entrees'
+                entries = "entr$([char]0x00e9)es"
                 commits = 'commits'
                 lines = 'lignes'
                 files = 'fichiers'
@@ -306,9 +306,9 @@ $template = @'
       <h1 id="title" data-i18n="title">Work Impact</h1>
       <div class="meta">
         <span id="subtitle" data-i18n="subtitle"></span>
-        <span class="quiet"> · </span>
+        <span class="quiet"> &#xB7; </span>
         <span class="quiet"><span data-i18n="range">Range</span>: <span id="range"></span></span>
-        <span class="quiet"> · </span>
+        <span class="quiet"> &#xB7; </span>
         <span class="quiet"><span data-i18n="generated">Generated</span>: <span id="generated"></span></span>
       </div>
     </div>
@@ -566,7 +566,7 @@ $template = @'
 
       // header meta
       document.getElementById("generated").textContent = data.generatedAtLocal || "";
-      document.getElementById("range").textContent = (data.range?.start || "") + " → " + (data.range?.end || "");
+      document.getElementById("range").textContent = (data.range?.start || "") + " \u2192 " + (data.range?.end || "");
 
       function parseLocalDate(s){
         // "YYYY-MM-DD" -> local Date
@@ -743,7 +743,7 @@ $template = @'
                 const lbl = dict.kindLabels?.[k] || k;
                 return lbl + ": " + fmtInt(kindsObj[k]);
               });
-              tipTitle.textContent = key + " · " + fmtInt(c) + " " + dict.units.entries;
+              tipTitle.textContent = key + " \u00B7 " + fmtInt(c) + " " + dict.units.entries;
               tipMeta.textContent =
                 (projects.length ? (dict.labelProjects + ": " + projects.join(", ")) : "") +
                 (kindParts.length ? ("\\n" + kindParts.join("\\n")) : "");
@@ -792,7 +792,7 @@ $template = @'
         const projects = Array.isArray(data.series?.projects) ? data.series.projects : [];
         projects.forEach(p=>{
           const tr = document.createElement("tr");
-          const ex = (p.recent||[]).map(s=>"• " + s).join("\\n");
+          const ex = (p.recent||[]).map(s=>"\u2022 " + s).join("\\n");
           tr.innerHTML = `<td><code>${String(p.project)}</code></td><td>${fmtInt(p.entries||0)}</td><td>${p.firstDay||""}</td><td>${p.lastDay||""}</td><td><pre style="margin:0;white-space:pre-wrap;font-family:inherit">${ex}</pre></td>`;
           pt.appendChild(tr);
         });
@@ -846,7 +846,7 @@ $template = @'
         const median = quantile(sorted, 0.5);
         const bins = histogramBuckets(sorted);
         const modeBin = bins.reduce((best,b)=> (b.count > (best?.count||-1) ? b : best), null);
-        const modeLabel = modeBin ? (modeBin.hi===null ? (modeBin.lo + "+") : (modeBin.lo + "–" + (modeBin.hi-1))) : "-";
+        const modeLabel = modeBin ? (modeBin.hi===null ? (modeBin.lo + "+") : (modeBin.lo + "\u2013" + (modeBin.hi-1))) : "-";
 
         document.getElementById("c-mean").textContent = fmt1(mean) + " " + I18N[lang].units.lines;
         document.getElementById("c-median").textContent = fmt1(median) + " " + I18N[lang].units.lines;
@@ -857,7 +857,7 @@ $template = @'
         hist.innerHTML = "";
         const hmax = Math.max(1, ...bins.map(b=>b.count));
         bins.forEach(b=>{
-          const lab = (b.hi===null) ? (b.lo + "+") : (b.lo + "–" + (b.hi-1));
+          const lab = (b.hi===null) ? (b.lo + "+") : (b.lo + "\u2013" + (b.hi-1));
           const row = document.createElement("div"); row.className = "histRow";
           row.innerHTML = `<div class="lab">${lab}</div><div class="track"><div class="fill" style="width:${(b.count/hmax*100).toFixed(2)}%"></div></div><div class="n">${fmtInt(b.count)}</div>`;
           hist.appendChild(row);
@@ -897,7 +897,7 @@ $template = @'
         outEl.innerHTML = "";
         const omax = Math.max(1, ...out.map(x=>x.cleanChurnLines||0));
         out.forEach(x=>{
-          const label = (x.project ? String(x.project) : "Project") + " · " + String(x.commit||"").slice(0,12);
+          const label = (x.project ? String(x.project) : "Project") + " \u00B7 " + String(x.commit||"").slice(0,12);
           makeBar(label, clampInt(x.cleanChurnLines||0), omax, outEl);
         });
       }
@@ -908,7 +908,7 @@ $template = @'
         const samples = Array.isArray(data.commitSamples) ? data.commitSamples : [];
         const files = samples.map(s=> clampInt(s.filesClean ?? s.filesTouched ?? 0)).filter(n=>n>=0);
         if(files.length === 0){
-          el.innerHTML = `<div class="quiet">${lang==="qc" ? "Aucune donnee de commit pour l'instant." : "No commit data yet."}</div>`;
+          el.innerHTML = `<div class="quiet">${lang==="qc" ? "Aucune donn\u00e9e de commit pour l\u2019instant." : "No commit data yet."}</div>`;
           return;
         }
         const sorted = [...files].sort((a,b)=>a-b);
@@ -917,7 +917,7 @@ $template = @'
         const p90 = quantile(sorted, 0.9);
         const max = Math.max(1, ...sorted);
         makeBar(lang==="qc" ? "Moyenne" : "Mean", Number(mean.toFixed(2)), max, el);
-        makeBar(lang==="qc" ? "Mediane" : "Median", Number(median.toFixed(2)), max, el);
+        makeBar(lang==="qc" ? "M\u00e9diane" : "Median", Number(median.toFixed(2)), max, el);
         makeBar(lang==="qc" ? "P90" : "P90", Number(p90.toFixed(2)), max, el);
       }
 
