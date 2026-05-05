@@ -199,7 +199,7 @@ $payload = [ordered]@{
 $payloadJson = ($payload | ConvertTo-Json -Depth 24 -Compress)
 $i18nJson = ((New-I18nTable) | ConvertTo-Json -Depth 24 -Compress)
 
-$content = @"
+$template = @'
 <!doctype html>
 <html lang="en">
 <head>
@@ -523,8 +523,8 @@ $content = @"
   </section>
 
   <script>
-    const PAYLOAD = $payloadJson;
-    const I18N = $i18nJson;
+    const PAYLOAD = __PAYLOAD_JSON__;
+    const I18N = __I18N_JSON__;
 
     (function(){
       const data = PAYLOAD.data;
@@ -536,14 +536,15 @@ $content = @"
       const fmtSigned = (n)=> (n>=0? "+" : "") + fmtInt(n);
 
       const supported = Object.keys(I18N);
-      const saved = localStorage.getItem("workImpactLang");
+      let saved = null;
+      try { saved = localStorage.getItem("workImpactLang"); } catch {}
       const browser = (navigator.language || "en").toLowerCase();
       let lang = (saved && supported.includes(saved)) ? saved : (browser.startsWith("fr") ? "qc" : "en");
       if (!supported.includes(lang)) lang = supported[0] || "en";
 
       const setLang = (next) => {
         lang = next;
-        localStorage.setItem("workImpactLang", lang);
+        try { localStorage.setItem("workImpactLang", lang); } catch {}
         document.getElementById("lang-en").setAttribute("aria-pressed", String(lang==="en"));
         document.getElementById("lang-qc").setAttribute("aria-pressed", String(lang==="qc"));
         applyI18n();
@@ -1056,7 +1057,9 @@ $content = @"
 </main>
 </body>
 </html>
-"@
+'@
+
+$content = $template.Replace('__PAYLOAD_JSON__', $payloadJson).Replace('__I18N_JSON__', $i18nJson)
 
 Set-Content -LiteralPath $outHtmlPath -Value $content -Encoding utf8
 try {
