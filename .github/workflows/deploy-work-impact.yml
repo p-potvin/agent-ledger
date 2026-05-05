@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
     paths:
+      - "events/**"
+      - "scripts/**"
+      - "work-impact.config.json"
+      - "work-impact.state.json"
       - "WORK_IMPACT.html"
       - "api/**"
       - "vercel.json"
@@ -15,20 +19,57 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  refresh:
+    name: Refresh WORK_IMPACT.html
+    runs-on: windows-latest
     permissions:
       contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Deploy to Vercel (Production)
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: "--prod --confirm"
-          working-directory: ./
+      - name: Refresh report (incremental)
+        shell: pwsh
+        run: |
+          ./scripts/update-work-impact.ps1
 
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: work-impact
+          path: |
+            WORK_IMPACT.html
+            work-impact.state.json
+            work-impact.config.json
+          if-no-files-found: error
+
+  deploy:
+    name: Deploy to Vercel (Production)
+    runs-on: ubuntu-latest
+    needs: refresh
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download report artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: work-impact
+          path: .
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Vercel CLI
+        run: npm i -g vercel@latest
+
+      - name: Deploy
+        env:
+          VERCEL_TOKEN: ${{ secrets.AGENT_LEDGER }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: vercel deploy --prod --yes --token "$VERCEL_TOKEN"

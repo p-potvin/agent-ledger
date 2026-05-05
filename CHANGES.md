@@ -3,6 +3,53 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-04 20:19 - agent-ledger</strong> <code>code-change</code> - Hardened WORK_IMPACT i18n to avoid broken HTML when editing translations: i18n is now emitted as JSON via New-I18nTable + ConvertTo-Json (no more hand-written JS string literals...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Hardened WORK_IMPACT i18n to avoid broken HTML when editing translations: i18n is now emitted as JSON via New-I18nTable + ConvertTo-Json (no more hand-written JS string literals). Updated French translations to proper accented versions (GÃ©nÃ©rÃ©/PÃ©riode, EntrÃ©es, ActivitÃ©, etc.) with correct apostrophes, then re-rendered WORK_IMPACT.html (from 2026-03-10) and verified FR toggle renders without console errors.
+- Commands:
+  - `render-work-impact.ps1 -StartDate 2026-03-10`
+  - `Browser verify: toggle FR`
+- Files:
+  - `agent-ledger/scripts/render-work-impact.ps1`
+  - `agent-ledger/WORK_IMPACT.html`
+  - `WORK_IMPACT.html`
+
+</details>
+
+<details>
+<summary><strong>2026-05-04 20:17 - agent-ledger</strong> <code>code-change</code> - Fixed WORK_IMPACT.html rendering failure caused by manually edited translation strings introducing unescaped quotes in the JS i18n block. Updated render-work-impact.ps1 to gener...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Fixed WORK_IMPACT.html rendering failure caused by manually edited translation strings introducing unescaped quotes in the JS i18n block. Updated render-work-impact.ps1 to generate i18n as JSON (New-I18nTable + ConvertTo-Json) so translations cannot break JS parsing. Re-rendered WORK_IMPACT.html (start 2026-03-10) and verified EN/FR toggle works and there are no console errors/warnings.
+- Commands:
+  - `render-work-impact.ps1 -StartDate 2026-03-10`
+  - `Browser verify: domSnapshot + language toggle`
+- Files:
+  - `agent-ledger/scripts/render-work-impact.ps1`
+  - `agent-ledger/WORK_IMPACT.html`
+  - `WORK_IMPACT.html`
+
+</details>
+
+<details>
+<summary><strong>2026-05-04 20:09 - agent-ledger</strong> <code>code-change</code> - Updated render-work-impact.ps1 to support -StartDate (inclusive local date) so WORK_IMPACT.html can be generated for a specific period. Re-rendered WORK_IMPACT.html for 2026-03-...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Updated render-work-impact.ps1 to support -StartDate (inclusive local date) so WORK_IMPACT.html can be generated for a specific period. Re-rendered WORK_IMPACT.html for 2026-03-10 through now and mirrored it to the parent WORK_IMPACT.html.
+- Commands:
+  - `render-work-impact.ps1 -StartDate 2026-03-10`
+- Files:
+  - `agent-ledger/scripts/render-work-impact.ps1`
+  - `agent-ledger/WORK_IMPACT.html`
+  - `WORK_IMPACT.html`
+
+</details>
+
+<details>
 <summary><strong>2026-05-04 19:45 - agent-ledger</strong> <code>code-change</code> - Added a self-contained bilingual (EN/FR) WORK_IMPACT.html visualization generated from agent-ledger/events. New render-work-impact.ps1 parses events, recomputes clean/raw line s...</summary>
 
 - Kind: code-change

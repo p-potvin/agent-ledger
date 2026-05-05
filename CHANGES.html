@@ -26,6 +26,62 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-04 20:19 - agent-ledger</strong> <span class="kind">code-change</span> - Hardened WORK_IMPACT i18n to avoid broken HTML when editing translations: i18n is now emitted as JSON via New-I18nTable + ConvertTo-Json (no more hand-written JS string literals...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Hardened WORK_IMPACT i18n to avoid broken HTML when editing translations: i18n is now emitted as JSON via New-I18nTable + ConvertTo-Json (no more hand-written JS string literals). Updated French translations to proper accented versions (G&#195;&#169;n&#195;&#169;r&#195;&#169;/P&#195;&#169;riode, Entr&#195;&#169;es, Activit&#195;&#169;, etc.) with correct apostrophes, then re-rendered WORK_IMPACT.html (from 2026-03-10) and verified FR toggle renders without console errors.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>render-work-impact.ps1 -StartDate 2026-03-10</code></li>
+        <li><code>Browser verify: toggle FR</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/render-work-impact.ps1</code></li>
+        <li><code>agent-ledger/WORK_IMPACT.html</code></li>
+        <li><code>WORK_IMPACT.html</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-04 20:17 - agent-ledger</strong> <span class="kind">code-change</span> - Fixed WORK_IMPACT.html rendering failure caused by manually edited translation strings introducing unescaped quotes in the JS i18n block. Updated render-work-impact.ps1 to gener...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Fixed WORK_IMPACT.html rendering failure caused by manually edited translation strings introducing unescaped quotes in the JS i18n block. Updated render-work-impact.ps1 to generate i18n as JSON (New-I18nTable + ConvertTo-Json) so translations cannot break JS parsing. Re-rendered WORK_IMPACT.html (start 2026-03-10) and verified EN/FR toggle works and there are no console errors/warnings.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>render-work-impact.ps1 -StartDate 2026-03-10</code></li>
+        <li><code>Browser verify: domSnapshot + language toggle</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/render-work-impact.ps1</code></li>
+        <li><code>agent-ledger/WORK_IMPACT.html</code></li>
+        <li><code>WORK_IMPACT.html</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-04 20:09 - agent-ledger</strong> <span class="kind">code-change</span> - Updated render-work-impact.ps1 to support -StartDate (inclusive local date) so WORK_IMPACT.html can be generated for a specific period. Re-rendered WORK_IMPACT.html for 2026-03-...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Updated render-work-impact.ps1 to support -StartDate (inclusive local date) so WORK_IMPACT.html can be generated for a specific period. Re-rendered WORK_IMPACT.html for 2026-03-10 through now and mirrored it to the parent WORK_IMPACT.html.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>render-work-impact.ps1 -StartDate 2026-03-10</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/render-work-impact.ps1</code></li>
+        <li><code>agent-ledger/WORK_IMPACT.html</code></li>
+        <li><code>WORK_IMPACT.html</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-04 19:45 - agent-ledger</strong> <span class="kind">code-change</span> - Added a self-contained bilingual (EN/FR) WORK_IMPACT.html visualization generated from agent-ledger/events. New render-work-impact.ps1 parses events, recomputes clean/raw line s...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>

@@ -1,0 +1,23 @@
+{
+  "id": "20260504-200939-572-agent-ledger-95a56709",
+  "createdAt": "2026-05-05T00:09:39.5724383Z",
+  "createdAtLocal": "2026-05-04 20:09",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Updated render-work-impact.ps1 to support -StartDate (inclusive local date) so WORK_IMPACT.html can be generated for a specific period. Re-rendered WORK_IMPACT.html for 2026-03-10 through now and mirrored it to the parent WORK_IMPACT.html.",
+  "commands": [
+    "render-work-impact.ps1 -StartDate 2026-03-10"
+  ],
+  "files": [
+    "agent-ledger/scripts/render-work-impact.ps1",
+    "agent-ledger/WORK_IMPACT.html",
+    "WORK_IMPACT.html"
+  ],
+  "planPath": "",
+  "contentHash": "95a56709d76412763330b6f9a464251017684cc9ca85cfff9fa2697ae4efb9c8",
+  "git": null
+}
