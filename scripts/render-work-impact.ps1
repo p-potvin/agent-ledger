@@ -306,9 +306,9 @@ $template = @'
       <h1 id="title" data-i18n="title">Work Impact</h1>
       <div class="meta">
         <span id="subtitle" data-i18n="subtitle"></span>
-        <span class="quiet"> &#xB7; </span>
+        <span class="quiet"> &#xb7; </span>
         <span class="quiet"><span data-i18n="range">Range</span>: <span id="range"></span></span>
-        <span class="quiet"> &#xB7; </span>
+        <span class="quiet"> &#xb7; </span>
         <span class="quiet"><span data-i18n="generated">Generated</span>: <span id="generated"></span></span>
       </div>
     </div>
