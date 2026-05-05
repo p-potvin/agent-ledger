@@ -53,8 +53,10 @@ Preferred local command:
 ```
 
 Rules:
+- Use `yyyy-MM-dd HH:mm` local time; the script fills this automatically.
 - Keep the summary under 1024 tokens.
 - Do not log secrets, tokens, private keys, credentials, or sensitive personal data.
+- Do not duplicate an existing event; the script deduplicates matching content.
 - If the ledger script or `CHANGES.md` cannot be accessed, say so in your reply.
 - When starting a task, consult `CHANGES.md`, `agent-ledger\CHANGES.md`, and the active project's roadmap/todo files to stay on course.
 
