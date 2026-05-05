@@ -1,0 +1,30 @@
+﻿{
+    "id":  "20260505-063720-721-link-sharing-71fbb376",
+    "createdAt":  "2026-05-05T10:37:20.7214027Z",
+    "createdAtLocal":  "2026-05-05 06:37",
+    "timezone":  "Eastern Standard Time",
+    "project":  "link-sharing",
+    "kind":  "general",
+    "actor":  "AI Agent",
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\link-sharing",
+    "summary":  "Deployment preparation complete. Configured Fastify to serve the React admin UI in production, fixed build directory structure issues with rootDir, and created Render (blueprint) and Local (NSSM) deployment scripts. All builds verified.",
+    "commands":  [
+                     "pnpm build"
+                 ],
+    "files":  [
+                  "render.yaml",
+                  "scripts/deploy-local.ps1",
+                  "server/index.ts",
+                  "server/tsconfig.json"
+              ],
+    "planPath":  "",
+    "contentHash":  "71fbb376c5146d783b0d17061ad17cfabed7c05d62447b59a4f00682d29962b9",
+    "git":  {
+                "repo":  "link-sharing",
+                "root":  "C:/Users/Administrator/Desktop/business/link-sharing",
+                "branch":  "main",
+                "head":  "7984759",
+                "hasChanges":  true
+            }
+}
