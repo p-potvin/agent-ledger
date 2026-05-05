@@ -1,0 +1,25 @@
+{
+  "id": "20260505-110625-377-usd-playground-ab521859",
+  "createdAt": "2026-05-05T15:06:25.3772273Z",
+  "createdAtLocal": "2026-05-05 11:06",
+  "timezone": "Eastern Standard Time",
+  "project": "usd-playground",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\usd-playground",
+  "summary": "Fixed VS Code not auto-activating .venv in integrated terminals. Root cause: .vscode/settings.json had no Python interpreter configuration. Added python.defaultInterpreterPath pointing to .venv\\Scripts\\python.exe and enabled python.terminal.activateEnvironment + python.terminal.activateEnvInCurrentTerminal. The .venv was created by uv (pyvenv.cfg shows uv=0.10.10) and works correctly when activated — VS Code just wasn't told to use it.",
+  "commands": [],
+  "files": [
+    ".vscode/settings.json"
+  ],
+  "planPath": "",
+  "contentHash": "ab5218598c04b9339f4388cdfd183c4358f8a0e94766df4578869c1a21970d87",
+  "git": {
+    "repo": "usd-playground",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/usd-playground",
+    "branch": "main",
+    "head": "fa4abbb",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "20260505-104355-122-usd-playground-cd18df8c",
+  "createdAt": "2026-05-05T14:43:55.1225582Z",
+  "createdAtLocal": "2026-05-05 10:43",
+  "timezone": "Eastern Standard Time",
+  "project": "usd-playground",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\usd-playground",
+  "summary": "Fixed ModuleNotFoundError: No module named 'PySide6'. The previous 'pip install pyside6' had run against the global Python, not the .venv. Ran ensurepip to bootstrap pip inside .venv, then installed PySide6==6.11.0 via .venv/Scripts/python.exe -m pip install PySide6. Verified import successful.",
+  "commands": [
+    ".venv\\Scripts\\python.exe -m ensurepip --upgrade",
+    ".venv\\Scripts\\python.exe -m pip install PySide6"
+  ],
+  "files": [
+    "requirements.txt"
+  ],
+  "planPath": "",
+  "contentHash": "cd18df8c1259a3d3360fce045fd26674c0ce5e16d0e4701403258caae7d534f1",
+  "git": {
+    "repo": "usd-playground",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/usd-playground",
+    "branch": "main",
+    "head": "fa4abbb",
+    "hasChanges": false
+  }
+}
