@@ -1,0 +1,26 @@
+{
+  "id": "20260505-111901-643-usd-playground-6f2dd2c6",
+  "createdAt": "2026-05-05T15:19:01.6437939Z",
+  "createdAtLocal": "2026-05-05 11:19",
+  "timezone": "Eastern Standard Time",
+  "project": "usd-playground",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\usd-playground",
+  "summary": "Fixed all 21 Pylance errors in gui_app.py. Changes: (1) Switched qfluentwidgets grouped import to individual lines with # type: ignore[assignment] on FluentWindow, PrimaryPushButton, SubtitleLabel, setTheme, setThemeColor, BodyLabel. (2) Added DARK=None to _FallbackTheme class. (3) Updated Qt enum namespacing for PySide6: AlignRight->AlignmentFlag.AlignRight, AlignCenter->AlignmentFlag.AlignCenter, UserRole->ItemDataRole.UserRole, KeepAspectRatio->AspectRatioMode.KeepAspectRatio, SmoothTransformation->TransformationMode.SmoothTransformation. (4) QLineEdit.Password->QLineEdit.EchoMode.Password. (5) Added isinstance guard for QApplication.instance().setStyleSheet. (6) Added # type: ignore[attr-defined] on sys.stdout/stderr.reconfigure. (7) Fixed _tm.get_theme(index)->get_theme(index=index). (8) Added python.analysis.extraPaths for vault-themes to .vscode/settings.json.",
+  "commands": [],
+  "files": [
+    "gui_app.py",
+    ".vscode/settings.json"
+  ],
+  "planPath": "",
+  "contentHash": "6f2dd2c6ec3a9048f9ad15786bb6062f07cb311d798733810daaff099c2e5c5c",
+  "git": {
+    "repo": "usd-playground",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/usd-playground",
+    "branch": "main",
+    "head": "fa4abbb",
+    "hasChanges": true
+  }
+}

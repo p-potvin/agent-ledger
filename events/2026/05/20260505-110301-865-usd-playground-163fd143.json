@@ -1,0 +1,25 @@
+{
+  "id": "20260505-110301-865-usd-playground-163fd143",
+  "createdAt": "2026-05-05T15:03:01.8653895Z",
+  "createdAtLocal": "2026-05-05 11:03",
+  "timezone": "Eastern Standard Time",
+  "project": "usd-playground",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\usd-playground",
+  "summary": "Fixed AttributeError crashes in gui_app.py style helpers. VaultTheme has no 'border_subtle', 'danger', or 'accent_hover' attributes. Replaced: border_subtle->border (in card_style and state_card_style), danger->error (in state_card_style), accent_hover->accent_muted (in state_card_style). App now imports and initializes without errors.",
+  "commands": [],
+  "files": [
+    "gui_app.py"
+  ],
+  "planPath": "",
+  "contentHash": "163fd143602f5f9e39323fe6781856a34d0bee246214c7e208b67729353477a3",
+  "git": {
+    "repo": "usd-playground",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/usd-playground",
+    "branch": "main",
+    "head": "fa4abbb",
+    "hasChanges": true
+  }
+}
