@@ -1,0 +1,35 @@
+{
+  "id": "20260506-061529-000-agent-ledger-copilot-work-impact-revamp",
+  "createdAt": "2026-05-06T06:35:41.859356Z",
+  "createdAtLocal": "2026-05-06 06:15",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "summary": "Work impact page revamp: fixed commit size/tech volume/files touched zero-data handling, switched milestones/strongest-week positions, reworked Evidence section into collapsible project cards, applied VaultWares branding (--vault-gold, --vault-cyan, --vault-green, --vault-burgundy, --vault-slate CSS tokens, dark-first design), added agent data section (actor/model/tools/MCP tracking from May 5+ events), added hour-of-day and day-of-week activity charts, updated update-work-impact-state.ps1 to collect agentData/hourSeries/dowSeries.",
+  "actor": "GitHub Copilot",
+  "runtime": {
+    "model": "claude-sonnet-4.6",
+    "toolsUsed": [
+      "view",
+      "edit",
+      "bash",
+      "grep",
+      "glob",
+      "create",
+      "report_progress"
+    ],
+    "mcpServersAccessed": "github-mcp-server-actions_list",
+    "mode": "Default",
+    "permissions": "sandbox_mode",
+    "network": "enabled"
+  },
+  "files": [
+    "WORK_IMPACT.html",
+    "scripts/render-work-impact.ps1",
+    "scripts/update-work-impact-state.ps1"
+  ],
+  "commands": [
+    "python3 /tmp/gen_work_impact.py",
+    "python3 (CSS var rename)",
+    "python3 (PS1 template update)"
+  ]
+}
