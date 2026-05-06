@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-05T23:27:01.2949304Z",
+    "lastUpdatedUtc":  "2026-05-06T00:27:01.1546034Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1216,7 +1216,9 @@
                                        "20260505-110625-377-usd-playground-ab521859",
                                        "20260505-111901-643-usd-playground-6f2dd2c6",
                                        "20260505-183216-866-vaultwares-agentciation-3ed02b47",
-                                       "20260505-184807-619-vaultwares-agentciation-88780d70"
+                                       "20260505-184807-619-vaultwares-agentciation-88780d70",
+                                       "20260505-193227-545-vault-themes-40764d3f",
+                                       "20260505-202532-744-agent-ledger-c4fcffe7"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2264,7 +2266,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  224
+                                                   "count":  226
                                                }
                                            ],
                                 "days":  [
@@ -3084,21 +3086,21 @@
                                                                   "vault-themes",
                                                                   "vaultwares-agentciation"
                                                               ],
-                                                 "entries":  28,
+                                                 "entries":  30,
                                                  "day":  "2026-05-05",
                                                  "kinds":  {
+                                                               "code-change":  17,
                                                                "commands":  2,
+                                                               "verification":  3,
                                                                "plan":  4,
-                                                               "general":  4,
-                                                               "verification":  2,
-                                                               "code-change":  16
+                                                               "general":  4
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1148
+                                                  "count":  1149
                                               },
                                               {
                                                   "kind":  "plan",
@@ -3110,7 +3112,7 @@
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  11
+                                                  "count":  12
                                               },
                                               {
                                                   "kind":  "general",
@@ -3485,7 +3487,7 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  29
+                                                                   "code-change":  30
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -3493,11 +3495,11 @@
                                                                        "files":  0
                                                                    },
                                                      "project":  "vault-themes",
-                                                     "entries":  29,
+                                                     "entries":  30,
                                                      "recent":  [
-                                                                    "Backfill: commit 240155e (2026-05-03T07:19:07-04:00) - added qt pyside6 theme exporter | files=2 +115 -1",
                                                                     "Backfill: commit ee16543 (2026-05-03T07:53:25-04:00) - added minimal icons | files=7 +0 -3",
-                                                                    "Implemented vault-themes cleanup plan: reorganized brand/assets/theme-manager/components/docs/examples layout; converted generated brand guide into maintainable docs plus lightw..."
+                                                                    "Implemented vault-themes cleanup plan: reorganized brand/assets/theme-manager/components/docs/examples layout; converted generated brand guide into maintainable docs plus lightw...",
+                                                                    "Removed vaultwares-agentciation from vault-themes so both source-of-truth repos stay independent. Removed the newly added vaultwares-agentciation submodule and .gitmodules file ..."
                                                                 ],
                                                      "firstDay":  "2026-03-27",
                                                      "lastDay":  "2026-05-05",
@@ -3718,7 +3720,7 @@
                                                  {
                                                      "kinds":  {
                                                                    "commands":  3,
-                                                                   "verification":  2,
+                                                                   "verification":  3,
                                                                    "code-change":  10
                                                                },
                                                      "lineClean":  {
@@ -3727,14 +3729,43 @@
                                                                        "files":  0
                                                                    },
                                                      "project":  "agent-ledger",
-                                                     "entries":  15,
+                                                     "entries":  16,
                                                      "recent":  [
-                                                                    "Work impact report: fixed HTML generation break (JS template literals were getting mangled) and regenerated WORK_IMPACT from state; ensured EN/QC i18n toggle works; updated incr...",
                                                                     "Verified GitHub Actions deploy pipeline: refresh job succeeds and deploy job succeeds when Vercel token is present. Added token fallback (AGENT_LEDGER -\u003e VERCEL_TOKEN) to avoid ...",
-                                                                    "Registered local Windows scheduled task AgentLedgerWorkImpactRefresh to run every 15 minutes and refresh WORK_IMPACT.html incrementally (no git sync/push)."
+                                                                    "Registered local Windows scheduled task AgentLedgerWorkImpactRefresh to run every 15 minutes and refresh WORK_IMPACT.html incrementally (no git sync/push).",
+                                                                    "Verified ledger-only Agent Header metadata path with duplicate tool and MCP inputs so record-agent-change.ps1 can deduplicate them before event storage and rendering."
                                                                 ],
                                                      "firstDay":  "2026-04-28",
                                                      "lastDay":  "2026-05-05",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  15
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "automation-suite",
+                                                     "entries":  15,
+                                                     "recent":  [
+                                                                    "Backfill: commit 2b2ec43 (2026-04-24T10:43:06-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=1 +1 -1",
+                                                                    "Backfill: commit 25683c2 (2026-04-25T21:05:22-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=2 +2 -2",
+                                                                    "Backfill: commit 7be29d9 (2026-05-01T17:52:12-04:00) - Automated commit: Updated files in automation-suite | files=2 +2 -2"
+                                                                ],
+                                                     "firstDay":  "2026-03-11",
+                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -3796,35 +3827,6 @@
                                                                 ],
                                                      "firstDay":  "2026-04-23",
                                                      "lastDay":  "2026-05-05",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  15
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "automation-suite",
-                                                     "entries":  15,
-                                                     "recent":  [
-                                                                    "Backfill: commit 2b2ec43 (2026-04-24T10:43:06-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=1 +1 -1",
-                                                                    "Backfill: commit 25683c2 (2026-04-25T21:05:22-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=2 +2 -2",
-                                                                    "Backfill: commit 7be29d9 (2026-05-01T17:52:12-04:00) - Automated commit: Updated files in automation-suite | files=2 +2 -2"
-                                                                ],
-                                                     "firstDay":  "2026-03-11",
-                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4443,7 +4445,7 @@
                             },
                  "totals":  {
                                 "projects":  45,
-                                "events":  1209,
+                                "events":  1211,
                                 "uniqueCommitsRecomputed":  1030,
                                 "activeDays":  53,
                                 "commitEventsWithStats":  1030
@@ -19900,8 +19902,8 @@
                                            "filesExcluded":  0
                                        }
                                    ],
-                 "generatedAtLocal":  "2026-05-05 19:27",
-                 "_maxCreatedAtUtc":  "2026-05-05T22:48:07.6198675Z",
+                 "generatedAtLocal":  "2026-05-05 20:27",
+                 "_maxCreatedAtUtc":  "2026-05-06T00:25:32.7441890Z",
                  "range":  {
                                "start":  "2026-03-11",
                                "end":  "2026-05-05"
