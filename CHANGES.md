@@ -3,6 +3,117 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-06 16:59 - agent-ledger</strong> <code>code-change</code> - Added safe Vercel auth diagnostics to the GitHub Actions deploy workflow and trimmed CR/LF from VERCEL_TOKEN before invoking Vercel CLI. New step runs ercel whoami so we can te...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-06 16:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added safe Vercel auth diagnostics to the GitHub Actions deploy workflow and trimmed CR/LF from VERCEL_TOKEN before invoking Vercel CLI. New step runs ercel whoami so we can tell whether the secret is empty/has newline/was revoked vs a later deploy failure.
+- Commands:
+  - `Get-Content .github/workflows/deploy-work-impact.yml`
+  - `git diff -- .github/workflows/deploy-work-impact.yml`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\.github\workflows\deploy-work-impact.yml`
+
+</details>
+
+<details>
+<summary><strong>2026-05-06 16:48 - tube-site</strong> <code>code-change</code> - Tube plugins: made GitHub Actions deploy zips include top-level plugin folder; added ad rotation support (--- delimited multi-snippet per slot) and new ad spots (sidebar, inline...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-06 16:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tube plugins: made GitHub Actions deploy zips include top-level plugin folder; added ad rotation support (--- delimited multi-snippet per slot) and new ad spots (sidebar, inline archive, below-embed / inplayer); added Diagnostics admin pages to confirm pagination/back-catalog (published count and estimated archive pages >=100); fixed popunder/ad scripts rendering as visible escaped code by decoding HTML entities on output and enabling script-capable sanitization for admins.
+- Commands:
+  - `Get-ChildItem -Force`
+  - `Get-Content .github/workflows/*.yml`
+  - `git diff --name-only`
+- Files:
+  - `C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml`
+  - `C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml`
+  - `C:\Users\Administrator\Desktop\business\tube-site\promking-tube\includes\ads.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\ads.php`
+
+</details>
+
+<details>
+<summary><strong>2026-05-06 05:25 - fastmcp</strong> <code>code-change</code> - Implemented tiered VaultWares FastMCP server (fs/shell sessions/optional ssh/ops/diagnostics) as python package vaultwares_fastmcp; updated entrypoints + README + installer + te...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-05-06\i-want-to-extend-my-custom  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-06 05:25 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented tiered VaultWares FastMCP server (fs/shell sessions/optional ssh/ops/diagnostics) as python package vaultwares_fastmcp; updated entrypoints + README + installer + tests; verified via pytest and live MCP stdio diag_status call; ran installer to wire Codex/Claude/Gemini configs.
+- Commands:
+  - `python -m pytest -q`
+  - `python -m vaultwares_fastmcp.installer --scope global --transport stdio`
+  - `python -m vaultwares_fastmcp (stdio via mcp client)`
+- Files:
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp\\vaultwares_fastmcp\\server.py`
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp\\vaultwares_fastmcp\\installer.py`
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp\\tests\\test_tiers.py`
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp\\pyproject.toml`
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp\\README.md`
+
+</details>
+
+<details>
+<summary><strong>2026-05-06 05:03 - scripts</strong> <code>code-change</code> - Added 4 features to frame_extractor.py/run_extractor.py: (1) max_frames=5 param in extract_keyframes() &#226;€” passes -vframes N to ffmpeg; (2) max_frames=5 added to process_video()...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\scripts  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-06 05:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added 4 features to frame_extractor.py/run_extractor.py: (1) max_frames=5 param in extract_keyframes() â€” passes -vframes N to ffmpeg; (2) max_frames=5 added to process_video() and forwarded through; (3) run_extractor.py positional arg renamed to input_path (VIDEO_OR_DIR), accepts file or directory; (4) --max-frames INT flag (default 5, 0=unlimited); (5) --ignore-pattern PATTERN flag (fnmatch, repeatable, action=append); (6) _make_run_dir() helper creates extracted_frames_YYYYMMDD_N non-clobbering output subdirs; (7) main() rewritten to handle folder enumeration, ignore-pattern filtering, per-video subdirs when folder input, timestamped run dir.
+- Files:
+  - `frame_extractor.py`
+  - `run_extractor.py`
+
+</details>
+
+<details>
 <summary><strong>2026-05-06 04:11 - agent-ledger</strong> <code>code-change</code> - Applied vault-themes branding to WORK_IMPACT.html. (1) Replaced :root CSS block with Golden Slate tokens (bg:#2E3538, ac:#D4AF37, etc.). (2) Removed @media prefers-color-scheme:...</summary>
 
 - Kind: code-change
