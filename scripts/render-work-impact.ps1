@@ -653,7 +653,7 @@ $template = @'
       const fmt1 = (n)=> new Intl.NumberFormat(undefined,{maximumFractionDigits:1}).format(n);
       const fmt2 = (n)=> new Intl.NumberFormat(undefined,{maximumFractionDigits:2}).format(n);
       const fmtSigned = (n)=> (n>=0?"+":"") + fmtInt(n);
-      const esc = (s)=> String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/\'/g,"&#39;");
+      const esc = (s)=> String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
 
       const supported = Object.keys(I18N);
       let saved = null;
