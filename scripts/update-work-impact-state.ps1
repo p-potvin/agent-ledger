@@ -191,6 +191,17 @@ $minUtc = $null
 $maxUtc = $null
 $commitEventsWithStats = 0
 
+# New: hour-of-day, day-of-week, agent data
+# Typed int arrays ensure each element is an independent integer (not an object reference).
+$hourCounts = [int[]](0..23 | ForEach-Object { 0 })   # 24 int zeros, index = local hour 0-23
+$dowCounts  = [int[]](0..6  | ForEach-Object { 0 })   # 7 int zeros, index = Mon=0 .. Sun=6
+$agentActorCounts = @{}
+$agentModelCounts = @{}
+$agentToolCounts = @{}
+$agentMcpCounts = @{}
+$agentDayBuckets = @{}        # day -> { count; actors HashSet; models HashSet }
+$agentTotalEvents = 0
+
 if ($state.data) {
     # Rehydrate from prior state for fast incremental updates.
     try {
@@ -234,6 +245,18 @@ if ($state.data) {
         $processedCommitKeys.Clear()
     }
 }
+
+# Hour/dow/agent counters are always rebuilt from all events (fast, no git I/O).
+# Resetting here (not just on first run) guarantees correctness even when rehydration
+# brought in prior state – these counters must always reflect ALL events in the window.
+$hourCounts = [int[]](0..23 | ForEach-Object { 0 })
+$dowCounts  = [int[]](0..6  | ForEach-Object { 0 })
+$agentActorCounts = @{}
+$agentModelCounts = @{}
+$agentToolCounts = @{}
+$agentMcpCounts = @{}
+$agentDayBuckets = @{}
+$agentTotalEvents = 0
 
 $eventsRoot = Join-Path $LedgerRoot 'events'
 if (-not (Test-Path -LiteralPath $eventsRoot)) {
@@ -369,6 +392,72 @@ Get-ChildItem -Path $eventsRoot -Recurse -File -Filter '*.json' |
         }
     }
 
+# --- Second pass: hour-of-day, day-of-week, agent data (all events, fast, no git I/O) ---
+Get-ChildItem -Path $eventsRoot -Recurse -File -Filter '*.json' |
+    Sort-Object -Property FullName |
+    ForEach-Object {
+        $path2 = $_.FullName
+        $e2 = $null
+        try { $e2 = Get-Content -Raw -LiteralPath $path2 | ConvertFrom-Json } catch { return }
+        if (-not $e2) { return }
+
+        $utc2 = Safe-ParseUtc ([string]$e2.createdAt)
+        if (-not $utc2) { return }
+        $local2 = To-LocalTime $utc2
+        if ($local2 -lt $startLocal) { return }
+
+        $hour2 = [int]$local2.Hour
+        $dow2 = [int]$local2.DayOfWeek   # 0=Sun..6=Sat, convert to Mon=0
+        $dowMon = if ($dow2 -eq 0) { 6 } else { $dow2 - 1 }
+        $hourCounts[$hour2] += 1
+        $dowCounts[$dowMon] += 1
+
+        # Agent data: only events with a runtime field
+        if ($e2.runtime) {
+            $agentTotalEvents += 1
+            $actor2 = if ($e2.actor) { [string]$e2.actor } else { 'Unknown' }
+            $model2 = if ($e2.runtime.model) { [string]$e2.runtime.model } else { 'unknown' }
+
+            Add-Count -Table $agentActorCounts -Key $actor2
+            Add-Count -Table $agentModelCounts -Key $model2
+
+            $tools2 = @($e2.runtime.toolsUsed)
+            foreach ($tool2 in $tools2) {
+                $ts = ([string]$tool2).Trim()
+                if (-not [string]::IsNullOrWhiteSpace($ts)) { Add-Count -Table $agentToolCounts -Key $ts }
+            }
+            $mcpRaw = [string]$e2.runtime.mcpServersAccessed
+            if (-not [string]::IsNullOrWhiteSpace($mcpRaw) -and $mcpRaw.ToLower() -ne 'none') {
+                foreach ($mc in ($mcpRaw -split ',')) {
+                    $ms2 = $mc.Trim()
+                    if (-not [string]::IsNullOrWhiteSpace($ms2)) { Add-Count -Table $agentMcpCounts -Key $ms2 }
+                }
+            }
+
+            $day2 = $local2.ToString('yyyy-MM-dd')
+            if (-not $agentDayBuckets.ContainsKey($day2)) {
+                $agentDayBuckets[$day2] = [pscustomobject]@{
+                    day = $day2; count = 0
+                    actors = New-Object System.Collections.Generic.HashSet[string]
+                    models = New-Object System.Collections.Generic.HashSet[string]
+                }
+            }
+            $agentDayBuckets[$day2].count += 1
+            [void]$agentDayBuckets[$day2].actors.Add($actor2)
+            [void]$agentDayBuckets[$day2].models.Add($model2)
+        }
+    }
+
+$agentDaySeries = @($agentDayBuckets.Values | Sort-Object -Property day | ForEach-Object {
+    @{ day = $_.day; count = $_.count; actors = @($_.actors | Sort-Object); models = @($_.models | Sort-Object) }
+})
+$agentActorList = @($agentActorCounts.GetEnumerator() | Sort-Object -Property Value -Descending | ForEach-Object { @($_.Key, $_.Value) })
+$agentModelList = @($agentModelCounts.GetEnumerator() | Sort-Object -Property Value -Descending | ForEach-Object { @($_.Key, $_.Value) })
+$agentToolList  = @($agentToolCounts.GetEnumerator()  | Sort-Object -Property Value -Descending | Select-Object -First 15 | ForEach-Object { @($_.Key, $_.Value) })
+$agentMcpList   = @($agentMcpCounts.GetEnumerator()   | Sort-Object -Property Value -Descending | ForEach-Object { @($_.Key, $_.Value) })
+
+$dowLabels = @('Mon','Tue','Wed','Thu','Fri','Sat','Sun')
+
 # Overall line stats are derived from per-project buckets, which are updated once per newly-seen commit.
 $overallRaw = @{ insertions = 0; deletions = 0; files = 0 }
 $overallClean = @{ insertions = 0; deletions = 0; files = 0 }
@@ -454,6 +543,16 @@ $data = @{
             'Line stats are recomputed from git commits referenced by Backfill events.',
             'Clean stats exclude common dependency/build/cache/generated folders (regex above).'
         )
+    }
+    hourSeries = @(0..23 | ForEach-Object { @{ hour = $_; count = $hourCounts[$_] } })
+    dowSeries = @(0..6 | ForEach-Object { @{ dow = $_; label = $dowLabels[$_]; count = $dowCounts[$_] } })
+    agentData = @{
+        totalEvents = $agentTotalEvents
+        actors     = $agentActorList
+        models     = $agentModelList
+        tools      = $agentToolList
+        mcpServers = $agentMcpList
+        daySeries  = $agentDaySeries
     }
     _minCreatedAtUtc = $minIso
     _maxCreatedAtUtc = $maxIso
