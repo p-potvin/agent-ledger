@@ -1,0 +1,31 @@
+{
+  "id": "20260506-032304-539-scripts-c22bf624",
+  "createdAt": "2026-05-06T07:23:04.5398126Z",
+  "createdAtLocal": "2026-05-06 03:23",
+  "timezone": "Eastern Standard Time",
+  "project": "scripts",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-06 03:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts",
+  "summary": "Fixed offline-mode crash for FluxTransformer2DModel. flux1-dev-fp8-e4m3fn.safetensors is not in diffusers' built-in filename map so it fell back to fetching black-forest-labs/FLUX.1-dev config from HF Hub. Created models/diffusion/config.json with correct FLUX.1-dev transformer params (attention_head_dim=128, num_layers=19, num_single_layers=38, guidance_embeds=true, etc.) and passed config=os.path.dirname(transformer_path) to from_single_file.",
+  "commands": [],
+  "files": [
+    "scripts/frame_extractor.py",
+    "scripts/models/diffusion/config.json"
+  ],
+  "planPath": "",
+  "contentHash": "c22bf62448a9c547fa8f6792993766facfbcacb73ae25d346a1f48fc6d34d62a",
+  "git": null
+}
