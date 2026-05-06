@@ -93,6 +93,18 @@ function New-I18nTable {
             agentHint = 'Entries recorded with an agent runtime header (available from May 2026).'
             activityTitle = 'When work happens'
             activityHint = 'Hour of day and day of week distributions across all entries.'
+            noCommitData = 'No commit data yet.'
+            commitLineDataUnavailable = '{n} commits referenced. Line-count data requires local access to the git repositories. Run update-work-impact.ps1 locally to populate.'
+            lineStatsUnavailable = 'Line-count data requires local access to git repositories. Run update-work-impact.ps1 locally.'
+            fileDataUnavailable = '{n} commits referenced. File count data requires local git access.'
+            noMcpData = 'No MCP servers.'
+            noAgentDays = 'No agent activity days yet.'
+            noSummaries = 'No summaries.'
+            agentEventsLabel = 'Agent events'
+            distinctActors = 'Distinct actors'
+            modelsUsed = 'Models used'
+            toolsUsed = 'Tools used'
+            streakMax = 'Max: {n} days'
             kindLabels = [ordered]@{
                 'code-change' = 'Built / changed'
                 'plan' = 'Planning'
@@ -174,6 +186,18 @@ function New-I18nTable {
             agentHint = "Entr$([char]0x00e9)es avec un en-t$([char]0x00ea)te d$([char]0x2019)agent runtime (disponible depuis mai 2026)."
             activityTitle = 'Quand le travail se passe'
             activityHint = 'Distribution par heure du jour et jour de la semaine.'
+            noCommitData = 'Pas encore de commits.'
+            commitLineDataUnavailable = "{n} commits r$([char]0x00e9)f$([char]0x00e9)renc$([char]0x00e9)s. Les donn$([char]0x00e9)es de lignes n$([char]0x00e9)cessitent un acc$([char]0x00e8)s local aux d$([char]0x00e9)p$([char]0x00f4)ts git."
+            lineStatsUnavailable = "Les donn$([char]0x00e9)es de lignes n$([char]0x00e9)cessitent un acc$([char]0x00e8)s local aux d$([char]0x00e9)p$([char]0x00f4)ts git. Ex$([char]0x00e9)cutez update-work-impact.ps1 localement."
+            fileDataUnavailable = "{n} commits r$([char]0x00e9)f$([char]0x00e9)renc$([char]0x00e9)s. Donn$([char]0x00e9)es de fichiers non disponibles sans acc$([char]0x00e8)s local."
+            noMcpData = 'Aucun serveur MCP.'
+            noAgentDays = "Aucune journ$([char]0x00e9)e avec agent."
+            noSummaries = "Aucun r$([char]0x00e9)sum$([char]0x00e9)."
+            agentEventsLabel = "$([char]0x00c9)v$([char]0x00e9)nements d$([char]0x2019)agent"
+            distinctActors = 'Acteurs distincts'
+            modelsUsed = "Mod$([char]0x00e8)les utilis$([char]0x00e9)s"
+            toolsUsed = "Outils utilis$([char]0x00e9)s"
+            streakMax = "Max$([char]0x00a0): {n} jours"
             kindLabels = [ordered]@{
                 'code-change' = "Construit / modifi$([char]0x00e9)"
                 'plan' = 'Planification'
@@ -629,7 +653,7 @@ $template = @'
       const fmt1 = (n)=> new Intl.NumberFormat(undefined,{maximumFractionDigits:1}).format(n);
       const fmt2 = (n)=> new Intl.NumberFormat(undefined,{maximumFractionDigits:2}).format(n);
       const fmtSigned = (n)=> (n>=0?"+":"") + fmtInt(n);
-      const esc = (s)=> String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+      const esc = (s)=> String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/\'/g,"&#39;");
 
       const supported = Object.keys(I18N);
       let saved = null;
@@ -862,7 +886,7 @@ $template = @'
         container.innerHTML = "";
 
         if(totalSamples === 0){
-          container.innerHTML = '<div class="no-data">No commit data yet.</div>';
+          container.innerHTML = '<div class="no-data">' + esc(t("noCommitData")) + '</div>';
           return;
         }
 
@@ -870,9 +894,8 @@ $template = @'
           // Show the commit count but explain line data isn't available
           const note = document.createElement("div");
           note.className = "info-note";
-          note.textContent = lang === "qc"
-            ? totalSamples + " commits r\u00e9f\u00e9renc\u00e9s. Les donn\u00e9es de lignes n\u00e9cessitent un acc\u00e8s local aux d\u00e9p\u00f4ts git."
-            : totalSamples + " commits referenced. Line-count data requires local access to the git repositories. Run update-work-impact.ps1 locally to populate.";
+          const tmpl = t("commitLineDataUnavailable");
+          note.textContent = tmpl.replace("{n}", fmtInt(totalSamples));
           container.appendChild(note);
           return;
         }
@@ -975,9 +998,7 @@ $template = @'
         if(!hasData){
           const note = document.createElement("div");
           note.className = "info-note";
-          note.textContent = lang === "qc"
-            ? "Les donn\u00e9es de lignes n\u00e9cessitent un acc\u00e8s local aux d\u00e9p\u00f4ts git."
-            : "Line-count data requires local access to git repositories. Run update-work-impact.ps1 locally.";
+          note.textContent = t("lineStatsUnavailable");
           container.appendChild(note);
           return;
         }
@@ -1008,15 +1029,14 @@ $template = @'
         const totalSamples = files.length;
 
         if(totalSamples === 0){
-          container.innerHTML = '<div class="no-data">No commit data yet.</div>';
+          container.innerHTML = '<div class="no-data">' + esc(t("noCommitData")) + '</div>';
           return;
         }
         if(!hasData){
           const note = document.createElement("div");
           note.className = "info-note";
-          note.textContent = lang === "qc"
-            ? totalSamples + " commits r\u00e9f\u00e9renc\u00e9s. Donn\u00e9es de fichiers non disponibles sans acc\u00e8s local aux d\u00e9p\u00f4ts."
-            : totalSamples + " commits referenced. File count data requires local git access.";
+          const tmpl2 = t("fileDataUnavailable");
+          note.textContent = tmpl2.replace("{n}", fmtInt(totalSamples));
           container.appendChild(note);
           return;
         }
@@ -1028,8 +1048,8 @@ $template = @'
         const max = Math.max(1, ...sorted);
         const units = I18N[lang].units;
         const el = document.createElement("div"); el.className = "barlist";
-        makeBarFrac(lang==="qc" ? "Moyenne" : "Mean", mean, max, el, units.files);
-        makeBarFrac(lang==="qc" ? "M\u00e9diane" : "Median", median, max, el, units.files);
+        makeBarFrac(t("commitStatMean"), mean, max, el, units.files);
+        makeBarFrac(t("commitStatMedian"), median, max, el, units.files);
         makeBarFrac("P90", p90, max, el, units.files);
         container.appendChild(el);
       }
@@ -1081,7 +1101,7 @@ $template = @'
         }
         if(spread){
           document.getElementById("hl-spread").textContent = spread.day;
-          document.getElementById("hl-spread-sub").textContent = fmtInt(spread.n) + " " + (lang==="qc" ? I18N[lang].labelProjects.toLowerCase() : "projects");
+          document.getElementById("hl-spread-sub").textContent = fmtInt(spread.n) + " " + t("labelProjects").toLowerCase();
         }
 
         const { busiestWeek } = computeBusiest();
@@ -1128,9 +1148,7 @@ $template = @'
         const { current, longest } = computeStreaks();
         document.getElementById("m-streak").textContent = fmtInt(current);
         document.getElementById("m-longest").textContent = fmtInt(longest);
-        document.getElementById("m-streak-sub").textContent = lang==="qc"
-          ? ("Max\u00a0: " + fmtInt(longest) + " jours")
-          : ("Max: " + fmtInt(longest) + " days");
+        document.getElementById("m-streak-sub").textContent = t("streakMax").replace("{n}", fmtInt(longest));
         const { busiestDay, busiestWeek } = computeBusiest();
         if(busiestDay){
           document.getElementById("m-bday").textContent = busiestDay.day;
@@ -1186,10 +1204,10 @@ $template = @'
         const kpiEl = document.getElementById("agentKpi");
         kpiEl.innerHTML = "";
         const kpis = [
-          { label: lang==="qc" ? "\u00c9v\u00e9nements d\u2019agent" : "Agent events", val: fmtInt(ag.totalEvents) },
-          { label: lang==="qc" ? "Acteurs distincts" : "Distinct actors", val: fmtInt((ag.actors||[]).length) },
-          { label: lang==="qc" ? "Mod\u00e8les utilis\u00e9s" : "Models used", val: fmtInt((ag.models||[]).length) },
-          { label: lang==="qc" ? "Outils utilis\u00e9s" : "Tools used", val: fmtInt((ag.tools||[]).length) },
+          { label: t("agentEventsLabel"), val: fmtInt(ag.totalEvents) },
+          { label: t("distinctActors"), val: fmtInt((ag.actors||[]).length) },
+          { label: t("modelsUsed"), val: fmtInt((ag.models||[]).length) },
+          { label: t("toolsUsed"), val: fmtInt((ag.tools||[]).length) },
         ];
         kpis.forEach(k => {
           const card = document.createElement("div"); card.className = "agent-kpi-card";
@@ -1211,7 +1229,7 @@ $template = @'
           const mmax = Math.max(1, ...ag.mcpServers.map(([,c])=>c||0));
           ag.mcpServers.forEach(([name, count]) => makeBar("MCP: " + String(name), count, mmax, mcpEl, 'green'));
         } else {
-          mcpEl.innerHTML = '<div class="no-data">' + (lang==="qc" ? "Aucun serveur MCP." : "No MCP servers.") + '</div>';
+          mcpEl.innerHTML = '<div class="no-data">' + esc(t("noMcpData")) + '</div>';
         }
         const actorsEl = document.getElementById("agentActors");
         actorsEl.innerHTML = "";
@@ -1232,7 +1250,7 @@ $template = @'
             makeBar(label, d.count||0, dmax, daysEl);
           });
         } else {
-          daysEl.innerHTML = '<div class="no-data">' + (lang==="qc" ? "Aucune journ\u00e9e avec agent." : "No agent activity days yet.") + '</div>';
+          daysEl.innerHTML = '<div class="no-data">' + esc(t("noAgentDays")) + '</div>';
         }
       }
 
@@ -1250,7 +1268,7 @@ $template = @'
             ? '<ul class="proj-recent" style="margin:0;padding-left:18px;">' +
               recent.map(s => '<li>' + esc(String(s)) + '</li>').join('') +
               '</ul>'
-            : '<div class="no-data">' + (lang==="qc" ? "Aucun r\u00e9sum\u00e9." : "No summaries.") + '</div>';
+            : '<div class="no-data">' + esc(t("noSummaries")) + '</div>';
 
           const details = document.createElement("details");
           details.className = "proj-card";
@@ -1262,8 +1280,8 @@ $template = @'
             '</summary>' +
             '<div class="detailsBody">' +
               '<div class="proj-meta">' +
-                '<span>' + (lang==="qc"?"Premier":"First") + ': ' + esc(p.firstDay||"") + '</span>' +
-                '<span>' + (lang==="qc"?"Dernier":"Last") + ': ' + esc(p.lastDay||"") + '</span>' +
+                '<span>' + esc(t("colFirst")) + ': ' + esc(p.firstDay||"") + '</span>' +
+                '<span>' + esc(t("colLast")) + ': ' + esc(p.lastDay||"") + '</span>' +
                 kindChips +
               '</div>' +
               '<div>' + recentHtml + '</div>' +
