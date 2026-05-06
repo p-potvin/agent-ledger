@@ -192,8 +192,9 @@ $maxUtc = $null
 $commitEventsWithStats = 0
 
 # New: hour-of-day, day-of-week, agent data
-$hourCounts = [int[]](0..23 | ForEach-Object { 0 })   # 24 independent int zeros (local hour 0-23)
-$dowCounts  = [int[]](0..6  | ForEach-Object { 0 })   # 7 independent int zeros (Mon=0 .. Sun=6)
+# Typed int arrays ensure each element is an independent integer (not an object reference).
+$hourCounts = [int[]](0..23 | ForEach-Object { 0 })   # 24 int zeros, index = local hour 0-23
+$dowCounts  = [int[]](0..6  | ForEach-Object { 0 })   # 7 int zeros, index = Mon=0 .. Sun=6
 $agentActorCounts = @{}
 $agentModelCounts = @{}
 $agentToolCounts = @{}
@@ -246,7 +247,8 @@ if ($state.data) {
 }
 
 # Hour/dow/agent counters are always rebuilt from all events (fast, no git I/O).
-# We scan all events below, not just new ones, so reset counters unconditionally.
+# Resetting here (not just on first run) guarantees correctness even when rehydration
+# brought in prior state – these counters must always reflect ALL events in the window.
 $hourCounts = [int[]](0..23 | ForEach-Object { 0 })
 $dowCounts  = [int[]](0..6  | ForEach-Object { 0 })
 $agentActorCounts = @{}
