@@ -67,9 +67,21 @@ jobs:
       - name: Install Vercel CLI
         run: npm i -g vercel@latest
 
+      - name: Verify Vercel token (safe diagnostics)
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          node -e "const crypto=require('crypto'); const t=(process.env.VERCEL_TOKEN||''); const clean=t.replace(/[\\r\\n]+/g,''); const org=(process.env.VERCEL_ORG_ID||'').replace(/[\\r\\n]+/g,''); const proj=(process.env.VERCEL_PROJECT_ID||'').replace(/[\\r\\n]+/g,''); console.log('vercel_token_len', t.length); console.log('vercel_token_clean_len', clean.length); console.log('vercel_org_id_len', org.length); console.log('vercel_project_id_len', proj.length); if(!clean){ console.error('Missing VERCEL_TOKEN'); process.exit(1);} if(!org||!proj){ console.error('Missing VERCEL_ORG_ID or VERCEL_PROJECT_ID'); process.exit(1);} console.log('vercel_token_sha256_12', crypto.createHash('sha256').update(clean).digest('hex').slice(0,12));"
+          VERCEL_TOKEN_CLEAN="$(printf %s "$VERCEL_TOKEN" | tr -d '\r\n')"
+          vercel whoami --token "$VERCEL_TOKEN_CLEAN"
+
       - name: Deploy
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: vercel deploy --prod --yes --token "$VERCEL_TOKEN"
+        run: |
+          VERCEL_TOKEN_CLEAN="$(printf %s "$VERCEL_TOKEN" | tr -d '\r\n')"
+          vercel deploy --prod --yes --token "$VERCEL_TOKEN_CLEAN"

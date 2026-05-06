@@ -1,0 +1,37 @@
+{
+  "id": "20260506-164810-248-tube-site-2826ed3f",
+  "createdAt": "2026-05-06T20:48:10.2486062Z",
+  "createdAtLocal": "2026-05-06 16:48",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-06 16:48 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Tube plugins: made GitHub Actions deploy zips include top-level plugin folder; added ad rotation support (--- delimited multi-snippet per slot) and new ad spots (sidebar, inline archive, below-embed / inplayer); added Diagnostics admin pages to confirm pagination/back-catalog (published count and estimated archive pages >=100); fixed popunder/ad scripts rendering as visible escaped code by decoding HTML entities on output and enabling script-capable sanitization for admins.",
+  "commands": [
+    "Get-ChildItem -Force",
+    "Get-Content .github/workflows/*.yml",
+    "git diff --name-only"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-fullxxx-video.yml",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-promking-tube.yml",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\ads.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\ads.php"
+  ],
+  "planPath": "",
+  "contentHash": "2826ed3f910eeb90834389701d283d8f5ed74b41e641394caa1fa7b6afa45288",
+  "git": null
+}

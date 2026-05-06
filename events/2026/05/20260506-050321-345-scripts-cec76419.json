@@ -1,0 +1,31 @@
+{
+  "id": "20260506-050321-345-scripts-cec76419",
+  "createdAt": "2026-05-06T09:03:21.3457177Z",
+  "createdAtLocal": "2026-05-06 05:03",
+  "timezone": "Eastern Standard Time",
+  "project": "scripts",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-06 05:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts",
+  "summary": "Added 4 features to frame_extractor.py/run_extractor.py: (1) max_frames=5 param in extract_keyframes() — passes -vframes N to ffmpeg; (2) max_frames=5 added to process_video() and forwarded through; (3) run_extractor.py positional arg renamed to input_path (VIDEO_OR_DIR), accepts file or directory; (4) --max-frames INT flag (default 5, 0=unlimited); (5) --ignore-pattern PATTERN flag (fnmatch, repeatable, action=append); (6) _make_run_dir() helper creates extracted_frames_YYYYMMDD_N non-clobbering output subdirs; (7) main() rewritten to handle folder enumeration, ignore-pattern filtering, per-video subdirs when folder input, timestamped run dir.",
+  "commands": [],
+  "files": [
+    "frame_extractor.py",
+    "run_extractor.py"
+  ],
+  "planPath": "",
+  "contentHash": "cec764193f4adb2735b805d969f7afe4935b2592d4ae3b164498fbc8c482fcf6",
+  "git": null
+}

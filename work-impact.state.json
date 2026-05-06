@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-06T08:57:02.1187331Z",
+    "lastUpdatedUtc":  "2026-05-06T21:27:02.7812442Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1227,7 +1227,11 @@
                                        "20260506-061529-000-agent-ledger-copilot-work-impact-revamp",
                                        "20260506-032304-539-scripts-c22bf624",
                                        "20260506-033508-642-scripts-c4ebab3e",
-                                       "20260506-041146-677-agent-ledger-f09701f5"
+                                       "20260506-041146-677-agent-ledger-f09701f5",
+                                       "20260506-050321-345-scripts-cec76419",
+                                       "20260506-052531-663-fastmcp-a598bf2f",
+                                       "20260506-164810-248-tube-site-2826ed3f",
+                                       "20260506-165918-819-agent-ledger-2a2f7370"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2292,7 +2296,7 @@
                                                                         "claude-sonnet-4.6",
                                                                         "unknown"
                                                                     ],
-                                                         "count":  6
+                                                         "count":  10
                                                      }
                                                  ],
                                    "tools":  [
@@ -2321,16 +2325,16 @@
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  6,
+                                                  10,
                                                   "Codex",
                                                   3,
                                                   "GitHub Copilot",
                                                   1
                                               ],
-                                   "totalEvents":  10,
+                                   "totalEvents":  14,
                                    "models":  [
                                                   "unknown",
-                                                  9,
+                                                  13,
                                                   "claude-sonnet-4.6",
                                                   1
                                               ]
@@ -2356,7 +2360,7 @@
                                    {
                                        "label":  "Wed",
                                        "dow":  2,
-                                       "count":  136
+                                       "count":  140
                                    },
                                    {
                                        "label":  "Thu",
@@ -2401,7 +2405,7 @@
                                         "hour":  4
                                     },
                                     {
-                                        "count":  58,
+                                        "count":  60,
                                         "hour":  5
                                     },
                                     {
@@ -2445,7 +2449,7 @@
                                         "hour":  15
                                     },
                                     {
-                                        "count":  71,
+                                        "count":  73,
                                         "hour":  16
                                     },
                                     {
@@ -2494,7 +2498,7 @@
                                                  "insertions":  0
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-06 04:57",
+                 "generatedAtLocal":  "2026-05-06 17:27",
                  "series":  {
                                 "months":  [
                                                {
@@ -2507,7 +2511,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  235
+                                                   "count":  239
                                                }
                                            ],
                                 "days":  [
@@ -3343,19 +3347,21 @@
                                              {
                                                  "projects":  [
                                                                   "agent-ledger",
-                                                                  "scripts"
+                                                                  "fastmcp",
+                                                                  "scripts",
+                                                                  "tube-site"
                                                               ],
-                                                 "entries":  6,
+                                                 "entries":  10,
                                                  "day":  "2026-05-06",
                                                  "kinds":  {
-                                                               "code-change":  6
+                                                               "code-change":  10
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1156
+                                                  "count":  1160
                                               },
                                               {
                                                   "kind":  "plan",
@@ -3684,7 +3690,7 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  35
+                                                                   "code-change":  36
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -3692,14 +3698,14 @@
                                                                        "files":  0
                                                                    },
                                                      "project":  "tube-site",
-                                                     "entries":  35,
+                                                     "entries":  36,
                                                      "recent":  [
-                                                                    "Backfill: commit 7de89ed (2026-05-04T07:28:46Z) - Add features for accumulation, adblock evasion, and link checks | files=3 +49 -0",
                                                                     "Backfill: commit 9e14c1c (2026-05-04T06:12:56-04:00) - Merge pull request #7 from Prom-King/add-features-for-accumulation-and-ads-18140236532184213601 | files=0 +49 -0",
-                                                                    "Backfill: commit ca526cf (2026-05-04T18:34:32-04:00) - Automated commit: Updated files in tube-site | files=8 +46 -216"
+                                                                    "Backfill: commit ca526cf (2026-05-04T18:34:32-04:00) - Automated commit: Updated files in tube-site | files=8 +46 -216",
+                                                                    "Tube plugins: made GitHub Actions deploy zips include top-level plugin folder; added ad rotation support (--- delimited multi-snippet per slot) and new ad spots (sidebar, inline..."
                                                                 ],
                                                      "firstDay":  "2026-04-23",
-                                                     "lastDay":  "2026-05-04",
+                                                     "lastDay":  "2026-05-06",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -3947,7 +3953,7 @@
                                                      "kinds":  {
                                                                    "commands":  3,
                                                                    "verification":  3,
-                                                                   "code-change":  12
+                                                                   "code-change":  13
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -3955,11 +3961,11 @@
                                                                        "files":  0
                                                                    },
                                                      "project":  "agent-ledger",
-                                                     "entries":  18,
+                                                     "entries":  19,
                                                      "recent":  [
-                                                                    "Verified ledger-only Agent Header metadata path with duplicate tool and MCP inputs so record-agent-change.ps1 can deduplicate them before event storage and rendering.",
                                                                     "Work impact page revamp: fixed commit size/tech volume/files touched zero-data handling, switched milestones/strongest-week positions, reworked Evidence section into collapsible...",
-                                                                    "Applied vault-themes branding to WORK_IMPACT.html. (1) Replaced :root CSS block with Golden Slate tokens (bg:#2E3538, ac:#D4AF37, etc.). (2) Removed @media prefers-color-scheme:..."
+                                                                    "Applied vault-themes branding to WORK_IMPACT.html. (1) Replaced :root CSS block with Golden Slate tokens (bg:#2E3538, ac:#D4AF37, etc.). (2) Removed @media prefers-color-scheme:...",
+                                                                    "Added safe Vercel auth diagnostics to the GitHub Actions deploy workflow and trimmed CR/LF from VERCEL_TOKEN before invoking Vercel CLI. New step runs \u000bercel whoami so we can te..."
                                                                 ],
                                                      "firstDay":  "2026-04-28",
                                                      "lastDay":  "2026-05-06",
@@ -4184,6 +4190,36 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "commands":  1,
+                                                                   "code-change":  9
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "scripts",
+                                                     "entries":  10,
+                                                     "recent":  [
+                                                                    "Fixed offline-mode crash for FluxTransformer2DModel. flux1-dev-fp8-e4m3fn.safetensors is not in diffusers\u0027 built-in filename map so it fell back to fetching black-forest-labs/FL...",
+                                                                    "Fixed RAM destruction from enable_model_cpu_offload(). Added _get_device() auto-detection (CUDA vs CPU). Switched default offload to enable_sequential_cpu_offload() which stream...",
+                                                                    "Added 4 features to frame_extractor.py/run_extractor.py: (1) max_frames=5 param in extract_keyframes() â€” passes -vframes N to ffmpeg; (2) max_frames=5 added to process_video()..."
+                                                                ],
+                                                     "firstDay":  "2026-05-04",
+                                                     "lastDay":  "2026-05-06",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  9,
                                                                    "plan":  1
                                                                },
@@ -4200,35 +4236,6 @@
                                                                     "Completed Phase 3: Updated API_Exposure_Architecture_Plan.md on Desktop. Designed Tailscale Funnel + Caddy reverse proxy architecture for noddit.org (vault-flows) and vaultwares..."
                                                                 ],
                                                      "firstDay":  "2026-04-18",
-                                                     "lastDay":  "2026-05-04",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  9
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "prelanding-page",
-                                                     "entries":  9,
-                                                     "recent":  [
-                                                                    "Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookie...",
-                                                                    "Backfill: commit 31fcbb5 (2026-05-01T17:55:28-04:00) - Automated commit: Updated files in prelanding-page | files=39 +4809 -157",
-                                                                    "Backfill: commit 3dfcdd2 (2026-05-04T18:34:27-04:00) - Automated commit: Updated files in prelanding-page | files=13 +386 -93"
-                                                                ],
-                                                     "firstDay":  "2026-04-23",
                                                      "lastDay":  "2026-05-04",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
@@ -4272,23 +4279,22 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "commands":  1,
-                                                                   "code-change":  8
+                                                                   "code-change":  9
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "scripts",
+                                                     "project":  "prelanding-page",
                                                      "entries":  9,
                                                      "recent":  [
-                                                                    "Fixed offline-mode crash when loading VAE. AutoencoderKL.from_single_file(\u0027ae.safetensors\u0027) couldn\u0027t map the generic filename to a config so diffusers fell back to fetching stab...",
-                                                                    "Fixed offline-mode crash for FluxTransformer2DModel. flux1-dev-fp8-e4m3fn.safetensors is not in diffusers\u0027 built-in filename map so it fell back to fetching black-forest-labs/FL...",
-                                                                    "Fixed RAM destruction from enable_model_cpu_offload(). Added _get_device() auto-detection (CUDA vs CPU). Switched default offload to enable_sequential_cpu_offload() which stream..."
+                                                                    "Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookie...",
+                                                                    "Backfill: commit 31fcbb5 (2026-05-01T17:55:28-04:00) - Automated commit: Updated files in prelanding-page | files=39 +4809 -157",
+                                                                    "Backfill: commit 3dfcdd2 (2026-05-04T18:34:27-04:00) - Automated commit: Updated files in prelanding-page | files=13 +386 -93"
                                                                 ],
-                                                     "firstDay":  "2026-05-04",
-                                                     "lastDay":  "2026-05-06",
+                                                     "firstDay":  "2026-04-23",
+                                                     "lastDay":  "2026-05-04",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4447,6 +4453,37 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "commands":  1,
+                                                                   "plan":  1,
+                                                                   "code-change":  2
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "fastmcp",
+                                                     "entries":  4,
+                                                     "recent":  [
+                                                                    "Successfully translated 40 .skill files into agent-readable Markdown files with YAML frontmatter in skills_md/.",
+                                                                    "Providing nssm commands to install fastmcp server as a Windows service.",
+                                                                    "Implemented tiered VaultWares FastMCP server (fs/shell sessions/optional ssh/ops/diagnostics) as python package vaultwares_fastmcp; updated entrypoints + README + installer + te..."
+                                                                ],
+                                                     "firstDay":  "2026-05-01",
+                                                     "lastDay":  "2026-05-06",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  3,
                                                                    "plan":  1
                                                                },
@@ -4464,37 +4501,6 @@
                                                                 ],
                                                      "firstDay":  "2026-05-03",
                                                      "lastDay":  "2026-05-03",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "commands":  1,
-                                                                   "plan":  1,
-                                                                   "code-change":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "fastmcp",
-                                                     "entries":  3,
-                                                     "recent":  [
-                                                                    "Translating .skill YAML files into agent-readable Markdown files in the fastmcp/skills_md directory.",
-                                                                    "Successfully translated 40 .skill files into agent-readable Markdown files with YAML frontmatter in skills_md/.",
-                                                                    "Providing nssm commands to install fastmcp server as a Windows service."
-                                                                ],
-                                                     "firstDay":  "2026-05-01",
-                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -20180,7 +20186,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-12T02:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-06T11:12:10.0000000Z",
+                 "_maxCreatedAtUtc":  "2026-05-06T20:59:18.8192480Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -20188,7 +20194,7 @@
                            },
                  "totals":  {
                                 "projects":  46,
-                                "events":  1220,
+                                "events":  1224,
                                 "uniqueCommitsRecomputed":  1030,
                                 "activeDays":  54,
                                 "commitEventsWithStats":  1030
