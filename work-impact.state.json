@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-06T07:12:01.8332735Z",
+    "lastUpdatedUtc":  "2026-05-06T08:57:02.1187331Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1222,7 +1222,12 @@
                                        "20260505-204104-230-workspace-git-sync-441389cf",
                                        "20260505-204600-557-workspace-git-sync-8e68d3ec",
                                        "20260505-223634-892-scripts-ae2cbf27",
-                                       "20260506-030037-383-scripts-70f07586"
+                                       "20260506-030037-383-scripts-70f07586",
+                                       "20260506-031210-790-scripts-2fc74ca5",
+                                       "20260506-061529-000-agent-ledger-copilot-work-impact-revamp",
+                                       "20260506-032304-539-scripts-c22bf624",
+                                       "20260506-033508-642-scripts-c4ebab3e",
+                                       "20260506-041146-677-agent-ledger-f09701f5"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2258,6 +2263,238 @@
                                      ]
                   },
     "data":  {
+                 "agentData":  {
+                                   "mcpServers":  [
+                                                      "github",
+                                                      1,
+                                                      "github-mcp-server-actions_list",
+                                                      1
+                                                  ],
+                                   "daySeries":  [
+                                                     {
+                                                         "actors":  [
+                                                                        "AI Agent",
+                                                                        "Codex"
+                                                                    ],
+                                                         "day":  "2026-05-05",
+                                                         "models":  [
+                                                                        "unknown"
+                                                                    ],
+                                                         "count":  4
+                                                     },
+                                                     {
+                                                         "actors":  [
+                                                                        "AI Agent",
+                                                                        "GitHub Copilot"
+                                                                    ],
+                                                         "day":  "2026-05-06",
+                                                         "models":  [
+                                                                        "claude-sonnet-4.6",
+                                                                        "unknown"
+                                                                    ],
+                                                         "count":  6
+                                                     }
+                                                 ],
+                                   "tools":  [
+                                                 "functions.apply_patch",
+                                                 3,
+                                                 "functions.shell_command",
+                                                 3,
+                                                 "functions.update_plan",
+                                                 2,
+                                                 "create",
+                                                 1,
+                                                 "mcp__codex_apps__github._request_pull_request_reviewers",
+                                                 1,
+                                                 "view",
+                                                 1,
+                                                 "edit",
+                                                 1,
+                                                 "report_progress",
+                                                 1,
+                                                 "grep",
+                                                 1,
+                                                 "bash",
+                                                 1,
+                                                 "glob",
+                                                 1
+                                             ],
+                                   "actors":  [
+                                                  "AI Agent",
+                                                  6,
+                                                  "Codex",
+                                                  3,
+                                                  "GitHub Copilot",
+                                                  1
+                                              ],
+                                   "totalEvents":  10,
+                                   "models":  [
+                                                  "unknown",
+                                                  9,
+                                                  "claude-sonnet-4.6",
+                                                  1
+                                              ]
+                               },
+                 "exclusions":  {
+                                    "notes":  [
+                                                  "Line stats are recomputed from git commits referenced by Backfill events.",
+                                                  "Clean stats exclude common dependency/build/cache/generated folders (regex above)."
+                                              ],
+                                    "pathRegex":  "(^|/|\\\\)(node_modules|\\.venv|venv|env|vendor|dist|build|target|obj|bin|__pycache__|\\.next|\\.nuxt|\\.turbo|\\.cache|coverage)(/|\\\\|$)|\\.(pyc|pyo|class|dll|exe|obj|cache|map)$"
+                                },
+                 "dowSeries":  [
+                                   {
+                                       "label":  "Mon",
+                                       "dow":  0,
+                                       "count":  157
+                                   },
+                                   {
+                                       "label":  "Tue",
+                                       "dow":  1,
+                                       "count":  166
+                                   },
+                                   {
+                                       "label":  "Wed",
+                                       "dow":  2,
+                                       "count":  136
+                                   },
+                                   {
+                                       "label":  "Thu",
+                                       "dow":  3,
+                                       "count":  79
+                                   },
+                                   {
+                                       "label":  "Fri",
+                                       "dow":  4,
+                                       "count":  307
+                                   },
+                                   {
+                                       "label":  "Sat",
+                                       "dow":  5,
+                                       "count":  184
+                                   },
+                                   {
+                                       "label":  "Sun",
+                                       "dow":  6,
+                                       "count":  187
+                                   }
+                               ],
+                 "hourSeries":  [
+                                    {
+                                        "count":  39,
+                                        "hour":  0
+                                    },
+                                    {
+                                        "count":  27,
+                                        "hour":  1
+                                    },
+                                    {
+                                        "count":  37,
+                                        "hour":  2
+                                    },
+                                    {
+                                        "count":  31,
+                                        "hour":  3
+                                    },
+                                    {
+                                        "count":  47,
+                                        "hour":  4
+                                    },
+                                    {
+                                        "count":  58,
+                                        "hour":  5
+                                    },
+                                    {
+                                        "count":  36,
+                                        "hour":  6
+                                    },
+                                    {
+                                        "count":  57,
+                                        "hour":  7
+                                    },
+                                    {
+                                        "count":  52,
+                                        "hour":  8
+                                    },
+                                    {
+                                        "count":  52,
+                                        "hour":  9
+                                    },
+                                    {
+                                        "count":  52,
+                                        "hour":  10
+                                    },
+                                    {
+                                        "count":  58,
+                                        "hour":  11
+                                    },
+                                    {
+                                        "count":  45,
+                                        "hour":  12
+                                    },
+                                    {
+                                        "count":  35,
+                                        "hour":  13
+                                    },
+                                    {
+                                        "count":  49,
+                                        "hour":  14
+                                    },
+                                    {
+                                        "count":  73,
+                                        "hour":  15
+                                    },
+                                    {
+                                        "count":  71,
+                                        "hour":  16
+                                    },
+                                    {
+                                        "count":  72,
+                                        "hour":  17
+                                    },
+                                    {
+                                        "count":  69,
+                                        "hour":  18
+                                    },
+                                    {
+                                        "count":  49,
+                                        "hour":  19
+                                    },
+                                    {
+                                        "count":  67,
+                                        "hour":  20
+                                    },
+                                    {
+                                        "count":  44,
+                                        "hour":  21
+                                    },
+                                    {
+                                        "count":  54,
+                                        "hour":  22
+                                    },
+                                    {
+                                        "count":  42,
+                                        "hour":  23
+                                    }
+                                ],
+                 "lineStats":  {
+                                   "excluded":  {
+                                                    "files":  0,
+                                                    "deletions":  0,
+                                                    "insertions":  0
+                                                },
+                                   "raw":  {
+                                               "files":  0,
+                                               "deletions":  0,
+                                               "insertions":  0
+                                           },
+                                   "clean":  {
+                                                 "files":  0,
+                                                 "deletions":  0,
+                                                 "insertions":  0
+                                             }
+                               },
+                 "generatedAtLocal":  "2026-05-06 04:57",
                  "series":  {
                                 "months":  [
                                                {
@@ -2270,7 +2507,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  230
+                                                   "count":  235
                                                }
                                            ],
                                 "days":  [
@@ -3104,18 +3341,21 @@
                                                            }
                                              },
                                              {
-                                                 "projects":  "scripts",
-                                                 "entries":  1,
+                                                 "projects":  [
+                                                                  "agent-ledger",
+                                                                  "scripts"
+                                                              ],
+                                                 "entries":  6,
                                                  "day":  "2026-05-06",
                                                  "kinds":  {
-                                                               "code-change":  1
+                                                               "code-change":  6
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1151
+                                                  "count":  1156
                                               },
                                               {
                                                   "kind":  "plan",
@@ -3542,7 +3782,7 @@
                                                      "entries":  28,
                                                      "recent":  [
                                                                     "Backfill: commit 51287a0 (2026-04-24T07:24:42-04:00) - chore: remove tailwindcss plugin from vite preview configuration | files=1 +1 -2",
-                                                                    "Backfill: commit 84c902f (2026-04-30T00:29:22Z) - ðŸŽ¨ Palette: Enhance form accessibility and button focus states | files=2 +20 -11",
+                                                                    "Backfill: commit 84c902f (2026-04-30T00:29:22Z) - Ã°Å¸Å½Â¨ Palette: Enhance form accessibility and button focus states | files=2 +20 -11",
                                                                     "Backfill: commit b2f2866 (2026-04-30T19:17:46-04:00) - Merge pull request #4 from p-potvin/palette-ux-improvements-4342842582149570691 | files=0 +20 -11"
                                                                 ],
                                                      "firstDay":  "2026-03-15",
@@ -3705,22 +3945,24 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  17
+                                                                   "commands":  3,
+                                                                   "verification":  3,
+                                                                   "code-change":  12
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "vault-explorer",
-                                                     "entries":  17,
+                                                     "project":  "agent-ledger",
+                                                     "entries":  18,
                                                      "recent":  [
-                                                                    "Backfill: commit 7980252 (2026-04-30T23:48:36Z) - ðŸŽ¨ Palette: Added empty states for vault and search | files=2 +41 -5",
-                                                                    "Backfill: commit 658d2c1 (2026-04-30T21:20:44-04:00) - Merge pull request #3 from p-potvin/palette-empty-states-17860079820416914185 | files=0 +41 -5",
-                                                                    "Backfill: commit 5376b0e (2026-05-01T17:52:33-04:00) - Automated commit: Updated files in vault-explorer | files=1 +1 -1"
+                                                                    "Verified ledger-only Agent Header metadata path with duplicate tool and MCP inputs so record-agent-change.ps1 can deduplicate them before event storage and rendering.",
+                                                                    "Work impact page revamp: fixed commit size/tech volume/files touched zero-data handling, switched milestones/strongest-week positions, reworked Evidence section into collapsible...",
+                                                                    "Applied vault-themes branding to WORK_IMPACT.html. (1) Replaced :root CSS block with Golden Slate tokens (bg:#2E3538, ac:#D4AF37, etc.). (2) Removed @media prefers-color-scheme:..."
                                                                 ],
-                                                     "firstDay":  "2026-04-19",
-                                                     "lastDay":  "2026-05-01",
+                                                     "firstDay":  "2026-04-28",
+                                                     "lastDay":  "2026-05-06",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -3734,24 +3976,22 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "commands":  3,
-                                                                   "verification":  3,
-                                                                   "code-change":  10
+                                                                   "code-change":  17
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "agent-ledger",
-                                                     "entries":  16,
+                                                     "project":  "vault-explorer",
+                                                     "entries":  17,
                                                      "recent":  [
-                                                                    "Verified GitHub Actions deploy pipeline: refresh job succeeds and deploy job succeeds when Vercel token is present. Added token fallback (AGENT_LEDGER -\u003e VERCEL_TOKEN) to avoid ...",
-                                                                    "Registered local Windows scheduled task AgentLedgerWorkImpactRefresh to run every 15 minutes and refresh WORK_IMPACT.html incrementally (no git sync/push).",
-                                                                    "Verified ledger-only Agent Header metadata path with duplicate tool and MCP inputs so record-agent-change.ps1 can deduplicate them before event storage and rendering."
+                                                                    "Backfill: commit 7980252 (2026-04-30T23:48:36Z) - Ã°Å¸Å½Â¨ Palette: Added empty states for vault and search | files=2 +41 -5",
+                                                                    "Backfill: commit 658d2c1 (2026-04-30T21:20:44-04:00) - Merge pull request #3 from p-potvin/palette-empty-states-17860079820416914185 | files=0 +41 -5",
+                                                                    "Backfill: commit 5376b0e (2026-05-01T17:52:33-04:00) - Automated commit: Updated files in vault-explorer | files=1 +1 -1"
                                                                 ],
-                                                     "firstDay":  "2026-04-28",
-                                                     "lastDay":  "2026-05-05",
+                                                     "firstDay":  "2026-04-19",
+                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4032,6 +4272,36 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "commands":  1,
+                                                                   "code-change":  8
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "scripts",
+                                                     "entries":  9,
+                                                     "recent":  [
+                                                                    "Fixed offline-mode crash when loading VAE. AutoencoderKL.from_single_file(\u0027ae.safetensors\u0027) couldn\u0027t map the generic filename to a config so diffusers fell back to fetching stab...",
+                                                                    "Fixed offline-mode crash for FluxTransformer2DModel. flux1-dev-fp8-e4m3fn.safetensors is not in diffusers\u0027 built-in filename map so it fell back to fetching black-forest-labs/FL...",
+                                                                    "Fixed RAM destruction from enable_model_cpu_offload(). Added _get_device() auto-detection (CUDA vs CPU). Switched default offload to enable_sequential_cpu_offload() which stream..."
+                                                                ],
+                                                     "firstDay":  "2026-05-04",
+                                                     "lastDay":  "2026-05-06",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  7
                                                                },
                                                      "lineClean":  {
@@ -4097,45 +4367,15 @@
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "qa-automation",
+                                                     "project":  "debrid-media-manager",
                                                      "entries":  6,
                                                      "recent":  [
-                                                                    "Reworked the qa-automation Playwright suite for the Prom King monetization roadmap: replaced obsolete PropPaths specs with configurable funnel/legal/redirect/postback/age-gate/o...",
-                                                                    "Backfill: commit fc4216c (2026-05-01T17:55:31-04:00) - Automated commit: Updated files in qa-automation | files=21 +2097 -529",
-                                                                    "Backfill: commit fe2c299 (2026-05-04T18:34:30-04:00) - Automated commit: Updated files in qa-automation | files=2 +54 -4"
+                                                                    "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
+                                                                    "Backfill: commit 55ec199 (2026-04-17T18:11:24-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +11 -5",
+                                                                    "Backfill: commit c6ce8b5 (2026-04-18T22:32:35-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +1 -2"
                                                                 ],
-                                                     "firstDay":  "2026-04-23",
-                                                     "lastDay":  "2026-05-04",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "commands":  1,
-                                                                   "code-change":  5
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "scripts",
-                                                     "entries":  6,
-                                                     "recent":  [
-                                                                    "Completed full Flux pipeline assembly from local ComfyUI files. Fixed setup_detailer_pipeline: replaced nonexistent CLIPTextModel/T5EncoderModel.from_single_file calls with from...",
-                                                                    "Added argparse CLI wrapper (run_extractor.py) for frame_extractor.py. Updated function signatures to surface all previously hardcoded values as named parameters: extract_keyfram...",
-                                                                    "Added torchvision compatibility shim in frame_extractor.py. torchvision \u003e=0.16 removed functional_tensor submodule (merged into functional). Registered sys.modules shim before b..."
-                                                                ],
-                                                     "firstDay":  "2026-05-04",
-                                                     "lastDay":  "2026-05-06",
+                                                     "firstDay":  "2026-04-01",
+                                                     "lastDay":  "2026-04-19",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4156,15 +4396,15 @@
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "debrid-media-manager",
+                                                     "project":  "qa-automation",
                                                      "entries":  6,
                                                      "recent":  [
-                                                                    "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
-                                                                    "Backfill: commit 55ec199 (2026-04-17T18:11:24-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +11 -5",
-                                                                    "Backfill: commit c6ce8b5 (2026-04-18T22:32:35-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +1 -2"
+                                                                    "Reworked the qa-automation Playwright suite for the Prom King monetization roadmap: replaced obsolete PropPaths specs with configurable funnel/legal/redirect/postback/age-gate/o...",
+                                                                    "Backfill: commit fc4216c (2026-05-01T17:55:31-04:00) - Automated commit: Updated files in qa-automation | files=21 +2097 -529",
+                                                                    "Backfill: commit fe2c299 (2026-05-04T18:34:30-04:00) - Automated commit: Updated files in qa-automation | files=2 +54 -4"
                                                                 ],
-                                                     "firstDay":  "2026-04-01",
-                                                     "lastDay":  "2026-04-19",
+                                                     "firstDay":  "2026-04-23",
+                                                     "lastDay":  "2026-05-04",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4296,8 +4536,8 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "handoff":  1,
-                                                                   "verification":  1
+                                                                   "verification":  1,
+                                                                   "handoff":  1
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -4486,13 +4726,6 @@
                                                                  }
                                                  }
                                              ]
-                            },
-                 "totals":  {
-                                "projects":  46,
-                                "events":  1215,
-                                "uniqueCommitsRecomputed":  1030,
-                                "activeDays":  54,
-                                "commitEventsWithStats":  1030
                             },
                  "commitSamples":  [
                                        {
@@ -19946,37 +20179,19 @@
                                            "filesExcluded":  0
                                        }
                                    ],
-                 "generatedAtLocal":  "2026-05-06 03:12",
-                 "_maxCreatedAtUtc":  "2026-05-06T07:00:37.3834696Z",
+                 "_minCreatedAtUtc":  "2026-03-12T02:02:52.0000000Z",
+                 "_maxCreatedAtUtc":  "2026-05-06T11:12:10.0000000Z",
+                 "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
                                "end":  "2026-05-06"
                            },
-                 "exclusions":  {
-                                    "notes":  [
-                                                  "Line stats are recomputed from git commits referenced by Backfill events.",
-                                                  "Clean stats exclude common dependency/build/cache/generated folders (regex above)."
-                                              ],
-                                    "pathRegex":  "(^|/|\\\\)(node_modules|\\.venv|venv|env|vendor|dist|build|target|obj|bin|__pycache__|\\.next|\\.nuxt|\\.turbo|\\.cache|coverage)(/|\\\\|$)|\\.(pyc|pyo|class|dll|exe|obj|cache|map)$"
-                                },
-                 "lineStats":  {
-                                   "excluded":  {
-                                                    "files":  0,
-                                                    "deletions":  0,
-                                                    "insertions":  0
-                                                },
-                                   "raw":  {
-                                               "files":  0,
-                                               "deletions":  0,
-                                               "insertions":  0
-                                           },
-                                   "clean":  {
-                                                 "files":  0,
-                                                 "deletions":  0,
-                                                 "insertions":  0
-                                             }
-                               },
-                 "_minCreatedAtUtc":  "2026-03-11T22:02:52.0000000Z",
-                 "schemaVersion":  1
+                 "totals":  {
+                                "projects":  46,
+                                "events":  1220,
+                                "uniqueCommitsRecomputed":  1030,
+                                "activeDays":  54,
+                                "commitEventsWithStats":  1030
+                            }
              }
 }

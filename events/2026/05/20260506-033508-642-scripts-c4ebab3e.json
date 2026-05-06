@@ -1,0 +1,31 @@
+{
+  "id": "20260506-033508-642-scripts-c4ebab3e",
+  "createdAt": "2026-05-06T07:35:08.6426477Z",
+  "createdAtLocal": "2026-05-06 03:35",
+  "timezone": "Eastern Standard Time",
+  "project": "scripts",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-06 03:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts",
+  "summary": "Fixed RAM destruction from enable_model_cpu_offload(). Added _get_device() auto-detection (CUDA vs CPU). Switched default offload to enable_sequential_cpu_offload() which streams individual transformer layers to VRAM rather than loading the full 9GB+ model into system RAM first. Added device/offload_mode params to setup_detailer_pipeline, setup_upscaler, and process_video. CPU dtype forced to float32. RealESRGANer now receives explicit torch.device. Added --device and --offload-mode CLI flags to run_extractor.py.",
+  "commands": [],
+  "files": [
+    "scripts/frame_extractor.py",
+    "scripts/run_extractor.py"
+  ],
+  "planPath": "",
+  "contentHash": "c4ebab3ed6e343a20600abfbbe1870030fd95e3ac5cbb44f648f96318f780ffe",
+  "git": null
+}
