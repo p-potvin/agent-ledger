@@ -1,0 +1,31 @@
+{
+  "id": "20260505-223634-892-scripts-ae2cbf27",
+  "createdAt": "2026-05-06T02:36:34.8923457Z",
+  "createdAtLocal": "2026-05-05 22:36",
+  "timezone": "Eastern Standard Time",
+  "project": "scripts",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-05 22:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts",
+  "summary": "Added argparse CLI wrapper (run_extractor.py) for frame_extractor.py. Updated function signatures to surface all previously hardcoded values as named parameters: extract_keyframes(frame_filter), enhance_details(guidance_scale, thumbnail_size), setup_upscaler(tile, tile_pad, pre_pad, half), upscale_image(outscale), and process_video(all of the above plus model paths). run_extractor.py exposes every parameter as an optional CLI flag with --help documentation grouped by category.",
+  "commands": [],
+  "files": [
+    "scripts/frame_extractor.py",
+    "scripts/run_extractor.py"
+  ],
+  "planPath": "",
+  "contentHash": "ae2cbf27caea180493e19ad8552343559f5766366bae936d03b6082d194bbff8",
+  "git": null
+}

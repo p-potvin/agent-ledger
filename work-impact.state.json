@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-06T00:27:01.1546034Z",
+    "lastUpdatedUtc":  "2026-05-06T07:12:01.8332735Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1218,7 +1218,11 @@
                                        "20260505-183216-866-vaultwares-agentciation-3ed02b47",
                                        "20260505-184807-619-vaultwares-agentciation-88780d70",
                                        "20260505-193227-545-vault-themes-40764d3f",
-                                       "20260505-202532-744-agent-ledger-c4fcffe7"
+                                       "20260505-202532-744-agent-ledger-c4fcffe7",
+                                       "20260505-204104-230-workspace-git-sync-441389cf",
+                                       "20260505-204600-557-workspace-git-sync-8e68d3ec",
+                                       "20260505-223634-892-scripts-ae2cbf27",
+                                       "20260506-030037-383-scripts-70f07586"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2266,7 +2270,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  226
+                                                   "count":  230
                                                }
                                            ],
                                 "days":  [
@@ -3082,37 +3086,48 @@
                                                                   "agent-ledger",
                                                                   "General Tasks",
                                                                   "link-sharing",
+                                                                  "scripts",
                                                                   "usd-playground",
                                                                   "vault-themes",
-                                                                  "vaultwares-agentciation"
+                                                                  "vaultwares-agentciation",
+                                                                  "Workspace Git Sync"
                                                               ],
-                                                 "entries":  30,
+                                                 "entries":  33,
                                                  "day":  "2026-05-05",
                                                  "kinds":  {
-                                                               "code-change":  17,
+                                                               "code-change":  18,
+                                                               "handoff":  1,
                                                                "commands":  2,
-                                                               "verification":  3,
+                                                               "verification":  4,
                                                                "plan":  4,
                                                                "general":  4
+                                                           }
+                                             },
+                                             {
+                                                 "projects":  "scripts",
+                                                 "entries":  1,
+                                                 "day":  "2026-05-06",
+                                                 "kinds":  {
+                                                               "code-change":  1
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1149
+                                                  "count":  1151
                                               },
                                               {
                                                   "kind":  "plan",
                                                   "count":  27
                                               },
                                               {
-                                                  "kind":  "commands",
+                                                  "kind":  "verification",
                                                   "count":  13
                                               },
                                               {
-                                                  "kind":  "verification",
-                                                  "count":  12
+                                                  "kind":  "commands",
+                                                  "count":  13
                                               },
                                               {
                                                   "kind":  "general",
@@ -3120,7 +3135,7 @@
                                               },
                                               {
                                                   "kind":  "handoff",
-                                                  "count":  4
+                                                  "count":  5
                                               }
                                           ],
                                 "projects":  [
@@ -3966,15 +3981,15 @@
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "vaultwares-identity-manager",
+                                                     "project":  "prelanding-page",
                                                      "entries":  9,
                                                      "recent":  [
-                                                                    "Backfill: commit 60af0ad (2026-04-17T18:12:30-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +11 -5",
-                                                                    "Backfill: commit e86a397 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +49 -0",
-                                                                    "Backfill: commit 672a338 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +0 -1"
+                                                                    "Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookie...",
+                                                                    "Backfill: commit 31fcbb5 (2026-05-01T17:55:28-04:00) - Automated commit: Updated files in prelanding-page | files=39 +4809 -157",
+                                                                    "Backfill: commit 3dfcdd2 (2026-05-04T18:34:27-04:00) - Automated commit: Updated files in prelanding-page | files=13 +386 -93"
                                                                 ],
-                                                     "firstDay":  "2026-03-30",
-                                                     "lastDay":  "2026-05-01",
+                                                     "firstDay":  "2026-04-23",
+                                                     "lastDay":  "2026-05-04",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -3995,15 +4010,15 @@
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "prelanding-page",
+                                                     "project":  "vaultwares-identity-manager",
                                                      "entries":  9,
                                                      "recent":  [
-                                                                    "Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookie...",
-                                                                    "Backfill: commit 31fcbb5 (2026-05-01T17:55:28-04:00) - Automated commit: Updated files in prelanding-page | files=39 +4809 -157",
-                                                                    "Backfill: commit 3dfcdd2 (2026-05-04T18:34:27-04:00) - Automated commit: Updated files in prelanding-page | files=13 +386 -93"
+                                                                    "Backfill: commit 60af0ad (2026-04-17T18:12:30-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +11 -5",
+                                                                    "Backfill: commit e86a397 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +49 -0",
+                                                                    "Backfill: commit 672a338 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +0 -1"
                                                                 ],
-                                                     "firstDay":  "2026-04-23",
-                                                     "lastDay":  "2026-05-04",
+                                                     "firstDay":  "2026-03-30",
+                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4082,15 +4097,45 @@
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "debrid-media-manager",
+                                                     "project":  "qa-automation",
                                                      "entries":  6,
                                                      "recent":  [
-                                                                    "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
-                                                                    "Backfill: commit 55ec199 (2026-04-17T18:11:24-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +11 -5",
-                                                                    "Backfill: commit c6ce8b5 (2026-04-18T22:32:35-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +1 -2"
+                                                                    "Reworked the qa-automation Playwright suite for the Prom King monetization roadmap: replaced obsolete PropPaths specs with configurable funnel/legal/redirect/postback/age-gate/o...",
+                                                                    "Backfill: commit fc4216c (2026-05-01T17:55:31-04:00) - Automated commit: Updated files in qa-automation | files=21 +2097 -529",
+                                                                    "Backfill: commit fe2c299 (2026-05-04T18:34:30-04:00) - Automated commit: Updated files in qa-automation | files=2 +54 -4"
                                                                 ],
-                                                     "firstDay":  "2026-04-01",
-                                                     "lastDay":  "2026-04-19",
+                                                     "firstDay":  "2026-04-23",
+                                                     "lastDay":  "2026-05-04",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "commands":  1,
+                                                                   "code-change":  5
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "scripts",
+                                                     "entries":  6,
+                                                     "recent":  [
+                                                                    "Completed full Flux pipeline assembly from local ComfyUI files. Fixed setup_detailer_pipeline: replaced nonexistent CLIPTextModel/T5EncoderModel.from_single_file calls with from...",
+                                                                    "Added argparse CLI wrapper (run_extractor.py) for frame_extractor.py. Updated function signatures to surface all previously hardcoded values as named parameters: extract_keyfram...",
+                                                                    "Added torchvision compatibility shim in frame_extractor.py. torchvision \u003e=0.16 removed functional_tensor submodule (merged into functional). Registered sys.modules shim before b..."
+                                                                ],
+                                                     "firstDay":  "2026-05-04",
+                                                     "lastDay":  "2026-05-06",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4111,15 +4156,15 @@
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "qa-automation",
+                                                     "project":  "debrid-media-manager",
                                                      "entries":  6,
                                                      "recent":  [
-                                                                    "Reworked the qa-automation Playwright suite for the Prom King monetization roadmap: replaced obsolete PropPaths specs with configurable funnel/legal/redirect/postback/age-gate/o...",
-                                                                    "Backfill: commit fc4216c (2026-05-01T17:55:31-04:00) - Automated commit: Updated files in qa-automation | files=21 +2097 -529",
-                                                                    "Backfill: commit fe2c299 (2026-05-04T18:34:30-04:00) - Automated commit: Updated files in qa-automation | files=2 +54 -4"
+                                                                    "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
+                                                                    "Backfill: commit 55ec199 (2026-04-17T18:11:24-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +11 -5",
+                                                                    "Backfill: commit c6ce8b5 (2026-04-18T22:32:35-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +1 -2"
                                                                 ],
-                                                     "firstDay":  "2026-04-23",
-                                                     "lastDay":  "2026-05-04",
+                                                     "firstDay":  "2026-04-01",
+                                                     "lastDay":  "2026-04-19",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4149,36 +4194,6 @@
                                                                 ],
                                                      "firstDay":  "2026-03-16",
                                                      "lastDay":  "2026-04-17",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  3,
-                                                                   "commands":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "scripts",
-                                                     "entries":  4,
-                                                     "recent":  [
-                                                                    "Enforced fully local model usage in frame_extractor.py: (1) Set HF_HUB_OFFLINE, TRANSFORMERS_OFFLINE, DIFFUSERS_OFFLINE env vars before all imports to prevent any HuggingFace ne...",
-                                                                    "Scaffolded folder structure under scripts/: models/diffusion/, models/upscale/, input/, output/. Created symlinks: models/diffusion/flux1-dev-fp8-e4m3fn.safetensors -\u003e D:\\comfyU...",
-                                                                    "Completed full Flux pipeline assembly from local ComfyUI files. Fixed setup_detailer_pipeline: replaced nonexistent CLIPTextModel/T5EncoderModel.from_single_file calls with from..."
-                                                                ],
-                                                     "firstDay":  "2026-05-04",
-                                                     "lastDay":  "2026-05-04",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4268,6 +4283,35 @@
                                                                 ],
                                                      "firstDay":  "2026-04-28",
                                                      "lastDay":  "2026-04-29",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "handoff":  1,
+                                                                   "verification":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "Workspace Git Sync",
+                                                     "entries":  2,
+                                                     "recent":  [
+                                                                    "Implemented ledger-only Agent Header policy and began workspace git sync. Direct-pushed vault-themes instruction conflict-marker cleanup and verified vault-themes/vaultwares-age...",
+                                                                    "Continued workspace git sync after user confirmed vault-video-enhancer branch was obsolete. Closed/deleted vault-video-enhancer PR branch, updated vaultwares-pipelines PR branch..."
+                                                                ],
+                                                     "firstDay":  "2026-05-05",
+                                                     "lastDay":  "2026-05-05",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4444,10 +4488,10 @@
                                              ]
                             },
                  "totals":  {
-                                "projects":  45,
-                                "events":  1211,
+                                "projects":  46,
+                                "events":  1215,
                                 "uniqueCommitsRecomputed":  1030,
-                                "activeDays":  53,
+                                "activeDays":  54,
                                 "commitEventsWithStats":  1030
                             },
                  "commitSamples":  [
@@ -19902,11 +19946,11 @@
                                            "filesExcluded":  0
                                        }
                                    ],
-                 "generatedAtLocal":  "2026-05-05 20:27",
-                 "_maxCreatedAtUtc":  "2026-05-06T00:25:32.7441890Z",
+                 "generatedAtLocal":  "2026-05-06 03:12",
+                 "_maxCreatedAtUtc":  "2026-05-06T07:00:37.3834696Z",
                  "range":  {
                                "start":  "2026-03-11",
-                               "end":  "2026-05-05"
+                               "end":  "2026-05-06"
                            },
                  "exclusions":  {
                                     "notes":  [

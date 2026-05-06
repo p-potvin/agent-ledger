@@ -26,6 +26,50 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-06 03:12 - scripts</strong> <span class="kind">code-change</span> - Fixed offline-mode crash when loading VAE. AutoencoderKL.from_single_file(&#39;ae.safetensors&#39;) couldn&#39;t map the generic filename to a config so diffusers fell back to fetching stab...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\scripts  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 03:12 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed offline-mode crash when loading VAE. AutoencoderKL.from_single_file(&#39;ae.safetensors&#39;) couldn&#39;t map the generic filename to a config so diffusers fell back to fetching stable-diffusion-v1-5 config from HF Hub, which fails with HF_HUB_OFFLINE=1. Created models/vae/config.json with the correct FLUX VAE parameters (latent_channels=16, scaling_factor=0.3611, shift_factor=0.1159, use_quant_conv=false etc.) and passed config=os.path.dirname(vae_path) to from_single_file so diffusers reads the local file.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>scripts/frame_extractor.py</code></li>
+        <li><code>scripts/models/vae/config.json</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-06 03:00 - scripts</strong> <span class="kind">code-change</span> - Added torchvision compatibility shim in frame_extractor.py. torchvision &gt;=0.16 removed functional_tensor submodule (merged into functional). Registered sys.modules shim before b...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\scripts  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 03:00 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added torchvision compatibility shim in frame_extractor.py. torchvision &gt;=0.16 removed functional_tensor submodule (merged into functional). Registered sys.modules shim before basicsr/realesrgan imports to prevent ModuleNotFoundError without requiring a torchvision downgrade.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>scripts/frame_extractor.py</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-05 22:36 - scripts</strong> <span class="kind">code-change</span> - Added argparse CLI wrapper (run_extractor.py) for frame_extractor.py. Updated function signatures to surface all previously hardcoded values as named parameters: extract_keyfram...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\scripts  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-05 22:36 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added argparse CLI wrapper (run_extractor.py) for frame_extractor.py. Updated function signatures to surface all previously hardcoded values as named parameters: extract_keyframes(frame_filter), enhance_details(guidance_scale, thumbnail_size), setup_upscaler(tile, tile_pad, pre_pad, half), upscale_image(outscale), and process_video(all of the above plus model paths). run_extractor.py exposes every parameter as an optional CLI flag with --help documentation grouped by category.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>scripts/frame_extractor.py</code></li>
+        <li><code>scripts/run_extractor.py</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-05 20:46 - Workspace Git Sync</strong> <span class="kind">verification</span> - Continued workspace git sync after user confirmed vault-video-enhancer branch was obsolete. Closed/deleted vault-video-enhancer PR branch, updated vaultwares-pipelines PR branch...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> verification</p>
@@ -9317,6 +9361,25 @@
     </div>
   </details>
   <details>
+    <summary><strong>2026-04-24 08:10 - weekly-menu</strong> <span class="kind">code-change</span> - Backfill: commit 695ea5b (2026-04-24T08:10:34-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -1</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Backfill: commit 695ea5b (2026-04-24T08:10:34-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -1</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s</code></li>
+        <li><code>git show --name-only --pretty=format: 695ea5b2325d40a545b4f3a807dc801c9fdac004</code></li>
+        <li><code>git show --numstat --pretty=format: 695ea5b2325d40a545b4f3a807dc801c9fdac004</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares_agentciation</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=weekly-menu, branch=main, head=6bebcc8</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-04-24 08:10 - windows-customizer</strong> <span class="kind">code-change</span> - Backfill: commit bd4d0cb (2026-04-24T08:10:34-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +15 -11</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
@@ -9338,22 +9401,24 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-04-24 08:10 - weekly-menu</strong> <span class="kind">code-change</span> - Backfill: commit 695ea5b (2026-04-24T08:10:34-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -1</summary>
+    <summary><strong>2026-04-24 08:10 - vaultwares-identity-manager</strong> <span class="kind">code-change</span> - Backfill: commit e86a397 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +49 -0</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> AI Agent</p>
-      <p class="summary"><strong>Summary:</strong> Backfill: commit 695ea5b (2026-04-24T08:10:34-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -1</p>
+      <p class="summary"><strong>Summary:</strong> Backfill: commit e86a397 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +49 -0</p>
       <p><strong>Commands:</strong></p>
       <ul>
         <li><code>git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s</code></li>
-        <li><code>git show --name-only --pretty=format: 695ea5b2325d40a545b4f3a807dc801c9fdac004</code></li>
-        <li><code>git show --numstat --pretty=format: 695ea5b2325d40a545b4f3a807dc801c9fdac004</code></li>
+        <li><code>git show --name-only --pretty=format: e86a3973950ff9c272a0ddd71ec20ae3d2ec6deb</code></li>
+        <li><code>git show --numstat --pretty=format: e86a3973950ff9c272a0ddd71ec20ae3d2ec6deb</code></li>
       </ul>
       <p><strong>Files:</strong></p>
       <ul>
-        <li><code>vaultwares_agentciation</code></li>
+        <li><code>.cursor/rules/vault-themes-submodule.mdc</code></li>
+        <li><code>AGENTS.md</code></li>
+        <li><code>CLAUDE.md</code></li>
       </ul>
-      <p><strong>Git:</strong> repo=weekly-menu, branch=main, head=6bebcc8</p>
+      <p><strong>Git:</strong> repo=vaultwares-identity-manager, branch=main, head=672a338</p>
     </div>
   </details>
   <details>
@@ -9387,47 +9452,6 @@
         <li><code>vaultwares_agentciation</code></li>
       </ul>
       <p><strong>Git:</strong> repo=vaultwares-pipelines, branch=main, head=465e017</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-04-24 08:10 - vaultwares-identity-manager</strong> <span class="kind">code-change</span> - Backfill: commit e86a397 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +49 -0</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p class="summary"><strong>Summary:</strong> Backfill: commit e86a397 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +49 -0</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s</code></li>
-        <li><code>git show --name-only --pretty=format: e86a3973950ff9c272a0ddd71ec20ae3d2ec6deb</code></li>
-        <li><code>git show --numstat --pretty=format: e86a3973950ff9c272a0ddd71ec20ae3d2ec6deb</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>.cursor/rules/vault-themes-submodule.mdc</code></li>
-        <li><code>AGENTS.md</code></li>
-        <li><code>CLAUDE.md</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vaultwares-identity-manager, branch=main, head=672a338</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-04-24 08:10 - vaultwares-template</strong> <span class="kind">code-change</span> - Backfill: commit a63589d (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=2 +14 -0</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p class="summary"><strong>Summary:</strong> Backfill: commit a63589d (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=2 +14 -0</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s</code></li>
-        <li><code>git show --name-only --pretty=format: a63589d59cca88f00c72b63a3ad29eed60babbc8</code></li>
-        <li><code>git show --numstat --pretty=format: a63589d59cca88f00c72b63a3ad29eed60babbc8</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>.github/INSTRUCTIONS.md</code></li>
-        <li><code>README.md</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vaultwares-template, branch=main, head=c1d59a8</p>
     </div>
   </details>
   <details>
@@ -9476,6 +9500,26 @@
         <li><code>vite.config.ts</code></li>
       </ul>
       <p><strong>Git:</strong> repo=vaultwares-website, branch=main, head=55b66eb</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-24 08:10 - vaultwares-template</strong> <span class="kind">code-change</span> - Backfill: commit a63589d (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=2 +14 -0</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Backfill: commit a63589d (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=2 +14 -0</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s</code></li>
+        <li><code>git show --name-only --pretty=format: a63589d59cca88f00c72b63a3ad29eed60babbc8</code></li>
+        <li><code>git show --numstat --pretty=format: a63589d59cca88f00c72b63a3ad29eed60babbc8</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>.github/INSTRUCTIONS.md</code></li>
+        <li><code>README.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-template, branch=main, head=c1d59a8</p>
     </div>
   </details>
   <details>
@@ -11884,25 +11928,6 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-04-21 08:50 - vault-flows</strong> <span class="kind">code-change</span> - Backfill: commit 81c10f4 (2026-04-21T08:50:54-04:00) - &#128737;️ Sentinel: [CRITICAL] Fix Path Traversal in Workflow Export and resolve e2e tests | files=1 +12 -7</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p class="summary"><strong>Summary:</strong> Backfill: commit 81c10f4 (2026-04-21T08:50:54-04:00) - &#128737;️ Sentinel: [CRITICAL] Fix Path Traversal in Workflow Export and resolve e2e tests | files=1 +12 -7</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s</code></li>
-        <li><code>git show --name-only --pretty=format: 81c10f446320ed3454acfb8b0248f3ca9937f5d7</code></li>
-        <li><code>git show --numstat --pretty=format: 81c10f446320ed3454acfb8b0248f3ca9937f5d7</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>tests/e2e/e2e_new_features.spec.js</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vault-flows, branch=main, head=ed096a3</p>
-    </div>
-  </details>
-  <details>
     <summary><strong>2026-04-21 08:50 - vault-flows</strong> <span class="kind">code-change</span> - Backfill: commit b60feb7 (2026-04-21T08:50:54-04:00) - &#128737;️ Sentinel: [CRITICAL] Fix Path Traversal in Workflow Export | files=3 +56 -4</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
@@ -11919,6 +11944,25 @@
         <li><code>agents/image_agent.py</code></li>
         <li><code>agents/video_agent.py</code></li>
         <li><code>agents/workflow_agent.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-flows, branch=main, head=ed096a3</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-04-21 08:50 - vault-flows</strong> <span class="kind">code-change</span> - Backfill: commit 81c10f4 (2026-04-21T08:50:54-04:00) - &#128737;️ Sentinel: [CRITICAL] Fix Path Traversal in Workflow Export and resolve e2e tests | files=1 +12 -7</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p class="summary"><strong>Summary:</strong> Backfill: commit 81c10f4 (2026-04-21T08:50:54-04:00) - &#128737;️ Sentinel: [CRITICAL] Fix Path Traversal in Workflow Export and resolve e2e tests | files=1 +12 -7</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s</code></li>
+        <li><code>git show --name-only --pretty=format: 81c10f446320ed3454acfb8b0248f3ca9937f5d7</code></li>
+        <li><code>git show --numstat --pretty=format: 81c10f446320ed3454acfb8b0248f3ca9937f5d7</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>tests/e2e/e2e_new_features.spec.js</code></li>
       </ul>
       <p><strong>Git:</strong> repo=vault-flows, branch=main, head=ed096a3</p>
     </div>
