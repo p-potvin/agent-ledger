@@ -102,6 +102,14 @@ else {
         if ($event.actor) {
             $lines.Add("- Actor: $($event.actor)")
         }
+        if ($event.agentHeader) {
+            $lines.Add("- Agent Header:")
+            $lines.Add('  ```text')
+            foreach ($headerLine in ("$($event.agentHeader)" -split "`r?`n")) {
+                $lines.Add("  $(ConvertTo-MarkdownLine $headerLine)")
+            }
+            $lines.Add('  ```')
+        }
         if ($summary) {
             $lines.Add("- Summary: $summary")
         }
@@ -189,6 +197,10 @@ else {
         $htmlLines.Add("      <p><strong>Kind:</strong> $(ConvertTo-HtmlText $kind)</p>")
         if ($event.actor) {
             $htmlLines.Add("      <p><strong>Actor:</strong> $(ConvertTo-HtmlText $event.actor)</p>")
+        }
+        if ($event.agentHeader) {
+            $htmlLines.Add('      <p><strong>Agent Header:</strong></p>')
+            $htmlLines.Add("      <pre><code>$(ConvertTo-HtmlText $event.agentHeader)</code></pre>")
         }
         if ($summary) {
             $htmlLines.Add("      <p class=""summary""><strong>Summary:</strong> $summary</p>")

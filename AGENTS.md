@@ -1,19 +1,19 @@
 # Workspace Agent Instructions (Canonical)
 
-This workspace uses a shared AI-agent ledger and a common agent-response header.
+This workspace uses a shared AI-agent ledger and a common ledger-only agent runtime header.
 
 Important precedence note:
 - Multiple `AGENTS.md` files may exist. The one deeper in the directory tree overrides higher-level ones.
 - In this workspace, `C:\Users\Administrator\Desktop\Github Repos\AGENTS.md` and `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\AGENTS.md` are intentionally kept identical. If you edit one, edit the other.
 
-## Agent Header (Mandatory)
+## Agent Header (Ledger-Only Mandatory)
 
-Every assistant reply (progress updates AND final answers) MUST begin with this header block.
+Do not print the Agent Header in user-facing replies. Instead, include the Agent Header in the ledger entry for the work you just performed.
 
 If a field is not knowable, write `unknown` (do not guess).
 Never include secrets (tokens, passwords, API keys, private URLs with embedded creds).
 
-Template (required):
+Template (required in the ledger entry):
 ```text
 Agent: <your display name> (role: <main|subagent:<agent_type>>)
 Model: <model id or 'unknown'>
@@ -26,8 +26,13 @@ MCP servers accessed (this reply): <comma-separated MCP namespaces/servers or 'n
 Time: <local date/time> (TZ: <timezone>)
 ```
 
+Tools and MCP logging rule:
+- Include only tools and MCP servers used since the user's most recent message.
+- Preserve first-seen order.
+- Deduplicate repeated tool names and MCP server names before writing the ledger entry.
+
 If sub-agents are used:
-- Each sub-agent should print its own header in its own responses.
+- Each sub-agent should include its own header in its own ledger/reporting surface when available.
 - The lead agent should mention which sub-agents were used in the final summary.
 
 Optional (recommended when relevant, but not required every time):

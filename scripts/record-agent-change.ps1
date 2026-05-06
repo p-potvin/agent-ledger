@@ -9,6 +9,14 @@ param(
     [string[]]$Files = @(),
     [string]$PlanPath,
     [string]$Actor = $env:AGENT_NAME,
+    [string]$AgentRole = 'main',
+    [string]$Model = 'unknown',
+    [string]$Thinking = 'unknown',
+    [string]$Mode = 'unknown',
+    [string]$Permissions = 'unknown',
+    [string]$Network = 'unknown',
+    [string[]]$ToolsUsed = @(),
+    [string[]]$McpServersAccessed = @(),
     [string]$WorkspaceRoot
 )
 
@@ -66,6 +74,22 @@ function Get-GitInfo {
     }
 }
 
+function Get-DedupedList {
+    param([string[]]$Items)
+    $seen = @{}
+    $result = New-Object System.Collections.Generic.List[string]
+    foreach ($item in $Items) {
+        $clean = "$item".Trim()
+        if ([string]::IsNullOrWhiteSpace($clean)) { continue }
+        $key = $clean.ToLowerInvariant()
+        if (-not $seen.ContainsKey($key)) {
+            $seen[$key] = $true
+            $result.Add($clean)
+        }
+    }
+    return @($result)
+}
+
 $ledgerRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 if (-not $WorkspaceRoot) {
     $WorkspaceRoot = Split-Path $ledgerRoot -Parent
@@ -87,10 +111,30 @@ if (-not $Actor) {
     $Actor = 'AI Agent'
 }
 
+$dedupedToolsUsed = Get-DedupedList $ToolsUsed
+$dedupedMcpServersAccessed = Get-DedupedList $McpServersAccessed
+
 $limitedSummary = Limit-Tokenish $Summary 1024
 $now = Get-Date
 $createdAt = $now.ToUniversalTime().ToString('o')
 $createdAtLocal = $now.ToString('yyyy-MM-dd HH:mm')
+$timezone = [System.TimeZoneInfo]::Local.Id
+
+$branchForHeader = if ($git -and $git.branch) { $git.branch } else { 'n/a' }
+$toolsForHeader = if ($dedupedToolsUsed.Count -gt 0) { $dedupedToolsUsed -join ', ' } else { 'none' }
+$mcpForHeader = if ($dedupedMcpServersAccessed.Count -gt 0) { $dedupedMcpServersAccessed -join ', ' } else { 'none' }
+$agentHeader = @(
+    "Agent: $Actor (role: $AgentRole)"
+    "Model: $Model"
+    "Thinking: $Thinking"
+    "Mode: $Mode"
+    "Permissions: $Permissions (network: $Network)"
+    "CWD: $((Get-Location).Path)  Branch: $branchForHeader"
+    "Tools used (this reply): $toolsForHeader"
+    "MCP servers accessed (this reply): $mcpForHeader"
+    "Time: $createdAtLocal (TZ: $timezone)"
+) -join [Environment]::NewLine
+
 $fingerprintSource = [ordered]@{
     project = $Project
     kind = $Kind
@@ -121,10 +165,21 @@ $event = [ordered]@{
     id = $id
     createdAt = $createdAt
     createdAtLocal = $createdAtLocal
-    timezone = [System.TimeZoneInfo]::Local.Id
+    timezone = $timezone
     project = $Project
     kind = $Kind
     actor = $Actor
+    agentHeader = $agentHeader
+    runtime = [ordered]@{
+        role = $AgentRole
+        model = $Model
+        thinking = $Thinking
+        mode = $Mode
+        permissions = $Permissions
+        network = $Network
+        toolsUsed = $dedupedToolsUsed
+        mcpServersAccessed = $dedupedMcpServersAccessed
+    }
     workspaceRoot = $WorkspaceRoot
     cwd = (Get-Location).Path
     summary = $limitedSummary
