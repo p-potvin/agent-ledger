@@ -1,0 +1,31 @@
+{
+  "id": "20260506-031210-790-scripts-2fc74ca5",
+  "createdAt": "2026-05-06T07:12:10.7908742Z",
+  "createdAtLocal": "2026-05-06 03:12",
+  "timezone": "Eastern Standard Time",
+  "project": "scripts",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-06 03:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts",
+  "summary": "Fixed offline-mode crash when loading VAE. AutoencoderKL.from_single_file('ae.safetensors') couldn't map the generic filename to a config so diffusers fell back to fetching stable-diffusion-v1-5 config from HF Hub, which fails with HF_HUB_OFFLINE=1. Created models/vae/config.json with the correct FLUX VAE parameters (latent_channels=16, scaling_factor=0.3611, shift_factor=0.1159, use_quant_conv=false etc.) and passed config=os.path.dirname(vae_path) to from_single_file so diffusers reads the local file.",
+  "commands": [],
+  "files": [
+    "scripts/frame_extractor.py",
+    "scripts/models/vae/config.json"
+  ],
+  "planPath": "",
+  "contentHash": "2fc74ca564c399f130a039f40e180923ca612ce95ea6ddb8564a21fcb103fd7c",
+  "git": null
+}

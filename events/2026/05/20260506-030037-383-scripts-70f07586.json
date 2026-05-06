@@ -1,0 +1,30 @@
+{
+  "id": "20260506-030037-383-scripts-70f07586",
+  "createdAt": "2026-05-06T07:00:37.3834696Z",
+  "createdAtLocal": "2026-05-06 03:00",
+  "timezone": "Eastern Standard Time",
+  "project": "scripts",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-06 03:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\scripts",
+  "summary": "Added torchvision compatibility shim in frame_extractor.py. torchvision >=0.16 removed functional_tensor submodule (merged into functional). Registered sys.modules shim before basicsr/realesrgan imports to prevent ModuleNotFoundError without requiring a torchvision downgrade.",
+  "commands": [],
+  "files": [
+    "scripts/frame_extractor.py"
+  ],
+  "planPath": "",
+  "contentHash": "70f0758659c1230326fd7412892593a2445bbdec0b02ee800e365a55d460e0db",
+  "git": null
+}
