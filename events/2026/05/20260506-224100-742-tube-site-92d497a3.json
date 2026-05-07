@@ -1,0 +1,35 @@
+{
+  "id": "20260506-224100-742-tube-site-92d497a3",
+  "createdAt": "2026-05-07T02:41:00.7421758Z",
+  "createdAtLocal": "2026-05-06 22:41",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-06 22:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Reworked tube plugin deployment verification: removed brittle success-string matching and replaced with (a) extract plugin file param from update response when possible, (b) fetch plugins.php and fail fast if it returns login form, (c) verify plugin file path appears (raw or URL-encoded), and (d) parse the nearby 'Version X.Y.Z' and fail if installed version != repo Version header (catches installed-but-not-updated).",
+  "commands": [
+    "Get-Content .github/workflows/deploy-fullxxx-video.yml",
+    "Get-Content .github/workflows/deploy-promking-tube.yml",
+    "git diff --name-only"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-fullxxx-video.yml",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-promking-tube.yml"
+  ],
+  "planPath": "",
+  "contentHash": "92d497a30a565ca830e1fae8174aeb7a300b4c3d27f2cfaeed5947e257fc3b21",
+  "git": null
+}

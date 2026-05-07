@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-06T21:27:02.7812442Z",
+    "lastUpdatedUtc":  "2026-05-07T19:27:02.3428181Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1231,7 +1231,31 @@
                                        "20260506-050321-345-scripts-cec76419",
                                        "20260506-052531-663-fastmcp-a598bf2f",
                                        "20260506-164810-248-tube-site-2826ed3f",
-                                       "20260506-165918-819-agent-ledger-2a2f7370"
+                                       "20260506-165918-819-agent-ledger-2a2f7370",
+                                       "20260506-224100-742-tube-site-92d497a3",
+                                       "20260506-225604-095-tube-site-db9f1320",
+                                       "20260506-230225-334-tube-site-327f0f47",
+                                       "20260506-231400-161-tube-site-60e9685a",
+                                       "20260506-232142-716-tube-site-1405026d",
+                                       "20260506-235959-696-general-tasks-97cea0bd",
+                                       "20260507-000147-376-general-tasks-fc827320",
+                                       "20260507-001045-820-general-tasks-e19fefc2",
+                                       "20260507-001422-569-general-tasks-b3f1fd99",
+                                       "20260507-001617-046-test-0586fbf3",
+                                       "20260507-001651-001-general-tasks-525bf4e1",
+                                       "20260507-001827-473-test-fc301040",
+                                       "20260507-001834-926-agent-ledger-571437a4",
+                                       "20260507-002419-784-agent-ledger-6fe4c20c",
+                                       "20260507-004137-711-general-tasks-bd9c02a6",
+                                       "20260507-020048-457-tube-site-44d0db56",
+                                       "20260507-023625-205-tube-site-da78270b",
+                                       "20260507-024121-536-fastmcp-66e237ba",
+                                       "20260507-024158-104-fastmcp-81155301",
+                                       "20260507-024538-925-fastmcp-0bf16382",
+                                       "20260507-030127-128-general-tasks-7649aa39",
+                                       "20260507-061539-097-tube-site-064c87d2",
+                                       "20260507-115400-016-general-tasks-817e10d4",
+                                       "20260507-125223-396-tube-site-7557d1ea"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2296,7 +2320,17 @@
                                                                         "claude-sonnet-4.6",
                                                                         "unknown"
                                                                     ],
-                                                         "count":  10
+                                                         "count":  16
+                                                     },
+                                                     {
+                                                         "actors":  [
+                                                                        "AI Agent"
+                                                                    ],
+                                                         "day":  "2026-05-07",
+                                                         "models":  [
+                                                                        "unknown"
+                                                                    ],
+                                                         "count":  18
                                                      }
                                                  ],
                                    "tools":  [
@@ -2325,16 +2359,16 @@
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  10,
+                                                  34,
                                                   "Codex",
                                                   3,
                                                   "GitHub Copilot",
                                                   1
                                               ],
-                                   "totalEvents":  14,
+                                   "totalEvents":  38,
                                    "models":  [
                                                   "unknown",
-                                                  13,
+                                                  37,
                                                   "claude-sonnet-4.6",
                                                   1
                                               ]
@@ -2360,12 +2394,12 @@
                                    {
                                        "label":  "Wed",
                                        "dow":  2,
-                                       "count":  140
+                                       "count":  146
                                    },
                                    {
                                        "label":  "Thu",
                                        "dow":  3,
-                                       "count":  79
+                                       "count":  97
                                    },
                                    {
                                        "label":  "Fri",
@@ -2385,7 +2419,7 @@
                                ],
                  "hourSeries":  [
                                     {
-                                        "count":  39,
+                                        "count":  48,
                                         "hour":  0
                                     },
                                     {
@@ -2393,11 +2427,11 @@
                                         "hour":  1
                                     },
                                     {
-                                        "count":  37,
+                                        "count":  42,
                                         "hour":  2
                                     },
                                     {
-                                        "count":  31,
+                                        "count":  32,
                                         "hour":  3
                                     },
                                     {
@@ -2409,7 +2443,7 @@
                                         "hour":  5
                                     },
                                     {
-                                        "count":  36,
+                                        "count":  37,
                                         "hour":  6
                                     },
                                     {
@@ -2429,11 +2463,11 @@
                                         "hour":  10
                                     },
                                     {
-                                        "count":  58,
+                                        "count":  59,
                                         "hour":  11
                                     },
                                     {
-                                        "count":  45,
+                                        "count":  46,
                                         "hour":  12
                                     },
                                     {
@@ -2473,11 +2507,11 @@
                                         "hour":  21
                                     },
                                     {
-                                        "count":  54,
+                                        "count":  56,
                                         "hour":  22
                                     },
                                     {
-                                        "count":  42,
+                                        "count":  46,
                                         "hour":  23
                                     }
                                 ],
@@ -2498,7 +2532,7 @@
                                                  "insertions":  0
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-06 17:27",
+                 "generatedAtLocal":  "2026-05-07 15:27",
                  "series":  {
                                 "months":  [
                                                {
@@ -2511,7 +2545,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  239
+                                                   "count":  263
                                                }
                                            ],
                                 "days":  [
@@ -3348,36 +3382,53 @@
                                                  "projects":  [
                                                                   "agent-ledger",
                                                                   "fastmcp",
+                                                                  "General Tasks",
                                                                   "scripts",
                                                                   "tube-site"
                                                               ],
-                                                 "entries":  10,
+                                                 "entries":  16,
                                                  "day":  "2026-05-06",
                                                  "kinds":  {
-                                                               "code-change":  10
+                                                               "code-change":  15,
+                                                               "general":  1
+                                                           }
+                                             },
+                                             {
+                                                 "projects":  [
+                                                                  "agent-ledger",
+                                                                  "fastmcp",
+                                                                  "General Tasks",
+                                                                  "Test",
+                                                                  "tube-site"
+                                                              ],
+                                                 "entries":  18,
+                                                 "day":  "2026-05-07",
+                                                 "kinds":  {
+                                                               "code-change":  9,
+                                                               "general":  9
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1160
+                                                  "count":  1174
                                               },
                                               {
                                                   "kind":  "plan",
                                                   "count":  27
                                               },
                                               {
-                                                  "kind":  "verification",
-                                                  "count":  13
+                                                  "kind":  "general",
+                                                  "count":  16
                                               },
                                               {
                                                   "kind":  "commands",
                                                   "count":  13
                                               },
                                               {
-                                                  "kind":  "general",
-                                                  "count":  6
+                                                  "kind":  "verification",
+                                                  "count":  13
                                               },
                                               {
                                                   "kind":  "handoff",
@@ -3631,6 +3682,35 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "code-change":  45
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "tube-site",
+                                                     "entries":  45,
+                                                     "recent":  [
+                                                                    "Added a harmless blank line at the top of each plugin README so you can trigger GitHub Actions deployments by touching README.md under promking-tube/ or fullxxx-video/.",
+                                                                    "Handle WP admin rate-limiting: add curl wrapper with exponential backoff for HTTP 429/503/52x to the login step in both tube-site deploy workflows; improve error message to expl...",
+                                                                    "Implemented phase-1 self-hosting assets for the tube sites: added Debian 12 VPS bootstrap/install/create-site scripts, nginx/php-fpm/MariaDB templates, and a self-hosted WordPre..."
+                                                                ],
+                                                     "firstDay":  "2026-04-23",
+                                                     "lastDay":  "2026-05-07",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  40,
                                                                    "plan":  2
                                                                },
@@ -3677,35 +3757,6 @@
                                                                 ],
                                                      "firstDay":  "2026-03-11",
                                                      "lastDay":  "2026-05-01",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  36
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "tube-site",
-                                                     "entries":  36,
-                                                     "recent":  [
-                                                                    "Backfill: commit 9e14c1c (2026-05-04T06:12:56-04:00) - Merge pull request #7 from Prom-King/add-features-for-accumulation-and-ads-18140236532184213601 | files=0 +49 -0",
-                                                                    "Backfill: commit ca526cf (2026-05-04T18:34:32-04:00) - Automated commit: Updated files in tube-site | files=8 +46 -216",
-                                                                    "Tube plugins: made GitHub Actions deploy zips include top-level plugin folder; added ad rotation support (--- delimited multi-snippet per slot) and new ad spots (sidebar, inline..."
-                                                                ],
-                                                     "firstDay":  "2026-04-23",
-                                                     "lastDay":  "2026-05-06",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -3922,6 +3973,37 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "commands":  3,
+                                                                   "verification":  3,
+                                                                   "code-change":  15
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "agent-ledger",
+                                                     "entries":  21,
+                                                     "recent":  [
+                                                                    "Added safe Vercel auth diagnostics to the GitHub Actions deploy workflow and trimmed CR/LF from VERCEL_TOKEN before invoking Vercel CLI. New step runs \u000bercel whoami so we can te...",
+                                                                    "Fixed exit code 128 issue: added \u0027exit 0\u0027 to render-agent-ledger.ps1 to explicitly return success code. Root cause: script completed successfully but didn\u0027t explicitly exit, cau...",
+                                                                    "Fixed exit code 128 and demonstrated proper VaultWares code change workflow: branched from main, committed with Lore protocol trailers, pushed to GitHub, created PR for human re..."
+                                                                ],
+                                                     "firstDay":  "2026-04-28",
+                                                     "lastDay":  "2026-05-07",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  20
                                                                },
                                                      "lineClean":  {
@@ -3951,24 +4033,24 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "commands":  3,
-                                                                   "verification":  3,
-                                                                   "code-change":  13
+                                                                   "plan":  1,
+                                                                   "general":  12,
+                                                                   "code-change":  6
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "agent-ledger",
+                                                     "project":  "General Tasks",
                                                      "entries":  19,
                                                      "recent":  [
-                                                                    "Work impact page revamp: fixed commit size/tech volume/files touched zero-data handling, switched milestones/strongest-week positions, reworked Evidence section into collapsible...",
-                                                                    "Applied vault-themes branding to WORK_IMPACT.html. (1) Replaced :root CSS block with Golden Slate tokens (bg:#2E3538, ac:#D4AF37, etc.). (2) Removed @media prefers-color-scheme:...",
-                                                                    "Added safe Vercel auth diagnostics to the GitHub Actions deploy workflow and trimmed CR/LF from VERCEL_TOKEN before invoking Vercel CLI. New step runs \u000bercel whoami so we can te..."
+                                                                    "Updated memory: agent-ledger push-to-main exception, PR reviewer addition, factual communication style, visual experiments. Listed sources of truth in load order.",
+                                                                    "Researched terminology for AI Agents (Claude/ChatGPT/Gemini/Manus/Copilot/Jules/Meta) vs MCP Hosts (Claude Desktop/VS Code/Cursor/Windsurf/Antigravity/Codex/OpenCode/Gemini CLI/...",
+                                                                    "Looked up current reputation/claims around SparkTraffic and TrafficPeak (traffic-buying services) to advise on whether paid traffic is worth it; no code changes."
                                                                 ],
                                                      "firstDay":  "2026-04-28",
-                                                     "lastDay":  "2026-05-06",
+                                                     "lastDay":  "2026-05-07",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4018,15 +4100,15 @@
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "automation-suite",
+                                                     "project":  "agentic-markup",
                                                      "entries":  15,
                                                      "recent":  [
-                                                                    "Backfill: commit 2b2ec43 (2026-04-24T10:43:06-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=1 +1 -1",
-                                                                    "Backfill: commit 25683c2 (2026-04-25T21:05:22-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=2 +2 -2",
-                                                                    "Backfill: commit 7be29d9 (2026-05-01T17:52:12-04:00) - Automated commit: Updated files in automation-suite | files=2 +2 -2"
+                                                                    "Backfill: commit d8bdb4f (2026-04-17T09:20:29-04:00) - Merge pull request #4 from p-potvin/fix-prototype-pollution-parse-attributes-7302579990965293704 | files=1 +24 -1",
+                                                                    "Backfill: commit 070ab3f (2026-04-17T18:11:12-04:00) - Automated commit: Updated files in agentic-markup | files=12 +376 -13",
+                                                                    "Backfill: commit 5184c31 (2026-04-24T07:21:10-04:00) - feat: implement content script observer and extension popup UI | files=6 +102 -93"
                                                                 ],
-                                                     "firstDay":  "2026-03-11",
-                                                     "lastDay":  "2026-05-01",
+                                                     "firstDay":  "2026-04-10",
+                                                     "lastDay":  "2026-04-24",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4047,15 +4129,15 @@
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "agentic-markup",
+                                                     "project":  "automation-suite",
                                                      "entries":  15,
                                                      "recent":  [
-                                                                    "Backfill: commit d8bdb4f (2026-04-17T09:20:29-04:00) - Merge pull request #4 from p-potvin/fix-prototype-pollution-parse-attributes-7302579990965293704 | files=1 +24 -1",
-                                                                    "Backfill: commit 070ab3f (2026-04-17T18:11:12-04:00) - Automated commit: Updated files in agentic-markup | files=12 +376 -13",
-                                                                    "Backfill: commit 5184c31 (2026-04-24T07:21:10-04:00) - feat: implement content script observer and extension popup UI | files=6 +102 -93"
+                                                                    "Backfill: commit 2b2ec43 (2026-04-24T10:43:06-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=1 +1 -1",
+                                                                    "Backfill: commit 25683c2 (2026-04-25T21:05:22-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=2 +2 -2",
+                                                                    "Backfill: commit 7be29d9 (2026-05-01T17:52:12-04:00) - Automated commit: Updated files in automation-suite | files=2 +2 -2"
                                                                 ],
-                                                     "firstDay":  "2026-04-10",
-                                                     "lastDay":  "2026-04-24",
+                                                     "firstDay":  "2026-03-11",
+                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4159,24 +4241,23 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "plan":  1,
-                                                                   "general":  4,
-                                                                   "code-change":  6
+                                                                   "code-change":  9,
+                                                                   "plan":  1
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "General Tasks",
-                                                     "entries":  11,
+                                                     "project":  "vaultwares-docs",
+                                                     "entries":  10,
                                                      "recent":  [
-                                                                    "Merged agent-ledger instruction content into a single canonical AGENTS.md and duplicated it into both workspace root and agent-ledger repo. Added mandatory \u0027Agent Header\u0027 requir...",
-                                                                    "Established persistent interaction rules in .gemini/rules/prom-king-ledger.md. These rules codify the shared ledger protocol, grounding requirements, and communication style for...",
-                                                                    "Renamed prom-king-ledger.md to unified-agent-rules.md to reflect applicability across both Prom King and VaultWares ecosystems. Reformatted for markdown lint compliance."
+                                                                    "Backfill: commit cbec59b (2026-04-24T18:06:40-04:00) - Merge pull request #5 from p-potvin/copilot/update-vaultwares-documentation | files=0 +43 -0",
+                                                                    "Backfill: commit 2f5b420 (2026-05-04T04:42:17-04:00) - docs: add comprehensive products and services catalog | files=2 +82 -0",
+                                                                    "Completed Phase 3: Updated API_Exposure_Architecture_Plan.md on Desktop. Designed Tailscale Funnel + Caddy reverse proxy architecture for noddit.org (vault-flows) and vaultwares..."
                                                                 ],
-                                                     "firstDay":  "2026-04-28",
-                                                     "lastDay":  "2026-05-05",
+                                                     "firstDay":  "2026-04-18",
+                                                     "lastDay":  "2026-05-04",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4220,22 +4301,21 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  9,
-                                                                   "plan":  1
+                                                                   "code-change":  9
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "vaultwares-docs",
-                                                     "entries":  10,
+                                                     "project":  "prelanding-page",
+                                                     "entries":  9,
                                                      "recent":  [
-                                                                    "Backfill: commit cbec59b (2026-04-24T18:06:40-04:00) - Merge pull request #5 from p-potvin/copilot/update-vaultwares-documentation | files=0 +43 -0",
-                                                                    "Backfill: commit 2f5b420 (2026-05-04T04:42:17-04:00) - docs: add comprehensive products and services catalog | files=2 +82 -0",
-                                                                    "Completed Phase 3: Updated API_Exposure_Architecture_Plan.md on Desktop. Designed Tailscale Funnel + Caddy reverse proxy architecture for noddit.org (vault-flows) and vaultwares..."
+                                                                    "Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookie...",
+                                                                    "Backfill: commit 31fcbb5 (2026-05-01T17:55:28-04:00) - Automated commit: Updated files in prelanding-page | files=39 +4809 -157",
+                                                                    "Backfill: commit 3dfcdd2 (2026-05-04T18:34:27-04:00) - Automated commit: Updated files in prelanding-page | files=13 +386 -93"
                                                                 ],
-                                                     "firstDay":  "2026-04-18",
+                                                     "firstDay":  "2026-04-23",
                                                      "lastDay":  "2026-05-04",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
@@ -4279,22 +4359,24 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  9
+                                                                   "commands":  1,
+                                                                   "plan":  1,
+                                                                   "code-change":  5
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "prelanding-page",
-                                                     "entries":  9,
+                                                     "project":  "fastmcp",
+                                                     "entries":  7,
                                                      "recent":  [
-                                                                    "Implemented the Prom King frontend/legal/compliance/branding slice in client-only scope: added Prom King metadata and page titles, new public legal routes/pages (privacy, cookie...",
-                                                                    "Backfill: commit 31fcbb5 (2026-05-01T17:55:28-04:00) - Automated commit: Updated files in prelanding-page | files=39 +4809 -157",
-                                                                    "Backfill: commit 3dfcdd2 (2026-05-04T18:34:27-04:00) - Automated commit: Updated files in prelanding-page | files=13 +386 -93"
+                                                                    "Added MCPB desktop-extension support by creating root manifest.json (MCPB manifest spec v0.3) and .mcpbignore to keep bundles small. Installed @anthropic-ai/mcpb, validated mani...",
+                                                                    "Adjusted MCPB manifest to launch via python -m vaultwares_fastmcp (entry_point vaultwares_fastmcp/__main__.py) instead of server.py, then revalidated and repacked vaultwares-fas...",
+                                                                    "Switched MCPB manifest to start stdio server via python /server.py (instead of python -m vaultwares_fastmcp) per expected entrypoint usage; revalidated and repacked vaultwares-f..."
                                                                 ],
-                                                     "firstDay":  "2026-04-23",
-                                                     "lastDay":  "2026-05-04",
+                                                     "firstDay":  "2026-05-01",
+                                                     "lastDay":  "2026-05-07",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4344,15 +4426,15 @@
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "gallery-scraper",
+                                                     "project":  "debrid-media-manager",
                                                      "entries":  6,
                                                      "recent":  [
-                                                                    "Backfill: commit 18801b3 (2026-04-07T13:19:16-04:00) - Added configs, icons, published add-on | files=18 +480 -74",
-                                                                    "Backfill: commit 2ff69ca (2026-04-08T15:26:04-04:00) - Add initial project setup with package.json and webpack configuration | files=8 +1542 -5",
-                                                                    "Backfill: commit d55eb37 (2026-05-01T17:52:19-04:00) - Automated commit: Updated files in gallery-scraper | files=1 +0 -0"
+                                                                    "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
+                                                                    "Backfill: commit 55ec199 (2026-04-17T18:11:24-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +11 -5",
+                                                                    "Backfill: commit c6ce8b5 (2026-04-18T22:32:35-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +1 -2"
                                                                 ],
-                                                     "firstDay":  "2026-04-07",
-                                                     "lastDay":  "2026-05-01",
+                                                     "firstDay":  "2026-04-01",
+                                                     "lastDay":  "2026-04-19",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4373,15 +4455,15 @@
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "debrid-media-manager",
+                                                     "project":  "gallery-scraper",
                                                      "entries":  6,
                                                      "recent":  [
-                                                                    "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
-                                                                    "Backfill: commit 55ec199 (2026-04-17T18:11:24-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +11 -5",
-                                                                    "Backfill: commit c6ce8b5 (2026-04-18T22:32:35-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +1 -2"
+                                                                    "Backfill: commit 18801b3 (2026-04-07T13:19:16-04:00) - Added configs, icons, published add-on | files=18 +480 -74",
+                                                                    "Backfill: commit 2ff69ca (2026-04-08T15:26:04-04:00) - Add initial project setup with package.json and webpack configuration | files=8 +1542 -5",
+                                                                    "Backfill: commit d55eb37 (2026-05-01T17:52:19-04:00) - Automated commit: Updated files in gallery-scraper | files=1 +0 -0"
                                                                 ],
-                                                     "firstDay":  "2026-04-01",
-                                                     "lastDay":  "2026-04-19",
+                                                     "firstDay":  "2026-04-07",
+                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4453,37 +4535,6 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "commands":  1,
-                                                                   "plan":  1,
-                                                                   "code-change":  2
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "fastmcp",
-                                                     "entries":  4,
-                                                     "recent":  [
-                                                                    "Successfully translated 40 .skill files into agent-readable Markdown files with YAML frontmatter in skills_md/.",
-                                                                    "Providing nssm commands to install fastmcp server as a Windows service.",
-                                                                    "Implemented tiered VaultWares FastMCP server (fs/shell sessions/optional ssh/ops/diagnostics) as python package vaultwares_fastmcp; updated entrypoints + README + installer + te..."
-                                                                ],
-                                                     "firstDay":  "2026-05-01",
-                                                     "lastDay":  "2026-05-06",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
                                                                    "code-change":  3,
                                                                    "plan":  1
                                                                },
@@ -4501,34 +4552,6 @@
                                                                 ],
                                                      "firstDay":  "2026-05-03",
                                                      "lastDay":  "2026-05-03",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  2
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "No More Groceries",
-                                                     "entries":  2,
-                                                     "recent":  [
-                                                                    "Fixed Tailwind CSS unstyled render by restoring styles.css from git, patching missing @reference ./tailwind.css for v4 compiler, and correcting user\u0027s assumption regarding vault...",
-                                                                    "Fixed local DB ABI collision by routing npm run dev backend commands through the Electron VM using ELECTRON_RUN_AS_NODE=1, eliminating the need to dual-compile better-sqlite3."
-                                                                ],
-                                                     "firstDay":  "2026-04-28",
-                                                     "lastDay":  "2026-04-29",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4571,20 +4594,76 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  1
+                                                                   "code-change":  2
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "Prom King monetization projects",
+                                                     "project":  "No More Groceries",
+                                                     "entries":  2,
+                                                     "recent":  [
+                                                                    "Fixed Tailwind CSS unstyled render by restoring styles.css from git, patching missing @reference ./tailwind.css for v4 compiler, and correcting user\u0027s assumption regarding vault...",
+                                                                    "Fixed local DB ABI collision by routing npm run dev backend commands through the Electron VM using ELECTRON_RUN_AS_NODE=1, eliminating the need to dual-compile better-sqlite3."
+                                                                ],
+                                                     "firstDay":  "2026-04-28",
+                                                     "lastDay":  "2026-04-29",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "general":  2
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "Test",
+                                                     "entries":  2,
+                                                     "recent":  [
+                                                                    "Testing exit code behavior",
+                                                                    "Testing exit code after fix"
+                                                                ],
+                                                     "firstDay":  "2026-05-07",
+                                                     "lastDay":  "2026-05-07",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "plan":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "business workspace",
                                                      "entries":  1,
                                                      "recent":  [
-                                                                    "Implemented Prom King tube pagination and back-catalog retention: added video source/remote/takedown fields and migration, active/not-removed filtering, paginated tRPC endpoints..."
+                                                                    "Familiarized with C:\\Users\\Administrator\\Desktop\\business repos for monetization planning. Mapped link-sharing, prelanding-page, qa-automation, and tube-site. Verified prelandin..."
                                                                 ],
-                                                     "firstDay":  "2026-05-04",
-                                                     "lastDay":  "2026-05-04",
+                                                     "firstDay":  "2026-04-30",
+                                                     "lastDay":  "2026-04-30",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4612,33 +4691,6 @@
                                                                 ],
                                                      "firstDay":  "2026-04-24",
                                                      "lastDay":  "2026-04-24",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "verification":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "business",
-                                                     "entries":  1,
-                                                     "recent":  [
-                                                                    "Checked whether the WordPress admin panel for prom-king.xyz is reachable. Searched the business workspace for WordPress config/admin references, found no wp-config.php and no lo..."
-                                                                ],
-                                                     "firstDay":  "2026-05-01",
-                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4686,6 +4738,33 @@
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
+                                                     "project":  "Prom King monetization projects",
+                                                     "entries":  1,
+                                                     "recent":  [
+                                                                    "Implemented Prom King tube pagination and back-catalog retention: added video source/remote/takedown fields and migration, active/not-removed filtering, paginated tRPC endpoints..."
+                                                                ],
+                                                     "firstDay":  "2026-05-04",
+                                                     "lastDay":  "2026-05-04",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
                                                      "project":  "business WordPress tube sites",
                                                      "entries":  1,
                                                      "recent":  [
@@ -4706,20 +4785,20 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "plan":  1
+                                                                   "verification":  1
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "business workspace",
+                                                     "project":  "business",
                                                      "entries":  1,
                                                      "recent":  [
-                                                                    "Familiarized with C:\\Users\\Administrator\\Desktop\\business repos for monetization planning. Mapped link-sharing, prelanding-page, qa-automation, and tube-site. Verified prelandin..."
+                                                                    "Checked whether the WordPress admin panel for prom-king.xyz is reachable. Searched the business workspace for WordPress config/admin references, found no wp-config.php and no lo..."
                                                                 ],
-                                                     "firstDay":  "2026-04-30",
-                                                     "lastDay":  "2026-04-30",
+                                                     "firstDay":  "2026-05-01",
+                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -20186,17 +20265,17 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-12T02:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-06T20:59:18.8192480Z",
+                 "_maxCreatedAtUtc":  "2026-05-07T16:52:23.3964632Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
-                               "end":  "2026-05-06"
+                               "end":  "2026-05-07"
                            },
                  "totals":  {
-                                "projects":  46,
-                                "events":  1224,
+                                "projects":  47,
+                                "events":  1248,
                                 "uniqueCommitsRecomputed":  1030,
-                                "activeDays":  54,
+                                "activeDays":  55,
                                 "commitEventsWithStats":  1030
                             }
              }

@@ -1,0 +1,31 @@
+{
+  "id": "20260507-001422-569-general-tasks-b3f1fd99",
+  "createdAt": "2026-05-07T04:14:22.5694410Z",
+  "createdAtLocal": "2026-05-07 00:14",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-07 00:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "User corrected agent ledger timing: it must be recorded AFTER all work is done, just before replying — not at the start. Saved as permanent feedback memory. Also loaded and confirmed vaultwares-mcp credit optimizer tools are active.",
+  "commands": [],
+  "files": [
+    "C:\\Users\\Administrator\\.claude\\projects\\C--Users-Administrator-Desktop-Github-Repos\\memory\\feedback_agent_ledger_timing.md",
+    "C:\\Users\\Administrator\\.claude\\projects\\C--Users-Administrator-Desktop-Github-Repos\\memory\\MEMORY.md"
+  ],
+  "planPath": "",
+  "contentHash": "b3f1fd99af040c0fe312de0d8577a1240628e51d6eb5a38f4ca36628b5a66584",
+  "git": null
+}

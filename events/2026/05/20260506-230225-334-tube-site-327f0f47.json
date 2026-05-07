@@ -1,0 +1,34 @@
+{
+  "id": "20260506-230225-334-tube-site-327f0f47",
+  "createdAt": "2026-05-07T03:02:25.3349831Z",
+  "createdAtLocal": "2026-05-06 23:02",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-06 23:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Fix YAML syntax error: removed heredoc blocks inside GitHub Actions run step (they broke YAML indentation). Replaced them with single-quoted python3 -c '...' one-liners for url encoding, plugin param extraction, and installed-version parsing in both tube-site deploy workflows.",
+  "commands": [
+    "Select-String .github/workflows/deploy-*.yml -Pattern '^import '",
+    "git diff --name-only"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-promking-tube.yml",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-fullxxx-video.yml"
+  ],
+  "planPath": "",
+  "contentHash": "327f0f47f6b785a757718bd1c021ad4ee8b3c2c62c0d211e6831c9ea202d79ad",
+  "git": null
+}
