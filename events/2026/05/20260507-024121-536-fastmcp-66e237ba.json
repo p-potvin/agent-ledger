@@ -1,0 +1,42 @@
+{
+  "id": "20260507-024121-536-fastmcp-66e237ba",
+  "createdAt": "2026-05-07T06:41:21.5368752Z",
+  "createdAtLocal": "2026-05-07 02:41",
+  "timezone": "Eastern Standard Time",
+  "project": "fastmcp",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-07 02:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp",
+  "summary": "Added MCPB desktop-extension support by creating root manifest.json (MCPB manifest spec v0.3) and .mcpbignore to keep bundles small. Installed @anthropic-ai/mcpb, validated manifest, packed vaultwares-fastmcp-2.0.0.mcpb (now ~101KB vs initial 31MB), and verified with pytest.",
+  "commands": [
+    "npm install -g @anthropic-ai/mcpb",
+    "mcpb validate .",
+    "mcpb pack . vaultwares-fastmcp-2.0.0.mcpb",
+    "python -m pytest -q"
+  ],
+  "files": [
+    "manifest.json",
+    ".mcpbignore"
+  ],
+  "planPath": "",
+  "contentHash": "66e237ba9540b3d35b6cc8bcf584fd6c200f685db89c9f89ae802b3c7101caa4",
+  "git": {
+    "repo": "fastmcp",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/fastmcp",
+    "branch": "main",
+    "head": "beff63d",
+    "hasChanges": true
+  }
+}

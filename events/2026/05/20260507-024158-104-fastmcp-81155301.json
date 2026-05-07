@@ -1,0 +1,39 @@
+{
+  "id": "20260507-024158-104-fastmcp-81155301",
+  "createdAt": "2026-05-07T06:41:58.1044957Z",
+  "createdAtLocal": "2026-05-07 02:41",
+  "timezone": "Eastern Standard Time",
+  "project": "fastmcp",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-07 02:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp",
+  "summary": "Adjusted MCPB manifest to launch via python -m vaultwares_fastmcp (entry_point vaultwares_fastmcp/__main__.py) instead of server.py, then revalidated and repacked vaultwares-fastmcp-2.0.0.mcpb.",
+  "commands": [
+    "mcpb validate .",
+    "mcpb pack . vaultwares-fastmcp-2.0.0.mcpb"
+  ],
+  "files": [
+    "manifest.json"
+  ],
+  "planPath": "",
+  "contentHash": "811553015760a9705b6ce54d752a0b77407535be66f0062dc182c9d01dc350af",
+  "git": {
+    "repo": "fastmcp",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/fastmcp",
+    "branch": "main",
+    "head": "beff63d",
+    "hasChanges": true
+  }
+}

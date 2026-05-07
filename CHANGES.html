@@ -26,6 +26,426 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-07 12:52 - tube-site</strong> <span class="kind">code-change</span> - Implemented phase-1 self-hosting assets for the tube sites: added Debian 12 VPS bootstrap/install/create-site scripts, nginx/php-fpm/MariaDB templates, and a self-hosted WordPre...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 12:52 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Implemented phase-1 self-hosting assets for the tube sites: added Debian 12 VPS bootstrap/install/create-site scripts, nginx/php-fpm/MariaDB templates, and a self-hosted WordPress migration runbook. Retargeted both deploy workflows to use secret-based WordPress base URLs (PROM_KING_WP_BASE_URL, FULLXXX_VIDEO_WP_BASE_URL) instead of hardcoded Porkbun domains, preserving the stronger login and version verification logic.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git diff --check</code></li>
+        <li><code>bash -n /mnt/c/Users/Administrator/Desktop/business/tube-site/infra/vps/bootstrap-debian12.sh</code></li>
+        <li><code>bash -n /mnt/c/Users/Administrator/Desktop/business/tube-site/infra/vps/install-wordpress-stack.sh</code></li>
+        <li><code>bash -n /mnt/c/Users/Administrator/Desktop/business/tube-site/infra/vps/create-wordpress-site.sh</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\infra\vps\bootstrap-debian12.sh</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\infra\vps\install-wordpress-stack.sh</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\infra\vps\create-wordpress-site.sh</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\docs\SELF_HOSTED_WORDPRESS_VPS.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 11:54 - General Tasks</strong> <span class="kind">general</span> - Looked up current reputation/claims around SparkTraffic and TrafficPeak (traffic-buying services) to advise on whether paid traffic is worth it; no code changes.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 11:54 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Looked up current reputation/claims around SparkTraffic and TrafficPeak (traffic-buying services) to advise on whether paid traffic is worth it; no code changes.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>web.run search: SparkTraffic review/terms</code></li>
+        <li><code>web.run search: TrafficPeak review/terms</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 06:15 - tube-site</strong> <span class="kind">code-change</span> - Handle WP admin rate-limiting: add curl wrapper with exponential backoff for HTTP 429/503/52x to the login step in both tube-site deploy workflows; improve error message to expl...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 06:15 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Handle WP admin rate-limiting: add curl wrapper with exponential backoff for HTTP 429/503/52x to the login step in both tube-site deploy workflows; improve error message to explicitly call out 429 and recommend allowlisting CI or using a self-hosted runner with stable IP.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git diff --name-only</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 03:01 - General Tasks</strong> <span class="kind">general</span> - Researched terminology for AI Agents (Claude/ChatGPT/Gemini/Manus/Copilot/Jules/Meta) vs MCP Hosts (Claude Desktop/VS Code/Cursor/Windsurf/Antigravity/Codex/OpenCode/Gemini CLI/...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 03:01 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Researched terminology for AI Agents (Claude/ChatGPT/Gemini/Manus/Copilot/Jules/Meta) vs MCP Hosts (Claude Desktop/VS Code/Cursor/Windsurf/Antigravity/Codex/OpenCode/Gemini CLI/Desktop Commander/AnythingLLM). Compiled Windows global instruction paths for each. Key finding: AGENTS.md is now Linux Foundation open standard (20K+ repos). Recommended VaultWares strategy: canonical AGENTS.md + sync script propagating to host-specific paths.</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 02:45 - fastmcp</strong> <span class="kind">code-change</span> - Switched MCPB manifest to start stdio server via python /server.py (instead of python -m vaultwares_fastmcp) per expected entrypoint usage; revalidated and repacked vaultwares-f...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\fastmcp  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 02:45 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Switched MCPB manifest to start stdio server via python /server.py (instead of python -m vaultwares_fastmcp) per expected entrypoint usage; revalidated and repacked vaultwares-fastmcp-2.0.0.mcpb.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>mcpb validate .</code></li>
+        <li><code>mcpb pack . vaultwares-fastmcp-2.0.0.mcpb</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>manifest.json</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=fastmcp, branch=main, head=beff63d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 02:41 - fastmcp</strong> <span class="kind">code-change</span> - Adjusted MCPB manifest to launch via python -m vaultwares_fastmcp (entry_point vaultwares_fastmcp/__main__.py) instead of server.py, then revalidated and repacked vaultwares-fas...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\fastmcp  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 02:41 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Adjusted MCPB manifest to launch via python -m vaultwares_fastmcp (entry_point vaultwares_fastmcp/__main__.py) instead of server.py, then revalidated and repacked vaultwares-fastmcp-2.0.0.mcpb.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>mcpb validate .</code></li>
+        <li><code>mcpb pack . vaultwares-fastmcp-2.0.0.mcpb</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>manifest.json</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=fastmcp, branch=main, head=beff63d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 02:41 - fastmcp</strong> <span class="kind">code-change</span> - Added MCPB desktop-extension support by creating root manifest.json (MCPB manifest spec v0.3) and .mcpbignore to keep bundles small. Installed @anthropic-ai/mcpb, validated mani...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\fastmcp  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 02:41 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added MCPB desktop-extension support by creating root manifest.json (MCPB manifest spec v0.3) and .mcpbignore to keep bundles small. Installed @anthropic-ai/mcpb, validated manifest, packed vaultwares-fastmcp-2.0.0.mcpb (now ~101KB vs initial 31MB), and verified with pytest.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm install -g @anthropic-ai/mcpb</code></li>
+        <li><code>mcpb validate .</code></li>
+        <li><code>mcpb pack . vaultwares-fastmcp-2.0.0.mcpb</code></li>
+        <li><code>python -m pytest -q</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>manifest.json</code></li>
+        <li><code>.mcpbignore</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=fastmcp, branch=main, head=beff63d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 02:36 - tube-site</strong> <span class="kind">code-change</span> - Added a harmless blank line at the top of each plugin README so you can trigger GitHub Actions deployments by touching README.md under promking-tube/ or fullxxx-video/.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 02:36 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added a harmless blank line at the top of each plugin README so you can trigger GitHub Actions deployments by touching README.md under promking-tube/ or fullxxx-video/.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Get-Content promking-tube/README.md -TotalCount 2</code></li>
+        <li><code>Get-Content fullxxx-video/README.md -TotalCount 2</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\promking-tube\README.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\README.md</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 02:00 - tube-site</strong> <span class="kind">code-change</span> - Improved WP login diagnostics for tube-site deploy workflows: capture login response headers/body to temp files, and when login cookie is missing print HTTP/Location/Set-Cookie ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 02:00 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Improved WP login diagnostics for tube-site deploy workflows: capture login response headers/body to temp files, and when login cookie is missing print HTTP/Location/Set-Cookie lines, cookie names saved, and a sanitized body preview. This helps identify WAF/2FA/captcha vs bad credentials without leaking secrets.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git diff --name-only</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 00:41 - General Tasks</strong> <span class="kind">general</span> - Updated memory: agent-ledger push-to-main exception, PR reviewer addition, factual communication style, visual experiments. Listed sources of truth in load order.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:41 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Updated memory: agent-ledger push-to-main exception, PR reviewer addition, factual communication style, visual experiments. Listed sources of truth in load order.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\feedback_git_workflow.md</code></li>
+        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\feedback_communication_style.md</code></li>
+        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\feedback_visuals.md</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 00:24 - agent-ledger</strong> <span class="kind">code-change</span> - Fixed exit code 128 and demonstrated proper VaultWares code change workflow: branched from main, committed with Lore protocol trailers, pushed to GitHub, created PR for human re...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: fix/render-exit-code Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:24 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed exit code 128 and demonstrated proper VaultWares code change workflow: branched from main, committed with Lore protocol trailers, pushed to GitHub, created PR for human review. User asked to explain code change process to integrate Claude into VaultWares workflow.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git checkout -b fix/render-exit-code</code></li>
+        <li><code>git add scripts/render-agent-ledger.ps1</code></li>
+        <li><code>git commit with Lore protocol</code></li>
+        <li><code>git push -u origin fix/render-exit-code</code></li>
+        <li><code>gh pr create</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\render-agent-ledger.ps1</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=agent-ledger, branch=fix/render-exit-code, head=5b92912</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 00:18 - agent-ledger</strong> <span class="kind">code-change</span> - Fixed exit code 128 issue: added &#39;exit 0&#39; to render-agent-ledger.ps1 to explicitly return success code. Root cause: script completed successfully but didn&#39;t explicitly exit, cau...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:18 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed exit code 128 issue: added &#39;exit 0&#39; to render-agent-ledger.ps1 to explicitly return success code. Root cause: script completed successfully but didn&#39;t explicitly exit, causing PowerShell to exit with inherited/undefined exit code.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Investigated render-agent-ledger.ps1 execution</code></li>
+        <li><code>Tested JSON file validity</code></li>
+        <li><code>Added explicit exit 0</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\render-agent-ledger.ps1</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 00:18 - Test</strong> <span class="kind">general</span> - Testing exit code after fix</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:18 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Testing exit code after fix</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 00:16 - General Tasks</strong> <span class="kind">general</span> - Investigated exit code 128 issue. Confirmed: ledger recordings succeed (events created, CHANGES.md rendered). Exit code 128 is harmless downstream report from render script, not...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:16 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Investigated exit code 128 issue. Confirmed: ledger recordings succeed (events created, CHANGES.md rendered). Exit code 128 is harmless downstream report from render script, not a blocker.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Checked render-agent-ledger.ps1 execution</code></li>
+        <li><code>Tested direct vs piped calls</code></li>
+        <li><code>Verified permissions and file writes</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\feedback_credit_optimizer_pipeline.md</code></li>
+        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\feedback_agent_ledger_timing.md</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 00:16 - Test</strong> <span class="kind">general</span> - Testing exit code behavior</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:16 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Testing exit code behavior</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 00:14 - General Tasks</strong> <span class="kind">general</span> - User corrected agent ledger timing: it must be recorded AFTER all work is done, just before replying &#226;€” not at the start. Saved as permanent feedback memory. Also loaded and co...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:14 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> User corrected agent ledger timing: it must be recorded AFTER all work is done, just before replying &#226;€” not at the start. Saved as permanent feedback memory. Also loaded and confirmed vaultwares-mcp credit optimizer tools are active.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\feedback_agent_ledger_timing.md</code></li>
+        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\MEMORY.md</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 00:10 - General Tasks</strong> <span class="kind">general</span> - User asked Claude to read credit optimization skills from vaultwares-fastmcp and memorize them for use on every reply.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:10 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> User asked Claude to read credit optimization skills from vaultwares-fastmcp and memorize them for use on every reply.</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-07 00:01 - General Tasks</strong> <span class="kind">general</span> - User asked Claude to familiarize itself with Vaultwares by reading AGENTS.md and README.md from vault-themes, vaultwares-docs, and vaultwares-agentciation, then save this knowle...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:01 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> User asked Claude to familiarize itself with Vaultwares by reading AGENTS.md and README.md from vault-themes, vaultwares-docs, and vaultwares-agentciation, then save this knowledge to persistent memory.</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-06 23:59 - General Tasks</strong> <span class="kind">general</span> - User asked what instructions are in the Github Repos CLAUDE.md file.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 23:59 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> User asked what instructions are in the Github Repos CLAUDE.md file.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\CLAUDE.md</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-06 23:21 - tube-site</strong> <span class="kind">code-change</span> - Harden WordPress admin session validation in tube-site deploy workflows: use a consistent browser-like User-Agent, follow redirects on login/upload, add an explicit wp-admin ses...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 23:21 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Harden WordPress admin session validation in tube-site deploy workflows: use a consistent browser-like User-Agent, follow redirects on login/upload, add an explicit wp-admin session check after login (with HTML preview on failure), and refine login-form detection regexes to avoid false positives.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git diff --name-only</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-06 23:14 - tube-site</strong> <span class="kind">code-change</span> - Fix E2BIG/Argument list too long during plugin verification: stop exporting huge plugins.php HTML into environment. Fetch plugins.php directly to a temp file and run grep/sed/py...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 23:14 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fix E2BIG/Argument list too long during plugin verification: stop exporting huge plugins.php HTML into environment. Fetch plugins.php directly to a temp file and run grep/sed/python against the file; version parsing now reads HTML from stdin.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Select-String .github/workflows/deploy-*.yml -Pattern &#39;PLUGINS_HTML&#39;</code></li>
+        <li><code>git diff --name-only</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-06 23:02 - tube-site</strong> <span class="kind">code-change</span> - Fix YAML syntax error: removed heredoc blocks inside GitHub Actions run step (they broke YAML indentation). Replaced them with single-quoted python3 -c &#39;...&#39; one-liners for url ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 23:02 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fix YAML syntax error: removed heredoc blocks inside GitHub Actions run step (they broke YAML indentation). Replaced them with single-quoted python3 -c &#39;...&#39; one-liners for url encoding, plugin param extraction, and installed-version parsing in both tube-site deploy workflows.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Select-String .github/workflows/deploy-*.yml -Pattern &#39;^import &#39;</code></li>
+        <li><code>git diff --name-only</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-06 22:56 - tube-site</strong> <span class="kind">code-change</span> - Fix CI syntax error in tube-site deploy workflows by replacing escaped inline python -c blocks with heredoc python blocks.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 22:56 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fix CI syntax error in tube-site deploy workflows by replacing escaped inline python -c blocks with heredoc python blocks.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git diff --name-only</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-06 22:41 - tube-site</strong> <span class="kind">code-change</span> - Reworked tube plugin deployment verification: removed brittle success-string matching and replaced with (a) extract plugin file param from update response when possible, (b) fet...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 22:41 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Reworked tube plugin deployment verification: removed brittle success-string matching and replaced with (a) extract plugin file param from update response when possible, (b) fetch plugins.php and fail fast if it returns login form, (c) verify plugin file path appears (raw or URL-encoded), and (d) parse the nearby &#39;Version X.Y.Z&#39; and fail if installed version != repo Version header (catches installed-but-not-updated).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Get-Content .github/workflows/deploy-fullxxx-video.yml</code></li>
+        <li><code>Get-Content .github/workflows/deploy-promking-tube.yml</code></li>
+        <li><code>git diff --name-only</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-06 16:59 - agent-ledger</strong> <span class="kind">code-change</span> - Added safe Vercel auth diagnostics to the GitHub Actions deploy workflow and trimmed CR/LF from VERCEL_TOKEN before invoking Vercel CLI. New step runs ercel whoami so we can te...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
