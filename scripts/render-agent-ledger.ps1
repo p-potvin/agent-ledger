@@ -251,3 +251,5 @@ Write-Output "  $changesPath"
 Write-Output "  $ParentChangesPath"
 Write-Output "  $changesHtmlPath"
 Write-Output "  $ParentHtmlPath"
+
+exit 0
