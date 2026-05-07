@@ -3,6 +3,33 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-07 19:46 - VaultWares SSOT</strong> <code>code-change</code> - Updated Windows Scheduled Task VaultWares-SyncGlobalInstructions to use headless conhost pattern (conhost.exe --headless wrapping powershell.exe). Added Scheduled Task Pattern s...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-07 19:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated Windows Scheduled Task VaultWares-SyncGlobalInstructions to use headless conhost pattern (conhost.exe --headless wrapping powershell.exe). Added Scheduled Task Pattern section to vaultwares-agentciation/docs/ARCHITECTURE.md. Updated sync script header comment. Saved feedback memory for future scheduled task creation. Both commits pushed to existing PR branches.
+- Commands:
+  - `Unregister-ScheduledTask VaultWares-SyncGlobalInstructions`
+  - `Register-ScheduledTask with conhost.exe --headless`
+- Files:
+  - `vaultwares-agentciation/docs/ARCHITECTURE.md`
+  - `vaultwares-docs/scripts/sync-global-instructions.ps1`
+
+</details>
+
+<details>
 <summary><strong>2026-05-07 15:47 - VaultWares SSOT (20 repos)</strong> <code>code-change</code> - Implemented the VaultWares Single Source of Truth system across 20 repositories. Created docs/LEXICON.md (Host, AI Assistant, Agent, Global Instructions Path terminology) and do...</summary>
 
 - Kind: code-change
@@ -3626,22 +3653,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-01 17:52 - vaultwares-identity-manager</strong> <code>code-change</code> - Backfill: commit 672a338 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +0 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 672a338 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +0 -1
-- Commands:
-  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
-  - `git show --name-only --pretty=format: 672a338253a6f481aecc009cb20ce0275115c3b2`
-  - `git show --numstat --pretty=format: 672a338253a6f481aecc009cb20ce0275115c3b2`
-- Files:
-  - `vault-themes`
-- Git: repo=vaultwares-identity-manager, branch=main, head=672a338
-
-</details>
-
-<details>
 <summary><strong>2026-05-01 17:52 - vaultwares-cli</strong> <code>code-change</code> - Backfill: commit aabba39 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-cli | files=2 +342 -5</summary>
 
 - Kind: code-change
@@ -3655,6 +3666,22 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `Cargo.lock`
   - `vault-themes`
 - Git: repo=vaultwares-cli, branch=main, head=aabba39
+
+</details>
+
+<details>
+<summary><strong>2026-05-01 17:52 - vaultwares-identity-manager</strong> <code>code-change</code> - Backfill: commit 672a338 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +0 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 672a338 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +0 -1
+- Commands:
+  - `git log --since=2026-04-28T01:06:27.4143571-04:00 --pretty=format:%H^%cI^%s`
+  - `git show --name-only --pretty=format: 672a338253a6f481aecc009cb20ce0275115c3b2`
+  - `git show --numstat --pretty=format: 672a338253a6f481aecc009cb20ce0275115c3b2`
+- Files:
+  - `vault-themes`
+- Git: repo=vaultwares-identity-manager, branch=main, head=672a338
 
 </details>
 
@@ -9130,22 +9157,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-04-24 08:10 - weekly-menu</strong> <code>code-change</code> - Backfill: commit 695ea5b (2026-04-24T08:10:34-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 695ea5b (2026-04-24T08:10:34-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -1
-- Commands:
-  - `git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s`
-  - `git show --name-only --pretty=format: 695ea5b2325d40a545b4f3a807dc801c9fdac004`
-  - `git show --numstat --pretty=format: 695ea5b2325d40a545b4f3a807dc801c9fdac004`
-- Files:
-  - `vaultwares_agentciation`
-- Git: repo=weekly-menu, branch=main, head=6bebcc8
-
-</details>
-
-<details>
 <summary><strong>2026-04-24 08:10 - windows-customizer</strong> <code>code-change</code> - Backfill: commit bd4d0cb (2026-04-24T08:10:34-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +15 -11</summary>
 
 - Kind: code-change
@@ -9164,28 +9175,18 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-04-24 08:10 - vaultwares-website</strong> <code>code-change</code> - Backfill: commit 4bef16e (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=11 +118 -5</summary>
+<summary><strong>2026-04-24 08:10 - weekly-menu</strong> <code>code-change</code> - Backfill: commit 695ea5b (2026-04-24T08:10:34-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -1</summary>
 
 - Kind: code-change
 - Actor: AI Agent
-- Summary: Backfill: commit 4bef16e (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=11 +118 -5
+- Summary: Backfill: commit 695ea5b (2026-04-24T08:10:34-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -1
 - Commands:
   - `git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s`
-  - `git show --name-only --pretty=format: 4bef16e347232763896f0884a1af8f0ab2ac7ded`
-  - `git show --numstat --pretty=format: 4bef16e347232763896f0884a1af8f0ab2ac7ded`
+  - `git show --name-only --pretty=format: 695ea5b2325d40a545b4f3a807dc801c9fdac004`
+  - `git show --numstat --pretty=format: 695ea5b2325d40a545b4f3a807dc801c9fdac004`
 - Files:
-  - `.cursor/rules/vault-themes-submodule.mdc`
-  - `.env.example`
-  - `.gitignore`
-  - `AGENTS.md`
-  - `CLAUDE.md`
-  - `api/proxy.ts`
-  - `generate_local_tls_certs.ps1`
-  - `package.json`
-  - `start_https_dev.ps1`
-  - `vault-themes`
-  - `vite.config.ts`
-- Git: repo=vaultwares-website, branch=main, head=55b66eb
+  - `vaultwares_agentciation`
+- Git: repo=weekly-menu, branch=main, head=6bebcc8
 
 </details>
 
@@ -9204,39 +9205,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `AGENTS.md`
   - `CLAUDE.md`
 - Git: repo=vaultwares-identity-manager, branch=main, head=672a338
-
-</details>
-
-<details>
-<summary><strong>2026-04-24 08:10 - video-depth-anything</strong> <code>code-change</code> - Backfill: commit aa85ca7 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -2</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit aa85ca7 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -2
-- Commands:
-  - `git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s`
-  - `git show --name-only --pretty=format: aa85ca79de8d732d1ad6d848cb660d1303160d6d`
-  - `git show --numstat --pretty=format: aa85ca79de8d732d1ad6d848cb660d1303160d6d`
-- Files:
-  - `get_weights.sh`
-- Git: repo=video-depth-anything, branch=main, head=aa85ca7
-
-</details>
-
-<details>
-<summary><strong>2026-04-24 08:10 - vaultwares-template</strong> <code>code-change</code> - Backfill: commit a63589d (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=2 +14 -0</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit a63589d (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=2 +14 -0
-- Commands:
-  - `git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s`
-  - `git show --name-only --pretty=format: a63589d59cca88f00c72b63a3ad29eed60babbc8`
-  - `git show --numstat --pretty=format: a63589d59cca88f00c72b63a3ad29eed60babbc8`
-- Files:
-  - `.github/INSTRUCTIONS.md`
-  - `README.md`
-- Git: repo=vaultwares-template, branch=main, head=c1d59a8
 
 </details>
 
@@ -9271,6 +9239,65 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
+<summary><strong>2026-04-24 08:10 - video-depth-anything</strong> <code>code-change</code> - Backfill: commit aa85ca7 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -2</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit aa85ca7 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -2
+- Commands:
+  - `git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s`
+  - `git show --name-only --pretty=format: aa85ca79de8d732d1ad6d848cb660d1303160d6d`
+  - `git show --numstat --pretty=format: aa85ca79de8d732d1ad6d848cb660d1303160d6d`
+- Files:
+  - `get_weights.sh`
+- Git: repo=video-depth-anything, branch=main, head=aa85ca7
+
+</details>
+
+<details>
+<summary><strong>2026-04-24 08:10 - vaultwares-website</strong> <code>code-change</code> - Backfill: commit 4bef16e (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=11 +118 -5</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 4bef16e (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=11 +118 -5
+- Commands:
+  - `git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s`
+  - `git show --name-only --pretty=format: 4bef16e347232763896f0884a1af8f0ab2ac7ded`
+  - `git show --numstat --pretty=format: 4bef16e347232763896f0884a1af8f0ab2ac7ded`
+- Files:
+  - `.cursor/rules/vault-themes-submodule.mdc`
+  - `.env.example`
+  - `.gitignore`
+  - `AGENTS.md`
+  - `CLAUDE.md`
+  - `api/proxy.ts`
+  - `generate_local_tls_certs.ps1`
+  - `package.json`
+  - `start_https_dev.ps1`
+  - `vault-themes`
+  - `vite.config.ts`
+- Git: repo=vaultwares-website, branch=main, head=55b66eb
+
+</details>
+
+<details>
+<summary><strong>2026-04-24 08:10 - vaultwares-template</strong> <code>code-change</code> - Backfill: commit a63589d (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=2 +14 -0</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit a63589d (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=2 +14 -0
+- Commands:
+  - `git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s`
+  - `git show --name-only --pretty=format: a63589d59cca88f00c72b63a3ad29eed60babbc8`
+  - `git show --numstat --pretty=format: a63589d59cca88f00c72b63a3ad29eed60babbc8`
+- Files:
+  - `.github/INSTRUCTIONS.md`
+  - `README.md`
+- Git: repo=vaultwares-template, branch=main, head=c1d59a8
+
+</details>
+
+<details>
 <summary><strong>2026-04-24 08:10 - vault-themes</strong> <code>code-change</code> - Backfill: commit afe7e84 (2026-04-24T08:10:32-04:00) - chore: sync workspace changes and resolve PR templates | files=13 +1089 -33</summary>
 
 - Kind: code-change
@@ -9295,6 +9322,25 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `components/glass/LiquidGlass.tsx`
   - `sync_submodule_rules.py`
 - Git: repo=vault-themes, branch=main, head=ee16543
+
+</details>
+
+<details>
+<summary><strong>2026-04-24 08:10 - vault-player</strong> <code>code-change</code> - Backfill: commit 258ac49 (2026-04-24T08:10:32-04:00) - chore: sync workspace changes and resolve PR templates | files=4 +50 -1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Summary: Backfill: commit 258ac49 (2026-04-24T08:10:32-04:00) - chore: sync workspace changes and resolve PR templates | files=4 +50 -1
+- Commands:
+  - `git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s`
+  - `git show --name-only --pretty=format: 258ac491bc2e0e92c1e1861f28476ca49bd8e6ad`
+  - `git show --numstat --pretty=format: 258ac491bc2e0e92c1e1861f28476ca49bd8e6ad`
+- Files:
+  - `.cursor/rules/vault-themes-submodule.mdc`
+  - `AGENTS.md`
+  - `CLAUDE.md`
+  - `vault-themes`
+- Git: repo=vault-player, branch=main, head=58d1933
 
 </details>
 
@@ -9364,25 +9410,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `vault-themes`
   - `vaultwares-agentciation`
 - Git: repo=vaultwares-cli, branch=main, head=aabba39
-
-</details>
-
-<details>
-<summary><strong>2026-04-24 08:10 - vault-player</strong> <code>code-change</code> - Backfill: commit 258ac49 (2026-04-24T08:10:32-04:00) - chore: sync workspace changes and resolve PR templates | files=4 +50 -1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Summary: Backfill: commit 258ac49 (2026-04-24T08:10:32-04:00) - chore: sync workspace changes and resolve PR templates | files=4 +50 -1
-- Commands:
-  - `git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s`
-  - `git show --name-only --pretty=format: 258ac491bc2e0e92c1e1861f28476ca49bd8e6ad`
-  - `git show --numstat --pretty=format: 258ac491bc2e0e92c1e1861f28476ca49bd8e6ad`
-- Files:
-  - `.cursor/rules/vault-themes-submodule.mdc`
-  - `AGENTS.md`
-  - `CLAUDE.md`
-  - `vault-themes`
-- Git: repo=vault-player, branch=main, head=58d1933
 
 </details>
 
