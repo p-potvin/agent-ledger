@@ -1,0 +1,43 @@
+{
+  "id": "20260507-154757-746-vaultwares-ssot-20-repos-10ab5f27",
+  "createdAt": "2026-05-07T19:47:57.7461999Z",
+  "createdAtLocal": "2026-05-07 15:47",
+  "timezone": "Eastern Standard Time",
+  "project": "VaultWares SSOT (20 repos)",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-07 15:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Implemented the VaultWares Single Source of Truth system across 20 repositories. Created docs/LEXICON.md (Host, AI Assistant, Agent, Global Instructions Path terminology) and docs/ARCHITECTURE.md (tier hierarchy, sync mechanism, Host path registry) in vaultwares-agentciation. Created vaultwares-docs/AGENTS.md as Tier 1 Source of Truth with company overview, mandatory protocols, and pointers to tier-2 repos. Created scripts/sync-global-instructions.ps1 to propagate instructions to 7 Host Global Instructions Paths (Claude Code, VS Code Copilot, Windsurf, Gemini/Antigravity, Codex CLI, OpenCode, Claude Desktop JSON). Rewrote workspace root AGENTS.md from 82-line ledger duplicate to 30-line SSOT pointer. Rewrote agent-ledger/AGENTS.md as focused Tier 2 ledger protocol. Added SSOT pointer to vault-themes/AGENTS.md. Standardized 16 consumer repo AGENTS.md files (removed duplication, fixed old vault-themes submodule paths pointing to .github/STYLE.md). Preserved repo-specific content in deconstructed, no-more-groceries, usd-playground, vault-central. Created Windows Scheduled Task VaultWares-SyncGlobalInstructions (daily 06:00 + logon). Pushed agent-ledger directly to main. Created 19 PRs across all other repos with p-potvin as reviewer.",
+  "commands": [
+    "sync-global-instructions.ps1 -DryRun",
+    "sync-global-instructions.ps1",
+    "Register-ScheduledTask VaultWares-SyncGlobalInstructions",
+    "gh pr create (19 repos)"
+  ],
+  "files": [
+    "vaultwares-agentciation/docs/LEXICON.md",
+    "vaultwares-agentciation/docs/ARCHITECTURE.md",
+    "vaultwares-agentciation/AGENTS.md",
+    "vaultwares-docs/AGENTS.md",
+    "vaultwares-docs/scripts/sync-global-instructions.ps1",
+    "AGENTS.md (workspace root)",
+    "agent-ledger/AGENTS.md",
+    "vault-themes/AGENTS.md",
+    "18 consumer repo AGENTS.md files"
+  ],
+  "planPath": "",
+  "contentHash": "10ab5f27e19af1c6fb0ed40ce3071d58d487c7b88ef5dcbc466f440312e522ec",
+  "git": null
+}
