@@ -1,81 +1,68 @@
-# Workspace Agent Instructions (Canonical)
+# Agent Ledger — Protocol & Header Template
 
-This workspace uses a shared AI-agent ledger and a common ledger-only agent runtime header.
+> For company-wide rules, read `vaultwares-docs/AGENTS.md` first.
 
-Important precedence note:
-- Multiple `AGENTS.md` files may exist. The one deeper in the directory tree overrides higher-level ones.
-- In this workspace, `C:\Users\Administrator\Desktop\Github Repos\AGENTS.md` and `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\AGENTS.md` are intentionally kept identical. If you edit one, edit the other.
+This repo is the Tier 2 Source of Truth for agent activity recording. All AI
+Assistants working in VaultWares projects must record completed work here.
 
-## Agent Header (Ledger-Only Mandatory)
+## When to Record
 
-Do not print the Agent Header in user-facing replies. Instead, include the Agent Header in the ledger entry for the work you just performed.
+Record the ledger **after all work is done, as the last step before replying**.
+The ledger is a record of completed work, not intent.
 
-If a field is not knowable, write `unknown` (do not guess).
-Never include secrets (tokens, passwords, API keys, private URLs with embedded creds).
+## Recording Command
 
-Template (required in the ledger entry):
-```text
-Agent: <your display name> (role: <main|subagent:<agent_type>>)
-Model: <model id or 'unknown'>
-Thinking: <low|medium|high|xhigh or 'unknown'>  # reasoning_effort / complexity
-Mode: <Default|Plan|other>
-Permissions: <sandbox_mode> (network: <enabled|disabled>)
-CWD: <path>  Branch: <branch or 'n/a'>
-Tools used (this reply): <comma-separated tool call names or 'none'>
-MCP servers accessed (this reply): <comma-separated MCP namespaces/servers or 'none'>
-Time: <local date/time> (TZ: <timezone>)
-```
-
-Tools and MCP logging rule:
-- Include only tools and MCP servers used since the user's most recent message.
-- Preserve first-seen order.
-- Deduplicate repeated tool names and MCP server names before writing the ledger entry.
-
-If sub-agents are used:
-- Each sub-agent should include its own header in its own ledger/reporting surface when available.
-- The lead agent should mention which sub-agents were used in the final summary.
-
-Optional (recommended when relevant, but not required every time):
-- Repo(s) touched:
-- Web browsing used (yes/no):
-- Artifacts generated:
-- External services accessed (GitHub/Vercel/etc):
-
-Note: I am slightly uncertain whether you want these optional fields always-on because it can get verbose. I included them as optional and recommend enabling them when relevant.
-
-## Shared Agent Ledger (Mandatory)
-
-Before answering the user, record what you just did in the shared agent ledger.
-
-Preferred local command:
 ```powershell
 & "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\record-agent-change.ps1" `
   -Project "<repo name or General Tasks>" `
   -Kind "<plan|commands|code-change|verification|handoff|general>" `
-  -Summary "<1024-token max summary of code changed, commands run, or plan made>" `
+  -Summary "<1024-token max summary of work done>" `
   -Commands @("<important command 1>", "<important command 2>") `
   -Files @("<important file 1>", "<important file 2>")
 ```
 
-Rules:
-- Use `yyyy-MM-dd HH:mm` local time; the script fills this automatically.
-- Keep the summary under 1024 tokens.
-- Do not log secrets, tokens, private keys, credentials, or sensitive personal data.
-- Do not duplicate an existing event; the script deduplicates matching content.
-- If the ledger script or `CHANGES.md` cannot be accessed, say so in your reply.
-- When starting a task, consult `CHANGES.md`, `agent-ledger\CHANGES.md`, and the active project's roadmap/todo files to stay on course.
+## Rules
 
-Cloud / restricted environments:
-- If you cannot run the local PowerShell script but you can write to the `p-potvin/agent-ledger` repo, create a unique JSON event file under `events/YYYY/MM/` using the existing event schema.
-- If you cannot write the ledger at all, include a compact "Ledger entry" in your final reply for later capture.
+- Keep summaries under 1024 tokens.
+- Do not log secrets, tokens, private keys, credentials, or sensitive data.
+- Do not duplicate an existing event — the script deduplicates.
+- If the ledger cannot be accessed, include a compact ledger entry in your reply.
+- Consult `CHANGES.md` and the active project's roadmap/todo files for continuity.
 
-## Repo Note: agent-ledger
+## Cloud / Restricted Environments
 
-The `agent-ledger` repo is the shared source of truth for agent activity.
+If you cannot run the PowerShell script but can write to `p-potvin/agent-ledger`:
+create a JSON event file under `events/YYYY/MM/` using the existing schema.
 
-When local PowerShell is available:
-- Run `agent-ledger/scripts/record-agent-change.ps1` to create the append-only event.
-- Regenerate readable summaries by running `agent-ledger/scripts/render-agent-ledger.ps1` (required when you wrote new event files locally).
-- Optionally refresh the work impact report by running `agent-ledger/scripts/update-work-impact.ps1` when relevant.
+If you cannot write the ledger at all, include a compact "Ledger entry" block
+in your final reply for later capture.
 
-Note: I am slightly uncertain whether you want regeneration required on every single change vs only "when relevant". I set it to "required when you wrote new event files locally".
+## Agent Header Template
+
+Include the agent header in the ledger entry (not in user-facing replies).
+Write `unknown` for any field that is not knowable. Never include secrets.
+
+```text
+Agent: <your display name> (role: <main|subagent:<agent_type>>)
+Model: <model id or 'unknown'>
+Thinking: <low|medium|high|xhigh or 'unknown'>
+Mode: <Default|Plan|other>
+Permissions: <sandbox_mode> (network: <enabled|disabled>)
+CWD: <path>  Branch: <branch or 'n/a'>
+Tools used (this reply): <comma-separated tool names or 'none'>
+MCP servers accessed (this reply): <comma-separated MCP namespaces or 'none'>
+Time: <local date/time> (TZ: <timezone>)
+```
+
+- Include only tools and MCP servers used since the user's most recent message.
+- Preserve first-seen order. Deduplicate before writing.
+- If sub-agents are used, each should include its own header. The lead mentions
+  which sub-agents were used in the final summary.
+
+## Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `scripts/record-agent-change.ps1` | Create an append-only event |
+| `scripts/render-agent-ledger.ps1` | Regenerate CHANGES.md and CHANGES.html |
+| `scripts/update-work-impact.ps1` | Refresh work impact report |
