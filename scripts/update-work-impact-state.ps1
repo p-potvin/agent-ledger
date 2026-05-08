@@ -228,7 +228,14 @@ if ($state.data) {
         }
         foreach ($s in @($rehydrate.commitSamples)) {
             $commitSamples.Add($s) | Out-Null
-            if ($s.commitKey) { [void]$processedCommitKeys.Add([string]$s.commitKey) }
+            # Only mark as processed if this commit already has line data.
+            # Zero-stat commits are re-tried on the next run so the regex fix
+            # (or a future -FullRebuild) can populate them without requiring a
+            # full rebuild every time.
+            $hasStats = (($s.rawChurnLines -ne $null) -and ([int]$s.rawChurnLines -gt 0)) -or
+                        (($s.cleanChurnLines -ne $null) -and ([int]$s.cleanChurnLines -gt 0)) -or
+                        (($s.filesTouched -ne $null) -and ([int]$s.filesTouched -gt 0))
+            if ($s.commitKey -and $hasStats) { [void]$processedCommitKeys.Add([string]$s.commitKey) }
         }
         $commitEventsWithStats = [int]$rehydrate.totals.commitEventsWithStats
         $minUtc = Safe-ParseUtc ([string]$rehydrate._minCreatedAtUtc)
@@ -338,7 +345,7 @@ Get-ChildItem -Path $eventsRoot -Recurse -File -Filter '*.json' |
                         if (-not $line) { continue }
                         $cols = $line -split "`t"
                         if ($cols.Count -lt 3) { continue }
-                        if ($cols[0] -notmatch '^\\d+$' -or $cols[1] -notmatch '^\\d+$') { continue }
+                        if ($cols[0] -notmatch '^\d+$' -or $cols[1] -notmatch '^\d+$') { continue }
 
                         $ins = [int]$cols[0]
                         $del = [int]$cols[1]
