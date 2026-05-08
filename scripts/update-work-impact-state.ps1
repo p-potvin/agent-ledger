@@ -232,7 +232,9 @@ if ($state.data) {
             # Zero-stat commits are re-tried on the next run so the regex fix
             # (or a future -FullRebuild) can populate them without requiring a
             # full rebuild every time.
-            $hasStats = ([int]$s.rawChurnLines -gt 0) -or ([int]$s.cleanChurnLines -gt 0) -or ([int]$s.filesTouched -gt 0)
+            $hasStats = (($s.rawChurnLines -ne $null) -and ([int]$s.rawChurnLines -gt 0)) -or
+                        (($s.cleanChurnLines -ne $null) -and ([int]$s.cleanChurnLines -gt 0)) -or
+                        (($s.filesTouched -ne $null) -and ([int]$s.filesTouched -gt 0))
             if ($s.commitKey -and $hasStats) { [void]$processedCommitKeys.Add([string]$s.commitKey) }
         }
         $commitEventsWithStats = [int]$rehydrate.totals.commitEventsWithStats
