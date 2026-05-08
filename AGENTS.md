@@ -59,6 +59,41 @@ Time: <local date/time> (TZ: <timezone>)
 - If sub-agents are used, each should include its own header. The lead mentions
   which sub-agents were used in the final summary.
 
+### Model name
+
+**You know your own model name.** Do not write `unknown` for the `Model` field
+unless you genuinely cannot determine it. Examples:
+
+| AI Assistant | Model field example |
+|---|---|
+| Claude Sonnet 4.5 | `claude-sonnet-4.5` |
+| Claude Opus 4 | `claude-opus-4` |
+| GPT-4.1 | `gpt-4.1` |
+| GPT-4o | `gpt-4o` |
+| Gemini 2.5 Pro | `gemini-2.5-pro` |
+| Codex (o3/o4) | `codex-o3` / `codex-o4-mini` |
+| GitHub Copilot | `github-copilot` |
+
+Use the model id that matches the version you are running. The model id is part
+of your identity — always log it explicitly.
+
+### Tools, MCP servers, and skills
+
+List **every tool or MCP server you invoked** in the `Tools used` and
+`MCP servers accessed` fields. Standard format:
+
+```
+Tools used (this reply): bash, view, edit, grep, glob, report_progress
+MCP servers accessed (this reply): github-mcp-server, playwright-mcp
+```
+
+**Skills** (named capability packs) should be logged as `skill:<name>`, e.g.
+`skill:customize-cloud-agent`. If you used no tools, write `none`.
+
+This data is parsed by `update-work-impact-state.ps1` to populate the
+Work Impact dashboard. Sparse or missing data will leave agent statistics
+empty on that page.
+
 ## Scripts
 
 | Script | Purpose |
