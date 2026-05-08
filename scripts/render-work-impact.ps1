@@ -94,7 +94,7 @@ function New-I18nTable {
             activityTitle = 'When work happens'
             activityHint = 'Hour of day and day of week distributions across all entries.'
             noCommitData = 'No commit data yet.'
-            commitLineDataUnavailable = '{n} commits referenced. Line-count data requires local access to the git repositories. Run update-work-impact.ps1 locally to populate.'
+            commitLineDataUnavailable = '{n} commits referenced. Line-count statistics are populated the next time update-work-impact.ps1 runs. If counts remain at zero, run with -FullRebuild to reprocess all commits.'
             lineStatsUnavailable = 'Line-count data requires local access to git repositories. Run update-work-impact.ps1 locally.'
             fileDataUnavailable = '{n} commits referenced. File count data requires local git access.'
             noMcpData = 'No MCP servers.'
@@ -187,7 +187,7 @@ function New-I18nTable {
             activityTitle = 'Quand le travail se passe'
             activityHint = 'Distribution par heure du jour et jour de la semaine.'
             noCommitData = 'Pas encore de commits.'
-            commitLineDataUnavailable = "{n} commits r$([char]0x00e9)f$([char]0x00e9)renc$([char]0x00e9)s. Les donn$([char]0x00e9)es de lignes n$([char]0x00e9)cessitent un acc$([char]0x00e8)s local aux d$([char]0x00e9)p$([char]0x00f4)ts git."
+            commitLineDataUnavailable = "{n} commits r$([char]0x00e9)f$([char]0x00e9)renc$([char]0x00e9)s. Les statistiques de lignes seront peupl$([char]0x00e9)es au prochain passage de update-work-impact.ps1. Si les compteurs restent $([char]0x00e0) z$([char]0x00e9)ro, relancez avec -FullRebuild."
             lineStatsUnavailable = "Les donn$([char]0x00e9)es de lignes n$([char]0x00e9)cessitent un acc$([char]0x00e8)s local aux d$([char]0x00e9)p$([char]0x00f4)ts git. Ex$([char]0x00e9)cutez update-work-impact.ps1 localement."
             fileDataUnavailable = "{n} commits r$([char]0x00e9)f$([char]0x00e9)renc$([char]0x00e9)s. Donn$([char]0x00e9)es de fichiers non disponibles sans acc$([char]0x00e8)s local."
             noMcpData = 'Aucun serveur MCP.'
