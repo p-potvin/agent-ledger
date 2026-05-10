@@ -1,0 +1,50 @@
+{
+  "id": "20260508-231630-207-vault-central-3846f9be",
+  "createdAt": "2026-05-09T03:16:30.2073772Z",
+  "createdAtLocal": "2026-05-08 23:16",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central\\.claude\\worktrees\\jovial-meitner-76c726  Branch: feat/crypto-integration\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-08 23:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central\\.claude\\worktrees\\jovial-meitner-76c726",
+  "summary": "Crypto integration shipped. Moved crypto-vault module to vault-themes submodule (own PR, merged). Vault-central wires it via vault-runtime (background-owned unlocked state) + vault-client (runtime-message thin client). Replaces legacy CryptoJS+raw-PIN with Argon2id + ML-KEM-1024 + AES-256-GCM envelope per Tier 1 standard. Includes one-time legacy preview migration that decrypts CryptoJS records with the old PIN before clearing it. dexie-store rewritten as envelope-aware persistence layer. Background runtime handlers: vault.setup/unlock/lock/status/destroy, preview.save/get/delete/clear_all. Tests: 13/13 unit (6 crypto + 7 existing), 6/6 Firefox (7 skipped per known limitations). PRs merged: vault-themes#9, vault-central#31. Total integration: ~22 tool calls including the rename mess at start of session.",
+  "commands": [
+    "npm install @noble/post-quantum @noble/hashes",
+    "npx esbuild background/scripts/background.ts ...",
+    "npx vitest run",
+    "npx playwright test --project=firefox"
+  ],
+  "files": [
+    "src/lib/vault-runtime.ts",
+    "src/lib/vault-client.ts",
+    "src/lib/dexie-store.ts",
+    "src/lib/storage-vault.ts",
+    "src/types/schemas.ts",
+    "background/scripts/background.ts",
+    "src/components/VaultDashboard.tsx",
+    "src/pin-entry.tsx",
+    "src/offscreen/processor.ts",
+    "vault-themes/security/crypto-vault.ts"
+  ],
+  "planPath": "",
+  "contentHash": "3846f9be987791267d7f017741c11bf09d6cecac6b450e6be2fa7723d9da65e6",
+  "git": {
+    "repo": "jovial-meitner-76c726",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central/.claude/worktrees/jovial-meitner-76c726",
+    "branch": "feat/crypto-integration",
+    "head": "dec7613",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "20260510-010917-258-tube-site-d31638bb",
+  "createdAt": "2026-05-10T05:09:17.2582721Z",
+  "createdAtLocal": "2026-05-10 01:09",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-10 01:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Deployed the updated promking-tube and fullxxx-video plugin directories to the self-hosted VPS, taking timestamped on-server backups first, replacing both live plugin trees, fixing ownership/permissions, reloading php8.2-fpm and nginx, and smoke-checking public watch pages for the new VaultWares player shell assets and markup.",
+  "commands": [
+    "ssh backup + replace plugin dirs on 212.193.6.35",
+    "scp -r promking-tube/fullxxx-video to ~/deploy-tmp",
+    "sudo systemctl reload php8.2-fpm",
+    "sudo systemctl reload nginx",
+    "Invoke-WebRequest smoke checks on prom-king.xyz and fullxxx.video"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video"
+  ],
+  "planPath": "",
+  "contentHash": "d31638bbf7d547a3fd13e49eddff552c653a301be8aa10211c2deb5e4ed2c217",
+  "git": null
+}

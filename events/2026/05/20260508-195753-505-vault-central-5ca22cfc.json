@@ -1,0 +1,46 @@
+{
+  "id": "20260508-195753-505-vault-central-5ca22cfc",
+  "createdAt": "2026-05-08T23:57:53.5053932Z",
+  "createdAtLocal": "2026-05-08 19:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central\\.claude\\worktrees\\jovial-meitner-76c726  Branch: claude-vw/jovial-meitner-76c726\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-08 19:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central\\.claude\\worktrees\\jovial-meitner-76c726",
+  "summary": "Decision tree pass complete. Threaded originUrl/originTitle from content.ts to background scraper-tab. Implemented duplicate-page detection (#1b), aggressive trigger ladder (#2b: 4 tiers from jwplayer/video.js to brute-force video.play()), multi-candidate disambiguation (#2b2: idClass boost > area > center distance > URL score), explicit type='video'|'link' decision per pipeline, always-save guarantee, reduced scraper timeout 35s -> 18s. Optimistic toast lands immediately after target selection (per spec: 'after candidate link chosen, failure odds low'). Full Firefox suite: 6 passed / 7 skipped (Firefox cannot navigate to moz-extension URLs externally) / 0 failed. ML-KEM crypto-vault module + 6 unit tests all pass; integration into dexie-store and move to vault-themes deferred to next pass.",
+  "commands": [
+    "npx esbuild src/scripts/content.ts --bundle ...",
+    "npx esbuild background/scripts/background.ts --bundle ...",
+    "npx playwright test --project=firefox"
+  ],
+  "files": [
+    "background/scripts/background.ts",
+    "src/scripts/content.ts",
+    "src/lib/crypto-vault.ts",
+    "src/lib/crypto-vault.test.ts",
+    "testing/fixture.ts",
+    "tests/firefox-utils.ts",
+    "vaultwares-docs/security/zero-knowledge-encryption-standard.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "5ca22cfcb1780f76f92c2ba3e4f2fbbc610bb4195baa120aa932a2e1ed6b43ac",
+  "git": {
+    "repo": "jovial-meitner-76c726",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central/.claude/worktrees/jovial-meitner-76c726",
+    "branch": "claude-vw/jovial-meitner-76c726",
+    "head": "1ea3933",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "20260508-233327-643-tube-site-d43fdb33",
+  "createdAt": "2026-05-09T03:33:27.6431751Z",
+  "createdAtLocal": "2026-05-08 23:33",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-08 23:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Fixed additional live tube-site issues. For \fullxxx-video, corrected settings persistence so google_analytics_code and mailchimp_code now save, and added backward-compatible Mailchimp rendering that treats new values as embed URLs while still rendering legacy raw HTML. For restored FullXXX playback, added runtime embed resolution for pornxp so expired signed MP4s no longer break the watch page; it now falls back to iframe mode using the current source page when needed. For Prom King, fixed the bulk scrape behavior so a dry selected source no longer returns an immediate no-op success by falling back across supported sources, and fixed category/tag archive routing (including the 18-25 page) so those URLs now return a real HTTP 200 instead of a false 404.",
+  "commands": [
+    "wp eval PKT_Video_Fetcher::run_bulk_fetch(1)",
+    "curl -I https://prom-king.xyz/tube/category/18-25/",
+    "curl https://fullxxx.video/videos/...",
+    "sync patched plugin files to VPS"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\helpers.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\admin-settings.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\templates\\single-fxv_video.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\video-fetcher.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\template-loader.php"
+  ],
+  "planPath": "",
+  "contentHash": "d43fdb3352b852d59cf683deb001e8f2529e2033f93ad75aa6680cbcfa20a0c3",
+  "git": null
+}

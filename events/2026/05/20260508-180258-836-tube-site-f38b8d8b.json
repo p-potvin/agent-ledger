@@ -1,0 +1,39 @@
+{
+  "id": "20260508-180258-836-tube-site-f38b8d8b",
+  "createdAt": "2026-05-08T22:02:58.8360777Z",
+  "createdAtLocal": "2026-05-08 18:02",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-08 18:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Imported the four WordPress backup payloads from C:\\Users\\Administrator\\Desktop\\business\\plugins-backups, diagnosed and fixed the active table-prefix mismatch (promkingxyz_ / \fullxxxvideo_ vs restored wp_), restored uploads/themes, switched both sites onto the restored \tube-shell theme, removed the theme skip-link from the live header, re-synced the current repo plugin code to the VPS, recreated/synced the requested admin users, and removed the legacy \u0007dmin users. Verified live pagination and restored ad/affiliate settings are present on both public sites. The current restored data set includes live tube catalogs and banner/affiliate settings, but ad rotation is only structurally verified because the restored DB values appear to use single ad snippets rather than the new multi-snippet rotation fields.",
+  "commands": [
+    "mysqldump backup of current VPS state",
+    "mysql import of *.sql.gz",
+    "rsync restored uploads/themes",
+    "wp user create/delete/list",
+    "curl https://prom-king.xyz",
+    "curl https://fullxxx.video"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\shortcodes.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\shortcodes.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\prelanding-page\\src\\App.jsx"
+  ],
+  "planPath": "",
+  "contentHash": "f38b8d8b1da97bef0fbc2780a21c4c01a6aa01bd7c80ca23cd6ae879b3270b0d",
+  "git": null
+}

@@ -1,0 +1,35 @@
+{
+  "id": "20260508-025002-494-tube-site-2739d071",
+  "createdAt": "2026-05-08T06:50:02.4945010Z",
+  "createdAtLocal": "2026-05-08 02:50",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-08 02:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Verified GitHub repo secret wiring for self-hosted WordPress base URLs and attempted VPS access. Added PROM_KING_WP_BASE_URL and FULLXXX_VIDEO_WP_BASE_URL secrets to Prom-King/tube-site, both currently pointed at the existing public domains as placeholders. VPS 212.183.6.35 was unreachable from this machine on ICMP, SSH/22, and Proxmox/8006, so remote provisioning and RAM diagnostics could not be executed.",
+  "commands": [
+    "gh secret list",
+    "Test-NetConnection 212.183.6.35 -Port 22",
+    "Test-NetConnection 212.183.6.35 -Port 8006"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-promking-tube.yml",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-fullxxx-video.yml"
+  ],
+  "planPath": "",
+  "contentHash": "2739d0714037027edb892cb6da09f84e82f7ce201c952fef4e13bc7307777a5d",
+  "git": null
+}

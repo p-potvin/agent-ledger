@@ -1,0 +1,37 @@
+{
+  "id": "20260508-102504-884-tube-site-9c042257",
+  "createdAt": "2026-05-08T14:25:04.8844196Z",
+  "createdAtLocal": "2026-05-08 10:25",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-08 10:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Fixed the live blank/empty front-end state on the VPS-hosted WordPress sites. Root cause: both installs still pointed at the missing \twentytwentyfive theme, then after installing the theme they still showed generic default blog content because no plugin-driven front page was configured. Installed and activated \twentytwentyfive, created static Home pages using [promking_tube columns=\\",
+  "commands": [
+    "wp theme install twentytwentyfive --activate",
+    "wp post create ... [promking_tube]",
+    "wp post create ... [fxv_grid]",
+    "curl https://prom-king.xyz",
+    "curl https://fullxxx.video"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\shortcodes.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\shortcodes.php"
+  ],
+  "planPath": "3\\ limit=\\24\\] and [fxv_grid count=\\24\\], set them as page_on_front, and removed the sample posts. Public domains now render the shortcode-driven tube surfaces with the expected empty-state message instead of a zero-length or generic WordPress page.",
+  "contentHash": "9c042257102b106996acbf5bebd7a1601837957981408b28a0887899dab7292d",
+  "git": null
+}

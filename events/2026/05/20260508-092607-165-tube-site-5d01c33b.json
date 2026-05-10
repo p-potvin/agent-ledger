@@ -1,0 +1,38 @@
+{
+  "id": "20260508-092607-165-tube-site-5d01c33b",
+  "createdAt": "2026-05-08T13:26:07.1655576Z",
+  "createdAtLocal": "2026-05-08 09:26",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-08 09:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Completed DNS/TLS and exit-node validation: both domains now resolve to 212.193.6.35, apex HTTPS is live on the VPS, WordPress home/siteurl are forced to HTTPS, and nginx accepts both apex and www hostnames. Tailscale exit-node functionality was verified end-to-end from the desktop by temporarily routing through ci-egress-vps, observing the public IP change from 74.57.201.206 to 212.193.6.35, then resetting back.",
+  "commands": [
+    "Resolve-DnsName prom-king.xyz -Type A",
+    "Resolve-DnsName fullxxx.video -Type A",
+    "certbot --nginx ...",
+    "tailscale set --exit-node=ci-egress-vps",
+    "Invoke-RestMethod https://api.ipify.org?format=json"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\.ssh\\tube-site-vps",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\infra\\vps\\create-wordpress-site.sh",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\infra\\vps\\php-fpm\\wordpress-site-pool.conf.template"
+  ],
+  "planPath": "",
+  "contentHash": "5d01c33b2ea999d5b47e23dd9075821a692bcb67b5c9b448fa0e102cbd30f6f8",
+  "git": null
+}
