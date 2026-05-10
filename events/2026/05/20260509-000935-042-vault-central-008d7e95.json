@@ -1,0 +1,46 @@
+{
+  "id": "20260509-000935-042-vault-central-008d7e95",
+  "createdAt": "2026-05-09T04:09:35.0424819Z",
+  "createdAtLocal": "2026-05-09 00:09",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central\\.claude\\worktrees\\jovial-meitner-76c726  Branch: feat/theming-refresh\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-09 00:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central\\.claude\\worktrees\\jovial-meitner-76c726",
+  "summary": "Pass complete. Backup format v2 (vault material included for cross-device restore, schemaVersion threaded through previews). Lock-vault UX (LockedBanner + 5s vaultStatus poll + Lock Vault Now wired to vaultLock). Theming refresh (motion tokens + soft eases + 3-radius/2-shadow surface stack + .vault-card/.vault-btn refined + dashboard JSX cleanup: removed four corner-accent SVGs, sidebar labels softened, section headers, toast pill, play affordance no scale jump). Design handoff doc published in vault-themes/components/dashboard-handoff.md as company-wide spec. PRs merged: vault-central#32, vault-themes#10, vault-central#33. Tests: 13/13 vitest, 6/6 Firefox, 0 failing.",
+  "commands": [
+    "npx esbuild background/scripts/background.ts ...",
+    "npx esbuild src/scripts/content.ts ...",
+    "npx vitest run",
+    "npx playwright test --project=firefox",
+    "git push upstream feat/backup-v2-and-lock-ux",
+    "gh pr merge ... --admin"
+  ],
+  "files": [
+    "src/styles/globals.css",
+    "src/components/VaultDashboard.tsx",
+    "src/lib/backup-vault.ts",
+    "vault-themes/components/dashboard-handoff.md"
+  ],
+  "planPath": "",
+  "contentHash": "008d7e95c2d465422b0f8ae5dc31c85bc656564d4a6d3ba809cbc95375decae7",
+  "git": {
+    "repo": "jovial-meitner-76c726",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central/.claude/worktrees/jovial-meitner-76c726",
+    "branch": "feat/theming-refresh",
+    "head": "781680d",
+    "hasChanges": false
+  }
+}

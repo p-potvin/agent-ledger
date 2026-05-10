@@ -1,0 +1,37 @@
+{
+  "id": "20260508-195555-946-link-sharing-e40c0e10",
+  "createdAt": "2026-05-08T23:55:55.9469145Z",
+  "createdAtLocal": "2026-05-08 19:55",
+  "timezone": "Eastern Standard Time",
+  "project": "link-sharing",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-08 19:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Started real link-sharing implementation beyond the generic CRUD shell. Added canonical host presets in shared/index.ts with KatFile as the launch-default provider and Rapidgator/K2S as secondary presets, exposed them via /api/host-presets, normalized host base domains on create, and added mirror URL hostname validation against the selected host/preset aliases in server/routes/admin.ts. Updated the admin UI to show host presets, prefill the Add Host modal from a selected preset, and surface mirror validation errors. Fixed the server TypeScript project config to include ../shared/**/*.ts. Verified server and client builds both pass.",
+  "commands": [
+    "npm run build (server)",
+    "npm run build (client)"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\link-sharing\\shared\\index.ts",
+    "C:\\Users\\Administrator\\Desktop\\business\\link-sharing\\server\\routes\\admin.ts",
+    "C:\\Users\\Administrator\\Desktop\\business\\link-sharing\\server\\tsconfig.json",
+    "C:\\Users\\Administrator\\Desktop\\business\\link-sharing\\client\\src\\App.tsx",
+    "C:\\Users\\Administrator\\Desktop\\business\\link-sharing\\client\\src\\index.css"
+  ],
+  "planPath": "",
+  "contentHash": "e40c0e106eb032af5bcb809240cfcd7001815fc44a889986e620fa5110f1521c",
+  "git": null
+}

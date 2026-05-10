@@ -1,0 +1,42 @@
+{
+  "id": "20260510-092357-871-general-tasks-bdca768e",
+  "createdAt": "2026-05-10T13:23:57.8719043Z",
+  "createdAtLocal": "2026-05-10 09:23",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-10 09:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Cleared the restored GA tags from the live tube-site WordPress installs, installed Node on the VPS, deployed prelanding-page as a Node service behind nginx at prelanding.prom-king.xyz with HTTPS, deployed link-sharing as a Node service behind nginx at links.prom-king.xyz with HTTPS, and staged vaultwares.ca/docs.vaultwares.ca nginx targets plus a static Mintlify export of vaultwares-docs on the VPS. VaultWares DNS still points to the old Porkbun targets, so the docs host is ready on-server but not publicly cut over yet.",
+  "commands": [
+    "wp option update/patch on VPS for pkt_google_analytics_code and fxv_settings.google_analytics_code",
+    "sudo apt-get install -y nodejs npm",
+    "sudo npm install -g n && sudo n 22.15.1",
+    "npm run build (prelanding-page with VITE_SITE_URL and VITE_LINK_SHARING_BASE_URL)",
+    "npm run build (link-sharing server/client)",
+    "npx mintlify export (vaultwares-docs)",
+    "systemd + nginx setup on VPS",
+    "sudo certbot --nginx -d prelanding.prom-king.xyz -d links.prom-king.xyz --redirect"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\prelanding-page\\dist",
+    "C:\\Users\\Administrator\\Desktop\\business\\link-sharing\\server\\dist",
+    "C:\\Users\\Administrator\\Desktop\\business\\link-sharing\\client\\dist",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\export.zip"
+  ],
+  "planPath": "",
+  "contentHash": "bdca768edbb9e0f3f46ae004a8cae3afc380b0625b6b51341719e2dad1261ddb",
+  "git": null
+}

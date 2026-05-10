@@ -1,0 +1,37 @@
+{
+  "id": "20260510-024631-488-realtime-stt-e341a1a6",
+  "createdAt": "2026-05-10T06:46:31.4882181Z",
+  "createdAtLocal": "2026-05-10 02:46",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-10 02:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Created step-by-step plan to convert FastConformer and Parakeet wrappers back to direct tensor injection, bypassing file IO for NeMo models.",
+  "commands": [],
+  "files": [
+    "stt_engine/parakeet_wrapper.py",
+    "stt_engine/fastconformer_wrapper.py"
+  ],
+  "planPath": "",
+  "contentHash": "e341a1a6f001fce42c7b78046575c848a1c57b75e898fa1291708ec571c477a4",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "3092c47",
+    "hasChanges": true
+  }
+}

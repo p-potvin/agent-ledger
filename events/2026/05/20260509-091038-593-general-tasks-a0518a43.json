@@ -1,0 +1,43 @@
+{
+  "id": "20260509-091038-593-general-tasks-a0518a43",
+  "createdAt": "2026-05-09T13:10:38.5931182Z",
+  "createdAtLocal": "2026-05-09 09:10",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-09 09:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Implemented phase-one VaultWares player integration in tube-site (provider capability maps, owned player shell, editable provider profile JSON settings, HLS/topvid runtime detection, archive preview gating), wrote PQC streaming and scraper-resilience design docs, updated link-sharing redirect metadata handling, and switched prelanding-page CTA routes to canonical link-sharing /f/:slug URLs via a reusable route helper.",
+  "commands": [
+    "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WinGet\\Packages\\PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe\\php.exe -l <tube-site changed php files>",
+    "npm run build (link-sharing/server)",
+    "npm run build (link-sharing/client)",
+    "npm run build (prelanding-page)",
+    "npm test (prelanding-page)",
+    "node --check <player/helper js files>"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\player.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\player.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\docs\\VAULT_PLAYER_PQC_STUDY.md",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\docs\\SCRAPER_EGRESS_RESILIENCE.md",
+    "C:\\Users\\Administrator\\Desktop\\business\\link-sharing\\server\\routes\\redirect.ts",
+    "C:\\Users\\Administrator\\Desktop\\business\\prelanding-page\\src\\App.jsx",
+    "C:\\Users\\Administrator\\Desktop\\business\\prelanding-page\\src\\lib\\linkRoutes.js"
+  ],
+  "planPath": "",
+  "contentHash": "a0518a43c4da5129fde4266e8318fd4ea0d3d6cc62ca897d4d0f193219a509f3",
+  "git": null
+}

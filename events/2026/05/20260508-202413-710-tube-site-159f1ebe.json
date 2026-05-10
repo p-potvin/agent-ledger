@@ -1,0 +1,34 @@
+{
+  "id": "20260508-202413-710-tube-site-159f1ebe",
+  "createdAt": "2026-05-09T00:24:13.7108001Z",
+  "createdAtLocal": "2026-05-08 20:24",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-08 20:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Fixed two live Prom King issues. Bulk scrape no longer returns an immediate zero-result success when the selected source is dry: \run_bulk_fetch() now falls back across the supported source list with per-source stats, and a live one-page run produced added/skipped counts instead of all zeros. Also fixed broken Prom King taxonomy/category routes (including the 18-25 page) by adding a plugin-side request/404 fallback in promking-tube/includes/template-loader.php; the body had already rendered after the earlier fallback, and the final patch now returns a correct HTTP 200 status as well.",
+  "commands": [
+    "wp eval PKT_Video_Fetcher::run_bulk_fetch(1)",
+    "curl -I https://prom-king.xyz/tube/category/18-25/"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\video-fetcher.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\template-loader.php"
+  ],
+  "planPath": "",
+  "contentHash": "159f1ebe246e0568295d412478ec9164c5232a79afe7ce4a926d66dcd2853039",
+  "git": null
+}

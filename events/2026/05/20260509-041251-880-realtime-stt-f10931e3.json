@@ -1,0 +1,38 @@
+{
+  "id": "20260509-041251-880-realtime-stt-f10931e3",
+  "createdAt": "2026-05-09T08:12:51.8801955Z",
+  "createdAtLocal": "2026-05-09 04:12",
+  "timezone": "Eastern Standard Time",
+  "project": "realtime-stt",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-09 04:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Refactored gui_overlay/overlay_window.py: Added drag handle to SubtitleWindow, fixed font refresh using unpolish/polish. Rebuilt SettingsWindow into a responsive grid layout using VaultThemes, fixed theme picker, and added logos and icons dynamically.",
+  "commands": [
+    "python update script"
+  ],
+  "files": [
+    "gui_overlay/overlay_window.py"
+  ],
+  "planPath": "",
+  "contentHash": "f10931e311214ef48f139267382c63dbbbfaf0e579d39ba5a6c79f8ad3390fd5",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "aa3028e",
+    "hasChanges": true
+  }
+}

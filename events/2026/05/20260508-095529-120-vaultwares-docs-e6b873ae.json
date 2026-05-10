@@ -1,0 +1,42 @@
+{
+  "id": "20260508-095529-120-vaultwares-docs-e6b873ae",
+  "createdAt": "2026-05-08T13:55:29.1204853Z",
+  "createdAtLocal": "2026-05-08 09:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-08 09:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Read FastMCP credit optimization skill docs and tightened the Tier-1/SSOT wording so future assistants explicitly run the MCP credit pipeline as the first substantive VaultWares step when \u000baultwares-mcp is available. Updated \u000baultwares-docs/AGENTS.md to point at the canonical \fastmcp/skills/credit-* sources and updated SSOT architecture docs to state that the sync path disseminates the routine. Then ran \u000baultwares-docs/scripts/sync-global-instructions.ps1, which synced the updated guidance to all 7 configured host instruction targets, including Codex CLI.",
+  "commands": [
+    "mcp__vaultwares_mcp__.credit_classify",
+    "mcp__vaultwares_mcp__.credit_recommend",
+    "mcp__vaultwares_mcp__.credit_optimize",
+    "mcp__vaultwares_mcp__.credit_analyze_batch",
+    "powershell vaultwares-docs/scripts/sync-global-instructions.ps1"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\AGENTS.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\vaultwares-agentciation\\docs\\ARCHITECTURE.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp\\skills\\credit-optimizer.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp\\skills\\credit-classify.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp\\skills\\credit-recommend.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp\\skills\\credit-optimize-prompt.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\fastmcp\\skills\\credit-analyze-batch.md"
+  ],
+  "planPath": "",
+  "contentHash": "e6b873aebcdd8119932de80ff1450f56558f9af5e2224d2aa729985cf33d5a81",
+  "git": null
+}
