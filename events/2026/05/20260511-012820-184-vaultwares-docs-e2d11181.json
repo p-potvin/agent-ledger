@@ -1,0 +1,43 @@
+﻿{
+    "id":  "20260511-012820-184-vaultwares-docs-e2d11181",
+    "createdAt":  "2026-05-11T05:28:20.1840179Z",
+    "createdAtLocal":  "2026-05-11 01:28",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-docs",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-11 01:28 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+    "summary":  "Fixed domain-specific Nginx configuration for docs.vaultwares.ca to point to the new build directory (/var/www/vaultwares-docs/dist) instead of the old Mintlify path (/srv/vaultwares-docs/site). Verified DNS resolves to the VPS IP.",
+    "commands":  [
+                     "nslookup docs.vaultwares.ca",
+                     "systemctl restart nginx"
+                 ],
+    "files":  [
+                  "/etc/nginx/sites-available/docs.vaultwares.ca.conf"
+              ],
+    "planPath":  "",
+    "contentHash":  "e2d11181c9f340aeae19d99348a0f0a56c70ccbed6cc92c8cd9d4cc0e25ffcdc",
+    "git":  {
+                "repo":  "vaultwares-docs",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+                "branch":  "main",
+                "head":  "7a5ea0a",
+                "hasChanges":  false
+            }
+}

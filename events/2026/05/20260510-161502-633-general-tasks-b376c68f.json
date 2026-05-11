@@ -1,0 +1,40 @@
+{
+  "id": "20260510-161502-633-general-tasks-b376c68f",
+  "createdAt": "2026-05-10T20:15:02.6337960Z",
+  "createdAtLocal": "2026-05-10 16:15",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-10 16:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "After DNS cutover, issued live Lets Encrypt certs for vaultwares.ca, www.vaultwares.ca, and docs.vaultwares.ca; updated the prelanding runtime to use the provided JWT secret plus a real MariaDB connection string on the VPS; verified prelanding.prom-king.xyz, links.prom-king.xyz/admin, and docs.vaultwares.ca over HTTPS; and set vaultwares.ca to redirect to the docs host over HTTPS.",
+  "commands": [
+    "Resolve-DnsName vaultwares.ca / docs.vaultwares.ca",
+    "sudo certbot --nginx -d vaultwares.ca -d www.vaultwares.ca -d docs.vaultwares.ca --redirect",
+    "systemctl restart prelanding-page.service",
+    "Invoke-WebRequest https://prelanding.prom-king.xyz/",
+    "Invoke-WebRequest https://links.prom-king.xyz/admin",
+    "Invoke-WebRequest https://docs.vaultwares.ca/",
+    "curl.exe -I https://vaultwares.ca/"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\export.zip",
+    "C:\\Users\\Administrator\\Desktop\\business\\prelanding-page\\dist",
+    "C:\\Users\\Administrator\\Desktop\\business\\link-sharing\\server\\dist"
+  ],
+  "planPath": "",
+  "contentHash": "b376c68f2ca987a6b27fdd25710339ef8ad64f8d37febfce0b6ddb88923ce775",
+  "git": null
+}

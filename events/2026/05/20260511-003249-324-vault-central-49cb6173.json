@@ -1,0 +1,39 @@
+{
+  "id": "20260511-003249-324-vault-central-49cb6173",
+  "createdAt": "2026-05-11T04:32:49.3246091Z",
+  "createdAtLocal": "2026-05-11 00:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Gemini 3.1 Pro (Preview)\r\nThinking: unknown\r\nMode: chat\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-11 00:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Gemini 3.1 Pro (Preview)",
+    "thinking": "unknown",
+    "mode": "chat",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Fixed FFmpeg initialization failure by providing a custom \\classWorkerURL\\ loaded via Blob URL. FFmpeg WASM inside the sandbox was attempting to fetch \\./worker.js\\, which is not a valid URL resolution inside a blob origin setup. By creating a temporary blob that imports the \\coreURL\\, FFmpeg correctly instantiates its background worker.",
+  "commands": [
+    "npm install @ffmpeg/core --save",
+    "npm run build"
+  ],
+  "files": [
+    "src/offscreen/sandbox.ts"
+  ],
+  "planPath": "",
+  "contentHash": "49cb61736d00610ed6d6f380e3a7de9ed2315a0c82effd889d6682c697c343f4",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "66c12eb",
+    "hasChanges": true
+  }
+}

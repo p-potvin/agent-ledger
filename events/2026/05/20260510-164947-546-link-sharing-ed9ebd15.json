@@ -1,0 +1,40 @@
+{
+  "id": "20260510-164947-546-link-sharing-ed9ebd15",
+  "createdAt": "2026-05-10T20:49:47.5466659Z",
+  "createdAtLocal": "2026-05-10 16:49",
+  "timezone": "Eastern Standard Time",
+  "project": "link-sharing",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-10 16:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Deployed the latest link-sharing slice to the VPS: quick-create route API, runtime-config API, file table full-route visibility, and Quick KatFile Route modal. Re-synced dist assets, restored server dependencies, restarted the live service, and verified links.prom-king.xyz health and admin responses.",
+  "commands": [
+    "scp server/client dist to VPS deploy-apps",
+    "rsync deploy-apps/link-sharing to /srv/link-sharing",
+    "npm install --omit=dev on VPS for /srv/link-sharing/server",
+    "systemctl restart link-sharing.service",
+    "curl https://links.prom-king.xyz/health",
+    "curl https://links.prom-king.xyz/admin"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\link-sharing\\server\\routes\\admin.ts",
+    "C:\\Users\\Administrator\\Desktop\\business\\link-sharing\\client\\src\\App.tsx",
+    "C:\\Users\\Administrator\\Desktop\\business\\link-sharing\\server\\dist",
+    "C:\\Users\\Administrator\\Desktop\\business\\link-sharing\\client\\dist"
+  ],
+  "planPath": "",
+  "contentHash": "ed9ebd15b1685a0678c930f6d615e471f3a716b37e43a36fe22577d29f03a0be",
+  "git": null
+}

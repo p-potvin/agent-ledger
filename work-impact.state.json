@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-10T14:27:02.2636267Z",
+    "lastUpdatedUtc":  "2026-05-11T11:27:02.3640570Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1315,7 +1315,35 @@
                                        "20260510-031152-193-realtime-stt-4bbfee60",
                                        "20260510-031235-326-realtime-stt-296caae3",
                                        "20260510-031339-495-realtime-stt-c4e02da4",
-                                       "20260510-092357-871-general-tasks-bdca768e"
+                                       "20260510-092357-871-general-tasks-bdca768e",
+                                       "20260510-131508-621-vault-central-932a7f02",
+                                       "20260510-140812-417-vault-central-48a5d72c",
+                                       "20260510-151806-132-realtime-stt-adf061da",
+                                       "20260510-161502-633-general-tasks-b376c68f",
+                                       "20260510-161927-155-link-sharing-afa64dd3",
+                                       "20260510-164947-546-link-sharing-ed9ebd15",
+                                       "20260510-170045-226-vaultwares-docs-1c31361b",
+                                       "20260510-170601-354-vaultwares-docs-a2b57473",
+                                       "20260510-172638-067-vaultwares-docs-6a09c425",
+                                       "20260510-173136-647-vaultwares-docs-cc5049d6",
+                                       "20260510-173420-148-vaultwares-docs-d58b1006",
+                                       "20260511-003249-324-vault-central-49cb6173",
+                                       "20260511-004611-244-vault-central-f91c6f7f",
+                                       "20260511-004740-943-vaultwares-docs-32bbc276",
+                                       "20260511-005748-403-vault-video-enhancer-bf082add",
+                                       "20260511-011420-261-vault-video-enhancer-8c8eefed",
+                                       "20260511-012358-616-vault-video-enhancer-a463aef4",
+                                       "20260511-012820-184-vaultwares-docs-e2d11181",
+                                       "20260511-012908-890-vault-central-53e7629b",
+                                       "20260511-013717-627-vaultwares-docs-b96de572",
+                                       "20260511-014427-199-vault-central-7a2bd94b",
+                                       "20260511-014933-187-vault-video-enhancer-c426aae5",
+                                       "20260511-024322-004-vaultwares-docs-742c8798",
+                                       "20260511-054818-699-vault-central-2de622f6",
+                                       "20260511-062931-370-vault-central-4bac3ded",
+                                       "20260511-064404-126-vaultwares-docs-a0e015b0",
+                                       "20260511-070158-664-vault-central-b4fe2490",
+                                       "20260511-071940-196-vault-central-91d027bd"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2414,13 +2442,32 @@
                                                      },
                                                      {
                                                          "actors":  [
-                                                                        "AI Agent"
+                                                                        "AI Agent",
+                                                                        "Antigravity",
+                                                                        "claude-sonnet-4-6"
                                                                     ],
                                                          "day":  "2026-05-10",
                                                          "models":  [
+                                                                        "claude-sonnet-4-6",
+                                                                        "Gemini 3 Flash",
                                                                         "unknown"
                                                                     ],
-                                                         "count":  19
+                                                         "count":  30
+                                                     },
+                                                     {
+                                                         "actors":  [
+                                                                        "AI Agent",
+                                                                        "Antigravity",
+                                                                        "GitHub Copilot"
+                                                                    ],
+                                                         "day":  "2026-05-11",
+                                                         "models":  [
+                                                                        "Gemini 2.0 Pro",
+                                                                        "Gemini 3.1 Pro (Preview)",
+                                                                        "gemini-2.0-pro-exp",
+                                                                        "unknown"
+                                                                    ],
+                                                         "count":  17
                                                      }
                                                  ],
                                    "tools":  [
@@ -2430,36 +2477,56 @@
                                                  3,
                                                  "functions.update_plan",
                                                  2,
-                                                 "create",
-                                                 1,
-                                                 "mcp__codex_apps__github._request_pull_request_reviewers",
+                                                 "write_to_file",
+                                                 2,
+                                                 "replace_file_content",
+                                                 2,
+                                                 "run_command",
+                                                 2,
+                                                 "edit",
                                                  1,
                                                  "view",
                                                  1,
-                                                 "edit",
+                                                 "mcp__codex_apps__github._request_pull_request_reviewers",
                                                  1,
                                                  "report_progress",
                                                  1,
                                                  "grep",
                                                  1,
-                                                 "bash",
-                                                 1,
                                                  "glob",
+                                                 1,
+                                                 "create",
+                                                 1,
+                                                 "bash",
                                                  1
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  94,
+                                                  106,
+                                                  "Antigravity",
+                                                  9,
+                                                  "GitHub Copilot",
+                                                  6,
                                                   "Codex",
                                                   3,
-                                                  "GitHub Copilot",
-                                                  1
+                                                  "claude-sonnet-4-6",
+                                                  2
                                               ],
-                                   "totalEvents":  98,
+                                   "totalEvents":  126,
                                    "models":  [
                                                   "unknown",
-                                                  97,
+                                                  112,
+                                                  "Gemini 3.1 Pro (Preview)",
+                                                  8,
+                                                  "claude-sonnet-4-6",
+                                                  2,
+                                                  "Gemini 2.0 Pro",
+                                                  1,
+                                                  "Gemini 3 Flash",
+                                                  1,
                                                   "claude-sonnet-4.6",
+                                                  1,
+                                                  "gemini-2.0-pro-exp",
                                                   1
                                               ]
                                },
@@ -2474,7 +2541,7 @@
                                    {
                                        "label":  "Mon",
                                        "dow":  0,
-                                       "count":  157
+                                       "count":  174
                                    },
                                    {
                                        "label":  "Tue",
@@ -2504,20 +2571,20 @@
                                    {
                                        "label":  "Sun",
                                        "dow":  6,
-                                       "count":  206
+                                       "count":  217
                                    }
                                ],
                  "hourSeries":  [
                                     {
-                                        "count":  50,
+                                        "count":  54,
                                         "hour":  0
                                     },
                                     {
-                                        "count":  32,
+                                        "count":  39,
                                         "hour":  1
                                     },
                                     {
-                                        "count":  47,
+                                        "count":  48,
                                         "hour":  2
                                     },
                                     {
@@ -2529,15 +2596,15 @@
                                         "hour":  4
                                     },
                                     {
-                                        "count":  62,
+                                        "count":  63,
                                         "hour":  5
                                     },
                                     {
-                                        "count":  37,
+                                        "count":  39,
                                         "hour":  6
                                     },
                                     {
-                                        "count":  58,
+                                        "count":  60,
                                         "hour":  7
                                     },
                                     {
@@ -2561,23 +2628,23 @@
                                         "hour":  12
                                     },
                                     {
-                                        "count":  36,
+                                        "count":  37,
                                         "hour":  13
                                     },
                                     {
-                                        "count":  51,
+                                        "count":  52,
                                         "hour":  14
                                     },
                                     {
-                                        "count":  74,
+                                        "count":  75,
                                         "hour":  15
                                     },
                                     {
-                                        "count":  73,
+                                        "count":  76,
                                         "hour":  16
                                     },
                                     {
-                                        "count":  74,
+                                        "count":  79,
                                         "hour":  17
                                     },
                                     {
@@ -2622,7 +2689,7 @@
                                                  "insertions":  0
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-10 10:27",
+                 "generatedAtLocal":  "2026-05-11 07:27",
                  "series":  {
                                 "months":  [
                                                {
@@ -2635,7 +2702,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  323
+                                                   "count":  351
                                                }
                                            ],
                                 "days":  [
@@ -3541,24 +3608,41 @@
                                                  "projects":  [
                                                                   "cultural-rhythm",
                                                                   "General Tasks",
+                                                                  "link-sharing",
                                                                   "realtime-stt",
                                                                   "tailnet-sync",
-                                                                  "tube-site"
+                                                                  "tube-site",
+                                                                  "vault-central",
+                                                                  "vaultwares-docs"
                                                               ],
-                                                 "entries":  19,
+                                                 "entries":  30,
                                                  "day":  "2026-05-10",
                                                  "kinds":  {
                                                                "plan":  3,
-                                                               "general":  4,
-                                                               "verification":  10,
-                                                               "code-change":  2
+                                                               "general":  6,
+                                                               "verification":  12,
+                                                               "code-change":  9
+                                                           }
+                                             },
+                                             {
+                                                 "projects":  [
+                                                                  "vault-central",
+                                                                  "vault-video-enhancer",
+                                                                  "vaultwares-docs"
+                                                              ],
+                                                 "entries":  17,
+                                                 "day":  "2026-05-11",
+                                                 "kinds":  {
+                                                               "general":  1,
+                                                               "verification":  2,
+                                                               "code-change":  14
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1197
+                                                  "count":  1218
                                               },
                                               {
                                                   "kind":  "plan",
@@ -3566,11 +3650,11 @@
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  34
+                                                  "count":  38
                                               },
                                               {
                                                   "kind":  "general",
-                                                  "count":  20
+                                                  "count":  23
                                               },
                                               {
                                                   "kind":  "commands",
@@ -3645,7 +3729,7 @@
                                                                    "plan":  3,
                                                                    "general":  3,
                                                                    "verification":  9,
-                                                                   "code-change":  92
+                                                                   "code-change":  93
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -3653,11 +3737,11 @@
                                                                        "files":  0
                                                                    },
                                                      "project":  "realtime-stt",
-                                                     "entries":  107,
+                                                     "entries":  108,
                                                      "recent":  [
-                                                                    "Fixed VS Code warnings and executed the agent ledger routine as requested.",
                                                                     "Confirmed agent ledger execution successfully broken out of loop.",
-                                                                    "Broke out of execution loop and correctly finalizing task."
+                                                                    "Broke out of execution loop and correctly finalizing task.",
+                                                                    "Set default engine to Parakeet (parakeet-tdt-0.6b-v3) and verified direct VRAM transcription. Updated UI to include engine selection and removed unused disk I/O code paths."
                                                                 ],
                                                      "firstDay":  "2026-03-26",
                                                      "lastDay":  "2026-05-10",
@@ -3674,25 +3758,24 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "commands":  4,
                                                                    "plan":  3,
-                                                                   "verification":  1,
-                                                                   "code-change":  93
+                                                                   "verification":  3,
+                                                                   "code-change":  102
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "vault-video-enhancer",
-                                                     "entries":  101,
+                                                     "project":  "vault-central",
+                                                     "entries":  108,
                                                      "recent":  [
-                                                                    "Attempting to resolve persistent CUDA illegal memory access errors by patching Lhotse\u0027s random seeding (a known source of instability on Windows) and adding pre-transcription GP...",
-                                                                    "Deep stabilization for CUDA illegal memory access. Monkey-patched Lhotse random seeding to avoid the crashing call. Added defensive synchronizations before transcription and aft...",
-                                                                    "Backfill: commit fe14010 (2026-05-04T02:37:37-04:00) - feat: implement Parakeet-TDT ASR pipeline with word-level timestamp segmentation for improved subtitle accuracy. | files=3..."
+                                                                    "Confirmed via new logs that the NS_ERROR_DOM_MEDIA_METADATA_ERR fix successfully eliminated the Firefox crash on dashboard mount.",
+                                                                    "Added tabs.create fallback to doTabExtraction in background.ts to workaround Firefox popup blocker instantly aborting window.create calls, which bypassed video captures completely.",
+                                                                    "Re-implemented extraction fallback to use \u0027active: true\u0027 for popup windows and tabs, bypassing Firefox\u0027s strict popup blocker and tab discarding rules. Updated ExtractionContext..."
                                                                 ],
-                                                     "firstDay":  "2026-03-14",
-                                                     "lastDay":  "2026-05-04",
+                                                     "firstDay":  "2026-03-13",
+                                                     "lastDay":  "2026-05-11",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -3706,24 +3789,54 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "commands":  4,
                                                                    "plan":  3,
-                                                                   "verification":  2,
-                                                                   "code-change":  93
+                                                                   "verification":  1,
+                                                                   "code-change":  97
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "vault-central",
-                                                     "entries":  98,
+                                                     "project":  "vault-video-enhancer",
+                                                     "entries":  105,
                                                      "recent":  [
-                                                                    "Decision tree pass complete. Threaded originUrl/originTitle from content.ts to background scraper-tab. Implemented duplicate-page detection (#1b), aggressive trigger ladder (#2b...",
-                                                                    "Crypto integration shipped. Moved crypto-vault module to vault-themes submodule (own PR, merged). Vault-central wires it via vault-runtime (background-owned unlocked state) + va...",
-                                                                    "Pass complete. Backup format v2 (vault material included for cross-device restore, schemaVersion threaded through previews). Lock-vault UX (LockedBanner + 5s vaultStatus poll + ..."
+                                                                    "Added responsive layout logic using QSplitter, a collapse toggle for the Activity Monitor, updated checkboxes to have tick symbols and better border radius, lowered padding, and...",
+                                                                    "Suppressed NeMo, one_logger warning spams using LogStream regex filters in vault_gui.py. Added VRAM loading progress logs to step 0 in core.py. Suppressed subprocess monitoring ...",
+                                                                    "Added in-place line overwriting for progress callbacks in vault_gui.py Monitor using QTextCursor, restoring clean CLI-style single-line progress tracking while allowing normal l..."
                                                                 ],
-                                                     "firstDay":  "2026-03-13",
-                                                     "lastDay":  "2026-05-09",
+                                                     "firstDay":  "2026-03-14",
+                                                     "lastDay":  "2026-05-11",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  54
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "no-more-groceries",
+                                                     "entries":  54,
+                                                     "recent":  [
+                                                                    "Added local 7-day disk caching to Apify integrations in store-search.js and product-search.js to avoid excessive token costs.",
+                                                                    "Backfill: commit 8670186 (2026-04-29T17:58:41-04:00) - feat: integrate Apify for product and store searches with caching | files=5 +715 -83",
+                                                                    "Backfill: commit 88c3476 (2026-05-01T17:52:22-04:00) - Automated commit: Updated files in no-more-groceries | files=2 +2 -2"
+                                                                ],
+                                                     "firstDay":  "2026-04-20",
+                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -3754,35 +3867,6 @@
                                                                 ],
                                                      "firstDay":  "2026-04-23",
                                                      "lastDay":  "2026-05-10",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  54
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "no-more-groceries",
-                                                     "entries":  54,
-                                                     "recent":  [
-                                                                    "Added local 7-day disk caching to Apify integrations in store-search.js and product-search.js to avoid excessive token costs.",
-                                                                    "Backfill: commit 8670186 (2026-04-29T17:58:41-04:00) - feat: integrate Apify for product and store searches with caching | files=5 +715 -83",
-                                                                    "Backfill: commit 88c3476 (2026-05-01T17:52:22-04:00) - Automated commit: Updated files in no-more-groceries | files=2 +2 -2"
-                                                                ],
-                                                     "firstDay":  "2026-04-20",
-                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4125,7 +4209,7 @@
                                                      "kinds":  {
                                                                    "plan":  1,
                                                                    "general":  12,
-                                                                   "verification":  2,
+                                                                   "verification":  3,
                                                                    "code-change":  7
                                                                },
                                                      "lineClean":  {
@@ -4134,11 +4218,11 @@
                                                                        "files":  0
                                                                    },
                                                      "project":  "General Tasks",
-                                                     "entries":  22,
+                                                     "entries":  23,
                                                      "recent":  [
-                                                                    "Ran global sync and cleanup across all repos. Attempted main/origin sync, fetched missing commits. Discovered 11 repos with vault-themes needing visual architecture updates, and...",
                                                                     "Implemented phase-one VaultWares player integration in tube-site (provider capability maps, owned player shell, editable provider profile JSON settings, HLS/topvid runtime detec...",
-                                                                    "Cleared the restored GA tags from the live tube-site WordPress installs, installed Node on the VPS, deployed prelanding-page as a Node service behind nginx at prelanding.prom-ki..."
+                                                                    "Cleared the restored GA tags from the live tube-site WordPress installs, installed Node on the VPS, deployed prelanding-page as a Node service behind nginx at prelanding.prom-ki...",
+                                                                    "After DNS cutover, issued live Lets Encrypt certs for vaultwares.ca, www.vaultwares.ca, and docs.vaultwares.ca; updated the prelanding runtime to use the provided JWT secret plu..."
                                                                 ],
                                                      "firstDay":  "2026-04-28",
                                                      "lastDay":  "2026-05-10",
@@ -4184,6 +4268,38 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "plan":  1,
+                                                                   "general":  3,
+                                                                   "verification":  1,
+                                                                   "code-change":  16
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "vaultwares-docs",
+                                                     "entries":  21,
+                                                     "recent":  [
+                                                                    "Implemented full VaultWares branding and design system. Added 10 preset themes from vault-themes, persistent localStorage state for themes/mode/language, responsive Sidebar/Navb...",
+                                                                    "Overhauled documentation UI with custom MDX engine, resolved layout/build issues, and expanded VaultThemes library with 25+ community-favorite presets. Synchronized global instr...",
+                                                                    "Reorganized VaultWares theme ecosystem into centralized exports. Created theme-manager.ts, themeManager.cs, and theme-manager.tw in vault-themes/theme-manager/exports/. Establis..."
+                                                                ],
+                                                     "firstDay":  "2026-04-18",
+                                                     "lastDay":  "2026-05-11",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "commands":  3,
                                                                    "verification":  3,
                                                                    "code-change":  15
@@ -4215,6 +4331,38 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "plan":  4,
+                                                                   "general":  2,
+                                                                   "verification":  3,
+                                                                   "code-change":  9
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "link-sharing",
+                                                     "entries":  18,
+                                                     "recent":  [
+                                                                    "Started real link-sharing implementation beyond the generic CRUD shell. Added canonical host presets in shared/index.ts with KatFile as the launch-default provider and Rapidgato...",
+                                                                    "Implemented the next public routing slice in link-sharing: added a runtime-config API for canonical public URLs, added a quick-create server route that creates a file plus prima...",
+                                                                    "Deployed the latest link-sharing slice to the VPS: quick-create route API, runtime-config API, file table full-route visibility, and Quick KatFile Route modal. Re-synced dist as..."
+                                                                ],
+                                                     "firstDay":  "2026-04-23",
+                                                     "lastDay":  "2026-05-10",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  17
                                                                },
                                                      "lineClean":  {
@@ -4231,38 +4379,6 @@
                                                                 ],
                                                      "firstDay":  "2026-04-19",
                                                      "lastDay":  "2026-05-01",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "plan":  4,
-                                                                   "general":  2,
-                                                                   "verification":  2,
-                                                                   "code-change":  8
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "link-sharing",
-                                                     "entries":  16,
-                                                     "recent":  [
-                                                                    "Planned PostgreSQL migration. Strategy includes schema conversion from sqlite-core to pg-core, updating driver to node-postgres, refactoring API routes to handle async result ar...",
-                                                                    "Verified and backfilled missing agent-ledger entries for Phase 4 planning, deployment planning, and PostgreSQL migration strategy. Confirmed current project state is fully docum...",
-                                                                    "Started real link-sharing implementation beyond the generic CRUD shell. Added canonical host presets in shared/index.ts with KatFile as the launch-default provider and Rapidgato..."
-                                                                ],
-                                                     "firstDay":  "2026-04-23",
-                                                     "lastDay":  "2026-05-08",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4334,35 +4450,6 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  14
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "deconstructed-website-a-la-mode",
-                                                     "entries":  14,
-                                                     "recent":  [
-                                                                    "Backfill: commit 396cfda (2026-04-24T05:22:31-04:00) - Merge pull request #2 from p-potvin/copilot/update-vault-themes-branding | files=0 +373 -82",
-                                                                    "Backfill: commit 1481c89 (2026-04-24T08:10:29-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +50 -0",
-                                                                    "Backfill: commit efb1628 (2026-05-01T17:52:16-04:00) - Automated commit: Updated files in deconstructed-website-a-la-mode | files=2 +0 -2"
-                                                                ],
-                                                     "firstDay":  "2026-04-20",
-                                                     "lastDay":  "2026-05-01",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
                                                                    "plan":  8,
                                                                    "general":  1,
                                                                    "code-change":  5
@@ -4394,6 +4481,35 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "code-change":  14
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "deconstructed-website-a-la-mode",
+                                                     "entries":  14,
+                                                     "recent":  [
+                                                                    "Backfill: commit 396cfda (2026-04-24T05:22:31-04:00) - Merge pull request #2 from p-potvin/copilot/update-vault-themes-branding | files=0 +373 -82",
+                                                                    "Backfill: commit 1481c89 (2026-04-24T08:10:29-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +50 -0",
+                                                                    "Backfill: commit efb1628 (2026-05-01T17:52:16-04:00) - Automated commit: Updated files in deconstructed-website-a-la-mode | files=2 +0 -2"
+                                                                ],
+                                                     "firstDay":  "2026-04-20",
+                                                     "lastDay":  "2026-05-01",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  12
                                                                },
                                                      "lineClean":  {
@@ -4410,36 +4526,6 @@
                                                                 ],
                                                      "firstDay":  "2026-04-07",
                                                      "lastDay":  "2026-05-01",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  10,
-                                                                   "plan":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "vaultwares-docs",
-                                                     "entries":  11,
-                                                     "recent":  [
-                                                                    "Backfill: commit 2f5b420 (2026-05-04T04:42:17-04:00) - docs: add comprehensive products and services catalog | files=2 +82 -0",
-                                                                    "Completed Phase 3: Updated API_Exposure_Architecture_Plan.md on Desktop. Designed Tailscale Funnel + Caddy reverse proxy architecture for noddit.org (vault-flows) and vaultwares...",
-                                                                    "Read FastMCP credit optimization skill docs and tightened the Tier-1/SSOT wording so future assistants explicitly run the MCP credit pipeline as the first substantive VaultWares..."
-                                                                ],
-                                                     "firstDay":  "2026-04-18",
-                                                     "lastDay":  "2026-05-08",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4608,35 +4694,6 @@
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "debrid-media-manager",
-                                                     "entries":  6,
-                                                     "recent":  [
-                                                                    "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
-                                                                    "Backfill: commit 55ec199 (2026-04-17T18:11:24-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +11 -5",
-                                                                    "Backfill: commit c6ce8b5 (2026-04-18T22:32:35-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +1 -2"
-                                                                ],
-                                                     "firstDay":  "2026-04-01",
-                                                     "lastDay":  "2026-04-19",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  6
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
                                                      "project":  "gallery-scraper",
                                                      "entries":  6,
                                                      "recent":  [
@@ -4675,6 +4732,35 @@
                                                                 ],
                                                      "firstDay":  "2026-04-23",
                                                      "lastDay":  "2026-05-04",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  6
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "debrid-media-manager",
+                                                     "entries":  6,
+                                                     "recent":  [
+                                                                    "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
+                                                                    "Backfill: commit 55ec199 (2026-04-17T18:11:24-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +11 -5",
+                                                                    "Backfill: commit c6ce8b5 (2026-04-18T22:32:35-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +1 -2"
+                                                                ],
+                                                     "firstDay":  "2026-04-01",
+                                                     "lastDay":  "2026-04-19",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4747,6 +4833,62 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "code-change":  2
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "No More Groceries",
+                                                     "entries":  2,
+                                                     "recent":  [
+                                                                    "Fixed Tailwind CSS unstyled render by restoring styles.css from git, patching missing @reference ./tailwind.css for v4 compiler, and correcting user\u0027s assumption regarding vault...",
+                                                                    "Fixed local DB ABI collision by routing npm run dev backend commands through the Electron VM using ELECTRON_RUN_AS_NODE=1, eliminating the need to dual-compile better-sqlite3."
+                                                                ],
+                                                     "firstDay":  "2026-04-28",
+                                                     "lastDay":  "2026-04-29",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  2
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "VaultWares SSOT",
+                                                     "entries":  2,
+                                                     "recent":  [
+                                                                    "Updated Windows Scheduled Task VaultWares-SyncGlobalInstructions to use headless conhost pattern (conhost.exe --headless wrapping powershell.exe). Added Scheduled Task Pattern s...",
+                                                                    "Recreated Windows Scheduled Task VaultWares-SyncGlobalInstructions with headless conhost pattern (conhost.exe --headless wrapping powershell.exe). All 19 SSOT PRs were merged â€..."
+                                                                ],
+                                                     "firstDay":  "2026-05-07",
+                                                     "lastDay":  "2026-05-08",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "verification":  1,
                                                                    "handoff":  1
                                                                },
@@ -4804,21 +4946,20 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  2
+                                                                   "code-change":  1
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "No More Groceries",
-                                                     "entries":  2,
+                                                     "project":  "video-depth-anything",
+                                                     "entries":  1,
                                                      "recent":  [
-                                                                    "Fixed Tailwind CSS unstyled render by restoring styles.css from git, patching missing @reference ./tailwind.css for v4 compiler, and correcting user\u0027s assumption regarding vault...",
-                                                                    "Fixed local DB ABI collision by routing npm run dev backend commands through the Electron VM using ELECTRON_RUN_AS_NODE=1, eliminating the need to dual-compile better-sqlite3."
+                                                                    "Backfill: commit aa85ca7 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -2"
                                                                 ],
-                                                     "firstDay":  "2026-04-28",
-                                                     "lastDay":  "2026-04-29",
+                                                     "firstDay":  "2026-04-24",
+                                                     "lastDay":  "2026-04-24",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4832,20 +4973,19 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  2
+                                                                   "verification":  1
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "VaultWares SSOT",
-                                                     "entries":  2,
+                                                     "project":  "vault-themes, vault-player",
+                                                     "entries":  1,
                                                      "recent":  [
-                                                                    "Updated Windows Scheduled Task VaultWares-SyncGlobalInstructions to use headless conhost pattern (conhost.exe --headless wrapping powershell.exe). Added Scheduled Task Pattern s...",
-                                                                    "Recreated Windows Scheduled Task VaultWares-SyncGlobalInstructions with headless conhost pattern (conhost.exe --headless wrapping powershell.exe). All 19 SSOT PRs were merged â€..."
+                                                                    "Created PQC_PROTOCOL_IMPLEMENTATION.md in main vault-themes repository to document the post-quantum AEAD streaming protocol and referenced it in AGENTS.md. Wrote integration tes..."
                                                                 ],
-                                                     "firstDay":  "2026-05-07",
+                                                     "firstDay":  "2026-05-08",
                                                      "lastDay":  "2026-05-08",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
@@ -4894,10 +5034,10 @@
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "business WordPress tube sites",
+                                                     "project":  "business tube sites",
                                                      "entries":  1,
                                                      "recent":  [
-                                                                    "Set up prom-king.xyz and fullxxx.video WordPress sites. Uploaded and activated a minimal shared Tube Shell theme on both domains, created shortcode-driven homepages, configured ..."
+                                                                    "Updated Tube Shell theme and both WordPress tube plugins for prom-king.xyz and fullxxx.video. Removed header navigation while keeping the sticky brand bar, added contact footer ..."
                                                                 ],
                                                      "firstDay":  "2026-05-01",
                                                      "lastDay":  "2026-05-01",
@@ -4914,47 +5054,20 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "verification":  1
+                                                                   "code-change":  1
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
                                                                        "deletions":  0,
                                                                        "files":  0
                                                                    },
-                                                     "project":  "vault-themes, vault-player",
+                                                     "project":  "business WordPress tube sites",
                                                      "entries":  1,
                                                      "recent":  [
-                                                                    "Created PQC_PROTOCOL_IMPLEMENTATION.md in main vault-themes repository to document the post-quantum AEAD streaming protocol and referenced it in AGENTS.md. Wrote integration tes..."
+                                                                    "Set up prom-king.xyz and fullxxx.video WordPress sites. Uploaded and activated a minimal shared Tube Shell theme on both domains, created shortcode-driven homepages, configured ..."
                                                                 ],
-                                                     "firstDay":  "2026-05-08",
-                                                     "lastDay":  "2026-05-08",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "plan":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "business workspace",
-                                                     "entries":  1,
-                                                     "recent":  [
-                                                                    "Familiarized with C:\\Users\\Administrator\\Desktop\\business repos for monetization planning. Mapped link-sharing, prelanding-page, qa-automation, and tube-site. Verified prelandin..."
-                                                                ],
-                                                     "firstDay":  "2026-04-30",
-                                                     "lastDay":  "2026-04-30",
+                                                     "firstDay":  "2026-05-01",
+                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4995,6 +5108,33 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "plan":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "business workspace",
+                                                     "entries":  1,
+                                                     "recent":  [
+                                                                    "Familiarized with C:\\Users\\Administrator\\Desktop\\business repos for monetization planning. Mapped link-sharing, prelanding-page, qa-automation, and tube-site. Verified prelandin..."
+                                                                ],
+                                                     "firstDay":  "2026-04-30",
+                                                     "lastDay":  "2026-04-30",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "verification":  1
                                                                },
                                                      "lineClean":  {
@@ -5006,60 +5146,6 @@
                                                      "entries":  1,
                                                      "recent":  [
                                                                     "Checked whether the WordPress admin panel for prom-king.xyz is reachable. Searched the business workspace for WordPress config/admin references, found no wp-config.php and no lo..."
-                                                                ],
-                                                     "firstDay":  "2026-05-01",
-                                                     "lastDay":  "2026-05-01",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "video-depth-anything",
-                                                     "entries":  1,
-                                                     "recent":  [
-                                                                    "Backfill: commit aa85ca7 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -2"
-                                                                ],
-                                                     "firstDay":  "2026-04-24",
-                                                     "lastDay":  "2026-04-24",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "business tube sites",
-                                                     "entries":  1,
-                                                     "recent":  [
-                                                                    "Updated Tube Shell theme and both WordPress tube plugins for prom-king.xyz and fullxxx.video. Removed header navigation while keeping the sticky brand bar, added contact footer ..."
                                                                 ],
                                                      "firstDay":  "2026-05-01",
                                                      "lastDay":  "2026-05-01",
@@ -20529,17 +20615,17 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-12T02:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-10T13:23:57.8719043Z",
+                 "_maxCreatedAtUtc":  "2026-05-11T11:19:40.1962176Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
-                               "end":  "2026-05-10"
+                               "end":  "2026-05-11"
                            },
                  "totals":  {
                                 "projects":  51,
-                                "events":  1308,
+                                "events":  1336,
                                 "uniqueCommitsRecomputed":  1030,
-                                "activeDays":  58,
+                                "activeDays":  59,
                                 "commitEventsWithStats":  1030
                             }
              }
