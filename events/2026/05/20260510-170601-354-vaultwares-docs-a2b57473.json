@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20260510-170601-354-vaultwares-docs-a2b57473",
+    "createdAt":  "2026-05-10T21:06:01.3543915Z",
+    "createdAtLocal":  "2026-05-10 17:06",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-docs",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: chat\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-10 17:06 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "chat",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+    "summary":  "Dropped Mintlify, migrated to custom Vite/React app with vault-themes implementation (10 presets, EN/QC toggle, dynamic styling). Moved old MDX to docs-content.",
+    "commands":  [
+                     "npx create-vite",
+                     "npm install"
+                 ],
+    "files":  [
+                  "src/App.tsx",
+                  "src/index.css"
+              ],
+    "planPath":  "",
+    "contentHash":  "a2b57473565e7cf1bd6e312204c2105e79382f1c8279e887bf0caabd361d9e66",
+    "git":  {
+                "repo":  "vaultwares-docs",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+                "branch":  "main",
+                "head":  "0011909",
+                "hasChanges":  true
+            }
+}

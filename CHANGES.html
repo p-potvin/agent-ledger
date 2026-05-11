@@ -26,6 +26,564 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-11 07:19 - vault-central</strong> <span class="kind">code-change</span> - Re-implemented extraction fallback to use &#39;active: true&#39; for popup windows and tabs, bypassing Firefox&#39;s strict popup blocker and tab discarding rules. Updated ExtractionContext...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> GitHub Copilot</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: GitHub Copilot (role: main) Model: Gemini 3.1 Pro (Preview) Thinking: true Mode: chat Permissions: admin (network: offline) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 07:19 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Re-implemented extraction fallback to use &#39;active: true&#39; for popup windows and tabs, bypassing Firefox&#39;s strict popup blocker and tab discarding rules. Updated ExtractionContext in background.ts to carry the original sender&#39;s windowId and tabId. Added focus restoration logic right after spawning the scraping tab to minimize disruption.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>background/scripts/background.ts</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=66c12eb</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 07:01 - vault-central</strong> <span class="kind">code-change</span> - Added tabs.create fallback to doTabExtraction in background.ts to workaround Firefox popup blocker instantly aborting window.create calls, which bypassed video captures completely.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.1 Pro (Preview) Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 07:01 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added tabs.create fallback to doTabExtraction in background.ts to workaround Firefox popup blocker instantly aborting window.create calls, which bypassed video captures completely.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>background/scripts/background.ts</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=66c12eb</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 06:44 - vaultwares-docs</strong> <span class="kind">code-change</span> - Reorganized VaultWares theme ecosystem into centralized exports. Created theme-manager.ts, themeManager.cs, and theme-manager.tw in vault-themes/theme-manager/exports/. Establis...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: gemini-2.0-pro-exp Thinking: True Mode: agent Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): run_command, write_to_file, replace_file_content MCP servers accessed (this reply): none Time: 2026-05-11 06:44 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Reorganized VaultWares theme ecosystem into centralized exports. Created theme-manager.ts, themeManager.cs, and theme-manager.tw in vault-themes/theme-manager/exports/. Established Knowledge Scout system in vaultwares-docs/KNOWLEDGE_SCOUT.md with precise consulting parameters. Added implementation TODOs to 25+ repositories in the Github Repos workspace. Synchronized global instructions across all host platforms.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>sync-global-instructions.ps1</code></li>
+        <li><code>cp theme_manager.py theme-manager/exports/</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault-themes/theme-manager/exports/theme-manager.ts</code></li>
+        <li><code>vault-themes/theme-manager/exports/themeManager.cs</code></li>
+        <li><code>vaultwares-docs/KNOWLEDGE_SCOUT.md</code></li>
+        <li><code>vault-themes/AGENTS.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=e80eaf1</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 06:29 - vault-central</strong> <span class="kind">verification</span> - Confirmed via new logs that the NS_ERROR_DOM_MEDIA_METADATA_ERR fix successfully eliminated the Firefox crash on dashboard mount.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.1 Pro (Preview) Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 06:29 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Confirmed via new logs that the NS_ERROR_DOM_MEDIA_METADATA_ERR fix successfully eliminated the Firefox crash on dashboard mount.</p>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=66c12eb</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 05:48 - vault-central</strong> <span class="kind">code-change</span> - Added preload=&#39;none&#39; to PreviewThumb video to bypass Firefox NS_ERROR_DOM_MEDIA_METADATA_ERR on mount caused by WebM blobs generated natively via MediaRecorder lacking time cues.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.1 Pro (Preview) Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 05:48 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added preload=&#39;none&#39; to PreviewThumb video to bypass Firefox NS_ERROR_DOM_MEDIA_METADATA_ERR on mount caused by WebM blobs generated natively via MediaRecorder lacking time cues.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/components/VaultDashboard.tsx</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=66c12eb</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 02:43 - vaultwares-docs</strong> <span class="kind">code-change</span> - Overhauled documentation UI with custom MDX engine, resolved layout/build issues, and expanded VaultThemes library with 25+ community-favorite presets. Synchronized global instr...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: Gemini 2.0 Pro Thinking: true Mode: chat Permissions: full (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): replace_file_content, write_to_file, run_command MCP servers accessed (this reply): none Time: 2026-05-11 02:43 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Overhauled documentation UI with custom MDX engine, resolved layout/build issues, and expanded VaultThemes library with 25+ community-favorite presets. Synchronized global instructions across all hosts.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+        <li><code>sync-global-instructions.ps1</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/App.tsx</code></li>
+        <li><code>src/themes.ts</code></li>
+        <li><code>src/index.css</code></li>
+        <li><code>vault-themes/theme_manager.py</code></li>
+        <li><code>vault-themes/AGENTS.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=b70a5e8</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 01:49 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Added in-place line overwriting for progress callbacks in vault_gui.py Monitor using QTextCursor, restoring clean CLI-style single-line progress tracking while allowing normal l...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> GitHub Copilot</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: GitHub Copilot (role: main) Model: unknown Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-video-enhancer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 01:49 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added in-place line overwriting for progress callbacks in vault_gui.py Monitor using QTextCursor, restoring clean CLI-style single-line progress tracking while allowing normal logs to append correctly after 100%.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault_gui.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-video-enhancer, branch=main, head=c4bf597</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 01:44 - vault-central</strong> <span class="kind">code-change</span> - Added aggressive debug logging across PreviewThumb, vault-client, background, and vault-runtime layers to trace missing WebM blobs. Repaired a missing early-return statement in ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.1 Pro (Preview) Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 01:44 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added aggressive debug logging across PreviewThumb, vault-client, background, and vault-runtime layers to trace missing WebM blobs. Repaired a missing early-return statement in getPreview.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/components/VaultDashboard.tsx</code></li>
+        <li><code>src/lib/vault-client.ts</code></li>
+        <li><code>background/scripts/background.ts</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=66c12eb</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 01:37 - vaultwares-docs</strong> <span class="kind">code-change</span> - Implemented full VaultWares branding and design system. Added 10 preset themes from vault-themes, persistent localStorage state for themes/mode/language, responsive Sidebar/Navb...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 01:37 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Implemented full VaultWares branding and design system. Added 10 preset themes from vault-themes, persistent localStorage state for themes/mode/language, responsive Sidebar/Navbar shell, and integrated the VaultWares logo. Configured Tailwind Typography to match semantic tokens.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+        <li><code>python push_ui_updates.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/App.tsx</code></li>
+        <li><code>src/themes.ts</code></li>
+        <li><code>src/translations.ts</code></li>
+        <li><code>src/index.css</code></li>
+        <li><code>tailwind.config.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=7a5ea0a</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 01:29 - vault-central</strong> <span class="kind">code-change</span> - Fixed another edge case where videoRef.current.load() was executing prematurely on mount because wasHovering initialized to false. By tracking hover history with a ref, .load() ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.1 Pro (Preview) Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 01:29 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed another edge case where videoRef.current.load() was executing prematurely on mount because wasHovering initialized to false. By tracking hover history with a ref, .load() is only executed when effectively stopping a video that was previously played. Also added size logging for blob validation.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/components/VaultDashboard.tsx</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=66c12eb</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 01:28 - vaultwares-docs</strong> <span class="kind">verification</span> - Fixed domain-specific Nginx configuration for docs.vaultwares.ca to point to the new build directory (/var/www/vaultwares-docs/dist) instead of the old Mintlify path (/srv/vault...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 01:28 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed domain-specific Nginx configuration for docs.vaultwares.ca to point to the new build directory (/var/www/vaultwares-docs/dist) instead of the old Mintlify path (/srv/vaultwares-docs/site). Verified DNS resolves to the VPS IP.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>nslookup docs.vaultwares.ca</code></li>
+        <li><code>systemctl restart nginx</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>/etc/nginx/sites-available/docs.vaultwares.ca.conf</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=7a5ea0a</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 01:23 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Suppressed NeMo, one_logger warning spams using LogStream regex filters in vault_gui.py. Added VRAM loading progress logs to step 0 in core.py. Suppressed subprocess monitoring ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> GitHub Copilot</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: GitHub Copilot (role: main) Model: unknown Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-video-enhancer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 01:23 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Suppressed NeMo, one_logger warning spams using LogStream regex filters in vault_gui.py. Added VRAM loading progress logs to step 0 in core.py. Suppressed subprocess monitoring flood loop inside Vault_enhancer/media.py. Replaced naive subprocess call in extract_wav_for_asr with robust error output capture.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault_gui.py</code></li>
+        <li><code>vault_enhancer/core.py</code></li>
+        <li><code>vault_enhancer/media.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-video-enhancer, branch=main, head=c4bf597</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 01:14 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Added responsive layout logic using QSplitter, a collapse toggle for the Activity Monitor, updated checkboxes to have tick symbols and better border radius, lowered padding, and...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> GitHub Copilot</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: GitHub Copilot (role: main) Model: unknown Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-video-enhancer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 01:14 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added responsive layout logic using QSplitter, a collapse toggle for the Activity Monitor, updated checkboxes to have tick symbols and better border radius, lowered padding, and converted max_duration unit from seconds to minutes allowing a None value.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault_gui.py</code></li>
+        <li><code>vault-themes/qt_exporter.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-video-enhancer, branch=main, head=c4bf597</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 00:57 - vault-video-enhancer</strong> <span class="kind">code-change</span> - Updated GUI branding paths to use vault-themes/assets. Replaced broken logo path with correct asset.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> GitHub Copilot</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: GitHub Copilot (role: main) Model: unknown Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-video-enhancer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 00:57 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Updated GUI branding paths to use vault-themes/assets. Replaced broken logo path with correct asset.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault_gui.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-video-enhancer, branch=main, head=c4bf597</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 00:47 - vaultwares-docs</strong> <span class="kind">general</span> - Fixed the VPS deployment completely: updated postcss.config.js to support Tailwind v4, fixed the GitHub repository clone URL, successfully built the Vite React app into dist, an...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: unknown Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 00:47 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed the VPS deployment completely: updated postcss.config.js to support Tailwind v4, fixed the GitHub repository clone URL, successfully built the Vite React app into dist, and configured Nginx to natively serve the dist SPA (bypassing the problematic PM2 loop).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ssh paramiko</code></li>
+        <li><code>nginx</code></li>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>postcss.config.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=094a1ec</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 00:46 - vault-central</strong> <span class="kind">code-change</span> - Fixed Firefox media decoding error NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006) on video dashboard hover. The error occurred because Firefox cannot seek to currentTime = 0 on We...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.1 Pro (Preview) Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 00:46 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed Firefox media decoding error NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006) on video dashboard hover. The error occurred because Firefox cannot seek to currentTime = 0 on WebM blobs generated by MediaRecorder that lack cue points. Replaced currentTime = 0 with videoRef.current.load() to reset playback position safely.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/components/VaultDashboard.tsx</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=66c12eb</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-11 00:32 - vault-central</strong> <span class="kind">code-change</span> - Fixed FFmpeg initialization failure by providing a custom \classWorkerURL\ loaded via Blob URL. FFmpeg WASM inside the sandbox was attempting to fetch \./worker.js\, which is no...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.1 Pro (Preview) Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-11 00:32 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed FFmpeg initialization failure by providing a custom \classWorkerURL\ loaded via Blob URL. FFmpeg WASM inside the sandbox was attempting to fetch \./worker.js\, which is not a valid URL resolution inside a blob origin setup. By creating a temporary blob that imports the \coreURL\, FFmpeg correctly instantiates its background worker.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm install @ffmpeg/core --save</code></li>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/offscreen/sandbox.ts</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=66c12eb</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-10 17:34 - vaultwares-docs</strong> <span class="kind">general</span> - Installed git and pm2 on the VPS via SSH to resolve missing command errors. Updated deploy.yml to fallback to pm2 serve if pm2 restart fails on the first run.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: unknown Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-10 17:34 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Installed git and pm2 on the VPS via SSH to resolve missing command errors. Updated deploy.yml to fallback to pm2 serve if pm2 restart fails on the first run.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ssh paramiko</code></li>
+        <li><code>apt-get install git</code></li>
+        <li><code>npm install pm2</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>.github/workflows/deploy.yml</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=40a1f94</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-10 17:31 - vaultwares-docs</strong> <span class="kind">general</span> - Created /var/www/vaultwares-docs directory directly on the VPS via SSH and updated the GitHub Actions deploy.yml to automatically create the directory in the future if missing.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: unknown Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-10 17:31 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Created /var/www/vaultwares-docs directory directly on the VPS via SSH and updated the GitHub Actions deploy.yml to automatically create the directory in the future if missing.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ssh paramiko</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>.github/workflows/deploy.yml</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=dedf79e</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-10 17:26 - vaultwares-docs</strong> <span class="kind">code-change</span> - Installed Tailwind CSS, configured tailwind.config.js and postcss.config.js, added Tailwind directives to index.css, and implemented React Router with ReactMarkdown in App.tsx.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: unknown Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-10 17:26 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Installed Tailwind CSS, configured tailwind.config.js and postcss.config.js, added Tailwind directives to index.css, and implemented React Router with ReactMarkdown in App.tsx.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm install -D tailwindcss postcss autoprefixer @tailwindcss/typography</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>tailwind.config.js</code></li>
+        <li><code>postcss.config.js</code></li>
+        <li><code>src/App.tsx</code></li>
+        <li><code>src/index.css</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=0011909</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-10 17:06 - vaultwares-docs</strong> <span class="kind">code-change</span> - Dropped Mintlify, migrated to custom Vite/React app with vault-themes implementation (10 presets, EN/QC toggle, dynamic styling). Moved old MDX to docs-content.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: unknown Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-10 17:06 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Dropped Mintlify, migrated to custom Vite/React app with vault-themes implementation (10 presets, EN/QC toggle, dynamic styling). Moved old MDX to docs-content.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npx create-vite</code></li>
+        <li><code>npm install</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/App.tsx</code></li>
+        <li><code>src/index.css</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=0011909</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-10 17:00 - vaultwares-docs</strong> <span class="kind">code-change</span> - Updated docs.json with vault-themes branding colors, created deploy.yml for VPS deployment, and added GitHub secrets for SSH access.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: unknown Thinking: unknown Mode: chat Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-10 17:00 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Updated docs.json with vault-themes branding colors, created deploy.yml for VPS deployment, and added GitHub secrets for SSH access.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>gh secret set</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>docs.json</code></li>
+        <li><code>.github/workflows/deploy.yml</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=0011909</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-10 16:49 - link-sharing</strong> <span class="kind">verification</span> - Deployed the latest link-sharing slice to the VPS: quick-create route API, runtime-config API, file table full-route visibility, and Quick KatFile Route modal. Re-synced dist as...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-10 16:49 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Deployed the latest link-sharing slice to the VPS: quick-create route API, runtime-config API, file table full-route visibility, and Quick KatFile Route modal. Re-synced dist assets, restored server dependencies, restarted the live service, and verified links.prom-king.xyz health and admin responses.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>scp server/client dist to VPS deploy-apps</code></li>
+        <li><code>rsync deploy-apps/link-sharing to /srv/link-sharing</code></li>
+        <li><code>npm install --omit=dev on VPS for /srv/link-sharing/server</code></li>
+        <li><code>systemctl restart link-sharing.service</code></li>
+        <li><code>curl https://links.prom-king.xyz/health</code></li>
+        <li><code>curl https://links.prom-king.xyz/admin</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\link-sharing\server\routes\admin.ts</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\link-sharing\client\src\App.tsx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\link-sharing\server\dist</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\link-sharing\client\dist</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-10 16:19 - link-sharing</strong> <span class="kind">code-change</span> - Implemented the next public routing slice in link-sharing: added a runtime-config API for canonical public URLs, added a quick-create server route that creates a file plus prima...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-10 16:19 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Implemented the next public routing slice in link-sharing: added a runtime-config API for canonical public URLs, added a quick-create server route that creates a file plus primary mirror in one step with host-domain validation, and updated the admin UI to expose full /f/:slug and /m/:slug URLs plus a KatFile-first Quick Route modal.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build (server)</code></li>
+        <li><code>npm run build (client)</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\business\link-sharing\server\routes\admin.ts</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\link-sharing\client\src\App.tsx</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-10 16:15 - General Tasks</strong> <span class="kind">verification</span> - After DNS cutover, issued live Lets Encrypt certs for vaultwares.ca, www.vaultwares.ca, and docs.vaultwares.ca; updated the prelanding runtime to use the provided JWT secret plu...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-10 16:15 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> After DNS cutover, issued live Lets Encrypt certs for vaultwares.ca, www.vaultwares.ca, and docs.vaultwares.ca; updated the prelanding runtime to use the provided JWT secret plus a real MariaDB connection string on the VPS; verified prelanding.prom-king.xyz, links.prom-king.xyz/admin, and docs.vaultwares.ca over HTTPS; and set vaultwares.ca to redirect to the docs host over HTTPS.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Resolve-DnsName vaultwares.ca / docs.vaultwares.ca</code></li>
+        <li><code>sudo certbot --nginx -d vaultwares.ca -d www.vaultwares.ca -d docs.vaultwares.ca --redirect</code></li>
+        <li><code>systemctl restart prelanding-page.service</code></li>
+        <li><code>Invoke-WebRequest https://prelanding.prom-king.xyz/</code></li>
+        <li><code>Invoke-WebRequest https://links.prom-king.xyz/admin</code></li>
+        <li><code>Invoke-WebRequest https://docs.vaultwares.ca/</code></li>
+        <li><code>curl.exe -I https://vaultwares.ca/</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\export.zip</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\prelanding-page\dist</code></li>
+        <li><code>C:\Users\Administrator\Desktop\business\link-sharing\server\dist</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-10 15:18 - realtime-stt</strong> <span class="kind">code-change</span> - Set default engine to Parakeet (parakeet-tdt-0.6b-v3) and verified direct VRAM transcription. Updated UI to include engine selection and removed unused disk I/O code paths.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: Gemini 3 Flash Thinking: True Mode: agent Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\realtime-stt  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-10 15:18 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Set default engine to Parakeet (parakeet-tdt-0.6b-v3) and verified direct VRAM transcription. Updated UI to include engine selection and removed unused disk I/O code paths.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>main_app.py</code></li>
+        <li><code>config.json</code></li>
+        <li><code>stt_engine/stt_strategies.py</code></li>
+        <li><code>gui_overlay/overlay_window.py</code></li>
+        <li><code>stt_engine/fastconformer_wrapper.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=realtime-stt, branch=main, head=cd77b7c</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-10 14:08 - vault-central</strong> <span class="kind">code-change</span> - Dashboard UI fixes Phase 2: (1) Card layout - CARD_CLASS/THUMB_CLASS maps replace hardcoded ternaries, views 5/6 use landscape flex-row, views 3/4 reduced heights. (2) Processin...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> claude-sonnet-4-6</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: claude-sonnet-4-6 (role: main) Model: claude-sonnet-4-6 Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-10 14:08 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Dashboard UI fixes Phase 2: (1) Card layout - CARD_CLASS/THUMB_CLASS maps replace hardcoded ternaries, views 5/6 use landscape flex-row, views 3/4 reduced heights. (2) Processing overlay z-10 added, text updated to Generating preview. (3) Edit modal bg-vault-cardBg to bg-vault-bg for light themes. (4) PIN toggle track=bg-vault-border, thumb=bg-vault-bg/white. (5) Sync button always accent when enabled. (6) IndexedDB removed from 2 strings. (7) Wipe button border-red-400/60 outline. Build clean: dashboard.js 84.41kb.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/components/VaultDashboard.tsx</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=b1adc01</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-10 13:15 - vault-central</strong> <span class="kind">code-change</span> - Two Chrome/Firefox fixes: (1) Scraper tab changed from tabs.create(active:false) to windows.create(minimized popup) &#226;€” Firefox discards inactive bg tabs until clicked; window a...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> claude-sonnet-4-6</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: claude-sonnet-4-6 (role: main) Model: claude-sonnet-4-6 Thinking: unknown Mode: agent Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-10 13:15 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Two Chrome/Firefox fixes: (1) Scraper tab changed from tabs.create(active:false) to windows.create(minimized popup) &#226;€” Firefox discards inactive bg tabs until clicked; window approach forces page load. Cleanup now calls windows.remove(scraperWindowId). (2) Chrome MV3 CSP fix for FFmpeg unsafe-eval: created sandboxed extension page sandbox.html+sandbox.ts. Offscreen processor fetches FFmpeg core bytes + video bytes, transfers them via postMessage to sandbox iframe. Sandbox (unrestricted CSP) loads FFmpeg with blob URLs from received bytes, processes video, returns ArrayBuffer. Removed unsafe-eval from extension_pages CSP. Added sandbox.pages manifest entry and sandbox CSP key. Build pipeline: added esbuild step for sandbox.ts. tsc + full build pass cleanly.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npx tsc --noEmit</code></li>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>background/scripts/background.ts</code></li>
+        <li><code>src/offscreen/processor.ts</code></li>
+        <li><code>src/offscreen/sandbox.ts</code></li>
+        <li><code>src/offscreen/sandbox.html</code></li>
+        <li><code>manifest.json</code></li>
+        <li><code>dist/manifest.json</code></li>
+        <li><code>vite.config.ts</code></li>
+        <li><code>package.json</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=b1adc01</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-10 09:23 - General Tasks</strong> <span class="kind">verification</span> - Cleared the restored GA tags from the live tube-site WordPress installs, installed Node on the VPS, deployed prelanding-page as a Node service behind nginx at prelanding.prom-ki...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> verification</p>
