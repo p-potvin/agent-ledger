@@ -1,0 +1,39 @@
+﻿{
+    "id":  "20260514-010730-825-vault-flows-ce23e6b3",
+    "createdAt":  "2026-05-14T05:07:30.8259600Z",
+    "createdAtLocal":  "2026-05-14 01:07",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-flows",
+    "kind":  "general",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.5-pro\r\nThinking: true\r\nMode: chat\r\nPermissions: unknown (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): run_command, view_file, list_dir\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-14 01:07 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.5-pro",
+                    "thinking":  "true",
+                    "mode":  "chat",
+                    "permissions":  "unknown",
+                    "network":  "online",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "view_file",
+                                      "list_dir"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "summary":  "Read notes and ledger from first multi-agent flow run (vw-2026-05-13-vf-001). Analyzed run observations: agents ignored LOCAL/ASYNC routing (used CLOUD for T1 and T6 which were marked LOCAL; T7 was ASYNC but done inline). Manager wrote all subagent ledger entries instead of agents themselves. Visibility gap: main agent cannot see subagent progress or completion signals. Token usage: 120K for 4.5 vs 110K for solo Sonnet 4.6. Outcome: complete SPA MVP in 15min dev + 35min bug fixes, 7/10 quality. Identified 4 improvement vectors for next run design.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vault-flows/TASKS.md",
+                  "vault-flows/TODO.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "ce23e6b33f2a234bc9038866f02cce25da5a38c64ac7526d33a28fdba1d015be",
+    "git":  null
+}

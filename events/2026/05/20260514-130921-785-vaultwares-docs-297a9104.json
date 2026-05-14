@@ -1,0 +1,41 @@
+{
+  "id": "20260514-130921-785-vaultwares-docs-297a9104",
+  "createdAt": "2026-05-14T17:09:21.7851547Z",
+  "createdAtLocal": "2026-05-14 13:09",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.shell_command, functions.apply_patch, functions.update_plan\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-14 13:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.shell_command",
+      "functions.apply_patch",
+      "functions.update_plan"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Added a canonical Mermaid network diagram to the private Operations network map page and included an optional diagrams.net (draw.io) source file. Also wired an Operations (Private) nav section into docs.json and the app sidebar so the pages are discoverable. Built docs successfully and pushed to main.",
+  "commands": [
+    "npm run build",
+    "git commit (Lore format)",
+    "git push origin main"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\network-map.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\images\\diagrams\\vaultwares-network.drawio",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\App.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "297a910497cc3bbfdba8d39e45cc04b391a141d1d69d073b3b781cca98f2c204",
+  "git": null
+}

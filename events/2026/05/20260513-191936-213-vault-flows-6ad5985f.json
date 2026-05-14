@@ -1,0 +1,38 @@
+{
+  "id": "20260513-191936-213-vault-flows-6ad5985f",
+  "createdAt": "2026-05-13T23:19:36.2135107Z",
+  "createdAtLocal": "2026-05-13 19:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "claude-sonnet-4-6",
+  "agentHeader": "Agent: claude-sonnet-4-6 (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: false\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows  Branch: rewrite/spa\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 19:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-6",
+    "thinking": "false",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Created i18n setup for vault-flows SPA. Added src/i18n/en.ts (English strings for nav, preset, node, execution, app namespaces), src/i18n/fr.ts (Quebec French translations, naturally ~15-20% longer), and src/i18n/index.ts (i18next init with LanguageDetector, localStorage key 'vw_lang', fallback 'fr', react-i18next integration).",
+  "commands": [],
+  "files": [
+    "src/i18n/en.ts",
+    "src/i18n/fr.ts",
+    "src/i18n/index.ts"
+  ],
+  "planPath": "",
+  "contentHash": "6ad5985ff91391af8a94b1abe2a543dae9d19563f2488889fab03e14d5afaeba",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "rewrite/spa",
+    "head": "462b211",
+    "hasChanges": true
+  }
+}

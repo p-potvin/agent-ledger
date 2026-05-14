@@ -1,0 +1,38 @@
+{
+  "id": "20260513-095102-106-vaultwares-mcp-6b43e3fa",
+  "createdAt": "2026-05-13T13:51:02.1069025Z",
+  "createdAtLocal": "2026-05-13 09:51",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-mcp",
+  "kind": "code-change",
+  "actor": "GitHub Copilot",
+  "agentHeader": "Agent: GitHub Copilot (role: main)\r\nModel: claude-sonnet-4-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 09:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp",
+  "summary": "Fixed ModuleNotFoundError: No module named 'fastmcp' in Claude Desktop extension mechanism. Root cause: manifest.json mcp_config.command was 'python' (system Python, no fastmcp). Fix 1: Updated manifest.json mcp_config.command to full venv Python path (.venv\\Scripts\\python.exe) and added VAULTWARES_VENV_SITE env var pointing to venv site-packages. Fix 2: Updated root server.py to add _bootstrap_venv() function that inserts venv site-packages into sys.path before importing fastmcp — checks VAULTWARES_VENV_SITE env var first, then walks up directory tree looking for .venv\\Lib\\site-packages. Rebuilt vaultwares-mcp-3.0.0.mcpb (102 files) with both fixes included and verified manifest command and bootstrap presence inside bundle.",
+  "commands": [],
+  "files": [
+    "manifest.json",
+    "server.py",
+    "vaultwares-mcp-3.0.0.mcpb"
+  ],
+  "planPath": "",
+  "contentHash": "6b43e3fae42274560faf03f3f01a5b9c0767d663803970311668610a2c3190cd",
+  "git": {
+    "repo": "vaultwares-mcp",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-mcp",
+    "branch": "main",
+    "head": "e034e76",
+    "hasChanges": true
+  }
+}

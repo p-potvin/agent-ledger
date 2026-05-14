@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20260513-100550-800-general-tasks-8e84256e",
+    "createdAt":  "2026-05-13T14:05:50.8000900Z",
+    "createdAtLocal":  "2026-05-13 10:05",
+    "timezone":  "Eastern Standard Time",
+    "project":  "General Tasks",
+    "kind":  "general",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: Gemini 3 Flash\r\nThinking: true\r\nMode: chat\r\nPermissions: standard (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): run_command, view_file, list_dir\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 10:05 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3 Flash",
+                    "thinking":  "true",
+                    "mode":  "chat",
+                    "permissions":  "standard",
+                    "network":  "online",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "view_file",
+                                      "list_dir"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+    "summary":  "Exported user memories and context across five categories (Instructions, Identity, Career, Projects, Preferences) as requested. Aggregated data from GEMINI.md, AGENTS.md, project-root JSON files, and conversation logs.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "8e84256e0b699b3910f0cdb42ebac7d02696cbe913bde27cccd1bf98aa491096",
+    "git":  {
+                "repo":  "vaultwares-docs",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+                "branch":  "main",
+                "head":  "f9164db",
+                "hasChanges":  false
+            }
+}

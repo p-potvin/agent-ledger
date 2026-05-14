@@ -1,0 +1,32 @@
+{
+  "id": "20260512-165211-830-general-tasks-dfc3f305",
+  "createdAt": "2026-05-12T20:52:11.8302804Z",
+  "createdAtLocal": "2026-05-12 16:52",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "verification",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: false\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-12 16:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "false",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": "functions.shell_command",
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Checked public DNS for vaultwares.ca/docs.vaultwares.ca/api.vaultwares.ca; all currently resolve to old VPS 212.193.6.35, explaining why api.vaultwares.ca still serves docs instead of the new VPS reverse-proxy.",
+  "commands": [
+    "nslookup api.vaultwares.ca 1.1.1.1",
+    "nslookup docs.vaultwares.ca 1.1.1.1",
+    "nslookup vaultwares.ca 1.1.1.1"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "dfc3f305186930080034e685ade83b3390533e0e8619b4c9d61b3beacd93a4cd",
+  "git": null
+}

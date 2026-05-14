@@ -1,0 +1,38 @@
+{
+  "id": "20260511-081251-853-vault-central-819086e1",
+  "createdAt": "2026-05-11T12:12:51.8533535Z",
+  "createdAtLocal": "2026-05-11 08:12",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "GitHub Copilot",
+  "agentHeader": "Agent: GitHub Copilot (role: main)\r\nModel: Gemini 3.1 Pro (Preview)\r\nThinking: true\r\nMode: chat\r\nPermissions: admin (network: offline)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-11 08:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Gemini 3.1 Pro (Preview)",
+    "thinking": "true",
+    "mode": "chat",
+    "permissions": "admin",
+    "network": "offline",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Replaced FFmpeg WASM inside the sandbox with native MediaRecorder WebM generation in the Firefox offscreen processor. Removed the dependency on sandbox.html completely for video processing, thus mitigating the 'Sandbox init timed out' errors caused by Firefox's restrictions.",
+  "commands": [
+    "npm run build"
+  ],
+  "files": [
+    "src/offscreen/processor.ts"
+  ],
+  "planPath": "",
+  "contentHash": "819086e12be433ebff93910e4b5e702286915c14a10b048879ffacbf5b3d5c95",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "a53966d",
+    "hasChanges": true
+  }
+}

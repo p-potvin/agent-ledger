@@ -3,6 +3,2376 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-14 13:12 - vaultwares-docs</strong> <code>handoff</code> - Refined VaultWares multi-agent maintenance protocol. Reverted Phase 7 (Happy Hour) from MULTI_AGENT_FLOW.md and replaced it with a 2-week log archiving rule. Created new documen...</summary>
+
+- Kind: handoff
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-2.5-pro
+  Thinking: true
+  Mode: agent
+  Permissions: sandbox_mode (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main
+  Tools used (this reply): write_to_file, replace_file_content, multi_replace_file_content, run_command, view_file
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 13:12 (TZ: Eastern Standard Time)
+  ```
+- Summary: Refined VaultWares multi-agent maintenance protocol. Reverted Phase 7 (Happy Hour) from MULTI_AGENT_FLOW.md and replaced it with a 2-week log archiving rule. Created new documentation for Large Files (warm loading, 500MB download limit), Project Tracking (TODO/ROADMAP mandate), and A.N.S.W.E.R.S. backup strategy (with encryption mandate). Drafted the 'Telemetry Trash-Panda' analyst personality. Updated global instructions (GEMINI.md) to forbid automatic syncing and mandate backup encryption. Added archive search mandate to agent-ledger/AGENTS.md.
+- Commands:
+  - `Remove-Item HAPPY_HOUR.md`
+  - `write_to_file GEMINI.md`
+- Files:
+  - `MULTI_AGENT_FLOW.md`
+  - `GEMINI.md`
+  - `AGENTS.md`
+  - `large-files.mdx`
+  - `project-tracking.mdx`
+  - `backup-strategy.mdx`
+  - `docs.json`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\04bbb870-39a4-41a4-92a6-fa9884efefed\implementation_plan.md`
+- Git: repo=vaultwares-docs, branch=main, head=c8486d7
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 13:09 - vaultwares-docs</strong> <code>code-change</code> - Added a canonical Mermaid network diagram to the private Operations network map page and included an optional diagrams.net (draw.io) source file. Also wired an Operations (Priva...</summary>
+
+- Kind: code-change
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command, functions.apply_patch, functions.update_plan
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 13:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added a canonical Mermaid network diagram to the private Operations network map page and included an optional diagrams.net (draw.io) source file. Also wired an Operations (Private) nav section into docs.json and the app sidebar so the pages are discoverable. Built docs successfully and pushed to main.
+- Commands:
+  - `npm run build`
+  - `git commit (Lore format)`
+  - `git push origin main`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\network-map.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\images\diagrams\vaultwares-network.drawio`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs.json`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\src\App.tsx`
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 12:08 - vault-video-enhancer</strong> <code>plan</code> - Replaced screenshot-based GUI testing protocol with programmatic mathematical layout auditor (layout_auditor.py) and pytest-qt state churning tests. Synced new protocol.</summary>
+
+- Kind: plan
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-video-enhancer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 12:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Replaced screenshot-based GUI testing protocol with programmatic mathematical layout auditor (layout_auditor.py) and pytest-qt state churning tests. Synced new protocol.
+- Commands:
+  - `python -m pytest tests/test_gui_state.py`
+- Files:
+  - `CLAUDE.md`
+  - `tests/utils/layout_auditor.py`
+  - `tests/test_gui_state.py`
+- Git: repo=vault-video-enhancer, branch=main, head=ad0b4ed
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 08:08 - vaultwares-agentciation</strong> <code>handoff</code> - Codified the Happy Hour protocol in HAPPY_HOUR.md and integrated it into MULTI_AGENT_FLOW.md as Phase 7. Executed ComfyUI model organization using a Python script to create base...</summary>
+
+- Kind: handoff
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-agentciation  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 08:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Codified the Happy Hour protocol in HAPPY_HOUR.md and integrated it into MULTI_AGENT_FLOW.md as Phase 7. Executed ComfyUI model organization using a Python script to create base-model symlink hierarchies in D:\comfyUI\resources\ComfyUI\models.
+- Commands:
+  - `python organize_comfy_models.py`
+- Files:
+  - `vaultwares-agentciation\docs\HAPPY_HOUR.md`
+  - `vaultwares-agentciation\docs\MULTI_AGENT_FLOW.md`
+- Git: repo=vaultwares-agentciation, branch=main, head=358fc43
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 05:49 - vaultwares-agentciation</strong> <code>handoff</code> - Updated Multi-Agent Orchestration Protocol based on run vw-2026-05-13-vf-001 feedback. Enforced: (1) Mandatory visual tests (Playwright toHaveScreenshot) for all GUI tasks; (2) ...</summary>
+
+- Kind: handoff
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-3-flash
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): replace_file_content, multi_replace_file_content, run_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 05:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated Multi-Agent Orchestration Protocol based on run vw-2026-05-13-vf-001 feedback. Enforced: (1) Mandatory visual tests (Playwright toHaveScreenshot) for all GUI tasks; (2) Subagent independence for ledger entries (manager must not proxy); (3) Mandatory update of TODO.md/ROADMAP.md (hygiene tasks); (4) Enforced use of Redis/ExtrovertAgent coordination. Synced changes across all 7 hosts.
+- Files:
+  - `vaultwares-agentciation/docs/MULTI_AGENT_FLOW.md`
+  - `vaultwares-agentciation/docs/TASKS_MD_SCHEMA.md`
+  - `vaultwares-agentciation/docs/AGENT_TELEMETRY.md`
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 04:26 - General Tasks</strong> <code>verification</code> - Repo health check across Desktop/business and Desktop/Github Repos: scanned 79 git repos for broken refs (Name clash) and basic git integrity (rev-parse HEAD, show-ref). Repaire...</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command, functions.update_plan
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 04:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Repo health check across Desktop/business and Desktop/Github Repos: scanned 79 git repos for broken refs (Name clash) and basic git integrity (rev-parse HEAD, show-ref). Repaired prelanding-page broken main/origin main refs. Removed a stray gitfile at windows-customizer/vault-themes that pointed to the wrong relative gitdir. Re-ran scan: 0 remaining problems.
+- Commands:
+  - `repo scan: rev-parse HEAD + show-ref`
+  - `repair prelanding-page refs`
+  - `remove windows-customizer/vault-themes/.git`
+- Files:
+  - `C:\Users\Administrator\Desktop\business\prelanding-page\.git\refs\heads\main`
+  - `C:\Users\Administrator\Desktop\business\prelanding-page\.git\refs\remotes\origin\main`
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 04:26 - General Tasks</strong> <code>verification</code> - test</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 04:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: test
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 04:04 - tube-site</strong> <code>commands</code> - Fixed broken git refs for main/origin/main, restored clean status, then committed and pushed the staged tube-site changes to origin/main using Lore commit format + OmX co-author...</summary>
+
+- Kind: commands
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 04:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed broken git refs for main/origin/main, restored clean status, then committed and pushed the staged tube-site changes to origin/main using Lore commit format + OmX co-author trailer.
+- Commands:
+  - `git restore --staged .`
+  - `git fetch origin`
+  - `git add -A`
+  - `git commit -m <Lore message>`
+  - `git push origin main`
+- Files:
+  - `C:\Users\Administrator\Desktop\business\tube-site\.git\refs\heads\main`
+  - `C:\Users\Administrator\Desktop\business\tube-site\.git\refs\remotes\origin\main`
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 04:01 - qa-automation</strong> <code>code-change</code> - Added Stealth and Aggressive behavior profiles to qa_automation_routine.py via the --mode parameter. Simulates mouse movements, scrolling, and random delays.</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: o3-mini
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\business\qa-automation  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 04:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added Stealth and Aggressive behavior profiles to qa_automation_routine.py via the --mode parameter. Simulates mouse movements, scrolling, and random delays.
+- Files:
+  - `qa_automation_routine.py`
+  - `TODO.md`
+- Git: repo=qa-automation, branch=main, head=fe2c299
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 03:50 - qa-automation</strong> <code>code-change</code> - Added AntiBotMetrics to qa_automation_routine.py for Phase 1 of bot-detection testing (TTB, metrics reporting to artifacts)</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: o3-mini
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\business\qa-automation  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 03:50 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added AntiBotMetrics to qa_automation_routine.py for Phase 1 of bot-detection testing (TTB, metrics reporting to artifacts)
+- Files:
+  - `qa_automation_routine.py`
+- Git: repo=qa-automation, branch=main, head=fe2c299
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 03:40 - qa-automation</strong> <code>plan</code> - Created ANTI_BOT_TEST_PLAN.md detailing how to measure time-to-block, track endpoint states, and generate test artifacts. Updated TODO.md.</summary>
+
+- Kind: plan
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: o3-mini
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\business\qa-automation  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 03:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created ANTI_BOT_TEST_PLAN.md detailing how to measure time-to-block, track endpoint states, and generate test artifacts. Updated TODO.md.
+- Files:
+  - `ANTI_BOT_TEST_PLAN.md`
+  - `TODO.md`
+- Git: repo=qa-automation, branch=main, head=fe2c299
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 03:36 - qa-automation</strong> <code>code-change</code> - Added platform switch for Kameleo vs Multilogin and implemented depth recursive link testing logic in the qa_automation_routine.py tool.</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: o3-mini
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\business\qa-automation  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 03:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added platform switch for Kameleo vs Multilogin and implemented depth recursive link testing logic in the qa_automation_routine.py tool.
+- Files:
+  - `qa_automation_routine.py`
+- Git: repo=qa-automation, branch=main, head=fe2c299
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 03:33 - qa-automation</strong> <code>code-change</code> - Updated qa_automation_routine.py to test a sequence of URLs, defaulting to https://prom-king.xyz and https://fullxxx.video as requested.</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: o3-mini
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\business\qa-automation  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 03:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated qa_automation_routine.py to test a sequence of URLs, defaulting to https://prom-king.xyz and https://fullxxx.video as requested.
+- Files:
+  - `qa_automation_routine.py`
+- Git: repo=qa-automation, branch=main, head=fe2c299
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 03:19 - qa-automation</strong> <code>code-change</code> - Created qa_automation_routine.py to standardize the routine for launching Kameleo with the &#39;qa-automation&#39; profile, navigating to a tube site route, and testing outbound/interna...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: o3-mini
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\business\qa-automation  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 03:19 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created qa_automation_routine.py to standardize the routine for launching Kameleo with the 'qa-automation' profile, navigating to a tube site route, and testing outbound/internal links via Playwright.
+- Files:
+  - `qa_automation_routine.py`
+- Git: repo=qa-automation, branch=main, head=fe2c299
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 02:03 - tube-site</strong> <code>code-change</code> - Fixed FullXXX fetch/backfill pagination and section targeting: pornxp now paginates via /?page=N (previous /videos?page=N returned empty), freesexvideos now paginates via /lates...</summary>
+
+- Kind: code-change
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command, functions.apply_patch, functions.update_plan
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 02:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed FullXXX fetch/backfill pagination and section targeting: pornxp now paginates via /?page=N (previous /videos?page=N returned empty), freesexvideos now paginates via /latest-updates/N/ (previous /page/N/ 404), and topvid no longer pretends to paginate; it only scrapes the first Popular grid and filters out nav/podcast-like paths. Increased manual/bulk candidate pool per listing page to avoid underfill and made manual page-count semantics clearer in admin UI.
+- Commands:
+  - `php -l tube-site/fullxxx-video/includes/video-fetcher.php`
+  - `php -l tube-site/fullxxx-video/includes/admin-settings.php`
+  - `curl checks for pornxp/?page=2 and freesexvideos/latest-updates/2`
+- Files:
+  - `tube-site/fullxxx-video/includes/video-fetcher.php`
+  - `tube-site/fullxxx-video/includes/admin-settings.php`
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 01:07 - vault-flows</strong> <code>general</code> - Read notes and ledger from first multi-agent flow run (vw-2026-05-13-vf-001). Analyzed run observations: agents ignored LOCAL/ASYNC routing (used CLOUD for T1 and T6 which were ...</summary>
+
+- Kind: general
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-2.5-pro
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): run_command, view_file, list_dir
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 01:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Read notes and ledger from first multi-agent flow run (vw-2026-05-13-vf-001). Analyzed run observations: agents ignored LOCAL/ASYNC routing (used CLOUD for T1 and T6 which were marked LOCAL; T7 was ASYNC but done inline). Manager wrote all subagent ledger entries instead of agents themselves. Visibility gap: main agent cannot see subagent progress or completion signals. Token usage: 120K for 4.5 vs 110K for solo Sonnet 4.6. Outcome: complete SPA MVP in 15min dev + 35min bug fixes, 7/10 quality. Identified 4 improvement vectors for next run design.
+- Files:
+  - `vault-flows/TASKS.md`
+  - `vault-flows/TODO.md`
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 01:01 - tube-site</strong> <code>code-change</code> - Fixed &#39;player modal too zoomed / controls not visible&#39; by making the Vault player modal body scrollable and capping surface height relative to viewport; also added cache-busting...</summary>
+
+- Kind: code-change
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.apply_patch, functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 01:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed 'player modal too zoomed / controls not visible' by making the Vault player modal body scrollable and capping surface height relative to viewport; also added cache-busting via filemtime-based asset versions for CSS/JS enqueues in both plugins so updates propagate immediately.
+- Commands:
+  - `scp updated vault-player.css + plugin php to VPS`
+  - `curl fullxxx watch page | grep vault-player.css?ver`
+- Files:
+  - `C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\assets\\css\\vault-player.css`
+  - `C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\assets\\css\\vault-player.css`
+  - `C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\fullxxx-video.php`
+  - `C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\promking-tube.php`
+  - `/var/www/fullxxx.video/public/wp-content/plugins/fullxxx-video/assets/css/vault-player.css`
+  - `/var/www/prom-king.xyz/public/wp-content/plugins/promking-tube/assets/css/vault-player.css`
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 23:38 - tube-site</strong> <code>code-change</code> - Fixed tube-site production breakage on vaultwares-1: installed php8.2-xml to restore DOMDocument (resolves 500s + fetcher crashes) and patched both plugins to force https for em...</summary>
+
+- Kind: code-change
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.apply_patch, functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 23:38 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed tube-site production breakage on vaultwares-1: installed php8.2-xml to restore DOMDocument (resolves 500s + fetcher crashes) and patched both plugins to force https for embed/source/mailchimp URLs to reduce mixed-content iframe failures. Deployed updated plugin files to /var/www/*.
+- Commands:
+  - `ssh root@100.73.93.84 apt-get install -y php8.2-xml`
+  - `scp helpers.php -> /tmp/fxv-helpers.php; install to plugin dir`
+  - `scp player.php -> /tmp/pkt-player.php; install to plugin dir`
+- Files:
+  - `C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\helpers.php`
+  - `C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\player.php`
+  - `/var/www/fullxxx.video/public/wp-content/plugins/fullxxx-video/includes/helpers.php`
+  - `/var/www/prom-king.xyz/public/wp-content/plugins/promking-tube/includes/player.php`
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 23:35 - General Tasks</strong> <code>commands</code> - Root-caused tube-site 500s and fetch failures to missing PHP DOMDocument on vaultwares-1; installed php8.2-xml (enables dom/xml modules) and restarted php8.2-fpm, restoring norm...</summary>
+
+- Kind: commands
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 23:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Root-caused tube-site 500s and fetch failures to missing PHP DOMDocument on vaultwares-1; installed php8.2-xml (enables dom/xml modules) and restarted php8.2-fpm, restoring normal page renders and fetcher DOM parsing.
+- Commands:
+  - `ssh root@100.73.93.84 tail /var/log/nginx/error.log`
+  - `ssh root@100.73.93.84 apt-get install -y php8.2-xml`
+  - `ssh root@100.73.93.84 systemctl restart php8.2-fpm`
+- Files:
+  - `/var/log/nginx/error.log`
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 23:33 - qa-automation</strong> <code>general</code> - Setup Kameleo CLI background process. Extracted proper Kameleo v3/v4 wsEndpoint mechanism for Playwright CDP connect over websocket bridge. Wrote a test python script specifical...</summary>
+
+- Kind: general
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: o3-mini
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\business\qa-automation  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 23:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: Setup Kameleo CLI background process. Extracted proper Kameleo v3/v4 wsEndpoint mechanism for Playwright CDP connect over websocket bridge. Wrote a test python script specifically for the qa-automation profile and created KAMELEO_ASSISTANT_GUIDE.md as documentation for other assistants.
+- Commands:
+  - `Start-Process Kameleo.CLI.exe`
+  - `.\.venv\Scripts\python.exe kameleo_qa_automation_test.py`
+- Files:
+  - `kameleo_qa_automation_test.py`
+  - `KAMELEO_ASSISTANT_GUIDE.md`
+- Git: repo=qa-automation, branch=main, head=fe2c299
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 22:07 - General Tasks</strong> <code>verification</code> - Verified Vaultwarden is running on vaultwares-1 as a Docker container (healthy) with port 8222 mapped to container port 80 and exposed via tailnet-only nginx vhost secrets.vault...</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 22:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified Vaultwarden is running on vaultwares-1 as a Docker container (healthy) with port 8222 mapped to container port 80 and exposed via tailnet-only nginx vhost secrets.vaultwares.ca; confirmed local loopback test requires --resolve to hit 127.0.0.1.
+- Commands:
+  - `ssh root@100.73.93.84 docker ps`
+  - `ssh root@100.73.93.84 ss -ltnp | grep 8222`
+  - `curl -k --resolve secrets.vaultwares.ca:443:127.0.0.1 https://secrets.vaultwares.ca`
+- Files:
+  - `/etc/nginx/sites-available/secrets.vaultwares.ca.conf`
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 22:01 - vaultwares-docs</strong> <code>code-change</code> - Documented today&#39;s infra changes in private docs: added ops log page for 2026-05-13 (noddit.org split proxy to PC SPA+API, gateway header, job queue/rate limit notes), linked it...</summary>
+
+- Kind: code-change
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.apply_patch, functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 22:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Documented today's infra changes in private docs: added ops log page for 2026-05-13 (noddit.org split proxy to PC SPA+API, gateway header, job queue/rate limit notes), linked it from network map, corrected secrets page to use secrets.vaultwares.ca, and added the new page to docs.json navigation.
+- Commands:
+  - `node -e "JSON.parse(require('fs').readFileSync('docs.json','utf8'));"`
+- Files:
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\ops-log-2026-05-13.mdx`
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\network-map.mdx`
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\secrets.mdx`
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs.json`
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 21:49 - vaultwares-pipelines</strong> <code>code-change</code> - Added a minimal durable in-process job queue to the FastAPI API (job records on disk + worker concurrency cap), changed /workflows/run to enqueue jobs and return jobId, added /j...</summary>
+
+- Kind: code-change
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.apply_patch, functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 21:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added a minimal durable in-process job queue to the FastAPI API (job records on disk + worker concurrency cap), changed /workflows/run to enqueue jobs and return jobId, added /jobs endpoints, and documented new env vars. Updated noddit.org nginx to split /api/ to the PC API (9001) while keeping SPA proxying, and restarted the local API with proxy-trust + origin allowlist so public noddit can reach it through the VPS.
+- Commands:
+  - `python -m py_compile api_server.py`
+  - `python -m pip install asyncpg`
+  - `ssh root@100.73.93.84 nginx -t && systemctl reload nginx`
+- Files:
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\api_server.py`
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\.env.example`
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\.env.local-api.example`
+  - `/etc/nginx/sites-available/noddit.org.conf`
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 21:42 - vault-flows</strong> <code>code-change</code> - Added signup modal to vault-flows. SignupModal.tsx: username+password (required), email (optional with visible &#39;(optional)&#39; label), auto-focus, loading/error states (409 conflic...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: rewrite/spa
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 21:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added signup modal to vault-flows. SignupModal.tsx: username+password (required), email (optional with visible '(optional)' label), auto-focus, loading/error states (409 conflict, network, generic), 'Log In' switch link. LoginModal: added 'No account yet? Sign Up' link. App.tsx: replaced showLogin:bool with authModal:'login'|'signup'|null. api/client.ts: register() function posting to /auth/register then auto-logging in. i18n: signup keys in EN+FR.
+- Commands:
+  - `npm run build`
+  - `git commit`
+- Files:
+  - `src/ui/SignupModal.tsx`
+  - `src/ui/LoginModal.tsx`
+  - `src/App.tsx`
+  - `src/api/client.ts`
+  - `src/i18n/en.ts`
+  - `src/i18n/fr.ts`
+- Git: repo=vault-flows, branch=rewrite/spa, head=7a6b979
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 21:34 - vault-flows</strong> <code>code-change</code> - Built login modal and auth gate for vault-flows. LoginModal.tsx: username/password form with loading state, error handling (invalid creds vs network), backdrop dismiss, auto-foc...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: rewrite/spa
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 21:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: Built login modal and auth gate for vault-flows. LoginModal.tsx: username/password form with loading state, error handling (invalid creds vs network), backdrop dismiss, auto-focus. Integrated into App.tsx: 'Log In' header button when unauthenticated, username chip when logged in, Run Flow auto-prompts login if no token then auto-executes on success. Added auth.* i18n keys in EN and FR. Build clean (255 modules, 0 TS errors).
+- Commands:
+  - `npm run build`
+  - `Restart-Service vault-flows-spa`
+  - `git commit`
+- Files:
+  - `src/ui/LoginModal.tsx`
+  - `src/App.tsx`
+  - `src/i18n/en.ts`
+  - `src/i18n/fr.ts`
+- Git: repo=vault-flows, branch=rewrite/spa, head=b225c79
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 21:24 - General Tasks</strong> <code>handoff</code> - Investigated Vault Flows &lt;-&gt; API auth path and HTTPS warnings: vault-flows uses /api fetch wrapper with in-memory Bearer JWT from /auth/login; API enforces HTTPS via x-forwarded...</summary>
+
+- Kind: handoff
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 21:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Investigated Vault Flows <-> API auth path and HTTPS warnings: vault-flows uses /api fetch wrapper with in-memory Bearer JWT from /auth/login; API enforces HTTPS via x-forwarded-proto only when peer is trusted proxy; noddit.org currently proxies to PC Vite preview HTTPS self-signed (nginx proxy_ssl_verify off).
+- Commands:
+  - `rg -n 'Authorization|/api|VITE_API_URL' vault-flows`
+  - `rg -n 'HTTPS required|426|x-forwarded-proto' vaultwares-pipelines/api_server.py`
+- Files:
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows\\src\\api\\client.ts`
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows\\vite.config.ts`
+  - `C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\api_server.py`
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 20:20 - vault-flows</strong> <code>code-change</code> - Fixed ReactFlow nodes not rendering visibly after preset load. Root cause: handleNodesChange was syncing all RF change types (including internal &#39;dimensions&#39; changes) back to Zu...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: rewrite/spa
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 20:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed ReactFlow nodes not rendering visibly after preset load. Root cause: handleNodesChange was syncing all RF change types (including internal 'dimensions' changes) back to Zustand store, triggering storeNodes useEffect which called setRfNodes â€” resetting nodes before RF finished measuring them. Loop kept nodes at visibility:hidden permanently. Fix: filter handleNodesChange to only sync 'position' changes; remove storeâ†’RF sync useEffects; add key={activePreset?.id} to FlowCanvas in App.tsx so it remounts correctly on preset change. Verified visually: TOPIC, EXPAND OUTLINE, WRITE FULL DRAFT, RESULT nodes all render on canvas.
+- Commands:
+  - `npm run build`
+  - `Restart-Service vault-flows-spa`
+  - `git commit`
+- Files:
+  - `src/canvas/FlowCanvas.tsx`
+  - `src/App.tsx`
+- Git: repo=vault-flows, branch=rewrite/spa, head=2888652
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 20:15 - vault-flows</strong> <code>code-change</code> - Fixed vault-flows SPA rebuild (branch: rewrite/spa, run: vw-2026-05-13-vf-001). Root causes: (1) Zustand object selectors in App.tsx and NodeParamPanel.tsx caused React 19 concu...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: rewrite/spa
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 20:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed vault-flows SPA rebuild (branch: rewrite/spa, run: vw-2026-05-13-vf-001). Root causes: (1) Zustand object selectors in App.tsx and NodeParamPanel.tsx caused React 19 concurrent-mode error #185 â€” replaced with individual useFlowStore selectors. (2) ThemePicker imported applyTheme from @/main creating a circular dependency â€” extracted applyTheme/initTheme to src/lib/theme.ts. (3) Dead PresetLibraryInline export in PresetCard.tsx removed. Added ErrorBoundary for crash visibility. Build passes (254 modules, 0 TS errors). App verified: preset loads 4-node canvas, node click shows param panel, no console errors.
+- Commands:
+  - `npm run build`
+  - `Restart-Service vault-flows-spa`
+  - `git commit`
+- Files:
+  - `src/App.tsx`
+  - `src/ui/NodeParamPanel.tsx`
+  - `src/main.tsx`
+  - `src/ui/ThemePicker.tsx`
+  - `src/lib/theme.ts`
+  - `src/ui/PresetCard.tsx`
+  - `src/ErrorBoundary.tsx`
+- Git: repo=vault-flows, branch=rewrite/spa, head=7c3039c
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 20:15 - OneTrainer</strong> <code>code-change</code> - Fixed config.json corruption in d:\OneTrainer\config.json. Previous two multi_replace_string_in_file passes had introduced: truncated boolean values (&#39;tru&#39; instead of &#39;true,&#39;), ...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Claude Sonnet 4.6
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: D:\OneTrainer  Branch: master
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 20:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed config.json corruption in d:\OneTrainer\config.json. Previous two multi_replace_string_in_file passes had introduced: truncated boolean values ('tru' instead of 'true,'), truncated string values ('ON' and 'COSINE' without closing quotes/commas), over-escaped backslashes in model paths (4 instead of 2), tripled transformer path suffix, wrong learning_rate (0.000111 instead of 0.0001), tripled quantization.cache_dir value. Fixed all issues using Python scripts writing directly to file. Final state: valid JSON, all 12GB RTX 3060 optimized settings active as OneTrainer default startup config.
+- Files:
+  - `d:\OneTrainer\config.json`
+- Git: repo=OneTrainer, branch=master, head=423c3b3
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 20:09 - General Tasks</strong> <code>code-change</code> - Configured new VPS nginx for noddit.org/www with Let&#39;s Encrypt TLS and reverse-proxy to Vault Flows SPA on tailnet (100.71.101.21:3100) using upstream HTTPS; added nginx http-ma...</summary>
+
+- Kind: code-change
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 20:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Configured new VPS nginx for noddit.org/www with Let's Encrypt TLS and reverse-proxy to Vault Flows SPA on tailnet (100.71.101.21:3100) using upstream HTTPS; added nginx http-map for  to support websocket upgrades.
+- Commands:
+  - `ssh root@100.73.93.84 ls /etc/nginx/sites-available`
+  - `certbot certonly --webroot -w /var/www/html -d noddit.org -d www.noddit.org`
+  - `nginx -t && systemctl reload nginx`
+- Files:
+  - `/etc/nginx/sites-available/noddit.org.conf`
+  - `/etc/nginx/conf.d/connection_upgrade.conf`
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 19:51 - General Tasks</strong> <code>commands</code> - Prepared for Vault Flows SPA proxying: updated Tailscale ACL to allow VPS servers (tag:server) and owner to reach PC 100.71.101.21 on tcp:3100; verified port 3100 is Vite previe...</summary>
+
+- Kind: commands
+- Actor: gpt-5.2
+- Agent Header:
+  ```text
+  Agent: gpt-5.2 (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 19:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Prepared for Vault Flows SPA proxying: updated Tailscale ACL to allow VPS servers (tag:server) and owner to reach PC 100.71.101.21 on tcp:3100; verified port 3100 is Vite preview and serves HTTPS; added nginx snippet /etc/nginx/snippets/vaultflows_proxy.conf for upstream proxying to https://100.71.101.21:3100 with websocket headers and upstream TLS verify disabled (pending choosing a domain/vhost to attach it to).
+- Commands:
+  - `Invoke-RestMethod GET/POST https://api.tailscale.com/api/v2/tailnet/<tailnet>/acl`
+  - `tailscale ssh root@vaultwares-1 curl http://100.71.101.21:3100`
+  - `netstat -abno | findstr :3100`
+  - `curl -vk https://127.0.0.1:3100`
+- Files:
+  - `/etc/nginx/snippets/vaultflows_proxy.conf`
+  - `C:\Users\Administrator\Desktop\business\_transfer\tailscale-acl-edit.json`
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 19:26 - vault-flows</strong> <code>code-change</code> - Full rewrite of vault-flows on branch rewrite/spa: replaced ComfyUI/JSX/Redux/Python product with TypeScript strict SPA. Created TASKS.md (multi-agent schema, run vw-2026-05-13-...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: agent
+  Permissions: default (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: rewrite/spa
+  Tools used (this reply): Write, Edit, Read, Bash, Agent, TodoWrite
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 19:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Full rewrite of vault-flows on branch rewrite/spa: replaced ComfyUI/JSX/Redux/Python product with TypeScript strict SPA. Created TASKS.md (multi-agent schema, run vw-2026-05-13-vf-001), created branch rewrite/spa, deleted old src/backend/agents/dispatcher, scaffolded Vite+React+Tailwind v4+vault-themes, added node types (input|output|llm|transform|display), Zustand store, React Flow canvas with 5 custom node renderers, typed API client over vaultwares-pipelines, stateless execution runner, i18next EN/FR i18n, 4 preset JSON files (blog-post-drafter, lesson-plan-builder, meeting-summary, image-gen-basic), App shell with sidebar preset library + canvas + right param panel + ThemePicker. Build passed: tsc -b && vite build, 252 modules, 0 TS errors. Committed as d13d767 on rewrite/spa. NSSM install pending.
+- Commands:
+  - `git checkout -b rewrite/spa`
+  - `npm install`
+  - `npm run build`
+  - `git commit`
+- Files:
+  - `vault-flows/TASKS.md`
+  - `vault-flows/src/App.tsx`
+  - `vault-flows/src/canvas/FlowCanvas.tsx`
+  - `vault-flows/src/nodes/types.ts`
+  - `vault-flows/src/store/flowStore.ts`
+  - `vault-flows/src/api/client.ts`
+  - `vault-flows/src/execution/runner.ts`
+  - `vault-flows/src/presets/index.ts`
+  - `vault-flows/src/i18n/index.ts`
+  - `vault-flows/vite.config.ts`
+  - `vault-flows/package.json`
+- Plan: `C:\Users\Administrator\.claude\plans\c-users-administrator-desktop-vault-flo-dreamy-reddy.md`
+- Git: repo=vault-flows, branch=rewrite/spa, head=d13d767
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 19:22 - vault-flows</strong> <code>code-change</code> - Created all 8 canvas components for the vault-flows SPA rewrite/spa branch: FlowCanvas.tsx (ReactFlow wrapper with Zustand sync, MiniMap, Controls, Background), BaseNode.tsx (sh...</summary>
+
+- Kind: code-change
+- Actor: Claude Sonnet 4.6
+- Agent Header:
+  ```text
+  Agent: Claude Sonnet 4.6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: rewrite/spa
+  Tools used (this reply): Read, Write, Bash, Glob
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 19:22 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created all 8 canvas components for the vault-flows SPA rewrite/spa branch: FlowCanvas.tsx (ReactFlow wrapper with Zustand sync, MiniMap, Controls, Background), BaseNode.tsx (shared card wrapper with left color strip and selection ring), InputNode/LLMNode/TransformNode/OutputNode/DisplayNode (typed NodeProps wrappers), and nodeTypes.ts (NodeTypes registry). Used CSS custom properties from vault-themes throughout â€” no hardcoded hex. Fixed @xyflow/react v12 + @types/react v19 JSX namespace incompatibility by casting ReactFlow through unknown to React.ComponentType. All 3 new-file TS errors resolved; remaining errors are pre-existing in main.tsx (missing App, index.css types, vault-themes applyTheme export).
+- Commands:
+  - `npm install`
+  - `npx tsc -p tsconfig.app.json --noEmit`
+- Files:
+  - `src/canvas/FlowCanvas.tsx`
+  - `src/canvas/nodeTypes.ts`
+  - `src/canvas/nodes/BaseNode.tsx`
+  - `src/canvas/nodes/InputNode.tsx`
+  - `src/canvas/nodes/LLMNode.tsx`
+  - `src/canvas/nodes/TransformNode.tsx`
+  - `src/canvas/nodes/OutputNode.tsx`
+  - `src/canvas/nodes/DisplayNode.tsx`
+- Git: repo=vault-flows, branch=rewrite/spa, head=462b211
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 19:21 - vault-flows</strong> <code>code-change</code> - Created src/presets/data/ with 4 preset JSON files and src/presets/index.ts TypeScript registry. Presets: blog-post-drafter (writing), lesson-plan-builder (education), meeting-s...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: rewrite/spa
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 19:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created src/presets/data/ with 4 preset JSON files and src/presets/index.ts TypeScript registry. Presets: blog-post-drafter (writing), lesson-plan-builder (education), meeting-summary (business), image-gen-basic (image). Registry exports PRESETS array, getPresetsByDomain(), getPresetById(). Node layout: 260px spacing, x:60 start, y:200. tsc --noEmit passes clean.
+- Commands:
+  - `mkdir -p src/presets/data`
+  - `npx tsc --noEmit`
+- Files:
+  - `src/presets/data/blog-post-drafter.json`
+  - `src/presets/data/lesson-plan-builder.json`
+  - `src/presets/data/meeting-summary.json`
+  - `src/presets/data/image-gen-basic.json`
+  - `src/presets/index.ts`
+- Git: repo=vault-flows, branch=rewrite/spa, head=462b211
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 19:19 - vault-flows</strong> <code>code-change</code> - Created i18n setup for vault-flows SPA. Added src/i18n/en.ts (English strings for nav, preset, node, execution, app namespaces), src/i18n/fr.ts (Quebec French translations, natu...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: rewrite/spa
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 19:19 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created i18n setup for vault-flows SPA. Added src/i18n/en.ts (English strings for nav, preset, node, execution, app namespaces), src/i18n/fr.ts (Quebec French translations, naturally ~15-20% longer), and src/i18n/index.ts (i18next init with LanguageDetector, localStorage key 'vw_lang', fallback 'fr', react-i18next integration).
+- Files:
+  - `src/i18n/en.ts`
+  - `src/i18n/fr.ts`
+  - `src/i18n/index.ts`
+- Git: repo=vault-flows, branch=rewrite/spa, head=462b211
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 19:19 - vault-flows</strong> <code>code-change</code> - Created src/api/client.ts and src/execution/runner.ts for the vault-flows SPA rewrite. client.ts implements in-memory JWT storage (never persisted), apiFetch with Authorization ...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: rewrite/spa
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 19:19 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created src/api/client.ts and src/execution/runner.ts for the vault-flows SPA rewrite. client.ts implements in-memory JWT storage (never persisted), apiFetch with Authorization and Accept-Language injection, typed apiPost/apiGet helpers, and all five API functions (login, getMe, runFlow, saveFlow, listFlows). runner.ts wraps apiRunFlow with error handling that converts thrown errors into ExecutionResult[] with error field set, serving as the UI execute button entry point.
+- Commands:
+  - `mkdir src/api`
+  - `mkdir src/execution`
+- Files:
+  - `src/api/client.ts`
+  - `src/execution/runner.ts`
+- Git: repo=vault-flows, branch=rewrite/spa, head=462b211
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 19:03 - OneTrainer</strong> <code>code-change</code> - Created BigLove-zt3-LoRA-12GB.json training preset optimized for RTX 3060 12GB VRAM + 32GB RAM. Key settings vs 8GB preset: layer_offload_fraction 0.6-&gt;0.2, transformer.train fa...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: claude-sonnet-4-5
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: D:\OneTrainer  Branch: master
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 19:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created BigLove-zt3-LoRA-12GB.json training preset optimized for RTX 3060 12GB VRAM + 32GB RAM. Key settings vs 8GB preset: layer_offload_fraction 0.6->0.2, transformer.train false->true (LoRA fix), transformer.weight_dtype FLOAT_8->INT_W8A8, vae.train true->false, vae.weight_dtype FLOAT_8->FLOAT_32, output_dtype FLOAT_8->BFLOAT_16, dataloader_threads 1->2, text_encoder_2/3/4.train true->false. Points to local model at D:\comfyUI\resources\ComfyUI\models\diffusion_models\BigLove-zt3-deturbo.
+- Files:
+  - `training_presets/BigLove-zt3-LoRA-12GB.json`
+- Git: repo=OneTrainer, branch=master, head=423c3b3
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 15:51 - General Tasks</strong> <code>handoff</code> - Investigated user reports: webhook delivery and VPS-&gt;PC API 426. Confirmed Tailscale webhook test events are arriving from Tailscale infra IPs and being logged on VPS; updated w...</summary>
+
+- Kind: handoff
+- Actor: gpt-5.2
+- Agent Header:
+  ```text
+  Agent: gpt-5.2 (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 15:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Investigated user reports: webhook delivery and VPS->PC API 426. Confirmed Tailscale webhook test events are arriving from Tailscale infra IPs and being logged on VPS; updated webhook receiver to parse both list and dict payloads so eventTypes populate correctly. For API 426, likely due to PC vaultwares-pipelines process not restarted after env changes (TAILSCALE_CIDRS/TRUSTED_PROXY_CIDRS); recommend restarting terminal-run API so it trusts tailnet/VPS proxy and allows ALLOW_HTTP_TRUSTED.
+- Commands:
+  - `tailscale ssh root@vaultwares-1 tail /var/log/vaultwares/tailscale-webhooks.ndjson`
+  - `cmd /c netstat -abno | findstr :9001`
+- Files:
+  - `/opt/vaultwares-webhooks/app.py`
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 15:18 - vaultwares-pipelines</strong> <code>code-change</code> - Investigated VPS-&gt;PC API 426/500 issues. Root cause: FastAPI enforces HTTPS (REQUIRE_HTTPS=1) and only trusts X-Forwarded-Proto from trusted proxy peers; also middleware raising...</summary>
+
+- Kind: code-change
+- Actor: gpt-5.2
+- Agent Header:
+  ```text
+  Agent: gpt-5.2 (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 15:18 (TZ: Eastern Standard Time)
+  ```
+- Summary: Investigated VPS->PC API 426/500 issues. Root cause: FastAPI enforces HTTPS (REQUIRE_HTTPS=1) and only trusts X-Forwarded-Proto from trusted proxy peers; also middleware raising HTTPException can surface as 500 depending on runtime. Updated local repo env to use broad Tailscale CIDR defaults and to trust VPS tailnet IPs as proxies (TRUSTED_PROXY_CIDRS includes 100.73.93.84/32 and 100.73.57.6/32). Follow-up: ensure the actually-running Windows listener on port 9001 is the intended vaultwares-pipelines process and restarted so it picks up the env + middleware fixes.
+- Commands:
+  - `Select-String .env (TAILSCALE_CIDRS/TRUSTED_PROXY_CIDRS)`
+  - `curl http://127.0.0.1:9001/openapi.json`
+  - `tailscale ssh root@vaultwares-1 curl http://100.71.101.21:9001/...`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\.env`
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 13:13 - General Tasks</strong> <code>handoff</code> - Tailnet hardening + VPS ingress updates: applied deny-by-default Tailscale ACL grants (owner-&gt;tag:server 22/80/443; owner-&gt;PC 3389/9001; tag:server-&gt;PC 9001), confirmed public S...</summary>
+
+- Kind: handoff
+- Actor: gpt-5.2
+- Agent Header:
+  ```text
+  Agent: gpt-5.2 (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command, functions.apply_patch, web.run
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 13:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tailnet hardening + VPS ingress updates: applied deny-by-default Tailscale ACL grants (owner->tag:server 22/80/443; owner->PC 3389/9001; tag:server->PC 9001), confirmed public SSH to VPSes is blocked (UFW allow 22 only on tailscale0). On new VPS (vaultwares-1 / 173.249.194.15 / 100.73.93.84) expanded LE cert (cert-name docs.vaultwares.ca) to cover vaultwares.ca, www, docs, api, hooks, secrets. Added Nginx HTTPS vhosts: vaultwares.ca public; docs.vaultwares.ca tailnet-only SPA; api.vaultwares.ca tailnet-only reverse proxy to PC:9001; hooks.vaultwares.ca public proxy to webhook receiver; secrets.vaultwares.ca tailnet-only proxy to Vaultwarden incl websocket hub. Implemented webhook receiver service (FastAPI) + logrotate; needs webhook secret + subscription configured in Tailscale admin. Built and deployed updated vaultwares-docs dist with private Operations pages (network map/tailscale/secrets). NOTE: api.vaultwares.ca from tailnet currently returns 500 because upstream PC API blocks/errs for non-local clients; follow-up needed in vaultwares-pipelines to trust VPS tailnet IPs and/or ensure running instance picks up updated .env + middleware behavior.
+- Commands:
+  - `tailscale status`
+  - `Invoke-RestMethod GET/POST https://api.tailscale.com/api/v2/tailnet/<tailnet>/acl`
+  - `tailscale ssh root@vaultwares-1 ...`
+  - `certbot certonly --nginx --cert-name docs.vaultwares.ca --expand -d ...`
+  - `ufw status verbose`
+  - `nginx -t && systemctl reload nginx`
+  - `npm run build (vaultwares-docs)`
+  - `tar ... | tailscale ssh root@vaultwares-1 ...`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs.json`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\src\App.tsx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\network-map.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\tailscale.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\secrets.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\api_server.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\.env`
+  - `/etc/nginx/sites-available/{vaultwares.ca,docs.vaultwares.ca,api.vaultwares.ca,hooks.vaultwares.ca,secrets.vaultwares.ca}.conf`
+  - `/etc/systemd/system/vaultwares-hooks.service`
+  - `/opt/vaultwares-webhooks/app.py`
+  - `/etc/logrotate.d/vaultwares-hooks`
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 10:05 - General Tasks</strong> <code>general</code> - Exported user memories and context across five categories (Instructions, Identity, Career, Projects, Preferences) as requested. Aggregated data from GEMINI.md, AGENTS.md, projec...</summary>
+
+- Kind: general
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 3 Flash
+  Thinking: true
+  Mode: chat
+  Permissions: standard (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main
+  Tools used (this reply): run_command, view_file, list_dir
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 10:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Exported user memories and context across five categories (Instructions, Identity, Career, Projects, Preferences) as requested. Aggregated data from GEMINI.md, AGENTS.md, project-root JSON files, and conversation logs.
+- Git: repo=vaultwares-docs, branch=main, head=f9164db
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 09:51 - vaultwares-mcp</strong> <code>code-change</code> - Fixed ModuleNotFoundError: No module named &#39;fastmcp&#39; in Claude Desktop extension mechanism. Root cause: manifest.json mcp_config.command was &#39;python&#39; (system Python, no fastmcp)...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: claude-sonnet-4-5
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-mcp  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 09:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed ModuleNotFoundError: No module named 'fastmcp' in Claude Desktop extension mechanism. Root cause: manifest.json mcp_config.command was 'python' (system Python, no fastmcp). Fix 1: Updated manifest.json mcp_config.command to full venv Python path (.venv\Scripts\python.exe) and added VAULTWARES_VENV_SITE env var pointing to venv site-packages. Fix 2: Updated root server.py to add _bootstrap_venv() function that inserts venv site-packages into sys.path before importing fastmcp â€” checks VAULTWARES_VENV_SITE env var first, then walks up directory tree looking for .venv\Lib\site-packages. Rebuilt vaultwares-mcp-3.0.0.mcpb (102 files) with both fixes included and verified manifest command and bootstrap presence inside bundle.
+- Files:
+  - `manifest.json`
+  - `server.py`
+  - `vaultwares-mcp-3.0.0.mcpb`
+- Git: repo=vaultwares-mcp, branch=main, head=e034e76
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 09:34 - vaultwares-mcp</strong> <code>code-change</code> - Created Claude Desktop config at %APPDATA%\Claude\claude_desktop_config.json. Added vaultwares-mcp MCP server entry with stdio transport, using .venv Python, args &#39;-m vaultwares...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-mcp  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 09:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created Claude Desktop config at %APPDATA%\Claude\claude_desktop_config.json. Added vaultwares-mcp MCP server entry with stdio transport, using .venv Python, args '-m vaultwares_mcp --transport stdio', cwd set to project root.
+- Files:
+  - `C:\Users\Administrator\AppData\Roaming\Claude\claude_desktop_config.json`
+- Git: repo=vaultwares-mcp, branch=main, head=e034e76
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 09:30 - vaultwares-mcp</strong> <code>commands</code> - Created Windows service &#39;vaultwares-mcp&#39; via NSSM. Service runs .venv Python with &#39;-m vaultwares_mcp --transport streamable-http --host 127.0.0.1 --port 9020&#39;, AppDirectory set ...</summary>
+
+- Kind: commands
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-mcp  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 09:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created Windows service 'vaultwares-mcp' via NSSM. Service runs .venv Python with '-m vaultwares_mcp --transport streamable-http --host 127.0.0.1 --port 9020', AppDirectory set to project root, auto-start on boot (SERVICE_AUTO_START), stdout/stderr logged to logs/ with 10MB rotation. Service confirmed SERVICE_RUNNING and endpoint at http://127.0.0.1:9020/mcp responding (HTTP 406 = server live, proper MCP headers needed).
+- Commands:
+  - `nssm install vaultwares-mcp`
+  - `nssm set vaultwares-mcp AppParameters`
+  - `nssm set vaultwares-mcp Start SERVICE_AUTO_START`
+  - `nssm start vaultwares-mcp`
+- Git: repo=vaultwares-mcp, branch=main, head=e034e76
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 07:55 - vaultwares-mcp</strong> <code>code-change</code> - Fixed ImportError in vaultwares_mcp/__main__.py: added sys.path bootstrap when __package__ is falsy so &#39;python vaultwares_mcp&#39; works without relative import failure. Built new v...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: claude-sonnet-4-5
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-mcp  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 07:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed ImportError in vaultwares_mcp/__main__.py: added sys.path bootstrap when __package__ is falsy so 'python vaultwares_mcp' works without relative import failure. Built new vaultwares-mcp-3.0.0.mcpb bundle (101 files, ZIP/DEFLATED) containing server.py, tools/, vaultwares_mcp/, skills/, and project root files. All version strings confirmed at 3.0.0 in pyproject.toml, manifest.json, __init__.py, and server.py diag_status.
+- Files:
+  - `vaultwares_mcp/__main__.py`
+  - `vaultwares-mcp-3.0.0.mcpb`
+- Git: repo=vaultwares-mcp, branch=main, head=e034e76
+
+</details>
+
+<details>
+<summary><strong>2026-05-13 06:57 - General Tasks</strong> <code>verification</code> - Validated access to Tailscale admin capabilities via provided ephemeral API key file. Confirmed API works for listing Tailnet devices and API keys using Tailscale v2 endpoints (...</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: chat
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-13 06:57 (TZ: Eastern Standard Time)
+  ```
+- Summary: Validated access to Tailscale admin capabilities via provided ephemeral API key file. Confirmed API works for listing Tailnet devices and API keys using Tailscale v2 endpoints (tailnet '-').
+- Commands:
+  - `Invoke-WebRequest https://api.tailscale.com/api/v2/tailnet/-/devices (Basic auth)`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\.access\tailscale\codex-tailscale-ephemeral-token.txt`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 17:05 - General Tasks</strong> <code>verification</code> - After DNS propagation to 173.249.194.15 for prom-king.xyz/www and fullxxx.video/www, issued Lets Encrypt certs on the new VPS using certbot nginx plugin and verified both sites ...</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 17:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: After DNS propagation to 173.249.194.15 for prom-king.xyz/www and fullxxx.video/www, issued Lets Encrypt certs on the new VPS using certbot nginx plugin and verified both sites return 200 over HTTPS.
+- Commands:
+  - `nslookup prom-king.xyz 1.1.1.1`
+  - `nslookup fullxxx.video 1.1.1.1`
+  - `certbot --nginx -d prom-king.xyz -d www.prom-king.xyz -d fullxxx.video -d www.fullxxx.video`
+  - `curl -I https://prom-king.xyz/`
+  - `curl -I https://fullxxx.video/`
+- Files:
+  - `/etc/nginx/sites-enabled/prom-king.xyz.conf`
+  - `/etc/nginx/sites-enabled/fullxxx.video.conf`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 16:58 - General Tasks</strong> <code>verification</code> - Issued Lets Encrypt certs on new VPS 173.249.194.15 for docs.vaultwares.ca, vaultwares.ca, www.vaultwares.ca via certbot nginx plugin and verified docs now serves 200 over HTTPS...</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 16:58 (TZ: Eastern Standard Time)
+  ```
+- Summary: Issued Lets Encrypt certs on new VPS 173.249.194.15 for docs.vaultwares.ca, vaultwares.ca, www.vaultwares.ca via certbot nginx plugin and verified docs now serves 200 over HTTPS and vaultwares.ca redirects to docs.
+- Commands:
+  - `certbot --nginx -d docs.vaultwares.ca -d vaultwares.ca -d www.vaultwares.ca`
+  - `curl -I https://docs.vaultwares.ca/`
+- Files:
+  - `/etc/nginx/sites-enabled/docs.vaultwares.ca.conf`
+  - `/etc/nginx/sites-enabled/vaultwares.ca.conf`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 16:52 - General Tasks</strong> <code>verification</code> - Checked public DNS for vaultwares.ca/docs.vaultwares.ca/api.vaultwares.ca; all currently resolve to old VPS 212.193.6.35, explaining why api.vaultwares.ca still serves docs inst...</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 16:52 (TZ: Eastern Standard Time)
+  ```
+- Summary: Checked public DNS for vaultwares.ca/docs.vaultwares.ca/api.vaultwares.ca; all currently resolve to old VPS 212.193.6.35, explaining why api.vaultwares.ca still serves docs instead of the new VPS reverse-proxy.
+- Commands:
+  - `nslookup api.vaultwares.ca 1.1.1.1`
+  - `nslookup docs.vaultwares.ca 1.1.1.1`
+  - `nslookup vaultwares.ca 1.1.1.1`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 16:50 - General Tasks</strong> <code>verification</code> - Verified new VPS can reach PC vaultwares-pipelines API over Tailscale at 100.71.101.21:9001 and via nginx api.vaultwares.ca reverse proxy. Both return HTTP 500 from upstream (co...</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 16:50 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified new VPS can reach PC vaultwares-pipelines API over Tailscale at 100.71.101.21:9001 and via nginx api.vaultwares.ca reverse proxy. Both return HTTP 500 from upstream (connectivity is working; backend error remains to debug on PC).
+- Commands:
+  - `curl http://100.71.101.21:9001/`
+  - `curl -H 'Host: api.vaultwares.ca' http://127.0.0.1/`
+- Files:
+  - `/etc/nginx/sites-available/api.vaultwares.ca.conf`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\api_server.py`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 16:45 - vaultwares-pipelines</strong> <code>code-change</code> - Changed vaultwares-pipelines API server default bind address from 127.0.0.1 to 0.0.0.0 (still overridable via API_HOST/API_PORT) so it can be reached over LAN/Tailscale for VPS ...</summary>
+
+- Kind: code-change
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.apply_patch, functions.shell_command, functions.update_plan
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 16:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Changed vaultwares-pipelines API server default bind address from 127.0.0.1 to 0.0.0.0 (still overridable via API_HOST/API_PORT) so it can be reached over LAN/Tailscale for VPS reverse proxy testing.
+- Commands:
+  - `python -m py_compile api_server.py`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\api_server.py`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 16:34 - General Tasks</strong> <code>commands</code> - Brought up new GreenCloud VPS 173.249.194.15 (Debian 12). Installed nginx/php8.2-fpm/MariaDB/certbot/ufw/fail2ban/rsync, joined Tailscale tailnet (VPS tailnet IP 100.120.212.57)...</summary>
+
+- Kind: commands
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command, functions.update_plan
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 16:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: Brought up new GreenCloud VPS 173.249.194.15 (Debian 12). Installed nginx/php8.2-fpm/MariaDB/certbot/ufw/fail2ban/rsync, joined Tailscale tailnet (VPS tailnet IP 100.120.212.57), migrated both WordPress tube sites (prom-king.xyz + fullxxx.video) by copying web roots and importing DB dumps, and deployed vaultwares docs static dist with vaultwares.ca redirect. Added api.vaultwares.ca reverse proxy over Tailscale to PC 100.71.101.21:9001 (tailnet-only). Proxy currently times out because backend is not reachable/listening on that port yet.
+- Commands:
+  - `apt-get install nginx php8.2-fpm mariadb-server certbot fail2ban ufw`
+  - `tailscale up --advertise-exit-node`
+  - `tar/rsync wp roots from old VPS`
+  - `mysqldump old WP DBs; import on new`
+  - `nginx site configs for prom-king.xyz, fullxxx.video, docs.vaultwares.ca, vaultwares.ca, api.vaultwares.ca`
+- Files:
+  - `/etc/nginx/sites-available/prom-king.xyz.conf`
+  - `/etc/nginx/sites-available/fullxxx.video.conf`
+  - `/etc/nginx/sites-available/docs.vaultwares.ca.conf`
+  - `/etc/nginx/sites-available/vaultwares.ca.conf`
+  - `/etc/nginx/sites-available/api.vaultwares.ca.conf`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 15:29 - General Tasks</strong> <code>verification</code> - Attempted SSH to new VPS 173.249.194.15 using provided OpenSSH ed25519 key C:\Users\Administrator\Desktop\greencloud-vps-ed25519.ospk. Verified key is valid (ssh-keygen -y works...</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command, functions.update_plan
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 15:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Attempted SSH to new VPS 173.249.194.15 using provided OpenSSH ed25519 key C:\Users\Administrator\Desktop\greencloud-vps-ed25519.ospk. Verified key is valid (ssh-keygen -y works) but SSH fails for all common users (root/Administrator/debian/ubuntu/admin) with Permission denied (publickey), indicating the key is not actually installed/attached to the server yet (likely needs applying to server or OS reinstall with key). Derived public key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGrqyWqZsniaBUru1c/pQYbB6lw03nEMtqVP9ymJm91P.
+- Commands:
+  - `ssh-keygen -y -f C:\\Users\\Administrator\\Desktop\\greencloud-vps-ed25519.ospk`
+  - `ssh -i C:\\Users\\Administrator\\Desktop\\greencloud-vps-ed25519.ospk root@173.249.194.15 echo ok`
+- Files:
+  - `C:\Users\Administrator\Desktop\greencloud-vps-ed25519.ospk`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 15:11 - General Tasks</strong> <code>verification</code> - Retried SSH as root with PuTTY plink using new-greencloud-ssh-rsa2.ppk with verbose output. Connection and hostkey OK; authentication fails because server refuses offered public...</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 15:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Retried SSH as root with PuTTY plink using new-greencloud-ssh-rsa2.ppk with verbose output. Connection and hostkey OK; authentication fails because server refuses offered public key. Likely authorized_keys does not contain this key or ssh-rsa keytype is disallowed. Recommended switching to ed25519 key and provided vw-greencloud-root-ed25519.pub for provider panel install.
+- Commands:
+  - `plink -ssh -v -batch -hostkey SHA256:Jti3... -i new-greencloud-ssh-rsa2.ppk root@173.249.194.15 'echo ok'`
+- Files:
+  - `C:\Users\Administrator\Desktop\Backups\Encryption\new-greencloud-ssh-rsa2.ppk`
+  - `C:\Users\Administrator\Desktop\Backups\Encryption\vaultwares-ssh-greencloud\vw-greencloud-root-ed25519.pub`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 15:10 - General Tasks</strong> <code>verification</code> - Attempted SSH to new VPS 173.249.194.15 with new keypair new-greencloud-ssh-rsa2 (.ppk/.pub). Verified port 22 reachable and hostkey fingerprint pinned, but server still refuses...</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 15:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Attempted SSH to new VPS 173.249.194.15 with new keypair new-greencloud-ssh-rsa2 (.ppk/.pub). Verified port 22 reachable and hostkey fingerprint pinned, but server still refuses the key for common users (root/debian/ubuntu/admin), indicating the public key is not actually installed on the VPS via provider panel yet. Extracted the exact SSH public key line from new-greencloud-ssh-rsa2.pub for user to paste into panel.
+- Commands:
+  - `plink -batch -hostkey SHA256:Jti3... -i new-greencloud-ssh-rsa2.ppk root@173.249.194.15 'echo ok'`
+  - `Get-Content new-greencloud-ssh-rsa2.pub`
+- Files:
+  - `C:\Users\Administrator\Desktop\Backups\Encryption\new-greencloud-ssh-rsa2.ppk`
+  - `C:\Users\Administrator\Desktop\Backups\Encryption\new-greencloud-ssh-rsa2.pub`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 15:06 - General Tasks</strong> <code>verification</code> - Tried SSH into new VPS 173.249.194.15 using regenerated key C:\Users\Administrator\Desktop\Backups\Encryption\greencloud-ssh-rsa2.ppk via plink with pinned hostkey. Port 22 reac...</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 15:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tried SSH into new VPS 173.249.194.15 using regenerated key C:\Users\Administrator\Desktop\Backups\Encryption\greencloud-ssh-rsa2.ppk via plink with pinned hostkey. Port 22 reachable, hostkey fingerprint verified, but server refused the key (authorized_keys mismatch). puttygen CLI did not emit/export public key from the .ppk, so need the exact public key line installed on VPS to proceed.
+- Commands:
+  - `Test-NetConnection 173.249.194.15 -Port 22`
+  - `plink -batch -hostkey SHA256:Jti3... -i greencloud-ssh-rsa2.ppk root@173.249.194.15`
+- Files:
+  - `C:\Users\Administrator\Desktop\Backups\Encryption\greencloud-ssh-rsa2.ppk`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 14:58 - General Tasks</strong> <code>handoff</code> - Attempted SSH to new VPS 173.249.194.15 using provided key; OpenSSH tools reported the key file is invalid format. Generated a fresh ed25519 keypair (vw-greencloud-root-ed25519)...</summary>
+
+- Kind: handoff
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 14:58 (TZ: Eastern Standard Time)
+  ```
+- Summary: Attempted SSH to new VPS 173.249.194.15 using provided key; OpenSSH tools reported the key file is invalid format. Generated a fresh ed25519 keypair (vw-greencloud-root-ed25519) to install on VPS via provider console so we can proceed with provisioning, Tailscale join, and deployments.
+- Commands:
+  - `ssh-keygen -t ed25519 -a 64 -f vw-greencloud-root-ed25519 -N ''`
+- Files:
+  - `C:\Users\Administrator\Desktop\Backups\Encryption\vaultwares-ssh-greencloud\vw-greencloud-root-ed25519`
+  - `C:\Users\Administrator\Desktop\Backups\Encryption\vaultwares-ssh-greencloud\vw-greencloud-root-ed25519.pub`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 13:48 - General Tasks</strong> <code>plan</code> - Chose OS direction for new VPS deployment; requested SSH access and Tailnet join details needed before provisioning and deploying tube sites + vaultwares docs/redirect + API rev...</summary>
+
+- Kind: plan
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: false
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): functions.update_plan
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 13:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Chose OS direction for new VPS deployment; requested SSH access and Tailnet join details needed before provisioning and deploying tube sites + vaultwares docs/redirect + API reverse-proxy test.
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 13:15 - tube-site</strong> <code>code-change</code> - Added explicit manual page-count controls to both FullXXX and PromKing fetch tools. Manual fetch now reads a user-supplied page count from the admin form, uses it instead of the...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 13:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added explicit manual page-count controls to both FullXXX and PromKing fetch tools. Manual fetch now reads a user-supplied page count from the admin form, uses it instead of the old hidden 6-page cap, and reports the chosen page budget in the completion message before resuming backfill.
+- Commands:
+  - `php -l fullxxx-video/includes/admin-settings.php`
+  - `php -l fullxxx-video/includes/video-fetcher.php`
+  - `php -l promking-tube/includes/video-fetcher.php`
+  - `scp plugin dirs to VPS and reload php-fpm/nginx`
+- Files:
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\admin-settings.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\video-fetcher.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\promking-tube\includes\video-fetcher.php`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 12:47 - tube-site</strong> <code>code-change</code> - Stabilized the FullXXX and PromKing scraper/admin flows: manual fetch is now distinct from scheduled behavior, FullXXX derives active sources from the allowlist and only gates m...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\business  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 12:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Stabilized the FullXXX and PromKing scraper/admin flows: manual fetch is now distinct from scheduled behavior, FullXXX derives active sources from the allowlist and only gates manual candidates on source/detail page hosts, remote scrape URLs are sanitized before fetches, backfill cursors can resume older pages and be reset from admin, last fetch results now include mode/page/candidate counts, and success notices auto-dismiss instead of lingering.
+- Commands:
+  - `php -l fullxxx-video/includes/helpers.php`
+  - `php -l fullxxx-video/includes/video-fetcher.php`
+  - `php -l fullxxx-video/includes/admin-settings.php`
+  - `php -l promking-tube/includes/video-fetcher.php`
+  - `scp plugin dirs to VPS and reload php-fpm/nginx`
+  - `wp eval-file on VPS to verify active sources/manual allowlist behavior`
+- Files:
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\helpers.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\video-fetcher.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\includes\admin-settings.php`
+  - `C:\Users\Administrator\Desktop\business\tube-site\promking-tube\includes\video-fetcher.php`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 09:04 - vaultwares-pipelines</strong> <code>general</code> - Clarified AGENTS.md wording so it explicitly allows local file edits, only restricts commits/pushes on main unless explicitly requested, and explains that standalone repos remai...</summary>
+
+- Kind: general
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator  Branch: n/a
+  Tools used (this reply): functions.apply_patch, functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 09:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: Clarified AGENTS.md wording so it explicitly allows local file edits, only restricts commits/pushes on main unless explicitly requested, and explains that standalone repos remain the authoritative source for vault-themes and vaultwares-agentciation changes.
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\AGENTS.md`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 08:55 - General Tasks</strong> <code>code-change</code> - Added &#39;Conversation Momentum&#39; rule to ~/.gemini/GEMINI.md: every response must end with one genuine question related to the most logical next step, open ambiguity, or clarificat...</summary>
+
+- Kind: code-change
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Claude Sonnet 4.6
+  Thinking: false
+  Mode: chat
+  Permissions: standard (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): view_file, replace_file_content
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 08:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added 'Conversation Momentum' rule to ~/.gemini/GEMINI.md: every response must end with one genuine question related to the most logical next step, open ambiguity, or clarification needed. Rule is in the personal section above VAULTWARES-SYNC block — not disseminated to other hosts via sync script.
+- Files:
+  - `C:\Users\Administrator\.gemini\GEMINI.md`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 07:46 - vaultwares-pipelines</strong> <code>verification</code> - Added explicit trusted Tailnet IP allowlisting, a protected network diagnostics endpoint for verifying VPS-to-local-PC forwarding, propagated vaultwares.ca domain updates in rep...</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator  Branch: n/a
+  Tools used (this reply): functions.shell_command, functions.apply_patch, multi_tool_use.parallel
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 07:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added explicit trusted Tailnet IP allowlisting, a protected network diagnostics endpoint for verifying VPS-to-local-PC forwarding, propagated vaultwares.ca domain updates in repo docs/config, and added focused API gateway tests covering allowlist behavior, trusted proxy forwarding, and spoofed X-Forwarded-For rejection.
+- Commands:
+  - `python -m py_compile api_server.py`
+  - `pytest tests/test_api_gateway.py -q`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\api_server.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\tests\test_api_gateway.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\API_START.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\README.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\VPS_GATEWAY.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\brume2_nginx.conf.example`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\vps_nginx.conf.example`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 07:21 - usd-playground</strong> <code>code-change</code> - Reverted COLMAP to v3.9.1 with CUDA support and modified pipeline.py to prioritize COLMAP.bat so SiftExtraction.use_gpu runs correctly again.</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Gemini 3.1 Pro (Preview)
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\usd-playground  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 07:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Reverted COLMAP to v3.9.1 with CUDA support and modified pipeline.py to prioritize COLMAP.bat so SiftExtraction.use_gpu runs correctly again.
+- Files:
+  - `download_colmap.ps1`
+  - `studio_core/pipeline.py`
+- Git: repo=usd-playground, branch=main, head=0283141
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 07:11 - vaultwares-agentciation</strong> <code>code-change</code> - Created 4 new docs in vaultwares-agentciation standalone repo: MULTI_AGENT_FLOW.md (6-phase protocol: trigger phrases, Socratic interview, TASKS.md, manager init with port 8011,...</summary>
+
+- Kind: code-change
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Claude Sonnet 4.6
+  Thinking: true
+  Mode: chat
+  Permissions: standard (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): write_to_file, multi_replace_file_content, replace_file_content, run_command, read_url_content
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 07:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created 4 new docs in vaultwares-agentciation standalone repo: MULTI_AGENT_FLOW.md (6-phase protocol: trigger phrases, Socratic interview, TASKS.md, manager init with port 8011, execution rounds with dispatch barrier, verification, testing 3-retry loop, PR + final report), TASKS_MD_SCHEMA.md (machine-parseable format with TASK_TYPE CLOUD/ASYNC/LOCAL, FILE_SCOPE, PARALLEL/BLOCKS markers, ASYNC_PROMPT field), AGENT_TELEMETRY.md (ledger additional fields including run_id task_id phase duration complexity offload_candidate, thought log format with pattern_data YAML trailer), JULES_INTEGRATION.md (full API surface v1alpha, dispatch protocol, branch naming, ASYNC_PROMPT requirements, Jules vs Redis team comparison table). Updated vaultwares-agentciation/AGENTS.md: added trigger phrase row to keyword_detection table, added execution_tiers block. Updated vaultwares-docs/AGENTS.md (Tier 1 SoT): added Multi-Agent Flow Protocol section with trigger phrase list, 4-doc pointer list, and execution tiers table. Ran sync-global-instructions.ps1 - all 7 hosts updated.
+- Commands:
+  - `sync-global-instructions.ps1`
+- Files:
+  - `vaultwares-agentciation/docs/MULTI_AGENT_FLOW.md`
+  - `vaultwares-agentciation/docs/TASKS_MD_SCHEMA.md`
+  - `vaultwares-agentciation/docs/AGENT_TELEMETRY.md`
+  - `vaultwares-agentciation/docs/JULES_INTEGRATION.md`
+  - `vaultwares-agentciation/AGENTS.md`
+  - `vaultwares-docs/AGENTS.md`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 07:09 - usd-playground</strong> <code>code-change</code> - Fix COLMAP SiftExtraction unrecognised option use_gpu by passing --no-gpu to ns-process-data commands.</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Gemini 3.1 Pro (Preview)
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\usd-playground  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 07:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fix COLMAP SiftExtraction unrecognised option use_gpu by passing --no-gpu to ns-process-data commands.
+- Files:
+  - `studio_core/pipeline.py`
+- Git: repo=usd-playground, branch=main, head=993e1e9
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 06:49 - vaultwares-pipelines</strong> <code>code-change</code> - VPS gateway integration refinements: made HTTPS enforcement robust by trusting x-forwarded-proto only from TRUSTED_PROXY_CIDRS; tightened /auth/login so untrusted callers must p...</summary>
+
+- Kind: code-change
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\Projects  Branch: n/a
+  Tools used (this reply): functions.shell_command, functions.apply_patch
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 06:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: VPS gateway integration refinements: made HTTPS enforcement robust by trusting x-forwarded-proto only from TRUSTED_PROXY_CIDRS; tightened /auth/login so untrusted callers must present an allowlisted Origin (ALLOWED_ORIGINS) even in gateway mode; updated docs/examples to reflect this.
+- Commands:
+  - `python -m py_compile api_server.py`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\api_server.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\.env.local-api.example`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\API_START.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\VPS_GATEWAY.md`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 06:47 - vaultwares-pipelines</strong> <code>code-change</code> - Hardened proxy handling for VPS gateway: only trust x-forwarded-proto when the immediate peer is in TRUSTED_PROXY_CIDRS; updated docs/examples to use the current VPS Tailscale I...</summary>
+
+- Kind: code-change
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator  Branch: n/a
+  Tools used (this reply): functions.shell_command, functions.apply_patch
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 06:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Hardened proxy handling for VPS gateway: only trust x-forwarded-proto when the immediate peer is in TRUSTED_PROXY_CIDRS; updated docs/examples to use the current VPS Tailscale IP (100.73.57.6) for TRUSTED_PROXY_CIDRS.
+- Commands:
+  - `python -m py_compile api_server.py`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\api_server.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\.env.local-api.example`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\API_START.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\VPS_GATEWAY.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\vps_nginx.conf.example`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 06:34 - vaultwares-pipelines</strong> <code>code-change</code> - Pivoted gateway docs/config from Brume2 to a VPS-over-Tailscale gateway: updated local API env/example + startup guide to reference VPS proxying, added VPS Nginx example and a V...</summary>
+
+- Kind: code-change
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5
+  Thinking: unknown
+  Mode: agent
+  Permissions: danger-full-access (network: online)
+  CWD: C:\Users\Administrator  Branch: n/a
+  Tools used (this reply): functions.shell_command, functions.apply_patch
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 06:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pivoted gateway docs/config from Brume2 to a VPS-over-Tailscale gateway: updated local API env/example + startup guide to reference VPS proxying, added VPS Nginx example and a VPS_GATEWAY plan doc, and marked Brume2 config as legacy/optional.
+- Commands:
+  - `python -m py_compile api_server.py db.py`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\.env.local-api.example`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\API_START.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\vps_nginx.conf.example`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\VPS_GATEWAY.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\brume2_nginx.conf.example`
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 06:28 - usd-playground</strong> <code>code-change</code> - Fix UnicodeEncodeError by enforcing UTF-8 encoding and setting PYTHONUTF8 for nerfstudio subprocesses.</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Gemini 3.1 Pro (Preview)
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\usd-playground  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 06:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fix UnicodeEncodeError by enforcing UTF-8 encoding and setting PYTHONUTF8 for nerfstudio subprocesses.
+- Files:
+  - `studio_core/pipeline.py`
+- Git: repo=usd-playground, branch=main, head=993e1e9
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 06:16 - usd-playground</strong> <code>code-change</code> - Make integration urls, tokens, UI theme, language pref, and strict mode persistent using QSettings in bounds of gui_app.py</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Gemini 3.1 Pro (Preview)
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\usd-playground  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 06:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: Make integration urls, tokens, UI theme, language pref, and strict mode persistent using QSettings in bounds of gui_app.py
+- Files:
+  - `gui_app.py`
+- Git: repo=usd-playground, branch=main, head=993e1e9
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 06:07 - usd-playground</strong> <code>code-change</code> - Fix Colmap path resolution, lineEdit stretch behavior in Integration, and add Toast notification for API test.</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Gemini 3.1 Pro (Preview)
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\usd-playground  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 06:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fix Colmap path resolution, lineEdit stretch behavior in Integration, and add Toast notification for API test.
+- Files:
+  - `gui_app.py`
+  - `studio_core/pipeline.py`
+- Git: repo=usd-playground, branch=main, head=993e1e9
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 05:40 - usd-playground</strong> <code>code-change</code> - Fix UI squishing by using QTabWidget for Integration and Run Logs</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Gemini 3.1 Pro (Preview)
+  Thinking: true
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\usd-playground  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 05:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fix UI squishing by using QTabWidget for Integration and Run Logs
+- Files:
+  - `gui_app.py`
+- Git: repo=usd-playground, branch=main, head=993e1e9
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 02:45 - usd-playground</strong> <code>code-change</code> - Fixed download_colmap.ps1 to point to existing 4.0.4 release and ran it. Updated pipeline.py COLMAP_CANDIDATE_PATHS to prioritize the tools/colmap/bin/colmap.exe path. This avoi...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\usd-playground  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 02:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed download_colmap.ps1 to point to existing 4.0.4 release and ran it. Updated pipeline.py COLMAP_CANDIDATE_PATHS to prioritize the tools/colmap/bin/colmap.exe path. This avoids the need to build colmap from source using vcpkg.
+- Files:
+  - `download_colmap.ps1`
+  - `studio_core/pipeline.py`
+- Git: repo=usd-playground, branch=main, head=993e1e9
+
+</details>
+
+<details>
+<summary><strong>2026-05-12 00:07 - General Tasks</strong> <code>code-change</code> - Hardened the Main Branch Commit Lock rule in GEMINI.md (and all 7 synced host targets). Added a [!CAUTION] block at the very top of the file before all other content, explicitly...</summary>
+
+- Kind: code-change
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Claude Sonnet 4.6 (Thinking)
+  Thinking: true
+  Mode: chat
+  Permissions: standard (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): view_file, multi_replace_file_content, run_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-12 00:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Hardened the Main Branch Commit Lock rule in GEMINI.md (and all 7 synced host targets). Added a [!CAUTION] block at the very top of the file before all other content, explicitly listing 'fix on production', 'fix the bug', 'update the site' as NOT sufficient permission to commit. Also added a second [!CAUTION] callout at the rule's original location in the document. Clarified that implied deployment intent is not enough and the assistant must wait for an explicit keyword (commit/push/deploy/merge). Ran sync-global-instructions.ps1 to propagate to Claude Code, VS Code, Windsurf, Codex CLI, OpenCode, Claude Desktop.
+- Commands:
+  - `sync-global-instructions.ps1`
+- Files:
+  - `~/.gemini/GEMINI.md`
+
+</details>
+
+<details>
+<summary><strong>2026-05-11 23:55 - vault-themes + vaultwares-docs</strong> <code>code-change</code> - vault-themes: Created vault-tailwind-v4.css (Tailwind v4 @theme bridge with all 19 VaultTheme token mappings, Golden Slate FOUC defaults, glass/banner/focus utilities), vault-to...</summary>
+
+- Kind: code-change
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Claude Sonnet 4.6 (Thinking)
+  Thinking: true
+  Mode: agent
+  Permissions: standard (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): view_file, list_dir, write_to_file, replace_file_content, run_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-11 23:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: vault-themes: Created vault-tailwind-v4.css (Tailwind v4 @theme bridge with all 19 VaultTheme token mappings, Golden Slate FOUC defaults, glass/banner/focus utilities), vault-tokens.css (CSS-only framework-free token file with OS prefers-color-scheme light fallback and vault- utility classes), and theme-manager/README.md with import instructions for TypeScript, Tailwind v4/v3, Python/Qt, C#/.NET, and WPF/XAML. vaultwares-docs: Replaced hand-drawn SVG in header with official vaultwares-minimal-gold.png (dark) and vaultwares-minimal-ink.png (light) mode-aware icons. Rewrote App.tsx with full sidebar nav matching all 10 docs.json sections and 40+ links, root / redirect to /getting-started/overview, path normalization for 404 fix, Steps/Step MDX component rendering, and responsive header collapse (>= 640px full, 360-639px tagline hidden, < 360px icon only). Both repos pushed to main triggering deploy.
+- Commands:
+  - `git push origin main`
+  - `npm run build`
+- Files:
+  - `vault-themes/theme-manager/exports/vault-tailwind-v4.css`
+  - `vault-themes/theme-manager/exports/vault-tokens.css`
+  - `vault-themes/theme-manager/README.md`
+  - `vaultwares-docs/src/App.tsx`
+  - `vaultwares-docs/src/index.css`
+  - `vaultwares-docs/public/vaultwares-minimal-gold.png`
+
+</details>
+
+<details>
+<summary><strong>2026-05-11 23:41 - vaultwares-docs</strong> <code>code-change</code> - Fixed production styling on docs.vaultwares.ca. Three root causes: (1) Tailwind v4 requires explicit @theme block to map CSS vars to utility classes — added full @theme mapping ...</summary>
+
+- Kind: code-change
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Claude Sonnet 4.6 (Thinking)
+  Thinking: true
+  Mode: agent
+  Permissions: standard (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): view_file, list_dir, write_to_file, multi_replace_file_content, run_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-11 23:41 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed production styling on docs.vaultwares.ca. Three root causes: (1) Tailwind v4 requires explicit @theme block to map CSS vars to utility classes — added full @theme mapping block for all vault-themes tokens (background, surface, surface-alt, surface-elevated, text, text-primary, text-secondary, text-muted, text-inverse, accent, accent-muted, border, error, warning, success, info, muted). (2) App.tsx used .replace() which only replaces first underscore — fixed to .replaceAll() so surface_alt -> --surface-alt, text_primary -> --text-primary etc. all work. (3) Wrong light theme ID 'codex-solarized-light-revisited' fixed to 'solarized-light-revisited'. Also added comprehensive prose-vault CSS, glass utility classes, semantic banner classes, proper scrollbar and focus ring styles per vault-themes brand guide. Built successfully (53KB CSS), committed and pushed to main to trigger GitHub Actions VPS deploy.
+- Commands:
+  - `npm run build`
+  - `git push origin main`
+- Files:
+  - `src/index.css`
+  - `src/App.tsx`
+
+</details>
+
+<details>
+<summary><strong>2026-05-11 19:48 - vault-central</strong> <code>code-change</code> - Replaced the WebM MediaRecorder blob saving to IndexedDB with a raw image sequence format saving (JSON Blob of data URLs). VaultDashboard PreviewThumb component now consumes the...</summary>
+
+- Kind: code-change
+- Actor: Copilot
+- Agent Header:
+  ```text
+  Agent: Copilot (role: main)
+  Model: o3-mini
+  Thinking: false
+  Mode: chat
+  Permissions: write (network: offline)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
+  Tools used (this reply): replace_string_in_file, run_in_terminal
+  MCP servers accessed (this reply): none
+  Time: 2026-05-11 19:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Replaced the WebM MediaRecorder blob saving to IndexedDB with a raw image sequence format saving (JSON Blob of data URLs). VaultDashboard PreviewThumb component now consumes the parsed Array of JSON data, iterating it via setInterval when hovered instead of playing an HTML video.
+- Commands:
+  - `npm run build`
+- Files:
+  - `src/offscreen/processor.ts`
+  - `src/components/VaultDashboard.tsx`
+- Git: repo=vault-central, branch=main, head=20b6296
+
+</details>
+
+<details>
+<summary><strong>2026-05-11 19:41 - vault-central</strong> <code>code-change</code> - Revised preview generation logic in the Firefox background fallback iframe again. Reverting to manual currentTime stepping over the Video object instead of executing play(), to ...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Gemini 3.1 Pro (Preview)
+  Thinking: true
+  Mode: chat
+  Permissions: admin (network: offline)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-11 19:41 (TZ: Eastern Standard Time)
+  ```
+- Summary: Revised preview generation logic in the Firefox background fallback iframe again. Reverting to manual currentTime stepping over the Video object instead of executing play(), to guarantee frame capture without relying on Firefox autoplay or requestAnimationFrame behavior in background contexts. Also added comprehensive processor error logging and headers.
+- Commands:
+  - `npm run build`
+- Files:
+  - `src/offscreen/processor.ts`
+- Git: repo=vault-central, branch=main, head=20b6296
+
+</details>
+
+<details>
+<summary><strong>2026-05-11 19:37 - usd-playground</strong> <code>code-change</code> - Added gsplat-to-cloud converter in studio_core/pipeline.py. Four new methods: _find_gsplat_config (finds latest config.yml under gsplat_outputs/), _export_gsplat_ply (runs ns-ex...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\usd-playground  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-11 19:37 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added gsplat-to-cloud converter in studio_core/pipeline.py. Four new methods: _find_gsplat_config (finds latest config.yml under gsplat_outputs/), _export_gsplat_ply (runs ns-export gaussian-splat to extract PLY from trained splatfacto model), _convert_ply_to_cloud_files (uses open3d to read PLY, writes cloud.ply and calls _write_usd_from_point_cloud), _write_usd_from_point_cloud (writes cloud.usda with real Vec3f points and vertex colors from open3d PointCloud using pxr). Also fixed --vis viewer -> --vis none in ns-train command for headless operation. Added converter call in _run_reconstruction after ns-train succeeds: exports PLY via ns-export, converts to cloud.ply + cloud.usda, marks degraded=True only if conversion fails. Placeholder fallbacks remain for safety.
+- Files:
+  - `studio_core/pipeline.py`
+- Git: repo=usd-playground, branch=main, head=993e1e9
+
+</details>
+
+<details>
+<summary><strong>2026-05-11 19:32 - agent-ledger</strong> <code>code-change</code> - Added lines added/removed/net KPI cards to WORK_IMPACT.html. Added .big-green and .big-red CSS classes using --v-green/--v-burgundy tokens. Added 3 new span3 cards (m-insertions...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: claude-sonnet-4.6
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-11 19:32 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added lines added/removed/net KPI cards to WORK_IMPACT.html. Added .big-green and .big-red CSS classes using --v-green/--v-burgundy tokens. Added 3 new span3 cards (m-insertions, m-deletions, m-netlines) after the Commits Sampled card in the top KPI grid. Added I18N keys metricInsertions/metricDeletions/metricNetLines for en and qc locales. Added rendering logic in renderTopMetrics() using data.lineStats?.clean to compute +insertions, âˆ’deletions, and net lines via fmtInt/fmtSigned helpers.
+- Files:
+  - `WORK_IMPACT.html`
+- Git: repo=agent-ledger, branch=main, head=77cde77
+
+</details>
+
+<details>
+<summary><strong>2026-05-11 19:01 - usd-playground</strong> <code>verification</code> - Diagnosed why cloud.usda and cloud.ply only contain placeholder content. Root causes: (1) COLMAP binary not installed &#226;€” the candidate path C:\Users\Administrator\Desktop\COLMA...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\usd-playground  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-11 19:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Diagnosed why cloud.usda and cloud.ply only contain placeholder content. Root causes: (1) COLMAP binary not installed â€” the candidate path C:\Users\Administrator\Desktop\COLMAP\bin\colmap.exe does not exist and COLMAP is not on PATH. The _run_reconstruction method gates the entire real reconstruction path on both ns_process_data AND colmap_bin being non-None; since colmap_bin is None, it immediately falls back to _write_placeholder_reconstruction() producing 3 hardcoded Vec3f points. (2) Even if COLMAP were installed, the pipeline has NO exporter code after ns-train splatfacto completes â€” it checks if cloud.usda exists and if cloud.ply exists, but neither ns-process-data nor ns-train writes those files. _write_placeholder_ply() and _write_placeholder_reconstruction() always fire. Available: ffmpeg, ffprobe, ns-process-data (system Python312), ns-train (system Python312), open3d, pxr. Missing: colmap binary only. Fix requires: install COLMAP binary, then add gsplat exporter code that copies/converts the trained model PLY output into cloud.ply and writes real USD from point cloud data.
+- Files:
+  - `studio_core/pipeline.py`
+  - `data/jobs/local-run-20260511-185029/reconstruction/cloud.usda`
+  - `data/jobs/local-run-20260511-185029/reconstruction/cloud.ply`
+- Git: repo=usd-playground, branch=main, head=993e1e9
+
+</details>
+
+<details>
+<summary><strong>2026-05-11 11:39 - usd-playground</strong> <code>code-change</code> - Completed UI/UX revamp Phase 9 Batch 3: inserted _build_header() (52px header strip with 25-theme ComboBox + EN/QC QPushButton toggle), _build_log_panel() (persistent log panel ...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Claude Sonnet 4.6
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\usd-playground  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-11 11:39 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed UI/UX revamp Phase 9 Batch 3: inserted _build_header() (52px header strip with 25-theme ComboBox + EN/QC QPushButton toggle), _build_log_panel() (persistent log panel with log_view TextEdit, clear, return-to-finish), _on_header_theme_changed(), _toggle_language(), retranslate() (syncs all 35 widget labels to _STRINGS i18n dict). Updated refresh_cards() to also re-style header QFrame. Fixed _render_selected_stage early-return path to hide return_to_finish_btn. Updated Window.__init__ to resize(1440,900) and connect dashboard.theme_changed + dashboard.lang_changed signals. Extended _apply_theme to sync both SettingsTab and header combo blockSignals + theme_swatch. Added _apply_lang() that calls settings.retranslate(). Fixed PushButton->QPushButton (not in qfluentwidgets imports), fixed get_theme(index=index). All 0 Pylance errors, syntax OK, import OK.
+- Files:
+  - `gui_app.py`
+- Git: repo=usd-playground, branch=main, head=993e1e9
+
+</details>
+
+<details>
+<summary><strong>2026-05-11 11:16 - vault-central</strong> <code>code-change</code> - Fixed black screen preview issue in Firefox by appending the offscreen processor&#39;s video element to the DOM, invoking play(), and continuously drawing 24fps real-time updates to...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Gemini 3.1 Pro (Preview)
+  Thinking: true
+  Mode: chat
+  Permissions: admin (network: offline)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-11 11:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed black screen preview issue in Firefox by appending the offscreen processor's video element to the DOM, invoking play(), and continuously drawing 24fps real-time updates to the canvas during the 3-second capture.
+- Commands:
+  - `npm run build`
+- Files:
+  - `src/offscreen/processor.ts`
+- Git: repo=vault-central, branch=main, head=a53966d
+
+</details>
+
+<details>
+<summary><strong>2026-05-11 11:10 - vaultwares-mcp</strong> <code>code-change</code> - Fixed broken imports in tests/test_tiers.py: 4 imports used &#39;vaultwares_.&#39; (truncated) instead of &#39;vaultwares_mcp.&#39;. Updated all four to correct module path (vaultwares_mcp.fs_t...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-mcp  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-11 11:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed broken imports in tests/test_tiers.py: 4 imports used 'vaultwares_.' (truncated) instead of 'vaultwares_mcp.'. Updated all four to correct module path (vaultwares_mcp.fs_tools, ops_tools, shell_tools, ssh_tools). All 41 tests now pass (0 errors). Also installed pytest via system Python (3.12) since .venv lacks pip.
+- Files:
+  - `tests/test_tiers.py`
+- Git: repo=vaultwares-mcp, branch=main, head=21444f4
+
+</details>
+
+<details>
+<summary><strong>2026-05-11 08:12 - vault-central</strong> <code>code-change</code> - Replaced FFmpeg WASM inside the sandbox with native MediaRecorder WebM generation in the Firefox offscreen processor. Removed the dependency on sandbox.html completely for video...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Gemini 3.1 Pro (Preview)
+  Thinking: true
+  Mode: chat
+  Permissions: admin (network: offline)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-11 08:12 (TZ: Eastern Standard Time)
+  ```
+- Summary: Replaced FFmpeg WASM inside the sandbox with native MediaRecorder WebM generation in the Firefox offscreen processor. Removed the dependency on sandbox.html completely for video processing, thus mitigating the 'Sandbox init timed out' errors caused by Firefox's restrictions.
+- Commands:
+  - `npm run build`
+- Files:
+  - `src/offscreen/processor.ts`
+- Git: repo=vault-central, branch=main, head=a53966d
+
+</details>
+
+<details>
+<summary><strong>2026-05-11 08:04 - vaultwares-mcp</strong> <code>code-change</code> - Renamed fastmcp to vaultwares-mcp. Refactored internal package to vaultwares_mcp. Implemented Tier 6: Agent Ledger tools (ledger_get_recent, ledger_search) for cross-session int...</summary>
+
+- Kind: code-change
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-2.0-pro-exp
+  Thinking: True
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-mcp  Branch: main
+  Tools used (this reply): robocopy, write_to_file, replace_file_content
+  MCP servers accessed (this reply): none
+  Time: 2026-05-11 08:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: Renamed fastmcp to vaultwares-mcp. Refactored internal package to vaultwares_mcp. Implemented Tier 6: Agent Ledger tools (ledger_get_recent, ledger_search) for cross-session intelligence retrieval. Updated pyproject.toml, manifest.json, and README.md. Synchronized root server.py with new package structure.
+- Commands:
+  - `robocopy fastmcp vaultwares-mcp /move`
+  - `python -m vaultwares_mcp --help`
+- Files:
+  - `vaultwares-mcp/vaultwares_mcp/ledger_tools.py`
+  - `vaultwares-mcp/vaultwares_mcp/server.py`
+  - `vaultwares-mcp/pyproject.toml`
+- Git: repo=vaultwares-mcp, branch=main, head=e68fb1e
+
+</details>
+
+<details>
 <summary><strong>2026-05-11 07:19 - vault-central</strong> <code>code-change</code> - Re-implemented extraction fallback to use &#39;active: true&#39; for popup windows and tabs, bypassing Firefox&#39;s strict popup blocker and tab discarding rules. Updated ExtractionContext...</summary>
 
 - Kind: code-change
