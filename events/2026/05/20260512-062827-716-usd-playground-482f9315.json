@@ -1,0 +1,36 @@
+{
+  "id": "20260512-062827-716-usd-playground-482f9315",
+  "createdAt": "2026-05-12T10:28:27.7161613Z",
+  "createdAtLocal": "2026-05-12 06:28",
+  "timezone": "Eastern Standard Time",
+  "project": "usd-playground",
+  "kind": "code-change",
+  "actor": "GitHub Copilot",
+  "agentHeader": "Agent: GitHub Copilot (role: main)\r\nModel: Gemini 3.1 Pro (Preview)\r\nThinking: true\r\nMode: chat\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\usd-playground  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-12 06:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Gemini 3.1 Pro (Preview)",
+    "thinking": "true",
+    "mode": "chat",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\usd-playground",
+  "summary": "Fix UnicodeEncodeError by enforcing UTF-8 encoding and setting PYTHONUTF8 for nerfstudio subprocesses.",
+  "commands": [],
+  "files": [
+    "studio_core/pipeline.py"
+  ],
+  "planPath": "",
+  "contentHash": "482f9315ecd119989962e9368d54b16d818377b1ad3ca499118aaf96156fb53e",
+  "git": {
+    "repo": "usd-playground",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/usd-playground",
+    "branch": "main",
+    "head": "993e1e9",
+    "hasChanges": true
+  }
+}

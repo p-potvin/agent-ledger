@@ -1,0 +1,38 @@
+{
+  "id": "20260513-220144-878-vaultwares-docs-d25ad2a1",
+  "createdAt": "2026-05-14T02:01:44.8781172Z",
+  "createdAtLocal": "2026-05-13 22:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.apply_patch, functions.shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 22:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.apply_patch",
+      "functions.shell_command"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Documented today's infra changes in private docs: added ops log page for 2026-05-13 (noddit.org split proxy to PC SPA+API, gateway header, job queue/rate limit notes), linked it from network map, corrected secrets page to use secrets.vaultwares.ca, and added the new page to docs.json navigation.",
+  "commands": [
+    "node -e \"JSON.parse(require('fs').readFileSync('docs.json','utf8'));\""
+  ],
+  "files": [
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Github Repos\\\\vaultwares-docs\\\\docs-content\\\\operations\\\\ops-log-2026-05-13.mdx",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Github Repos\\\\vaultwares-docs\\\\docs-content\\\\operations\\\\network-map.mdx",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Github Repos\\\\vaultwares-docs\\\\docs-content\\\\operations\\\\secrets.mdx",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Github Repos\\\\vaultwares-docs\\\\docs.json"
+  ],
+  "planPath": "",
+  "contentHash": "d25ad2a1875cfbd59deb8125bd2a5ccf0f90e884d6e68b06808a194704d1efea",
+  "git": null
+}

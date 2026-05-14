@@ -1,0 +1,40 @@
+{
+  "id": "20260513-233821-688-tube-site-5ecdd65e",
+  "createdAt": "2026-05-14T03:38:21.6885273Z",
+  "createdAtLocal": "2026-05-13 23:38",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.apply_patch, functions.shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 23:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.apply_patch",
+      "functions.shell_command"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Fixed tube-site production breakage on vaultwares-1: installed php8.2-xml to restore DOMDocument (resolves 500s + fetcher crashes) and patched both plugins to force https for embed/source/mailchimp URLs to reduce mixed-content iframe failures. Deployed updated plugin files to /var/www/*.",
+  "commands": [
+    "ssh root@100.73.93.84 apt-get install -y php8.2-xml",
+    "scp helpers.php -> /tmp/fxv-helpers.php; install to plugin dir",
+    "scp player.php -> /tmp/pkt-player.php; install to plugin dir"
+  ],
+  "files": [
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\fullxxx-video\\\\includes\\\\helpers.php",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\promking-tube\\\\includes\\\\player.php",
+    "/var/www/fullxxx.video/public/wp-content/plugins/fullxxx-video/includes/helpers.php",
+    "/var/www/prom-king.xyz/public/wp-content/plugins/promking-tube/includes/player.php"
+  ],
+  "planPath": "",
+  "contentHash": "5ecdd65eab081298458c0d95866a77cc64d62bca235c4ac8dfcf5b1047b6130a",
+  "git": null
+}

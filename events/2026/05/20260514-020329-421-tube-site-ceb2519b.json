@@ -1,0 +1,39 @@
+{
+  "id": "20260514-020329-421-tube-site-ceb2519b",
+  "createdAt": "2026-05-14T06:03:29.4218542Z",
+  "createdAtLocal": "2026-05-14 02:03",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.shell_command, functions.apply_patch, functions.update_plan\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-14 02:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.shell_command",
+      "functions.apply_patch",
+      "functions.update_plan"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Fixed FullXXX fetch/backfill pagination and section targeting: pornxp now paginates via /?page=N (previous /videos?page=N returned empty), freesexvideos now paginates via /latest-updates/N/ (previous /page/N/ 404), and topvid no longer pretends to paginate; it only scrapes the first Popular grid and filters out nav/podcast-like paths. Increased manual/bulk candidate pool per listing page to avoid underfill and made manual page-count semantics clearer in admin UI.",
+  "commands": [
+    "php -l tube-site/fullxxx-video/includes/video-fetcher.php",
+    "php -l tube-site/fullxxx-video/includes/admin-settings.php",
+    "curl checks for pornxp/?page=2 and freesexvideos/latest-updates/2"
+  ],
+  "files": [
+    "tube-site/fullxxx-video/includes/video-fetcher.php",
+    "tube-site/fullxxx-video/includes/admin-settings.php"
+  ],
+  "planPath": "",
+  "contentHash": "ceb2519b4efa512428ed474eb013bd6a03900292d4d0f464926a2a887e77df53",
+  "git": null
+}

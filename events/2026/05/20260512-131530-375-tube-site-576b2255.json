@@ -1,0 +1,37 @@
+{
+  "id": "20260512-131530-375-tube-site-576b2255",
+  "createdAt": "2026-05-12T17:15:30.3755636Z",
+  "createdAtLocal": "2026-05-12 13:15",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-12 13:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Added explicit manual page-count controls to both FullXXX and PromKing fetch tools. Manual fetch now reads a user-supplied page count from the admin form, uses it instead of the old hidden 6-page cap, and reports the chosen page budget in the completion message before resuming backfill.",
+  "commands": [
+    "php -l fullxxx-video/includes/admin-settings.php",
+    "php -l fullxxx-video/includes/video-fetcher.php",
+    "php -l promking-tube/includes/video-fetcher.php",
+    "scp plugin dirs to VPS and reload php-fpm/nginx"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\admin-settings.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\video-fetcher.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\video-fetcher.php"
+  ],
+  "planPath": "",
+  "contentHash": "576b225569771bd064feeb0d3fbf42c5ea233026e96fd28168cefbba47217b20",
+  "git": null
+}
