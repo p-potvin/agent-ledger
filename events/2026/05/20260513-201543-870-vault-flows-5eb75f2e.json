@@ -1,0 +1,46 @@
+{
+  "id": "20260513-201543-870-vault-flows-5eb75f2e",
+  "createdAt": "2026-05-14T00:15:43.8707965Z",
+  "createdAtLocal": "2026-05-13 20:15",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "claude-sonnet-4-6",
+  "agentHeader": "Agent: claude-sonnet-4-6 (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows  Branch: rewrite/spa\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 20:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-6",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Fixed vault-flows SPA rebuild (branch: rewrite/spa, run: vw-2026-05-13-vf-001). Root causes: (1) Zustand object selectors in App.tsx and NodeParamPanel.tsx caused React 19 concurrent-mode error #185 — replaced with individual useFlowStore selectors. (2) ThemePicker imported applyTheme from @/main creating a circular dependency — extracted applyTheme/initTheme to src/lib/theme.ts. (3) Dead PresetLibraryInline export in PresetCard.tsx removed. Added ErrorBoundary for crash visibility. Build passes (254 modules, 0 TS errors). App verified: preset loads 4-node canvas, node click shows param panel, no console errors.",
+  "commands": [
+    "npm run build",
+    "Restart-Service vault-flows-spa",
+    "git commit"
+  ],
+  "files": [
+    "src/App.tsx",
+    "src/ui/NodeParamPanel.tsx",
+    "src/main.tsx",
+    "src/ui/ThemePicker.tsx",
+    "src/lib/theme.ts",
+    "src/ui/PresetCard.tsx",
+    "src/ErrorBoundary.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "5eb75f2e6118b6afc6c82c50c863fe83e27cf01741a9ad18105364b30dc9be39",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "rewrite/spa",
+    "head": "7c3039c",
+    "hasChanges": true
+  }
+}

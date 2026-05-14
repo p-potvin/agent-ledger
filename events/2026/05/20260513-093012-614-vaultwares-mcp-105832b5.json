@@ -1,0 +1,39 @@
+{
+  "id": "20260513-093012-614-vaultwares-mcp-105832b5",
+  "createdAt": "2026-05-13T13:30:12.6141623Z",
+  "createdAtLocal": "2026-05-13 09:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-mcp",
+  "kind": "commands",
+  "actor": "GitHub Copilot",
+  "agentHeader": "Agent: GitHub Copilot (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 09:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-6",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp",
+  "summary": "Created Windows service 'vaultwares-mcp' via NSSM. Service runs .venv Python with '-m vaultwares_mcp --transport streamable-http --host 127.0.0.1 --port 9020', AppDirectory set to project root, auto-start on boot (SERVICE_AUTO_START), stdout/stderr logged to logs/ with 10MB rotation. Service confirmed SERVICE_RUNNING and endpoint at http://127.0.0.1:9020/mcp responding (HTTP 406 = server live, proper MCP headers needed).",
+  "commands": [
+    "nssm install vaultwares-mcp",
+    "nssm set vaultwares-mcp AppParameters",
+    "nssm set vaultwares-mcp Start SERVICE_AUTO_START",
+    "nssm start vaultwares-mcp"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "105832b5ca48e2501f240c7bcefb128957c65bee1ba38d9701f4f2c8cbd8ba1e",
+  "git": {
+    "repo": "vaultwares-mcp",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-mcp",
+    "branch": "main",
+    "head": "e034e76",
+    "hasChanges": true
+  }
+}

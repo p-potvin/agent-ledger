@@ -1,0 +1,58 @@
+{
+  "id": "20260513-192658-694-vault-flows-00c37c49",
+  "createdAt": "2026-05-13T23:26:58.6940170Z",
+  "createdAtLocal": "2026-05-13 19:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "claude-sonnet-4-6",
+  "agentHeader": "Agent: claude-sonnet-4-6 (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: false\r\nMode: agent\r\nPermissions: default (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows  Branch: rewrite/spa\r\nTools used (this reply): Write, Edit, Read, Bash, Agent, TodoWrite\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 19:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-6",
+    "thinking": "false",
+    "mode": "agent",
+    "permissions": "default",
+    "network": "online",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Read",
+      "Bash",
+      "Agent",
+      "TodoWrite"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Full rewrite of vault-flows on branch rewrite/spa: replaced ComfyUI/JSX/Redux/Python product with TypeScript strict SPA. Created TASKS.md (multi-agent schema, run vw-2026-05-13-vf-001), created branch rewrite/spa, deleted old src/backend/agents/dispatcher, scaffolded Vite+React+Tailwind v4+vault-themes, added node types (input|output|llm|transform|display), Zustand store, React Flow canvas with 5 custom node renderers, typed API client over vaultwares-pipelines, stateless execution runner, i18next EN/FR i18n, 4 preset JSON files (blog-post-drafter, lesson-plan-builder, meeting-summary, image-gen-basic), App shell with sidebar preset library + canvas + right param panel + ThemePicker. Build passed: tsc -b && vite build, 252 modules, 0 TS errors. Committed as d13d767 on rewrite/spa. NSSM install pending.",
+  "commands": [
+    "git checkout -b rewrite/spa",
+    "npm install",
+    "npm run build",
+    "git commit"
+  ],
+  "files": [
+    "vault-flows/TASKS.md",
+    "vault-flows/src/App.tsx",
+    "vault-flows/src/canvas/FlowCanvas.tsx",
+    "vault-flows/src/nodes/types.ts",
+    "vault-flows/src/store/flowStore.ts",
+    "vault-flows/src/api/client.ts",
+    "vault-flows/src/execution/runner.ts",
+    "vault-flows/src/presets/index.ts",
+    "vault-flows/src/i18n/index.ts",
+    "vault-flows/vite.config.ts",
+    "vault-flows/package.json"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\c-users-administrator-desktop-vault-flo-dreamy-reddy.md",
+  "contentHash": "00c37c49cf6fa4444b101489cb10a72ce446319fdfc3ec74a9a21c228454bf76",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "rewrite/spa",
+    "head": "d13d767",
+    "hasChanges": true
+  }
+}

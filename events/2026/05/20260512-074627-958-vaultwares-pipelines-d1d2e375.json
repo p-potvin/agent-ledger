@@ -1,0 +1,43 @@
+{
+  "id": "20260512-074627-958-vaultwares-pipelines-d1d2e375",
+  "createdAt": "2026-05-12T11:46:27.9585095Z",
+  "createdAtLocal": "2026-05-12 07:46",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-pipelines",
+  "kind": "verification",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator  Branch: n/a\r\nTools used (this reply): functions.shell_command, functions.apply_patch, multi_tool_use.parallel\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-12 07:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.shell_command",
+      "functions.apply_patch",
+      "multi_tool_use.parallel"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines",
+  "cwd": "C:\\Users\\Administrator",
+  "summary": "Added explicit trusted Tailnet IP allowlisting, a protected network diagnostics endpoint for verifying VPS-to-local-PC forwarding, propagated vaultwares.ca domain updates in repo docs/config, and added focused API gateway tests covering allowlist behavior, trusted proxy forwarding, and spoofed X-Forwarded-For rejection.",
+  "commands": [
+    "python -m py_compile api_server.py",
+    "pytest tests/test_api_gateway.py -q"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\api_server.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\tests\\test_api_gateway.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\API_START.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\VPS_GATEWAY.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\brume2_nginx.conf.example",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\vps_nginx.conf.example"
+  ],
+  "planPath": "",
+  "contentHash": "d1d2e3755fe36867f512799563880e674dca1dd432662f98530867684e178dcf",
+  "git": null
+}

@@ -1,0 +1,47 @@
+﻿{
+    "id":  "20260511-080422-342-vaultwares-mcp-0e8d8681",
+    "createdAt":  "2026-05-11T12:04:22.3420242Z",
+    "createdAtLocal":  "2026-05-11 08:04",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-mcp",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.0-pro-exp\r\nThinking: True\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp  Branch: main\r\nTools used (this reply): robocopy, write_to_file, replace_file_content\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-11 08:04 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.0-pro-exp",
+                    "thinking":  "True",
+                    "mode":  "agent",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  [
+                                      "robocopy",
+                                      "write_to_file",
+                                      "replace_file_content"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp",
+    "summary":  "Renamed fastmcp to vaultwares-mcp. Refactored internal package to vaultwares_mcp. Implemented Tier 6: Agent Ledger tools (ledger_get_recent, ledger_search) for cross-session intelligence retrieval. Updated pyproject.toml, manifest.json, and README.md. Synchronized root server.py with new package structure.",
+    "commands":  [
+                     "robocopy fastmcp vaultwares-mcp /move",
+                     "python -m vaultwares_mcp --help"
+                 ],
+    "files":  [
+                  "vaultwares-mcp/vaultwares_mcp/ledger_tools.py",
+                  "vaultwares-mcp/vaultwares_mcp/server.py",
+                  "vaultwares-mcp/pyproject.toml"
+              ],
+    "planPath":  "",
+    "contentHash":  "0e8d86818ea453b8915dea5912ee6f7cb760140806519d2e71fa0cbbecfa7579",
+    "git":  {
+                "repo":  "vaultwares-mcp",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-mcp",
+                "branch":  "main",
+                "head":  "e68fb1e",
+                "hasChanges":  true
+            }
+}

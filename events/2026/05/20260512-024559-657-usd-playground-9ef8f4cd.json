@@ -1,0 +1,37 @@
+{
+  "id": "20260512-024559-657-usd-playground-9ef8f4cd",
+  "createdAt": "2026-05-12T06:45:59.6577664Z",
+  "createdAtLocal": "2026-05-12 02:45",
+  "timezone": "Eastern Standard Time",
+  "project": "usd-playground",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\usd-playground  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-12 02:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\usd-playground",
+  "summary": "Fixed download_colmap.ps1 to point to existing 4.0.4 release and ran it. Updated pipeline.py COLMAP_CANDIDATE_PATHS to prioritize the tools/colmap/bin/colmap.exe path. This avoids the need to build colmap from source using vcpkg.",
+  "commands": [],
+  "files": [
+    "download_colmap.ps1",
+    "studio_core/pipeline.py"
+  ],
+  "planPath": "",
+  "contentHash": "9ef8f4cd62f4387b0b7869b60d2112a0ea16e13875ca480d4c27f36ed1c2f9b4",
+  "git": {
+    "repo": "usd-playground",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/usd-playground",
+    "branch": "main",
+    "head": "993e1e9",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "id": "20260511-111011-082-vaultwares-mcp-cd517e2a",
+  "createdAt": "2026-05-11T15:10:11.0829348Z",
+  "createdAtLocal": "2026-05-11 11:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-mcp",
+  "kind": "code-change",
+  "actor": "GitHub Copilot",
+  "agentHeader": "Agent: GitHub Copilot (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-11 11:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-6",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp",
+  "summary": "Fixed broken imports in tests/test_tiers.py: 4 imports used 'vaultwares_.' (truncated) instead of 'vaultwares_mcp.'. Updated all four to correct module path (vaultwares_mcp.fs_tools, ops_tools, shell_tools, ssh_tools). All 41 tests now pass (0 errors). Also installed pytest via system Python (3.12) since .venv lacks pip.",
+  "commands": [],
+  "files": [
+    "tests/test_tiers.py"
+  ],
+  "planPath": "",
+  "contentHash": "cd517e2ab14a95c94117a069e959005614d859e69ca9bcfbd61b291b45117d9e",
+  "git": {
+    "repo": "vaultwares-mcp",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-mcp",
+    "branch": "main",
+    "head": "21444f4",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "20260514-034000-512-qa-automation-c8dbe833",
+  "createdAt": "2026-05-14T07:40:00.5121265Z",
+  "createdAtLocal": "2026-05-14 03:40",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "plan",
+  "actor": "GitHub Copilot",
+  "agentHeader": "Agent: GitHub Copilot (role: main)\r\nModel: o3-mini\r\nThinking: true\r\nMode: chat\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business\\qa-automation  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-14 03:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "o3-mini",
+    "thinking": "true",
+    "mode": "chat",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business\\qa-automation",
+  "summary": "Created ANTI_BOT_TEST_PLAN.md detailing how to measure time-to-block, track endpoint states, and generate test artifacts. Updated TODO.md.",
+  "commands": [],
+  "files": [
+    "ANTI_BOT_TEST_PLAN.md",
+    "TODO.md"
+  ],
+  "planPath": "",
+  "contentHash": "c8dbe833e3e09da51fa8425a8e216964ae36e241397295b63374bca47be6e04e",
+  "git": {
+    "repo": "qa-automation",
+    "root": "C:/Users/Administrator/Desktop/business/qa-automation",
+    "branch": "main",
+    "head": "fe2c299",
+    "hasChanges": true
+  }
+}

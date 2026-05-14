@@ -1,0 +1,42 @@
+﻿{
+    "id":  "20260511-234100-026-vaultwares-docs-4ed392eb",
+    "createdAt":  "2026-05-12T03:41:00.0268266Z",
+    "createdAtLocal":  "2026-05-11 23:41",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-docs",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: Claude Sonnet 4.6 (Thinking)\r\nThinking: true\r\nMode: agent\r\nPermissions: standard (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): view_file, list_dir, write_to_file, multi_replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-11 23:41 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude Sonnet 4.6 (Thinking)",
+                    "thinking":  "true",
+                    "mode":  "agent",
+                    "permissions":  "standard",
+                    "network":  "online",
+                    "toolsUsed":  [
+                                      "view_file",
+                                      "list_dir",
+                                      "write_to_file",
+                                      "multi_replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "summary":  "Fixed production styling on docs.vaultwares.ca. Three root causes: (1) Tailwind v4 requires explicit @theme block to map CSS vars to utility classes — added full @theme mapping block for all vault-themes tokens (background, surface, surface-alt, surface-elevated, text, text-primary, text-secondary, text-muted, text-inverse, accent, accent-muted, border, error, warning, success, info, muted). (2) App.tsx used .replace() which only replaces first underscore — fixed to .replaceAll() so surface_alt -\u003e --surface-alt, text_primary -\u003e --text-primary etc. all work. (3) Wrong light theme ID \u0027codex-solarized-light-revisited\u0027 fixed to \u0027solarized-light-revisited\u0027. Also added comprehensive prose-vault CSS, glass utility classes, semantic banner classes, proper scrollbar and focus ring styles per vault-themes brand guide. Built successfully (53KB CSS), committed and pushed to main to trigger GitHub Actions VPS deploy.",
+    "commands":  [
+                     "npm run build",
+                     "git push origin main"
+                 ],
+    "files":  [
+                  "src/index.css",
+                  "src/App.tsx"
+              ],
+    "planPath":  "",
+    "contentHash":  "4ed392eb65fb3b1c82c6deabe13928200925f0baeb5bb881d55259deaffd2195",
+    "git":  null
+}
