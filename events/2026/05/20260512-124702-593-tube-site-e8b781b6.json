@@ -1,0 +1,40 @@
+{
+  "id": "20260512-124702-593-tube-site-e8b781b6",
+  "createdAt": "2026-05-12T16:47:02.5934607Z",
+  "createdAtLocal": "2026-05-12 12:47",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-12 12:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Stabilized the FullXXX and PromKing scraper/admin flows: manual fetch is now distinct from scheduled behavior, FullXXX derives active sources from the allowlist and only gates manual candidates on source/detail page hosts, remote scrape URLs are sanitized before fetches, backfill cursors can resume older pages and be reset from admin, last fetch results now include mode/page/candidate counts, and success notices auto-dismiss instead of lingering.",
+  "commands": [
+    "php -l fullxxx-video/includes/helpers.php",
+    "php -l fullxxx-video/includes/video-fetcher.php",
+    "php -l fullxxx-video/includes/admin-settings.php",
+    "php -l promking-tube/includes/video-fetcher.php",
+    "scp plugin dirs to VPS and reload php-fpm/nginx",
+    "wp eval-file on VPS to verify active sources/manual allowlist behavior"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\helpers.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\video-fetcher.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\admin-settings.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\video-fetcher.php"
+  ],
+  "planPath": "",
+  "contentHash": "e8b781b63f2b02cc12219f8545f0e08be079569522464e2b9706717523fe22f8",
+  "git": null
+}

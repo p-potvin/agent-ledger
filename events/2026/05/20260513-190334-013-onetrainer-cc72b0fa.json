@@ -1,0 +1,36 @@
+{
+  "id": "20260513-190334-013-onetrainer-cc72b0fa",
+  "createdAt": "2026-05-13T23:03:34.0135611Z",
+  "createdAtLocal": "2026-05-13 19:03",
+  "timezone": "Eastern Standard Time",
+  "project": "OneTrainer",
+  "kind": "code-change",
+  "actor": "GitHub Copilot",
+  "agentHeader": "Agent: GitHub Copilot (role: main)\r\nModel: claude-sonnet-4-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: D:\\OneTrainer  Branch: master\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 19:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "D:\\OneTrainer",
+  "cwd": "D:\\OneTrainer",
+  "summary": "Created BigLove-zt3-LoRA-12GB.json training preset optimized for RTX 3060 12GB VRAM + 32GB RAM. Key settings vs 8GB preset: layer_offload_fraction 0.6->0.2, transformer.train false->true (LoRA fix), transformer.weight_dtype FLOAT_8->INT_W8A8, vae.train true->false, vae.weight_dtype FLOAT_8->FLOAT_32, output_dtype FLOAT_8->BFLOAT_16, dataloader_threads 1->2, text_encoder_2/3/4.train true->false. Points to local model at D:\\comfyUI\\resources\\ComfyUI\\models\\diffusion_models\\BigLove-zt3-deturbo.",
+  "commands": [],
+  "files": [
+    "training_presets/BigLove-zt3-LoRA-12GB.json"
+  ],
+  "planPath": "",
+  "contentHash": "cc72b0fa3f2692feb0ca2dd3cb9c8eb64b22f3fb3b4dbcabf8af022b7a6efa65",
+  "git": {
+    "repo": "OneTrainer",
+    "root": "D:/OneTrainer",
+    "branch": "master",
+    "head": "423c3b3",
+    "hasChanges": true
+  }
+}

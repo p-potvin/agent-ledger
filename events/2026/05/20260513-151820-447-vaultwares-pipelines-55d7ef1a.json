@@ -1,0 +1,34 @@
+{
+  "id": "20260513-151820-447-vaultwares-pipelines-55d7ef1a",
+  "createdAt": "2026-05-13T19:18:20.4472535Z",
+  "createdAtLocal": "2026-05-13 15:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-pipelines",
+  "kind": "code-change",
+  "actor": "gpt-5.2",
+  "agentHeader": "Agent: gpt-5.2 (role: main)\r\nModel: gpt-5.2\r\nThinking: false\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 15:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "false",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": "functions.shell_command",
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Investigated VPS->PC API 426/500 issues. Root cause: FastAPI enforces HTTPS (REQUIRE_HTTPS=1) and only trusts X-Forwarded-Proto from trusted proxy peers; also middleware raising HTTPException can surface as 500 depending on runtime. Updated local repo env to use broad Tailscale CIDR defaults and to trust VPS tailnet IPs as proxies (TRUSTED_PROXY_CIDRS includes 100.73.93.84/32 and 100.73.57.6/32). Follow-up: ensure the actually-running Windows listener on port 9001 is the intended vaultwares-pipelines process and restarted so it picks up the env + middleware fixes.",
+  "commands": [
+    "Select-String .env (TAILSCALE_CIDRS/TRUSTED_PROXY_CIDRS)",
+    "curl http://127.0.0.1:9001/openapi.json",
+    "tailscale ssh root@vaultwares-1 curl http://100.71.101.21:9001/..."
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\.env"
+  ],
+  "planPath": "",
+  "contentHash": "55d7ef1a29f7b41429f164a9c393c030d53d491f9931c6c01fb04e3e3f0df3cd",
+  "git": null
+}

@@ -1,0 +1,37 @@
+{
+  "id": "20260512-170558-432-general-tasks-12bc40b8",
+  "createdAt": "2026-05-12T21:05:58.4325063Z",
+  "createdAtLocal": "2026-05-12 17:05",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "verification",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: false\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-12 17:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "false",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": "functions.shell_command",
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "After DNS propagation to 173.249.194.15 for prom-king.xyz/www and fullxxx.video/www, issued Lets Encrypt certs on the new VPS using certbot nginx plugin and verified both sites return 200 over HTTPS.",
+  "commands": [
+    "nslookup prom-king.xyz 1.1.1.1",
+    "nslookup fullxxx.video 1.1.1.1",
+    "certbot --nginx -d prom-king.xyz -d www.prom-king.xyz -d fullxxx.video -d www.fullxxx.video",
+    "curl -I https://prom-king.xyz/",
+    "curl -I https://fullxxx.video/"
+  ],
+  "files": [
+    "/etc/nginx/sites-enabled/prom-king.xyz.conf",
+    "/etc/nginx/sites-enabled/fullxxx.video.conf"
+  ],
+  "planPath": "",
+  "contentHash": "12bc40b88534d0806e7bb26844075b74a81457374ffa7092955da9a49933a55f",
+  "git": null
+}

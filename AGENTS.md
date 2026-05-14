@@ -28,6 +28,7 @@ The ledger is a record of completed work, not intent.
 - Do not duplicate an existing event — the script deduplicates.
 - If the ledger cannot be accessed, include a compact ledger entry in your reply.
 - Consult `CHANGES.md` and the active project's roadmap/todo files for continuity.
+- **Deep Search Protocol**: When analyzing work impact, changed files, or historical context, you **MUST** look in the `archive/` or `history/` directories if the information is not present in the 2-week active ledger window.
 
 ## Cloud / Restricted Environments
 

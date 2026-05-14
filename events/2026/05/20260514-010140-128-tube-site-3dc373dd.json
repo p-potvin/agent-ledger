@@ -1,0 +1,41 @@
+{
+  "id": "20260514-010140-128-tube-site-3dc373dd",
+  "createdAt": "2026-05-14T05:01:40.1282395Z",
+  "createdAtLocal": "2026-05-14 01:01",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.apply_patch, functions.shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-14 01:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.apply_patch",
+      "functions.shell_command"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Fixed 'player modal too zoomed / controls not visible' by making the Vault player modal body scrollable and capping surface height relative to viewport; also added cache-busting via filemtime-based asset versions for CSS/JS enqueues in both plugins so updates propagate immediately.",
+  "commands": [
+    "scp updated vault-player.css + plugin php to VPS",
+    "curl fullxxx watch page | grep vault-player.css?ver"
+  ],
+  "files": [
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\fullxxx-video\\\\assets\\\\css\\\\vault-player.css",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\promking-tube\\\\assets\\\\css\\\\vault-player.css",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\fullxxx-video\\\\fullxxx-video.php",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\promking-tube\\\\promking-tube.php",
+    "/var/www/fullxxx.video/public/wp-content/plugins/fullxxx-video/assets/css/vault-player.css",
+    "/var/www/prom-king.xyz/public/wp-content/plugins/promking-tube/assets/css/vault-player.css"
+  ],
+  "planPath": "",
+  "contentHash": "3dc373ddcdf922533a02892738c5c6d3907abd3d3dbd231dfc5891f62496c3c0",
+  "git": null
+}

@@ -1,0 +1,39 @@
+{
+  "id": "20260512-064701-974-vaultwares-pipelines-00f051d3",
+  "createdAt": "2026-05-12T10:47:01.9740259Z",
+  "createdAtLocal": "2026-05-12 06:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-pipelines",
+  "kind": "code-change",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator  Branch: n/a\r\nTools used (this reply): functions.shell_command, functions.apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-12 06:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.shell_command",
+      "functions.apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines",
+  "cwd": "C:\\Users\\Administrator",
+  "summary": "Hardened proxy handling for VPS gateway: only trust x-forwarded-proto when the immediate peer is in TRUSTED_PROXY_CIDRS; updated docs/examples to use the current VPS Tailscale IP (100.73.57.6) for TRUSTED_PROXY_CIDRS.",
+  "commands": [
+    "python -m py_compile api_server.py"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\api_server.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\.env.local-api.example",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\API_START.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\VPS_GATEWAY.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\vps_nginx.conf.example"
+  ],
+  "planPath": "",
+  "contentHash": "00f051d33f48477cb9e3d535d624ce741a0529f2bae8229819690543ff9a742c",
+  "git": null
+}

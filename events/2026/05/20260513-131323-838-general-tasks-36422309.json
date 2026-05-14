@@ -1,0 +1,53 @@
+{
+  "id": "20260513-131323-838-general-tasks-36422309",
+  "createdAt": "2026-05-13T17:13:23.8382398Z",
+  "createdAtLocal": "2026-05-13 13:13",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "handoff",
+  "actor": "gpt-5.2",
+  "agentHeader": "Agent: gpt-5.2 (role: main)\r\nModel: gpt-5.2\r\nThinking: false\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.shell_command, functions.apply_patch, web.run\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 13:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "false",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.shell_command",
+      "functions.apply_patch",
+      "web.run"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Tailnet hardening + VPS ingress updates: applied deny-by-default Tailscale ACL grants (owner->tag:server 22/80/443; owner->PC 3389/9001; tag:server->PC 9001), confirmed public SSH to VPSes is blocked (UFW allow 22 only on tailscale0). On new VPS (vaultwares-1 / 173.249.194.15 / 100.73.93.84) expanded LE cert (cert-name docs.vaultwares.ca) to cover vaultwares.ca, www, docs, api, hooks, secrets. Added Nginx HTTPS vhosts: vaultwares.ca public; docs.vaultwares.ca tailnet-only SPA; api.vaultwares.ca tailnet-only reverse proxy to PC:9001; hooks.vaultwares.ca public proxy to webhook receiver; secrets.vaultwares.ca tailnet-only proxy to Vaultwarden incl websocket hub. Implemented webhook receiver service (FastAPI) + logrotate; needs webhook secret + subscription configured in Tailscale admin. Built and deployed updated vaultwares-docs dist with private Operations pages (network map/tailscale/secrets). NOTE: api.vaultwares.ca from tailnet currently returns 500 because upstream PC API blocks/errs for non-local clients; follow-up needed in vaultwares-pipelines to trust VPS tailnet IPs and/or ensure running instance picks up updated .env + middleware behavior.",
+  "commands": [
+    "tailscale status",
+    "Invoke-RestMethod GET/POST https://api.tailscale.com/api/v2/tailnet/<tailnet>/acl",
+    "tailscale ssh root@vaultwares-1 ...",
+    "certbot certonly --nginx --cert-name docs.vaultwares.ca --expand -d ...",
+    "ufw status verbose",
+    "nginx -t && systemctl reload nginx",
+    "npm run build (vaultwares-docs)",
+    "tar ... | tailscale ssh root@vaultwares-1 ..."
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\App.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\network-map.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\tailscale.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\secrets.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\api_server.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\.env",
+    "/etc/nginx/sites-available/{vaultwares.ca,docs.vaultwares.ca,api.vaultwares.ca,hooks.vaultwares.ca,secrets.vaultwares.ca}.conf",
+    "/etc/systemd/system/vaultwares-hooks.service",
+    "/opt/vaultwares-webhooks/app.py",
+    "/etc/logrotate.d/vaultwares-hooks"
+  ],
+  "planPath": "",
+  "contentHash": "364223098fa21e65c3d1a7fa1ff1b14edcc52d45099eda5e95176518a5f62dc0",
+  "git": null
+}

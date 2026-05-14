@@ -1,0 +1,36 @@
+{
+  "id": "20260512-164538-402-vaultwares-pipelines-dda51fb4",
+  "createdAt": "2026-05-12T20:45:38.4023520Z",
+  "createdAtLocal": "2026-05-12 16:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-pipelines",
+  "kind": "code-change",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: false\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.apply_patch, functions.shell_command, functions.update_plan\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-12 16:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "false",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.apply_patch",
+      "functions.shell_command",
+      "functions.update_plan"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Changed vaultwares-pipelines API server default bind address from 127.0.0.1 to 0.0.0.0 (still overridable via API_HOST/API_PORT) so it can be reached over LAN/Tailscale for VPS reverse proxy testing.",
+  "commands": [
+    "python -m py_compile api_server.py"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\api_server.py"
+  ],
+  "planPath": "",
+  "contentHash": "dda51fb4a4eaa6a6292efd3972673eb228ffde58df13c13edb32401d396fd57f",
+  "git": null
+}
