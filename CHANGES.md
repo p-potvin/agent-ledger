@@ -3,6 +3,96 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-14 17:18 - vault-video-enhancer</strong> <code>verification</code> - Implemented extensive GUI and worker logic tests (12 new tests). Fixed UI clipping issues, panel assignment bugs, and orphaned tooltip code. Verified layout stability with autom...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-video-enhancer  Branch: feature/folder-processing-cuda-stabilization
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 17:18 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented extensive GUI and worker logic tests (12 new tests). Fixed UI clipping issues, panel assignment bugs, and orphaned tooltip code. Verified layout stability with automated audits.
+- Commands:
+  - `pytest tests/test_gui_functional.py tests/test_worker_logic.py tests/test_gui_state.py`
+- Files:
+  - `vault_gui.py`
+  - `vault-themes/qt_exporter.py`
+  - `tests/test_gui_functional.py`
+  - `tests/test_worker_logic.py`
+- Git: repo=vault-video-enhancer, branch=feature/folder-processing-cuda-stabilization, head=21f2a07
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 15:18 - vaultwares-docs</strong> <code>verification</code> - Read network-map.mdx and ran full connectivity/TLS audit across all listed services. Public: vaultwares.ca, noddit.org, prom-king.xyz, fullxxx.video all return 200. TLS: all TLS...</summary>
+
+- Kind: verification
+- Actor: Claude Sonnet 4.6
+- Agent Header:
+  ```text
+  Agent: Claude Sonnet 4.6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): Read, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 15:18 (TZ: Eastern Standard Time)
+  ```
+- Summary: Read network-map.mdx and ran full connectivity/TLS audit across all listed services. Public: vaultwares.ca, noddit.org, prom-king.xyz, fullxxx.video all return 200. TLS: all TLS 1.3 + AES-256 + Let's Encrypt, ~88-89 days remaining, SANs valid for all domains. Tailnet: vaultwares-1 and ci-egress-vps reachable; Brume2 shows active direct WireGuard link in tailscale status (ICMP blocked by OpenWrt firewall, not a real issue). docs.vaultwares.ca and secrets.vaultwares.ca both return nginx 403 â€” this machine's tailnet IP (100.71.101.21) is not in the nginx allowlist on vaultwares-1. Local FastAPI API on port 9001: serving Vaultwares Pipelines dashboard + Swagger docs correctly.
+- Commands:
+  - `Invoke-WebRequest (HTTP checks)`
+  - `SslStream (TLS cert inspection)`
+  - `Test-Connection (tailnet ping)`
+  - `tailscale status`
+  - `TcpClient port probe (Brume2)`
+- Files:
+  - `vaultwares-docs\docs-content\operations\network-map.mdx`
+
+</details>
+
+<details>
+<summary><strong>2026-05-14 13:38 - General Tasks</strong> <code>handoff</code> - Completed audit of unpublished code across the VaultWares ecosystem. Created feature branches, pushed local changes, and opened Pull Requests for 5 repositories: vault-video-enh...</summary>
+
+- Kind: handoff
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 2.0 Flash
+  Thinking: true
+  Mode: agent
+  Permissions: full (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: feature/ops-and-best-practices
+  Tools used (this reply): run_command, gh
+  MCP servers accessed (this reply): none
+  Time: 2026-05-14 13:38 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed audit of unpublished code across the VaultWares ecosystem. Created feature branches, pushed local changes, and opened Pull Requests for 5 repositories: vault-video-enhancer (#6), vault-themes (#13), vaultwares-agentciation (#8), vaultwares-docs (#10), and agent-ledger (#7). Added p-potvin as a reviewer to all new PRs and existing PRs in realtime-stt (#42, #43). All identified 'floating' worktrees and uncommitted protocol/bugfix code is now staged for review.
+- Commands:
+  - `gh pr create`
+  - `gh pr edit`
+  - `git push --set-upstream`
+- Files:
+  - `vault_gui.py`
+  - `theme_manager.py`
+  - `MULTI_AGENT_FLOW.md`
+  - `docs.json`
+  - `archive-old-ledger-entries.ps1`
+- Git: repo=vaultwares-docs, branch=feature/ops-and-best-practices, head=eea6410
+
+</details>
+
+<details>
 <summary><strong>2026-05-14 13:12 - vaultwares-docs</strong> <code>handoff</code> - Refined VaultWares multi-agent maintenance protocol. Reverted Phase 7 (Happy Hour) from MULTI_AGENT_FLOW.md and replaced it with a 2-week log archiving rule. Created new documen...</summary>
 
 - Kind: handoff
