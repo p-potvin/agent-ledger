@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-14T21:27:02.9713633Z",
+    "lastUpdatedUtc":  "2026-05-15T08:12:02.8739234Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1433,7 +1433,12 @@
                                        "20260514-131200-719-vaultwares-docs-c157573a",
                                        "20260514-133815-214-general-tasks-8028ee64",
                                        "20260514-151807-507-vaultwares-docs-c63009b8",
-                                       "20260514-171806-593-vault-video-enhancer-b1c05452"
+                                       "20260514-171806-593-vault-video-enhancer-b1c05452",
+                                       "20260514-185650-362-vault-video-enhancer-adc9c959",
+                                       "20260514-191339-036-vault-video-enhancer-66a55aae",
+                                       "20260514-203437-151-general-tasks-df2327ca",
+                                       "20260514-214255-376-vault-flows-a971df96",
+                                       "20260514-214308-600-vaultwares-pipelines-c21c1962"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2615,24 +2620,25 @@
                                                          "models":  [
                                                                         "claude-sonnet-4-6",
                                                                         "Gemini 2.0 Flash",
+                                                                        "Gemini 3.1 Pro (Low)",
                                                                         "gemini-2.5-pro",
                                                                         "gemini-3-flash",
                                                                         "gpt-5.2",
                                                                         "o3-mini",
                                                                         "unknown"
                                                                     ],
-                                                         "count":  20
+                                                         "count":  25
                                                      }
                                                  ],
                                    "tools":  [
                                                  "functions.shell_command",
-                                                 36,
+                                                 39,
                                                  "functions.apply_patch",
-                                                 16,
+                                                 18,
+                                                 "functions.update_plan",
+                                                 12,
                                                  "run_command",
                                                  11,
-                                                 "functions.update_plan",
-                                                 9,
                                                  "replace_file_content",
                                                  8,
                                                  "write_to_file",
@@ -2660,11 +2666,11 @@
                                                   "AI Agent",
                                                   113,
                                                   "Codex",
-                                                  34,
+                                                  37,
                                                   "GitHub Copilot",
                                                   32,
                                                   "Antigravity",
-                                                  20,
+                                                  22,
                                                   "claude-sonnet-4-6",
                                                   10,
                                                   "gpt-5.2",
@@ -2674,12 +2680,12 @@
                                                   "Copilot",
                                                   1
                                               ],
-                                   "totalEvents":  216,
+                                   "totalEvents":  221,
                                    "models":  [
                                                   "unknown",
                                                   120,
                                                   "gpt-5.2",
-                                                  30,
+                                                  33,
                                                   "Gemini 3.1 Pro (Preview)",
                                                   17,
                                                   "claude-sonnet-4-6",
@@ -2690,15 +2696,17 @@
                                                   5,
                                                   "Claude Sonnet 4.6",
                                                   4,
-                                                  "Claude Sonnet 4.6 (Thinking)",
-                                                  3,
                                                   "claude-sonnet-4-5",
+                                                  3,
+                                                  "Claude Sonnet 4.6 (Thinking)",
                                                   3,
                                                   "Gemini 3 Flash",
                                                   2,
+                                                  "claude-sonnet-4.6",
+                                                  2,
                                                   "gemini-2.0-pro-exp",
                                                   2,
-                                                  "claude-sonnet-4.6",
+                                                  "Gemini 3.1 Pro (Low)",
                                                   2,
                                                   "gemini-2.5-pro",
                                                   2,
@@ -2726,22 +2734,22 @@
                                    {
                                        "label":  "Tue",
                                        "dow":  1,
-                                       "count":  195
+                                       "count":  170
                                    },
                                    {
                                        "label":  "Wed",
                                        "dow":  2,
-                                       "count":  175
+                                       "count":  155
                                    },
                                    {
                                        "label":  "Thu",
                                        "dow":  3,
-                                       "count":  119
+                                       "count":  123
                                    },
                                    {
                                        "label":  "Fri",
                                        "dow":  4,
-                                       "count":  336
+                                       "count":  331
                                    },
                                    {
                                        "label":  "Sat",
@@ -2760,19 +2768,19 @@
                                         "hour":  0
                                     },
                                     {
-                                        "count":  41,
+                                        "count":  37,
                                         "hour":  1
                                     },
                                     {
-                                        "count":  50,
+                                        "count":  38,
                                         "hour":  2
                                     },
                                     {
-                                        "count":  49,
+                                        "count":  47,
                                         "hour":  3
                                     },
                                     {
-                                        "count":  52,
+                                        "count":  51,
                                         "hour":  4
                                     },
                                     {
@@ -2784,31 +2792,31 @@
                                         "hour":  6
                                     },
                                     {
-                                        "count":  65,
+                                        "count":  57,
                                         "hour":  7
                                     },
                                     {
-                                        "count":  59,
+                                        "count":  58,
                                         "hour":  8
                                     },
                                     {
-                                        "count":  61,
+                                        "count":  56,
                                         "hour":  9
                                     },
                                     {
-                                        "count":  54,
+                                        "count":  48,
                                         "hour":  10
                                     },
                                     {
-                                        "count":  62,
+                                        "count":  60,
                                         "hour":  11
                                     },
                                     {
-                                        "count":  49,
+                                        "count":  47,
                                         "hour":  12
                                     },
                                     {
-                                        "count":  43,
+                                        "count":  40,
                                         "hour":  13
                                     },
                                     {
@@ -2816,31 +2824,31 @@
                                         "hour":  14
                                     },
                                     {
-                                        "count":  82,
+                                        "count":  81,
                                         "hour":  15
                                     },
                                     {
-                                        "count":  81,
+                                        "count":  79,
                                         "hour":  16
                                     },
                                     {
-                                        "count":  81,
+                                        "count":  79,
                                         "hour":  17
                                     },
                                     {
-                                        "count":  70,
+                                        "count":  71,
                                         "hour":  18
                                     },
                                     {
-                                        "count":  64,
+                                        "count":  65,
                                         "hour":  19
                                     },
                                     {
-                                        "count":  72,
+                                        "count":  73,
                                         "hour":  20
                                     },
                                     {
-                                        "count":  48,
+                                        "count":  50,
                                         "hour":  21
                                     },
                                     {
@@ -2869,7 +2877,7 @@
                                                  "insertions":  0
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-14 17:27",
+                 "generatedAtLocal":  "2026-05-15 04:12",
                  "series":  {
                                 "months":  [
                                                {
@@ -2882,7 +2890,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  441
+                                                   "count":  446
                                                }
                                            ],
                                 "days":  [
@@ -3870,15 +3878,16 @@
                                                                   "vault-flows",
                                                                   "vault-video-enhancer",
                                                                   "vaultwares-agentciation",
-                                                                  "vaultwares-docs"
+                                                                  "vaultwares-docs",
+                                                                  "vaultwares-pipelines"
                                                               ],
-                                                 "entries":  20,
+                                                 "entries":  25,
                                                  "day":  "2026-05-14",
                                                  "kinds":  {
-                                                               "code-change":  8,
+                                                               "code-change":  12,
                                                                "handoff":  4,
                                                                "commands":  1,
-                                                               "verification":  4,
+                                                               "verification":  5,
                                                                "plan":  2,
                                                                "general":  1
                                                            }
@@ -3887,11 +3896,11 @@
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1272
+                                                  "count":  1276
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  54
+                                                  "count":  55
                                               },
                                               {
                                                   "kind":  "plan",
@@ -3915,7 +3924,7 @@
                                                      "kinds":  {
                                                                    "general":  1,
                                                                    "verification":  1,
-                                                                   "code-change":  138
+                                                                   "code-change":  139
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -3923,14 +3932,14 @@
                                                                        "files":  0
                                                                    },
                                                      "project":  "vaultwares-pipelines",
-                                                     "entries":  140,
+                                                     "entries":  141,
                                                      "recent":  [
-                                                                    "Changed vaultwares-pipelines API server default bind address from 127.0.0.1 to 0.0.0.0 (still overridable via API_HOST/API_PORT) so it can be reached over LAN/Tailscale for VPS ...",
                                                                     "Investigated VPS-\u003ePC API 426/500 issues. Root cause: FastAPI enforces HTTPS (REQUIRE_HTTPS=1) and only trusts X-Forwarded-Proto from trusted proxy peers; also middleware raising...",
-                                                                    "Added a minimal durable in-process job queue to the FastAPI API (job records on disk + worker concurrency cap), changed /workflows/run to enqueue jobs and return jobId, added /j..."
+                                                                    "Added a minimal durable in-process job queue to the FastAPI API (job records on disk + worker concurrency cap), changed /workflows/run to enqueue jobs and return jobId, added /j...",
+                                                                    "Added noddit split reverse-proxy example and documented same-origin /api pattern in VPS gateway docs. Pushed to origin/main (no PR)."
                                                                 ],
                                                      "firstDay":  "2026-04-04",
-                                                     "lastDay":  "2026-05-13",
+                                                     "lastDay":  "2026-05-14",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -3944,7 +3953,7 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  137,
+                                                                   "code-change":  138,
                                                                    "general":  1
                                                                },
                                                      "lineClean":  {
@@ -3953,11 +3962,11 @@
                                                                        "files":  0
                                                                    },
                                                      "project":  "vault-flows",
-                                                     "entries":  138,
+                                                     "entries":  139,
                                                      "recent":  [
-                                                                    "Built login modal and auth gate for vault-flows. LoginModal.tsx: username/password form with loading state, error handling (invalid creds vs network), backdrop dismiss, auto-foc...",
                                                                     "Added signup modal to vault-flows. SignupModal.tsx: username+password (required), email (optional with visible \u0027(optional)\u0027 label), auto-focus, loading/error states (409 conflic...",
-                                                                    "Read notes and ledger from first multi-agent flow run (vw-2026-05-13-vf-001). Analyzed run observations: agents ignored LOCAL/ASYNC routing (used CLOUD for T1 and T6 which were ..."
+                                                                    "Read notes and ledger from first multi-agent flow run (vw-2026-05-13-vf-001). Analyzed run observations: agents ignored LOCAL/ASYNC routing (used CLOUD for T1 and T6 which were ...",
+                                                                    "Implemented same-origin /api default for noddit in vault-flows and merged rewrite/spa into main. The SPA now infers apiBase=\u0027/api\u0027 when served from noddit.org to avoid mixed-con..."
                                                                 ],
                                                      "firstDay":  "2026-04-06",
                                                      "lastDay":  "2026-05-14",
@@ -4005,6 +4014,38 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "commands":  4,
+                                                                   "plan":  4,
+                                                                   "verification":  2,
+                                                                   "code-change":  99
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "vault-video-enhancer",
+                                                     "entries":  109,
+                                                     "recent":  [
+                                                                    "Implemented extensive GUI and worker logic tests (12 new tests). Fixed UI clipping issues, panel assignment bugs, and orphaned tooltip code. Verified layout stability with autom...",
+                                                                    "Applied new vault-themes design routine. Added dark/light mode switcher, EN/QC language localization, updated missing attribute monitor_panel, fixed qt_exporter to expose get_th...",
+                                                                    "Refined layout responsiveness. Enabled scrollable central area for small windows. Switched to vertical layout when width \u003c 800 with monitor panel on top. Reduced input and butto..."
+                                                                ],
+                                                     "firstDay":  "2026-03-14",
+                                                     "lastDay":  "2026-05-14",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "plan":  3,
                                                                    "general":  3,
                                                                    "verification":  9,
@@ -4024,38 +4065,6 @@
                                                                 ],
                                                      "firstDay":  "2026-03-26",
                                                      "lastDay":  "2026-05-10",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "commands":  4,
-                                                                   "plan":  4,
-                                                                   "verification":  2,
-                                                                   "code-change":  97
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "vault-video-enhancer",
-                                                     "entries":  107,
-                                                     "recent":  [
-                                                                    "Added in-place line overwriting for progress callbacks in vault_gui.py Monitor using QTextCursor, restoring clean CLI-style single-line progress tracking while allowing normal l...",
-                                                                    "Replaced screenshot-based GUI testing protocol with programmatic mathematical layout auditor (layout_auditor.py) and pytest-qt state churning tests. Synced new protocol.",
-                                                                    "Implemented extensive GUI and worker logic tests (12 new tests). Fixed UI clipping issues, panel assignment bugs, and orphaned tooltip code. Verified layout stability with autom..."
-                                                                ],
-                                                     "firstDay":  "2026-03-14",
-                                                     "lastDay":  "2026-05-14",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4163,7 +4172,7 @@
                                                                    "code-change":  10,
                                                                    "handoff":  5,
                                                                    "commands":  3,
-                                                                   "verification":  15,
+                                                                   "verification":  16,
                                                                    "plan":  2,
                                                                    "general":  13
                                                                },
@@ -4173,11 +4182,11 @@
                                                                        "files":  0
                                                                    },
                                                      "project":  "General Tasks",
-                                                     "entries":  48,
+                                                     "entries":  49,
                                                      "recent":  [
-                                                                    "test",
                                                                     "Repo health check across Desktop/business and Desktop/Github Repos: scanned 79 git repos for broken refs (Name clash) and basic git integrity (rev-parse HEAD, show-ref). Repaire...",
-                                                                    "Completed audit of unpublished code across the VaultWares ecosystem. Created feature branches, pushed local changes, and opened Pull Requests for 5 repositories: vault-video-enh..."
+                                                                    "Completed audit of unpublished code across the VaultWares ecosystem. Created feature branches, pushed local changes, and opened Pull Requests for 5 repositories: vault-video-enh...",
+                                                                    "Reviewed tailnet-related config seams for vaultwares-pipelines (HTTPS enforcement via REQUIRE_HTTPS + trusted proxy scheme headers) and vault-flows (VITE_API_URL/config apiBase ..."
                                                                 ],
                                                      "firstDay":  "2026-04-28",
                                                      "lastDay":  "2026-05-14",
@@ -5422,33 +5431,6 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "vault-themes + vaultwares-docs",
-                                                     "entries":  1,
-                                                     "recent":  [
-                                                                    "vault-themes: Created vault-tailwind-v4.css (Tailwind v4 @theme bridge with all 19 VaultTheme token mappings, Golden Slate FOUC defaults, glass/banner/focus utilities), vault-to..."
-                                                                ],
-                                                     "firstDay":  "2026-05-11",
-                                                     "lastDay":  "2026-05-11",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
                                                                    "plan":  1
                                                                },
                                                      "lineClean":  {
@@ -5463,6 +5445,33 @@
                                                                 ],
                                                      "firstDay":  "2026-04-30",
                                                      "lastDay":  "2026-04-30",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "vault-themes + vaultwares-docs",
+                                                     "entries":  1,
+                                                     "recent":  [
+                                                                    "vault-themes: Created vault-tailwind-v4.css (Tailwind v4 @theme bridge with all 19 VaultTheme token mappings, Golden Slate FOUC defaults, glass/banner/focus utilities), vault-to..."
+                                                                ],
+                                                     "firstDay":  "2026-05-11",
+                                                     "lastDay":  "2026-05-11",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -20956,7 +20965,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-12T02:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-14T21:18:06.5933108Z",
+                 "_maxCreatedAtUtc":  "2026-05-15T01:43:08.6005421Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -20964,7 +20973,7 @@
                            },
                  "totals":  {
                                 "projects":  54,
-                                "events":  1426,
+                                "events":  1431,
                                 "uniqueCommitsRecomputed":  1030,
                                 "activeDays":  62,
                                 "commitEventsWithStats":  1030

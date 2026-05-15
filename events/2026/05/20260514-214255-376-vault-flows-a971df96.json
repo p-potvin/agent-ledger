@@ -1,0 +1,39 @@
+{
+  "id": "20260514-214255-376-vault-flows-a971df96",
+  "createdAt": "2026-05-15T01:42:55.3761958Z",
+  "createdAtLocal": "2026-05-14 21:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.shell_command, functions.apply_patch, functions.update_plan\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-14 21:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.shell_command",
+      "functions.apply_patch",
+      "functions.update_plan"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Implemented same-origin /api default for noddit in vault-flows and merged rewrite/spa into main. The SPA now infers apiBase='/api' when served from noddit.org to avoid mixed-content warnings and keep tailnet IPs out of the browser. Merge was built (npm run build) and pushed to origin/main (no PR).",
+  "commands": [
+    "npm run build",
+    "git merge --no-ff --no-commit rewrite/spa",
+    "git commit (Lore format)",
+    "git push origin main"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows\\src\\api.js"
+  ],
+  "planPath": "",
+  "contentHash": "a971df964e6d00055c9243d2d2607a04ecfb65c4e2256e3e2ca24d125826f62a",
+  "git": null
+}
