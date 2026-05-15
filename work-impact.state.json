@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-15T08:12:02.8739234Z",
+    "lastUpdatedUtc":  "2026-05-15T08:27:16.3803856Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -2877,7 +2877,7 @@
                                                  "insertions":  0
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-15 04:12",
+                 "generatedAtLocal":  "2026-05-15 04:27",
                  "series":  {
                                 "months":  [
                                                {
@@ -5431,33 +5431,6 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "plan":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "project":  "business workspace",
-                                                     "entries":  1,
-                                                     "recent":  [
-                                                                    "Familiarized with C:\\Users\\Administrator\\Desktop\\business repos for monetization planning. Mapped link-sharing, prelanding-page, qa-automation, and tube-site. Verified prelandin..."
-                                                                ],
-                                                     "firstDay":  "2026-04-30",
-                                                     "lastDay":  "2026-04-30",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
                                                                    "code-change":  1
                                                                },
                                                      "lineClean":  {
@@ -5472,6 +5445,33 @@
                                                                 ],
                                                      "firstDay":  "2026-05-11",
                                                      "lastDay":  "2026-05-11",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "plan":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "project":  "business workspace",
+                                                     "entries":  1,
+                                                     "recent":  [
+                                                                    "Familiarized with C:\\Users\\Administrator\\Desktop\\business repos for monetization planning. Mapped link-sharing, prelanding-page, qa-automation, and tube-site. Verified prelandin..."
+                                                                ],
+                                                     "firstDay":  "2026-04-30",
+                                                     "lastDay":  "2026-04-30",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
