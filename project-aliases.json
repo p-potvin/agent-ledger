@@ -78,8 +78,8 @@
       "aliases": ["tube-site"],
       "renamedAt": "2026-05-17",
       "previousRemote": "Prom-King/tube-site",
-      "newRemote": "promking/tube-sites",
-      "notes": "Business folder. GitHub org Prom-King also renamed to promking. Lives under business/promking/tube-sites locally."
+      "newRemote": "Prom-King/tube-sites",
+      "notes": "Business folder. The org name 'promking' was unavailable on GitHub so the org stays as Prom-King; only the repo was renamed. Locally the folder still lives under business/promking/tube-sites as a logical grouping."
     }
   ]
 }
