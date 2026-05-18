@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "description": "Canonical project name + historical aliases. The work-impact aggregator and the record-agent-change intake both call scripts/resolve-project-alias.ps1 to normalize any alias to its canonical name before bucketing. Append a new entry every time a project is renamed and run update-work-impact.ps1 -FullRebuild once so the dashboard rebuckets historical events.",
+  "projects": [
+    {
+      "canonical": "vaultwares-glass",
+      "aliases": ["glass-ui"],
+      "renamedAt": "2026-05-17",
+      "previousRemote": "p-potvin/glass-ui",
+      "newRemote": "p-potvin/vaultwares-glass",
+      "notes": "Folder + remote rename. The package.json field 'vault-flows' was an unused misnomer that never reached ledger slugs and is omitted from aliases to avoid collision with the real vault-flows repo."
+    },
+    {
+      "canonical": "vaultwares-dispatch",
+      "aliases": ["dispatch-wares"],
+      "renamedAt": "2026-05-17",
+      "previousRemote": "p-potvin/dispatch-wares",
+      "newRemote": "p-potvin/vaultwares-dispatch"
+    },
+    {
+      "canonical": "vaultwares-decompile",
+      "aliases": ["deconstructed-website-a-la-mode"],
+      "renamedAt": "2026-05-17",
+      "previousRemote": "p-potvin/deconstructed-website-a-la-mode",
+      "newRemote": "p-potvin/vaultwares-decompile"
+    },
+    {
+      "canonical": "vaultwares-media-processing",
+      "aliases": ["vault-video-enhancer"],
+      "renamedAt": "2026-05-17",
+      "previousRemote": "p-potvin/vault-video-enhancer",
+      "newRemote": "p-potvin/vaultwares-media-processing"
+    },
+    {
+      "canonical": "vaultwares-realtime",
+      "aliases": ["realtime-stt"],
+      "renamedAt": "2026-05-17",
+      "previousRemote": "p-potvin/realtime-stt",
+      "newRemote": "p-potvin/vaultwares-realtime"
+    },
+    {
+      "canonical": "vaultwares-studio",
+      "aliases": ["usd-playground"],
+      "renamedAt": "2026-05-17",
+      "previousRemote": "p-potvin/usd-playground",
+      "newRemote": "p-potvin/vaultwares-studio"
+    },
+    {
+      "canonical": "vaultwares-website",
+      "aliases": ["vaultwares-v1"],
+      "renamedAt": "2026-05-17",
+      "previousRemote": "p-potvin/vaultwares-v1",
+      "newRemote": "p-potvin/vaultwares-website",
+      "notes": "Folder name unchanged; only remote + package.json identity rename."
+    },
+    {
+      "canonical": "vaultwares-docs",
+      "aliases": ["tmp-app"],
+      "renamedAt": "2026-05-17",
+      "notes": "Package.json placeholder fix; folder + remote unchanged. Alias retained for audit only."
+    },
+    {
+      "canonical": "vaultwares-identity-manager",
+      "aliases": ["vaultwares-auto-signup"],
+      "renamedAt": "2026-05-17",
+      "notes": "Folder + remote unchanged; only package.json + Chrome extension manifest identity. Alias retained for audit only."
+    },
+    {
+      "canonical": "vaultwares-cli",
+      "aliases": [],
+      "renamedAt": "2026-05-17",
+      "previousRemote": "p-potvin/vault-themes",
+      "newRemote": "p-potvin/vaultwares-cli",
+      "notes": "Repo identity unchanged but git remote was misconfigured (pointed at p-potvin/vault-themes). Recorded for audit only."
+    },
+    {
+      "canonical": "tube-sites",
+      "aliases": ["tube-site"],
+      "renamedAt": "2026-05-17",
+      "previousRemote": "Prom-King/tube-site",
+      "newRemote": "promking/tube-sites",
+      "notes": "Business folder. GitHub org Prom-King also renamed to promking. Lives under business/promking/tube-sites locally."
+    }
+  ]
+}

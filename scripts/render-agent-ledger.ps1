@@ -11,6 +11,25 @@ if (-not $LedgerRoot) {
     $LedgerRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 }
 
+. (Join-Path $PSScriptRoot 'resolve-project-alias.ps1')
+$aliasMapPath = Join-Path $LedgerRoot 'project-aliases.json'
+$seenCanonicals = @{}
+
+function Get-ProjectLabel {
+    param([string]$Project)
+    if ([string]::IsNullOrWhiteSpace($Project)) { return 'General Tasks' }
+    $canonical = Resolve-ProjectAlias -Project $Project -AliasMapPath $aliasMapPath
+    if ($script:seenCanonicals.ContainsKey($canonical)) {
+        return $canonical
+    }
+    $script:seenCanonicals[$canonical] = $true
+    $aliases = @(Get-ProjectAliases -Canonical $canonical -AliasMapPath $aliasMapPath)
+    if ($aliases.Count -gt 0) {
+        return "$canonical (formerly $($aliases -join ', '))"
+    }
+    return $canonical
+}
+
 function ConvertTo-MarkdownLine {
     param([AllowNull()][string]$Value)
     if ([string]::IsNullOrWhiteSpace($Value)) {
@@ -81,8 +100,9 @@ if (-not $events -or $events.Count -eq 0) {
     $lines.Add('_No agent activity has been recorded yet._')
 }
 else {
+    $script:seenCanonicals = @{}
     foreach ($event in $events) {
-        $project = if ($event.project) { $event.project } else { 'General Tasks' }
+        $project = Get-ProjectLabel ([string]$event.project)
         $created = if ($event.createdAtLocal) { $event.createdAtLocal } else { $event.createdAt }
         $kind = if ($event.kind) { $event.kind } else { 'general' }
         $summary = ConvertTo-MarkdownLine $event.summary
@@ -180,8 +200,9 @@ if (-not $events -or $events.Count -eq 0) {
     $htmlLines.Add('  <p>No agent activity has been recorded yet.</p>')
 }
 else {
+    $script:seenCanonicals = @{}
     foreach ($event in $events) {
-        $project = if ($event.project) { $event.project } else { 'General Tasks' }
+        $project = Get-ProjectLabel ([string]$event.project)
         $created = if ($event.createdAtLocal) { $event.createdAtLocal } else { $event.createdAt }
         $kind = if ($event.kind) { $event.kind } else { 'general' }
         $summary = ConvertTo-HtmlText $event.summary

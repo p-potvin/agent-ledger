@@ -97,6 +97,9 @@ if (-not $WorkspaceRoot) {
 $eventsRoot = Join-Path $ledgerRoot 'events'
 New-Item -ItemType Directory -Path $eventsRoot -Force | Out-Null
 
+. (Join-Path $PSScriptRoot 'resolve-project-alias.ps1')
+$aliasMapPath = Join-Path $ledgerRoot 'project-aliases.json'
+
 $git = Get-GitInfo
 if (-not $Project) {
     if ($git -and $git.repo) {
@@ -106,6 +109,8 @@ if (-not $Project) {
         $Project = 'General Tasks'
     }
 }
+
+$Project = Resolve-ProjectAlias -Project $Project -AliasMapPath $aliasMapPath
 
 if (-not $Actor) {
     $Actor = 'AI Agent'

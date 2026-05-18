@@ -46,6 +46,20 @@ The sync script pulls with rebase, renders `CHANGES.md`, commits queued ledger f
 
 Open `C:\Users\Administrator\Desktop\Github Repos\CHANGES.html` in Firefox for a quick-glance ledger with clickable expandable entries. Use `CHANGES.md` when viewing on GitHub or in a Markdown previewer such as VS Code.
 
+## Project aliases (rename continuity)
+
+`project-aliases.json` at the repo root maps each canonical project name to its historical aliases. When a project is renamed (folder, GitHub remote, or `package.json` identity), append an entry there **before** the rename so existing ledger events keep bucketing under the new canonical name.
+
+The intake (`record-agent-change.ps1`) normalizes the `-Project` argument through the map, so callers using an old name automatically get the new one in fresh events. The work-impact aggregator (`update-work-impact-state.ps1`) and the ledger renderer (`render-agent-ledger.ps1`) apply the same resolver when iterating events, so the dashboard and `CHANGES.md` always group activity under the canonical name even though the historical event JSON files remain frozen with their original `project` field.
+
+After editing `project-aliases.json`, run once to rebuild the cached buckets:
+
+```powershell
+& "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\update-work-impact.ps1" -FullRebuild
+```
+
+The renderer adds a `(formerly <alias>, …)` suffix on the most recent entry for each renamed project per page.
+
 ## Work impact visualization
 
 Generate a non-technical, bilingual (EN/FR) work-impact report from the ledger events:

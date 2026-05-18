@@ -95,6 +95,10 @@ This data is parsed by `update-work-impact-state.ps1` to populate the
 Work Impact dashboard. Sparse or missing data will leave agent statistics
 empty on that page.
 
+## Project Aliases
+
+`project-aliases.json` at the repo root is the single source of truth for renames. Every time a project is renamed (folder, remote, or manifest identity), append a new entry there **before** the rename. The intake, the work-impact aggregator, and the ledger renderer all normalize project names through this map so historical events keep bucketing under the canonical name. After editing the map, run `update-work-impact.ps1 -FullRebuild` once.
+
 ## Scripts
 
 | Script | Purpose |
@@ -102,3 +106,4 @@ empty on that page.
 | `scripts/record-agent-change.ps1` | Create an append-only event |
 | `scripts/render-agent-ledger.ps1` | Regenerate CHANGES.md and CHANGES.html |
 | `scripts/update-work-impact.ps1` | Refresh work impact report |
+| `scripts/resolve-project-alias.ps1` | Helper module — normalizes a project name via `project-aliases.json` |
