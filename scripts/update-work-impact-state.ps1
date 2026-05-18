@@ -20,6 +20,9 @@ if (-not $StatePath) {
     $StatePath = Join-Path $LedgerRoot 'work-impact.state.json'
 }
 
+. (Join-Path $PSScriptRoot 'resolve-project-alias.ps1')
+$aliasMapPath = Join-Path $LedgerRoot 'project-aliases.json'
+
 function ConvertTo-OneLine {
     param([AllowNull()][string]$Value)
     if ([string]::IsNullOrWhiteSpace($Value)) { return '' }
@@ -297,6 +300,7 @@ Get-ChildItem -Path $eventsRoot -Recurse -File -Filter '*.json' |
         if ($local -lt $startLocal) { return }
 
         $project = if ($e.project) { [string]$e.project } else { 'General Tasks' }
+        $project = Resolve-ProjectAlias -Project $project -AliasMapPath $aliasMapPath
         $kind = if ($e.kind) { [string]$e.kind } else { 'general' }
         $day = $local.ToString('yyyy-MM-dd')
         $month = $local.ToString('yyyy-MM')
