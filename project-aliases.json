@@ -80,6 +80,22 @@
       "previousRemote": "Prom-King/tube-site",
       "newRemote": "Prom-King/tube-sites",
       "notes": "Business folder. The org name 'promking' was unavailable on GitHub so the org stays as Prom-King; only the repo was renamed. Locally the folder still lives under business/promking/tube-sites as a logical grouping."
+    },
+    {
+      "canonical": "vaultwares-themes",
+      "aliases": ["vault-themes"],
+      "renamedAt": "2026-05-18",
+      "previousRemote": "p-potvin/vault-themes",
+      "newRemote": "p-potvin/vaultwares-themes",
+      "notes": "Folder + remote rename. CSS brand tokens (vault-gold, vault-base, vault-paper, vault-light, vault-cyan, vault-green, vault-burgundy, vault-slate, vault-muted) KEPT as-is per scope decision — they are short brand identifiers, not project names."
+    },
+    {
+      "canonical": "vaultwares-adk",
+      "aliases": ["vaultwares-agentciation"],
+      "renamedAt": "2026-05-18",
+      "previousRemote": "p-potvin/vaultwares-agentciation",
+      "newRemote": "p-potvin/vaultwares-adk",
+      "notes": "Folder + remote + Python pkg (vaultwares_agentciation -> vaultwares_adk) + display brand (VaultWares Agentciation -> VaultWares ADK) + CLI args (--agentciation-root -> --adk-root). Class identifiers and method bodies unchanged."
     }
   ]
 }
