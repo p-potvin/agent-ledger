@@ -1,0 +1,44 @@
+{
+  "id": "20260520-122837-932-vw-jira-sync-3e8f4a9d",
+  "createdAt": "2026-05-20T16:28:37.9326883Z",
+  "createdAtLocal": "2026-05-20 12:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-jira-sync",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 12:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync",
+  "summary": "Created scheduled task VaultWares-DistributeJiraSecrets: runs every 30 min via conhost.exe --headless pattern, calls scripts/scheduled-distribute-secrets.ps1 which injects GH_TOKEN from ~/.config/gh/token.txt (bypasses keyring for non-interactive sessions), runs distribute_secrets.py. Tested: 41/41 repos OK. Added logs/distribute-secrets.log with 500-line rotation.",
+  "commands": [
+    "Register-ScheduledTask -TaskName VaultWares-DistributeJiraSecrets",
+    "conhost.exe --headless powershell.exe -NoProfile -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -File scheduled-distribute-secrets.ps1"
+  ],
+  "files": [
+    "vw-jira-sync/scripts/scheduled-distribute-secrets.ps1",
+    "C:\\Users\\Administrator\\.config\\gh\\token.txt"
+  ],
+  "planPath": "",
+  "contentHash": "3e8f4a9deef9da44eb3a6359619e33f3faff8285aea86bd80ae2e7a6b93e7d8c",
+  "git": {
+    "repo": "vw-jira-sync",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vw-jira-sync",
+    "branch": "main",
+    "head": "6a12d64",
+    "hasChanges": true
+  }
+}

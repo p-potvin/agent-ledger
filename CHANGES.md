@@ -3,6 +3,34 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-20 12:28 - vw-jira-sync</strong> <code>commands</code> - Created scheduled task VaultWares-DistributeJiraSecrets: runs every 30 min via conhost.exe --headless pattern, calls scripts/scheduled-distribute-secrets.ps1 which injects GH_TO...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 12:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created scheduled task VaultWares-DistributeJiraSecrets: runs every 30 min via conhost.exe --headless pattern, calls scripts/scheduled-distribute-secrets.ps1 which injects GH_TOKEN from ~/.config/gh/token.txt (bypasses keyring for non-interactive sessions), runs distribute_secrets.py. Tested: 41/41 repos OK. Added logs/distribute-secrets.log with 500-line rotation.
+- Commands:
+  - `Register-ScheduledTask -TaskName VaultWares-DistributeJiraSecrets`
+  - `conhost.exe --headless powershell.exe -NoProfile -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -File scheduled-distribute-secrets.ps1`
+- Files:
+  - `vw-jira-sync/scripts/scheduled-distribute-secrets.ps1`
+  - `C:\Users\Administrator\.config\gh\token.txt`
+- Git: repo=vw-jira-sync, branch=main, head=6a12d64
+
+</details>
+
+<details>
 <summary><strong>2026-05-20 12:00 - vaultwares-realtime (formerly realtime-stt)</strong> <code>code-change</code> - Improve form accessibility and keyboard navigation in SettingsWindow: Used QLabel.setBuddy() and mnemonics (&amp;) for form labels next to comboboxes, spinboxes, and buttons in gui_...</summary>
 
 - Kind: code-change
