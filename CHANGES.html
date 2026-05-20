@@ -26,6 +26,27 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-20 12:28 - vw-jira-sync</strong> <span class="kind">commands</span> - Created scheduled task VaultWares-DistributeJiraSecrets: runs every 30 min via conhost.exe --headless pattern, calls scripts/scheduled-distribute-secrets.ps1 which injects GH_TO...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> commands</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-20 12:28 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Created scheduled task VaultWares-DistributeJiraSecrets: runs every 30 min via conhost.exe --headless pattern, calls scripts/scheduled-distribute-secrets.ps1 which injects GH_TOKEN from ~/.config/gh/token.txt (bypasses keyring for non-interactive sessions), runs distribute_secrets.py. Tested: 41/41 repos OK. Added logs/distribute-secrets.log with 500-line rotation.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Register-ScheduledTask -TaskName VaultWares-DistributeJiraSecrets</code></li>
+        <li><code>conhost.exe --headless powershell.exe -NoProfile -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -File scheduled-distribute-secrets.ps1</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vw-jira-sync/scripts/scheduled-distribute-secrets.ps1</code></li>
+        <li><code>C:\Users\Administrator\.config\gh\token.txt</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vw-jira-sync, branch=main, head=6a12d64</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-20 12:00 - vaultwares-realtime (formerly realtime-stt)</strong> <span class="kind">code-change</span> - Improve form accessibility and keyboard navigation in SettingsWindow: Used QLabel.setBuddy() and mnemonics (&amp;) for form labels next to comboboxes, spinboxes, and buttons in gui_...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
