@@ -23,14 +23,13 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync",
-  "summary": "Created scheduled task VaultWares-DistributeJiraSecrets: runs every 30 min via conhost.exe --headless pattern, calls scripts/scheduled-distribute-secrets.ps1 which injects GH_TOKEN from ~/.config/gh/token.txt (bypasses keyring for non-interactive sessions), runs distribute_secrets.py. Tested: 41/41 repos OK. Added logs/distribute-secrets.log with 500-line rotation.",
+  "summary": "Created scheduled task VaultWares-DistributeJiraSecrets: runs every 30 min via conhost.exe --headless pattern, calls scripts/scheduled-distribute-secrets.ps1 which injects GH_TOKEN from a token file (bypasses keyring for non-interactive sessions), runs distribute_secrets.py. Tested: 41/41 repos OK. Added logs/distribute-secrets.log with 500-line rotation.",
   "commands": [
     "Register-ScheduledTask -TaskName VaultWares-DistributeJiraSecrets",
     "conhost.exe --headless powershell.exe -NoProfile -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -File scheduled-distribute-secrets.ps1"
   ],
   "files": [
-    "vw-jira-sync/scripts/scheduled-distribute-secrets.ps1",
-    "C:\\Users\\Administrator\\.config\\gh\\token.txt"
+    "vw-jira-sync/scripts/scheduled-distribute-secrets.ps1"
   ],
   "planPath": "",
   "contentHash": "3e8f4a9deef9da44eb3a6359619e33f3faff8285aea86bd80ae2e7a6b93e7d8c",
