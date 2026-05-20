@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260520-092613-852-vault-explorer-9fc6b61e",
+    "createdAt":  "2026-05-20T13:26:13.8527272Z",
+    "createdAtLocal":  "2026-05-20 09:26",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Vault Explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: feat/vault-explorer-revamp\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 09:26 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Evolved Vault Explorer frontend layout \u0026 modernized titlebar controls: Shrunk titlebar from 44px to 32px; repositioned lang, theme, settings controls on the left side of the titlebar next to the shield logo; removed standard \u0027aultWares\u0027 logo text for absolute minimalist aesthetic. Shifted \u0027+ Folder\u0027 (New Folder) and \u0027Refresh\u0027 commands into the toolbar as compact 32x32px icon-only controls. Replaced sort-order select dropdown with toggle button (#btn-sort-order) displaying inline SVGs for ascending/descending modes with persistent labels. Replaced eager statusbar folder-sizing IPC calls with a smart Everything size calculator debounced by 3s. Prevented memory starvation by removing the eager WebM background generation queue from the page-load render batches, fully deferring sequential FFMPEG preview stitching to the 60s user inactivity idle timer. Resolved directory junction unlinking failure bugs in the main process using safe rmdir/unlink Windows platform routines. Fixed property dialog string interpolation bug and mapped the stats properties properly.",
+    "commands":  [
+                     "python C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\d736b979-bc1e-4390-a3c1-db1606392a3e\\scratch\\apply_explorer_revamp.py",
+                     "node --check main.js"
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\index.html",
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\main.js",
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\TODO.md",
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\ROADMAP.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "9fc6b61e070a4711e109706bccf0a9a9b2d039fbfb5c8809932c7d4212438c42",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "feat/vault-explorer-revamp",
+                "head":  "72884e6",
+                "hasChanges":  true
+            }
+}
