@@ -17,6 +17,8 @@ param(
     [string]$Network = 'unknown',
     [string[]]$ToolsUsed = @(),
     [string[]]$McpServersAccessed = @(),
+    [hashtable]$Flags = @{},
+    [object]$Metrics = $null,
     [string]$WorkspaceRoot
 )
 
@@ -74,6 +76,51 @@ function Get-GitInfo {
     }
 }
 
+function ConvertTo-SnakeCaseKey {
+    param([AllowNull()][string]$Key)
+    if ([string]::IsNullOrWhiteSpace($Key)) { return '' }
+
+    $k = $Key.Trim()
+    # Insert underscores on camelCase/PascalCase boundaries.
+    $k = ($k -creplace '([a-z0-9])([A-Z])', '$1_$2')
+    # Normalize separators to underscores.
+    $k = ($k -replace '[^a-zA-Z0-9_]+', '_')
+    # Collapse repeats.
+    while ($k -match '__') { $k = ($k -replace '__', '_') }
+    $k = $k.Trim('_')
+    return $k.ToLowerInvariant()
+}
+
+function Normalize-ObjectKeysToSnakeCase {
+    param([AllowNull()][object]$Value)
+    if ($null -eq $Value) { return $null }
+
+    if ($Value -is [hashtable]) {
+        $out = [ordered]@{}
+        foreach ($k in $Value.Keys) {
+            $nk = ConvertTo-SnakeCaseKey ([string]$k)
+            if (-not [string]::IsNullOrWhiteSpace($nk)) {
+                $out[$nk] = $Value[$k]
+            }
+        }
+        return $out
+    }
+
+    # PSCustomObject / ordered dictionaries (including ConvertFrom-Json results)
+    if ($Value.PSObject -and $Value.PSObject.Properties -and $Value.PSObject.Properties.Count -gt 0) {
+        $out = [ordered]@{}
+        foreach ($p in $Value.PSObject.Properties) {
+            $nk = ConvertTo-SnakeCaseKey ([string]$p.Name)
+            if (-not [string]::IsNullOrWhiteSpace($nk)) {
+                $out[$nk] = $p.Value
+            }
+        }
+        return $out
+    }
+
+    return $Value
+}
+
 function Get-DedupedList {
     param([string[]]$Items)
     $seen = @{}
@@ -118,6 +165,8 @@ if (-not $Actor) {
 
 $dedupedToolsUsed = Get-DedupedList $ToolsUsed
 $dedupedMcpServersAccessed = Get-DedupedList $McpServersAccessed
+$normalizedFlags = Normalize-ObjectKeysToSnakeCase $Flags
+$normalizedMetrics = Normalize-ObjectKeysToSnakeCase $Metrics
 
 $limitedSummary = Limit-Tokenish $Summary 1024
 $now = Get-Date
@@ -147,6 +196,8 @@ $fingerprintSource = [ordered]@{
     commands = $Commands
     files = $Files
     planPath = $PlanPath
+    flags = $normalizedFlags
+    metrics = $normalizedMetrics
 } | ConvertTo-Json -Depth 8 -Compress
 $contentHash = Get-Sha256 $fingerprintSource
 
@@ -185,6 +236,10 @@ $event = [ordered]@{
         toolsUsed = $dedupedToolsUsed
         mcpServersAccessed = $dedupedMcpServersAccessed
     }
+    telemetry = [ordered]@{
+        flags = $normalizedFlags
+        metrics = $normalizedMetrics
+    }
     workspaceRoot = $WorkspaceRoot
     cwd = (Get-Location).Path
     summary = $limitedSummary
@@ -199,3 +254,7 @@ $event | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $eventPath -Encodin
 & (Join-Path $PSScriptRoot 'render-agent-ledger.ps1') | Out-Null
 
 Write-Output "Recorded ledger event: $eventPath"
+
+
+
+

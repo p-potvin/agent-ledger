@@ -77,6 +77,16 @@ function Add-Count {
     $Table[$Key] = [int]$Table[$Key] + $Delta
 }
 
+function Add-FlagCounts {
+    param([hashtable]$Table,[object]$Flags)
+    if ($null -eq $Flags) { return }
+    foreach ($p in $Flags.psobject.Properties) {
+        $k = [string]$p.Name
+        if ([string]::IsNullOrWhiteSpace($k)) { continue }
+        if (-not $Table.ContainsKey($k)) { $Table[$k] = 0 }
+        $Table[$k] = [int]$Table[$k] + 1
+    }
+}
 function Add-StatBucket {
     param(
         [object]$Bucket,
@@ -98,6 +108,7 @@ function Ensure-ProjectBucket {
             firstDay = ''
             lastDay = ''
             kinds = @{}
+            flagCounts = @{}
             recent = New-Object System.Collections.Generic.List[object]
             lineRaw = [pscustomobject]@{ insertions = 0; deletions = 0; files = 0 }
             lineClean = [pscustomobject]@{ insertions = 0; deletions = 0; files = 0 }
@@ -223,6 +234,9 @@ if ($state.data) {
             $pb.firstDay = [string]$p.firstDay
             $pb.lastDay = [string]$p.lastDay
             foreach ($kv in $p.kinds.PSObject.Properties) { $pb.kinds[[string]$kv.Name] = [int]$kv.Value }
+            if ($p.PSObject.Properties.Name -contains 'flagCounts' -and $p.flagCounts) {
+                foreach ($kv in $p.flagCounts.PSObject.Properties) { $pb.flagCounts[[string]$kv.Name] = [int]$kv.Value }
+            }
             $pb.recent.Clear()
             foreach ($r in @($p.recent)) { $pb.recent.Add([ordered]@{ createdAt = ''; summary = [string]$r }) }
             $pb.lineRaw = $p.lineRaw
@@ -322,6 +336,7 @@ Get-ChildItem -Path $eventsRoot -Recurse -File -Filter '*.json' |
         $projBucket = Ensure-ProjectBucket -Table $projectBuckets -Project $project
         $projBucket.entries = [int]$projBucket.entries + 1
         Add-Count -Table $projBucket.kinds -Key $kind -Delta 1
+        if ($e.telemetry -and $e.telemetry.flags) { Add-FlagCounts -Table $projBucket.flagCounts -Flags $e.telemetry.flags }
         if ([string]::IsNullOrWhiteSpace($projBucket.firstDay) -or ($day -lt $projBucket.firstDay)) { $projBucket.firstDay = $day }
         if ([string]::IsNullOrWhiteSpace($projBucket.lastDay) -or ($day -gt $projBucket.lastDay)) { $projBucket.lastDay = $day }
 
@@ -506,6 +521,7 @@ $seriesProjects = @($projects | ForEach-Object {
         firstDay = $_.firstDay
         lastDay = $_.lastDay
         kinds = $_.kinds
+        flagCounts = $_.flagCounts
         recent = @($_.recent | ForEach-Object { [string]$_.summary } | Select-Object -Last 3)
         lineRaw = $_.lineRaw
         lineClean = $_.lineClean
@@ -580,3 +596,6 @@ $state.data = $data
 $state | ConvertTo-Json -Depth 12 | Set-Content -LiteralPath $StatePath -Encoding utf8
 
 Write-Output "Updated work impact state: $StatePath (newEvents=$newEventsProcessed)"
+
+
+
