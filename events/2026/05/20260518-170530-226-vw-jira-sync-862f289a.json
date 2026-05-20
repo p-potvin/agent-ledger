@@ -1,0 +1,41 @@
+{
+  "id": "20260518-170530-226-vw-jira-sync-862f289a",
+  "createdAt": "2026-05-18T21:05:30.2268201Z",
+  "createdAtLocal": "2026-05-18 17:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-jira-sync",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-18 17:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync",
+  "summary": "Fixed GitHub Actions workflow startup_failure affecting 35/37 repos. Root cause: restrictive permissions block in reusable workflow prevented job creation. Removed permissions block from sync.yml; all 37 repos now execute (previously 35 got startup_failure, 2 ran but hit Jira 401). Second issue: Jira 401 auth error in Actions environment — token likely corrupted during gh secret set distribution. Re-distributed JIRA_TOKEN to vault-flows as test.",
+  "commands": [
+    "Edit .github/workflows/sync.yml: removed restrictive permissions block",
+    "git push to vw-jira-sync main (commit ada569e)",
+    "Re-ran vault-flows workflow: now shows failure (not startup_failure)",
+    "Re-distributed JIRA_TOKEN to vault-flows using gh secret set"
+  ],
+  "files": [
+    ".github/workflows/sync.yml"
+  ],
+  "planPath": "",
+  "contentHash": "862f289ab54ea7857ffb843c094209d8c74ae178037e688df753795fbe023022",
+  "git": {
+    "repo": "vw-jira-sync",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vw-jira-sync",
+    "branch": "main",
+    "head": "ada569e",
+    "hasChanges": false
+  }
+}

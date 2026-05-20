@@ -1,0 +1,42 @@
+﻿{
+    "id":  "20260516-183153-566-tube-site-98a7a21b",
+    "createdAt":  "2026-05-16T22:31:53.5669960Z",
+    "createdAtLocal":  "2026-05-16 18:31",
+    "timezone":  "Eastern Standard Time",
+    "project":  "tube-site",
+    "kind":  "plan",
+    "actor":  "Fix: Re-add spankbang to allowlist",
+    "agentHeader":  "Agent: Fix: Re-add spankbang to allowlist (role: promking-tube/includes/video-fetcher.php)\r\nModel: fullxxx-video/includes/video-fetcher.php\r\nThinking: fullxxx-video/includes/helpers.php\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business\\tube-site  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-16 18:31 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "promking-tube/includes/video-fetcher.php",
+                    "model":  "fullxxx-video/includes/video-fetcher.php",
+                    "thinking":  "fullxxx-video/includes/helpers.php",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+    "summary":  "Planning unification of fetcher engines across promking-tube and fullxxx-video into tube-shared. Updating redirect URLs to lnk.prom-king.xyz and re-adding SpankBang to allowlists.",
+    "commands":  [
+                     "Plan: Unify fetcher orchestrators"
+                 ],
+    "files":  [
+                  "tube-shared/includes/class-video-fetcher.php"
+              ],
+    "planPath":  "Config: Update redirect domain to lnk.prom-king.xyz",
+    "contentHash":  "98a7a21bd61c667d6afbc6a39d00901a6b603262f53a0abc4d79f7f2ce97d1f3",
+    "git":  {
+                "repo":  "tube-site",
+                "root":  "C:/Users/Administrator/Desktop/business/tube-site",
+                "branch":  "main",
+                "head":  "7511d04",
+                "hasChanges":  true
+            }
+}

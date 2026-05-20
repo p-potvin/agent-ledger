@@ -1,0 +1,45 @@
+{
+  "id": "20260519-210112-428-vaultwares-themes-vaultwares-adk-vaultwares-real-e681b182",
+  "createdAt": "2026-05-20T01:01:12.4288435Z",
+  "createdAtLocal": "2026-05-19 21:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-media-processing  Branch: feature/phase5-sync\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-19 21:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-media-processing",
+  "summary": "Python dash-vs-underscore import fix: (1) vaultwares-themes: created vaultwares_themes/__init__.py importlib shim (loads theme_manager + qt_exporter, exposes VaultTheme/VaultThemeManager/QtThemeExporter), added pyproject.toml, fixed .gitignore (removed __init__.* pattern that was suppressing __init__.py). (2) vaultwares-adk: added pyproject.toml, fixed shim _MODULES list (added agent_ledger before extrovert_agent), fixed dual sys.modules registration to support both absolute and relative imports. Both pushed to main. (3) vaultwares-realtime + vaultwares-media-processing: large PyInstaller build/dist artifacts (1.6GB .exe/.pyz) were blocking push; created clean feature/phase5-sync branches from origin/main, generated diffs excluding build/dist, applied and committed, pushed, created PRs #62 and #15. Convention: dashed checkout dirs stay as-is, consumers do sys.path.insert(0, 'vaultwares-themes') then from vaultwares_themes import ...",
+  "commands": [
+    "git add vaultwares_themes/ pyproject.toml .gitignore && git commit && git push origin main",
+    "git diff HEAD..main -- . ':(exclude)build' ':(exclude)dist' > /tmp/clean.patch",
+    "git checkout -b feature/phase5-sync origin/main && git apply clean.patch && git commit && git push",
+    "gh api repos/p-potvin/vaultwares-media-processing/pulls --method POST ..."
+  ],
+  "files": [
+    "vaultwares-themes/vaultwares_themes/__init__.py",
+    "vaultwares-themes/pyproject.toml",
+    "vaultwares-themes/.gitignore",
+    "vaultwares-adk/vaultwares_adk/__init__.py",
+    "vaultwares-adk/pyproject.toml"
+  ],
+  "planPath": "",
+  "contentHash": "e681b1827105b5f8bd7112542872f62247fbbba58d02ac23ce48d4c15b20c4f8",
+  "git": {
+    "repo": "vaultwares-media-processing",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-media-processing",
+    "branch": "feature/phase5-sync",
+    "head": "ba8d70e",
+    "hasChanges": true
+  }
+}

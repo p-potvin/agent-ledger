@@ -1,0 +1,45 @@
+{
+  "id": "20260518-114548-403-general-tasks-e4849d7e",
+  "createdAt": "2026-05-18T15:45:48.4034529Z",
+  "createdAtLocal": "2026-05-18 11:45",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-18 11:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Phase 4 complete. Two standalone renames pushed: vault-themes -> vaultwares-themes (33 file edits + dist-to-vault-themes subfolder renamed; CSS brand tokens preserved per scope decision) and vaultwares-agentciation -> vaultwares-adk (32 file edits + Python pkg vaultwares_agentciation -> vaultwares_adk + display brand + CLI args). For vaultwares-adk, my initial commit accidentally landed on a feature/protocol-manifest-updates Jules PR branch; recovered by cherry-picking onto main, pushing, deleting the wrong branch. agent-ledger project-aliases.json updated with the two new aliases and pushed (915ac1c). update-work-impact.ps1 -FullRebuild reconfirmed historical buckets resolve correctly: vault-themes (31 events) -> vaultwares-themes, vaultwares-agentciation (47 events) -> vaultwares-adk. Phase 5 (per-repo pull/conflict/commit/sync) ready to begin.",
+  "commands": [
+    "PowerShell substitution",
+    "Move-Item folder rename",
+    "gh repo rename",
+    "git checkout main + cherry-pick + push",
+    "update-work-impact.ps1 -FullRebuild"
+  ],
+  "files": [
+    "vaultwares-themes",
+    "vaultwares-adk",
+    "agent-ledger/project-aliases.json",
+    "agent-ledger/work-impact.state.json"
+  ],
+  "planPath": "",
+  "contentHash": "e4849d7e4637ba1deef2c6a668703aef169045c87850e412df46e262ef8f4965",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "915ac1c",
+    "hasChanges": true
+  }
+}

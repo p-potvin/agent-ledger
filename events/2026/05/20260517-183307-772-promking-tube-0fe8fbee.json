@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20260517-183307-772-promking-tube-0fe8fbee",
+    "createdAt":  "2026-05-17T22:33:07.7721452Z",
+    "createdAtLocal":  "2026-05-17 18:33",
+    "timezone":  "Eastern Standard Time",
+    "project":  "promking-tube",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business\\tube-site  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-17 18:33 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+    "summary":  "Decoupled PromKing ecosystem (promking-tube and fullxxx-video) visually and code-wise from the VaultWares stack. Created pkt-player.css and pkt-player.bundle.js unbranded assets, registered them in the enqueuers, deleted legacy vault-player assets, and updated the author tag to PromKing. Renamed all visual/copy occurrences of \u0027watch page\u0027 to \u0027video page\u0027.",
+    "commands":  [
+                     "Remove-Item"
+                 ],
+    "files":  [
+                  "promking-tube/promking-tube.php",
+                  "fullxxx-video/fullxxx-video.php",
+                  "tube-shared/tube-shared.php"
+              ],
+    "planPath":  "",
+    "contentHash":  "0fe8fbee536811091cb3002cc5b6f36051b519fa92b5e7dc85c567a611988cb8",
+    "git":  {
+                "repo":  "tube-site",
+                "root":  "C:/Users/Administrator/Desktop/business/tube-site",
+                "branch":  "main",
+                "head":  "87efd35",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "20260515-142008-607-vaultwares-docs-4ba19f94",
+  "createdAt": "2026-05-15T18:20:08.6076094Z",
+  "createdAtLocal": "2026-05-15 14:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "gpt-5.2-codex",
+  "agentHeader": "Agent: gpt-5.2-codex (role: main)\r\nModel: gpt-5.2\r\nThinking: false\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.apply_patch, functions.shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-15 14:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "false",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.apply_patch",
+      "functions.shell_command"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Added a new AGENTS.md section documenting copy/paste-safe shell command practices (avoid pipelines, prefer single-line commands or file-based parsing) to prevent pipe corruption in SSH/PowerShell terminals; synced global instruction targets; pushed to main.",
+  "commands": [
+    "git commit -m Docs: add copy-paste safe command guidance",
+    "git push",
+    "sync-global-instructions.ps1"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\AGENTS.md"
+  ],
+  "planPath": "",
+  "contentHash": "4ba19f9445ec13b2037f3e7fec96b0a9753f4a1c305025cd5e4bb4985df2d029",
+  "git": null
+}

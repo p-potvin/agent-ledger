@@ -1,0 +1,43 @@
+{
+  "id": "20260518-023055-817-general-tasks-e1eef8cb",
+  "createdAt": "2026-05-18T06:30:55.8175758Z",
+  "createdAtLocal": "2026-05-18 02:30",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-18 02:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Phase 3 progress checkpoint. Completed renames #1-5: vaultwares-docs (package.json identity), cultural-rhythm/nexus-flow/nexus-orchestrator (package.json names), vaultwares-identity-manager (package.json + Chrome manifest + docs + content.css header), vaultwares-website (package.json + repository url + CI workflow VITE_BASE_URL + README + branding.md + 4 cross-refs in identity-manager docs), vaultwares-decompile (full folder rename from deconstructed-website-a-la-mode + 27 in-file substitutions for Deconstructed brand and .deconstructed user-data paths + DeconstructedManager class renamed + .builds icons renamed + rebuild-all.ps1 + create-shortcuts.ps1 updated). All changes uncommitted per main-branch policy. Workspace-wide scan shows zero remaining deconstructed/vaultwares-v1/vaultwares-auto-signup/tmp-app/react-example in active code. Remaining: vaultwares-glass, vaultwares-dispatch, vaultwares-realtime, vaultwares-studio, vaultwares-media-processing, business/promking restructure.",
+  "commands": [
+    "Edit + PowerShell bulk substitutions",
+    "Move-Item folder rename",
+    "gh repo rename verified earlier"
+  ],
+  "files": [
+    "vaultwares-docs/package.json",
+    "cultural-rhythm/package.json",
+    "nexus-flow/package.json",
+    "nexus-orchestrator/package.json",
+    "vaultwares-identity-manager/package.json",
+    "vaultwares-website/package.json",
+    "vaultwares-website/.github/workflows/deploy.yml",
+    "vaultwares-decompile/package.json",
+    ".builds/rebuild-all.ps1",
+    ".builds/create-shortcuts.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "e1eef8cb4d26a3dee9bf604cfc5740c3cd32458113bb28279944fe2fb0e56c08",
+  "git": null
+}

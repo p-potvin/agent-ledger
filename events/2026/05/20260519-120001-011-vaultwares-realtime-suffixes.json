@@ -1,0 +1,36 @@
+{
+  "id": "20260519-120001-011-vaultwares-realtime-suffixes",
+  "createdAt": "2026-05-19T16:00:01.0000000Z",
+  "createdAtLocal": "2026-05-19 12:00",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-realtime",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Haiku\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-realtime  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-19 12:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Haiku",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-realtime",
+  "summary": "Improve UX of settings spinboxes and drag handle: Added pt and px suffixes to size spinboxes (size_spin and outline_width_spin) and added tooltip and accessible name to invisible drag handle in SubtitleWindow. Unit suffixes provide immediate visual context without requiring external labels. Tooltips and accessible names improve discoverability for screen readers.",
+  "commands": [],
+  "files": [
+    "gui_overlay/overlay_window.py"
+  ],
+  "planPath": "",
+  "contentHash": "fc2f4a6c8e0a2b4d6e8f0a2b4d6e8f0a2b4d6e8f0a2b4d6e8f0a2b4d6e8f0a2",
+  "git": {
+    "repo": "vaultwares-realtime",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-realtime",
+    "branch": "main",
+    "head": "unknown",
+    "hasChanges": false
+  }
+}

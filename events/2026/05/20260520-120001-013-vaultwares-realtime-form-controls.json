@@ -1,0 +1,36 @@
+{
+  "id": "20260520-120001-013-vaultwares-realtime-form-controls",
+  "createdAt": "2026-05-20T16:00:01.0000000Z",
+  "createdAtLocal": "2026-05-20 12:00",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-realtime",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Haiku\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-realtime  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 12:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Haiku",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-realtime",
+  "summary": "Improve form accessibility and keyboard navigation in SettingsWindow: Used QLabel.setBuddy() and mnemonics (&) for form labels next to comboboxes, spinboxes, and buttons in gui_overlay/overlay_window.py. Setting a buddy on a QLabel links it to an input field semantically, allowing screen readers to announce the label when the field is focused. Ampersand mnemonic adds quick Alt+Key navigation shortcuts.",
+  "commands": [],
+  "files": [
+    "gui_overlay/overlay_window.py"
+  ],
+  "planPath": "",
+  "contentHash": "ae1b3d5f7a9c1e3f5a7b9d1f3a5c7e9f1a3b5d7f9a1b3d5f7a9b1d3f5a7",
+  "git": {
+    "repo": "vaultwares-realtime",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-realtime",
+    "branch": "main",
+    "head": "unknown",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "20260518-062652-427-general-tasks-f78ced45",
+  "createdAt": "2026-05-18T10:26:52.4275676Z",
+  "createdAtLocal": "2026-05-18 06:26",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-18 06:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Phase 3 progress through #11: all 11 renames complete except media-processing folder rename (robocopy /MOVE in progress due to persistent file watcher lock on Move-Item). Renames executed in order: vaultwares-docs / 3x react-example trio / vaultwares-identity-manager / vaultwares-website / vaultwares-decompile (full folder rename) / vaultwares-glass (folder + sln + Vercel + 23 src edits) / vaultwares-dispatch (folder + frontend/web subfolder + 9 file edits) / vaultwares-realtime (folder + stt_engine python pkg + 23 in-file edits) / vaultwares-studio (folder + studio_core pkg + 17 in-file edits) / vaultwares-media-processing (vault_enhancer python pkg renamed inside; folder move via robocopy in flight). Business restructure done: business/promking/{tube-sites,qa-automation} created, fullxxx-video-work and link-sharing/qa-automation deleted. All .builds/icons + launchers + rebuild-all + create-shortcuts updated for each rename. Two cross-cutting items remain: workspace-wide cleanup of .github/STYLE.md and INSTRUCTIONS.md cross-references (~20 files reference glass-ui by name in other repos), and final folder rename retry for media-processing.",
+  "commands": [
+    "PowerShell Move-Item",
+    "robocopy /MIR /MOVE",
+    "Edit tool x100+"
+  ],
+  "files": [
+    "vaultwares-decompile",
+    "vaultwares-glass",
+    "vaultwares-dispatch",
+    "vaultwares-realtime",
+    "vaultwares-studio",
+    "vaultwares-media-processing",
+    "business/promking/tube-sites",
+    "business/promking/qa-automation",
+    ".builds/rebuild-all.ps1",
+    ".builds/create-shortcuts.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "f78ced459f67e4417885ef5ed5d87ac2e7f578fea96b057a78d56adeb7b8cf4f",
+  "git": null
+}

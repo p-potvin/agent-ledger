@@ -1,0 +1,45 @@
+﻿{
+    "id":  "20260516-180958-557-tube-site-905de741",
+    "createdAt":  "2026-05-16T22:09:58.5575943Z",
+    "createdAtLocal":  "2026-05-16 18:09",
+    "timezone":  "Eastern Standard Time",
+    "project":  "tube-site",
+    "kind":  "plan",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: Gemini 3 Flash\r\nThinking: True\r\nMode: agent\r\nPermissions: full (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business\\tube-site  Branch: main\r\nTools used (this reply): list_dir, view_file, grep_search, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-16 18:09 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3 Flash",
+                    "thinking":  "True",
+                    "mode":  "agent",
+                    "permissions":  "full",
+                    "network":  "online",
+                    "toolsUsed":  [
+                                      "list_dir",
+                                      "view_file",
+                                      "grep_search",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\business\\tube-site",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+    "summary":  "Replacing Pornhub scraper with a more reliable video source (SpankBang) due to podcast pollution and scraping issues on Pornhub front page.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "promking-tube/includes/video-fetcher.php"
+              ],
+    "planPath":  "",
+    "contentHash":  "905de741b5b6a637d66ab28cc195f2cb97d3d5fa4add0cecabcd5884c552f9ff",
+    "git":  {
+                "repo":  "tube-site",
+                "root":  "C:/Users/Administrator/Desktop/business/tube-site",
+                "branch":  "main",
+                "head":  "5a05b2a",
+                "hasChanges":  true
+            }
+}
