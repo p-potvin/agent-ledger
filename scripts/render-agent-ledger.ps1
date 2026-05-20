@@ -39,6 +39,18 @@ function ConvertTo-MarkdownLine {
     return ($Value -replace "`r?`n", ' ').Trim()
 }
 
+function ConvertTo-CompactJson {
+    param([AllowNull()][object]$Value,[int]$MaxLength=220,[int]$Depth=6)
+    if ($null -eq $Value) { return '' }
+    try {
+        $json = ($Value | ConvertTo-Json -Depth $Depth -Compress)
+        if ($json.Length -le $MaxLength) { return $json }
+        return ($json.Substring(0, $MaxLength - 3) + '...')
+    }
+    catch {
+        return ''
+    }
+}
 function ConvertTo-HtmlText {
     param([AllowNull()][string]$Value)
     if ([string]::IsNullOrWhiteSpace($Value)) {
@@ -129,6 +141,22 @@ else {
                 $lines.Add("  $(ConvertTo-MarkdownLine $headerLine)")
             }
             $lines.Add('  ```')
+        }
+        if ($event.telemetry) {
+            $flagsText = ''
+            if ($event.telemetry.flags) {
+                $pairs = New-Object System.Collections.Generic.List[string]
+                foreach ($p in $event.telemetry.flags.psobject.Properties) {
+                    $pairs.Add("$($p.Name)=$($p.Value)")
+                }
+                if ($pairs.Count -gt 0) { $flagsText = ($pairs -join ', ') }
+            }
+            $metricsText = ConvertTo-CompactJson $event.telemetry.metrics
+            if ($flagsText -or $metricsText) {
+                $lines.Add('- Telemetry:')
+                if ($flagsText) { $lines.Add("  - Flags: $flagsText") }
+                if ($metricsText) { $lines.Add("  - Metrics: $metricsText") }
+            }
         }
         if ($summary) {
             $lines.Add("- Summary: $summary")
@@ -223,6 +251,24 @@ else {
             $htmlLines.Add('      <p><strong>Agent Header:</strong></p>')
             $htmlLines.Add("      <pre><code>$(ConvertTo-HtmlText $event.agentHeader)</code></pre>")
         }
+        if ($event.telemetry) {
+            $flagsText = ''
+            if ($event.telemetry.flags) {
+                $pairs = New-Object System.Collections.Generic.List[string]
+                foreach ($p in $event.telemetry.flags.psobject.Properties) {
+                    $pairs.Add("$($p.Name)=$($p.Value)")
+                }
+                if ($pairs.Count -gt 0) { $flagsText = ($pairs -join ', ') }
+            }
+            $metricsText = ConvertTo-CompactJson $event.telemetry.metrics
+            if ($flagsText -or $metricsText) {
+                $htmlLines.Add('      <p><strong>Telemetry:</strong></p>')
+                $htmlLines.Add('      <ul>')
+                if ($flagsText) { $htmlLines.Add("        <li><strong>Flags:</strong> $(ConvertTo-HtmlText $flagsText)</li>") }
+                if ($metricsText) { $htmlLines.Add("        <li><strong>Metrics:</strong> <code>$(ConvertTo-HtmlText $metricsText)</code></li>") }
+                $htmlLines.Add('      </ul>')
+            }
+        }
         if ($summary) {
             $htmlLines.Add("      <p class=""summary""><strong>Summary:</strong> $summary</p>")
         }
@@ -274,3 +320,6 @@ Write-Output "  $changesHtmlPath"
 Write-Output "  $ParentHtmlPath"
 
 exit 0
+
+
+
