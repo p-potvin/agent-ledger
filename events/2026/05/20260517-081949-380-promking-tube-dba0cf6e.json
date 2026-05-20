@@ -1,0 +1,45 @@
+﻿{
+    "id":  "20260517-081949-380-promking-tube-dba0cf6e",
+    "createdAt":  "2026-05-17T12:19:49.3806624Z",
+    "createdAtLocal":  "2026-05-17 08:19",
+    "timezone":  "Eastern Standard Time",
+    "project":  "promking-tube",
+    "kind":  "plan",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: Gemini 3.1 Pro\r\nThinking: true\r\nMode: agent\r\nPermissions: full (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business\\tube-site  Branch: main\r\nTools used (this reply): run_command, write_to_file, replace_file_content\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-17 08:19 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.1 Pro",
+                    "thinking":  "true",
+                    "mode":  "agent",
+                    "permissions":  "full",
+                    "network":  "online",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "write_to_file",
+                                      "replace_file_content"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\business\\tube-site",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+    "summary":  "Updated SELF_HOSTED_WORDPRESS_VPS.md to reflect the successful migration to GreenCloud VPS and the configured firewall restrictions. Authored a comprehensive Roadmap \u0026 Implementation Plan for the next steps of the tube sites and link-sharing redirects, detailing systemd cron migration, SQLite to MariaDB optimization, shared auth deployment, and production DNS cutover.",
+    "commands":  [
+                     "git"
+                 ],
+    "files":  [
+                  "SELF_HOSTED_WORDPRESS_VPS.md",
+                  "implementation_plan.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "dba0cf6e828a12a287ee665b44aa9b047d789f2f4410da2dd4b721789fb72528",
+    "git":  {
+                "repo":  "tube-site",
+                "root":  "C:/Users/Administrator/Desktop/business/tube-site",
+                "branch":  "main",
+                "head":  "87efd35",
+                "hasChanges":  true
+            }
+}

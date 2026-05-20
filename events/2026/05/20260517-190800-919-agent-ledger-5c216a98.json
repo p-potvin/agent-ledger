@@ -1,0 +1,39 @@
+{
+  "id": "20260517-190800-919-agent-ledger-5c216a98",
+  "createdAt": "2026-05-17T23:08:00.9190575Z",
+  "createdAtLocal": "2026-05-17 19:08",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-17 19:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Added project-aliases.json + resolve-project-alias.ps1 helper, then wired the resolver into record-agent-change.ps1, update-work-impact-state.ps1, and render-agent-ledger.ps1. Documented the system in README.md and AGENTS.md. Ran update-work-impact.ps1 -FullRebuild and re-rendered CHANGES.md to verify: 1421 events resolved into 50 canonical project buckets, all 10 historical aliases (glass-ui, dispatch-wares, deconstructed-website-a-la-mode, vault-video-enhancer, realtime-stt, usd-playground, tube-site, tmp-app, vaultwares-v1, vaultwares-auto-signup) now bucket under their new canonical names. Confirmed 'formerly X' suffix renders correctly on the most recent entry per renamed project. Resolver is cache-keyed by mtime so editing the JSON does not require restart. This is the pre-refactor continuity guarantee before the 13 project renames begin.",
+  "commands": [
+    "update-work-impact.ps1 -FullRebuild",
+    "render-agent-ledger.ps1"
+  ],
+  "files": [
+    "agent-ledger/project-aliases.json",
+    "agent-ledger/scripts/resolve-project-alias.ps1",
+    "agent-ledger/scripts/record-agent-change.ps1",
+    "agent-ledger/scripts/update-work-impact-state.ps1",
+    "agent-ledger/scripts/render-agent-ledger.ps1",
+    "agent-ledger/README.md",
+    "agent-ledger/AGENTS.md"
+  ],
+  "planPath": "",
+  "contentHash": "5c216a986f5168b087755fc582f3c5af4ee83edc425086301bfd20e84fbed5cd",
+  "git": null
+}

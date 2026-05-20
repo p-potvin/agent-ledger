@@ -1,0 +1,46 @@
+{
+  "id": "20260518-054703-476-vw-jira-sync-58473802",
+  "createdAt": "2026-05-18T09:47:03.4767805Z",
+  "createdAtLocal": "2026-05-18 05:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-jira-sync",
+  "kind": "code-change",
+  "actor": "Claude Code (Opus 4.7)",
+  "agentHeader": "Agent: Claude Code (Opus 4.7) (role: main)\r\nModel: claude-opus-4-7\r\nThinking: true\r\nMode: agent\r\nPermissions: unknown (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync  Branch: n/a\r\nTools used (this reply): Write, Edit, Bash, PowerShell, Grep, Read, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-18 05:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "true",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "online",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Grep",
+      "Read",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync",
+  "summary": "Built initial vw-jira-sync workspace: config.yaml (37 tracked repos, status_map: open->'PR Created', draft->'To Do', merged/closed->'Done'), requirements.txt (requests + PyYAML), .gitignore, scripts/jira_sync.py (shared lib: ADF builders, Jira REST with 429/5xx retry+backoff, gh CLI subprocess wrappers), scripts/backfill.py (resumable orchestrator with per-repo mapping/{repo}.json, --dry-run and --repo flags), README.md, mapping/.gitkeep. Fixed two bugs found via dry-run: (1) gh subprocess UnicodeDecodeError on Windows cp1252 with em-dashes in PR bodies -- forced encoding='utf-8' errors='replace'. (2) save_mapping was persisting in dry-run, polluting state between previews -- wrapped all 3 call sites with 'if not dry_run'. Also added merge-commit filter (parents > 1) to direct-commit classification to avoid logging GH-generated 'Merge pull request #N from...' commits as direct pushes. Final dry-run preview against nemo-playground (smallest non-zero repo) produced clean output: 1 Epic + 1 Task ('[nemo-playground#1] Add live real-time STT pipeline...') with parent: VW-Epic, status -> Done, 12 comment posts (Copilot review_inline + reviews), 1 direct commit -> Epic comment, 1 merge commit skipped. ADF rendering correct: em-dashes as U+2014. Awaiting user go/no-go for live execution -- proposed 1-repo live preview (nemo-playground) before full 37-repo backfill.",
+  "commands": [
+    "python scripts/backfill.py --dry-run --repo nemo-playground"
+  ],
+  "files": [
+    "vw-jira-sync/config.yaml",
+    "vw-jira-sync/scripts/jira_sync.py",
+    "vw-jira-sync/scripts/backfill.py",
+    "vw-jira-sync/requirements.txt",
+    "vw-jira-sync/README.md",
+    "vw-jira-sync/.gitignore"
+  ],
+  "planPath": "",
+  "contentHash": "58473802d997fac535bd9526f7927fa700a97f23a3f74e22e44538d7ce871d0a",
+  "git": null
+}

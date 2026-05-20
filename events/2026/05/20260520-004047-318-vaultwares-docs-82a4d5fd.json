@@ -1,0 +1,41 @@
+{
+  "id": "20260520-004047-318-vaultwares-docs-82a4d5fd",
+  "createdAt": "2026-05-20T04:40:47.3188758Z",
+  "createdAtLocal": "2026-05-20 00:40",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 00:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Adjusted router semantics so the ROUTER routine runs first, then other routines only when relevant, then selected summaries are opened; updated vaultwares-docs AGENTS.md stub accordingly; re-applied repo-wide pre-instructions to propagate the updated wording; ran sync-global-instructions.ps1.",
+  "commands": [
+    "powershell -File scripts\\\\apply-preinstructions-to-repos.ps1",
+    "powershell -File scripts\\\\sync-global-instructions.ps1"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\ROUTER.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\AGENTS.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\templates\\AGENTS.stub.md"
+  ],
+  "planPath": "",
+  "contentHash": "82a4d5fd6e4477100f43c8796f8b7e7d7e64b4d22df7f413f96e67585dea25d3",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "main",
+    "head": "a73261d",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "20260520-002135-710-vaultwares-docs-f97152bf",
+  "createdAt": "2026-05-20T04:21:35.7101425Z",
+  "createdAtLocal": "2026-05-20 00:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 00:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Implemented routines-first assistant protocol TOC: added instructions/ROUTER.md plus 25 protocol summaries and notes; added HANDLING_BUGS and NETWORK_INFRASTRUCTURE protocols; pointed BRAND_TOKENS_UI to the updated vaultwares-themes design system; generated docs-content mirror pages under docs-content/ai-tools/assistant-protocols and wired navigation; replaced vaultwares-docs AGENTS.md and CLAUDE.md with minimal pre-instructions; added scripts to generate mirrors, validate, and apply pre-instructions; applied/created minimal AGENTS.md + CLAUDE.md across all repos under C:\\\\Users\\\\Administrator\\\\Desktop\\\\Github Repos with backups stored under vaultwares-docs\\\\instructions\\\\legacy; ran npm run build and sync-global-instructions.ps1.",
+  "commands": [
+    "node scripts\\\\generate-assistant-protocol-mirrors.mjs",
+    "powershell -File scripts\\\\apply-preinstructions-to-repos.ps1",
+    "npm run build",
+    "powershell -File scripts\\\\sync-global-instructions.ps1"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\ROUTER.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\summaries\\HANDLING_BUGS.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\summaries\\NETWORK_INFRASTRUCTURE.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\scripts\\apply-preinstructions-to-repos.ps1",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\scripts\\generate-assistant-protocol-mirrors.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\ai-tools\\assistant-protocols\\index.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "f97152bffb69ea078987fdf5f337755ab865cacebc599199af988bec4ffd252e",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "main",
+    "head": "a73261d",
+    "hasChanges": true
+  }
+}

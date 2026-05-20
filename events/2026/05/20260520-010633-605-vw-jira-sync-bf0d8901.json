@@ -1,0 +1,43 @@
+{
+  "id": "20260520-010633-605-vw-jira-sync-bf0d8901",
+  "createdAt": "2026-05-20T05:06:33.6056694Z",
+  "createdAtLocal": "2026-05-20 01:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-jira-sync",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 01:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync",
+  "summary": "Added Prom-King org support. 4 new projects: PKLS/PKPRE/PKQA/PKTS. Added repo_owners config map for multi-org GitHub owner routing. Updated backfill.py, create_projects.py, deploy_caller_workflows.py to use repo_owner() helper. Secrets distributed and caller workflows deployed to all 4 PK repos. Backfills running in background.",
+  "commands": [
+    "python scripts/create_projects.py --repo link-sharing ... (4/4 created)",
+    "python scripts/deploy_caller_workflows.py --strategy main --repo link-sharing ... (4/4)",
+    "git push origin main (commit 18e3f9b)"
+  ],
+  "files": [
+    "config.yaml",
+    "scripts/backfill.py",
+    "scripts/create_projects.py",
+    "scripts/deploy_caller_workflows.py"
+  ],
+  "planPath": "",
+  "contentHash": "bf0d890128ff7a2935dba5e071d038429f7e65e377e2697b1c694f90f7b53ca3",
+  "git": {
+    "repo": "vw-jira-sync",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vw-jira-sync",
+    "branch": "main",
+    "head": "18e3f9b",
+    "hasChanges": true
+  }
+}

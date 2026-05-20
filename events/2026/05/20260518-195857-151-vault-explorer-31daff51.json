@@ -1,0 +1,40 @@
+﻿{
+    "id":  "20260518-195857-151-vault-explorer-31daff51",
+    "createdAt":  "2026-05-18T23:58:57.1516953Z",
+    "createdAtLocal":  "2026-05-18 19:58",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "plan",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: Gemini 3 Flash\r\nThinking: false\r\nMode: agent\r\nPermissions: full (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): write_to_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-18 19:58 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3 Flash",
+                    "thinking":  "false",
+                    "mode":  "agent",
+                    "permissions":  "full",
+                    "network":  "online",
+                    "toolsUsed":  "write_to_file",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Created implementation plan to address titlebar overlaps, remove fake terminology, bind keys (Esc, F5, Arrow key file focus), implement 5-minute background FFMPEG generation idle time, toast feedbacks, paste/cut/copy/zip context options, dimensions/size badges, smart folder size caching with Everything fallback, and fix symbolic link deletion.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\217b4911-f632-48d5-832c-8e83f0787a69\\implementation_plan.md",
+    "contentHash":  "31daff51b213882981f512d5585f5f04220035d1f83528853c6a4cd91f655562",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "c15224e",
+                "hasChanges":  false
+            }
+}

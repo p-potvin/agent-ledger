@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260518-235620-901-link-sharing-f9909227",
+    "createdAt":  "2026-05-19T03:56:20.9014101Z",
+    "createdAtLocal":  "2026-05-18 23:56",
+    "timezone":  "Eastern Standard Time",
+    "project":  "link-sharing",
+    "kind":  "verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: Gemini 3 Flash\r\nThinking: true\r\nMode: build\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business\\link-sharing  Branch: main\r\nTools used (this reply): run_command, write_to_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-18 23:56 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3 Flash",
+                    "thinking":  "true",
+                    "mode":  "build",
+                    "permissions":  "danger-full-access",
+                    "network":  "online",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "write_to_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\business\\link-sharing",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\link-sharing",
+    "summary":  "Prepared the production environment on the GreenCloud VPS (100.73.93.84) to host the link-sharing service. Installed PostgreSQL 15, Node.js 22 LTS, and enabled Corepack (pnpm v11.1.3). Configured Nginx proxy routing, systemd service unit rules, unprivileged deployment user keys, sudoers restart permissions, and added webhook targets to vw-deployd. Generated a deploy key for GitHub integration.",
+    "commands":  [
+                     "apt install postgresql",
+                     "apt install nodejs",
+                     "ssh-keygen"
+                 ],
+    "files":  [
+                  "/var/www/deploy-scripts/deploy-link-sharing.sh",
+                  "/etc/nginx/sites-available/link-sharing.conf",
+                  "/etc/systemd/system/prom-king-links.service",
+                  "/etc/vw-deployd/config.yml"
+              ],
+    "planPath":  "",
+    "contentHash":  "f9909227d0e54a56f7c5cd78e11937972d5bef513dc657250af4c644276a0412",
+    "git":  {
+                "repo":  "link-sharing",
+                "root":  "C:/Users/Administrator/Desktop/business/link-sharing",
+                "branch":  "main",
+                "head":  "bd85998",
+                "hasChanges":  true
+            }
+}
