@@ -1,0 +1,45 @@
+﻿{
+    "id":  "20260520-103411-405-vault-explorer-e69da627",
+    "createdAt":  "2026-05-20T14:34:11.4052129Z",
+    "createdAtLocal":  "2026-05-20 10:34",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Vault Explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: feat/vault-explorer-revamp\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 10:34 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Bug fix batch 1 (23 bugs logged, 16+ addressed): Fixed French mojibake encoding (Unicode escapes), fixed setLanguage destroying SVG icon buttons, fixed lang init from saved settings, fixed lang button showing opposite language, moved theme/settings panels inline under their trigger buttons with position:absolute, added size-badge CSS class, made back button uniform 32x32, made path-display clickable to browse, added F5 refresh hotkey, replaced all alert() with showToast() across context menu, added full context menu action handlers (cut/copy/paste/delete/zip/rename/properties/open-folder), added showPropertiesDialog function, added console.log logging everywhere, fixed folder dialog sizing and positioning, fixed legacy MP4 conversion to check video stream before converting, fixed open-file to use path.resolve for VLC compatibility, added log() helper to main.js IPC handlers.",
+    "commands":  [
+                     "node --check main.js",
+                     "node --check temp_script_1.js"
+                 ],
+    "files":  [
+                  "index.html",
+                  "main.js",
+                  "TODO.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "e69da62768a66da694bc282607733bc83fabfbea7019428a6c6c0e8e10a3e8cf",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "feat/vault-explorer-revamp",
+                "head":  "72884e6",
+                "hasChanges":  true
+            }
+}

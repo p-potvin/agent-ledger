@@ -51,6 +51,474 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
+<summary><strong>2026-05-20 11:16 - vaultwares-adk (formerly vaultwares-agentciation)</strong> <code>verification</code> - Ran Columbo&#39;s full extraction pipeline manually against vaultwares-themes as beachhead test. Walked all 9 phases: AUDIT classified 170+ files (essentials met: source code in Pyt...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 11:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ran Columbo's full extraction pipeline manually against vaultwares-themes as beachhead test. Walked all 9 phases: AUDIT classified 170+ files (essentials met: source code in Python/TS/TSX/CSS/C#/XAML, test suite partial, asset originals including PSD source — confidence 70%). BLIND PASS extracted intent from README + dir structure without opening code: design system + brand identity library with 8 cross-platform export formats, bilingual EN/FR, 15-section preview system, glass UI components. SIGHTED PASS walked full file manifest, found 4 contradictions: README dir tree stale, assets duplicated 3+ locations, stub files vs full files, references to non-existent root files. GAP MAP produced 6 interview questions: crypto-vault purpose in theme repo, asset duplication rationale, README drift, PQC protocol relevance, which exports actively consumed, 6.9MB HTML in version control. COMPOSE wrote 11-file recipe to recipe-output/vaultwares-themes/: intent.md (one-pager), port.yaml (manifest), domain/tokens.md (full token spec), domain/patterns.md (5 standard + 3 bespoke), ux/preview-system.md (15-section preview + flows), 3 regenerated SVGs (vw-favicon, vw-wordmark-dark, vw-wordmark-light — rebuilt from recipe tokens, not copied), tests/acceptance.md, interview.md (6 Columbo-voiced questions), revisions.md (sidecar). SVG regeneration successful: V-mark with vault-door circle motif, gold #CC9B21, Segoe UI Semilight wordmark in both paper/ink variants.
+- Commands:
+  - `Get-ChildItem vaultwares-themes -Recurse -File`
+  - `Read README.md`
+  - `Read brand/tokens/tokens.ts`
+  - `Read assets/logos/vaultwares-logo-dark.svg`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\recipe-output\vaultwares-themes\intent.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\recipe-output\vaultwares-themes\port.yaml`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\recipe-output\vaultwares-themes\domain\tokens.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\recipe-output\vaultwares-themes\domain\patterns.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\recipe-output\vaultwares-themes\interview.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\recipe-output\vaultwares-themes\assets\vw-favicon.svg`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\recipe-output\vaultwares-themes\assets\vw-wordmark-dark.svg`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\recipe-output\vaultwares-themes\assets\vw-wordmark-light.svg`
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 11:11 - VaultWares protocols</strong> <code>handoff</code> - Completed LONG_RUNNING_TASKS v1 rollout: CLAUDE stub now matches AGENTS stub; propagation script skips vaultwares-docs SSOT; vaultwares-mcp includes new token-first task_estimat...</summary>
+
+- Kind: handoff
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: chat
+  Permissions: escalated (network: offline)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main
+  Tools used (this reply): powershell, git, node, python
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 11:11 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: interview_started=True, credit_pipeline_used=False, long_running_tasks=True, router=True, resume_used=True
+  - Metrics: {"estimated_output_tokens":8200}
+- Summary: Completed LONG_RUNNING_TASKS v1 rollout: CLAUDE stub now matches AGENTS stub; propagation script skips vaultwares-docs SSOT; vaultwares-mcp includes new token-first task_estimate tool; agent-ledger scripts support telemetry flags/metrics with snake_case normalization.
+- Commands:
+  - `vaultwares-docs/scripts/apply-preinstructions-to-repos.ps1`
+  - `git push origin main (vaultwares-docs, vaultwares-mcp, agent-ledger)`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\ROUTER.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\LONG_RUNNING_TASKS.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\notes\LONG_RUNNING_TASKS.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\templates\AGENTS.stub.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\templates\CLAUDE.stub.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\scripts\apply-preinstructions-to-repos.ps1`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-mcp\tools\task_estimator.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-mcp\vaultwares_mcp\server.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\record-agent-change.ps1`
+  - `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\render-agent-ledger.ps1`
+  - `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\update-work-impact-state.ps1`
+- Git: repo=vaultwares-docs, branch=main, head=f4104fe
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 11:04 - agent-ledger</strong> <code>verification</code> - Verify correct snake_case telemetry key normalization</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: chat
+  Permissions: escalated (network: offline)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 11:04 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: resume_used=False, long_running_tasks=True
+  - Metrics: {"tools_used_count":1,"estimated_output_tokens":8200,"commands_run_count":1}
+- Summary: Verify correct snake_case telemetry key normalization
+- Commands:
+  - `record-agent-change.ps1`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\record-agent-change.ps1`
+- Git: repo=vaultwares-docs, branch=main, head=37642ac
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 10:49 - vaultwares-docs (formerly tmp-app)</strong> <code>code-change</code> - Implemented LONG_RUNNING_TASKS overlay wiring in ROUTER.md; generated protocol mirrors; patched agent-ledger to support telemetry Flags/Metrics and render/aggregate them; verifi...</summary>
+
+- Kind: code-change
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: chat
+  Permissions: escalated (network: offline)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main
+  Tools used (this reply): powershell, node, python
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 10:49 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: router=True, resume_used=False, interview_started=False, credit_pipeline_used=False, long_running_tasks=True
+  - Metrics: {"toolsUsedCount":3,"commandsRunCount":6,"estimatedOutputTokens":8200}
+- Summary: Implemented LONG_RUNNING_TASKS overlay wiring in ROUTER.md; generated protocol mirrors; patched agent-ledger to support telemetry Flags/Metrics and render/aggregate them; verified task_estimator token estimate output.
+- Commands:
+  - `node scripts/generate-assistant-protocol-mirrors.mjs`
+  - `scripts/validate-assistant-protocols.ps1`
+  - `python -c (estimate_task)`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\ROUTER.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\LONG_RUNNING_TASKS.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\notes\LONG_RUNNING_TASKS.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\templates\AGENTS.stub.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\ai-tools\assistant-protocols\index.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\record-agent-change.ps1`
+  - `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\render-agent-ledger.ps1`
+  - `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\update-work-impact-state.ps1`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-mcp\tools\task_estimator.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-mcp\vaultwares_mcp\server.py`
+- Git: repo=vaultwares-docs, branch=main, head=af44038
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 10:48 - vaultwares-docs</strong> <code>verification</code> - Verify telemetry flags/metrics serialization and rendering</summary>
+
+- Kind: verification
+- Actor: codex
+- Agent Header:
+  ```text
+  Agent: codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: chat
+  Permissions: escalated (network: offline)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main
+  Tools used (this reply): powershell, node
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 10:48 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: long_running_tasks=True, router=True, resume_used=False, interview_started=False
+  - Metrics: {"toolsUsedCount":2,"commandsRunCount":2,"estimatedOutputTokens":8000}
+- Summary: Verify telemetry flags/metrics serialization and rendering
+- Commands:
+  - `validate-assistant-protocols.ps1`
+  - `generate-assistant-protocol-mirrors.mjs`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\ROUTER.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\record-agent-change.ps1`
+- Git: repo=vaultwares-docs, branch=main, head=af44038
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 10:34 - Vault Explorer</strong> <code>code-change</code> - Bug fix batch 1 (23 bugs logged, 16+ addressed): Fixed French mojibake encoding (Unicode escapes), fixed setLanguage destroying SVG icon buttons, fixed lang init from saved sett...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/vault-explorer-revamp
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 10:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: Bug fix batch 1 (23 bugs logged, 16+ addressed): Fixed French mojibake encoding (Unicode escapes), fixed setLanguage destroying SVG icon buttons, fixed lang init from saved settings, fixed lang button showing opposite language, moved theme/settings panels inline under their trigger buttons with position:absolute, added size-badge CSS class, made back button uniform 32x32, made path-display clickable to browse, added F5 refresh hotkey, replaced all alert() with showToast() across context menu, added full context menu action handlers (cut/copy/paste/delete/zip/rename/properties/open-folder), added showPropertiesDialog function, added console.log logging everywhere, fixed folder dialog sizing and positioning, fixed legacy MP4 conversion to check video stream before converting, fixed open-file to use path.resolve for VLC compatibility, added log() helper to main.js IPC handlers.
+- Commands:
+  - `node --check main.js`
+  - `node --check temp_script_1.js`
+- Files:
+  - `index.html`
+  - `main.js`
+  - `TODO.md`
+- Git: repo=vault-explorer, branch=feat/vault-explorer-revamp, head=72884e6
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 09:26 - Vault Explorer</strong> <code>code-change</code> - Evolved Vault Explorer frontend layout &amp; modernized titlebar controls: Shrunk titlebar from 44px to 32px; repositioned lang, theme, settings controls on the left side of the tit...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/vault-explorer-revamp
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 09:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Evolved Vault Explorer frontend layout & modernized titlebar controls: Shrunk titlebar from 44px to 32px; repositioned lang, theme, settings controls on the left side of the titlebar next to the shield logo; removed standard 'aultWares' logo text for absolute minimalist aesthetic. Shifted '+ Folder' (New Folder) and 'Refresh' commands into the toolbar as compact 32x32px icon-only controls. Replaced sort-order select dropdown with toggle button (#btn-sort-order) displaying inline SVGs for ascending/descending modes with persistent labels. Replaced eager statusbar folder-sizing IPC calls with a smart Everything size calculator debounced by 3s. Prevented memory starvation by removing the eager WebM background generation queue from the page-load render batches, fully deferring sequential FFMPEG preview stitching to the 60s user inactivity idle timer. Resolved directory junction unlinking failure bugs in the main process using safe rmdir/unlink Windows platform routines. Fixed property dialog string interpolation bug and mapped the stats properties properly.
+- Commands:
+  - `python C:\Users\Administrator\.gemini\antigravity\brain\d736b979-bc1e-4390-a3c1-db1606392a3e\scratch\apply_explorer_revamp.py`
+  - `node --check main.js`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
+  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\main.js`
+  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\TODO.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\ROADMAP.md`
+- Git: repo=vault-explorer, branch=feat/vault-explorer-revamp, head=72884e6
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 09:21 - vault-explorer</strong> <code>plan</code> - Initiated Phase 2 (Manager Initialization). Verified that Redis is already running on localhost:6379. Instantiated a team of 3 extroverted workers (worker-1 as executor for back...</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 3.5 Flash (Medium)
+  Thinking: unknown
+  Mode: plan
+  Permissions: full (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 09:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Initiated Phase 2 (Manager Initialization). Verified that Redis is already running on localhost:6379. Instantiated a team of 3 extroverted workers (worker-1 as executor for backend IPCs, worker-2 as executor for frontend UI revamp, and worker-3 as planner for hygiene docs).
+- Git: repo=vault-explorer, branch=main, head=72884e6
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 09:20 - vault-explorer</strong> <code>plan</code> - Wrote TASKS.md file according to the machine-parseable TASKS_MD_SCHEMA, reflecting the scope agreed upon in the Socratic interview.</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 3.1 Pro (Low)
+  Thinking: unknown
+  Mode: plan
+  Permissions: full (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 09:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: Wrote TASKS.md file according to the machine-parseable TASKS_MD_SCHEMA, reflecting the scope agreed upon in the Socratic interview.
+- Files:
+  - `TASKS.md`
+- Git: repo=vault-explorer, branch=main, head=72884e6
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 09:19 - vault-explorer</strong> <code>plan</code> - Concluded Socratic Interview. Summarized full scope of the run: implementing backend IPCs (webm generation, symlink deletion, file cut/copy/paste, zip selection, properties), fr...</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 3.5 Flash (Medium)
+  Thinking: unknown
+  Mode: plan
+  Permissions: full (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 09:19 (TZ: Eastern Standard Time)
+  ```
+- Summary: Concluded Socratic Interview. Summarized full scope of the run: implementing backend IPCs (webm generation, symlink deletion, file cut/copy/paste, zip selection, properties), frontend visual revamp (titlebar resizing, toolbar layout, select chevron fixes, keyboard shortcuts, background FFMPEG idle-trigger, clipboards/properties modals), and a Playwright test harness for visual QA, running with up to 4 parallel workers.
+- Git: repo=vault-explorer, branch=main, head=72884e6
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 09:18 - vault-explorer</strong> <code>plan</code> - Processed user response for dependencies (external npm dependencies are accepted). Advanced Socratic Interview to the next dimension: Test Coverage and Parallelism Ceiling.</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 3.5 Flash (Medium)
+  Thinking: unknown
+  Mode: plan
+  Permissions: full (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 09:18 (TZ: Eastern Standard Time)
+  ```
+- Summary: Processed user response for dependencies (external npm dependencies are accepted). Advanced Socratic Interview to the next dimension: Test Coverage and Parallelism Ceiling.
+- Git: repo=vault-explorer, branch=main, head=72884e6
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 09:17 - vault-explorer</strong> <code>plan</code> - Processed user response for scope (open scope, new features welcomed). Advanced Socratic Interview to the next dimension: Known Constraints and Security Implications.</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 3.5 Flash (Medium)
+  Thinking: unknown
+  Mode: plan
+  Permissions: full (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 09:17 (TZ: Eastern Standard Time)
+  ```
+- Summary: Processed user response for scope (open scope, new features welcomed). Advanced Socratic Interview to the next dimension: Known Constraints and Security Implications.
+- Git: repo=vault-explorer, branch=main, head=72884e6
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 09:16 - vault-explorer</strong> <code>plan</code> - Processed user response for affected code (free to modify, but branch creation is mandatory). Advanced Socratic Interview to the next dimension: Out-of-Scope Areas.</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 3.5 Flash (Medium)
+  Thinking: unknown
+  Mode: plan
+  Permissions: full (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 09:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: Processed user response for affected code (free to modify, but branch creation is mandatory). Advanced Socratic Interview to the next dimension: Out-of-Scope Areas.
+- Git: repo=vault-explorer, branch=main, head=72884e6
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 09:15 - vault-explorer</strong> <code>plan</code> - Processed user response for success criteria (user-validated frontend, agent-tested backend). Advanced Socratic Interview to the next dimension: Affected Files and Modules.</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 3.5 Flash (Medium)
+  Thinking: unknown
+  Mode: plan
+  Permissions: full (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 09:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Processed user response for success criteria (user-validated frontend, agent-tested backend). Advanced Socratic Interview to the next dimension: Affected Files and Modules.
+- Git: repo=vault-explorer, branch=main, head=72884e6
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 09:11 - vault-explorer</strong> <code>plan</code> - Acknowledged the &#39;stephane bellavance special&#39; trigger phrase. Initialized Phase 1 (Socratic Interview) of the VaultWares Multi-Agent Flow Protocol. Formulated the first Socrati...</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 3.5 Flash (Medium)
+  Thinking: unknown
+  Mode: plan
+  Permissions: full (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 09:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Acknowledged the 'stephane bellavance special' trigger phrase. Initialized Phase 1 (Socratic Interview) of the VaultWares Multi-Agent Flow Protocol. Formulated the first Socratic question covering the goal and success definitions of the vault-explorer features outlined in the implementation plan.
+- Git: repo=vault-explorer, branch=main, head=72884e6
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 08:56 - vault-explorer</strong> <code>code-change</code> - Identified that index.html had been accidentally wiped out (truncated to 0 bytes) in commit 72884e6. Restored index.html from parent commit 2fe4861 and successfully executed .ge...</summary>
+
+- Kind: code-change
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 3.5 Flash (Medium)
+  Thinking: unknown
+  Mode: code-change
+  Permissions: full (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 08:56 (TZ: Eastern Standard Time)
+  ```
+- Summary: Identified that index.html had been accidentally wiped out (truncated to 0 bytes) in commit 72884e6. Restored index.html from parent commit 2fe4861 and successfully executed .gemini/antigravity/brain/217b4911-f632-48d5-832c-8e83f0787a69/scratch/update_index.py to apply context menu, toast notifications, and properties support updates, resolving the blank white screen.
+- Commands:
+  - `git checkout 72884e6^ -- index.html`
+  - `python .gemini/antigravity/brain/217b4911-f632-48d5-832c-8e83f0787a69/scratch/update_index.py`
+  - `pnpm start`
+- Files:
+  - `index.html`
+- Git: repo=vault-explorer, branch=main, head=72884e6
+
+</details>
+
+<details>
+<summary><strong>2026-05-20 08:53 - vault-explorer</strong> <code>verification</code> - Configured pnpm onlyBuiltDependencies in package.json to authorize electron and electron-winstaller postinstall scripts automatically. Ran pnpm install and pnpm rebuild to downl...</summary>
+
+- Kind: verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 3.5 Flash (Medium)
+  Thinking: unknown
+  Mode: verification
+  Permissions: full (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-20 08:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: Configured pnpm onlyBuiltDependencies in package.json to authorize electron and electron-winstaller postinstall scripts automatically. Ran pnpm install and pnpm rebuild to download prebuilt binaries and verify electron launches cleanly without 'electron is not recognized' errors.
+- Commands:
+  - `pnpm install`
+  - `pnpm rebuild`
+  - `pnpm start`
+- Files:
+  - `package.json`
+- Git: repo=vault-explorer, branch=main, head=72884e6
+
+</details>
+
+<details>
 <summary><strong>2026-05-20 07:59 - General Tasks (workspace)</strong> <code>code-change</code> - Recreated all 20 project .venv dirs using uv (Python 3.12.11 canonical; Video-Depth-Anything on 3.11.15 due to torch==2.1.1 ABI). CUDA repos (scripts, vaultwares-pipelines, vaul...</summary>
 
 - Kind: code-change
@@ -114,7 +582,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 02:48 - vaultwares-adk (formerly vaultwares-agentciation)</strong> <code>code-change</code> - Scaffolded Columbo agent (codebase forensics &amp; recipe extraction) in vaultwares-adk. Created columbo.agent.md (81 lines — personality definition with YAML frontmatter, 5-tier au...</summary>
+<summary><strong>2026-05-20 02:48 - vaultwares-adk</strong> <code>code-change</code> - Scaffolded Columbo agent (codebase forensics &amp; recipe extraction) in vaultwares-adk. Created columbo.agent.md (81 lines — personality definition with YAML frontmatter, 5-tier au...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -213,7 +681,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 01:42 - vaultwares-docs (formerly tmp-app)</strong> <code>code-change</code> - Created docs-content/operations/jira-sync.mdx: full runbook for GitHub→Jira sync. Covers architecture, 41-project map, issue label scheme, PR status mapping, secrets, adding rep...</summary>
+<summary><strong>2026-05-20 01:42 - vaultwares-docs</strong> <code>code-change</code> - Created docs-content/operations/jira-sync.mdx: full runbook for GitHub→Jira sync. Covers architecture, 41-project map, issue label scheme, PR status mapping, secrets, adding rep...</summary>
 
 - Kind: code-change
 - Actor: claude-sonnet-4-5
