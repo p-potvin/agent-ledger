@@ -1,0 +1,39 @@
+{
+  "id": "20260521-145342-897-general-tasks-93366ab4",
+  "createdAt": "2026-05-21T18:53:42.8971886Z",
+  "createdAtLocal": "2026-05-21 14:53",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 14:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Updated .extras github automation scripts so Tier-2 repos and core docs/ledger are always processed first. github_pull_all.ps1 now sorts workspace repos with priority order: vaultwares-themes, vaultwares-adk, vaultwares-docs, agent-ledger; and when a repo has submodules vaultwares-themes/vaultwares-adk it updates those first before recursive submodule update. github_automation_script.ps1 now (1) calls github_pull_all.ps1 from .extras, then (2) stages/commits/pushes repos from the root workspace (not .extras) in the same priority order.",
+  "commands": [
+    "[Parser]::ParseFile(.extras/github_pull_all.ps1)",
+    "[Parser]::ParseFile(.extras/github_automation_script.ps1)",
+    "Get-ChildItem ... | Sort-Object (priority order smoke check)"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\.extras\\github_pull_all.ps1",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\.extras\\github_automation_script.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "93366ab405402de162e3f3fc2a54835ccd37bb02a36417fa87fbd5d753bfc92a",
+  "git": null
+}
