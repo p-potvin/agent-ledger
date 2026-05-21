@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-21T18:27:01.8879634Z",
+    "lastUpdatedUtc":  "2026-05-21T19:12:01.7806680Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1501,7 +1501,10 @@
                                        "20260521-083115-503-general-tasks-c296728d",
                                        "20260521-101437-327-general-tasks-ef22115e",
                                        "20260521-110642-129-general-tasks-1b0f5739",
-                                       "20260521-120458-885-general-tasks-70df54b1"
+                                       "20260521-120458-885-general-tasks-70df54b1",
+                                       "20260521-143056-209-vaultwares-docs-30eb0e34",
+                                       "20260521-145342-897-general-tasks-93366ab4",
+                                       "20260521-145848-696-vw-jira-sync-cb9339ec"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2466,7 +2469,7 @@
                                                          "models":  [
                                                                         "unknown"
                                                                     ],
-                                                         "count":  16
+                                                         "count":  19
                                                      }
                                                  ],
                                    "tools":  [
@@ -2503,7 +2506,7 @@
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  214,
+                                                  217,
                                                   "Antigravity",
                                                   68,
                                                   "codex",
@@ -2531,10 +2534,10 @@
                                                   "claude-sonnet-4-5",
                                                   1
                                               ],
-                                   "totalEvents":  403,
+                                   "totalEvents":  406,
                                    "models":  [
                                                   "unknown",
-                                                  204,
+                                                  207,
                                                   "gpt-5.2",
                                                   58,
                                                   "Gemini 3.1 Pro (Preview)",
@@ -2617,7 +2620,7 @@
                                    {
                                        "label":  "Thu",
                                        "dow":  3,
-                                       "count":  62
+                                       "count":  65
                                    },
                                    {
                                        "label":  "Fri",
@@ -2693,7 +2696,7 @@
                                         "hour":  13
                                     },
                                     {
-                                        "count":  19,
+                                        "count":  22,
                                         "hour":  14
                                     },
                                     {
@@ -2750,7 +2753,7 @@
                                                  "insertions":  651803
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-21 14:27",
+                 "generatedAtLocal":  "2026-05-21 15:12",
                  "series":  {
                                 "months":  [
                                                {
@@ -2763,7 +2766,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  555
+                                                   "count":  558
                                                }
                                            ],
                                 "days":  [
@@ -3870,32 +3873,33 @@
                                                                   "General Tasks",
                                                                   "vault-explorer",
                                                                   "VaultWares Secrets",
+                                                                  "vaultwares-docs",
                                                                   "vaultwares-secrets",
                                                                   "vaultwares-themes",
                                                                   "vw-jira-sync"
                                                               ],
-                                                 "entries":  16,
+                                                 "entries":  19,
                                                  "day":  "2026-05-21",
                                                  "kinds":  {
-                                                               "plan":  3,
+                                                               "plan":  4,
                                                                "handoff":  2,
-                                                               "verification":  4,
-                                                               "code-change":  7
+                                                               "verification":  5,
+                                                               "code-change":  8
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1281
+                                                  "count":  1282
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  75
+                                                  "count":  76
                                               },
                                               {
                                                   "kind":  "plan",
-                                                  "count":  62
+                                                  "count":  63
                                               },
                                               {
                                                   "kind":  "general",
@@ -4085,7 +4089,7 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  12,
+                                                                   "code-change":  13,
                                                                    "handoff":  12,
                                                                    "commands":  12,
                                                                    "verification":  22,
@@ -4101,11 +4105,11 @@
 
                                                                     },
                                                      "project":  "General Tasks",
-                                                     "entries":  74,
+                                                     "entries":  75,
                                                      "recent":  [
-                                                                    "Changed secrets URL to warden.vaultwares.ca. On greencloud-vps: added nginx vhost warden.vaultwares.ca (tailnet-only allowlist), updated secrets.vaultwares.ca to 301 redirect to...",
                                                                     "Verified split DNS behavior on this Windows host: docs.vaultwares.ca and secrets.vaultwares.ca resolve to tailnet IP 100.73.93.84 and return 200; secrets redirects to warden. wa...",
-                                                                    "Tailscale DNS screenshot is showing split-DNS routes to a nameserver (not a direct host override). Confirmed from this Windows host that TCP 53 to 100.73.93.84 fails while 443 s..."
+                                                                    "Tailscale DNS screenshot is showing split-DNS routes to a nameserver (not a direct host override). Confirmed from this Windows host that TCP 53 to 100.73.93.84 fails while 443 s...",
+                                                                    "Updated .extras github automation scripts so Tier-2 repos and core docs/ledger are always processed first. github_pull_all.ps1 now sorts workspace repos with priority order: vau..."
                                                                 ],
                                                      "firstDay":  "2026-05-04",
                                                      "lastDay":  "2026-05-21",
@@ -4325,7 +4329,7 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "plan":  1,
+                                                                   "plan":  2,
                                                                    "handoff":  1,
                                                                    "general":  3,
                                                                    "verification":  4,
@@ -4337,21 +4341,21 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  2,
                                                                         "resume_used":  2,
-                                                                        "interview_started":  2,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  2,
+                                                                        "router":  2,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
-                                                     "entries":  38,
+                                                     "entries":  39,
                                                      "recent":  [
-                                                                    "Created docs-content/operations/jira-sync.mdx: full runbook for GitHubÃ¢â€ â€™Jira sync. Covers architecture, 41-project map, issue label scheme, PR status mapping, secrets, adding r...",
                                                                     "Verify telemetry flags/metrics serialization and rendering",
-                                                                    "Implemented LONG_RUNNING_TASKS overlay wiring in ROUTER.md; generated protocol mirrors; patched agent-ledger to support telemetry Flags/Metrics and render/aggregate them; verifi..."
+                                                                    "Implemented LONG_RUNNING_TASKS overlay wiring in ROUTER.md; generated protocol mirrors; patched agent-ledger to support telemetry Flags/Metrics and render/aggregate them; verifi...",
+                                                                    "Identified 3 issues from user feedback: (1) AGENTS.md keep for Copilot/Jules compatibility but fix absolute Windows paths to repo-relative. (2) No WORK_TRACKING protocol exists ..."
                                                                 ],
                                                      "firstDay":  "2026-04-18",
-                                                     "lastDay":  "2026-05-20",
+                                                     "lastDay":  "2026-05-21",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4894,6 +4898,41 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "commands":  1,
+                                                                   "plan":  1,
+                                                                   "verification":  6,
+                                                                   "code-change":  4
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "vw-jira-sync",
+                                                     "entries":  12,
+                                                     "recent":  [
+                                                                    "Chose and prepped trigger model #1: GitHub should not run vw-jira-sync on GitHub-hosted/self-hosted Actions runners. Instead use existing webhook ingress at hooks.vaultwares.ca/...",
+                                                                    "Implemented and deployed the preferred webhook-triggered Jira sync model (no GitHub Actions runners). On vaultwares-1 (100.73.93.84) replaced vw-deployd (in /opt/automation-suit...",
+                                                                    "Full audit pass. Findings: (1) JIRA_TOKEN expired â€” jira-token.txt unchanged since 5/20 6:46 AM; (2) greencloud-vps self-hosted runner: 0 registered, all jira-sync.yml calls s..."
+                                                                ],
+                                                     "firstDay":  "2026-05-18",
+                                                     "lastDay":  "2026-05-21",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  12
                                                                },
                                                      "lineClean":  {
@@ -4922,41 +4961,6 @@
                                                                      "insertions":  7107,
                                                                      "deletions":  228,
                                                                      "files":  74
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "commands":  1,
-                                                                   "plan":  1,
-                                                                   "verification":  5,
-                                                                   "code-change":  4
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "vw-jira-sync",
-                                                     "entries":  11,
-                                                     "recent":  [
-                                                                    "Audited vw-jira-sync GitHub Actions runner configuration. Reusable workflow .github/workflows/sync.yml is pinned to self-hosted runner label [self-hosted, greencloud-vps] (no Gi...",
-                                                                    "Chose and prepped trigger model #1: GitHub should not run vw-jira-sync on GitHub-hosted/self-hosted Actions runners. Instead use existing webhook ingress at hooks.vaultwares.ca/...",
-                                                                    "Implemented and deployed the preferred webhook-triggered Jira sync model (no GitHub Actions runners). On vaultwares-1 (100.73.93.84) replaced vw-deployd (in /opt/automation-suit..."
-                                                                ],
-                                                     "firstDay":  "2026-05-18",
-                                                     "lastDay":  "2026-05-21",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
                                                                  }
                                                  },
                                                  {
@@ -5296,8 +5300,8 @@
                                                                    },
                                                      "flagCounts":  {
                                                                         "scope":  1,
-                                                                        "commit":  1,
                                                                         "estimated_output_tokens":  2,
+                                                                        "commit":  1,
                                                                         "issue":  2
                                                                     },
                                                      "project":  "Prom-King\\\\tube-sites",
@@ -5761,10 +5765,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  1,
                                                                         "resume_used":  1,
-                                                                        "interview_started":  1,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "router":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "VaultWares protocols",
@@ -16365,7 +16369,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T14:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-21T16:04:58.8851500Z",
+                 "_maxCreatedAtUtc":  "2026-05-21T18:58:48.6960694Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16373,7 +16377,7 @@
                            },
                  "totals":  {
                                 "projects":  65,
-                                "events":  1494,
+                                "events":  1497,
                                 "uniqueCommitsRecomputed":  689,
                                 "activeDays":  69,
                                 "commitEventsWithStats":  689

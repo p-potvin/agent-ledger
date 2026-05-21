@@ -26,6 +26,44 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-21 14:58 - vw-jira-sync</strong> <span class="kind">verification</span> - Full audit pass. Findings: (1) JIRA_TOKEN expired &#226;€” jira-token.txt unchanged since 5/20 6:46 AM; (2) greencloud-vps self-hosted runner: 0 registered, all jira-sync.yml calls s...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync  Branch: vw-codex-selfhosted-runner Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-21 14:58 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Full audit pass. Findings: (1) JIRA_TOKEN expired &#226;€” jira-token.txt unchanged since 5/20 6:46 AM; (2) greencloud-vps self-hosted runner: 0 registered, all jira-sync.yml calls stuck QUEUED; (3) hooks.vaultwares.ca is live (200 ok at 173.249.194.15) but no GitHub webhooks configured in any of 41 repos; (4) 17 repos dirty with vaultwares-themes submodule bump at 4074d542; (5) vault-central pages build fails (private vaultwares-adk submodule, pre-existing); (6) vault-flows daily-flow-generator npm ci failure (pre-existing); (7) Node.js 20 deprecation June 2 deadline. vw-jira-sync repo itself is clean, scheduled task running, jira-sync.yml deployed, gh_api auth refactor merged (GITHUB_TOKEN first).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Resolve-DnsName hooks.vaultwares.ca</code></li>
+        <li><code>gh run list --workflow jira-sync.yml</code></li>
+        <li><code>gh api repos/p-potvin/vault-flows/hooks</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vw-jira-sync, branch=vw-codex-selfhosted-runner, head=b1f94b4</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-21 14:53 - General Tasks</strong> <span class="kind">code-change</span> - Updated .extras github automation scripts so Tier-2 repos and core docs/ledger are always processed first. github_pull_all.ps1 now sorts workspace repos with priority order: vau...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-21 14:53 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Updated .extras github automation scripts so Tier-2 repos and core docs/ledger are always processed first. github_pull_all.ps1 now sorts workspace repos with priority order: vaultwares-themes, vaultwares-adk, vaultwares-docs, agent-ledger; and when a repo has submodules vaultwares-themes/vaultwares-adk it updates those first before recursive submodule update. github_automation_script.ps1 now (1) calls github_pull_all.ps1 from .extras, then (2) stages/commits/pushes repos from the root workspace (not .extras) in the same priority order.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>[Parser]::ParseFile(.extras/github_pull_all.ps1)</code></li>
+        <li><code>[Parser]::ParseFile(.extras/github_automation_script.ps1)</code></li>
+        <li><code>Get-ChildItem ... | Sort-Object (priority order smoke check)</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\.extras\github_pull_all.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\.extras\github_automation_script.ps1</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-21 14:30 - vaultwares-docs (formerly tmp-app)</strong> <span class="kind">plan</span> - Identified 3 issues from user feedback: (1) AGENTS.md keep for Copilot/Jules compatibility but fix absolute Windows paths to repo-relative. (2) No WORK_TRACKING protocol exists ...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> plan</p>

@@ -1,0 +1,42 @@
+{
+  "id": "20260521-145848-696-vw-jira-sync-cb9339ec",
+  "createdAt": "2026-05-21T18:58:48.6960694Z",
+  "createdAtLocal": "2026-05-21 14:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-jira-sync",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync  Branch: vw-codex-selfhosted-runner\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 14:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync",
+  "summary": "Full audit pass. Findings: (1) JIRA_TOKEN expired — jira-token.txt unchanged since 5/20 6:46 AM; (2) greencloud-vps self-hosted runner: 0 registered, all jira-sync.yml calls stuck QUEUED; (3) hooks.vaultwares.ca is live (200 ok at 173.249.194.15) but no GitHub webhooks configured in any of 41 repos; (4) 17 repos dirty with vaultwares-themes submodule bump at 4074d542; (5) vault-central pages build fails (private vaultwares-adk submodule, pre-existing); (6) vault-flows daily-flow-generator npm ci failure (pre-existing); (7) Node.js 20 deprecation June 2 deadline. vw-jira-sync repo itself is clean, scheduled task running, jira-sync.yml deployed, gh_api auth refactor merged (GITHUB_TOKEN first).",
+  "commands": [
+    "Resolve-DnsName hooks.vaultwares.ca",
+    "gh run list --workflow jira-sync.yml",
+    "gh api repos/p-potvin/vault-flows/hooks"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "cb9339ec7230bd679e779ea07e8d1214c5cbfd534bc8b4051797f3a8f49f6107",
+  "git": {
+    "repo": "vw-jira-sync",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vw-jira-sync",
+    "branch": "vw-codex-selfhosted-runner",
+    "head": "b1f94b4",
+    "hasChanges": false
+  }
+}
