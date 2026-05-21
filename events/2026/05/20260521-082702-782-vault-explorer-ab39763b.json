@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260521-082702-782-vault-explorer-ab39763b",
+    "createdAt":  "2026-05-21T12:27:02.7823562Z",
+    "createdAtLocal":  "2026-05-21 08:27",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 08:27 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Root cause fix: Electron native context menu race condition where menu-will-close fired before item click callbacks, causing all menu actions to resolve as \u0027closed\u0027. Fixed with resolved/once flag pattern plus 50ms setTimeout on closed fallback. Also fixed zip-selection PowerShell path escaping: replaced single-quote concatenation with -LiteralPath array literal and powershell.exe -NoProfile -NonInteractive. All context menu actions (encrypt, zip, delete, rename, cut, copy, generate, upscale, open-folder, remove-folder) now correctly reach the renderer.",
+    "commands":  [
+                     "npm start"
+                 ],
+    "files":  [
+                  "main.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "ab39763ba052a0269c4ecd3de231411bcaa4896ac64170c06cb847f2420712a1",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "fb36198",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "20260521-083115-503-general-tasks-c296728d",
+  "createdAt": "2026-05-21T12:31:15.5039610Z",
+  "createdAtLocal": "2026-05-21 08:31",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 08:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Verified tailnet/private endpoints per operations/network-map.mdx; confirmed docs/secrets are 200 over tailnet DNS and 403 when forced over public IP. Fixed nginx secrets vhost headers (previously broken due to PowerShell $ expansion) and ensured nginx reloads cleanly. Removed legacy Vaultwarden docker container on greencloud-vps (backup retained under /opt). VaultWarden (first-party secrets service) now serves https://secrets.vaultwares.ca with /, /health, /docs. Created new GitHub repo p-potvin/vault-warden and deployed code to /opt/vault-warden with systemd vw-secretsd running python -m vault_warden. Updated vaultwares-docs with a centralized operations/project-bootstrap runbook and refreshed ops pages (network-map, secrets, jira-sync) + new ops log 2026-05-21; opened PR #12. Fixed vaultwares-pipelines api_server startup crash when optional faceswap static dir missing; opened issue #50 and PR #51. Updated vw-jira-sync to prefer webhook trigger model and token-based GitHub API calls; opened PR #2.",
+  "commands": [
+    "curl https://docs.vaultwares.ca/",
+    "curl https://secrets.vaultwares.ca/",
+    "curl --resolve docs.vaultwares.ca:443:173.249.194.15 https://docs.vaultwares.ca/",
+    "ssh root@100.73.93.84 nginx -t",
+    "ssh root@100.73.93.84 systemctl reload nginx",
+    "ssh root@100.73.93.84 docker rm -f vaultwarden",
+    "ssh root@100.73.93.84 systemctl restart vw-secretsd",
+    "gh repo create p-potvin/vault-warden --private",
+    "gh pr create (vaultwares-docs)",
+    "gh pr create (vaultwares-pipelines)",
+    "gh pr create (vw-jira-sync)"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\network-map.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\secrets.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\jira-sync.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\project-bootstrap.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\ops-log-2026-05-21.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\summaries\\SECRETS_HANDLING.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\api_server.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync\\scripts\\jira_sync.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync\\scripts\\live_sync.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-warden\\vault_warden\\app.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-warden\\ops\\systemd\\vw-secretsd.service",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-warden\\ops\\docker-compose.yml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-warden\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-warden\\.gitignore"
+  ],
+  "planPath": "",
+  "contentHash": "c296728de47adfe78759eb3f6ca2389bfcfebfa575aa76bcb24e9f41f0b51994",
+  "git": null
+}

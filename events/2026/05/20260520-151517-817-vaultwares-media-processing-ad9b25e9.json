@@ -1,0 +1,42 @@
+{
+  "id": "20260520-151517-817-vaultwares-media-processing-ad9b25e9",
+  "createdAt": "2026-05-20T19:15:17.8179682Z",
+  "createdAtLocal": "2026-05-20 15:15",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-media-processing",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-media-processing  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 15:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-media-processing",
+  "summary": "Fixed core.py transcribe_video crash. Overhauled vault_gui.py TitleBar layout to mirror VaultWares app.jsx header with Workspace Pill and Search bar.",
+  "commands": [],
+  "files": [
+    "vault_gui.py",
+    "vaultwares_media_processing/core.py",
+    "vaultwares-themes/qt_exporter.py"
+  ],
+  "planPath": "",
+  "contentHash": "ad9b25e93967544a195159ef497bbc5af9d140b95041d242001cdea7bdfeb000",
+  "git": {
+    "repo": "vaultwares-media-processing",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-media-processing",
+    "branch": "main",
+    "head": "9228e6f",
+    "hasChanges": true
+  }
+}

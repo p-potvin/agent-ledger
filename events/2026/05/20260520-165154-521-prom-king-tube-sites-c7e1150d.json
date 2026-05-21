@@ -1,0 +1,39 @@
+{
+  "id": "20260520-165154-521-prom-king-tube-sites-c7e1150d",
+  "createdAt": "2026-05-20T20:51:54.5210419Z",
+  "createdAtLocal": "2026-05-20 16:51",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King\\\\tube-sites",
+  "kind": "commands",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: medium\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): functions.shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 16:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "medium",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": "functions.shell_command",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "commit": "39686e6",
+      "issue": "https://github.com/Prom-King/tube-sites/issues/22"
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Committed and pushed scraper allowlist fix to origin/main (commit 39686e6).",
+  "commands": [
+    "git add fullxxx-video/includes/admin-settings.php fullxxx-video/includes/helpers.php fullxxx-video/includes/video-fetcher.php",
+    "git commit -m \"fix(scraper): allow pornxp/fsv embeds via expanded allowlist\"",
+    "git push origin main"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "c7e1150df2e39eaba09aa101e530bfc2ce141e4ad143932842a821b8da5f6f20",
+  "git": null
+}

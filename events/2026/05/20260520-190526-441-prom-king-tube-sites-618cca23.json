@@ -1,0 +1,43 @@
+{
+  "id": "20260520-190526-441-prom-king-tube-sites-618cca23",
+  "createdAt": "2026-05-20T23:05:26.4414934Z",
+  "createdAtLocal": "2026-05-20 19:05",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/tube-sites",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): powershell, git, gh, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 19:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "powershell",
+      "git",
+      "gh",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Disabled Jira sync GitHub Actions execution on PR/push (dispatch-only) to comply with Prom-King policy of webhook-only tailnet-contained runners. Merged PR #25 into main (commit e9f80ce). Also rotated Prom-King/tube-sites Actions secret JIRA_TOKEN from local C:\\\\Users\\\\Administrator\\\\Desktop\\\\jira-token.txt. Separately merged vw-jira-sync PR #1 to switch reusable workflow runs-on to self-hosted greencloud-vps.",
+  "commands": [
+    "gh pr merge 25 --repo Prom-King/tube-sites --squash --delete-branch",
+    "gh secret set JIRA_TOKEN --repo Prom-King/tube-sites --body <jira-token.txt>",
+    "gh pr merge 1 --repo p-potvin/vw-jira-sync --squash --delete-branch"
+  ],
+  "files": [
+    ".github/workflows/jira-sync.yml"
+  ],
+  "planPath": "",
+  "contentHash": "618cca235a2e4f99f8c094aa0e699e5da9a61e35f2933fb7b104ac0d7e38a067",
+  "git": null
+}

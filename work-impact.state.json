@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-20T16:27:02.2141735Z",
+    "lastUpdatedUtc":  "2026-05-21T18:27:01.8879634Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1462,7 +1462,46 @@
                                        "20260520-110420-185-agent-ledger-3306f632",
                                        "20260520-111127-080-vaultwares-protocols-ff41cd26",
                                        "20260520-111627-613-vaultwares-adk-81ac5847",
-                                       "20260520-115418-193-agent-ledger-4a1c956a"
+                                       "20260520-115418-193-agent-ledger-4a1c956a",
+                                       "20260520-122837-932-vw-jira-sync-3e8f4a9d",
+                                       "20260520-140517-638-vaultwares-media-processing-0cfa9ba2",
+                                       "20260520-141103-538-vaultwares-media-processing-abd64805",
+                                       "20260520-141758-568-prom-king-tube-sites-d0474ca5",
+                                       "20260520-142705-319-vaultwares-media-processing-d6ea64e1",
+                                       "20260520-145302-155-vault-explorer-0985b07b",
+                                       "20260520-151517-817-vaultwares-media-processing-ad9b25e9",
+                                       "20260520-155529-773-vaultwares-media-processing-fc7a768a",
+                                       "20260520-160542-291-vaultwares-media-processing-5519f0ae",
+                                       "20260520-162447-160-vault-explorer-07677c5a",
+                                       "20260520-163641-748-prom-king-tube-sites-27e8b982",
+                                       "20260520-164043-367-vaultwares-media-processing-6e559e55",
+                                       "20260520-165154-521-prom-king-tube-sites-c7e1150d",
+                                       "20260520-165322-073-vault-explorer-d8825e2c",
+                                       "20260520-171232-477-vault-explorer-ad428826",
+                                       "20260520-173227-901-vault-explorer-a2cf70e6",
+                                       "20260520-175048-342-vault-explorer-311525a7",
+                                       "20260520-175631-593-vault-explorer-41fcf68d",
+                                       "20260520-184712-344-vw-jira-sync-24ad0c7a",
+                                       "20260520-185026-510-prom-king-tube-sites-1c75c63f",
+                                       "20260520-185401-330-vaultwares-adk-8efc837c",
+                                       "20260520-185604-660-prom-king-tube-sites-2e0e829c",
+                                       "20260520-190526-441-prom-king-tube-sites-618cca23",
+                                       "20260521-003627-380-vaultwares-themes-70eaae1e",
+                                       "20260521-025054-933-vw-jira-sync-c0baca6c",
+                                       "20260521-032633-925-vw-jira-sync-32c9d6b5",
+                                       "20260521-033055-434-vault-explorer-c6d03dd9",
+                                       "20260521-035253-186-vw-jira-sync-065f918e",
+                                       "20260521-035818-598-vaultwares-secrets-422fc068",
+                                       "20260521-041124-600-vault-explorer-7f048e09",
+                                       "20260521-043829-215-vault-explorer-58a8bd73",
+                                       "20260521-052426-462-vaultwares-secrets-0319c749",
+                                       "20260521-071347-734-vault-explorer-0defc0d3",
+                                       "20260521-075825-215-vault-explorer-7342abfd",
+                                       "20260521-082702-782-vault-explorer-ab39763b",
+                                       "20260521-083115-503-general-tasks-c296728d",
+                                       "20260521-101437-327-general-tasks-ef22115e",
+                                       "20260521-110642-129-general-tasks-1b0f5739",
+                                       "20260521-120458-885-general-tasks-70df54b1"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2180,7 +2219,7 @@
                                                          "models":  [
                                                                         "unknown"
                                                                     ],
-                                                         "count":  11
+                                                         "count":  6
                                                      },
                                                      {
                                                          "actors":  [
@@ -2417,48 +2456,58 @@
                                                                         "gpt-5.2",
                                                                         "unknown"
                                                                     ],
-                                                         "count":  30
+                                                         "count":  53
+                                                     },
+                                                     {
+                                                         "actors":  [
+                                                                        "AI Agent"
+                                                                    ],
+                                                         "day":  "2026-05-21",
+                                                         "models":  [
+                                                                        "unknown"
+                                                                    ],
+                                                         "count":  16
                                                      }
                                                  ],
                                    "tools":  [
                                                  "functions.shell_command",
-                                                 53,
+                                                 56,
                                                  "run_command",
                                                  34,
                                                  "functions.apply_patch",
-                                                 23,
+                                                 25,
                                                  "write_to_file",
                                                  23,
                                                  "view_file",
                                                  22,
                                                  "replace_file_content",
                                                  16,
+                                                 "PowerShell",
+                                                 13,
                                                  "multi_replace_file_content",
                                                  11,
                                                  "list_dir",
                                                  10,
                                                  "functions.update_plan",
                                                  10,
-                                                 "PowerShell",
-                                                 10,
+                                                 "git",
+                                                 7,
                                                  "Bash",
                                                  6,
                                                  "grep_search",
                                                  5,
                                                  "Write",
                                                  4,
-                                                 "git",
-                                                 4,
-                                                 "Read",
+                                                 "gh",
                                                  4
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  183,
+                                                  214,
                                                   "Antigravity",
                                                   68,
                                                   "codex",
-                                                  41,
+                                                  44,
                                                   "GitHub Copilot",
                                                   32,
                                                   "gpt-5.2-codex",
@@ -2482,12 +2531,12 @@
                                                   "claude-sonnet-4-5",
                                                   1
                                               ],
-                                   "totalEvents":  369,
+                                   "totalEvents":  403,
                                    "models":  [
                                                   "unknown",
-                                                  173,
+                                                  204,
                                                   "gpt-5.2",
-                                                  55,
+                                                  58,
                                                   "Gemini 3.1 Pro (Preview)",
                                                   17,
                                                   "claude-sonnet-4-6",
@@ -2563,12 +2612,12 @@
                                    {
                                        "label":  "Wed",
                                        "dow":  2,
-                                       "count":  70
+                                       "count":  88
                                    },
                                    {
                                        "label":  "Thu",
                                        "dow":  3,
-                                       "count":  46
+                                       "count":  62
                                    },
                                    {
                                        "label":  "Fri",
@@ -2588,7 +2637,7 @@
                                ],
                  "hourSeries":  [
                                     {
-                                        "count":  23,
+                                        "count":  24,
                                         "hour":  0
                                     },
                                     {
@@ -2596,19 +2645,19 @@
                                         "hour":  1
                                     },
                                     {
-                                        "count":  19,
+                                        "count":  20,
                                         "hour":  2
                                     },
                                     {
-                                        "count":  22,
+                                        "count":  26,
                                         "hour":  3
                                     },
                                     {
-                                        "count":  10,
+                                        "count":  11,
                                         "hour":  4
                                     },
                                     {
-                                        "count":  10,
+                                        "count":  9,
                                         "hour":  5
                                     },
                                     {
@@ -2616,11 +2665,11 @@
                                         "hour":  6
                                     },
                                     {
-                                        "count":  13,
+                                        "count":  15,
                                         "hour":  7
                                     },
                                     {
-                                        "count":  13,
+                                        "count":  15,
                                         "hour":  8
                                     },
                                     {
@@ -2628,15 +2677,15 @@
                                         "hour":  9
                                     },
                                     {
-                                        "count":  6,
+                                        "count":  7,
                                         "hour":  10
                                     },
                                     {
-                                        "count":  18,
+                                        "count":  19,
                                         "hour":  11
                                     },
                                     {
-                                        "count":  25,
+                                        "count":  27,
                                         "hour":  12
                                     },
                                     {
@@ -2644,27 +2693,27 @@
                                         "hour":  13
                                     },
                                     {
-                                        "count":  14,
+                                        "count":  19,
                                         "hour":  14
                                     },
                                     {
-                                        "count":  14,
+                                        "count":  16,
                                         "hour":  15
                                     },
                                     {
-                                        "count":  13,
+                                        "count":  17,
                                         "hour":  16
                                     },
                                     {
-                                        "count":  14,
+                                        "count":  18,
                                         "hour":  17
                                     },
                                     {
-                                        "count":  9,
+                                        "count":  13,
                                         "hour":  18
                                     },
                                     {
-                                        "count":  18,
+                                        "count":  19,
                                         "hour":  19
                                     },
                                     {
@@ -2701,7 +2750,7 @@
                                                  "insertions":  651803
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-20 12:27",
+                 "generatedAtLocal":  "2026-05-21 14:27",
                  "series":  {
                                 "months":  [
                                                {
@@ -2714,7 +2763,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  516
+                                                   "count":  555
                                                }
                                            ],
                                 "days":  [
@@ -3792,50 +3841,73 @@
                                                                   "agent-ledger",
                                                                   "General Tasks (workspace)",
                                                                   "General Tasks / vw-jira-sync",
+                                                                  "Prom-King/tube-sites",
+                                                                  "Prom-King\\\\tube-sites",
                                                                   "Vault Explorer",
                                                                   "vault-explorer",
+                                                                  "VaultWares Media Processing",
                                                                   "VaultWares protocols",
                                                                   "vaultwares-adk",
                                                                   "vaultwares-docs",
                                                                   "vaultwares-docs / vw-jira-sync",
+                                                                  "vaultwares-media-processing",
                                                                   "vaultwares-realtime",
                                                                   "vw-jira-sync"
                                                               ],
-                                                 "entries":  30,
+                                                 "entries":  53,
                                                  "day":  "2026-05-20",
                                                  "kinds":  {
-                                                               "plan":  9,
+                                                               "code-change":  32,
                                                                "handoff":  2,
-                                                               "general":  1,
+                                                               "commands":  2,
+                                                               "verification":  6,
+                                                               "plan":  9,
+                                                               "general":  2
+                                                           }
+                                             },
+                                             {
+                                                 "projects":  [
+                                                                  "General Tasks",
+                                                                  "vault-explorer",
+                                                                  "VaultWares Secrets",
+                                                                  "vaultwares-secrets",
+                                                                  "vaultwares-themes",
+                                                                  "vw-jira-sync"
+                                                              ],
+                                                 "entries":  16,
+                                                 "day":  "2026-05-21",
+                                                 "kinds":  {
+                                                               "plan":  3,
+                                                               "handoff":  2,
                                                                "verification":  4,
-                                                               "code-change":  14
+                                                               "code-change":  7
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1256
+                                                  "count":  1281
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  69
+                                                  "count":  75
                                               },
                                               {
                                                   "kind":  "plan",
-                                                  "count":  59
+                                                  "count":  62
                                               },
                                               {
                                                   "kind":  "general",
-                                                  "count":  31
+                                                  "count":  32
                                               },
                                               {
                                                   "kind":  "commands",
-                                                  "count":  23
+                                                  "count":  25
                                               },
                                               {
                                                   "kind":  "handoff",
-                                                  "count":  17
+                                                  "count":  19
                                               }
                                           ],
                                 "projects":  [
@@ -4014,9 +4086,9 @@
                                                  {
                                                      "kinds":  {
                                                                    "code-change":  12,
-                                                                   "handoff":  10,
+                                                                   "handoff":  12,
                                                                    "commands":  12,
-                                                                   "verification":  20,
+                                                                   "verification":  22,
                                                                    "plan":  4,
                                                                    "general":  12
                                                                },
@@ -4029,14 +4101,14 @@
 
                                                                     },
                                                      "project":  "General Tasks",
-                                                     "entries":  70,
+                                                     "entries":  74,
                                                      "recent":  [
-                                                                    "Phase 3 complete. All 11 project renames landed: vaultwares-docs, cultural-rhythm/nexus-flow/nexus-orchestrator (3x package.json identity), vaultwares-identity-manager, vaultwar...",
-                                                                    "Phase 4 complete. Two standalone renames pushed: vault-themes -\u003e vaultwares-themes (33 file edits + dist-to-vault-themes subfolder renamed; CSS brand tokens preserved per scope ...",
-                                                                    "Full workspace local cleanup across all repos: (1) Deleted Vercel artifacts: vercel.json, .vercelignore, .vercel/ from vaultwares-docs, vaultwares-website, agent-ledger, vaultwa..."
+                                                                    "Changed secrets URL to warden.vaultwares.ca. On greencloud-vps: added nginx vhost warden.vaultwares.ca (tailnet-only allowlist), updated secrets.vaultwares.ca to 301 redirect to...",
+                                                                    "Verified split DNS behavior on this Windows host: docs.vaultwares.ca and secrets.vaultwares.ca resolve to tailnet IP 100.73.93.84 and return 200; secrets redirects to warden. wa...",
+                                                                    "Tailscale DNS screenshot is showing split-DNS routes to a nameserver (not a direct host override). Confirmed from this Windows host that TCP 53 to 100.73.93.84 fails while 443 s..."
                                                                 ],
                                                      "firstDay":  "2026-05-04",
-                                                     "lastDay":  "2026-05-19",
+                                                     "lastDay":  "2026-05-21",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4053,7 +4125,7 @@
                                                                    "plan":  2,
                                                                    "general":  1,
                                                                    "verification":  2,
-                                                                   "code-change":  54
+                                                                   "code-change":  59
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -4064,14 +4136,14 @@
 
                                                                     },
                                                      "project":  "vaultwares-media-processing",
-                                                     "entries":  59,
+                                                     "entries":  64,
                                                      "recent":  [
-                                                                    "Cleaned up the project by removing redundant patch scripts (patch_gui*.py), temporary results, scratch debug scripts (debug_monitor.py), and orphaned CMD files. Removed the obso...",
-                                                                    "Optimized Parakeet model loading by implementing a persistent extraction cache in parakeet_wrapper.py, bypassing the slow repeated extraction of the 2.5GB .nemo tarball. Enhance...",
-                                                                    "Created an implementation plan to build the \u0027vwipl\u0027 library for text-based progress tracking and to modify the GUI to support in-place log replacements for the activity monitor,..."
+                                                                    "Restored complete original transcribe_video logic in core.py from git history (commit ba8d70e) and patched namespace references from vault_enhancer to vaultwares_media_processing.",
+                                                                    "Integrated StreamDiffusion Scaffold. Created vaultwares_media_processing/stream_wrapper.py to handle TensorRT StreamDiffusion inference. Re-routed core.py to support stylize_vid...",
+                                                                    "Fixed TensorRT script crash resulting from incompatible diffusers/huggingface-hub versions and a missing CUDA-enabled torch binary inside the .venv. Reinstalled huggingface-hub\u003c..."
                                                                 ],
                                                      "firstDay":  "2026-03-14",
-                                                     "lastDay":  "2026-05-15",
+                                                     "lastDay":  "2026-05-20",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4119,8 +4191,43 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "plan":  21,
+                                                                   "verification":  2,
+                                                                   "code-change":  31
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  9674,
+                                                                       "deletions":  615,
+                                                                       "files":  51
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "vault-explorer",
+                                                     "entries":  54,
+                                                     "recent":  [
+                                                                    "CSS cleanup: removed 205-line duplicate style block (lines 406-619) that was causing theme picker to break on hover and theme rendering to be unreliable. Removed stale #settings...",
+                                                                    "Context menu overhaul: removed Paste from item menus (now only on background), open-file resolves \u0027open-error\u0027 on shell.openPath failure. Added background right-click listener (...",
+                                                                    "Root cause fix: Electron native context menu race condition where menu-will-close fired before item click callbacks, causing all menu actions to resolve as \u0027closed\u0027. Fixed with ..."
+                                                                ],
+                                                     "firstDay":  "2026-04-19",
+                                                     "lastDay":  "2026-05-21",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  9674,
+                                                                     "deletions":  615,
+                                                                     "files":  51
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "plan":  6,
                                                                    "handoff":  2,
+                                                                   "general":  1,
                                                                    "verification":  1,
                                                                    "code-change":  42
                                                                },
@@ -4133,11 +4240,11 @@
 
                                                                     },
                                                      "project":  "vaultwares-adk",
-                                                     "entries":  51,
+                                                     "entries":  52,
                                                      "recent":  [
-                                                                    "Started vault-port (working name) agent scaffolding in vaultwares-adk. Pivot: vaultwares-adk is VaultWares\u0027s own Python multi-agent framework (Redis-based, ExtrovertAgent/Lonely...",
                                                                     "Scaffolded Columbo agent (codebase forensics \u0026 recipe extraction) in vaultwares-adk. Created columbo.agent.md (81 lines Ã¢â‚¬â€ personality definition with YAML frontmatter, 5-tier ...",
-                                                                    "Ran Columbo\u0027s full extraction pipeline manually against vaultwares-themes as beachhead test. Walked all 9 phases: AUDIT classified 170+ files (essentials met: source code in Pyt..."
+                                                                    "Ran Columbo\u0027s full extraction pipeline manually against vaultwares-themes as beachhead test. Walked all 9 phases: AUDIT classified 170+ files (essentials met: source code in Pyt...",
+                                                                    "Answered Columbo\u0027s 6 interview questions for the vaultwares-themes recipe. Q1 (crypto-vault): intentional â€” VaultWares treats client-side encryption as UX contract, but could ..."
                                                                 ],
                                                      "firstDay":  "2026-04-05",
                                                      "lastDay":  "2026-05-20",
@@ -4182,40 +4289,6 @@
                                                                      "insertions":  40661,
                                                                      "deletions":  11941,
                                                                      "files":  260
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "plan":  21,
-                                                                   "verification":  2,
-                                                                   "code-change":  19
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  9674,
-                                                                       "deletions":  615,
-                                                                       "files":  51
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "vault-explorer",
-                                                     "entries":  42,
-                                                     "recent":  [
-                                                                    "Concluded Socratic Interview. Summarized full scope of the run: implementing backend IPCs (webm generation, symlink deletion, file cut/copy/paste, zip selection, properties), fr...",
-                                                                    "Wrote TASKS.md file according to the machine-parseable TASKS_MD_SCHEMA, reflecting the scope agreed upon in the Socratic interview.",
-                                                                    "Initiated Phase 2 (Manager Initialization). Verified that Redis is already running on localhost:6379. Instantiated a team of 3 extroverted workers (worker-1 as executor for back..."
-                                                                ],
-                                                     "firstDay":  "2026-04-19",
-                                                     "lastDay":  "2026-05-20",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  9674,
-                                                                     "deletions":  615,
-                                                                     "files":  51
                                                                  }
                                                  },
                                                  {
@@ -4292,7 +4365,8 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  31
+                                                                   "code-change":  31,
+                                                                   "plan":  1
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -4303,14 +4377,14 @@
 
                                                                     },
                                                      "project":  "vaultwares-themes",
-                                                     "entries":  31,
+                                                     "entries":  32,
                                                      "recent":  [
-                                                                    "Implemented vault-themes cleanup plan: reorganized brand/assets/theme-manager/components/docs/examples layout; converted generated brand guide into maintainable docs plus lightw...",
                                                                     "Removed vaultwares-agentciation from vault-themes so both source-of-truth repos stay independent. Removed the newly added vaultwares-agentciation submodule and .gitmodules file ...",
-                                                                    "Replaced old themes with new UI Kit themes from assets, updated theme_manager.py to reflect 12 new themes, updated sync_submodule_rules.py with new target map and managed block,..."
+                                                                    "Replaced old themes with new UI Kit themes from assets, updated theme_manager.py to reflect 12 new themes, updated sync_submodule_rules.py with new target map and managed block,...",
+                                                                    "Compiled full first-pass deletion list for agent-ledger and vaultwares-themes. agent-ledger: DELETE AGENTS.md (redundant with CLAUDE.md), ROADMAP.md, TODO.md (stubs), .github/co..."
                                                                 ],
                                                      "firstDay":  "2026-03-27",
-                                                     "lastDay":  "2026-05-18",
+                                                     "lastDay":  "2026-05-21",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4852,6 +4926,41 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "commands":  1,
+                                                                   "plan":  1,
+                                                                   "verification":  5,
+                                                                   "code-change":  4
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "vw-jira-sync",
+                                                     "entries":  11,
+                                                     "recent":  [
+                                                                    "Audited vw-jira-sync GitHub Actions runner configuration. Reusable workflow .github/workflows/sync.yml is pinned to self-hosted runner label [self-hosted, greencloud-vps] (no Gi...",
+                                                                    "Chose and prepped trigger model #1: GitHub should not run vw-jira-sync on GitHub-hosted/self-hosted Actions runners. Instead use existing webhook ingress at hooks.vaultwares.ca/...",
+                                                                    "Implemented and deployed the preferred webhook-triggered Jira sync model (no GitHub Actions runners). On vaultwares-1 (100.73.93.84) replaced vw-deployd (in /opt/automation-suit..."
+                                                                ],
+                                                     "firstDay":  "2026-05-18",
+                                                     "lastDay":  "2026-05-21",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  9,
                                                                    "commands":  1
                                                                },
@@ -4981,35 +5090,34 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  5,
-                                                                   "commands":  1
+                                                                   "code-change":  6
                                                                },
                                                      "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
+                                                                       "insertions":  1438,
+                                                                       "deletions":  7,
+                                                                       "files":  34
                                                                    },
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "vaultwares-mcp",
+                                                     "project":  "debrid-media-manager",
                                                      "entries":  6,
                                                      "recent":  [
-                                                                    "Created Windows service \u0027vaultwares-mcp\u0027 via NSSM. Service runs .venv Python with \u0027-m vaultwares_mcp --transport streamable-http --host 127.0.0.1 --port 9020\u0027, AppDirectory set ...",
-                                                                    "Created Claude Desktop config at %APPDATA%\\Claude\\claude_desktop_config.json. Added vaultwares-mcp MCP server entry with stdio transport, using .venv Python, args \u0027-m vaultwares...",
-                                                                    "Fixed ModuleNotFoundError: No module named \u0027fastmcp\u0027 in Claude Desktop extension mechanism. Root cause: manifest.json mcp_config.command was \u0027python\u0027 (system Python, no fastmcp)..."
+                                                                    "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
+                                                                    "Backfill: commit 55ec199 (2026-04-17T18:11:24-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +11 -5",
+                                                                    "Backfill: commit c6ce8b5 (2026-04-18T22:32:35-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +1 -2"
                                                                 ],
-                                                     "firstDay":  "2026-05-11",
-                                                     "lastDay":  "2026-05-13",
+                                                     "firstDay":  "2026-04-01",
+                                                     "lastDay":  "2026-04-19",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
                                                                           "files":  0
                                                                       },
                                                      "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
+                                                                     "insertions":  1438,
+                                                                     "deletions":  7,
+                                                                     "files":  34
                                                                  }
                                                  },
                                                  {
@@ -5049,40 +5157,8 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  6
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  1438,
-                                                                       "deletions":  7,
-                                                                       "files":  34
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "debrid-media-manager",
-                                                     "entries":  6,
-                                                     "recent":  [
-                                                                    "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
-                                                                    "Backfill: commit 55ec199 (2026-04-17T18:11:24-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +11 -5",
-                                                                    "Backfill: commit c6ce8b5 (2026-04-18T22:32:35-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +1 -2"
-                                                                ],
-                                                     "firstDay":  "2026-04-01",
-                                                     "lastDay":  "2026-04-19",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  1438,
-                                                                     "deletions":  7,
-                                                                     "files":  34
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "verification":  2,
-                                                                   "code-change":  4
+                                                                   "code-change":  5,
+                                                                   "commands":  1
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -5092,15 +5168,15 @@
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "vw-jira-sync",
+                                                     "project":  "vaultwares-mcp",
                                                      "entries":  6,
                                                      "recent":  [
-                                                                    "GitHub Actions live sync workflow now operational on all 37 repos. Fixed startup_failure by removing restrictive permissions block. Fixed Jira 401 by re-distributing JIRA_TOKEN....",
-                                                                    "Restructured Jira integration from 1 project (VW) with Epics to 37 per-repo projects (Option A). Created create_projects.py script; updated config.yaml with repo_project_keys; r...",
-                                                                    "Added Prom-King org support. 4 new projects: PKLS/PKPRE/PKQA/PKTS. Added repo_owners config map for multi-org GitHub owner routing. Updated backfill.py, create_projects.py, depl..."
+                                                                    "Created Windows service \u0027vaultwares-mcp\u0027 via NSSM. Service runs .venv Python with \u0027-m vaultwares_mcp --transport streamable-http --host 127.0.0.1 --port 9020\u0027, AppDirectory set ...",
+                                                                    "Created Claude Desktop config at %APPDATA%\\Claude\\claude_desktop_config.json. Added vaultwares-mcp MCP server entry with stdio transport, using .venv Python, args \u0027-m vaultwares...",
+                                                                    "Fixed ModuleNotFoundError: No module named \u0027fastmcp\u0027 in Claude Desktop extension mechanism. Root cause: manifest.json mcp_config.command was \u0027python\u0027 (system Python, no fastmcp)..."
                                                                 ],
-                                                     "firstDay":  "2026-05-18",
-                                                     "lastDay":  "2026-05-20",
+                                                     "firstDay":  "2026-05-11",
+                                                     "lastDay":  "2026-05-13",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5210,6 +5286,43 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "commands":  1,
+                                                                   "code-change":  2
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+                                                                        "scope":  1,
+                                                                        "commit":  1,
+                                                                        "estimated_output_tokens":  2,
+                                                                        "issue":  2
+                                                                    },
+                                                     "project":  "Prom-King\\\\tube-sites",
+                                                     "entries":  3,
+                                                     "recent":  [
+                                                                    "Applied PromKing Branding Tubeshell design system (base+themes+icons) to both WordPress tube plugins (promking-tube + fullxxx-video). Added theme body classes + font enqueue, up...",
+                                                                    "Fix multi-source scraper: pornxp was blocked because embed URLs now resolve to hosts like sn.porn-xp.com (outside allowlist). Added allowlist expansion per active source + updat...",
+                                                                    "Committed and pushed scraper allowlist fix to origin/main (commit 39686e6)."
+                                                                ],
+                                                     "firstDay":  "2026-05-20",
+                                                     "lastDay":  "2026-05-20",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "verification":  1,
                                                                    "code-change":  2
                                                                },
                                                      "lineClean":  {
@@ -5220,14 +5333,47 @@
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "OneTrainer",
-                                                     "entries":  2,
+                                                     "project":  "Prom-King/tube-sites",
+                                                     "entries":  3,
                                                      "recent":  [
-                                                                    "Created BigLove-zt3-LoRA-12GB.json training preset optimized for RTX 3060 12GB VRAM + 32GB RAM. Key settings vs 8GB preset: layer_offload_fraction 0.6-\u003e0.2, transformer.train fa...",
-                                                                    "Fixed config.json corruption in d:\\OneTrainer\\config.json. Previous two multi_replace_string_in_file passes had introduced: truncated boolean values (\u0027tru\u0027 instead of \u0027true,\u0027), ..."
+                                                                    "Fix FullXXX scraper resilience for FreeSexVideos: allow HTTP 404 responses with real HTML payload (anti-scrape) and update FreeSexVideos listingUrlPattern away from /latest-upda...",
+                                                                    "Merged PR #24 into main (commit ff48d64) to ship FreeSexVideos /latest-updates/{page}/ pattern + 404-with-body tolerance. Note: Jira sync workflow was failing on PR with GITHUB_...",
+                                                                    "Disabled Jira sync GitHub Actions execution on PR/push (dispatch-only) to comply with Prom-King policy of webhook-only tailnet-contained runners. Merged PR #25 into main (commit..."
                                                                 ],
-                                                     "firstDay":  "2026-05-13",
-                                                     "lastDay":  "2026-05-14",
+                                                     "firstDay":  "2026-05-20",
+                                                     "lastDay":  "2026-05-20",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  3
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "Vault Explorer",
+                                                     "entries":  3,
+                                                     "recent":  [
+                                                                    "Evolved Vault Explorer frontend layout \u0026 modernized titlebar controls: Shrunk titlebar from 44px to 32px; repositioned lang, theme, settings controls on the left side of the tit...",
+                                                                    "Bug fix batch 1 (23 bugs logged, 16+ addressed): Fixed French mojibake encoding (Unicode escapes), fixed setLanguage destroying SVG icon buttons, fixed lang init from saved sett...",
+                                                                    "Fixed all bugs (BUG-01 to BUG-23) in TODO.md. Patched WebM preview pathing, fixed fake folder deletion and F5 refresh logic. Restored missing CSS for .size-badge and positioned ..."
+                                                                ],
+                                                     "firstDay":  "2026-05-20",
+                                                     "lastDay":  "2026-05-20",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5259,6 +5405,99 @@
                                                                 ],
                                                      "firstDay":  "2026-05-07",
                                                      "lastDay":  "2026-05-07",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  2
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "VaultWares SSOT",
+                                                     "entries":  2,
+                                                     "recent":  [
+                                                                    "Updated Windows Scheduled Task VaultWares-SyncGlobalInstructions to use headless conhost pattern (conhost.exe --headless wrapping powershell.exe). Added Scheduled Task Pattern s...",
+                                                                    "Recreated Windows Scheduled Task VaultWares-SyncGlobalInstructions with headless conhost pattern (conhost.exe --headless wrapping powershell.exe). All 19 SSOT PRs were merged Ã¢â‚¬â€ ..."
+                                                                ],
+                                                     "firstDay":  "2026-05-07",
+                                                     "lastDay":  "2026-05-08",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  2
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "OneTrainer",
+                                                     "entries":  2,
+                                                     "recent":  [
+                                                                    "Created BigLove-zt3-LoRA-12GB.json training preset optimized for RTX 3060 12GB VRAM + 32GB RAM. Key settings vs 8GB preset: layer_offload_fraction 0.6-\u003e0.2, transformer.train fa...",
+                                                                    "Fixed config.json corruption in d:\\OneTrainer\\config.json. Previous two multi_replace_string_in_file passes had introduced: truncated boolean values (\u0027tru\u0027 instead of \u0027true,\u0027), ..."
+                                                                ],
+                                                     "firstDay":  "2026-05-13",
+                                                     "lastDay":  "2026-05-14",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  2
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "VaultWares Media Processing",
+                                                     "entries":  2,
+                                                     "recent":  [
+                                                                    "Refactored vault_gui.py init_ui to implement a dual-pane Application Shell with Left Sidebar and Main Right content area with a Titlebar, matching the React UI design system.",
+                                                                    "Added TokenPill UI and customized target languages field into a tag pill layout."
+                                                                ],
+                                                     "firstDay":  "2026-05-20",
+                                                     "lastDay":  "2026-05-20",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5304,98 +5543,6 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  2
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "Vault Explorer",
-                                                     "entries":  2,
-                                                     "recent":  [
-                                                                    "Evolved Vault Explorer frontend layout \u0026 modernized titlebar controls: Shrunk titlebar from 44px to 32px; repositioned lang, theme, settings controls on the left side of the tit...",
-                                                                    "Bug fix batch 1 (23 bugs logged, 16+ addressed): Fixed French mojibake encoding (Unicode escapes), fixed setLanguage destroying SVG icon buttons, fixed lang init from saved sett..."
-                                                                ],
-                                                     "firstDay":  "2026-05-20",
-                                                     "lastDay":  "2026-05-20",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  2
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "VaultWares SSOT",
-                                                     "entries":  2,
-                                                     "recent":  [
-                                                                    "Updated Windows Scheduled Task VaultWares-SyncGlobalInstructions to use headless conhost pattern (conhost.exe --headless wrapping powershell.exe). Added Scheduled Task Pattern s...",
-                                                                    "Recreated Windows Scheduled Task VaultWares-SyncGlobalInstructions with headless conhost pattern (conhost.exe --headless wrapping powershell.exe). All 19 SSOT PRs were merged Ã¢â‚¬â€ ..."
-                                                                ],
-                                                     "firstDay":  "2026-05-07",
-                                                     "lastDay":  "2026-05-08",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "vaultwares-docs / vw-jira-sync",
-                                                     "entries":  1,
-                                                     "recent":  [
-                                                                    "Wired jira-sync runbook into agent routing chain. (1) KNOWLEDGE_SCOUT.md: new row warning that renaming a GitHub repo without vw-jira-sync updates creates duplicate Jira issues;..."
-                                                                ],
-                                                     "firstDay":  "2026-05-20",
-                                                     "lastDay":  "2026-05-20",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
                                                                    "code-change":  1
                                                                },
                                                      "lineClean":  {
@@ -5426,122 +5573,32 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "verification":  1
+                                                                   "code-change":  1
                                                                },
                                                      "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
+                                                                       "insertions":  1,
+                                                                       "deletions":  2,
+                                                                       "files":  1
                                                                    },
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "VaultWares Ã¢â‚¬â€ Post-Refactoring Cleanup \u0026 Infrastructure Verification",
+                                                     "project":  "video-depth-anything",
                                                      "entries":  1,
                                                      "recent":  [
-                                                                    "CLAUDE.md updated: replaced all vault-themes references with vaultwares-themes, vaultwares-agentciation with vaultwares-adk, removed misleading empty lines. Documentation audit:..."
+                                                                    "Backfill: commit aa85ca7 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -2"
                                                                 ],
-                                                     "firstDay":  "2026-05-18",
-                                                     "lastDay":  "2026-05-18",
+                                                     "firstDay":  "2026-04-24",
+                                                     "lastDay":  "2026-04-24",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
                                                                           "files":  0
                                                                       },
                                                      "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "verification":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "VaultWares Ã¢â‚¬â€ Project Rename Refactoring (Phase 5 PR Workflow)",
-                                                     "entries":  1,
-                                                     "recent":  [
-                                                                    "PR workflow transition initiated. 11 of 13 repos successfully pushed to main via batch sync (weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-pl..."
-                                                                ],
-                                                     "firstDay":  "2026-05-18",
-                                                     "lastDay":  "2026-05-18",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "verification":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "VaultWares Ã¢â‚¬â€ System Verification \u0026 Maintenance Complete",
-                                                     "entries":  1,
-                                                     "recent":  [
-                                                                    "Comprehensive system verification completed successfully: (1) PowerShell scripts validated - all 16 scripts in ~/desktop/pwsh/ have correct paths; (2) All 40+ repos pulled succe..."
-                                                                ],
-                                                     "firstDay":  "2026-05-19",
-                                                     "lastDay":  "2026-05-19",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "verification":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "vault-themes, vault-player",
-                                                     "entries":  1,
-                                                     "recent":  [
-                                                                    "Created PQC_PROTOCOL_IMPLEMENTATION.md in main vault-themes repository to document the post-quantum AEAD streaming protocol and referenced it in AGENTS.md. Wrote integration tes..."
-                                                                ],
-                                                     "firstDay":  "2026-05-09",
-                                                     "lastDay":  "2026-05-09",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
+                                                                     "insertions":  1,
+                                                                     "deletions":  2,
+                                                                     "files":  1
                                                                  }
                                                  },
                                                  {
@@ -5556,13 +5613,13 @@
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "Prom King monetization projects",
+                                                     "project":  "vaultwares-secrets",
                                                      "entries":  1,
                                                      "recent":  [
-                                                                    "Implemented Prom King tube pagination and back-catalog retention: added video source/remote/takedown fields and migration, active/not-removed filtering, paginated tRPC endpoints..."
+                                                                    "Created new VaultWares-first secret service project (vaultwares-secrets) and deployed an MVP to vaultwares-1 using PostgreSQL (Docker) + FastAPI (systemd). Added nginx routing u..."
                                                                 ],
-                                                     "firstDay":  "2026-05-04",
-                                                     "lastDay":  "2026-05-04",
+                                                     "firstDay":  "2026-05-21",
+                                                     "lastDay":  "2026-05-21",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5620,6 +5677,66 @@
                                                      "entries":  1,
                                                      "recent":  [
                                                                     "Phase 5 completion: Successfully rebased and pushed 11 of 13 directly-affected repos. Weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-player, v..."
+                                                                ],
+                                                     "firstDay":  "2026-05-18",
+                                                     "lastDay":  "2026-05-18",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "General Tasks / vw-jira-sync",
+                                                     "entries":  1,
+                                                     "recent":  [
+                                                                    "Diagnosed and fixed GitHub Actions Jira sync failures (400 project error = bad JIRA_TOKEN). MCP probe confirmed projects healthy. Redistributed secrets (37 VW repos OK; PK repos..."
+                                                                ],
+                                                     "firstDay":  "2026-05-20",
+                                                     "lastDay":  "2026-05-20",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "verification":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "VaultWares Ã¢â‚¬â€ Project Rename Refactoring (Phase 5 PR Workflow)",
+                                                     "entries":  1,
+                                                     "recent":  [
+                                                                    "PR workflow transition initiated. 11 of 13 repos successfully pushed to main via batch sync (weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-pl..."
                                                                 ],
                                                      "firstDay":  "2026-05-18",
                                                      "lastDay":  "2026-05-18",
@@ -5700,6 +5817,66 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "plan":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "VaultWares Secrets",
+                                                     "entries":  1,
+                                                     "recent":  [
+                                                                    "Reviewed VaultWares secret-system direction (vaultwares-docs/docs-content/operations/secrets.mdx) and current state on vaultwares-1: secrets.vaultwares.ca is Vaultwarden behind ..."
+                                                                ],
+                                                     "firstDay":  "2026-05-21",
+                                                     "lastDay":  "2026-05-21",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "vaultwares-docs / vw-jira-sync",
+                                                     "entries":  1,
+                                                     "recent":  [
+                                                                    "Wired jira-sync runbook into agent routing chain. (1) KNOWLEDGE_SCOUT.md: new row warning that renaming a GitHub repo without vw-jira-sync updates creates duplicate Jira issues;..."
+                                                                ],
+                                                     "firstDay":  "2026-05-20",
+                                                     "lastDay":  "2026-05-20",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  1
                                                                },
                                                      "lineClean":  {
@@ -5733,34 +5910,34 @@
                                                                    "code-change":  1
                                                                },
                                                      "lineClean":  {
-                                                                       "insertions":  1,
-                                                                       "deletions":  2,
-                                                                       "files":  1
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
                                                                    },
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "video-depth-anything",
+                                                     "project":  "Prom King monetization projects",
                                                      "entries":  1,
                                                      "recent":  [
-                                                                    "Backfill: commit aa85ca7 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -2"
+                                                                    "Implemented Prom King tube pagination and back-catalog retention: added video source/remote/takedown fields and migration, active/not-removed filtering, paginated tRPC endpoints..."
                                                                 ],
-                                                     "firstDay":  "2026-04-24",
-                                                     "lastDay":  "2026-04-24",
+                                                     "firstDay":  "2026-05-04",
+                                                     "lastDay":  "2026-05-04",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
                                                                           "files":  0
                                                                       },
                                                      "lineRaw":  {
-                                                                     "insertions":  1,
-                                                                     "deletions":  2,
-                                                                     "files":  1
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
                                                                  }
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  1
+                                                                   "verification":  1
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -5770,13 +5947,73 @@
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "General Tasks / vw-jira-sync",
+                                                     "project":  "VaultWares Ã¢â‚¬â€ System Verification \u0026 Maintenance Complete",
                                                      "entries":  1,
                                                      "recent":  [
-                                                                    "Diagnosed and fixed GitHub Actions Jira sync failures (400 project error = bad JIRA_TOKEN). MCP probe confirmed projects healthy. Redistributed secrets (37 VW repos OK; PK repos..."
+                                                                    "Comprehensive system verification completed successfully: (1) PowerShell scripts validated - all 16 scripts in ~/desktop/pwsh/ have correct paths; (2) All 40+ repos pulled succe..."
                                                                 ],
-                                                     "firstDay":  "2026-05-20",
-                                                     "lastDay":  "2026-05-20",
+                                                     "firstDay":  "2026-05-19",
+                                                     "lastDay":  "2026-05-19",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "verification":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "VaultWares Ã¢â‚¬â€ Post-Refactoring Cleanup \u0026 Infrastructure Verification",
+                                                     "entries":  1,
+                                                     "recent":  [
+                                                                    "CLAUDE.md updated: replaced all vault-themes references with vaultwares-themes, vaultwares-agentciation with vaultwares-adk, removed misleading empty lines. Documentation audit:..."
+                                                                ],
+                                                     "firstDay":  "2026-05-18",
+                                                     "lastDay":  "2026-05-18",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "verification":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "vault-themes, vault-player",
+                                                     "entries":  1,
+                                                     "recent":  [
+                                                                    "Created PQC_PROTOCOL_IMPLEMENTATION.md in main vault-themes repository to document the post-quantum AEAD streaming protocol and referenced it in AGENTS.md. Wrote integration tes..."
+                                                                ],
+                                                     "firstDay":  "2026-05-09",
+                                                     "lastDay":  "2026-05-09",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -16128,17 +16365,17 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T14:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-21T00:00:01.0000000Z",
+                 "_maxCreatedAtUtc":  "2026-05-21T16:04:58.8851500Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
-                               "end":  "2026-05-20"
+                               "end":  "2026-05-21"
                            },
                  "totals":  {
-                                "projects":  60,
-                                "events":  1455,
+                                "projects":  65,
+                                "events":  1494,
                                 "uniqueCommitsRecomputed":  689,
-                                "activeDays":  68,
+                                "activeDays":  69,
                                 "commitEventsWithStats":  689
                             }
              }

@@ -1,0 +1,41 @@
+{
+  "id": "20260521-025054-933-vw-jira-sync-c0baca6c",
+  "createdAt": "2026-05-21T06:50:54.9334816Z",
+  "createdAtLocal": "2026-05-21 02:50",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-jira-sync",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 02:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Audited vw-jira-sync GitHub Actions runner configuration. Reusable workflow .github/workflows/sync.yml is pinned to self-hosted runner label [self-hosted, greencloud-vps] (no GitHub-hosted runs-on values). Verified caller template .github/workflow-templates/jira-sync.yml uses workflow_call into sync.yml so runs-on comes from the reusable workflow. Checked GitHub API for p-potvin/vw-jira-sync: total_count=0 runners, so no self-hosted runner is currently attached/available to that repo (jobs would queue until a runner exists). On vaultwares-1 (100.73.93.84) found /opt/actions-runner with agentName greencloud-vps in .runner but no Runner.Listener process running; local runner metadata points at p-potvin/vaultwares-docs.",
+  "commands": [
+    "rg runs-on/self-hosted in .github/workflows",
+    "cat .github/workflows/sync.yml",
+    "cat .github/workflow-templates/jira-sync.yml",
+    "gh api repos/p-potvin/vw-jira-sync/actions/runners",
+    "ssh root@100.73.93.84 cat /opt/actions-runner/.runner"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync\\.github\\workflows\\sync.yml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync\\.github\\workflow-templates\\jira-sync.yml"
+  ],
+  "planPath": "",
+  "contentHash": "c0baca6c5fc7107994266dca8a83c50338c9b507a5859fb90f65d0db4b1bc187",
+  "git": null
+}

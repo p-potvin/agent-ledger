@@ -1,0 +1,45 @@
+{
+  "id": "20260520-160542-291-vaultwares-media-processing-5519f0ae",
+  "createdAt": "2026-05-20T20:05:42.2916438Z",
+  "createdAtLocal": "2026-05-20 16:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-media-processing",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-media-processing  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 16:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-media-processing",
+  "summary": "Integrated StreamDiffusion Scaffold. Created vaultwares_media_processing/stream_wrapper.py to handle TensorRT StreamDiffusion inference. Re-routed core.py to support stylize_video via the diffuer class. Altered vault_gui.py to include a toggle for Transcription vs Stylization, injecting missing layout elements dynamically for Video-to-Video parameters.",
+  "commands": [
+    "Set-Content",
+    "python patch_gui.py"
+  ],
+  "files": [
+    "vaultwares_media_processing/stream_wrapper.py",
+    "vaultwares_media_processing/core.py",
+    "vault_gui.py"
+  ],
+  "planPath": "",
+  "contentHash": "5519f0ae59ee14b2487516d7a8dabf0976e0fd1a7ab6f6ba64a540ee89a780a2",
+  "git": {
+    "repo": "vaultwares-media-processing",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-media-processing",
+    "branch": "main",
+    "head": "9228e6f",
+    "hasChanges": false
+  }
+}

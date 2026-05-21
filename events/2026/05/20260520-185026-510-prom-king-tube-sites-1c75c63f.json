@@ -1,0 +1,45 @@
+{
+  "id": "20260520-185026-510-prom-king-tube-sites-1c75c63f",
+  "createdAt": "2026-05-20T22:50:26.5103433Z",
+  "createdAtLocal": "2026-05-20 18:50",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/tube-sites",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): powershell, git, gh, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 18:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "powershell",
+      "git",
+      "gh",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Fix FullXXX scraper resilience for FreeSexVideos: allow HTTP 404 responses with real HTML payload (anti-scrape) and update FreeSexVideos listingUrlPattern away from /latest-updates/page/{page}/. Opened issue #23 and PR #24 on Prom-King/tube-sites; ran php tests/VideoFetcherTest.php.",
+  "commands": [
+    "curl -I https://www.freesexvideos.xxx/latest-updates/page/2/",
+    "php .\\\\tests\\\\VideoFetcherTest.php",
+    "gh issue create ...",
+    "gh pr create ..."
+  ],
+  "files": [
+    "fullxxx-video/includes/video-fetcher.php",
+    "fullxxx-video/includes/player.php"
+  ],
+  "planPath": "",
+  "contentHash": "1c75c63f7632a9fdfc650f32e8b5bb065e47fa6fdba5add943f4902cb88e073d",
+  "git": null
+}

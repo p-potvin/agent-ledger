@@ -1,0 +1,46 @@
+{
+  "id": "20260520-163641-748-prom-king-tube-sites-27e8b982",
+  "createdAt": "2026-05-20T20:36:41.7482533Z",
+  "createdAtLocal": "2026-05-20 16:36",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King\\\\tube-sites",
+  "kind": "code-change",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: medium\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): functions.apply_patch, functions.shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 16:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "medium",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "functions.apply_patch",
+      "functions.shell_command"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "issue": "https://github.com/Prom-King/tube-sites/issues/22",
+      "estimated_output_tokens": 900
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Fix multi-source scraper: pornxp was blocked because embed URLs now resolve to hosts like sn.porn-xp.com (outside allowlist). Added allowlist expansion per active source + updated pornxp/topvid domain map, and used effective allowlist when validating candidates so pornxp + freesexvideos can insert again.",
+  "commands": [
+    "Invoke-WebRequest to fetch sample pages and confirm pornxp embed host sn.porn-xp.com",
+    "gh issue create (Prom-King/tube-sites#22)",
+    "php -l fullxxx-video/includes/{helpers,video-fetcher,admin-settings}.php"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\admin-settings.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\helpers.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\video-fetcher.php"
+  ],
+  "planPath": "",
+  "contentHash": "27e8b982a0e3c1cf21a9b2ea25b34e86c3ed8aede95479016c3fd4d2e00a892f",
+  "git": null
+}
