@@ -1,0 +1,62 @@
+{
+  "id": "20260520-141758-568-prom-king-tube-sites-d0474ca5",
+  "createdAt": "2026-05-20T18:17:58.5688512Z",
+  "createdAtLocal": "2026-05-20 14:17",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King\\\\tube-sites",
+  "kind": "code-change",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: medium\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): functions.apply_patch, functions.shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 14:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "medium",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "functions.apply_patch",
+      "functions.shell_command"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "estimated_output_tokens": 900,
+      "scope": "apply PromKing.html design system to both tube sites"
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Applied PromKing Branding Tubeshell design system (base+themes+icons) to both WordPress tube plugins (promking-tube + fullxxx-video). Added theme body classes + font enqueue, updated templates to use tubeshell header/hero/footer and token palette, updated JS selectors for title filtering + hover previews, and tokenized tube-shared auth + pkt-player UI.",
+  "commands": [
+    "Copy-Item Promking Branding/styles/{base,theme-*}.css -> */assets/css/tubeshell/*",
+    "php -l <touched php files>",
+    "git status --porcelain"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\assets\\css\\fxv-auth.css",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\assets\\css\\pkt-player.css",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\assets\\css\\tube.css",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\assets\\js\\tube.js",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\fullxxx-video.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\auth-bridge.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\templates\\archive-fxv_video.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\templates\\single-fxv_video.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\templates\\taxonomy-fxv_category.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\assets\\css\\pkt-auth.css",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\assets\\css\\pkt-player.css",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\assets\\css\\tube.css",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\assets\\js\\tube.js",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\includes\\auth-bridge.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\promking-tube.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\templates\\archive-pkt_video.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\templates\\single-pkt_video.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\templates\\taxonomy-pkt_category.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\tube-shared\\assets\\css\\tube-auth.css"
+  ],
+  "planPath": "",
+  "contentHash": "d0474ca53a85f85f46547dcf2e1a8827ce4e055ad1be9bda8ae2873ec35d36f8",
+  "git": null
+}

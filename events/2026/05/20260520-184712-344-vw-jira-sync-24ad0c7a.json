@@ -1,0 +1,35 @@
+{
+  "id": "20260520-184712-344-vw-jira-sync-24ad0c7a",
+  "createdAt": "2026-05-20T22:47:12.3444674Z",
+  "createdAtLocal": "2026-05-20 18:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-jira-sync",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 18:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Diagnosed root cause of GitHub Actions 'Sync to Jira' 400 failures. GH token distribution is working (41/41 repos OK at 12:28). jira-token.txt last written 6:46 AM — token is expired/invalid. Jira returns 400 (not 401) for bad credentials (anonymous access, project permission fail). Fix: user generates new Atlassian API token at id.atlassian.com, overwrites jira-token.txt, triggers Start-ScheduledTask VaultWares-DistributeJiraSecrets.",
+  "commands": [
+    "Get-Item jira-token.txt | Select LastWriteTime",
+    "Start-ScheduledTask -TaskName VaultWares-DistributeJiraSecrets"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "24ad0c7a2125b745954cc3ff1f80ad145edf09ea9a10c1a3b570c56a7e4d554e",
+  "git": null
+}

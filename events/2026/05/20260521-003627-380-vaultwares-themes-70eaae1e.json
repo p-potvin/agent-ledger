@@ -1,0 +1,41 @@
+{
+  "id": "20260521-003627-380-vaultwares-themes-70eaae1e",
+  "createdAt": "2026-05-21T04:36:27.3804943Z",
+  "createdAtLocal": "2026-05-21 00:36",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-themes",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 00:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Compiled full first-pass deletion list for agent-ledger and vaultwares-themes. agent-ledger: DELETE AGENTS.md (redundant with CLAUDE.md), ROADMAP.md, TODO.md (stubs), .github/copilot-instructions.md. vaultwares-themes TEXT: DELETE agent-ledger.md, .Jules/palette.md, PQC_PROTOCOL_IMPLEMENTATION.md (move to docs first), brand/legacy-notes/guide.txt (encoded PDF binary), brand/legacy-notes/branding-fr-en.txt, numerous duplicate design-system README/SKILL/notes/dist-to-* md files across assets/design-system/, brand/VaultWares Design System/, brand/UI Kit/. DELETE generated artifacts: VaultWares Theme Library.html (6.9MB), VaultWares Design System.zip, examples/brand-guide/dist/, package-lock.json. FLAGS BEFORE DELETE: wordmark SVGs only in design-system copies (need mv to assets/logos/ first); security/README.md move to vaultwares-docs; docs/ folder review. CODE FILE INVENTORY compiled: tokens, components, security, theme-manager exports, UI kit duplicates, generated themes.js across 5 locations.",
+  "commands": [
+    "find vaultwares-themes -type f"
+  ],
+  "files": [
+    "vaultwares-themes/agent-ledger.md",
+    "vaultwares-themes/.Jules/palette.md",
+    "vaultwares-themes/PQC_PROTOCOL_IMPLEMENTATION.md",
+    "agent-ledger/AGENTS.md",
+    "agent-ledger/ROADMAP.md",
+    "agent-ledger/TODO.md"
+  ],
+  "planPath": "",
+  "contentHash": "70eaae1e56e52b384822652700f76c5e67504f3855bf4c8f0a81cd463142e6b7",
+  "git": null
+}

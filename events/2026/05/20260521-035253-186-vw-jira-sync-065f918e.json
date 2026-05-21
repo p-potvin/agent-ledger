@@ -1,0 +1,46 @@
+{
+  "id": "20260521-035253-186-vw-jira-sync-065f918e",
+  "createdAt": "2026-05-21T07:52:53.1863346Z",
+  "createdAtLocal": "2026-05-21 03:52",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-jira-sync",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 03:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Implemented and deployed the preferred webhook-triggered Jira sync model (no GitHub Actions runners). On vaultwares-1 (100.73.93.84) replaced vw-deployd (in /opt/automation-suite) with new vw-webhookd running from /opt/vaultwares-adk/webhookd/vw_webhookd.py behind existing nginx route https://hooks.vaultwares.ca/github. vw-webhookd verifies X-Hub-Signature-256 with VW_GITHUB_WEBHOOK_SECRET and, for allowed repos/events, writes the webhook JSON to /tmp and runs vw-jira-sync/scripts/live_sync.py server-side using GITHUB_EVENT_NAME+GITHUB_EVENT_PATH. Deployed vw-jira-sync to /opt/vw-jira-sync and updated scripts to not require gh CLI on the server (token-based GitHub REST when available; anonymous GitHub REST fallback if no token). Verified end-to-end by generating a signed pull_request webhook locally on the VPS for p-potvin/vault-flows PR #125; webhookd executed live_sync successfully and updated Jira issue (seen in /var/log/vw-webhookd.log). Jira token is currently provided via a root-owned file referenced by /etc/vw-jira-sync/env (no token values logged). Vaultwarden storage in secrets.vaultwares.ca is not yet implemented because initial account/bootstrap is still pending (Bitwarden client/CLI required for account creation).",
+  "commands": [
+    "ssh root@100.73.93.84 cat /etc/nginx/sites-enabled/hooks.vaultwares.ca.conf",
+    "ssh root@100.73.93.84 systemctl stop/disable vw-deployd; enable vw-webhookd",
+    "scp vw-jira-sync files to /opt/vw-jira-sync",
+    "scp webhookd files to /opt/vaultwares-adk/webhookd",
+    "curl https://hooks.vaultwares.ca/github (401 without signature)",
+    "signed local webhook test -> 202 + log evidence"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-adk\\webhookd\\vw_webhookd.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-adk\\webhookd\\config.example.yml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-adk\\webhookd\\vw-webhookd.service",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync\\scripts\\jira_sync.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync\\scripts\\live_sync.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync\\README.md"
+  ],
+  "planPath": "",
+  "contentHash": "065f918e574c93c49b419551b4c5ef99b0d2a20f0bc73a0e890b252d7f2160d8",
+  "git": null
+}

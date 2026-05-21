@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260520-175048-342-vault-explorer-311525a7",
+    "createdAt":  "2026-05-20T21:50:48.3424274Z",
+    "createdAtLocal":  "2026-05-20 17:50",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 17:50 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Major video player upgrade: (1) Player now overlays titlebar (z-index 10000, top:0). (2) Video title bar at top with gradient + title text + corner-flush minimize/close buttons. (3) PiP mode: any click except the pip-close-btn X restores the player; video click does not pause in PiP. (4) Seek time row below progress bar (elapsed / total). (5) All control icons 22px (ctrl-btn class). (6) Speed cycling button 1x-\u003e1.25-\u003e1.5-\u003e2-\u003e0.75. (7) CC subtitle button opens file picker, loads .srt/.vtt as track element. (8) Upscale AI toggle stub with toast.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "index.html"
+              ],
+    "planPath":  "",
+    "contentHash":  "311525a75220a6c2ae0e1edc2fc6e291e2efda009550fd4ddf8d02195b29e640",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "3578174",
+                "hasChanges":  true
+            }
+}

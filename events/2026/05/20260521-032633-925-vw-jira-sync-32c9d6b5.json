@@ -1,0 +1,46 @@
+{
+  "id": "20260521-032633-925-vw-jira-sync-32c9d6b5",
+  "createdAt": "2026-05-21T07:26:33.9255941Z",
+  "createdAtLocal": "2026-05-21 03:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-jira-sync",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 03:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Chose and prepped trigger model #1: GitHub should not run vw-jira-sync on GitHub-hosted/self-hosted Actions runners. Instead use existing webhook ingress at hooks.vaultwares.ca/github (nginx -> vw-deployd on vaultwares-1) to forward signed GitHub webhook events into vw-jira-sync/scripts/live_sync.py on the VPS. Implemented code changes: (1) vw-jira-sync/scripts/jira_sync.py now prefers token-based GitHub REST API via / and falls back to gh CLI only if no token; (2) vw-jira-sync/scripts/live_sync.py docstring updated to clarify it can run under webhook receiver by setting GITHUB_EVENT_NAME + GITHUB_EVENT_PATH; (3) automation-suite/deployd/vw_deployd.py extended with optional jira_sync forwarding (writes webhook body to disk, sets env, runs fixed command) while keeping deploy flow push-only; updated deployd/config.example.yml + deployd/README.md accordingly; (4) vaultwares-docs/docs-content/operations/jira-sync.mdx updated to document the webhook-triggered preferred architecture and mark GitHub Actions caller-workflow flow as legacy. Verified Python syntax via py_compile.",
+  "commands": [
+    "rg/cat vw-jira-sync scripts",
+    "ssh cat /etc/nginx/sites-enabled/hooks.vaultwares.ca.conf",
+    "ssh ls/sed /opt/vaultwares-webhooks/app.py",
+    "ssh cat /etc/vw-deployd/config.yml",
+    "python -m py_compile"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync\\scripts\\jira_sync.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync\\scripts\\live_sync.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\automation-suite\\deployd\\vw_deployd.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\automation-suite\\deployd\\config.example.yml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\automation-suite\\deployd\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\jira-sync.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "32c9d6b55aa55f765ba3f453c4c5cf6d472df258903d38b3284ae07564bab989",
+  "git": null
+}

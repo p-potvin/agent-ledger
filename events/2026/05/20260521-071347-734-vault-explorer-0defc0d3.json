@@ -1,0 +1,50 @@
+﻿{
+    "id":  "20260521-071347-734-vault-explorer-0defc0d3",
+    "createdAt":  "2026-05-21T11:13:47.7349711Z",
+    "createdAtLocal":  "2026-05-21 07:13",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 07:13 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "CSS cleanup: removed 205-line duplicate style block (lines 406-619) that was causing theme picker to break on hover and theme rendering to be unreliable. Removed stale #settings-panel override at top of style block. Added video::cue subtitle styling wired to --sub-font-size CSS variable. Restored canonical #settings-panel and .settings-panel-header CSS. Added light-theme halo fix in themes.css via [data-theme-mode=light] overrides for .status-bar, .sorting-bar, .titlebar. Wired defaultSubLang preference into playItem subtitle auto-selection (language match instead of always first track). Added rememberPosition save-on-close and restore-via-loadedmetadata in playItem and close-modal handler.",
+    "commands":  [
+                     "PowerShell line removal (indices 405-618)",
+                     "npm start"
+                 ],
+    "files":  [
+                  "index.html",
+                  "themes.css"
+              ],
+    "planPath":  "",
+    "contentHash":  "0defc0d3def95b8238065183b1a5f78c4dffb19ed0cc13c9cebadfc2099cd52e",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "fb36198",
+                "hasChanges":  true
+            }
+}

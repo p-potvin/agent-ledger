@@ -1,0 +1,40 @@
+{
+  "id": "20260521-120458-885-general-tasks-70df54b1",
+  "createdAt": "2026-05-21T16:04:58.8851500Z",
+  "createdAtLocal": "2026-05-21 12:04",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 12:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Tailscale DNS screenshot is showing split-DNS routes to a nameserver (not a direct host override). Confirmed from this Windows host that TCP 53 to 100.73.93.84 fails while 443 succeeds; warden.vaultwares.ca resolution times out accordingly. On greencloud-vps, dnsmasq is running and now has an explicit record for warden.vaultwares.ca -> 100.73.93.84 (added to /etc/dnsmasq.d/vaultwares-split-dns.conf). Verified locally on the VPS via dig that it answers correctly. Next required change is in Tailscale ACL: allow UDP+TCP 53 from your devices (or autogroup:admin) to the greencloud-vps/tag:server so split DNS can query the nameserver. Updated docs to note DNS port 53 requirement in operations/tailscale.mdx and pushed to the existing docs PR branch.",
+  "commands": [
+    "tailscale dns status",
+    "Test-NetConnection 100.73.93.84 -Port 53",
+    "ssh root@100.73.93.84 dig @100.73.93.84 warden.vaultwares.ca A",
+    "ssh root@100.73.93.84 systemctl restart dnsmasq"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\tailscale.mdx",
+    "/etc/dnsmasq.d/vaultwares-split-dns.conf"
+  ],
+  "planPath": "",
+  "contentHash": "70df54b19e662b8c1e63ac5755c0c27c6690ca0d6ab0ac260850b8295ffacf37",
+  "git": null
+}
