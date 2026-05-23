@@ -1,0 +1,52 @@
+﻿{
+    "id":  "20260521-235305-627-vault-explorer-e22157c5",
+    "createdAt":  "2026-05-22T03:53:05.6272928Z",
+    "createdAtLocal":  "2026-05-21 23:53",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 23:53 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Replaced random thumbnail seek with Math.min(20, duration) seek in main.js and generate_previews.py. Recreated Windows scheduled task \u0027VaultExplorerPreviews\u0027 to execute with conhost wrapper. Implemented standard ASR/translation pipeline inside audio_normalize.py using --transcribe switch, leveraging already isolated vocals with Parakeet V3. Added \u0027Normalize \u0026 Transcribe (AI)\u0027 context menu item and fully wired ipc and preload channels to toggle ASR transcription during background audio isolation.",
+    "commands":  [
+                     "schtasks /create /tn \u0027VaultExplorerPreviews\u0027 /tr \u0027conhost python ...\u0027 ..."
+                 ],
+    "files":  [
+                  "main.js",
+                  "preload.js",
+                  "index.html",
+                  "python-scripts/generate_previews.py",
+                  "python-scripts/audio_normalize.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "e22157c51bad2174c294591531d13f5f05a80db649a5173f75dd7e49c1bf030d",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "d25d7ed",
+                "hasChanges":  true
+            }
+}

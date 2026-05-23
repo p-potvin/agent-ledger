@@ -231,65 +231,107 @@ $payload = [ordered]@{
 $payloadJson = ($payload | ConvertTo-Json -Depth 24 -Compress)
 $i18nJson = ((New-I18nTable) | ConvertTo-Json -Depth 24 -Compress)
 
+# Build reverse alias map: canonical -> [oldName, ...] for project card labels
+$aliasesFilePath = Join-Path $PSScriptRoot "..\project-aliases.json"
+$aliasReverseMap = [ordered]@{}
+if (Test-Path -LiteralPath $aliasesFilePath) {
+    try {
+        $aliasData = Get-Content -Raw -LiteralPath $aliasesFilePath | ConvertFrom-Json
+        foreach ($entry in $aliasData.projects) {
+            if ($entry.canonical -and $entry.aliases) {
+                $validAliases = @($entry.aliases | Where-Object { $_ -and $_.Trim() -ne '' })
+                if ($validAliases.Count -gt 0) {
+                    $aliasReverseMap[$entry.canonical] = $validAliases
+                }
+            }
+        }
+    } catch { }
+}
+$aliasMapJson = ($aliasReverseMap | ConvertTo-Json -Depth 4 -Compress)
+
 $template = @'
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Work Impact</title>
+  <title>Work Impact — VaultWares</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
   <style>
-    /* === VaultWares Design Tokens === */
+    /* === VaultWares Revisited Design Tokens === */
     :root {
-      --v-base: #12161f;
-      --v-surface: #1c2232;
-      --v-surface2: #242c3e;
-      --v-gold: #c4a44a;
-      --v-gold-muted: rgba(196,164,74,0.14);
-      --v-gold-dim: rgba(196,164,74,0.32);
-      --v-cyan: #18b8d0;
-      --v-green: #2ea86b;
-      --v-burgundy: #8a2424;
-      --v-slate: #7d8fa5;
-      --v-muted-color: #5c6d82;
-      --v-border: rgba(125,143,165,0.18);
-      --bg: var(--v-base);
-      --fg: #e8ecf2;
-      --muted: var(--v-slate);
-      --border: var(--v-border);
-      --card: var(--v-surface);
-      --chip: var(--v-gold-muted);
-      --accent: var(--v-gold);
-      --link: var(--v-cyan);
-      --good0: rgba(125,143,165,0.10);
-      --good1: rgba(196,164,74,0.22);
-      --good2: rgba(196,164,74,0.48);
-      --good3: rgba(196,164,74,0.75);
-      --good4: #c4a44a;
+      --font-sans: "Inter", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", "Cascadia Code", Consolas, ui-monospace, monospace;
+      /* Primitives */
+      --vault-console-bg: #161320;
+      --vault-console-surface: #1F1A2B;
+      --vault-console-raised: #2A2340;
+      --vault-console-elevated: #31274A;
+      --vault-console-border-subtle: rgba(255,255,255,0.06);
+      --vault-console-text-secondary: rgba(237,230,255,0.72);
+      --vault-console-gold: #D6A441;
+      --vault-console-violet: #B07CFF;
+      --vault-signal-online: #6BE675;
+      --vault-signal-relay: #55D6FF;
+      --vault-signal-sync: #B07CFF;
+      --vault-signal-warning: #F0B94B;
+      --vault-signal-alert: #FF6B7A;
+      /* Semantic dashboard vars */
+      --v-base: var(--vault-console-bg);
+      --v-surface: var(--vault-console-surface);
+      --v-surface2: var(--vault-console-raised);
+      --v-gold: var(--vault-console-gold);
+      --v-gold-muted: rgba(214,164,65,0.14);
+      --v-gold-dim: rgba(214,164,65,0.32);
+      --v-cyan: var(--vault-signal-relay);
+      --v-green: var(--vault-signal-online);
+      --v-burgundy: var(--vault-signal-alert);
+      --v-slate: var(--vault-console-text-secondary);
+      --v-muted-color: rgba(237,230,255,0.45);
+      --v-border: var(--vault-console-border-subtle);
+      --bg: var(--vault-console-bg);
+      --fg: #EDE6FF;
+      --muted: var(--vault-console-text-secondary);
+      --border: var(--vault-console-border-subtle);
+      --card: var(--vault-console-surface);
+      --chip: rgba(214,164,65,0.14);
+      --accent: var(--vault-console-gold);
+      --link: var(--vault-signal-relay);
+      --good0: rgba(176,124,255,0.08);
+      --good1: rgba(214,164,65,0.22);
+      --good2: rgba(214,164,65,0.48);
+      --good3: rgba(214,164,65,0.75);
+      --good4: var(--vault-console-gold);
     }
     @media (prefers-color-scheme: light) {
       :root {
-        --v-base: #f4efe6;
-        --v-surface: #ffffff;
-        --v-surface2: #ede8df;
+        --vault-warm-bg: #F5F1E8;
+        --vault-warm-raised: #FCFAF5;
+        --vault-warm-muted: #ECE5D8;
+        --vault-warm-border-subtle: rgba(22,19,32,0.08);
+        --v-base: var(--vault-warm-bg);
+        --v-surface: var(--vault-warm-raised);
+        --v-surface2: var(--vault-warm-muted);
         --v-gold: #8c6820;
-        --v-gold-muted: rgba(140,104,32,0.10);
-        --v-gold-dim: rgba(140,104,32,0.25);
+        --v-gold-muted: rgba(140,104,32,0.12);
+        --v-gold-dim: rgba(140,104,32,0.28);
         --v-cyan: #0a7590;
-        --v-green: #1a6940;
-        --v-burgundy: #7b1a1a;
-        --v-slate: #4a5a6d;
-        --v-muted-color: #7a8898;
-        --v-border: rgba(26,31,44,0.14);
-        --bg: var(--v-base);
-        --fg: #1a1f2c;
-        --muted: var(--v-slate);
-        --border: var(--v-border);
-        --card: var(--v-surface);
-        --chip: var(--v-gold-muted);
-        --accent: var(--v-gold);
-        --link: var(--v-cyan);
-        --good0: #e8e4dc;
+        --v-green: #2a7a32;
+        --v-burgundy: #9b1c1c;
+        --v-slate: rgba(22,19,32,0.55);
+        --v-muted-color: rgba(22,19,32,0.40);
+        --v-border: var(--vault-warm-border-subtle);
+        --bg: var(--vault-warm-bg);
+        --fg: #161320;
+        --muted: rgba(22,19,32,0.55);
+        --border: var(--vault-warm-border-subtle);
+        --card: var(--vault-warm-raised);
+        --chip: rgba(140,104,32,0.12);
+        --accent: #8c6820;
+        --link: #0a7590;
+        --good0: var(--vault-warm-muted);
         --good1: rgba(140,104,32,0.22);
         --good2: rgba(140,104,32,0.48);
         --good3: rgba(140,104,32,0.75);
@@ -299,7 +341,7 @@ $template = @'
 
     /* === Base === */
     *, *::before, *::after { box-sizing: border-box; }
-    body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--fg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+    body { margin: 0; font-family: var(--font-sans); background: var(--bg); color: var(--fg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
     main { max-width: 1140px; margin: 0 auto; padding: 24px 16px 80px; }
     a { color: var(--link); }
 
@@ -360,7 +402,7 @@ $template = @'
     th, td { text-align:left; padding: 8px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
     th { color: var(--muted); font-weight: 700; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.05em; }
     tr:last-child td { border-bottom: none; }
-    code { font-family: "Cascadia Code", Consolas, monospace; font-size: 11.5px; }
+    code { font-family: var(--font-mono); font-size: 11.5px; }
 
     /* === Calendar heatmap === */
     .heatWrap { overflow-x: auto; scrollbar-width: thin; }
@@ -419,6 +461,7 @@ $template = @'
     .proj-meta { display: flex; gap: 8px; flex-wrap: wrap; font-size: 11px; margin-bottom: 10px; }
     .proj-meta span { background: var(--chip); border: 1px solid var(--v-gold-dim); border-radius: 4px; padding: 2px 7px; color: var(--accent); font-weight: 600; }
     .proj-recent li { font-size: 12px; color: var(--fg); line-height: 1.55; margin-bottom: 4px; word-break: break-word; }
+    .proj-formerly { font-size: 11px; color: var(--muted); font-style: italic; margin-left: 4px; font-weight: 400; }
 
     /* === Kind chips === */
     .kchip { display:inline-block; padding: 1px 6px; border-radius: 4px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
@@ -644,6 +687,7 @@ $template = @'
   <script>
     const PAYLOAD = __PAYLOAD_JSON__;
     const I18N = __I18N_JSON__;
+    const ALIASES = __ALIAS_MAP_JSON__;
 
     (function(){
       const data = PAYLOAD.data;
@@ -1270,12 +1314,16 @@ $template = @'
               '</ul>'
             : '<div class="no-data">' + esc(t("noSummaries")) + '</div>';
 
+          const formerlyList = (ALIASES && ALIASES[p.project]) ? [].concat(ALIASES[p.project]) : [];
+          const formerlyHtml = formerlyList.length
+            ? ' <span class="proj-formerly">formerly: ' + formerlyList.map(esc).join(', ') + '</span>'
+            : '';
           const details = document.createElement("details");
           details.className = "proj-card";
           details.innerHTML =
             '<summary>' +
               '<i class="s-arrow">\u25B6</i>' +
-              '<strong><code>' + esc(String(p.project)) + '</code></strong>' +
+              '<strong><code>' + esc(String(p.project)) + '</code></strong>' + formerlyHtml +
               '<span class="pill" style="margin-left:auto;">' + fmtInt(p.entries||0) + '</span>' +
             '</summary>' +
             '<div class="detailsBody">' +
@@ -1313,7 +1361,7 @@ $template = @'
 
 '@
 
-$content = $template.Replace('__PAYLOAD_JSON__', $payloadJson).Replace('__I18N_JSON__', $i18nJson)
+$content = $template.Replace('__PAYLOAD_JSON__', $payloadJson).Replace('__I18N_JSON__', $i18nJson).Replace('__ALIAS_MAP_JSON__', $aliasMapJson)
 
 Set-Content -LiteralPath $outHtmlPath -Value $content -Encoding utf8
 try {

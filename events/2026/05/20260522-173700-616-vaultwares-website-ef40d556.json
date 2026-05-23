@@ -1,0 +1,47 @@
+{
+  "id": "20260522-173700-616-vaultwares-website-ef40d556",
+  "createdAt": "2026-05-22T21:37:00.6169495Z",
+  "createdAtLocal": "2026-05-22 17:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-website",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 17:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Homepage now removes the VaultDrive/VaultCrypt/VaultGate list and replaces it with a telemetry card (animated line graph + LED status chips + metrics) plus a Console Preview section using screenshots. Navbar/Footer logo mark switched from the bolt favicon to the RelayDistributed icon to avoid looking like the Vite logo; favicon.svg also replaced with the relay mark. Deployed by pushing to main; verified vw-webhookd ran /var/www/deploy-scripts/deploy-vaultwares-website.sh with exit=0 and https://vaultwares.ca/favicon.svg serves the new icon.",
+  "commands": [
+    "npm run build",
+    "git commit -m 'home: telemetry panels, new logo, screenshots'",
+    "git commit -m 'brand: replace favicon mark'",
+    "git push origin main",
+    "ssh root@100.73.93.84 tail -n /var/log/vw-webhookd.log"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\src\\pages\\Home.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\src\\components\\Navbar.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\src\\components\\Footer.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\public\\favicon.svg",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\public\\screenshots\\home-console-brand.png",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\public\\screenshots\\store-console-brand.png",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\public\\screenshots\\store-empty-state-console-brand.png",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\.gitignore"
+  ],
+  "planPath": "",
+  "contentHash": "ef40d5569aeeac1333dde4bf8468b66b0ee800cff17ef84178a6e3de0c12a418",
+  "git": null
+}

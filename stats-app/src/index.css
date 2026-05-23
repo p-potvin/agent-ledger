@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Vault Console Palette ──────────────────────── */
+  --color-vault-bg:           #161320;
+  --color-vault-surface:      #1F1A2B;
+  --color-vault-raised:       #2A2340;
+  --color-vault-elevated:     #31274A;
+  --color-vault-border:       rgba(255,255,255,0.06);
+  --color-vault-fg:           #EDE6FF;
+  --color-vault-slate:        rgba(237,230,255,0.72);
+  --color-vault-muted:        rgba(237,230,255,0.45);
+  --color-vault-chip:         rgba(214,164,65,0.14);
+
+  /* ── Brand Accent Colors ───────────────────────── */
+  --color-vault-gold:         #D6A441;
+  --color-vault-gold-dim:     rgba(214,164,65,0.32);
+  --color-vault-gold-muted:   rgba(214,164,65,0.14);
+  --color-vault-gold-glow:    rgba(214,164,65,0.08);
+  --color-vault-violet:       #B07CFF;
+  --color-vault-cyan:         #55D6FF;
+  --color-vault-cyan-hard:    #21B8CC;
+  --color-vault-green:        #6BE675;
+  --color-vault-green-hard:   #4ECC21;
+  --color-vault-burgundy:     #FF6B7A;
+
+  /* ── Signal / LED Colors ───────────────────────── */
+  --color-signal-online:      #6BE675;
+  --color-signal-relay:       #55D6FF;
+  --color-signal-sync:        #B07CFF;
+  --color-signal-warning:     #F0B94B;
+  --color-signal-alert:       #FF6B7A;
+
+  /* ── Heatmap Levels ──────────────────────────────*/
+  --color-vault-good0:        rgba(176,124,255,0.08);
+  --color-vault-good1:        rgba(214,164,65,0.22);
+  --color-vault-good2:        rgba(214,164,65,0.48);
+  --color-vault-good3:        rgba(214,164,65,0.75);
+  --color-vault-good4:        #D6A441;
+
+  /* ── Typography ─────────────────────────────────*/
+  --font-sans:  "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-mono:  "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
+
+  /* ── Radii / Spacing ─────────────────────────────*/
+  --radius-card: 10px;
+  --radius-chip: 999px;
+  --spacing-card: 14px;
+}
+
+/* ── LED Pulse Animations ────────────────────────── */
+@keyframes led-pulse-green {
+  0%, 100% { opacity: 1;   box-shadow: 0 0 6px #6BE675; }
+  50%       { opacity: 0.4; box-shadow: 0 0 2px #6BE675; }
+}
+@keyframes led-pulse-cyan {
+  0%, 100% { opacity: 1;   box-shadow: 0 0 6px #55D6FF; }
+  50%       { opacity: 0.4; box-shadow: 0 0 2px #55D6FF; }
+}
+@keyframes led-pulse-violet {
+  0%, 100% { opacity: 1;   box-shadow: 0 0 6px #B07CFF; }
+  50%       { opacity: 0.4; box-shadow: 0 0 2px #B07CFF; }
+}
+@keyframes led-pulse-gold {
+  0%, 100% { opacity: 1;   box-shadow: 0 0 6px #D6A441; }
+  50%       { opacity: 0.4; box-shadow: 0 0 2px #D6A441; }
+}
+@keyframes led-pulse-alert {
+  0%, 100% { opacity: 1;   box-shadow: 0 0 6px #FF6B7A; }
+  50%       { opacity: 0.4; box-shadow: 0 0 2px #FF6B7A; }
+}
+
+/* ── Base Reset ─────────────────────────────────────*/
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--color-vault-bg);
+  color: var(--color-vault-fg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, pre, .mono {
+  font-family: var(--font-mono);
+}
+
+/* ── Scrollbar Styling ───────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-vault-surface); }
+::-webkit-scrollbar-thumb { background: var(--color-vault-raised); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-vault-elevated); }
+
+/* ── Light Theme Override ────────────────────────── */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --color-vault-bg:       #F5F1E8;
+    --color-vault-surface:  #FCFAF5;
+    --color-vault-raised:   #ECE5D8;
+    --color-vault-elevated: #E4DBC8;
+    --color-vault-border:   rgba(0,0,0,0.08);
+    --color-vault-fg:       #161320;
+    --color-vault-slate:    rgba(22,19,32,0.72);
+    --color-vault-muted:    rgba(22,19,32,0.45);
+    --color-vault-gold:     #8c6820;
+    --color-vault-cyan:     #0a7590;
+    --color-vault-cyan-hard:#0a7590;
+    --color-vault-green:    #2a7a32;
+    --color-vault-burgundy: #9b1c1c;
+    --color-vault-chip:     rgba(140,104,32,0.12);
+  }
+}

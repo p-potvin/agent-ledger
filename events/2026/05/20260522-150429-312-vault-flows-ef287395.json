@@ -1,0 +1,39 @@
+{
+  "id": "20260522-150429-312-vault-flows-ef287395",
+  "createdAt": "2026-05-22T19:04:29.3124654Z",
+  "createdAtLocal": "2026-05-22 15:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 15:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Added noddit.org + www.noddit.org as additional public hostnames for vault-flows. Rewrote /etc/nginx/sites-available/noddit.org.conf on greencloud-vps to serve the same /var/www/vault-flows/dist as flows.vaultwares.ca (was previously reverse-proxying to https://100.71.101.21:3100 with a different gateway secret). Unified GATEWAY_SHARED_SECRET across both vhosts to the value already in vaultwares-pipelines/.env. Added https://noddit.org and https://www.noddit.org to ALLOWED_ORIGINS in pipelines .env. Restarted vault-pipelines-api NSSM service. Verified full signup -> /auth/me flow against all three hostnames (flows.vaultwares.ca, noddit.org, www.noddit.org): 200 for /, /api/openapi.json, /api/auth/register, and bearer-auth /api/auth/me.",
+  "commands": [
+    "ssh root@100.73.93.84 'cat > /etc/nginx/sites-available/noddit.org.conf <<EOF...'",
+    "nginx -t && systemctl reload nginx",
+    "nssm restart vault-pipelines-api"
+  ],
+  "files": [
+    "greencloud-vps:/etc/nginx/sites-available/noddit.org.conf",
+    "vaultwares-pipelines/.env"
+  ],
+  "planPath": "",
+  "contentHash": "ef287395314792ebb459c9a386a58305ce4111d2bc62d25bc01a4283c2b38320",
+  "git": null
+}

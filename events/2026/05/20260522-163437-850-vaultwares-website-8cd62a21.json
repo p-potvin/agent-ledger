@@ -1,0 +1,40 @@
+{
+  "id": "20260522-163437-850-vaultwares-website-8cd62a21",
+  "createdAt": "2026-05-22T20:34:37.8505383Z",
+  "createdAtLocal": "2026-05-22 16:34",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-website",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 16:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Aligned vaultwares-website deploy with greencloud-vps standard token flow: deploy script now forces all git operations to use the VPS-local GH token via GIT_ASKPASS (/var/www/deploy-scripts/git-askpass-vw-gh-token.sh reading /etc/vw-webhookd/gh-token). Fixed /etc/vw-webhookd/gh-token permissions to root:vwdeploy 0640 so vw-webhookd/vwdeploy can read it; re-ran deploy script as vwdeploy successfully.",
+  "commands": [
+    "ssh root@100.73.93.84 chown root:vwdeploy /etc/vw-webhookd/gh-token; chmod 0640 /etc/vw-webhookd/gh-token",
+    "scp C:\\\\Users\\\\Administrator\\\\Desktop\\\\deploy-vaultwares-website.sh root@100.73.93.84:/var/www/deploy-scripts/deploy-vaultwares-website.sh",
+    "ssh root@100.73.93.84 sudo -u vwdeploy ... /var/www/deploy-scripts/deploy-vaultwares-website.sh"
+  ],
+  "files": [
+    "/var/www/deploy-scripts/deploy-vaultwares-website.sh (greencloud-vps)",
+    "/var/www/deploy-scripts/git-askpass-vw-gh-token.sh (greencloud-vps)",
+    "/etc/vw-webhookd/gh-token (greencloud-vps)"
+  ],
+  "planPath": "",
+  "contentHash": "8cd62a21a415e21ddfa7a017146191626ba97f7cb81609998cbd03307eeb1381",
+  "git": null
+}
