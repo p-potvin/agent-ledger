@@ -1,1 +1,3 @@
 .vercel
+stats-app/node_modules/
+stats-app/dist/

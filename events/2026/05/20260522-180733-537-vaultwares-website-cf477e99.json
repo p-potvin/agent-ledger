@@ -1,0 +1,45 @@
+{
+  "id": "20260522-180733-537-vaultwares-website-cf477e99",
+  "createdAt": "2026-05-22T22:07:33.5372197Z",
+  "createdAtLocal": "2026-05-22 18:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-website",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 18:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Removed the bolt /favicon.svg entirely. Site now uses the VaultWares gold-filled logo assets from vaultwares-themes: favicon is /brand/vaultwares-favicon-gold-filled-64.png (+ /brand/vw-gold-filled.ico), and navbar/footer logo uses /brand/vaultwares-minimal-gold-filled.png. Verified live HTML no longer references favicon.svg and greencloud-vps deploy ran successfully for commit fe65db6.",
+  "commands": [
+    "npm run build",
+    "git commit -m 'brand: use vaultwares gold-filled logo; drop favicon.svg'",
+    "git push origin main",
+    "curl https://vaultwares.ca/"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\index.html",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\src\\components\\Navbar.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\src\\components\\Footer.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\public\\brand\\vaultwares-minimal-gold-filled.png",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\public\\brand\\vaultwares-favicon-gold-filled-64.png",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\public\\brand\\vw-gold-filled.ico",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\public\\favicon.svg"
+  ],
+  "planPath": "",
+  "contentHash": "cf477e9968a65e639f73d4ea3fc3b4e487b2f6597b8209ac3cefb5533bf83dc1",
+  "git": null
+}

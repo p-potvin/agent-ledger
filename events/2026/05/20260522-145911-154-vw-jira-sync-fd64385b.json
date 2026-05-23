@@ -1,0 +1,43 @@
+{
+  "id": "20260522-145911-154-vw-jira-sync-fd64385b",
+  "createdAt": "2026-05-22T18:59:11.1544212Z",
+  "createdAtLocal": "2026-05-22 14:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-jira-sync",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 14:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync",
+  "summary": "Removed JIRA token exposure from GitHub infrastructure. (1) Deleted JIRA_BASE_URL, JIRA_EMAIL, JIRA_TOKEN Actions secrets from all 41 repos (123 total) — tokens no longer stored on GitHub servers. (2) Unregistered Windows scheduled task VaultWares-DistributeJiraSecrets — distribute_secrets.py no longer runs automatically. (3) Added purge_actions_secrets.py for future cleanup runs. Webhook path on VPS is now the sole active mechanism; both tokens are read from vw-secretsd/gh-token on greencloud-vps and never leave to GitHub infrastructure except as auth headers to api.github.com and vaultwares.atlassian.net (unavoidable).",
+  "commands": [
+    ".venv\\Scripts\\python.exe scripts\\purge_actions_secrets.py",
+    "Unregister-ScheduledTask -TaskName VaultWares-DistributeJiraSecrets"
+  ],
+  "files": [
+    "vw-jira-sync/scripts/purge_actions_secrets.py"
+  ],
+  "planPath": "",
+  "contentHash": "fd64385ba6ea2553c7e51624a1eedc8ee32e879837f3e1d4fe211329ec58db7e",
+  "git": {
+    "repo": "vw-jira-sync",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vw-jira-sync",
+    "branch": "main",
+    "head": "a410124",
+    "hasChanges": false
+  }
+}

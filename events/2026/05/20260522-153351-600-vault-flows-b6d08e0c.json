@@ -1,0 +1,48 @@
+{
+  "id": "20260522-153351-600-vault-flows-b6d08e0c",
+  "createdAt": "2026-05-22T19:33:51.6006444Z",
+  "createdAtLocal": "2026-05-22 15:33",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 15:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Wired placeholder LLM default end-to-end and verified real LLM responses through entire stack. Set OLLAMA_DEFAULT_MODEL=nutboy02/Qwen3.6-35B-A3B-Claude-4.7-Opus-abliterated-uncenfull:Q2_K_MTX in pipelines .env. Updated all 3 LLM-bearing preset JSONs (blog-post-drafter, lesson-plan-builder, meeting-summary) from model='llama3' to the placeholder. Added _strip_reasoning_tokens() to api_server.py to remove <think>...</think> chain-of-thought blocks that reasoning models (Qwen 3, DeepSeek-R1 distillations) emit before their final answer — applied in _ollama_generate before returning. Rebuilt vault-flows and atomically redeployed to /var/www/vault-flows/dist. End-to-end test via https://flows.vaultwares.ca/api/flows/run: real LLM response in 31s for a 3-node graph (input -> llm -> display); <think> blocks correctly stripped from output. Scanned D:\\\\comfyui\\\\resources\\\\comfyui\\\\models for real-default candidates: most are diffusion-model GGUFs (Flux/Hunyuan/Wan/LTX/SeedVR), not LLMs. The only general-purpose instruction-tuned LLMs on disk in GGUF format are gemma-3-12b-it-qat-Q4_0 (8.2 GB, QAT quant, recommended) and Qwen2.5-VL-7B-Instruct-abliterated.Q4_K_S (4.2 GB, smaller and multimodal but abliterated/uncensored, may affect business/education tone). Recommending gemma-3-12b-it-qat for the real default, importable into Ollama via Modelfile without re-downloading.",
+  "commands": [
+    "sed -i 's|llama3|nutboy02/Qwen3.6-35B...|g' src/presets/data/*.json",
+    "npm run build && scp -rq dist root@100.73.93.84:/var/www/vault-flows/",
+    "nssm restart vault-pipelines-api"
+  ],
+  "files": [
+    "vaultwares-pipelines/.env",
+    "vaultwares-pipelines/api_server.py",
+    "vault-flows/src/presets/data/blog-post-drafter.json",
+    "vault-flows/src/presets/data/lesson-plan-builder.json",
+    "vault-flows/src/presets/data/meeting-summary.json"
+  ],
+  "planPath": "",
+  "contentHash": "b6d08e0c6d885dc5fac346c4420ec7a52b7bfea23a82a860ee969c270d3524f8",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "117e167",
+    "hasChanges": true
+  }
+}

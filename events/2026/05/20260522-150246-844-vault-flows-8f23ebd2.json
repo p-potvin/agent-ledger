@@ -1,0 +1,51 @@
+{
+  "id": "20260522-150246-844-vault-flows-8f23ebd2",
+  "createdAt": "2026-05-22T19:02:46.8442296Z",
+  "createdAtLocal": "2026-05-22 15:02",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 15:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Wired up the external-user path end-to-end. (1) Networking Layer 1: fixed vault-flows .env (VITE_API_URL was 0.0.0.0:8000 -> http://127.0.0.1:9001), added preview.proxy to vite.config.ts so NSSM-managed vite preview also proxies /api, ran npm install to restore missing node_modules/.bin/vite.cmd. (2) Pipelines fixes: removed duplicate AUTH_ENABLED=0 in .env, installed asyncpg in .venv, pinned tortoise-orm<1.0 in requirements.txt and downgraded from 1.1.7 (which made _inited request-context-scoped and broke db_available()) to 0.25.4. (3) Auth flow: added POST /auth/register to api_server.py with USERNAME_RE [A-Za-z0-9_-]{3,32}, MIN_PASSWORD_LENGTH 8, per-IP rate limit 3/min (trusted clients bypass), 409 on duplicate, returns JWT directly so client can skip a second /auth/login round-trip. (4) Pipelines as service: registered NSSM service vault-pipelines-api with auto-start + auto-restart, rotating logs in _runlogs/. (5) GreenCloud Layer 3: deployed dist/ to /var/www/vault-flows/dist on greencloud-vps via scp, created /etc/nginx/sites-available/flows.vaultwares.ca.conf with SPA fallback + /api/ proxy to http://100.71.101.21:9001 via Tailscale, certbot LE cert for flows.vaultwares.ca, added GATEWAY_REQUIRED_PUBLIC=1 + GATEWAY_SHARED_SECRET + nginx proxy_set_header X-VW-Gateway-Secret to pass the gateway check, added https://flows.vaultwares.ca to ALLOWED_ORIGINS. Verified end-to-end: external signup/login over https://flows.vaultwares.ca/api/auth/{register,login} returns JWT; /auth/me + /workflows accept the token; unauth requests get 403. Fixed vault-flows ImportError by changing vault-themes paths to vaultwares-themes (actual submodule name) in src/lib/theme.ts, src/ui/ThemePicker.tsx, src/index.css.",
+  "commands": [
+    "nssm install vault-pipelines-api ...",
+    "certbot certonly --webroot -w /var/www/vault-flows/dist -d flows.vaultwares.ca",
+    "curl -sk https://flows.vaultwares.ca/api/auth/register"
+  ],
+  "files": [
+    "vault-flows/.env",
+    "vault-flows/vite.config.ts",
+    "vault-flows/src/lib/theme.ts",
+    "vault-flows/src/index.css",
+    "vaultwares-pipelines/.env",
+    "vaultwares-pipelines/api_server.py",
+    "vaultwares-pipelines/requirements.txt",
+    "greencloud-vps:/etc/nginx/sites-available/flows.vaultwares.ca.conf"
+  ],
+  "planPath": "",
+  "contentHash": "8f23ebd280ee0b8ef072177f9e9b883ac36b9faf3051be2df88297a93b0a9528",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "117e167",
+    "hasChanges": true
+  }
+}

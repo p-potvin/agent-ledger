@@ -1,0 +1,36 @@
+{
+  "id": "20260522-162314-995-vaultwares-toolkit-7a7f376e",
+  "createdAt": "2026-05-22T20:23:14.9951712Z",
+  "createdAtLocal": "2026-05-22 16:23",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-toolkit",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 16:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Answered vault-port/Columbo location and productization audit. Canonical lives at vaultwares-adk/columbo.py (738 lines, inherits ExtrovertAgent + Redis) + columbo.agent.md (82-line persona spec). Copy-pasted into 10 sibling repos as orphan mirrors. Parallel TypeScript Botpress skeleton at adk-playground/Columbo (stub). vaultwares-toolkit is empty (README 1 line, no src/). Recommended move makes sense: toolkit's purpose matches Columbo's, but Columbo needs decoupling from ExtrovertAgent/Redis first. Top product gaps: (1) pick Python vs TS, kill the other; (2) decouple Redis; (3) implement round-trip self-verification (currently placeholder); (4) build real interview loop; (5) reference test corpus. Packaging gaps: pip-installable, MCP wrapper, semver, license/commercial model. Website gaps: domain (columbo.dev recommended), landing page, live demo (highest leverage marketing), docs, founder blog. Integration gaps: GitHub App, CI mode, VSCode ext, Jira sync, hooks into vault-themes/docs/mcp. Honest summary: idea that worked once, not a product yet.",
+  "commands": [],
+  "files": [
+    "vaultwares-adk/columbo.py",
+    "vaultwares-adk/columbo.agent.md",
+    "vaultwares-toolkit/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "7a7f376e32945f41dfade528cef3048dec6f8d83b29514f1582c4f08b6531552",
+  "git": null
+}

@@ -1,0 +1,43 @@
+{
+  "id": "20260522-160753-511-vaultwares-website-52388b9d",
+  "createdAt": "2026-05-22T20:07:53.5118023Z",
+  "createdAtLocal": "2026-05-22 16:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-website",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 16:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fixed vaultwares-website CI + GreenCloud VPS auto-deploy. GitHub Pages workflow now only initializes the public vaultwares-themes submodule (avoids failing checkout of private vaultwares-adk). On greencloud-vps, added /var/www/deploy-scripts/deploy-vaultwares-website.sh and corrected /var/www/vaultwares-website + /var/www/vaultwares-website-src ownership to vwdeploy so vw-webhookd can build+swap dist on push; verified webhookd executed the deploy script successfully for commit 1a2ee2e and vaultwares.ca served updated dist.",
+  "commands": [
+    "npm run build",
+    "git commit -m 'ci: init only vaultwares-themes submodule'",
+    "git push origin main",
+    "ssh root@100.73.93.84 ...",
+    "scp deploy-vaultwares-website.sh root@100.73.93.84:/var/www/deploy-scripts/deploy-vaultwares-website.sh"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\.github\\workflows\\deploy.yml",
+    "/var/www/deploy-scripts/deploy-vaultwares-website.sh (greencloud-vps)",
+    "/var/www/vaultwares-website (greencloud-vps)",
+    "/var/www/vaultwares-website-src (greencloud-vps)"
+  ],
+  "planPath": "",
+  "contentHash": "52388b9dc26a19ea41f563201a23a0c780717f92d494c02042c19c2e51646927",
+  "git": null
+}

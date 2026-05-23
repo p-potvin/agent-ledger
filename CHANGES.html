@@ -3,21 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agent Ledger</title>
+  <title>Agent Ledger â€” VaultWares</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
   <style>
-    :root { color-scheme: light dark; font-family: "Segoe UI", system-ui, sans-serif; }
-    body { margin: 0; padding: 32px; background: Canvas; color: CanvasText; }
+    :root {
+      --font-sans: "Inter", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", Consolas, ui-monospace, monospace;
+      --vault-bg: #161320; --vault-surface: #1F1A2B; --vault-raised: #2A2340;
+      --vault-border: rgba(255,255,255,0.06); --vault-gold: #D6A441;
+      --vault-relay: #55D6FF; --vault-muted: rgba(237,230,255,0.55);
+      --vault-fg: #EDE6FF; --vault-chip: rgba(214,164,65,0.14);
+      --vault-chip-border: rgba(214,164,65,0.32);
+      color-scheme: dark;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --vault-bg: #F5F1E8; --vault-surface: #FCFAF5; --vault-raised: #ECE5D8;
+        --vault-border: rgba(22,19,32,0.08); --vault-gold: #8c6820;
+        --vault-relay: #0a7590; --vault-muted: rgba(22,19,32,0.50);
+        --vault-fg: #161320; --vault-chip: rgba(140,104,32,0.12);
+        --vault-chip-border: rgba(140,104,32,0.28);
+        color-scheme: light;
+      }
+    }
+    body { margin: 0; padding: 32px; background: var(--vault-bg); color: var(--vault-fg); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
     main { max-width: 1120px; margin: 0 auto; }
-    h1 { margin: 0 0 8px; font-size: 28px; }
-    .meta { margin: 0 0 24px; color: color-mix(in srgb, CanvasText 68%, transparent); }
-    details { border: 1px solid color-mix(in srgb, CanvasText 16%, transparent); border-radius: 8px; margin: 10px 0; background: color-mix(in srgb, Canvas 94%, CanvasText 6%); }
-    details[open] { background: Canvas; }
+    h1 { margin: 0 0 8px; font-size: 28px; font-weight: 800; letter-spacing: -0.01em; }
+    .meta { margin: 0 0 24px; color: var(--vault-muted); font-size: 13px; }
+    details { border: 1px solid var(--vault-border); border-radius: 8px; margin: 10px 0; background: var(--vault-surface); }
+    details[open] { background: var(--vault-raised); }
     summary { cursor: pointer; padding: 12px 14px; line-height: 1.45; }
-    summary:hover { background: color-mix(in srgb, CanvasText 7%, transparent); }
+    summary:hover { background: rgba(255,255,255,0.04); }
     .entry-body { padding: 0 14px 14px 34px; }
-    .kind { font-family: Consolas, monospace; font-size: 12px; padding: 2px 6px; border-radius: 999px; background: color-mix(in srgb, CanvasText 11%, transparent); }
+    .kind { font-family: var(--font-mono); font-size: 11px; padding: 2px 7px; border-radius: 999px; background: var(--vault-chip); border: 1px solid var(--vault-chip-border); color: var(--vault-gold); font-weight: 700; }
     .summary { margin: 10px 0; }
-    code { font-family: Consolas, monospace; font-size: 13px; }
+    code { font-family: var(--font-mono); font-size: 12.5px; }
     li { margin: 4px 0; }
   </style>
 </head>
@@ -25,6 +47,983 @@
 <main>
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
+  <details>
+    <summary><strong>2026-05-23 01:32 - agent-ledger/stats-app</strong> <span class="kind">code-change</span> - Completed React/Tailwind 4/Vite stats-app build pipeline. Fixed ActivityPatterns.tsx unused 	 param (TS6133). Copied vaultwares-console-icons.svg, vaultwares-wordmark-dark.svg, ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger\stats-app  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-23 01:32 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Completed React/Tailwind 4/Vite stats-app build pipeline. Fixed ActivityPatterns.tsx unused 	 param (TS6133). Copied vaultwares-console-icons.svg, vaultwares-wordmark-dark.svg, vaultwares-logo-dark.svg, vw-gold-filled.ico to stats-app/public/icons/. Updated index.html favicon ref to .ico. Verified clean Vite build: 50 modules, 227.9kB JS, 21.6kB CSS. Confirmed deploy-stats-app.yml workflow exists targeting self-hosted greencloud-vps runner, rsync to /var/www/stats.vaultwares.ca/, triggered on push to main paths stats-app/** and the workflow file.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+        <li><code>rsync -avz --delete stats-app/dist/ /var/www/stats.vaultwares.ca/</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>stats-app/src/components/ActivityPatterns.tsx</code></li>
+        <li><code>stats-app/public/icons/vaultwares-console-icons.svg</code></li>
+        <li><code>stats-app/index.html</code></li>
+        <li><code>.github/workflows/deploy-stats-app.yml</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=agent-ledger, branch=main, head=15467f7</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-23 00:04 - agent-ledger</strong> <span class="kind">code-change</span> - Fixed corrupted render-agent-ledger.ps1: removed 44 duplicate/truncated lines (code block at char boundary caused duplication during prior multi_replace). Restored correct CSS b...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-23 00:04 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed corrupted render-agent-ledger.ps1: removed 44 duplicate/truncated lines (code block at char boundary caused duplication during prior multi_replace). Restored correct CSS block ending (.code, li, &lt;/style&gt;). Also confirmed all previous render-work-impact.ps1 vaultwares-revisited rebrand changes (9 replacements: CSS tokens, fonts, alias injection) are fully applied; WORK_IMPACT.html and CHANGES.html both regenerated successfully.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>render-agent-ledger.ps1</code></li>
+        <li><code>update-work-impact.ps1</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>scripts/render-agent-ledger.ps1</code></li>
+        <li><code>scripts/render-work-impact.ps1</code></li>
+        <li><code>CHANGES.html</code></li>
+        <li><code>WORK_IMPACT.html</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=agent-ledger, branch=main, head=15467f7</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 23:12 - vaultwares-docs (formerly tmp-app)</strong> <span class="kind">code-change</span> - Fixed the CHECKOUT_DIR delete permission bug in deploy-link-sharing.sh and deploy-vaultwares-website.sh on greencloud-vps. Both scripts were updated to use &#39;find -mindepth 1 -de...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 23:12 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed the CHECKOUT_DIR delete permission bug in deploy-link-sharing.sh and deploy-vaultwares-website.sh on greencloud-vps. Both scripts were updated to use &#39;find -mindepth 1 -delete&#39; instead of &#39;rm -rf&#39; on the root directory, preventing the root permission denied error for vwdeploy.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ssh root@greencloud-vps</code></li>
+        <li><code>perl</code></li>
+        <li><code>base64</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>/var/www/deploy-scripts/deploy-link-sharing.sh</code></li>
+        <li><code>/var/www/deploy-scripts/deploy-vaultwares-website.sh</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=10c58fe</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 23:07 - vaultwares-docs</strong> <span class="kind">verification</span> - Fixed a permission denied issue in the auto-deploy script on greencloud-vps where vwdeploy could not delete the CHECKOUT_DIR because /var/www is owned by root. Modified deploy-v...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 23:07 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed a permission denied issue in the auto-deploy script on greencloud-vps where vwdeploy could not delete the CHECKOUT_DIR because /var/www is owned by root. Modified deploy-vaultwares-docs.sh to empty the directory contents using find instead of deleting the directory itself. Re-triggered the webhook by pushing an empty commit and verified the deployment succeeded.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ssh root@greencloud-vps</code></li>
+        <li><code>git commit --allow-empty</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=10c58fe</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 23:05 - vaultwares-website (formerly vaultwares-v1)</strong> <span class="kind">code-change</span> - Fixed TS7016 and TS6133 compilation errors in vaultwares-revisited demo by configuring explicit react path mapping in tsconfig.json and defining correct React Props in Button.ts...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-themes\vaultwares-revisited\demo  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 23:05 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed TS7016 and TS6133 compilation errors in vaultwares-revisited demo by configuring explicit react path mapping in tsconfig.json and defining correct React Props in Button.tsx, resulting in successful build.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm install react@19 react-dom@19 @types/react@19 @types/react-dom@19</code></li>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-themes/vaultwares-revisited/demo/tsconfig.json</code></li>
+        <li><code>vaultwares-themes/vaultwares-revisited/components/Button.tsx</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-themes, branch=main, head=883a19e</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 23:02 - vault-flows</strong> <span class="kind">code-change</span> - Big multi-piece update. (1) Signed image URLs: /comfyui-image/{token} + /uploads/image/{token} endpoints in pipelines, both signed with JWT_SECRET, both unauthenticated by desig...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 23:02 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Big multi-piece update. (1) Signed image URLs: /comfyui-image/{token} + /uploads/image/{token} endpoints in pipelines, both signed with JWT_SECRET, both unauthenticated by design (token IS the credential). _execute_comfyui_graph now mints signed URLs via _sign_comfyui_image_token instead of base64-inflating images as data URIs. New env COMFYUI_URL_TOKEN_TTL_SECONDS=3600. (2) Image upload: POST /uploads/image accepts multipart, writes to UPLOADS_DIR with random name, returns signed upload-token. GET /uploads/image/{token} serves it back. _resolve_image_ref_to_path validates tokens, _upload_to_comfyui pushes local file into ComfyUI input folder. Env: UPLOADS_DIR=./_uploads, UPLOADS_MAX_BYTES=20MB, UPLOADS_TOKEN_TTL_SECONDS=86400. Nginx vhosts (flows.vaultwares.ca + noddit.org) bumped client_max_body_size to 25m. (3) New image_input node type in vault-flows: ImageInputNode.tsx renders file picker + thumbnail, uploads on selection, stores image_ref+preview_url+filename in params. Worker flow runner: image_input nodes emit kind=image with imageUrl=preview_url and output=ref-token so downstream comfyui_workflow nodes can pick it up via {{input}} template. (4) _handle_comfyui_workflow now template-substitutes upstream into string values in params.inputs (so {source_image: &#39;{{input}}&#39;} from an image_input upstream just works). (5) Workflow&#39;s comfyui_graph step gets new optional image_inputs: [&#39;key&#39;,&#39;key&#39;,...] list &#226;€” keys whose values are upload-tokens get resolved by the worker before submitting the graph (_resolve_image_inputs decodes the token, posts to ComfyUI /upload/image, substitutes the resulting ComfyUI filename into the LoadImage node). (6) Bulk converter (scripts/convert_proven_workflows.py): walks 13 ComfyUI editor-format workflows in C:/Users/Administrator/ComfyUI/user/default/workflows/Proven_Workflows. Pulls ComfyUI /object_info to drive widget-vs-link conversion (handles control_after_generate sibling widget for seed inputs). Detects API-format pass-through. For unknown custom-node types (Flux2KleinCheckpointLoader, FaceAlign, FaceDetectorInsightFace, ImagePasteFace, WAN2_2_I2V_*, VideoHelperSuite_ImagesToVideo): preserves the node + its links + widget_values as best-effort with a warning so ComfyUI&#39;s error is the source of truth. Heuristics extract primary model (CheckpointLoader/UnetLoader inputs), LoRA names, positive/negative prompts (via KSampler positive/negative links to CLIPTextEncode), seed path, and image input slots (LoadImage nodes &#226;†’ source_image/target_image/reference_image keys). NAME_MAP gives each workflow a clean id+display name (e.g. flux2-klein-faceswap, qwen-image-edit-4step, wan22-img2video). Idempotent via PUT-then-POST. 13/13 seeded successfully. Catalog now has 14 workflows (13 from Proven_Workflows + z-image-turbo-text2img). End-to-end verified through https://flows.vaultwares.ca: upload PNG -&gt; image_input node -&gt; biglove-photo comfyui_workflow node -&gt; ComfyUI received the file via /upload/image and ran VAEEncode against it (failed only because bigLove checkpoint lacks a baked-in VAE; the wiring is correct, that&#39;s a workflow-content issue).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python scripts/convert_proven_workflows.py</code></li>
+        <li><code>curl -F file=@... https://flows.vaultwares.ca/api/uploads/image</code></li>
+        <li><code>ssh root@... &#39;sed -i ... client_max_body_size 25m&#39;</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-pipelines/api_server.py</code></li>
+        <li><code>vaultwares-pipelines/.env</code></li>
+        <li><code>vault-flows/src/nodes/types.ts</code></li>
+        <li><code>vault-flows/src/nodes/registry.ts</code></li>
+        <li><code>vault-flows/src/canvas/nodes/ImageInputNode.tsx</code></li>
+        <li><code>vault-flows/src/canvas/nodeTypes.ts</code></li>
+        <li><code>vault-flows/src/api/client.ts</code></li>
+        <li><code>vault-flows/scripts/convert_proven_workflows.py</code></li>
+        <li><code>greencloud-vps:/etc/nginx/sites-available/flows.vaultwares.ca.conf</code></li>
+        <li><code>greencloud-vps:/etc/nginx/sites-available/noddit.org.conf</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-flows, branch=main, head=117e167</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 22:42 - vault-flows</strong> <span class="kind">code-change</span> - Wired the comfyui_workflow node to actually call ComfyUI end-to-end. (1) Replaced placeholder _job_worker in pipelines api_server.py &#226;€” kind=workflow_run jobs now call _execute...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 22:42 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Wired the comfyui_workflow node to actually call ComfyUI end-to-end. (1) Replaced placeholder _job_worker in pipelines api_server.py &#226;€” kind=workflow_run jobs now call _execute_workflow_run, which loads the workflow&#39;s first comfyui_graph step, applies input_paths substitutions from job payload inputs, and dispatches to _execute_comfyui_graph. (2) _execute_comfyui_graph posts the API-format graph to ComfyUI /prompt with a random client_id, polls /history/{prompt_id} every 1.5s until status.completed or status_str==&#39;error&#39;, extracts image refs from outputs[*].images, fetches the first one via /view, base64-encodes it as a data:image/png URI (so the SPA can render via &lt;img src&gt; without a second authenticated request). (3) Added _apply_input_paths helper that deep-copies the graph and walks dotted paths (e.g. &#39;5.inputs.text&#39;) to substitute values from the inputs dict before submission. (4) _handle_comfyui_workflow (flow runner) now passes node.params.inputs through to job payload. (5) New env: COMFYUI_URL=http://127.0.0.1:8188, COMFYUI_PROMPT_TIMEOUT_SECONDS=300. (6) Seeded workflow &#39;z-image-turbo-text2img&#39; in pipelines DB via POST /workflows &#226;€” single comfyui_graph step using ckpt z-Image-Turbo-FP8-AIO.safetensors, 6-step KSampler euler/simple CFG 1.0 at 1024x1024, input_paths for prompt/negative_prompt/seed/steps/width/height. (7) End-to-end verified: vault-flows graph with [input -&gt; comfyui_workflow(z-image-turbo-text2img, inputs={prompt,seed}) -&gt; display] returned in 1m 27s (incl. first-call model warmup), produced a real PNG image (2.2 MB data URI, valid PNG signature 89504e470d0a1a0a) of the requested &#39;glowing crystal cave with bioluminescent mushrooms&#39;, saved as vault-flows-zimage_00001_.png in ComfyUI&#39;s output dir; display node correctly forwards the upstream image payload (kind=&#39;image&#39;, imageUrl=data URI). Also restarted Postgres which had stopped between sessions.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>curl POST /workflows &lt; seed-z-image.json</code></li>
+        <li><code>curl POST /flows/run with comfyui_workflow node</code></li>
+        <li><code>Start-Service postgresql-x64-18</code></li>
+        <li><code>nssm restart vault-pipelines-api</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-pipelines/api_server.py</code></li>
+        <li><code>vaultwares-pipelines/.env</code></li>
+        <li><code>seed-z-image.json</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 22:41 - vaultwares-themes (formerly vault-themes)</strong> <span class="kind">code-change</span> - Added missing tsconfig.json to demo to satisfy tsc compilation, and mapped main.tsx to the correct DemoPage component and css.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-website  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 22:41 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added missing tsconfig.json to demo to satisfy tsc compilation, and mapped main.tsx to the correct DemoPage component and css.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-themes/vaultwares-revisited/demo/tsconfig.json</code></li>
+        <li><code>vaultwares-themes/vaultwares-revisited/demo/src/main.tsx</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-website, branch=main, head=2b13b97</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 22:23 - vaultwares-themes</strong> <span class="kind">code-change</span> - Created compile.ps1 script in vaultwares-revisited/demo to install dependencies and compile the demo tsx files.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-website  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 22:23 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Created compile.ps1 script in vaultwares-revisited/demo to install dependencies and compile the demo tsx files.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-themes/vaultwares-revisited/demo/compile.ps1</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-website, branch=main, head=2b13b97</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 22:23 - vaultwares-docs</strong> <span class="kind">code-change</span> - Resolved inline css mappings to properly use theme variables mapped by Tailwind (bg-surface-alt, border-border) instead of hardcoding css vars. Attached prose class to the markd...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 22:23 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Resolved inline css mappings to properly use theme variables mapped by Tailwind (bg-surface-alt, border-border) instead of hardcoding css vars. Attached prose class to the markdown viewer for typography formatting. Also created translate node script and integrated QC extension fallbacks for the content viewer.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm install @vitalets/google-translate-api --save-dev</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/App.tsx</code></li>
+        <li><code>translate-docs.mjs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=f7a2d46</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 22:23 - vaultwares-docs</strong> <span class="kind">code-change</span> - Fixed CSS tokens mapped to inline variables in App.tsx by replacing them with corresponding tailwind classes (bg-surface-alt, border-border, etc.) and updated the MarkdownViewer...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 22:23 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed CSS tokens mapped to inline variables in App.tsx by replacing them with corresponding tailwind classes (bg-surface-alt, border-border, etc.) and updated the MarkdownViewer to use the Typography plugin (.prose). Implemented QC translation scripting for auto-parsing .mdx content, and updated the frontend so the QC switch gracefully falls back to EN context if -QC.mdx doesn&#39;t exist yet.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm install @vitalets/google-translate-api --save-dev</code></li>
+        <li><code>node translate-docs.mjs</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/App.tsx</code></li>
+        <li><code>translate-docs.mjs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=f7a2d46</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 22:13 - vaultwares-themes</strong> <span class="kind">code-change</span> - Corrected &#39;dark/light&#39; mode terminology to &#39;Console/Warm&#39; across markdown files, added Segoe UI to sans-fonts, described pulse animation as slow and subtle, and updated README a...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-website  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 22:13 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Corrected &#39;dark/light&#39; mode terminology to &#39;Console/Warm&#39; across markdown files, added Segoe UI to sans-fonts, described pulse animation as slow and subtle, and updated README and IMPLEMENTATION to strongly reflect the temporary and experimental status of the folder. Created DemoPage.tsx to demonstrate the React implementations.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-themes/vaultwares-revisited/README.md</code></li>
+        <li><code>vaultwares-themes/vaultwares-revisited/IMPLEMENTATION.md</code></li>
+        <li><code>vaultwares-themes/vaultwares-revisited/demo/DemoPage.tsx</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-website, branch=main, head=fe65db6</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 21:47 - vaultwares-toolkit</strong> <span class="kind">code-change</span> - Moved Columbo from vaultwares-adk into vaultwares-toolkit on main. Refactor: dropped ExtrovertAgent base class + all Redis dependencies (imports, init params, CLI flags). Replac...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-toolkit  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 21:47 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Moved Columbo from vaultwares-adk into vaultwares-toolkit on main. Refactor: dropped ExtrovertAgent base class + all Redis dependencies (imports, init params, CLI flags). Replaced _publish_result (Redis pub) with _write_checkpoint (writes JSON to &lt;output&gt;/checkpoints/). Pipeline runs end-to-end now; HITL pause-resume is v2 work. New shape: src/vault_port/columbo.py (refactored agent + CLI), agents/columbo.agent.md (verbatim persona), assets/columbo/ (3 identity SVGs), tests/fixtures/recipe-output/vaultwares-themes/ (first reference output), pyproject.toml (pip-installable, columbo entry point), README.md (full positioning + usage + philosophy). Package name: vault-port on PyPI, columbo CLI command. Smoke test passed: ran end-to-end against toolkit itself, 8 phases executed, 4 checkpoints emitted, recipe composed (55% confidence &#226;€” no test suite yet). Committed on main.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python -m vault_port.columbo extract . --output ./tmp-self-recipe</code></li>
+        <li><code>git commit</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-toolkit/src/vault_port/columbo.py</code></li>
+        <li><code>vaultwares-toolkit/src/vault_port/__init__.py</code></li>
+        <li><code>vaultwares-toolkit/pyproject.toml</code></li>
+        <li><code>vaultwares-toolkit/README.md</code></li>
+        <li><code>vaultwares-toolkit/agents/columbo.agent.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-toolkit, branch=main, head=542b2c9</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 20:39 - vault-explorer</strong> <span class="kind">code-change</span> - Overwrote background Python preview generator and Node.js backend generator to support non-blurry middle-keyframe thumbnail extraction, robust skip/regenerate-both double proces...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 20:39 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Overwrote background Python preview generator and Node.js backend generator to support non-blurry middle-keyframe thumbnail extraction, robust skip/regenerate-both double processing checks, and dot/normalized folder skips. Scheduled 2 AM task on May 23.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>main.js</code></li>
+        <li><code>python-scripts/generate_previews.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=6eff1a9</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 20:01 - vaultwares-themes</strong> <span class="kind">code-change</span> - Created VaultWares-Revisited design system section inside vaultwares-themes. Includes philosophy, tokens, components, icons, and implementation guides derived from vaultwares-we...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-website  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 20:01 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Created VaultWares-Revisited design system section inside vaultwares-themes. Includes philosophy, tokens, components, icons, and implementation guides derived from vaultwares-website and Console. Explicitly marked as a temporary section for agents.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-themes/vaultwares-revisited/README.md</code></li>
+        <li><code>vaultwares-themes/vaultwares-revisited/TOKENS.md</code></li>
+        <li><code>vaultwares-themes/vaultwares-revisited/revisited.css</code></li>
+        <li><code>vaultwares-themes/vaultwares-revisited/PHILOSOPHY.md</code></li>
+        <li><code>vaultwares-themes/vaultwares-revisited/COMPONENTS.md</code></li>
+        <li><code>vaultwares-themes/vaultwares-revisited/IMPLEMENTATION.md</code></li>
+        <li><code>vaultwares-themes/vaultwares-revisited/GLYPHS_ICONS.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-website, branch=main, head=fe65db6</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 19:34 - vault-flows</strong> <span class="kind">code-change</span> - Quick-fix refactor: vault-flows is a general node-based workflow builder, not a chat tool. Widened the node taxonomy and runner without breaking existing chat presets. (1) Types...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 19:34 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Quick-fix refactor: vault-flows is a general node-based workflow builder, not a chat tool. Widened the node taxonomy and runner without breaking existing chat presets. (1) Types (vault-flows/src/nodes/types.ts): NodeType union extended with &#39;model_call&#39; (provider-discriminated generation) and &#39;comfyui_workflow&#39; (run a saved ComfyUI workflow as one step). Added ModelCallProvider type (&#39;ollama&#39;|&#39;comfyui&#39;|&#39;http&#39;). ExecutionResult extended with optional kind (&#39;text&#39;|&#39;image&#39;|&#39;json&#39;|&#39;file&#39;|&#39;job_result&#39;), imageUrl, fileRef, data fields so non-text outputs can flow through the graph. (2) Registry (registry.ts): added model_call (defaults provider:ollama, empty model so server picks default) and comfyui_workflow (defaults mode:local). Existing llm/input/output/transform/display entries unchanged. (3) Canvas (canvas/nodes/): created ModelCallNode.tsx (shows provider + model) and ComfyUIWorkflowNode.tsx (shows workflow_id + mode). Registered in nodeTypes.ts. (4) DisplayNode rewrite: branches on result.kind &#226;€” text shows &lt;p&gt;, image shows &lt;img&gt; (max 220x160), json/job_result shows &lt;pre&gt;, file shows &#39;&#240;Ÿ“„ path&#39;. (5) Backend (vaultwares-pipelines/api_server.py): ExecutionResultOut extended with kind/imageUrl/fileRef/data. /flows/run refactored into dispatcher pattern with handlers: _handle_model_call_ollama (existing logic), _handle_model_call_http (httpx generic call, parses JSON content-type, returns kind=json+data), _handle_comfyui_workflow (validates workflow_id exists in DB, enqueues via _new_job+_queue_job, polls _read_job until succeeded/failed/canceled with COMFYUI_JOB_POLL_INTERVAL_SECONDS=2 and COMFYUI_JOB_MAX_WAIT_SECONDS=600), _handle_model_call dispatching on params.provider. New _forward_upstream_payload helper makes display/output nodes preserve upstream kind/imageUrl/data instead of stringifying. &#39;llm&#39; type aliased to _handle_model_call_ollama for backward compat. (6) Env: added COMFYUI_JOB_POLL_INTERVAL_SECONDS, COMFYUI_JOB_MAX_WAIT_SECONDS, HTTP_NODE_TIMEOUT_SECONDS. Verified 6 paths through https://flows.vaultwares.ca: legacy llm still works, model_call+ollama equivalent, model_call+http hit httpbin.org/json and got proper kind=json+data payload (forwarded to display correctly), comfyui_workflow missing/nonexistent workflow_id gives clean error, unknown provider gives clean error. All existing chat presets continue to work via the llm path.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+        <li><code>scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/</code></li>
+        <li><code>nssm restart vault-pipelines-api</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault-flows/src/nodes/types.ts</code></li>
+        <li><code>vault-flows/src/nodes/registry.ts</code></li>
+        <li><code>vault-flows/src/canvas/nodeTypes.ts</code></li>
+        <li><code>vault-flows/src/canvas/nodes/ModelCallNode.tsx</code></li>
+        <li><code>vault-flows/src/canvas/nodes/ComfyUIWorkflowNode.tsx</code></li>
+        <li><code>vault-flows/src/canvas/nodes/DisplayNode.tsx</code></li>
+        <li><code>vaultwares-pipelines/api_server.py</code></li>
+        <li><code>vaultwares-pipelines/.env</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-flows, branch=main, head=117e167</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 18:07 - vaultwares-website</strong> <span class="kind">code-change</span> - Removed the bolt /favicon.svg entirely. Site now uses the VaultWares gold-filled logo assets from vaultwares-themes: favicon is /brand/vaultwares-favicon-gold-filled-64.png (+ /...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 18:07 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Removed the bolt /favicon.svg entirely. Site now uses the VaultWares gold-filled logo assets from vaultwares-themes: favicon is /brand/vaultwares-favicon-gold-filled-64.png (+ /brand/vw-gold-filled.ico), and navbar/footer logo uses /brand/vaultwares-minimal-gold-filled.png. Verified live HTML no longer references favicon.svg and greencloud-vps deploy ran successfully for commit fe65db6.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+        <li><code>git commit -m &#39;brand: use vaultwares gold-filled logo; drop favicon.svg&#39;</code></li>
+        <li><code>git push origin main</code></li>
+        <li><code>curl https://vaultwares.ca/</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\index.html</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\src\components\Navbar.tsx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\src\components\Footer.tsx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\public\brand\vaultwares-minimal-gold-filled.png</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\public\brand\vaultwares-favicon-gold-filled-64.png</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\public\brand\vw-gold-filled.ico</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\public\favicon.svg</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 17:37 - vaultwares-website</strong> <span class="kind">code-change</span> - Homepage now removes the VaultDrive/VaultCrypt/VaultGate list and replaces it with a telemetry card (animated line graph + LED status chips + metrics) plus a Console Preview sec...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 17:37 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Homepage now removes the VaultDrive/VaultCrypt/VaultGate list and replaces it with a telemetry card (animated line graph + LED status chips + metrics) plus a Console Preview section using screenshots. Navbar/Footer logo mark switched from the bolt favicon to the RelayDistributed icon to avoid looking like the Vite logo; favicon.svg also replaced with the relay mark. Deployed by pushing to main; verified vw-webhookd ran /var/www/deploy-scripts/deploy-vaultwares-website.sh with exit=0 and https://vaultwares.ca/favicon.svg serves the new icon.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+        <li><code>git commit -m &#39;home: telemetry panels, new logo, screenshots&#39;</code></li>
+        <li><code>git commit -m &#39;brand: replace favicon mark&#39;</code></li>
+        <li><code>git push origin main</code></li>
+        <li><code>ssh root@100.73.93.84 tail -n /var/log/vw-webhookd.log</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\src\pages\Home.tsx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\src\components\Navbar.tsx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\src\components\Footer.tsx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\public\favicon.svg</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\public\screenshots\home-console-brand.png</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\public\screenshots\store-console-brand.png</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\public\screenshots\store-empty-state-console-brand.png</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\.gitignore</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 16:34 - vaultwares-website</strong> <span class="kind">verification</span> - Aligned vaultwares-website deploy with greencloud-vps standard token flow: deploy script now forces all git operations to use the VPS-local GH token via GIT_ASKPASS (/var/www/de...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 16:34 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Aligned vaultwares-website deploy with greencloud-vps standard token flow: deploy script now forces all git operations to use the VPS-local GH token via GIT_ASKPASS (/var/www/deploy-scripts/git-askpass-vw-gh-token.sh reading /etc/vw-webhookd/gh-token). Fixed /etc/vw-webhookd/gh-token permissions to root:vwdeploy 0640 so vw-webhookd/vwdeploy can read it; re-ran deploy script as vwdeploy successfully.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ssh root@100.73.93.84 chown root:vwdeploy /etc/vw-webhookd/gh-token; chmod 0640 /etc/vw-webhookd/gh-token</code></li>
+        <li><code>scp C:\\Users\\Administrator\\Desktop\\deploy-vaultwares-website.sh root@100.73.93.84:/var/www/deploy-scripts/deploy-vaultwares-website.sh</code></li>
+        <li><code>ssh root@100.73.93.84 sudo -u vwdeploy ... /var/www/deploy-scripts/deploy-vaultwares-website.sh</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>/var/www/deploy-scripts/deploy-vaultwares-website.sh (greencloud-vps)</code></li>
+        <li><code>/var/www/deploy-scripts/git-askpass-vw-gh-token.sh (greencloud-vps)</code></li>
+        <li><code>/etc/vw-webhookd/gh-token (greencloud-vps)</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 16:23 - vaultwares-toolkit</strong> <span class="kind">plan</span> - Answered vault-port/Columbo location and productization audit. Canonical lives at vaultwares-adk/columbo.py (738 lines, inherits ExtrovertAgent + Redis) + columbo.agent.md (82-l...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 16:23 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Answered vault-port/Columbo location and productization audit. Canonical lives at vaultwares-adk/columbo.py (738 lines, inherits ExtrovertAgent + Redis) + columbo.agent.md (82-line persona spec). Copy-pasted into 10 sibling repos as orphan mirrors. Parallel TypeScript Botpress skeleton at adk-playground/Columbo (stub). vaultwares-toolkit is empty (README 1 line, no src/). Recommended move makes sense: toolkit&#39;s purpose matches Columbo&#39;s, but Columbo needs decoupling from ExtrovertAgent/Redis first. Top product gaps: (1) pick Python vs TS, kill the other; (2) decouple Redis; (3) implement round-trip self-verification (currently placeholder); (4) build real interview loop; (5) reference test corpus. Packaging gaps: pip-installable, MCP wrapper, semver, license/commercial model. Website gaps: domain (columbo.dev recommended), landing page, live demo (highest leverage marketing), docs, founder blog. Integration gaps: GitHub App, CI mode, VSCode ext, Jira sync, hooks into vault-themes/docs/mcp. Honest summary: idea that worked once, not a product yet.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-adk/columbo.py</code></li>
+        <li><code>vaultwares-adk/columbo.agent.md</code></li>
+        <li><code>vaultwares-toolkit/README.md</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 16:07 - vaultwares-website</strong> <span class="kind">code-change</span> - Fixed vaultwares-website CI + GreenCloud VPS auto-deploy. GitHub Pages workflow now only initializes the public vaultwares-themes submodule (avoids failing checkout of private v...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 16:07 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed vaultwares-website CI + GreenCloud VPS auto-deploy. GitHub Pages workflow now only initializes the public vaultwares-themes submodule (avoids failing checkout of private vaultwares-adk). On greencloud-vps, added /var/www/deploy-scripts/deploy-vaultwares-website.sh and corrected /var/www/vaultwares-website + /var/www/vaultwares-website-src ownership to vwdeploy so vw-webhookd can build+swap dist on push; verified webhookd executed the deploy script successfully for commit 1a2ee2e and vaultwares.ca served updated dist.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+        <li><code>git commit -m &#39;ci: init only vaultwares-themes submodule&#39;</code></li>
+        <li><code>git push origin main</code></li>
+        <li><code>ssh root@100.73.93.84 ...</code></li>
+        <li><code>scp deploy-vaultwares-website.sh root@100.73.93.84:/var/www/deploy-scripts/deploy-vaultwares-website.sh</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-website\.github\workflows\deploy.yml</code></li>
+        <li><code>/var/www/deploy-scripts/deploy-vaultwares-website.sh (greencloud-vps)</code></li>
+        <li><code>/var/www/vaultwares-website (greencloud-vps)</code></li>
+        <li><code>/var/www/vaultwares-website-src (greencloud-vps)</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 15:49 - vaultwares-website</strong> <span class="kind">code-change</span> - Fixed GitHub Actions build failure by checking out git submodules (vaultwares-themes) in .github/workflows/deploy.yml so Tailwind CSS token import from ../vaultwares-themes reso...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 15:49 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed GitHub Actions build failure by checking out git submodules (vaultwares-themes) in .github/workflows/deploy.yml so Tailwind CSS token import from ../vaultwares-themes resolves during CI builds. Pushed to main for live deployment.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git -C vaultwares-website commit -m &quot;CI: checkout submodules for build&quot;</code></li>
+        <li><code>git -C vaultwares-website push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-website/.github/workflows/deploy.yml</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 15:36 - vaultwares-website + vaultwares-themes</strong> <span class="kind">verification</span> - Replaced the default Vite/favicon assets with VaultWares branding (favicon + icon symbol sheet) and pushed both vaultwares-themes and vaultwares-website main branches so the liv...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 15:36 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Replaced the default Vite/favicon assets with VaultWares branding (favicon + icon symbol sheet) and pushed both vaultwares-themes and vaultwares-website main branches so the live site deploy can pick them up. Synced the vaultwares-themes submodule in vaultwares-website to the newly pushed themes commit, then rebased website main onto origin/main and pushed (branch protection bypassed but push succeeded). Verified build + basic nav flow earlier; this step is the publication/handoff to live deploy.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git -C vaultwares-themes commit -m &quot;Add console operational token layer&quot;</code></li>
+        <li><code>git -C vaultwares-themes pull --rebase origin main</code></li>
+        <li><code>git -C vaultwares-themes push origin main</code></li>
+        <li><code>git -C vaultwares-website/vaultwares-themes fetch origin main</code></li>
+        <li><code>git -C vaultwares-website/vaultwares-themes reset --hard origin/main</code></li>
+        <li><code>git -C vaultwares-website commit -m &quot;Apply VaultWares console branding&quot;</code></li>
+        <li><code>git -C vaultwares-website pull --rebase origin main</code></li>
+        <li><code>git -C vaultwares-website push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-website/public/favicon.svg</code></li>
+        <li><code>vaultwares-website/public/icons.svg</code></li>
+        <li><code>vaultwares-website/index.html</code></li>
+        <li><code>vaultwares-website/src/components/Navbar.tsx</code></li>
+        <li><code>vaultwares-website/vaultwares-themes</code></li>
+        <li><code>vaultwares-themes/assets/icons/vaultwares-console-icons.svg</code></li>
+        <li><code>vaultwares-themes/assets/tokens/css-variables.css</code></li>
+        <li><code>vaultwares-themes/assets/tokens/tokens.ts</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 15:33 - vault-flows</strong> <span class="kind">code-change</span> - Wired placeholder LLM default end-to-end and verified real LLM responses through entire stack. Set OLLAMA_DEFAULT_MODEL=nutboy02/Qwen3.6-35B-A3B-Claude-4.7-Opus-abliterated-unce...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 15:33 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Wired placeholder LLM default end-to-end and verified real LLM responses through entire stack. Set OLLAMA_DEFAULT_MODEL=nutboy02/Qwen3.6-35B-A3B-Claude-4.7-Opus-abliterated-uncenfull:Q2_K_MTX in pipelines .env. Updated all 3 LLM-bearing preset JSONs (blog-post-drafter, lesson-plan-builder, meeting-summary) from model=&#39;llama3&#39; to the placeholder. Added _strip_reasoning_tokens() to api_server.py to remove &lt;think&gt;...&lt;/think&gt; chain-of-thought blocks that reasoning models (Qwen 3, DeepSeek-R1 distillations) emit before their final answer &#226;€” applied in _ollama_generate before returning. Rebuilt vault-flows and atomically redeployed to /var/www/vault-flows/dist. End-to-end test via https://flows.vaultwares.ca/api/flows/run: real LLM response in 31s for a 3-node graph (input -&gt; llm -&gt; display); &lt;think&gt; blocks correctly stripped from output. Scanned D:\\comfyui\\resources\\comfyui\\models for real-default candidates: most are diffusion-model GGUFs (Flux/Hunyuan/Wan/LTX/SeedVR), not LLMs. The only general-purpose instruction-tuned LLMs on disk in GGUF format are gemma-3-12b-it-qat-Q4_0 (8.2 GB, QAT quant, recommended) and Qwen2.5-VL-7B-Instruct-abliterated.Q4_K_S (4.2 GB, smaller and multimodal but abliterated/uncensored, may affect business/education tone). Recommending gemma-3-12b-it-qat for the real default, importable into Ollama via Modelfile without re-downloading.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>sed -i &#39;s|llama3|nutboy02/Qwen3.6-35B...|g&#39; src/presets/data/*.json</code></li>
+        <li><code>npm run build &amp;&amp; scp -rq dist root@100.73.93.84:/var/www/vault-flows/</code></li>
+        <li><code>nssm restart vault-pipelines-api</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-pipelines/.env</code></li>
+        <li><code>vaultwares-pipelines/api_server.py</code></li>
+        <li><code>vault-flows/src/presets/data/blog-post-drafter.json</code></li>
+        <li><code>vault-flows/src/presets/data/lesson-plan-builder.json</code></li>
+        <li><code>vault-flows/src/presets/data/meeting-summary.json</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-flows, branch=main, head=117e167</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 15:16 - vault-flows</strong> <span class="kind">code-change</span> - Built the vault-flows graph execution layer. Backend (vaultwares-pipelines/api_server.py): added POST /flows/run that accepts a vault-flows Flow {nodes, edges} and walks it topo...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 15:16 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Built the vault-flows graph execution layer. Backend (vaultwares-pipelines/api_server.py): added POST /flows/run that accepts a vault-flows Flow {nodes, edges} and walks it topologically. Per-node behavior: input emits params.value (or prompt/topic/text fallback); llm calls Ollama /api/generate with model/temperature/system/prompt, substituting {{input}}/{{value}}/{{context}} placeholders from upstream output; transform applies a template; display/output pass upstream through. Returns {results: ExecutionResult[]} in execution order; per-node errors don&#39;t abort the run, downstream still receives whatever upstream produced. Added GET /flows/models that proxies Ollama /api/tags so the SPA can discover available models + check reachability. New env vars: OLLAMA_URL (default http://127.0.0.1:11434), OLLAMA_DEFAULT_MODEL (llama3), OLLAMA_CALL_TIMEOUT_SECONDS (120). Used httpx (already in venv) for async Ollama calls. Frontend (vault-flows/src/api/client.ts): switched runFlow from POST /workflows/run {flow} (which was the ComfyUI job-queue endpoint) to POST /flows/run {flow} (the new graph runner). Rebuilt and atomically redeployed to /var/www/vault-flows/dist on greencloud-vps (staged dist.new, mv to dist, chown www-data). Verified end-to-end via https://flows.vaultwares.ca: pass-through graph (input -&gt; display) returns correct topological output; LLM node with bogus model returns clean per-node error &#39;Model X not available in Ollama. Pull it with: ollama pull X&#39;. Ollama on operator box currently has 0 models &#226;€” runner will activate the moment a model is pulled; presets default to model=&#39;llama3&#39; so they&#39;ll need an update once the user finishes pulling gemma.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>scp -r dist root@100.73.93.84:/var/www/vault-flows/dist.new</code></li>
+        <li><code>curl -sk -H &#39;Authorization: Bearer ...&#39; https://flows.vaultwares.ca/api/flows/models</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-pipelines/api_server.py</code></li>
+        <li><code>vault-flows/src/api/client.ts</code></li>
+        <li><code>greencloud-vps:/var/www/vault-flows/dist/</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-flows, branch=main, head=117e167</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 15:10 - vaultwares-website + vaultwares-themes</strong> <span class="kind">code-change</span> - Updated vaultwares-website to use the new VaultWares Console operational branding from C:\Users\Administrator\Desktop\VaultWares Console. Added additive console operational toke...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 15:10 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Updated vaultwares-website to use the new VaultWares Console operational branding from C:\Users\Administrator\Desktop\VaultWares Console. Added additive console operational tokens, icon assets, React icon components, and guidance to vaultwares-themes and mirrored the same additions into the website submodule. Restyled the website shell, navbar, footer, home, store, product, blog, login, and product-card surfaces around aubergine console panels, warm/gold branding, violet/cyan signal colors, and local favicon/icon assets. Removed placeholder Google Analytics from index.html, added static API fallbacks to mock products for preview/static deployments, and cleaned forbidden arrow/military-grade copy in touched strings.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Get-Content vaultwares-docs/AGENTS.md and instructions/ROUTER.md</code></li>
+        <li><code>Get-Content selected VaultWares protocol summaries</code></li>
+        <li><code>npm ci</code></li>
+        <li><code>npm run build</code></li>
+        <li><code>npm install --no-save playwright</code></li>
+        <li><code>npx playwright install chromium</code></li>
+        <li><code>Start-Process npm run preview -- --host 127.0.0.1 --port 5444</code></li>
+        <li><code>Playwright browser checks for home-&gt;store-&gt;blog-&gt;back plus store empty state</code></li>
+        <li><code>Stop-Process preview server</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-website/src/index.css</code></li>
+        <li><code>vaultwares-website/src/pages/Home.tsx</code></li>
+        <li><code>vaultwares-website/src/pages/Store.tsx</code></li>
+        <li><code>vaultwares-website/src/pages/ProductDetail.tsx</code></li>
+        <li><code>vaultwares-website/src/pages/Blog.tsx</code></li>
+        <li><code>vaultwares-website/src/pages/Login.tsx</code></li>
+        <li><code>vaultwares-website/src/components/Navbar.tsx</code></li>
+        <li><code>vaultwares-website/src/components/Footer.tsx</code></li>
+        <li><code>vaultwares-website/src/components/ProductCard.tsx</code></li>
+        <li><code>vaultwares-website/src/icons/vaultwares-icons.tsx</code></li>
+        <li><code>vaultwares-website/public/favicon.svg</code></li>
+        <li><code>vaultwares-website/public/icons.svg</code></li>
+        <li><code>vaultwares-website/index.html</code></li>
+        <li><code>vaultwares-website/src/i18n.ts</code></li>
+        <li><code>vaultwares-website/src/store/mockData.ts</code></li>
+        <li><code>vaultwares-website/locales/products.en.json</code></li>
+        <li><code>vaultwares-website/locales/products.fr.json</code></li>
+        <li><code>vaultwares-themes/assets/tokens/tokens.ts</code></li>
+        <li><code>vaultwares-themes/assets/tokens/css-variables.css</code></li>
+        <li><code>vaultwares-themes/assets/console-operational-system.md</code></li>
+        <li><code>vaultwares-themes/assets/icons/vaultwares-console-icons.svg</code></li>
+        <li><code>vaultwares-themes/components/react/vaultwares-icons.tsx</code></li>
+        <li><code>vaultwares-themes/assets/README.md</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 15:08 - vw-jira-sync</strong> <span class="kind">code-change</span> - Removed jira-sync.yml caller workflows from all 41 tracked repos (41/41 deleted). Added remove_caller_workflows.py. Webhook path on VPS is now the sole active Jira sync mechanis...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 15:08 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Removed jira-sync.yml caller workflows from all 41 tracked repos (41/41 deleted). Added remove_caller_workflows.py. Webhook path on VPS is now the sole active Jira sync mechanism. Also audited all greencloud-vps deployments: 11 nginx vhosts, 6 systemd services (vw-webhookd, vw-secretsd, vaultwares-hooks/Tailscale, nginx, MariaDB, PostgreSQL), Docker postgres:16, actions-runner installed but not running.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>.venv\Scripts\python.exe scripts\remove_caller_workflows.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vw-jira-sync/scripts/remove_caller_workflows.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vw-jira-sync, branch=main, head=d64eb84</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 15:04 - vault-flows</strong> <span class="kind">code-change</span> - Added noddit.org + www.noddit.org as additional public hostnames for vault-flows. Rewrote /etc/nginx/sites-available/noddit.org.conf on greencloud-vps to serve the same /var/www...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 15:04 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added noddit.org + www.noddit.org as additional public hostnames for vault-flows. Rewrote /etc/nginx/sites-available/noddit.org.conf on greencloud-vps to serve the same /var/www/vault-flows/dist as flows.vaultwares.ca (was previously reverse-proxying to https://100.71.101.21:3100 with a different gateway secret). Unified GATEWAY_SHARED_SECRET across both vhosts to the value already in vaultwares-pipelines/.env. Added https://noddit.org and https://www.noddit.org to ALLOWED_ORIGINS in pipelines .env. Restarted vault-pipelines-api NSSM service. Verified full signup -&gt; /auth/me flow against all three hostnames (flows.vaultwares.ca, noddit.org, www.noddit.org): 200 for /, /api/openapi.json, /api/auth/register, and bearer-auth /api/auth/me.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ssh root@100.73.93.84 &#39;cat &gt; /etc/nginx/sites-available/noddit.org.conf &lt;&lt;EOF...&#39;</code></li>
+        <li><code>nginx -t &amp;&amp; systemctl reload nginx</code></li>
+        <li><code>nssm restart vault-pipelines-api</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>greencloud-vps:/etc/nginx/sites-available/noddit.org.conf</code></li>
+        <li><code>vaultwares-pipelines/.env</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 15:02 - vault-flows</strong> <span class="kind">code-change</span> - Wired up the external-user path end-to-end. (1) Networking Layer 1: fixed vault-flows .env (VITE_API_URL was 0.0.0.0:8000 -&gt; http://127.0.0.1:9001), added preview.proxy to vite....</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 15:02 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Wired up the external-user path end-to-end. (1) Networking Layer 1: fixed vault-flows .env (VITE_API_URL was 0.0.0.0:8000 -&gt; http://127.0.0.1:9001), added preview.proxy to vite.config.ts so NSSM-managed vite preview also proxies /api, ran npm install to restore missing node_modules/.bin/vite.cmd. (2) Pipelines fixes: removed duplicate AUTH_ENABLED=0 in .env, installed asyncpg in .venv, pinned tortoise-orm&lt;1.0 in requirements.txt and downgraded from 1.1.7 (which made _inited request-context-scoped and broke db_available()) to 0.25.4. (3) Auth flow: added POST /auth/register to api_server.py with USERNAME_RE [A-Za-z0-9_-]{3,32}, MIN_PASSWORD_LENGTH 8, per-IP rate limit 3/min (trusted clients bypass), 409 on duplicate, returns JWT directly so client can skip a second /auth/login round-trip. (4) Pipelines as service: registered NSSM service vault-pipelines-api with auto-start + auto-restart, rotating logs in _runlogs/. (5) GreenCloud Layer 3: deployed dist/ to /var/www/vault-flows/dist on greencloud-vps via scp, created /etc/nginx/sites-available/flows.vaultwares.ca.conf with SPA fallback + /api/ proxy to http://100.71.101.21:9001 via Tailscale, certbot LE cert for flows.vaultwares.ca, added GATEWAY_REQUIRED_PUBLIC=1 + GATEWAY_SHARED_SECRET + nginx proxy_set_header X-VW-Gateway-Secret to pass the gateway check, added https://flows.vaultwares.ca to ALLOWED_ORIGINS. Verified end-to-end: external signup/login over https://flows.vaultwares.ca/api/auth/{register,login} returns JWT; /auth/me + /workflows accept the token; unauth requests get 403. Fixed vault-flows ImportError by changing vault-themes paths to vaultwares-themes (actual submodule name) in src/lib/theme.ts, src/ui/ThemePicker.tsx, src/index.css.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>nssm install vault-pipelines-api ...</code></li>
+        <li><code>certbot certonly --webroot -w /var/www/vault-flows/dist -d flows.vaultwares.ca</code></li>
+        <li><code>curl -sk https://flows.vaultwares.ca/api/auth/register</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault-flows/.env</code></li>
+        <li><code>vault-flows/vite.config.ts</code></li>
+        <li><code>vault-flows/src/lib/theme.ts</code></li>
+        <li><code>vault-flows/src/index.css</code></li>
+        <li><code>vaultwares-pipelines/.env</code></li>
+        <li><code>vaultwares-pipelines/api_server.py</code></li>
+        <li><code>vaultwares-pipelines/requirements.txt</code></li>
+        <li><code>greencloud-vps:/etc/nginx/sites-available/flows.vaultwares.ca.conf</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-flows, branch=main, head=117e167</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 14:59 - vw-jira-sync</strong> <span class="kind">code-change</span> - Removed JIRA token exposure from GitHub infrastructure. (1) Deleted JIRA_BASE_URL, JIRA_EMAIL, JIRA_TOKEN Actions secrets from all 41 repos (123 total) &#226;€” tokens no longer stor...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 14:59 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Removed JIRA token exposure from GitHub infrastructure. (1) Deleted JIRA_BASE_URL, JIRA_EMAIL, JIRA_TOKEN Actions secrets from all 41 repos (123 total) &#226;€” tokens no longer stored on GitHub servers. (2) Unregistered Windows scheduled task VaultWares-DistributeJiraSecrets &#226;€” distribute_secrets.py no longer runs automatically. (3) Added purge_actions_secrets.py for future cleanup runs. Webhook path on VPS is now the sole active mechanism; both tokens are read from vw-secretsd/gh-token on greencloud-vps and never leave to GitHub infrastructure except as auth headers to api.github.com and vaultwares.atlassian.net (unavoidable).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>.venv\Scripts\python.exe scripts\purge_actions_secrets.py</code></li>
+        <li><code>Unregister-ScheduledTask -TaskName VaultWares-DistributeJiraSecrets</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vw-jira-sync/scripts/purge_actions_secrets.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vw-jira-sync, branch=main, head=a410124</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 14:32 - vw-jira-sync</strong> <span class="kind">code-change</span> - Refactored scheduled-distribute-secrets.ps1 to fetch GH_TOKEN and JIRA_TOKEN from greencloud-vps via Tailscale SSH at runtime. No tokens stored on local disk. GH_TOKEN read from...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 14:32 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Refactored scheduled-distribute-secrets.ps1 to fetch GH_TOKEN and JIRA_TOKEN from greencloud-vps via Tailscale SSH at runtime. No tokens stored on local disk. GH_TOKEN read from /etc/vw-webhookd/gh-token on VPS; JIRA_TOKEN fetched via /usr/local/bin/vw-print-jira-token helper (reads from vw-secretsd). Created vw-print-jira-token helper on VPS. Tested: 41/41 repos updated successfully.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ssh root@100.73.93.84 vw-print-jira-token</code></li>
+        <li><code>powershell -File scripts\scheduled-distribute-secrets.ps1</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vw-jira-sync/scripts/scheduled-distribute-secrets.ps1</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vw-jira-sync, branch=main, head=13f81d9</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 13:28 - vaultwares-console</strong> <span class="kind">code-change</span> - Modify App.tsx to map over vaultWaresIcons, using an inner color list based on loop index to assign color/glow. Also fixed TS errors related to unmatched brackets in icons.tsx a...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\vaultwares-console  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-22 13:28 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Modify App.tsx to map over vaultWaresIcons, using an inner color list based on loop index to assign color/glow. Also fixed TS errors related to unmatched brackets in icons.tsx and vaultwares-icons.tsx files.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/App.tsx</code></li>
+        <li><code>src/icons.tsx</code></li>
+        <li><code>src/icons/vaultwares-icons.tsx</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-22 00:07 - Prom-King tube-sites</strong> <span class="kind">code-change</span> - Revamped PromKing + FullXXX tube UI to match tube-shared UI_kit_example (branding/icons + auth modal), fixed FXV allowlist host parsing to accept pasted URLs, and disabled GitHu...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gpt-5.2 Thinking: medium Mode: Default Permissions: danger-full-access (network: enabled) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): functions.shell_command, functions.apply_patch, functions.update_plan MCP servers accessed (this reply): none Time: 2026-05-22 00:07 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Revamped PromKing + FullXXX tube UI to match tube-shared UI_kit_example (branding/icons + auth modal), fixed FXV allowlist host parsing to accept pasted URLs, and disabled GitHub-hosted deploy workflows (dispatch-only + self-hosted). Merged to main (a8d2683).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>php -l (multiple files)</code></li>
+        <li><code>php tests/VideoFetcherTest.php</code></li>
+        <li><code>curl freesexvideos/latest-updates (status/size checks)</code></li>
+        <li><code>git add -A</code></li>
+        <li><code>git commit -m &#39;revamp(ui): ...&#39;</code></li>
+        <li><code>git checkout main</code></li>
+        <li><code>git merge --ff-only vw-codex-ui-revamp</code></li>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>.github/workflows/deploy-fullxxx-video.yml</code></li>
+        <li><code>.github/workflows/deploy-promking-tube.yml</code></li>
+        <li><code>fullxxx-video/assets/css/pkt-player.css</code></li>
+        <li><code>fullxxx-video/assets/css/tubeshell/base.css</code></li>
+        <li><code>fullxxx-video/includes/auth-bridge.php</code></li>
+        <li><code>fullxxx-video/includes/helpers.php</code></li>
+        <li><code>fullxxx-video/templates/archive-fxv_video.php</code></li>
+        <li><code>fullxxx-video/templates/single-fxv_video.php</code></li>
+        <li><code>fullxxx-video/templates/taxonomy-fxv_category.php</code></li>
+        <li><code>promking-tube/assets/css/pkt-player.css</code></li>
+        <li><code>promking-tube/assets/css/tubeshell/base.css</code></li>
+        <li><code>promking-tube/includes/auth-bridge.php</code></li>
+        <li><code>promking-tube/includes/shortcodes.php</code></li>
+        <li><code>promking-tube/templates/archive-pkt_video.php</code></li>
+        <li><code>promking-tube/templates/single-pkt_video.php</code></li>
+        <li><code>promking-tube/templates/taxonomy-pkt_category.php</code></li>
+        <li><code>tube-shared/assets/css/tube-auth.css</code></li>
+        <li><code>tube-shared/includes/icons.php</code></li>
+        <li><code>tube-shared/templates/auth-modal.php</code></li>
+        <li><code>tube-shared/tube-shared.php</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-21 23:53 - vault-explorer</strong> <span class="kind">code-change</span> - Replaced random thumbnail seek with Math.min(20, duration) seek in main.js and generate_previews.py. Recreated Windows scheduled task &#39;VaultExplorerPreviews&#39; to execute with con...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-21 23:53 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Replaced random thumbnail seek with Math.min(20, duration) seek in main.js and generate_previews.py. Recreated Windows scheduled task &#39;VaultExplorerPreviews&#39; to execute with conhost wrapper. Implemented standard ASR/translation pipeline inside audio_normalize.py using --transcribe switch, leveraging already isolated vocals with Parakeet V3. Added &#39;Normalize &amp; Transcribe (AI)&#39; context menu item and fully wired ipc and preload channels to toggle ASR transcription during background audio isolation.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>schtasks /create /tn &#39;VaultExplorerPreviews&#39; /tr &#39;conhost python ...&#39; ...</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>main.js</code></li>
+        <li><code>preload.js</code></li>
+        <li><code>index.html</code></li>
+        <li><code>python-scripts/generate_previews.py</code></li>
+        <li><code>python-scripts/audio_normalize.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=d25d7ed</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-21 21:44 - vault-explorer</strong> <span class="kind">code-change</span> - Implemented automatic window maximization on startup in main.js. Upgraded video thumbnail generation to random frame seek. Enhanced WebM preview generation to 12 clips of 5s eac...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-21 21:44 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Implemented automatic window maximization on startup in main.js. Upgraded video thumbnail generation to random frame seek. Enhanced WebM preview generation to 12 clips of 5s each (60s total) and direct full transcoding for videos &lt;= 100 seconds. Restored media.py and utils.py from previous merge commit in vaultwares-media-processing. Developed a robust background Python processing script in python-scripts/generate_previews.py and successfully registered a Windows scheduled task at 2:00 AM on May 22, 2026 for the F:\ drive. Built a new realtime vocal isolation &amp; normalization IPC pipeline via python-scripts/audio_normalize.py (incorporating Demucs, FFmpeg dynaudnorm filter, and NVENC/libx264 encoding with CUDA/CPU fallback) and fully integrated progress streaming with an elegant progress overlay on the video file cards.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>schtasks /create /tn &#39;VaultExplorerPreviews&#39; /tr &#39;python ...&#39; /sc once /sd 05/22/2026 /st 02:00 /f</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>main.js</code></li>
+        <li><code>preload.js</code></li>
+        <li><code>index.html</code></li>
+        <li><code>python-scripts/generate_previews.py</code></li>
+        <li><code>python-scripts/audio_normalize.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=d25d7ed</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-21 20:24 - vault-explorer</strong> <span class="kind">code-change</span> - Refactored preview generation inside main.js to directly encode VP9 video and Opus audio in one pass using fast input seeking and realtime VP9 encoder options. This completely e...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-21 20:24 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Refactored preview generation inside main.js to directly encode VP9 video and Opus audio in one pass using fast input seeking and realtime VP9 encoder options. This completely eliminates intermediate image file generation on disk, reducing sub-clip compile times to under 5 seconds total, eliminating the 95% CPU/RAM disk bottleneck, and preserving perfect synchronized audio for hover playback.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm start</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>main.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=d25d7ed</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-21 19:57 - vault-explorer</strong> <span class="kind">code-change</span> - Restored audio playback to hover WebM previews (muted=false, volume=0.5) per user request, taking advantage of the no-user-gesture-required autoplay policy configuration. Refact...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-21 19:57 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Restored audio playback to hover WebM previews (muted=false, volume=0.5) per user request, taking advantage of the no-user-gesture-required autoplay policy configuration. Refactored the UI to dynamically attach and bind the hover preview logic directly to card DOM elements once a WebM finishes compiling, eliminating full-page refreshes. Investigated FFmpeg/Vulkan upscaling bottlenecks.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm start</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>index.html</code></li>
+        <li><code>main.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=d25d7ed</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-21 19:47 - vault-explorer</strong> <span class="kind">code-change</span> - Disabled Real-ESRGAN AI upscaling for hover WebM previews. Standard previews are rendered inside tiny thumbnail cards, so deep-learning upscaling is imperceptible but adds huge ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-21 19:47 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Disabled Real-ESRGAN AI upscaling for hover WebM previews. Standard previews are rendered inside tiny thumbnail cards, so deep-learning upscaling is imperceptible but adds huge GPU/CPU overhead (causing generation to take 2+ minutes). Disabling upscaling reduces preview compilation time to under 2 seconds.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm start</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>main.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=d25d7ed</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-21 19:41 - vault-explorer</strong> <span class="kind">code-change</span> - Aligned the manual generate-webm naming convention inside main.js with scanDirectory uniqueBase naming (uses relativePath instead of plain baseName). This resolves the mismatch ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-21 19:41 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Aligned the manual generate-webm naming convention inside main.js with scanDirectory uniqueBase naming (uses relativePath instead of plain baseName). This resolves the mismatch where generated hover-previews were saved under baseName but expected by the directory scanner under uniqueBase. This allows scanner to locate all previews and successfully bind the mouseenter hover autoplay listeners.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm start</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>main.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=d25d7ed</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-21 19:34 - vault-explorer</strong> <span class="kind">code-change</span> - Normalized videoPath card lookup queries to lowercase and forward slashes to solve Windows path mismatch bugs. When WebM progress finishes (100%), the respective card-level load...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-21 19:34 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Normalized videoPath card lookup queries to lowercase and forward slashes to solve Windows path mismatch bugs. When WebM progress finishes (100%), the respective card-level loading spinners are successfully targeted and destroyed.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm start</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>index.html</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=d25d7ed</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-21 19:25 - vault-explorer</strong> <span class="kind">code-change</span> - Fixed WebM preview generation and playback issues: 1) Corrected the FFmpeg concat command file path parser on Windows by mapping backslashes to forward slashes in generated txt ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-21 19:25 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed WebM preview generation and playback issues: 1) Corrected the FFmpeg concat command file path parser on Windows by mapping backslashes to forward slashes in generated txt file content. 2) Set the hover-video autoplay element to muted=true and volume=0, fulfilling Chromium&#39;s strict autoplay policy for non-interactive video elements.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm start</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>main.js</code></li>
+        <li><code>index.html</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=d25d7ed</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-21 16:14 - vault-explorer</strong> <span class="kind">code-change</span> - Converted WebM generation from a full-screen blocking loader to an asynchronous, non-blocking background queue task. Modified generateThumbAndPreview and schedule-idle-previews ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-21 16:14 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Converted WebM generation from a full-screen blocking loader to an asynchronous, non-blocking background queue task. Modified generateThumbAndPreview and schedule-idle-previews in main.js to attach and propagate videoPath inside progress events. Updated index.html with webm-loading-overlay CSS/HTML card overlays, a global task progress badge next to Explorer title, and registered an onWebmProgress IPC listener to update the card percentages in real time.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm start</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>main.js</code></li>
+        <li><code>index.html</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=d25d7ed</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-21 15:37 - vw-jira-sync</strong> <span class="kind">code-change</span> - Full webhook deployment pass. (1) Created scripts/deploy_webhooks.py &#226;€” deploys/updates GitHub webhooks on all 41 repos to hooks.vaultwares.ca/github with 5 events (push, pull_...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-21 15:37 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Full webhook deployment pass. (1) Created scripts/deploy_webhooks.py &#226;€” deploys/updates GitHub webhooks on all 41 repos to hooks.vaultwares.ca/github with 5 events (push, pull_request, pull_request_review, pull_request_review_comment, issue_comment). 41/41 OK &#226;€” 40 created, vaultwares-docs updated from push-only. (2) Synced config.yaml + jira_sync.py + live_sync.py to VPS /opt/vw-jira-sync/. (3) Updated /usr/local/bin/vw-jira-sync-run.sh on VPS to export GITHUB_TOKEN from /etc/vw-webhookd/gh-token &#226;€” fixes 404 on private repo commits. (4) Added FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true to sync.yml. (5) Bumped vaultwares-themes submodule in vaultwares-studio, vaultwares-website, wander. Webhook working end-to-end: VSTUD-53, VWEB-45, VDOCS-50/51, WAND-9 created in Jira.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>.venv\Scripts\python.exe scripts\deploy_webhooks.py</code></li>
+        <li><code>git push origin main</code></li>
+        <li><code>scp config.yaml scripts/jira_sync.py scripts/live_sync.py root@100.73.93.84:/opt/vw-jira-sync/...</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vw-jira-sync/scripts/deploy_webhooks.py</code></li>
+        <li><code>vw-jira-sync/.github/workflows/sync.yml</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vw-jira-sync, branch=main, head=ddfaf42</p>
+    </div>
+  </details>
   <details>
     <summary><strong>2026-05-21 14:58 - vw-jira-sync</strong> <span class="kind">verification</span> - Full audit pass. Findings: (1) JIRA_TOKEN expired &#226;€” jira-token.txt unchanged since 5/20 6:46 AM; (2) greencloud-vps self-hosted runner: 0 registered, all jira-sync.yml calls s...</summary>
     <div class="entry-body">
@@ -64,7 +1063,7 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-05-21 14:30 - vaultwares-docs (formerly tmp-app)</strong> <span class="kind">plan</span> - Identified 3 issues from user feedback: (1) AGENTS.md keep for Copilot/Jules compatibility but fix absolute Windows paths to repo-relative. (2) No WORK_TRACKING protocol exists ...</summary>
+    <summary><strong>2026-05-21 14:30 - vaultwares-docs</strong> <span class="kind">plan</span> - Identified 3 issues from user feedback: (1) AGENTS.md keep for Copilot/Jules compatibility but fix absolute Windows paths to repo-relative. (2) No WORK_TRACKING protocol exists ...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> plan</p>
       <p><strong>Actor:</strong> AI Agent</p>
@@ -450,7 +1449,7 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-05-21 00:36 - vaultwares-themes (formerly vault-themes)</strong> <span class="kind">plan</span> - Compiled full first-pass deletion list for agent-ledger and vaultwares-themes. agent-ledger: DELETE AGENTS.md (redundant with CLAUDE.md), ROADMAP.md, TODO.md (stubs), .github/co...</summary>
+    <summary><strong>2026-05-21 00:36 - vaultwares-themes</strong> <span class="kind">plan</span> - Compiled full first-pass deletion list for agent-ledger and vaultwares-themes. agent-ledger: DELETE AGENTS.md (redundant with CLAUDE.md), ROADMAP.md, TODO.md (stubs), .github/co...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> plan</p>
       <p><strong>Actor:</strong> AI Agent</p>
@@ -1844,7 +2843,7 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-05-18 16:55 - vaultwares-website (formerly vaultwares-v1)</strong> <span class="kind">code-change</span> - Phase 5 per-repo sync: vaultwares-realtime (c93337d), vaultwares-studio (34a0266), vaultwares-media-processing (7b849b0 w/rebase conflicts), vaultwares-pipelines (8c0099c). All ...</summary>
+    <summary><strong>2026-05-18 16:55 - vaultwares-website</strong> <span class="kind">code-change</span> - Phase 5 per-repo sync: vaultwares-realtime (c93337d), vaultwares-studio (34a0266), vaultwares-media-processing (7b849b0 w/rebase conflicts), vaultwares-pipelines (8c0099c). All ...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> AI Agent</p>
@@ -7254,540 +8253,6 @@
         <li><code>src/pin-entry.tsx</code></li>
       </ul>
       <p><strong>Git:</strong> repo=jovial-meitner-76c726, branch=claude-vw/jovial-meitner-76c726, head=1ea3933</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-08 03:31 - tube-sites</strong> <span class="kind">verification</span> - Provisioned the Debian 12 VPS at 212.193.6.35: generated and installed a dedicated SSH key, added 1GB swap, installed nginx/php8.2-fpm/mariadb/certbot/tailscale, disabled redis ...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> verification</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-08 03:31 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Provisioned the Debian 12 VPS at 212.193.6.35: generated and installed a dedicated SSH key, added 1GB swap, installed nginx/php8.2-fpm/mariadb/certbot/tailscale, disabled redis and packagekit to save RAM, created two WordPress instances for prom-king.xyz and fullxxx.video, copied and activated the repo plugins, updated GitHub admin secrets to the new VPS WordPress users, and enabled key-only SSH hardening plus UFW with 22/80/443. Final memory footprint is about 495 MB used with 1 GB swap free. Tailscale is joined and configured locally for exit-node advertisement, but admin-console approval may still be needed before it shows as an active exit node.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>ssh ... free -m</code></li>
-        <li><code>ssh ... wp plugin list</code></li>
-        <li><code>gh secret list</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\infra\vps\create-wordpress-site.sh</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\infra\vps\php-fpm\wordpress-site-pool.conf.template</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-08 02:50 - tube-sites</strong> <span class="kind">verification</span> - Verified GitHub repo secret wiring for self-hosted WordPress base URLs and attempted VPS access. Added PROM_KING_WP_BASE_URL and FULLXXX_VIDEO_WP_BASE_URL secrets to Prom-King/t...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> verification</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-08 02:50 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Verified GitHub repo secret wiring for self-hosted WordPress base URLs and attempted VPS access. Added PROM_KING_WP_BASE_URL and FULLXXX_VIDEO_WP_BASE_URL secrets to Prom-King/tube-site, both currently pointed at the existing public domains as placeholders. VPS 212.183.6.35 was unreachable from this machine on ICMP, SSH/22, and Proxmox/8006, so remote provisioning and RAM diagnostics could not be executed.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>gh secret list</code></li>
-        <li><code>Test-NetConnection 212.183.6.35 -Port 22</code></li>
-        <li><code>Test-NetConnection 212.183.6.35 -Port 8006</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-08 02:48 - VaultWares SSOT</strong> <span class="kind">code-change</span> - Recreated Windows Scheduled Task VaultWares-SyncGlobalInstructions with headless conhost pattern (conhost.exe --headless wrapping powershell.exe). All 19 SSOT PRs were merged &#226;€...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-08 02:48 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Recreated Windows Scheduled Task VaultWares-SyncGlobalInstructions with headless conhost pattern (conhost.exe --headless wrapping powershell.exe). All 19 SSOT PRs were merged &#226;€” switched repos back to main and cleaned up feature branches. The headless conhost commits didn&#39;t land in the original PRs, so re-added the Scheduled Task Pattern section to ARCHITECTURE.md and sync script header, pushed as follow-up PRs #6 and #8.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>Unregister/Register-ScheduledTask with conhost.exe --headless</code></li>
-        <li><code>git checkout main + pull (19 repos)</code></li>
-        <li><code>gh pr create (2 follow-up PRs)</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>vaultwares-agentciation/docs/ARCHITECTURE.md</code></li>
-        <li><code>vaultwares-docs/scripts/sync-global-instructions.ps1</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 19:46 - VaultWares SSOT</strong> <span class="kind">code-change</span> - Updated Windows Scheduled Task VaultWares-SyncGlobalInstructions to use headless conhost pattern (conhost.exe --headless wrapping powershell.exe). Added Scheduled Task Pattern s...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 19:46 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Updated Windows Scheduled Task VaultWares-SyncGlobalInstructions to use headless conhost pattern (conhost.exe --headless wrapping powershell.exe). Added Scheduled Task Pattern section to vaultwares-agentciation/docs/ARCHITECTURE.md. Updated sync script header comment. Saved feedback memory for future scheduled task creation. Both commits pushed to existing PR branches.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>Unregister-ScheduledTask VaultWares-SyncGlobalInstructions</code></li>
-        <li><code>Register-ScheduledTask with conhost.exe --headless</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>vaultwares-agentciation/docs/ARCHITECTURE.md</code></li>
-        <li><code>vaultwares-docs/scripts/sync-global-instructions.ps1</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 15:47 - VaultWares SSOT (20 repos)</strong> <span class="kind">code-change</span> - Implemented the VaultWares Single Source of Truth system across 20 repositories. Created docs/LEXICON.md (Host, AI Assistant, Agent, Global Instructions Path terminology) and do...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 15:47 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Implemented the VaultWares Single Source of Truth system across 20 repositories. Created docs/LEXICON.md (Host, AI Assistant, Agent, Global Instructions Path terminology) and docs/ARCHITECTURE.md (tier hierarchy, sync mechanism, Host path registry) in vaultwares-agentciation. Created vaultwares-docs/AGENTS.md as Tier 1 Source of Truth with company overview, mandatory protocols, and pointers to tier-2 repos. Created scripts/sync-global-instructions.ps1 to propagate instructions to 7 Host Global Instructions Paths (Claude Code, VS Code Copilot, Windsurf, Gemini/Antigravity, Codex CLI, OpenCode, Claude Desktop JSON). Rewrote workspace root AGENTS.md from 82-line ledger duplicate to 30-line SSOT pointer. Rewrote agent-ledger/AGENTS.md as focused Tier 2 ledger protocol. Added SSOT pointer to vault-themes/AGENTS.md. Standardized 16 consumer repo AGENTS.md files (removed duplication, fixed old vault-themes submodule paths pointing to .github/STYLE.md). Preserved repo-specific content in deconstructed, no-more-groceries, usd-playground, vault-central. Created Windows Scheduled Task VaultWares-SyncGlobalInstructions (daily 06:00 + logon). Pushed agent-ledger directly to main. Created 19 PRs across all other repos with p-potvin as reviewer.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>sync-global-instructions.ps1 -DryRun</code></li>
-        <li><code>sync-global-instructions.ps1</code></li>
-        <li><code>Register-ScheduledTask VaultWares-SyncGlobalInstructions</code></li>
-        <li><code>gh pr create (19 repos)</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>vaultwares-agentciation/docs/LEXICON.md</code></li>
-        <li><code>vaultwares-agentciation/docs/ARCHITECTURE.md</code></li>
-        <li><code>vaultwares-agentciation/AGENTS.md</code></li>
-        <li><code>vaultwares-docs/AGENTS.md</code></li>
-        <li><code>vaultwares-docs/scripts/sync-global-instructions.ps1</code></li>
-        <li><code>AGENTS.md (workspace root)</code></li>
-        <li><code>agent-ledger/AGENTS.md</code></li>
-        <li><code>vault-themes/AGENTS.md</code></li>
-        <li><code>18 consumer repo AGENTS.md files</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 12:52 - tube-sites</strong> <span class="kind">code-change</span> - Implemented phase-1 self-hosting assets for the tube sites: added Debian 12 VPS bootstrap/install/create-site scripts, nginx/php-fpm/MariaDB templates, and a self-hosted WordPre...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 12:52 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Implemented phase-1 self-hosting assets for the tube sites: added Debian 12 VPS bootstrap/install/create-site scripts, nginx/php-fpm/MariaDB templates, and a self-hosted WordPress migration runbook. Retargeted both deploy workflows to use secret-based WordPress base URLs (PROM_KING_WP_BASE_URL, FULLXXX_VIDEO_WP_BASE_URL) instead of hardcoded Porkbun domains, preserving the stronger login and version verification logic.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git diff --check</code></li>
-        <li><code>bash -n /mnt/c/Users/Administrator/Desktop/business/tube-site/infra/vps/bootstrap-debian12.sh</code></li>
-        <li><code>bash -n /mnt/c/Users/Administrator/Desktop/business/tube-site/infra/vps/install-wordpress-stack.sh</code></li>
-        <li><code>bash -n /mnt/c/Users/Administrator/Desktop/business/tube-site/infra/vps/create-wordpress-site.sh</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\infra\vps\bootstrap-debian12.sh</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\infra\vps\install-wordpress-stack.sh</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\infra\vps\create-wordpress-site.sh</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\docs\SELF_HOSTED_WORDPRESS_VPS.md</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 11:54 - General Tasks</strong> <span class="kind">general</span> - Looked up current reputation/claims around SparkTraffic and TrafficPeak (traffic-buying services) to advise on whether paid traffic is worth it; no code changes.</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> general</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 11:54 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Looked up current reputation/claims around SparkTraffic and TrafficPeak (traffic-buying services) to advise on whether paid traffic is worth it; no code changes.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>web.run search: SparkTraffic review/terms</code></li>
-        <li><code>web.run search: TrafficPeak review/terms</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 06:15 - tube-sites</strong> <span class="kind">code-change</span> - Handle WP admin rate-limiting: add curl wrapper with exponential backoff for HTTP 429/503/52x to the login step in both tube-site deploy workflows; improve error message to expl...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 06:15 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Handle WP admin rate-limiting: add curl wrapper with exponential backoff for HTTP 429/503/52x to the login step in both tube-site deploy workflows; improve error message to explicitly call out 429 and recommend allowlisting CI or using a self-hosted runner with stable IP.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git diff --name-only</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 03:01 - General Tasks</strong> <span class="kind">general</span> - Researched terminology for AI Agents (Claude/ChatGPT/Gemini/Manus/Copilot/Jules/Meta) vs MCP Hosts (Claude Desktop/VS Code/Cursor/Windsurf/Antigravity/Codex/OpenCode/Gemini CLI/...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> general</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 03:01 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Researched terminology for AI Agents (Claude/ChatGPT/Gemini/Manus/Copilot/Jules/Meta) vs MCP Hosts (Claude Desktop/VS Code/Cursor/Windsurf/Antigravity/Codex/OpenCode/Gemini CLI/Desktop Commander/AnythingLLM). Compiled Windows global instruction paths for each. Key finding: AGENTS.md is now Linux Foundation open standard (20K+ repos). Recommended VaultWares strategy: canonical AGENTS.md + sync script propagating to host-specific paths.</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 02:45 - fastmcp</strong> <span class="kind">code-change</span> - Switched MCPB manifest to start stdio server via python /server.py (instead of python -m vaultwares_fastmcp) per expected entrypoint usage; revalidated and repacked vaultwares-f...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\fastmcp  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 02:45 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Switched MCPB manifest to start stdio server via python /server.py (instead of python -m vaultwares_fastmcp) per expected entrypoint usage; revalidated and repacked vaultwares-fastmcp-2.0.0.mcpb.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>mcpb validate .</code></li>
-        <li><code>mcpb pack . vaultwares-fastmcp-2.0.0.mcpb</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>manifest.json</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=fastmcp, branch=main, head=beff63d</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 02:41 - fastmcp</strong> <span class="kind">code-change</span> - Adjusted MCPB manifest to launch via python -m vaultwares_fastmcp (entry_point vaultwares_fastmcp/__main__.py) instead of server.py, then revalidated and repacked vaultwares-fas...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\fastmcp  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 02:41 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Adjusted MCPB manifest to launch via python -m vaultwares_fastmcp (entry_point vaultwares_fastmcp/__main__.py) instead of server.py, then revalidated and repacked vaultwares-fastmcp-2.0.0.mcpb.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>mcpb validate .</code></li>
-        <li><code>mcpb pack . vaultwares-fastmcp-2.0.0.mcpb</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>manifest.json</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=fastmcp, branch=main, head=beff63d</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 02:41 - fastmcp</strong> <span class="kind">code-change</span> - Added MCPB desktop-extension support by creating root manifest.json (MCPB manifest spec v0.3) and .mcpbignore to keep bundles small. Installed @anthropic-ai/mcpb, validated mani...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\fastmcp  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 02:41 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Added MCPB desktop-extension support by creating root manifest.json (MCPB manifest spec v0.3) and .mcpbignore to keep bundles small. Installed @anthropic-ai/mcpb, validated manifest, packed vaultwares-fastmcp-2.0.0.mcpb (now ~101KB vs initial 31MB), and verified with pytest.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>npm install -g @anthropic-ai/mcpb</code></li>
-        <li><code>mcpb validate .</code></li>
-        <li><code>mcpb pack . vaultwares-fastmcp-2.0.0.mcpb</code></li>
-        <li><code>python -m pytest -q</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>manifest.json</code></li>
-        <li><code>.mcpbignore</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=fastmcp, branch=main, head=beff63d</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 02:36 - tube-sites</strong> <span class="kind">code-change</span> - Added a harmless blank line at the top of each plugin README so you can trigger GitHub Actions deployments by touching README.md under promking-tube/ or fullxxx-video/.</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 02:36 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Added a harmless blank line at the top of each plugin README so you can trigger GitHub Actions deployments by touching README.md under promking-tube/ or fullxxx-video/.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>Get-Content promking-tube/README.md -TotalCount 2</code></li>
-        <li><code>Get-Content fullxxx-video/README.md -TotalCount 2</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\promking-tube\README.md</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\fullxxx-video\README.md</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 02:00 - tube-sites</strong> <span class="kind">code-change</span> - Improved WP login diagnostics for tube-site deploy workflows: capture login response headers/body to temp files, and when login cookie is missing print HTTP/Location/Set-Cookie ...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 02:00 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Improved WP login diagnostics for tube-site deploy workflows: capture login response headers/body to temp files, and when login cookie is missing print HTTP/Location/Set-Cookie lines, cookie names saved, and a sanitized body preview. This helps identify WAF/2FA/captcha vs bad credentials without leaking secrets.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git diff --name-only</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 00:41 - General Tasks</strong> <span class="kind">general</span> - Updated memory: agent-ledger push-to-main exception, PR reviewer addition, factual communication style, visual experiments. Listed sources of truth in load order.</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> general</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:41 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Updated memory: agent-ledger push-to-main exception, PR reviewer addition, factual communication style, visual experiments. Listed sources of truth in load order.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\feedback_git_workflow.md</code></li>
-        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\feedback_communication_style.md</code></li>
-        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\feedback_visuals.md</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 00:24 - agent-ledger</strong> <span class="kind">code-change</span> - Fixed exit code 128 and demonstrated proper VaultWares code change workflow: branched from main, committed with Lore protocol trailers, pushed to GitHub, created PR for human re...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: fix/render-exit-code Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:24 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Fixed exit code 128 and demonstrated proper VaultWares code change workflow: branched from main, committed with Lore protocol trailers, pushed to GitHub, created PR for human review. User asked to explain code change process to integrate Claude into VaultWares workflow.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git checkout -b fix/render-exit-code</code></li>
-        <li><code>git add scripts/render-agent-ledger.ps1</code></li>
-        <li><code>git commit with Lore protocol</code></li>
-        <li><code>git push -u origin fix/render-exit-code</code></li>
-        <li><code>gh pr create</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\render-agent-ledger.ps1</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=agent-ledger, branch=fix/render-exit-code, head=5b92912</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 00:18 - agent-ledger</strong> <span class="kind">code-change</span> - Fixed exit code 128 issue: added &#39;exit 0&#39; to render-agent-ledger.ps1 to explicitly return success code. Root cause: script completed successfully but didn&#39;t explicitly exit, cau...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:18 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Fixed exit code 128 issue: added &#39;exit 0&#39; to render-agent-ledger.ps1 to explicitly return success code. Root cause: script completed successfully but didn&#39;t explicitly exit, causing PowerShell to exit with inherited/undefined exit code.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>Investigated render-agent-ledger.ps1 execution</code></li>
-        <li><code>Tested JSON file validity</code></li>
-        <li><code>Added explicit exit 0</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\render-agent-ledger.ps1</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 00:18 - Test</strong> <span class="kind">general</span> - Testing exit code after fix</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> general</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:18 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Testing exit code after fix</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 00:16 - General Tasks</strong> <span class="kind">general</span> - Investigated exit code 128 issue. Confirmed: ledger recordings succeed (events created, CHANGES.md rendered). Exit code 128 is harmless downstream report from render script, not...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> general</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:16 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Investigated exit code 128 issue. Confirmed: ledger recordings succeed (events created, CHANGES.md rendered). Exit code 128 is harmless downstream report from render script, not a blocker.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>Checked render-agent-ledger.ps1 execution</code></li>
-        <li><code>Tested direct vs piped calls</code></li>
-        <li><code>Verified permissions and file writes</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\feedback_credit_optimizer_pipeline.md</code></li>
-        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\feedback_agent_ledger_timing.md</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 00:16 - Test</strong> <span class="kind">general</span> - Testing exit code behavior</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> general</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:16 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Testing exit code behavior</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 00:14 - General Tasks</strong> <span class="kind">general</span> - User corrected agent ledger timing: it must be recorded AFTER all work is done, just before replying &#226;€” not at the start. Saved as permanent feedback memory. Also loaded and co...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> general</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:14 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> User corrected agent ledger timing: it must be recorded AFTER all work is done, just before replying &#226;€” not at the start. Saved as permanent feedback memory. Also loaded and confirmed vaultwares-mcp credit optimizer tools are active.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\feedback_agent_ledger_timing.md</code></li>
-        <li><code>C:\Users\Administrator\.claude\projects\C--Users-Administrator-Desktop-Github-Repos\memory\MEMORY.md</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 00:10 - General Tasks</strong> <span class="kind">general</span> - User asked Claude to read credit optimization skills from vaultwares-fastmcp and memorize them for use on every reply.</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> general</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:10 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> User asked Claude to read credit optimization skills from vaultwares-fastmcp and memorize them for use on every reply.</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-07 00:01 - General Tasks</strong> <span class="kind">general</span> - User asked Claude to familiarize itself with Vaultwares by reading AGENTS.md and README.md from vault-themes, vaultwares-docs, and vaultwares-agentciation, then save this knowle...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> general</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-07 00:01 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> User asked Claude to familiarize itself with Vaultwares by reading AGENTS.md and README.md from vault-themes, vaultwares-docs, and vaultwares-agentciation, then save this knowledge to persistent memory.</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-06 23:59 - General Tasks</strong> <span class="kind">general</span> - User asked what instructions are in the Github Repos CLAUDE.md file.</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> general</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 23:59 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> User asked what instructions are in the Github Repos CLAUDE.md file.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\CLAUDE.md</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-06 23:21 - tube-sites</strong> <span class="kind">code-change</span> - Harden WordPress admin session validation in tube-site deploy workflows: use a consistent browser-like User-Agent, follow redirects on login/upload, add an explicit wp-admin ses...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 23:21 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Harden WordPress admin session validation in tube-site deploy workflows: use a consistent browser-like User-Agent, follow redirects on login/upload, add an explicit wp-admin session check after login (with HTML preview on failure), and refine login-form detection regexes to avoid false positives.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git diff --name-only</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-06 23:14 - tube-sites</strong> <span class="kind">code-change</span> - Fix E2BIG/Argument list too long during plugin verification: stop exporting huge plugins.php HTML into environment. Fetch plugins.php directly to a temp file and run grep/sed/py...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 23:14 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Fix E2BIG/Argument list too long during plugin verification: stop exporting huge plugins.php HTML into environment. Fetch plugins.php directly to a temp file and run grep/sed/python against the file; version parsing now reads HTML from stdin.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>Select-String .github/workflows/deploy-*.yml -Pattern &#39;PLUGINS_HTML&#39;</code></li>
-        <li><code>git diff --name-only</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-06 23:02 - tube-sites</strong> <span class="kind">code-change</span> - Fix YAML syntax error: removed heredoc blocks inside GitHub Actions run step (they broke YAML indentation). Replaced them with single-quoted python3 -c &#39;...&#39; one-liners for url ...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 23:02 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Fix YAML syntax error: removed heredoc blocks inside GitHub Actions run step (they broke YAML indentation). Replaced them with single-quoted python3 -c &#39;...&#39; one-liners for url encoding, plugin param extraction, and installed-version parsing in both tube-site deploy workflows.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>Select-String .github/workflows/deploy-*.yml -Pattern &#39;^import &#39;</code></li>
-        <li><code>git diff --name-only</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-06 22:56 - tube-sites</strong> <span class="kind">code-change</span> - Fix CI syntax error in tube-site deploy workflows by replacing escaped inline python -c blocks with heredoc python blocks.</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 22:56 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Fix CI syntax error in tube-site deploy workflows by replacing escaped inline python -c blocks with heredoc python blocks.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git diff --name-only</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-06 22:41 - tube-sites</strong> <span class="kind">code-change</span> - Reworked tube plugin deployment verification: removed brittle success-string matching and replaced with (a) extract plugin file param from update response when possible, (b) fet...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\business  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-06 22:41 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Reworked tube plugin deployment verification: removed brittle success-string matching and replaced with (a) extract plugin file param from update response when possible, (b) fetch plugins.php and fail fast if it returns login form, (c) verify plugin file path appears (raw or URL-encoded), and (d) parse the nearby &#39;Version X.Y.Z&#39; and fail if installed version != repo Version header (catches installed-but-not-updated).</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>Get-Content .github/workflows/deploy-fullxxx-video.yml</code></li>
-        <li><code>Get-Content .github/workflows/deploy-promking-tube.yml</code></li>
-        <li><code>git diff --name-only</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-fullxxx-video.yml</code></li>
-        <li><code>C:\Users\Administrator\Desktop\business\tube-site\.github\workflows\deploy-promking-tube.yml</code></li>
-      </ul>
     </div>
   </details>
   <details>

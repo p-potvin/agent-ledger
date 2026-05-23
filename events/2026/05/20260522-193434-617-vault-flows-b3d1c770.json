@@ -1,0 +1,51 @@
+{
+  "id": "20260522-193434-617-vault-flows-b3d1c770",
+  "createdAt": "2026-05-22T23:34:34.6178106Z",
+  "createdAtLocal": "2026-05-22 19:34",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 19:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Quick-fix refactor: vault-flows is a general node-based workflow builder, not a chat tool. Widened the node taxonomy and runner without breaking existing chat presets. (1) Types (vault-flows/src/nodes/types.ts): NodeType union extended with 'model_call' (provider-discriminated generation) and 'comfyui_workflow' (run a saved ComfyUI workflow as one step). Added ModelCallProvider type ('ollama'|'comfyui'|'http'). ExecutionResult extended with optional kind ('text'|'image'|'json'|'file'|'job_result'), imageUrl, fileRef, data fields so non-text outputs can flow through the graph. (2) Registry (registry.ts): added model_call (defaults provider:ollama, empty model so server picks default) and comfyui_workflow (defaults mode:local). Existing llm/input/output/transform/display entries unchanged. (3) Canvas (canvas/nodes/): created ModelCallNode.tsx (shows provider + model) and ComfyUIWorkflowNode.tsx (shows workflow_id + mode). Registered in nodeTypes.ts. (4) DisplayNode rewrite: branches on result.kind — text shows <p>, image shows <img> (max 220x160), json/job_result shows <pre>, file shows '📄 path'. (5) Backend (vaultwares-pipelines/api_server.py): ExecutionResultOut extended with kind/imageUrl/fileRef/data. /flows/run refactored into dispatcher pattern with handlers: _handle_model_call_ollama (existing logic), _handle_model_call_http (httpx generic call, parses JSON content-type, returns kind=json+data), _handle_comfyui_workflow (validates workflow_id exists in DB, enqueues via _new_job+_queue_job, polls _read_job until succeeded/failed/canceled with COMFYUI_JOB_POLL_INTERVAL_SECONDS=2 and COMFYUI_JOB_MAX_WAIT_SECONDS=600), _handle_model_call dispatching on params.provider. New _forward_upstream_payload helper makes display/output nodes preserve upstream kind/imageUrl/data instead of stringifying. 'llm' type aliased to _handle_model_call_ollama for backward compat. (6) Env: added COMFYUI_JOB_POLL_INTERVAL_SECONDS, COMFYUI_JOB_MAX_WAIT_SECONDS, HTTP_NODE_TIMEOUT_SECONDS. Verified 6 paths through https://flows.vaultwares.ca: legacy llm still works, model_call+ollama equivalent, model_call+http hit httpbin.org/json and got proper kind=json+data payload (forwarded to display correctly), comfyui_workflow missing/nonexistent workflow_id gives clean error, unknown provider gives clean error. All existing chat presets continue to work via the llm path.",
+  "commands": [
+    "npm run build",
+    "scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/",
+    "nssm restart vault-pipelines-api"
+  ],
+  "files": [
+    "vault-flows/src/nodes/types.ts",
+    "vault-flows/src/nodes/registry.ts",
+    "vault-flows/src/canvas/nodeTypes.ts",
+    "vault-flows/src/canvas/nodes/ModelCallNode.tsx",
+    "vault-flows/src/canvas/nodes/ComfyUIWorkflowNode.tsx",
+    "vault-flows/src/canvas/nodes/DisplayNode.tsx",
+    "vaultwares-pipelines/api_server.py",
+    "vaultwares-pipelines/.env"
+  ],
+  "planPath": "",
+  "contentHash": "b3d1c7704bb3a43b3cc265f6b3c257073a6d49309097509b058050530ba51402",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "117e167",
+    "hasChanges": true
+  }
+}

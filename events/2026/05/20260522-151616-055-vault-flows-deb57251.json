@@ -1,0 +1,45 @@
+{
+  "id": "20260522-151616-055-vault-flows-deb57251",
+  "createdAt": "2026-05-22T19:16:16.0552162Z",
+  "createdAtLocal": "2026-05-22 15:16",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 15:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Built the vault-flows graph execution layer. Backend (vaultwares-pipelines/api_server.py): added POST /flows/run that accepts a vault-flows Flow {nodes, edges} and walks it topologically. Per-node behavior: input emits params.value (or prompt/topic/text fallback); llm calls Ollama /api/generate with model/temperature/system/prompt, substituting {{input}}/{{value}}/{{context}} placeholders from upstream output; transform applies a template; display/output pass upstream through. Returns {results: ExecutionResult[]} in execution order; per-node errors don't abort the run, downstream still receives whatever upstream produced. Added GET /flows/models that proxies Ollama /api/tags so the SPA can discover available models + check reachability. New env vars: OLLAMA_URL (default http://127.0.0.1:11434), OLLAMA_DEFAULT_MODEL (llama3), OLLAMA_CALL_TIMEOUT_SECONDS (120). Used httpx (already in venv) for async Ollama calls. Frontend (vault-flows/src/api/client.ts): switched runFlow from POST /workflows/run {flow} (which was the ComfyUI job-queue endpoint) to POST /flows/run {flow} (the new graph runner). Rebuilt and atomically redeployed to /var/www/vault-flows/dist on greencloud-vps (staged dist.new, mv to dist, chown www-data). Verified end-to-end via https://flows.vaultwares.ca: pass-through graph (input -> display) returns correct topological output; LLM node with bogus model returns clean per-node error 'Model X not available in Ollama. Pull it with: ollama pull X'. Ollama on operator box currently has 0 models — runner will activate the moment a model is pulled; presets default to model='llama3' so they'll need an update once the user finishes pulling gemma.",
+  "commands": [
+    "scp -r dist root@100.73.93.84:/var/www/vault-flows/dist.new",
+    "curl -sk -H 'Authorization: Bearer ...' https://flows.vaultwares.ca/api/flows/models"
+  ],
+  "files": [
+    "vaultwares-pipelines/api_server.py",
+    "vault-flows/src/api/client.ts",
+    "greencloud-vps:/var/www/vault-flows/dist/"
+  ],
+  "planPath": "",
+  "contentHash": "deb57251ac5bcd0f347d9c61dd3c1138f4e0f609f70ff6a890304d9e8313ea96",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "117e167",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "20260522-230210-303-vault-flows-8638e40d",
+  "createdAt": "2026-05-23T03:02:10.3037434Z",
+  "createdAtLocal": "2026-05-22 23:02",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 23:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Big multi-piece update. (1) Signed image URLs: /comfyui-image/{token} + /uploads/image/{token} endpoints in pipelines, both signed with JWT_SECRET, both unauthenticated by design (token IS the credential). _execute_comfyui_graph now mints signed URLs via _sign_comfyui_image_token instead of base64-inflating images as data URIs. New env COMFYUI_URL_TOKEN_TTL_SECONDS=3600. (2) Image upload: POST /uploads/image accepts multipart, writes to UPLOADS_DIR with random name, returns signed upload-token. GET /uploads/image/{token} serves it back. _resolve_image_ref_to_path validates tokens, _upload_to_comfyui pushes local file into ComfyUI input folder. Env: UPLOADS_DIR=./_uploads, UPLOADS_MAX_BYTES=20MB, UPLOADS_TOKEN_TTL_SECONDS=86400. Nginx vhosts (flows.vaultwares.ca + noddit.org) bumped client_max_body_size to 25m. (3) New image_input node type in vault-flows: ImageInputNode.tsx renders file picker + thumbnail, uploads on selection, stores image_ref+preview_url+filename in params. Worker flow runner: image_input nodes emit kind=image with imageUrl=preview_url and output=ref-token so downstream comfyui_workflow nodes can pick it up via {{input}} template. (4) _handle_comfyui_workflow now template-substitutes upstream into string values in params.inputs (so {source_image: '{{input}}'} from an image_input upstream just works). (5) Workflow's comfyui_graph step gets new optional image_inputs: ['key','key',...] list — keys whose values are upload-tokens get resolved by the worker before submitting the graph (_resolve_image_inputs decodes the token, posts to ComfyUI /upload/image, substitutes the resulting ComfyUI filename into the LoadImage node). (6) Bulk converter (scripts/convert_proven_workflows.py): walks 13 ComfyUI editor-format workflows in C:/Users/Administrator/ComfyUI/user/default/workflows/Proven_Workflows. Pulls ComfyUI /object_info to drive widget-vs-link conversion (handles control_after_generate sibling widget for seed inputs). Detects API-format pass-through. For unknown custom-node types (Flux2KleinCheckpointLoader, FaceAlign, FaceDetectorInsightFace, ImagePasteFace, WAN2_2_I2V_*, VideoHelperSuite_ImagesToVideo): preserves the node + its links + widget_values as best-effort with a warning so ComfyUI's error is the source of truth. Heuristics extract primary model (CheckpointLoader/UnetLoader inputs), LoRA names, positive/negative prompts (via KSampler positive/negative links to CLIPTextEncode), seed path, and image input slots (LoadImage nodes → source_image/target_image/reference_image keys). NAME_MAP gives each workflow a clean id+display name (e.g. flux2-klein-faceswap, qwen-image-edit-4step, wan22-img2video). Idempotent via PUT-then-POST. 13/13 seeded successfully. Catalog now has 14 workflows (13 from Proven_Workflows + z-image-turbo-text2img). End-to-end verified through https://flows.vaultwares.ca: upload PNG -> image_input node -> biglove-photo comfyui_workflow node -> ComfyUI received the file via /upload/image and ran VAEEncode against it (failed only because bigLove checkpoint lacks a baked-in VAE; the wiring is correct, that's a workflow-content issue).",
+  "commands": [
+    "python scripts/convert_proven_workflows.py",
+    "curl -F file=@... https://flows.vaultwares.ca/api/uploads/image",
+    "ssh root@... 'sed -i ... client_max_body_size 25m'"
+  ],
+  "files": [
+    "vaultwares-pipelines/api_server.py",
+    "vaultwares-pipelines/.env",
+    "vault-flows/src/nodes/types.ts",
+    "vault-flows/src/nodes/registry.ts",
+    "vault-flows/src/canvas/nodes/ImageInputNode.tsx",
+    "vault-flows/src/canvas/nodeTypes.ts",
+    "vault-flows/src/api/client.ts",
+    "vault-flows/scripts/convert_proven_workflows.py",
+    "greencloud-vps:/etc/nginx/sites-available/flows.vaultwares.ca.conf",
+    "greencloud-vps:/etc/nginx/sites-available/noddit.org.conf"
+  ],
+  "planPath": "",
+  "contentHash": "8638e40df557efba60daca5b9bb54e5e158ad8b324cda16e37c44fbeece5c155",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "117e167",
+    "hasChanges": true
+  }
+}
