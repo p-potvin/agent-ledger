@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+/*
+ * VaultWares Revisited tokens — sourced from vaultwares-themes/vaultwares-revisited/revisited.css
+ * Inlined here because Tailwind v4's resolver can't traverse above the site/ boundary.
+ * Canonical source: vaultwares-themes/vaultwares-revisited/TOKENS.md
+ */
+
+/* === Tailwind v4 @theme — map VaultWares Revisited tokens to utility classes === */
+@theme {
+  --color-vw-console-bg: var(--vault-console-bg);
+  --color-vw-console-surface: var(--vault-console-surface);
+  --color-vw-console-raised: var(--vault-console-raised);
+  --color-vw-console-elevated: var(--vault-console-elevated);
+  --color-vw-console-border: var(--vault-console-border-subtle);
+  --color-vw-console-text-secondary: var(--vault-console-text-secondary);
+  --color-vw-console-gold: var(--vault-console-gold);
+  --color-vw-console-violet: var(--vault-console-violet);
+  --color-vw-signal-online: var(--vault-signal-online);
+  --color-vw-signal-relay: var(--vault-signal-relay);
+  --color-vw-signal-sync: var(--vault-signal-sync);
+  --color-vw-signal-warning: var(--vault-signal-warning);
+  --color-vw-signal-alert: var(--vault-signal-alert);
+  --font-sans: "Inter", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* === VaultWares Revisited Core Tokens === */
+:root {
+  --font-sans: "Inter", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Warm Mode / Document State */
+  --vault-warm-bg: #F5F1E8;
+  --vault-warm-raised: #FCFAF5;
+  --vault-warm-muted: #ECE5D8;
+  --vault-warm-border-subtle: rgba(22, 19, 32, 0.08);
+
+  /* Console Mode / Terminal State */
+  --vault-console-bg: #161320;
+  --vault-console-surface: #1F1A2B;
+  --vault-console-raised: #2A2340;
+  --vault-console-elevated: #31274A;
+  --vault-console-border-subtle: rgba(255, 255, 255, 0.06);
+  --vault-console-text-secondary: rgba(237, 230, 255, 0.72);
+
+  /* Accents */
+  --vault-console-gold: #D6A441;
+  --vault-console-violet: #B07CFF;
+
+  /* Signals */
+  --vault-signal-online: #6BE675;
+  --vault-signal-relay: #55D6FF;
+  --vault-signal-sync: #B07CFF;
+  --vault-signal-warning: #F0B94B;
+  --vault-signal-alert: #FF6B7A;
+
+  /* Semantic dashboard aliases */
+  --v-base: var(--vault-console-bg);
+  --v-surface: var(--vault-console-surface);
+  --v-surface2: var(--vault-console-raised);
+  --v-gold: var(--vault-console-gold);
+  --v-gold-muted: rgba(214, 164, 65, 0.14);
+  --v-gold-dim: rgba(214, 164, 65, 0.32);
+  --v-violet: var(--vault-console-violet);
+  --v-green: var(--vault-signal-online);
+  --v-burgundy: var(--vault-signal-alert);
+  --v-slate: var(--vault-console-text-secondary);
+  --v-muted-color: rgba(237, 230, 255, 0.45);
+  --v-border: var(--vault-console-border-subtle);
+  --bg: var(--vault-console-bg);
+  --fg: #ede6ff;
+  --muted: var(--vault-console-text-secondary);
+  --border: var(--vault-console-border-subtle);
+  --card: var(--vault-console-surface);
+  --chip: rgba(214, 164, 65, 0.14);
+  --accent: var(--vault-console-gold);
+  --link: var(--vault-console-violet);
+  --good0: rgba(176, 124, 255, 0.08);
+  --good1: rgba(214, 164, 65, 0.22);
+  --good2: rgba(214, 164, 65, 0.48);
+  --good3: rgba(214, 164, 65, 0.75);
+  --good4: var(--vault-console-gold);
+}
+
+/* Warm / light mode removed — console-only for now */
+
+/* === Shell Primitives (from revisited.css) === */
+.vw-console-shell {
+  background:
+    radial-gradient(circle at 15% 0%, rgba(176, 124, 255, 0.18), transparent 32rem),
+    linear-gradient(180deg, var(--vault-console-surface), var(--vault-console-bg));
+  color: #fff;
+}
+
+/* .vw-warm-shell removed — console-only for now */
+
+/* === Base resets === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--link);
+}
+
+/* === Scrollbar (Console) === */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--vault-console-raised);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vault-console-gold);
+}

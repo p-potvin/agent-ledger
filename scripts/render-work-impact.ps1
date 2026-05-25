@@ -1375,3 +1375,20 @@ Write-Output "Rendered work impact to:"
 Write-Output "  $outHtmlPath"
 Write-Output "  $ParentHtmlPath"
 
+# --- Also emit JSON for the React site (hybrid output) ---
+$siteDataDir = Join-Path $LedgerRoot 'site' 'public' 'data'
+if (Test-Path (Join-Path $LedgerRoot 'site')) {
+    if (-not (Test-Path $siteDataDir)) {
+        New-Item -ItemType Directory -Path $siteDataDir -Force | Out-Null
+    }
+    $siteJsonPath = Join-Path $siteDataDir 'work-impact-data.json'
+    $sitePayload = ($payload | ConvertTo-Json -Depth 24)
+    Set-Content -LiteralPath $siteJsonPath -Value $sitePayload -Encoding utf8
+    Write-Output "  $siteJsonPath (React site data)"
+
+    # Also write project aliases for the React site
+    $siteAliasPath = Join-Path $siteDataDir 'project-aliases.json'
+    Set-Content -LiteralPath $siteAliasPath -Value $aliasMapJson -Encoding utf8
+    Write-Output "  $siteAliasPath (project aliases)"
+}
+
