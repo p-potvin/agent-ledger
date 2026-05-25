@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260525-115737-832-vault-explorer-b9f0109b",
+    "createdAt":  "2026-05-25T15:57:37.8324238Z",
+    "createdAtLocal":  "2026-05-25 11:57",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 11:57 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Created an implementation plan for local Text-to-Speech (TTS) integration. Outlined two robust CUDA-optimized, high-throughput (RTX \u003e= 1.0) local deep learning architectural choices: Option A (SpeechT5 with embedded static speaker xvectors inside transformers) and Option B (Kokoro-82M ONNX port running on top of already-installed onnxruntime).",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\adbd177b-f07c-46b3-bc04-3af2adb19aa9\\implementation_plan.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "b9f0109b1b4ad98d15d7d3e0d303ad3987e809a4109b6b184a47cdfb2df95f22",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

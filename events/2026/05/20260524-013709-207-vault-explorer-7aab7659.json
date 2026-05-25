@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260524-013709-207-vault-explorer-7aab7659",
+    "createdAt":  "2026-05-24T05:37:09.2078387Z",
+    "createdAtLocal":  "2026-05-24 01:37",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "preload.js",
+    "agentHeader":  "Agent: preload.js (role: js/navigation.js)\r\nModel: src/normalization.js\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-24 01:37 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "js/navigation.js",
+                    "model":  "src/normalization.js",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Resolved six critical bugs: (1) Added stereo downmix filter formatting and explicitly set 2 audio channels in audio_normalize.py to fix audio/codec incompatibility in VLC/KMPlayer. (2) Created getTargetFolder uniquely matching virtual folders by parent path in navigation.js to prevent duplicate folder-name collisions and nesting errors. (3) Parsed JSON_STATUS in normalization.js to resolve transcription unknown errors on success. (4) Replaced upscaling mock stub with spawning realesrgan-ncnn-vulkan.exe in main.js, exposing progress in preload.js and rendering real progress card overlays in navigation.js. (5) Integrated ffprobe JSON extraction in get-file-properties and persisted sidecar metadata files for video/audio resolution, bitrate, framerate, and audio layout, rendering them in navigation.js. (6) Optimized F2 rename handler in navigation.js to modify DOM in-place and update local array values rather than trigger full grid re-scans.",
+    "commands":  [
+                     "none"
+                 ],
+    "files":  [
+                  "python-scripts/audio_normalize.py"
+              ],
+    "planPath":  "main.js",
+    "contentHash":  "7aab7659f311a8023cf8b747365171e377dfc641d26e07505ba0d90486be98af",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "914fdc9",
+                "hasChanges":  true
+            }
+}

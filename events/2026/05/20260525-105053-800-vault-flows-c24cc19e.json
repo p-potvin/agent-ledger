@@ -1,0 +1,50 @@
+{
+  "id": "20260525-105053-800-vault-flows-c24cc19e",
+  "createdAt": "2026-05-25T14:50:53.8001194Z",
+  "createdAtLocal": "2026-05-25 10:50",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 10:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Landed A2: full real-time progress + cancel for comfyui_workflow nodes. Backend (vaultwares-pipelines): added websockets dependency (16.0) to .venv + requirements.txt. _execute_comfyui_graph now takes optional progress_cb + cancel_event args. Spawns _comfyui_ws_listener as an asyncio.Task that subscribes to ws://127.0.0.1:8188/ws?clientId=<id>, filters events by prompt_id, calls progress_cb with executing/progress/executed/execution_error/execution_success/execution_cached events. If cancel_event is set during execution, POSTs to ComfyUI's /interrupt and raises RuntimeError('canceled'). _execute_workflow_run plumbs both through. Job worker creates: (a) a progress_cb closure that maintains a progress_state dict and writes it to job.progress with throttling (~5 Hz), (b) a watch_cancel asyncio.Task that polls the job record once per second and sets cancel_event when status==canceled. JobSummary/JobDetail gained a progress field. New GET /jobs/recent endpoint (registered before /jobs/{job_id} to avoid the same path-conflict the validation endpoint hit) returns the caller's most recently-updated job, filterable by kind and CSV status; admins see all jobs, non-admins only their own (matched via requested_by.username or special 'vault-flows' tag). Frontend (vault-flows): listed JobSummary + JobProgress types in client.ts; getRecentJob(opts) handles the 'null' body case; cancelJob(id) calls POST /jobs/{id}/cancel. New ExecutionProgressOverlay.tsx renders a fixed bottom-right card while executionStatus==='running' — polls /jobs/recent at 1 Hz, shows a pulsing accent dot, progress bar (when total>0), current message, node + step counter, elapsed time, and a Cancel button that calls cancelJob. App.tsx mounts the overlay. Verified end-to-end: started a 30-step run, observed live step progress (poll showed step 4/12, then step 2/30 etc, with current node id 3), POST /jobs/{id}/cancel mid-execution → worker tripped /interrupt → /flows/run returned with error='ComfyUI workflow was canceled', final job status=canceled. Deployed dist (assets/index-DCi4ZtfE.js) atomically.",
+  "commands": [
+    "./.venv/Scripts/python.exe -m pip install websockets",
+    "npm run build",
+    "scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/",
+    "nssm restart vault-pipelines-api",
+    "POST /jobs/{id}/cancel"
+  ],
+  "files": [
+    "vaultwares-pipelines/api_server.py",
+    "vaultwares-pipelines/requirements.txt",
+    "vault-flows/src/api/client.ts",
+    "vault-flows/src/ui/ExecutionProgressOverlay.tsx",
+    "vault-flows/src/App.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "c24cc19e215dc295ff0a1d5abb8413900861ececdd8d152ea62f87ae9c88a153",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "117e167",
+    "hasChanges": true
+  }
+}

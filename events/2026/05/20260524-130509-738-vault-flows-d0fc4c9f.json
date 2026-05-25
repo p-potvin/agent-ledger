@@ -1,0 +1,46 @@
+{
+  "id": "20260524-130509-738-vault-flows-d0fc4c9f",
+  "createdAt": "2026-05-24T17:05:09.7382864Z",
+  "createdAtLocal": "2026-05-24 13:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-24 13:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Fixed 'logged in but getting 401' UX by persisting the JWT in sessionStorage instead of in-memory-only, and bumped pipelines JWT_TTL_SECONDS from 900 (15 min) to 3600 (1 hour). Frontend (src/api/client.ts): setToken/getToken now read/write sessionStorage key 'vw_jwt' with try/catch fallback to in-memory. Added clearToken() for use on stale-token detection. In-memory mirror kept for fetch-path perf. getMe() return type corrected from {id,username,role} to MeResponse{username,is_admin} matching pipelines schema. App.tsx: useEffect on mount that, if getToken() is set, calls getMe() and either rehydrates currentUser (success) or calls clearToken()+nulls user (401). This makes page refresh in the same tab keep the user logged in, while tab close still clears the token. Pipelines (.env): JWT_TTL_SECONDS=3600 — verified via login -> JWT payload exp-iat=3600s. NSSM service restarted. Built + deployed dist (assets/index-GzA-V8ki.js) atomically to greencloud-vps; live on flows.vaultwares.ca + noddit.org. Tradeoff acknowledged: sessionStorage tokens are XSS-readable but vault-flows has no untrusted user content injection points; httpOnly cookie auth was considered but requires a bigger pipelines refactor and isn't needed yet.",
+  "commands": [
+    "npm run build",
+    "scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/",
+    "nssm restart vault-pipelines-api"
+  ],
+  "files": [
+    "vault-flows/src/api/client.ts",
+    "vault-flows/src/App.tsx",
+    "vaultwares-pipelines/.env"
+  ],
+  "planPath": "",
+  "contentHash": "d0fc4c9fde6e0f5f8d7635bda35def036f2607a40ed86555ba6cd2cbd30e7594",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "117e167",
+    "hasChanges": true
+  }
+}

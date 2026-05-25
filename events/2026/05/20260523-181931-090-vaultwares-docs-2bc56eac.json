@@ -1,0 +1,43 @@
+{
+  "id": "20260523-181931-090-vaultwares-docs-2bc56eac",
+  "createdAt": "2026-05-23T22:19:31.0905023Z",
+  "createdAtLocal": "2026-05-23 18:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-23 18:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Inspected docs translation state, confirmed 63 QC MDX files are byte-for-byte English copies, verified a single local Gemma4 Ollama probe works, and paused before running a bulk internal model request batch per request-safety protocol.",
+  "commands": [
+    "Get-Content AGENTS.md / instructions/ROUTER.md / selected summaries",
+    "git status --short --branch",
+    "rg --files src",
+    "Node exact-copy audit for docs-content/*.mdx vs *-QC.mdx",
+    "node test-translate.mjs",
+    "node test-translate.mjs --yes"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\translate-docs.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\test-translate.mjs"
+  ],
+  "planPath": "",
+  "contentHash": "2bc56eacc427be07c3e346b61ea78dc8406b403483885a61c80164c15781fcf2",
+  "git": null
+}

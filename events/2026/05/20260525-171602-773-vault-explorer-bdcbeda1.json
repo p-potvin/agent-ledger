@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260525-171602-773-vault-explorer-bdcbeda1",
+    "createdAt":  "2026-05-25T21:16:02.7734331Z",
+    "createdAtLocal":  "2026-05-25 17:16",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 17:16 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Implemented a robust, hardcoded hidden system exclusion filter inside scanner.js (findVideosAsync) and main.js (calculateDirectorySizeRecursive). Excludes development virtual environments (.venv, venv, conda), VCS (.git, .gitmodules, .gitattributes, .gitignore), cloud folders (google drive, onedrive, dropbox, proton drive, mega, nextcloud, yandex, icloud, etc.), recycle bins, temp folders, local cache files (.DS_Store, Thumbs.db, AppData), and lockfiles. Fixed a major bug where the scanner loaded configuration settings from the project root instead of the proper AppData path, and aligned globExclusions parameter parsing to completely hide default rules from the UI settings. Rebuilt NSIS setup installer successfully.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "src/scanner.js",
+                  "main.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "bdcbeda1ba1f4eac0f904e80977c254ab03baca8c5e083e46db149b4b9ba5430",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

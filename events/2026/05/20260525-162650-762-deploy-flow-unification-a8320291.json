@@ -1,0 +1,48 @@
+{
+  "id": "20260525-162650-762-deploy-flow-unification-a8320291",
+  "createdAt": "2026-05-25T20:26:50.7623261Z",
+  "createdAtLocal": "2026-05-25 16:26",
+  "timezone": "Eastern Standard Time",
+  "project": "deploy-flow-unification",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5.2\r\nThinking: medium\r\nMode: codex\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): powershell, git, gh, npm\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 16:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "medium",
+    "mode": "codex",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "powershell",
+      "git",
+      "gh",
+      "npm"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Standardized deployment flow docs + removed GitHub Actions deploys on main pushes across repos. Merged PRs: p-potvin/vaultwares-docs#18 (merge 9ac6a90), p-potvin/vaultwares-website#9 (merge 29b6f8b, admin), p-potvin/vault-flows#126 (merge f4e4b75, admin), Prom-King/tube-sites#26 (merge 6df8534, admin). Added operations/deployment-flow (EN+QC), aligned webhook receiver naming to vw-webhookd (127.0.0.1:9033) and documented vaultwares-hooks (127.0.0.1:8787). Updated assistant stubs to require reading deployment-flow for CI/deploy tasks. Updated tube-sites VPS doc with correct GreenCloud IPs (173.249.194.15 / 100.73.93.84) and removed DB passwords.",
+  "commands": [
+    "npm run generate:page-resources (vaultwares-docs)",
+    "git push + gh pr create/merge for 4 repos",
+    "git worktree add (vault-flows)"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\deployment-flow.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\jira-sync.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\.github\\workflows\\verify-page-resources.yml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-website\\.github\\workflows\\deploy.yml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows\\.github\\workflows\\ci.yml",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\docs\\SELF_HOSTED_WORDPRESS_VPS.md"
+  ],
+  "planPath": "",
+  "contentHash": "a83202918c54ed27fe03cecef44db42d5e4ae5f05d5d6a85eafe1cb2d18a9b60",
+  "git": null
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260525-162713-916-vault-explorer-224a1b00",
+    "createdAt":  "2026-05-25T20:27:13.9160628Z",
+    "createdAtLocal":  "2026-05-25 16:27",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 16:27 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Identified and fixed the real cause of the startup crash. After scanning a directory, the frontend called schedule-idle-previews with all items. For large folders or cloud directories (like iCloud Photos with 2,100+ items), this ran over 6,000 synchronous I/O operations (fs.existsSync) in a single loop on the main process thread, blocking the Electron main thread and triggering a native access violation crash/watchdog lock. Optimized the handler in previews.js to skip automatic background previews for cloud-backed directories (iCloud, OneDrive, Dropbox, etc.) and limited active batch size to 80 items in other folders. Rebuilt installer successfully.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "src/previews.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "224a1b00f1384a2ff3f207b35b287c298d06f5c2cd6fe08ebab703a75eb3de2d",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}
