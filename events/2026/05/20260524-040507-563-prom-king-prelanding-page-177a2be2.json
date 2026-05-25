@@ -1,0 +1,70 @@
+{
+  "id": "20260524-040507-563-prom-king-prelanding-page-177a2be2",
+  "createdAt": "2026-05-24T08:05:07.5631335Z",
+  "createdAtLocal": "2026-05-24 04:05",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/prelanding-page",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\prelanding-page  Branch: main\r\nTools used (this reply): shell_command, apply_patch, web.run, update_plan\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-24 04:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "web.run",
+      "update_plan"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "geo": "true",
+      "llms_txt": "true",
+      "build_blocked_by_dependency_links": "true",
+      "seo": "true"
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\prelanding-page",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\prelanding-page",
+  "summary": "Implemented SEO and AI-search visibility primitives for Prom King: reusable client SEO metadata/JSON-LD helper, route-specific canonical/OpenGraph/Twitter/robots metadata, static robots.txt, sitemap.xml, llms.txt, and web manifest. Verified sitemap XML, manifest JSON, inline JSON-LD, and git diff hygiene; full tsc/vite build is blocked by broken local node_modules package links/missing entrypoints.",
+  "commands": [
+    "Get-Content vaultwares-docs instructions ROUTER.md and selected summaries",
+    "web search/open official Google Search Central, Bing Webmaster, and OpenAI crawler docs",
+    "git status --short",
+    "npm run check (blocked: missing node_modules/typescript/bin/tsc)",
+    "pnpm exec tsc --noEmit (blocked: missing node_modules/typescript/bin/tsc)",
+    "direct tsc via node_modules/.pnpm typescript (blocked by missing @testing-library/jest-dom types)",
+    "direct vite build via node_modules/.pnpm vite (blocked by missing esbuild package resolution)",
+    "PowerShell XML/JSON parser checks for sitemap, manifest, inline JSON-LD",
+    "git diff --check"
+  ],
+  "files": [
+    "client/index.html",
+    "client/src/lib/seo.ts",
+    "client/src/pages/Home.tsx",
+    "client/src/pages/LinkSharing.tsx",
+    "client/src/pages/LegalPage.tsx",
+    "client/src/pages/TubeSite.tsx",
+    "client/src/pages/TubeWatch.tsx",
+    "client/public/robots.txt",
+    "client/public/sitemap.xml",
+    "client/public/llms.txt",
+    "client/public/site.webmanifest"
+  ],
+  "planPath": "",
+  "contentHash": "177a2be29521021434e53c19c07f2a82b10aa0a92d051f3a35e45d7e08e6ab39",
+  "git": {
+    "repo": "prelanding-page",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/prelanding-page",
+    "branch": "main",
+    "head": "119e1b9",
+    "hasChanges": true
+  }
+}

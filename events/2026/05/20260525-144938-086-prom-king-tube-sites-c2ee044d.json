@@ -1,0 +1,46 @@
+{
+  "id": "20260525-144938-086-prom-king-tube-sites-c2ee044d",
+  "createdAt": "2026-05-25T18:49:38.0866097Z",
+  "createdAtLocal": "2026-05-25 14:49",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King tube-sites",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5.2\r\nThinking: medium\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): functions.shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 14:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "medium",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": "functions.shell_command",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Deployed updated FullXXX + PromKing plugins to the public GreenCloud host (vaultwares.ca / 173.249.194.15 via Tailscale 100.73.93.84), added MU loader for tube-shared, fixed loader quoting bug that caused HTTP 500, restarted php8.2-fpm, and verified fullxxx /videos now serves new Tubeshell UI (Featured this week + Go Premium + tubeshell base/theme + tube-auth). Cancelled queued GitHub Actions deploy run (26414737967) since no self-hosted runner is registered.",
+  "commands": [
+    "gh workflow run deploy-fullxxx-video.yml (queued; cancelled)",
+    "gh run cancel 26414737967",
+    "ssh root@100.73.93.84 (deploy plugin dirs)",
+    "scp tube-shared-loader.php to both sites",
+    "systemctl restart php8.2-fpm",
+    "curl/Invoke-WebRequest fullxxx.video/videos for markers"
+  ],
+  "files": [
+    "/var/www/fullxxx.video/public/wp-content/plugins/fullxxx-video/* (deployed)",
+    "/var/www/fullxxx.video/public/wp-content/plugins/tube-shared/* (deployed)",
+    "/var/www/fullxxx.video/public/wp-content/mu-plugins/tube-shared-loader.php (fixed)",
+    "/var/www/prom-king.xyz/public/wp-content/plugins/promking-tube/* (deployed)",
+    "/var/www/prom-king.xyz/public/wp-content/plugins/tube-shared/* (deployed)",
+    "/var/www/prom-king.xyz/public/wp-content/mu-plugins/tube-shared-loader.php (fixed)"
+  ],
+  "planPath": "",
+  "contentHash": "c2ee044d6272ac02c8e0b797e729b938ec1c76fd799dd167a58cd030c6f36a28",
+  "git": null
+}

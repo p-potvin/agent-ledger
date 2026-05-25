@@ -1,0 +1,55 @@
+{
+  "id": "20260525-180553-270-agent-ledger-a0198abe",
+  "createdAt": "2026-05-25T22:05:53.2705233Z",
+  "createdAtLocal": "2026-05-25 18:05",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: vw-codex-ledger-site\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 18:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Scaffolded ledger.vaultwares.ca React/Vite/Tailwind v4 site with vaultwares-revisited theme. Created site/ directory with full SPA: WorkImpactPage (KPI cards, heatmap, bar charts, project evidence cards) and ChangesPage (collapsible event list). Both pages consume JSON data from PS1 render scripts. Modified render-work-impact.ps1 and render-agent-ledger.ps1 to output JSON alongside existing standalone HTML (hybrid output). Added .github/workflows/build.yml (PR-only build check, no deploy — matching vaultwares-website pattern). Created deploy/ directory with nginx-ledger.conf (tailnet-only ACL: allow 100.64.0.0/10, deny all) and deploy.sh for webhook-driven deployment on greencloud-vps. Created DEPLOY.md with full VPS setup instructions. Build verified: tsc + vite build succeeds, site renders correctly with all data populated.",
+  "commands": [
+    "npm install (site/)",
+    "npm run build (site/)",
+    "pwsh render-work-impact.ps1",
+    "pwsh render-agent-ledger.ps1"
+  ],
+  "files": [
+    "site/package.json",
+    "site/src/App.tsx",
+    "site/src/pages/WorkImpactPage.tsx",
+    "site/src/pages/ChangesPage.tsx",
+    "site/src/index.css",
+    "scripts/render-work-impact.ps1",
+    "scripts/render-agent-ledger.ps1",
+    ".github/workflows/build.yml",
+    "deploy/nginx-ledger.conf",
+    "deploy/deploy.sh",
+    "DEPLOY.md"
+  ],
+  "planPath": "",
+  "contentHash": "a0198abe6cd0e3f713111c76287c02ad4fc55ea4423d3b424d1a4d90eb755bf2",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "vw-codex-ledger-site",
+    "head": "5ccc5c6",
+    "hasChanges": true
+  }
+}

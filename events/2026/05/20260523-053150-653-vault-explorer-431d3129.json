@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260523-053150-653-vault-explorer-431d3129",
+    "createdAt":  "2026-05-23T09:31:50.6536758Z",
+    "createdAtLocal":  "2026-05-23 05:31",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-23 05:31 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Monkeypatched child_process spawn and execFile in main.js to cleanly track all active subprocesses (FFmpeg, Real-ESRGAN, ASR) and kill them with SIGKILL on app termination (will-quit, before-quit, and process exit).",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "main.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "431d312974c0d285a1b10806abc055f697f066a5dd12056bc47c0763fe514c63",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "6eff1a9",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260523-061121-303-vault-explorer-95da9d74",
+    "createdAt":  "2026-05-23T10:11:21.3034706Z",
+    "createdAtLocal":  "2026-05-23 06:11",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-23 06:11 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Globally excluded Recycle Bin (\\.BIN) and Windows system directories starting with \\$ or named System Volume Information to prevent NTFS indexing floods (fixing Everything Search Out of Memory OOM crashes). Restricted all background FFmpeg processes to 2 CPU threads max for stable system responsiveness.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "main.js",
+                  "python-scripts/generate_previews.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "95da9d74a855ff7051a583e79a0f97938f95e19a76fe0efee51ab12ae5ba1320",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "6eff1a9",
+                "hasChanges":  true
+            }
+}

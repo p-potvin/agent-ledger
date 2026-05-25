@@ -1,0 +1,63 @@
+{
+  "id": "20260525-111936-941-qa-automation-6deadff4",
+  "createdAt": "2026-05-25T15:19:36.9414774Z",
+  "createdAtLocal": "2026-05-25 11:19",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5.2\r\nThinking: medium\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): shell_command, web.run\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 11:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5.2",
+    "thinking": "medium",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "web.run"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "provider": "edge",
+      "runs": "2",
+      "engines": "duckduckgo,bing,brave",
+      "keywords": "prom king full xxx videos,fullxxx.video,prom-king.xyz",
+      "max_pages": "12",
+      "proxy": "scrapingant"
+    },
+    "metrics": {
+      "run1_ok": 4,
+      "run1_failed": 5,
+      "run2_ok": 3,
+      "run2_failed": 6,
+      "found_prom_king": 0,
+      "found_fullxxx": 0
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Ran two 9-session SERP visibility batches on DuckDuckGo/Bing/Brave (3 keywords, depth 12) using ScrapingAnt proxy + Edge provider. Captured report artifacts for both runs. Researched cheaper proxy alternatives vs ScrapingAnt paid tier pricing.",
+  "commands": [
+    "='duckduckgo,bing,brave'; ='prom king full xxx videos,fullxxx.video,prom-king.xyz'; ='12'; ='0'; ='0'; ='1'; ='edge'; ='1'; ='0'; ='0'; npm run report:search-visibility",
+    "web research: compared proxy pricing providers (Webshare, PacketStream, IPRoyal, Decodo, Proxy-Cheap, Rayobyte, SOAX)"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\search-visibility\\20260525-110501\\results.json",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\search-visibility\\20260525-110501\\summary.md",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\search-visibility\\20260525-111134\\results.json",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\search-visibility\\20260525-111134\\summary.md"
+  ],
+  "planPath": "",
+  "contentHash": "6deadff4f9a78b757656c85093c73e6ea3892682f353ca3490fc3ca48cee0853",
+  "git": {
+    "repo": "qa-automation",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+    "branch": "main",
+    "head": "393f6b4",
+    "hasChanges": true
+  }
+}

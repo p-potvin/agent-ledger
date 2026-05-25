@@ -1,0 +1,53 @@
+﻿{
+    "id":  "20260524-082008-899-vault-explorer-1d23edcf",
+    "createdAt":  "2026-05-24T12:20:08.8994091Z",
+    "createdAtLocal":  "2026-05-24 08:20",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Vault Explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-24 08:20 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Integrated Real-Debrid streaming pipeline in Vault Explorer. Created src/realdebrid.js for managing torrent scraping via YTS API, adding magnet links, and unrestricting cached files via Real-Debrid. Registered handlers in main.js and exposed them via preload.js. Added playStream function in player.js to handle direct high-speed HTTP streaming URLs. Created a premium dark-themed streaming details dialog in index.html, added an absolute-positioned ⚡ STREAM button to TMDB movie cards, and implemented triggerRDStream and startRDDebridFlow in app.js.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "src/realdebrid.js",
+                  "main.js",
+                  "preload.js",
+                  "js/player.js",
+                  "index.html",
+                  "js/app.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "1d23edcf6a184c1c55ce1527ece2fb221a067605f08218a8e0dc813de95d807b",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "914fdc9",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "20260523-200825-150-vaultwares-docs-7c31a0e4",
+  "createdAt": "2026-05-24T00:08:25.1500546Z",
+  "createdAtLocal": "2026-05-23 20:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-23 20:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Reverted the docs navbar/sidebar back to console mode, translated all QC frontend documentation pages with local Gemma4 via Ollama using bounded staggered localhost requests, hardened the translation helper for exact-copy and clean-QC batches, validated MDX/frontmatter/code-fence integrity, built and preview-checked the site, pushed commit 21bc886 to main, and verified the live docs site serves the updated QC overview chunk.",
+  "commands": [
+    "node test-translate.mjs --yes",
+    "node translate-docs.mjs --yes --only-exact-qc",
+    "node translate-docs.mjs --yes --only-clean-qc",
+    "node MDX integrity validation script",
+    "git diff --check",
+    "npm run build",
+    "vite preview on 127.0.0.1:4175 with three route checks",
+    "git commit -m \"Translate docs frontend to QC\"",
+    "git push origin main",
+    "gh api repos/p-potvin/vaultwares-docs/hooks/624603635/deliveries",
+    "curl/Invoke-WebRequest https://docs.vaultwares.ca assets"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\*-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\App.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\index.css",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\translate-docs.mjs"
+  ],
+  "planPath": "",
+  "contentHash": "7c31a0e4e5e817c6f5504a940583589624975cd7929d69f06847214402fc612d",
+  "git": null
+}

@@ -1,0 +1,66 @@
+{
+  "id": "20260524-063711-262-prom-king-fullxxx-video-and-qa-automation-c0d8a3e7",
+  "createdAt": "2026-05-24T10:37:11.2627357Z",
+  "createdAtLocal": "2026-05-24 06:37",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/fullxxx-video-and-qa-automation",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-24 06:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "qa_crawl_depth": "4",
+      "live_crawl_found_category_404s": "true",
+      "same_domain_only": "true",
+      "live_crawl_launched": "true",
+      "seo": "true",
+      "geo": "true"
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Added FullXXX SEO/GEO discovery assets, packaged the plugin zip, finished qa-automation depth-4 crawler, and launched the live crawl. The live crawl reached fullxxx.video and failed on current live category 404s before the local plugin package is deployed.",
+  "commands": [
+    "npm install",
+    "npx playwright install chromium",
+    "npx tsc --noEmit",
+    "npm run test:list -- tests/fullxxx-crawl.spec.ts --project=chromium",
+    "python -m py_compile qa_automation_routine.py",
+    "npm run test:fullxxx:crawl with CRAWL_MAX_DEPTH=4 CRAWL_MAX_PAGES=500",
+    "npm run test:fullxxx:crawl with CRAWL_MAX_PAGES=1 smoke",
+    "php -l fullxxx-video/includes/seo-discovery.php",
+    "php -l fullxxx-video/includes/template-loader.php",
+    "php -l fullxxx-video/includes/post-types.php",
+    "php -l fullxxx-video/fullxxx-video.php",
+    "git diff --check"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\fullxxx-video.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\template-loader.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\seo-discovery.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\post-types.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video.zip",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\tests\\fullxxx-crawl.spec.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\package.json",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\.env.example",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\qa_automation_routine.py"
+  ],
+  "planPath": "",
+  "contentHash": "c0d8a3e7831fac62f6e939680720e0d12e0a42e9a1570956fe145e8c3e551ca5",
+  "git": null
+}

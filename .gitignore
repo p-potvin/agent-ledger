@@ -1,3 +1,6 @@
 .vercel
 stats-app/node_modules/
 stats-app/dist/
+site/node_modules/
+site/dist/
+site/public/data/*.json

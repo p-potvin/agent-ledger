@@ -341,6 +341,50 @@ Write-Output "  $ParentChangesPath"
 Write-Output "  $changesHtmlPath"
 Write-Output "  $ParentHtmlPath"
 
+# --- Also emit JSON for the React site (hybrid output) ---
+$siteDataDir = Join-Path $LedgerRoot 'site' 'public' 'data'
+if (Test-Path (Join-Path $LedgerRoot 'site')) {
+    if (-not (Test-Path $siteDataDir)) {
+        New-Item -ItemType Directory -Path $siteDataDir -Force | Out-Null
+    }
+    $changesJsonPath = Join-Path $siteDataDir 'changes-data.json'
+    # Build a clean array of event objects for the React frontend
+    $jsonEvents = @()
+    if ($events -and $events.Count -gt 0) {
+        foreach ($event in $events) {
+            $obj = [ordered]@{
+                createdAt = $event.createdAt
+                createdAtLocal = $event.createdAtLocal
+                project = [string]$event.project
+                kind = if ($event.kind) { $event.kind } else { 'general' }
+                summary = if ($event.summary) { "$($event.summary)" } else { '' }
+            }
+            if ($event.actor) { $obj['actor'] = "$($event.actor)" }
+            if ($event.agentHeader) { $obj['agentHeader'] = "$($event.agentHeader)" }
+            if ($event.commands -and $event.commands.Count -gt 0) {
+                $obj['commands'] = @($event.commands | ForEach-Object { "$_" })
+            }
+            if ($event.files -and $event.files.Count -gt 0) {
+                $obj['files'] = @($event.files | ForEach-Object { "$_" })
+            }
+            if ($event.planPath) { $obj['planPath'] = "$($event.planPath)" }
+            if ($event.git) { $obj['git'] = $event.git }
+            if ($event.telemetry) { $obj['telemetry'] = $event.telemetry }
+            $jsonEvents += $obj
+        }
+    }
+    $changesJsonContent = ($jsonEvents | ConvertTo-Json -Depth 12)
+    # ConvertTo-Json on a single-element array returns an object, not array — fix:
+    if ($jsonEvents.Count -eq 1) {
+        $changesJsonContent = "[$changesJsonContent]"
+    }
+    if ($jsonEvents.Count -eq 0) {
+        $changesJsonContent = "[]"
+    }
+    Set-Content -LiteralPath $changesJsonPath -Value $changesJsonContent -Encoding utf8
+    Write-Output "  $changesJsonPath (React site data)"
+}
+
 exit 0
 
 
