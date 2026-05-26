@@ -3,7 +3,55 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-26 18:41 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Implemented a live-stream latency catch-up algorithm in stream_translator.py that dynamically monitors the playback queue backlog. If pending speech is between 4.0s and 7.5s, sp...</summary>
+<summary><strong>2026-05-26 18:45 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Fixed missing line breaks in the Spoken Translator GUI console by appending a newline character to incoming log event data in js/app.js.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed missing line breaks in the Spoken Translator GUI console by appending a newline character to incoming log event data in js/app.js.
+- Files:
+  - `js/app.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:44 - vault-explorer</strong> <code>code-change</code> - Updated spoken translator latency parameters: speedup triggers at 2.0s (1.15x), speeds up further at 3.5s (1.35x), and flushes the queue at 5.0s. Added consecutive_flushes count...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated spoken translator latency parameters: speedup triggers at 2.0s (1.15x), speeds up further at 3.5s (1.35x), and flushes the queue at 5.0s. Added consecutive_flushes counter tracking; if the queue flushes consecutively 3 or more times, it logs a warning warning indicating hardware bottlenecking.
+- Files:
+  - `python-scripts/stream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:41 - vault-explorer</strong> <code>code-change</code> - Implemented a live-stream latency catch-up algorithm in stream_translator.py that dynamically monitors the playback queue backlog. If pending speech is between 4.0s and 7.5s, sp...</summary>
 
 - Kind: code-change
 - Actor: AI Agent

@@ -48,7 +48,37 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-05-26 18:41 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change</span> - Implemented a live-stream latency catch-up algorithm in stream_translator.py that dynamically monitors the playback queue backlog. If pending speech is between 4.0s and 7.5s, sp...</summary>
+    <summary><strong>2026-05-26 18:45 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change</span> - Fixed missing line breaks in the Spoken Translator GUI console by appending a newline character to incoming log event data in js/app.js.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-26 18:45 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed missing line breaks in the Spoken Translator GUI console by appending a newline character to incoming log event data in js/app.js.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>js/app.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=f435a44</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-26 18:44 - vault-explorer</strong> <span class="kind">code-change</span> - Updated spoken translator latency parameters: speedup triggers at 2.0s (1.15x), speeds up further at 3.5s (1.35x), and flushes the queue at 5.0s. Added consecutive_flushes count...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-26 18:44 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Updated spoken translator latency parameters: speedup triggers at 2.0s (1.15x), speeds up further at 3.5s (1.35x), and flushes the queue at 5.0s. Added consecutive_flushes counter tracking; if the queue flushes consecutively 3 or more times, it logs a warning warning indicating hardware bottlenecking.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>python-scripts/stream_translator.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=f435a44</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-26 18:41 - vault-explorer</strong> <span class="kind">code-change</span> - Implemented a live-stream latency catch-up algorithm in stream_translator.py that dynamically monitors the playback queue backlog. If pending speech is between 4.0s and 7.5s, sp...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> AI Agent</p>
