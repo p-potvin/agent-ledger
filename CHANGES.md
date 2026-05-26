@@ -3,7 +3,33 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-26 19:33 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Optimized Torrentio scraper in realdebrid.js to try the highly-cached default endpoint first with a short timeout, falling back to full provider queries to avoid timeouts. Added \</summary>
+<summary><strong>2026-05-26 19:41 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Completely resolved the missing top-row cards, click propagation, manual selection cutoff, and rate-limiting bugs. Refactored hover-card.js to utilize a robust window.premiumHov...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 19:41 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completely resolved the missing top-row cards, click propagation, manual selection cutoff, and rate-limiting bugs. Refactored hover-card.js to utilize a robust window.premiumHoverState namespace to eliminate closure isolation that was leaking card visibility styles. Integrated post-await activeRDFlowId validation checks in startRDDebridFlow in app.js to block background unrestriction threads from overriding user manual overrides. Increased the Real-Debrid polling rate to 3500ms to eliminate instant rate-limiting. Scoped discover-tmdb watch region to CA and added original language filters to filter out Bollywood spam.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\hover-card.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\app.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\tmdb.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 19:33 - vault-explorer</strong> <code>code-change</code> - Optimized Torrentio scraper in realdebrid.js to try the highly-cached default endpoint first with a short timeout, falling back to full provider queries to avoid timeouts. Added \</summary>
 
 - Kind: code-change
 - Actor: AI Agent
