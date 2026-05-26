@@ -3,7 +3,37 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-26 18:24 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Split translations into separate js/translations.en.js and js/translations.qc.js. Replaced all legacy emojis in the tabs and search grids with inline SVGs/LED indicators. Cleane...</summary>
+<summary><strong>2026-05-26 18:30 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Decoupled js/app.js by migrating all premium hover popup card logic into js/hover-card.js, updating index.html to load it. Prioritized the neural net vaultwares-media-processing...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Decoupled js/app.js by migrating all premium hover popup card logic into js/hover-card.js, updating index.html to load it. Prioritized the neural net vaultwares-media-processing venv in PowerShell translation wrappers to natively resolve torch dependencies. Configured Python translation scripts to stream console outputs via UTF-8 to prevent charmap encoder crashes under Windows terminal. Verified the entire translation pipeline end-to-end with zero mocks using a real English speech WAV file, transcribing, translating, and synthesizing French audio peaks successfully.
+- Files:
+  - `js/hover-card.js`
+  - `js/app.js`
+  - `index.html`
+  - `powershell/Start-StreamTranslator.ps1`
+  - `powershell/Start-LivestreamTranslator.ps1`
+  - `python-scripts/stream_translator.py`
+  - `python-scripts/livestream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:24 - vault-explorer</strong> <code>code-change</code> - Split translations into separate js/translations.en.js and js/translations.qc.js. Replaced all legacy emojis in the tabs and search grids with inline SVGs/LED indicators. Cleane...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
