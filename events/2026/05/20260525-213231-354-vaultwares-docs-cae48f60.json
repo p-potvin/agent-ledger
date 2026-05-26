@@ -1,0 +1,46 @@
+{
+  "id": "20260525-213231-354-vaultwares-docs-cae48f60",
+  "createdAt": "2026-05-26T01:32:31.3549804Z",
+  "createdAtLocal": "2026-05-25 21:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5.2\r\nThinking: medium\r\nMode: codex\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): powershell, git, gh, npm\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 21:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "medium",
+    "mode": "codex",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "powershell",
+      "git",
+      "gh",
+      "npm"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Second pass QC simplification (index-QC style) merged to main for rendered preview. Merged PR p-potvin/vaultwares-docs#19 into main at commit ad7abb588df77f01b8f55d7530b3b7467df3d90a (2026-05-26). Added more analogies/examples and simplified flow explanations further in QC pages: index-QC, getting-started/overview-QC, getting-started/products-and-services-QC, quickstart-QC, operations/{network-map,secrets}-QC. Page resources regenerated and included in merge.",
+  "commands": [
+    "npm run generate:page-resources",
+    "gh pr merge 19 --squash --admin",
+    "git pull --ff-only"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\index-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\getting-started\\overview-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\getting-started\\products-and-services-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\quickstart-QC.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "cae48f6055b54eff175f9b3ea1b58408251d40cf45441c327fcc5baefca03e49",
+  "git": null
+}

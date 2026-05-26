@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260525-182041-789-vault-explorer-7a545a28",
+    "createdAt":  "2026-05-25T22:20:41.7893386Z",
+    "createdAtLocal":  "2026-05-25 18:20",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 18:20 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Created stabilization and modernization implementation plan covering NeMo ASR initialization crash, player 1px visual gap, title bar hover controls auto-hiding, manual WebM preview regeneration with stereo audio downmixing, native AI submenu padding alignment, and multilingual translation pipeline.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\adbd177b-f07c-46b3-bc04-3af2adb19aa9\\implementation_plan.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "7a545a289abed99314acf704df0a249aee8790718834d2566b3e8ef1085d5d04",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

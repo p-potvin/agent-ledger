@@ -1,0 +1,45 @@
+{
+  "id": "20260526-001124-235-agent-ledger-f021756e",
+  "createdAt": "2026-05-26T04:11:24.2353786Z",
+  "createdAtLocal": "2026-05-26 00:11",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 00:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Fixed two issues: (1) record-agent-change.ps1 now tolerates hallucinated parameters from AI agents by adding -Public switch and ValueFromRemainingArguments catch-all. (2) Consolidated 76 project names down to 44 by expanding project-aliases.json with case variants, namespace-prefixed names, junk meta-entries, and multi-project slugs; added Normalize-RawProjectName function to update-work-impact-state.ps1; fixed the script to read both events/ and history/ directories on -FullRebuild. Deployed updated site to greencloud-vps.",
+  "commands": [
+    "update-work-impact.ps1 -FullRebuild",
+    "git push origin main"
+  ],
+  "files": [
+    "scripts/record-agent-change.ps1",
+    "scripts/update-work-impact-state.ps1",
+    "project-aliases.json"
+  ],
+  "planPath": "",
+  "contentHash": "f021756e407fa59a7706e8b21218821a6d6f64d31056e683feb8be2cc7ad9835",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "94ab9b3",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "20260526-144850-722-agent-ledger-533be69e",
+  "createdAt": "2026-05-26T18:48:50.7227290Z",
+  "createdAtLocal": "2026-05-26 14:48",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change,handoff,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 14:48 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections — tube-sites absorbs fullxxx, vw-jira-sync split out, dropped 'formerly' from UI. B: Dashboard layout — log-scale heatmap, 4 new chart widgets (ActivityPulse, TopProjectsVelocity, CommitChurnSparkline, Activity24) in 12-col grid. C: Animated LEDs — pulse keyframes, Led component in Nav and section headers. D: Categorized TSX icon library (7 categories, barrel export) in vaultwares-themes + copied into site. E: New V+coil logo (gold #D6A441 + ink #241e36), archived 7 old minimal-V PNGs. F: Multi-kind ledger entries — kind-utils.ps1 shared library, lenient comma-separated validation, split-on-read in PS + TS consumers, parseKinds/isKnownKind in types.ts, multi-kind badge rendering in ChangesPage, agent-ledger-schema.mdx doc, CLAUDE.md kind enum references, memory file. Updated README.md, branding-QC.mdx, GLYPHS_ICONS.md, assets/README.md. Added IconClock/IconFolder to ChangesPage event rows. Build passes clean (63 modules, 267kB). Pushed agent-ledger to main (webhook deploy confirmed 200). PRs created for vaultwares-themes (#17) and vaultwares-docs (#20).",
+  "commands": [
+    "npx tsc --noEmit",
+    "npm run build",
+    "git push origin main",
+    "gh pr create (themes #17)",
+    "gh pr create (docs #20)",
+    "curl ledger.vaultwares.ca -> 200"
+  ],
+  "files": [
+    "scripts/kind-utils.ps1",
+    "scripts/record-agent-change.ps1",
+    "scripts/update-work-impact-state.ps1",
+    "scripts/render-work-impact.ps1",
+    "project-aliases.json",
+    "site/src/types.ts",
+    "site/src/pages/WorkImpactPage.tsx",
+    "site/src/pages/ChangesPage.tsx",
+    "site/src/components/Nav.tsx",
+    "site/src/components/Led.tsx",
+    "site/src/components/ActivityPulse.tsx",
+    "site/src/components/TopProjectsVelocity.tsx",
+    "site/src/components/CommitChurnSparkline.tsx",
+    "site/src/components/Activity24.tsx",
+    "site/src/icons/index.ts",
+    "site/src/index.css",
+    "site/src/useData.ts",
+    "README.md",
+    "vaultwares-themes/assets/logos/vaultwares-logo.svg",
+    "vaultwares-themes/vaultwares-revisited/GLYPHS_ICONS.md",
+    "vaultwares-themes/assets/README.md",
+    "vaultwares-docs/docs-content/operations/agent-ledger-schema.mdx",
+    "vaultwares-docs/docs-content/branding-QC.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "533be69e5b103e24a16dc270dcc276224b81f1ed829fa684fc8bbed39fed9ca7",
+  "git": null
+}

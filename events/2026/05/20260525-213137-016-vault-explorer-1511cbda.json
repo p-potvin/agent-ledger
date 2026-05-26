@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260525-213137-016-vault-explorer-1511cbda",
+    "createdAt":  "2026-05-26T01:31:37.0164365Z",
+    "createdAtLocal":  "2026-05-25 21:31",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 21:31 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Prepended the unbuffered stdout switch (-u) to all spawned Python processes in src/livestream.js and src/normalization.js. This forces Python to instantly flush all outputs, preventing standard streams from buffering indefinitely when running outside of interactive TTY terminals. The ASR benchmark, spoken translation telemetry console, and audio normalization progress bars will now update in high-fidelity real time in the UI.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "src/livestream.js",
+                  "src/normalization.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "1511cbda8a8191212562ff3a29a47636f47c9ec8dca420583518ebe2d5c4e4e0",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

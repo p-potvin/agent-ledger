@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260526-180837-864-vault-explorer-1e38f06f",
+    "createdAt":  "2026-05-26T22:08:37.8646829Z",
+    "createdAtLocal":  "2026-05-26 18:08",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 18:08 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Phased out Unicode icons with inline Lucide-style SVGs in Details buttons (\u0027btn-modal-library\u0027 and \u0027btn-modal-follow\u0027). Refactored buttons to use bilingual EN/FR wording. Fixed details modal Add/Remove Library click handling to persistently update window.appSettings.library and live refresh the favorite grid or catalog card border highlighting. Configured TV Show \u0027Suivre la série/Follow Show\u0027 button to persistently save followed show IDs inside window.appSettings.followedShows. Added context manager stderr/stdout redirection to os.devnull in python-scripts/livestream_translator.py to completely suppress verbose NeMo / tqdm warnings and maintain clean, formatted telemetry in the console.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "js/streaming.js",
+                  "python-scripts/livestream_translator.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "1e38f06ff813aa0e74d12d1ca9f660ba582e03e266ed03460fb46b6ae0eb4d7c",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

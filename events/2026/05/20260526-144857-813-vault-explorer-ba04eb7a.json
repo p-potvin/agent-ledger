@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260526-144857-813-vault-explorer-ba04eb7a",
+    "createdAt":  "2026-05-26T18:48:57.8131985Z",
+    "createdAtLocal":  "2026-05-26 14:48",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 14:48 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Fixed ASR transcribe keyword mismatch in parakeet_wrapper.py. Hooked up the Add to Library button in streaming details modal with persistent settings storage and beautiful visual states. Added a 500ms delay stagger and _torrentRequestCounter request tracking in triggerRDStream to prevent race conditions when opening a new movie during a pending scrape. Appended a global document click listener in streaming.js to close the floating modals when clicking outside their active DOM boundaries.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vaultwares-media-processing/vaultwares_media_processing/parakeet_wrapper.py",
+                  "js/streaming.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "ba04eb7a1be8d8317ae0bd9435ebc049cee21447f452ee7a53402bedb94831db",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}
