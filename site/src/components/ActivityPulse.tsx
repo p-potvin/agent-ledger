@@ -1,14 +1,14 @@
-import { useMemo } from 'react';
-import { Led } from './Led';
+import { useMemo, useState } from 'react';
 import type { DaySeries } from '../types';
+import { I18N, type Lang } from '../i18n';
 
-const KIND_COLORS: Record<string, { stroke: string; label: string; status: 'online' | 'relay' | 'sync' | 'warning' | 'alert' }> = {
-  'code-change': { stroke: 'var(--v-gold)', label: 'Built', status: 'warning' },
-  plan: { stroke: 'var(--v-violet)', label: 'Plan', status: 'sync' },
-  verification: { stroke: 'var(--v-green)', label: 'Verify', status: 'online' },
-  commands: { stroke: 'var(--v-slate)', label: 'Ops', status: 'relay' },
-  handoff: { stroke: 'var(--v-burgundy)', label: 'Handoff', status: 'alert' },
-  general: { stroke: 'var(--v-muted-color)', label: 'Other', status: 'relay' },
+const KIND_COLORS: Record<string, { stroke: string }> = {
+  'code-change': { stroke: 'var(--v-gold)' },
+  plan: { stroke: 'var(--v-violet)' },
+  verification: { stroke: 'var(--v-green)' },
+  commands: { stroke: 'var(--v-slate)' },
+  handoff: { stroke: 'var(--v-burgundy)' },
+  general: { stroke: 'var(--v-muted-color)' },
 };
 
 const KINDS = Object.keys(KIND_COLORS);
@@ -30,7 +30,15 @@ function catmullRom(points: [number, number][], tension = 0.5): string {
   return d.join(' ');
 }
 
-export function ActivityPulse({ days }: { days: DaySeries[] }) {
+type TipState = { x: number; y: number; title: string; meta: string } | null;
+
+function clamp(n: number, min: number, max: number) {
+  return Math.min(max, Math.max(min, n));
+}
+
+export function ActivityPulse({ days, lang }: { days: DaySeries[]; lang: Lang }) {
+  const dict = I18N[lang];
+  const [tip, setTip] = useState<TipState>(null);
   const last60 = useMemo(() => days.slice(-60), [days]);
 
   const { lines, totals, maxVal } = useMemo(() => {
@@ -67,19 +75,47 @@ export function ActivityPulse({ days }: { days: DaySeries[] }) {
     <div className="flex flex-col h-full">
       <div className="flex items-center justify-between mb-2">
         <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0">
-          Activity Pulse
+          {dict.widgets.activityPulseTitle}
         </h2>
         <div className="flex gap-2 flex-wrap">
           {KINDS.map((k) => (
             <span key={k} className="flex items-center gap-1 text-[9px] text-[var(--muted)]">
-              <Led status={KIND_COLORS[k].status} size={5} pulse={false} />
-              {KIND_COLORS[k].label}
+              <span
+                className="inline-block w-[10px] h-[10px] rounded-full"
+                style={{ backgroundColor: KIND_COLORS[k].stroke, boxShadow: `0 0 10px ${KIND_COLORS[k].stroke}` }}
+              />
+              {dict.kindLabels[k] || k}
             </span>
           ))}
         </div>
       </div>
 
-      <svg viewBox={`0 0 ${W} ${H}`} className="w-full flex-1" preserveAspectRatio="none">
+      <div className="relative flex-1">
+        <svg
+          viewBox={`0 0 ${W} ${H}`}
+          className="w-full h-full"
+          preserveAspectRatio="none"
+          onMouseLeave={() => setTip(null)}
+          onMouseMove={(e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = clamp(e.clientX - rect.left, 0, rect.width);
+            const idx = clamp(
+              Math.round((x / rect.width) * (last60.length - 1)),
+              0,
+              Math.max(0, last60.length - 1),
+            );
+            const day = last60[idx]?.day || '';
+            const kinds = last60[idx]?.kinds || {};
+
+            const parts = KINDS.map((k) => {
+              const label = dict.kindLabels[k] || k;
+              const v = kinds[k] || 0;
+              return `${label}: ${new Intl.NumberFormat().format(v)}`;
+            });
+
+            setTip({ x: e.clientX, y: e.clientY, title: day, meta: parts.join(' · ') });
+          }}
+        >
         {KINDS.map((k) => {
           const pts: [number, number][] = lines[k].map((v, i) => [
             PAD + (i / Math.max(1, lines[k].length - 1)) * (W - 2 * PAD),
@@ -106,6 +142,17 @@ export function ActivityPulse({ days }: { days: DaySeries[] }) {
         })}
         <style>{`@keyframes draw-line { to { stroke-dashoffset: 0; } }`}</style>
       </svg>
+        {tip ? (
+          <div className="fixed z-50 pointer-events-none" style={{ left: tip.x + 12, top: tip.y + 12 }}>
+            <div className="rounded-lg border border-[var(--border)] bg-[var(--card)] px-2.5 py-2 shadow-lg max-w-[380px]">
+              <div className="text-[10px] font-bold text-[var(--fg)]">{tip.title}</div>
+              <div className="text-[10px] text-[var(--muted)] leading-relaxed">{tip.meta}</div>
+            </div>
+          </div>
+        ) : null}
+      </div>
+
+      <div className="text-[10px] text-[var(--muted)] mt-1">{dict.widgets.activityPulseHint}</div>
 
       <div className="flex gap-2 mt-2 justify-between">
         {KINDS.map((k) => (
@@ -113,7 +160,7 @@ export function ActivityPulse({ days }: { days: DaySeries[] }) {
             <div className="text-[13px] font-bold tabular-nums" style={{ color: KIND_COLORS[k].stroke }}>
               {totals[k]}
             </div>
-            <div className="text-[8px] text-[var(--muted)] uppercase">{KIND_COLORS[k].label}</div>
+            <div className="text-[8px] text-[var(--muted)] uppercase">{dict.kindLabels[k] || k}</div>
           </div>
         ))}
       </div>

@@ -81,6 +81,7 @@
   --good2: rgba(214, 164, 65, 0.48);
   --good3: rgba(214, 164, 65, 0.75);
   --good4: var(--vault-console-gold);
+  --good5: color-mix(in srgb, var(--vault-console-gold) 70%, var(--fg));
 }
 
 /* Warm / light mode removed — console-only for now */

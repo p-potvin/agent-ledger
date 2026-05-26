@@ -1,13 +1,12 @@
 import { useMemo, useRef, useState } from 'react';
 import { Card } from '../components/Card';
 import { LangToggle } from '../components/LangToggle';
-import { Led } from '../components/Led';
 import { ActivityPulse } from '../components/ActivityPulse';
 import { TopProjectsVelocity } from '../components/TopProjectsVelocity';
 import { CommitChurnSparkline } from '../components/CommitChurnSparkline';
 import { Activity24 } from '../components/Activity24';
 import { useWorkImpactData } from '../useData';
-import { I18N, useLang, type Lang } from '../i18n';
+import { I18N, useLangState, type Lang } from '../i18n';
 import { IconCalendar, IconActivity, IconBarChart, IconFolder } from '../icons';
 import { IconChevronRight, IconFileText } from '../icons';
 import { IconGitCommit } from '../icons';
@@ -134,6 +133,8 @@ function Heatmap({
     const max = Math.max(1, ...counts);
     const levelFn = (c: number) => {
       if (c <= 0) return 0;
+      // Extra-high activity tier so the heatmap doesn't "top out" too early.
+      if (c >= 60) return 5;
       const ratio = Math.log10(c + 1) / Math.log10(max + 1);
       if (ratio < 0.25) return 1;
       if (ratio < 0.50) return 2;
@@ -159,6 +160,7 @@ function Heatmap({
     'bg-[var(--good2)]',
     'bg-[var(--good3)]',
     'bg-[var(--good4)]',
+    'bg-[var(--good5)]',
   ];
 
   const dict = I18N[lang];
@@ -322,7 +324,7 @@ function ProjectCard({
 
 export function WorkImpactPage() {
   const { data, loading, error } = useWorkImpactData();
-  const [lang, setLang] = useLang();
+  const [lang, setLang] = useLangState();
   const dict = I18N[lang];
 
   const streaks = useMemo(() => {
@@ -377,13 +379,13 @@ export function WorkImpactPage() {
 
   if (loading) {
     return (
-      <div className="text-center py-20 text-[var(--muted)]">Loading...</div>
+      <div className="text-center py-20 text-[var(--muted)]">{dict.errors.loading}</div>
     );
   }
   if (error || !data) {
     return (
       <div className="text-center py-20 text-[var(--v-burgundy)]">
-        Failed to load data: {error || 'empty'}
+        {dict.errors.failedToLoad}: {error || 'empty'}
       </div>
     );
   }
@@ -411,7 +413,7 @@ export function WorkImpactPage() {
             </span>
             <span className="opacity-50"> &middot; </span>
             <span className="opacity-50">
-              {dict.generated}: {data.generatedAtLocal || ''}
+              {dict.generated}: {data.generatedAtLocal || ''} {dict.generatedSuffix}
             </span>
           </div>
         </div>
@@ -440,7 +442,7 @@ export function WorkImpactPage() {
         <KpiCard
           label={dict.metricStreak}
           value={fmtInt(streaks.current)}
-          sub={`Max: ${fmtInt(streaks.longest)} ${dict.units.days}`}
+          sub={`${dict.labels.max}: ${fmtInt(streaks.longest)} ${dict.units.days}`}
         />
         <KpiCard
           label={dict.metricLongestStreak}
@@ -494,6 +496,7 @@ export function WorkImpactPage() {
                 <span className="w-[13px] h-[13px] rounded-[3px] bg-[var(--good2)]" />
                 <span className="w-[13px] h-[13px] rounded-[3px] bg-[var(--good3)]" />
                 <span className="w-[13px] h-[13px] rounded-[3px] bg-[var(--good4)]" />
+                <span className="w-[13px] h-[13px] rounded-[3px] bg-[var(--good5)]" title="60+" />
               </span>
               <span>{dict.more}</span>
             </div>
@@ -506,7 +509,7 @@ export function WorkImpactPage() {
           />
         </Card>
         <Card className="col-span-4 max-md:col-span-12">
-          <ActivityPulse days={data.series?.days || []} />
+          <ActivityPulse days={data.series?.days || []} lang={lang} />
         </Card>
         <Card className="col-span-4 max-md:col-span-12">
           <TopProjectsVelocity
@@ -518,10 +521,10 @@ export function WorkImpactPage() {
           />
         </Card>
         <Card className="col-span-4 max-md:col-span-12">
-          <CommitChurnSparkline samples={commitSamples} />
+          <CommitChurnSparkline samples={commitSamples} lang={lang} />
         </Card>
         <Card className="col-span-4 max-md:col-span-12">
-          <Activity24 hourSeries={data.hourSeries || []} />
+          <Activity24 hourSeries={data.hourSeries || []} lang={lang} />
         </Card>
       </section>
 
@@ -637,7 +640,6 @@ export function WorkImpactPage() {
       {/* Project evidence cards */}
       <section className="mt-5">
         <h2 className="text-sm font-bold text-[var(--fg)] m-0 mb-2.5 flex items-center gap-2.5">
-          <Led status="relay" size={6} />
           <IconFolder width={14} height={14} className="text-[var(--muted)]" />
           <span>{dict.evidenceTitle}</span>
           <span className="flex-1 h-px bg-[var(--border)]" />

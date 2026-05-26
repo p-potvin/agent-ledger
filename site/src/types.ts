@@ -56,10 +56,15 @@ export interface ProjectSeries {
 export interface CommitSample {
   project?: string;
   commit?: string;
+  day?: string;
   month?: string;
   cleanChurnLines?: number;
+  cleanNetLines?: number;
+  rawChurnLines?: number;
+  excludedChurnLines?: number;
   filesTouched?: number;
   filesClean?: number;
+  filesExcluded?: number;
 }
 
 export interface LineStat {

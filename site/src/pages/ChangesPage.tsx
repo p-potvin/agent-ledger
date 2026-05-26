@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { LangToggle } from '../components/LangToggle';
 import { useChangesData } from '../useData';
-import { I18N, useLang, type Lang } from '../i18n';
+import { I18N, useLangState, type Lang } from '../i18n';
 import { parseKinds, isKnownKind } from '../types';
 import { IconClock, IconFolder } from '../icons';
 
@@ -36,8 +36,9 @@ function EventCard({
   lang: Lang;
 }) {
   const [open, setOpen] = useState(false);
+  const dict = I18N[lang];
   const created = event.createdAtLocal || event.createdAt || '';
-  const project = event.project || 'General Tasks';
+  const project = event.project || dict.generalTasks;
   const kinds = parseKinds(event.kind);
   const summary = event.summary || '';
   const preview =
@@ -72,17 +73,17 @@ function EventCard({
       </summary>
       <div className="px-3.5 pb-3.5 pl-8">
         <p>
-          <strong>Kind:</strong> {kinds.join(', ')}
+          <strong>{dict.changesLabels.kind}:</strong> {kinds.join(', ')}
         </p>
         {event.actor && (
           <p>
-            <strong>Actor:</strong> {event.actor}
+            <strong>{dict.changesLabels.actor}:</strong> {event.actor}
           </p>
         )}
         {event.agentHeader && (
           <>
             <p>
-              <strong>Agent Header:</strong>
+              <strong>{dict.changesLabels.agentHeader}:</strong>
             </p>
             <pre className="text-xs bg-[var(--v-surface2)] border border-[var(--border)] rounded p-2 overflow-auto">
               <code>{event.agentHeader}</code>
@@ -92,12 +93,12 @@ function EventCard({
         {event.telemetry && (
           <>
             <p>
-              <strong>Telemetry:</strong>
+              <strong>{dict.changesLabels.telemetry}:</strong>
             </p>
             <ul className="text-xs">
               {event.telemetry.flags && (
                 <li>
-                  <strong>Flags:</strong>{' '}
+                  <strong>{dict.changesLabels.flags}:</strong>{' '}
                   {Object.entries(event.telemetry.flags)
                     .map(([k, v]) => `${k}=${v}`)
                     .join(', ')}
@@ -105,7 +106,7 @@ function EventCard({
               )}
               {event.telemetry.metrics && (
                 <li>
-                  <strong>Metrics:</strong>{' '}
+                  <strong>{dict.changesLabels.metrics}:</strong>{' '}
                   <code>
                     {JSON.stringify(event.telemetry.metrics).slice(0, 220)}
                   </code>
@@ -116,13 +117,13 @@ function EventCard({
         )}
         {summary && (
           <p className="my-2.5">
-            <strong>Summary:</strong> {summary}
+            <strong>{dict.changesLabels.summary}:</strong> {summary}
           </p>
         )}
         {event.commands && event.commands.length > 0 && (
           <>
             <p>
-              <strong>Commands:</strong>
+              <strong>{dict.changesLabels.commands}:</strong>
             </p>
             <ul className="text-xs">
               {event.commands.map((c, i) => (
@@ -136,7 +137,7 @@ function EventCard({
         {event.files && event.files.length > 0 && (
           <>
             <p>
-              <strong>Files:</strong>
+              <strong>{dict.changesLabels.files}:</strong>
             </p>
             <ul className="text-xs">
               {event.files.map((f, i) => (
@@ -149,12 +150,12 @@ function EventCard({
         )}
         {event.planPath && (
           <p>
-            <strong>Plan:</strong> <code>{event.planPath}</code>
+            <strong>{dict.changesLabels.plan}:</strong> <code>{event.planPath}</code>
           </p>
         )}
         {event.git && (
           <p>
-            <strong>Git:</strong>{' '}
+            <strong>{dict.changesLabels.git}:</strong>{' '}
             {[
               event.git.repo && `repo=${event.git.repo}`,
               event.git.branch && `branch=${event.git.branch}`,
@@ -171,18 +172,18 @@ function EventCard({
 
 export function ChangesPage() {
   const { events, loading, error } = useChangesData();
-  const [lang, setLang] = useLang();
+  const [lang, setLang] = useLangState();
   const dict = I18N[lang];
 
   if (loading) {
     return (
-      <div className="text-center py-20 text-[var(--muted)]">Loading...</div>
+      <div className="text-center py-20 text-[var(--muted)]">{dict.errors.loading}</div>
     );
   }
   if (error) {
     return (
       <div className="text-center py-20 text-[var(--v-burgundy)]">
-        Failed to load data: {error}
+        {dict.errors.failedToLoad}: {error}
       </div>
     );
   }

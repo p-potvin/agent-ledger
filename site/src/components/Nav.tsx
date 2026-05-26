@@ -1,9 +1,11 @@
 import { NavLink } from 'react-router-dom';
-import { Led } from './Led';
 import { IconActivity, IconList } from '../icons';
 import { IconChevronRight } from '../icons';
+import { I18N, useLangState } from '../i18n';
 
 export function Nav() {
+  const [lang] = useLangState();
+  const dict = I18N[lang];
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     `px-3 py-1.5 rounded-full text-sm font-semibold transition-colors flex items-center gap-1.5 ${
       isActive
@@ -22,18 +24,17 @@ export function Nav() {
           />
           <IconChevronRight width={14} height={14} className="text-[var(--v-gold-dim)]" />
           <h1 className="text-lg font-bold m-0 flex items-center gap-2">
-            Agent Ledger
-            <Led status="online" size={6} />
+            {dict.changesTitle}
           </h1>
         </div>
         <nav className="flex items-center gap-2 ml-auto">
           <NavLink to="/work-impact" className={linkClass}>
             <IconActivity width={14} height={14} />
-            Work Impact
+            {dict.title}
           </NavLink>
           <NavLink to="/changes" className={linkClass}>
             <IconList width={14} height={14} />
-            Changes
+            {dict.changesTitle}
           </NavLink>
         </nav>
       </div>
