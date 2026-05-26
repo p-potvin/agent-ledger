@@ -1,7 +1,6 @@
 [CmdletBinding()]
 param(
     [string]$Project,
-    [ValidateSet('plan', 'commands', 'code-change', 'verification', 'handoff', 'general')]
     [string]$Kind = 'general',
     [Parameter(Mandatory = $true)]
     [string]$Summary,
@@ -162,6 +161,18 @@ if (-not $Project) {
 }
 
 $Project = Resolve-ProjectAlias -Project $Project -AliasMapPath $aliasMapPath
+
+# Multi-kind normalization: split, dedupe, sort for stable hash; keep unknown values verbatim
+$rawParts = ($Kind -split ',') | ForEach-Object { $_.Trim() } | Where-Object { $_ }
+if ($rawParts.Count -eq 0) { $rawParts = @('general') }
+$normalizedKind = ($rawParts | Sort-Object -Unique) -join ','
+$Kind = $normalizedKind
+
+$allowed = @('plan','commands','code-change','verification','handoff','general')
+$unknown = $rawParts | Where-Object { $_ -notin $allowed }
+if ($unknown.Count -gt 0) {
+    Write-Warning "Unknown kind(s) accepted but will aggregate under 'general': $($unknown -join ', ')"
+}
 
 if (-not $Actor) {
     $Actor = 'AI Agent'

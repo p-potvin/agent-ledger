@@ -1314,16 +1314,12 @@ $template = @'
               '</ul>'
             : '<div class="no-data">' + esc(t("noSummaries")) + '</div>';
 
-          const formerlyList = (ALIASES && ALIASES[p.project]) ? [].concat(ALIASES[p.project]) : [];
-          const formerlyHtml = formerlyList.length
-            ? ' <span class="proj-formerly">formerly: ' + formerlyList.map(esc).join(', ') + '</span>'
-            : '';
           const details = document.createElement("details");
           details.className = "proj-card";
           details.innerHTML =
             '<summary>' +
               '<i class="s-arrow">\u25B6</i>' +
-              '<strong><code>' + esc(String(p.project)) + '</code></strong>' + formerlyHtml +
+              '<strong><code>' + esc(String(p.project)) + '</code></strong>' +
               '<span class="pill" style="margin-left:auto;">' + fmtInt(p.entries||0) + '</span>' +
             '</summary>' +
             '<div class="detailsBody">' +
@@ -1376,7 +1372,7 @@ Write-Output "  $outHtmlPath"
 Write-Output "  $ParentHtmlPath"
 
 # --- Also emit JSON for the React site (hybrid output) ---
-$siteDataDir = Join-Path $LedgerRoot 'site' 'public' 'data'
+$siteDataDir = Join-Path (Join-Path (Join-Path $LedgerRoot 'site') 'public') 'data'
 if (Test-Path (Join-Path $LedgerRoot 'site')) {
     if (-not (Test-Path $siteDataDir)) {
         New-Item -ItemType Directory -Path $siteDataDir -Force | Out-Null
@@ -1385,10 +1381,5 @@ if (Test-Path (Join-Path $LedgerRoot 'site')) {
     $sitePayload = ($payload | ConvertTo-Json -Depth 24)
     Set-Content -LiteralPath $siteJsonPath -Value $sitePayload -Encoding utf8
     Write-Output "  $siteJsonPath (React site data)"
-
-    # Also write project aliases for the React site
-    $siteAliasPath = Join-Path $siteDataDir 'project-aliases.json'
-    Set-Content -LiteralPath $siteAliasPath -Value $aliasMapJson -Encoding utf8
-    Write-Output "  $siteAliasPath (project aliases)"
 }
 

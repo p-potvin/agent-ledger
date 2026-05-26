@@ -12,6 +12,7 @@ if (-not $LedgerRoot) {
 }
 
 . (Join-Path $PSScriptRoot 'resolve-project-alias.ps1')
+. (Join-Path $PSScriptRoot 'kind-utils.ps1')
 $aliasMapPath = Join-Path $LedgerRoot 'project-aliases.json'
 $seenCanonicals = @{}
 
@@ -342,7 +343,7 @@ Write-Output "  $changesHtmlPath"
 Write-Output "  $ParentHtmlPath"
 
 # --- Also emit JSON for the React site (hybrid output) ---
-$siteDataDir = Join-Path $LedgerRoot 'site' 'public' 'data'
+$siteDataDir = Join-Path (Join-Path (Join-Path $LedgerRoot 'site') 'public') 'data'
 if (Test-Path (Join-Path $LedgerRoot 'site')) {
     if (-not (Test-Path $siteDataDir)) {
         New-Item -ItemType Directory -Path $siteDataDir -Force | Out-Null

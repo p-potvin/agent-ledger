@@ -113,6 +113,15 @@ a {
   color: var(--link);
 }
 
+/* === LED pulse animation === */
+@keyframes vw-led-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.92); }
+}
+.vw-led {
+  animation: vw-led-pulse 2.4s ease-in-out infinite;
+}
+
 /* === Scrollbar (Console) === */
 ::-webkit-scrollbar {
   width: 8px;

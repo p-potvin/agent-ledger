@@ -21,6 +21,7 @@ if (-not $StatePath) {
 }
 
 . (Join-Path $PSScriptRoot 'resolve-project-alias.ps1')
+. (Join-Path $PSScriptRoot 'kind-utils.ps1')
 $aliasMapPath = Join-Path $LedgerRoot 'project-aliases.json'
 
 function Normalize-RawProjectName {
@@ -342,7 +343,8 @@ $eventDirs | ForEach-Object { Get-ChildItem -Path $_ -Recurse -File -Filter '*.j
         $project = if ($e.project) { [string]$e.project } else { 'General Tasks' }
         $project = Normalize-RawProjectName $project
         $project = Resolve-ProjectAlias -Project $project -AliasMapPath $aliasMapPath
-        $kind = if ($e.kind) { [string]$e.kind } else { 'general' }
+        $kindRaw = if ($e.kind) { [string]$e.kind } else { 'general' }
+        $kindParts = Get-KindListForAggregation $kindRaw
         $day = $local.ToString('yyyy-MM-dd')
         $month = $local.ToString('yyyy-MM')
 
@@ -353,16 +355,16 @@ $eventDirs | ForEach-Object { Get-ChildItem -Path $_ -Recurse -File -Filter '*.j
         if (-not $maxUtc -or $utc -gt $maxUtc) { $maxUtc = $utc }
 
         Add-Count -Table $monthCounts -Key $month -Delta 1
-        Add-Count -Table $kindCounts -Key $kind -Delta 1
+        foreach ($kp in $kindParts) { Add-Count -Table $kindCounts -Key $kp -Delta 1 }
 
         $dayBucket = Ensure-DayBucket -Table $dayBuckets -Day $day
         $dayBucket.entries = [int]$dayBucket.entries + 1
         [void]$dayBucket.projects.Add($project)
-        Add-Count -Table $dayBucket.kinds -Key $kind -Delta 1
+        foreach ($kp in $kindParts) { Add-Count -Table $dayBucket.kinds -Key $kp -Delta 1 }
 
         $projBucket = Ensure-ProjectBucket -Table $projectBuckets -Project $project
         $projBucket.entries = [int]$projBucket.entries + 1
-        Add-Count -Table $projBucket.kinds -Key $kind -Delta 1
+        foreach ($kp in $kindParts) { Add-Count -Table $projBucket.kinds -Key $kp -Delta 1 }
         if ($e.telemetry -and $e.telemetry.flags) { Add-FlagCounts -Table $projBucket.flagCounts -Flags $e.telemetry.flags }
         if ([string]::IsNullOrWhiteSpace($projBucket.firstDay) -or ($day -lt $projBucket.firstDay)) { $projBucket.firstDay = $day }
         if ([string]::IsNullOrWhiteSpace($projBucket.lastDay) -or ($day -gt $projBucket.lastDay)) { $projBucket.lastDay = $day }
