@@ -3,6 +3,38 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-26 18:24 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Split translations into separate js/translations.en.js and js/translations.qc.js. Replaced all legacy emojis in the tabs and search grids with inline SVGs/LED indicators. Cleane...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Split translations into separate js/translations.en.js and js/translations.qc.js. Replaced all legacy emojis in the tabs and search grids with inline SVGs/LED indicators. Cleaned up unused temporary scripts, test models and log files. Separated documentation into README.en.md and README.qc.md, leaving a clean routing directory in README.md. Designed and integrated a high-fidelity Netflix-style expanding hover popup card with a 400ms delay, smooth cubic-bezier transitions, autoplaying muted YouTube trailer frame embedding, and Play/Library/Details button actions.
+- Files:
+  - `js/translations.en.js`
+  - `js/translations.qc.js`
+  - `js/translations.js`
+  - `js/app.js`
+  - `index.html`
+  - `index.css`
+  - `README.md`
+  - `README.en.md`
+  - `README.qc.md`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
 <summary><strong>2026-05-26 18:10 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>commands,verification</code> - Fixed local AgentLedgerSync push failure (missing paths in sync script) and pushed updates; prod ledger now refreshed.</summary>
 
 - Kind: commands,verification
@@ -25,7 +57,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 18:08 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Phased out Unicode icons with inline Lucide-style SVGs in Details buttons (&#39;btn-modal-library&#39; and &#39;btn-modal-follow&#39;). Refactored buttons to use bilingual EN/FR wording. Fixed ...</summary>
+<summary><strong>2026-05-26 18:08 - vault-explorer</strong> <code>code-change</code> - Phased out Unicode icons with inline Lucide-style SVGs in Details buttons (&#39;btn-modal-library&#39; and &#39;btn-modal-follow&#39;). Refactored buttons to use bilingual EN/FR wording. Fixed ...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
