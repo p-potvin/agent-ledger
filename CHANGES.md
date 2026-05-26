@@ -3,6 +3,28 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-26 18:10 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>commands,verification</code> - Fixed local AgentLedgerSync push failure (missing paths in sync script) and pushed updates; prod ledger now refreshed.</summary>
+
+- Kind: commands,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed local AgentLedgerSync push failure (missing paths in sync script) and pushed updates; prod ledger now refreshed.
+- Git: repo=agent-ledger, branch=main, head=fc548d1
+
+</details>
+
+<details>
 <summary><strong>2026-05-26 18:08 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Phased out Unicode icons with inline Lucide-style SVGs in Details buttons (&#39;btn-modal-library&#39; and &#39;btn-modal-follow&#39;). Refactored buttons to use bilingual EN/FR wording. Fixed ...</summary>
 
 - Kind: code-change
@@ -174,7 +196,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 14:48 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change,handoff,verification</code> - Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections &#226;€” tube-sites absorbs fullxxx, vw-jira-sync split out, dropped &#39;fo...</summary>
+<summary><strong>2026-05-26 14:48 - agent-ledger</strong> <code>code-change,handoff,verification</code> - Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections &#226;€” tube-sites absorbs fullxxx, vw-jira-sync split out, dropped &#39;fo...</summary>
 
 - Kind: code-change,handoff,verification
 - Actor: AI Agent
