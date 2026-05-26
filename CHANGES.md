@@ -3,7 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-26 18:45 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Fixed missing line breaks in the Spoken Translator GUI console by appending a newline character to incoming log event data in js/app.js.</summary>
+<summary><strong>2026-05-26 19:07 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Integrated OpenSubtitles.com API for dynamic subtitle searching and lazy downloading / caching inside Electron. Exposed new OpenSubtitles API Key text field in Settings UI and s...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 19:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Integrated OpenSubtitles.com API for dynamic subtitle searching and lazy downloading / caching inside Electron. Exposed new OpenSubtitles API Key text field in Settings UI and securely persisted it in vault-settings.json. Updated video player track appender to support remote lazy tracks and automated downloading next to the video path.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\settings.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\preload.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\scanner.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\player.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:45 - vault-explorer</strong> <code>code-change</code> - Fixed missing line breaks in the Spoken Translator GUI console by appending a newline character to incoming log event data in js/app.js.</summary>
 
 - Kind: code-change
 - Actor: AI Agent
