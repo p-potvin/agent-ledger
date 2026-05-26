@@ -26,7 +26,7 @@
     },
     {
       "canonical": "vaultwares-media-processing",
-      "aliases": ["vault-video-enhancer"],
+      "aliases": ["vault-video-enhancer", "VaultWares Media Processing", "video-transcriber-translator"],
       "renamedAt": "2026-05-17",
       "previousRemote": "p-potvin/vault-video-enhancer",
       "newRemote": "p-potvin/vaultwares-media-processing"
@@ -75,11 +75,11 @@
     },
     {
       "canonical": "tube-sites",
-      "aliases": ["tube-site"],
+      "aliases": ["tube-site", "promking-tube", "Prom-King\\tube-sites", "Prom-King/tube-sites", "Prom-King tube-sites", "Prom-King\\\\tube-sites"],
       "renamedAt": "2026-05-17",
       "previousRemote": "Prom-King/tube-site",
       "newRemote": "Prom-King/tube-sites",
-      "notes": "Business folder. The org name 'promking' was unavailable on GitHub so the org stays as Prom-King; only the repo was renamed. Locally the folder still lives under business/promking/tube-sites as a logical grouping."
+      "notes": "Business folder. Includes namespace-prefixed variants from agent input."
     },
     {
       "canonical": "vaultwares-themes",
@@ -96,6 +96,54 @@
       "previousRemote": "p-potvin/vaultwares-agentciation",
       "newRemote": "p-potvin/vaultwares-adk",
       "notes": "Folder + remote + Python pkg (vaultwares_agentciation -> vaultwares_adk) + display brand (VaultWares Agentciation -> VaultWares ADK) + CLI args (--agentciation-root -> --adk-root). Class identifiers and method bodies unchanged."
-    }
+    },
+
+    {"_comment": "--- Agent input normalization aliases (not real renames) ---"},
+
+    {
+      "canonical": "vault-explorer",
+      "aliases": ["Vault Explorer"],
+      "notes": "Case variant from agent input."
+    },
+    {
+      "canonical": "vaultwares-media-processing",
+      "aliases": ["VaultWares Media Processing"],
+      "notes": "Case variant from agent input."
+    },
+    {
+      "canonical": "qa-automation",
+      "aliases": ["Prom-King/qa-automation", "Prom-King/fullxxx-video-and-qa-automation", "Prom-King/fullxxx-webhook-deploy-qa"],
+      "notes": "Namespace-prefixed variants from agent input."
+    },
+    {
+      "canonical": "prelanding-page",
+      "aliases": ["Prom-King/prelanding-page", "prom-king-prelanding-page"],
+      "notes": "Namespace-prefixed variant from agent input."
+    },
+    {
+      "canonical": "agent-ledger",
+      "aliases": ["agent-ledger/stats-app"],
+      "notes": "Sub-project slug from agent input."
+    },
+    {
+      "canonical": "vaultwares-mcp",
+      "aliases": ["fastmcp"],
+      "notes": "Old repo name before MCP server was folded into vaultwares-mcp."
+    },
+    {
+      "canonical": "vaultwares-docs",
+      "aliases": ["tmp-app", "vaultwares-docs / vw-jira-sync"],
+      "notes": "Package.json placeholder + multi-project slug from agent input."
+    },
+    {
+      "canonical": "General Tasks",
+      "aliases": ["General Tasks (workspace)", "General Tasks / vw-jira-sync", "Workspace Git Sync", "VaultWares protocols", "Prom King monetization projects", "business workspace", "business", "business tube sites", "business WordPress tube sites", "Test", "VaultWares Secrets", "vaultwares-secrets", "vaultwares-console"],
+      "notes": "Junk meta-names from agent input bucketed into General Tasks."
+    },
+    {
+      "canonical": "no-more-groceries",
+      "aliases": ["No More Groceries"],
+      "notes": "Case variant from agent input."
+    },
   ]
 }

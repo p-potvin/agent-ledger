@@ -19,7 +19,11 @@ param(
     [string[]]$McpServersAccessed = @(),
     [hashtable]$Flags = @{},
     [object]$Metrics = $null,
-    [string]$WorkspaceRoot
+    [string]$WorkspaceRoot,
+    # AI agents sometimes hallucinate parameters — accept and ignore them
+    [switch]$Public,
+    [Parameter(ValueFromRemainingArguments)]
+    [object[]]$_Overflow
 )
 
 $ErrorActionPreference = 'Stop'
