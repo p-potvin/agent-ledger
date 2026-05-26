@@ -3,7 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-26 18:30 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Decoupled js/app.js by migrating all premium hover popup card logic into js/hover-card.js, updating index.html to load it. Prioritized the neural net vaultwares-media-processing...</summary>
+<summary><strong>2026-05-26 18:35 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Decoupled rendering logic from js/app.js by extracting renderFavorites and favorite local files to js/favorites.js, and renderTMDB, MOCK_TMDB_DATA, updateProviderButtonsUI, and ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Decoupled rendering logic from js/app.js by extracting renderFavorites and favorite local files to js/favorites.js, and renderTMDB, MOCK_TMDB_DATA, updateProviderButtonsUI, and updateSubtabsUI to js/tmdb.js. Included the new script references in index.html. Fixed the spoken translation audio truncation bug in stream_translator.py by introducing playback_queue.join() in the cleanup block to ensure the main thread waits for the sounddevice thread to finish playing all synthesized audio before exiting.
+- Files:
+  - `js/favorites.js`
+  - `js/tmdb.js`
+  - `js/app.js`
+  - `index.html`
+  - `python-scripts/stream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:30 - vault-explorer</strong> <code>code-change</code> - Decoupled js/app.js by migrating all premium hover popup card logic into js/hover-card.js, updating index.html to load it. Prioritized the neural net vaultwares-media-processing...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
