@@ -48,7 +48,37 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-05-26 18:35 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change</span> - Decoupled rendering logic from js/app.js by extracting renderFavorites and favorite local files to js/favorites.js, and renderTMDB, MOCK_TMDB_DATA, updateProviderButtonsUI, and ...</summary>
+    <summary><strong>2026-05-26 18:41 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change</span> - Implemented a live-stream latency catch-up algorithm in stream_translator.py that dynamically monitors the playback queue backlog. If pending speech is between 4.0s and 7.5s, sp...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-26 18:41 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Implemented a live-stream latency catch-up algorithm in stream_translator.py that dynamically monitors the playback queue backlog. If pending speech is between 4.0s and 7.5s, speech speed is stretched to 1.15x; if between 7.5s and 12.0s, it speaks at 1.35x. If lag exceeds 12.0s, it flushes the backlog entirely and jumps directly to the live stream head.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>python-scripts/stream_translator.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=f435a44</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-26 18:40 - vault-explorer</strong> <span class="kind">verification</span> - Ran stream translator on raw Cloudflare MLB MPEG-TS stream chunk, successfully transcribing game commentary in real-time, translating it to French, and playing it back with no a...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-26 18:40 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Ran stream translator on raw Cloudflare MLB MPEG-TS stream chunk, successfully transcribing game commentary in real-time, translating it to French, and playing it back with no audio cutoffs. Generated a high-fidelity dark-mode GUI dashboard mockup showcasing visual telemetry and equalizers.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\translation_experiment_results.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=f435a44</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-26 18:35 - vault-explorer</strong> <span class="kind">code-change</span> - Decoupled rendering logic from js/app.js by extracting renderFavorites and favorite local files to js/favorites.js, and renderTMDB, MOCK_TMDB_DATA, updateProviderButtonsUI, and ...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> AI Agent</p>
