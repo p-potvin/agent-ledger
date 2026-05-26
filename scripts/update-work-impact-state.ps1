@@ -160,6 +160,16 @@ function Get-NumstatForCommit {
     return $lines
 }
 
+function Get-CommitTimestamp {
+    param(
+        [Parameter(Mandatory = $true)][string]$RepoRoot,
+        [Parameter(Mandatory = $true)][string]$Commitish
+    )
+    $iso = & git -C $RepoRoot show -s --format=%cI $Commitish 2>$null
+    if ([string]::IsNullOrWhiteSpace($iso)) { return $null }
+    return Safe-ParseUtc $iso
+}
+
 if (-not (Test-Path -LiteralPath $ConfigPath)) {
     throw "Config not found: $ConfigPath"
 }
@@ -417,13 +427,23 @@ $eventDirs | ForEach-Object { Get-ChildItem -Path $_ -Recurse -File -Filter '*.j
 
                     [void]$processedCommitKeys.Add($commitKey)
 
+                    # Get commit timestamp and convert to local time for accurate day/month bucketing
+                    $commitUtc = Get-CommitTimestamp -RepoRoot $repoRoot -Commitish $commitish
+                    $commitDay = $day   # fallback to event day if commit timestamp unavailable
+                    $commitMonth = $month
+                    if ($commitUtc) {
+                        $commitLocal = To-LocalTime $commitUtc
+                        $commitDay = $commitLocal.ToString('yyyy-MM-dd')
+                        $commitMonth = $commitLocal.ToString('yyyy-MM')
+                    }
+
                     $commitSamples.Add([ordered]@{
                         commitKey = $commitKey
                         repoRoot = $repoRoot
                         commit = $commitish
                         project = $project
-                        day = $day
-                        month = $month
+                        day = $commitDay
+                        month = $commitMonth
                         cleanChurnLines = ($cleanIns + $cleanDel)
                         cleanNetLines = ($cleanIns - $cleanDel)
                         rawChurnLines = ($rawIns + $rawDel)
