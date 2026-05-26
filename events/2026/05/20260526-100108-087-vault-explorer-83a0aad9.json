@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260526-100108-087-vault-explorer-83a0aad9",
+    "createdAt":  "2026-05-26T14:01:08.0878146Z",
+    "createdAtLocal":  "2026-05-26 10:01",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 10:01 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Fixed \u0027No module named torch\u0027 Parakeet error in livestream translation. Root cause: getRobustPythonExe() in src/utils.js was resolving to the local vault-explorer/.venv (Python 3.13, no torch) instead of the sibling vaultwares-media-processing/.venv (Python 3.x, PyTorch 2.6.0+cu124, NeMo, Parakeet). Reordered searchBases to try vaultwares-media-processing/.venv first. Also cleaned stale duplicate comment. Also identified the RD instantAvailability endpoint is permanently removed (error_code 37); the add+select+poll flow is the correct bypass and does work (Halloween confirmed cached: downloaded 100%).",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "src/utils.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "83a0aad9942b16ea1d8f473c6b319742c463b4b4031d516211848a4c8419c9a8",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

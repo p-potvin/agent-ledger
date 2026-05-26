@@ -1,0 +1,50 @@
+﻿{
+    "id":  "20260526-093021-822-vault-explorer-9e8c8bbe",
+    "createdAt":  "2026-05-26T13:30:21.8222187Z",
+    "createdAtLocal":  "2026-05-26 09:30",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 09:30 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Stabilized Vault Explorer streaming. Fixed duplicate/premature startup tab boot logic in js/app.js to correctly resolve blank Movies tab. Added unique flow ID and cancellation state check in startRDDebridFlow to prevent overlapping/flickering UI progress. Implemented fallback activation of translation backend when native audio playback fails. Added error event listener in video player for clear user feedback on playback failures. Added EZTV series mirror scraping fallback to src/realdebrid.js.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "js/app.js",
+                  "js/player.js",
+                  "src/realdebrid.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "9e8c8bbe47c882553b4beec52aa2c35194bfee639c5d3a0dcf3f012440376ca8",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

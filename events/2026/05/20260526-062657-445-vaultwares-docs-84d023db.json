@@ -1,0 +1,48 @@
+{
+  "id": "20260526-062657-445-vaultwares-docs-84d023db",
+  "createdAt": "2026-05-26T10:26:57.4452731Z",
+  "createdAtLocal": "2026-05-26 06:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5.2\r\nThinking: medium\r\nMode: codex\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): powershell, git, rg\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 06:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "medium",
+    "mode": "codex",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "powershell",
+      "git",
+      "rg"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Planned non-technical audience document set grounded in actual repos (not vaultwares-docs pages). Reviewed concrete sources: gemini-daily-flow.md (10 days of workflow ideas), vault-flows/README + presets, vaultwares-pipelines/README + examples, vaultwares-themes/security/crypto-vault.ts (ML-KEM + AES envelope), vaultwares-identity-manager/docs/program/README.md, vault-explorer/README.md, agent-ledger/DEPLOY.md for tailscale/private deploy model evidence. Next output is a QC-friendly list of proposed offline documents for explaining VaultWares.",
+  "commands": [
+    "Read gemini-daily-flow.md",
+    "Read READMEs in vault-flows, vaultwares-pipelines, vaultwares-themes, vaultwares-identity-manager, vault-explorer",
+    "rg PQC/ML-KEM strings"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\gemini-daily-flow.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-themes\\security\\crypto-vault.ts",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-identity-manager\\docs\\program\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\DEPLOY.md"
+  ],
+  "planPath": "",
+  "contentHash": "84d023db574b8c28128106e8df5a4d2353d53a811096ca328f436785d63140fd",
+  "git": null
+}

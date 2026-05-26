@@ -1,0 +1,51 @@
+﻿{
+    "id":  "20260526-113933-060-vault-explorer-ac0ba83e",
+    "createdAt":  "2026-05-26T15:39:33.0604012Z",
+    "createdAtLocal":  "2026-05-26 11:39",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 11:39 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Implemented season/episode picker and quality+language-aware torrent ranking for TV streaming. Created js/streaming.js with: showMediaDetails() modal wiring (opens TMDB details before RD dialog), _setupTVModal() / _loadSeasonEpisodes() to populate season dropdown and episode table from get-tmdb-tv-season, scoreTorrent() + rankTorrents() to sort by preferred quality (2160p/1080p/720p) and language (en/fr/multi), auto-select mode, and updated triggerRDStream() supporting season+episode params. Updated app.js card clicks to call showMediaDetails. Updated realdebrid.js search-torrents handler to accept season/episode and build episode-specific Torrentio URL (imdbId:season:episode). Fixed duplicate display property bug in tv-actions-container in index.html. Increased Torrentio limit from 6 to 20 results.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "js/streaming.js",
+                  "js/app.js",
+                  "src/realdebrid.js",
+                  "index.html"
+              ],
+    "planPath":  "",
+    "contentHash":  "ac0ba83e221cb38ef589671290c6e6b4e2dbe279a9c4da0357bdb19be22179d9",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

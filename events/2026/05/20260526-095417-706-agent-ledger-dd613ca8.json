@@ -1,0 +1,55 @@
+{
+  "id": "20260526-095417-706-agent-ledger-dd613ca8",
+  "createdAt": "2026-05-26T13:54:17.7068803Z",
+  "createdAtLocal": "2026-05-26 09:54",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): powershell, git, gh, ssh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 09:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "powershell",
+      "git",
+      "gh",
+      "ssh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Revamp ledger.vaultwares.ca UI widgets for clarity: replace commit churn sparkline with interactive bar chart (weekday + timeline toggle), add hover tooltips to commit churn / 24h activity / activity pulse, remove LED indicators from widgets + headers, add new heatmap intensity tier for 60+ entries, clarify Generated line (local time), and translate UI labels to QC (nav + changes page labels). Also fixed agent-ledger webhook secret mismatch (vw-webhookd env has leading space) and redeployed.",
+  "commands": [
+    "npm run build (site)",
+    "git commit e7cf2be",
+    "git push origin main",
+    "gh api PATCH repo webhook secret",
+    "ssh root@100.73.93.84 bash /opt/sites/agent-ledger/deploy/deploy.sh",
+    "HEAD https://ledger.vaultwares.ca (Last-Modified 2026-05-26 13:53Z)"
+  ],
+  "files": [
+    "site/src/components/CommitChurnSparkline.tsx",
+    "site/src/components/Activity24.tsx",
+    "site/src/components/ActivityPulse.tsx",
+    "site/src/pages/WorkImpactPage.tsx",
+    "site/src/pages/ChangesPage.tsx",
+    "site/src/components/Nav.tsx",
+    "site/src/i18n.ts",
+    "site/src/index.css",
+    "site/src/App.tsx",
+    "site/src/types.ts"
+  ],
+  "planPath": "",
+  "contentHash": "dd613ca8daf9a307fb786c66d7bc29baa74dad40dd76d869624ac6675140cc98",
+  "git": null
+}

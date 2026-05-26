@@ -1,0 +1,51 @@
+{
+  "id": "20260525-184010-193-agent-ledger-ef225696",
+  "createdAt": "2026-05-25T22:40:10.1937835Z",
+  "createdAtLocal": "2026-05-25 18:40",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 18:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Ledger site visual polish + deploy to production. (1) Locked to console-only mode: removed @media prefers-color-scheme light block and .vw-warm-shell from index.css. (2) Replaced cyan (--vault-signal-relay) with violet (--vault-console-violet) for --link and --v-cyan tokens. (3) Added VaultWares logo SVG to Nav header from vaultwares-themes submodule. (4) Added project alias labels: render-work-impact.ps1 now outputs project-aliases.json to site data, new useAliasData hook fetches it, ProjectCard shows 'formerly ...' labels for renamed projects. (5) Merged vw-codex-ledger-site to main, pushed to origin. (6) First deploy to greencloud-vps: cloned repo, generated Let's Encrypt TLS cert, installed nginx vhost (tailnet-only), uploaded built dist. (7) Registered agent-ledger in vw-webhookd for automated deploys on push. (8) Installed pwsh on VPS for future automated deploys. Site live at https://ledger.vaultwares.ca (tailnet access only).",
+  "commands": [
+    "npm run build",
+    "git push origin main",
+    "certbot certonly --webroot -d ledger.vaultwares.ca",
+    "scp dist/* root@greencloud-vps:/var/www/ledger.vaultwares.ca/"
+  ],
+  "files": [
+    "site/src/index.css",
+    "site/src/components/Nav.tsx",
+    "site/src/pages/WorkImpactPage.tsx",
+    "site/src/useData.ts",
+    "scripts/render-work-impact.ps1",
+    "deploy/nginx-ledger.conf",
+    "site/public/vaultwares-logo.svg"
+  ],
+  "planPath": "",
+  "contentHash": "ef2256969f38bbc562c45c3622415ad4419ec7fd7bb32677a3fa98e52127f8de",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "cef1ed5",
+    "hasChanges": true
+  }
+}

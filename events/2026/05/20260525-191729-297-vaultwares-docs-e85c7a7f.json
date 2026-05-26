@@ -1,0 +1,50 @@
+{
+  "id": "20260525-191729-297-vaultwares-docs-e85c7a7f",
+  "createdAt": "2026-05-25T23:17:29.2976608Z",
+  "createdAtLocal": "2026-05-25 19:17",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5.2\r\nThinking: medium\r\nMode: codex\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): powershell, git, gh, npm\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 19:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "medium",
+    "mode": "codex",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "powershell",
+      "git",
+      "gh",
+      "npm"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "QC docs simplification pass for non-technical audience + visuals. Created PR p-potvin/vaultwares-docs#19. Rewrote QC pages: index-QC, quickstart-QC, getting-started/overview-QC, getting-started/products-and-services-QC, development-QC, operations/{deployment-flow,network-map,tailscale,secrets}-QC with analogies, glossaries, tables, and Mermaid diagrams. Regenerated page resources via \npm run generate:page-resources and committed generated src/resources/pages/*.json + manifest.",
+  "commands": [
+    "npm run generate:page-resources",
+    "git push",
+    "gh pr create"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\index-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\quickstart-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\getting-started\\overview-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\getting-started\\products-and-services-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\deployment-flow-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\network-map-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\tailscale-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\secrets-QC.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "e85c7a7f7a65514727c552e7a6e6e947daff890e3e84155fa049626538154bde",
+  "git": null
+}
