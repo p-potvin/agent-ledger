@@ -3,7 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-26 19:07 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Integrated OpenSubtitles.com API for dynamic subtitle searching and lazy downloading / caching inside Electron. Exposed new OpenSubtitles API Key text field in Settings UI and s...</summary>
+<summary><strong>2026-05-26 19:33 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Optimized Torrentio scraper in realdebrid.js to try the highly-cached default endpoint first with a short timeout, falling back to full provider queries to avoid timeouts. Added \</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 19:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: Optimized Torrentio scraper in realdebrid.js to try the highly-cached default endpoint first with a short timeout, falling back to full provider queries to avoid timeouts. Added \
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\app.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\streaming.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\realdebrid.js`
+- Plan: `btn-rd-choose-manually\ Show All Streams button in index.html to allow bypassing stuck debrid caching or auto-select crawls. Integrated it in app.js and streaming.js to abort active caching flows and instantly display the manual streams list.`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 19:07 - vault-explorer</strong> <code>code-change</code> - Integrated OpenSubtitles.com API for dynamic subtitle searching and lazy downloading / caching inside Electron. Exposed new OpenSubtitles API Key text field in Settings UI and s...</summary>
 
 - Kind: code-change
 - Actor: AI Agent

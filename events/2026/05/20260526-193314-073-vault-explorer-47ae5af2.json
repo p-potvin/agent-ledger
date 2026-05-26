@@ -1,0 +1,51 @@
+﻿{
+    "id":  "20260526-193314-073-vault-explorer-47ae5af2",
+    "createdAt":  "2026-05-26T23:33:14.0739963Z",
+    "createdAtLocal":  "2026-05-26 19:33",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 19:33 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Optimized Torrentio scraper in realdebrid.js to try the highly-cached default endpoint first with a short timeout, falling back to full provider queries to avoid timeouts. Added \\",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\index.html",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\app.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\streaming.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\src\\realdebrid.js"
+              ],
+    "planPath":  "btn-rd-choose-manually\\ Show All Streams button in index.html to allow bypassing stuck debrid caching or auto-select crawls. Integrated it in app.js and streaming.js to abort active caching flows and instantly display the manual streams list.",
+    "contentHash":  "47ae5af2cc82dac047633d937bedc40e5f2ab6b03abf5c3d3d84cee413c96de9",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}
