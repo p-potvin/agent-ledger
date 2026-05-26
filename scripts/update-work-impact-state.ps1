@@ -23,6 +23,25 @@ if (-not $StatePath) {
 . (Join-Path $PSScriptRoot 'resolve-project-alias.ps1')
 $aliasMapPath = Join-Path $LedgerRoot 'project-aliases.json'
 
+function Normalize-RawProjectName {
+    param([string]$Name)
+    # Drop entries that are clearly meta/junk (contain encoded unicode, "SSOT", "Phase 5", etc.)
+    if ($Name -match 'Ã|Phase \d|SSOT|Cleanup & Infrastructure|System Verification') {
+        return 'General Tasks'
+    }
+    # Multi-project entries: pick the first project name
+    if ($Name -match '[,+]') {
+        $first = ($Name -split '\s*[,+]\s*')[0].Trim()
+        if ($first) { return $first }
+    }
+    # "VaultWares – Some Description" meta entries (em-dash/en-dash followed by a space)
+    # Must NOT match valid repo slugs like "vaultwares-pipelines"
+    if ($Name -cmatch "^VaultWares\s+[$([char]0x2013)$([char]0x2014)]\s+") {
+        return 'General Tasks'
+    }
+    return $Name
+}
+
 function ConvertTo-OneLine {
     param([AllowNull()][string]$Value)
     if ([string]::IsNullOrWhiteSpace($Value)) { return '' }
@@ -283,13 +302,20 @@ $agentDayBuckets = @{}
 $agentTotalEvents = 0
 
 $eventsRoot = Join-Path $LedgerRoot 'events'
+$historyRoot = Join-Path $LedgerRoot 'history'
 if (-not (Test-Path -LiteralPath $eventsRoot)) {
     throw "Events folder not found: $eventsRoot"
 }
 
 $newEventsProcessed = 0
 
-Get-ChildItem -Path $eventsRoot -Recurse -File -Filter '*.json' |
+# On full rebuild, read both events/ and history/ directories
+$eventDirs = @($eventsRoot)
+if ($FullRebuild -and (Test-Path -LiteralPath $historyRoot)) {
+    $eventDirs += $historyRoot
+}
+
+$eventDirs | ForEach-Object { Get-ChildItem -Path $_ -Recurse -File -Filter '*.json' } |
     Sort-Object -Property FullName |
     ForEach-Object {
         $path = $_.FullName
@@ -314,6 +340,7 @@ Get-ChildItem -Path $eventsRoot -Recurse -File -Filter '*.json' |
         if ($local -lt $startLocal) { return }
 
         $project = if ($e.project) { [string]$e.project } else { 'General Tasks' }
+        $project = Normalize-RawProjectName $project
         $project = Resolve-ProjectAlias -Project $project -AliasMapPath $aliasMapPath
         $kind = if ($e.kind) { [string]$e.kind } else { 'general' }
         $day = $local.ToString('yyyy-MM-dd')
@@ -419,7 +446,7 @@ Get-ChildItem -Path $eventsRoot -Recurse -File -Filter '*.json' |
     }
 
 # --- Second pass: hour-of-day, day-of-week, agent data (all events, fast, no git I/O) ---
-Get-ChildItem -Path $eventsRoot -Recurse -File -Filter '*.json' |
+$eventDirs | ForEach-Object { Get-ChildItem -Path $_ -Recurse -File -Filter '*.json' } |
     Sort-Object -Property FullName |
     ForEach-Object {
         $path2 = $_.FullName
