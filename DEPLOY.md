@@ -29,7 +29,9 @@ git submodule update --init --depth 1 vaultwares-themes
 
 ```bash
 sudo mkdir -p /var/www/ledger.vaultwares.ca
-sudo chown www-data:www-data /var/www/ledger.vaultwares.ca
+# Important: deployments are executed by `vw-webhookd` which runs as `vwdeploy`.
+# The web root must be writable by `vwdeploy`.
+sudo chown -R vwdeploy:vwdeploy /var/www/ledger.vaultwares.ca
 ```
 
 ### 3. Tailscale DNS
