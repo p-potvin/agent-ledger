@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastUpdatedUtc": "2026-05-26T04:09:59.2546922Z",
+  "lastUpdatedUtc": "2026-05-26T15:13:07.4743666Z",
   "config": {
     "startDate": "2026-03-11",
     "primaryCommitMetric": "cleanChurnLines",
@@ -2478,6 +2478,3172 @@
     ]
   },
   "data": {
+    "series": {
+      "days": [
+        {
+          "day": "2026-03-11",
+          "projects": [
+            "automation-suite",
+            "vaultwares-website"
+          ],
+          "entries": 5,
+          "kinds": {
+            "code-change": 5
+          }
+        },
+        {
+          "day": "2026-03-12",
+          "projects": [
+            "traffic-pulse",
+            "vaultwares-website"
+          ],
+          "entries": 8,
+          "kinds": {
+            "code-change": 8
+          }
+        },
+        {
+          "day": "2026-03-13",
+          "projects": [
+            "cultural-rhythm",
+            "traffic-pulse",
+            "vault-central"
+          ],
+          "entries": 4,
+          "kinds": {
+            "code-change": 4
+          }
+        },
+        {
+          "day": "2026-03-14",
+          "projects": [
+            "vaultwares-dispatch",
+            "vaultwares-media-processing",
+            "windows-customizer"
+          ],
+          "entries": 8,
+          "kinds": {
+            "code-change": 8
+          }
+        },
+        {
+          "day": "2026-03-15",
+          "projects": [
+            "vaultwares-glass",
+            "vaultwares-website"
+          ],
+          "entries": 6,
+          "kinds": {
+            "code-change": 6
+          }
+        },
+        {
+          "day": "2026-03-16",
+          "projects": [
+            "cultural-rhythm",
+            "event-horizon",
+            "vault-central",
+            "vaultwares-glass",
+            "vaultwares-media-processing"
+          ],
+          "entries": 27,
+          "kinds": {
+            "code-change": 27
+          }
+        },
+        {
+          "day": "2026-03-17",
+          "projects": "vaultwares-dispatch",
+          "entries": 1,
+          "kinds": {
+            "code-change": 1
+          }
+        },
+        {
+          "day": "2026-03-19",
+          "projects": "vaultwares-media-processing",
+          "entries": 7,
+          "kinds": {
+            "code-change": 7
+          }
+        },
+        {
+          "day": "2026-03-20",
+          "projects": [
+            "vault-central",
+            "vaultwares-dispatch",
+            "vaultwares-media-processing"
+          ],
+          "entries": 18,
+          "kinds": {
+            "code-change": 18
+          }
+        },
+        {
+          "day": "2026-03-21",
+          "projects": "vault-central",
+          "entries": 3,
+          "kinds": {
+            "code-change": 3
+          }
+        },
+        {
+          "day": "2026-03-23",
+          "projects": [
+            "vault-central",
+            "vaultwares-media-processing",
+            "vaultwares-website",
+            "windows-customizer"
+          ],
+          "entries": 9,
+          "kinds": {
+            "code-change": 9
+          }
+        },
+        {
+          "day": "2026-03-25",
+          "projects": [
+            "vault-central",
+            "vaultwares-media-processing"
+          ],
+          "entries": 4,
+          "kinds": {
+            "code-change": 4
+          }
+        },
+        {
+          "day": "2026-03-26",
+          "projects": [
+            "vaultwares-media-processing",
+            "vaultwares-realtime"
+          ],
+          "entries": 3,
+          "kinds": {
+            "code-change": 3
+          }
+        },
+        {
+          "day": "2026-03-27",
+          "projects": [
+            "vaultwares-realtime",
+            "vaultwares-template",
+            "vaultwares-themes"
+          ],
+          "entries": 24,
+          "kinds": {
+            "code-change": 24
+          }
+        },
+        {
+          "day": "2026-03-28",
+          "projects": [
+            "vault-central",
+            "vaultwares-realtime"
+          ],
+          "entries": 2,
+          "kinds": {
+            "code-change": 2
+          }
+        },
+        {
+          "day": "2026-03-29",
+          "projects": [
+            "automation-suite",
+            "vault-central",
+            "windows-customizer"
+          ],
+          "entries": 8,
+          "kinds": {
+            "code-change": 8
+          }
+        },
+        {
+          "day": "2026-03-30",
+          "projects": "vaultwares-identity-manager",
+          "entries": 3,
+          "kinds": {
+            "code-change": 3
+          }
+        },
+        {
+          "day": "2026-03-31",
+          "projects": [
+            "automation-suite",
+            "cultural-rhythm",
+            "traffic-pulse",
+            "vaultwares-dispatch",
+            "vaultwares-website",
+            "windows-customizer"
+          ],
+          "entries": 17,
+          "kinds": {
+            "code-change": 17
+          }
+        },
+        {
+          "day": "2026-04-01",
+          "projects": [
+            "auto-backup",
+            "automation-suite",
+            "cultural-rhythm",
+            "debrid-media-manager",
+            "event-horizon",
+            "traffic-pulse",
+            "vault-central",
+            "vaultwares-dispatch",
+            "vaultwares-glass",
+            "vaultwares-identity-manager",
+            "vaultwares-media-processing",
+            "vaultwares-template",
+            "vaultwares-website",
+            "windows-customizer"
+          ],
+          "entries": 32,
+          "kinds": {
+            "code-change": 32
+          }
+        },
+        {
+          "day": "2026-04-02",
+          "projects": "vaultwares-media-processing",
+          "entries": 1,
+          "kinds": {
+            "code-change": 1
+          }
+        },
+        {
+          "day": "2026-04-03",
+          "projects": [
+            "vaultwares-media-processing",
+            "vaultwares-realtime"
+          ],
+          "entries": 2,
+          "kinds": {
+            "code-change": 2
+          }
+        },
+        {
+          "day": "2026-04-04",
+          "projects": [
+            "vault-central",
+            "vaultwares-pipelines"
+          ],
+          "entries": 15,
+          "kinds": {
+            "code-change": 15
+          }
+        },
+        {
+          "day": "2026-04-05",
+          "projects": [
+            "vault-central",
+            "vaultwares-adk",
+            "vaultwares-pipelines",
+            "vaultwares-realtime",
+            "vaultwares-template"
+          ],
+          "entries": 20,
+          "kinds": {
+            "code-change": 20
+          }
+        },
+        {
+          "day": "2026-04-06",
+          "projects": [
+            "vault-central",
+            "vault-flows",
+            "vaultwares-adk",
+            "vaultwares-pipelines",
+            "vaultwares-template"
+          ],
+          "entries": 35,
+          "kinds": {
+            "code-change": 35
+          }
+        },
+        {
+          "day": "2026-04-07",
+          "projects": [
+            "gallery-scraper",
+            "vaultwares-pipelines",
+            "weekly-menu"
+          ],
+          "entries": 10,
+          "kinds": {
+            "code-change": 10
+          }
+        },
+        {
+          "day": "2026-04-08",
+          "projects": [
+            "gallery-scraper",
+            "vaultwares-adk"
+          ],
+          "entries": 2,
+          "kinds": {
+            "code-change": 2
+          }
+        },
+        {
+          "day": "2026-04-09",
+          "projects": [
+            "vault-flows",
+            "vaultwares-adk",
+            "vaultwares-pipelines"
+          ],
+          "entries": 3,
+          "kinds": {
+            "code-change": 3
+          }
+        },
+        {
+          "day": "2026-04-10",
+          "projects": [
+            "agentic-markup",
+            "vault-central",
+            "vaultwares-studio"
+          ],
+          "entries": 9,
+          "kinds": {
+            "code-change": 9
+          }
+        },
+        {
+          "day": "2026-04-11",
+          "projects": [
+            "cultural-rhythm",
+            "vaultwares-media-processing"
+          ],
+          "entries": 2,
+          "kinds": {
+            "code-change": 2
+          }
+        },
+        {
+          "day": "2026-04-12",
+          "projects": [
+            "vault-central",
+            "vaultwares-media-processing",
+            "vaultwares-realtime",
+            "vaultwares-studio"
+          ],
+          "entries": 7,
+          "kinds": {
+            "code-change": 7
+          }
+        },
+        {
+          "day": "2026-04-13",
+          "projects": [
+            "auto-backup",
+            "vault-central",
+            "vault-flows",
+            "vaultwares-adk",
+            "vaultwares-studio",
+            "vaultwares-template",
+            "vaultwares-themes",
+            "weekly-menu",
+            "windows-customizer"
+          ],
+          "entries": 17,
+          "kinds": {
+            "code-change": 17
+          }
+        },
+        {
+          "day": "2026-04-14",
+          "projects": [
+            "vault-central",
+            "vault-flows",
+            "vaultwares-adk",
+            "vaultwares-cli",
+            "vaultwares-identity-manager",
+            "vaultwares-pipelines",
+            "vaultwares-realtime"
+          ],
+          "entries": 21,
+          "kinds": {
+            "code-change": 21
+          }
+        },
+        {
+          "day": "2026-04-15",
+          "projects": [
+            "traffic-pulse",
+            "vault-central"
+          ],
+          "entries": 4,
+          "kinds": {
+            "code-change": 4
+          }
+        },
+        {
+          "day": "2026-04-16",
+          "projects": [
+            "automation-suite",
+            "vault-central",
+            "vault-flows",
+            "vaultwares-adk",
+            "vaultwares-dispatch",
+            "vaultwares-pipelines",
+            "vaultwares-studio",
+            "vaultwares-themes",
+            "vaultwares-website"
+          ],
+          "entries": 24,
+          "kinds": {
+            "code-change": 24
+          }
+        },
+        {
+          "day": "2026-04-17",
+          "projects": [
+            "agentic-markup",
+            "auto-backup",
+            "automation-suite",
+            "cultural-rhythm",
+            "debrid-media-manager",
+            "event-horizon",
+            "traffic-pulse",
+            "vault-central",
+            "vault-flows",
+            "vault-player",
+            "vaultwares-adk",
+            "vaultwares-cli",
+            "vaultwares-dispatch",
+            "vaultwares-glass",
+            "vaultwares-identity-manager",
+            "vaultwares-media-processing",
+            "vaultwares-pipelines",
+            "vaultwares-realtime",
+            "vaultwares-studio",
+            "vaultwares-template",
+            "vaultwares-themes",
+            "vaultwares-website",
+            "weekly-menu",
+            "windows-customizer"
+          ],
+          "entries": 94,
+          "kinds": {
+            "code-change": 94
+          }
+        },
+        {
+          "day": "2026-04-18",
+          "projects": [
+            "traffic-pulse",
+            "vault-central",
+            "vault-flows",
+            "vaultwares-adk",
+            "vaultwares-cli",
+            "vaultwares-dispatch",
+            "vaultwares-docs",
+            "vaultwares-glass",
+            "vaultwares-pipelines",
+            "vaultwares-realtime",
+            "vaultwares-studio",
+            "vaultwares-template",
+            "vaultwares-themes",
+            "vaultwares-website",
+            "weekly-menu"
+          ],
+          "entries": 65,
+          "kinds": {
+            "code-change": 65
+          }
+        },
+        {
+          "day": "2026-04-19",
+          "projects": [
+            "automation-suite",
+            "debrid-media-manager",
+            "vault-central",
+            "vault-explorer",
+            "vault-flows",
+            "vault-player",
+            "vaultwares-cli",
+            "vaultwares-glass",
+            "vaultwares-pipelines",
+            "vaultwares-realtime",
+            "vaultwares-studio",
+            "vaultwares-template",
+            "vaultwares-themes",
+            "vaultwares-website",
+            "windows-customizer"
+          ],
+          "entries": 44,
+          "kinds": {
+            "code-change": 44
+          }
+        },
+        {
+          "day": "2026-04-20",
+          "projects": [
+            "no-more-groceries",
+            "vault-central",
+            "vault-flows",
+            "vaultwares-decompile",
+            "vaultwares-glass",
+            "vaultwares-pipelines",
+            "vaultwares-studio"
+          ],
+          "entries": 62,
+          "kinds": {
+            "code-change": 62
+          }
+        },
+        {
+          "day": "2026-04-21",
+          "projects": [
+            "no-more-groceries",
+            "vault-central",
+            "vault-flows",
+            "vaultwares-adk",
+            "vaultwares-pipelines",
+            "vaultwares-realtime",
+            "vaultwares-studio"
+          ],
+          "entries": 27,
+          "kinds": {
+            "code-change": 27
+          }
+        },
+        {
+          "day": "2026-04-22",
+          "projects": [
+            "automation-suite",
+            "cultural-rhythm",
+            "traffic-pulse",
+            "vault-central",
+            "vaultwares-adk",
+            "vaultwares-dispatch",
+            "vaultwares-pipelines",
+            "vaultwares-realtime",
+            "vaultwares-studio",
+            "vaultwares-website"
+          ],
+          "entries": 25,
+          "kinds": {
+            "code-change": 25
+          }
+        },
+        {
+          "day": "2026-04-23",
+          "projects": [
+            "link-sharing",
+            "prelanding-page",
+            "qa-automation",
+            "tube-sites",
+            "vault-central",
+            "vault-flows",
+            "vaultwares-pipelines",
+            "vaultwares-realtime",
+            "vaultwares-studio"
+          ],
+          "entries": 25,
+          "kinds": {
+            "code-change": 25
+          }
+        },
+        {
+          "day": "2026-04-24",
+          "projects": [
+            "agentic-markup",
+            "automation-suite",
+            "cultural-rhythm",
+            "no-more-groceries",
+            "traffic-pulse",
+            "vault-central",
+            "vault-explorer",
+            "vault-flows",
+            "vault-player",
+            "vaultwares-adk",
+            "vaultwares-cli",
+            "vaultwares-decompile",
+            "vaultwares-dispatch",
+            "vaultwares-docs",
+            "vaultwares-glass",
+            "vaultwares-identity-manager",
+            "vaultwares-media-processing",
+            "vaultwares-pipelines",
+            "vaultwares-realtime",
+            "vaultwares-studio",
+            "vaultwares-template",
+            "vaultwares-themes",
+            "vaultwares-website",
+            "video-depth-anything",
+            "weekly-menu",
+            "windows-customizer"
+          ],
+          "entries": 100,
+          "kinds": {
+            "code-change": 100
+          }
+        },
+        {
+          "day": "2026-04-25",
+          "projects": [
+            "vault-central",
+            "vault-flows",
+            "vaultwares-pipelines",
+            "vaultwares-realtime"
+          ],
+          "entries": 12,
+          "kinds": {
+            "code-change": 12
+          }
+        },
+        {
+          "day": "2026-04-26",
+          "projects": [
+            "automation-suite",
+            "no-more-groceries",
+            "vault-central",
+            "vault-explorer",
+            "vault-flows",
+            "vault-player",
+            "vaultwares-cli",
+            "vaultwares-pipelines",
+            "vaultwares-realtime",
+            "vaultwares-studio",
+            "vaultwares-template",
+            "vaultwares-themes"
+          ],
+          "entries": 41,
+          "kinds": {
+            "code-change": 41
+          }
+        },
+        {
+          "day": "2026-04-27",
+          "projects": [
+            "vault-central",
+            "vault-flows",
+            "vaultwares-pipelines",
+            "vaultwares-realtime"
+          ],
+          "entries": 9,
+          "kinds": {
+            "code-change": 9
+          }
+        },
+        {
+          "day": "2026-04-28",
+          "projects": [
+            "agent-ledger",
+            "General Tasks",
+            "no-more-groceries",
+            "vault-central",
+            "vault-explorer",
+            "vault-flows",
+            "vault-player",
+            "vaultwares-adk",
+            "vaultwares-cli",
+            "vaultwares-pipelines",
+            "vaultwares-realtime",
+            "vaultwares-themes"
+          ],
+          "entries": 70,
+          "kinds": {
+            "commands": 3,
+            "code-change": 56,
+            "handoff": 3,
+            "plan": 2,
+            "general": 2,
+            "verification": 4
+          }
+        },
+        {
+          "day": "2026-04-29",
+          "projects": [
+            "General Tasks",
+            "no-more-groceries",
+            "prelanding-page",
+            "qa-automation",
+            "tube-sites",
+            "vault-central",
+            "vault-explorer",
+            "vault-flows",
+            "vaultwares-adk",
+            "vaultwares-cli",
+            "vaultwares-realtime"
+          ],
+          "entries": 38,
+          "kinds": {
+            "plan": 7,
+            "handoff": 1,
+            "code-change": 30
+          }
+        },
+        {
+          "day": "2026-04-30",
+          "projects": [
+            "General Tasks",
+            "vault-central",
+            "vault-explorer",
+            "vault-flows",
+            "vaultwares-glass",
+            "vaultwares-realtime"
+          ],
+          "entries": 12,
+          "kinds": {
+            "code-change": 11,
+            "plan": 1
+          }
+        },
+        {
+          "day": "2026-05-01",
+          "projects": [
+            "automation-suite",
+            "cultural-rhythm",
+            "gallery-scraper",
+            "General Tasks",
+            "no-more-groceries",
+            "prelanding-page",
+            "qa-automation",
+            "traffic-pulse",
+            "tube-sites",
+            "vault-central",
+            "vault-explorer",
+            "vault-flows",
+            "vault-player",
+            "vaultwares-adk",
+            "vaultwares-cli",
+            "vaultwares-decompile",
+            "vaultwares-dispatch",
+            "vaultwares-identity-manager",
+            "vaultwares-mcp",
+            "vaultwares-pipelines",
+            "vaultwares-realtime",
+            "vaultwares-studio",
+            "vaultwares-template",
+            "vaultwares-themes",
+            "vaultwares-website",
+            "weekly-menu",
+            "windows-customizer"
+          ],
+          "entries": 77,
+          "kinds": {
+            "plan": 4,
+            "commands": 1,
+            "code-change": 69,
+            "verification": 3
+          }
+        },
+        {
+          "day": "2026-05-02",
+          "projects": [
+            "tube-sites",
+            "vault-central"
+          ],
+          "entries": 20,
+          "kinds": {
+            "code-change": 19,
+            "plan": 1
+          }
+        },
+        {
+          "day": "2026-05-03",
+          "projects": [
+            "vault-central",
+            "vault-flows",
+            "vaultwares-media-processing",
+            "vaultwares-themes"
+          ],
+          "entries": 63,
+          "kinds": {
+            "plan": 1,
+            "commands": 4,
+            "code-change": 58
+          }
+        },
+        {
+          "day": "2026-05-04",
+          "projects": [
+            "agent-ledger",
+            "General Tasks",
+            "link-sharing",
+            "prelanding-page",
+            "qa-automation",
+            "scripts",
+            "tube-sites",
+            "vault-central",
+            "vault-flows",
+            "vaultwares-docs",
+            "vaultwares-media-processing"
+          ],
+          "entries": 34,
+          "kinds": {
+            "plan": 7,
+            "commands": 3,
+            "code-change": 23,
+            "verification": 1
+          }
+        },
+        {
+          "day": "2026-05-05",
+          "projects": [
+            "agent-ledger",
+            "General Tasks",
+            "link-sharing",
+            "vaultwares-adk",
+            "vaultwares-realtime",
+            "vaultwares-studio",
+            "vaultwares-themes"
+          ],
+          "entries": 32,
+          "kinds": {
+            "plan": 4,
+            "commands": 2,
+            "general": 4,
+            "code-change": 19,
+            "verification": 3
+          }
+        },
+        {
+          "day": "2026-05-06",
+          "projects": [
+            "agent-ledger",
+            "General Tasks",
+            "scripts",
+            "tube-sites",
+            "vaultwares-mcp"
+          ],
+          "entries": 14,
+          "kinds": {
+            "handoff": 1,
+            "code-change": 11,
+            "verification": 2
+          }
+        },
+        {
+          "day": "2026-05-07",
+          "projects": [
+            "agent-ledger",
+            "General Tasks",
+            "tube-sites",
+            "vaultwares-mcp"
+          ],
+          "entries": 26,
+          "kinds": {
+            "code-change": 16,
+            "general": 10
+          }
+        },
+        {
+          "day": "2026-05-08",
+          "projects": [
+            "General Tasks",
+            "link-sharing",
+            "prelanding-page",
+            "tailnet-sync",
+            "tube-sites",
+            "vault-central",
+            "vaultwares-docs",
+            "vaultwares-realtime"
+          ],
+          "entries": 21,
+          "kinds": {
+            "plan": 4,
+            "code-change": 10,
+            "verification": 7
+          }
+        },
+        {
+          "day": "2026-05-09",
+          "projects": [
+            "cultural-rhythm",
+            "General Tasks",
+            "tailnet-sync",
+            "tube-sites",
+            "vault-central",
+            "vault-player",
+            "vaultwares-realtime",
+            "vaultwares-themes"
+          ],
+          "entries": 23,
+          "kinds": {
+            "plan": 5,
+            "code-change": 14,
+            "verification": 4
+          }
+        },
+        {
+          "day": "2026-05-10",
+          "projects": [
+            "cultural-rhythm",
+            "General Tasks",
+            "link-sharing",
+            "tailnet-sync",
+            "tube-sites",
+            "vault-central",
+            "vaultwares-docs",
+            "vaultwares-realtime"
+          ],
+          "entries": 30,
+          "kinds": {
+            "plan": 3,
+            "general": 6,
+            "code-change": 9,
+            "verification": 12
+          }
+        },
+        {
+          "day": "2026-05-11",
+          "projects": [
+            "agent-ledger",
+            "vault-central",
+            "vaultwares-docs",
+            "vaultwares-mcp",
+            "vaultwares-media-processing",
+            "vaultwares-realtime",
+            "vaultwares-studio"
+          ],
+          "entries": 28,
+          "kinds": {
+            "general": 1,
+            "code-change": 24,
+            "verification": 3
+          }
+        },
+        {
+          "day": "2026-05-12",
+          "projects": [
+            "General Tasks",
+            "tube-sites",
+            "vaultwares-adk",
+            "vaultwares-docs",
+            "vaultwares-pipelines",
+            "vaultwares-studio",
+            "vaultwares-themes"
+          ],
+          "entries": 31,
+          "kinds": {
+            "commands": 1,
+            "code-change": 18,
+            "handoff": 1,
+            "plan": 1,
+            "general": 1,
+            "verification": 9
+          }
+        },
+        {
+          "day": "2026-05-13",
+          "projects": [
+            "General Tasks",
+            "OneTrainer",
+            "vault-flows",
+            "vaultwares-mcp",
+            "vaultwares-pipelines"
+          ],
+          "entries": 16,
+          "kinds": {
+            "general": 1,
+            "commands": 2,
+            "handoff": 2,
+            "code-change": 10,
+            "verification": 1
+          }
+        },
+        {
+          "day": "2026-05-14",
+          "projects": [
+            "General Tasks",
+            "OneTrainer",
+            "qa-automation",
+            "tube-sites",
+            "vault-flows",
+            "vaultwares-adk",
+            "vaultwares-docs",
+            "vaultwares-media-processing",
+            "vaultwares-pipelines",
+            "vaultwares-realtime"
+          ],
+          "entries": 36,
+          "kinds": {
+            "commands": 2,
+            "code-change": 20,
+            "handoff": 5,
+            "plan": 2,
+            "general": 2,
+            "verification": 5
+          }
+        },
+        {
+          "day": "2026-05-15",
+          "projects": [
+            "General Tasks",
+            "qa-automation",
+            "tube-sites",
+            "vault-flows",
+            "vaultwares-docs",
+            "vaultwares-media-processing",
+            "vaultwares-pipelines",
+            "vaultwares-realtime"
+          ],
+          "entries": 27,
+          "kinds": {
+            "commands": 2,
+            "code-change": 13,
+            "handoff": 5,
+            "plan": 2,
+            "general": 2,
+            "verification": 3
+          }
+        },
+        {
+          "day": "2026-05-16",
+          "projects": [
+            "automation-suite",
+            "General Tasks",
+            "link-sharing",
+            "tube-sites",
+            "vaultwares-adk",
+            "vaultwares-docs"
+          ],
+          "entries": 30,
+          "kinds": {
+            "commands": 6,
+            "code-change": 13,
+            "handoff": 1,
+            "plan": 7,
+            "general": 2,
+            "verification": 1
+          }
+        },
+        {
+          "day": "2026-05-17",
+          "projects": [
+            "agent-ledger",
+            "General Tasks",
+            "link-sharing",
+            "tube-sites"
+          ],
+          "entries": 9,
+          "kinds": {
+            "plan": 3,
+            "general": 1,
+            "code-change": 3,
+            "verification": 2
+          }
+        },
+        {
+          "day": "2026-05-18",
+          "projects": [
+            "agent-ledger",
+            "General Tasks",
+            "link-sharing",
+            "tube-sites",
+            "vault-explorer",
+            "vaultwares-adk",
+            "vaultwares-pipelines",
+            "vaultwares-realtime",
+            "vaultwares-themes",
+            "vaultwares-website",
+            "vw-jira-sync"
+          ],
+          "entries": 47,
+          "kinds": {
+            "plan": 17,
+            "commands": 5,
+            "code-change": 15,
+            "verification": 10
+          }
+        },
+        {
+          "day": "2026-05-19",
+          "projects": [
+            "General Tasks",
+            "link-sharing",
+            "vault-explorer",
+            "vaultwares-realtime"
+          ],
+          "entries": 7,
+          "kinds": {
+            "code-change": 4,
+            "verification": 3
+          }
+        },
+        {
+          "day": "2026-05-20",
+          "projects": [
+            "agent-ledger",
+            "General Tasks",
+            "tube-sites",
+            "vault-explorer",
+            "vaultwares-adk",
+            "vaultwares-docs",
+            "vaultwares-media-processing",
+            "vaultwares-realtime",
+            "vaultwares-themes",
+            "vw-jira-sync"
+          ],
+          "entries": 55,
+          "kinds": {
+            "commands": 2,
+            "code-change": 34,
+            "handoff": 2,
+            "plan": 9,
+            "general": 2,
+            "verification": 6
+          }
+        },
+        {
+          "day": "2026-05-21",
+          "projects": [
+            "General Tasks",
+            "vault-explorer",
+            "vaultwares-docs",
+            "vaultwares-themes",
+            "vw-jira-sync"
+          ],
+          "entries": 26,
+          "kinds": {
+            "plan": 4,
+            "handoff": 2,
+            "code-change": 15,
+            "verification": 5
+          }
+        },
+        {
+          "day": "2026-05-22",
+          "projects": [
+            "General Tasks",
+            "tube-sites",
+            "vault-explorer",
+            "vault-flows",
+            "vaultwares-toolkit",
+            "vaultwares-website",
+            "vw-jira-sync"
+          ],
+          "entries": 21,
+          "kinds": {
+            "plan": 1,
+            "code-change": 18,
+            "verification": 2
+          }
+        },
+        {
+          "day": "2026-05-23",
+          "projects": [
+            "agent-ledger",
+            "vault-explorer",
+            "vault-flows",
+            "vaultwares-docs",
+            "vaultwares-themes",
+            "vaultwares-toolkit",
+            "vaultwares-website"
+          ],
+          "entries": 43,
+          "kinds": {
+            "plan": 1,
+            "commands": 1,
+            "code-change": 35,
+            "verification": 6
+          }
+        },
+        {
+          "day": "2026-05-24",
+          "projects": [
+            "prelanding-page",
+            "qa-automation",
+            "vault-explorer",
+            "vault-flows",
+            "vaultwares-docs"
+          ],
+          "entries": 37,
+          "kinds": {
+            "plan": 4,
+            "commands": 1,
+            "handoff": 1,
+            "code-change": 23,
+            "verification": 8
+          }
+        },
+        {
+          "day": "2026-05-25",
+          "projects": [
+            "agent-ledger",
+            "deploy-flow-unification",
+            "qa-automation",
+            "tube-sites",
+            "vault-explorer",
+            "vault-flows",
+            "vaultwares-docs"
+          ],
+          "entries": 35,
+          "kinds": {
+            "plan": 3,
+            "commands": 1,
+            "code-change": 27,
+            "verification": 4
+          }
+        },
+        {
+          "day": "2026-05-26",
+          "projects": [
+            "agent-ledger",
+            "python-scripts",
+            "vault-explorer",
+            "vaultwares-docs"
+          ],
+          "entries": 13,
+          "kinds": {
+            "general": 1,
+            "code-change": 10,
+            "verification": 2
+          }
+        }
+      ],
+      "months": [
+        {
+          "month": "2026-03",
+          "count": 157
+        },
+        {
+          "month": "2026-04",
+          "count": 828
+        },
+        {
+          "month": "2026-05",
+          "count": 801
+        }
+      ],
+      "kinds": [
+        {
+          "kind": "code-change",
+          "count": 1492
+        },
+        {
+          "kind": "verification",
+          "count": 106
+        },
+        {
+          "kind": "plan",
+          "count": 93
+        },
+        {
+          "kind": "commands",
+          "count": 36
+        },
+        {
+          "kind": "general",
+          "count": 35
+        },
+        {
+          "kind": "handoff",
+          "count": 24
+        }
+      ],
+      "projects": [
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-25",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit ed096a3 (2026-05-01T17:52:35-04:00) - Automated commit: Updated files in vault-flows | files=2 +2 -2",
+            "Implemented first local node-editor phase: added IMPROVEMENTS product note for guest preset/catalog and authenticated personal workspace direction; added workflow graph schema/n...",
+            "Backfill: uncommitted working tree changes present (post-cutoff 2026-05-03T02:58:39.3259575Z)."
+          ],
+          "kinds": {
+            "code-change": 150,
+            "general": 1
+          },
+          "lineRaw": {
+            "insertions": 210919,
+            "deletions": 22790,
+            "files": 682
+          },
+          "lineClean": {
+            "insertions": 210919,
+            "deletions": 22790,
+            "files": 682
+          },
+          "entries": 151,
+          "firstDay": "2026-04-06",
+          "project": "vault-flows"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-26",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit 7980252 (2026-04-30T23:48:36Z) - 🎨 Palette: Added empty states for vault and search | files=2 +41 -5",
+            "Backfill: commit 658d2c1 (2026-04-30T21:20:44-04:00) - Merge pull request #3 from p-potvin/palette-empty-states-17860079820416914185 | files=0 +41 -5",
+            "Backfill: commit 5376b0e (2026-05-01T17:52:33-04:00) - Automated commit: Updated files in vault-explorer | files=1 +1 -1"
+          ],
+          "kinds": {
+            "plan": 27,
+            "commands": 1,
+            "general": 1,
+            "code-change": 102,
+            "verification": 14
+          },
+          "lineRaw": {
+            "insertions": 9674,
+            "deletions": 615,
+            "files": 51
+          },
+          "lineClean": {
+            "insertions": 9674,
+            "deletions": 615,
+            "files": 51
+          },
+          "entries": 145,
+          "firstDay": "2026-04-19",
+          "project": "vault-explorer"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-18",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit e75c1a6 (2026-05-01T19:45:09Z) - fix: export AgentRegistry from __init__.py in vaultwares_agentciation submodule | files=0 +0 -0",
+            "Backfill: commit d68766d (2026-05-01T15:47:49-04:00) - Merge pull request #31 from p-potvin/sentinel/api-key-bcrypt-dos-39214615738646647 | files=0 +38 -8",
+            "Backfill: commit 465e017 (2026-05-01T17:52:41-04:00) - Automated commit: Updated files in vaultwares-pipelines | files=2 +2 -2"
+          ],
+          "kinds": {
+            "general": 1,
+            "code-change": 141,
+            "verification": 3
+          },
+          "lineRaw": {
+            "insertions": 46481,
+            "deletions": 24271,
+            "files": 1071
+          },
+          "lineClean": {
+            "insertions": 46481,
+            "deletions": 24271,
+            "files": 1071
+          },
+          "entries": 145,
+          "firstDay": "2026-04-04",
+          "project": "vaultwares-pipelines"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-20",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Added responsive layout logic using QSplitter, a collapse toggle for the Activity Monitor, updated checkboxes to have tick symbols and better border radius, lowered padding, and...",
+            "Suppressed NeMo, one_logger warning spams using LogStream regex filters in vault_gui.py. Added VRAM loading progress logs to step 0 in core.py. Suppressed subprocess monitoring ...",
+            "Added in-place line overwriting for progress callbacks in vault_gui.py Monitor using QTextCursor, restoring clean CLI-style single-line progress tracking while allowing normal l..."
+          ],
+          "kinds": {
+            "plan": 6,
+            "commands": 4,
+            "general": 1,
+            "code-change": 113,
+            "verification": 3
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 127,
+          "firstDay": "2026-03-14",
+          "project": "vaultwares-media-processing"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-20",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Confirmed agent ledger execution successfully broken out of loop.",
+            "Broke out of execution loop and correctly finalizing task.",
+            "Set default engine to Parakeet (parakeet-tdt-0.6b-v3) and verified direct VRAM transcription. Updated UI to include engine selection and removed unused disk I/O code paths."
+          ],
+          "kinds": {
+            "plan": 3,
+            "general": 4,
+            "code-change": 106,
+            "verification": 9
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 122,
+          "firstDay": "2026-03-26",
+          "project": "vaultwares-realtime"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-11",
+          "lineExcluded": {
+            "insertions": 1745,
+            "deletions": 1287,
+            "files": 300
+          },
+          "recent": [
+            "Fixed Firefox media decoding error NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006) on video dashboard hover. The error occurred because Firefox cannot seek to currentTime = 0 on We...",
+            "Fixed another edge case where videoRef.current.load() was executing prematurely on mount because wasHovering initialized to false. By tracking hover history with a ref, .load() ...",
+            "Added aggressive debug logging across PreviewThumb, vault-client, background, and vault-runtime layers to trace missing WebM blobs. Repaired a missing early-return statement in ..."
+          ],
+          "kinds": {
+            "plan": 3,
+            "code-change": 106,
+            "verification": 3
+          },
+          "lineRaw": {
+            "insertions": 47046,
+            "deletions": 27115,
+            "files": 954
+          },
+          "lineClean": {
+            "insertions": 45301,
+            "deletions": 25828,
+            "files": 654
+          },
+          "entries": 112,
+          "firstDay": "2026-03-13",
+          "project": "vault-central"
+        },
+        {
+          "flagCounts": {
+            "resume_used": 1,
+            "credit_pipeline_used": 1,
+            "long_running_tasks": 1,
+            "router": 1,
+            "interview_started": 1
+          },
+          "lastDay": "2026-05-22",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Implemented phase-one VaultWares player integration in tube-site (provider capability maps, owned player shell, editable provider profile JSON settings, HLS/topvid runtime detec...",
+            "Cleared the restored GA tags from the live tube-site WordPress installs, installed Node on the VPS, deployed prelanding-page as a Node service behind nginx at prelanding.prom-ki...",
+            "After DNS cutover, issued live Lets Encrypt certs for vaultwares.ca, www.vaultwares.ca, and docs.vaultwares.ca; updated the prelanding runtime to use the provided JWT secret plu..."
+          ],
+          "kinds": {
+            "commands": 12,
+            "code-change": 27,
+            "handoff": 14,
+            "plan": 7,
+            "general": 16,
+            "verification": 28
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 104,
+          "firstDay": "2026-04-28",
+          "project": "General Tasks"
+        },
+        {
+          "flagCounts": {
+            "issue": 2,
+            "commit": 1,
+            "scope": 1,
+            "estimated_output_tokens": 2
+          },
+          "lastDay": "2026-05-25",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Fixed two live Prom King issues. Bulk scrape no longer returns an immediate zero-result success when the selected source is dry: \run_bulk_fetch() now falls back across the suppo...",
+            "Fixed additional live tube-site issues. For \fullxxx-video, corrected settings persistence so google_analytics_code and mailchimp_code now save, and added backward-compatible Mai...",
+            "Deployed the updated promking-tube and fullxxx-video plugin directories to the self-hosted VPS, taking timestamped on-server backups first, replacing both live plugin trees, fix..."
+          ],
+          "kinds": {
+            "commands": 3,
+            "code-change": 67,
+            "handoff": 1,
+            "plan": 7,
+            "general": 2,
+            "verification": 12
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 92,
+          "firstDay": "2026-04-23",
+          "project": "tube-sites"
+        },
+        {
+          "flagCounts": {
+            "resume_used": 2,
+            "credit_pipeline_used": 1,
+            "long_running_tasks": 2,
+            "router": 2,
+            "interview_started": 2
+          },
+          "lastDay": "2026-05-26",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Fixed domain-specific Nginx configuration for docs.vaultwares.ca to point to the new build directory (/var/www/vaultwares-docs/dist) instead of the old Mintlify path (/srv/vault...",
+            "Implemented full VaultWares branding and design system. Added 10 preset themes from vault-themes, persistent localStorage state for themes/mode/language, responsive Sidebar/Navb...",
+            "Overhauled documentation UI with custom MDX engine, resolved layout/build issues, and expanded VaultThemes library with 25+ community-favorite presets. Synchronized global instr..."
+          ],
+          "kinds": {
+            "commands": 1,
+            "code-change": 40,
+            "handoff": 2,
+            "plan": 4,
+            "general": 3,
+            "verification": 7
+          },
+          "lineRaw": {
+            "insertions": 14282,
+            "deletions": 324,
+            "files": 66
+          },
+          "lineClean": {
+            "insertions": 14282,
+            "deletions": 324,
+            "files": 66
+          },
+          "entries": 57,
+          "firstDay": "2026-04-18",
+          "project": "vaultwares-docs"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-01",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Added local 7-day disk caching to Apify integrations in store-search.js and product-search.js to avoid excessive token costs.",
+            "Backfill: commit 8670186 (2026-04-29T17:58:41-04:00) - feat: integrate Apify for product and store searches with caching | files=5 +715 -83",
+            "Backfill: commit 88c3476 (2026-05-01T17:52:22-04:00) - Automated commit: Updated files in no-more-groceries | files=2 +2 -2"
+          ],
+          "kinds": {
+            "code-change": 56
+          },
+          "lineRaw": {
+            "insertions": 40661,
+            "deletions": 11941,
+            "files": 260
+          },
+          "lineClean": {
+            "insertions": 40661,
+            "deletions": 11941,
+            "files": 260
+          },
+          "entries": 56,
+          "firstDay": "2026-04-20",
+          "project": "no-more-groceries"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-12",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Fixed AttributeError crashes in gui_app.py style helpers. VaultTheme has no 'border_subtle', 'danger', or 'accent_hover' attributes. Replaced: border_subtle->border (in card_sty...",
+            "Fixed VS Code not auto-activating .venv in integrated terminals. Root cause: .vscode/settings.json had no Python interpreter configuration. Added python.defaultInterpreterPath p...",
+            "Fixed all 21 Pylance errors in gui_app.py. Changes: (1) Switched qfluentwidgets grouped import to individual lines with # type: ignore[assignment] on FluentWindow, PrimaryPushBu..."
+          ],
+          "kinds": {
+            "commands": 1,
+            "code-change": 53,
+            "verification": 1
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 55,
+          "firstDay": "2026-04-10",
+          "project": "vaultwares-studio"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-20",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit ae703d0 (2026-04-30T20:18:15-04:00) - Please provide the diff or list of changes you would like summarized. | files=2 +30 -5",
+            "Created implementation plan for making vaultwares-agentciation the source of truth for reusable custom agents, skills, tools, protocols, and agent/IDE integrations. Inspected re...",
+            "Implemented vaultwares-agentciation as the workspace source of truth for reusable agent infrastructure. Restructured docs into docs/ with root pointer stubs and added CONTEXT.md..."
+          ],
+          "kinds": {
+            "plan": 7,
+            "general": 1,
+            "handoff": 2,
+            "code-change": 42,
+            "verification": 1
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 53,
+          "firstDay": "2026-04-05",
+          "project": "vaultwares-adk"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-23",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit 0e69908 (2026-04-24T18:01:02-04:00) - feat: apply full VaultWares branding and centralized documentation | files=5 +88 -12",
+            "Backfill: commit f83ce1f (2026-05-01T16:34:50-04:00) - chore: remove unused files and associated references | files=3 +2 -3",
+            "Backfill: commit 55b66eb (2026-05-01T17:52:45-04:00) - Automated commit: Updated files in vaultwares-website | files=1 +1 -1"
+          ],
+          "kinds": {
+            "code-change": 48,
+            "verification": 2
+          },
+          "lineRaw": {
+            "insertions": 25150,
+            "deletions": 9188,
+            "files": 381
+          },
+          "lineClean": {
+            "insertions": 25150,
+            "deletions": 9188,
+            "files": 381
+          },
+          "entries": 50,
+          "firstDay": "2026-03-11",
+          "project": "vaultwares-website"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-01",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit 3d1a0ad (2026-04-30T20:17:43-04:00) - refactor: modularize codebase by extracting CLI logic into dedicated runtime and TUI crates while implementing PQC securit...",
+            "Backfill: commit 2aecc69 (2026-04-30T20:18:27-04:00) - feat: implement TUI session picker, FHE-based token aggregation, and ML-KEM-768 key encapsulation | files=6 +239 -2",
+            "Backfill: commit aabba39 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-cli | files=2 +342 -5"
+          ],
+          "kinds": {
+            "plan": 8,
+            "commands": 3,
+            "handoff": 4,
+            "code-change": 29,
+            "verification": 3
+          },
+          "lineRaw": {
+            "insertions": 106400,
+            "deletions": 9678,
+            "files": 397
+          },
+          "lineClean": {
+            "insertions": 106400,
+            "deletions": 9678,
+            "files": 397
+          },
+          "entries": 47,
+          "firstDay": "2026-04-14",
+          "project": "vaultwares-cli"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-23",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Implemented vault-themes cleanup plan: reorganized brand/assets/theme-manager/components/docs/examples layout; converted generated brand guide into maintainable docs plus lightw...",
+            "Removed vaultwares-agentciation from vault-themes so both source-of-truth repos stay independent. Removed the newly added vaultwares-agentciation submodule and .gitmodules file ...",
+            "Created PQC_PROTOCOL_IMPLEMENTATION.md in main vault-themes repository to document the post-quantum AEAD streaming protocol and referenced it in AGENTS.md. Wrote integration tes..."
+          ],
+          "kinds": {
+            "plan": 1,
+            "code-change": 37,
+            "verification": 1
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 39,
+          "firstDay": "2026-03-27",
+          "project": "vaultwares-themes"
+        },
+        {
+          "flagCounts": {
+            "resume_used": 1,
+            "long_running_tasks": 1,
+            "dedup_checked": 1,
+            "append_events": 1
+          },
+          "lastDay": "2026-05-26",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Added safe Vercel auth diagnostics to the GitHub Actions deploy workflow and trimmed CR/LF from VERCEL_TOKEN before invoking Vercel CLI. New step runs \u000bercel whoami so we can te...",
+            "Fixed exit code 128 issue: added 'exit 0' to render-agent-ledger.ps1 to explicitly return success code. Root cause: script completed successfully but didn't explicitly exit, cau...",
+            "Fixed exit code 128 and demonstrated proper VaultWares code change workflow: branched from main, committed with Lore protocol trailers, pushed to GitHub, created PR for human re..."
+          ],
+          "kinds": {
+            "handoff": 1,
+            "commands": 5,
+            "code-change": 23,
+            "verification": 4
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 33,
+          "firstDay": "2026-04-28",
+          "project": "agent-ledger"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-01",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit 62e749a (2026-04-25T20:54:40-04:00) - chore: resolve merge conflicts in README.md and add local TLS baseline | files=1 +384 -1",
+            "Backfill: commit 568e12e (2026-04-26T03:04:00-04:00) - docs: add local TLS baseline for future API consumers (#4) | files=0 +1 -1",
+            "Backfill: commit c1d59a8 (2026-05-01T17:52:43-04:00) - Automated commit: Updated files in vaultwares-template | files=1 +1 -1"
+          ],
+          "kinds": {
+            "code-change": 31
+          },
+          "lineRaw": {
+            "insertions": 10766,
+            "deletions": 4444,
+            "files": 178
+          },
+          "lineClean": {
+            "insertions": 10766,
+            "deletions": 4444,
+            "files": 178
+          },
+          "entries": 31,
+          "firstDay": "2026-03-27",
+          "project": "vaultwares-template"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-04-30",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit 51287a0 (2026-04-24T07:24:42-04:00) - chore: remove tailwindcss plugin from vite preview configuration | files=1 +1 -2",
+            "Backfill: commit 84c902f (2026-04-30T00:29:22Z) - 🎨 Palette: Enhance form accessibility and button focus states | files=2 +20 -11",
+            "Backfill: commit b2f2866 (2026-04-30T19:17:46-04:00) - Merge pull request #4 from p-potvin/palette-ux-improvements-4342842582149570691 | files=0 +20 -11"
+          ],
+          "kinds": {
+            "code-change": 28
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 28,
+          "firstDay": "2026-03-15",
+          "project": "vaultwares-glass"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-09",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Implemented VaultContainerReader, VaultContainerWriter, encapsulate_standard_format, and export_standard_format in components/container.py to support fully streaming ML-KEM-768 ...",
+            "Added Phase 6 (Extensive Redesign & Branding) and updated Phase 4 to be Skipped in TODO.md. Started Phase 5 Web Layer implementation priority 1 by scaffolding components/vault_w...",
+            "Added VaultWebContainerWriter to vault_web_layer.js to support file encryption for the web extension, gated by env var ENABLE_WEB_ENCRYPTION. Completed phase 5 priority 1."
+          ],
+          "kinds": {
+            "code-change": 26,
+            "plan": 2
+          },
+          "lineRaw": {
+            "insertions": 7724,
+            "deletions": 719,
+            "files": 109
+          },
+          "lineClean": {
+            "insertions": 7724,
+            "deletions": 719,
+            "files": 109
+          },
+          "entries": 28,
+          "firstDay": "2026-04-17",
+          "project": "vault-player"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-01",
+          "lineExcluded": {
+            "insertions": 690703,
+            "deletions": 3786,
+            "files": 1760
+          },
+          "recent": [
+            "Backfill: commit 3ee22d2 (2026-04-24T11:06:38-04:00) - feat: add environment variables for Mapbox configuration and API base URL | files=1 +3 -0",
+            "Backfill: commit d017539 (2026-04-24T14:32:03-04:00) - Merge branch 'copilot/worktree-2026-04-15T21-20-09' | files=0 +0 -0",
+            "Backfill: commit 6372673 (2026-05-01T17:52:26-04:00) - Automated commit: Updated files in traffic-pulse | files=2 +1 -2"
+          ],
+          "kinds": {
+            "code-change": 27
+          },
+          "lineRaw": {
+            "insertions": 701037,
+            "deletions": 5887,
+            "files": 1856
+          },
+          "lineClean": {
+            "insertions": 10334,
+            "deletions": 2101,
+            "files": 96
+          },
+          "entries": 27,
+          "firstDay": "2026-03-12",
+          "project": "traffic-pulse"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-19",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Started real link-sharing implementation beyond the generic CRUD shell. Added canonical host presets in shared/index.ts with KatFile as the launch-default provider and Rapidgato...",
+            "Implemented the next public routing slice in link-sharing: added a runtime-config API for canonical public URLs, added a quick-create server route that creates a file plus prima...",
+            "Deployed the latest link-sharing slice to the VPS: quick-create route API, runtime-config API, file table full-route visibility, and Quick KatFile Route modal. Re-synced dist as..."
+          ],
+          "kinds": {
+            "plan": 5,
+            "commands": 2,
+            "general": 2,
+            "code-change": 12,
+            "verification": 5
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 26,
+          "firstDay": "2026-04-23",
+          "project": "link-sharing"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-01",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit 07abdad (2026-04-24T07:24:18-04:00) - merge | files=3 +49 -0",
+            "Backfill: commit 758acf8 (2026-04-24T14:26:53-04:00) - Merge remote-tracking branch 'origin/jules-14558258200679654617-cbb13ad6' | files=0 +0 -0",
+            "Backfill: commit 1d2fe2b (2026-05-01T17:52:18-04:00) - Automated commit: Updated files in dispatch-wares | files=1 +0 -1"
+          ],
+          "kinds": {
+            "code-change": 26
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 26,
+          "firstDay": "2026-03-14",
+          "project": "vaultwares-dispatch"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-10",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit ee41dce (2026-05-01T17:52:14-04:00) - Automated commit: Updated files in cultural-rhythm | files=1 +0 -1",
+            "Analyzed cultural-rhythm for UI upgrades. Planned injection of vault-themes submodule CSS, theme picker, dark/light switch, and documentation standardizations.",
+            "Added ThemePicker component supporting 10 vault-themes. Added dark/light mode toggle. Injected branding to index.html. Standardized AGENTS.md. Build succeeds."
+          ],
+          "kinds": {
+            "code-change": 23,
+            "plan": 1
+          },
+          "lineRaw": {
+            "insertions": 8872,
+            "deletions": 412,
+            "files": 84
+          },
+          "lineClean": {
+            "insertions": 8872,
+            "deletions": 412,
+            "files": 84
+          },
+          "entries": 24,
+          "firstDay": "2026-03-13",
+          "project": "cultural-rhythm"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-01",
+          "lineExcluded": {
+            "insertions": 29710,
+            "deletions": 16952,
+            "files": 119
+          },
+          "recent": [
+            "Backfill: commit 30d30d4 (2026-04-24T14:20:39-04:00) - Merge branch 'main' of https://github.com/p-potvin/windows-customizer | files=0 +12 -12",
+            "Backfill: commit 3ebcf37 (2026-04-24T14:20:48-04:00) - update sub refs | files=1 +1 -1",
+            "Backfill: commit 1e55523 (2026-05-01T17:52:49-04:00) - Automated commit: Updated files in windows-customizer | files=1 +1 -1"
+          ],
+          "kinds": {
+            "code-change": 22
+          },
+          "lineRaw": {
+            "insertions": 63486,
+            "deletions": 17517,
+            "files": 277
+          },
+          "lineClean": {
+            "insertions": 33776,
+            "deletions": 565,
+            "files": 158
+          },
+          "entries": 22,
+          "firstDay": "2026-03-14",
+          "project": "windows-customizer"
+        },
+        {
+          "flagCounts": {
+            "keywords": 1,
+            "seo": 1,
+            "same_domain_only": 1,
+            "search_visibility": 2,
+            "provider": 1,
+            "vw_state_resume_id": 1,
+            "max_serp_pages": 1,
+            "headed": 1,
+            "vw_state_logged_only": 1,
+            "no_vw_state_in_chat": 1,
+            "proxy_chain": 1,
+            "proxy_provider": 2,
+            "live_crawl_found_category_404s": 1,
+            "firefox_profile": 1,
+            "safesearch_default": 1,
+            "session_count_full": 1,
+            "browser_rotation": 2,
+            "google_result": 1,
+            "runs": 1,
+            "scenario_count": 1,
+            "own_domain_stealth_only": 4,
+            "proxy_mode": 1,
+            "ignore_https_errors_auto": 1,
+            "ip_rotation_mandatory": 2,
+            "max_pages": 1,
+            "smoke_session_count": 1,
+            "qa_allow_category_404": 1,
+            "run_type": 1,
+            "geo": 1,
+            "dns_origin_mismatch": 1,
+            "live_crawl_launched": 1,
+            "ip_rotation": 1,
+            "rotation_mandatory": 1,
+            "secrets_redacted": 1,
+            "engines": 2,
+            "chat_vw_state_output": 1,
+            "safe_search": 1,
+            "proxy": 1,
+            "qa_crawl_depth": 1,
+            "addons": 1,
+            "secrets_not_printed": 1,
+            "deploy_assumption_fix": 1
+          },
+          "lastDay": "2026-05-25",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Reworked the qa-automation Playwright suite for the Prom King monetization roadmap: replaced obsolete PropPaths specs with configurable funnel/legal/redirect/postback/age-gate/o...",
+            "Backfill: commit fc4216c (2026-05-01T17:55:31-04:00) - Automated commit: Updated files in qa-automation | files=21 +2097 -529",
+            "Backfill: commit fe2c299 (2026-05-04T18:34:30-04:00) - Automated commit: Updated files in qa-automation | files=2 +54 -4"
+          ],
+          "kinds": {
+            "plan": 1,
+            "general": 2,
+            "code-change": 15,
+            "verification": 4
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 22,
+          "firstDay": "2026-04-23",
+          "project": "qa-automation"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-16",
+          "lineExcluded": {
+            "insertions": 131723,
+            "deletions": 62524,
+            "files": 706
+          },
+          "recent": [
+            "Backfill: commit 2b2ec43 (2026-04-24T10:43:06-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=1 +1 -1",
+            "Backfill: commit 25683c2 (2026-04-25T21:05:22-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=2 +2 -2",
+            "Backfill: commit 7be29d9 (2026-05-01T17:52:12-04:00) - Automated commit: Updated files in automation-suite | files=2 +2 -2"
+          ],
+          "kinds": {
+            "code-change": 17
+          },
+          "lineRaw": {
+            "insertions": 133005,
+            "deletions": 62548,
+            "files": 760
+          },
+          "lineClean": {
+            "insertions": 1282,
+            "deletions": 24,
+            "files": 54
+          },
+          "entries": 17,
+          "firstDay": "2026-03-11",
+          "project": "automation-suite"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-22",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Refactored scheduled-distribute-secrets.ps1 to fetch GH_TOKEN and JIRA_TOKEN from greencloud-vps via Tailscale SSH at runtime. No tokens stored on local disk. GH_TOKEN read from...",
+            "Removed JIRA token exposure from GitHub infrastructure. (1) Deleted JIRA_BASE_URL, JIRA_EMAIL, JIRA_TOKEN Actions secrets from all 41 repos (123 total) — tokens no longer stored...",
+            "Removed jira-sync.yml caller workflows from all 41 tracked repos (41/41 deleted). Added remove_caller_workflows.py. Webhook path on VPS is now the sole active Jira sync mechanis..."
+          ],
+          "kinds": {
+            "plan": 1,
+            "commands": 1,
+            "code-change": 8,
+            "verification": 6
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 16,
+          "firstDay": "2026-05-18",
+          "project": "vw-jira-sync"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-04-24",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit d8bdb4f (2026-04-17T09:20:29-04:00) - Merge pull request #4 from p-potvin/fix-prototype-pollution-parse-attributes-7302579990965293704 | files=1 +24 -1",
+            "Backfill: commit 070ab3f (2026-04-17T18:11:12-04:00) - Automated commit: Updated files in agentic-markup | files=12 +376 -13",
+            "Backfill: commit 5184c31 (2026-04-24T07:21:10-04:00) - feat: implement content script observer and extension popup UI | files=6 +102 -93"
+          ],
+          "kinds": {
+            "code-change": 15
+          },
+          "lineRaw": {
+            "insertions": 18978,
+            "deletions": 661,
+            "files": 110
+          },
+          "lineClean": {
+            "insertions": 18978,
+            "deletions": 661,
+            "files": 110
+          },
+          "entries": 15,
+          "firstDay": "2026-04-10",
+          "project": "agentic-markup"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-10",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "User approved optimization phase. Preparing implementation plan to migrate Wander.Network from REST to gRPC with Protobufs and streaming chunked file transfers.",
+            "Optimization plan approved. Executing gRPC migration. Scaffolding task list.",
+            "Optimization complete. Replaced REST controllers with gRPC SyncGrpcService. Updated SyncEngine to use Protobuf messages and stream file chunks over System.IO.Pipelines/FileStrea..."
+          ],
+          "kinds": {
+            "plan": 8,
+            "general": 1,
+            "code-change": 5
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 14,
+          "firstDay": "2026-05-08",
+          "project": "tailnet-sync"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-01",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit 396cfda (2026-04-24T05:22:31-04:00) - Merge pull request #2 from p-potvin/copilot/update-vault-themes-branding | files=0 +373 -82",
+            "Backfill: commit 1481c89 (2026-04-24T08:10:29-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +50 -0",
+            "Backfill: commit efb1628 (2026-05-01T17:52:16-04:00) - Automated commit: Updated files in deconstructed-website-a-la-mode | files=2 +0 -2"
+          ],
+          "kinds": {
+            "code-change": 14
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 14,
+          "firstDay": "2026-04-20",
+          "project": "vaultwares-decompile"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-13",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Added MCPB desktop-extension support by creating root manifest.json (MCPB manifest spec v0.3) and .mcpbignore to keep bundles small. Installed @anthropic-ai/mcpb, validated mani...",
+            "Adjusted MCPB manifest to launch via python -m vaultwares_fastmcp (entry_point vaultwares_fastmcp/__main__.py) instead of server.py, then revalidated and repacked vaultwares-fas...",
+            "Switched MCPB manifest to start stdio server via python /server.py (instead of python -m vaultwares_fastmcp) per expected entrypoint usage; revalidated and repacked vaultwares-f..."
+          ],
+          "kinds": {
+            "plan": 1,
+            "commands": 2,
+            "code-change": 10
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 13,
+          "firstDay": "2026-05-01",
+          "project": "vaultwares-mcp"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-01",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit 695ea5b (2026-04-24T08:10:34-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -1",
+            "Backfill: commit 1ef5048 (2026-04-24T14:20:15-04:00) - update sub refs | files=1 +1 -1",
+            "Backfill: commit 6bebcc8 (2026-05-01T17:52:47-04:00) - Automated commit: Updated files in weekly-menu | files=1 +1 -1"
+          ],
+          "kinds": {
+            "code-change": 12
+          },
+          "lineRaw": {
+            "insertions": 7107,
+            "deletions": 228,
+            "files": 74
+          },
+          "lineClean": {
+            "insertions": 7107,
+            "deletions": 228,
+            "files": 74
+          },
+          "entries": 12,
+          "firstDay": "2026-04-07",
+          "project": "weekly-menu"
+        },
+        {
+          "flagCounts": {
+            "llms_txt": 1,
+            "build_blocked_by_dependency_links": 1,
+            "geo": 1,
+            "seo": 1
+          },
+          "lastDay": "2026-05-24",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit 31fcbb5 (2026-05-01T17:55:28-04:00) - Automated commit: Updated files in prelanding-page | files=39 +4809 -157",
+            "Backfill: commit 3dfcdd2 (2026-05-04T18:34:27-04:00) - Automated commit: Updated files in prelanding-page | files=13 +386 -93",
+            "Reworked the prelanding page hero and body into a stronger prelander flow in src/App.jsx: added traffic-intent selection, dynamic primary recommendation, stronger offer hierarch..."
+          ],
+          "kinds": {
+            "code-change": 11
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 11,
+          "firstDay": "2026-04-23",
+          "project": "prelanding-page"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-06",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Fixed offline-mode crash for FluxTransformer2DModel. flux1-dev-fp8-e4m3fn.safetensors is not in diffusers' built-in filename map so it fell back to fetching black-forest-labs/FL...",
+            "Fixed RAM destruction from enable_model_cpu_offload(). Added _get_device() auto-detection (CUDA vs CPU). Switched default offload to enable_sequential_cpu_offload() which stream...",
+            "Added 4 features to frame_extractor.py/run_extractor.py: (1) max_frames=5 param in extract_keyframes() — passes -vframes N to ffmpeg; (2) max_frames=5 added to process_video() a..."
+          ],
+          "kinds": {
+            "code-change": 9,
+            "commands": 1
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 10,
+          "firstDay": "2026-05-04",
+          "project": "scripts"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-01",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit 60af0ad (2026-04-17T18:12:30-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +11 -5",
+            "Backfill: commit e86a397 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +49 -0",
+            "Backfill: commit 672a338 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +0 -1"
+          ],
+          "kinds": {
+            "code-change": 9
+          },
+          "lineRaw": {
+            "insertions": 10623,
+            "deletions": 221,
+            "files": 87
+          },
+          "lineClean": {
+            "insertions": 10623,
+            "deletions": 221,
+            "files": 87
+          },
+          "entries": 9,
+          "firstDay": "2026-03-30",
+          "project": "vaultwares-identity-manager"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-04-17",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit ce8ea8f (2026-04-01T19:06:09-04:00) - Merge pull request #1 from p-potvin/copilot/add-windows-native-app | files=0 +2115 -0",
+            "Backfill: commit 5fe1d29 (2026-04-13T15:57:51-04:00) - push local changes | files=12 +192 -56",
+            "Backfill: commit 99d81da (2026-04-17T18:11:13-04:00) - Automated commit: Updated files in auto-backup | files=1 +11 -5"
+          ],
+          "kinds": {
+            "code-change": 7
+          },
+          "lineRaw": {
+            "insertions": 5321,
+            "deletions": 61,
+            "files": 88
+          },
+          "lineClean": {
+            "insertions": 5321,
+            "deletions": 61,
+            "files": 88
+          },
+          "entries": 7,
+          "firstDay": "2026-04-01",
+          "project": "auto-backup"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-04-19",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
+            "Backfill: commit 55ec199 (2026-04-17T18:11:24-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +11 -5",
+            "Backfill: commit c6ce8b5 (2026-04-18T22:32:35-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +1 -2"
+          ],
+          "kinds": {
+            "code-change": 6
+          },
+          "lineRaw": {
+            "insertions": 1438,
+            "deletions": 7,
+            "files": 34
+          },
+          "lineClean": {
+            "insertions": 1438,
+            "deletions": 7,
+            "files": 34
+          },
+          "entries": 6,
+          "firstDay": "2026-04-01",
+          "project": "debrid-media-manager"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-01",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit 18801b3 (2026-04-07T13:19:16-04:00) - Added configs, icons, published add-on | files=18 +480 -74",
+            "Backfill: commit 2ff69ca (2026-04-08T15:26:04-04:00) - Add initial project setup with package.json and webpack configuration | files=8 +1542 -5",
+            "Backfill: commit d55eb37 (2026-05-01T17:52:19-04:00) - Automated commit: Updated files in gallery-scraper | files=1 +0 -0"
+          ],
+          "kinds": {
+            "code-change": 6
+          },
+          "lineRaw": {
+            "insertions": 2343,
+            "deletions": 138,
+            "files": 23
+          },
+          "lineClean": {
+            "insertions": 2343,
+            "deletions": 138,
+            "files": 23
+          },
+          "entries": 6,
+          "firstDay": "2026-04-07",
+          "project": "gallery-scraper"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-04-17",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit 057c516 (2026-03-16T08:48:25-04:00) - added ray tracing support | files=3 +197 -246",
+            "Backfill: commit 36d8d48 (2026-04-01T18:04:56-04:00) - Added agent skills in .copilot folder | files=11 +157 -0",
+            "Backfill: commit c580205 (2026-04-17T18:12:12-04:00) - Automated commit: Updated files in event-horizon | files=3 +15 -10"
+          ],
+          "kinds": {
+            "code-change": 5
+          },
+          "lineRaw": {
+            "insertions": 908,
+            "deletions": 256,
+            "files": 24
+          },
+          "lineClean": {
+            "insertions": 908,
+            "deletions": 256,
+            "files": 24
+          },
+          "entries": 5,
+          "firstDay": "2026-03-16",
+          "project": "event-horizon"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-23",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Answered vault-port/Columbo location and productization audit. Canonical lives at vaultwares-adk/columbo.py (738 lines, inherits ExtrovertAgent + Redis) + columbo.agent.md (82-l...",
+            "Moved Columbo from vaultwares-adk into vaultwares-toolkit on main. Refactor: dropped ExtrovertAgent base class + all Redis dependencies (imports, init params, CLI flags). Replac...",
+            "Branch cleanup + HITL constraint. vaultwares-adk: switched off feat/columbo-agent to main, force-deleted feat/columbo-agent locally (was at ff19c0c). adk main is 26 commits behi..."
+          ],
+          "kinds": {
+            "code-change": 2,
+            "plan": 1
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 3,
+          "firstDay": "2026-05-22",
+          "project": "vaultwares-toolkit"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-14",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Created BigLove-zt3-LoRA-12GB.json training preset optimized for RTX 3060 12GB VRAM + 32GB RAM. Key settings vs 8GB preset: layer_offload_fraction 0.6->0.2, transformer.train fa...",
+            "Fixed config.json corruption in d:\\OneTrainer\\config.json. Previous two multi_replace_string_in_file passes had introduced: truncated boolean values ('tru' instead of 'true,'), ..."
+          ],
+          "kinds": {
+            "code-change": 2
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 2,
+          "firstDay": "2026-05-13",
+          "project": "OneTrainer"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-26",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Added Ollama gemma4 integration to dynamically adjust MIDI scales based on typing and clicking speed in input_to_midi.py",
+            "Installed dependencies in .venv, added benchmark code to track Ollama response time, and ran script in background."
+          ],
+          "kinds": {
+            "code-change": 2
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 2,
+          "firstDay": "2026-05-26",
+          "project": "python-scripts"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-04-24",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Backfill: commit aa85ca7 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -2"
+          ],
+          "kinds": {
+            "code-change": 1
+          },
+          "lineRaw": {
+            "insertions": 1,
+            "deletions": 2,
+            "files": 1
+          },
+          "lineClean": {
+            "insertions": 1,
+            "deletions": 2,
+            "files": 1
+          },
+          "entries": 1,
+          "firstDay": "2026-04-24",
+          "project": "video-depth-anything"
+        },
+        {
+          "flagCounts": {},
+          "lastDay": "2026-05-25",
+          "lineExcluded": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "recent": [
+            "Standardized deployment flow docs + removed GitHub Actions deploys on main pushes across repos. Merged PRs: p-potvin/vaultwares-docs#18 (merge 9ac6a90), p-potvin/vaultwares-webs..."
+          ],
+          "kinds": {
+            "code-change": 1
+          },
+          "lineRaw": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "lineClean": {
+            "insertions": 0,
+            "deletions": 0,
+            "files": 0
+          },
+          "entries": 1,
+          "firstDay": "2026-05-25",
+          "project": "deploy-flow-unification"
+        }
+      ]
+    },
+    "totals": {
+      "uniqueCommitsRecomputed": 679,
+      "projects": 44,
+      "activeDays": 74,
+      "events": 1786,
+      "commitEventsWithStats": 679
+    },
+    "agentData": {
+      "actors": [
+        "AI Agent",
+        261,
+        "Antigravity",
+        60,
+        "codex",
+        44,
+        "GitHub Copilot",
+        28,
+        "gpt-5.2-codex",
+        17,
+        "claude-sonnet-4-6",
+        8,
+        "Claude Code (Opus 4.7)",
+        5,
+        "gpt-5.2",
+        4,
+        "Claude Sonnet 4.6",
+        3,
+        "claude-code",
+        2,
+        "Claude Opus 4.7",
+        1,
+        "claude-sonnet-4-5",
+        1,
+        "preload.js",
+        1,
+        "Fix: Re-add spankbang to allowlist",
+        1,
+        "Copilot",
+        1
+      ],
+      "models": [
+        "unknown",
+        237,
+        "gpt-5.2",
+        64,
+        "Claude Haiku",
+        14,
+        "claude-sonnet-4-6",
+        14,
+        "Gemini 3 Flash",
+        13,
+        "Gemini 3.1 Pro (Preview)",
+        13,
+        "Gemini 3.5 Flash (Medium)",
+        9,
+        "gpt-5",
+        9,
+        "o3-mini",
+        9,
+        "Gemini 2.0 Flash",
+        7,
+        "claude-opus-4-7",
+        6,
+        "gemini-2.5-pro",
+        6,
+        "Gemini 3.1 Pro (Low)",
+        4,
+        "Claude Sonnet 4.6",
+        4,
+        "claude-sonnet-4-5",
+        4,
+        "Claude Sonnet 4.6 (Thinking)",
+        3,
+        "Gemini 3.1 Pro (High)",
+        3,
+        "Gemini 3.1 Pro",
+        3,
+        "Gemini-1.5-Pro",
+        3,
+        "gemini-2.0-pro-exp",
+        2,
+        "gemini",
+        2,
+        "claude-opus-4-5",
+        2,
+        "gemini-3-flash",
+        1,
+        "src/normalization.js",
+        1,
+        "gpt-4o",
+        1,
+        "Claude Opus 4.6",
+        1,
+        "claude-sonnet-4.6",
+        1,
+        "fullxxx-video/includes/video-fetcher.php",
+        1
+      ],
+      "totalEvents": 437,
+      "mcpServers": [],
+      "tools": [
+        "functions.shell_command",
+        58,
+        "run_command",
+        33,
+        "functions.apply_patch",
+        26,
+        "view_file",
+        22,
+        "write_to_file",
+        22,
+        "replace_file_content",
+        15,
+        "PowerShell",
+        14,
+        "apply_patch",
+        12,
+        "multi_replace_file_content",
+        11,
+        "functions.update_plan",
+        11,
+        "shell_command",
+        11,
+        "list_dir",
+        10,
+        "git",
+        8,
+        "Bash",
+        6,
+        "gh",
+        5
+      ],
+      "daySeries": [
+        {
+          "day": "2026-05-05",
+          "models": [
+            "Claude Haiku"
+          ],
+          "actors": [
+            "AI Agent"
+          ],
+          "count": 1
+        },
+        {
+          "day": "2026-05-08",
+          "models": [
+            "Claude Haiku"
+          ],
+          "actors": [
+            "AI Agent"
+          ],
+          "count": 4
+        },
+        {
+          "day": "2026-05-09",
+          "models": [
+            "Claude Haiku"
+          ],
+          "actors": [
+            "AI Agent"
+          ],
+          "count": 1
+        },
+        {
+          "day": "2026-05-11",
+          "models": [
+            "Claude Haiku",
+            "Claude Sonnet 4.6",
+            "claude-sonnet-4-6",
+            "claude-sonnet-4.6",
+            "Gemini 3.1 Pro (Preview)",
+            "gemini-2.0-pro-exp",
+            "o3-mini",
+            "unknown"
+          ],
+          "actors": [
+            "AI Agent",
+            "Antigravity",
+            "Copilot",
+            "GitHub Copilot"
+          ],
+          "count": 16
+        },
+        {
+          "day": "2026-05-12",
+          "models": [
+            "Claude Sonnet 4.6",
+            "Claude Sonnet 4.6 (Thinking)",
+            "Gemini 3.1 Pro (Preview)",
+            "gpt-5",
+            "gpt-5.2",
+            "unknown"
+          ],
+          "actors": [
+            "AI Agent",
+            "Antigravity",
+            "codex",
+            "GitHub Copilot"
+          ],
+          "count": 31
+        },
+        {
+          "day": "2026-05-13",
+          "models": [
+            "claude-sonnet-4-5",
+            "claude-sonnet-4-6",
+            "Gemini 3 Flash",
+            "gpt-5.2"
+          ],
+          "actors": [
+            "Antigravity",
+            "Claude Sonnet 4.6",
+            "claude-sonnet-4-6",
+            "codex",
+            "GitHub Copilot",
+            "gpt-5.2"
+          ],
+          "count": 16
+        },
+        {
+          "day": "2026-05-14",
+          "models": [
+            "Claude Haiku",
+            "Claude Sonnet 4.6",
+            "claude-sonnet-4-6",
+            "Gemini 2.0 Flash",
+            "Gemini 3.1 Pro (Low)",
+            "gemini-2.5-pro",
+            "gemini-3-flash",
+            "gpt-5.2",
+            "o3-mini",
+            "unknown"
+          ],
+          "actors": [
+            "AI Agent",
+            "Antigravity",
+            "Claude Sonnet 4.6",
+            "claude-sonnet-4-6",
+            "codex",
+            "GitHub Copilot"
+          ],
+          "count": 36
+        },
+        {
+          "day": "2026-05-15",
+          "models": [
+            "Claude Haiku",
+            "claude-sonnet-4-6",
+            "Gemini 2.0 Flash",
+            "Gemini 3.1 Pro (High)",
+            "Gemini 3.1 Pro (Low)",
+            "gpt-5.2",
+            "o3-mini"
+          ],
+          "actors": [
+            "AI Agent",
+            "Antigravity",
+            "Claude Sonnet 4.6",
+            "codex",
+            "GitHub Copilot",
+            "gpt-5.2-codex"
+          ],
+          "count": 27
+        },
+        {
+          "day": "2026-05-16",
+          "models": [
+            "Claude Opus 4.6",
+            "claude-opus-4-7",
+            "fullxxx-video/includes/video-fetcher.php",
+            "Gemini 3 Flash",
+            "Gemini 3.1 Pro",
+            "Gemini 3.1 Pro (High)",
+            "gpt-4o",
+            "gpt-5",
+            "GPT-5",
+            "gpt-5.2",
+            "unknown"
+          ],
+          "actors": [
+            "AI Agent",
+            "Antigravity",
+            "Claude Opus 4.7",
+            "Codex",
+            "Fix: Re-add spankbang to allowlist",
+            "gpt-5.2-codex"
+          ],
+          "count": 30
+        },
+        {
+          "day": "2026-05-17",
+          "models": [
+            "Gemini 3 Flash",
+            "Gemini 3.1 Pro",
+            "unknown"
+          ],
+          "actors": [
+            "AI Agent",
+            "Antigravity"
+          ],
+          "count": 9
+        },
+        {
+          "day": "2026-05-18",
+          "models": [
+            "Claude Haiku",
+            "claude-opus-4-7",
+            "gemini",
+            "Gemini 3 Flash",
+            "Gemini-1.5-Pro",
+            "gemini-2.5-pro",
+            "unknown"
+          ],
+          "actors": [
+            "AI Agent",
+            "Antigravity",
+            "Claude Code (Opus 4.7)"
+          ],
+          "count": 47
+        },
+        {
+          "day": "2026-05-19",
+          "models": [
+            "Claude Haiku",
+            "Gemini 3 Flash",
+            "gemini-1.5-pro",
+            "unknown"
+          ],
+          "actors": [
+            "AI Agent",
+            "Antigravity"
+          ],
+          "count": 7
+        },
+        {
+          "day": "2026-05-20",
+          "models": [
+            "Claude Haiku",
+            "claude-opus-4-5",
+            "claude-sonnet-4-5",
+            "Gemini 3.1 Pro (Low)",
+            "Gemini 3.5 Flash (Medium)",
+            "gpt-5.2",
+            "unknown"
+          ],
+          "actors": [
+            "AI Agent",
+            "Antigravity",
+            "claude-code",
+            "claude-sonnet-4-5",
+            "codex"
+          ],
+          "count": 55
+        },
+        {
+          "day": "2026-05-21",
+          "models": [
+            "unknown"
+          ],
+          "actors": [
+            "AI Agent"
+          ],
+          "count": 26
+        },
+        {
+          "day": "2026-05-22",
+          "models": [
+            "gpt-5.2",
+            "unknown"
+          ],
+          "actors": [
+            "AI Agent"
+          ],
+          "count": 21
+        },
+        {
+          "day": "2026-05-23",
+          "models": [
+            "unknown"
+          ],
+          "actors": [
+            "AI Agent"
+          ],
+          "count": 43
+        },
+        {
+          "day": "2026-05-24",
+          "models": [
+            "GPT-5",
+            "GPT-5.2",
+            "src/normalization.js",
+            "unknown"
+          ],
+          "actors": [
+            "AI Agent",
+            "preload.js"
+          ],
+          "count": 37
+        },
+        {
+          "day": "2026-05-25",
+          "models": [
+            "GPT-5.2",
+            "gpt-5.2",
+            "unknown"
+          ],
+          "actors": [
+            "AI Agent"
+          ],
+          "count": 30
+        }
+      ]
+    },
+    "dowSeries": [
+      {
+        "count": 93,
+        "label": "Mon",
+        "dow": 0
+      },
+      {
+        "count": 39,
+        "label": "Tue",
+        "dow": 1
+      },
+      {
+        "count": 71,
+        "label": "Wed",
+        "dow": 2
+      },
+      {
+        "count": 62,
+        "label": "Thu",
+        "dow": 3
+      },
+      {
+        "count": 52,
+        "label": "Fri",
+        "dow": 4
+      },
+      {
+        "count": 74,
+        "label": "Sat",
+        "dow": 5
+      },
+      {
+        "count": 46,
+        "label": "Sun",
+        "dow": 6
+      }
+    ],
+    "schemaVersion": 1,
+    "_maxCreatedAtUtc": "2026-05-26T08:05:19.0000000Z",
+    "generatedAtLocal": "2026-05-26 15:13",
+    "range": {
+      "end": "2026-05-26",
+      "start": "2026-03-11"
+    },
     "commitSamples": [
       {
         "commitKey": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -12665,3346 +15831,122 @@
         "filesExcluded": 0
       }
     ],
-    "series": {
-      "kinds": [
-        {
-          "kind": "code-change",
-          "count": 1492
-        },
-        {
-          "kind": "verification",
-          "count": 106
-        },
-        {
-          "kind": "plan",
-          "count": 93
-        },
-        {
-          "kind": "commands",
-          "count": 36
-        },
-        {
-          "kind": "general",
-          "count": 35
-        },
-        {
-          "kind": "handoff",
-          "count": 24
-        }
-      ],
-      "months": [
-        {
-          "month": "2026-03",
-          "count": 157
-        },
-        {
-          "month": "2026-04",
-          "count": 828
-        },
-        {
-          "month": "2026-05",
-          "count": 801
-        }
-      ],
-      "days": [
-        {
-          "kinds": {
-            "code-change": 5
-          },
-          "day": "2026-03-11",
-          "entries": 5,
-          "projects": [
-            "automation-suite",
-            "vaultwares-website"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 8
-          },
-          "day": "2026-03-12",
-          "entries": 8,
-          "projects": [
-            "traffic-pulse",
-            "vaultwares-website"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 4
-          },
-          "day": "2026-03-13",
-          "entries": 4,
-          "projects": [
-            "cultural-rhythm",
-            "traffic-pulse",
-            "vault-central"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 8
-          },
-          "day": "2026-03-14",
-          "entries": 8,
-          "projects": [
-            "vaultwares-dispatch",
-            "vaultwares-media-processing",
-            "windows-customizer"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 6
-          },
-          "day": "2026-03-15",
-          "entries": 6,
-          "projects": [
-            "vaultwares-glass",
-            "vaultwares-website"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 27
-          },
-          "day": "2026-03-16",
-          "entries": 27,
-          "projects": [
-            "cultural-rhythm",
-            "event-horizon",
-            "vault-central",
-            "vaultwares-glass",
-            "vaultwares-media-processing"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 1
-          },
-          "day": "2026-03-17",
-          "entries": 1,
-          "projects": "vaultwares-dispatch"
-        },
-        {
-          "kinds": {
-            "code-change": 7
-          },
-          "day": "2026-03-19",
-          "entries": 7,
-          "projects": "vaultwares-media-processing"
-        },
-        {
-          "kinds": {
-            "code-change": 18
-          },
-          "day": "2026-03-20",
-          "entries": 18,
-          "projects": [
-            "vault-central",
-            "vaultwares-dispatch",
-            "vaultwares-media-processing"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 3
-          },
-          "day": "2026-03-21",
-          "entries": 3,
-          "projects": "vault-central"
-        },
-        {
-          "kinds": {
-            "code-change": 9
-          },
-          "day": "2026-03-23",
-          "entries": 9,
-          "projects": [
-            "vault-central",
-            "vaultwares-media-processing",
-            "vaultwares-website",
-            "windows-customizer"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 4
-          },
-          "day": "2026-03-25",
-          "entries": 4,
-          "projects": [
-            "vault-central",
-            "vaultwares-media-processing"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 3
-          },
-          "day": "2026-03-26",
-          "entries": 3,
-          "projects": [
-            "vaultwares-media-processing",
-            "vaultwares-realtime"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 24
-          },
-          "day": "2026-03-27",
-          "entries": 24,
-          "projects": [
-            "vaultwares-realtime",
-            "vaultwares-template",
-            "vaultwares-themes"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 2
-          },
-          "day": "2026-03-28",
-          "entries": 2,
-          "projects": [
-            "vault-central",
-            "vaultwares-realtime"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 8
-          },
-          "day": "2026-03-29",
-          "entries": 8,
-          "projects": [
-            "automation-suite",
-            "vault-central",
-            "windows-customizer"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 3
-          },
-          "day": "2026-03-30",
-          "entries": 3,
-          "projects": "vaultwares-identity-manager"
-        },
-        {
-          "kinds": {
-            "code-change": 17
-          },
-          "day": "2026-03-31",
-          "entries": 17,
-          "projects": [
-            "automation-suite",
-            "cultural-rhythm",
-            "traffic-pulse",
-            "vaultwares-dispatch",
-            "vaultwares-website",
-            "windows-customizer"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 32
-          },
-          "day": "2026-04-01",
-          "entries": 32,
-          "projects": [
-            "auto-backup",
-            "automation-suite",
-            "cultural-rhythm",
-            "debrid-media-manager",
-            "event-horizon",
-            "traffic-pulse",
-            "vault-central",
-            "vaultwares-dispatch",
-            "vaultwares-glass",
-            "vaultwares-identity-manager",
-            "vaultwares-media-processing",
-            "vaultwares-template",
-            "vaultwares-website",
-            "windows-customizer"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 1
-          },
-          "day": "2026-04-02",
-          "entries": 1,
-          "projects": "vaultwares-media-processing"
-        },
-        {
-          "kinds": {
-            "code-change": 2
-          },
-          "day": "2026-04-03",
-          "entries": 2,
-          "projects": [
-            "vaultwares-media-processing",
-            "vaultwares-realtime"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 15
-          },
-          "day": "2026-04-04",
-          "entries": 15,
-          "projects": [
-            "vault-central",
-            "vaultwares-pipelines"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 20
-          },
-          "day": "2026-04-05",
-          "entries": 20,
-          "projects": [
-            "vault-central",
-            "vaultwares-adk",
-            "vaultwares-pipelines",
-            "vaultwares-realtime",
-            "vaultwares-template"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 35
-          },
-          "day": "2026-04-06",
-          "entries": 35,
-          "projects": [
-            "vault-central",
-            "vault-flows",
-            "vaultwares-adk",
-            "vaultwares-pipelines",
-            "vaultwares-template"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 10
-          },
-          "day": "2026-04-07",
-          "entries": 10,
-          "projects": [
-            "gallery-scraper",
-            "vaultwares-pipelines",
-            "weekly-menu"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 2
-          },
-          "day": "2026-04-08",
-          "entries": 2,
-          "projects": [
-            "gallery-scraper",
-            "vaultwares-adk"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 3
-          },
-          "day": "2026-04-09",
-          "entries": 3,
-          "projects": [
-            "vault-flows",
-            "vaultwares-adk",
-            "vaultwares-pipelines"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 9
-          },
-          "day": "2026-04-10",
-          "entries": 9,
-          "projects": [
-            "agentic-markup",
-            "vault-central",
-            "vaultwares-studio"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 2
-          },
-          "day": "2026-04-11",
-          "entries": 2,
-          "projects": [
-            "cultural-rhythm",
-            "vaultwares-media-processing"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 7
-          },
-          "day": "2026-04-12",
-          "entries": 7,
-          "projects": [
-            "vault-central",
-            "vaultwares-media-processing",
-            "vaultwares-realtime",
-            "vaultwares-studio"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 17
-          },
-          "day": "2026-04-13",
-          "entries": 17,
-          "projects": [
-            "auto-backup",
-            "vault-central",
-            "vault-flows",
-            "vaultwares-adk",
-            "vaultwares-studio",
-            "vaultwares-template",
-            "vaultwares-themes",
-            "weekly-menu",
-            "windows-customizer"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 21
-          },
-          "day": "2026-04-14",
-          "entries": 21,
-          "projects": [
-            "vault-central",
-            "vault-flows",
-            "vaultwares-adk",
-            "vaultwares-cli",
-            "vaultwares-identity-manager",
-            "vaultwares-pipelines",
-            "vaultwares-realtime"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 4
-          },
-          "day": "2026-04-15",
-          "entries": 4,
-          "projects": [
-            "traffic-pulse",
-            "vault-central"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 24
-          },
-          "day": "2026-04-16",
-          "entries": 24,
-          "projects": [
-            "automation-suite",
-            "vault-central",
-            "vault-flows",
-            "vaultwares-adk",
-            "vaultwares-dispatch",
-            "vaultwares-pipelines",
-            "vaultwares-studio",
-            "vaultwares-themes",
-            "vaultwares-website"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 94
-          },
-          "day": "2026-04-17",
-          "entries": 94,
-          "projects": [
-            "agentic-markup",
-            "auto-backup",
-            "automation-suite",
-            "cultural-rhythm",
-            "debrid-media-manager",
-            "event-horizon",
-            "traffic-pulse",
-            "vault-central",
-            "vault-flows",
-            "vault-player",
-            "vaultwares-adk",
-            "vaultwares-cli",
-            "vaultwares-dispatch",
-            "vaultwares-glass",
-            "vaultwares-identity-manager",
-            "vaultwares-media-processing",
-            "vaultwares-pipelines",
-            "vaultwares-realtime",
-            "vaultwares-studio",
-            "vaultwares-template",
-            "vaultwares-themes",
-            "vaultwares-website",
-            "weekly-menu",
-            "windows-customizer"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 65
-          },
-          "day": "2026-04-18",
-          "entries": 65,
-          "projects": [
-            "traffic-pulse",
-            "vault-central",
-            "vault-flows",
-            "vaultwares-adk",
-            "vaultwares-cli",
-            "vaultwares-dispatch",
-            "vaultwares-docs",
-            "vaultwares-glass",
-            "vaultwares-pipelines",
-            "vaultwares-realtime",
-            "vaultwares-studio",
-            "vaultwares-template",
-            "vaultwares-themes",
-            "vaultwares-website",
-            "weekly-menu"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 44
-          },
-          "day": "2026-04-19",
-          "entries": 44,
-          "projects": [
-            "automation-suite",
-            "debrid-media-manager",
-            "vault-central",
-            "vault-explorer",
-            "vault-flows",
-            "vault-player",
-            "vaultwares-cli",
-            "vaultwares-glass",
-            "vaultwares-pipelines",
-            "vaultwares-realtime",
-            "vaultwares-studio",
-            "vaultwares-template",
-            "vaultwares-themes",
-            "vaultwares-website",
-            "windows-customizer"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 62
-          },
-          "day": "2026-04-20",
-          "entries": 62,
-          "projects": [
-            "no-more-groceries",
-            "vault-central",
-            "vault-flows",
-            "vaultwares-decompile",
-            "vaultwares-glass",
-            "vaultwares-pipelines",
-            "vaultwares-studio"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 27
-          },
-          "day": "2026-04-21",
-          "entries": 27,
-          "projects": [
-            "no-more-groceries",
-            "vault-central",
-            "vault-flows",
-            "vaultwares-adk",
-            "vaultwares-pipelines",
-            "vaultwares-realtime",
-            "vaultwares-studio"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 25
-          },
-          "day": "2026-04-22",
-          "entries": 25,
-          "projects": [
-            "automation-suite",
-            "cultural-rhythm",
-            "traffic-pulse",
-            "vault-central",
-            "vaultwares-adk",
-            "vaultwares-dispatch",
-            "vaultwares-pipelines",
-            "vaultwares-realtime",
-            "vaultwares-studio",
-            "vaultwares-website"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 25
-          },
-          "day": "2026-04-23",
-          "entries": 25,
-          "projects": [
-            "link-sharing",
-            "prelanding-page",
-            "qa-automation",
-            "tube-sites",
-            "vault-central",
-            "vault-flows",
-            "vaultwares-pipelines",
-            "vaultwares-realtime",
-            "vaultwares-studio"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 100
-          },
-          "day": "2026-04-24",
-          "entries": 100,
-          "projects": [
-            "agentic-markup",
-            "automation-suite",
-            "cultural-rhythm",
-            "no-more-groceries",
-            "traffic-pulse",
-            "vault-central",
-            "vault-explorer",
-            "vault-flows",
-            "vault-player",
-            "vaultwares-adk",
-            "vaultwares-cli",
-            "vaultwares-decompile",
-            "vaultwares-dispatch",
-            "vaultwares-docs",
-            "vaultwares-glass",
-            "vaultwares-identity-manager",
-            "vaultwares-media-processing",
-            "vaultwares-pipelines",
-            "vaultwares-realtime",
-            "vaultwares-studio",
-            "vaultwares-template",
-            "vaultwares-themes",
-            "vaultwares-website",
-            "video-depth-anything",
-            "weekly-menu",
-            "windows-customizer"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 12
-          },
-          "day": "2026-04-25",
-          "entries": 12,
-          "projects": [
-            "vault-central",
-            "vault-flows",
-            "vaultwares-pipelines",
-            "vaultwares-realtime"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 41
-          },
-          "day": "2026-04-26",
-          "entries": 41,
-          "projects": [
-            "automation-suite",
-            "no-more-groceries",
-            "vault-central",
-            "vault-explorer",
-            "vault-flows",
-            "vault-player",
-            "vaultwares-cli",
-            "vaultwares-pipelines",
-            "vaultwares-realtime",
-            "vaultwares-studio",
-            "vaultwares-template",
-            "vaultwares-themes"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 9
-          },
-          "day": "2026-04-27",
-          "entries": 9,
-          "projects": [
-            "vault-central",
-            "vault-flows",
-            "vaultwares-pipelines",
-            "vaultwares-realtime"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 56,
-            "verification": 4,
-            "commands": 3,
-            "plan": 2,
-            "general": 2,
-            "handoff": 3
-          },
-          "day": "2026-04-28",
-          "entries": 70,
-          "projects": [
-            "agent-ledger",
-            "General Tasks",
-            "no-more-groceries",
-            "vault-central",
-            "vault-explorer",
-            "vault-flows",
-            "vault-player",
-            "vaultwares-adk",
-            "vaultwares-cli",
-            "vaultwares-pipelines",
-            "vaultwares-realtime",
-            "vaultwares-themes"
-          ]
-        },
-        {
-          "kinds": {
-            "handoff": 1,
-            "plan": 7,
-            "code-change": 30
-          },
-          "day": "2026-04-29",
-          "entries": 38,
-          "projects": [
-            "General Tasks",
-            "no-more-groceries",
-            "prelanding-page",
-            "qa-automation",
-            "tube-sites",
-            "vault-central",
-            "vault-explorer",
-            "vault-flows",
-            "vaultwares-adk",
-            "vaultwares-cli",
-            "vaultwares-realtime"
-          ]
-        },
-        {
-          "kinds": {
-            "plan": 1,
-            "code-change": 11
-          },
-          "day": "2026-04-30",
-          "entries": 12,
-          "projects": [
-            "General Tasks",
-            "vault-central",
-            "vault-explorer",
-            "vault-flows",
-            "vaultwares-glass",
-            "vaultwares-realtime"
-          ]
-        },
-        {
-          "kinds": {
-            "plan": 4,
-            "commands": 1,
-            "verification": 3,
-            "code-change": 69
-          },
-          "day": "2026-05-01",
-          "entries": 77,
-          "projects": [
-            "automation-suite",
-            "cultural-rhythm",
-            "gallery-scraper",
-            "General Tasks",
-            "no-more-groceries",
-            "prelanding-page",
-            "qa-automation",
-            "traffic-pulse",
-            "tube-sites",
-            "vault-central",
-            "vault-explorer",
-            "vault-flows",
-            "vault-player",
-            "vaultwares-adk",
-            "vaultwares-cli",
-            "vaultwares-decompile",
-            "vaultwares-dispatch",
-            "vaultwares-identity-manager",
-            "vaultwares-mcp",
-            "vaultwares-pipelines",
-            "vaultwares-realtime",
-            "vaultwares-studio",
-            "vaultwares-template",
-            "vaultwares-themes",
-            "vaultwares-website",
-            "weekly-menu",
-            "windows-customizer"
-          ]
-        },
-        {
-          "kinds": {
-            "plan": 1,
-            "code-change": 19
-          },
-          "day": "2026-05-02",
-          "entries": 20,
-          "projects": [
-            "tube-sites",
-            "vault-central"
-          ]
-        },
-        {
-          "kinds": {
-            "plan": 1,
-            "commands": 4,
-            "code-change": 58
-          },
-          "day": "2026-05-03",
-          "entries": 63,
-          "projects": [
-            "vault-central",
-            "vault-flows",
-            "vaultwares-media-processing",
-            "vaultwares-themes"
-          ]
-        },
-        {
-          "kinds": {
-            "plan": 7,
-            "commands": 3,
-            "verification": 1,
-            "code-change": 23
-          },
-          "day": "2026-05-04",
-          "entries": 34,
-          "projects": [
-            "agent-ledger",
-            "General Tasks",
-            "link-sharing",
-            "prelanding-page",
-            "qa-automation",
-            "scripts",
-            "tube-sites",
-            "vault-central",
-            "vault-flows",
-            "vaultwares-docs",
-            "vaultwares-media-processing"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 19,
-            "verification": 3,
-            "commands": 2,
-            "plan": 4,
-            "general": 4
-          },
-          "day": "2026-05-05",
-          "entries": 32,
-          "projects": [
-            "agent-ledger",
-            "General Tasks",
-            "link-sharing",
-            "vaultwares-adk",
-            "vaultwares-realtime",
-            "vaultwares-studio",
-            "vaultwares-themes"
-          ]
-        },
-        {
-          "kinds": {
-            "handoff": 1,
-            "verification": 2,
-            "code-change": 11
-          },
-          "day": "2026-05-06",
-          "entries": 14,
-          "projects": [
-            "agent-ledger",
-            "General Tasks",
-            "scripts",
-            "tube-sites",
-            "vaultwares-mcp"
-          ]
-        },
-        {
-          "kinds": {
-            "general": 10,
-            "code-change": 16
-          },
-          "day": "2026-05-07",
-          "entries": 26,
-          "projects": [
-            "agent-ledger",
-            "General Tasks",
-            "tube-sites",
-            "vaultwares-mcp"
-          ]
-        },
-        {
-          "kinds": {
-            "plan": 4,
-            "verification": 7,
-            "code-change": 10
-          },
-          "day": "2026-05-08",
-          "entries": 21,
-          "projects": [
-            "General Tasks",
-            "link-sharing",
-            "prelanding-page",
-            "tailnet-sync",
-            "tube-sites",
-            "vault-central",
-            "vaultwares-docs",
-            "vaultwares-realtime"
-          ]
-        },
-        {
-          "kinds": {
-            "plan": 5,
-            "verification": 4,
-            "code-change": 14
-          },
-          "day": "2026-05-09",
-          "entries": 23,
-          "projects": [
-            "cultural-rhythm",
-            "General Tasks",
-            "tailnet-sync",
-            "tube-sites",
-            "vault-central",
-            "vault-player",
-            "vaultwares-realtime",
-            "vaultwares-themes"
-          ]
-        },
-        {
-          "kinds": {
-            "general": 6,
-            "plan": 3,
-            "verification": 12,
-            "code-change": 9
-          },
-          "day": "2026-05-10",
-          "entries": 30,
-          "projects": [
-            "cultural-rhythm",
-            "General Tasks",
-            "link-sharing",
-            "tailnet-sync",
-            "tube-sites",
-            "vault-central",
-            "vaultwares-docs",
-            "vaultwares-realtime"
-          ]
-        },
-        {
-          "kinds": {
-            "general": 1,
-            "verification": 3,
-            "code-change": 24
-          },
-          "day": "2026-05-11",
-          "entries": 28,
-          "projects": [
-            "agent-ledger",
-            "vault-central",
-            "vaultwares-docs",
-            "vaultwares-mcp",
-            "vaultwares-media-processing",
-            "vaultwares-realtime",
-            "vaultwares-studio"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 18,
-            "verification": 9,
-            "commands": 1,
-            "plan": 1,
-            "general": 1,
-            "handoff": 1
-          },
-          "day": "2026-05-12",
-          "entries": 31,
-          "projects": [
-            "General Tasks",
-            "tube-sites",
-            "vaultwares-adk",
-            "vaultwares-docs",
-            "vaultwares-pipelines",
-            "vaultwares-studio",
-            "vaultwares-themes"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 10,
-            "verification": 1,
-            "commands": 2,
-            "general": 1,
-            "handoff": 2
-          },
-          "day": "2026-05-13",
-          "entries": 16,
-          "projects": [
-            "General Tasks",
-            "OneTrainer",
-            "vault-flows",
-            "vaultwares-mcp",
-            "vaultwares-pipelines"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 20,
-            "verification": 5,
-            "commands": 2,
-            "plan": 2,
-            "general": 2,
-            "handoff": 5
-          },
-          "day": "2026-05-14",
-          "entries": 36,
-          "projects": [
-            "General Tasks",
-            "OneTrainer",
-            "qa-automation",
-            "tube-sites",
-            "vault-flows",
-            "vaultwares-adk",
-            "vaultwares-docs",
-            "vaultwares-media-processing",
-            "vaultwares-pipelines",
-            "vaultwares-realtime"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 13,
-            "verification": 3,
-            "commands": 2,
-            "plan": 2,
-            "general": 2,
-            "handoff": 5
-          },
-          "day": "2026-05-15",
-          "entries": 27,
-          "projects": [
-            "General Tasks",
-            "qa-automation",
-            "tube-sites",
-            "vault-flows",
-            "vaultwares-docs",
-            "vaultwares-media-processing",
-            "vaultwares-pipelines",
-            "vaultwares-realtime"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 13,
-            "verification": 1,
-            "commands": 6,
-            "plan": 7,
-            "general": 2,
-            "handoff": 1
-          },
-          "day": "2026-05-16",
-          "entries": 30,
-          "projects": [
-            "automation-suite",
-            "General Tasks",
-            "link-sharing",
-            "tube-sites",
-            "vaultwares-adk",
-            "vaultwares-docs"
-          ]
-        },
-        {
-          "kinds": {
-            "general": 1,
-            "plan": 3,
-            "verification": 2,
-            "code-change": 3
-          },
-          "day": "2026-05-17",
-          "entries": 9,
-          "projects": [
-            "agent-ledger",
-            "General Tasks",
-            "link-sharing",
-            "tube-sites"
-          ]
-        },
-        {
-          "kinds": {
-            "plan": 17,
-            "commands": 5,
-            "verification": 10,
-            "code-change": 15
-          },
-          "day": "2026-05-18",
-          "entries": 47,
-          "projects": [
-            "agent-ledger",
-            "General Tasks",
-            "link-sharing",
-            "tube-sites",
-            "vault-explorer",
-            "vaultwares-adk",
-            "vaultwares-pipelines",
-            "vaultwares-realtime",
-            "vaultwares-themes",
-            "vaultwares-website",
-            "vw-jira-sync"
-          ]
-        },
-        {
-          "kinds": {
-            "verification": 3,
-            "code-change": 4
-          },
-          "day": "2026-05-19",
-          "entries": 7,
-          "projects": [
-            "General Tasks",
-            "link-sharing",
-            "vault-explorer",
-            "vaultwares-realtime"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 34,
-            "verification": 6,
-            "commands": 2,
-            "plan": 9,
-            "general": 2,
-            "handoff": 2
-          },
-          "day": "2026-05-20",
-          "entries": 55,
-          "projects": [
-            "agent-ledger",
-            "General Tasks",
-            "tube-sites",
-            "vault-explorer",
-            "vaultwares-adk",
-            "vaultwares-docs",
-            "vaultwares-media-processing",
-            "vaultwares-realtime",
-            "vaultwares-themes",
-            "vw-jira-sync"
-          ]
-        },
-        {
-          "kinds": {
-            "handoff": 2,
-            "plan": 4,
-            "verification": 5,
-            "code-change": 15
-          },
-          "day": "2026-05-21",
-          "entries": 26,
-          "projects": [
-            "General Tasks",
-            "vault-explorer",
-            "vaultwares-docs",
-            "vaultwares-themes",
-            "vw-jira-sync"
-          ]
-        },
-        {
-          "kinds": {
-            "plan": 1,
-            "verification": 2,
-            "code-change": 18
-          },
-          "day": "2026-05-22",
-          "entries": 21,
-          "projects": [
-            "General Tasks",
-            "tube-sites",
-            "vault-explorer",
-            "vault-flows",
-            "vaultwares-toolkit",
-            "vaultwares-website",
-            "vw-jira-sync"
-          ]
-        },
-        {
-          "kinds": {
-            "plan": 1,
-            "commands": 1,
-            "verification": 6,
-            "code-change": 35
-          },
-          "day": "2026-05-23",
-          "entries": 43,
-          "projects": [
-            "agent-ledger",
-            "vault-explorer",
-            "vault-flows",
-            "vaultwares-docs",
-            "vaultwares-themes",
-            "vaultwares-toolkit",
-            "vaultwares-website"
-          ]
-        },
-        {
-          "kinds": {
-            "code-change": 23,
-            "verification": 8,
-            "commands": 1,
-            "plan": 4,
-            "handoff": 1
-          },
-          "day": "2026-05-24",
-          "entries": 37,
-          "projects": [
-            "prelanding-page",
-            "qa-automation",
-            "vault-explorer",
-            "vault-flows",
-            "vaultwares-docs"
-          ]
-        },
-        {
-          "kinds": {
-            "plan": 3,
-            "commands": 1,
-            "verification": 4,
-            "code-change": 27
-          },
-          "day": "2026-05-25",
-          "entries": 35,
-          "projects": [
-            "agent-ledger",
-            "deploy-flow-unification",
-            "qa-automation",
-            "tube-sites",
-            "vault-explorer",
-            "vault-flows",
-            "vaultwares-docs"
-          ]
-        },
-        {
-          "kinds": {
-            "general": 1,
-            "verification": 2,
-            "code-change": 10
-          },
-          "day": "2026-05-26",
-          "entries": 13,
-          "projects": [
-            "agent-ledger",
-            "python-scripts",
-            "vault-explorer",
-            "vaultwares-docs"
-          ]
-        }
-      ],
-      "projects": [
-        {
-          "project": "vault-flows",
-          "lineRaw": {
-            "insertions": 210919,
-            "deletions": 22790,
-            "files": 682
-          },
-          "lastDay": "2026-05-25",
-          "lineClean": {
-            "insertions": 210919,
-            "deletions": 22790,
-            "files": 682
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 151,
-          "flagCounts": {},
-          "kinds": {
-            "general": 1,
-            "code-change": 150
-          },
-          "recent": [
-            "Backfill: commit ed096a3 (2026-05-01T17:52:35-04:00) - Automated commit: Updated files in vault-flows | files=2 +2 -2",
-            "Implemented first local node-editor phase: added IMPROVEMENTS product note for guest preset/catalog and authenticated personal workspace direction; added workflow graph schema/n...",
-            "Backfill: uncommitted working tree changes present (post-cutoff 2026-05-03T02:58:39.3259575Z)."
-          ],
-          "firstDay": "2026-04-06"
-        },
-        {
-          "project": "vault-explorer",
-          "lineRaw": {
-            "insertions": 9674,
-            "deletions": 615,
-            "files": 51
-          },
-          "lastDay": "2026-05-26",
-          "lineClean": {
-            "insertions": 9674,
-            "deletions": 615,
-            "files": 51
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 145,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 102,
-            "verification": 14,
-            "commands": 1,
-            "plan": 27,
-            "general": 1
-          },
-          "recent": [
-            "Backfill: commit 7980252 (2026-04-30T23:48:36Z) - 🎨 Palette: Added empty states for vault and search | files=2 +41 -5",
-            "Backfill: commit 658d2c1 (2026-04-30T21:20:44-04:00) - Merge pull request #3 from p-potvin/palette-empty-states-17860079820416914185 | files=0 +41 -5",
-            "Backfill: commit 5376b0e (2026-05-01T17:52:33-04:00) - Automated commit: Updated files in vault-explorer | files=1 +1 -1"
-          ],
-          "firstDay": "2026-04-19"
-        },
-        {
-          "project": "vaultwares-pipelines",
-          "lineRaw": {
-            "insertions": 46481,
-            "deletions": 24271,
-            "files": 1071
-          },
-          "lastDay": "2026-05-18",
-          "lineClean": {
-            "insertions": 46481,
-            "deletions": 24271,
-            "files": 1071
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 145,
-          "flagCounts": {},
-          "kinds": {
-            "general": 1,
-            "verification": 3,
-            "code-change": 141
-          },
-          "recent": [
-            "Backfill: commit e75c1a6 (2026-05-01T19:45:09Z) - fix: export AgentRegistry from __init__.py in vaultwares_agentciation submodule | files=0 +0 -0",
-            "Backfill: commit d68766d (2026-05-01T15:47:49-04:00) - Merge pull request #31 from p-potvin/sentinel/api-key-bcrypt-dos-39214615738646647 | files=0 +38 -8",
-            "Backfill: commit 465e017 (2026-05-01T17:52:41-04:00) - Automated commit: Updated files in vaultwares-pipelines | files=2 +2 -2"
-          ],
-          "firstDay": "2026-04-04"
-        },
-        {
-          "project": "vaultwares-media-processing",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-20",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 127,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 113,
-            "verification": 3,
-            "commands": 4,
-            "plan": 6,
-            "general": 1
-          },
-          "recent": [
-            "Added responsive layout logic using QSplitter, a collapse toggle for the Activity Monitor, updated checkboxes to have tick symbols and better border radius, lowered padding, and...",
-            "Suppressed NeMo, one_logger warning spams using LogStream regex filters in vault_gui.py. Added VRAM loading progress logs to step 0 in core.py. Suppressed subprocess monitoring ...",
-            "Added in-place line overwriting for progress callbacks in vault_gui.py Monitor using QTextCursor, restoring clean CLI-style single-line progress tracking while allowing normal l..."
-          ],
-          "firstDay": "2026-03-14"
-        },
-        {
-          "project": "vaultwares-realtime",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-20",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 122,
-          "flagCounts": {},
-          "kinds": {
-            "general": 4,
-            "plan": 3,
-            "verification": 9,
-            "code-change": 106
-          },
-          "recent": [
-            "Confirmed agent ledger execution successfully broken out of loop.",
-            "Broke out of execution loop and correctly finalizing task.",
-            "Set default engine to Parakeet (parakeet-tdt-0.6b-v3) and verified direct VRAM transcription. Updated UI to include engine selection and removed unused disk I/O code paths."
-          ],
-          "firstDay": "2026-03-26"
-        },
-        {
-          "project": "vault-central",
-          "lineRaw": {
-            "insertions": 47046,
-            "deletions": 27115,
-            "files": 954
-          },
-          "lastDay": "2026-05-11",
-          "lineClean": {
-            "insertions": 45301,
-            "deletions": 25828,
-            "files": 654
-          },
-          "lineExcluded": {
-            "insertions": 1745,
-            "deletions": 1287,
-            "files": 300
-          },
-          "entries": 112,
-          "flagCounts": {},
-          "kinds": {
-            "plan": 3,
-            "verification": 3,
-            "code-change": 106
-          },
-          "recent": [
-            "Fixed Firefox media decoding error NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006) on video dashboard hover. The error occurred because Firefox cannot seek to currentTime = 0 on We...",
-            "Fixed another edge case where videoRef.current.load() was executing prematurely on mount because wasHovering initialized to false. By tracking hover history with a ref, .load() ...",
-            "Added aggressive debug logging across PreviewThumb, vault-client, background, and vault-runtime layers to trace missing WebM blobs. Repaired a missing early-return statement in ..."
-          ],
-          "firstDay": "2026-03-13"
-        },
-        {
-          "project": "General Tasks",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-22",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 104,
-          "flagCounts": {
-            "interview_started": 1,
-            "router": 1,
-            "long_running_tasks": 1,
-            "resume_used": 1,
-            "credit_pipeline_used": 1
-          },
-          "kinds": {
-            "code-change": 27,
-            "verification": 28,
-            "commands": 12,
-            "plan": 7,
-            "general": 16,
-            "handoff": 14
-          },
-          "recent": [
-            "Implemented phase-one VaultWares player integration in tube-site (provider capability maps, owned player shell, editable provider profile JSON settings, HLS/topvid runtime detec...",
-            "Cleared the restored GA tags from the live tube-site WordPress installs, installed Node on the VPS, deployed prelanding-page as a Node service behind nginx at prelanding.prom-ki...",
-            "After DNS cutover, issued live Lets Encrypt certs for vaultwares.ca, www.vaultwares.ca, and docs.vaultwares.ca; updated the prelanding runtime to use the provided JWT secret plu..."
-          ],
-          "firstDay": "2026-04-28"
-        },
-        {
-          "project": "tube-sites",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-25",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 92,
-          "flagCounts": {
-            "issue": 2,
-            "scope": 1,
-            "commit": 1,
-            "estimated_output_tokens": 2
-          },
-          "kinds": {
-            "code-change": 67,
-            "verification": 12,
-            "commands": 3,
-            "plan": 7,
-            "general": 2,
-            "handoff": 1
-          },
-          "recent": [
-            "Fixed two live Prom King issues. Bulk scrape no longer returns an immediate zero-result success when the selected source is dry: \run_bulk_fetch() now falls back across the suppo...",
-            "Fixed additional live tube-site issues. For \fullxxx-video, corrected settings persistence so google_analytics_code and mailchimp_code now save, and added backward-compatible Mai...",
-            "Deployed the updated promking-tube and fullxxx-video plugin directories to the self-hosted VPS, taking timestamped on-server backups first, replacing both live plugin trees, fix..."
-          ],
-          "firstDay": "2026-04-23"
-        },
-        {
-          "project": "vaultwares-docs",
-          "lineRaw": {
-            "insertions": 14282,
-            "deletions": 324,
-            "files": 66
-          },
-          "lastDay": "2026-05-26",
-          "lineClean": {
-            "insertions": 14282,
-            "deletions": 324,
-            "files": 66
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 57,
-          "flagCounts": {
-            "interview_started": 2,
-            "router": 2,
-            "long_running_tasks": 2,
-            "resume_used": 2,
-            "credit_pipeline_used": 1
-          },
-          "kinds": {
-            "code-change": 40,
-            "verification": 7,
-            "commands": 1,
-            "plan": 4,
-            "general": 3,
-            "handoff": 2
-          },
-          "recent": [
-            "Fixed domain-specific Nginx configuration for docs.vaultwares.ca to point to the new build directory (/var/www/vaultwares-docs/dist) instead of the old Mintlify path (/srv/vault...",
-            "Implemented full VaultWares branding and design system. Added 10 preset themes from vault-themes, persistent localStorage state for themes/mode/language, responsive Sidebar/Navb...",
-            "Overhauled documentation UI with custom MDX engine, resolved layout/build issues, and expanded VaultThemes library with 25+ community-favorite presets. Synchronized global instr..."
-          ],
-          "firstDay": "2026-04-18"
-        },
-        {
-          "project": "no-more-groceries",
-          "lineRaw": {
-            "insertions": 40661,
-            "deletions": 11941,
-            "files": 260
-          },
-          "lastDay": "2026-05-01",
-          "lineClean": {
-            "insertions": 40661,
-            "deletions": 11941,
-            "files": 260
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 56,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 56
-          },
-          "recent": [
-            "Added local 7-day disk caching to Apify integrations in store-search.js and product-search.js to avoid excessive token costs.",
-            "Backfill: commit 8670186 (2026-04-29T17:58:41-04:00) - feat: integrate Apify for product and store searches with caching | files=5 +715 -83",
-            "Backfill: commit 88c3476 (2026-05-01T17:52:22-04:00) - Automated commit: Updated files in no-more-groceries | files=2 +2 -2"
-          ],
-          "firstDay": "2026-04-20"
-        },
-        {
-          "project": "vaultwares-studio",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-12",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 55,
-          "flagCounts": {},
-          "kinds": {
-            "commands": 1,
-            "verification": 1,
-            "code-change": 53
-          },
-          "recent": [
-            "Fixed AttributeError crashes in gui_app.py style helpers. VaultTheme has no 'border_subtle', 'danger', or 'accent_hover' attributes. Replaced: border_subtle->border (in card_sty...",
-            "Fixed VS Code not auto-activating .venv in integrated terminals. Root cause: .vscode/settings.json had no Python interpreter configuration. Added python.defaultInterpreterPath p...",
-            "Fixed all 21 Pylance errors in gui_app.py. Changes: (1) Switched qfluentwidgets grouped import to individual lines with # type: ignore[assignment] on FluentWindow, PrimaryPushBu..."
-          ],
-          "firstDay": "2026-04-10"
-        },
-        {
-          "project": "vaultwares-adk",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-20",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 53,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 42,
-            "verification": 1,
-            "plan": 7,
-            "general": 1,
-            "handoff": 2
-          },
-          "recent": [
-            "Backfill: commit ae703d0 (2026-04-30T20:18:15-04:00) - Please provide the diff or list of changes you would like summarized. | files=2 +30 -5",
-            "Created implementation plan for making vaultwares-agentciation the source of truth for reusable custom agents, skills, tools, protocols, and agent/IDE integrations. Inspected re...",
-            "Implemented vaultwares-agentciation as the workspace source of truth for reusable agent infrastructure. Restructured docs into docs/ with root pointer stubs and added CONTEXT.md..."
-          ],
-          "firstDay": "2026-04-05"
-        },
-        {
-          "project": "vaultwares-website",
-          "lineRaw": {
-            "insertions": 25150,
-            "deletions": 9188,
-            "files": 381
-          },
-          "lastDay": "2026-05-23",
-          "lineClean": {
-            "insertions": 25150,
-            "deletions": 9188,
-            "files": 381
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 50,
-          "flagCounts": {},
-          "kinds": {
-            "verification": 2,
-            "code-change": 48
-          },
-          "recent": [
-            "Backfill: commit 0e69908 (2026-04-24T18:01:02-04:00) - feat: apply full VaultWares branding and centralized documentation | files=5 +88 -12",
-            "Backfill: commit f83ce1f (2026-05-01T16:34:50-04:00) - chore: remove unused files and associated references | files=3 +2 -3",
-            "Backfill: commit 55b66eb (2026-05-01T17:52:45-04:00) - Automated commit: Updated files in vaultwares-website | files=1 +1 -1"
-          ],
-          "firstDay": "2026-03-11"
-        },
-        {
-          "project": "vaultwares-cli",
-          "lineRaw": {
-            "insertions": 106400,
-            "deletions": 9678,
-            "files": 397
-          },
-          "lastDay": "2026-05-01",
-          "lineClean": {
-            "insertions": 106400,
-            "deletions": 9678,
-            "files": 397
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 47,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 29,
-            "verification": 3,
-            "commands": 3,
-            "plan": 8,
-            "handoff": 4
-          },
-          "recent": [
-            "Backfill: commit 3d1a0ad (2026-04-30T20:17:43-04:00) - refactor: modularize codebase by extracting CLI logic into dedicated runtime and TUI crates while implementing PQC securit...",
-            "Backfill: commit 2aecc69 (2026-04-30T20:18:27-04:00) - feat: implement TUI session picker, FHE-based token aggregation, and ML-KEM-768 key encapsulation | files=6 +239 -2",
-            "Backfill: commit aabba39 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-cli | files=2 +342 -5"
-          ],
-          "firstDay": "2026-04-14"
-        },
-        {
-          "project": "vaultwares-themes",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-23",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 39,
-          "flagCounts": {},
-          "kinds": {
-            "plan": 1,
-            "verification": 1,
-            "code-change": 37
-          },
-          "recent": [
-            "Implemented vault-themes cleanup plan: reorganized brand/assets/theme-manager/components/docs/examples layout; converted generated brand guide into maintainable docs plus lightw...",
-            "Removed vaultwares-agentciation from vault-themes so both source-of-truth repos stay independent. Removed the newly added vaultwares-agentciation submodule and .gitmodules file ...",
-            "Created PQC_PROTOCOL_IMPLEMENTATION.md in main vault-themes repository to document the post-quantum AEAD streaming protocol and referenced it in AGENTS.md. Wrote integration tes..."
-          ],
-          "firstDay": "2026-03-27"
-        },
-        {
-          "project": "agent-ledger",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-26",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 33,
-          "flagCounts": {
-            "resume_used": 1,
-            "append_events": 1,
-            "dedup_checked": 1,
-            "long_running_tasks": 1
-          },
-          "kinds": {
-            "handoff": 1,
-            "commands": 5,
-            "verification": 4,
-            "code-change": 23
-          },
-          "recent": [
-            "Added safe Vercel auth diagnostics to the GitHub Actions deploy workflow and trimmed CR/LF from VERCEL_TOKEN before invoking Vercel CLI. New step runs \u000bercel whoami so we can te...",
-            "Fixed exit code 128 issue: added 'exit 0' to render-agent-ledger.ps1 to explicitly return success code. Root cause: script completed successfully but didn't explicitly exit, cau...",
-            "Fixed exit code 128 and demonstrated proper VaultWares code change workflow: branched from main, committed with Lore protocol trailers, pushed to GitHub, created PR for human re..."
-          ],
-          "firstDay": "2026-04-28"
-        },
-        {
-          "project": "vaultwares-template",
-          "lineRaw": {
-            "insertions": 10766,
-            "deletions": 4444,
-            "files": 178
-          },
-          "lastDay": "2026-05-01",
-          "lineClean": {
-            "insertions": 10766,
-            "deletions": 4444,
-            "files": 178
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 31,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 31
-          },
-          "recent": [
-            "Backfill: commit 62e749a (2026-04-25T20:54:40-04:00) - chore: resolve merge conflicts in README.md and add local TLS baseline | files=1 +384 -1",
-            "Backfill: commit 568e12e (2026-04-26T03:04:00-04:00) - docs: add local TLS baseline for future API consumers (#4) | files=0 +1 -1",
-            "Backfill: commit c1d59a8 (2026-05-01T17:52:43-04:00) - Automated commit: Updated files in vaultwares-template | files=1 +1 -1"
-          ],
-          "firstDay": "2026-03-27"
-        },
-        {
-          "project": "vault-player",
-          "lineRaw": {
-            "insertions": 7724,
-            "deletions": 719,
-            "files": 109
-          },
-          "lastDay": "2026-05-09",
-          "lineClean": {
-            "insertions": 7724,
-            "deletions": 719,
-            "files": 109
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 28,
-          "flagCounts": {},
-          "kinds": {
-            "plan": 2,
-            "code-change": 26
-          },
-          "recent": [
-            "Implemented VaultContainerReader, VaultContainerWriter, encapsulate_standard_format, and export_standard_format in components/container.py to support fully streaming ML-KEM-768 ...",
-            "Added Phase 6 (Extensive Redesign & Branding) and updated Phase 4 to be Skipped in TODO.md. Started Phase 5 Web Layer implementation priority 1 by scaffolding components/vault_w...",
-            "Added VaultWebContainerWriter to vault_web_layer.js to support file encryption for the web extension, gated by env var ENABLE_WEB_ENCRYPTION. Completed phase 5 priority 1."
-          ],
-          "firstDay": "2026-04-17"
-        },
-        {
-          "project": "vaultwares-glass",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-04-30",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 28,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 28
-          },
-          "recent": [
-            "Backfill: commit 51287a0 (2026-04-24T07:24:42-04:00) - chore: remove tailwindcss plugin from vite preview configuration | files=1 +1 -2",
-            "Backfill: commit 84c902f (2026-04-30T00:29:22Z) - 🎨 Palette: Enhance form accessibility and button focus states | files=2 +20 -11",
-            "Backfill: commit b2f2866 (2026-04-30T19:17:46-04:00) - Merge pull request #4 from p-potvin/palette-ux-improvements-4342842582149570691 | files=0 +20 -11"
-          ],
-          "firstDay": "2026-03-15"
-        },
-        {
-          "project": "traffic-pulse",
-          "lineRaw": {
-            "insertions": 701037,
-            "deletions": 5887,
-            "files": 1856
-          },
-          "lastDay": "2026-05-01",
-          "lineClean": {
-            "insertions": 10334,
-            "deletions": 2101,
-            "files": 96
-          },
-          "lineExcluded": {
-            "insertions": 690703,
-            "deletions": 3786,
-            "files": 1760
-          },
-          "entries": 27,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 27
-          },
-          "recent": [
-            "Backfill: commit 3ee22d2 (2026-04-24T11:06:38-04:00) - feat: add environment variables for Mapbox configuration and API base URL | files=1 +3 -0",
-            "Backfill: commit d017539 (2026-04-24T14:32:03-04:00) - Merge branch 'copilot/worktree-2026-04-15T21-20-09' | files=0 +0 -0",
-            "Backfill: commit 6372673 (2026-05-01T17:52:26-04:00) - Automated commit: Updated files in traffic-pulse | files=2 +1 -2"
-          ],
-          "firstDay": "2026-03-12"
-        },
-        {
-          "project": "link-sharing",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-19",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 26,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 12,
-            "verification": 5,
-            "commands": 2,
-            "plan": 5,
-            "general": 2
-          },
-          "recent": [
-            "Started real link-sharing implementation beyond the generic CRUD shell. Added canonical host presets in shared/index.ts with KatFile as the launch-default provider and Rapidgato...",
-            "Implemented the next public routing slice in link-sharing: added a runtime-config API for canonical public URLs, added a quick-create server route that creates a file plus prima...",
-            "Deployed the latest link-sharing slice to the VPS: quick-create route API, runtime-config API, file table full-route visibility, and Quick KatFile Route modal. Re-synced dist as..."
-          ],
-          "firstDay": "2026-04-23"
-        },
-        {
-          "project": "vaultwares-dispatch",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-01",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 26,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 26
-          },
-          "recent": [
-            "Backfill: commit 07abdad (2026-04-24T07:24:18-04:00) - merge | files=3 +49 -0",
-            "Backfill: commit 758acf8 (2026-04-24T14:26:53-04:00) - Merge remote-tracking branch 'origin/jules-14558258200679654617-cbb13ad6' | files=0 +0 -0",
-            "Backfill: commit 1d2fe2b (2026-05-01T17:52:18-04:00) - Automated commit: Updated files in dispatch-wares | files=1 +0 -1"
-          ],
-          "firstDay": "2026-03-14"
-        },
-        {
-          "project": "cultural-rhythm",
-          "lineRaw": {
-            "insertions": 8872,
-            "deletions": 412,
-            "files": 84
-          },
-          "lastDay": "2026-05-10",
-          "lineClean": {
-            "insertions": 8872,
-            "deletions": 412,
-            "files": 84
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 24,
-          "flagCounts": {},
-          "kinds": {
-            "plan": 1,
-            "code-change": 23
-          },
-          "recent": [
-            "Backfill: commit ee41dce (2026-05-01T17:52:14-04:00) - Automated commit: Updated files in cultural-rhythm | files=1 +0 -1",
-            "Analyzed cultural-rhythm for UI upgrades. Planned injection of vault-themes submodule CSS, theme picker, dark/light switch, and documentation standardizations.",
-            "Added ThemePicker component supporting 10 vault-themes. Added dark/light mode toggle. Injected branding to index.html. Standardized AGENTS.md. Build succeeds."
-          ],
-          "firstDay": "2026-03-13"
-        },
-        {
-          "project": "windows-customizer",
-          "lineRaw": {
-            "insertions": 63486,
-            "deletions": 17517,
-            "files": 277
-          },
-          "lastDay": "2026-05-01",
-          "lineClean": {
-            "insertions": 33776,
-            "deletions": 565,
-            "files": 158
-          },
-          "lineExcluded": {
-            "insertions": 29710,
-            "deletions": 16952,
-            "files": 119
-          },
-          "entries": 22,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 22
-          },
-          "recent": [
-            "Backfill: commit 30d30d4 (2026-04-24T14:20:39-04:00) - Merge branch 'main' of https://github.com/p-potvin/windows-customizer | files=0 +12 -12",
-            "Backfill: commit 3ebcf37 (2026-04-24T14:20:48-04:00) - update sub refs | files=1 +1 -1",
-            "Backfill: commit 1e55523 (2026-05-01T17:52:49-04:00) - Automated commit: Updated files in windows-customizer | files=1 +1 -1"
-          ],
-          "firstDay": "2026-03-14"
-        },
-        {
-          "project": "qa-automation",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-25",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 22,
-          "flagCounts": {
-            "google_result": 1,
-            "qa_crawl_depth": 1,
-            "search_visibility": 2,
-            "proxy_mode": 1,
-            "smoke_session_count": 1,
-            "headed": 1,
-            "run_type": 1,
-            "browser_rotation": 2,
-            "geo": 1,
-            "no_vw_state_in_chat": 1,
-            "secrets_not_printed": 1,
-            "safe_search": 1,
-            "session_count_full": 1,
-            "secrets_redacted": 1,
-            "proxy_chain": 1,
-            "runs": 1,
-            "vw_state_logged_only": 1,
-            "dns_origin_mismatch": 1,
-            "firefox_profile": 1,
-            "proxy_provider": 2,
-            "ip_rotation_mandatory": 2,
-            "keywords": 1,
-            "rotation_mandatory": 1,
-            "max_serp_pages": 1,
-            "proxy": 1,
-            "engines": 2,
-            "addons": 1,
-            "provider": 1,
-            "deploy_assumption_fix": 1,
-            "chat_vw_state_output": 1,
-            "vw_state_resume_id": 1,
-            "live_crawl_launched": 1,
-            "qa_allow_category_404": 1,
-            "ip_rotation": 1,
-            "ignore_https_errors_auto": 1,
-            "seo": 1,
-            "live_crawl_found_category_404s": 1,
-            "same_domain_only": 1,
-            "safesearch_default": 1,
-            "own_domain_stealth_only": 4,
-            "max_pages": 1,
-            "scenario_count": 1
-          },
-          "kinds": {
-            "general": 2,
-            "plan": 1,
-            "verification": 4,
-            "code-change": 15
-          },
-          "recent": [
-            "Reworked the qa-automation Playwright suite for the Prom King monetization roadmap: replaced obsolete PropPaths specs with configurable funnel/legal/redirect/postback/age-gate/o...",
-            "Backfill: commit fc4216c (2026-05-01T17:55:31-04:00) - Automated commit: Updated files in qa-automation | files=21 +2097 -529",
-            "Backfill: commit fe2c299 (2026-05-04T18:34:30-04:00) - Automated commit: Updated files in qa-automation | files=2 +54 -4"
-          ],
-          "firstDay": "2026-04-23"
-        },
-        {
-          "project": "automation-suite",
-          "lineRaw": {
-            "insertions": 133005,
-            "deletions": 62548,
-            "files": 760
-          },
-          "lastDay": "2026-05-16",
-          "lineClean": {
-            "insertions": 1282,
-            "deletions": 24,
-            "files": 54
-          },
-          "lineExcluded": {
-            "insertions": 131723,
-            "deletions": 62524,
-            "files": 706
-          },
-          "entries": 17,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 17
-          },
-          "recent": [
-            "Backfill: commit 2b2ec43 (2026-04-24T10:43:06-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=1 +1 -1",
-            "Backfill: commit 25683c2 (2026-04-25T21:05:22-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=2 +2 -2",
-            "Backfill: commit 7be29d9 (2026-05-01T17:52:12-04:00) - Automated commit: Updated files in automation-suite | files=2 +2 -2"
-          ],
-          "firstDay": "2026-03-11"
-        },
-        {
-          "project": "vw-jira-sync",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-22",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 16,
-          "flagCounts": {},
-          "kinds": {
-            "plan": 1,
-            "commands": 1,
-            "verification": 6,
-            "code-change": 8
-          },
-          "recent": [
-            "Refactored scheduled-distribute-secrets.ps1 to fetch GH_TOKEN and JIRA_TOKEN from greencloud-vps via Tailscale SSH at runtime. No tokens stored on local disk. GH_TOKEN read from...",
-            "Removed JIRA token exposure from GitHub infrastructure. (1) Deleted JIRA_BASE_URL, JIRA_EMAIL, JIRA_TOKEN Actions secrets from all 41 repos (123 total) — tokens no longer stored...",
-            "Removed jira-sync.yml caller workflows from all 41 tracked repos (41/41 deleted). Added remove_caller_workflows.py. Webhook path on VPS is now the sole active Jira sync mechanis..."
-          ],
-          "firstDay": "2026-05-18"
-        },
-        {
-          "project": "agentic-markup",
-          "lineRaw": {
-            "insertions": 18978,
-            "deletions": 661,
-            "files": 110
-          },
-          "lastDay": "2026-04-24",
-          "lineClean": {
-            "insertions": 18978,
-            "deletions": 661,
-            "files": 110
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 15,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 15
-          },
-          "recent": [
-            "Backfill: commit d8bdb4f (2026-04-17T09:20:29-04:00) - Merge pull request #4 from p-potvin/fix-prototype-pollution-parse-attributes-7302579990965293704 | files=1 +24 -1",
-            "Backfill: commit 070ab3f (2026-04-17T18:11:12-04:00) - Automated commit: Updated files in agentic-markup | files=12 +376 -13",
-            "Backfill: commit 5184c31 (2026-04-24T07:21:10-04:00) - feat: implement content script observer and extension popup UI | files=6 +102 -93"
-          ],
-          "firstDay": "2026-04-10"
-        },
-        {
-          "project": "vaultwares-decompile",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-01",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 14,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 14
-          },
-          "recent": [
-            "Backfill: commit 396cfda (2026-04-24T05:22:31-04:00) - Merge pull request #2 from p-potvin/copilot/update-vault-themes-branding | files=0 +373 -82",
-            "Backfill: commit 1481c89 (2026-04-24T08:10:29-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +50 -0",
-            "Backfill: commit efb1628 (2026-05-01T17:52:16-04:00) - Automated commit: Updated files in deconstructed-website-a-la-mode | files=2 +0 -2"
-          ],
-          "firstDay": "2026-04-20"
-        },
-        {
-          "project": "tailnet-sync",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-10",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 14,
-          "flagCounts": {},
-          "kinds": {
-            "general": 1,
-            "plan": 8,
-            "code-change": 5
-          },
-          "recent": [
-            "User approved optimization phase. Preparing implementation plan to migrate Wander.Network from REST to gRPC with Protobufs and streaming chunked file transfers.",
-            "Optimization plan approved. Executing gRPC migration. Scaffolding task list.",
-            "Optimization complete. Replaced REST controllers with gRPC SyncGrpcService. Updated SyncEngine to use Protobuf messages and stream file chunks over System.IO.Pipelines/FileStrea..."
-          ],
-          "firstDay": "2026-05-08"
-        },
-        {
-          "project": "vaultwares-mcp",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-13",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 13,
-          "flagCounts": {},
-          "kinds": {
-            "plan": 1,
-            "commands": 2,
-            "code-change": 10
-          },
-          "recent": [
-            "Added MCPB desktop-extension support by creating root manifest.json (MCPB manifest spec v0.3) and .mcpbignore to keep bundles small. Installed @anthropic-ai/mcpb, validated mani...",
-            "Adjusted MCPB manifest to launch via python -m vaultwares_fastmcp (entry_point vaultwares_fastmcp/__main__.py) instead of server.py, then revalidated and repacked vaultwares-fas...",
-            "Switched MCPB manifest to start stdio server via python /server.py (instead of python -m vaultwares_fastmcp) per expected entrypoint usage; revalidated and repacked vaultwares-f..."
-          ],
-          "firstDay": "2026-05-01"
-        },
-        {
-          "project": "weekly-menu",
-          "lineRaw": {
-            "insertions": 7107,
-            "deletions": 228,
-            "files": 74
-          },
-          "lastDay": "2026-05-01",
-          "lineClean": {
-            "insertions": 7107,
-            "deletions": 228,
-            "files": 74
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 12,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 12
-          },
-          "recent": [
-            "Backfill: commit 695ea5b (2026-04-24T08:10:34-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -1",
-            "Backfill: commit 1ef5048 (2026-04-24T14:20:15-04:00) - update sub refs | files=1 +1 -1",
-            "Backfill: commit 6bebcc8 (2026-05-01T17:52:47-04:00) - Automated commit: Updated files in weekly-menu | files=1 +1 -1"
-          ],
-          "firstDay": "2026-04-07"
-        },
-        {
-          "project": "prelanding-page",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-24",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 11,
-          "flagCounts": {
-            "geo": 1,
-            "seo": 1,
-            "build_blocked_by_dependency_links": 1,
-            "llms_txt": 1
-          },
-          "kinds": {
-            "code-change": 11
-          },
-          "recent": [
-            "Backfill: commit 31fcbb5 (2026-05-01T17:55:28-04:00) - Automated commit: Updated files in prelanding-page | files=39 +4809 -157",
-            "Backfill: commit 3dfcdd2 (2026-05-04T18:34:27-04:00) - Automated commit: Updated files in prelanding-page | files=13 +386 -93",
-            "Reworked the prelanding page hero and body into a stronger prelander flow in src/App.jsx: added traffic-intent selection, dynamic primary recommendation, stronger offer hierarch..."
-          ],
-          "firstDay": "2026-04-23"
-        },
-        {
-          "project": "scripts",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-06",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 10,
-          "flagCounts": {},
-          "kinds": {
-            "commands": 1,
-            "code-change": 9
-          },
-          "recent": [
-            "Fixed offline-mode crash for FluxTransformer2DModel. flux1-dev-fp8-e4m3fn.safetensors is not in diffusers' built-in filename map so it fell back to fetching black-forest-labs/FL...",
-            "Fixed RAM destruction from enable_model_cpu_offload(). Added _get_device() auto-detection (CUDA vs CPU). Switched default offload to enable_sequential_cpu_offload() which stream...",
-            "Added 4 features to frame_extractor.py/run_extractor.py: (1) max_frames=5 param in extract_keyframes() — passes -vframes N to ffmpeg; (2) max_frames=5 added to process_video() a..."
-          ],
-          "firstDay": "2026-05-04"
-        },
-        {
-          "project": "vaultwares-identity-manager",
-          "lineRaw": {
-            "insertions": 10623,
-            "deletions": 221,
-            "files": 87
-          },
-          "lastDay": "2026-05-01",
-          "lineClean": {
-            "insertions": 10623,
-            "deletions": 221,
-            "files": 87
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 9,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 9
-          },
-          "recent": [
-            "Backfill: commit 60af0ad (2026-04-17T18:12:30-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +11 -5",
-            "Backfill: commit e86a397 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +49 -0",
-            "Backfill: commit 672a338 (2026-05-01T17:52:39-04:00) - Automated commit: Updated files in vaultwares-identity-manager | files=1 +0 -1"
-          ],
-          "firstDay": "2026-03-30"
-        },
-        {
-          "project": "auto-backup",
-          "lineRaw": {
-            "insertions": 5321,
-            "deletions": 61,
-            "files": 88
-          },
-          "lastDay": "2026-04-17",
-          "lineClean": {
-            "insertions": 5321,
-            "deletions": 61,
-            "files": 88
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 7,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 7
-          },
-          "recent": [
-            "Backfill: commit ce8ea8f (2026-04-01T19:06:09-04:00) - Merge pull request #1 from p-potvin/copilot/add-windows-native-app | files=0 +2115 -0",
-            "Backfill: commit 5fe1d29 (2026-04-13T15:57:51-04:00) - push local changes | files=12 +192 -56",
-            "Backfill: commit 99d81da (2026-04-17T18:11:13-04:00) - Automated commit: Updated files in auto-backup | files=1 +11 -5"
-          ],
-          "firstDay": "2026-04-01"
-        },
-        {
-          "project": "gallery-scraper",
-          "lineRaw": {
-            "insertions": 2343,
-            "deletions": 138,
-            "files": 23
-          },
-          "lastDay": "2026-05-01",
-          "lineClean": {
-            "insertions": 2343,
-            "deletions": 138,
-            "files": 23
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 6,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 6
-          },
-          "recent": [
-            "Backfill: commit 18801b3 (2026-04-07T13:19:16-04:00) - Added configs, icons, published add-on | files=18 +480 -74",
-            "Backfill: commit 2ff69ca (2026-04-08T15:26:04-04:00) - Add initial project setup with package.json and webpack configuration | files=8 +1542 -5",
-            "Backfill: commit d55eb37 (2026-05-01T17:52:19-04:00) - Automated commit: Updated files in gallery-scraper | files=1 +0 -0"
-          ],
-          "firstDay": "2026-04-07"
-        },
-        {
-          "project": "debrid-media-manager",
-          "lineRaw": {
-            "insertions": 1438,
-            "deletions": 7,
-            "files": 34
-          },
-          "lastDay": "2026-04-19",
-          "lineClean": {
-            "insertions": 1438,
-            "deletions": 7,
-            "files": 34
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 6,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 6
-          },
-          "recent": [
-            "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
-            "Backfill: commit 55ec199 (2026-04-17T18:11:24-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +11 -5",
-            "Backfill: commit c6ce8b5 (2026-04-18T22:32:35-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +1 -2"
-          ],
-          "firstDay": "2026-04-01"
-        },
-        {
-          "project": "event-horizon",
-          "lineRaw": {
-            "insertions": 908,
-            "deletions": 256,
-            "files": 24
-          },
-          "lastDay": "2026-04-17",
-          "lineClean": {
-            "insertions": 908,
-            "deletions": 256,
-            "files": 24
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 5,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 5
-          },
-          "recent": [
-            "Backfill: commit 057c516 (2026-03-16T08:48:25-04:00) - added ray tracing support | files=3 +197 -246",
-            "Backfill: commit 36d8d48 (2026-04-01T18:04:56-04:00) - Added agent skills in .copilot folder | files=11 +157 -0",
-            "Backfill: commit c580205 (2026-04-17T18:12:12-04:00) - Automated commit: Updated files in event-horizon | files=3 +15 -10"
-          ],
-          "firstDay": "2026-03-16"
-        },
-        {
-          "project": "vaultwares-toolkit",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-23",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 3,
-          "flagCounts": {},
-          "kinds": {
-            "plan": 1,
-            "code-change": 2
-          },
-          "recent": [
-            "Answered vault-port/Columbo location and productization audit. Canonical lives at vaultwares-adk/columbo.py (738 lines, inherits ExtrovertAgent + Redis) + columbo.agent.md (82-l...",
-            "Moved Columbo from vaultwares-adk into vaultwares-toolkit on main. Refactor: dropped ExtrovertAgent base class + all Redis dependencies (imports, init params, CLI flags). Replac...",
-            "Branch cleanup + HITL constraint. vaultwares-adk: switched off feat/columbo-agent to main, force-deleted feat/columbo-agent locally (was at ff19c0c). adk main is 26 commits behi..."
-          ],
-          "firstDay": "2026-05-22"
-        },
-        {
-          "project": "OneTrainer",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-14",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 2,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 2
-          },
-          "recent": [
-            "Created BigLove-zt3-LoRA-12GB.json training preset optimized for RTX 3060 12GB VRAM + 32GB RAM. Key settings vs 8GB preset: layer_offload_fraction 0.6->0.2, transformer.train fa...",
-            "Fixed config.json corruption in d:\\OneTrainer\\config.json. Previous two multi_replace_string_in_file passes had introduced: truncated boolean values ('tru' instead of 'true,'), ..."
-          ],
-          "firstDay": "2026-05-13"
-        },
-        {
-          "project": "python-scripts",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-26",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 2,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 2
-          },
-          "recent": [
-            "Added Ollama gemma4 integration to dynamically adjust MIDI scales based on typing and clicking speed in input_to_midi.py",
-            "Installed dependencies in .venv, added benchmark code to track Ollama response time, and ran script in background."
-          ],
-          "firstDay": "2026-05-26"
-        },
-        {
-          "project": "deploy-flow-unification",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lastDay": "2026-05-25",
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 1,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 1
-          },
-          "recent": [
-            "Standardized deployment flow docs + removed GitHub Actions deploys on main pushes across repos. Merged PRs: p-potvin/vaultwares-docs#18 (merge 9ac6a90), p-potvin/vaultwares-webs..."
-          ],
-          "firstDay": "2026-05-25"
-        },
-        {
-          "project": "video-depth-anything",
-          "lineRaw": {
-            "insertions": 1,
-            "deletions": 2,
-            "files": 1
-          },
-          "lastDay": "2026-04-24",
-          "lineClean": {
-            "insertions": 1,
-            "deletions": 2,
-            "files": 1
-          },
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "entries": 1,
-          "flagCounts": {},
-          "kinds": {
-            "code-change": 1
-          },
-          "recent": [
-            "Backfill: commit aa85ca7 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -2"
-          ],
-          "firstDay": "2026-04-24"
-        }
-      ]
-    },
-    "range": {
-      "start": "2026-03-11",
-      "end": "2026-05-26"
-    },
-    "_minCreatedAtUtc": "2026-03-11T06:02:52.0000000Z",
-    "_maxCreatedAtUtc": "2026-05-26T08:05:19.0000000Z",
-    "schemaVersion": 1,
-    "hourSeries": [
-      {
-        "hour": 0,
-        "count": 87
-      },
-      {
-        "hour": 1,
-        "count": 56
-      },
-      {
-        "hour": 2,
-        "count": 79
-      },
-      {
-        "hour": 3,
-        "count": 69
-      },
-      {
-        "hour": 4,
-        "count": 67
-      },
-      {
-        "hour": 5,
-        "count": 53
-      },
-      {
-        "hour": 6,
-        "count": 58
-      },
-      {
-        "hour": 7,
-        "count": 57
-      },
-      {
-        "hour": 8,
-        "count": 63
-      },
-      {
-        "hour": 9,
-        "count": 72
-      },
-      {
-        "hour": 10,
-        "count": 60
-      },
-      {
-        "hour": 11,
-        "count": 75
-      },
-      {
-        "hour": 12,
-        "count": 71
-      },
-      {
-        "hour": 13,
-        "count": 75
-      },
-      {
-        "hour": 14,
-        "count": 68
-      },
-      {
-        "hour": 15,
-        "count": 83
-      },
-      {
-        "hour": 16,
-        "count": 74
-      },
-      {
-        "hour": 17,
-        "count": 57
-      },
-      {
-        "hour": 18,
-        "count": 78
-      },
-      {
-        "hour": 19,
-        "count": 106
-      },
-      {
-        "hour": 20,
-        "count": 105
-      },
-      {
-        "hour": 21,
-        "count": 104
-      },
-      {
-        "hour": 22,
-        "count": 92
-      },
-      {
-        "hour": 23,
-        "count": 77
-      }
-    ],
-    "totals": {
-      "events": 1786,
-      "commitEventsWithStats": 679,
-      "uniqueCommitsRecomputed": 679,
-      "activeDays": 74,
-      "projects": 44
-    },
     "lineStats": {
+      "raw": {
+        "insertions": 1472222,
+        "deletions": 199023,
+        "files": 7567
+      },
       "clean": {
-        "deletions": 114474,
         "insertions": 618341,
+        "deletions": 114474,
         "files": 4682
       },
       "excluded": {
-        "deletions": 84549,
         "insertions": 853881,
+        "deletions": 84549,
         "files": 2885
-      },
-      "raw": {
-        "deletions": 199023,
-        "insertions": 1472222,
-        "files": 7567
       }
     },
-    "agentData": {
-      "models": [
-        "unknown",
-        365,
-        "gpt-5.2",
-        66,
-        "Gemini 3.1 Pro (Preview)",
-        17,
-        "claude-sonnet-4-6",
-        16,
-        "Claude Haiku",
-        14,
-        "Gemini 3 Flash",
-        14,
-        "gpt-5",
-        9,
-        "o3-mini",
-        9,
-        "Gemini 3.5 Flash (Medium)",
-        9,
-        "Gemini 2.0 Flash",
-        7,
-        "claude-opus-4-7",
-        6,
-        "gemini-2.5-pro",
-        6,
-        "Claude Sonnet 4.6",
-        4,
-        "claude-sonnet-4-5",
-        4,
-        "Gemini 3.1 Pro (Low)",
-        4,
-        "Gemini 3.1 Pro",
-        3,
-        "Gemini 3.1 Pro (High)",
-        3,
-        "Gemini-1.5-Pro",
-        3,
-        "Claude Sonnet 4.6 (Thinking)",
-        3,
-        "gemini-2.0-pro-exp",
-        2,
-        "gemini",
-        2,
-        "claude-opus-4-5",
-        2,
-        "claude-sonnet-4.6",
-        2,
-        "src/normalization.js",
-        1,
-        "Gemini 2.0 Pro",
-        1,
-        "gpt-4o",
-        1,
-        "Claude Opus 4.6",
-        1,
-        "fullxxx-video/includes/video-fetcher.php",
-        1,
-        "gemini-3-flash",
-        1
-      ],
-      "mcpServers": [
-        "github-mcp-server-actions_list",
-        1,
-        "github",
-        1
-      ],
-      "actors": [
-        "AI Agent",
-        382,
-        "Antigravity",
-        68,
-        "codex",
-        47,
-        "GitHub Copilot",
-        33,
-        "gpt-5.2-codex",
-        17,
-        "claude-sonnet-4-6",
-        10,
-        "Claude Code (Opus 4.7)",
-        5,
-        "gpt-5.2",
-        4,
-        "Claude Sonnet 4.6",
-        3,
-        "claude-code",
-        2,
-        "Claude Opus 4.7",
-        1,
-        "preload.js",
-        1,
-        "Copilot",
-        1,
-        "claude-sonnet-4-5",
-        1,
-        "Fix: Re-add spankbang to allowlist",
-        1
-      ],
-      "totalEvents": 576,
-      "daySeries": [
-        {
-          "models": [
-            "Claude Haiku"
-          ],
-          "day": "2026-05-05",
-          "count": 1,
-          "actors": [
-            "AI Agent"
-          ]
-        },
-        {
-          "models": [
-            "claude-sonnet-4.6",
-            "unknown"
-          ],
-          "day": "2026-05-06",
-          "count": 14,
-          "actors": [
-            "AI Agent",
-            "Codex",
-            "GitHub Copilot"
-          ]
-        },
-        {
-          "models": [
-            "unknown"
-          ],
-          "day": "2026-05-07",
-          "count": 26,
-          "actors": [
-            "AI Agent"
-          ]
-        },
-        {
-          "models": [
-            "Claude Haiku",
-            "unknown"
-          ],
-          "day": "2026-05-08",
-          "count": 21,
-          "actors": [
-            "AI Agent"
-          ]
-        },
-        {
-          "models": [
-            "Claude Haiku",
-            "unknown"
-          ],
-          "day": "2026-05-09",
-          "count": 23,
-          "actors": [
-            "AI Agent"
-          ]
-        },
-        {
-          "models": [
-            "claude-sonnet-4-6",
-            "Gemini 3 Flash",
-            "unknown"
-          ],
-          "day": "2026-05-10",
-          "count": 30,
-          "actors": [
-            "AI Agent",
-            "Antigravity",
-            "claude-sonnet-4-6"
-          ]
-        },
-        {
-          "models": [
-            "Claude Haiku",
-            "Claude Sonnet 4.6",
-            "claude-sonnet-4-6",
-            "claude-sonnet-4.6",
-            "Gemini 2.0 Pro",
-            "Gemini 3.1 Pro (Preview)",
-            "gemini-2.0-pro-exp",
-            "o3-mini",
-            "unknown"
-          ],
-          "day": "2026-05-11",
-          "count": 28,
-          "actors": [
-            "AI Agent",
-            "Antigravity",
-            "Copilot",
-            "GitHub Copilot"
-          ]
-        },
-        {
-          "models": [
-            "Claude Sonnet 4.6",
-            "Claude Sonnet 4.6 (Thinking)",
-            "Gemini 3.1 Pro (Preview)",
-            "gpt-5",
-            "gpt-5.2",
-            "unknown"
-          ],
-          "day": "2026-05-12",
-          "count": 31,
-          "actors": [
-            "AI Agent",
-            "Antigravity",
-            "codex",
-            "GitHub Copilot"
-          ]
-        },
-        {
-          "models": [
-            "claude-sonnet-4-5",
-            "claude-sonnet-4-6",
-            "Gemini 3 Flash",
-            "gpt-5.2"
-          ],
-          "day": "2026-05-13",
-          "count": 16,
-          "actors": [
-            "Antigravity",
-            "Claude Sonnet 4.6",
-            "claude-sonnet-4-6",
-            "codex",
-            "GitHub Copilot",
-            "gpt-5.2"
-          ]
-        },
-        {
-          "models": [
-            "Claude Haiku",
-            "Claude Sonnet 4.6",
-            "claude-sonnet-4-6",
-            "Gemini 2.0 Flash",
-            "Gemini 3.1 Pro (Low)",
-            "gemini-2.5-pro",
-            "gemini-3-flash",
-            "gpt-5.2",
-            "o3-mini",
-            "unknown"
-          ],
-          "day": "2026-05-14",
-          "count": 36,
-          "actors": [
-            "AI Agent",
-            "Antigravity",
-            "Claude Sonnet 4.6",
-            "claude-sonnet-4-6",
-            "codex",
-            "GitHub Copilot"
-          ]
-        },
-        {
-          "models": [
-            "Claude Haiku",
-            "claude-sonnet-4-6",
-            "Gemini 2.0 Flash",
-            "Gemini 3.1 Pro (High)",
-            "Gemini 3.1 Pro (Low)",
-            "gpt-5.2",
-            "o3-mini"
-          ],
-          "day": "2026-05-15",
-          "count": 27,
-          "actors": [
-            "AI Agent",
-            "Antigravity",
-            "Claude Sonnet 4.6",
-            "codex",
-            "GitHub Copilot",
-            "gpt-5.2-codex"
-          ]
-        },
-        {
-          "models": [
-            "Claude Opus 4.6",
-            "claude-opus-4-7",
-            "fullxxx-video/includes/video-fetcher.php",
-            "Gemini 3 Flash",
-            "Gemini 3.1 Pro",
-            "Gemini 3.1 Pro (High)",
-            "gpt-4o",
-            "gpt-5",
-            "GPT-5",
-            "gpt-5.2",
-            "unknown"
-          ],
-          "day": "2026-05-16",
-          "count": 30,
-          "actors": [
-            "AI Agent",
-            "Antigravity",
-            "Claude Opus 4.7",
-            "Codex",
-            "Fix: Re-add spankbang to allowlist",
-            "gpt-5.2-codex"
-          ]
-        },
-        {
-          "models": [
-            "Gemini 3 Flash",
-            "Gemini 3.1 Pro",
-            "unknown"
-          ],
-          "day": "2026-05-17",
-          "count": 9,
-          "actors": [
-            "AI Agent",
-            "Antigravity"
-          ]
-        },
-        {
-          "models": [
-            "Claude Haiku",
-            "claude-opus-4-7",
-            "gemini",
-            "Gemini 3 Flash",
-            "Gemini-1.5-Pro",
-            "gemini-2.5-pro",
-            "unknown"
-          ],
-          "day": "2026-05-18",
-          "count": 47,
-          "actors": [
-            "AI Agent",
-            "Antigravity",
-            "Claude Code (Opus 4.7)"
-          ]
-        },
-        {
-          "models": [
-            "Claude Haiku",
-            "Gemini 3 Flash",
-            "gemini-1.5-pro",
-            "unknown"
-          ],
-          "day": "2026-05-19",
-          "count": 7,
-          "actors": [
-            "AI Agent",
-            "Antigravity"
-          ]
-        },
-        {
-          "models": [
-            "Claude Haiku",
-            "claude-opus-4-5",
-            "claude-sonnet-4-5",
-            "Gemini 3.1 Pro (Low)",
-            "Gemini 3.5 Flash (Medium)",
-            "gpt-5.2",
-            "unknown"
-          ],
-          "day": "2026-05-20",
-          "count": 55,
-          "actors": [
-            "AI Agent",
-            "Antigravity",
-            "claude-code",
-            "claude-sonnet-4-5",
-            "codex"
-          ]
-        },
-        {
-          "models": [
-            "unknown"
-          ],
-          "day": "2026-05-21",
-          "count": 26,
-          "actors": [
-            "AI Agent"
-          ]
-        },
-        {
-          "models": [
-            "gpt-5.2",
-            "unknown"
-          ],
-          "day": "2026-05-22",
-          "count": 21,
-          "actors": [
-            "AI Agent"
-          ]
-        },
-        {
-          "models": [
-            "unknown"
-          ],
-          "day": "2026-05-23",
-          "count": 43,
-          "actors": [
-            "AI Agent"
-          ]
-        },
-        {
-          "models": [
-            "GPT-5",
-            "GPT-5.2",
-            "src/normalization.js",
-            "unknown"
-          ],
-          "day": "2026-05-24",
-          "count": 37,
-          "actors": [
-            "AI Agent",
-            "preload.js"
-          ]
-        },
-        {
-          "models": [
-            "GPT-5.2",
-            "gpt-5.2",
-            "unknown"
-          ],
-          "day": "2026-05-25",
-          "count": 35,
-          "actors": [
-            "AI Agent"
-          ]
-        },
-        {
-          "models": [
-            "gpt-5.2",
-            "unknown"
-          ],
-          "day": "2026-05-26",
-          "count": 13,
-          "actors": [
-            "AI Agent"
-          ]
-        }
-      ],
-      "tools": [
-        "functions.shell_command",
-        61,
-        "run_command",
-        34,
-        "functions.apply_patch",
-        29,
-        "write_to_file",
-        23,
-        "view_file",
-        22,
-        "replace_file_content",
-        16,
-        "PowerShell",
-        16,
-        "functions.update_plan",
-        13,
-        "apply_patch",
-        12,
-        "multi_replace_file_content",
-        11,
-        "shell_command",
-        11,
-        "git",
-        10,
-        "list_dir",
-        10,
-        "Bash",
-        7,
-        "gh",
-        7
-      ]
-    },
-    "dowSeries": [
+    "hourSeries": [
       {
-        "label": "Mon",
-        "count": 306,
-        "dow": 0
+        "hour": 0,
+        "count": 16
       },
       {
-        "label": "Tue",
-        "count": 229,
-        "dow": 1
+        "hour": 1,
+        "count": 9
       },
       {
-        "label": "Wed",
-        "count": 195,
-        "dow": 2
+        "hour": 2,
+        "count": 11
       },
       {
-        "label": "Thu",
-        "count": 171,
-        "dow": 3
+        "hour": 3,
+        "count": 15
       },
       {
-        "label": "Fri",
-        "count": 397,
-        "dow": 4
+        "hour": 4,
+        "count": 11
       },
       {
-        "label": "Sat",
-        "count": 223,
-        "dow": 5
+        "hour": 5,
+        "count": 14
       },
       {
-        "label": "Sun",
-        "count": 265,
-        "dow": 6
+        "hour": 6,
+        "count": 10
+      },
+      {
+        "hour": 7,
+        "count": 13
+      },
+      {
+        "hour": 8,
+        "count": 15
+      },
+      {
+        "hour": 9,
+        "count": 10
+      },
+      {
+        "hour": 10,
+        "count": 23
+      },
+      {
+        "hour": 11,
+        "count": 17
+      },
+      {
+        "hour": 12,
+        "count": 16
+      },
+      {
+        "hour": 13,
+        "count": 18
+      },
+      {
+        "hour": 14,
+        "count": 15
+      },
+      {
+        "hour": 15,
+        "count": 24
+      },
+      {
+        "hour": 16,
+        "count": 27
+      },
+      {
+        "hour": 17,
+        "count": 20
+      },
+      {
+        "hour": 18,
+        "count": 26
+      },
+      {
+        "hour": 19,
+        "count": 31
+      },
+      {
+        "hour": 20,
+        "count": 29
+      },
+      {
+        "hour": 21,
+        "count": 25
+      },
+      {
+        "hour": 22,
+        "count": 19
+      },
+      {
+        "hour": 23,
+        "count": 23
       }
     ],
-    "generatedAtLocal": "2026-05-26 00:09",
+    "_minCreatedAtUtc": "2026-03-11T06:02:52.0000000Z",
     "exclusions": {
       "notes": [
         "Line stats are recomputed from git commits referenced by Backfill events.",
