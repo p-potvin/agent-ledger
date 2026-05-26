@@ -1,0 +1,4 @@
+node_modules/
+dist/
+# JSON data files are generated at build time, not committed
+public/data/*.json

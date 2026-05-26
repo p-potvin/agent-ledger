@@ -75,11 +75,11 @@
     },
     {
       "canonical": "tube-sites",
-      "aliases": ["tube-site", "promking-tube", "Prom-King\\tube-sites", "Prom-King/tube-sites", "Prom-King tube-sites", "Prom-King\\\\tube-sites"],
+      "aliases": ["tube-site", "promking-tube", "Prom-King\\tube-sites", "Prom-King/tube-sites", "Prom-King tube-sites", "Prom-King\\\\tube-sites", "prom-king.xyz", "fullxxx.video", "prom-king/fullxxx-video-and-qa-automation", "prom-king/fullxxx-webhook-deploy-qa"],
       "renamedAt": "2026-05-17",
       "previousRemote": "Prom-King/tube-site",
       "newRemote": "Prom-King/tube-sites",
-      "notes": "Business folder. Includes namespace-prefixed variants from agent input."
+      "notes": "Business folder. Includes namespace-prefixed variants and fullxxx.video domains from agent input."
     },
     {
       "canonical": "vaultwares-themes",
@@ -112,8 +112,8 @@
     },
     {
       "canonical": "qa-automation",
-      "aliases": ["Prom-King/qa-automation", "Prom-King/fullxxx-video-and-qa-automation", "Prom-King/fullxxx-webhook-deploy-qa"],
-      "notes": "Namespace-prefixed variants from agent input."
+      "aliases": ["Prom-King/qa-automation"],
+      "notes": "Namespace-prefixed variant from agent input. fullxxx variants moved to tube-sites."
     },
     {
       "canonical": "prelanding-page",
@@ -132,18 +132,23 @@
     },
     {
       "canonical": "vaultwares-docs",
-      "aliases": ["tmp-app", "vaultwares-docs / vw-jira-sync"],
-      "notes": "Package.json placeholder + multi-project slug from agent input."
+      "aliases": ["tmp-app"],
+      "notes": "Package.json placeholder from agent input. vw-jira-sync split out as its own project."
+    },
+    {
+      "canonical": "vw-jira-sync",
+      "aliases": ["vaultwares-docs / vw-jira-sync", "General Tasks / vw-jira-sync"],
+      "notes": "Split out from vaultwares-docs and General Tasks — vw-jira-sync is its own canonical project."
     },
     {
       "canonical": "General Tasks",
-      "aliases": ["General Tasks (workspace)", "General Tasks / vw-jira-sync", "Workspace Git Sync", "VaultWares protocols", "Prom King monetization projects", "business workspace", "business", "business tube sites", "business WordPress tube sites", "Test", "VaultWares Secrets", "vaultwares-secrets", "vaultwares-console"],
+      "aliases": ["General Tasks (workspace)", "Workspace Git Sync", "VaultWares protocols", "Prom King monetization projects", "business workspace", "business", "business tube sites", "business WordPress tube sites", "Test", "VaultWares Secrets", "vaultwares-secrets", "vaultwares-console"],
       "notes": "Junk meta-names from agent input bucketed into General Tasks."
     },
     {
       "canonical": "no-more-groceries",
       "aliases": ["No More Groceries"],
       "notes": "Case variant from agent input."
-    },
+    }
   ]
 }

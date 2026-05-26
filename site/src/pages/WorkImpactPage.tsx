@@ -1,8 +1,16 @@
 import { useMemo, useRef, useState } from 'react';
 import { Card } from '../components/Card';
 import { LangToggle } from '../components/LangToggle';
-import { useWorkImpactData, useAliasData, type AliasMap } from '../useData';
+import { Led } from '../components/Led';
+import { ActivityPulse } from '../components/ActivityPulse';
+import { TopProjectsVelocity } from '../components/TopProjectsVelocity';
+import { CommitChurnSparkline } from '../components/CommitChurnSparkline';
+import { Activity24 } from '../components/Activity24';
+import { useWorkImpactData } from '../useData';
 import { I18N, useLang, type Lang } from '../i18n';
+import { IconCalendar, IconActivity, IconBarChart, IconFolder } from '../icons';
+import { IconChevronRight, IconFileText } from '../icons';
+import { IconGitCommit } from '../icons';
 import type { DaySeries, ProjectSeries } from '../types';
 
 /* ---- helpers ---- */
@@ -123,15 +131,13 @@ function Heatmap({
       Math.round((end.getTime() - alignedStart.getTime()) / (24 * 3600 * 1000)) + 1;
     const byDay = new Map(daySeries.map((d) => [d.day, d]));
     const counts = daySeries.map((d) => d.entries || 0);
-    const sorted = [...counts].sort((a, b) => a - b);
-    const q1 = quantile(sorted, 0.25);
-    const q2 = quantile(sorted, 0.5);
-    const q3 = quantile(sorted, 0.75);
+    const max = Math.max(1, ...counts);
     const levelFn = (c: number) => {
       if (c <= 0) return 0;
-      if (c <= q1) return 1;
-      if (c <= q2) return 2;
-      if (c <= q3) return 3;
+      const ratio = Math.log10(c + 1) / Math.log10(max + 1);
+      if (ratio < 0.25) return 1;
+      if (ratio < 0.50) return 2;
+      if (ratio < 0.75) return 3;
       return 4;
     };
     return {
@@ -236,39 +242,32 @@ function Heatmap({
 function ProjectCard({
   p,
   lang,
-  aliases,
 }: {
   p: ProjectSeries;
   lang: Lang;
-  aliases?: AliasMap;
 }) {
   const [open, setOpen] = useState(false);
   const dict = I18N[lang];
   const kinds = p.kinds || {};
   const recent = (p.recent || []).slice(0, 3);
-  const formerNames = aliases?.[p.project];
 
   return (
     <details
       className="border border-[var(--border)] rounded-lg bg-[var(--card)] mb-2"
+      data-project={p.project}
       open={open}
       onToggle={(e) => setOpen((e.target as HTMLDetailsElement).open)}
     >
       <summary className="cursor-pointer px-4 py-3 flex items-center gap-2.5 select-none list-none [&::-webkit-details-marker]:hidden">
-        <span
-          className={`inline-block text-[10px] text-[var(--muted)] transition-transform ${open ? 'rotate-90' : ''}`}
-        >
-          &#9654;
-        </span>
+        <IconChevronRight
+          width={12}
+          height={12}
+          className={`text-[var(--muted)] transition-transform flex-shrink-0 ${open ? 'rotate-90' : ''}`}
+        />
         <span className="flex items-center gap-2 min-w-0">
           <strong className="text-[13px] font-semibold">
             <code>{p.project}</code>
           </strong>
-          {formerNames && formerNames.length > 0 && (
-            <span className="text-[10px] text-[var(--muted)] italic truncate">
-              formerly {formerNames.join(', ')}
-            </span>
-          )}
         </span>
         <span className="ml-auto inline-block px-2 py-0.5 rounded-full bg-[var(--chip)] border border-[var(--v-gold-dim)] text-[11px] text-[var(--accent)] font-bold flex-shrink-0">
           {fmtInt(p.entries || 0)}
@@ -323,7 +322,6 @@ function ProjectCard({
 
 export function WorkImpactPage() {
   const { data, loading, error } = useWorkImpactData();
-  const aliases = useAliasData();
   const [lang, setLang] = useLang();
   const dict = I18N[lang];
 
@@ -473,16 +471,19 @@ export function WorkImpactPage() {
         />
       </section>
 
-      {/* Heatmap */}
-      <section className="mt-5">
-        <Card>
+      {/* Heatmap + chart widgets */}
+      <section className="grid grid-cols-12 gap-3 mt-5">
+        <Card className="col-span-8 max-md:col-span-12">
           <div className="flex items-center justify-between flex-wrap gap-2">
-            <div>
-              <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0">
-                {dict.calendarTitle}
-              </h2>
-              <div className="text-xs text-[var(--muted)]">
-                {dict.calendarHint}
+            <div className="flex items-center gap-2">
+              <IconCalendar width={14} height={14} className="text-[var(--muted)]" />
+              <div>
+                <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0">
+                  {dict.calendarTitle}
+                </h2>
+                <div className="text-xs text-[var(--muted)]">
+                  {dict.calendarHint}
+                </div>
               </div>
             </div>
             <div className="flex gap-2 items-center text-[11.5px] text-[var(--muted)]">
@@ -504,12 +505,31 @@ export function WorkImpactPage() {
             lang={lang}
           />
         </Card>
+        <Card className="col-span-4 max-md:col-span-12">
+          <ActivityPulse days={data.series?.days || []} />
+        </Card>
+        <Card className="col-span-4 max-md:col-span-12">
+          <TopProjectsVelocity
+            projects={projects}
+            onScrollTo={(name) => {
+              const el = document.querySelector(`[data-project="${name}"]`);
+              el?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }}
+          />
+        </Card>
+        <Card className="col-span-4 max-md:col-span-12">
+          <CommitChurnSparkline samples={commitSamples} />
+        </Card>
+        <Card className="col-span-4 max-md:col-span-12">
+          <Activity24 hourSeries={data.hourSeries || []} />
+        </Card>
       </section>
 
       {/* Monthly + Projects + Kinds */}
       <section className="grid grid-cols-12 gap-3 mt-5">
         <Card className="col-span-6 max-md:col-span-12">
-          <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
+          <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2 flex items-center gap-1.5">
+            <IconBarChart width={13} height={13} />
             {dict.monthlyTitle}
           </h2>
           <div className="flex flex-col gap-2">
@@ -524,7 +544,8 @@ export function WorkImpactPage() {
           </div>
         </Card>
         <Card className="col-span-6 max-md:col-span-12">
-          <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
+          <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2 flex items-center gap-1.5">
+            <IconFolder width={13} height={13} />
             {dict.projectsTitle}
           </h2>
           <div className="flex flex-col gap-2">
@@ -616,6 +637,8 @@ export function WorkImpactPage() {
       {/* Project evidence cards */}
       <section className="mt-5">
         <h2 className="text-sm font-bold text-[var(--fg)] m-0 mb-2.5 flex items-center gap-2.5">
+          <Led status="relay" size={6} />
+          <IconFolder width={14} height={14} className="text-[var(--muted)]" />
           <span>{dict.evidenceTitle}</span>
           <span className="flex-1 h-px bg-[var(--border)]" />
         </h2>
@@ -623,7 +646,7 @@ export function WorkImpactPage() {
           {dict.evidenceHint}
         </p>
         {projects.map((p) => (
-          <ProjectCard key={p.project} p={p} lang={lang} aliases={aliases} />
+          <ProjectCard key={p.project} p={p} lang={lang} />
         ))}
       </section>
     </>

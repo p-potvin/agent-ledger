@@ -26,26 +26,6 @@ export function useWorkImpactData() {
   return { data, loading, error };
 }
 
-export type AliasMap = Record<string, string[]>;
-
-export function useAliasData() {
-  const [aliases, setAliases] = useState<AliasMap>({});
-
-  useEffect(() => {
-    fetch('/data/project-aliases.json')
-      .then((r) => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      })
-      .then((json) => setAliases(json ?? {}))
-      .catch(() => {
-        // Alias data is optional — fail silently
-      });
-  }, []);
-
-  return aliases;
-}
-
 export function useChangesData() {
   const [events, setEvents] = useState<ChangesEvent[]>([]);
   const [loading, setLoading] = useState(true);

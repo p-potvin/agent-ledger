@@ -18,13 +18,24 @@ This repo is the append-only ledger for AI-agent activity across local and cloud
 ## Record an event
 
 ```powershell
+# Single kind
 & "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\record-agent-change.ps1" `
   -Project "vault-flows" `
   -Kind "code-change" `
   -Summary "Updated workflow validation and ran node --test." `
   -Commands @("node --test") `
   -Files @("src/validation.js", "test/validation.test.js")
+
+# Multi-kind (comma-separated — counted under both buckets in dashboards)
+& "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\record-agent-change.ps1" `
+  -Project "vault-flows" `
+  -Kind "code-change,verification" `
+  -Summary "Added helper and confirmed tests pass." `
+  -Commands @("node --test") `
+  -Files @("src/helper.js")
 ```
+
+The `kind` field accepts a comma-separated string of canonical values: `plan`, `commands`, `code-change`, `verification`, `handoff`, `general`. Unknown values are accepted but aggregate under `general` in charts. See `vaultwares-docs/docs-content/operations/agent-ledger-schema.mdx` for the full schema.
 
 The script deduplicates matching content, writes an event file, and regenerates both readable ledgers.
 
@@ -58,7 +69,7 @@ After editing `project-aliases.json`, run once to rebuild the cached buckets:
 & "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\update-work-impact.ps1" -FullRebuild
 ```
 
-The renderer adds a `(formerly <alias>, …)` suffix on the most recent entry for each renamed project per page.
+The renderer groups activity under the canonical name. Historical aliases are stored for continuity but not displayed in the UI.
 
 ## Work impact visualization
 
@@ -73,17 +84,7 @@ This writes:
 - `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\WORK_IMPACT.html`
 - `C:\Users\Administrator\Desktop\Github Repos\WORK_IMPACT.html`
 
-## Vercel (protected)
+## Deployment (protected)
 
-This repo includes a minimal Vercel Serverless Function (`api/index.js`) that serves `WORK_IMPACT.html` behind HTTP Basic Auth.
-
-Required Vercel environment variables:
-
-- `WORK_IMPACT_USER`
-- `WORK_IMPACT_PASS`
-
-A GitHub Actions workflow is included at `.github/workflows/deploy-work-impact.yml`. It expects repository secrets:
-
-- `VERCEL_TOKEN`
-- `VERCEL_ORG_ID`
-- `VERCEL_PROJECT_ID`
+This repo is deployed to ledger.vaultwares.ca for internal use only. It serves `WORK_IMPACT.html` and `CHANGES.html` on the tailnet only for historical and statistical purposes.
+**Read DEPLOY.md** to know more details.
