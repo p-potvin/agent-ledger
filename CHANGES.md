@@ -3,7 +3,33 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-26 19:41 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Completely resolved the missing top-row cards, click propagation, manual selection cutoff, and rate-limiting bugs. Refactored hover-card.js to utilize a robust window.premiumHov...</summary>
+<summary><strong>2026-05-26 19:43 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Extended the subtitle lookup and download systems to support remote media streaming URLs, query by media titles, and gracefully cache to temp directories. Programmatically hid N...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 19:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Extended the subtitle lookup and download systems to support remote media streaming URLs, query by media titles, and gracefully cache to temp directories. Programmatically hid Next and Previous player and PiP overlay buttons during streaming modes while preserving their visibility for local file sequences.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\scanner.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\preload.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\player.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 19:41 - vault-explorer</strong> <code>code-change</code> - Completely resolved the missing top-row cards, click propagation, manual selection cutoff, and rate-limiting bugs. Refactored hover-card.js to utilize a robust window.premiumHov...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
