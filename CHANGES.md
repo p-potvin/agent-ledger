@@ -3,6 +3,41 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-27 15:35 - vault-flows</strong> <code>code-change</code> - Step 2 of the feedback plan: inline editable params + per-instance rename + per-instance color override on every canvas node. (1) BaseNode redesigned with two new header afforda...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 15:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Step 2 of the feedback plan: inline editable params + per-instance rename + per-instance color override on every canvas node. (1) BaseNode redesigned with two new header affordances: double-click the label to rename (stored in params._displayName; clearing it resets to default), click the type-color swatch to open a 7-color palette popover (Default/Gold/Violet/Copper/Online/Warning/Alert) that writes to params._color. Both _displayName and _color have underscore prefixes so the runner ignores them. effectiveLabel and effectiveColor fall through to NODE_REGISTRY defaults when the override is empty. The popover closes on outside-click via a window listener. (2) New canvas-specific inline controls in canvas/nodes/inline.tsx â€” InlineField, InlineTextInput, InlineNumberInput, InlineTextArea, InlineSelect, InlineAdvanced (collapsible 'Advanced' chevron). All inputs add the 'nodrag' className so React Flow doesn't start a drag when typing. (3) Updated 5 node renderers to render editable forms inside the card body: InputNode (textarea for value), LLMNode (model + prompt inline; system/temp/max_tokens behind Advanced), ModelCallNode (provider select + model/url + prompt inline; system/temp behind Advanced when provider==ollama; url replaces prompt when provider==http), TransformNode (template textarea), ComfyUIWorkflowNode (workflow_id chip + per-key input controls partitioned PRIMARY=positive_prompt/negative_prompt/prompt/source_image/target_image/reference_image/seed inline, everything else under Advanced; lazy-loads workflow schema via getPipelinesWorkflow when cache misses; inline image picker with upload+thumbnail+change-button matching the side panel's ComfyUIWorkflowInputsEditor pattern). ImageInputNode polished to match the compact inline style. The side-panel NodeParamPanel now reads params._displayName for its header to stay in sync. Architectural note: comfyui_workflow nodes deliberately render only the input_paths contract â€” the underlying 30+ node graph stays opaque, which is the structural nudge toward composition over flat 150-node ComfyUI-style flows. Deployed dist (assets/index-d_wRPBW5.js).
+- Commands:
+  - `npm run build`
+  - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
+- Files:
+  - `vault-flows/src/canvas/nodes/BaseNode.tsx`
+  - `vault-flows/src/canvas/nodes/inline.tsx`
+  - `vault-flows/src/canvas/nodes/InputNode.tsx`
+  - `vault-flows/src/canvas/nodes/LLMNode.tsx`
+  - `vault-flows/src/canvas/nodes/ModelCallNode.tsx`
+  - `vault-flows/src/canvas/nodes/TransformNode.tsx`
+  - `vault-flows/src/canvas/nodes/ComfyUIWorkflowNode.tsx`
+  - `vault-flows/src/canvas/nodes/ImageInputNode.tsx`
+  - `vault-flows/src/ui/NodeParamPanel.tsx`
+- Git: repo=vault-flows, branch=main, head=f4e4b75
+
+</details>
+
+<details>
 <summary><strong>2026-05-27 15:11 - vault-flows</strong> <code>code-change</code> - Quick-win feedback fixes: (1) Added --vault-copper #C77C45 + --vault-copper-muted in src/index.css; remapped --vault-signal-relay to copper so all existing &#39;relay&#39; references (T...</summary>
 
 - Kind: code-change
