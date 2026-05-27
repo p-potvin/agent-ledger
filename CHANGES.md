@@ -3,6 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-27 15:11 - vault-flows</strong> <code>code-change</code> - Quick-win feedback fixes: (1) Added --vault-copper #C77C45 + --vault-copper-muted in src/index.css; remapped --vault-signal-relay to copper so all existing &#39;relay&#39; references (T...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 15:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Quick-win feedback fixes: (1) Added --vault-copper #C77C45 + --vault-copper-muted in src/index.css; remapped --vault-signal-relay to copper so all existing 'relay' references (Transform node, validation badges) automatically pick up the new color. New Tailwind utility vw-copper. (2) WorkflowLibrary auto-refresh on login â€” added key={currentUser ?? 'guest'} so the library remounts and re-fetches the catalog when auth state flips, no page reload needed. (3) Param panel hidden by default â€” added paramPanelOpen state (default false), floating top-right toggle button (PanelRightOpen/Close from Lucide) on the canvas, the right inspector aside only renders when toggled. (4) Per-node execution-state LED in the canvas BaseNode header: muted/grey idle, copper pending, online green succeeded, alert red failed; pulses while in pending state. Derived from the global executionStatus + the per-node executionResults entry. Deployed dist (assets/index-CDo5-Dpt.js) atomically.
+- Commands:
+  - `npm run build`
+  - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
+- Files:
+  - `vault-flows/src/index.css`
+  - `vault-flows/src/App.tsx`
+  - `vault-flows/src/canvas/nodes/BaseNode.tsx`
+- Git: repo=vault-flows, branch=main, head=f4e4b75
+
+</details>
+
+<details>
 <summary><strong>2026-05-27 14:34 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Corrected IndentationError in livestream_translator.py at the Kokoro print statement. Moved livestream initial settings loading logic from startup to a lazy tab-load helper (loa...</summary>
 
 - Kind: code-change
