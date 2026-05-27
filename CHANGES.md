@@ -3,7 +3,323 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-26 18:08 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Phased out Unicode icons with inline Lucide-style SVGs in Details buttons (&#39;btn-modal-library&#39; and &#39;btn-modal-follow&#39;). Refactored buttons to use bilingual EN/FR wording. Fixed ...</summary>
+<summary><strong>2026-05-26 19:43 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Extended the subtitle lookup and download systems to support remote media streaming URLs, query by media titles, and gracefully cache to temp directories. Programmatically hid N...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 19:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Extended the subtitle lookup and download systems to support remote media streaming URLs, query by media titles, and gracefully cache to temp directories. Programmatically hid Next and Previous player and PiP overlay buttons during streaming modes while preserving their visibility for local file sequences.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\scanner.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\preload.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\player.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 19:41 - vault-explorer</strong> <code>code-change</code> - Completely resolved the missing top-row cards, click propagation, manual selection cutoff, and rate-limiting bugs. Refactored hover-card.js to utilize a robust window.premiumHov...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 19:41 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completely resolved the missing top-row cards, click propagation, manual selection cutoff, and rate-limiting bugs. Refactored hover-card.js to utilize a robust window.premiumHoverState namespace to eliminate closure isolation that was leaking card visibility styles. Integrated post-await activeRDFlowId validation checks in startRDDebridFlow in app.js to block background unrestriction threads from overriding user manual overrides. Increased the Real-Debrid polling rate to 3500ms to eliminate instant rate-limiting. Scoped discover-tmdb watch region to CA and added original language filters to filter out Bollywood spam.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\hover-card.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\app.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\tmdb.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 19:33 - vault-explorer</strong> <code>code-change</code> - Optimized Torrentio scraper in realdebrid.js to try the highly-cached default endpoint first with a short timeout, falling back to full provider queries to avoid timeouts. Added \</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 19:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: Optimized Torrentio scraper in realdebrid.js to try the highly-cached default endpoint first with a short timeout, falling back to full provider queries to avoid timeouts. Added \
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\app.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\streaming.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\realdebrid.js`
+- Plan: `btn-rd-choose-manually\ Show All Streams button in index.html to allow bypassing stuck debrid caching or auto-select crawls. Integrated it in app.js and streaming.js to abort active caching flows and instantly display the manual streams list.`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 19:07 - vault-explorer</strong> <code>code-change</code> - Integrated OpenSubtitles.com API for dynamic subtitle searching and lazy downloading / caching inside Electron. Exposed new OpenSubtitles API Key text field in Settings UI and s...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 19:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Integrated OpenSubtitles.com API for dynamic subtitle searching and lazy downloading / caching inside Electron. Exposed new OpenSubtitles API Key text field in Settings UI and securely persisted it in vault-settings.json. Updated video player track appender to support remote lazy tracks and automated downloading next to the video path.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\settings.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\preload.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\scanner.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\player.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:45 - vault-explorer</strong> <code>code-change</code> - Fixed missing line breaks in the Spoken Translator GUI console by appending a newline character to incoming log event data in js/app.js.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed missing line breaks in the Spoken Translator GUI console by appending a newline character to incoming log event data in js/app.js.
+- Files:
+  - `js/app.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:44 - vault-explorer</strong> <code>code-change</code> - Updated spoken translator latency parameters: speedup triggers at 2.0s (1.15x), speeds up further at 3.5s (1.35x), and flushes the queue at 5.0s. Added consecutive_flushes count...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated spoken translator latency parameters: speedup triggers at 2.0s (1.15x), speeds up further at 3.5s (1.35x), and flushes the queue at 5.0s. Added consecutive_flushes counter tracking; if the queue flushes consecutively 3 or more times, it logs a warning warning indicating hardware bottlenecking.
+- Files:
+  - `python-scripts/stream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:41 - vault-explorer</strong> <code>code-change</code> - Implemented a live-stream latency catch-up algorithm in stream_translator.py that dynamically monitors the playback queue backlog. If pending speech is between 4.0s and 7.5s, sp...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:41 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented a live-stream latency catch-up algorithm in stream_translator.py that dynamically monitors the playback queue backlog. If pending speech is between 4.0s and 7.5s, speech speed is stretched to 1.15x; if between 7.5s and 12.0s, it speaks at 1.35x. If lag exceeds 12.0s, it flushes the backlog entirely and jumps directly to the live stream head.
+- Files:
+  - `python-scripts/stream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:40 - vault-explorer</strong> <code>verification</code> - Ran stream translator on raw Cloudflare MLB MPEG-TS stream chunk, successfully transcribing game commentary in real-time, translating it to French, and playing it back with no a...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ran stream translator on raw Cloudflare MLB MPEG-TS stream chunk, successfully transcribing game commentary in real-time, translating it to French, and playing it back with no audio cutoffs. Generated a high-fidelity dark-mode GUI dashboard mockup showcasing visual telemetry and equalizers.
+- Files:
+  - `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\translation_experiment_results.md`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:35 - vault-explorer</strong> <code>code-change</code> - Decoupled rendering logic from js/app.js by extracting renderFavorites and favorite local files to js/favorites.js, and renderTMDB, MOCK_TMDB_DATA, updateProviderButtonsUI, and ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Decoupled rendering logic from js/app.js by extracting renderFavorites and favorite local files to js/favorites.js, and renderTMDB, MOCK_TMDB_DATA, updateProviderButtonsUI, and updateSubtabsUI to js/tmdb.js. Included the new script references in index.html. Fixed the spoken translation audio truncation bug in stream_translator.py by introducing playback_queue.join() in the cleanup block to ensure the main thread waits for the sounddevice thread to finish playing all synthesized audio before exiting.
+- Files:
+  - `js/favorites.js`
+  - `js/tmdb.js`
+  - `js/app.js`
+  - `index.html`
+  - `python-scripts/stream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:30 - vault-explorer</strong> <code>code-change</code> - Decoupled js/app.js by migrating all premium hover popup card logic into js/hover-card.js, updating index.html to load it. Prioritized the neural net vaultwares-media-processing...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Decoupled js/app.js by migrating all premium hover popup card logic into js/hover-card.js, updating index.html to load it. Prioritized the neural net vaultwares-media-processing venv in PowerShell translation wrappers to natively resolve torch dependencies. Configured Python translation scripts to stream console outputs via UTF-8 to prevent charmap encoder crashes under Windows terminal. Verified the entire translation pipeline end-to-end with zero mocks using a real English speech WAV file, transcribing, translating, and synthesizing French audio peaks successfully.
+- Files:
+  - `js/hover-card.js`
+  - `js/app.js`
+  - `index.html`
+  - `powershell/Start-StreamTranslator.ps1`
+  - `powershell/Start-LivestreamTranslator.ps1`
+  - `python-scripts/stream_translator.py`
+  - `python-scripts/livestream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:24 - vault-explorer</strong> <code>code-change</code> - Split translations into separate js/translations.en.js and js/translations.qc.js. Replaced all legacy emojis in the tabs and search grids with inline SVGs/LED indicators. Cleane...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Split translations into separate js/translations.en.js and js/translations.qc.js. Replaced all legacy emojis in the tabs and search grids with inline SVGs/LED indicators. Cleaned up unused temporary scripts, test models and log files. Separated documentation into README.en.md and README.qc.md, leaving a clean routing directory in README.md. Designed and integrated a high-fidelity Netflix-style expanding hover popup card with a 400ms delay, smooth cubic-bezier transitions, autoplaying muted YouTube trailer frame embedding, and Play/Library/Details button actions.
+- Files:
+  - `js/translations.en.js`
+  - `js/translations.qc.js`
+  - `js/translations.js`
+  - `js/app.js`
+  - `index.html`
+  - `index.css`
+  - `README.md`
+  - `README.en.md`
+  - `README.qc.md`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:10 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>commands,verification</code> - Fixed local AgentLedgerSync push failure (missing paths in sync script) and pushed updates; prod ledger now refreshed.</summary>
+
+- Kind: commands,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed local AgentLedgerSync push failure (missing paths in sync script) and pushed updates; prod ledger now refreshed.
+- Git: repo=agent-ledger, branch=main, head=fc548d1
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:08 - vault-explorer</strong> <code>code-change</code> - Phased out Unicode icons with inline Lucide-style SVGs in Details buttons (&#39;btn-modal-library&#39; and &#39;btn-modal-follow&#39;). Refactored buttons to use bilingual EN/FR wording. Fixed ...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -174,7 +490,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 14:48 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change,handoff,verification</code> - Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections &#226;€” tube-sites absorbs fullxxx, vw-jira-sync split out, dropped &#39;fo...</summary>
+<summary><strong>2026-05-26 14:48 - agent-ledger</strong> <code>code-change,handoff,verification</code> - Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections &#226;€” tube-sites absorbs fullxxx, vw-jira-sync split out, dropped &#39;fo...</summary>
 
 - Kind: code-change,handoff,verification
 - Actor: AI Agent

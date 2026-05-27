@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-26T21:57:01.7716609Z",
+    "lastUpdatedUtc":  "2026-05-26T23:57:01.9333552Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1840,7 +1840,20 @@
                                        "20260526-153657-187-vault-explorer-4ea08cb7",
                                        "20260526-154423-108-qa-automation-f99089a1",
                                        "20260526-161527-506-vaultwares-toolkit-e30d57d2",
-                                       "20260526-161905-588-vaultwares-toolkit-a11bb19d"
+                                       "20260526-161905-588-vaultwares-toolkit-a11bb19d",
+                                       "20260526-180837-864-vault-explorer-1e38f06f",
+                                       "20260526-181030-336-agent-ledger-13fd9e19",
+                                       "20260526-182458-109-vault-explorer-c54e989b",
+                                       "20260526-183030-115-vault-explorer-13be85e4",
+                                       "20260526-183534-516-vault-explorer-61869dce",
+                                       "20260526-184039-743-vault-explorer-33b214ac",
+                                       "20260526-184142-915-vault-explorer-f85c5a69",
+                                       "20260526-184454-804-vault-explorer-0be5a421",
+                                       "20260526-184532-805-vault-explorer-994c9348",
+                                       "20260526-190704-648-vault-explorer-934420fe",
+                                       "20260526-193314-073-vault-explorer-47ae5af2",
+                                       "20260526-194125-318-vault-explorer-b70dae64",
+                                       "20260526-194302-460-vault-explorer-1e23554c"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2817,7 +2830,7 @@
                                                                         "gpt-5.2",
                                                                         "unknown"
                                                                     ],
-                                                         "count":  49
+                                                         "count":  62
                                                      }
                                                  ],
                                    "tools":  [
@@ -2854,7 +2867,7 @@
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  323,
+                                                  336,
                                                   "Antigravity",
                                                   59,
                                                   "codex",
@@ -2884,10 +2897,10 @@
                                                   "preload.js",
                                                   1
                                               ],
-                                   "totalEvents":  497,
+                                   "totalEvents":  510,
                                    "models":  [
                                                   "unknown",
-                                                  297,
+                                                  310,
                                                   "gpt-5.2",
                                                   69,
                                                   "claude-sonnet-4-6",
@@ -2960,7 +2973,7 @@
                                    {
                                        "label":  "Tue",
                                        "dow":  1,
-                                       "count":  84
+                                       "count":  97
                                    },
                                    {
                                        "label":  "Wed",
@@ -3062,11 +3075,11 @@
                                         "hour":  17
                                     },
                                     {
-                                        "count":  22,
+                                        "count":  31,
                                         "hour":  18
                                     },
                                     {
-                                        "count":  25,
+                                        "count":  29,
                                         "hour":  19
                                     },
                                     {
@@ -3103,7 +3116,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-26 17:57",
+                 "generatedAtLocal":  "2026-05-26 19:57",
                  "series":  {
                                 "months":  [
                                                {
@@ -3116,7 +3129,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  848
+                                                   "count":  861
                                                }
                                            ],
                                 "days":  [
@@ -4329,13 +4342,13 @@
                                                                   "vaultwares-toolkit",
                                                                   "vaultwares-webhooks"
                                                               ],
-                                                 "entries":  60,
+                                                 "entries":  73,
                                                  "day":  "2026-05-26",
                                                  "kinds":  {
-                                                               "code-change":  49,
+                                                               "code-change":  60,
                                                                "handoff":  2,
-                                                               "commands":  3,
-                                                               "verification":  12,
+                                                               "commands":  4,
+                                                               "verification":  14,
                                                                "plan":  1,
                                                                "general":  4
                                                            }
@@ -4344,11 +4357,11 @@
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1531
+                                                  "count":  1542
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  116
+                                                  "count":  118
                                               },
                                               {
                                                   "kind":  "plan",
@@ -4356,7 +4369,7 @@
                                               },
                                               {
                                                   "kind":  "commands",
-                                                  "count":  39
+                                                  "count":  40
                                               },
                                               {
                                                   "kind":  "general",
@@ -4370,11 +4383,11 @@
                                 "projects":  [
                                                  {
                                                      "kinds":  {
+                                                                   "code-change":  135,
                                                                    "commands":  1,
+                                                                   "verification":  18,
                                                                    "plan":  27,
-                                                                   "general":  1,
-                                                                   "verification":  17,
-                                                                   "code-change":  124
+                                                                   "general":  1
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  9674,
@@ -4385,11 +4398,11 @@
 
                                                                     },
                                                      "project":  "vault-explorer",
-                                                     "entries":  167,
+                                                     "entries":  179,
                                                      "recent":  [
-                                                                    "Implemented OMDb API and Poster API handlers using credential file key. Fixed start-up Uncaught SyntaxError (duplicate global \u0027el\u0027 helper in streaming.js) and resolved live stre...",
-                                                                    "Fixed ASR transcribe keyword mismatch in parakeet_wrapper.py. Hooked up the Add to Library button in streaming details modal with persistent settings storage and beautiful visua...",
-                                                                    "Suppressed NVIDIA NeMo tqdm progress loops during real-time streaming by setting verbose=False in model.transcribe. Silenced Megatron/OneLogger logging noise by setting NeMo log..."
+                                                                    "Optimized Torrentio scraper in realdebrid.js to try the highly-cached default endpoint first with a short timeout, falling back to full provider queries to avoid timeouts. Added \\",
+                                                                    "Completely resolved the missing top-row cards, click propagation, manual selection cutoff, and rate-limiting bugs. Refactored hover-card.js to utilize a robust window.premiumHov...",
+                                                                    "Extended the subtitle lookup and download systems to support remote media streaming URLs, query by media titles, and gracefully cache to temp directories. Programmatically hid N..."
                                                                 ],
                                                      "firstDay":  "2026-04-19",
                                                      "lastDay":  "2026-05-26",
@@ -4905,10 +4918,10 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "commands":  6,
+                                                                   "commands":  7,
                                                                    "handoff":  2,
                                                                    "general":  1,
-                                                                   "verification":  7,
+                                                                   "verification":  8,
                                                                    "code-change":  26
                                                                },
                                                      "lineClean":  {
@@ -4923,11 +4936,11 @@
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "agent-ledger",
-                                                     "entries":  38,
+                                                     "entries":  39,
                                                      "recent":  [
-                                                                    "Revamp ledger.vaultwares.ca UI widgets for clarity: replace commit churn sparkline with interactive bar chart (weekday + timeline toggle), add hover tooltips to commit churn / 2...",
                                                                     "Investigated fishy WORK_IMPACT spikes on 2026-04-14 and 2026-04-25; identified dominant commits and opened issue #10 about commit-date bucketing.",
-                                                                    "Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections â€” tube-sites absorbs fullxxx, vw-jira-sync split out, dropped \u0027fo..."
+                                                                    "Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections â€” tube-sites absorbs fullxxx, vw-jira-sync split out, dropped \u0027fo...",
+                                                                    "Fixed local AgentLedgerSync push failure (missing paths in sync script) and pushed updates; prod ledger now refreshed."
                                                                 ],
                                                      "firstDay":  "2026-04-28",
                                                      "lastDay":  "2026-05-26",
@@ -16123,7 +16136,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-26T20:19:05.5885340Z",
+                 "_maxCreatedAtUtc":  "2026-05-26T23:43:02.4601404Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16131,7 +16144,7 @@
                            },
                  "totals":  {
                                 "projects":  45,
-                                "events":  1833,
+                                "events":  1846,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  74,
                                 "commitEventsWithStats":  679
