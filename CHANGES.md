@@ -3,7 +3,167 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-26 19:43 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Extended the subtitle lookup and download systems to support remote media streaming URLs, query by media titles, and gracefully cache to temp directories. Programmatically hid N...</summary>
+<summary><strong>2026-05-27 14:34 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Corrected IndentationError in livestream_translator.py at the Kokoro print statement. Moved livestream initial settings loading logic from startup to a lazy tab-load helper (loa...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 14:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: Corrected IndentationError in livestream_translator.py at the Kokoro print statement. Moved livestream initial settings loading logic from startup to a lazy tab-load helper (loadLivestreamSettingsOnce), executed only on first opening of the livestream tab. Dynamically synchronized the renderer settings with the global vault-settings.json file, allowing the audio_normalize.py script to read the user-configured Kokoro voice name and language code directly from settings.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\livestream_translator.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\audio_normalize.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\app.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 14:25 - vault-explorer</strong> <code>code-change</code> - Modernized and stabilized the translation and torrenting pipeline by implementing persistent settings via localStorage, introducing a z-index backdrop overlay to lock torrent mo...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 14:25 (TZ: Eastern Standard Time)
+  ```
+- Summary: Modernized and stabilized the translation and torrenting pipeline by implementing persistent settings via localStorage, introducing a z-index backdrop overlay to lock torrent modal interactions, bypassing slow online Hugging Face API checks to boot Parakeet ASR in under 2 seconds, fixing espeak language backend exceptions by normalizing fr-ca to fr-fr, and ensuring clean translator state reset on tab switch.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\app.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\streaming.js`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-media-processing\vaultwares_media_processing\parakeet_wrapper.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\livestream_translator.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\stream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 14:13 - vault-explorer</strong> <code>code-change</code> - Optimized the real-time spoken translation systems by integrating robust pycaw-based audio ducking supporting the Electron process, slashing latency by cutting chunk sizes/silen...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 14:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Optimized the real-time spoken translation systems by integrating robust pycaw-based audio ducking supporting the Electron process, slashing latency by cutting chunk sizes/silence delay and FFmpeg window sizes, accelerating boots to instant via HuggingFace Hub local cache bypass, printing speech transcripts to the UI console, and writing non-blocking asynchronous queue-based benchmark logs to a file.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\livestream_translator.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\stream_translator.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\audio_normalize.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 23:27 - vault-flows</strong> <code>code-change</code> - Full vaultwares-revisited redesign landed in one pass. Phase 0: Archived old design &#226;€” moved src/lib/theme.ts, src/ui/ThemePicker.tsx, src/ui/PresetLibrary.tsx, src/ui/PresetCa...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 23:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: Full vaultwares-revisited redesign landed in one pass. Phase 0: Archived old design â€” moved src/lib/theme.ts, src/ui/ThemePicker.tsx, src/ui/PresetLibrary.tsx, src/ui/PresetCard.tsx, copy of src/index.css to /vaultwares-old-design/ with README explaining what was retired. Phase 1: Updated vaultwares-themes submodule (4074d54 -> a186b1a), pulled in vaultwares-revisited/ + tokens. New src/index.css imports Inter+JetBrains Mono, vaultwares-themes/assets/tokens/css-variables.css, tailwindcss, @xyflow/react/dist/style.css; @theme block exposes Tailwind colors vw-console-bg/surface/raised/elevated/gold/violet/text/muted/border, vw-warm-bg/raised/muted/ink/text/text-muted/gold/border, vw-signal-online/relay/sync/warning/alert. Shells: .vw-console-shell with violet radial-gradient, .vw-warm-shell with gold radial-gradient. Cards: .vw-card / .vw-card-flat / .vw-warm-card / .vw-warm-card-flat. LEDs with ledPulse keyframes. Terminal-style scrollbars. React Flow overrides: gold edges with drop-shadow, dot background pattern, restyled Controls/MiniMap. main.tsx no longer calls initTheme â€” Console + Warm coexist statically, no toggle. Phase 2: AppShell (vw-console-shell wrapper), Navbar (sticky glassmorphic with Hexagon brand, Lucide icons, mono labels, primary/secondary Buttons), Footer (status-bar with online LED). Phase 3: 5 primitive components â€” LED (8 colors, pulsing/static), Card (console/warm + sm/md/lg + interactive), Button (primary/secondary/ghost/danger/icon variants, sm/md/lg sizes, mono uppercase labels), Badge (8 tones, both surfaces, optional icon), Field (mono label + TextInput + TextArea, refs forwarded). Phase 4: Rewired App.tsx (drops 200 LOC of inline styles for AppShell+Navbar+Footer+EmptyState; sidebar is now a vw-warm-shell panel containing the workflow library, right inspector is vw-console-shell), LoginModal+SignupModal (Card+Field+Button, Lucide icons for inputs, AlertCircle for errors), WorkflowLibrary (Warm cards with LED + Badge per workflow + verdict-driven dimming), NodeParamPanel (Console card, LED+mono header, type-routed body, error styling via vw-signal-alert), ComfyUIWorkflowInputsEditor (Field-based structured editor with Upload/ImagePlus icons), ExecutionProgressOverlay (Card with LED + gold progress bar + danger Cancel button), ImageInputNode (Lucide dropzone). Phase 5: NODE_REGISTRY colors remapped to vault tokens (gold for inputs+comfyui, violet for llm/model_call, signal-relay for transform, signal-online for output/display); BaseNode redesigned with color-mix raised background, gold left rail, mono uppercase labels, glowing handle ports; per-node renderers (Input/LLM/ModelCall/ComfyUIWorkflow/Transform/Output/Display) all use new tokens + Lucide accents. FlowCanvas: dropped var(--background)/var(--surface)/var(--border), Controls/MiniMap auto-style via CSS, nodeColor map uses vault tokens. Added lucide-react dependency. Final sweep confirms 0 leftover var(--accent|--surface|--text|--background|--border|--error|--warning|--success|--info|--radius-md|--text-secondary|--text-inverse|--text-muted|--surface-elevated) references in src/. Build clean, dist/index-C-oTzBAp.js (539KB / 168KB gz) + index-DPJL241W.css (80KB / 13KB gz). Deployed atomically to greencloud-vps; live on flows.vaultwares.ca + noddit.org. Net file changes: 4 archived, 8 new (AppShell, Navbar, Footer, Card, Button, Badge, LED, Field, vaultwares-old-design/README.md), 12 rewritten (index.css, main.tsx, App.tsx, LoginModal, SignupModal, WorkflowLibrary, NodeParamPanel, ComfyUIWorkflowInputsEditor, ExecutionProgressOverlay, ImageInputNode, registry.ts, FlowCanvas + all 7 canvas node renderers).
+- Commands:
+  - `git submodule update --remote vaultwares-themes`
+  - `npm install lucide-react`
+  - `npm run build`
+  - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
+- Files:
+  - `vault-flows/src/index.css`
+  - `vault-flows/src/main.tsx`
+  - `vault-flows/src/App.tsx`
+  - `vault-flows/src/nodes/registry.ts`
+  - `vault-flows/src/ui/AppShell.tsx`
+  - `vault-flows/src/ui/Navbar.tsx`
+  - `vault-flows/src/ui/Footer.tsx`
+  - `vault-flows/src/ui/LoginModal.tsx`
+  - `vault-flows/src/ui/SignupModal.tsx`
+  - `vault-flows/src/ui/WorkflowLibrary.tsx`
+  - `vault-flows/src/ui/NodeParamPanel.tsx`
+  - `vault-flows/src/ui/ComfyUIWorkflowInputsEditor.tsx`
+  - `vault-flows/src/ui/ExecutionProgressOverlay.tsx`
+  - `vault-flows/src/ui/components/Card.tsx`
+  - `vault-flows/src/ui/components/Button.tsx`
+  - `vault-flows/src/ui/components/Badge.tsx`
+  - `vault-flows/src/ui/components/LED.tsx`
+  - `vault-flows/src/ui/components/Field.tsx`
+  - `vault-flows/src/canvas/FlowCanvas.tsx`
+  - `vault-flows/src/canvas/nodes/BaseNode.tsx`
+  - `vault-flows/src/canvas/nodes/InputNode.tsx`
+  - `vault-flows/src/canvas/nodes/ImageInputNode.tsx`
+  - `vault-flows/src/canvas/nodes/LLMNode.tsx`
+  - `vault-flows/src/canvas/nodes/ModelCallNode.tsx`
+  - `vault-flows/src/canvas/nodes/ComfyUIWorkflowNode.tsx`
+  - `vault-flows/src/canvas/nodes/TransformNode.tsx`
+  - `vault-flows/src/canvas/nodes/OutputNode.tsx`
+  - `vault-flows/src/canvas/nodes/DisplayNode.tsx`
+  - `vault-flows/vaultwares-old-design/`
+- Git: repo=vault-flows, branch=main, head=117e167
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 20:07 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Removed GitHub Actions workflows so prod deploys are webhook/self-hosted only.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 20:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Removed GitHub Actions workflows so prod deploys are webhook/self-hosted only.
+- Git: repo=agent-ledger, branch=main, head=8be8eacb
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 19:43 - vault-explorer</strong> <code>code-change</code> - Extended the subtitle lookup and download systems to support remote media streaming URLs, query by media titles, and gracefully cache to temp directories. Programmatically hid N...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -297,7 +457,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 18:10 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>commands,verification</code> - Fixed local AgentLedgerSync push failure (missing paths in sync script) and pushed updates; prod ledger now refreshed.</summary>
+<summary><strong>2026-05-26 18:10 - agent-ledger</strong> <code>commands,verification</code> - Fixed local AgentLedgerSync push failure (missing paths in sync script) and pushed updates; prod ledger now refreshed.</summary>
 
 - Kind: commands,verification
 - Actor: AI Agent

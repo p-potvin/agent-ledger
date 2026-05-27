@@ -1,0 +1,53 @@
+﻿{
+    "id":  "20260527-142503-169-vault-explorer-f288e01a",
+    "createdAt":  "2026-05-27T18:25:03.1697576Z",
+    "createdAtLocal":  "2026-05-27 14:25",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-27 14:25 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Modernized and stabilized the translation and torrenting pipeline by implementing persistent settings via localStorage, introducing a z-index backdrop overlay to lock torrent modal interactions, bypassing slow online Hugging Face API checks to boot Parakeet ASR in under 2 seconds, fixing espeak language backend exceptions by normalizing fr-ca to fr-fr, and ensuring clean translator state reset on tab switch.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\index.html",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\app.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\streaming.js",
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-media-processing\\vaultwares_media_processing\\parakeet_wrapper.py",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\python-scripts\\livestream_translator.py",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\python-scripts\\stream_translator.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "f288e01a2fa805016357e57ec9922569d74a18bd05b67eff37c3df836d33f3c5",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}
