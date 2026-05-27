@@ -3,7 +3,34 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-27 17:04 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Reduced interactive hover card cooldown to 200ms. Added global Escape keyboard controls to dismiss the streaming-details-modal and rd-stream-dialog modals. Refactored startRDDeb...</summary>
+<summary><strong>2026-05-27 17:13 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,general</code> - Modernized inline emojis across the Movies &amp; Series tab, streaming details modals, Real-Debrid dialog loaders, and Torrentio scrape status indicators. Standardized visual aesthe...</summary>
+
+- Kind: code-change,general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 17:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Modernized inline emojis across the Movies & Series tab, streaming details modals, Real-Debrid dialog loaders, and Torrentio scrape status indicators. Standardized visual aesthetics using unified VaultWares Revisited theme components, CSS tokens, and locally cached high-fidelity brand favicons (IMDb, Apple TV, JustWatch). Added global rule memory file C:\Users\Administrator\.gemini\rules\vaultwares-revisited-theme.md to persist theme alignment across sessions.
+- Files:
+  - `index.html`
+  - `js/streaming.js`
+  - `js/app.js`
+  - `C:\Users\Administrator\.gemini\rules\vaultwares-revisited-theme.md`
+- Git: repo=vault-explorer, branch=main, head=9d6166b
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 17:04 - vault-explorer</strong> <code>code-change</code> - Reduced interactive hover card cooldown to 200ms. Added global Escape keyboard controls to dismiss the streaming-details-modal and rd-stream-dialog modals. Refactored startRDDeb...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
