@@ -3,7 +3,36 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-27 14:13 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Optimized the real-time spoken translation systems by integrating robust pycaw-based audio ducking supporting the Electron process, slashing latency by cutting chunk sizes/silen...</summary>
+<summary><strong>2026-05-27 14:25 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Modernized and stabilized the translation and torrenting pipeline by implementing persistent settings via localStorage, introducing a z-index backdrop overlay to lock torrent mo...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 14:25 (TZ: Eastern Standard Time)
+  ```
+- Summary: Modernized and stabilized the translation and torrenting pipeline by implementing persistent settings via localStorage, introducing a z-index backdrop overlay to lock torrent modal interactions, bypassing slow online Hugging Face API checks to boot Parakeet ASR in under 2 seconds, fixing espeak language backend exceptions by normalizing fr-ca to fr-fr, and ensuring clean translator state reset on tab switch.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\app.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\streaming.js`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-media-processing\vaultwares_media_processing\parakeet_wrapper.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\livestream_translator.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\stream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 14:13 - vault-explorer</strong> <code>code-change</code> - Optimized the real-time spoken translation systems by integrating robust pycaw-based audio ducking supporting the Electron process, slashing latency by cutting chunk sizes/silen...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
