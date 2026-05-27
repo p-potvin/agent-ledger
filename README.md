@@ -13,7 +13,7 @@ This repo is the append-only ledger for AI-agent activity across local and cloud
 - `scripts/render-agent-ledger.ps1` - rebuilds readable ledgers from event files.
 - `scripts/sync-agent-ledger.ps1` - pulls, renders, commits, and pushes queued ledger changes.
 - `scripts/setup-agent-ledger-scheduler.ps1` - registers a Windows scheduled task for automatic sync.
-- `AGENT_LEDGER_INSTRUCTIONS.md` - reusable instruction block for agent environments.
+- `AGENTS.md` / `CLAUDE.md` - reusable instruction blocks for agent environments.
 
 ## Record an event
 

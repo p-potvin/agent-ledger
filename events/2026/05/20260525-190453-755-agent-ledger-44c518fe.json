@@ -1,0 +1,38 @@
+{
+  "id": "20260525-190453-755-agent-ledger-44c518fe",
+  "createdAt": "2026-05-25T23:04:53.7551494Z",
+  "createdAtLocal": "2026-05-25 19:04",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 19:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fixed 403 on ledger.vaultwares.ca: the dnsmasq split-DNS config on greencloud-vps was missing the ledger entry. Added address=/ledger.vaultwares.ca/100.73.93.84 to /etc/dnsmasq.d/vaultwares-split-dns.conf and restarted dnsmasq. Tailscale split DNS routes queries to this dnsmasq instance, which now returns the tailnet IP instead of the public IP. The 100.64.0.0/10 ACL is correct for the full Tailscale CGNAT range.",
+  "commands": [
+    "ssh root@greencloud-vps sed -i add ledger.vaultwares.ca dnsmasq",
+    "systemctl restart dnsmasq",
+    "ipconfig /flushdns"
+  ],
+  "files": [
+    "/etc/dnsmasq.d/vaultwares-split-dns.conf"
+  ],
+  "planPath": "",
+  "contentHash": "44c518fea5b6a12cbe465b963f1e267f2f4db4fee961726ebab2bc6035e53fca",
+  "git": null
+}

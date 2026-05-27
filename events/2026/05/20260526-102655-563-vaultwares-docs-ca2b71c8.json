@@ -1,0 +1,57 @@
+{
+  "id": "20260526-102655-563-vaultwares-docs-ca2b71c8",
+  "createdAt": "2026-05-26T14:26:55.5632070Z",
+  "createdAtLocal": "2026-05-26 10:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): powershell, git\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 10:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "powershell",
+      "git"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Add simple, mandatory ops documentation: (1) webhook secret rotation checklist (EN+QC) for VW_GITHUB_WEBHOOK_SECRET, (2) services inventory table (EN+QC) including Prom-King/FullXXX sites and link-sharing, and (3) link these from deployment-flow + network-map + project-bootstrap; update vaultwares-docs AGENTS/CLAUDE mandatory-reading pointers and DEPLOYMENT_POLICY summary. Regenerated page resources and pushed to main for deploy.",
+  "commands": [
+    "npm run generate:page-resources",
+    "npm ci",
+    "npm run build",
+    "git commit 4828093",
+    "git push origin main"
+  ],
+  "files": [
+    "docs-content/operations/webhook-secret-rotation.mdx",
+    "docs-content/operations/webhook-secret-rotation-QC.mdx",
+    "docs-content/operations/services-inventory.mdx",
+    "docs-content/operations/services-inventory-QC.mdx",
+    "docs-content/operations/deployment-flow.mdx",
+    "docs-content/operations/deployment-flow-QC.mdx",
+    "docs-content/operations/network-map.mdx",
+    "docs-content/operations/network-map-QC.mdx",
+    "docs-content/operations/project-bootstrap.mdx",
+    "docs-content/operations/project-bootstrap-QC.mdx",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "instructions/summaries/DEPLOYMENT_POLICY.md",
+    "src/resources/pages/operations__services-inventory.json",
+    "src/resources/pages/operations__webhook-secret-rotation.json"
+  ],
+  "planPath": "",
+  "contentHash": "ca2b71c86b6eac56e63b835f2451dd7cfb77b08bcb060cde4a7f0e57f7bbd59f",
+  "git": null
+}
