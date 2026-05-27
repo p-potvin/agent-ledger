@@ -3,6 +3,32 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-27 14:13 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Optimized the real-time spoken translation systems by integrating robust pycaw-based audio ducking supporting the Electron process, slashing latency by cutting chunk sizes/silen...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 14:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Optimized the real-time spoken translation systems by integrating robust pycaw-based audio ducking supporting the Electron process, slashing latency by cutting chunk sizes/silence delay and FFmpeg window sizes, accelerating boots to instant via HuggingFace Hub local cache bypass, printing speech transcripts to the UI console, and writing non-blocking asynchronous queue-based benchmark logs to a file.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\livestream_translator.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\stream_translator.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\audio_normalize.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
 <summary><strong>2026-05-26 23:27 - vault-flows</strong> <code>code-change</code> - Full vaultwares-revisited redesign landed in one pass. Phase 0: Archived old design &#226;€” moved src/lib/theme.ts, src/ui/ThemePicker.tsx, src/ui/PresetLibrary.tsx, src/ui/PresetCa...</summary>
 
 - Kind: code-change
@@ -82,7 +108,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 19:43 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Extended the subtitle lookup and download systems to support remote media streaming URLs, query by media titles, and gracefully cache to temp directories. Programmatically hid N...</summary>
+<summary><strong>2026-05-26 19:43 - vault-explorer</strong> <code>code-change</code> - Extended the subtitle lookup and download systems to support remote media streaming URLs, query by media titles, and gracefully cache to temp directories. Programmatically hid N...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
