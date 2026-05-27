@@ -3,6 +3,40 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-27 15:58 - vault-flows</strong> <code>code-change</code> - Round 3 feedback fixes &#226;€” eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 15:58 (TZ: Eastern Standard Time)
+  ```
+- Summary: Round 3 feedback fixes â€” eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. Added a useEffect in FlowCanvas that propagates store data changes (params, label) to rfNodes while leaving position/measured state untouched (preserves the visibility:hidden fix from earlier sessions). Identity-checks on params and label avoid spurious re-renders. (2) Toast system: new src/ui/components/Toast.tsx with module-level event hub (pushToast/dismissToast from anywhere) and ToastHost mounted at App root; renders top-right stack with auto-dismiss (6s default, 4s for success); three tones (error/success/info) with matching tokens. App.tsx now pushes 'success' on clean run, 'error' on per-node or top-level failure + auto-opens the inspector. (3) Execution errors moved to TOP of NodeParamPanel â€” banner with the failure detail + a Reset button; the old bottom error block was removed. Per-node text/json outputs still render below (image results render inline ON the comfyui_workflow node). (4) Removed the auto-created Display node from loadFromComfyWorkflow; the master flow is now just the single comfyui_workflow node, with results rendering inline (gallery + thumbnails). Eliminates the disconnected 'Result' node that felt orphaned. (5) Inline image result on ComfyUIWorkflowNode: when the workflow succeeds and the result has imageUrl/imageUrls, the gallery renders inside the node card itself; click any thumb opens full-size in a new tab. (6) New InlineSeedInput in canvas/nodes/inline.tsx â€” number input with a dice button (Lucide Dice5) that fills a 31-bit random int. ComfyUIWorkflowNode routes any input key named 'seed' through this control. (7) Size presets dropdown â€” when a workflow exposes both 'width' and 'height' in input_paths, a single 'size' InlineSelect drives both (512Â², 768Â², 1024Â², portrait/landscape variants, Custom reveals manual w/h number inputs). Exported SIZE_PRESETS array from inline.tsx. (8) NodeId pill â€” small mono badge at the bottom of every node card showing 'node#<short-id>'; tooltip on hover reveals the full id. shortenNodeId helper formats numeric/short/UUID ids consistently. (9) Persisted last-used inputs: ComfyUIWorkflowNode reads localStorage['vw:lastInputs:<workflow_id>'] on mount if all inputs are empty, prefills non-image fields (upload tokens excluded â€” they expire); debounced 400ms save on every input change. Each user gets their own browser-local memory of last prompt/seed/size per workflow. Deployed dist (assets/index-BxACQy3N.js).
+- Commands:
+  - `npm run build`
+  - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
+- Files:
+  - `vault-flows/src/canvas/FlowCanvas.tsx`
+  - `vault-flows/src/canvas/nodes/BaseNode.tsx`
+  - `vault-flows/src/canvas/nodes/inline.tsx`
+  - `vault-flows/src/canvas/nodes/ComfyUIWorkflowNode.tsx`
+  - `vault-flows/src/store/flowStore.ts`
+  - `vault-flows/src/ui/NodeParamPanel.tsx`
+  - `vault-flows/src/ui/components/Toast.tsx`
+  - `vault-flows/src/App.tsx`
+- Git: repo=vault-flows, branch=main, head=f4e4b75
+
+</details>
+
+<details>
 <summary><strong>2026-05-27 15:44 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Resolved YouTube Error 4 and Error 152 in video playback by masking Electron User-Agent for youtube/youtube-nocookie HTTP requests to match standard desktop Chrome. Fixed subtit...</summary>
 
 - Kind: code-change

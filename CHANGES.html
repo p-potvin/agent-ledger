@@ -48,6 +48,33 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-27 15:58 - vault-flows</strong> <span class="kind">code-change</span> - Round 3 feedback fixes &#226;€” eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-27 15:58 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Round 3 feedback fixes &#226;€” eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. Added a useEffect in FlowCanvas that propagates store data changes (params, label) to rfNodes while leaving position/measured state untouched (preserves the visibility:hidden fix from earlier sessions). Identity-checks on params and label avoid spurious re-renders. (2) Toast system: new src/ui/components/Toast.tsx with module-level event hub (pushToast/dismissToast from anywhere) and ToastHost mounted at App root; renders top-right stack with auto-dismiss (6s default, 4s for success); three tones (error/success/info) with matching tokens. App.tsx now pushes &#39;success&#39; on clean run, &#39;error&#39; on per-node or top-level failure + auto-opens the inspector. (3) Execution errors moved to TOP of NodeParamPanel &#226;€” banner with the failure detail + a Reset button; the old bottom error block was removed. Per-node text/json outputs still render below (image results render inline ON the comfyui_workflow node). (4) Removed the auto-created Display node from loadFromComfyWorkflow; the master flow is now just the single comfyui_workflow node, with results rendering inline (gallery + thumbnails). Eliminates the disconnected &#39;Result&#39; node that felt orphaned. (5) Inline image result on ComfyUIWorkflowNode: when the workflow succeeds and the result has imageUrl/imageUrls, the gallery renders inside the node card itself; click any thumb opens full-size in a new tab. (6) New InlineSeedInput in canvas/nodes/inline.tsx &#226;€” number input with a dice button (Lucide Dice5) that fills a 31-bit random int. ComfyUIWorkflowNode routes any input key named &#39;seed&#39; through this control. (7) Size presets dropdown &#226;€” when a workflow exposes both &#39;width&#39; and &#39;height&#39; in input_paths, a single &#39;size&#39; InlineSelect drives both (512&#194;&#178;, 768&#194;&#178;, 1024&#194;&#178;, portrait/landscape variants, Custom reveals manual w/h number inputs). Exported SIZE_PRESETS array from inline.tsx. (8) NodeId pill &#226;€” small mono badge at the bottom of every node card showing &#39;node#&lt;short-id&gt;&#39;; tooltip on hover reveals the full id. shortenNodeId helper formats numeric/short/UUID ids consistently. (9) Persisted last-used inputs: ComfyUIWorkflowNode reads localStorage[&#39;vw:lastInputs:&lt;workflow_id&gt;&#39;] on mount if all inputs are empty, prefills non-image fields (upload tokens excluded &#226;€” they expire); debounced 400ms save on every input change. Each user gets their own browser-local memory of last prompt/seed/size per workflow. Deployed dist (assets/index-BxACQy3N.js).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+        <li><code>scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault-flows/src/canvas/FlowCanvas.tsx</code></li>
+        <li><code>vault-flows/src/canvas/nodes/BaseNode.tsx</code></li>
+        <li><code>vault-flows/src/canvas/nodes/inline.tsx</code></li>
+        <li><code>vault-flows/src/canvas/nodes/ComfyUIWorkflowNode.tsx</code></li>
+        <li><code>vault-flows/src/store/flowStore.ts</code></li>
+        <li><code>vault-flows/src/ui/NodeParamPanel.tsx</code></li>
+        <li><code>vault-flows/src/ui/components/Toast.tsx</code></li>
+        <li><code>vault-flows/src/App.tsx</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-flows, branch=main, head=f4e4b75</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-27 15:44 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change</span> - Resolved YouTube Error 4 and Error 152 in video playback by masking Electron User-Agent for youtube/youtube-nocookie HTTP requests to match standard desktop Chrome. Fixed subtit...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
