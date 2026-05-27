@@ -1,0 +1,52 @@
+﻿{
+    "id":  "20260526-190704-648-vault-explorer-934420fe",
+    "createdAt":  "2026-05-26T23:07:04.6483011Z",
+    "createdAtLocal":  "2026-05-26 19:07",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 19:07 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Integrated OpenSubtitles.com API for dynamic subtitle searching and lazy downloading / caching inside Electron. Exposed new OpenSubtitles API Key text field in Settings UI and securely persisted it in vault-settings.json. Updated video player track appender to support remote lazy tracks and automated downloading next to the video path.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\index.html",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\settings.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\preload.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\src\\scanner.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\player.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "934420fec6323690125f80838a5b57f5ce684a9535589f4ee9fb58265a135796",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

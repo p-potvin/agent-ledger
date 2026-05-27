@@ -1,0 +1,45 @@
+{
+  "id": "20260526-091327-441-agent-ledger-a6e06a7f",
+  "createdAt": "2026-05-26T13:13:27.4415496Z",
+  "createdAtLocal": "2026-05-26 09:13",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): powershell, ssh, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 09:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "powershell",
+      "ssh",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Fix ledger.vaultwares.ca not updating: found p-potvin/agent-ledger had 0 GitHub webhooks, so vw-webhookd never received push events. Created repo webhook to https://hooks.vaultwares.ca/github (events: push,pull_request), verified ping delivery=200, then ran /opt/sites/agent-ledger/deploy/deploy.sh on greencloud-vps; ledger.vaultwares.ca Last-Modified now 2026-05-26 13:11Z.",
+  "commands": [
+    "Invoke-WebRequest https://ledger.vaultwares.ca (checked Last-Modified)",
+    "gh api repos/p-potvin/agent-ledger/hooks (length=0)",
+    "gh api POST repos/p-potvin/agent-ledger/hooks (created)",
+    "gh api POST .../pings (200)",
+    "ssh root@100.73.93.84 bash /opt/sites/agent-ledger/deploy/deploy.sh"
+  ],
+  "files": [
+    "/etc/vw-webhookd/config.yml (remote)",
+    "/var/log/vw-webhookd.log (remote)"
+  ],
+  "planPath": "",
+  "contentHash": "a6e06a7fa1672743bdd4542abbe3d62c037bb16a509739c0ef0bcbe4ad2b7505",
+  "git": null
+}

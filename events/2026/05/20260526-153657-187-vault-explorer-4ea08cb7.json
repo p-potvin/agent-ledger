@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260526-153657-187-vault-explorer-4ea08cb7",
+    "createdAt":  "2026-05-26T19:36:57.1875829Z",
+    "createdAtLocal":  "2026-05-26 15:36",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 15:36 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Suppressed NVIDIA NeMo tqdm progress loops during real-time streaming by setting verbose=False in model.transcribe. Silenced Megatron/OneLogger logging noise by setting NeMo logging level to ERROR on module import. Fixed the Movies tab cards opening bug by introducing window._detailsModalJustOpened and window._rdDialogJustOpened boolean state flags, preventing instant bubbling modal closures during click event propagation.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vaultwares-media-processing/vaultwares_media_processing/parakeet_wrapper.py",
+                  "js/streaming.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "4ea08cb75d32921580ae7138724c4e349e6ba282b1d9ab546a18ba5957b695c8",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "20260526-100718-945-vaultwares-webhooks-9d5ac5fa",
+  "createdAt": "2026-05-26T14:07:18.9454039Z",
+  "createdAtLocal": "2026-05-26 10:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-webhooks",
+  "kind": "commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): powershell, ssh, gh, git\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 10:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "powershell",
+      "ssh",
+      "gh",
+      "git"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Rotation complète de VW_GITHUB_WEBHOOK_SECRET (sans GitHub Actions): nouveau secret installé dans /etc/vw-webhookd/env (sans espace), webhooks GitHub mis à jour pour les repos cibles (vaultwares-docs, vaultwares-website, Prom-King/link-sharing, agent-ledger), service vw-webhookd redémarré. Vérifié par pings + push réel sur agent-ledger: vw-webhookd a reçu l’événement, a exécuté /opt/sites/agent-ledger/deploy/deploy.sh, et le déploiement a terminé avec exit=0. Correctifs ops appliqués pour que le runner vwdeploy puisse déployer: git safe.directory + ownership /opt/sites/agent-ledger et /var/www/ledger.vaultwares.ca.",
+  "commands": [
+    "ssh root@100.73.93.84: update /etc/vw-webhookd/env (rotate secret)",
+    "gh api: PATCH/POST repo webhooks to hooks.vaultwares.ca/github",
+    "systemctl restart vw-webhookd",
+    "git push (agent-ledger) to validate deploy",
+    "chown + git safe.directory for vwdeploy",
+    "Invoke-WebRequest HEAD https://ledger.vaultwares.ca"
+  ],
+  "files": [
+    "/etc/vw-webhookd/env (remote)",
+    "/etc/vw-webhookd/config.yml (remote)",
+    "/var/log/vw-webhookd.log (remote)",
+    "/opt/sites/agent-ledger (remote perms)",
+    "/var/www/ledger.vaultwares.ca (remote perms)"
+  ],
+  "planPath": "",
+  "contentHash": "9d5ac5faa6e4e308cc94a1f45a38e322abe12497aa8c347809a5976b5af8477c",
+  "git": null
+}

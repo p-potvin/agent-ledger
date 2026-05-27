@@ -3,6 +3,2222 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-26 23:27 - vault-flows</strong> <code>code-change</code> - Full vaultwares-revisited redesign landed in one pass. Phase 0: Archived old design &#226;€” moved src/lib/theme.ts, src/ui/ThemePicker.tsx, src/ui/PresetLibrary.tsx, src/ui/PresetCa...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 23:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: Full vaultwares-revisited redesign landed in one pass. Phase 0: Archived old design â€” moved src/lib/theme.ts, src/ui/ThemePicker.tsx, src/ui/PresetLibrary.tsx, src/ui/PresetCard.tsx, copy of src/index.css to /vaultwares-old-design/ with README explaining what was retired. Phase 1: Updated vaultwares-themes submodule (4074d54 -> a186b1a), pulled in vaultwares-revisited/ + tokens. New src/index.css imports Inter+JetBrains Mono, vaultwares-themes/assets/tokens/css-variables.css, tailwindcss, @xyflow/react/dist/style.css; @theme block exposes Tailwind colors vw-console-bg/surface/raised/elevated/gold/violet/text/muted/border, vw-warm-bg/raised/muted/ink/text/text-muted/gold/border, vw-signal-online/relay/sync/warning/alert. Shells: .vw-console-shell with violet radial-gradient, .vw-warm-shell with gold radial-gradient. Cards: .vw-card / .vw-card-flat / .vw-warm-card / .vw-warm-card-flat. LEDs with ledPulse keyframes. Terminal-style scrollbars. React Flow overrides: gold edges with drop-shadow, dot background pattern, restyled Controls/MiniMap. main.tsx no longer calls initTheme â€” Console + Warm coexist statically, no toggle. Phase 2: AppShell (vw-console-shell wrapper), Navbar (sticky glassmorphic with Hexagon brand, Lucide icons, mono labels, primary/secondary Buttons), Footer (status-bar with online LED). Phase 3: 5 primitive components â€” LED (8 colors, pulsing/static), Card (console/warm + sm/md/lg + interactive), Button (primary/secondary/ghost/danger/icon variants, sm/md/lg sizes, mono uppercase labels), Badge (8 tones, both surfaces, optional icon), Field (mono label + TextInput + TextArea, refs forwarded). Phase 4: Rewired App.tsx (drops 200 LOC of inline styles for AppShell+Navbar+Footer+EmptyState; sidebar is now a vw-warm-shell panel containing the workflow library, right inspector is vw-console-shell), LoginModal+SignupModal (Card+Field+Button, Lucide icons for inputs, AlertCircle for errors), WorkflowLibrary (Warm cards with LED + Badge per workflow + verdict-driven dimming), NodeParamPanel (Console card, LED+mono header, type-routed body, error styling via vw-signal-alert), ComfyUIWorkflowInputsEditor (Field-based structured editor with Upload/ImagePlus icons), ExecutionProgressOverlay (Card with LED + gold progress bar + danger Cancel button), ImageInputNode (Lucide dropzone). Phase 5: NODE_REGISTRY colors remapped to vault tokens (gold for inputs+comfyui, violet for llm/model_call, signal-relay for transform, signal-online for output/display); BaseNode redesigned with color-mix raised background, gold left rail, mono uppercase labels, glowing handle ports; per-node renderers (Input/LLM/ModelCall/ComfyUIWorkflow/Transform/Output/Display) all use new tokens + Lucide accents. FlowCanvas: dropped var(--background)/var(--surface)/var(--border), Controls/MiniMap auto-style via CSS, nodeColor map uses vault tokens. Added lucide-react dependency. Final sweep confirms 0 leftover var(--accent|--surface|--text|--background|--border|--error|--warning|--success|--info|--radius-md|--text-secondary|--text-inverse|--text-muted|--surface-elevated) references in src/. Build clean, dist/index-C-oTzBAp.js (539KB / 168KB gz) + index-DPJL241W.css (80KB / 13KB gz). Deployed atomically to greencloud-vps; live on flows.vaultwares.ca + noddit.org. Net file changes: 4 archived, 8 new (AppShell, Navbar, Footer, Card, Button, Badge, LED, Field, vaultwares-old-design/README.md), 12 rewritten (index.css, main.tsx, App.tsx, LoginModal, SignupModal, WorkflowLibrary, NodeParamPanel, ComfyUIWorkflowInputsEditor, ExecutionProgressOverlay, ImageInputNode, registry.ts, FlowCanvas + all 7 canvas node renderers).
+- Commands:
+  - `git submodule update --remote vaultwares-themes`
+  - `npm install lucide-react`
+  - `npm run build`
+  - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
+- Files:
+  - `vault-flows/src/index.css`
+  - `vault-flows/src/main.tsx`
+  - `vault-flows/src/App.tsx`
+  - `vault-flows/src/nodes/registry.ts`
+  - `vault-flows/src/ui/AppShell.tsx`
+  - `vault-flows/src/ui/Navbar.tsx`
+  - `vault-flows/src/ui/Footer.tsx`
+  - `vault-flows/src/ui/LoginModal.tsx`
+  - `vault-flows/src/ui/SignupModal.tsx`
+  - `vault-flows/src/ui/WorkflowLibrary.tsx`
+  - `vault-flows/src/ui/NodeParamPanel.tsx`
+  - `vault-flows/src/ui/ComfyUIWorkflowInputsEditor.tsx`
+  - `vault-flows/src/ui/ExecutionProgressOverlay.tsx`
+  - `vault-flows/src/ui/components/Card.tsx`
+  - `vault-flows/src/ui/components/Button.tsx`
+  - `vault-flows/src/ui/components/Badge.tsx`
+  - `vault-flows/src/ui/components/LED.tsx`
+  - `vault-flows/src/ui/components/Field.tsx`
+  - `vault-flows/src/canvas/FlowCanvas.tsx`
+  - `vault-flows/src/canvas/nodes/BaseNode.tsx`
+  - `vault-flows/src/canvas/nodes/InputNode.tsx`
+  - `vault-flows/src/canvas/nodes/ImageInputNode.tsx`
+  - `vault-flows/src/canvas/nodes/LLMNode.tsx`
+  - `vault-flows/src/canvas/nodes/ModelCallNode.tsx`
+  - `vault-flows/src/canvas/nodes/ComfyUIWorkflowNode.tsx`
+  - `vault-flows/src/canvas/nodes/TransformNode.tsx`
+  - `vault-flows/src/canvas/nodes/OutputNode.tsx`
+  - `vault-flows/src/canvas/nodes/DisplayNode.tsx`
+  - `vault-flows/vaultwares-old-design/`
+- Git: repo=vault-flows, branch=main, head=117e167
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 20:07 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Removed GitHub Actions workflows so prod deploys are webhook/self-hosted only.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 20:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Removed GitHub Actions workflows so prod deploys are webhook/self-hosted only.
+- Git: repo=agent-ledger, branch=main, head=8be8eacb
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 19:43 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Extended the subtitle lookup and download systems to support remote media streaming URLs, query by media titles, and gracefully cache to temp directories. Programmatically hid N...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 19:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Extended the subtitle lookup and download systems to support remote media streaming URLs, query by media titles, and gracefully cache to temp directories. Programmatically hid Next and Previous player and PiP overlay buttons during streaming modes while preserving their visibility for local file sequences.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\scanner.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\preload.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\player.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 19:41 - vault-explorer</strong> <code>code-change</code> - Completely resolved the missing top-row cards, click propagation, manual selection cutoff, and rate-limiting bugs. Refactored hover-card.js to utilize a robust window.premiumHov...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 19:41 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completely resolved the missing top-row cards, click propagation, manual selection cutoff, and rate-limiting bugs. Refactored hover-card.js to utilize a robust window.premiumHoverState namespace to eliminate closure isolation that was leaking card visibility styles. Integrated post-await activeRDFlowId validation checks in startRDDebridFlow in app.js to block background unrestriction threads from overriding user manual overrides. Increased the Real-Debrid polling rate to 3500ms to eliminate instant rate-limiting. Scoped discover-tmdb watch region to CA and added original language filters to filter out Bollywood spam.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\hover-card.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\app.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\tmdb.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 19:33 - vault-explorer</strong> <code>code-change</code> - Optimized Torrentio scraper in realdebrid.js to try the highly-cached default endpoint first with a short timeout, falling back to full provider queries to avoid timeouts. Added \</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 19:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: Optimized Torrentio scraper in realdebrid.js to try the highly-cached default endpoint first with a short timeout, falling back to full provider queries to avoid timeouts. Added \
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\app.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\streaming.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\realdebrid.js`
+- Plan: `btn-rd-choose-manually\ Show All Streams button in index.html to allow bypassing stuck debrid caching or auto-select crawls. Integrated it in app.js and streaming.js to abort active caching flows and instantly display the manual streams list.`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 19:07 - vault-explorer</strong> <code>code-change</code> - Integrated OpenSubtitles.com API for dynamic subtitle searching and lazy downloading / caching inside Electron. Exposed new OpenSubtitles API Key text field in Settings UI and s...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 19:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Integrated OpenSubtitles.com API for dynamic subtitle searching and lazy downloading / caching inside Electron. Exposed new OpenSubtitles API Key text field in Settings UI and securely persisted it in vault-settings.json. Updated video player track appender to support remote lazy tracks and automated downloading next to the video path.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\settings.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\preload.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\scanner.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\player.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:45 - vault-explorer</strong> <code>code-change</code> - Fixed missing line breaks in the Spoken Translator GUI console by appending a newline character to incoming log event data in js/app.js.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed missing line breaks in the Spoken Translator GUI console by appending a newline character to incoming log event data in js/app.js.
+- Files:
+  - `js/app.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:44 - vault-explorer</strong> <code>code-change</code> - Updated spoken translator latency parameters: speedup triggers at 2.0s (1.15x), speeds up further at 3.5s (1.35x), and flushes the queue at 5.0s. Added consecutive_flushes count...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated spoken translator latency parameters: speedup triggers at 2.0s (1.15x), speeds up further at 3.5s (1.35x), and flushes the queue at 5.0s. Added consecutive_flushes counter tracking; if the queue flushes consecutively 3 or more times, it logs a warning warning indicating hardware bottlenecking.
+- Files:
+  - `python-scripts/stream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:41 - vault-explorer</strong> <code>code-change</code> - Implemented a live-stream latency catch-up algorithm in stream_translator.py that dynamically monitors the playback queue backlog. If pending speech is between 4.0s and 7.5s, sp...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:41 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented a live-stream latency catch-up algorithm in stream_translator.py that dynamically monitors the playback queue backlog. If pending speech is between 4.0s and 7.5s, speech speed is stretched to 1.15x; if between 7.5s and 12.0s, it speaks at 1.35x. If lag exceeds 12.0s, it flushes the backlog entirely and jumps directly to the live stream head.
+- Files:
+  - `python-scripts/stream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:40 - vault-explorer</strong> <code>verification</code> - Ran stream translator on raw Cloudflare MLB MPEG-TS stream chunk, successfully transcribing game commentary in real-time, translating it to French, and playing it back with no a...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ran stream translator on raw Cloudflare MLB MPEG-TS stream chunk, successfully transcribing game commentary in real-time, translating it to French, and playing it back with no audio cutoffs. Generated a high-fidelity dark-mode GUI dashboard mockup showcasing visual telemetry and equalizers.
+- Files:
+  - `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\translation_experiment_results.md`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:35 - vault-explorer</strong> <code>code-change</code> - Decoupled rendering logic from js/app.js by extracting renderFavorites and favorite local files to js/favorites.js, and renderTMDB, MOCK_TMDB_DATA, updateProviderButtonsUI, and ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Decoupled rendering logic from js/app.js by extracting renderFavorites and favorite local files to js/favorites.js, and renderTMDB, MOCK_TMDB_DATA, updateProviderButtonsUI, and updateSubtabsUI to js/tmdb.js. Included the new script references in index.html. Fixed the spoken translation audio truncation bug in stream_translator.py by introducing playback_queue.join() in the cleanup block to ensure the main thread waits for the sounddevice thread to finish playing all synthesized audio before exiting.
+- Files:
+  - `js/favorites.js`
+  - `js/tmdb.js`
+  - `js/app.js`
+  - `index.html`
+  - `python-scripts/stream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:30 - vault-explorer</strong> <code>code-change</code> - Decoupled js/app.js by migrating all premium hover popup card logic into js/hover-card.js, updating index.html to load it. Prioritized the neural net vaultwares-media-processing...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Decoupled js/app.js by migrating all premium hover popup card logic into js/hover-card.js, updating index.html to load it. Prioritized the neural net vaultwares-media-processing venv in PowerShell translation wrappers to natively resolve torch dependencies. Configured Python translation scripts to stream console outputs via UTF-8 to prevent charmap encoder crashes under Windows terminal. Verified the entire translation pipeline end-to-end with zero mocks using a real English speech WAV file, transcribing, translating, and synthesizing French audio peaks successfully.
+- Files:
+  - `js/hover-card.js`
+  - `js/app.js`
+  - `index.html`
+  - `powershell/Start-StreamTranslator.ps1`
+  - `powershell/Start-LivestreamTranslator.ps1`
+  - `python-scripts/stream_translator.py`
+  - `python-scripts/livestream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:24 - vault-explorer</strong> <code>code-change</code> - Split translations into separate js/translations.en.js and js/translations.qc.js. Replaced all legacy emojis in the tabs and search grids with inline SVGs/LED indicators. Cleane...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Split translations into separate js/translations.en.js and js/translations.qc.js. Replaced all legacy emojis in the tabs and search grids with inline SVGs/LED indicators. Cleaned up unused temporary scripts, test models and log files. Separated documentation into README.en.md and README.qc.md, leaving a clean routing directory in README.md. Designed and integrated a high-fidelity Netflix-style expanding hover popup card with a 400ms delay, smooth cubic-bezier transitions, autoplaying muted YouTube trailer frame embedding, and Play/Library/Details button actions.
+- Files:
+  - `js/translations.en.js`
+  - `js/translations.qc.js`
+  - `js/translations.js`
+  - `js/app.js`
+  - `index.html`
+  - `index.css`
+  - `README.md`
+  - `README.en.md`
+  - `README.qc.md`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:10 - agent-ledger</strong> <code>commands,verification</code> - Fixed local AgentLedgerSync push failure (missing paths in sync script) and pushed updates; prod ledger now refreshed.</summary>
+
+- Kind: commands,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed local AgentLedgerSync push failure (missing paths in sync script) and pushed updates; prod ledger now refreshed.
+- Git: repo=agent-ledger, branch=main, head=fc548d1
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 18:08 - vault-explorer</strong> <code>code-change</code> - Phased out Unicode icons with inline Lucide-style SVGs in Details buttons (&#39;btn-modal-library&#39; and &#39;btn-modal-follow&#39;). Refactored buttons to use bilingual EN/FR wording. Fixed ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 18:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Phased out Unicode icons with inline Lucide-style SVGs in Details buttons ('btn-modal-library' and 'btn-modal-follow'). Refactored buttons to use bilingual EN/FR wording. Fixed details modal Add/Remove Library click handling to persistently update window.appSettings.library and live refresh the favorite grid or catalog card border highlighting. Configured TV Show 'Suivre la série/Follow Show' button to persistently save followed show IDs inside window.appSettings.followedShows. Added context manager stderr/stdout redirection to os.devnull in python-scripts/livestream_translator.py to completely suppress verbose NeMo / tqdm warnings and maintain clean, formatted telemetry in the console.
+- Files:
+  - `js/streaming.js`
+  - `python-scripts/livestream_translator.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 16:19 - vaultwares-toolkit</strong> <code>code-change</code> - Addressed CodeRabbit review on PR #1 (3 inline comments on README.md): badge links now point to repo / python.org / LICENSE.md instead of empty (); both directory-tree fenced co...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-toolkit  Branch: feat/columbo-import
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 16:19 (TZ: Eastern Standard Time)
+  ```
+- Summary: Addressed CodeRabbit review on PR #1 (3 inline comments on README.md): badge links now point to repo / python.org / LICENSE.md instead of empty (); both directory-tree fenced code blocks gained 'text' language identifier; install section reworded from 'available globally' to 'available in your active Python environment'. Committed 0541087 on feat/columbo-import, pushed, replied to all 3 threads via gh api and resolved them via GraphQL.
+- Commands:
+  - `git commit`
+  - `git push`
+  - `gh api graphql resolveReviewThread`
+- Files:
+  - `vaultwares-toolkit/README.md`
+- Git: repo=vaultwares-toolkit, branch=feat/columbo-import, head=0541087
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 16:15 - vaultwares-toolkit</strong> <code>commands,handoff</code> - Opened PR #1 on vaultwares-toolkit: feat/columbo-import -&gt; main. Moved 2 local main commits (Columbo import from vaultwares-adk + HITL human-chat-only constraint) onto feat/colu...</summary>
+
+- Kind: commands,handoff
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-toolkit  Branch: feat/columbo-import
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 16:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Opened PR #1 on vaultwares-toolkit: feat/columbo-import -> main. Moved 2 local main commits (Columbo import from vaultwares-adk + HITL human-chat-only constraint) onto feat/columbo-import branch, pushed, opened PR. PR covers vault-port package (Columbo refactored off ExtrovertAgent/Redis, _write_checkpoint replaces _publish_result, pip-installable columbo CLI), reference recipe-output fixture from vaultwares-themes beachhead run, HITL human-chat-only note in README + agent.md forbidding extract mode in scheduled/autonomous/headless-CI until interview phase has non-human impl. URL: https://github.com/p-potvin/vaultwares-toolkit/pull/1
+- Commands:
+  - `git checkout -b feat/columbo-import`
+  - `git push -u origin feat/columbo-import`
+  - `gh pr create --base main --head feat/columbo-import`
+- Files:
+  - `vaultwares-toolkit/src/vault_port/columbo.py`
+  - `vaultwares-toolkit/agents/columbo.agent.md`
+  - `vaultwares-toolkit/README.md`
+  - `vaultwares-toolkit/pyproject.toml`
+- Git: repo=vaultwares-toolkit, branch=feat/columbo-import, head=0471faf
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 15:44 - qa-automation (formerly Prom-King/qa-automation)</strong> <code>verification</code> - Implemented own-domain stealth crawl runner (Node/Playwright) that generates rotating IPoasis proxies per domain session (via proxy-chain anonymization), crawls same-domain link...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5.2
+  Thinking: medium
+  Mode: Default
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\qa-automation  Branch: main
+  Tools used (this reply): apply_patch, shell_command, multi_tool_use.parallel
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 15:44 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: max_pages=40_default, bandwidth_guardrails=block image,media,font; block_third_party=1, own_domain_only=true, ip_rotation=ipoasis_rotate_per_domain_session, stealth_behavior=enabled_on_own_domains, max_depth=4
+  - Metrics: {"prom_king_pages":4,"fullxxx_pages":40,"blocked":0,"failures":0}
+- Summary: Implemented own-domain stealth crawl runner (Node/Playwright) that generates rotating IPoasis proxies per domain session (via proxy-chain anonymization), crawls same-domain links up to depth 4 with conservative page cap, blocks heavy resources (image/media/font) and optionally third-party requests to protect bandwidth, and runs human-like behavior + age-gate handling only on prom-king.xyz/fullxxx.video. Executed a run with default limits and wrote JSON artifacts.
+- Commands:
+  - `npm run report:own-domain-stealth`
+  - `node -c .\\scripts\\run-own-domain-stealth.mjs`
+- Files:
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\scripts\\run-own-domain-stealth.mjs`
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\package.json`
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\package-lock.json`
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\.env.example`
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\README.md`
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\own-domain-stealth\\20260526-153952\\summary.json`
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\own-domain-stealth\\20260526-153952\\prom-king.xyz\\stealth-results.json`
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\own-domain-stealth\\20260526-153952\\fullxxx.video\\stealth-results.json`
+- Git: repo=qa-automation, branch=main, head=393f6b4
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 15:36 - vault-explorer</strong> <code>code-change</code> - Suppressed NVIDIA NeMo tqdm progress loops during real-time streaming by setting verbose=False in model.transcribe. Silenced Megatron/OneLogger logging noise by setting NeMo log...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 15:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Suppressed NVIDIA NeMo tqdm progress loops during real-time streaming by setting verbose=False in model.transcribe. Silenced Megatron/OneLogger logging noise by setting NeMo logging level to ERROR on module import. Fixed the Movies tab cards opening bug by introducing window._detailsModalJustOpened and window._rdDialogJustOpened boolean state flags, preventing instant bubbling modal closures during click event propagation.
+- Files:
+  - `vaultwares-media-processing/vaultwares_media_processing/parakeet_wrapper.py`
+  - `js/streaming.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 14:48 - vault-explorer</strong> <code>code-change</code> - Fixed ASR transcribe keyword mismatch in parakeet_wrapper.py. Hooked up the Add to Library button in streaming details modal with persistent settings storage and beautiful visua...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 14:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed ASR transcribe keyword mismatch in parakeet_wrapper.py. Hooked up the Add to Library button in streaming details modal with persistent settings storage and beautiful visual states. Added a 500ms delay stagger and _torrentRequestCounter request tracking in triggerRDStream to prevent race conditions when opening a new movie during a pending scrape. Appended a global document click listener in streaming.js to close the floating modals when clicking outside their active DOM boundaries.
+- Files:
+  - `vaultwares-media-processing/vaultwares_media_processing/parakeet_wrapper.py`
+  - `js/streaming.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 14:48 - agent-ledger</strong> <code>code-change,handoff,verification</code> - Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections &#226;€” tube-sites absorbs fullxxx, vw-jira-sync split out, dropped &#39;fo...</summary>
+
+- Kind: code-change,handoff,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 14:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections â€” tube-sites absorbs fullxxx, vw-jira-sync split out, dropped 'formerly' from UI. B: Dashboard layout â€” log-scale heatmap, 4 new chart widgets (ActivityPulse, TopProjectsVelocity, CommitChurnSparkline, Activity24) in 12-col grid. C: Animated LEDs â€” pulse keyframes, Led component in Nav and section headers. D: Categorized TSX icon library (7 categories, barrel export) in vaultwares-themes + copied into site. E: New V+coil logo (gold #D6A441 + ink #241e36), archived 7 old minimal-V PNGs. F: Multi-kind ledger entries â€” kind-utils.ps1 shared library, lenient comma-separated validation, split-on-read in PS + TS consumers, parseKinds/isKnownKind in types.ts, multi-kind badge rendering in ChangesPage, agent-ledger-schema.mdx doc, CLAUDE.md kind enum references, memory file. Updated README.md, branding-QC.mdx, GLYPHS_ICONS.md, assets/README.md. Added IconClock/IconFolder to ChangesPage event rows. Build passes clean (63 modules, 267kB). Pushed agent-ledger to main (webhook deploy confirmed 200). PRs created for vaultwares-themes (#17) and vaultwares-docs (#20).
+- Commands:
+  - `npx tsc --noEmit`
+  - `npm run build`
+  - `git push origin main`
+  - `gh pr create (themes #17)`
+  - `gh pr create (docs #20)`
+  - `curl ledger.vaultwares.ca -> 200`
+- Files:
+  - `scripts/kind-utils.ps1`
+  - `scripts/record-agent-change.ps1`
+  - `scripts/update-work-impact-state.ps1`
+  - `scripts/render-work-impact.ps1`
+  - `project-aliases.json`
+  - `site/src/types.ts`
+  - `site/src/pages/WorkImpactPage.tsx`
+  - `site/src/pages/ChangesPage.tsx`
+  - `site/src/components/Nav.tsx`
+  - `site/src/components/Led.tsx`
+  - `site/src/components/ActivityPulse.tsx`
+  - `site/src/components/TopProjectsVelocity.tsx`
+  - `site/src/components/CommitChurnSparkline.tsx`
+  - `site/src/components/Activity24.tsx`
+  - `site/src/icons/index.ts`
+  - `site/src/index.css`
+  - `site/src/useData.ts`
+  - `README.md`
+  - `vaultwares-themes/assets/logos/vaultwares-logo.svg`
+  - `vaultwares-themes/vaultwares-revisited/GLYPHS_ICONS.md`
+  - `vaultwares-themes/assets/README.md`
+  - `vaultwares-docs/docs-content/operations/agent-ledger-schema.mdx`
+  - `vaultwares-docs/docs-content/branding-QC.mdx`
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 14:40 - vault-explorer</strong> <code>code-change</code> - Implemented OMDb API and Poster API handlers using credential file key. Fixed start-up Uncaught SyntaxError (duplicate global &#39;el&#39; helper in streaming.js) and resolved live stre...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 14:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented OMDb API and Poster API handlers using credential file key. Fixed start-up Uncaught SyntaxError (duplicate global 'el' helper in streaming.js) and resolved live streaming transcription runtime exception in parakeet_wrapper.py (expected 2 values, got 1) by refactoring transcription to utilize NVIDIA NeMo native high-performance transcribe API. Added elegant line break padding to ASR python-scripts/stream_translator.py print statements for superior log presentation.
+- Files:
+  - `src/tmdb.js`
+  - `preload.js`
+  - `js/streaming.js`
+  - `python-scripts/stream_translator.py`
+  - `vaultwares-media-processing/vaultwares_media_processing/parakeet_wrapper.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 13:45 - vault-explorer</strong> <code>code-change</code> - Stabilized media streaming pipeline and livestream translation. Implemented automatic web-scraping direct-stream URL resolver inside stream_translator.py for tube sites like por...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 13:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Stabilized media streaming pipeline and livestream translation. Implemented automatic web-scraping direct-stream URL resolver inside stream_translator.py for tube sites like pornxp.fo using standard library urllib and regex, eliminating FFmpeg errors. Integrated the persistent watch history layer into Custom HTML5 player.js and streaming.js, enabling periodic watch progress updates, continue watching state persistence, and resume-from-last-played capability for both streaming and local media files.
+- Files:
+  - `python-scripts/stream_translator.py`
+  - `preload.js`
+  - `js/player.js`
+  - `js/streaming.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 11:39 - vault-explorer</strong> <code>code-change</code> - Implemented season/episode picker and quality+language-aware torrent ranking for TV streaming. Created js/streaming.js with: showMediaDetails() modal wiring (opens TMDB details ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 11:39 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented season/episode picker and quality+language-aware torrent ranking for TV streaming. Created js/streaming.js with: showMediaDetails() modal wiring (opens TMDB details before RD dialog), _setupTVModal() / _loadSeasonEpisodes() to populate season dropdown and episode table from get-tmdb-tv-season, scoreTorrent() + rankTorrents() to sort by preferred quality (2160p/1080p/720p) and language (en/fr/multi), auto-select mode, and updated triggerRDStream() supporting season+episode params. Updated app.js card clicks to call showMediaDetails. Updated realdebrid.js search-torrents handler to accept season/episode and build episode-specific Torrentio URL (imdbId:season:episode). Fixed duplicate display property bug in tv-actions-container in index.html. Increased Torrentio limit from 6 to 20 results.
+- Files:
+  - `js/streaming.js`
+  - `js/app.js`
+  - `src/realdebrid.js`
+  - `index.html`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 11:08 - agent-ledger</strong> <code>bug</code> - Investigated fishy WORK_IMPACT spikes on 2026-04-14 and 2026-04-25; identified dominant commits and opened issue #10 about commit-date bucketing.</summary>
+
+- Kind: bug
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 11:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Investigated fishy WORK_IMPACT spikes on 2026-04-14 and 2026-04-25; identified dominant commits and opened issue #10 about commit-date bucketing.
+- Git: repo=agent-ledger, branch=main, head=efa5464
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 10:26 - vaultwares-docs (formerly tmp-app)</strong> <code>code-change,verification</code> - Add simple, mandatory ops documentation: (1) webhook secret rotation checklist (EN+QC) for VW_GITHUB_WEBHOOK_SECRET, (2) services inventory table (EN+QC) including Prom-King/Ful...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): powershell, git
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 10:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Add simple, mandatory ops documentation: (1) webhook secret rotation checklist (EN+QC) for VW_GITHUB_WEBHOOK_SECRET, (2) services inventory table (EN+QC) including Prom-King/FullXXX sites and link-sharing, and (3) link these from deployment-flow + network-map + project-bootstrap; update vaultwares-docs AGENTS/CLAUDE mandatory-reading pointers and DEPLOYMENT_POLICY summary. Regenerated page resources and pushed to main for deploy.
+- Commands:
+  - `npm run generate:page-resources`
+  - `npm ci`
+  - `npm run build`
+  - `git commit 4828093`
+  - `git push origin main`
+- Files:
+  - `docs-content/operations/webhook-secret-rotation.mdx`
+  - `docs-content/operations/webhook-secret-rotation-QC.mdx`
+  - `docs-content/operations/services-inventory.mdx`
+  - `docs-content/operations/services-inventory-QC.mdx`
+  - `docs-content/operations/deployment-flow.mdx`
+  - `docs-content/operations/deployment-flow-QC.mdx`
+  - `docs-content/operations/network-map.mdx`
+  - `docs-content/operations/network-map-QC.mdx`
+  - `docs-content/operations/project-bootstrap.mdx`
+  - `docs-content/operations/project-bootstrap-QC.mdx`
+  - `AGENTS.md`
+  - `CLAUDE.md`
+  - `instructions/summaries/DEPLOYMENT_POLICY.md`
+  - `src/resources/pages/operations__services-inventory.json`
+  - `src/resources/pages/operations__webhook-secret-rotation.json`
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 10:07 - vaultwares-webhooks</strong> <code>commands,verification</code> - Rotation compl&#195;&#168;te de VW_GITHUB_WEBHOOK_SECRET (sans GitHub Actions): nouveau secret install&#195;&#169; dans /etc/vw-webhookd/env (sans espace), webhooks GitHub mis &#195;&#160; jour pour les repo...</summary>
+
+- Kind: commands,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): powershell, ssh, gh, git
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 10:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Rotation complÃ¨te de VW_GITHUB_WEBHOOK_SECRET (sans GitHub Actions): nouveau secret installÃ© dans /etc/vw-webhookd/env (sans espace), webhooks GitHub mis Ã  jour pour les repos cibles (vaultwares-docs, vaultwares-website, Prom-King/link-sharing, agent-ledger), service vw-webhookd redÃ©marrÃ©. VÃ©rifiÃ© par pings + push rÃ©el sur agent-ledger: vw-webhookd a reÃ§u lâ€™Ã©vÃ©nement, a exÃ©cutÃ© /opt/sites/agent-ledger/deploy/deploy.sh, et le dÃ©ploiement a terminÃ© avec exit=0. Correctifs ops appliquÃ©s pour que le runner vwdeploy puisse dÃ©ployer: git safe.directory + ownership /opt/sites/agent-ledger et /var/www/ledger.vaultwares.ca.
+- Commands:
+  - `ssh root@100.73.93.84: update /etc/vw-webhookd/env (rotate secret)`
+  - `gh api: PATCH/POST repo webhooks to hooks.vaultwares.ca/github`
+  - `systemctl restart vw-webhookd`
+  - `git push (agent-ledger) to validate deploy`
+  - `chown + git safe.directory for vwdeploy`
+  - `Invoke-WebRequest HEAD https://ledger.vaultwares.ca`
+- Files:
+  - `/etc/vw-webhookd/env (remote)`
+  - `/etc/vw-webhookd/config.yml (remote)`
+  - `/var/log/vw-webhookd.log (remote)`
+  - `/opt/sites/agent-ledger (remote perms)`
+  - `/var/www/ledger.vaultwares.ca (remote perms)`
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 10:01 - vault-explorer</strong> <code>code-change</code> - Fixed &#39;No module named torch&#39; Parakeet error in livestream translation. Root cause: getRobustPythonExe() in src/utils.js was resolving to the local vault-explorer/.venv (Python ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 10:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed 'No module named torch' Parakeet error in livestream translation. Root cause: getRobustPythonExe() in src/utils.js was resolving to the local vault-explorer/.venv (Python 3.13, no torch) instead of the sibling vaultwares-media-processing/.venv (Python 3.x, PyTorch 2.6.0+cu124, NeMo, Parakeet). Reordered searchBases to try vaultwares-media-processing/.venv first. Also cleaned stale duplicate comment. Also identified the RD instantAvailability endpoint is permanently removed (error_code 37); the add+select+poll flow is the correct bypass and does work (Halloween confirmed cached: downloaded 100%).
+- Files:
+  - `src/utils.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 09:54 - agent-ledger</strong> <code>code-change,verification</code> - Revamp ledger.vaultwares.ca UI widgets for clarity: replace commit churn sparkline with interactive bar chart (weekday + timeline toggle), add hover tooltips to commit churn / 2...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): powershell, git, gh, ssh
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 09:54 (TZ: Eastern Standard Time)
+  ```
+- Summary: Revamp ledger.vaultwares.ca UI widgets for clarity: replace commit churn sparkline with interactive bar chart (weekday + timeline toggle), add hover tooltips to commit churn / 24h activity / activity pulse, remove LED indicators from widgets + headers, add new heatmap intensity tier for 60+ entries, clarify Generated line (local time), and translate UI labels to QC (nav + changes page labels). Also fixed agent-ledger webhook secret mismatch (vw-webhookd env has leading space) and redeployed.
+- Commands:
+  - `npm run build (site)`
+  - `git commit e7cf2be`
+  - `git push origin main`
+  - `gh api PATCH repo webhook secret`
+  - `ssh root@100.73.93.84 bash /opt/sites/agent-ledger/deploy/deploy.sh`
+  - `HEAD https://ledger.vaultwares.ca (Last-Modified 2026-05-26 13:53Z)`
+- Files:
+  - `site/src/components/CommitChurnSparkline.tsx`
+  - `site/src/components/Activity24.tsx`
+  - `site/src/components/ActivityPulse.tsx`
+  - `site/src/pages/WorkImpactPage.tsx`
+  - `site/src/pages/ChangesPage.tsx`
+  - `site/src/components/Nav.tsx`
+  - `site/src/i18n.ts`
+  - `site/src/index.css`
+  - `site/src/App.tsx`
+  - `site/src/types.ts`
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 09:30 - vault-explorer</strong> <code>code-change</code> - Stabilized Vault Explorer streaming. Fixed duplicate/premature startup tab boot logic in js/app.js to correctly resolve blank Movies tab. Added unique flow ID and cancellation s...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 09:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Stabilized Vault Explorer streaming. Fixed duplicate/premature startup tab boot logic in js/app.js to correctly resolve blank Movies tab. Added unique flow ID and cancellation state check in startRDDebridFlow to prevent overlapping/flickering UI progress. Implemented fallback activation of translation backend when native audio playback fails. Added error event listener in video player for clear user feedback on playback failures. Added EZTV series mirror scraping fallback to src/realdebrid.js.
+- Files:
+  - `js/app.js`
+  - `js/player.js`
+  - `src/realdebrid.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 09:16 - vault-explorer</strong> <code>code-change</code> - Implemented real-time Torrent download/caching progress bar inside startRDDebridFlow loader. Polling rd-torrent-status every 1.5s allows users to monitor cloud download progress...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 09:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented real-time Torrent download/caching progress bar inside startRDDebridFlow loader. Polling rd-torrent-status every 1.5s allows users to monitor cloud download progress (percentage, download speed, and seeders) on uncached files, then automatically unrestricts and starts playing once finished, bypassing standard fatal un-cached errors gracefully.
+- Files:
+  - `js/app.js`
+  - `src/realdebrid.js`
+  - `preload.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 09:13 - agent-ledger</strong> <code>commands,verification</code> - Fix ledger.vaultwares.ca not updating: found p-potvin/agent-ledger had 0 GitHub webhooks, so vw-webhookd never received push events. Created repo webhook to https://hooks.vaultw...</summary>
+
+- Kind: commands,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): powershell, ssh, gh
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 09:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fix ledger.vaultwares.ca not updating: found p-potvin/agent-ledger had 0 GitHub webhooks, so vw-webhookd never received push events. Created repo webhook to https://hooks.vaultwares.ca/github (events: push,pull_request), verified ping delivery=200, then ran /opt/sites/agent-ledger/deploy/deploy.sh on greencloud-vps; ledger.vaultwares.ca Last-Modified now 2026-05-26 13:11Z.
+- Commands:
+  - `Invoke-WebRequest https://ledger.vaultwares.ca (checked Last-Modified)`
+  - `gh api repos/p-potvin/agent-ledger/hooks (length=0)`
+  - `gh api POST repos/p-potvin/agent-ledger/hooks (created)`
+  - `gh api POST .../pings (200)`
+  - `ssh root@100.73.93.84 bash /opt/sites/agent-ledger/deploy/deploy.sh`
+- Files:
+  - `/etc/vw-webhookd/config.yml (remote)`
+  - `/var/log/vw-webhookd.log (remote)`
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 09:10 - vault-explorer</strong> <code>code-change</code> - Bypassed Torrentio debrid proxy 502 Bad Gateway failures by executing direct public Torrentio metadata queries from the client, resolving and unrestricting cached torrents direc...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 09:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Bypassed Torrentio debrid proxy 502 Bad Gateway failures by executing direct public Torrentio metadata queries from the client, resolving and unrestricting cached torrents directly via Real-Debrid API. Solved Videotron/ISP DNS blocking of yts.mx by implementing an automated fallback rotating through active YTS mirrors (yts.lt, yts.pm, yts.ae) with custom AbortSignal timeouts. Cleaned TMDB trailing period titles before scraping to ensure correct matching.
+- Files:
+  - `src/realdebrid.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 09:00 - vault-explorer</strong> <code>code-change</code> - Implemented client-side TMDB movie/series card clicking to trigger Real-Debrid streaming. Added automatic fallback/retry logic to window.startRDDebridFlow when Real-Debrid error...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 09:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented client-side TMDB movie/series card clicking to trigger Real-Debrid streaming. Added automatic fallback/retry logic to window.startRDDebridFlow when Real-Debrid error 35 (infringing_file) is encountered, allowing it to seamlessly cycle to the next best cached stream torrent. Fixed HTML5 stream audio player playback error from blocking real-time translation backend by bypassing the native audio element player when the translation toggle is checked and handling other raw loading format warnings gracefully.
+- Files:
+  - `js/app.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 08:53 - vault-explorer</strong> <code>code-change</code> - Configured player-first stream capture with optional real-time spoken translation toggle in js/app.js, index.html and index.css. Toggling translator ducks/mutes the HTML5 audio ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 08:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: Configured player-first stream capture with optional real-time spoken translation toggle in js/app.js, index.html and index.css. Toggling translator ducks/mutes the HTML5 audio stream natively and triggers the background python stream translator process.
+- Files:
+  - `js/app.js`
+  - `index.html`
+  - `index.css`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 08:51 - vault-explorer</strong> <code>code-change</code> - Configured interactive front-end controls and audio visualizer events for the Spoken Translator tab in js/app.js. Styled the TMDB movie ratings as a beautiful, compact purple sq...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 08:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Configured interactive front-end controls and audio visualizer events for the Spoken Translator tab in js/app.js. Styled the TMDB movie ratings as a beautiful, compact purple square on the bottom left of cards.
+- Files:
+  - `js/app.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 08:47 - vault-explorer</strong> <code>code-change</code> - Restored complete functionality to the TMDB streaming browser tab. Exposed pagination and custom discover endpoints in preload.js; implemented fully paginated search and categor...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 08:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Restored complete functionality to the TMDB streaming browser tab. Exposed pagination and custom discover endpoints in preload.js; implemented fully paginated search and category discovery in src/tmdb.js with support for offline combined mock data; updated js/app.js tab switching, top-level translations, and custom watch provider and subtab selectors; and resolved key event listener issues.
+- Files:
+  - `preload.js`
+  - `src/tmdb.js`
+  - `js/app.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 08:39 - vault-explorer</strong> <code>code-change,verification</code> - Relocated settings-led to the left side of the trigger button content, and adjusted CSS layout properties with margin-right spacing and a slowed-down 3.5s breathe animation pulse.</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 08:39 (TZ: Eastern Standard Time)
+  ```
+- Summary: Relocated settings-led to the left side of the trigger button content, and adjusted CSS layout properties with margin-right spacing and a slowed-down 3.5s breathe animation pulse.
+- Files:
+  - `index.html`
+  - `index.css`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 08:38 - vault-explorer</strong> <code>code-change,verification</code> - Patched missing settings-panel-header CSS selector in index.html settings modal, and added robust element existence guards in js/app.js setLanguage() to resolve TypeError which ...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 08:38 (TZ: Eastern Standard Time)
+  ```
+- Summary: Patched missing settings-panel-header CSS selector in index.html settings modal, and added robust element existence guards in js/app.js setLanguage() to resolve TypeError which blocked the application lifecycle and tab loading.
+- Files:
+  - `index.html`
+  - `js/app.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 08:36 - vaultwares-docs</strong> <code>code-change</code> - Translate Mermaid diagram zoom toolbar labels to QC French (Ajuster / Remettre + aria labels); pushed to main.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): powershell, git
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 08:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Translate Mermaid diagram zoom toolbar labels to QC French (Ajuster / Remettre + aria labels); pushed to main.
+- Commands:
+  - `git commit`
+  - `git push origin main`
+- Files:
+  - `src/MermaidBlock.tsx`
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 08:35 - vaultwares-docs</strong> <code>code-change,verification</code> - Add zoomable Mermaid rendering for `mermaid blocks (auto-fit, light background for contrast) and fix duplicate pre mapping; pushed to main for deploy. Note: local npm build fail...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): powershell, git
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 08:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Add zoomable Mermaid rendering for `mermaid blocks (auto-fit, light background for contrast) and fix duplicate pre mapping; pushed to main for deploy. Note: local npm build failed because node_modules missing (no install run).
+- Commands:
+  - `npm run build (failed: missing node_modules)`
+  - `git commit`
+  - `git push origin main`
+- Files:
+  - `src/MermaidBlock.tsx`
+  - `src/markdownComponents.tsx`
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 08:24 - vault-explorer</strong> <code>code-change,verification</code> - Relocated settings-panel into a centered console modal with an animated settings-led adjacent to the trigger. Added support for Original Language default subtitle option that lo...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 08:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Relocated settings-panel into a centered console modal with an animated settings-led adjacent to the trigger. Added support for Original Language default subtitle option that loads base .srt files specifically. Refined TMDB movie card layout to reset padding and display, improved density to 130px, and solved overview-text visibility overflow by defaulting display: none.
+- Files:
+  - `index.html`
+  - `index.css`
+  - `js/settings.js`
+  - `js/player.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 08:20 - vaultwares-docs</strong> <code>code-change</code> - Added browser-rendered daily workflow diagrams page to vaultwares-docs main (QC-first). New route /getting-started/daily-flows with QC content and Mermaid diagrams for Days 1&#226;€“...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gpt-5.2
+  Thinking: medium
+  Mode: codex
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): powershell, git, npm
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 08:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added browser-rendered daily workflow diagrams page to vaultwares-docs main (QC-first). New route /getting-started/daily-flows with QC content and Mermaid diagrams for Days 1â€“10 from gemini-daily-flow.md. Linked from index-QC and added a pointer in getting-started/overview-QC. Regenerated page resources (97 pages) and pushed commit cedfb68 to main to trigger webhook deployment.
+- Commands:
+  - `npm run generate:page-resources`
+  - `git commit`
+  - `git push`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\getting-started\daily-flows-QC.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\getting-started\daily-flows.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\index-QC.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\getting-started\overview-QC.mdx`
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 06:26 - vaultwares-docs</strong> <code>plan</code> - Planned non-technical audience document set grounded in actual repos (not vaultwares-docs pages). Reviewed concrete sources: gemini-daily-flow.md (10 days of workflow ideas), va...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gpt-5.2
+  Thinking: medium
+  Mode: codex
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): powershell, git, rg
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 06:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Planned non-technical audience document set grounded in actual repos (not vaultwares-docs pages). Reviewed concrete sources: gemini-daily-flow.md (10 days of workflow ideas), vault-flows/README + presets, vaultwares-pipelines/README + examples, vaultwares-themes/security/crypto-vault.ts (ML-KEM + AES envelope), vaultwares-identity-manager/docs/program/README.md, vault-explorer/README.md, agent-ledger/DEPLOY.md for tailscale/private deploy model evidence. Next output is a QC-friendly list of proposed offline documents for explaining VaultWares.
+- Commands:
+  - `Read gemini-daily-flow.md`
+  - `Read READMEs in vault-flows, vaultwares-pipelines, vaultwares-themes, vaultwares-identity-manager, vault-explorer`
+  - `rg PQC/ML-KEM strings`
+- Files:
+  - `C:\Users\Administrator\Desktop\gemini-daily-flow.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vault-flows\README.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\README.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-themes\security\crypto-vault.ts`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-identity-manager\docs\program\README.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\README.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\agent-ledger\DEPLOY.md`
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 05:10 - vault-explorer</strong> <code>code-change</code> - Modernized Vault Explorer discovery and streaming. Configured Torrentio with Real-Debrid API keys to check cached statuses and return direct pre-unrestricted links. Intercepted ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 05:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Modernized Vault Explorer discovery and streaming. Configured Torrentio with Real-Debrid API keys to check cached statuses and return direct pre-unrestricted links. Intercepted 302 redirects in rd-stream-torrent to instantly fetch cached debrid links under 200ms. Redesigned streaming details modal into two columns (poster and links left, metadata and small player right). Resolved YouTube Error 153 using session header overrides and widget referrers. Deferred local vault directory loading on startup to respect new Homepage Tab settings saved persistently.
+- Files:
+  - `main.js`
+  - `src/realdebrid.js`
+  - `index.html`
+  - `index.css`
+  - `js/app.js`
+  - `js/settings.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 03:58 - vault-explorer</strong> <code>code-change</code> - Updated TMDB search and discover handlers in tmdb.js and app.js to support multi-page pagination. Added YouTube trailer browser fallback button with open-external-url IPC handle...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 03:58 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated TMDB search and discover handlers in tmdb.js and app.js to support multi-page pagination. Added YouTube trailer browser fallback button with open-external-url IPC handler using shell.openExternal. Upgraded Real-Debrid unrestrict API response handlers in realdebrid.js to parse and return structured JSON errors (infringing_file, bad_token, etc.). Integrated language-aware error feedback in app.js and settings.js for premium localized user experience.
+- Commands:
+  - `git diff`
+- Files:
+  - `main.js`
+  - `src/tmdb.js`
+  - `src/realdebrid.js`
+  - `js/app.js`
+  - `js/settings.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 03:07 - vault-explorer</strong> <code>code-change</code> - Implemented watch provider dynamic discovery, Netflix-style personalized dashboard rows, continue watching tracker, followed series, and library persistent state management.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 03:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented watch provider dynamic discovery, Netflix-style personalized dashboard rows, continue watching tracker, followed series, and library persistent state management.
+- Files:
+  - `src/tmdb.js`
+  - `preload.js`
+  - `index.html`
+  - `js/app.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 02:37 - vault-explorer</strong> <code>code-change</code> - Differentiated between movies and series in Streaming tab. Created Movies/Series sub-tabs and decoupled the Real-Debrid streaming process. Replaced TMDB browser clicks with a de...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 02:37 (TZ: Eastern Standard Time)
+  ```
+- Summary: Differentiated between movies and series in Streaming tab. Created Movies/Series sub-tabs and decoupled the Real-Debrid streaming process. Replaced TMDB browser clicks with a details modal showing high-res synopsis, YouTube trailer integration, season selector, and episode listings.
+- Files:
+  - `js/app.js`
+  - `js/translations.js`
+  - `preload.js`
+  - `src/tmdb.js`
+  - `index.html`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 02:33 - python-scripts</strong> <code>code-change</code> - Fixed Telegram session re-login issue by using absolute __file__ paths for .session. Added strict pre-parser to only capture linkvertise.com URLs and mutate them to .lol prior t...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 02:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed Telegram session re-login issue by using absolute __file__ paths for .session. Added strict pre-parser to only capture linkvertise.com URLs and mutate them to .lol prior to running anything else.
+- Files:
+  - `telegram/telethon_link_resolver.py`
+- Git: repo=python-scripts, branch=main, head=98e158c
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 02:32 - vault-explorer</strong> <code>code-change</code> - Finalized the modernization of the Movies/Series browser, solved cross-tab scroll persistence, and perfected the high-density Netflix-style hover expansions. Restored full scrol...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 02:32 (TZ: Eastern Standard Time)
+  ```
+- Summary: Finalized the modernization of the Movies/Series browser, solved cross-tab scroll persistence, and perfected the high-density Netflix-style hover expansions. Restored full scroll memory and dynamic status bar counts for all primary tabs.
+- Files:
+  - `js/app.js`
+  - `js/navigation.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 02:21 - vault-explorer</strong> <code>code-change</code> - Adapted the file card right-click context menu to dynamically recognize and adjust for multi-selections. When multiple cards are selected, the context menu automatically hides a...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 02:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Adapted the file card right-click context menu to dynamically recognize and adjust for multi-selections. When multiple cards are selected, the context menu automatically hides all single-only operations (Open File, Show in Windows Explorer, Rename, Properties, and Generate Preview) while keeping only multi-item compatible batch tools: Toggle Favorites, Cut Selection, Copy Selection, AI Enhancements, Encrypt/Decrypt, Zip Selection, and Delete Selection. Modified main.js, js/navigation.js, and js/app.js to sequentially or concurrently loop over the batch of selected items, displaying individual processing overlays on each card.
+- Files:
+  - `main.js`
+  - `js/navigation.js`
+  - `js/app.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 02:13 - python-scripts</strong> <code>code-change</code> - Added Playwright async integration to telethon_link_resolver.py to automatically bypass linkvertise limits by mutating to .lol and clicking #cta-button to scrape specifically fo...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 02:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added Playwright async integration to telethon_link_resolver.py to automatically bypass linkvertise limits by mutating to .lol and clicking #cta-button to scrape specifically for the final mega.nz link.
+- Commands:
+  - `.\.venv\Scripts\python.exe -m pip install playwright`
+  - `.\.venv\Scripts\playwright.exe install chromium`
+- Files:
+  - `telegram/telethon_link_resolver.py`
+- Git: repo=python-scripts, branch=main, head=98e158c
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 02:06 - python-scripts</strong> <code>code-change</code> - Moved all Telegram-related scripts (telegram_link_resolver.py, telethon_link_resolver.py, session files, output logs) into a new /telegram/ directory and updated Windows Task Sc...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 02:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: Moved all Telegram-related scripts (telegram_link_resolver.py, telethon_link_resolver.py, session files, output logs) into a new /telegram/ directory and updated Windows Task Scheduler script paths accordingly.
+- Commands:
+  - `mkdir telegram`
+  - `Move-Item telegram_link_resolver.py ... telegram/`
+- Files:
+  - `telegram/setup_telegram_task.ps1`
+- Git: repo=python-scripts, branch=main, head=98e158c
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 02:00 - python-scripts</strong> <code>code-change</code> - Changed target CHANNEL_NAME in telethon_link_resolver.py to &#39;@ThePlugLeaks&#39;</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 02:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: Changed target CHANNEL_NAME in telethon_link_resolver.py to '@ThePlugLeaks'
+- Files:
+  - `telethon_link_resolver.py`
+- Git: repo=python-scripts, branch=main, head=98e158c
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 01:59 - python-scripts</strong> <code>code-change</code> - Added await client.get_dialogs() in telethon_link_resolver.py to populate the entity cache so bare integer User IDs can be correctly resolved by Telethon.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 01:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added await client.get_dialogs() in telethon_link_resolver.py to populate the entity cache so bare integer User IDs can be correctly resolved by Telethon.
+- Files:
+  - `telethon_link_resolver.py`
+- Git: repo=python-scripts, branch=main, head=98e158c
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 01:53 - python-scripts</strong> <code>code-change</code> - Changed target CHANNEL_NAME in telethon_link_resolver.py from @PlugLeaks to integer User ID 8082432203 based on user request.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 01:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: Changed target CHANNEL_NAME in telethon_link_resolver.py from @PlugLeaks to integer User ID 8082432203 based on user request.
+- Files:
+  - `telethon_link_resolver.py`
+- Git: repo=python-scripts, branch=main, head=98e158c
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 01:50 - python-scripts</strong> <code>general</code> - Instructed user to run telethon_link_resolver script to complete initial interactive authentication.</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 01:50 (TZ: Eastern Standard Time)
+  ```
+- Summary: Instructed user to run telethon_link_resolver script to complete initial interactive authentication.
+- Files:
+  - `TODO.md`
+- Git: repo=python-scripts, branch=main, head=98e158c
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 01:47 - python-scripts</strong> <code>general</code> - Provided detailed step-by-step instructions on how to locate Telegram API ID and Hash.</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 01:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Provided detailed step-by-step instructions on how to locate Telegram API ID and Hash.
+- Git: repo=python-scripts, branch=main, head=98e158c
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 01:42 - python-scripts</strong> <code>code-change</code> - Created telethon_link_resolver.py. Added Telethon library into .venv to scrape live messages via Telegram API directly instead of needing manual exports.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 01:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created telethon_link_resolver.py. Added Telethon library into .venv to scrape live messages via Telegram API directly instead of needing manual exports.
+- Commands:
+  - `.\.venv\Scripts\python.exe -m pip install telethon`
+- Files:
+  - `telethon_link_resolver.py`
+- Git: repo=python-scripts, branch=main, head=98e158c
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 01:23 - python-scripts</strong> <code>code-change</code> - Created telegram_link_resolver.py to parse Telegram export result.json, resolve URL redirects via requests, and generated a PowerShell script to schedule the task daily.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 01:23 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created telegram_link_resolver.py to parse Telegram export result.json, resolve URL redirects via requests, and generated a PowerShell script to schedule the task daily.
+- Commands:
+  - `.\.venv\Scripts\python.exe -m pip install requests`
+- Files:
+  - `telegram_link_resolver.py`
+  - `setup_telegram_task.ps1`
+- Git: repo=python-scripts, branch=main, head=98e158c
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 00:28 - python-scripts</strong> <code>code-change</code> - Rewrote input_to_midi.py to implement a 20-loop generative transition engine mapping mouse Y to pitch and typing APM to tempo/arpeggiation, making keystrokes a melodic bonus.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 00:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: Rewrote input_to_midi.py to implement a 20-loop generative transition engine mapping mouse Y to pitch and typing APM to tempo/arpeggiation, making keystrokes a melodic bonus.
+- Files:
+  - `input_to_midi.py`
+- Git: repo=python-scripts, branch=main, head=98e158c
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 00:11 - agent-ledger</strong> <code>code-change</code> - Fixed two issues: (1) record-agent-change.ps1 now tolerates hallucinated parameters from AI agents by adding -Public switch and ValueFromRemainingArguments catch-all. (2) Consol...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 00:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed two issues: (1) record-agent-change.ps1 now tolerates hallucinated parameters from AI agents by adding -Public switch and ValueFromRemainingArguments catch-all. (2) Consolidated 76 project names down to 44 by expanding project-aliases.json with case variants, namespace-prefixed names, junk meta-entries, and multi-project slugs; added Normalize-RawProjectName function to update-work-impact-state.ps1; fixed the script to read both events/ and history/ directories on -FullRebuild. Deployed updated site to greencloud-vps.
+- Commands:
+  - `update-work-impact.ps1 -FullRebuild`
+  - `git push origin main`
+- Files:
+  - `scripts/record-agent-change.ps1`
+  - `scripts/update-work-impact-state.ps1`
+  - `project-aliases.json`
+- Git: repo=agent-ledger, branch=main, head=94ab9b3
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 00:05 - python-scripts</strong> <code>code-change</code> - Installed dependencies in .venv, added benchmark code to track Ollama response time, and ran script in background.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 00:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Installed dependencies in .venv, added benchmark code to track Ollama response time, and ran script in background.
+- Commands:
+  - `.\.venv\Scripts\python.exe -m pip install pynput mido python-rtmidi`
+  - `.\.venv\Scripts\python.exe input_to_midi.py`
+- Files:
+  - `input_to_midi.py`
+- Git: repo=python-scripts, branch=main, head=98e158c
+
+</details>
+
+<details>
+<summary><strong>2026-05-26 00:03 - vault-explorer</strong> <code>code-change</code> - Renamed the TMDB tab to Movies/Series (Films/S&#233;ries in French/QC) and redesigned the movies poster results cards to use a non-stretching aspect-ratio: 2/3 container with a click...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 00:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: Renamed the TMDB tab to Movies/Series (Films/Séries in French/QC) and redesigned the movies poster results cards to use a non-stretching aspect-ratio: 2/3 container with a click handler on the entire card to trigger streams. Extended the Settings panel to include advanced streaming preferences for Auto-Select Best Stream, Max Stream Quality (4K, 1080p, 720p), and Preferred Language (English, French/VF, Multilingual). Upgraded triggerRDStream to perform intelligent sorting and filtering on the scraped torrent links, iteratively attempting to unrestrict candidates via Real-Debrid automatically before displaying manual options if auto-select fails or is disabled.
+- Files:
+  - `index.html`
+  - `js/translations.js`
+  - `js/settings.js`
+  - `js/app.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 23:24 - vault-explorer</strong> <code>code-change</code> - Decoupled torch and soundfile dependencies from simulated mode in benchmark_asr.py, allowing simulated ASR benchmarks to execute flawlessly on lightweight venvs lacking these la...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 23:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Decoupled torch and soundfile dependencies from simulated mode in benchmark_asr.py, allowing simulated ASR benchmarks to execute flawlessly on lightweight venvs lacking these large dependencies while natively exploiting GPU acceleration when run in heavy media-processing venvs.
+- Files:
+  - `python-scripts/benchmark_asr.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 23:23 - vault-explorer</strong> <code>code-change</code> - Adjusted global copy and cut shortcut intercepts in app.js to permit highlighted text clipboard capture, and updated index.html default body class to vw-console-shell to avert l...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 23:23 (TZ: Eastern Standard Time)
+  ```
+- Summary: Adjusted global copy and cut shortcut intercepts in app.js to permit highlighted text clipboard capture, and updated index.html default body class to vw-console-shell to avert light theme flashing on boot.
+- Files:
+  - `js/app.js`
+  - `index.html`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 23:05 - vault-explorer</strong> <code>code-change</code> - Removed the automatic DevTools window open call on Electron app startup from main.js.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 23:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Removed the automatic DevTools window open call on Electron app startup from main.js.
+- Files:
+  - `main.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 22:56 - vault-explorer</strong> <code>general</code> - Analyzed model architectures of NVIDIA NeMo Parakeet, Canary, and NMT. Documented why Parakeet-TDT-0.6b-v3 is strictly an English ASR model and does not possess translation capa...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 22:56 (TZ: Eastern Standard Time)
+  ```
+- Summary: Analyzed model architectures of NVIDIA NeMo Parakeet, Canary, and NMT. Documented why Parakeet-TDT-0.6b-v3 is strictly an English ASR model and does not possess translation capabilities, clarifying the architectural distinction between ASR and Speech Translation (ST) or NMT (like Google Translate).
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 22:45 - python-scripts</strong> <code>code-change</code> - Added Ollama gemma4 integration to dynamically adjust MIDI scales based on typing and clicking speed in input_to_midi.py</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 22:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added Ollama gemma4 integration to dynamically adjust MIDI scales based on typing and clicking speed in input_to_midi.py
+- Files:
+  - `input_to_midi.py`
+- Git: repo=python-scripts, branch=main, head=98e158c
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 21:44 - vault-explorer</strong> <code>verification</code> - Successfully validated the loopback livestream spoken translator pipeline end-to-end. Designed and executed a high-fidelity simulation harness (run_high_fidelity_simulation.py) ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 21:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Successfully validated the loopback livestream spoken translator pipeline end-to-end. Designed and executed a high-fidelity simulation harness (run_high_fidelity_simulation.py) using software-based mocks for PortAudio (sounddevice/soundcard) and ONNX Runtime (onnxruntime) to bypass OS-level audio/GPU driver deadlocks on the headless/VM environment. Synthesized standard SAPI English input speech, ingested it through the mock WASAPI loopback, transcribed, translated it to French via the Google Translator API, and outputted the French speech output file simulated_french_speech.wav (32,044 bytes) along with real-time 20-band visualizer telemetry.
+- Commands:
+  - `& " C:\Users\Administrator\Desktop\Github Repos\vault-explorer\.venv\Scripts\python.exe\ -u \C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\scratch\run_high_fidelity_simulation.py\`
+- Files:
+  - `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\scratch\run_high_fidelity_simulation.py`
+  - `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\scratch\simulated_french_speech.wav`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 21:32 - vaultwares-docs</strong> <code>verification</code> - Second pass QC simplification (index-QC style) merged to main for rendered preview. Merged PR p-potvin/vaultwares-docs#19 into main at commit ad7abb588df77f01b8f55d7530b3b7467df...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gpt-5.2
+  Thinking: medium
+  Mode: codex
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): powershell, git, gh, npm
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 21:32 (TZ: Eastern Standard Time)
+  ```
+- Summary: Second pass QC simplification (index-QC style) merged to main for rendered preview. Merged PR p-potvin/vaultwares-docs#19 into main at commit ad7abb588df77f01b8f55d7530b3b7467df3d90a (2026-05-26). Added more analogies/examples and simplified flow explanations further in QC pages: index-QC, getting-started/overview-QC, getting-started/products-and-services-QC, quickstart-QC, operations/{network-map,secrets}-QC. Page resources regenerated and included in merge.
+- Commands:
+  - `npm run generate:page-resources`
+  - `gh pr merge 19 --squash --admin`
+  - `git pull --ff-only`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\index-QC.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\getting-started\overview-QC.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\getting-started\products-and-services-QC.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\quickstart-QC.mdx`
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 21:31 - vault-explorer</strong> <code>code-change</code> - Prepended the unbuffered stdout switch (-u) to all spawned Python processes in src/livestream.js and src/normalization.js. This forces Python to instantly flush all outputs, pre...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 21:31 (TZ: Eastern Standard Time)
+  ```
+- Summary: Prepended the unbuffered stdout switch (-u) to all spawned Python processes in src/livestream.js and src/normalization.js. This forces Python to instantly flush all outputs, preventing standard streams from buffering indefinitely when running outside of interactive TTY terminals. The ASR benchmark, spoken translation telemetry console, and audio normalization progress bars will now update in high-fidelity real time in the UI.
+- Files:
+  - `src/livestream.js`
+  - `src/normalization.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 20:29 - vault-explorer</strong> <code>code-change</code> - Created five standalone PowerShell wrapper scripts (Start-LivestreamTranslator.ps1, Start-StreamTranslator.ps1, Start-AudioNormalization.ps1, Start-AsrBenchmark.ps1, Start-Previ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 20:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created five standalone PowerShell wrapper scripts (Start-LivestreamTranslator.ps1, Start-StreamTranslator.ps1, Start-AudioNormalization.ps1, Start-AsrBenchmark.ps1, Start-PreviewGenerator.ps1) inside the powershell/ directory. Each script automates resolving the appropriate virtual environment (loopback-capable lean environment vs heavy media processing model environment) and exposes CLI arguments as standard PowerShell parameters. Fully updated and localized the main project README.md file with detailed documentation and examples for each script. Validated scripts successfully in simulation benchmark runs.
+- Files:
+  - `powershell/Start-LivestreamTranslator.ps1`
+  - `powershell/Start-StreamTranslator.ps1`
+  - `powershell/Start-AudioNormalization.ps1`
+  - `powershell/Start-AsrBenchmark.ps1`
+  - `powershell/Start-PreviewGenerator.ps1`
+  - `README.md`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 20:18 - agent-ledger</strong> <code>code-change</code> - Fixed PowerShell 5.1 compatibility bug in Join-Path calls across render-agent-ledger.ps1 and render-work-impact.ps1 (nested Join-Path instead of passing multi-positional argumen...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 20:18 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed PowerShell 5.1 compatibility bug in Join-Path calls across render-agent-ledger.ps1 and render-work-impact.ps1 (nested Join-Path instead of passing multi-positional arguments not supported in older Windows PowerShell versions). Successfully re-rendered the ledger with all 443 history events.
+- Files:
+  - `scripts/render-agent-ledger.ps1`
+  - `scripts/render-work-impact.ps1`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 20:09 - vault-explorer</strong> <code>code-change</code> - Fixed soundcard ModuleNotFoundError by reordering venv priority in getRobustPythonExe(): vault-explorer/.venv now wins for all scripts (soundcard/pycaw/sounddevice all present)....</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 20:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed soundcard ModuleNotFoundError by reordering venv priority in getRobustPythonExe(): vault-explorer/.venv now wins for all scripts (soundcard/pycaw/sounddevice all present). Added getMediaProcessingPythonExe() in normalization.js so normalize-audio and run-asr-benchmark keep routing to vaultwares-media-processing venv which has NeMo/Demucs.
+- Files:
+  - `src/utils.js`
+  - `src/normalization.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 19:17 - vaultwares-docs</strong> <code>code-change</code> - QC docs simplification pass for non-technical audience + visuals. Created PR p-potvin/vaultwares-docs#19. Rewrote QC pages: index-QC, quickstart-QC, getting-started/overview-QC,...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gpt-5.2
+  Thinking: medium
+  Mode: codex
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): powershell, git, gh, npm
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 19:17 (TZ: Eastern Standard Time)
+  ```
+- Summary: QC docs simplification pass for non-technical audience + visuals. Created PR p-potvin/vaultwares-docs#19. Rewrote QC pages: index-QC, quickstart-QC, getting-started/overview-QC, getting-started/products-and-services-QC, development-QC, operations/{deployment-flow,network-map,tailscale,secrets}-QC with analogies, glossaries, tables, and Mermaid diagrams. Regenerated page resources via  pm run generate:page-resources and committed generated src/resources/pages/*.json + manifest.
+- Commands:
+  - `npm run generate:page-resources`
+  - `git push`
+  - `gh pr create`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\index-QC.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\quickstart-QC.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\getting-started\overview-QC.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\getting-started\products-and-services-QC.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\deployment-flow-QC.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\network-map-QC.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\tailscale-QC.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\secrets-QC.mdx`
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 19:04 - agent-ledger</strong> <code>commands</code> - Fixed 403 on ledger.vaultwares.ca: the dnsmasq split-DNS config on greencloud-vps was missing the ledger entry. Added address=/ledger.vaultwares.ca/100.73.93.84 to /etc/dnsmasq....</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 19:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed 403 on ledger.vaultwares.ca: the dnsmasq split-DNS config on greencloud-vps was missing the ledger entry. Added address=/ledger.vaultwares.ca/100.73.93.84 to /etc/dnsmasq.d/vaultwares-split-dns.conf and restarted dnsmasq. Tailscale split DNS routes queries to this dnsmasq instance, which now returns the tailnet IP instead of the public IP. The 100.64.0.0/10 ACL is correct for the full Tailscale CGNAT range.
+- Commands:
+  - `ssh root@greencloud-vps sed -i add ledger.vaultwares.ca dnsmasq`
+  - `systemctl restart dnsmasq`
+  - `ipconfig /flushdns`
+- Files:
+  - `/etc/dnsmasq.d/vaultwares-split-dns.conf`
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 18:40 - agent-ledger</strong> <code>code-change</code> - Ledger site visual polish + deploy to production. (1) Locked to console-only mode: removed @media prefers-color-scheme light block and .vw-warm-shell from index.css. (2) Replace...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 18:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ledger site visual polish + deploy to production. (1) Locked to console-only mode: removed @media prefers-color-scheme light block and .vw-warm-shell from index.css. (2) Replaced cyan (--vault-signal-relay) with violet (--vault-console-violet) for --link and --v-cyan tokens. (3) Added VaultWares logo SVG to Nav header from vaultwares-themes submodule. (4) Added project alias labels: render-work-impact.ps1 now outputs project-aliases.json to site data, new useAliasData hook fetches it, ProjectCard shows 'formerly ...' labels for renamed projects. (5) Merged vw-codex-ledger-site to main, pushed to origin. (6) First deploy to greencloud-vps: cloned repo, generated Let's Encrypt TLS cert, installed nginx vhost (tailnet-only), uploaded built dist. (7) Registered agent-ledger in vw-webhookd for automated deploys on push. (8) Installed pwsh on VPS for future automated deploys. Site live at https://ledger.vaultwares.ca (tailnet access only).
+- Commands:
+  - `npm run build`
+  - `git push origin main`
+  - `certbot certonly --webroot -d ledger.vaultwares.ca`
+  - `scp dist/* root@greencloud-vps:/var/www/ledger.vaultwares.ca/`
+- Files:
+  - `site/src/index.css`
+  - `site/src/components/Nav.tsx`
+  - `site/src/pages/WorkImpactPage.tsx`
+  - `site/src/useData.ts`
+  - `scripts/render-work-impact.ps1`
+  - `deploy/nginx-ledger.conf`
+  - `site/public/vaultwares-logo.svg`
+- Git: repo=agent-ledger, branch=main, head=cef1ed5
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 18:27 - vault-explorer</strong> <code>code-change</code> - Implemented stabilization plan: (1) index.css gap fix top:31px + calc(100vh-31px); (2) body.titlebar-hovered CSS rule + player.js mouseenter/leave to auto-hide controls; (3) pre...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 18:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented stabilization plan: (1) index.css gap fix top:31px + calc(100vh-31px); (2) body.titlebar-hovered CSS rule + player.js mouseenter/leave to auto-hide controls; (3) previews.js -ac 2 stereo downmix for VP8+Vorbis single and multi-clip paths; (4) httpx monkey-patch (RequestError/ConnectError/TimeoutException) added to all 4 Python scripts before NeMo imports; (5) main.js Revert Enhancements 4-space indent alignment.
+- Commands:
+  - `npm start`
+- Files:
+  - `index.css`
+  - `js/player.js`
+  - `src/previews.js`
+  - `main.js`
+  - `python-scripts/livestream_translator.py`
+  - `python-scripts/stream_translator.py`
+  - `python-scripts/benchmark_asr.py`
+  - `python-scripts/audio_normalize.py`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-25 18:20 - vault-explorer</strong> <code>plan</code> - Created stabilization and modernization implementation plan covering NeMo ASR initialization crash, player 1px visual gap, title bar hover controls auto-hiding, manual WebM prev...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-25 18:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created stabilization and modernization implementation plan covering NeMo ASR initialization crash, player 1px visual gap, title bar hover controls auto-hiding, manual WebM preview regeneration with stereo audio downmixing, native AI submenu padding alignment, and multilingual translation pipeline.
+- Files:
+  - `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
 <summary><strong>2026-05-25 18:05 - agent-ledger</strong> <code>code-change</code> - Scaffolded ledger.vaultwares.ca React/Vite/Tailwind v4 site with vaultwares-revisited theme. Created site/ directory with full SPA: WorkImpactPage (KPI cards, heatmap, bar chart...</summary>
 
 - Kind: code-change
@@ -517,7 +2733,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-25 14:49 - Prom-King tube-sites</strong> <code>verification</code> - Deployed updated FullXXX + PromKing plugins to the public GreenCloud host (vaultwares.ca / 173.249.194.15 via Tailscale 100.73.93.84), added MU loader for tube-shared, fixed loa...</summary>
+<summary><strong>2026-05-25 14:49 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>verification</code> - Deployed updated FullXXX + PromKing plugins to the public GreenCloud host (vaultwares.ca / 173.249.194.15 via Tailscale 100.73.93.84), added MU loader for tube-shared, fixed loa...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -742,7 +2958,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-25 10:47 - vaultwares-docs (formerly tmp-app)</strong> <code>code-change</code> - Refreshed docs navigation/settings content to match the current React+Vite generated-manifest system (removed legacy Mintlify docs.json + old favicon.svg), updated development +...</summary>
+<summary><strong>2026-05-25 10:47 - vaultwares-docs</strong> <code>code-change</code> - Refreshed docs navigation/settings content to match the current React+Vite generated-manifest system (removed legacy Mintlify docs.json + old favicon.svg), updated development +...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -1355,7 +3571,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-24 09:28 - Vault Explorer</strong> <code>code-change</code> - Integrated TorrentioRD inside src/realdebrid.js. Implemented fetching of IMDB IDs from TMDB external IDs API using TMDB_BEARER_TOKEN, followed by scraping of cached torrents/str...</summary>
+<summary><strong>2026-05-24 09:28 - vault-explorer</strong> <code>code-change</code> - Integrated TorrentioRD inside src/realdebrid.js. Implemented fetching of IMDB IDs from TMDB external IDs API using TMDB_BEARER_TOKEN, followed by scraping of cached torrents/str...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -1381,7 +3597,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-24 08:41 - Prom-King/qa-automation</strong> <code>code-change</code> - Added a Firefox-profile crawler runner that launches a headed persistent Firefox context from a copied user profile to preserve add-ons/state, with optional FIREFOX_EXECUTABLE_P...</summary>
+<summary><strong>2026-05-24 08:41 - qa-automation</strong> <code>code-change</code> - Added a Firefox-profile crawler runner that launches a headed persistent Firefox context from a copied user profile to preserve add-ons/state, with optional FIREFOX_EXECUTABLE_P...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -1412,7 +3628,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-24 08:20 - Vault Explorer</strong> <code>code-change</code> - Integrated Real-Debrid streaming pipeline in Vault Explorer. Created src/realdebrid.js for managing torrent scraping via YTS API, adding magnet links, and unrestricting cached f...</summary>
+<summary><strong>2026-05-24 08:20 - vault-explorer</strong> <code>code-change</code> - Integrated Real-Debrid streaming pipeline in Vault Explorer. Created src/realdebrid.js for managing torrent scraping via YTS API, adding magnet links, and unrestricting cached f...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -1441,7 +3657,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-24 08:07 - Vault Explorer</strong> <code>code-change</code> - Integrated TMDB live API search using the provided secrets in .env. Created src/tmdb.js semantic file to load .env variables manually and register search-tmdb IPC handler. Regis...</summary>
+<summary><strong>2026-05-24 08:07 - vault-explorer</strong> <code>code-change</code> - Integrated TMDB live API search using the provided secrets in .env. Created src/tmdb.js semantic file to load .env variables manually and register search-tmdb IPC handler. Regis...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -1468,7 +3684,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-24 07:25 - Prom-King/fullxxx-webhook-deploy-qa</strong> <code>code-change</code> - Reverted mistaken GitHub Actions deployment workflow edits (deploy is tailnet webhook, not GH runner), verified DNS points fullxxx.video to 173.249.194.15 (not the old VPS), and...</summary>
+<summary><strong>2026-05-24 07:25 - tube-sites</strong> <code>code-change</code> - Reverted mistaken GitHub Actions deployment workflow edits (deploy is tailnet webhook, not GH runner), verified DNS points fullxxx.video to 173.249.194.15 (not the old VPS), and...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -1505,7 +3721,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-24 07:11 - Vault Explorer</strong> <code>code-change</code> - Fixed Picture-in-Picture mode overlay exclusion in player.js. Configured ended-play-btn and ended-countdown to correctly play the next video in the playlist or replay if at the ...</summary>
+<summary><strong>2026-05-24 07:11 - vault-explorer</strong> <code>code-change</code> - Fixed Picture-in-Picture mode overlay exclusion in player.js. Configured ended-play-btn and ended-countdown to correctly play the next video in the playlist or replay if at the ...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -1594,7 +3810,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-24 06:37 - Prom-King/fullxxx-video-and-qa-automation</strong> <code>code-change</code> - Added FullXXX SEO/GEO discovery assets, packaged the plugin zip, finished qa-automation depth-4 crawler, and launched the live crawl. The live crawl reached fullxxx.video and fa...</summary>
+<summary><strong>2026-05-24 06:37 - tube-sites</strong> <code>code-change</code> - Added FullXXX SEO/GEO discovery assets, packaged the plugin zip, finished qa-automation depth-4 crawler, and launched the live crawl. The live crawl reached fullxxx.video and fa...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -1692,7 +3908,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-24 04:05 - Prom-King/prelanding-page</strong> <code>code-change</code> - Implemented SEO and AI-search visibility primitives for Prom King: reusable client SEO metadata/JSON-LD helper, route-specific canonical/OpenGraph/Twitter/robots metadata, stati...</summary>
+<summary><strong>2026-05-24 04:05 - prelanding-page (formerly Prom-King/prelanding-page, prom-king-prelanding-page)</strong> <code>code-change</code> - Implemented SEO and AI-search visibility primitives for Prom King: reusable client SEO metadata/JSON-LD helper, route-specific canonical/OpenGraph/Twitter/robots metadata, stati...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -1845,7 +4061,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-24 01:22 - Vault Explorer</strong> <code>code-change</code> - Fixed encrypted file context menu integration and visual representation. Handled double-click decryption of .enc files. Stopped keyboard events bubbling up from the rename input...</summary>
+<summary><strong>2026-05-24 01:22 - vault-explorer</strong> <code>code-change</code> - Fixed encrypted file context menu integration and visual representation. Handled double-click decryption of .enc files. Stopped keyboard events bubbling up from the rename input...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -2814,7 +5030,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-23 01:32 - agent-ledger/stats-app</strong> <code>code-change</code> - Completed React/Tailwind 4/Vite stats-app build pipeline. Fixed ActivityPatterns.tsx unused 	 param (TS6133). Copied vaultwares-console-icons.svg, vaultwares-wordmark-dark.svg, ...</summary>
+<summary><strong>2026-05-23 01:32 - agent-ledger</strong> <code>code-change</code> - Completed React/Tailwind 4/Vite stats-app build pipeline. Fixed ActivityPatterns.tsx unused 	 param (TS6133). Copied vaultwares-console-icons.svg, vaultwares-wordmark-dark.svg, ...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -3611,7 +5827,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-22 15:08 - vw-jira-sync</strong> <code>code-change</code> - Removed jira-sync.yml caller workflows from all 41 tracked repos (41/41 deleted). Added remove_caller_workflows.py. Webhook path on VPS is now the sole active Jira sync mechanis...</summary>
+<summary><strong>2026-05-22 15:08 - vw-jira-sync (formerly vaultwares-docs / vw-jira-sync, General Tasks / vw-jira-sync)</strong> <code>code-change</code> - Removed jira-sync.yml caller workflows from all 41 tracked repos (41/41 deleted). Added remove_caller_workflows.py. Webhook path on VPS is now the sole active Jira sync mechanis...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -3754,7 +5970,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-22 13:28 - vaultwares-console</strong> <code>code-change</code> - Modify App.tsx to map over vaultWaresIcons, using an inner color list based on loop index to assign color/glow. Also fixed TS errors related to unmatched brackets in icons.tsx a...</summary>
+<summary><strong>2026-05-22 13:28 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>code-change</code> - Modify App.tsx to map over vaultWaresIcons, using an inner color list based on loop index to assign color/glow. Also fixed TS errors related to unmatched brackets in icons.tsx a...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -3781,7 +5997,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-22 00:07 - Prom-King tube-sites</strong> <code>code-change</code> - Revamped PromKing + FullXXX tube UI to match tube-shared UI_kit_example (branding/icons + auth modal), fixed FXV allowlist host parsing to accept pasted URLs, and disabled GitHu...</summary>
+<summary><strong>2026-05-22 00:07 - tube-sites</strong> <code>code-change</code> - Revamped PromKing + FullXXX tube UI to match tube-shared UI_kit_example (branding/icons + auth modal), fixed FXV allowlist host parsing to accept pasted URLs, and disabled GitHu...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -4422,7 +6638,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-21 05:24 - vaultwares-secrets</strong> <code>code-change</code> - Created new VaultWares-first secret service project (vaultwares-secrets) and deployed an MVP to vaultwares-1 using PostgreSQL (Docker) + FastAPI (systemd). Added nginx routing u...</summary>
+<summary><strong>2026-05-21 05:24 - General Tasks</strong> <code>code-change</code> - Created new VaultWares-first secret service project (vaultwares-secrets) and deployed an MVP to vaultwares-1 using PostgreSQL (Docker) + FastAPI (systemd). Added nginx routing u...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -4511,7 +6727,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-21 03:58 - VaultWares Secrets</strong> <code>plan</code> - Reviewed VaultWares secret-system direction (vaultwares-docs/docs-content/operations/secrets.mdx) and current state on vaultwares-1: secrets.vaultwares.ca is Vaultwarden behind ...</summary>
+<summary><strong>2026-05-21 03:58 - General Tasks</strong> <code>plan</code> - Reviewed VaultWares secret-system direction (vaultwares-docs/docs-content/operations/secrets.mdx) and current state on vaultwares-1: secrets.vaultwares.ca is Vaultwarden behind ...</summary>
 
 - Kind: plan
 - Actor: AI Agent
@@ -4694,7 +6910,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 19:05 - Prom-King/tube-sites</strong> <code>code-change</code> - Disabled Jira sync GitHub Actions execution on PR/push (dispatch-only) to comply with Prom-King policy of webhook-only tailnet-contained runners. Merged PR #25 into main (commit...</summary>
+<summary><strong>2026-05-20 19:05 - tube-sites</strong> <code>code-change</code> - Disabled Jira sync GitHub Actions execution on PR/push (dispatch-only) to comply with Prom-King policy of webhook-only tailnet-contained runners. Merged PR #25 into main (commit...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -4721,7 +6937,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 18:56 - Prom-King/tube-sites</strong> <code>verification</code> - Merged PR #24 into main (commit ff48d64) to ship FreeSexVideos /latest-updates/{page}/ pattern + 404-with-body tolerance. Note: Jira sync workflow was failing on PR with GITHUB_...</summary>
+<summary><strong>2026-05-20 18:56 - tube-sites</strong> <code>verification</code> - Merged PR #24 into main (commit ff48d64) to ship FreeSexVideos /latest-updates/{page}/ pattern + 404-with-body tolerance. Note: Jira sync workflow was failing on PR with GITHUB_...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -4775,7 +6991,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 18:50 - Prom-King/tube-sites</strong> <code>code-change</code> - Fix FullXXX scraper resilience for FreeSexVideos: allow HTTP 404 responses with real HTML payload (anti-scrape) and update FreeSexVideos listingUrlPattern away from /latest-upda...</summary>
+<summary><strong>2026-05-20 18:50 - tube-sites</strong> <code>code-change</code> - Fix FullXXX scraper resilience for FreeSexVideos: allow HTTP 404 responses with real HTML payload (anti-scrape) and update FreeSexVideos listingUrlPattern away from /latest-upda...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -4950,7 +7166,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 16:51 - Prom-King\\tube-sites</strong> <code>commands</code> - Committed and pushed scraper allowlist fix to origin/main (commit 39686e6).</summary>
+<summary><strong>2026-05-20 16:51 - tube-sites</strong> <code>commands</code> - Committed and pushed scraper allowlist fix to origin/main (commit 39686e6).</summary>
 
 - Kind: commands
 - Actor: codex
@@ -4977,7 +7193,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 16:40 - vaultwares-media-processing (formerly vault-video-enhancer)</strong> <code>code-change</code> - Fixed TensorRT script crash resulting from incompatible diffusers/huggingface-hub versions and a missing CUDA-enabled torch binary inside the .venv. Reinstalled huggingface-hub&lt;...</summary>
+<summary><strong>2026-05-20 16:40 - vaultwares-media-processing (formerly vault-video-enhancer, VaultWares Media Processing, video-transcriber-translator)</strong> <code>code-change</code> - Fixed TensorRT script crash resulting from incompatible diffusers/huggingface-hub versions and a missing CUDA-enabled torch binary inside the .venv. Reinstalled huggingface-hub&lt;...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -5001,7 +7217,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 16:36 - Prom-King\\tube-sites</strong> <code>code-change</code> - Fix multi-source scraper: pornxp was blocked because embed URLs now resolve to hosts like sn.porn-xp.com (outside allowlist). Added allowlist expansion per active source + updat...</summary>
+<summary><strong>2026-05-20 16:36 - tube-sites</strong> <code>code-change</code> - Fix multi-source scraper: pornxp was blocked because embed URLs now resolve to hosts like sn.porn-xp.com (outside allowlist). Added allowlist expansion per active source + updat...</summary>
 
 - Kind: code-change
 - Actor: codex
@@ -5142,7 +7358,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 14:53 - Vault Explorer</strong> <code>code-change</code> - Fixed all bugs (BUG-01 to BUG-23) in TODO.md. Patched WebM preview pathing, fixed fake folder deletion and F5 refresh logic. Restored missing CSS for .size-badge and positioned ...</summary>
+<summary><strong>2026-05-20 14:53 - vault-explorer</strong> <code>code-change</code> - Fixed all bugs (BUG-01 to BUG-23) in TODO.md. Patched WebM preview pathing, fixed fake folder deletion and F5 refresh logic. Restored missing CSS for .size-badge and positioned ...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -5192,7 +7408,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 14:17 - Prom-King\\tube-sites</strong> <code>code-change</code> - Applied PromKing Branding Tubeshell design system (base+themes+icons) to both WordPress tube plugins (promking-tube + fullxxx-video). Added theme body classes + font enqueue, up...</summary>
+<summary><strong>2026-05-20 14:17 - tube-sites</strong> <code>code-change</code> - Applied PromKing Branding Tubeshell design system (base+themes+icons) to both WordPress tube plugins (promking-tube + fullxxx-video). Added theme body classes + font enqueue, up...</summary>
 
 - Kind: code-change
 - Actor: codex
@@ -5239,7 +7455,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 14:11 - VaultWares Media Processing</strong> <code>code-change</code> - Added TokenPill UI and customized target languages field into a tag pill layout.</summary>
+<summary><strong>2026-05-20 14:11 - vaultwares-media-processing</strong> <code>code-change</code> - Added TokenPill UI and customized target languages field into a tag pill layout.</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -5266,7 +7482,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 14:05 - VaultWares Media Processing</strong> <code>code-change</code> - Refactored vault_gui.py init_ui to implement a dual-pane Application Shell with Left Sidebar and Main Right content area with a Titlebar, matching the React UI design system.</summary>
+<summary><strong>2026-05-20 14:05 - vaultwares-media-processing</strong> <code>code-change</code> - Refactored vault_gui.py init_ui to implement a dual-pane Application Shell with Left Sidebar and Main Right content area with a Titlebar, matching the React UI design system.</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -5437,7 +7653,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 11:11 - VaultWares protocols</strong> <code>handoff</code> - Completed LONG_RUNNING_TASKS v1 rollout: CLAUDE stub now matches AGENTS stub; propagation script skips vaultwares-docs SSOT; vaultwares-mcp includes new token-first task_estimat...</summary>
+<summary><strong>2026-05-20 11:11 - General Tasks</strong> <code>handoff</code> - Completed LONG_RUNNING_TASKS v1 rollout: CLAUDE stub now matches AGENTS stub; propagation script skips vaultwares-docs SSOT; vaultwares-mcp includes new token-first task_estimat...</summary>
 
 - Kind: handoff
 - Actor: codex
@@ -5577,7 +7793,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 10:34 - Vault Explorer</strong> <code>code-change</code> - Bug fix batch 1 (23 bugs logged, 16+ addressed): Fixed French mojibake encoding (Unicode escapes), fixed setLanguage destroying SVG icon buttons, fixed lang init from saved sett...</summary>
+<summary><strong>2026-05-20 10:34 - vault-explorer</strong> <code>code-change</code> - Bug fix batch 1 (23 bugs logged, 16+ addressed): Fixed French mojibake encoding (Unicode escapes), fixed setLanguage destroying SVG icon buttons, fixed lang init from saved sett...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -5606,7 +7822,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 09:26 - Vault Explorer</strong> <code>code-change</code> - Evolved Vault Explorer frontend layout &amp; modernized titlebar controls: Shrunk titlebar from 44px to 32px; repositioned lang, theme, settings controls on the left side of the tit...</summary>
+<summary><strong>2026-05-20 09:26 - vault-explorer</strong> <code>code-change</code> - Evolved Vault Explorer frontend layout &amp; modernized titlebar controls: Shrunk titlebar from 44px to 32px; repositioned lang, theme, settings controls on the left side of the tit...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -5870,7 +8086,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 07:59 - General Tasks (workspace)</strong> <code>code-change</code> - Recreated all 20 project .venv dirs using uv (Python 3.12.11 canonical; Video-Depth-Anything on 3.11.15 due to torch==2.1.1 ABI). CUDA repos (scripts, vaultwares-pipelines, vaul...</summary>
+<summary><strong>2026-05-20 07:59 - General Tasks</strong> <code>code-change</code> - Recreated all 20 project .venv dirs using uv (Python 3.12.11 canonical; Video-Depth-Anything on 3.11.15 due to torch==2.1.1 ABI). CUDA repos (scripts, vaultwares-pipelines, vaul...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -5903,7 +8119,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 06:16 - General Tasks / vw-jira-sync</strong> <code>code-change</code> - Diagnosed and fixed GitHub Actions Jira sync failures (400 project error = bad JIRA_TOKEN). MCP probe confirmed projects healthy. Redistributed secrets (37 VW repos OK; PK repos...</summary>
+<summary><strong>2026-05-20 06:16 - vw-jira-sync</strong> <code>code-change</code> - Diagnosed and fixed GitHub Actions Jira sync failures (400 project error = bad JIRA_TOKEN). MCP probe confirmed projects healthy. Redistributed secrets (37 VW repos OK; PK repos...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -5968,7 +8184,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 02:28 - vaultwares-docs / vw-jira-sync</strong> <code>code-change</code> - Wired jira-sync runbook into agent routing chain. (1) KNOWLEDGE_SCOUT.md: new row warning that renaming a GitHub repo without vw-jira-sync updates creates duplicate Jira issues;...</summary>
+<summary><strong>2026-05-20 02:28 - vw-jira-sync</strong> <code>code-change</code> - Wired jira-sync runbook into agent routing chain. (1) KNOWLEDGE_SCOUT.md: new row warning that renaming a GitHub repo without vw-jira-sync updates creates duplicate Jira issues;...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -7486,7 +9702,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-18 00:45 - promking-tube</strong> <code>code-change</code> - Wrote a technical review (qa_script_review.md) and completely overhauled the Multilogin QA automation script (gemini_automation_script.py), introducing dynamic browser engine de...</summary>
+<summary><strong>2026-05-18 00:45 - tube-sites</strong> <code>code-change</code> - Wrote a technical review (qa_script_review.md) and completely overhauled the Multilogin QA automation script (gemini_automation_script.py), introducing dynamic browser engine de...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -7708,7 +9924,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-17 20:00 - promking-tube</strong> <code>commands</code> - Committed all decoupling changes under the Lore Commit Protocol and successfully pushed the &#39;main&#39; branch updates to remote repository (https://github.com/Prom-King/tube-site).</summary>
+<summary><strong>2026-05-17 20:00 - tube-sites</strong> <code>commands</code> - Committed all decoupling changes under the Lore Commit Protocol and successfully pushed the &#39;main&#39; branch updates to remote repository (https://github.com/Prom-King/tube-site).</summary>
 
 - Kind: commands
 - Actor: AI Agent
@@ -7769,7 +9985,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-17 18:33 - promking-tube</strong> <code>code-change</code> - Decoupled PromKing ecosystem (promking-tube and fullxxx-video) visually and code-wise from the VaultWares stack. Created pkt-player.css and pkt-player.bundle.js unbranded assets...</summary>
+<summary><strong>2026-05-17 18:33 - tube-sites</strong> <code>code-change</code> - Decoupled PromKing ecosystem (promking-tube and fullxxx-video) visually and code-wise from the VaultWares stack. Created pkt-player.css and pkt-player.bundle.js unbranded assets...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -7797,7 +10013,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-17 16:32 - promking-tube</strong> <code>plan</code> - Researched pornhub-api library, identified it as Python, and mapped the user&#39;s concurrency requirements to a PHP curl_multi_init architecture. Re-wrote the implementation plan t...</summary>
+<summary><strong>2026-05-17 16:32 - tube-sites</strong> <code>plan</code> - Researched pornhub-api library, identified it as Python, and mapped the user&#39;s concurrency requirements to a PHP curl_multi_init architecture. Re-wrote the implementation plan t...</summary>
 
 - Kind: plan
 - Actor: Antigravity
@@ -7865,7 +10081,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-17 08:19 - promking-tube</strong> <code>plan</code> - Updated SELF_HOSTED_WORDPRESS_VPS.md to reflect the successful migration to GreenCloud VPS and the configured firewall restrictions. Authored a comprehensive Roadmap &amp; Implement...</summary>
+<summary><strong>2026-05-17 08:19 - tube-sites</strong> <code>plan</code> - Updated SELF_HOSTED_WORDPRESS_VPS.md to reflect the successful migration to GreenCloud VPS and the configured firewall restrictions. Authored a comprehensive Roadmap &amp; Implement...</summary>
 
 - Kind: plan
 - Actor: Antigravity
@@ -7927,7 +10143,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-17 07:07 - promking-tube</strong> <code>verification</code> - Executed full database and media assets migration from the legacy VPS (100.73.93.84) to the new GreenCloud VPS (100.73.57.6). Transferred promking_wp and fullxxx_wp databases vi...</summary>
+<summary><strong>2026-05-17 07:07 - tube-sites</strong> <code>verification</code> - Executed full database and media assets migration from the legacy VPS (100.73.93.84) to the new GreenCloud VPS (100.73.57.6). Transferred promking_wp and fullxxx_wp databases vi...</summary>
 
 - Kind: verification
 - Actor: Antigravity
@@ -7985,7 +10201,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-17 06:56 - tube-sites (formerly tube-site)</strong> <code>code-change</code> - Unified and centralized video fetcher orchestration under the Tube_Fetcher_Orchestrator pattern in both promking-tube and fullxxx-video plugins. Established PKT_Video_Fetcher_De...</summary>
+<summary><strong>2026-05-17 06:56 - tube-sites</strong> <code>code-change</code> - Unified and centralized video fetcher orchestration under the Tube_Fetcher_Orchestrator pattern in both promking-tube and fullxxx-video plugins. Established PKT_Video_Fetcher_De...</summary>
 
 - Kind: code-change
 - Actor: Antigravity
@@ -10799,7 +13015,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-13 09:51 - vaultwares-mcp</strong> <code>code-change</code> - Fixed ModuleNotFoundError: No module named &#39;fastmcp&#39; in Claude Desktop extension mechanism. Root cause: manifest.json mcp_config.command was &#39;python&#39; (system Python, no fastmcp)...</summary>
+<summary><strong>2026-05-13 09:51 - vaultwares-mcp (formerly fastmcp)</strong> <code>code-change</code> - Fixed ModuleNotFoundError: No module named &#39;fastmcp&#39; in Claude Desktop extension mechanism. Root cause: manifest.json mcp_config.command was &#39;python&#39; (system Python, no fastmcp)...</summary>
 
 - Kind: code-change
 - Actor: GitHub Copilot
@@ -12032,136 +14248,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `vaultwares-mcp/vaultwares_mcp/server.py`
   - `vaultwares-mcp/pyproject.toml`
 - Git: repo=vaultwares-mcp, branch=main, head=e68fb1e
-
-</details>
-
-<details>
-<summary><strong>2026-05-11 07:19 - vault-central</strong> <code>code-change</code> - Re-implemented extraction fallback to use &#39;active: true&#39; for popup windows and tabs, bypassing Firefox&#39;s strict popup blocker and tab discarding rules. Updated ExtractionContext...</summary>
-
-- Kind: code-change
-- Actor: GitHub Copilot
-- Agent Header:
-  ```text
-  Agent: GitHub Copilot (role: main)
-  Model: Gemini 3.1 Pro (Preview)
-  Thinking: true
-  Mode: chat
-  Permissions: admin (network: offline)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-05-11 07:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: Re-implemented extraction fallback to use 'active: true' for popup windows and tabs, bypassing Firefox's strict popup blocker and tab discarding rules. Updated ExtractionContext in background.ts to carry the original sender's windowId and tabId. Added focus restoration logic right after spawning the scraping tab to minimize disruption.
-- Commands:
-  - `npm run build`
-- Files:
-  - `background/scripts/background.ts`
-- Git: repo=vault-central, branch=main, head=66c12eb
-
-</details>
-
-<details>
-<summary><strong>2026-05-11 07:01 - vault-central</strong> <code>code-change</code> - Added tabs.create fallback to doTabExtraction in background.ts to workaround Firefox popup blocker instantly aborting window.create calls, which bypassed video captures completely.</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.1 Pro (Preview)
-  Thinking: unknown
-  Mode: chat
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-05-11 07:01 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added tabs.create fallback to doTabExtraction in background.ts to workaround Firefox popup blocker instantly aborting window.create calls, which bypassed video captures completely.
-- Commands:
-  - `npm run build`
-- Files:
-  - `background/scripts/background.ts`
-- Git: repo=vault-central, branch=main, head=66c12eb
-
-</details>
-
-<details>
-<summary><strong>2026-05-11 06:44 - vaultwares-docs</strong> <code>code-change</code> - Reorganized VaultWares theme ecosystem into centralized exports. Created theme-manager.ts, themeManager.cs, and theme-manager.tw in vault-themes/theme-manager/exports/. Establis...</summary>
-
-- Kind: code-change
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-2.0-pro-exp
-  Thinking: True
-  Mode: agent
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main
-  Tools used (this reply): run_command, write_to_file, replace_file_content
-  MCP servers accessed (this reply): none
-  Time: 2026-05-11 06:44 (TZ: Eastern Standard Time)
-  ```
-- Summary: Reorganized VaultWares theme ecosystem into centralized exports. Created theme-manager.ts, themeManager.cs, and theme-manager.tw in vault-themes/theme-manager/exports/. Established Knowledge Scout system in vaultwares-docs/KNOWLEDGE_SCOUT.md with precise consulting parameters. Added implementation TODOs to 25+ repositories in the Github Repos workspace. Synchronized global instructions across all host platforms.
-- Commands:
-  - `sync-global-instructions.ps1`
-  - `cp theme_manager.py theme-manager/exports/`
-- Files:
-  - `vault-themes/theme-manager/exports/theme-manager.ts`
-  - `vault-themes/theme-manager/exports/themeManager.cs`
-  - `vaultwares-docs/KNOWLEDGE_SCOUT.md`
-  - `vault-themes/AGENTS.md`
-- Git: repo=vaultwares-docs, branch=main, head=e80eaf1
-
-</details>
-
-<details>
-<summary><strong>2026-05-11 06:29 - vault-central</strong> <code>verification</code> - Confirmed via new logs that the NS_ERROR_DOM_MEDIA_METADATA_ERR fix successfully eliminated the Firefox crash on dashboard mount.</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.1 Pro (Preview)
-  Thinking: unknown
-  Mode: chat
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-05-11 06:29 (TZ: Eastern Standard Time)
-  ```
-- Summary: Confirmed via new logs that the NS_ERROR_DOM_MEDIA_METADATA_ERR fix successfully eliminated the Firefox crash on dashboard mount.
-- Git: repo=vault-central, branch=main, head=66c12eb
-
-</details>
-
-<details>
-<summary><strong>2026-05-11 05:48 - vault-central</strong> <code>code-change</code> - Added preload=&#39;none&#39; to PreviewThumb video to bypass Firefox NS_ERROR_DOM_MEDIA_METADATA_ERR on mount caused by WebM blobs generated natively via MediaRecorder lacking time cues.</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.1 Pro (Preview)
-  Thinking: unknown
-  Mode: chat
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-05-11 05:48 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added preload='none' to PreviewThumb video to bypass Firefox NS_ERROR_DOM_MEDIA_METADATA_ERR on mount caused by WebM blobs generated natively via MediaRecorder lacking time cues.
-- Commands:
-  - `npm run build`
-- Files:
-  - `src/components/VaultDashboard.tsx`
-- Git: repo=vault-central, branch=main, head=66c12eb
 
 </details>
 

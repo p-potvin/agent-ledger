@@ -27,7 +27,33 @@ Invoke-Git -C $LedgerRoot rebase --autostash origin/main
 & (Join-Path $LedgerRoot 'scripts\render-agent-ledger.ps1') | Out-Null
 & (Join-Path $LedgerRoot 'scripts\render-work-impact.ps1') | Out-Null
 
-Invoke-Git -C $LedgerRoot add README.md CHANGES.md CHANGES.html WORK_IMPACT.html events scripts AGENTS.md AGENT_LEDGER_INSTRUCTIONS.md .github vercel.json api .vercelignore
+$candidatePaths = @(
+    'README.md',
+    'CHANGES.md',
+    'CHANGES.html',
+    'WORK_IMPACT.html',
+    'work-impact.state.json',
+    'work-impact.config.json',
+    'project-aliases.json',
+    'AGENTS.md',
+    'CLAUDE.md',
+    '.claude',
+    '.github',
+    'api',
+    'deploy',
+    'events',
+    'history',
+    'scripts',
+    'site',
+    'stats-app'
+)
+
+$pathsToAdd = @($candidatePaths | Where-Object { Test-Path -LiteralPath (Join-Path $LedgerRoot $_) })
+if (-not $pathsToAdd -or $pathsToAdd.Count -eq 0) {
+    throw "No sync paths found under LedgerRoot: $LedgerRoot"
+}
+
+Invoke-Git -C $LedgerRoot add -- @pathsToAdd
 $cached = git -C $LedgerRoot diff --cached --name-only
 if (-not $cached) {
     Write-Output 'No ledger changes to sync.'
