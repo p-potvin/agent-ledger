@@ -3,6 +3,33 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-27 17:04 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Reduced interactive hover card cooldown to 200ms. Added global Escape keyboard controls to dismiss the streaming-details-modal and rd-stream-dialog modals. Refactored startRDDeb...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 17:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: Reduced interactive hover card cooldown to 200ms. Added global Escape keyboard controls to dismiss the streaming-details-modal and rd-stream-dialog modals. Refactored startRDDebridFlow to show an instant DMCA toast and return to the manual stream picker modal on copyright infringement instead of looping through other dead torrents. Added dynamic watch and trailer option badges (IMDb, Apple TV, JustWatch, TMDB) underneath the overview paragraph in the streaming details modal.
+- Files:
+  - `js/streaming.js`
+  - `js/hover-card.js`
+  - `js/app.js`
+  - `index.html`
+- Git: repo=vault-explorer, branch=main, head=9d6166b
+
+</details>
+
+<details>
 <summary><strong>2026-05-27 15:58 - vault-flows</strong> <code>code-change</code> - Round 3 feedback fixes &#226;€” eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. ...</summary>
 
 - Kind: code-change
@@ -37,7 +64,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-27 15:44 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Resolved YouTube Error 4 and Error 152 in video playback by masking Electron User-Agent for youtube/youtube-nocookie HTTP requests to match standard desktop Chrome. Fixed subtit...</summary>
+<summary><strong>2026-05-27 15:44 - vault-explorer</strong> <code>code-change</code> - Resolved YouTube Error 4 and Error 152 in video playback by masking Electron User-Agent for youtube/youtube-nocookie HTTP requests to match standard desktop Chrome. Fixed subtit...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
