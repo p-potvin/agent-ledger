@@ -3,7 +3,33 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-27 14:25 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Modernized and stabilized the translation and torrenting pipeline by implementing persistent settings via localStorage, introducing a z-index backdrop overlay to lock torrent mo...</summary>
+<summary><strong>2026-05-27 14:34 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Corrected IndentationError in livestream_translator.py at the Kokoro print statement. Moved livestream initial settings loading logic from startup to a lazy tab-load helper (loa...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 14:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: Corrected IndentationError in livestream_translator.py at the Kokoro print statement. Moved livestream initial settings loading logic from startup to a lazy tab-load helper (loadLivestreamSettingsOnce), executed only on first opening of the livestream tab. Dynamically synchronized the renderer settings with the global vault-settings.json file, allowing the audio_normalize.py script to read the user-configured Kokoro voice name and language code directly from settings.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\livestream_translator.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\python-scripts\audio_normalize.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\app.js`
+- Git: repo=vault-explorer, branch=main, head=f435a44
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 14:25 - vault-explorer</strong> <code>code-change</code> - Modernized and stabilized the translation and torrenting pipeline by implementing persistent settings via localStorage, introducing a z-index backdrop overlay to lock torrent mo...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
