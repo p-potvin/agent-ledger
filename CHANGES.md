@@ -3,6 +3,28 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-26 20:07 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Removed GitHub Actions workflows so prod deploys are webhook/self-hosted only.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-26 20:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Removed GitHub Actions workflows so prod deploys are webhook/self-hosted only.
+- Git: repo=agent-ledger, branch=main, head=8be8eacb
+
+</details>
+
+<details>
 <summary><strong>2026-05-26 19:43 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Extended the subtitle lookup and download systems to support remote media streaming URLs, query by media titles, and gracefully cache to temp directories. Programmatically hid N...</summary>
 
 - Kind: code-change
@@ -297,7 +319,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 18:10 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>commands,verification</code> - Fixed local AgentLedgerSync push failure (missing paths in sync script) and pushed updates; prod ledger now refreshed.</summary>
+<summary><strong>2026-05-26 18:10 - agent-ledger</strong> <code>commands,verification</code> - Fixed local AgentLedgerSync push failure (missing paths in sync script) and pushed updates; prod ledger now refreshed.</summary>
 
 - Kind: commands,verification
 - Actor: AI Agent
