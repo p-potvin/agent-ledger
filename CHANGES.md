@@ -3,6 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-27 15:44 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Resolved YouTube Error 4 and Error 152 in video playback by masking Electron User-Agent for youtube/youtube-nocookie HTTP requests to match standard desktop Chrome. Fixed subtit...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 15:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Resolved YouTube Error 4 and Error 152 in video playback by masking Electron User-Agent for youtube/youtube-nocookie HTTP requests to match standard desktop Chrome. Fixed subtitles not rendering by transparently converting both local and downloaded OpenSubtitles .srt files to WebVTT (.vtt) format. Introduced 500ms hover card cooldown in js/hover-card.js to prevent cards switching/flashing back and forth when leaving the hover card. Fixed ReferenceError on 'Start Translator' button by dynamically querying livestream-url-input and livestream-translation-toggle elements inside the event handler instead of referencing outer lexical scopes. Disabled the Real-Time Upscaling (ESRGAN) 'AI' button in index.html as a visual placeholder.
+- Files:
+  - `main.js`
+  - `src/scanner.js`
+  - `index.html`
+  - `js/player.js`
+  - `js/app.js`
+  - `js/hover-card.js`
+- Git: repo=vault-explorer, branch=main, head=9d6166b
+
+</details>
+
+<details>
 <summary><strong>2026-05-27 15:35 - vault-flows</strong> <code>code-change</code> - Step 2 of the feedback plan: inline editable params + per-instance rename + per-instance color override on every canvas node. (1) BaseNode redesigned with two new header afforda...</summary>
 
 - Kind: code-change
@@ -67,7 +96,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-27 14:34 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Corrected IndentationError in livestream_translator.py at the Kokoro print statement. Moved livestream initial settings loading logic from startup to a lazy tab-load helper (loa...</summary>
+<summary><strong>2026-05-27 14:34 - vault-explorer</strong> <code>code-change</code> - Corrected IndentationError in livestream_translator.py at the Kokoro print statement. Moved livestream initial settings loading logic from startup to a lazy tab-load helper (loa...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
