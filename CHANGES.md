@@ -3,6 +3,32 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-27 23:14 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Prioritized KinoCheck premium trailers in js/hover-card.js interactive popup previews with fallback to TMDB videos.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-refactor-modules
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 23:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Prioritized KinoCheck premium trailers in js/hover-card.js interactive popup previews with fallback to TMDB videos.
+- Commands:
+  - `node --check js/hover-card.js`
+- Files:
+  - `js/hover-card.js`
+- Git: repo=vault-explorer, branch=vw-codex-refactor-modules, head=259adaf
+
+</details>
+
+<details>
 <summary><strong>2026-05-27 22:10 - vault-flows</strong> <code>code-change,verification</code> - Added node browser sidebar with categories (Inputs/Loaders/Generation/Transform/Outputs) plus new load_text and load_file node types. Click-to-add and drag-drop into canvas both...</summary>
 
 - Kind: code-change,verification
@@ -40,7 +66,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-27 20:28 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Integrated KinoCheck premium API into Vault Explorer. Modified backend src/tmdb.js to securely load the KinoCheck premium key from .access/kinocheck_api.txt and register the get...</summary>
+<summary><strong>2026-05-27 20:28 - vault-explorer</strong> <code>code-change</code> - Integrated KinoCheck premium API into Vault Explorer. Modified backend src/tmdb.js to securely load the KinoCheck premium key from .access/kinocheck_api.txt and register the get...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
