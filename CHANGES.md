@@ -3,6 +3,46 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-28 17:05 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,plan</code> - FXV + PKT tube site overhaul. FXV: dropped iframe-only providers (freesexvideos, spankbang); rewired provider profiles for owned-player only (mp4/HLS); added eporner as new dire...</summary>
+
+- Kind: code-change,plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 17:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: FXV + PKT tube site overhaul. FXV: dropped iframe-only providers (freesexvideos, spankbang); rewired provider profiles for owned-player only (mp4/HLS); added eporner as new direct-stream source with detail-page extraction (fxv_extract_eporner_source); added fxv_actor + fxv_studio taxonomies; per-source actor/studio extraction; hardened per-source fetchers to skip candidates without extractable direct mp4/m3u8/webm URLs (topvid now requires HLS manifest extraction inline); fxv_resolve_runtime_embed falls back to 'unsupported' instead of 'iframe'; updated source catalog + domain map + admin allowlist hints. PKT: added pkt_actor + pkt_studio taxonomies; tightened per-source XPath (xvideos requires video_<digits> + non-channel anchor, xhamster requires /videos/ link, spankbang requires /<key>/video/); added URL_REJECT_PATTERNS (channels/playlists/profiles/series) and CONTENT_REJECT_PATTERNS ('Trust and Safety', 'podcast', 'episode', etc.) to fix prior PH-podcast contamination; redtube API handler now extracts actors from stars/models/pornstars + applies same content filters; added handle_wipe_and_backfill admin handler (requires typed WIPE confirmation) that deletes every pkt_video post, clears seen+cursors+poisoned keywords, then runs bulk fetch across xvideos+xhamster+spankbang+redtube targeting ~50 pages each. Shared: rewrote pkt-player.bundle.js to support hls.js via jsdelivr CDN for non-Safari browsers, added 'unsupported' player mode with source-page link CTA, removed automatic iframe fallback on HLS failures; mirrored JS+CSS to both plugins. Templates: reduced FXV archive inline ad (12->24), removed FXV in-player overlay ad, reduced PKT archive inline ad (3->15), removed PKT below-embed ad slot, added actor+studio chip rows to single-video templates. CSS: added .pkt-player-modal__unsupported + credit chip styles; harmonized PKT brand-icon fallback paths and play-icon fallback SVG (removed lone emoji). All modified PHP lints clean.
+- Commands:
+  - `php -l (8 files, all clean)`
+  - `cp pkt-player.bundle.js + pkt-player.css to fullxxx-video`
+- Files:
+  - `tube-sites/fullxxx-video/includes/player.php`
+  - `tube-sites/fullxxx-video/includes/video-fetcher.php`
+  - `tube-sites/fullxxx-video/includes/helpers.php`
+  - `tube-sites/fullxxx-video/includes/post-types.php`
+  - `tube-sites/fullxxx-video/includes/admin-settings.php`
+  - `tube-sites/fullxxx-video/templates/single-fxv_video.php`
+  - `tube-sites/fullxxx-video/templates/archive-fxv_video.php`
+  - `tube-sites/promking-tube/includes/video-fetcher.php`
+  - `tube-sites/promking-tube/includes/post-types.php`
+  - `tube-sites/promking-tube/templates/single-pkt_video.php`
+  - `tube-sites/promking-tube/templates/archive-pkt_video.php`
+  - `tube-sites/promking-tube/assets/css/pkt-player.css`
+  - `tube-sites/promking-tube/assets/js/pkt-player.bundle.js`
+  - `tube-sites/fullxxx-video/assets/css/pkt-player.css`
+  - `tube-sites/fullxxx-video/assets/js/pkt-player.bundle.js`
+
+</details>
+
+<details>
 <summary><strong>2026-05-28 16:00 - Prom-King</strong> <code>general</code> - GTM per-site enforcement + GA4-via-GTM playbook</summary>
 
 - Kind: general
@@ -65,7 +105,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-28 15:20 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>handoff,verification</code> - Verified live fullxxx.video is still serving the old homepage and old fullxxx-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck...</summary>
+<summary><strong>2026-05-28 15:20 - tube-sites</strong> <code>handoff,verification</code> - Verified live fullxxx.video is still serving the old homepage and old fullxxx-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck...</summary>
 
 - Kind: handoff,verification
 - Actor: AI Agent

@@ -48,6 +48,39 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-28 17:05 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <span class="kind">code-change,plan</span> - FXV + PKT tube site overhaul. FXV: dropped iframe-only providers (freesexvideos, spankbang); rewired provider profiles for owned-player only (mp4/HLS); added eporner as new dire...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-28 17:05 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> FXV + PKT tube site overhaul. FXV: dropped iframe-only providers (freesexvideos, spankbang); rewired provider profiles for owned-player only (mp4/HLS); added eporner as new direct-stream source with detail-page extraction (fxv_extract_eporner_source); added fxv_actor + fxv_studio taxonomies; per-source actor/studio extraction; hardened per-source fetchers to skip candidates without extractable direct mp4/m3u8/webm URLs (topvid now requires HLS manifest extraction inline); fxv_resolve_runtime_embed falls back to &#39;unsupported&#39; instead of &#39;iframe&#39;; updated source catalog + domain map + admin allowlist hints. PKT: added pkt_actor + pkt_studio taxonomies; tightened per-source XPath (xvideos requires video_&lt;digits&gt; + non-channel anchor, xhamster requires /videos/ link, spankbang requires /&lt;key&gt;/video/); added URL_REJECT_PATTERNS (channels/playlists/profiles/series) and CONTENT_REJECT_PATTERNS (&#39;Trust and Safety&#39;, &#39;podcast&#39;, &#39;episode&#39;, etc.) to fix prior PH-podcast contamination; redtube API handler now extracts actors from stars/models/pornstars + applies same content filters; added handle_wipe_and_backfill admin handler (requires typed WIPE confirmation) that deletes every pkt_video post, clears seen+cursors+poisoned keywords, then runs bulk fetch across xvideos+xhamster+spankbang+redtube targeting ~50 pages each. Shared: rewrote pkt-player.bundle.js to support hls.js via jsdelivr CDN for non-Safari browsers, added &#39;unsupported&#39; player mode with source-page link CTA, removed automatic iframe fallback on HLS failures; mirrored JS+CSS to both plugins. Templates: reduced FXV archive inline ad (12-&gt;24), removed FXV in-player overlay ad, reduced PKT archive inline ad (3-&gt;15), removed PKT below-embed ad slot, added actor+studio chip rows to single-video templates. CSS: added .pkt-player-modal__unsupported + credit chip styles; harmonized PKT brand-icon fallback paths and play-icon fallback SVG (removed lone emoji). All modified PHP lints clean.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>php -l (8 files, all clean)</code></li>
+        <li><code>cp pkt-player.bundle.js + pkt-player.css to fullxxx-video</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>tube-sites/fullxxx-video/includes/player.php</code></li>
+        <li><code>tube-sites/fullxxx-video/includes/video-fetcher.php</code></li>
+        <li><code>tube-sites/fullxxx-video/includes/helpers.php</code></li>
+        <li><code>tube-sites/fullxxx-video/includes/post-types.php</code></li>
+        <li><code>tube-sites/fullxxx-video/includes/admin-settings.php</code></li>
+        <li><code>tube-sites/fullxxx-video/templates/single-fxv_video.php</code></li>
+        <li><code>tube-sites/fullxxx-video/templates/archive-fxv_video.php</code></li>
+        <li><code>tube-sites/promking-tube/includes/video-fetcher.php</code></li>
+        <li><code>tube-sites/promking-tube/includes/post-types.php</code></li>
+        <li><code>tube-sites/promking-tube/templates/single-pkt_video.php</code></li>
+        <li><code>tube-sites/promking-tube/templates/archive-pkt_video.php</code></li>
+        <li><code>tube-sites/promking-tube/assets/css/pkt-player.css</code></li>
+        <li><code>tube-sites/promking-tube/assets/js/pkt-player.bundle.js</code></li>
+        <li><code>tube-sites/fullxxx-video/assets/css/pkt-player.css</code></li>
+        <li><code>tube-sites/fullxxx-video/assets/js/pkt-player.bundle.js</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-28 16:00 - Prom-King</strong> <span class="kind">general</span> - GTM per-site enforcement + GA4-via-GTM playbook</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> general</p>
@@ -96,7 +129,7 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-05-28 15:20 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <span class="kind">handoff,verification</span> - Verified live fullxxx.video is still serving the old homepage and old fullxxx-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck...</summary>
+    <summary><strong>2026-05-28 15:20 - tube-sites</strong> <span class="kind">handoff,verification</span> - Verified live fullxxx.video is still serving the old homepage and old fullxxx-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> handoff,verification</p>
       <p><strong>Actor:</strong> AI Agent</p>
