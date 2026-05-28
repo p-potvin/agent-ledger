@@ -3,7 +3,36 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-28 18:03 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,commands,verification</code> - Re-applied prior tube-site overhaul (edits had been reverted in the working tree between sessions) and pushed to origin/main. Commit f5b0378 on top of 7bd9c85. 15 files, +809 -1...</summary>
+<summary><strong>2026-05-28 18:31 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,handoff,verification</code> - 2257-page duplicate bug fixed + deploy-runner verified. (1) Pushed commit 8e1a6c2 hardening fxv_create_page_if_missing (cache-bypass get_posts query, once-per-request + once-per...</summary>
+
+- Kind: code-change,handoff,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 18:31 (TZ: Eastern Standard Time)
+  ```
+- Summary: 2257-page duplicate bug fixed + deploy-runner verified. (1) Pushed commit 8e1a6c2 hardening fxv_create_page_if_missing (cache-bypass get_posts query, once-per-request + once-per-hour throttle on admin_init) and adding admin-post handler fxv_cleanup_legal_dupes that trashes everything but the oldest /2257/, /contact/, /privacy-policy/ page. Button surfaced on FXV settings page. (2) Deploy-runner investigation on greencloud-vps (tailnet 100.73.93.84): vw-webhookd + vaultwares-hooks both active and listening (9033/8787/9444), hooks.vaultwares.ca/health returns 200. Deployed source /var/www/tube-sites-src was stuck at 7bd9c85 (pre-overhaul). GitHub webhook deliveries for Prom-King/tube-sites have been returning HTTP 401 (bad_signature) since at least 2026-05-28 09:08 UTC â€” every Prom-King repo push gets denied, while p-potvin/agent-ledger pushes succeed normally. Root cause: VW_GITHUB_WEBHOOK_SECRET mismatch between /etc/vw-webhookd/env and the secret configured on Prom-King webhooks at GitHub. Confirmed via gh api repos/Prom-King/tube-sites/hooks: last_response.code=401. Manually ran VW_AFTER=8e1a6c28bf6258c0387fde37f07f2ba790e427c8 /var/www/deploy-scripts/deploy-tube-sites.sh as root â€” succeeded, /var/www/tube-sites-src HEAD now at 8e1a6c2, WP plugin dirs synced (verified eporner/requireDirectSource/URL_REJECT_PATTERNS/handle_wipe_and_backfill/cleanup handler all present in deployed copies). Action required from user: rotate or sync the webhook secret per vaultwares-docs/docs-content/operations/webhook-secret-rotation.mdx. I did NOT touch the secret myself.
+- Commands:
+  - `git push origin main (8e1a6c2)`
+  - `ssh root@100.73.93.84 'VW_AFTER=8e1a6c28b... bash /var/www/deploy-scripts/deploy-tube-sites.sh'`
+  - `gh api repos/Prom-King/tube-sites/hooks`
+- Files:
+  - `commit 8e1a6c2`
+  - `/var/www/tube-sites-src on greencloud-vps`
+  - `/etc/vw-webhookd/env on greencloud-vps`
+
+</details>
+
+<details>
+<summary><strong>2026-05-28 18:03 - tube-sites</strong> <code>code-change,commands,verification</code> - Re-applied prior tube-site overhaul (edits had been reverted in the working tree between sessions) and pushed to origin/main. Commit f5b0378 on top of 7bd9c85. 15 files, +809 -1...</summary>
 
 - Kind: code-change,commands,verification
 - Actor: AI Agent
