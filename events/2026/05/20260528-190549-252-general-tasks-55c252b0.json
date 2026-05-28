@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260528-190549-252-general-tasks-55c252b0",
+    "createdAt":  "2026-05-28T23:05:49.2522788Z",
+    "createdAtLocal":  "2026-05-28 19:05",
+    "timezone":  "Eastern Standard Time",
+    "project":  "General Tasks",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-28 19:05 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
+    "summary":  "Removed the two legacy GitHub Actions deployment workflows (deploy-fullxxx-video.yml and deploy-promking-tube.yml) from tube-sites/.github/workflows/ to adhere to the Tailscale webhook-based deployment architecture.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\.github\\workflows\\deploy-fullxxx-video.yml",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\.github\\workflows\\deploy-promking-tube.yml"
+              ],
+    "planPath":  "",
+    "contentHash":  "55c252b0850357194fd08acfd3e6f1419d010fbc0cee32cb2e4a788c824c156d",
+    "git":  {
+                "repo":  "tube-sites",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/tube-sites",
+                "branch":  "main",
+                "head":  "8e1a6c2",
+                "hasChanges":  true
+            }
+}

@@ -3,7 +3,58 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-28 18:53 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>code-change</code> - Executed the rotate_webhook_secrets.py script to generate a new 32-byte webhook signature secret, update VaultWarden (VW_GITHUB_WEBHOOK_SECRET), update /etc/vw-webhookd/env on g...</summary>
+<summary><strong>2026-05-28 19:05 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>code-change</code> - Removed the two legacy GitHub Actions deployment workflows (deploy-fullxxx-video.yml and deploy-promking-tube.yml) from tube-sites/.github/workflows/ to adhere to the Tailscale ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\tube-sites  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 19:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Removed the two legacy GitHub Actions deployment workflows (deploy-fullxxx-video.yml and deploy-promking-tube.yml) from tube-sites/.github/workflows/ to adhere to the Tailscale webhook-based deployment architecture.
+- Files:
+  - `c:\Users\Administrator\Desktop\Prom-King\tube-sites\.github\workflows\deploy-fullxxx-video.yml`
+  - `c:\Users\Administrator\Desktop\Prom-King\tube-sites\.github\workflows\deploy-promking-tube.yml`
+- Git: repo=tube-sites, branch=main, head=8e1a6c2
+
+</details>
+
+<details>
+<summary><strong>2026-05-28 19:02 - General Tasks</strong> <code>code-change</code> - Inspected the &#39;runuser: command not found&#39; and permission issue on greencloud-vps deploy scripts. Rewrote deploy-tube-sites.sh and deploy-link-sharing.sh to execute directly as ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 19:02 (TZ: Eastern Standard Time)
+  ```
+- Summary: Inspected the 'runuser: command not found' and permission issue on greencloud-vps deploy scripts. Rewrote deploy-tube-sites.sh and deploy-link-sharing.sh to execute directly as vwdeploy (since vw-webhookd runs as vwdeploy, not root), removing runuser completely. Proactively resolved lockfile permission issues and Unix shebang line ending issues. Confirmed successful deployments on tube-sites and verified successful webhook deliveries for link-sharing.
+- Commands:
+  - `gh api --method POST repos/Prom-King/tube-sites/hooks/628184164/tests`
+  - `gh api --method POST repos/Prom-King/link-sharing/hooks/628184108/tests`
+- Files:
+  - `C:\Users\Administrator\.gemini\antigravity\brain\ac3b5952-be6a-469d-b60b-ba2b9a11b386\scratch\update_vps_scripts.py`
+
+</details>
+
+<details>
+<summary><strong>2026-05-28 18:53 - General Tasks</strong> <code>code-change</code> - Executed the rotate_webhook_secrets.py script to generate a new 32-byte webhook signature secret, update VaultWarden (VW_GITHUB_WEBHOOK_SECRET), update /etc/vw-webhookd/env on g...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
