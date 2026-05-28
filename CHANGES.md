@@ -3,6 +3,43 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-27 22:10 - vault-flows</strong> <code>code-change,verification</code> - Added node browser sidebar with categories (Inputs/Loaders/Generation/Transform/Outputs) plus new load_text and load_file node types. Click-to-add and drag-drop into canvas both...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 22:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added node browser sidebar with categories (Inputs/Loaders/Generation/Transform/Outputs) plus new load_text and load_file node types. Click-to-add and drag-drop into canvas both work. Added addNode action to flowStore that auto-creates an Untitled Flow synthetic preset when no workflow is loaded. Fixed FlowCanvas reconciliation bug where newly added store nodes were not appended to rfNodes. Wrapped FlowCanvas in ReactFlowProvider so screenToFlowPosition works for drag-drop. App.tsx sidebar now has Workflows/Nodes tabs. Verified npm run build passes; preview test confirmed 5 categories render, click + drag-drop both spawn nodes, filter input matches across label/type/description.
+- Commands:
+  - `npm run build`
+  - `preview_start vault-flows`
+  - `preview_eval node-add and drag-drop simulation`
+- Files:
+  - `src/nodes/types.ts`
+  - `src/nodes/registry.ts`
+  - `src/canvas/FlowCanvas.tsx`
+  - `src/canvas/nodeTypes.ts`
+  - `src/canvas/nodes/LoadTextNode.tsx`
+  - `src/canvas/nodes/LoadFileNode.tsx`
+  - `src/store/flowStore.ts`
+  - `src/ui/NodeBrowserSidebar.tsx`
+  - `src/App.tsx`
+  - `.claude/launch.json`
+- Git: repo=vault-flows, branch=main, head=d64c939
+
+</details>
+
+<details>
 <summary><strong>2026-05-27 20:28 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Integrated KinoCheck premium API into Vault Explorer. Modified backend src/tmdb.js to securely load the KinoCheck premium key from .access/kinocheck_api.txt and register the get...</summary>
 
 - Kind: code-change
