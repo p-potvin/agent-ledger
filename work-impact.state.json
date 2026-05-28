@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-27T18:42:01.5544364Z",
+    "lastUpdatedUtc":  "2026-05-28T00:12:01.7585111Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1858,7 +1858,15 @@
                                        "20260526-232700-270-vault-flows-e098d0cd",
                                        "20260527-141330-413-vault-explorer-6fac755a",
                                        "20260527-142503-169-vault-explorer-f288e01a",
-                                       "20260527-143409-412-vault-explorer-36dddca9"
+                                       "20260527-143409-412-vault-explorer-36dddca9",
+                                       "20260527-151107-639-vault-flows-bf65db3f",
+                                       "20260527-153534-495-vault-flows-8861cd13",
+                                       "20260527-154428-000-vault-explorer-5ded2431",
+                                       "20260527-155827-768-vault-flows-39b00dcb",
+                                       "20260527-170417-926-vault-explorer-36ea8013",
+                                       "20260527-171300-849-vault-explorer-bf5cc747",
+                                       "20260527-180312-354-vault-explorer-c583d7d4",
+                                       "20260527-184205-460-vault-explorer-ce24b22c"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2845,7 +2853,7 @@
                                                          "models":  [
                                                                         "unknown"
                                                                     ],
-                                                         "count":  3
+                                                         "count":  11
                                                      }
                                                  ],
                                    "tools":  [
@@ -2882,7 +2890,7 @@
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  341,
+                                                  349,
                                                   "Antigravity",
                                                   59,
                                                   "codex",
@@ -2912,10 +2920,10 @@
                                                   "preload.js",
                                                   1
                                               ],
-                                   "totalEvents":  515,
+                                   "totalEvents":  523,
                                    "models":  [
                                                   "unknown",
-                                                  315,
+                                                  323,
                                                   "gpt-5.2",
                                                   69,
                                                   "claude-sonnet-4-6",
@@ -2993,7 +3001,7 @@
                                    {
                                        "label":  "Wed",
                                        "dow":  2,
-                                       "count":  85
+                                       "count":  93
                                    },
                                    {
                                        "label":  "Thu",
@@ -3078,7 +3086,7 @@
                                         "hour":  14
                                     },
                                     {
-                                        "count":  33,
+                                        "count":  37,
                                         "hour":  15
                                     },
                                     {
@@ -3086,11 +3094,11 @@
                                         "hour":  16
                                     },
                                     {
-                                        "count":  25,
+                                        "count":  27,
                                         "hour":  17
                                     },
                                     {
-                                        "count":  31,
+                                        "count":  33,
                                         "hour":  18
                                     },
                                     {
@@ -3131,7 +3139,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-27 14:42",
+                 "generatedAtLocal":  "2026-05-27 20:12",
                  "series":  {
                                 "months":  [
                                                {
@@ -3144,7 +3152,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  866
+                                                   "count":  874
                                                }
                                            ],
                                 "days":  [
@@ -4370,22 +4378,27 @@
                                                            }
                                              },
                                              {
-                                                 "projects":  "vault-explorer",
-                                                 "entries":  3,
+                                                 "projects":  [
+                                                                  "vault-explorer",
+                                                                  "vault-flows"
+                                                              ],
+                                                 "entries":  11,
                                                  "day":  "2026-05-27",
                                                  "kinds":  {
-                                                               "code-change":  3
+                                                               "general":  1,
+                                                               "verification":  1,
+                                                               "code-change":  10
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1547
+                                                  "count":  1554
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  118
+                                                  "count":  119
                                               },
                                               {
                                                   "kind":  "plan",
@@ -4397,7 +4410,7 @@
                                               },
                                               {
                                                   "kind":  "general",
-                                                  "count":  38
+                                                  "count":  39
                                               },
                                               {
                                                   "kind":  "handoff",
@@ -4407,11 +4420,11 @@
                                 "projects":  [
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  138,
                                                                    "commands":  1,
-                                                                   "verification":  18,
                                                                    "plan":  27,
-                                                                   "general":  1
+                                                                   "general":  2,
+                                                                   "verification":  19,
+                                                                   "code-change":  142
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  9674,
@@ -4422,11 +4435,11 @@
 
                                                                     },
                                                      "project":  "vault-explorer",
-                                                     "entries":  182,
+                                                     "entries":  187,
                                                      "recent":  [
-                                                                    "Optimized the real-time spoken translation systems by integrating robust pycaw-based audio ducking supporting the Electron process, slashing latency by cutting chunk sizes/silen...",
-                                                                    "Modernized and stabilized the translation and torrenting pipeline by implementing persistent settings via localStorage, introducing a z-index backdrop overlay to lock torrent mo...",
-                                                                    "Corrected IndentationError in livestream_translator.py at the Kokoro print statement. Moved livestream initial settings loading logic from startup to a lazy tab-load helper (loa..."
+                                                                    "Modernized inline emojis across the Movies \u0026 Series tab, streaming details modals, Real-Debrid dialog loaders, and Torrentio scrape status indicators. Standardized visual aesthe...",
+                                                                    "Successfully verified structural integrity, modularity, and feature parity of the modularized Vault Explorer. Fixed the undeclared \u0027el\u0027 helper global by defining it as a \u0027var\u0027 i...",
+                                                                    "Added robust network disconnection handling and UI state synchronization for livestreaming. Implemented an automatic reconnection attempt mechanism inside python-scripts/stream_..."
                                                                 ],
                                                      "firstDay":  "2026-04-19",
                                                      "lastDay":  "2026-05-27",
@@ -4443,7 +4456,7 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  151,
+                                                                   "code-change":  154,
                                                                    "general":  1
                                                                },
                                                      "lineClean":  {
@@ -4455,14 +4468,14 @@
 
                                                                     },
                                                      "project":  "vault-flows",
-                                                     "entries":  152,
+                                                     "entries":  155,
                                                      "recent":  [
-                                                                    "Implemented first local node-editor phase: added IMPROVEMENTS product note for guest preset/catalog and authenticated personal workspace direction; added workflow graph schema/n...",
-                                                                    "Backfill: uncommitted working tree changes present (post-cutoff 2026-05-03T02:58:39.3259575Z).",
-                                                                    "Full vaultwares-revisited redesign landed in one pass. Phase 0: Archived old design â€” moved src/lib/theme.ts, src/ui/ThemePicker.tsx, src/ui/PresetLibrary.tsx, src/ui/PresetCa..."
+                                                                    "Quick-win feedback fixes: (1) Added --vault-copper #C77C45 + --vault-copper-muted in src/index.css; remapped --vault-signal-relay to copper so all existing \u0027relay\u0027 references (T...",
+                                                                    "Step 2 of the feedback plan: inline editable params + per-instance rename + per-instance color override on every canvas node. (1) BaseNode redesigned with two new header afforda...",
+                                                                    "Round 3 feedback fixes â€” eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. ..."
                                                                 ],
                                                      "firstDay":  "2026-04-06",
-                                                     "lastDay":  "2026-05-26",
+                                                     "lastDay":  "2026-05-27",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -16160,7 +16173,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-27T18:34:09.4122273Z",
+                 "_maxCreatedAtUtc":  "2026-05-27T22:42:05.4601673Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16168,7 +16181,7 @@
                            },
                  "totals":  {
                                 "projects":  45,
-                                "events":  1851,
+                                "events":  1859,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  75,
                                 "commitEventsWithStats":  679

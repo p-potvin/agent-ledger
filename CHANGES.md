@@ -3,7 +3,246 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-27 14:34 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Corrected IndentationError in livestream_translator.py at the Kokoro print statement. Moved livestream initial settings loading logic from startup to a lazy tab-load helper (loa...</summary>
+<summary><strong>2026-05-27 18:42 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Added robust network disconnection handling and UI state synchronization for livestreaming. Implemented an automatic reconnection attempt mechanism inside python-scripts/stream_...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-refactor-modules
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 18:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added robust network disconnection handling and UI state synchronization for livestreaming. Implemented an automatic reconnection attempt mechanism inside python-scripts/stream_translator.py that retries connecting to the HTTPS stream up to 3 times in case of transient dropouts. Added window.resetLivestreamUIState() inside js/livestream.js, which is automatically triggered upon detecting backend process termination in console logs, keeping the UI state (play indicators, mute status, toggle buttons) perfectly in sync.
+- Commands:
+  - `node tests/refactor_smoke_test.js`
+  - `node tests/comprehensive_test.js`
+- Files:
+  - `python-scripts/stream_translator.py`
+  - `js/livestream.js`
+- Git: repo=vault-explorer, branch=vw-codex-refactor-modules, head=9d6166b
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 18:03 - vault-explorer</strong> <code>verification</code> - Successfully verified structural integrity, modularity, and feature parity of the modularized Vault Explorer. Fixed the undeclared &#39;el&#39; helper global by defining it as a &#39;var&#39; i...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-refactor-modules
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 18:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: Successfully verified structural integrity, modularity, and feature parity of the modularized Vault Explorer. Fixed the undeclared 'el' helper global by defining it as a 'var' in js/utils.js, and appended window.initTabListeners to js/navigation/tabs.js to bind click events to top navigation tab switches. Adjusted comprehensive_test.js to navigate to the Vault tab before verifying DOM visibility to account for various default settings, and corrected the expected Quebecois translation string to 'explorer la voûte'. Both the refactor smoke tests and comprehensive integration test suites passed 100% with zero runtime exceptions.
+- Commands:
+  - `node tests/refactor_smoke_test.js`
+  - `node tests/comprehensive_test.js`
+- Files:
+  - `js/utils.js`
+  - `js/navigation/tabs.js`
+  - `js/app.js`
+  - `tests/comprehensive_test.js`
+- Git: repo=vault-explorer, branch=vw-codex-refactor-modules, head=9d6166b
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 17:13 - vault-explorer</strong> <code>code-change,general</code> - Modernized inline emojis across the Movies &amp; Series tab, streaming details modals, Real-Debrid dialog loaders, and Torrentio scrape status indicators. Standardized visual aesthe...</summary>
+
+- Kind: code-change,general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 17:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Modernized inline emojis across the Movies & Series tab, streaming details modals, Real-Debrid dialog loaders, and Torrentio scrape status indicators. Standardized visual aesthetics using unified VaultWares Revisited theme components, CSS tokens, and locally cached high-fidelity brand favicons (IMDb, Apple TV, JustWatch). Added global rule memory file C:\Users\Administrator\.gemini\rules\vaultwares-revisited-theme.md to persist theme alignment across sessions.
+- Files:
+  - `index.html`
+  - `js/streaming.js`
+  - `js/app.js`
+  - `C:\Users\Administrator\.gemini\rules\vaultwares-revisited-theme.md`
+- Git: repo=vault-explorer, branch=main, head=9d6166b
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 17:04 - vault-explorer</strong> <code>code-change</code> - Reduced interactive hover card cooldown to 200ms. Added global Escape keyboard controls to dismiss the streaming-details-modal and rd-stream-dialog modals. Refactored startRDDeb...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 17:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: Reduced interactive hover card cooldown to 200ms. Added global Escape keyboard controls to dismiss the streaming-details-modal and rd-stream-dialog modals. Refactored startRDDebridFlow to show an instant DMCA toast and return to the manual stream picker modal on copyright infringement instead of looping through other dead torrents. Added dynamic watch and trailer option badges (IMDb, Apple TV, JustWatch, TMDB) underneath the overview paragraph in the streaming details modal.
+- Files:
+  - `js/streaming.js`
+  - `js/hover-card.js`
+  - `js/app.js`
+  - `index.html`
+- Git: repo=vault-explorer, branch=main, head=9d6166b
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 15:58 - vault-flows</strong> <code>code-change</code> - Round 3 feedback fixes &#226;€” eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 15:58 (TZ: Eastern Standard Time)
+  ```
+- Summary: Round 3 feedback fixes â€” eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. Added a useEffect in FlowCanvas that propagates store data changes (params, label) to rfNodes while leaving position/measured state untouched (preserves the visibility:hidden fix from earlier sessions). Identity-checks on params and label avoid spurious re-renders. (2) Toast system: new src/ui/components/Toast.tsx with module-level event hub (pushToast/dismissToast from anywhere) and ToastHost mounted at App root; renders top-right stack with auto-dismiss (6s default, 4s for success); three tones (error/success/info) with matching tokens. App.tsx now pushes 'success' on clean run, 'error' on per-node or top-level failure + auto-opens the inspector. (3) Execution errors moved to TOP of NodeParamPanel â€” banner with the failure detail + a Reset button; the old bottom error block was removed. Per-node text/json outputs still render below (image results render inline ON the comfyui_workflow node). (4) Removed the auto-created Display node from loadFromComfyWorkflow; the master flow is now just the single comfyui_workflow node, with results rendering inline (gallery + thumbnails). Eliminates the disconnected 'Result' node that felt orphaned. (5) Inline image result on ComfyUIWorkflowNode: when the workflow succeeds and the result has imageUrl/imageUrls, the gallery renders inside the node card itself; click any thumb opens full-size in a new tab. (6) New InlineSeedInput in canvas/nodes/inline.tsx â€” number input with a dice button (Lucide Dice5) that fills a 31-bit random int. ComfyUIWorkflowNode routes any input key named 'seed' through this control. (7) Size presets dropdown â€” when a workflow exposes both 'width' and 'height' in input_paths, a single 'size' InlineSelect drives both (512Â², 768Â², 1024Â², portrait/landscape variants, Custom reveals manual w/h number inputs). Exported SIZE_PRESETS array from inline.tsx. (8) NodeId pill â€” small mono badge at the bottom of every node card showing 'node#<short-id>'; tooltip on hover reveals the full id. shortenNodeId helper formats numeric/short/UUID ids consistently. (9) Persisted last-used inputs: ComfyUIWorkflowNode reads localStorage['vw:lastInputs:<workflow_id>'] on mount if all inputs are empty, prefills non-image fields (upload tokens excluded â€” they expire); debounced 400ms save on every input change. Each user gets their own browser-local memory of last prompt/seed/size per workflow. Deployed dist (assets/index-BxACQy3N.js).
+- Commands:
+  - `npm run build`
+  - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
+- Files:
+  - `vault-flows/src/canvas/FlowCanvas.tsx`
+  - `vault-flows/src/canvas/nodes/BaseNode.tsx`
+  - `vault-flows/src/canvas/nodes/inline.tsx`
+  - `vault-flows/src/canvas/nodes/ComfyUIWorkflowNode.tsx`
+  - `vault-flows/src/store/flowStore.ts`
+  - `vault-flows/src/ui/NodeParamPanel.tsx`
+  - `vault-flows/src/ui/components/Toast.tsx`
+  - `vault-flows/src/App.tsx`
+- Git: repo=vault-flows, branch=main, head=f4e4b75
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 15:44 - vault-explorer</strong> <code>code-change</code> - Resolved YouTube Error 4 and Error 152 in video playback by masking Electron User-Agent for youtube/youtube-nocookie HTTP requests to match standard desktop Chrome. Fixed subtit...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 15:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Resolved YouTube Error 4 and Error 152 in video playback by masking Electron User-Agent for youtube/youtube-nocookie HTTP requests to match standard desktop Chrome. Fixed subtitles not rendering by transparently converting both local and downloaded OpenSubtitles .srt files to WebVTT (.vtt) format. Introduced 500ms hover card cooldown in js/hover-card.js to prevent cards switching/flashing back and forth when leaving the hover card. Fixed ReferenceError on 'Start Translator' button by dynamically querying livestream-url-input and livestream-translation-toggle elements inside the event handler instead of referencing outer lexical scopes. Disabled the Real-Time Upscaling (ESRGAN) 'AI' button in index.html as a visual placeholder.
+- Files:
+  - `main.js`
+  - `src/scanner.js`
+  - `index.html`
+  - `js/player.js`
+  - `js/app.js`
+  - `js/hover-card.js`
+- Git: repo=vault-explorer, branch=main, head=9d6166b
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 15:35 - vault-flows</strong> <code>code-change</code> - Step 2 of the feedback plan: inline editable params + per-instance rename + per-instance color override on every canvas node. (1) BaseNode redesigned with two new header afforda...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 15:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Step 2 of the feedback plan: inline editable params + per-instance rename + per-instance color override on every canvas node. (1) BaseNode redesigned with two new header affordances: double-click the label to rename (stored in params._displayName; clearing it resets to default), click the type-color swatch to open a 7-color palette popover (Default/Gold/Violet/Copper/Online/Warning/Alert) that writes to params._color. Both _displayName and _color have underscore prefixes so the runner ignores them. effectiveLabel and effectiveColor fall through to NODE_REGISTRY defaults when the override is empty. The popover closes on outside-click via a window listener. (2) New canvas-specific inline controls in canvas/nodes/inline.tsx â€” InlineField, InlineTextInput, InlineNumberInput, InlineTextArea, InlineSelect, InlineAdvanced (collapsible 'Advanced' chevron). All inputs add the 'nodrag' className so React Flow doesn't start a drag when typing. (3) Updated 5 node renderers to render editable forms inside the card body: InputNode (textarea for value), LLMNode (model + prompt inline; system/temp/max_tokens behind Advanced), ModelCallNode (provider select + model/url + prompt inline; system/temp behind Advanced when provider==ollama; url replaces prompt when provider==http), TransformNode (template textarea), ComfyUIWorkflowNode (workflow_id chip + per-key input controls partitioned PRIMARY=positive_prompt/negative_prompt/prompt/source_image/target_image/reference_image/seed inline, everything else under Advanced; lazy-loads workflow schema via getPipelinesWorkflow when cache misses; inline image picker with upload+thumbnail+change-button matching the side panel's ComfyUIWorkflowInputsEditor pattern). ImageInputNode polished to match the compact inline style. The side-panel NodeParamPanel now reads params._displayName for its header to stay in sync. Architectural note: comfyui_workflow nodes deliberately render only the input_paths contract â€” the underlying 30+ node graph stays opaque, which is the structural nudge toward composition over flat 150-node ComfyUI-style flows. Deployed dist (assets/index-d_wRPBW5.js).
+- Commands:
+  - `npm run build`
+  - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
+- Files:
+  - `vault-flows/src/canvas/nodes/BaseNode.tsx`
+  - `vault-flows/src/canvas/nodes/inline.tsx`
+  - `vault-flows/src/canvas/nodes/InputNode.tsx`
+  - `vault-flows/src/canvas/nodes/LLMNode.tsx`
+  - `vault-flows/src/canvas/nodes/ModelCallNode.tsx`
+  - `vault-flows/src/canvas/nodes/TransformNode.tsx`
+  - `vault-flows/src/canvas/nodes/ComfyUIWorkflowNode.tsx`
+  - `vault-flows/src/canvas/nodes/ImageInputNode.tsx`
+  - `vault-flows/src/ui/NodeParamPanel.tsx`
+- Git: repo=vault-flows, branch=main, head=f4e4b75
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 15:11 - vault-flows</strong> <code>code-change</code> - Quick-win feedback fixes: (1) Added --vault-copper #C77C45 + --vault-copper-muted in src/index.css; remapped --vault-signal-relay to copper so all existing &#39;relay&#39; references (T...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-flows  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 15:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Quick-win feedback fixes: (1) Added --vault-copper #C77C45 + --vault-copper-muted in src/index.css; remapped --vault-signal-relay to copper so all existing 'relay' references (Transform node, validation badges) automatically pick up the new color. New Tailwind utility vw-copper. (2) WorkflowLibrary auto-refresh on login â€” added key={currentUser ?? 'guest'} so the library remounts and re-fetches the catalog when auth state flips, no page reload needed. (3) Param panel hidden by default â€” added paramPanelOpen state (default false), floating top-right toggle button (PanelRightOpen/Close from Lucide) on the canvas, the right inspector aside only renders when toggled. (4) Per-node execution-state LED in the canvas BaseNode header: muted/grey idle, copper pending, online green succeeded, alert red failed; pulses while in pending state. Derived from the global executionStatus + the per-node executionResults entry. Deployed dist (assets/index-CDo5-Dpt.js) atomically.
+- Commands:
+  - `npm run build`
+  - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
+- Files:
+  - `vault-flows/src/index.css`
+  - `vault-flows/src/App.tsx`
+  - `vault-flows/src/canvas/nodes/BaseNode.tsx`
+- Git: repo=vault-flows, branch=main, head=f4e4b75
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 14:34 - vault-explorer</strong> <code>code-change</code> - Corrected IndentationError in livestream_translator.py at the Kokoro print statement. Moved livestream initial settings loading logic from startup to a lazy tab-load helper (loa...</summary>
 
 - Kind: code-change
 - Actor: AI Agent

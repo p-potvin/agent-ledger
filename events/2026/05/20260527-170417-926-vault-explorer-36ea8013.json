@@ -1,0 +1,51 @@
+﻿{
+    "id":  "20260527-170417-926-vault-explorer-36ea8013",
+    "createdAt":  "2026-05-27T21:04:17.9261983Z",
+    "createdAtLocal":  "2026-05-27 17:04",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-27 17:04 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Reduced interactive hover card cooldown to 200ms. Added global Escape keyboard controls to dismiss the streaming-details-modal and rd-stream-dialog modals. Refactored startRDDebridFlow to show an instant DMCA toast and return to the manual stream picker modal on copyright infringement instead of looping through other dead torrents. Added dynamic watch and trailer option badges (IMDb, Apple TV, JustWatch, TMDB) underneath the overview paragraph in the streaming details modal.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "js/streaming.js",
+                  "js/hover-card.js",
+                  "js/app.js",
+                  "index.html"
+              ],
+    "planPath":  "",
+    "contentHash":  "36ea8013f5310f379816cb044710240bec29ad124c5dffbaf4f9e31ef8dae83c",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "9d6166b",
+                "hasChanges":  true
+            }
+}
