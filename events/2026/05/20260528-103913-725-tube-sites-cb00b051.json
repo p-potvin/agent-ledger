@@ -1,0 +1,47 @@
+{
+  "id": "20260528-103913-725-tube-sites-cb00b051",
+  "createdAt": "2026-05-28T14:39:13.7254805Z",
+  "createdAtLocal": "2026-05-28 10:39",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-sites",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): functions.shell_command, functions.apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-28 10:39 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "functions.shell_command",
+      "functions.apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "estimated_output_tokens": 550,
+      "ga4_deploy_via_gtm_default": true
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Switched GA4 to be deployed via GTM by default for both sites (added GA4-via-GTM toggles and disabled direct gtag.js injection when enabled) to avoid double-tagging.",
+  "commands": [
+    "php -l (updated settings/helpers)",
+    "git status --porcelain"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\includes\\admin-settings.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\admin-settings.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\helpers.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\README.md"
+  ],
+  "planPath": "",
+  "contentHash": "cb00b0510230931a80d40f56ea6618bfcd243ae8ad9d7af88f387252993c6c89",
+  "git": null
+}
