@@ -3,6 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-28 18:03 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,commands,verification</code> - Re-applied prior tube-site overhaul (edits had been reverted in the working tree between sessions) and pushed to origin/main. Commit f5b0378 on top of 7bd9c85. 15 files, +809 -1...</summary>
+
+- Kind: code-change,commands,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\tube-sites  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 18:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: Re-applied prior tube-site overhaul (edits had been reverted in the working tree between sessions) and pushed to origin/main. Commit f5b0378 on top of 7bd9c85. 15 files, +809 -181. GTM-WXGQJ7PR + ga4_via_gtm_enabled defaults preserved (parallel assistant's analytics work intact). Vercel/main-push deploy will pick up the changes.
+- Commands:
+  - `git add fullxxx-video/ promking-tube/`
+  - `git commit -m 'FXV/PKT tube sites: owned-player overhaul + fetcher hardening'`
+  - `git push origin main`
+  - `php -l on all 11 modified PHP files (clean)`
+- Files:
+  - `commit f5b0378 on Prom-King/tube-sites main`
+- Git: repo=tube-sites, branch=main, head=f5b0378
+
+</details>
+
+<details>
 <summary><strong>2026-05-28 17:28 - Prom-King</strong> <code>general</code> - PKT now injects GTM-WXGQJ7PR (shared container)</summary>
 
 - Kind: general
@@ -32,7 +61,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-28 17:05 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,plan</code> - FXV + PKT tube site overhaul. FXV: dropped iframe-only providers (freesexvideos, spankbang); rewired provider profiles for owned-player only (mp4/HLS); added eporner as new dire...</summary>
+<summary><strong>2026-05-28 17:05 - tube-sites</strong> <code>code-change,plan</code> - FXV + PKT tube site overhaul. FXV: dropped iframe-only providers (freesexvideos, spankbang); rewired provider profiles for owned-player only (mp4/HLS); added eporner as new dire...</summary>
 
 - Kind: code-change,plan
 - Actor: AI Agent

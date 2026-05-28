@@ -1,0 +1,45 @@
+{
+  "id": "20260528-180333-231-tube-sites-3d374fae",
+  "createdAt": "2026-05-28T22:03:33.2312043Z",
+  "createdAtLocal": "2026-05-28 18:03",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-sites",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-28 18:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
+  "summary": "Re-applied prior tube-site overhaul (edits had been reverted in the working tree between sessions) and pushed to origin/main. Commit f5b0378 on top of 7bd9c85. 15 files, +809 -181. GTM-WXGQJ7PR + ga4_via_gtm_enabled defaults preserved (parallel assistant's analytics work intact). Vercel/main-push deploy will pick up the changes.",
+  "commands": [
+    "git add fullxxx-video/ promking-tube/",
+    "git commit -m 'FXV/PKT tube sites: owned-player overhaul + fetcher hardening'",
+    "git push origin main",
+    "php -l on all 11 modified PHP files (clean)"
+  ],
+  "files": [
+    "commit f5b0378 on Prom-King/tube-sites main"
+  ],
+  "planPath": "",
+  "contentHash": "3d374faec700e91260f30099e0685a1477b8c61b165fb31209abaa4e8077d67e",
+  "git": {
+    "repo": "tube-sites",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/tube-sites",
+    "branch": "main",
+    "head": "f5b0378",
+    "hasChanges": false
+  }
+}
