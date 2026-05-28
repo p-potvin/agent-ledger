@@ -1,0 +1,50 @@
+{
+  "id": "20260528-160008-702-prom-king-1432e5b0",
+  "createdAt": "2026-05-28T20:00:08.7021953Z",
+  "createdAtLocal": "2026-05-28 16:00",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): ssh, curl, git\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-28 16:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "ssh",
+      "curl",
+      "git"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\tube-sites",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "GTM per-site enforcement + GA4-via-GTM playbook",
+  "commands": [
+    "git push origin main (tube-sites)",
+    "ssh root@100.73.93.84 export VW_AFTER=105bb125...; /var/www/deploy-scripts/deploy-tube-sites.sh",
+    "curl https://prom-king.xyz/ (confirm no GTM id)",
+    "curl https://fullxxx.video/ (confirm GTM id + consent defaults)"
+  ],
+  "files": [
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\tube-sites\\\\promking-tube\\\\includes\\\\admin-settings.php",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\tube-sites\\\\docs\\\\ANALYTICS_GTM_GA4_2026.md"
+  ],
+  "planPath": "",
+  "contentHash": "1432e5b04d50caba7373f41512e709ac082b6e6a86d3cf2116cbfc5522947bfd",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "c94945fa",
+    "hasChanges": false
+  }
+}

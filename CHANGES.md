@@ -3,6 +3,36 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-28 16:00 - Prom-King</strong> <code>general</code> - GTM per-site enforcement + GA4-via-GTM playbook</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): ssh, curl, git
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 16:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: GTM per-site enforcement + GA4-via-GTM playbook
+- Commands:
+  - `git push origin main (tube-sites)`
+  - `ssh root@100.73.93.84 export VW_AFTER=105bb125...; /var/www/deploy-scripts/deploy-tube-sites.sh`
+  - `curl https://prom-king.xyz/ (confirm no GTM id)`
+  - `curl https://fullxxx.video/ (confirm GTM id + consent defaults)`
+- Files:
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\includes\\admin-settings.php`
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\docs\\ANALYTICS_GTM_GA4_2026.md`
+- Git: repo=agent-ledger, branch=main, head=c94945fa
+
+</details>
+
+<details>
 <summary><strong>2026-05-28 15:55 - Prom-King</strong> <code>deploy</code> - Tube-sites deploy verified; PK palette updated</summary>
 
 - Kind: deploy
