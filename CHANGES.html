@@ -48,7 +48,32 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-05-28 01:31 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change</span> - Modernized the Vault Explorer UI/UX by fixing critical regressions. Renamed the double-defined initNavigationListeners function in keybindings.js to prevent collision with direc...</summary>
+    <summary><strong>2026-05-28 02:32 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change</span> - Modernized the Vault Explorer navigation bar: replaced &#39;root/&#39; path display with active directory name, hid back button when at root level, placed the select browse button next ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-refactor-modules Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-28 02:32 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Modernized the Vault Explorer navigation bar: replaced &#39;root/&#39; path display with active directory name, hid back button when at root level, placed the select browse button next to the path display. Added filter icon next to the file-type dropdown. Styled the search-box to include a search loop icon separator on the left and a small &#39;x&#39; clear-button on the right. Styled folder buttons to use folder icons and &#39;New Folder&#39; button to &#39;+ [folder icon]&#39;. Prevented duplicate folder creation names. Resolved the &#39;load more&#39; scrolling lag using DocumentFragment and an async block lock. Prevented double-clicks and bubble triggers on contextmenu card listeners. Integrated &#39;Add to Virtual Folder&#39; submenu for single and multi-select card lists to organize files while active in filter views. Intercepted paste-into-folder to use instant virtual items association without physical disc copy delays. Prevented OpenSubtitles API calls inside the Vault tab.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>index.html</code></li>
+        <li><code>js/navigation/directory.js</code></li>
+        <li><code>js/navigation/filters.js</code></li>
+        <li><code>js/navigation/card.js</code></li>
+        <li><code>js/navigation/card-events.js</code></li>
+        <li><code>js/app.js</code></li>
+        <li><code>preload.js</code></li>
+        <li><code>src/scanner.js</code></li>
+        <li><code>src/ipc/system.ipc.js</code></li>
+        <li><code>js/translations.en.js</code></li>
+        <li><code>js/translations.qc.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=vw-codex-refactor-modules, head=259adaf</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-28 01:31 - vault-explorer</strong> <span class="kind">code-change</span> - Modernized the Vault Explorer UI/UX by fixing critical regressions. Renamed the double-defined initNavigationListeners function in keybindings.js to prevent collision with direc...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> AI Agent</p>
