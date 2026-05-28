@@ -1,0 +1,51 @@
+{
+  "id": "20260528-140658-383-tube-sites-974a2370",
+  "createdAt": "2026-05-28T18:06:58.3831156Z",
+  "createdAtLocal": "2026-05-28 14:06",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-sites",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): functions.shell_command, functions.apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-28 14:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "functions.shell_command",
+      "functions.apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "estimated_output_tokens": 1200,
+      "deployment_triggered": true,
+      "pushed_main": true
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "FXV: applied tubeshell design to home + DMCA/2257/contact/privacy pages (new page templates + legal-page shortcodes), switched brand mark to UI_Kit fx-dot icon, fixed category URLs to use /category/ with hierarchical path resolution, and pushed merge to main to trigger deployment. Also includes earlier GTM+Consent Mode v2 + GA4-via-GTM defaults for both sites.",
+  "commands": [
+    "php -l (key changed files)",
+    "git merge --no-ff vw-codex-unify-deploy-flow",
+    "git push origin main"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\template-loader.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\templates\\page-fxv_shell.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\templates\\page-fxv_home.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\legal-pages.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\post-types.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\seo-discovery.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\assets\\css\\tubeshell\\theme.css"
+  ],
+  "planPath": "",
+  "contentHash": "974a23700510c6ddfdda762953d138f06ebca6be4b5c12306f687a65cbe6009f",
+  "git": null
+}

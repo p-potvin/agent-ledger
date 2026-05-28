@@ -3,7 +3,42 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-28 14:00 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,verification</code> - Switched FullXXX brand mark icons to UI_Kit fx-dot.svg (matches the configured favicon style) across archive/tax/single templates and the auth modal branding.</summary>
+<summary><strong>2026-05-28 14:06 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,verification</code> - FXV: applied tubeshell design to home + DMCA/2257/contact/privacy pages (new page templates + legal-page shortcodes), switched brand mark to UI_Kit fx-dot icon, fixed category U...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): functions.shell_command, functions.apply_patch
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 14:06 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: estimated_output_tokens=1200, deployment_triggered=True, pushed_main=True
+- Summary: FXV: applied tubeshell design to home + DMCA/2257/contact/privacy pages (new page templates + legal-page shortcodes), switched brand mark to UI_Kit fx-dot icon, fixed category URLs to use /category/ with hierarchical path resolution, and pushed merge to main to trigger deployment. Also includes earlier GTM+Consent Mode v2 + GA4-via-GTM defaults for both sites.
+- Commands:
+  - `php -l (key changed files)`
+  - `git merge --no-ff vw-codex-unify-deploy-flow`
+  - `git push origin main`
+- Files:
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\template-loader.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\templates\page-fxv_shell.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\templates\page-fxv_home.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\legal-pages.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\post-types.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\seo-discovery.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\assets\css\tubeshell\theme.css`
+
+</details>
+
+<details>
+<summary><strong>2026-05-28 14:00 - tube-sites</strong> <code>code-change,verification</code> - Switched FullXXX brand mark icons to UI_Kit fx-dot.svg (matches the configured favicon style) across archive/tax/single templates and the auth modal branding.</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
