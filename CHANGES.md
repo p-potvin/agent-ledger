@@ -3,7 +3,36 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-28 10:39 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,verification</code> - Switched GA4 to be deployed via GTM by default for both sites (added GA4-via-GTM toggles and disabled direct gtag.js injection when enabled) to avoid double-tagging.</summary>
+<summary><strong>2026-05-28 13:33 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,verification</code> - Updated FullXXX (theme-fx) to the new dark black/white/hot-pink visual system to match the /videos design; aligned &lt;meta name=theme-color&gt;.</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): functions.apply_patch, functions.shell_command, web.run
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 13:33 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: estimated_output_tokens=650, ui_theme_fx_dark=True
+- Summary: Updated FullXXX (theme-fx) to the new dark black/white/hot-pink visual system to match the /videos design; aligned <meta name=theme-color>.
+- Commands:
+  - `git diff fullxxx-video/assets/css/tubeshell/theme.css fullxxx-video/includes/template-loader.php`
+  - `php -l fullxxx-video/includes/template-loader.php`
+- Files:
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\assets\css\tubeshell\theme.css`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\template-loader.php`
+
+</details>
+
+<details>
+<summary><strong>2026-05-28 10:39 - tube-sites</strong> <code>code-change,verification</code> - Switched GA4 to be deployed via GTM by default for both sites (added GA4-via-GTM toggles and disabled direct gtag.js injection when enabled) to avoid double-tagging.</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
