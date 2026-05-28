@@ -3,7 +3,37 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-28 14:06 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,verification</code> - FXV: applied tubeshell design to home + DMCA/2257/contact/privacy pages (new page templates + legal-page shortcodes), switched brand mark to UI_Kit fx-dot icon, fixed category U...</summary>
+<summary><strong>2026-05-28 15:20 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>handoff,verification</code> - Verified live fullxxx.video is still serving the old homepage and old fullxxx-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck...</summary>
+
+- Kind: handoff,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): functions.shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 15:20 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: deploy_status=queued, runner_blocked=True, deploy_run_id=26596556363
+- Summary: Verified live fullxxx.video is still serving the old homepage and old fullxxx-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck queued (self-hosted runner not picking it up).
+- Commands:
+  - `Invoke-WebRequest https://fullxxx.video/ (grep for tubeshell markers)`
+  - `Invoke-WebRequest https://fullxxx.video/wp-content/plugins/fullxxx-video/assets/css/tubeshell/theme.css (saw old light palette)`
+  - `gh workflow run 'Deploy fullxxx-video to fullxxx.video'`
+  - `gh run view 26596556363`
+- Files:
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\.github\workflows\deploy-fullxxx-video.yml`
+
+</details>
+
+<details>
+<summary><strong>2026-05-28 14:06 - tube-sites</strong> <code>code-change,verification</code> - FXV: applied tubeshell design to home + DMCA/2257/contact/privacy pages (new page templates + legal-page shortcodes), switched brand mark to UI_Kit fx-dot icon, fixed category U...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
