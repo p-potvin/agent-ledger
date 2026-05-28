@@ -3,6 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-28 17:28 - Prom-King</strong> <code>general</code> - PKT now injects GTM-WXGQJ7PR (shared container)</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): ssh, curl, git
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 17:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: PKT now injects GTM-WXGQJ7PR (shared container)
+- Commands:
+  - `git push origin main (tube-sites)`
+  - `ssh root@100.73.93.84 export VW_AFTER=7bd9c856...; /var/www/deploy-scripts/deploy-tube-sites.sh`
+  - `curl https://prom-king.xyz/ (confirm gtm.js + ns iframe + GTM-WXGQJ7PR)`
+- Files:
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\includes\\admin-settings.php`
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\docs\\ANALYTICS_GTM_GA4_2026.md`
+- Git: repo=agent-ledger, branch=main, head=3a60a849
+
+</details>
+
+<details>
 <summary><strong>2026-05-28 17:05 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,plan</code> - FXV + PKT tube site overhaul. FXV: dropped iframe-only providers (freesexvideos, spankbang); rewired provider profiles for owned-player only (mp4/HLS); added eporner as new dire...</summary>
 
 - Kind: code-change,plan
