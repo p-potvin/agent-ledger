@@ -3,7 +3,36 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-27 18:42 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Added robust network disconnection handling and UI state synchronization for livestreaming. Implemented an automatic reconnection attempt mechanism inside python-scripts/stream_...</summary>
+<summary><strong>2026-05-27 20:28 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Integrated KinoCheck premium API into Vault Explorer. Modified backend src/tmdb.js to securely load the KinoCheck premium key from .access/kinocheck_api.txt and register the get...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-refactor-modules
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-27 20:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: Integrated KinoCheck premium API into Vault Explorer. Modified backend src/tmdb.js to securely load the KinoCheck premium key from .access/kinocheck_api.txt and register the get-kinocheck-trailer IPC handler with robust fallback strategies. Updated preload.js to expose getKinoCheckTrailer. Refactored js/streaming.js _fetchAndInjectTrailer to prioritize calling KinoCheck API for high-fidelity trailer mapping, successfully mitigating YouTube embedded playback Error 152-4 issue while preserving TMDB lookup as a fallback.
+- Commands:
+  - `node scratch/test_kinocheck.js`
+  - `node --check src/tmdb.js preload.js`
+- Files:
+  - `src/tmdb.js`
+  - `preload.js`
+  - `js/streaming.js`
+- Git: repo=vault-explorer, branch=vw-codex-refactor-modules, head=259adaf
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 18:42 - vault-explorer</strong> <code>code-change</code> - Added robust network disconnection handling and UI state synchronization for livestreaming. Implemented an automatic reconnection attempt mechanism inside python-scripts/stream_...</summary>
 
 - Kind: code-change
 - Actor: AI Agent

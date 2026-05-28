@@ -48,7 +48,29 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-05-27 18:42 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change</span> - Added robust network disconnection handling and UI state synchronization for livestreaming. Implemented an automatic reconnection attempt mechanism inside python-scripts/stream_...</summary>
+    <summary><strong>2026-05-27 20:28 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change</span> - Integrated KinoCheck premium API into Vault Explorer. Modified backend src/tmdb.js to securely load the KinoCheck premium key from .access/kinocheck_api.txt and register the get...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-refactor-modules Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-27 20:28 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Integrated KinoCheck premium API into Vault Explorer. Modified backend src/tmdb.js to securely load the KinoCheck premium key from .access/kinocheck_api.txt and register the get-kinocheck-trailer IPC handler with robust fallback strategies. Updated preload.js to expose getKinoCheckTrailer. Refactored js/streaming.js _fetchAndInjectTrailer to prioritize calling KinoCheck API for high-fidelity trailer mapping, successfully mitigating YouTube embedded playback Error 152-4 issue while preserving TMDB lookup as a fallback.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>node scratch/test_kinocheck.js</code></li>
+        <li><code>node --check src/tmdb.js preload.js</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/tmdb.js</code></li>
+        <li><code>preload.js</code></li>
+        <li><code>js/streaming.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=vw-codex-refactor-modules, head=259adaf</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-27 18:42 - vault-explorer</strong> <span class="kind">code-change</span> - Added robust network disconnection handling and UI state synchronization for livestreaming. Implemented an automatic reconnection attempt mechanism inside python-scripts/stream_...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> AI Agent</p>

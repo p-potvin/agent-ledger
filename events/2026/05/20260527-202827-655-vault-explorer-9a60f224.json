@@ -1,0 +1,51 @@
+﻿{
+    "id":  "20260527-202827-655-vault-explorer-9a60f224",
+    "createdAt":  "2026-05-28T00:28:27.6552529Z",
+    "createdAtLocal":  "2026-05-27 20:28",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-refactor-modules\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-27 20:28 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Integrated KinoCheck premium API into Vault Explorer. Modified backend src/tmdb.js to securely load the KinoCheck premium key from .access/kinocheck_api.txt and register the get-kinocheck-trailer IPC handler with robust fallback strategies. Updated preload.js to expose getKinoCheckTrailer. Refactored js/streaming.js _fetchAndInjectTrailer to prioritize calling KinoCheck API for high-fidelity trailer mapping, successfully mitigating YouTube embedded playback Error 152-4 issue while preserving TMDB lookup as a fallback.",
+    "commands":  [
+                     "node scratch/test_kinocheck.js",
+                     "node --check src/tmdb.js preload.js"
+                 ],
+    "files":  [
+                  "src/tmdb.js",
+                  "preload.js",
+                  "js/streaming.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "9a60f224a558d96b3ccfb5d3c7d76c154036311b644e85f99977e808df5d8707",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "vw-codex-refactor-modules",
+                "head":  "259adaf",
+                "hasChanges":  true
+            }
+}
