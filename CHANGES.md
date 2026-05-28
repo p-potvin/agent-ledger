@@ -3,6 +3,29 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-28 18:50 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>plan</code> - Prepared end-to-end webhook secret rotation script &#39;rotate_webhook_secrets.py&#39; and successfully tested in dry-run mode. Seeking user approval before executing the API request lo...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 18:50 (TZ: Eastern Standard Time)
+  ```
+- Summary: Prepared end-to-end webhook secret rotation script 'rotate_webhook_secrets.py' and successfully tested in dry-run mode. Seeking user approval before executing the API request loop for 41 repositories per request rate limiting policy.
+- Files:
+  - `C:\Users\Administrator\.gemini\antigravity\brain\ac3b5952-be6a-469d-b60b-ba2b9a11b386\scratch\rotate_webhook_secrets.py`
+
+</details>
+
+<details>
 <summary><strong>2026-05-28 18:31 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,handoff,verification</code> - 2257-page duplicate bug fixed + deploy-runner verified. (1) Pushed commit 8e1a6c2 hardening fxv_create_page_if_missing (cache-bypass get_posts query, once-per-request + once-per...</summary>
 
 - Kind: code-change,handoff,verification
@@ -6834,7 +6857,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-22 13:28 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>code-change</code> - Modify App.tsx to map over vaultWaresIcons, using an inner color list based on loop index to assign color/glow. Also fixed TS errors related to unmatched brackets in icons.tsx a...</summary>
+<summary><strong>2026-05-22 13:28 - General Tasks</strong> <code>code-change</code> - Modify App.tsx to map over vaultWaresIcons, using an inner color list based on loop index to assign color/glow. Also fixed TS errors related to unmatched brackets in icons.tsx a...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
