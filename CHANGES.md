@@ -3,7 +3,37 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-27 23:14 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Prioritized KinoCheck premium trailers in js/hover-card.js interactive popup previews with fallback to TMDB videos.</summary>
+<summary><strong>2026-05-28 01:31 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Modernized the Vault Explorer UI/UX by fixing critical regressions. Renamed the double-defined initNavigationListeners function in keybindings.js to prevent collision with direc...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-refactor-modules
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 01:31 (TZ: Eastern Standard Time)
+  ```
+- Summary: Modernized the Vault Explorer UI/UX by fixing critical regressions. Renamed the double-defined initNavigationListeners function in keybindings.js to prevent collision with directory.js, which restored scroll pagination, search, sort, filter, and lasso select listeners. Added live search, filter, and sort capabilities to the Library/Favorites tab with active caching to prevent disk I/O. Added click-outside-to-deselect behavior, proper contextmenu preventDefault() logic on right-click for first-time triggers, picture-in-picture background playback persistence during tab switching, and subtitle cleanup on player close.
+- Files:
+  - `js/navigation/keybindings.js`
+  - `js/app.js`
+  - `js/navigation/directory.js`
+  - `js/navigation/tabs.js`
+  - `js/favorites.js`
+  - `js/player/player.js`
+  - `index.html`
+- Git: repo=vault-explorer, branch=vw-codex-refactor-modules, head=259adaf
+
+</details>
+
+<details>
+<summary><strong>2026-05-27 23:14 - vault-explorer</strong> <code>code-change</code> - Prioritized KinoCheck premium trailers in js/hover-card.js interactive popup previews with fallback to TMDB videos.</summary>
 
 - Kind: code-change
 - Actor: AI Agent
