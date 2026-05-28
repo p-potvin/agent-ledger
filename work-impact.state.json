@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-28T17:57:02.0586117Z",
+    "lastUpdatedUtc":  "2026-05-28T18:12:01.4891023Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1874,7 +1874,9 @@
                                        "20260528-023251-964-vault-explorer-23d37e54",
                                        "20260528-102425-948-tube-sites-308849bf",
                                        "20260528-103913-725-tube-sites-cb00b051",
-                                       "20260528-133336-894-tube-sites-364ed57a"
+                                       "20260528-133336-894-tube-sites-364ed57a",
+                                       "20260528-140048-316-tube-sites-a23a6f9d",
+                                       "20260528-140658-383-tube-sites-974a2370"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2871,16 +2873,16 @@
                                                          "models":  [
                                                                         "unknown"
                                                                     ],
-                                                         "count":  5
+                                                         "count":  7
                                                      }
                                                  ],
                                    "tools":  [
                                                  "functions.shell_command",
-                                                 61,
+                                                 63,
                                                  "run_command",
                                                  32,
                                                  "functions.apply_patch",
-                                                 29,
+                                                 31,
                                                  "PowerShell",
                                                  24,
                                                  "view_file",
@@ -2895,20 +2897,20 @@
                                                  13,
                                                  "shell_command",
                                                  12,
-                                                 "functions.update_plan",
-                                                 11,
                                                  "multi_replace_file_content",
+                                                 11,
+                                                 "functions.update_plan",
                                                  11,
                                                  "list_dir",
                                                  10,
                                                  "gh",
                                                  10,
-                                                 "multi_tool_use.parallel",
+                                                 "web.run",
                                                  6
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  357,
+                                                  359,
                                                   "Antigravity",
                                                   59,
                                                   "codex",
@@ -2938,10 +2940,10 @@
                                                   "preload.js",
                                                   1
                                               ],
-                                   "totalEvents":  531,
+                                   "totalEvents":  533,
                                    "models":  [
                                                   "unknown",
-                                                  331,
+                                                  333,
                                                   "gpt-5.2",
                                                   69,
                                                   "claude-sonnet-4-6",
@@ -3024,7 +3026,7 @@
                                    {
                                        "label":  "Thu",
                                        "dow":  3,
-                                       "count":  60
+                                       "count":  62
                                    },
                                    {
                                        "label":  "Fri",
@@ -3100,7 +3102,7 @@
                                         "hour":  13
                                     },
                                     {
-                                        "count":  32,
+                                        "count":  34,
                                         "hour":  14
                                     },
                                     {
@@ -3157,7 +3159,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-28 13:57",
+                 "generatedAtLocal":  "2026-05-28 14:12",
                  "series":  {
                                 "months":  [
                                                {
@@ -3170,7 +3172,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  882
+                                                   "count":  884
                                                }
                                            ],
                                 "days":  [
@@ -4413,22 +4415,22 @@
                                                                   "tube-sites",
                                                                   "vault-explorer"
                                                               ],
-                                                 "entries":  5,
+                                                 "entries":  7,
                                                  "day":  "2026-05-28",
                                                  "kinds":  {
-                                                               "verification":  3,
-                                                               "code-change":  5
+                                                               "verification":  5,
+                                                               "code-change":  7
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1562
+                                                  "count":  1564
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  123
+                                                  "count":  125
                                               },
                                               {
                                                   "kind":  "plan",
@@ -4672,10 +4674,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  1,
                                                                         "resume_used":  1,
-                                                                        "interview_started":  1,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "router":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
@@ -4700,10 +4702,10 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  70,
+                                                                   "code-change":  72,
                                                                    "handoff":  1,
                                                                    "commands":  3,
-                                                                   "verification":  15,
+                                                                   "verification":  17,
                                                                    "plan":  7,
                                                                    "general":  2
                                                                },
@@ -4713,22 +4715,25 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "overlays_applied":  1,
-                                                                        "issue":  2,
+                                                                        "estimated_output_tokens":  7,
+                                                                        "scope":  1,
                                                                         "request_rate_limiting_needed":  1,
-                                                                        "ga4_deploy_via_gtm_default":  1,
-                                                                        "consent_mode_v2":  1,
-                                                                        "ui_theme_fx_dark":  1,
                                                                         "commit":  1,
-                                                                        "estimated_output_tokens":  5,
-                                                                        "scope":  1
+                                                                        "fullxxx_brand_icon":  1,
+                                                                        "ui_theme_fx_dark":  1,
+                                                                        "pushed_main":  1,
+                                                                        "ga4_deploy_via_gtm_default":  1,
+                                                                        "issue":  2,
+                                                                        "deployment_triggered":  1,
+                                                                        "overlays_applied":  1,
+                                                                        "consent_mode_v2":  1
                                                                     },
                                                      "project":  "tube-sites",
-                                                     "entries":  95,
+                                                     "entries":  97,
                                                      "recent":  [
-                                                                    "Added configurable GTM + GA4 wiring, Consent Mode v2 defaults/updates, and a lightweight consent banner for both tube plugins (promking-tube + fullxxx-video). Added optional pri...",
-                                                                    "Switched GA4 to be deployed via GTM by default for both sites (added GA4-via-GTM toggles and disabled direct gtag.js injection when enabled) to avoid double-tagging.",
-                                                                    "Updated FullXXX (theme-fx) to the new dark black/white/hot-pink visual system to match the /videos design; aligned \u003cmeta name=theme-color\u003e."
+                                                                    "Updated FullXXX (theme-fx) to the new dark black/white/hot-pink visual system to match the /videos design; aligned \u003cmeta name=theme-color\u003e.",
+                                                                    "Switched FullXXX brand mark icons to UI_Kit fx-dot.svg (matches the configured favicon style) across archive/tax/single templates and the auth modal branding.",
+                                                                    "FXV: applied tubeshell design to home + DMCA/2257/contact/privacy pages (new page templates + legal-page shortcodes), switched brand mark to UI_Kit fx-dot icon, fixed category U..."
                                                                 ],
                                                      "firstDay":  "2026-04-23",
                                                      "lastDay":  "2026-05-28",
@@ -4758,10 +4763,10 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  2,
                                                                         "resume_used":  2,
-                                                                        "interview_started":  2,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  2,
+                                                                        "router":  2,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
@@ -5290,7 +5295,6 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
-                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5312,10 +5316,11 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
+                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "same_domain_only":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -16209,7 +16214,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-28T17:33:36.8942236Z",
+                 "_maxCreatedAtUtc":  "2026-05-28T18:06:58.3831156Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16217,7 +16222,7 @@
                            },
                  "totals":  {
                                 "projects":  45,
-                                "events":  1867,
+                                "events":  1869,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  76,
                                 "commitEventsWithStats":  679
