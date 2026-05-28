@@ -3,6 +3,38 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-28 15:55 - Prom-King</strong> <code>deploy</code> - Tube-sites deploy verified; PK palette updated</summary>
+
+- Kind: deploy
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): powershell, ssh, curl
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 15:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tube-sites deploy verified; PK palette updated
+- Commands:
+  - `ssh root@100.73.93.84 systemctl status vw-webhookd vaultwares-hooks`
+  - `export VW_AFTER=6183940733...; /var/www/deploy-scripts/deploy-tube-sites.sh`
+  - `export VW_AFTER=c4757d1852...; /var/www/deploy-scripts/deploy-tube-sites.sh`
+  - `curl https://fullxxx.video/`
+  - `curl https://prom-king.xyz/`
+- Files:
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\assets\\css\\tubeshell\\theme.css`
+  - `/var/www/deploy-scripts/deploy-tube-sites.sh`
+  - `/etc/vw-webhookd/config.yml`
+- Git: repo=agent-ledger, branch=main, head=a0b4bab7
+
+</details>
+
+<details>
 <summary><strong>2026-05-28 15:20 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>handoff,verification</code> - Verified live fullxxx.video is still serving the old homepage and old fullxxx-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck...</summary>
 
 - Kind: handoff,verification

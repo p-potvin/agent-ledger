@@ -48,6 +48,31 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-28 15:55 - Prom-King</strong> <span class="kind">deploy</span> - Tube-sites deploy verified; PK palette updated</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> deploy</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main Tools used (this reply): powershell, ssh, curl MCP servers accessed (this reply): none Time: 2026-05-28 15:55 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Tube-sites deploy verified; PK palette updated</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ssh root@100.73.93.84 systemctl status vw-webhookd vaultwares-hooks</code></li>
+        <li><code>export VW_AFTER=6183940733...; /var/www/deploy-scripts/deploy-tube-sites.sh</code></li>
+        <li><code>export VW_AFTER=c4757d1852...; /var/www/deploy-scripts/deploy-tube-sites.sh</code></li>
+        <li><code>curl https://fullxxx.video/</code></li>
+        <li><code>curl https://prom-king.xyz/</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\assets\\css\\tubeshell\\theme.css</code></li>
+        <li><code>/var/www/deploy-scripts/deploy-tube-sites.sh</code></li>
+        <li><code>/etc/vw-webhookd/config.yml</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=agent-ledger, branch=main, head=a0b4bab7</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-28 15:20 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <span class="kind">handoff,verification</span> - Verified live fullxxx.video is still serving the old homepage and old fullxxx-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> handoff,verification</p>

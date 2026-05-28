@@ -1,0 +1,52 @@
+{
+  "id": "20260528-155543-662-prom-king-8e35d031",
+  "createdAt": "2026-05-28T19:55:43.6623570Z",
+  "createdAtLocal": "2026-05-28 15:55",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "deploy",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): powershell, ssh, curl\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-28 15:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "powershell",
+      "ssh",
+      "curl"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\tube-sites",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Tube-sites deploy verified; PK palette updated",
+  "commands": [
+    "ssh root@100.73.93.84 systemctl status vw-webhookd vaultwares-hooks",
+    "export VW_AFTER=6183940733...; /var/www/deploy-scripts/deploy-tube-sites.sh",
+    "export VW_AFTER=c4757d1852...; /var/www/deploy-scripts/deploy-tube-sites.sh",
+    "curl https://fullxxx.video/",
+    "curl https://prom-king.xyz/"
+  ],
+  "files": [
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\tube-sites\\\\promking-tube\\\\assets\\\\css\\\\tubeshell\\\\theme.css",
+    "/var/www/deploy-scripts/deploy-tube-sites.sh",
+    "/etc/vw-webhookd/config.yml"
+  ],
+  "planPath": "",
+  "contentHash": "8e35d0317488ca2795e44ddd1120cd889307638eabbc0110dc1baecbef2acdec",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "a0b4bab7",
+    "hasChanges": false
+  }
+}
