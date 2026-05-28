@@ -3,6 +3,48 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-28 10:24 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,verification</code> - Added configurable GTM + GA4 wiring, Consent Mode v2 defaults/updates, and a lightweight consent banner for both tube plugins (promking-tube + fullxxx-video). Added optional pri...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): functions.shell_command, functions.apply_patch, web.run
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 10:24 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: request_rate_limiting_needed=False, consent_mode_v2=True, estimated_output_tokens=1800, overlays_applied=
+- Summary: Added configurable GTM + GA4 wiring, Consent Mode v2 defaults/updates, and a lightweight consent banner for both tube plugins (promking-tube + fullxxx-video). Added optional prior-blocking for plugin-injected marketing scripts (ad snippets) until Marketing consent is granted.
+- Commands:
+  - `rg -n gtag/GTM/GA4 references`
+  - `php -l (changed PHP files)`
+  - `git status --porcelain`
+- Files:
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\promking-tube\includes\admin-settings.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\promking-tube\includes\ads.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\promking-tube\assets\js\tube-consent.js`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\promking-tube\assets\css\tube-consent.css`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\promking-tube\promking-tube.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\promking-tube\templates\single-pkt_video.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\promking-tube\README.md`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\admin-settings.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\ads.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\helpers.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\assets\js\tube-consent.js`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\assets\css\tube-consent.css`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\fullxxx-video.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\README.md`
+
+</details>
+
+<details>
 <summary><strong>2026-05-28 02:32 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Modernized the Vault Explorer navigation bar: replaced &#39;root/&#39; path display with active directory name, hid back button when at root level, placed the select browse button next ...</summary>
 
 - Kind: code-change
@@ -3209,7 +3251,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-25 14:49 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>verification</code> - Deployed updated FullXXX + PromKing plugins to the public GreenCloud host (vaultwares.ca / 173.249.194.15 via Tailscale 100.73.93.84), added MU loader for tube-shared, fixed loa...</summary>
+<summary><strong>2026-05-25 14:49 - tube-sites</strong> <code>verification</code> - Deployed updated FullXXX + PromKing plugins to the public GreenCloud host (vaultwares.ca / 173.249.194.15 via Tailscale 100.73.93.84), added MU loader for tube-shared, fixed loa...</summary>
 
 - Kind: verification
 - Actor: AI Agent
