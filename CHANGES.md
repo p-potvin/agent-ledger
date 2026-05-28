@@ -3,7 +3,38 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-28 13:33 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,verification</code> - Updated FullXXX (theme-fx) to the new dark black/white/hot-pink visual system to match the /videos design; aligned &lt;meta name=theme-color&gt;.</summary>
+<summary><strong>2026-05-28 14:00 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,verification</code> - Switched FullXXX brand mark icons to UI_Kit fx-dot.svg (matches the configured favicon style) across archive/tax/single templates and the auth modal branding.</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): functions.apply_patch, functions.shell_command, functions.view_image
+  MCP servers accessed (this reply): none
+  Time: 2026-05-28 14:00 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: estimated_output_tokens=450, fullxxx_brand_icon=fx-dot.svg
+- Summary: Switched FullXXX brand mark icons to UI_Kit fx-dot.svg (matches the configured favicon style) across archive/tax/single templates and the auth modal branding.
+- Commands:
+  - `rg fullxxx-lockup-soft.svg (ensure removed)`
+  - `php -l fullxxx-video/templates/*.php fullxxx-video/includes/auth-bridge.php`
+- Files:
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\templates\archive-fxv_video.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\templates\taxonomy-fxv_category.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\templates\single-fxv_video.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\auth-bridge.php`
+
+</details>
+
+<details>
+<summary><strong>2026-05-28 13:33 - tube-sites</strong> <code>code-change,verification</code> - Updated FullXXX (theme-fx) to the new dark black/white/hot-pink visual system to match the /videos design; aligned &lt;meta name=theme-color&gt;.</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
