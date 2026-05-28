@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-28T19:57:01.5869571Z",
+    "lastUpdatedUtc":  "2026-05-28T20:12:01.5566398Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1878,7 +1878,8 @@
                                        "20260528-140048-316-tube-sites-a23a6f9d",
                                        "20260528-140658-383-tube-sites-974a2370",
                                        "20260528-152027-825-tube-sites-3d7e2008",
-                                       "20260528-155543-662-prom-king-8e35d031"
+                                       "20260528-155543-662-prom-king-8e35d031",
+                                       "20260528-160008-702-prom-king-1432e5b0"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2875,7 +2876,7 @@
                                                          "models":  [
                                                                         "unknown"
                                                                     ],
-                                                         "count":  9
+                                                         "count":  10
                                                      }
                                                  ],
                                    "tools":  [
@@ -2892,7 +2893,7 @@
                                                  "write_to_file",
                                                  21,
                                                  "git",
-                                                 17,
+                                                 18,
                                                  "replace_file_content",
                                                  14,
                                                  "apply_patch",
@@ -2912,7 +2913,7 @@
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  361,
+                                                  362,
                                                   "Antigravity",
                                                   59,
                                                   "codex",
@@ -2942,10 +2943,10 @@
                                                   "preload.js",
                                                   1
                                               ],
-                                   "totalEvents":  535,
+                                   "totalEvents":  536,
                                    "models":  [
                                                   "unknown",
-                                                  335,
+                                                  336,
                                                   "gpt-5.2",
                                                   69,
                                                   "claude-sonnet-4-6",
@@ -3028,7 +3029,7 @@
                                    {
                                        "label":  "Thu",
                                        "dow":  3,
-                                       "count":  64
+                                       "count":  65
                                    },
                                    {
                                        "label":  "Fri",
@@ -3112,7 +3113,7 @@
                                         "hour":  15
                                     },
                                     {
-                                        "count":  31,
+                                        "count":  32,
                                         "hour":  16
                                     },
                                     {
@@ -3161,7 +3162,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-28 15:57",
+                 "generatedAtLocal":  "2026-05-28 16:12",
                  "series":  {
                                 "months":  [
                                                {
@@ -3174,7 +3175,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  886
+                                                   "count":  887
                                                }
                                            ],
                                 "days":  [
@@ -4418,11 +4419,11 @@
                                                                   "tube-sites",
                                                                   "vault-explorer"
                                                               ],
-                                                 "entries":  9,
+                                                 "entries":  10,
                                                  "day":  "2026-05-28",
                                                  "kinds":  {
                                                                "handoff":  1,
-                                                               "general":  1,
+                                                               "general":  2,
                                                                "verification":  6,
                                                                "code-change":  7
                                                            }
@@ -4443,7 +4444,7 @@
                                               },
                                               {
                                                   "kind":  "general",
-                                                  "count":  40
+                                                  "count":  41
                                               },
                                               {
                                                   "kind":  "commands",
@@ -4679,10 +4680,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  1,
                                                                         "resume_used":  1,
-                                                                        "interview_started":  1,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "router":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
@@ -4771,10 +4772,10 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  2,
                                                                         "resume_used":  2,
-                                                                        "interview_started":  2,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  2,
+                                                                        "router":  2,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
@@ -5303,7 +5304,6 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
-                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5325,10 +5325,11 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
+                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "same_domain_only":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -5845,6 +5846,38 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "code-change":  5
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  908,
+                                                                       "deletions":  256,
+                                                                       "files":  24
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "event-horizon",
+                                                     "entries":  5,
+                                                     "recent":  [
+                                                                    "Backfill: commit 057c516 (2026-03-16T08:48:25-04:00) - added ray tracing support | files=3 +197 -246",
+                                                                    "Backfill: commit 36d8d48 (2026-04-01T18:04:56-04:00) - Added agent skills in .copilot folder | files=11 +157 -0",
+                                                                    "Backfill: commit c580205 (2026-04-17T18:12:12-04:00) - Automated commit: Updated files in event-horizon | files=3 +15 -10"
+                                                                ],
+                                                     "firstDay":  "2026-03-16",
+                                                     "lastDay":  "2026-04-17",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  908,
+                                                                     "deletions":  256,
+                                                                     "files":  24
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "commands":  1,
                                                                    "plan":  1,
                                                                    "handoff":  1,
@@ -5880,34 +5913,33 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  5
+                                                                   "general":  2
                                                                },
                                                      "lineClean":  {
-                                                                       "insertions":  908,
-                                                                       "deletions":  256,
-                                                                       "files":  24
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
                                                                    },
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "event-horizon",
-                                                     "entries":  5,
+                                                     "project":  "Prom-King",
+                                                     "entries":  2,
                                                      "recent":  [
-                                                                    "Backfill: commit 057c516 (2026-03-16T08:48:25-04:00) - added ray tracing support | files=3 +197 -246",
-                                                                    "Backfill: commit 36d8d48 (2026-04-01T18:04:56-04:00) - Added agent skills in .copilot folder | files=11 +157 -0",
-                                                                    "Backfill: commit c580205 (2026-04-17T18:12:12-04:00) - Automated commit: Updated files in event-horizon | files=3 +15 -10"
+                                                                    "Tube-sites deploy verified; PK palette updated",
+                                                                    "GTM per-site enforcement + GA4-via-GTM playbook"
                                                                 ],
-                                                     "firstDay":  "2026-03-16",
-                                                     "lastDay":  "2026-04-17",
+                                                     "firstDay":  "2026-05-28",
+                                                     "lastDay":  "2026-05-28",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
                                                                           "files":  0
                                                                       },
                                                      "lineRaw":  {
-                                                                     "insertions":  908,
-                                                                     "deletions":  256,
-                                                                     "files":  24
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
                                                                  }
                                                  },
                                                  {
@@ -5974,7 +6006,7 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "general":  1
+                                                                   "code-change":  1
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -5984,13 +6016,13 @@
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "Prom-King",
+                                                     "project":  "deploy-flow-unification",
                                                      "entries":  1,
                                                      "recent":  [
-                                                                    "Tube-sites deploy verified; PK palette updated"
+                                                                    "Standardized deployment flow docs + removed GitHub Actions deploys on main pushes across repos. Merged PRs: p-potvin/vaultwares-docs#18 (merge 9ac6a90), p-potvin/vaultwares-webs..."
                                                                 ],
-                                                     "firstDay":  "2026-05-28",
-                                                     "lastDay":  "2026-05-28",
+                                                     "firstDay":  "2026-05-25",
+                                                     "lastDay":  "2026-05-25",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -6030,36 +6062,6 @@
                                                                      "insertions":  1,
                                                                      "deletions":  2,
                                                                      "files":  1
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "deploy-flow-unification",
-                                                     "entries":  1,
-                                                     "recent":  [
-                                                                    "Standardized deployment flow docs + removed GitHub Actions deploys on main pushes across repos. Merged PRs: p-potvin/vaultwares-docs#18 (merge 9ac6a90), p-potvin/vaultwares-webs..."
-                                                                ],
-                                                     "firstDay":  "2026-05-25",
-                                                     "lastDay":  "2026-05-25",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
                                                                  }
                                                  }
                                              ]
@@ -16252,7 +16254,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-28T19:55:43.6623570Z",
+                 "_maxCreatedAtUtc":  "2026-05-28T20:00:08.7021953Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16260,7 +16262,7 @@
                            },
                  "totals":  {
                                 "projects":  46,
-                                "events":  1871,
+                                "events":  1872,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  76,
                                 "commitEventsWithStats":  679
