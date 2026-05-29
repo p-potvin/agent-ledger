@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-29T03:12:01.7879050Z",
+    "lastUpdatedUtc":  "2026-05-29T03:27:01.9435387Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1887,7 +1887,8 @@
                                        "20260528-185036-588-general-tasks-b2639f05",
                                        "20260528-185311-274-general-tasks-61c322f5",
                                        "20260528-190258-570-general-tasks-5a01fae1",
-                                       "20260528-190549-252-general-tasks-55c252b0"
+                                       "20260528-190549-252-general-tasks-55c252b0",
+                                       "20260528-232507-324-vault-flows-cb4dff1a"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2884,7 +2885,7 @@
                                                          "models":  [
                                                                         "unknown"
                                                                     ],
-                                                         "count":  18
+                                                         "count":  19
                                                      }
                                                  ],
                                    "tools":  [
@@ -2921,7 +2922,7 @@
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  370,
+                                                  371,
                                                   "Antigravity",
                                                   59,
                                                   "codex",
@@ -2951,10 +2952,10 @@
                                                   "preload.js",
                                                   1
                                               ],
-                                   "totalEvents":  544,
+                                   "totalEvents":  545,
                                    "models":  [
                                                   "unknown",
-                                                  344,
+                                                  345,
                                                   "gpt-5.2",
                                                   69,
                                                   "claude-sonnet-4-6",
@@ -3037,7 +3038,7 @@
                                    {
                                        "label":  "Thu",
                                        "dow":  3,
-                                       "count":  73
+                                       "count":  74
                                    },
                                    {
                                        "label":  "Fri",
@@ -3149,7 +3150,7 @@
                                         "hour":  22
                                     },
                                     {
-                                        "count":  20,
+                                        "count":  21,
                                         "hour":  23
                                     }
                                 ],
@@ -3170,7 +3171,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-28 23:12",
+                 "generatedAtLocal":  "2026-05-28 23:27",
                  "series":  {
                                 "months":  [
                                                {
@@ -3183,7 +3184,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  895
+                                                   "count":  896
                                                }
                                            ],
                                 "days":  [
@@ -4426,12 +4427,13 @@
                                                                   "General Tasks",
                                                                   "Prom-King",
                                                                   "tube-sites",
-                                                                  "vault-explorer"
+                                                                  "vault-explorer",
+                                                                  "vault-flows"
                                                               ],
-                                                 "entries":  18,
+                                                 "entries":  19,
                                                  "day":  "2026-05-28",
                                                  "kinds":  {
-                                                               "code-change":  13,
+                                                               "code-change":  14,
                                                                "handoff":  2,
                                                                "commands":  1,
                                                                "verification":  8,
@@ -4443,7 +4445,7 @@
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1570
+                                                  "count":  1571
                                               },
                                               {
                                                   "kind":  "verification",
@@ -4507,7 +4509,7 @@
                                                      "kinds":  {
                                                                    "general":  1,
                                                                    "verification":  1,
-                                                                   "code-change":  155
+                                                                   "code-change":  156
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  210919,
@@ -4518,14 +4520,14 @@
 
                                                                     },
                                                      "project":  "vault-flows",
-                                                     "entries":  156,
+                                                     "entries":  157,
                                                      "recent":  [
-                                                                    "Step 2 of the feedback plan: inline editable params + per-instance rename + per-instance color override on every canvas node. (1) BaseNode redesigned with two new header afforda...",
                                                                     "Round 3 feedback fixes â€” eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. ...",
-                                                                    "Added node browser sidebar with categories (Inputs/Loaders/Generation/Transform/Outputs) plus new load_text and load_file node types. Click-to-add and drag-drop into canvas both..."
+                                                                    "Added node browser sidebar with categories (Inputs/Loaders/Generation/Transform/Outputs) plus new load_text and load_file node types. Click-to-add and drag-drop into canvas both...",
+                                                                    "Added \u0027Face Filter\u0027 preset to vault-flows: an image-domain workflow that uses gemma4 vision via Ollama to detect human faces in uploaded images and return a structured JSON verd..."
                                                                 ],
                                                      "firstDay":  "2026-04-06",
-                                                     "lastDay":  "2026-05-27",
+                                                     "lastDay":  "2026-05-28",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4691,10 +4693,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "resume_used":  1,
-                                                                        "credit_pipeline_used":  1,
-                                                                        "interview_started":  1,
                                                                         "router":  1,
+                                                                        "resume_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "credit_pipeline_used":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
@@ -4783,10 +4785,10 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "resume_used":  2,
-                                                                        "credit_pipeline_used":  1,
-                                                                        "interview_started":  2,
                                                                         "router":  2,
+                                                                        "resume_used":  2,
+                                                                        "interview_started":  2,
+                                                                        "credit_pipeline_used":  1,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
@@ -5315,6 +5317,7 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5336,11 +5339,10 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
-                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "secrets_redacted":  1,
+                                                                        "same_domain_only":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -16266,7 +16268,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-28T23:05:49.2522788Z",
+                 "_maxCreatedAtUtc":  "2026-05-29T03:25:07.3240717Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16274,7 +16276,7 @@
                            },
                  "totals":  {
                                 "projects":  46,
-                                "events":  1880,
+                                "events":  1881,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  76,
                                 "commitEventsWithStats":  679

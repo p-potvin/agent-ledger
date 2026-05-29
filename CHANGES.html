@@ -48,6 +48,27 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-28 23:25 - vault-flows</strong> <span class="kind">code-change</span> - Added &#39;Face Filter&#39; preset to vault-flows: an image-domain workflow that uses gemma4 vision via Ollama to detect human faces in uploaded images and return a structured JSON verd...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-28 23:25 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added &#39;Face Filter&#39; preset to vault-flows: an image-domain workflow that uses gemma4 vision via Ollama to detect human faces in uploaded images and return a structured JSON verdict (has_face, face_count, confidence). Also created scripts/face-filter.py &#226;€” a batch CLI tool that scans a folder of images using OpenCV Haar cascade (falls back to MediaPipe if installed), copies images containing faces to an output folder, and optionally separates no-face images. Installed opencv-python 4.13.0. Registered the new preset in presets/index.ts alongside existing presets.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>pip install opencv-python</code></li>
+        <li><code>npx tsc --noEmit</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault-flows/src/presets/index.ts</code></li>
+        <li><code>vault-flows/src/presets/data/face-filter.json</code></li>
+        <li><code>vault-flows/scripts/face-filter.py</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-28 19:05 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <span class="kind">code-change</span> - Removed the two legacy GitHub Actions deployment workflows (deploy-fullxxx-video.yml and deploy-promking-tube.yml) from tube-sites/.github/workflows/ to adhere to the Tailscale ...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
