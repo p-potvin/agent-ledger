@@ -3,6 +3,37 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-29 18:49 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,handoff,verification</code> - FXV UI/UX + functional verification pass complete. (1) Webhook secret synced server-&gt;GitHub across 30 hooks (4 Prom-King + 26 p-potvin). (2) Deploy chain verified end-to-end wit...</summary>
+
+- Kind: code-change,handoff,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\tube-sites  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-29 18:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: FXV UI/UX + functional verification pass complete. (1) Webhook secret synced server->GitHub across 30 hooks (4 Prom-King + 26 p-potvin). (2) Deploy chain verified end-to-end with empty commit, 4bf2c70 deployed in ~1s. (3) Cleanup handler trashed 91 duplicate /2257/ pages; canonical kept at post 71. Republished /privacy-policy/ (id=3) which had been left in draft. (4) Migrated stored fxv_settings DB option: dropped freesexvideos, added eporner, regenerated provider_profiles_json from plugin defaults (cleared junk allowlistdomains key). (5) Visual walkthrough via Chrome headless: HEADER is now unified across all 5 templates (single helper fxv_render_primary_nav), but duplicate FOOTER persists (theme + plugin both render). Age gate is invasive on every page EXCEPT home. Categories taxonomy has 380 terms polluted with actor/studio names; fxv_actor and fxv_studio taxonomies are still empty. (6) GTM-WXGQJ7PR loads; dataLayer + ns.html fallback present. (7) Inline fix shipped (commit 5a39e51): unified nav helper - Videos/Categories/Actors/Studios/DMCA/2257/Contact/Privacy. Replaces broken /studios/ link and dead /pricing/ link in 5 templates. PUNCH LIST DEFERRED: (a) /2257/ has WordPress redirect_canonical 301 loop - slug=2257 status=publish in DB but request loops to itself; (b) duplicate footer; (c) age gate inconsistent placement; (d) 380 fxv_category terms need to be split into fxv_actor/fxv_studio (data migration); (e) search input has no submit handler; (f) home hero takes >100vh, content below fold.
+- Commands:
+  - `gh api PATCH x30 repo hooks`
+  - `git push origin main 5a39e51`
+  - `wp_delete_post x91 dupes via cleanup handler`
+  - `wp option update fxv_settings`
+- Files:
+  - `commit 5a39e51`
+  - `fullxxx-video/includes/helpers.php`
+  - `fullxxx-video/templates/*.php (5 files)`
+- Git: repo=tube-sites, branch=main, head=5a39e51
+
+</details>
+
+<details>
 <summary><strong>2026-05-29 02:30 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Optimized FFmpeg preview generation by downscaling clips to 320:-2 and limiting process execution to 2 threads, correcting the resource saturation bottleneck. Handled virtual fo...</summary>
 
 - Kind: code-change
@@ -227,7 +258,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-28 18:31 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,handoff,verification</code> - 2257-page duplicate bug fixed + deploy-runner verified. (1) Pushed commit 8e1a6c2 hardening fxv_create_page_if_missing (cache-bypass get_posts query, once-per-request + once-per...</summary>
+<summary><strong>2026-05-28 18:31 - tube-sites</strong> <code>code-change,handoff,verification</code> - 2257-page duplicate bug fixed + deploy-runner verified. (1) Pushed commit 8e1a6c2 hardening fxv_create_page_if_missing (cache-bypass get_posts query, once-per-request + once-per...</summary>
 
 - Kind: code-change,handoff,verification
 - Actor: AI Agent
