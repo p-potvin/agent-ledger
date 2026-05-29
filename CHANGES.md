@@ -3,7 +3,43 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-29 02:16 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Decoupled the Library (remote streams) and Favorites (local files) grids, centering and aligning empty state elements across all tabs. Resolved layout/border shifts on tab navig...</summary>
+<summary><strong>2026-05-29 02:30 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Optimized FFmpeg preview generation by downscaling clips to 320:-2 and limiting process execution to 2 threads, correcting the resource saturation bottleneck. Handled virtual fo...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-29 02:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Optimized FFmpeg preview generation by downscaling clips to 320:-2 and limiting process execution to 2 threads, correcting the resource saturation bottleneck. Handled virtual folder favorite toggling by generating dynamic, unique virtual paths during search and directory filters and integrated parsing logic for virtual folders under favorites view. Localized TMDB, discover, details, season, and TV handlers to accept and respect custom language codes (fr-CA / en-US) from window.currentLang. Intercepted default session headers to strip frame blocking attributes (X-Frame-Options/CSP), solving embedded trailer failures. Audited and improved torrent choosing with a Real-Debrid instantAvailability checking flow, dynamically badging cached torrent streams as ⚡ RD+ and adding high-priority weightings to cached entries.
+- Commands:
+  - `node tests/refactor_smoke_test.js`
+- Files:
+  - `src/previews.js`
+  - `js/favorites.js`
+  - `js/navigation/filters.js`
+  - `js/navigation/card.js`
+  - `preload.js`
+  - `src/tmdb.js`
+  - `js/tmdb.js`
+  - `js/streaming.js`
+  - `js/hover-card.js`
+  - `main.js`
+  - `src/realdebrid.js`
+- Git: repo=vault-explorer, branch=main, head=c4f65a7
+
+</details>
+
+<details>
+<summary><strong>2026-05-29 02:16 - vault-explorer</strong> <code>code-change</code> - Decoupled the Library (remote streams) and Favorites (local files) grids, centering and aligning empty state elements across all tabs. Resolved layout/border shifts on tab navig...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
