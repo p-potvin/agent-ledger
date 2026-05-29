@@ -3,6 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-29 01:26 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Fixed search functionality in applyFilters to perform recursive, global search across all vault files (including inside virtual folders) instead of limiting it to current naviga...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-29 01:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed search functionality in applyFilters to perform recursive, global search across all vault files (including inside virtual folders) instead of limiting it to current navigation visible files. Also corrected navigation path variable in navigateTo to properly capture directory paths instead of hardcoding 'root', and integrated rootItemsCache updates into the views refresh listener to keep search indices fresh. Fixed selectors and translation assertions in comprehensive_test.js so the integration tests pass perfectly.
+- Commands:
+  - `node tests/refactor_smoke_test.js`
+  - `node tests/comprehensive_test.js`
+- Files:
+  - `js/navigation/filters.js`
+  - `js/navigation/directory.js`
+  - `tests/comprehensive_test.js`
+- Git: repo=vault-explorer, branch=main, head=c4f65a7
+
+</details>
+
+<details>
 <summary><strong>2026-05-28 23:25 - vault-flows</strong> <code>code-change</code> - Added &#39;Face Filter&#39; preset to vault-flows: an image-domain workflow that uses gemma4 vision via Ollama to detect human faces in uploaded images and return a structured JSON verd...</summary>
 
 - Kind: code-change
@@ -518,7 +547,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-28 02:32 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Modernized the Vault Explorer navigation bar: replaced &#39;root/&#39; path display with active directory name, hid back button when at root level, placed the select browse button next ...</summary>
+<summary><strong>2026-05-28 02:32 - vault-explorer</strong> <code>code-change</code> - Modernized the Vault Explorer navigation bar: replaced &#39;root/&#39; path display with active directory name, hid back button when at root level, placed the select browse button next ...</summary>
 
 - Kind: code-change
 - Actor: AI Agent

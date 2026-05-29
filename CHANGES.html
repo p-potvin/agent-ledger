@@ -48,6 +48,28 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-29 01:26 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change</span> - Fixed search functionality in applyFilters to perform recursive, global search across all vault files (including inside virtual folders) instead of limiting it to current naviga...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-29 01:26 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed search functionality in applyFilters to perform recursive, global search across all vault files (including inside virtual folders) instead of limiting it to current navigation visible files. Also corrected navigation path variable in navigateTo to properly capture directory paths instead of hardcoding &#39;root&#39;, and integrated rootItemsCache updates into the views refresh listener to keep search indices fresh. Fixed selectors and translation assertions in comprehensive_test.js so the integration tests pass perfectly.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>node tests/refactor_smoke_test.js</code></li>
+        <li><code>node tests/comprehensive_test.js</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>js/navigation/filters.js</code></li>
+        <li><code>js/navigation/directory.js</code></li>
+        <li><code>tests/comprehensive_test.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=c4f65a7</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-28 23:25 - vault-flows</strong> <span class="kind">code-change</span> - Added &#39;Face Filter&#39; preset to vault-flows: an image-domain workflow that uses gemma4 vision via Ollama to detect human faces in uploaded images and return a structured JSON verd...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
@@ -452,7 +474,7 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-05-28 02:32 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change</span> - Modernized the Vault Explorer navigation bar: replaced &#39;root/&#39; path display with active directory name, hid back button when at root level, placed the select browse button next ...</summary>
+    <summary><strong>2026-05-28 02:32 - vault-explorer</strong> <span class="kind">code-change</span> - Modernized the Vault Explorer navigation bar: replaced &#39;root/&#39; path display with active directory name, hid back button when at root level, placed the select browse button next ...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> AI Agent</p>
