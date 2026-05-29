@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-29T22:42:01.6138056Z",
+    "lastUpdatedUtc":  "2026-05-29T22:57:01.5724352Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1891,7 +1891,8 @@
                                        "20260528-232507-324-vault-flows-cb4dff1a",
                                        "20260529-012618-678-vault-explorer-51eb42ec",
                                        "20260529-021651-970-vault-explorer-514911ab",
-                                       "20260529-023005-418-vault-explorer-4e3dea89"
+                                       "20260529-023005-418-vault-explorer-4e3dea89",
+                                       "20260529-184928-281-tube-sites-905f8614"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2898,7 +2899,7 @@
                                                          "models":  [
                                                                         "unknown"
                                                                     ],
-                                                         "count":  3
+                                                         "count":  4
                                                      }
                                                  ],
                                    "tools":  [
@@ -2935,7 +2936,7 @@
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  374,
+                                                  375,
                                                   "Antigravity",
                                                   59,
                                                   "codex",
@@ -2965,10 +2966,10 @@
                                                   "preload.js",
                                                   1
                                               ],
-                                   "totalEvents":  548,
+                                   "totalEvents":  549,
                                    "models":  [
                                                   "unknown",
-                                                  348,
+                                                  349,
                                                   "gpt-5.2",
                                                   69,
                                                   "claude-sonnet-4-6",
@@ -3056,7 +3057,7 @@
                                    {
                                        "label":  "Fri",
                                        "dow":  4,
-                                       "count":  63
+                                       "count":  64
                                    },
                                    {
                                        "label":  "Sat",
@@ -3143,7 +3144,7 @@
                                         "hour":  17
                                     },
                                     {
-                                        "count":  37,
+                                        "count":  38,
                                         "hour":  18
                                     },
                                     {
@@ -3184,7 +3185,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-29 18:42",
+                 "generatedAtLocal":  "2026-05-29 18:57",
                  "series":  {
                                 "months":  [
                                                {
@@ -3197,7 +3198,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  899
+                                                   "count":  900
                                                }
                                            ],
                                 "days":  [
@@ -4455,22 +4456,27 @@
                                                            }
                                              },
                                              {
-                                                 "projects":  "vault-explorer",
-                                                 "entries":  3,
+                                                 "projects":  [
+                                                                  "tube-sites",
+                                                                  "vault-explorer"
+                                                              ],
+                                                 "entries":  4,
                                                  "day":  "2026-05-29",
                                                  "kinds":  {
-                                                               "code-change":  3
+                                                               "handoff":  1,
+                                                               "verification":  1,
+                                                               "code-change":  4
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1574
+                                                  "count":  1575
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  128
+                                                  "count":  129
                                               },
                                               {
                                                   "kind":  "plan",
@@ -4486,7 +4492,7 @@
                                               },
                                               {
                                                   "kind":  "handoff",
-                                                  "count":  28
+                                                  "count":  29
                                               }
                                           ],
                                 "projects":  [
@@ -4714,10 +4720,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  1,
                                                                         "resume_used":  1,
-                                                                        "interview_started":  1,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "router":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
@@ -4742,10 +4748,10 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  75,
-                                                                   "handoff":  3,
+                                                                   "code-change":  76,
+                                                                   "handoff":  4,
                                                                    "commands":  4,
-                                                                   "verification":  20,
+                                                                   "verification":  21,
                                                                    "plan":  8,
                                                                    "general":  2
                                                                },
@@ -4772,14 +4778,14 @@
                                                                         "runner_blocked":  1
                                                                     },
                                                      "project":  "tube-sites",
-                                                     "entries":  101,
+                                                     "entries":  102,
                                                      "recent":  [
-                                                                    "FXV + PKT tube site overhaul. FXV: dropped iframe-only providers (freesexvideos, spankbang); rewired provider profiles for owned-player only (mp4/HLS); added eporner as new dire...",
                                                                     "Re-applied prior tube-site overhaul (edits had been reverted in the working tree between sessions) and pushed to origin/main. Commit f5b0378 on top of 7bd9c85. 15 files, +809 -1...",
-                                                                    "2257-page duplicate bug fixed + deploy-runner verified. (1) Pushed commit 8e1a6c2 hardening fxv_create_page_if_missing (cache-bypass get_posts query, once-per-request + once-per..."
+                                                                    "2257-page duplicate bug fixed + deploy-runner verified. (1) Pushed commit 8e1a6c2 hardening fxv_create_page_if_missing (cache-bypass get_posts query, once-per-request + once-per...",
+                                                                    "FXV UI/UX + functional verification pass complete. (1) Webhook secret synced server-\u003eGitHub across 30 hooks (4 Prom-King + 26 p-potvin). (2) Deploy chain verified end-to-end wit..."
                                                                 ],
                                                      "firstDay":  "2026-04-23",
-                                                     "lastDay":  "2026-05-28",
+                                                     "lastDay":  "2026-05-29",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4806,10 +4812,10 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  2,
                                                                         "resume_used":  2,
-                                                                        "interview_started":  2,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  2,
+                                                                        "router":  2,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
@@ -5338,7 +5344,6 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
-                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5360,10 +5365,11 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
+                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "same_domain_only":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -16289,7 +16295,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-29T06:30:05.4189446Z",
+                 "_maxCreatedAtUtc":  "2026-05-29T22:49:28.2812920Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16297,7 +16303,7 @@
                            },
                  "totals":  {
                                 "projects":  46,
-                                "events":  1884,
+                                "events":  1885,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  77,
                                 "commitEventsWithStats":  679
