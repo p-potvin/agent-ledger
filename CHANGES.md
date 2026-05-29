@@ -3,7 +3,39 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-29 01:26 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Fixed search functionality in applyFilters to perform recursive, global search across all vault files (including inside virtual folders) instead of limiting it to current naviga...</summary>
+<summary><strong>2026-05-29 02:16 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Decoupled the Library (remote streams) and Favorites (local files) grids, centering and aligning empty state elements across all tabs. Resolved layout/border shifts on tab navig...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-29 02:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: Decoupled the Library (remote streams) and Favorites (local files) grids, centering and aligning empty state elements across all tabs. Resolved layout/border shifts on tab navigation. Implemented multi-selection WebM background generation with real-time individual and batch task-badge status updates. Corrected English and Quebecois i18n tab translations and dynamically updated the language toggle for tab buttons.
+- Commands:
+  - `node tests/refactor_smoke_test.js`
+- Files:
+  - `js/favorites.js`
+  - `js/app.js`
+  - `js/navigation/card-events.js`
+  - `src/ipc/system.ipc.js`
+  - `index.css`
+  - `js/translations.en.js`
+  - `js/translations.qc.js`
+- Git: repo=vault-explorer, branch=main, head=c4f65a7
+
+</details>
+
+<details>
+<summary><strong>2026-05-29 01:26 - vault-explorer</strong> <code>code-change</code> - Fixed search functionality in applyFilters to perform recursive, global search across all vault files (including inside virtual folders) instead of limiting it to current naviga...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
