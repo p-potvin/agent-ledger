@@ -3,6 +3,41 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-30 15:47 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change</code> - Continued punch-list from prior session. (1) Fixed duplicate header/footer: set fxv_plugin_template flag in template_loader.php; theme header.php/footer.php now output bare HTML...</summary>
+
+- Kind: code-change
+- Actor: Claude
+- Agent Header:
+  ```text
+  Agent: Claude (role: main)
+  Model: claude-opus-4-6
+  Thinking: medium
+  Mode: agent
+  Permissions: ask (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): Read, Edit, Grep, Glob, Bash, TaskCreate, TaskUpdate
+  MCP servers accessed (this reply): none
+  Time: 2026-05-30 15:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Continued punch-list from prior session. (1) Fixed duplicate header/footer: set fxv_plugin_template flag in template_loader.php; theme header.php/footer.php now output bare HTML shell when flag is set, so plugin templates own all visual chrome. (2) Added unified fxv_render_footer() helper in helpers.php and wired it into all 5 FXV templates. Removed old inline fxv-watch__footer from single-fxv_video.php. (3) Search form: replaced bare SVG icon with button[type=submit].tubeshell-search__btn so icon is a clickable tap target; updated base.css. (4) Removed stale template_redirect 2257 hook from theme functions.php that conflicted with rewrite_rules_array fix. All 10 changed PHP files pass php -l.
+- Commands:
+  - `php -l (10 files)`
+- Files:
+  - `fullxxx-video/includes/template-loader.php`
+  - `fullxxx-video/includes/helpers.php`
+  - `fullxxx-video/templates/archive-fxv_video.php`
+  - `fullxxx-video/templates/taxonomy-fxv_category.php`
+  - `fullxxx-video/templates/page-fxv_home.php`
+  - `fullxxx-video/templates/page-fxv_shell.php`
+  - `fullxxx-video/templates/single-fxv_video.php`
+  - `fullxxx-video/assets/css/tubeshell/base.css`
+  - `.extras/tube-shell-theme/tube-shell/header.php`
+  - `.extras/tube-shell-theme/tube-shell/footer.php`
+  - `.extras/tube-shell-theme/tube-shell/functions.php`
+
+</details>
+
+<details>
 <summary><strong>2026-05-30 11:56 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Refactored remaining inline SVGs out of the application and translation strings into icons.js. Replaced translation tab SVGs with icons.js injections in app.js, removed the magi...</summary>
 
 - Kind: code-change,verification
@@ -296,7 +331,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-29 18:49 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,handoff,verification</code> - FXV UI/UX + functional verification pass complete. (1) Webhook secret synced server-&gt;GitHub across 30 hooks (4 Prom-King + 26 p-potvin). (2) Deploy chain verified end-to-end wit...</summary>
+<summary><strong>2026-05-29 18:49 - tube-sites</strong> <code>code-change,handoff,verification</code> - FXV UI/UX + functional verification pass complete. (1) Webhook secret synced server-&gt;GitHub across 30 hooks (4 Prom-King + 26 p-potvin). (2) Deploy chain verified end-to-end wit...</summary>
 
 - Kind: code-change,handoff,verification
 - Actor: AI Agent
