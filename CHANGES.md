@@ -3,6 +3,36 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-29 22:44 - vault-explorer (formerly Vault Explorer)</strong> <code>plan,verification</code> - Audited implementation_plan.md against actual codebase. Found: preload.js has all 5 new IPC bridges (scheduleIdlePreviews, pasteFiles, zipSelection, getFileProperties, getFolder...</summary>
+
+- Kind: plan,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: high
+  Mode: agent
+  Permissions: ask (network: local/windows)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): view_file, grep_search, list_dir
+  MCP servers accessed (this reply): none
+  Time: 2026-05-29 22:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Audited implementation_plan.md against actual codebase. Found: preload.js has all 5 new IPC bridges (scheduleIdlePreviews, pasteFiles, zipSelection, getFileProperties, getFolderSizeSmart). files.ipc.js has paste-files and zip-selection handlers. system.ipc.js has updated fakeFolder context menu (Open Folder, Remove Folder). properties.js has showPropertiesDialog consuming getFileProperties. keybindings.js has F5 refresh, Ctrl+C/X/V/A/Delete, F2, Ctrl+N. Sort dropdown replaced with popover menu. Titlebar restructured with 'Explorer' text and no 'aultWares'. However: get-file-properties, get-folder-size-smart, and schedule-idle-previews backend handlers are MISSING from src/ipc/. Idle FFMPEG timer not implemented. Arrow key navigation not in keybindings.js. Properties IPC bridge exists in preload but no backend handler registered.
+- Files:
+  - `implementation_plan.md`
+  - `preload.js`
+  - `src/ipc/files.ipc.js`
+  - `src/ipc/system.ipc.js`
+  - `src/ipc/media.ipc.js`
+  - `js/navigation/keybindings.js`
+  - `js/navigation/properties.js`
+- Git: repo=vault-explorer, branch=main, head=c4f65a7
+
+</details>
+
+<details>
 <summary><strong>2026-05-29 18:49 - tube-sites (formerly tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa)</strong> <code>code-change,handoff,verification</code> - FXV UI/UX + functional verification pass complete. (1) Webhook secret synced server-&gt;GitHub across 30 hooks (4 Prom-King + 26 p-potvin). (2) Deploy chain verified end-to-end wit...</summary>
 
 - Kind: code-change,handoff,verification
@@ -34,7 +64,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-29 02:30 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change</code> - Optimized FFmpeg preview generation by downscaling clips to 320:-2 and limiting process execution to 2 threads, correcting the resource saturation bottleneck. Handled virtual fo...</summary>
+<summary><strong>2026-05-29 02:30 - vault-explorer</strong> <code>code-change</code> - Optimized FFmpeg preview generation by downscaling clips to 320:-2 and limiting process execution to 2 threads, correcting the resource saturation bottleneck. Handled virtual fo...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
