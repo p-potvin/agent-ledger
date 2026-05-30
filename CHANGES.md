@@ -3,6 +3,54 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-30 09:32 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>analysis</code> - Checked current GitHub CodeQL/GHAS pricing vs Copilot Pro, inventoried repo visibility (p-potvin public vs Prom-King private), and mapped Jira automation to existing vw-jira-syn...</summary>
+
+- Kind: analysis
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-30 09:32 (TZ: Eastern Standard Time)
+  ```
+- Summary: Checked current GitHub CodeQL/GHAS pricing vs Copilot Pro, inventoried repo visibility (p-potvin public vs Prom-King private), and mapped Jira automation to existing vw-jira-sync webhook architecture; identified next steps + approval gates for any batch GitHub API enablement.
+- Commands:
+  - `gh auth status`
+  - `gh api users/p-potvin/repos?per_page=100&sort=full_name`
+  - `gh api orgs/Prom-King/repos?per_page=100&sort=full_name`
+  - `Get-Content vaultwares-docs/AGENTS.md`
+  - `Get-Content vaultwares-docs/instructions/ROUTER.md`
+  - `Get-Content vaultwares-docs/instructions/summaries/* (selected)`
+  - `Get-Content vaultwares-docs/docs-content/operations/{deployment-flow,services-inventory,webhook-secret-rotation,jira-sync}.mdx`
+  - `Get-Content vw-jira-sync/{AGENTS.md,README.md,config.yaml,scripts/deploy_webhooks.py}`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\ROUTER.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\SOURCE_OF_TRUTH.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\SECURITY_POSTURE.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\SECRETS_HANDLING.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\REQUEST_RATE_LIMITING.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\AUTOMATION_POLICY.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\DEPENDENCY_POLICY.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\PR_POLICY.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\GIT_BRANCH_POLICY.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\FILE_CHANGES.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\VERIFICATION.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\deployment-flow.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\services-inventory.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\webhook-secret-rotation.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\jira-sync.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync\config.yaml`
+  - `C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync\scripts\deploy_webhooks.py`
+
+</details>
+
+<details>
 <summary><strong>2026-05-30 04:16 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Decoupled hardcoded SVGs and UI strings across Vault Explorer frontend. Created centralized icons.js dictionary using premium lucide-styled SVG definitions. Integrated icons dic...</summary>
 
 - Kind: code-change,verification
@@ -253,7 +301,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-28 19:05 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>code-change</code> - Removed the two legacy GitHub Actions deployment workflows (deploy-fullxxx-video.yml and deploy-promking-tube.yml) from tube-sites/.github/workflows/ to adhere to the Tailscale ...</summary>
+<summary><strong>2026-05-28 19:05 - General Tasks</strong> <code>code-change</code> - Removed the two legacy GitHub Actions deployment workflows (deploy-fullxxx-video.yml and deploy-promking-tube.yml) from tube-sites/.github/workflows/ to adhere to the Tailscale ...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
