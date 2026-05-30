@@ -3,7 +3,38 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-29 22:44 - vault-explorer (formerly Vault Explorer)</strong> <code>plan,verification</code> - Audited implementation_plan.md against actual codebase. Found: preload.js has all 5 new IPC bridges (scheduleIdlePreviews, pasteFiles, zipSelection, getFileProperties, getFolder...</summary>
+<summary><strong>2026-05-30 00:59 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,plan</code> - Merged implementation_plan.md into ROADMAP.md, organizing it by the 5 app tabs. Cleaned up root files: created public/ directory and moved all favicons/posters into it, updating...</summary>
+
+- Kind: code-change,plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gemini-3.1-pro
+  Thinking: low
+  Mode: agent
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): run_command, replace_file_content, write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-05-30 00:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: Merged implementation_plan.md into ROADMAP.md, organizing it by the 5 app tabs. Cleaned up root files: created public/ directory and moved all favicons/posters into it, updating main.js and src/tmdb.js to reference the new paths. Removed legacy README.en.md and README.qc.md, and consolidated everything into a single updated README.md reflecting the transition to a home media server and new features.
+- Commands:
+  - `Remove-Item README.en.md README.qc.md implementation_plan.md`
+  - `Move-Item *_favicon.png public/`
+  - `node update_paths.js`
+- Files:
+  - `ROADMAP.md`
+  - `README.md`
+  - `main.js`
+  - `src/tmdb.js`
+- Git: repo=vault-explorer, branch=main, head=c4f65a7
+
+</details>
+
+<details>
+<summary><strong>2026-05-29 22:44 - vault-explorer</strong> <code>plan,verification</code> - Audited implementation_plan.md against actual codebase. Found: preload.js has all 5 new IPC bridges (scheduleIdlePreviews, pasteFiles, zipSelection, getFileProperties, getFolder...</summary>
 
 - Kind: plan,verification
 - Actor: AI Agent
