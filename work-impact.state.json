@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-30T21:57:02.4068143Z",
+    "lastUpdatedUtc":  "2026-05-30T22:12:01.1656053Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1908,7 +1908,10 @@
                                        "20260530-170926-341-vault-explorer-12623359",
                                        "20260530-173323-107-vault-explorer-aeb54ffb",
                                        "20260530-175049-778-vault-explorer-ff464713",
-                                       "20260530-175612-116-vault-explorer-3f363768"
+                                       "20260530-175612-116-vault-explorer-3f363768",
+                                       "20260530-175842-694-vault-explorer-d0dce2ec",
+                                       "20260530-180617-429-vault-explorer-80467f35",
+                                       "20260530-181030-863-vault-explorer-cd2df992"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2861,24 +2864,24 @@
                                                                         "gemini-pro",
                                                                         "unknown"
                                                                     ],
-                                                         "count":  15
+                                                         "count":  18
                                                      }
                                                  ],
                                    "tools":  [
                                                  "PowerShell",
                                                  24,
-                                                 "git",
-                                                 19,
                                                  "run_command",
+                                                 20,
+                                                 "git",
                                                  19,
                                                  "write_to_file",
                                                  18,
                                                  "view_file",
-                                                 16,
+                                                 18,
                                                  "functions.shell_command",
                                                  14,
                                                  "replace_file_content",
-                                                 13,
+                                                 14,
                                                  "apply_patch",
                                                  13,
                                                  "shell_command",
@@ -2888,19 +2891,19 @@
                                                  "gh",
                                                  9,
                                                  "grep_search",
-                                                 6,
-                                                 "ssh",
+                                                 7,
+                                                 "list_dir",
                                                  6,
                                                  "multi_replace_file_content",
                                                  6,
-                                                 "multi_tool_use.parallel",
-                                                 5
+                                                 "ssh",
+                                                 6
                                              ],
                                    "actors":  [
                                                   "AI Agent",
                                                   374,
                                                   "Antigravity",
-                                                  44,
+                                                  47,
                                                   "Codex",
                                                   10,
                                                   "Claude Code (Opus 4.7)",
@@ -2920,7 +2923,7 @@
                                                   "Claude",
                                                   1
                                               ],
-                                   "totalEvents":  443,
+                                   "totalEvents":  446,
                                    "models":  [
                                                   "unknown",
                                                   345,
@@ -2930,10 +2933,10 @@
                                                   14,
                                                   "Gemini 3 Flash",
                                                   12,
+                                                  "Gemini-1.5-Pro",
+                                                  10,
                                                   "Gemini 3.5 Flash (Medium)",
                                                   9,
-                                                  "Gemini-1.5-Pro",
-                                                  7,
                                                   "claude-opus-4-7",
                                                   6,
                                                   "Gemini 3.1 Pro",
@@ -3006,7 +3009,7 @@
                                    {
                                        "label":  "Sat",
                                        "dow":  5,
-                                       "count":  76
+                                       "count":  79
                                    },
                                    {
                                        "label":  "Sun",
@@ -3084,11 +3087,11 @@
                                         "hour":  16
                                     },
                                     {
-                                        "count":  33,
+                                        "count":  34,
                                         "hour":  17
                                     },
                                     {
-                                        "count":  36,
+                                        "count":  38,
                                         "hour":  18
                                     },
                                     {
@@ -3129,7 +3132,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-30 17:57",
+                 "generatedAtLocal":  "2026-05-30 18:12",
                  "series":  {
                                 "months":  [
                                                {
@@ -3142,7 +3145,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  916
+                                                   "count":  919
                                                }
                                            ],
                                 "days":  [
@@ -4420,13 +4423,13 @@
                                                                   "vault-explorer",
                                                                   "vw-jira-sync"
                                                               ],
-                                                 "entries":  15,
+                                                 "entries":  18,
                                                  "day":  "2026-05-30",
                                                  "kinds":  {
-                                                               "code-change":  8,
+                                                               "code-change":  10,
                                                                "commands":  2,
-                                                               "verification":  7,
-                                                               "plan":  4,
+                                                               "verification":  9,
+                                                               "plan":  5,
                                                                "general":  3
                                                            }
                                              }
@@ -4434,15 +4437,15 @@
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1583
+                                                  "count":  1585
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  137
+                                                  "count":  139
                                               },
                                               {
                                                   "kind":  "plan",
-                                                  "count":  101
+                                                  "count":  102
                                               },
                                               {
                                                   "kind":  "general",
@@ -4460,10 +4463,10 @@
                                 "projects":  [
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  156,
+                                                                   "code-change":  158,
                                                                    "commands":  1,
-                                                                   "verification":  27,
-                                                                   "plan":  32,
+                                                                   "verification":  29,
+                                                                   "plan":  33,
                                                                    "general":  3
                                                                },
                                                      "lineClean":  {
@@ -4475,11 +4478,11 @@
 
                                                                     },
                                                      "project":  "vault-explorer",
-                                                     "entries":  205,
+                                                     "entries":  208,
                                                      "recent":  [
-                                                                    "Completed the stabilization of media resume and library management features. Integrated premium Remove from Library buttons directly on library cards, implemented virtual collec...",
-                                                                    "Created implementation plan to resolve Vault and Favorites load order issues at application startup. Identified root cause in loadDirectory strict realPath check which prevented...",
-                                                                    "Modified loadDirectory inside js/navigation/directory.js to bypass premature returns when realPath is empty at root level. Allowed initialization of empty state and virtual fold..."
+                                                                    "Designed and published the seek-bar hover preview stabilization plan (Part 3), integrating local .trickplay scanning with Real-Debrid streaming video scrub-preview fallback.",
+                                                                    "Successfully implemented seek-bar hover preview thumbnails and Real-Debrid streaming improvements (Roadmap Part 3). Updated scanner.js to resolve .trickplay folders, linked scru...",
+                                                                    "Added dynamic local ASR subtitle generation directly while watching a video in the HTML5 player. Integrated Plex/Jellyfin/Kodi NFO interoperability by parsing adjacent .nfo file..."
                                                                 ],
                                                      "firstDay":  "2026-04-19",
                                                      "lastDay":  "2026-05-30",
@@ -4682,10 +4685,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "resume_used":  1,
-                                                                        "credit_pipeline_used":  1,
-                                                                        "interview_started":  1,
                                                                         "router":  1,
+                                                                        "resume_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "credit_pipeline_used":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
@@ -4774,10 +4777,10 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "resume_used":  2,
-                                                                        "credit_pipeline_used":  1,
-                                                                        "interview_started":  2,
                                                                         "router":  2,
+                                                                        "resume_used":  2,
+                                                                        "interview_started":  2,
+                                                                        "credit_pipeline_used":  1,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
@@ -5306,6 +5309,7 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5327,11 +5331,10 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
-                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "secrets_redacted":  1,
+                                                                        "same_domain_only":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -16257,7 +16260,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-30T21:56:12.1161640Z",
+                 "_maxCreatedAtUtc":  "2026-05-30T22:10:30.8634512Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16265,7 +16268,7 @@
                            },
                  "totals":  {
                                 "projects":  46,
-                                "events":  1901,
+                                "events":  1904,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  78,
                                 "commitEventsWithStats":  679

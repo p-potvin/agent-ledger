@@ -3,7 +3,36 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-30 18:06 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Successfully implemented seek-bar hover preview thumbnails and Real-Debrid streaming improvements (Roadmap Part 3). Updated scanner.js to resolve .trickplay folders, linked scru...</summary>
+<summary><strong>2026-05-30 18:10 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Added dynamic local ASR subtitle generation directly while watching a video in the HTML5 player. Integrated Plex/Jellyfin/Kodi NFO interoperability by parsing adjacent .nfo file...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-1.5-pro
+  Thinking: high
+  Mode: code
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): replace_file_content, view_file, run_command, grep_search
+  MCP servers accessed (this reply): none
+  Time: 2026-05-30 18:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added dynamic local ASR subtitle generation directly while watching a video in the HTML5 player. Integrated Plex/Jellyfin/Kodi NFO interoperability by parsing adjacent .nfo files in the file scanner, enabling NFO search matching, and rendering attributes in the File Properties modal. Updated ROADMAP.md to track accomplishments.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\player\subtitles.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\scanner.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\navigation\properties.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\navigation\filters.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\ROADMAP.md`
+- Git: repo=vault-explorer, branch=main, head=56a6a22
+
+</details>
+
+<details>
+<summary><strong>2026-05-30 18:06 - vault-explorer</strong> <code>code-change,verification</code> - Successfully implemented seek-bar hover preview thumbnails and Real-Debrid streaming improvements (Roadmap Part 3). Updated scanner.js to resolve .trickplay folders, linked scru...</summary>
 
 - Kind: code-change,verification
 - Actor: Antigravity
