@@ -3,7 +3,40 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-30 00:59 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,plan</code> - Merged implementation_plan.md into ROADMAP.md, organizing it by the 5 app tabs. Cleaned up root files: created public/ directory and moved all favicons/posters into it, updating...</summary>
+<summary><strong>2026-05-30 04:16 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Decoupled hardcoded SVGs and UI strings across Vault Explorer frontend. Created centralized icons.js dictionary using premium lucide-styled SVG definitions. Integrated icons dic...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 3.5 Flash
+  Thinking: high
+  Mode: code
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): write_to_file, replace_file_content, multi_replace_file_content, view_file
+  MCP servers accessed (this reply): none
+  Time: 2026-05-30 04:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: Decoupled hardcoded SVGs and UI strings across Vault Explorer frontend. Created centralized icons.js dictionary using premium lucide-styled SVG definitions. Integrated icons dictionary and window.translations bilingually in utils.js, subtitles.js, card.js, favorites.js, and hover-card.js, stabilizing the UI state, safe subtitle/CC fallback trackIdx = -1 and multi-language support.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\icons.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\utils.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\player\subtitles.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\navigation\card.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\favorites.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\hover-card.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\translations.en.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\translations.qc.js`
+- Plan: `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\ROADMAP.md`
+- Git: repo=vault-explorer, branch=main, head=c4f65a7
+
+</details>
+
+<details>
+<summary><strong>2026-05-30 00:59 - vault-explorer</strong> <code>code-change,plan</code> - Merged implementation_plan.md into ROADMAP.md, organizing it by the 5 app tabs. Cleaned up root files: created public/ directory and moved all favicons/posters into it, updating...</summary>
 
 - Kind: code-change,plan
 - Actor: AI Agent
