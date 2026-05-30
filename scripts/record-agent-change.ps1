@@ -183,7 +183,7 @@ $dedupedMcpServersAccessed = Get-DedupedList $McpServersAccessed
 $normalizedFlags = Normalize-ObjectKeysToSnakeCase $Flags
 $normalizedMetrics = Normalize-ObjectKeysToSnakeCase $Metrics
 
-$limitedSummary = Limit-Tokenish $Summary 1024
+$limitedSummary = Limit-Tokenish $Summary 256
 $now = Get-Date
 $createdAt = $now.ToUniversalTime().ToString('o')
 $createdAtLocal = $now.ToString('yyyy-MM-dd HH:mm')
