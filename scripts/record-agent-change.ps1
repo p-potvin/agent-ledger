@@ -28,7 +28,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 function Limit-Tokenish {
-    param([string]$Text, [int]$Limit = 1024)
+    param([string]$Text, [int]$Limit = 256)
     $parts = ($Text -split '\s+') | Where-Object { $_ }
     if ($parts.Count -le $Limit) {
         return $Text.Trim()
