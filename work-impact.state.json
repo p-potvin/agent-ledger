@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-30T07:57:02.2962695Z",
+    "lastUpdatedUtc":  "2026-05-30T08:12:02.3613438Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -2616,105 +2616,33 @@
                                                      },
                                                      {
                                                          "actors":  [
-                                                                        "AI Agent",
-                                                                        "Antigravity",
-                                                                        "Copilot",
-                                                                        "GitHub Copilot"
+                                                                        "AI Agent"
                                                                     ],
                                                          "day":  "2026-05-11",
                                                          "models":  [
-                                                                        "Claude Haiku",
-                                                                        "Claude Sonnet 4.6",
-                                                                        "Claude Sonnet 4.6 (Thinking)",
-                                                                        "claude-sonnet-4.6",
-                                                                        "claude-sonnet-4-6",
-                                                                        "Gemini 3.1 Pro (Preview)",
-                                                                        "gemini-2.0-pro-exp",
-                                                                        "o3-mini",
-                                                                        "unknown"
+                                                                        "Claude Haiku"
                                                                     ],
-                                                         "count":  13
+                                                         "count":  1
                                                      },
                                                      {
                                                          "actors":  [
-                                                                        "AI Agent",
-                                                                        "Antigravity",
-                                                                        "codex",
-                                                                        "GitHub Copilot"
-                                                                    ],
-                                                         "day":  "2026-05-12",
-                                                         "models":  [
-                                                                        "Claude Sonnet 4.6",
-                                                                        "Claude Sonnet 4.6 (Thinking)",
-                                                                        "Gemini 3.1 Pro (Preview)",
-                                                                        "gpt-5",
-                                                                        "gpt-5.2",
-                                                                        "unknown"
-                                                                    ],
-                                                         "count":  29
-                                                     },
-                                                     {
-                                                         "actors":  [
-                                                                        "Antigravity",
-                                                                        "Claude Sonnet 4.6",
-                                                                        "claude-sonnet-4-6",
-                                                                        "codex",
-                                                                        "GitHub Copilot",
-                                                                        "gpt-5.2"
-                                                                    ],
-                                                         "day":  "2026-05-13",
-                                                         "models":  [
-                                                                        "Claude Sonnet 4.6",
-                                                                        "claude-sonnet-4-5",
-                                                                        "claude-sonnet-4-6",
-                                                                        "Gemini 3 Flash",
-                                                                        "gpt-5.2",
-                                                                        "o3-mini"
-                                                                    ],
-                                                         "count":  29
-                                                     },
-                                                     {
-                                                         "actors":  [
-                                                                        "AI Agent",
-                                                                        "Antigravity",
-                                                                        "Claude Sonnet 4.6",
-                                                                        "codex",
-                                                                        "GitHub Copilot"
+                                                                        "AI Agent"
                                                                     ],
                                                          "day":  "2026-05-14",
                                                          "models":  [
-                                                                        "Claude Haiku",
-                                                                        "claude-sonnet-4-6",
-                                                                        "Gemini 2.0 Flash",
-                                                                        "Gemini 3.1 Pro (Low)",
-                                                                        "gemini-2.5-pro",
-                                                                        "gemini-3-flash",
-                                                                        "gpt-5.2",
-                                                                        "o3-mini",
-                                                                        "unknown"
+                                                                        "Claude Haiku"
                                                                     ],
-                                                         "count":  26
+                                                         "count":  1
                                                      },
                                                      {
                                                          "actors":  [
-                                                                        "AI Agent",
-                                                                        "Antigravity",
-                                                                        "Claude Sonnet 4.6",
-                                                                        "GitHub Copilot",
-                                                                        "gpt-5.2-codex"
+                                                                        "AI Agent"
                                                                     ],
                                                          "day":  "2026-05-15",
                                                          "models":  [
-                                                                        "Claude Haiku",
-                                                                        "claude-sonnet-4-6",
-                                                                        "Gemini 2.0 Flash",
-                                                                        "Gemini 3.1 Pro (High)",
-                                                                        "Gemini 3.1 Pro (Low)",
-                                                                        "gpt-5.2",
-                                                                        "o3-mini",
-                                                                        "unknown"
+                                                                        "Claude Haiku"
                                                                     ],
-                                                         "count":  25
+                                                         "count":  1
                                                      },
                                                      {
                                                          "actors":  [
@@ -2732,14 +2660,13 @@
                                                                         "fullxxx-video/includes/video-fetcher.php",
                                                                         "Gemini 3 Flash",
                                                                         "Gemini 3.1 Pro",
-                                                                        "Gemini 3.1 Pro (High)",
                                                                         "gpt-4o",
                                                                         "GPT-5",
                                                                         "gpt-5",
                                                                         "gpt-5.2",
                                                                         "unknown"
                                                                     ],
-                                                         "count":  29
+                                                         "count":  26
                                                      },
                                                      {
                                                          "actors":  [
@@ -2916,128 +2843,100 @@
                                                      }
                                                  ],
                                    "tools":  [
-                                                 "functions.shell_command",
-                                                 64,
-                                                 "run_command",
-                                                 33,
-                                                 "functions.apply_patch",
-                                                 31,
                                                  "PowerShell",
-                                                 25,
-                                                 "view_file",
-                                                 23,
-                                                 "write_to_file",
-                                                 22,
+                                                 24,
                                                  "git",
                                                  19,
-                                                 "replace_file_content",
-                                                 15,
+                                                 "run_command",
+                                                 18,
+                                                 "functions.shell_command",
+                                                 14,
                                                  "apply_patch",
                                                  13,
                                                  "shell_command",
                                                  12,
-                                                 "list_dir",
-                                                 11,
-                                                 "multi_replace_file_content",
-                                                 11,
-                                                 "functions.update_plan",
-                                                 11,
-                                                 "gh",
+                                                 "write_to_file",
+                                                 12,
+                                                 "view_file",
+                                                 12,
+                                                 "functions.apply_patch",
                                                  10,
-                                                 "web.run",
-                                                 6
+                                                 "gh",
+                                                 9,
+                                                 "replace_file_content",
+                                                 7,
+                                                 "ssh",
+                                                 6,
+                                                 "grep_search",
+                                                 5,
+                                                 "list_dir",
+                                                 5,
+                                                 "multi_tool_use.parallel",
+                                                 5
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  377,
+                                                  369,
                                                   "Antigravity",
-                                                  59,
-                                                  "codex",
-                                                  44,
-                                                  "GitHub Copilot",
-                                                  27,
-                                                  "gpt-5.2-codex",
-                                                  17,
-                                                  "claude-sonnet-4-6",
-                                                  8,
+                                                  36,
+                                                  "Codex",
+                                                  10,
                                                   "Claude Code (Opus 4.7)",
                                                   5,
-                                                  "gpt-5.2",
-                                                  4,
-                                                  "Claude Sonnet 4.6",
+                                                  "gpt-5.2-codex",
                                                   3,
                                                   "claude-code",
                                                   2,
-                                                  "Copilot",
+                                                  "Claude Opus 4.7",
                                                   1,
                                                   "Fix: Re-add spankbang to allowlist",
                                                   1,
-                                                  "claude-sonnet-4-5",
-                                                  1,
-                                                  "Claude Opus 4.7",
-                                                  1,
                                                   "preload.js",
+                                                  1,
+                                                  "claude-sonnet-4-5",
                                                   1
                                               ],
-                                   "totalEvents":  551,
+                                   "totalEvents":  429,
                                    "models":  [
                                                   "unknown",
-                                                  349,
+                                                  340,
                                                   "gpt-5.2",
-                                                  69,
-                                                  "claude-sonnet-4-6",
-                                                  15,
+                                                  22,
                                                   "Claude Haiku",
                                                   14,
                                                   "Gemini 3 Flash",
-                                                  13,
+                                                  12,
                                                   "Gemini 3.5 Flash (Medium)",
                                                   9,
-                                                  "gpt-5",
-                                                  9,
-                                                  "o3-mini",
-                                                  9,
-                                                  "Gemini 3.1 Pro (Preview)",
-                                                  9,
-                                                  "Gemini 2.0 Flash",
-                                                  7,
-                                                  "gemini-2.5-pro",
-                                                  6,
                                                   "claude-opus-4-7",
                                                   6,
-                                                  "Claude Sonnet 4.6",
+                                                  "gemini-2.5-pro",
                                                   4,
-                                                  "claude-sonnet-4-5",
-                                                  4,
-                                                  "Gemini 3.1 Pro (Low)",
+                                                  "gpt-5",
                                                   4,
                                                   "Gemini 3.1 Pro",
                                                   3,
                                                   "Gemini-1.5-Pro",
                                                   3,
-                                                  "Gemini 3.1 Pro (High)",
-                                                  3,
-                                                  "Claude Sonnet 4.6 (Thinking)",
-                                                  3,
-                                                  "claude-opus-4-5",
-                                                  2,
                                                   "gemini",
                                                   2,
-                                                  "fullxxx-video/includes/video-fetcher.php",
+                                                  "claude-opus-4-5",
+                                                  2,
+                                                  "gpt-4o",
                                                   1,
-                                                  "gemini-3.1-pro",
-                                                  1,
-                                                  "Claude Opus 4.6",
+                                                  "Gemini 3.1 Pro (Low)",
                                                   1,
                                                   "src/normalization.js",
                                                   1,
-                                                  "gpt-4o",
+                                                  "claude-sonnet-4-5",
                                                   1,
-                                                  "gemini-2.0-pro-exp",
+                                                  "claude-sonnet-4-6",
                                                   1,
-                                                  "gemini-3-flash",
+                                                  "Claude Opus 4.6",
                                                   1,
-                                                  "claude-sonnet-4.6",
+                                                  "fullxxx-video/includes/video-fetcher.php",
+                                                  1,
+                                                  "gemini-3.1-pro",
                                                   1
                                               ]
                                },
@@ -3052,32 +2951,32 @@
                                    {
                                        "label":  "Mon",
                                        "dow":  0,
-                                       "count":  104
+                                       "count":  92
                                    },
                                    {
                                        "label":  "Tue",
                                        "dow":  1,
-                                       "count":  99
+                                       "count":  70
                                    },
                                    {
                                        "label":  "Wed",
                                        "dow":  2,
-                                       "count":  96
+                                       "count":  67
                                    },
                                    {
                                        "label":  "Thu",
                                        "dow":  3,
-                                       "count":  74
+                                       "count":  49
                                    },
                                    {
                                        "label":  "Fri",
                                        "dow":  4,
-                                       "count":  65
+                                       "count":  41
                                    },
                                    {
                                        "label":  "Sat",
                                        "dow":  5,
-                                       "count":  65
+                                       "count":  62
                                    },
                                    {
                                        "label":  "Sun",
@@ -3087,99 +2986,99 @@
                                ],
                  "hourSeries":  [
                                     {
-                                        "count":  16,
+                                        "count":  15,
                                         "hour":  0
                                     },
                                     {
-                                        "count":  22,
+                                        "count":  20,
                                         "hour":  1
                                     },
                                     {
-                                        "count":  20,
+                                        "count":  17,
                                         "hour":  2
                                     },
                                     {
-                                        "count":  15,
+                                        "count":  8,
                                         "hour":  3
                                     },
                                     {
-                                        "count":  15,
+                                        "count":  10,
                                         "hour":  4
                                     },
                                     {
-                                        "count":  10,
+                                        "count":  6,
                                         "hour":  5
                                     },
                                     {
-                                        "count":  22,
+                                        "count":  11,
                                         "hour":  6
                                     },
                                     {
-                                        "count":  15,
+                                        "count":  10,
                                         "hour":  7
                                     },
                                     {
-                                        "count":  25,
+                                        "count":  21,
                                         "hour":  8
                                     },
                                     {
-                                        "count":  24,
+                                        "count":  18,
                                         "hour":  9
                                     },
                                     {
-                                        "count":  20,
+                                        "count":  19,
                                         "hour":  10
                                     },
                                     {
-                                        "count":  26,
+                                        "count":  19,
                                         "hour":  11
                                     },
                                     {
-                                        "count":  27,
+                                        "count":  24,
                                         "hour":  12
                                     },
                                     {
-                                        "count":  22,
+                                        "count":  15,
                                         "hour":  13
                                     },
                                     {
-                                        "count":  34,
+                                        "count":  28,
                                         "hour":  14
                                     },
                                     {
-                                        "count":  39,
+                                        "count":  31,
                                         "hour":  15
                                     },
                                     {
-                                        "count":  32,
+                                        "count":  26,
                                         "hour":  16
                                     },
                                     {
-                                        "count":  29,
+                                        "count":  27,
                                         "hour":  17
                                     },
                                     {
-                                        "count":  38,
+                                        "count":  36,
                                         "hour":  18
                                     },
                                     {
-                                        "count":  31,
+                                        "count":  18,
                                         "hour":  19
                                     },
                                     {
-                                        "count":  21,
+                                        "count":  16,
                                         "hour":  20
                                     },
                                     {
-                                        "count":  12,
+                                        "count":  6,
                                         "hour":  21
                                     },
                                     {
-                                        "count":  15,
+                                        "count":  12,
                                         "hour":  22
                                     },
                                     {
-                                        "count":  21,
+                                        "count":  16,
                                         "hour":  23
                                     }
                                 ],
@@ -3200,7 +3099,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-30 03:57",
+                 "generatedAtLocal":  "2026-05-30 04:12",
                  "series":  {
                                 "months":  [
                                                {
@@ -4745,10 +4644,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "resume_used":  1,
-                                                                        "credit_pipeline_used":  1,
-                                                                        "interview_started":  1,
                                                                         "router":  1,
+                                                                        "resume_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "credit_pipeline_used":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
@@ -4837,10 +4736,10 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "resume_used":  2,
-                                                                        "credit_pipeline_used":  1,
-                                                                        "interview_started":  2,
                                                                         "router":  2,
+                                                                        "resume_used":  2,
+                                                                        "interview_started":  2,
+                                                                        "credit_pipeline_used":  1,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
@@ -5369,6 +5268,7 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5390,11 +5290,10 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
-                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "secrets_redacted":  1,
+                                                                        "same_domain_only":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
