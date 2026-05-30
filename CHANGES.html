@@ -48,7 +48,43 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-05-30 10:16 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <span class="kind">commands</span> - Enabled GitHub CodeQL default setup (Code Scanning) on 8 public repos (vault-explorer, vaultwares-docs, vaultwares-pipelines, vault-flows already configured, vault-central, vaul...</summary>
+    <summary><strong>2026-05-30 10:49 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <span class="kind">general</span> - Confirmed Dependabot alerts/security updates are available on all GitHub plans (no GHAS purchase required). Validated custom GitHub App &#39;gemini-code-assist-for-vaultwares&#39; metad...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-30 10:49 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Confirmed Dependabot alerts/security updates are available on all GitHub plans (no GHAS purchase required). Validated custom GitHub App &#39;gemini-code-assist-for-vaultwares&#39; metadata: app exists, but webhook_url is null (no webhook configured), so it cannot receive events to perform code reviews; official Gemini Code Assist GitHub setup is done via Google Cloud/Developer Connect, not by manually creating a GitHub App.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>gh api apps/gemini-code-assist-for-vaultwares --jq ...</code></li>
+        <li><code>web lookup: GitHub security features docs + Gemini Code Assist GitHub setup docs</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-30 10:48 - vw-jira-sync (formerly vaultwares-docs / vw-jira-sync, General Tasks / vw-jira-sync)</strong> <span class="kind">commands</span> - Updated all 41 GitHub repo webhooks to subscribe to dependabot_alert (in addition to existing events) using vw-jira-sync/scripts/deploy_webhooks.py in --events-only mode (no sec...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> commands</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-30 10:48 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Updated all 41 GitHub repo webhooks to subscribe to dependabot_alert (in addition to existing events) using vw-jira-sync/scripts/deploy_webhooks.py in --events-only mode (no secret needed). Also updated deploy_webhooks.py to support --events-only and added delay control; pushed updates to existing PR branch vw-codex-dependabot-alerts.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python -c &#39;len(repos)=41&#39; (local)</code></li>
+        <li><code>python scripts/deploy_webhooks.py --events-only --delay 0.25 (41 repos)</code></li>
+        <li><code>git commit -m &#39;Allow events-only webhook updates&#39;</code></li>
+        <li><code>git push</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync\scripts\deploy_webhooks.py</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-30 10:16 - General Tasks</strong> <span class="kind">commands</span> - Enabled GitHub CodeQL default setup (Code Scanning) on 8 public repos (vault-explorer, vaultwares-docs, vaultwares-pipelines, vault-flows already configured, vault-central, vaul...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> commands</p>
       <p><strong>Actor:</strong> AI Agent</p>
@@ -5248,7 +5284,7 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-05-22 15:08 - vw-jira-sync (formerly vaultwares-docs / vw-jira-sync, General Tasks / vw-jira-sync)</strong> <span class="kind">code-change</span> - Removed jira-sync.yml caller workflows from all 41 tracked repos (41/41 deleted). Added remove_caller_workflows.py. Webhook path on VPS is now the sole active Jira sync mechanis...</summary>
+    <summary><strong>2026-05-22 15:08 - vw-jira-sync</strong> <span class="kind">code-change</span> - Removed jira-sync.yml caller workflows from all 41 tracked repos (41/41 deleted). Added remove_caller_workflows.py. Webhook path on VPS is now the sole active Jira sync mechanis...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> AI Agent</p>
