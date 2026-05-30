@@ -1,0 +1,61 @@
+﻿{
+    "id":  "20260530-183820-703-vault-explorer-d034dd5a",
+    "createdAt":  "2026-05-30T22:38:20.7036879Z",
+    "createdAtLocal":  "2026-05-30 18:38",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change,verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-6-thinking\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: windows-local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): view_file, replace_file_content, multi_replace_file_content, run_command, command_status\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-30 18:38 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6-thinking",
+                    "thinking":  "medium",
+                    "mode":  "agent",
+                    "permissions":  "ask",
+                    "network":  "windows-local",
+                    "toolsUsed":  [
+                                      "view_file",
+                                      "replace_file_content",
+                                      "multi_replace_file_content",
+                                      "run_command",
+                                      "command_status"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Completed Section 5: Global Mute \u0026 Subtab Categorization. (1) Added \u0027Mute Hover Previews\u0027 checkbox to settings panel (index.html), wired to appSettings.mutePreviews in settings.js, applied in utils.js attachHoverWebmToCard. (2) Enforced subtab root-level separation in filters.js — Collections/Albums/Playlists hide loose files at root. (3) Added audio filter support to filters.js and favorites.js. (4) Scanner now classifies mp3/wav/ogg/m4a/flac/aac/wma as type \u0027audio\u0027. (5) Added \u0027Music\u0027 option to filter-type dropdown with EN+QC translations. (6) Auto-selects correct folder type in new-folder dialog based on active subtab. All 10 changes landed; comprehensive_test.js passed (0 exceptions, exit 0).",
+    "commands":  [
+                     "node tests/comprehensive_test.js"
+                 ],
+    "files":  [
+                  "index.html",
+                  "js/settings.js",
+                  "js/utils.js",
+                  "js/navigation/filters.js",
+                  "js/favorites.js",
+                  "src/scanner.js",
+                  "js/translations.en.js",
+                  "js/translations.qc.js",
+                  "js/app.js",
+                  "js/navigation/keybindings.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "d034dd5aa074ccf01eeb5963073dd37859f0181e22d426e25ce77a2481274f22",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "56a6a22",
+                "hasChanges":  true
+            }
+}

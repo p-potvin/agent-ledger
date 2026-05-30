@@ -48,7 +48,35 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-05-30 18:24 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change,verification</span> - Fixed directory startup cache-miss loading logic. Increased toast notification container z-index to 10500 and dynamic modal backdrop z-indexes to 15000 so they render correctly ...</summary>
+    <summary><strong>2026-05-30 18:38 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change,verification</span> - Completed Section 5: Global Mute &amp; Subtab Categorization. (1) Added &#39;Mute Hover Previews&#39; checkbox to settings panel (index.html), wired to appSettings.mutePreviews in settings....</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: claude-sonnet-4-6-thinking Thinking: medium Mode: agent Permissions: ask (network: windows-local) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): view_file, replace_file_content, multi_replace_file_content, run_command, command_status MCP servers accessed (this reply): none Time: 2026-05-30 18:38 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Completed Section 5: Global Mute &amp; Subtab Categorization. (1) Added &#39;Mute Hover Previews&#39; checkbox to settings panel (index.html), wired to appSettings.mutePreviews in settings.js, applied in utils.js attachHoverWebmToCard. (2) Enforced subtab root-level separation in filters.js — Collections/Albums/Playlists hide loose files at root. (3) Added audio filter support to filters.js and favorites.js. (4) Scanner now classifies mp3/wav/ogg/m4a/flac/aac/wma as type &#39;audio&#39;. (5) Added &#39;Music&#39; option to filter-type dropdown with EN+QC translations. (6) Auto-selects correct folder type in new-folder dialog based on active subtab. All 10 changes landed; comprehensive_test.js passed (0 exceptions, exit 0).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>node tests/comprehensive_test.js</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>index.html</code></li>
+        <li><code>js/settings.js</code></li>
+        <li><code>js/utils.js</code></li>
+        <li><code>js/navigation/filters.js</code></li>
+        <li><code>js/favorites.js</code></li>
+        <li><code>src/scanner.js</code></li>
+        <li><code>js/translations.en.js</code></li>
+        <li><code>js/translations.qc.js</code></li>
+        <li><code>js/app.js</code></li>
+        <li><code>js/navigation/keybindings.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=56a6a22</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-30 18:24 - vault-explorer</strong> <span class="kind">code-change,verification</span> - Fixed directory startup cache-miss loading logic. Increased toast notification container z-index to 10500 and dynamic modal backdrop z-indexes to 15000 so they render correctly ...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change,verification</p>
       <p><strong>Actor:</strong> Antigravity</p>

@@ -3,7 +3,42 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-30 18:24 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Fixed directory startup cache-miss loading logic. Increased toast notification container z-index to 10500 and dynamic modal backdrop z-indexes to 15000 so they render correctly ...</summary>
+<summary><strong>2026-05-30 18:38 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Completed Section 5: Global Mute &amp; Subtab Categorization. (1) Added &#39;Mute Hover Previews&#39; checkbox to settings panel (index.html), wired to appSettings.mutePreviews in settings....</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-sonnet-4-6-thinking
+  Thinking: medium
+  Mode: agent
+  Permissions: ask (network: windows-local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): view_file, replace_file_content, multi_replace_file_content, run_command, command_status
+  MCP servers accessed (this reply): none
+  Time: 2026-05-30 18:38 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed Section 5: Global Mute & Subtab Categorization. (1) Added 'Mute Hover Previews' checkbox to settings panel (index.html), wired to appSettings.mutePreviews in settings.js, applied in utils.js attachHoverWebmToCard. (2) Enforced subtab root-level separation in filters.js — Collections/Albums/Playlists hide loose files at root. (3) Added audio filter support to filters.js and favorites.js. (4) Scanner now classifies mp3/wav/ogg/m4a/flac/aac/wma as type 'audio'. (5) Added 'Music' option to filter-type dropdown with EN+QC translations. (6) Auto-selects correct folder type in new-folder dialog based on active subtab. All 10 changes landed; comprehensive_test.js passed (0 exceptions, exit 0).
+- Commands:
+  - `node tests/comprehensive_test.js`
+- Files:
+  - `index.html`
+  - `js/settings.js`
+  - `js/utils.js`
+  - `js/navigation/filters.js`
+  - `js/favorites.js`
+  - `src/scanner.js`
+  - `js/translations.en.js`
+  - `js/translations.qc.js`
+  - `js/app.js`
+  - `js/navigation/keybindings.js`
+- Git: repo=vault-explorer, branch=main, head=56a6a22
+
+</details>
+
+<details>
+<summary><strong>2026-05-30 18:24 - vault-explorer</strong> <code>code-change,verification</code> - Fixed directory startup cache-miss loading logic. Increased toast notification container z-index to 10500 and dynamic modal backdrop z-indexes to 15000 so they render correctly ...</summary>
 
 - Kind: code-change,verification
 - Actor: Antigravity
