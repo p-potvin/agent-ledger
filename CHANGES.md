@@ -3,7 +3,38 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-30 11:24 - vault-explorer (formerly Vault Explorer)</strong> <code>verification</code> - Created a minimal draft PR to smoke-test Gemini Code Assist for GitHub. Posted a &#39;/gemini review&#39; comment on PR #34. At time of verification, CodeQL &#39;Analyze (javascript-typescr...</summary>
+<summary><strong>2026-05-30 11:56 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Refactored remaining inline SVGs out of the application and translation strings into icons.js. Replaced translation tab SVGs with icons.js injections in app.js, removed the magi...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: Gemini 3.1 Pro
+  Thinking: high
+  Mode: code
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): multi_replace_file_content, replace_file_content, view_file
+  MCP servers accessed (this reply): none
+  Time: 2026-05-30 11:56 (TZ: Eastern Standard Time)
+  ```
+- Summary: Refactored remaining inline SVGs out of the application and translation strings into icons.js. Replaced translation tab SVGs with icons.js injections in app.js, removed the magic emoji in translations with a proper SVG in properties.js. Removed all inline SVGs in streaming.js, tmdb.js, player.js, and filters.js, fully leveraging the centralized icons dictionary.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\icons.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\app.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\streaming.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\tmdb.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\player\player.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\navigation\filters.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\navigation\properties.js`
+- Plan: `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\ROADMAP.md`
+- Git: repo=vault-explorer, branch=main, head=56a6a22
+
+</details>
+
+<details>
+<summary><strong>2026-05-30 11:24 - vault-explorer</strong> <code>verification</code> - Created a minimal draft PR to smoke-test Gemini Code Assist for GitHub. Posted a &#39;/gemini review&#39; comment on PR #34. At time of verification, CodeQL &#39;Analyze (javascript-typescr...</summary>
 
 - Kind: verification
 - Actor: AI Agent
