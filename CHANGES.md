@@ -3,7 +3,45 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-30 09:32 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>analysis</code> - Checked current GitHub CodeQL/GHAS pricing vs Copilot Pro, inventoried repo visibility (p-potvin public vs Prom-King private), and mapped Jira automation to existing vw-jira-syn...</summary>
+<summary><strong>2026-05-30 10:16 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>commands</code> - Enabled GitHub CodeQL default setup (Code Scanning) on 8 public repos (vault-explorer, vaultwares-docs, vaultwares-pipelines, vault-flows already configured, vault-central, vaul...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-30 10:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: Enabled GitHub CodeQL default setup (Code Scanning) on 8 public repos (vault-explorer, vaultwares-docs, vaultwares-pipelines, vault-flows already configured, vault-central, vault-guardian, vaultwares-themes, vaultwares-realtime). Skipped private repos vaultwares-adk + vaultwares-toolkit as requested. Added dependabot_alert -> Jira support in vw-jira-sync and opened PR p-potvin/vw-jira-sync#3.
+- Commands:
+  - `gh api repos/p-potvin/<repo>/code-scanning/default-setup (GET)`
+  - `gh api -X PATCH repos/p-potvin/vault-explorer/code-scanning/default-setup ...`
+  - `gh api -X PATCH repos/p-potvin/vaultwares-docs/code-scanning/default-setup ...`
+  - `gh api -X PATCH repos/p-potvin/vaultwares-pipelines/code-scanning/default-setup ...`
+  - `gh api -X PATCH repos/p-potvin/vault-central/code-scanning/default-setup ...`
+  - `gh api -X PATCH repos/p-potvin/vault-guardian/code-scanning/default-setup ...`
+  - `gh api -X PATCH repos/p-potvin/vaultwares-themes/code-scanning/default-setup ...`
+  - `gh api -X PATCH repos/p-potvin/vaultwares-realtime/code-scanning/default-setup ...`
+  - `git checkout -b vw-codex-dependabot-alerts`
+  - `python -m py_compile scripts/live_sync.py scripts/deploy_webhooks.py`
+  - `git commit -m 'Handle dependabot_alert webhooks'`
+  - `git push -u origin vw-codex-dependabot-alerts`
+  - `gh pr create --title 'Dependabot vulnerability alerts -> Jira' ...`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync\scripts\deploy_webhooks.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync\scripts\live_sync.py`
+
+</details>
+
+<details>
+<summary><strong>2026-05-30 09:32 - General Tasks</strong> <code>analysis</code> - Checked current GitHub CodeQL/GHAS pricing vs Copilot Pro, inventoried repo visibility (p-potvin public vs Prom-King private), and mapped Jira automation to existing vw-jira-syn...</summary>
 
 - Kind: analysis
 - Actor: AI Agent
