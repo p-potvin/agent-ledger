@@ -3,7 +3,36 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-30 17:09 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,general,verification</code> - Finished Section 1: Implement an FFMPEG idle timer (60s) sequential preview generator, robust keyboard Arrow Keys grid navigation, Escape key parent directory navigation, and a ...</summary>
+<summary><strong>2026-05-30 17:33 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Completed the stabilization of media resume and library management features. Integrated premium Remove from Library buttons directly on library cards, implemented virtual collec...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-pro
+  Thinking: high
+  Mode: code
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): replace_file_content, multi_replace_file_content
+  MCP servers accessed (this reply): none
+  Time: 2026-05-30 17:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed the stabilization of media resume and library management features. Integrated premium Remove from Library buttons directly on library cards, implemented virtual collection assignment dialog for streaming library items with dynamic rendering inside sub-folders, and updated keybindings/card events to support reference removal instead of deleting files when browsing collections.
+- Files:
+  - `js/favorites.js`
+  - `js/navigation/card.js`
+  - `js/navigation/directory.js`
+  - `js/navigation/card-events.js`
+  - `js/navigation/keybindings.js`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=56a6a22
+
+</details>
+
+<details>
+<summary><strong>2026-05-30 17:09 - vault-explorer</strong> <code>code-change,general,verification</code> - Finished Section 1: Implement an FFMPEG idle timer (60s) sequential preview generator, robust keyboard Arrow Keys grid navigation, Escape key parent directory navigation, and a ...</summary>
 
 - Kind: code-change,general,verification
 - Actor: Antigravity
