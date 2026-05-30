@@ -48,7 +48,33 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-05-30 18:10 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change,verification</span> - Added dynamic local ASR subtitle generation directly while watching a video in the HTML5 player. Integrated Plex/Jellyfin/Kodi NFO interoperability by parsing adjacent .nfo file...</summary>
+    <summary><strong>2026-05-30 18:24 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change,verification</span> - Fixed directory startup cache-miss loading logic. Increased toast notification container z-index to 10500 and dynamic modal backdrop z-indexes to 15000 so they render correctly ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: Gemini 3.5 Flash Thinking: high Mode: code Permissions: ask (network: local-windows) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): replace_file_content, multi_replace_file_content, run_command, view_file MCP servers accessed (this reply): none Time: 2026-05-30 18:24 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed directory startup cache-miss loading logic. Increased toast notification container z-index to 10500 and dynamic modal backdrop z-indexes to 15000 so they render correctly on top of the fullscreen video player modal. Completely removed sounddevice real-time playback from offline batch audio normalization to eliminate the PortAudio Windows access violation crash (code 3221225477). Updated and verified smoke and comprehensive integration Playwright test suites, achieving 100% pass rate.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>node tests/refactor_smoke_test.js</code></li>
+        <li><code>node tests/comprehensive_test.js</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>js/navigation/directory.js</code></li>
+        <li><code>index.css</code></li>
+        <li><code>js/navigation/properties.js</code></li>
+        <li><code>python-scripts/audio_normalize.py</code></li>
+        <li><code>tests/refactor_smoke_test.js</code></li>
+        <li><code>tests/comprehensive_test.js</code></li>
+      </ul>
+      <p><strong>Plan:</strong> <code>C:\Users\Administrator\Desktop\Github Repos\vault-explorer\ROADMAP.md</code></p>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=56a6a22</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-05-30 18:10 - vault-explorer</strong> <span class="kind">code-change,verification</span> - Added dynamic local ASR subtitle generation directly while watching a video in the HTML5 player. Integrated Plex/Jellyfin/Kodi NFO interoperability by parsing adjacent .nfo file...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change,verification</p>
       <p><strong>Actor:</strong> Antigravity</p>
