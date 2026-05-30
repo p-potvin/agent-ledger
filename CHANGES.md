@@ -3,7 +3,40 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-30 17:05 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,plan,verification</code> - Overhauled navigation into a streamlined three-tab interface (Vault, Streaming, Livestream) with vertically centered tabs and an integrated capsule-pill sub-navigation bar. Impl...</summary>
+<summary><strong>2026-05-30 17:09 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,general,verification</code> - Finished Section 1: Implement an FFMPEG idle timer (60s) sequential preview generator, robust keyboard Arrow Keys grid navigation, Escape key parent directory navigation, and a ...</summary>
+
+- Kind: code-change,general,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-1.5-pro
+  Thinking: medium
+  Mode: code
+  Permissions: autopilot (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): replace_file_content, write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-05-30 17:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Finished Section 1: Implement an FFMPEG idle timer (60s) sequential preview generator, robust keyboard Arrow Keys grid navigation, Escape key parent directory navigation, and a premium custom clipboard green notification pill. Exposed showClipboardNotification globally. Added the ability to double-click the video player's title to rename local video files while playing, updating grid cards, titlebar, player state, and filesystem. Added Rename Folder to context menus for virtual folders.
+- Commands:
+  - `None`
+- Files:
+  - `ROADMAP.md`
+  - `index.html`
+  - `js/utils.js`
+  - `js/player/player.js`
+  - `js/navigation/card.js`
+  - `js/navigation/keybindings.js`
+  - `js/navigation/idle.js`
+- Plan: `None`
+- Git: repo=vault-explorer, branch=main, head=56a6a22
+
+</details>
+
+<details>
+<summary><strong>2026-05-30 17:05 - vault-explorer</strong> <code>code-change,plan,verification</code> - Overhauled navigation into a streamlined three-tab interface (Vault, Streaming, Livestream) with vertically centered tabs and an integrated capsule-pill sub-navigation bar. Impl...</summary>
 
 - Kind: code-change,plan,verification
 - Actor: Antigravity
