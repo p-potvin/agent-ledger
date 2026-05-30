@@ -3,6 +3,36 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-30 11:24 - vault-explorer (formerly Vault Explorer)</strong> <code>verification</code> - Created a minimal draft PR to smoke-test Gemini Code Assist for GitHub. Posted a &#39;/gemini review&#39; comment on PR #34. At time of verification, CodeQL &#39;Analyze (javascript-typescr...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-30 11:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created a minimal draft PR to smoke-test Gemini Code Assist for GitHub. Posted a '/gemini review' comment on PR #34. At time of verification, CodeQL 'Analyze (javascript-typescript)' check was IN_PROGRESS and bot comments were from p-potvin + coderabbitai; no Gemini bot comment observed yet.
+- Commands:
+  - `git worktree add ..\\_wt_gemini_test_vault-explorer -b vw-codex-gemini-test origin/main`
+  - `git commit -m 'chore: gemini code assist smoke-test PR'`
+  - `git push -u origin vw-codex-gemini-test`
+  - `gh pr create --draft (vault-explorer#34)`
+  - `gh pr comment 34 --body '/gemini review'`
+  - `gh pr view 34 --json comments,statusCheckRollup`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\_wt_gemini_test_vault-explorer\README.md`
+
+</details>
+
+<details>
 <summary><strong>2026-05-30 10:49 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>general</code> - Confirmed Dependabot alerts/security updates are available on all GitHub plans (no GHAS purchase required). Validated custom GitHub App &#39;gemini-code-assist-for-vaultwares&#39; metad...</summary>
 
 - Kind: general
@@ -141,7 +171,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-30 04:16 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Decoupled hardcoded SVGs and UI strings across Vault Explorer frontend. Created centralized icons.js dictionary using premium lucide-styled SVG definitions. Integrated icons dic...</summary>
+<summary><strong>2026-05-30 04:16 - vault-explorer</strong> <code>code-change,verification</code> - Decoupled hardcoded SVGs and UI strings across Vault Explorer frontend. Created centralized icons.js dictionary using premium lucide-styled SVG definitions. Integrated icons dic...</summary>
 
 - Kind: code-change,verification
 - Actor: Antigravity
