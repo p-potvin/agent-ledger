@@ -3,7 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-31 04:04 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Stabilized audio processing pipeline: 1) Pre-imported datasets to fix PyTorch/PyArrow conflict. 2) Patched shutil.rmtree to catch and ignore WinError 32 PermissionError on Windo...</summary>
+<summary><strong>2026-05-31 04:13 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Remuxed Demucs vocal output to mono using FFmpeg -ac 1 instantly instead of Python channel mean manipulation. Implemented keyboard shortcut (Ctrl+Escape) to toggle Picture-in-Pi...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gemini-2.5-flash-thinking
+  Thinking: high
+  Mode: code
+  Permissions: bypass (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): replace_file_content, multi_replace_file_content, run_command, view_file
+  MCP servers accessed (this reply): none
+  Time: 2026-05-31 04:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Remuxed Demucs vocal output to mono using FFmpeg -ac 1 instantly instead of Python channel mean manipulation. Implemented keyboard shortcut (Ctrl+Escape) to toggle Picture-in-Picture mode inside the video player keydown listener. Added a native 'app-hidden' IPC channel event that is sent from main.js to the renderer when closed/minimized to the system tray, automatically stopping/pausing all active video players, movie trailers, and livestreams cleanly. Verified that all Real-Debrid streaming, virtual storage model, and torrent selection features are robust and checked off Section #3, #4, and #5 in the product ROADMAP.md.
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-media-processing\vaultwares_media_processing\media.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\main.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\preload.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\player\player.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\ROADMAP.md`
+- Git: repo=vault-explorer, branch=main, head=56a6a22
+
+</details>
+
+<details>
+<summary><strong>2026-05-31 04:04 - vault-explorer</strong> <code>code-change,verification</code> - Stabilized audio processing pipeline: 1) Pre-imported datasets to fix PyTorch/PyArrow conflict. 2) Patched shutil.rmtree to catch and ignore WinError 32 PermissionError on Windo...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
