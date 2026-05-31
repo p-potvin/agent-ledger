@@ -3,7 +3,34 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-31 03:25 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Updated the background image enhancement pipeline to write enhanced image files (_enhanced.jpg) into the folder&#39;s local .thumbs subfolder instead of polluting original media fol...</summary>
+<summary><strong>2026-05-31 04:04 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Stabilized audio processing pipeline: 1) Pre-imported datasets to fix PyTorch/PyArrow conflict. 2) Patched shutil.rmtree to catch and ignore WinError 32 PermissionError on Windo...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gemini-2.5-flash-thinking
+  Thinking: very high
+  Mode: code
+  Permissions: bypass (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): replace_file_content, run_command, view_file
+  MCP servers accessed (this reply): none
+  Time: 2026-05-31 04:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: Stabilized audio processing pipeline: 1) Pre-imported datasets to fix PyTorch/PyArrow conflict. 2) Patched shutil.rmtree to catch and ignore WinError 32 PermissionError on Windows temp directory cleanups. 3) Automatically converted stereo/multichannel audio to mono to prevent input shape mismatch in NeMo DecRNNT. 4) Integrated onNormalizeProgress IPC progress updates dynamically into both the top Titlebar task-badge and bottom status-bar progress zone. 5) Decoupled UI reloads from settings saving, only reloading the directory when structural values (globExclusions or defaultFolder) actually change.
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-media-processing\vaultwares_media_processing\parakeet_wrapper.py`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\app.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\progress.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\settings.js`
+- Git: repo=vault-explorer, branch=main, head=56a6a22
+
+</details>
+
+<details>
+<summary><strong>2026-05-31 03:25 - vault-explorer</strong> <code>code-change,verification</code> - Updated the background image enhancement pipeline to write enhanced image files (_enhanced.jpg) into the folder&#39;s local .thumbs subfolder instead of polluting original media fol...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
