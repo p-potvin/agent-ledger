@@ -3,7 +3,56 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-31 04:34 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Implemented modular Playlist Engine in js/playlist-view.js. Decoupled playlist list and grid view rendering. Integrated playlist toggle and state deactivation on tab switch insi...</summary>
+<summary><strong>2026-05-31 04:42 - vault-explorer (formerly Vault Explorer)</strong> <code>plan</code> - Designed an implementation plan to stabilize TMDB request handling and pagination race conditions, and to repair the Shift+Esc Picture-in-Picture keybinding trigger in the video...</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-3.5-flash
+  Thinking: medium
+  Mode: plan
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): write_to_file, view_file
+  MCP servers accessed (this reply): none
+  Time: 2026-05-31 04:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Designed an implementation plan to stabilize TMDB request handling and pagination race conditions, and to repair the Shift+Esc Picture-in-Picture keybinding trigger in the video player.
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=56a6a22
+
+</details>
+
+<details>
+<summary><strong>2026-05-31 04:40 - vault-explorer</strong> <code>code-change</code> - Refactored media pipeline persistence. Stored and pre-filled preferred ASR/translation language settings in window.appSettings to ensure persistence. Decoupled subtitle/translat...</summary>
+
+- Kind: code-change
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-2.0-flash
+  Thinking: medium
+  Mode: code
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): view_file, replace_file_content, run_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-31 04:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Refactored media pipeline persistence. Stored and pre-filled preferred ASR/translation language settings in window.appSettings to ensure persistence. Decoupled subtitle/translation logic from index-based arrays by mapping playback events, rename handlers, periodic watch history saves, and ended states to window.currentPlayingItem to prevent drift inside virtual folders.
+- Files:
+  - `js/player/player.js`
+  - `js/player/subtitles.js`
+  - `js/navigation/card-events.js`
+- Git: repo=vault-explorer, branch=main, head=56a6a22
+
+</details>
+
+<details>
+<summary><strong>2026-05-31 04:34 - vault-explorer</strong> <code>code-change,verification</code> - Implemented modular Playlist Engine in js/playlist-view.js. Decoupled playlist list and grid view rendering. Integrated playlist toggle and state deactivation on tab switch insi...</summary>
 
 - Kind: code-change,verification
 - Actor: Antigravity
