@@ -48,6 +48,23 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-31 00:56 - agent-ledger (formerly agent-ledger/stats-app)</strong> <span class="kind">code-change,plan</span> - Created VaultWares Daily Dashboard system: (1) track-input.py &#226;€” silent Python background tracker using pynput that monitors keystrokes, mouse distance, Ctrl+S/C/V events, char...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,plan</p>
+      <p><strong>Actor:</strong> claude-sonnet-4-6</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: claude-sonnet-4-6 (role: main) Model: claude-sonnet-4-6 Thinking: false Mode: chat Permissions: read-write (network: online) CWD: C:\Users\Administrator  Branch: n/a Tools used (this reply): Write, Read, mcp__workspace__bash, mcp__Windows-MCP__PowerShell MCP servers accessed (this reply): Windows-MCP Time: 2026-05-31 00:56 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Created VaultWares Daily Dashboard system: (1) track-input.py &#226;€” silent Python background tracker using pynput that monitors keystrokes, mouse distance, Ctrl+S/C/V events, chars typed/pasted; writes hourly JSON to input-logs/YYYY-MM-DD.json. (2) setup-input-tracker.ps1 &#226;€” installs deps, registers two Windows scheduled tasks. (3) render-daily-dashboard.ps1 &#226;€” reads input-logs + ledger, generates DAILY_DASHBOARD.html. Dashboard: LED stat cards, hourly activity bar with range picker, heatmap, deep work score ring, focus blocks, daily trend, rhythm chart, AI model/kinds donuts, project bar, context-switch chart, fun facts. Full VaultWares console theme.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/track-input.py</code></li>
+        <li><code>agent-ledger/scripts/setup-input-tracker.ps1</code></li>
+        <li><code>agent-ledger/scripts/render-daily-dashboard.ps1</code></li>
+        <li><code>agent-ledger/DAILY_DASHBOARD.html</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-31 00:42 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <span class="kind">general</span> - Ran /productivity:update: scanned 7 project TASKS.md files and last 20 ledger entries. Compiled active work summary. Today: CodeQL on 8 repos, Gemini smoke test (vault-explorer ...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> general</p>
@@ -1493,7 +1510,7 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-05-26 20:07 - agent-ledger (formerly agent-ledger/stats-app)</strong> <span class="kind">code-change</span> - Removed GitHub Actions workflows so prod deploys are webhook/self-hosted only.</summary>
+    <summary><strong>2026-05-26 20:07 - agent-ledger</strong> <span class="kind">code-change</span> - Removed GitHub Actions workflows so prod deploys are webhook/self-hosted only.</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> AI Agent</p>

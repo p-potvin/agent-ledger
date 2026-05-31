@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-31T04:42:01.4262989Z",
+    "lastUpdatedUtc":  "2026-05-31T04:57:01.4190969Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1915,7 +1915,9 @@
                                        "20260530-182449-973-vault-explorer-991ac30d",
                                        "20260530-183820-703-vault-explorer-d034dd5a",
                                        "20260530-203257-426-vault-explorer-eba92f6d",
-                                       "20260531-000407-985-general-tasks-0f2ada13"
+                                       "20260531-000407-985-general-tasks-0f2ada13",
+                                       "20260531-004229-454-general-tasks-c35418d6",
+                                       "20260531-005638-165-agent-ledger-17fc570c"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2602,6 +2604,8 @@
     "data":  {
                  "agentData":  {
                                    "mcpServers":  [
+                                                      "Windows-MCP",
+                                                      1,
                                                       "VaultWares MCP",
                                                       1
                                                   ],
@@ -2875,13 +2879,14 @@
                                                      },
                                                      {
                                                          "actors":  [
+                                                                        "claude-sonnet-4-6",
                                                                         "claude-sonnet-4-6 (scheduled task)"
                                                                     ],
                                                          "day":  "2026-05-31",
                                                          "models":  [
                                                                         "claude-sonnet-4-6"
                                                                     ],
-                                                         "count":  1
+                                                         "count":  3
                                                      }
                                                  ],
                                    "tools":  [
@@ -2905,9 +2910,9 @@
                                                  12,
                                                  "functions.apply_patch",
                                                  10,
-                                                 "multi_replace_file_content",
-                                                 9,
                                                  "gh",
+                                                 9,
+                                                 "multi_replace_file_content",
                                                  9,
                                                  "grep_search",
                                                  8,
@@ -2929,6 +2934,8 @@
                                                   3,
                                                   "claude-code",
                                                   2,
+                                                  "claude-sonnet-4-6",
+                                                  2,
                                                   "Claude",
                                                   1,
                                                   "preload.js",
@@ -2942,7 +2949,7 @@
                                                   "claude-sonnet-4-6 (scheduled task)",
                                                   1
                                               ],
-                                   "totalEvents":  450,
+                                   "totalEvents":  452,
                                    "models":  [
                                                   "unknown",
                                                   345,
@@ -2960,27 +2967,27 @@
                                                   6,
                                                   "gemini-2.5-pro",
                                                   5,
+                                                  "claude-sonnet-4-6",
+                                                  4,
                                                   "Gemini 3.1 Pro",
                                                   4,
                                                   "gpt-5",
                                                   4,
                                                   "Gemini 3.5 Flash",
                                                   3,
-                                                  "claude-sonnet-4-6",
+                                                  "gemini",
                                                   2,
                                                   "claude-opus-4-5",
                                                   2,
-                                                  "gemini",
-                                                  2,
                                                   "claude-sonnet-4-5",
                                                   1,
-                                                  "gpt-4o",
+                                                  "src/normalization.js",
                                                   1,
                                                   "Gemini 3.1 Pro (Low)",
                                                   1,
                                                   "claude-opus-4-6",
                                                   1,
-                                                  "src/normalization.js",
+                                                  "gpt-4o",
                                                   1,
                                                   "gemini-3.1-pro",
                                                   1,
@@ -3035,12 +3042,12 @@
                                    {
                                        "label":  "Sun",
                                        "dow":  6,
-                                       "count":  49
+                                       "count":  51
                                    }
                                ],
                  "hourSeries":  [
                                     {
-                                        "count":  16,
+                                        "count":  18,
                                         "hour":  0
                                     },
                                     {
@@ -3153,7 +3160,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-31 00:42",
+                 "generatedAtLocal":  "2026-05-31 00:57",
                  "series":  {
                                 "months":  [
                                                {
@@ -3166,7 +3173,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  923
+                                                   "count":  925
                                                }
                                            ],
                                 "days":  [
@@ -4455,19 +4462,24 @@
                                                            }
                                              },
                                              {
-                                                 "projects":  "General Tasks",
-                                                 "entries":  1,
+                                                 "projects":  [
+                                                                  "agent-ledger",
+                                                                  "General Tasks"
+                                                              ],
+                                                 "entries":  3,
                                                  "day":  "2026-05-31",
                                                  "kinds":  {
+                                                               "plan":  1,
+                                                               "general":  2,
                                                                "verification":  1,
-                                                               "general":  1
+                                                               "code-change":  1
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1588
+                                                  "count":  1589
                                               },
                                               {
                                                   "kind":  "verification",
@@ -4475,11 +4487,11 @@
                                               },
                                               {
                                                   "kind":  "plan",
-                                                  "count":  102
+                                                  "count":  103
                                               },
                                               {
                                                   "kind":  "general",
-                                                  "count":  46
+                                                  "count":  47
                                               },
                                               {
                                                   "kind":  "commands",
@@ -4673,7 +4685,7 @@
                                                                    "commands":  13,
                                                                    "verification":  29,
                                                                    "plan":  8,
-                                                                   "general":  19
+                                                                   "general":  20
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -4681,18 +4693,18 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  1,
                                                                         "resume_used":  1,
-                                                                        "interview_started":  1,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "router":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
-                                                     "entries":  112,
+                                                     "entries":  113,
                                                      "recent":  [
-                                                                    "Enabled GitHub CodeQL default setup (Code Scanning) on 8 public repos (vault-explorer, vaultwares-docs, vaultwares-pipelines, vault-flows already configured, vault-central, vaul...",
                                                                     "Confirmed Dependabot alerts/security updates are available on all GitHub plans (no GHAS purchase required). Validated custom GitHub App \u0027gemini-code-assist-for-vaultwares\u0027 metad...",
-                                                                    "Midday project file sync (scheduled task). Read DAILY_RECAP.md and 21 ledger events from 2026-05-30. Updated 3 files: (1) vault-explorer/TASKS.md: marked H1,1,1a,1b,1c,2,2a,2b,2..."
+                                                                    "Midday project file sync (scheduled task). Read DAILY_RECAP.md and 21 ledger events from 2026-05-30. Updated 3 files: (1) vault-explorer/TASKS.md: marked H1,1,1a,1b,1c,2,2a,2b,2...",
+                                                                    "Ran /productivity:update: scanned 7 project TASKS.md files and last 20 ledger entries. Compiled active work summary. Today: CodeQL on 8 repos, Gemini smoke test (vault-explorer ..."
                                                                 ],
                                                      "firstDay":  "2026-04-28",
                                                      "lastDay":  "2026-05-31",
@@ -4807,10 +4819,10 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  2,
                                                                         "resume_used":  2,
-                                                                        "interview_started":  2,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  2,
+                                                                        "router":  2,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
@@ -5006,11 +5018,12 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "commands":  7,
+                                                                   "code-change":  28,
                                                                    "handoff":  2,
-                                                                   "general":  1,
+                                                                   "commands":  7,
                                                                    "verification":  8,
-                                                                   "code-change":  27
+                                                                   "plan":  1,
+                                                                   "general":  1
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -5024,14 +5037,14 @@
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "agent-ledger",
-                                                     "entries":  40,
+                                                     "entries":  41,
                                                      "recent":  [
-                                                                    "Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections â€” tube-sites absorbs fullxxx, vw-jira-sync split out, dropped \u0027fo...",
                                                                     "Fixed local AgentLedgerSync push failure (missing paths in sync script) and pushed updates; prod ledger now refreshed.",
-                                                                    "Removed GitHub Actions workflows so prod deploys are webhook/self-hosted only."
+                                                                    "Removed GitHub Actions workflows so prod deploys are webhook/self-hosted only.",
+                                                                    "Created VaultWares Daily Dashboard system: (1) track-input.py â€” silent Python background tracker using pynput that monitors keystrokes, mouse distance, Ctrl+S/C/V events, char..."
                                                                 ],
                                                      "firstDay":  "2026-04-28",
-                                                     "lastDay":  "2026-05-26",
+                                                     "lastDay":  "2026-05-31",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5339,7 +5352,6 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
-                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5361,10 +5373,11 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
+                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "same_domain_only":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -16290,7 +16303,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-31T04:04:07.9855148Z",
+                 "_maxCreatedAtUtc":  "2026-05-31T04:56:38.1653390Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16298,7 +16311,7 @@
                            },
                  "totals":  {
                                 "projects":  46,
-                                "events":  1908,
+                                "events":  1910,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  79,
                                 "commitEventsWithStats":  679

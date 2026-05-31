@@ -3,6 +3,32 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-31 00:56 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change,plan</code> - Created VaultWares Daily Dashboard system: (1) track-input.py &#226;€” silent Python background tracker using pynput that monitors keystrokes, mouse distance, Ctrl+S/C/V events, char...</summary>
+
+- Kind: code-change,plan
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: chat
+  Permissions: read-write (network: online)
+  CWD: C:\Users\Administrator  Branch: n/a
+  Tools used (this reply): Write, Read, mcp__workspace__bash, mcp__Windows-MCP__PowerShell
+  MCP servers accessed (this reply): Windows-MCP
+  Time: 2026-05-31 00:56 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created VaultWares Daily Dashboard system: (1) track-input.py â€” silent Python background tracker using pynput that monitors keystrokes, mouse distance, Ctrl+S/C/V events, chars typed/pasted; writes hourly JSON to input-logs/YYYY-MM-DD.json. (2) setup-input-tracker.ps1 â€” installs deps, registers two Windows scheduled tasks. (3) render-daily-dashboard.ps1 â€” reads input-logs + ledger, generates DAILY_DASHBOARD.html. Dashboard: LED stat cards, hourly activity bar with range picker, heatmap, deep work score ring, focus blocks, daily trend, rhythm chart, AI model/kinds donuts, project bar, context-switch chart, fun facts. Full VaultWares console theme.
+- Files:
+  - `agent-ledger/scripts/track-input.py`
+  - `agent-ledger/scripts/setup-input-tracker.ps1`
+  - `agent-ledger/scripts/render-daily-dashboard.ps1`
+  - `agent-ledger/DAILY_DASHBOARD.html`
+
+</details>
+
+<details>
 <summary><strong>2026-05-31 00:42 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>general</code> - Ran /productivity:update: scanned 7 project TASKS.md files and last 20 ledger entries. Compiled active work summary. Today: CodeQL on 8 repos, Gemini smoke test (vault-explorer ...</summary>
 
 - Kind: general
@@ -1912,7 +1938,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 20:07 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Removed GitHub Actions workflows so prod deploys are webhook/self-hosted only.</summary>
+<summary><strong>2026-05-26 20:07 - agent-ledger</strong> <code>code-change</code> - Removed GitHub Actions workflows so prod deploys are webhook/self-hosted only.</summary>
 
 - Kind: code-change
 - Actor: AI Agent
