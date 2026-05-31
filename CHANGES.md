@@ -3,7 +3,41 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-30 18:38 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Completed Section 5: Global Mute &amp; Subtab Categorization. (1) Added &#39;Mute Hover Previews&#39; checkbox to settings panel (index.html), wired to appSettings.mutePreviews in settings....</summary>
+<summary><strong>2026-05-30 20:32 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Three-part modernization pass: (1) Stripped unicode arrows from both translation files (EN/QC) — ↺ ↑ ↓ removed from tooltip values since buttons already use SVG. Added refresh a...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gemini-2.5-pro
+  Thinking: high
+  Mode: agent
+  Permissions: ask (network: windows-local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): view_file, replace_file_content, multi_replace_file_content, run_command, command_status, grep_search, search_web
+  MCP servers accessed (this reply): none
+  Time: 2026-05-30 20:32 (TZ: Eastern Standard Time)
+  ```
+- Summary: Three-part modernization pass: (1) Stripped unicode arrows from both translation files (EN/QC) — ↺ ↑ ↓ removed from tooltip values since buttons already use SVG. Added refresh and musicNote SVGs to icons.js. (2) Multi-color audio waveform visualizer for type=audio cards — 12 bars with a violet→cyan→gold→rose→magenta palette, randomized heights+timing, hover-accelerate effect. Audio cards get .audio-card class, dark gradient bg, faint music note watermark. dblclick opens file. (3) Background image enhancement pipeline: registerImageEnhanceHandler in previews.js runs ImageMagick (adaptive-sharpen 1.25x0.75 + modulate 100,120 saturation + sigmoidal-contrast 3x50%) on visible image cards. Result streamed back via image-enhanced IPC event to swap card src live. Registered in main.js, bridged in preload.js, triggered in filters.js on image filter. All tests passed (exit 0).
+- Commands:
+  - `node tests/comprehensive_test.js`
+- Files:
+  - `js/translations.en.js`
+  - `js/translations.qc.js`
+  - `js/icons.js`
+  - `js/navigation/card.js`
+  - `index.css`
+  - `src/previews.js`
+  - `main.js`
+  - `preload.js`
+  - `js/navigation/filters.js`
+- Git: repo=vault-explorer, branch=main, head=56a6a22
+
+</details>
+
+<details>
+<summary><strong>2026-05-30 18:38 - vault-explorer</strong> <code>code-change,verification</code> - Completed Section 5: Global Mute &amp; Subtab Categorization. (1) Added &#39;Mute Hover Previews&#39; checkbox to settings panel (index.html), wired to appSettings.mutePreviews in settings....</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
