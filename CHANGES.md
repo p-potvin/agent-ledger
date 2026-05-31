@@ -3,7 +3,28 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-31 00:04 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>general,verification</code> - Midday project file sync (scheduled task). Read DAILY_RECAP.md and 21 ledger events from 2026-05-30. Updated 3 files: (1) vault-explorer/TASKS.md: marked H1,1,1a,1b,1c,2,2a,2b,2...</summary>
+<summary><strong>2026-05-31 00:42 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>general</code> - Ran /productivity:update: scanned 7 project TASKS.md files and last 20 ledger entries. Compiled active work summary. Today: CodeQL on 8 repos, Gemini smoke test (vault-explorer ...</summary>
+
+- Kind: general
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: chat
+  Permissions: ask (network: online)
+  CWD: C:\Users\Administrator  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-05-31 00:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ran /productivity:update: scanned 7 project TASKS.md files and last 20 ledger entries. Compiled active work summary. Today: CodeQL on 8 repos, Gemini smoke test (vault-explorer PR#34), vw-jira-sync Dependabot webhooks (41 repos), tube-sites punch-list (duplicate footer, unified nav, search btn fix).
+
+</details>
+
+<details>
+<summary><strong>2026-05-31 00:04 - General Tasks</strong> <code>general,verification</code> - Midday project file sync (scheduled task). Read DAILY_RECAP.md and 21 ledger events from 2026-05-30. Updated 3 files: (1) vault-explorer/TASKS.md: marked H1,1,1a,1b,1c,2,2a,2b,2...</summary>
 
 - Kind: general,verification
 - Actor: claude-sonnet-4-6 (scheduled task)
