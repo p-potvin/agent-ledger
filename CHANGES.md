@@ -3,7 +3,32 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-31 00:56 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change,plan</code> - Created VaultWares Daily Dashboard system: (1) track-input.py &#226;€” silent Python background tracker using pynput that monitors keystrokes, mouse distance, Ctrl+S/C/V events, char...</summary>
+<summary><strong>2026-05-31 02:35 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Revised DAILY_DASHBOARD theme per user feedback: removed all cyan, muted all accent colors (gold #b8882e, violet #8a62c0, green #4e9954, amber #c49840, orange #a86840, red #a84e...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: chat
+  Permissions: read-write (network: online)
+  CWD: C:\Users\Administrator  Branch: n/a
+  Tools used (this reply): Read, Edit, mcp__Windows-MCP__PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-05-31 02:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Revised DAILY_DASHBOARD theme per user feedback: removed all cyan, muted all accent colors (gold #b8882e, violet #8a62c0, green #4e9954, amber #c49840, orange #a86840, red #a84e5a), LED dots reduced to 6px with single soft glow and slower fade-only animation, removed glassmorphism/gradient backgrounds from all cards (solid surface2 only), removed scanline ::before overlays, heatmap switched to violet levels. Also fixed setup-input-tracker.ps1 scheduled task registration to use conhost.exe --headless as the executable per spec.
+- Files:
+  - `agent-ledger/scripts/render-daily-dashboard.ps1`
+  - `agent-ledger/scripts/setup-input-tracker.ps1`
+  - `agent-ledger/DAILY_DASHBOARD.html`
+
+</details>
+
+<details>
+<summary><strong>2026-05-31 00:56 - agent-ledger</strong> <code>code-change,plan</code> - Created VaultWares Daily Dashboard system: (1) track-input.py &#226;€” silent Python background tracker using pynput that monitors keystrokes, mouse distance, Ctrl+S/C/V events, char...</summary>
 
 - Kind: code-change,plan
 - Actor: claude-sonnet-4-6

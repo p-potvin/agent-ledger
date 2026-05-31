@@ -118,32 +118,32 @@ $html = @"
   --font-mono: "JetBrains Mono","Cascadia Code",Consolas,ui-monospace,monospace;
   --bg:        #0e0c18;
   --surface:   #161320;
-  --surface2:  #1f1a2b;
-  --surface3:  #2a2340;
+  --surface2:  #1c1826;
+  --surface3:  #231e30;
   --border:    rgba(255,255,255,0.07);
-  --fg:        #ede6ff;
-  --muted:     rgba(237,230,255,0.55);
-  --dim:       rgba(237,230,255,0.28);
-  --gold:      #d6a441;
-  --gold-glow: rgba(214,164,65,0.35);
-  --gold-dim:  rgba(214,164,65,0.15);
-  --cyan:      #55d6ff;
-  --cyan-glow: rgba(85,214,255,0.35);
-  --violet:    #b07cff;
-  --violet-glow: rgba(176,124,255,0.35);
-  --green:     #6be675;
-  --green-glow:rgba(107,230,117,0.35);
-  --red:       #ff6b7a;
-  --red-glow:  rgba(255,107,122,0.35);
-  --orange:    #ff9f55;
-  --orange-glow: rgba(255,159,85,0.35);
+  --fg:        #d8d0f0;
+  --muted:     rgba(216,208,240,0.48);
+  --dim:       rgba(216,208,240,0.24);
+  --gold:      #b8882e;
+  --gold-glow: rgba(184,136,46,0.28);
+  --gold-dim:  rgba(184,136,46,0.12);
+  --amber:     #c49840;
+  --amber-glow:rgba(196,152,64,0.22);
+  --violet:    #8a62c0;
+  --violet-glow:rgba(138,98,192,0.28);
+  --green:     #4e9954;
+  --green-glow:rgba(78,153,84,0.28);
+  --red:       #a84e5a;
+  --red-glow:  rgba(168,78,90,0.28);
+  --orange:    #a86840;
+  --orange-glow:rgba(168,104,64,0.28);
 }
 
 /* ===== Reset ===== */
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;font-family:var(--font-sans);background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh}
 main{max-width:1200px;margin:0 auto;padding:24px 16px 80px}
-a{color:var(--cyan)}
+a{color:var(--gold)}
 canvas{display:block}
 
 /* ===== Header ===== */
@@ -151,19 +151,19 @@ header{display:flex;align-items:center;justify-content:space-between;flex-wrap:w
 .brand{display:flex;align-items:center;gap:10px}
 .brand-badge{background:var(--gold-dim);border:1px solid var(--gold-glow);border-radius:6px;padding:3px 10px;font-size:10px;font-weight:800;color:var(--gold);letter-spacing:.1em;text-transform:uppercase}
 h1{margin:0;font-size:22px;font-weight:800;letter-spacing:-.01em}
-h1 span{color:var(--cyan)}
+h1 span{color:var(--gold)}
 .meta-row{color:var(--muted);font-size:12px;margin-top:2px}
 
 /* ===== Range Picker ===== */
 .range-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .range-row label{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
 .range-btn{appearance:none;border:1px solid var(--border);border-radius:6px;padding:6px 14px;background:var(--surface2);color:var(--muted);font-size:12px;font-weight:600;cursor:pointer;transition:all .15s;font-family:var(--font-sans)}
-.range-btn:hover{border-color:var(--cyan);color:var(--cyan)}
-.range-btn.active{background:rgba(85,214,255,.12);border-color:var(--cyan);color:var(--cyan);box-shadow:0 0 10px rgba(85,214,255,.2)}
+.range-btn:hover{border-color:var(--gold);color:var(--gold)}
+.range-btn.active{background:var(--gold-dim);border-color:var(--gold);color:var(--gold)}
 .custom-row{display:flex;gap:8px;align-items:center;margin-top:6px;display:none}
 .custom-row.visible{display:flex}
 .custom-row input{appearance:none;border:1px solid var(--border);border-radius:6px;padding:5px 10px;background:var(--surface2);color:var(--fg);font-size:12px;font-family:var(--font-mono)}
-.custom-row button{appearance:none;border:1px solid var(--cyan-glow);border-radius:6px;padding:5px 12px;background:rgba(85,214,255,.1);color:var(--cyan);font-size:12px;font-weight:700;cursor:pointer;font-family:var(--font-sans)}
+.custom-row button{appearance:none;border:1px solid var(--gold-glow);border-radius:6px;padding:5px 12px;background:var(--gold-dim);color:var(--gold);font-size:12px;font-weight:700;cursor:pointer;font-family:var(--font-sans)}
 
 /* ===== Grid ===== */
 section{margin-top:24px}
@@ -178,53 +178,39 @@ section{margin-top:24px}
 @media(max-width:560px){.span2,.span3,.span4,.span6,.span8{grid-column:span 12}}
 
 /* ===== Cards ===== */
-.card{border:1px solid var(--border);background:var(--surface);border-radius:12px;padding:16px;position:relative;overflow:hidden}
-.card::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.025) 3px,rgba(0,0,0,.025) 4px);pointer-events:none;border-radius:inherit}
+.card{border:1px solid var(--border);background:var(--surface);border-radius:12px;padding:16px;position:relative}
 .card-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 10px}
 .big-num{font-size:32px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums;font-family:var(--font-mono)}
 .big-sub{font-size:11px;color:var(--muted);margin-top:4px}
 section > h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 10px}
 
 /* ===== LED Stat Cards ===== */
-.led-card{border-radius:12px;padding:16px 16px 14px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:4px}
-.led-card::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,.04) 3px,rgba(0,0,0,.04) 4px);pointer-events:none;border-radius:inherit}
-.led-card .led-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;animation:ledpulse 2.4s ease-in-out infinite}
-@keyframes ledpulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.85)}}
-.led-header{display:flex;align-items:center;gap:8px}
-.led-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-.led-value{font-size:28px;font-weight:800;font-family:var(--font-mono);line-height:1.1;font-variant-numeric:tabular-nums}
-.led-unit{font-size:11px;font-weight:600;opacity:.7;margin-left:3px}
-.led-sub{font-size:11px;margin-top:2px}
+.led-card{border-radius:12px;padding:16px 16px 14px;background:var(--surface2);border:1px solid var(--border);display:flex;flex-direction:column;gap:4px}
+.led-card .led-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;animation:ledpulse 3s ease-in-out infinite}
+@keyframes ledpulse{0%,100%{opacity:1}60%{opacity:.4}}
+.led-header{display:flex;align-items:center;gap:7px}
+.led-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.led-value{font-size:26px;font-weight:800;font-family:var(--font-mono);line-height:1.1;font-variant-numeric:tabular-nums}
+.led-unit{font-size:11px;font-weight:600;opacity:.6;margin-left:2px}
+.led-sub{font-size:11px;color:var(--muted);margin-top:2px}
 
-.led-cyan{background:linear-gradient(135deg,rgba(85,214,255,.1),rgba(85,214,255,.04));border:1px solid rgba(85,214,255,.25)}
-.led-cyan .led-dot{background:var(--cyan);box-shadow:0 0 6px var(--cyan),0 0 14px var(--cyan),0 0 24px var(--cyan)}
-.led-cyan .led-label{color:var(--cyan)}
-.led-cyan .led-value{color:var(--cyan)}
-
-.led-violet{background:linear-gradient(135deg,rgba(176,124,255,.1),rgba(176,124,255,.04));border:1px solid rgba(176,124,255,.25)}
-.led-violet .led-dot{background:var(--violet);box-shadow:0 0 6px var(--violet),0 0 14px var(--violet),0 0 24px var(--violet)}
-.led-violet .led-label{color:var(--violet)}
-.led-violet .led-value{color:var(--violet)}
-
-.led-gold{background:linear-gradient(135deg,rgba(214,164,65,.1),rgba(214,164,65,.04));border:1px solid rgba(214,164,65,.25)}
-.led-gold .led-dot{background:var(--gold);box-shadow:0 0 6px var(--gold),0 0 14px var(--gold),0 0 24px var(--gold)}
-.led-gold .led-label{color:var(--gold)}
+.led-gold .led-dot{background:var(--gold);box-shadow:0 0 5px var(--gold)}
 .led-gold .led-value{color:var(--gold)}
 
-.led-green{background:linear-gradient(135deg,rgba(107,230,117,.1),rgba(107,230,117,.04));border:1px solid rgba(107,230,117,.25)}
-.led-green .led-dot{background:var(--green);box-shadow:0 0 6px var(--green),0 0 14px var(--green),0 0 24px var(--green)}
-.led-green .led-label{color:var(--green)}
+.led-violet .led-dot{background:var(--violet);box-shadow:0 0 5px var(--violet)}
+.led-violet .led-value{color:var(--violet)}
+
+.led-green .led-dot{background:var(--green);box-shadow:0 0 5px var(--green)}
 .led-green .led-value{color:var(--green)}
 
-.led-red{background:linear-gradient(135deg,rgba(255,107,122,.1),rgba(255,107,122,.04));border:1px solid rgba(255,107,122,.25)}
-.led-red .led-dot{background:var(--red);box-shadow:0 0 6px var(--red),0 0 14px var(--red),0 0 24px var(--red)}
-.led-red .led-label{color:var(--red)}
-.led-red .led-value{color:var(--red)}
+.led-amber .led-dot{background:var(--amber);box-shadow:0 0 5px var(--amber)}
+.led-amber .led-value{color:var(--amber)}
 
-.led-orange{background:linear-gradient(135deg,rgba(255,159,85,.1),rgba(255,159,85,.04));border:1px solid rgba(255,159,85,.25)}
-.led-orange .led-dot{background:var(--orange);box-shadow:0 0 6px var(--orange),0 0 14px var(--orange),0 0 24px var(--orange)}
-.led-orange .led-label{color:var(--orange)}
+.led-orange .led-dot{background:var(--orange);box-shadow:0 0 5px var(--orange)}
 .led-orange .led-value{color:var(--orange)}
+
+.led-red .led-dot{background:var(--red);box-shadow:0 0 5px var(--red)}
+.led-red .led-value{color:var(--red)}
 
 /* ===== Hourly Chart ===== */
 .chart-wrap{position:relative;width:100%;height:240px}
@@ -233,12 +219,12 @@ section > h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spac
 .heatWrap{overflow-x:auto;scrollbar-width:thin}
 .heat{display:grid;grid-auto-flow:column;grid-auto-columns:13px;gap:3px;align-items:start;padding:6px 4px 4px}
 .heatCol{display:grid;grid-template-rows:repeat(7,13px);gap:3px}
-.cell{width:13px;height:13px;border-radius:3px;background:rgba(176,124,255,.07);cursor:default;transition:transform .1s}
+.cell{width:13px;height:13px;border-radius:3px;background:rgba(255,255,255,.05);cursor:default;transition:transform .1s}
 .cell:hover{transform:scale(1.4)}
-.lvl1{background:rgba(85,214,255,.18)}
-.lvl2{background:rgba(85,214,255,.4)}
-.lvl3{background:rgba(85,214,255,.65)}
-.lvl4{background:var(--cyan);box-shadow:0 0 5px var(--cyan)}
+.lvl1{background:rgba(138,98,192,.25)}
+.lvl2{background:rgba(138,98,192,.48)}
+.lvl3{background:rgba(138,98,192,.72)}
+.lvl4{background:var(--violet)}
 .heatLegend{display:flex;gap:8px;align-items:center;justify-content:flex-end;font-size:11px;color:var(--muted);padding:0 4px 4px}
 .legendSwatch{display:flex;gap:3px;align-items:center}
 .heatMonths{display:flex;gap:3px;padding:0 4px;font-size:9px;color:var(--dim);overflow-x:auto;scrollbar-width:none}
@@ -288,9 +274,8 @@ section > h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spac
 /* ===== Misc ===== */
 .sep{border:none;border-top:1px solid var(--border);margin:0}
 .tag{display:inline-block;padding:1px 7px;border-radius:999px;font-size:10px;font-weight:700;border:1px solid}
-.tag-cyan{background:rgba(85,214,255,.1);border-color:rgba(85,214,255,.3);color:var(--cyan)}
-.tag-violet{background:rgba(176,124,255,.1);border-color:rgba(176,124,255,.3);color:var(--violet)}
-.tag-gold{background:rgba(214,164,65,.1);border-color:rgba(214,164,65,.3);color:var(--gold)}
+.tag-violet{background:var(--surface3);border-color:rgba(138,98,192,.3);color:var(--violet)}
+.tag-gold{background:var(--gold-dim);border-color:var(--gold-glow);color:var(--gold)}
 </style>
 </head>
 <body>
@@ -326,35 +311,35 @@ section > h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spac
 <!-- ===== LED Stat Strip ===== -->
 <section>
   <div class="grid" id="ledStrip">
-    <div class="led-card led-cyan span2" id="card-keys">
+    <div class="led-card led-gold span2" id="card-keys">
       <div class="led-header"><div class="led-dot"></div><div class="led-label">Keystrokes</div></div>
       <div class="led-value" id="v-keys">—</div>
-      <div class="led-sub" style="color:var(--muted)" id="s-keys"></div>
+      <div class="led-sub" id="s-keys"></div>
     </div>
     <div class="led-card led-violet span2" id="card-mouse">
       <div class="led-header"><div class="led-dot"></div><div class="led-label">Mouse Travel</div></div>
       <div class="led-value" id="v-mouse">—<span class="led-unit">m</span></div>
-      <div class="led-sub" style="color:var(--muted)" id="s-mouse"></div>
+      <div class="led-sub" id="s-mouse"></div>
     </div>
     <div class="led-card led-green span2" id="card-saves">
       <div class="led-header"><div class="led-dot"></div><div class="led-label">Saves</div></div>
       <div class="led-value" id="v-saves">—</div>
-      <div class="led-sub" style="color:var(--muted)" id="s-saves"></div>
+      <div class="led-sub" id="s-saves"></div>
     </div>
-    <div class="led-card led-gold span2" id="card-copies">
+    <div class="led-card led-amber span2" id="card-copies">
       <div class="led-header"><div class="led-dot"></div><div class="led-label">Copies</div></div>
       <div class="led-value" id="v-copies">—</div>
-      <div class="led-sub" style="color:var(--muted)" id="s-copies"></div>
+      <div class="led-sub" id="s-copies"></div>
     </div>
     <div class="led-card led-orange span2" id="card-chars">
       <div class="led-header"><div class="led-dot"></div><div class="led-label">Chars Typed</div></div>
       <div class="led-value" id="v-chars">—</div>
-      <div class="led-sub" style="color:var(--muted)" id="s-chars"></div>
+      <div class="led-sub" id="s-chars"></div>
     </div>
     <div class="led-card led-red span2" id="card-pastes">
       <div class="led-header"><div class="led-dot"></div><div class="led-label">Pastes</div></div>
       <div class="led-value" id="v-pastes">—</div>
-      <div class="led-sub" style="color:var(--muted)" id="s-pastes"></div>
+      <div class="led-sub" id="s-pastes"></div>
     </div>
   </div>
 </section>
@@ -389,10 +374,10 @@ section > h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spac
         <div class="score-label">Deep Work Score</div>
         <div class="score-ring">
           <svg width="110" height="110" viewBox="0 0 110 110">
-            <circle cx="55" cy="55" r="46" fill="none" stroke="rgba(176,124,255,0.1)" stroke-width="10"/>
+            <circle cx="55" cy="55" r="46" fill="none" stroke="rgba(138,98,192,0.12)" stroke-width="10"/>
             <circle id="scoreArc" cx="55" cy="55" r="46" fill="none" stroke="var(--violet)" stroke-width="10"
               stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="289"
-              style="transition:stroke-dashoffset 1s ease;filter:drop-shadow(0 0 6px var(--violet))"/>
+              style="transition:stroke-dashoffset 1s ease"/>
           </svg>
           <div class="score-inner">
             <div class="score-num" id="scoreNum">—</div>
@@ -580,8 +565,8 @@ Chart.defaults.font.family = '"Inter","Segoe UI",sans-serif';
 Chart.defaults.font.size = 11;
 
 const DONUT_COLORS = [
-  '#55d6ff','#b07cff','#d6a441','#6be675','#ff6b7a','#ff9f55',
-  '#3da9d4','#8a5fd4','#aa8030','#4da850'
+  '#b8882e','#8a62c0','#4e9954','#c49840','#a86840','#a84e5a',
+  '#9a7428','#6a4aa0','#3a7840','#8a5830'
 ];
 
 function makeChart(id, cfg){ return new Chart(document.getElementById(id).getContext('2d'), cfg); }
@@ -607,7 +592,7 @@ function initCharts(){
 
   trendChartInst = makeChart('trendChart', {
     type:'bar',
-    data:{ labels:[], datasets:[{ data:[], backgroundColor:'rgba(85,214,255,0.5)', borderRadius:3, borderSkipped:false }] },
+    data:{ labels:[], datasets:[{ data:[], backgroundColor:'rgba(184,136,46,0.55)', borderRadius:3, borderSkipped:false }] },
     options:{ ...barOpts, plugins:{ ...barOpts.plugins,
       tooltip:{ callbacks:{ label: ctx=>`${fmt(ctx.parsed.y)} keystrokes` } }
     }}
@@ -616,7 +601,7 @@ function initCharts(){
   rhythmChartInst = makeChart('rhythmChart', {
     type:'bar',
     data:{ labels: Array.from({length:24},(_,i)=>i+'h'), datasets:[{
-      data:[], backgroundColor:'rgba(176,124,255,0.5)', borderRadius:3, borderSkipped:false
+      data:[], backgroundColor:'rgba(138,98,192,0.55)', borderRadius:3, borderSkipped:false
     }]},
     options:{ ...barOpts, plugins:{ ...barOpts.plugins,
       tooltip:{ callbacks:{ label:ctx=>`${fmtDec(ctx.parsed.y)} avg keystrokes` } }
@@ -641,7 +626,7 @@ function initCharts(){
 
   switchChartInst = makeChart('switchChart', {
     type:'bar',
-    data:{ labels:[], datasets:[{ data:[], backgroundColor:'rgba(214,164,65,0.5)', borderRadius:3, borderSkipped:false }] },
+    data:{ labels:[], datasets:[{ data:[], backgroundColor:'rgba(184,136,46,0.5)', borderRadius:3, borderSkipped:false }] },
     options:{ ...barOpts, plugins:{ ...barOpts.plugins,
       tooltip:{ callbacks:{ label:ctx=>`${ctx.parsed.y} project switch${ctx.parsed.y===1?'':'es'}` } }
     }}
@@ -699,10 +684,10 @@ function render(){
   const maxH = Math.max(...hourlyData,1);
   hourlyColors = hourlyData.map(v=>{
     const ratio = v/maxH;
-    if(ratio>.75) return 'rgba(85,214,255,0.9)';
-    if(ratio>.5)  return 'rgba(85,214,255,0.65)';
-    if(ratio>.25) return 'rgba(85,214,255,0.4)';
-    return 'rgba(85,214,255,0.2)';
+    if(ratio>.75) return 'rgba(184,136,46,0.9)';
+    if(ratio>.5)  return 'rgba(184,136,46,0.65)';
+    if(ratio>.25) return 'rgba(184,136,46,0.42)';
+    return 'rgba(184,136,46,0.2)';
   });
   hourlyChartInst.data.labels   = hourlyLabels;
   hourlyChartInst.data.datasets[0].data = hourlyData;
@@ -731,7 +716,7 @@ function render(){
   const events = ledgerInRange(range);
   buildDonut(modelChartInst, countBy(events,'model'));
   buildDonut(kindsChartInst, countBy(events,'kind'));
-  buildProjectsBar(events);
+  buildProjectsBar(events, range);
   buildSwitchChart(days, events);
 
   /* ---- fun facts ---- */
@@ -860,7 +845,7 @@ function buildFocus(today){
 
   const hourlyK = row.hourly.map(h=>h.keystrokes||0);
   const TOTAL_MINS = 24*60;
-  const BLOCK_COLORS = ['#55d6ff','#b07cff','#d6a441','#6be675','#ff9f55'];
+  const BLOCK_COLORS = ['#b8882e','#8a62c0','#4e9954','#c49840','#a86840'];
   let colorIdx=0;
 
   // Find blocks of consecutive active hours (threshold: >30 keys)
@@ -903,7 +888,7 @@ function buildDonut(chart, counts){
 /* ============================================================
    Projects bar list
    ============================================================ */
-function buildProjectsBar(events){
+function buildProjectsBar(events, range){
   const el = document.getElementById('projectsBar');
   const counts = countBy(events,'project');
   const entries = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,8);
@@ -912,7 +897,7 @@ function buildProjectsBar(events){
   el.innerHTML = entries.map(([p,n])=>`
     <div class="bar-row">
       <div class="bar-label" title="${p}">${p}</div>
-      <div class="bar-track"><div class="bar-fill" style="width:${(n/max*100).toFixed(1)}%;background:var(--violet)"></div></div>
+      <div class="bar-track"><div class="bar-fill" style="width:${(n/max*100).toFixed(1)}%;background:var(--gold)"></div></div>
       <div class="bar-n">${n}</div>
     </div>`).join('');
 }

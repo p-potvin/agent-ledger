@@ -86,9 +86,10 @@ Write-Host "Registering scheduled task: $TrackerTask ..." -ForegroundColor Yello
 
 Unregister-ScheduledTask -TaskName $TrackerTask -Confirm:$false -ErrorAction SilentlyContinue | Out-Null
 
+$conhost = "$env:SystemRoot\System32\conhost.exe"
 $trackerAction = New-ScheduledTaskAction `
-    -Execute    $pythonResolved `
-    -Argument   "`"$TrackerScript`"" `
+    -Execute    $conhost `
+    -Argument   "--headless powershell.exe -NoProfile -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -Command `"& '$pythonResolved' '$TrackerScript'`"" `
     -WorkingDirectory $ScriptDir
 
 $trackerTrigger  = New-ScheduledTaskTrigger -AtLogOn
@@ -122,8 +123,8 @@ Unregister-ScheduledTask -TaskName $RendererTask -Confirm:$false -ErrorAction Si
 $midnight = (Get-Date -Hour 0 -Minute 5 -Second 0).ToString("HH:mm")
 
 $renderAction = New-ScheduledTaskAction `
-    -Execute    "powershell.exe" `
-    -Argument   "-NonInteractive -WindowStyle Hidden -File `"$RenderScript`" -LedgerRoot `"$LedgerRoot`"" `
+    -Execute    $conhost `
+    -Argument   "--headless powershell.exe -NoProfile -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -File `"$RenderScript`" -LedgerRoot `"$LedgerRoot`"" `
     -WorkingDirectory $LedgerRoot
 
 $renderTrigger  = New-ScheduledTaskTrigger -Daily -At $midnight
