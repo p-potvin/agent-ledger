@@ -3,7 +3,33 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-31 04:13 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Remuxed Demucs vocal output to mono using FFmpeg -ac 1 instantly instead of Python channel mean manipulation. Implemented keyboard shortcut (Ctrl+Escape) to toggle Picture-in-Pi...</summary>
+<summary><strong>2026-05-31 04:34 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Implemented modular Playlist Engine in js/playlist-view.js. Decoupled playlist list and grid view rendering. Integrated playlist toggle and state deactivation on tab switch insi...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-exp-1206
+  Thinking: high
+  Mode: code
+  Permissions: autopilot (network: windows)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): view_file, replace_file_content, write_to_file, run_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-31 04:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented modular Playlist Engine in js/playlist-view.js. Decoupled playlist list and grid view rendering. Integrated playlist toggle and state deactivation on tab switch inside tabs.js. Resolved audio hover overlap bugs in utils.js to enforce single preview audio playback.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\playlist-view.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\navigation\tabs.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\utils.js`
+- Git: repo=vault-explorer, branch=main, head=56a6a22
+
+</details>
+
+<details>
+<summary><strong>2026-05-31 04:13 - vault-explorer</strong> <code>code-change,verification</code> - Remuxed Demucs vocal output to mono using FFmpeg -ac 1 instantly instead of Python channel mean manipulation. Implemented keyboard shortcut (Ctrl+Escape) to toggle Picture-in-Pi...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
