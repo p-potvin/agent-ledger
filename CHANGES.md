@@ -3,7 +3,33 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-31 04:42 - vault-explorer (formerly Vault Explorer)</strong> <code>plan</code> - Designed an implementation plan to stabilize TMDB request handling and pagination race conditions, and to repair the Shift+Esc Picture-in-Picture keybinding trigger in the video...</summary>
+<summary><strong>2026-05-31 04:52 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Implemented thread-safe asynchronous request serialization in js/tmdb.js with tmdbRequestId and tmdbIsFetching locks, preventing race conditions during pagination. Repaired the ...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-3.5-flash
+  Thinking: medium
+  Mode: code
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): replace_file_content, write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-05-31 04:52 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented thread-safe asynchronous request serialization in js/tmdb.js with tmdbRequestId and tmdbIsFetching locks, preventing race conditions during pagination. Repaired the Shift+Esc video player keybinding in js/player/player.js by allowing Shift/Ctrl modifiers to toggle PiP mode while blocking standard Escape close-modal actions.
+- Files:
+  - `js/tmdb.js`
+  - `js/player/player.js`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=56a6a22
+
+</details>
+
+<details>
+<summary><strong>2026-05-31 04:42 - vault-explorer</strong> <code>plan</code> - Designed an implementation plan to stabilize TMDB request handling and pagination race conditions, and to repair the Shift+Esc Picture-in-Picture keybinding trigger in the video...</summary>
 
 - Kind: plan
 - Actor: Antigravity
