@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-05-31T09:12:01.4671315Z",
+    "lastUpdatedUtc":  "2026-05-31T09:27:01.5990798Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1925,7 +1925,8 @@
                                        "20260531-043456-861-vault-explorer-1946cd94",
                                        "20260531-044018-644-vault-explorer-cc33f517",
                                        "20260531-044236-712-vault-explorer-9bb6e91d",
-                                       "20260531-045249-350-vault-explorer-04e31eff"
+                                       "20260531-045249-350-vault-explorer-04e31eff",
+                                       "20260531-052340-055-vault-explorer-b6cd6802"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2877,7 +2878,7 @@
                                                                         "gemini-3.5-flash",
                                                                         "gemini-exp-1206"
                                                                     ],
-                                                         "count":  11
+                                                         "count":  12
                                                      }
                                                  ],
                                    "tools":  [
@@ -2890,7 +2891,7 @@
                                                  "replace_file_content",
                                                  21,
                                                  "write_to_file",
-                                                 20,
+                                                 21,
                                                  "git",
                                                  17,
                                                  "apply_patch",
@@ -2916,7 +2917,7 @@
                                                   "AI Agent",
                                                   369,
                                                   "Antigravity",
-                                                  43,
+                                                  44,
                                                   "codex",
                                                   8,
                                                   "Claude Code (Opus 4.7)",
@@ -2934,7 +2935,7 @@
                                                   "Claude",
                                                   1
                                               ],
-                                   "totalEvents":  434,
+                                   "totalEvents":  435,
                                    "models":  [
                                                   "unknown",
                                                   335,
@@ -2958,11 +2959,11 @@
                                                   3,
                                                   "Gemini 3.1 Pro",
                                                   3,
-                                                  "gemini-2.5-flash-thinking",
-                                                  2,
                                                   "gemini-3.5-flash",
-                                                  2,
+                                                  3,
                                                   "gemini",
+                                                  2,
+                                                  "gemini-2.5-flash-thinking",
                                                   2,
                                                   "GPT-5",
                                                   2,
@@ -2972,15 +2973,15 @@
                                                   1,
                                                   "src/normalization.js",
                                                   1,
-                                                  "claude-sonnet-4-5",
-                                                  1,
                                                   "claude-opus-4-6",
                                                   1,
-                                                  "gemini-exp-1206",
+                                                  "claude-sonnet-4-5",
+                                                  1,
+                                                  "gemini-3.1-pro",
                                                   1,
                                                   "Gemini 3.1 Pro (Low)",
                                                   1,
-                                                  "gemini-3.1-pro",
+                                                  "gemini-exp-1206",
                                                   1,
                                                   "gemini-pro",
                                                   1,
@@ -3029,7 +3030,7 @@
                                    {
                                        "label":  "Sun",
                                        "dow":  6,
-                                       "count":  59
+                                       "count":  60
                                    }
                                ],
                  "hourSeries":  [
@@ -3054,7 +3055,7 @@
                                         "hour":  4
                                     },
                                     {
-                                        "count":  6,
+                                        "count":  7,
                                         "hour":  5
                                     },
                                     {
@@ -3147,7 +3148,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-05-31 05:12",
+                 "generatedAtLocal":  "2026-05-31 05:27",
                  "series":  {
                                 "months":  [
                                                {
@@ -3160,7 +3161,7 @@
                                                },
                                                {
                                                    "month":  "2026-05",
-                                                   "count":  933
+                                                   "count":  934
                                                }
                                            ],
                                 "days":  [
@@ -4454,10 +4455,10 @@
                                                                   "General Tasks",
                                                                   "vault-explorer"
                                                               ],
-                                                 "entries":  11,
+                                                 "entries":  12,
                                                  "day":  "2026-05-31",
                                                  "kinds":  {
-                                                               "plan":  2,
+                                                               "plan":  3,
                                                                "general":  2,
                                                                "verification":  6,
                                                                "code-change":  8
@@ -4475,7 +4476,7 @@
                                               },
                                               {
                                                   "kind":  "plan",
-                                                  "count":  104
+                                                  "count":  105
                                               },
                                               {
                                                   "kind":  "general",
@@ -4493,11 +4494,11 @@
                                 "projects":  [
                                                  {
                                                      "kinds":  {
+                                                                   "code-change":  167,
                                                                    "commands":  1,
-                                                                   "plan":  34,
-                                                                   "general":  3,
                                                                    "verification":  37,
-                                                                   "code-change":  167
+                                                                   "plan":  35,
+                                                                   "general":  3
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  9674,
@@ -4508,11 +4509,11 @@
 
                                                                     },
                                                      "project":  "vault-explorer",
-                                                     "entries":  218,
+                                                     "entries":  219,
                                                      "recent":  [
-                                                                    "Refactored media pipeline persistence. Stored and pre-filled preferred ASR/translation language settings in window.appSettings to ensure persistence. Decoupled subtitle/translat...",
                                                                     "Designed an implementation plan to stabilize TMDB request handling and pagination race conditions, and to repair the Shift+Esc Picture-in-Picture keybinding trigger in the video...",
-                                                                    "Implemented thread-safe asynchronous request serialization in js/tmdb.js with tmdbRequestId and tmdbIsFetching locks, preventing race conditions during pagination. Repaired the ..."
+                                                                    "Implemented thread-safe asynchronous request serialization in js/tmdb.js with tmdbRequestId and tmdbIsFetching locks, preventing race conditions during pagination. Repaired the ...",
+                                                                    "Created implementation plan to optimize folder creation, renaming, and removal, as well as file deletion operations, by transitioning them to instant local state updates and sof..."
                                                                 ],
                                                      "firstDay":  "2026-04-19",
                                                      "lastDay":  "2026-05-31",
@@ -4681,10 +4682,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  1,
                                                                         "resume_used":  1,
-                                                                        "interview_started":  1,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "router":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
@@ -4807,10 +4808,10 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  2,
                                                                         "resume_used":  2,
-                                                                        "interview_started":  2,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  2,
+                                                                        "router":  2,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
@@ -5340,7 +5341,6 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
-                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5362,10 +5362,11 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
+                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "same_domain_only":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -16291,7 +16292,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-05-31T08:52:49.3506856Z",
+                 "_maxCreatedAtUtc":  "2026-05-31T09:23:40.0550569Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16299,7 +16300,7 @@
                            },
                  "totals":  {
                                 "projects":  46,
-                                "events":  1918,
+                                "events":  1919,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  79,
                                 "commitEventsWithStats":  679

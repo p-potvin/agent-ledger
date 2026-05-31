@@ -3,7 +3,63 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-31 04:52 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Implemented thread-safe asynchronous request serialization in js/tmdb.js with tmdbRequestId and tmdbIsFetching locks, preventing race conditions during pagination. Repaired the ...</summary>
+<summary><strong>2026-05-31 05:27 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Decoupled virtual folder deletion, file deletion, and folder renaming/creation actions from full disk-bound directory re-scans (loadDirectory) in js/navigation/card.js, js/navig...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-2.5-pro
+  Thinking: high
+  Mode: code
+  Permissions: autopilot (network: Windows)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): replace_file_content, run_command, view_file
+  MCP servers accessed (this reply): none
+  Time: 2026-05-31 05:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: Decoupled virtual folder deletion, file deletion, and folder renaming/creation actions from full disk-bound directory re-scans (loadDirectory) in js/navigation/card.js, js/navigation/keybindings.js, and js/navigation/card-events.js. The UI now utilizes applyFilters() and invalidateRootCache() for instant updates without disk latency.
+- Commands:
+  - `node -c js/navigation/card-events.js js/navigation/keybindings.js js/navigation/card.js`
+- Files:
+  - `js/navigation/card-events.js`
+  - `js/navigation/keybindings.js`
+  - `js/navigation/card.js`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
+<summary><strong>2026-05-31 05:23 - vault-explorer</strong> <code>plan</code> - Created implementation plan to optimize folder creation, renaming, and removal, as well as file deletion operations, by transitioning them to instant local state updates and sof...</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-3.5-flash
+  Thinking: medium
+  Mode: plan
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-05-31 05:23 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created implementation plan to optimize folder creation, renaming, and removal, as well as file deletion operations, by transitioning them to instant local state updates and soft filters instead of expensive physical directory disk re-scans.
+- Files:
+  - `js/navigation/card-events.js`
+  - `js/navigation/keybindings.js`
+  - `js/navigation/card.js`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
+<summary><strong>2026-05-31 04:52 - vault-explorer</strong> <code>code-change,verification</code> - Implemented thread-safe asynchronous request serialization in js/tmdb.js with tmdbRequestId and tmdbIsFetching locks, preventing race conditions during pagination. Repaired the ...</summary>
 
 - Kind: code-change,verification
 - Actor: Antigravity
