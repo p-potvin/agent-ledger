@@ -1,0 +1,43 @@
+﻿{
+    "id":  "20260531-000407-985-general-tasks-0f2ada13",
+    "createdAt":  "2026-05-31T04:04:07.9855148Z",
+    "createdAtLocal":  "2026-05-31 00:04",
+    "timezone":  "Eastern Standard Time",
+    "project":  "General Tasks",
+    "kind":  "general,verification",
+    "actor":  "claude-sonnet-4-6 (scheduled task)",
+    "agentHeader":  "Agent: claude-sonnet-4-6 (scheduled task) (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: false\r\nMode: agent\r\nPermissions: read-write (network: online)\r\nCWD: G:\\mega\\TooTwistedTabooVIP Pack  Branch: n/a\r\nTools used (this reply): mcp__VaultWares_MCP__MCP_Server___ledger_get_recent, mcp__VaultWares_MCP__MCP_Server___sh_run\r\nMCP servers accessed (this reply): VaultWares MCP\r\nTime: 2026-05-31 00:04 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6",
+                    "thinking":  "false",
+                    "mode":  "agent",
+                    "permissions":  "read-write",
+                    "network":  "online",
+                    "toolsUsed":  [
+                                      "mcp__VaultWares_MCP__MCP_Server___ledger_get_recent",
+                                      "mcp__VaultWares_MCP__MCP_Server___sh_run"
+                                  ],
+                    "mcpServersAccessed":  "VaultWares MCP"
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "G:\\mega\\TooTwistedTabooVIP Pack",
+    "summary":  "Midday project file sync (scheduled task). Read DAILY_RECAP.md and 21 ledger events from 2026-05-30. Updated 3 files: (1) vault-explorer/TASKS.md: marked H1,1,1a,1b,1c,2,2a,2b,2c as [x]. (2) vault-explorer/ROADMAP.md: added Vault Tab Polish section (icons.js, 3-tab nav, audio visualizer, image enhancement IPC, mute previews, subtab categorization). (3) Prom-King/tube-sites/ROADMAP.md: added May 30 completed work log (duplicate header/footer fix, search form SVG, php lint). Skipped agent-ledger TODO and vw-jira-sync (no tracked files).",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "vault-explorer/TASKS.md",
+                  "vault-explorer/ROADMAP.md",
+                  "Prom-King/tube-sites/ROADMAP.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "0f2ada1312e412ad1ef1a08105dc506d2bfcd7e7eb9564ecaac99e1aead144b5",
+    "git":  null
+}

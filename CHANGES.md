@@ -3,6 +3,31 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-31 00:04 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>general,verification</code> - Midday project file sync (scheduled task). Read DAILY_RECAP.md and 21 ledger events from 2026-05-30. Updated 3 files: (1) vault-explorer/TASKS.md: marked H1,1,1a,1b,1c,2,2a,2b,2...</summary>
+
+- Kind: general,verification
+- Actor: claude-sonnet-4-6 (scheduled task)
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (scheduled task) (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: agent
+  Permissions: read-write (network: online)
+  CWD: G:\mega\TooTwistedTabooVIP Pack  Branch: n/a
+  Tools used (this reply): mcp__VaultWares_MCP__MCP_Server___ledger_get_recent, mcp__VaultWares_MCP__MCP_Server___sh_run
+  MCP servers accessed (this reply): VaultWares MCP
+  Time: 2026-05-31 00:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: Midday project file sync (scheduled task). Read DAILY_RECAP.md and 21 ledger events from 2026-05-30. Updated 3 files: (1) vault-explorer/TASKS.md: marked H1,1,1a,1b,1c,2,2a,2b,2c as [x]. (2) vault-explorer/ROADMAP.md: added Vault Tab Polish section (icons.js, 3-tab nav, audio visualizer, image enhancement IPC, mute previews, subtab categorization). (3) Prom-King/tube-sites/ROADMAP.md: added May 30 completed work log (duplicate header/footer fix, search form SVG, php lint). Skipped agent-ledger TODO and vw-jira-sync (no tracked files).
+- Files:
+  - `vault-explorer/TASKS.md`
+  - `vault-explorer/ROADMAP.md`
+  - `Prom-King/tube-sites/ROADMAP.md`
+
+</details>
+
+<details>
 <summary><strong>2026-05-30 20:32 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Three-part modernization pass: (1) Stripped unicode arrows from both translation files (EN/QC) — ↺ ↑ ↓ removed from tooltip values since buttons already use SVG. Added refresh a...</summary>
 
 - Kind: code-change,verification
@@ -458,7 +483,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-30 10:49 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>general</code> - Confirmed Dependabot alerts/security updates are available on all GitHub plans (no GHAS purchase required). Validated custom GitHub App &#39;gemini-code-assist-for-vaultwares&#39; metad...</summary>
+<summary><strong>2026-05-30 10:49 - General Tasks</strong> <code>general</code> - Confirmed Dependabot alerts/security updates are available on all GitHub plans (no GHAS purchase required). Validated custom GitHub App &#39;gemini-code-assist-for-vaultwares&#39; metad...</summary>
 
 - Kind: general
 - Actor: AI Agent
