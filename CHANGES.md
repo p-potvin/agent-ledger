@@ -3,6 +3,33 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-05-31 03:25 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Updated the background image enhancement pipeline to write enhanced image files (_enhanced.jpg) into the folder&#39;s local .thumbs subfolder instead of polluting original media fol...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gemini-2.5-pro
+  Thinking: high
+  Mode: code
+  Permissions: ask (network: windows-local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): view_file, replace_file_content, run_command, command_status, grep_search
+  MCP servers accessed (this reply): none
+  Time: 2026-05-31 03:25 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated the background image enhancement pipeline to write enhanced image files (_enhanced.jpg) into the folder's local .thumbs subfolder instead of polluting original media folders. Also modified scanner.js to look for these local enhanced images in the .thumbs subfolder, loading them as the thumbnail if present, and falling back to the original image path if not. This ensures users immediately see enhanced images when navigating, while preserving folder cleanliness. Verified all features are stable and pass integration tests successfully.
+- Commands:
+  - `node tests/comprehensive_test.js`
+- Files:
+  - `src/previews.js`
+  - `src/scanner.js`
+- Git: repo=vault-explorer, branch=main, head=56a6a22
+
+</details>
+
+<details>
 <summary><strong>2026-05-31 02:35 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Revised DAILY_DASHBOARD theme per user feedback: removed all cyan, muted all accent colors (gold #b8882e, violet #8a62c0, green #4e9954, amber #c49840, orange #a86840, red #a84e...</summary>
 
 - Kind: code-change
@@ -100,7 +127,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-30 20:32 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Three-part modernization pass: (1) Stripped unicode arrows from both translation files (EN/QC) — ↺ ↑ ↓ removed from tooltip values since buttons already use SVG. Added refresh a...</summary>
+<summary><strong>2026-05-30 20:32 - vault-explorer</strong> <code>code-change,verification</code> - Three-part modernization pass: (1) Stripped unicode arrows from both translation files (EN/QC) — ↺ ↑ ↓ removed from tooltip values since buttons already use SVG. Added refresh a...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent

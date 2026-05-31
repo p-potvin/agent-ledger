@@ -48,6 +48,26 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-05-31 03:25 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change,verification</span> - Updated the background image enhancement pipeline to write enhanced image files (_enhanced.jpg) into the folder&#39;s local .thumbs subfolder instead of polluting original media fol...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: code Permissions: ask (network: windows-local) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): view_file, replace_file_content, run_command, command_status, grep_search MCP servers accessed (this reply): none Time: 2026-05-31 03:25 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Updated the background image enhancement pipeline to write enhanced image files (_enhanced.jpg) into the folder&#39;s local .thumbs subfolder instead of polluting original media folders. Also modified scanner.js to look for these local enhanced images in the .thumbs subfolder, loading them as the thumbnail if present, and falling back to the original image path if not. This ensures users immediately see enhanced images when navigating, while preserving folder cleanliness. Verified all features are stable and pass integration tests successfully.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>node tests/comprehensive_test.js</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/previews.js</code></li>
+        <li><code>src/scanner.js</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=56a6a22</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-05-31 02:35 - agent-ledger (formerly agent-ledger/stats-app)</strong> <span class="kind">code-change</span> - Revised DAILY_DASHBOARD theme per user feedback: removed all cyan, muted all accent colors (gold #b8882e, violet #8a62c0, green #4e9954, amber #c49840, orange #a86840, red #a84e...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
@@ -107,7 +127,7 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-05-30 20:32 - vault-explorer (formerly Vault Explorer)</strong> <span class="kind">code-change,verification</span> - Three-part modernization pass: (1) Stripped unicode arrows from both translation files (EN/QC) — ↺ ↑ ↓ removed from tooltip values since buttons already use SVG. Added refresh a...</summary>
+    <summary><strong>2026-05-30 20:32 - vault-explorer</strong> <span class="kind">code-change,verification</span> - Three-part modernization pass: (1) Stripped unicode arrows from both translation files (EN/QC) — ↺ ↑ ↓ removed from tooltip values since buttons already use SVG. Added refresh a...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change,verification</p>
       <p><strong>Actor:</strong> AI Agent</p>
