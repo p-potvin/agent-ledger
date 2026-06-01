@@ -3,7 +3,32 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-31 05:27 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Decoupled virtual folder deletion, file deletion, and folder renaming/creation actions from full disk-bound directory re-scans (loadDirectory) in js/navigation/card.js, js/navig...</summary>
+<summary><strong>2026-05-31 22:28 - vault-explorer (formerly Vault Explorer)</strong> <code>plan</code> - Investigated initial startup latency (2-minute scan delay). Identified synchronous fs calls in main thread as the primary bottleneck. Designed optimization plan using async batc...</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-2.0
+  Thinking: high
+  Mode: plan
+  Permissions: ask (network: local Windows)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): view_file,grep_search,write_to_file,run_command
+  MCP servers accessed (this reply): none
+  Time: 2026-05-31 22:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: Investigated initial startup latency (2-minute scan delay). Identified synchronous fs calls in main thread as the primary bottleneck. Designed optimization plan using async batched fs operations and persistent caching. Developed a comprehensive, customer-ready streaming tab implementation plan detailing TMDB metadata caching, advanced quality/language torrent scoring, isolated async resolvers, and YouTube embed Error 153/152 workarounds.
+- Files:
+  - `streaming_tab_plan.md`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\streaming_tab_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
+<summary><strong>2026-05-31 05:27 - vault-explorer</strong> <code>code-change,verification</code> - Decoupled virtual folder deletion, file deletion, and folder renaming/creation actions from full disk-bound directory re-scans (loadDirectory) in js/navigation/card.js, js/navig...</summary>
 
 - Kind: code-change,verification
 - Actor: Antigravity
