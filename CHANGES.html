@@ -48,7 +48,22 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-06-01 05:33 - agent-ledger (formerly agent-ledger/stats-app)</strong> <span class="kind">code-change</span> - Fixed renderer missing events: scanner was only reading history/ directory, missing all entries in events/ (the active write target). Added EventsDir variable, refactored into I...</summary>
+    <summary><strong>2026-06-01 05:43 - agent-ledger (formerly agent-ledger/stats-app)</strong> <span class="kind">code-change</span> - Fixed all render-daily-dashboard.ps1 issues: (1) Switched from double-quoted heredoc to single-quoted @&#39;...&#39;@ to prevent dollar-sign/hash expansion. (2) Moved JSON injection to ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> claude-sonnet-4-6</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: claude-sonnet-4-6 (role: main) Model: claude-sonnet-4-6 Thinking: false Mode: chat Permissions: read-write (network: online) CWD: C:\Users\Administrator\Desktop\pwsh  Branch: n/a Tools used (this reply): Read, Write, Edit, mcp__workspace__bash, mcp__VaultWares_MCP__MCP_Server___sh_run MCP servers accessed (this reply): none Time: 2026-06-01 05:43 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed all render-daily-dashboard.ps1 issues: (1) Switched from double-quoted heredoc to single-quoted @&#39;...&#39;@ to prevent dollar-sign/hash expansion. (2) Moved JSON injection to post-heredoc .Replace() calls with safe placeholder tokens __INPUT_DAYS__, __LEDGER_EVENTS__, __GENERATED_AT__. (3) Stripped null-byte padding from PS1 file that was preventing the Replace and WriteAllText calls from executing. Final output: 246k char HTML, 1927 ledger events, complete with initCharts/render, all charts working.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/render-daily-dashboard.ps1</code></li>
+        <li><code>agent-ledger/DAILY_DASHBOARD.html</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-01 05:33 - agent-ledger</strong> <span class="kind">code-change</span> - Fixed renderer missing events: scanner was only reading history/ directory, missing all entries in events/ (the active write target). Added EventsDir variable, refactored into I...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> claude-sonnet-4-6</p>

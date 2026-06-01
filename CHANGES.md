@@ -3,7 +3,31 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-06-01 05:33 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Fixed renderer missing events: scanner was only reading history/ directory, missing all entries in events/ (the active write target). Added EventsDir variable, refactored into I...</summary>
+<summary><strong>2026-06-01 05:43 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Fixed all render-daily-dashboard.ps1 issues: (1) Switched from double-quoted heredoc to single-quoted @&#39;...&#39;@ to prevent dollar-sign/hash expansion. (2) Moved JSON injection to ...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: chat
+  Permissions: read-write (network: online)
+  CWD: C:\Users\Administrator\Desktop\pwsh  Branch: n/a
+  Tools used (this reply): Read, Write, Edit, mcp__workspace__bash, mcp__VaultWares_MCP__MCP_Server___sh_run
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 05:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed all render-daily-dashboard.ps1 issues: (1) Switched from double-quoted heredoc to single-quoted @'...'@ to prevent dollar-sign/hash expansion. (2) Moved JSON injection to post-heredoc .Replace() calls with safe placeholder tokens __INPUT_DAYS__, __LEDGER_EVENTS__, __GENERATED_AT__. (3) Stripped null-byte padding from PS1 file that was preventing the Replace and WriteAllText calls from executing. Final output: 246k char HTML, 1927 ledger events, complete with initCharts/render, all charts working.
+- Files:
+  - `agent-ledger/scripts/render-daily-dashboard.ps1`
+  - `agent-ledger/DAILY_DASHBOARD.html`
+
+</details>
+
+<details>
+<summary><strong>2026-06-01 05:33 - agent-ledger</strong> <code>code-change</code> - Fixed renderer missing events: scanner was only reading history/ directory, missing all entries in events/ (the active write target). Added EventsDir variable, refactored into I...</summary>
 
 - Kind: code-change
 - Actor: claude-sonnet-4-6
