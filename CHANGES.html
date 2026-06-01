@@ -48,6 +48,21 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-06-01 18:10 - python-scripts</strong> <span class="kind">code-change</span> - Fixed playwright 5000ms timeouts on rip.linkvertise.lol by updating telethon_link_resolver.py&#39;s bypass mechanism to use the TRW API end-point securely without headful DOM parsin...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> GitHub Copilot</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: GitHub Copilot (role: main) Model: Gemini 3.1 Pro (Preview) Thinking: low Mode: code Permissions: autopilot (network: local) CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main Tools used (this reply): replace_string_in_file, run_in_terminal MCP servers accessed (this reply): none Time: 2026-06-01 18:10 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed playwright 5000ms timeouts on rip.linkvertise.lol by updating telethon_link_resolver.py&#39;s bypass mechanism to use the TRW API end-point securely without headful DOM parsing. Also mitigated the TRW 202 status blocks with python sleep handling.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>telegram\telethon_link_resolver.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=python-scripts, branch=main, head=8e2fa98</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-06-01 17:57 - python-scripts</strong> <span class="kind">code-change</span> - Created TRW API linkvertise bypass in trw_bypass_pipeline.py. Bypasses URLs via trw.lat, filters size/type, extracts RD links via extension context, and merges non-mega urls to ...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>

@@ -3,6 +3,30 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-01 18:10 - python-scripts</strong> <code>code-change</code> - Fixed playwright 5000ms timeouts on rip.linkvertise.lol by updating telethon_link_resolver.py&#39;s bypass mechanism to use the TRW API end-point securely without headful DOM parsin...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Gemini 3.1 Pro (Preview)
+  Thinking: low
+  Mode: code
+  Permissions: autopilot (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): replace_string_in_file, run_in_terminal
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 18:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed playwright 5000ms timeouts on rip.linkvertise.lol by updating telethon_link_resolver.py's bypass mechanism to use the TRW API end-point securely without headful DOM parsing. Also mitigated the TRW 202 status blocks with python sleep handling.
+- Files:
+  - `telegram\telethon_link_resolver.py`
+- Git: repo=python-scripts, branch=main, head=8e2fa98
+
+</details>
+
+<details>
 <summary><strong>2026-06-01 17:57 - python-scripts</strong> <code>code-change</code> - Created TRW API linkvertise bypass in trw_bypass_pipeline.py. Bypasses URLs via trw.lat, filters size/type, extracts RD links via extension context, and merges non-mega urls to ...</summary>
 
 - Kind: code-change
