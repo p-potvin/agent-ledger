@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-06-01T12:12:01.3342639Z",
+    "lastUpdatedUtc":  "2026-06-01T12:27:01.3793681Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1937,7 +1937,8 @@
                                        "20260601-074319-487-agent-ledger-9d0ff9aa",
                                        "20260601-074329-746-vaultwares-docs-7834878c",
                                        "20260601-074424-262-agent-ledger-ebf6396b",
-                                       "20260601-074504-069-agent-ledger-fa0d56b2"
+                                       "20260601-074504-069-agent-ledger-fa0d56b2",
+                                       "20260601-082344-031-agent-ledger-780b2605"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2632,66 +2633,6 @@
                                    "daySeries":  [
                                                      {
                                                          "actors":  [
-                                                                        "AI Agent"
-                                                                    ],
-                                                         "day":  "2026-05-05",
-                                                         "models":  [
-                                                                        "Claude Haiku"
-                                                                    ],
-                                                         "count":  1
-                                                     },
-                                                     {
-                                                         "actors":  [
-                                                                        "AI Agent"
-                                                                    ],
-                                                         "day":  "2026-05-08",
-                                                         "models":  [
-                                                                        "Claude Haiku"
-                                                                    ],
-                                                         "count":  4
-                                                     },
-                                                     {
-                                                         "actors":  [
-                                                                        "AI Agent"
-                                                                    ],
-                                                         "day":  "2026-05-09",
-                                                         "models":  [
-                                                                        "Claude Haiku"
-                                                                    ],
-                                                         "count":  1
-                                                     },
-                                                     {
-                                                         "actors":  [
-                                                                        "AI Agent"
-                                                                    ],
-                                                         "day":  "2026-05-11",
-                                                         "models":  [
-                                                                        "Claude Haiku"
-                                                                    ],
-                                                         "count":  1
-                                                     },
-                                                     {
-                                                         "actors":  [
-                                                                        "AI Agent"
-                                                                    ],
-                                                         "day":  "2026-05-14",
-                                                         "models":  [
-                                                                        "Claude Haiku"
-                                                                    ],
-                                                         "count":  1
-                                                     },
-                                                     {
-                                                         "actors":  [
-                                                                        "AI Agent"
-                                                                    ],
-                                                         "day":  "2026-05-15",
-                                                         "models":  [
-                                                                        "Claude Haiku"
-                                                                    ],
-                                                         "count":  1
-                                                     },
-                                                     {
-                                                         "actors":  [
                                                                         "AI Agent",
                                                                         "Antigravity",
                                                                         "Claude Code (Opus 4.7)"
@@ -2889,25 +2830,25 @@
                                                                         "gemini-2.5-pro",
                                                                         "unknown"
                                                                     ],
-                                                         "count":  8
+                                                         "count":  9
                                                      }
                                                  ],
                                    "tools":  [
                                                  "view_file",
                                                  22,
-                                                 "PowerShell",
-                                                 21,
                                                  "run_command",
+                                                 21,
+                                                 "PowerShell",
                                                  21,
                                                  "replace_file_content",
                                                  20,
-                                                 "write_to_file",
-                                                 17,
                                                  "git",
                                                  17,
-                                                 "functions.shell_command",
-                                                 11,
+                                                 "write_to_file",
+                                                 17,
                                                  "apply_patch",
+                                                 11,
+                                                 "functions.shell_command",
                                                  11,
                                                  "shell_command",
                                                  10,
@@ -2915,24 +2856,24 @@
                                                  9,
                                                  "functions.apply_patch",
                                                  8,
+                                                 "Edit",
+                                                 8,
                                                  "multi_replace_file_content",
                                                  8,
-                                                 "Edit",
+                                                 "Read",
                                                  7,
                                                  "grep_search",
-                                                 6,
-                                                 "ssh",
                                                  6
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  354,
+                                                  345,
                                                   "Antigravity",
                                                   40,
                                                   "codex",
                                                   8,
                                                   "claude-sonnet-4-6",
-                                                  6,
+                                                  7,
                                                   "Claude Code (Opus 4.7)",
                                                   2,
                                                   "claude-code",
@@ -2946,22 +2887,22 @@
                                                   "Claude",
                                                   1
                                               ],
-                                   "totalEvents":  416,
+                                   "totalEvents":  408,
                                    "models":  [
                                                   "unknown",
                                                   319,
                                                   "gpt-5.2",
                                                   19,
-                                                  "Claude Haiku",
-                                                  14,
                                                   "Gemini-1.5-Pro",
                                                   10,
                                                   "Gemini 3.5 Flash (Medium)",
                                                   9,
                                                   "claude-sonnet-4-6",
-                                                  8,
+                                                  9,
                                                   "gemini-2.5-pro",
                                                   8,
+                                                  "Claude Haiku",
+                                                  5,
                                                   "gemini-3.5-flash",
                                                   3,
                                                   "Gemini 3.5 Flash",
@@ -3016,7 +2957,7 @@
                                    {
                                        "label":  "Tue",
                                        "dow":  1,
-                                       "count":  70
+                                       "count":  69
                                    },
                                    {
                                        "label":  "Wed",
@@ -3026,17 +2967,17 @@
                                    {
                                        "label":  "Thu",
                                        "dow":  3,
-                                       "count":  49
+                                       "count":  48
                                    },
                                    {
                                        "label":  "Fri",
                                        "dow":  4,
-                                       "count":  41
+                                       "count":  36
                                    },
                                    {
                                        "label":  "Sat",
                                        "dow":  5,
-                                       "count":  56
+                                       "count":  55
                                    },
                                    {
                                        "label":  "Sun",
@@ -3078,7 +3019,7 @@
                                         "hour":  7
                                     },
                                     {
-                                        "count":  17,
+                                        "count":  18,
                                         "hour":  8
                                     },
                                     {
@@ -3094,7 +3035,7 @@
                                         "hour":  11
                                     },
                                     {
-                                        "count":  23,
+                                        "count":  14,
                                         "hour":  12
                                     },
                                     {
@@ -3159,7 +3100,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-06-01 08:12",
+                 "generatedAtLocal":  "2026-06-01 08:27",
                  "series":  {
                                 "months":  [
                                                {
@@ -3176,7 +3117,7 @@
                                                },
                                                {
                                                    "month":  "2026-06",
-                                                   "count":  8
+                                                   "count":  9
                                                }
                                            ],
                                 "days":  [
@@ -4485,20 +4426,20 @@
                                                                   "vault-explorer",
                                                                   "vaultwares-docs"
                                                               ],
-                                                 "entries":  8,
+                                                 "entries":  9,
                                                  "day":  "2026-06-01",
                                                  "kinds":  {
                                                                "commands":  2,
                                                                "general":  1,
                                                                "verification":  2,
-                                                               "code-change":  7
+                                                               "code-change":  8
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1604
+                                                  "count":  1605
                                               },
                                               {
                                                   "kind":  "verification",
@@ -4712,10 +4653,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  1,
                                                                         "resume_used":  1,
-                                                                        "interview_started":  1,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "router":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
@@ -4838,10 +4779,10 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  2,
                                                                         "resume_used":  2,
-                                                                        "interview_started":  2,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  2,
+                                                                        "router":  2,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
@@ -5001,7 +4942,7 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  34,
+                                                                   "code-change":  35,
                                                                    "handoff":  2,
                                                                    "commands":  8,
                                                                    "verification":  9,
@@ -5020,11 +4961,11 @@
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "agent-ledger",
-                                                     "entries":  48,
+                                                     "entries":  49,
                                                      "recent":  [
-                                                                    "Updated archive-old-ledger-entries.ps1 to be rename-aware: ledger root is now resolved from script location (or -LedgerRoot), script normalizes event relative paths using projec...",
                                                                     "archive-old-ledger-entries.ps1: added -Force to Get-ChildItem and Move-Item to ensure hidden/read-only ledger JSONs can still be archived after the rename-aware path normalizati...",
-                                                                    "Cleaned up an unintended working-tree modification: restored a changed backfill history event (history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json) back to HEAD a..."
+                                                                    "Cleaned up an unintended working-tree modification: restored a changed backfill history event (history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json) back to HEAD a...",
+                                                                    "Fixed 3 bugs: (1) track-input.py Ctrl+S/C/V detection broken -- Ctrl+letter generates control chars (e.g. Ctrl+S=\\x13), now converts back via ord(raw)+96. (2) mouse_distance_m f..."
                                                                 ],
                                                      "firstDay":  "2026-04-28",
                                                      "lastDay":  "2026-06-01",
@@ -5371,7 +5312,6 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
-                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5393,10 +5333,11 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
+                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "same_domain_only":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -16322,7 +16263,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-06-01T11:45:04.0691275Z",
+                 "_maxCreatedAtUtc":  "2026-06-01T12:23:44.0311792Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16330,7 +16271,7 @@
                            },
                  "totals":  {
                                 "projects":  46,
-                                "events":  1930,
+                                "events":  1931,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  80,
                                 "commitEventsWithStats":  679

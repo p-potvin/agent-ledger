@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260601-082344-031-agent-ledger-780b2605",
+    "createdAt":  "2026-06-01T12:23:44.0311792Z",
+    "createdAtLocal":  "2026-06-01 08:23",
+    "timezone":  "Eastern Standard Time",
+    "project":  "agent-ledger",
+    "kind":  "code-change",
+    "actor":  "claude-sonnet-4-6",
+    "agentHeader":  "Agent: claude-sonnet-4-6 (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: false\r\nMode: chat\r\nPermissions: read-write (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\pwsh  Branch: n/a\r\nTools used (this reply): Read, Edit, mcp__VaultWares_MCP__MCP_Server___sh_run\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-01 08:23 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6",
+                    "thinking":  "false",
+                    "mode":  "chat",
+                    "permissions":  "read-write",
+                    "network":  "online",
+                    "toolsUsed":  [
+                                      "Read",
+                                      "Edit",
+                                      "mcp__VaultWares_MCP__MCP_Server___sh_run"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\pwsh",
+    "summary":  "Fixed 3 bugs: (1) track-input.py Ctrl+S/C/V detection broken -- Ctrl+letter generates control chars (e.g. Ctrl+S=\\x13), now converts back via ord(raw)+96. (2) mouse_distance_m float drift -- changed +=round() to =round(existing+new). (3) _load_day silent data loss on corrupt JSON -- now backs up .corrupt file instead of zeroing. (4) render-daily-dashboard.ps1 work kinds now split on comma via new countByKinds() JS function.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "agent-ledger/scripts/track-input.py",
+                  "agent-ledger/scripts/render-daily-dashboard.ps1",
+                  "agent-ledger/DAILY_DASHBOARD.html"
+              ],
+    "planPath":  "",
+    "contentHash":  "780b260592d1fc71b5b903446209b9723290a70ab35c51b5a30ecf58125f1b22",
+    "git":  null
+}

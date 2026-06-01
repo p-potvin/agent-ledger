@@ -3,7 +3,32 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-06-01 07:45 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>commands</code> - Cleaned up an unintended working-tree modification: restored a changed backfill history event (history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json) back to HEAD a...</summary>
+<summary><strong>2026-06-01 08:23 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Fixed 3 bugs: (1) track-input.py Ctrl+S/C/V detection broken -- Ctrl+letter generates control chars (e.g. Ctrl+S=\x13), now converts back via ord(raw)+96. (2) mouse_distance_m f...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: chat
+  Permissions: read-write (network: online)
+  CWD: C:\Users\Administrator\Desktop\pwsh  Branch: n/a
+  Tools used (this reply): Read, Edit, mcp__VaultWares_MCP__MCP_Server___sh_run
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 08:23 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed 3 bugs: (1) track-input.py Ctrl+S/C/V detection broken -- Ctrl+letter generates control chars (e.g. Ctrl+S=\x13), now converts back via ord(raw)+96. (2) mouse_distance_m float drift -- changed +=round() to =round(existing+new). (3) _load_day silent data loss on corrupt JSON -- now backs up .corrupt file instead of zeroing. (4) render-daily-dashboard.ps1 work kinds now split on comma via new countByKinds() JS function.
+- Files:
+  - `agent-ledger/scripts/track-input.py`
+  - `agent-ledger/scripts/render-daily-dashboard.ps1`
+  - `agent-ledger/DAILY_DASHBOARD.html`
+
+</details>
+
+<details>
+<summary><strong>2026-06-01 07:45 - agent-ledger</strong> <code>commands</code> - Cleaned up an unintended working-tree modification: restored a changed backfill history event (history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json) back to HEAD a...</summary>
 
 - Kind: commands
 - Actor: AI Agent

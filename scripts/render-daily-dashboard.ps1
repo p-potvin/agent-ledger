@@ -398,6 +398,7 @@ function hourlySum(day,field){ const row=dayMap[day]; if(!row) return new Array(
 function dailyTotals(days,field){ return days.map(d=>{ const row=dayMap[d]; return row?row.hourly.reduce((s,h)=>s+(h[field]||0),0):0; }); }
 function ledgerInRange(range){ const f=dateStr(range.from).slice(0,10),t=dateStr(range.to).slice(0,10); return LEDGER_EVENTS.filter(e=>e.date>=f&&e.date<=t); }
 function countBy(arr,key){ const m={}; for(const x of arr){ const v=x[key]||'unknown'; m[v]=(m[v]||0)+1; } return m; }
+function countByKinds(arr){ const m={}; for(const x of arr){ const kinds=(x.kind||'general').split(','); for(const k of kinds){ const v=k.trim()||'general'; m[v]=(m[v]||0)+1; } } return m; }
 
 /* Chart.js defaults */
 Chart.defaults.color='rgba(216,208,240,0.48)';
@@ -471,7 +472,7 @@ function render(){
 
   const events=ledgerInRange(range);
   buildDonut(modelC,countBy(events,'model'));
-  buildDonut(kindsC,countBy(events,'kind'));
+  buildDonut(kindsC,countByKinds(events));
   buildProjectsBar(events);
   buildSwitchChart(days,events);
   buildFun(totKeys,totMouse,totSaves,totCopies,totChars,totPastes,totPastedChars,activeDays);

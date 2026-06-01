@@ -48,7 +48,23 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-06-01 07:45 - agent-ledger (formerly agent-ledger/stats-app)</strong> <span class="kind">commands</span> - Cleaned up an unintended working-tree modification: restored a changed backfill history event (history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json) back to HEAD a...</summary>
+    <summary><strong>2026-06-01 08:23 - agent-ledger (formerly agent-ledger/stats-app)</strong> <span class="kind">code-change</span> - Fixed 3 bugs: (1) track-input.py Ctrl+S/C/V detection broken -- Ctrl+letter generates control chars (e.g. Ctrl+S=\x13), now converts back via ord(raw)+96. (2) mouse_distance_m f...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> claude-sonnet-4-6</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: claude-sonnet-4-6 (role: main) Model: claude-sonnet-4-6 Thinking: false Mode: chat Permissions: read-write (network: online) CWD: C:\Users\Administrator\Desktop\pwsh  Branch: n/a Tools used (this reply): Read, Edit, mcp__VaultWares_MCP__MCP_Server___sh_run MCP servers accessed (this reply): none Time: 2026-06-01 08:23 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed 3 bugs: (1) track-input.py Ctrl+S/C/V detection broken -- Ctrl+letter generates control chars (e.g. Ctrl+S=\x13), now converts back via ord(raw)+96. (2) mouse_distance_m float drift -- changed +=round() to =round(existing+new). (3) _load_day silent data loss on corrupt JSON -- now backs up .corrupt file instead of zeroing. (4) render-daily-dashboard.ps1 work kinds now split on comma via new countByKinds() JS function.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/track-input.py</code></li>
+        <li><code>agent-ledger/scripts/render-daily-dashboard.ps1</code></li>
+        <li><code>agent-ledger/DAILY_DASHBOARD.html</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-01 07:45 - agent-ledger</strong> <span class="kind">commands</span> - Cleaned up an unintended working-tree modification: restored a changed backfill history event (history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json) back to HEAD a...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> commands</p>
       <p><strong>Actor:</strong> AI Agent</p>
