@@ -3,7 +3,34 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-06-01 08:23 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Fixed 3 bugs: (1) track-input.py Ctrl+S/C/V detection broken -- Ctrl+letter generates control chars (e.g. Ctrl+S=\x13), now converts back via ord(raw)+96. (2) mouse_distance_m f...</summary>
+<summary><strong>2026-06-01 10:40 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Merged daily dashboard into WORK_IMPACT. render-work-impact.ps1 now also loads input-logs/*.json and events/+history/ ledger events. HTML template fully rewritten with new muted...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: chat
+  Permissions: read-write (network: online)
+  CWD: C:\Users\Administrator\Desktop\pwsh  Branch: n/a
+  Tools used (this reply): Read, Write, Edit, mcp__workspace__bash, mcp__VaultWares_MCP__MCP_Server___sh_run
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 10:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Merged daily dashboard into WORK_IMPACT. render-work-impact.ps1 now also loads input-logs/*.json and events/+history/ ledger events. HTML template fully rewritten with new muted color scheme (no cyan), LED stat strip, hourly Chart.js chart with range picker, deep work score ring, focus blocks, AI model donut, kinds donut (comma-split), context switch bar, fun stats, daily trend + rhythm charts. All original WORK_IMPACT widgets kept (KPI row, heatmap, monthly bars, projects, commit stats, tech volume, concentration, highlights, agent section, project cards). Deleted DAILY_DASHBOARD.html and render-daily-dashboard.ps1. Unregistered VaultWares-DailyDashboard task. Tracker (VaultWares-InputTracker) running. Also fixed tracker: 99 restart count, unlock trigger, mouse wake gap protection, Ctrl+S/C/V control-char fix, float precision fix.
+- Files:
+  - `agent-ledger/scripts/render-work-impact.ps1`
+  - `agent-ledger/WORK_IMPACT.html`
+  - `WORK_IMPACT.html`
+  - `agent-ledger/scripts/track-input.py`
+  - `agent-ledger/scripts/setup-input-tracker.ps1`
+
+</details>
+
+<details>
+<summary><strong>2026-06-01 08:23 - agent-ledger</strong> <code>code-change</code> - Fixed 3 bugs: (1) track-input.py Ctrl+S/C/V detection broken -- Ctrl+letter generates control chars (e.g. Ctrl+S=\x13), now converts back via ord(raw)+96. (2) mouse_distance_m f...</summary>
 
 - Kind: code-change
 - Actor: claude-sonnet-4-6
