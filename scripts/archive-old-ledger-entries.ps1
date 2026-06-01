@@ -13,7 +13,7 @@
 $ledgerRoot = "C:\Users\Administrator\Desktop\Github Repos\agent-ledger"
 $eventsDir = Join-Path $ledgerRoot "events"
 $historyDir = Join-Path $ledgerRoot "history"
-$thresholdDays = 14
+$thresholdDays = 15
 $cutoffDate = (Get-Date).AddDays(-$thresholdDays)
 
 if (-not (Test-Path $historyDir)) {
