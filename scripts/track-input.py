@@ -92,7 +92,11 @@ def _load_day(dt: datetime) -> dict:
         try:
             return json.loads(p.read_text(encoding="utf-8"))
         except Exception:
-            pass
+            # Corrupt file — back it up rather than silently zero it out
+            try:
+                p.rename(str(p) + ".corrupt")
+            except Exception:
+                pass
     return _blank_day(dt)
 
 
@@ -131,7 +135,7 @@ def _flush() -> None:
     slot["copies"]           += snap["copies"]
     slot["pastes"]           += snap["pastes"]
     slot["chars_pasted"]     += snap["chars_pasted"]
-    slot["mouse_distance_m"] += round(snap["mouse_px"] / PX_PER_METER, 4)
+    slot["mouse_distance_m"] = round(slot["mouse_distance_m"] + snap["mouse_px"] / PX_PER_METER, 4)
 
     _save_day(now, day)
 
@@ -166,8 +170,16 @@ def _on_press(key) -> None:
 
         # --- Ctrl combo handling ---
         if _ctrl_held:
+            ch = None
             try:
-                ch = key.char.lower() if hasattr(key, "char") and key.char else None
+                raw = key.char if hasattr(key, "char") and key.char else None
+                if raw:
+                    # Ctrl+letter generates a control character (e.g. Ctrl+S = \x13).
+                    # Convert back to the plain letter so comparison works.
+                    if len(raw) == 1 and ord(raw) < 32:
+                        ch = chr(ord(raw) + 96)   # \x13 -> 's', \x03 -> 'c', \x16 -> 'v'
+                    else:
+                        ch = raw.lower()
             except Exception:
                 ch = None
 
