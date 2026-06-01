@@ -3,6 +3,33 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-01 17:57 - python-scripts</strong> <code>code-change</code> - Created TRW API linkvertise bypass in trw_bypass_pipeline.py. Bypasses URLs via trw.lat, filters size/type, extracts RD links via extension context, and merges non-mega urls to ...</summary>
+
+- Kind: code-change
+- Actor: Github Copilot
+- Agent Header:
+  ```text
+  Agent: Github Copilot (role: main)
+  Model: gemini-3.1-pro
+  Thinking: low
+  Mode: chat
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): read_file, run_in_terminal, create_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 17:57 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created TRW API linkvertise bypass in trw_bypass_pipeline.py. Bypasses URLs via trw.lat, filters size/type, extracts RD links via extension context, and merges non-mega urls to unrestricted_mega_links.txt.
+- Commands:
+  - `curl`
+- Files:
+  - `telegram/trw_bypass_pipeline.py`
+- Plan: ` `
+- Git: repo=python-scripts, branch=main, head=8e2fa98
+
+</details>
+
+<details>
 <summary><strong>2026-06-01 12:26 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Fixed two issues: (1) LED cards and Chart.js widgets showing -- on page load -- moved initCharts()+render() into window.addEventListener(&#39;load&#39;,...) with try-catch so CDN timing...</summary>
 
 - Kind: code-change
