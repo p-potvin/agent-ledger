@@ -48,7 +48,76 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-06-01 05:43 - agent-ledger (formerly agent-ledger/stats-app)</strong> <span class="kind">code-change</span> - Fixed all render-daily-dashboard.ps1 issues: (1) Switched from double-quoted heredoc to single-quoted @&#39;...&#39;@ to prevent dollar-sign/hash expansion. (2) Moved JSON injection to ...</summary>
+    <summary><strong>2026-06-01 07:45 - agent-ledger (formerly agent-ledger/stats-app)</strong> <span class="kind">commands</span> - Cleaned up an unintended working-tree modification: restored a changed backfill history event (history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json) back to HEAD a...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> commands</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-06-01 07:45 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Cleaned up an unintended working-tree modification: restored a changed backfill history event (history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json) back to HEAD after it showed a spurious summary diff.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git restore history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-01 07:44 - agent-ledger</strong> <span class="kind">code-change</span> - archive-old-ledger-entries.ps1: added -Force to Get-ChildItem and Move-Item to ensure hidden/read-only ledger JSONs can still be archived after the rename-aware path normalizati...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-06-01 07:44 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> archive-old-ledger-entries.ps1: added -Force to Get-ChildItem and Move-Item to ensure hidden/read-only ledger JSONs can still be archived after the rename-aware path normalization changes.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/archive-old-ledger-entries.ps1</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-01 07:43 - vaultwares-docs (formerly tmp-app)</strong> <span class="kind">code-change,commands</span> - Added an explicit renamed-projects table to docs (agent-ledger schema page) so the old&#226;†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so th...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,commands</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-06-01 07:43 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added an explicit renamed-projects table to docs (agent-ledger schema page) so the old&#226;†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so the rendered docs include the update.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run generate:page-resources</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-docs/docs-content/operations/agent-ledger-schema.mdx</code></li>
+        <li><code>vaultwares-docs/src/resources/pages/operations__agent-ledger-schema.json</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-01 07:43 - agent-ledger</strong> <span class="kind">code-change,verification</span> - Updated archive-old-ledger-entries.ps1 to be rename-aware: ledger root is now resolved from script location (or -LedgerRoot), script normalizes event relative paths using projec...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-06-01 07:43 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Updated archive-old-ledger-entries.ps1 to be rename-aware: ledger root is now resolved from script location (or -LedgerRoot), script normalizes event relative paths using project-aliases.json so legacy layouts like events/&lt;project&gt;/YYYY/MM archive under canonical project folders in history/ even after renames. Added collision-safe move behavior (skip + warning if target exists). Verified the script runs cleanly with -ThresholdDays 100000 (no moves).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>&amp; &quot;C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\archive-old-ledger-entries.ps1&quot; -LedgerRoot &quot;C:\Users\Administrator\Desktop\Github Repos\agent-ledger&quot; -ThresholdDays 100000</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/archive-old-ledger-entries.ps1</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-01 05:43 - agent-ledger</strong> <span class="kind">code-change</span> - Fixed all render-daily-dashboard.ps1 issues: (1) Switched from double-quoted heredoc to single-quoted @&#39;...&#39;@ to prevent dollar-sign/hash expansion. (2) Moved JSON injection to ...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> claude-sonnet-4-6</p>
@@ -2239,7 +2308,7 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-05-26 10:26 - vaultwares-docs (formerly tmp-app)</strong> <span class="kind">code-change,verification</span> - Add simple, mandatory ops documentation: (1) webhook secret rotation checklist (EN+QC) for VW_GITHUB_WEBHOOK_SECRET, (2) services inventory table (EN+QC) including Prom-King/Ful...</summary>
+    <summary><strong>2026-05-26 10:26 - vaultwares-docs</strong> <span class="kind">code-change,verification</span> - Add simple, mandatory ops documentation: (1) webhook secret rotation checklist (EN+QC) for VW_GITHUB_WEBHOOK_SECRET, (2) services inventory table (EN+QC) including Prom-King/Ful...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change,verification</p>
       <p><strong>Actor:</strong> AI Agent</p>

@@ -76,7 +76,7 @@ function Get-NormalizedRelativePath {
 }
 
 # Find all JSON files in events/ older than cutoff
-$filesToArchive = Get-ChildItem -Path $eventsDir -Filter '*.json' -Recurse -File |
+$filesToArchive = Get-ChildItem -Path $eventsDir -Filter '*.json' -Recurse -File -Force |
     Where-Object { $_.LastWriteTime -lt $cutoffDate }
 
 if (-not $filesToArchive -or $filesToArchive.Count -eq 0) {
@@ -109,7 +109,7 @@ foreach ($file in $filesToArchive) {
         continue
     }
 
-    Move-Item -LiteralPath $file.FullName -Destination $targetPath
+    Move-Item -LiteralPath $file.FullName -Destination $targetPath -Force
     $moved++
 }
 

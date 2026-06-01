@@ -3,7 +3,106 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-06-01 05:43 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Fixed all render-daily-dashboard.ps1 issues: (1) Switched from double-quoted heredoc to single-quoted @&#39;...&#39;@ to prevent dollar-sign/hash expansion. (2) Moved JSON injection to ...</summary>
+<summary><strong>2026-06-01 07:45 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>commands</code> - Cleaned up an unintended working-tree modification: restored a changed backfill history event (history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json) back to HEAD a...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 07:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Cleaned up an unintended working-tree modification: restored a changed backfill history event (history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json) back to HEAD after it showed a spurious summary diff.
+- Commands:
+  - `git restore history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json`
+- Files:
+  - `agent-ledger/history/2026/04/20260424-072204-000-automation-suite-36aa0b90.json`
+
+</details>
+
+<details>
+<summary><strong>2026-06-01 07:44 - agent-ledger</strong> <code>code-change</code> - archive-old-ledger-entries.ps1: added -Force to Get-ChildItem and Move-Item to ensure hidden/read-only ledger JSONs can still be archived after the rename-aware path normalizati...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 07:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: archive-old-ledger-entries.ps1: added -Force to Get-ChildItem and Move-Item to ensure hidden/read-only ledger JSONs can still be archived after the rename-aware path normalization changes.
+- Files:
+  - `agent-ledger/scripts/archive-old-ledger-entries.ps1`
+
+</details>
+
+<details>
+<summary><strong>2026-06-01 07:43 - vaultwares-docs (formerly tmp-app)</strong> <code>code-change,commands</code> - Added an explicit renamed-projects table to docs (agent-ledger schema page) so the old&#226;†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so th...</summary>
+
+- Kind: code-change,commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 07:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added an explicit renamed-projects table to docs (agent-ledger schema page) so the oldâ†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so the rendered docs include the update.
+- Commands:
+  - `npm run generate:page-resources`
+- Files:
+  - `vaultwares-docs/docs-content/operations/agent-ledger-schema.mdx`
+  - `vaultwares-docs/src/resources/pages/operations__agent-ledger-schema.json`
+
+</details>
+
+<details>
+<summary><strong>2026-06-01 07:43 - agent-ledger</strong> <code>code-change,verification</code> - Updated archive-old-ledger-entries.ps1 to be rename-aware: ledger root is now resolved from script location (or -LedgerRoot), script normalizes event relative paths using projec...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 07:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated archive-old-ledger-entries.ps1 to be rename-aware: ledger root is now resolved from script location (or -LedgerRoot), script normalizes event relative paths using project-aliases.json so legacy layouts like events/<project>/YYYY/MM archive under canonical project folders in history/ even after renames. Added collision-safe move behavior (skip + warning if target exists). Verified the script runs cleanly with -ThresholdDays 100000 (no moves).
+- Commands:
+  - `& "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\archive-old-ledger-entries.ps1" -LedgerRoot "C:\Users\Administrator\Desktop\Github Repos\agent-ledger" -ThresholdDays 100000`
+- Files:
+  - `agent-ledger/scripts/archive-old-ledger-entries.ps1`
+
+</details>
+
+<details>
+<summary><strong>2026-06-01 05:43 - agent-ledger</strong> <code>code-change</code> - Fixed all render-daily-dashboard.ps1 issues: (1) Switched from double-quoted heredoc to single-quoted @&#39;...&#39;@ to prevent dollar-sign/hash expansion. (2) Moved JSON injection to ...</summary>
 
 - Kind: code-change
 - Actor: claude-sonnet-4-6
@@ -3019,7 +3118,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 10:26 - vaultwares-docs (formerly tmp-app)</strong> <code>code-change,verification</code> - Add simple, mandatory ops documentation: (1) webhook secret rotation checklist (EN+QC) for VW_GITHUB_WEBHOOK_SECRET, (2) services inventory table (EN+QC) including Prom-King/Ful...</summary>
+<summary><strong>2026-05-26 10:26 - vaultwares-docs</strong> <code>code-change,verification</code> - Add simple, mandatory ops documentation: (1) webhook secret rotation checklist (EN+QC) for VW_GITHUB_WEBHOOK_SECRET, (2) services inventory table (EN+QC) including Prom-King/Ful...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
