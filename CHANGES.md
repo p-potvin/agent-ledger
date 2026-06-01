@@ -3,6 +3,31 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-01 12:11 - vault-explorer (formerly Vault Explorer)</strong> <code>plan</code> - Created implementation plan to modernize video player UI (playback speed icon and subtitle generation context menu) and debug the NeMo/Parakeet pipeline by downmixing input audi...</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-1.5-pro
+  Thinking: medium
+  Mode: plan
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 12:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created implementation plan to modernize video player UI (playback speed icon and subtitle generation context menu) and debug the NeMo/Parakeet pipeline by downmixing input audio to mono.
+- Files:
+  - `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
 <summary><strong>2026-06-01 10:40 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Merged daily dashboard into WORK_IMPACT. render-work-impact.ps1 now also loads input-logs/*.json and events/+history/ ledger events. HTML template fully rewritten with new muted...</summary>
 
 - Kind: code-change
@@ -226,7 +251,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-01 00:43 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,general,verification</code> - Completed double-hydration caching and async scanner optimizations in Vault Explorer. Refactored scanner.js to use asynchronous I/O and concurrent batching with a limit of 32 ta...</summary>
+<summary><strong>2026-06-01 00:43 - vault-explorer</strong> <code>code-change,general,verification</code> - Completed double-hydration caching and async scanner optimizations in Vault Explorer. Refactored scanner.js to use asynchronous I/O and concurrent batching with a limit of 32 ta...</summary>
 
 - Kind: code-change,general,verification
 - Actor: AI Agent
