@@ -107,7 +107,7 @@ $html = @"
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Daily Dashboard — VaultWares</title>
+<title>Daily Dashboard -- VaultWares</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -287,7 +287,7 @@ section > h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spac
     <div class="brand-badge">VaultWares</div>
     <div>
       <h1>Daily <span>Dashboard</span></h1>
-      <div class="meta-row">Generated <span id="genTime"></span> &nbsp;·&nbsp; <span id="dataRange"></span></div>
+      <div class="meta-row">Generated <span id="genTime"></span> &nbsp;&middot;&nbsp; <span id="dataRange"></span></div>
     </div>
   </div>
   <div>
@@ -301,7 +301,7 @@ section > h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spac
     </div>
     <div class="custom-row" id="customRow">
       <input type="date" id="customFrom">
-      <span style="color:var(--muted);font-size:12px">→</span>
+      <span style="color:var(--muted);font-size:12px">-></span>
       <input type="date" id="customTo">
       <button onclick="applyCustom()">Apply</button>
     </div>
@@ -313,32 +313,32 @@ section > h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spac
   <div class="grid" id="ledStrip">
     <div class="led-card led-gold span2" id="card-keys">
       <div class="led-header"><div class="led-dot"></div><div class="led-label">Keystrokes</div></div>
-      <div class="led-value" id="v-keys">—</div>
+      <div class="led-value" id="v-keys">--</div>
       <div class="led-sub" id="s-keys"></div>
     </div>
     <div class="led-card led-violet span2" id="card-mouse">
       <div class="led-header"><div class="led-dot"></div><div class="led-label">Mouse Travel</div></div>
-      <div class="led-value" id="v-mouse">—<span class="led-unit">m</span></div>
+      <div class="led-value" id="v-mouse">--<span class="led-unit">m</span></div>
       <div class="led-sub" id="s-mouse"></div>
     </div>
     <div class="led-card led-green span2" id="card-saves">
       <div class="led-header"><div class="led-dot"></div><div class="led-label">Saves</div></div>
-      <div class="led-value" id="v-saves">—</div>
+      <div class="led-value" id="v-saves">--</div>
       <div class="led-sub" id="s-saves"></div>
     </div>
     <div class="led-card led-amber span2" id="card-copies">
       <div class="led-header"><div class="led-dot"></div><div class="led-label">Copies</div></div>
-      <div class="led-value" id="v-copies">—</div>
+      <div class="led-value" id="v-copies">--</div>
       <div class="led-sub" id="s-copies"></div>
     </div>
     <div class="led-card led-orange span2" id="card-chars">
       <div class="led-header"><div class="led-dot"></div><div class="led-label">Chars Typed</div></div>
-      <div class="led-value" id="v-chars">—</div>
+      <div class="led-value" id="v-chars">--</div>
       <div class="led-sub" id="s-chars"></div>
     </div>
     <div class="led-card led-red span2" id="card-pastes">
       <div class="led-header"><div class="led-dot"></div><div class="led-label">Pastes</div></div>
-      <div class="led-value" id="v-pastes">—</div>
+      <div class="led-value" id="v-pastes">--</div>
       <div class="led-sub" id="s-pastes"></div>
     </div>
   </div>
@@ -346,7 +346,7 @@ section > h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spac
 
 <!-- ===== Hourly Activity ===== -->
 <section>
-  <h2 id="hourlyTitle">Hourly Activity — Today</h2>
+  <h2 id="hourlyTitle">Hourly Activity -- Today</h2>
   <div class="card span12">
     <div class="chart-wrap"><canvas id="hourlyChart"></canvas></div>
   </div>
@@ -380,11 +380,11 @@ section > h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spac
               style="transition:stroke-dashoffset 1s ease"/>
           </svg>
           <div class="score-inner">
-            <div class="score-num" id="scoreNum">—</div>
+            <div class="score-num" id="scoreNum">--</div>
             <div class="score-max">/100</div>
           </div>
         </div>
-        <div class="score-title" id="scoreTitle">—</div>
+        <div class="score-title" id="scoreTitle">--</div>
         <div style="font-size:11px;color:var(--muted);text-align:center;max-width:140px" id="scoreDesc"></div>
       </div>
     </div>
@@ -408,7 +408,7 @@ section > h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spac
 <!-- ===== Focus Blocks ===== -->
 <section>
   <div class="card span12">
-    <div class="card-title">Focus Blocks — Today <span class="tag tag-cyan" style="margin-left:6px">≥ 30 min uninterrupted</span></div>
+    <div class="card-title">Focus Blocks -- Today <span class="tag tag-cyan" style="margin-left:6px">>= 30 min uninterrupted</span></div>
     <div class="focus-timeline" id="focusTimeline"></div>
     <div class="focus-axis">
       <span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>23:59</span>
@@ -462,8 +462,8 @@ const GENERATED_AT  = "$generatedAt";
 /* ============================================================
    Utilities
    ============================================================ */
-const fmt = n => n == null ? '—' : Number(n).toLocaleString();
-const fmtDec = (n,d=1) => n == null ? '—' : Number(n).toLocaleString(undefined,{maximumFractionDigits:d});
+const fmt = n => n == null ? '--' : Number(n).toLocaleString();
+const fmtDec = (n,d=1) => n == null ? '--' : Number(n).toLocaleString(undefined,{maximumFractionDigits:d});
 
 function dateStr(d){ return d.toISOString().slice(0,10); }
 function parseDateStr(s){ const [y,m,d]=s.split('-'); return new Date(y,m-1,d); }
@@ -644,7 +644,7 @@ function render(){
   /* ---- header ---- */
   document.getElementById('genTime').textContent = GENERATED_AT.replace('T',' ');
   document.getElementById('dataRange').textContent =
-    days.length===1 ? days[0] : days[0] + ' → ' + days[days.length-1];
+    days.length===1 ? days[0] : days[0] + ' -> ' + days[days.length-1];
 
   /* ---- totals ---- */
   const totKeys   = sumField(days,'keystrokes');
@@ -675,11 +675,11 @@ function render(){
   if(days.length===1){
     hourlyLabels = Array.from({length:24},(_,i)=>i+'h');
     hourlyData   = hourlySum(days[0],'keystrokes');
-    document.getElementById('hourlyTitle').textContent = 'Hourly Activity — '+days[0];
+    document.getElementById('hourlyTitle').textContent = 'Hourly Activity -- '+days[0];
   } else {
     hourlyLabels = Array.from({length:24},(_,i)=>i+'h');
     hourlyData   = hourlyAvg(days,'keystrokes');
-    document.getElementById('hourlyTitle').textContent = 'Average Hourly Activity (keystrokes/hr) — '+days.length+' days';
+    document.getElementById('hourlyTitle').textContent = 'Average Hourly Activity (keystrokes/hr) -- '+days.length+' days';
   }
   const maxH = Math.max(...hourlyData,1);
   hourlyColors = hourlyData.map(v=>{
@@ -788,13 +788,13 @@ function buildHeatmap(highlightDays){
    ============================================================ */
 function buildScore(days, today){
   const row = dayMap[today];
-  if(!row){ document.getElementById('scoreNum').textContent='—'; document.getElementById('scoreTitle').textContent='No data'; return; }
+  if(!row){ document.getElementById('scoreNum').textContent='--'; document.getElementById('scoreTitle').textContent='No data'; return; }
 
   // Score heuristics (0-100):
-  // 1. Long focus blocks (hours with >50 keys back-to-back) → up to 40pts
-  // 2. Total keystrokes today → up to 30pts
-  // 3. Low context switching (ledger) → up to 15pts
-  // 4. Saves ratio (saves/keystrokes) → up to 15pts
+  // 1. Long focus blocks (hours with >50 keys back-to-back) -> up to 40pts
+  // 2. Total keystrokes today -> up to 30pts
+  // 3. Low context switching (ledger) -> up to 15pts
+  // 4. Saves ratio (saves/keystrokes) -> up to 15pts
 
   const hourlyK = row.hourly.map(h=>h.keystrokes||0);
   const totalK  = hourlyK.reduce((a,b)=>a+b,0);
@@ -856,7 +856,7 @@ function buildFocus(today){
   }
   if(start!==-1) blocks.push({start,end:24});
 
-  // Filter to >=1 hour (≥30min is ≥1 block-hour here)
+  // Filter to >=1 hour (>=30min is >=1 block-hour here)
   blocks = blocks.filter(b=>b.end-b.start>=1);
 
   if(!blocks.length){ tl.innerHTML='<div class="focus-empty">No focus blocks detected yet today.</div>'; return; }
@@ -870,7 +870,7 @@ function buildFocus(today){
     div.className='focus-block';
     div.style.cssText=`left:${leftPct}%;width:${widthPct}%;background:${color};`;
     div.textContent = dur+'h';
-    div.title = `${b.start}:00 – ${b.end}:00 (${dur}h focus block)`;
+    div.title = `${b.start}:00 - ${b.end}:00 (${dur}h focus block)`;
     tl.appendChild(div);
   }
 }
@@ -924,42 +924,42 @@ function buildFun(keys, mouseM, saves, copies, chars, pastes, pastedChars, activ
   if(chars>0){
     const words = Math.round(chars/5);
     const pages = (words/250).toFixed(1);
-    facts.push({e:'📄',s:pages+' pages',d:'of text typed (250 words/page)'});
+    facts.push({e:'[pg]',s:pages+' pages',d:'of text typed (250 words/page)'});
   }
   // Mouse distance
   if(mouseM>0){
-    if(mouseM>=1000) facts.push({e:'🗺️',s:fmtDec(mouseM/1000,2)+' km',d:'mouse travel distance'});
-    else              facts.push({e:'🖱️',s:fmtDec(mouseM)+' m',d:'mouse travel distance'});
+    if(mouseM>=1000) facts.push({e:'[map]',s:fmtDec(mouseM/1000,2)+' km',d:'mouse travel distance'});
+    else              facts.push({e:'[mouse]',s:fmtDec(mouseM)+' m',d:'mouse travel distance'});
     // Marathons? 42.195km
     const marathons=(mouseM/1000/42.195);
-    if(marathons>0.01) facts.push({e:'🏃',s:fmtDec(marathons,3)+'×',d:'a marathon in mouse movement'});
+    if(marathons>0.01) facts.push({e:'[run]',s:fmtDec(marathons,3)+'x',d:'a marathon in mouse movement'});
   }
   // Saves
-  if(saves>0) facts.push({e:'💾',s:fmt(saves),d:'times you saved your work'});
+  if(saves>0) facts.push({e:'[save]',s:fmt(saves),d:'times you saved your work'});
   // Copy-paste ratio
   if(copies>0&&pastes>0){
     const ratio=(copies/pastes).toFixed(2);
-    facts.push({e:'📋',s:ratio+'×',d:'copy-to-paste ratio'});
+    facts.push({e:'[clip]',s:ratio+'x',d:'copy-to-paste ratio'});
   }
   // Words per minute estimate (assuming 8h active time)
   if(chars>0&&activeDays>0){
     const activeMinutes = activeDays*8*60;
     const wpm = ((chars/5)/activeMinutes).toFixed(1);
-    facts.push({e:'⌨️',s:wpm+' WPM',d:'estimated typing speed (8h active/day)'});
+    facts.push({e:'[kbd]',s:wpm+' WPM',d:'estimated typing speed (8h active/day)'});
   }
   // Keystrokes
   if(keys>1000){
     const novels = (keys/500000).toFixed(4);
-    facts.push({e:'📚',s:novels+'×',d:'a novel worth of keystrokes (500k chars)'});
+    facts.push({e:'[book]',s:novels+'x',d:'a novel worth of keystrokes (500k chars)'});
   }
   // Pasted chars
   if(pastedChars>0){
-    facts.push({e:'📥',s:fmt(pastedChars),d:'characters pasted from clipboard'});
+    facts.push({e:'[in]',s:fmt(pastedChars),d:'characters pasted from clipboard'});
   }
   // Saves per hour
   if(saves>0&&keys>0){
     const savePer1k=(saves/keys*1000).toFixed(2);
-    facts.push({e:'🔁',s:savePer1k,d:'saves per 1,000 keystrokes'});
+    facts.push({e:'[loop]',s:savePer1k,d:'saves per 1,000 keystrokes'});
   }
 
   const el=document.getElementById('funFacts');
@@ -1008,6 +1008,6 @@ render();
 # Write output
 [System.IO.File]::WriteAllText($OutPath, $html, [System.Text.Encoding]::UTF8)
 
-Write-Host "Dashboard rendered → $OutPath" -ForegroundColor Cyan
+Write-Host "Dashboard rendered -> $OutPath" -ForegroundColor Cyan
 Write-Host "  Input days loaded : $($inputDays.Count)"  -ForegroundColor Green
 Write-Host "  Ledger events     : $($ledgerEvents.Count)" -ForegroundColor Green
