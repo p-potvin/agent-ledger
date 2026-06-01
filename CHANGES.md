@@ -3,7 +3,37 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-05-31 22:34 - vault-explorer (formerly Vault Explorer)</strong> <code>plan</code> - Answered user&#39;s senior developer architecture questions regarding: Big Functions, Long Execution Latencies, and Unacceptable Production Anti-Patterns. Drafted a detailed impleme...</summary>
+<summary><strong>2026-06-01 00:43 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,general,verification</code> - Completed double-hydration caching and async scanner optimizations in Vault Explorer. Refactored scanner.js to use asynchronous I/O and concurrent batching with a limit of 32 ta...</summary>
+
+- Kind: code-change,general,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gemini-2.5-pro
+  Thinking: high
+  Mode: code
+  Permissions: ask (network: Windows-Local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): view_file, write_to_file, run_command, command_status
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 00:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed double-hydration caching and async scanner optimizations in Vault Explorer. Refactored scanner.js to use asynchronous I/O and concurrent batching with a limit of 32 tasks. Exposed secure IPC getCachedDirectory bridge in preload.js. Updated loadDirectory in directory.js to instantly fetch persistent JSON cache and dynamically sync scan results in the background. Fully verified with full integration test pass (npm run test:integration:all).
+- Commands:
+  - `npm run test:integration:all`
+  - `node -c js/navigation/directory.js`
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\navigation\directory.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\preload.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\scanner.js`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
+<summary><strong>2026-05-31 22:34 - vault-explorer</strong> <code>plan</code> - Answered user&#39;s senior developer architecture questions regarding: Big Functions, Long Execution Latencies, and Unacceptable Production Anti-Patterns. Drafted a detailed impleme...</summary>
 
 - Kind: plan
 - Actor: Antigravity
