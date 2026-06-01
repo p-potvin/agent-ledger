@@ -3,6 +3,30 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-01 12:26 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Fixed two issues: (1) LED cards and Chart.js widgets showing -- on page load -- moved initCharts()+render() into window.addEventListener(&#39;load&#39;,...) with try-catch so CDN timing...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: chat
+  Permissions: read-write (network: online)
+  CWD: C:\Users\Administrator\Desktop\pwsh  Branch: n/a
+  Tools used (this reply): mcp__workspace__bash, mcp__VaultWares_MCP__MCP_Server___sh_run
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 12:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed two issues: (1) LED cards and Chart.js widgets showing -- on page load -- moved initCharts()+render() into window.addEventListener('load',...) with try-catch so CDN timing or chart errors don't silently prevent LED cards from rendering. (2) Restarted VaultWares-InputTracker scheduled task so it picks up the Ctrl+S/C/V control-char fix (ord(raw)+96 conversion) that was already in track-input.py.
+- Files:
+  - `agent-ledger/scripts/render-work-impact.ps1`
+  - `WORK_IMPACT.html`
+
+</details>
+
+<details>
 <summary><strong>2026-06-01 12:11 - vault-explorer (formerly Vault Explorer)</strong> <code>plan</code> - Created implementation plan to modernize video player UI (playback speed icon and subtitle generation context menu) and debug the NeMo/Parakeet pipeline by downmixing input audi...</summary>
 
 - Kind: plan
@@ -28,7 +52,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-01 10:40 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Merged daily dashboard into WORK_IMPACT. render-work-impact.ps1 now also loads input-logs/*.json and events/+history/ ledger events. HTML template fully rewritten with new muted...</summary>
+<summary><strong>2026-06-01 10:40 - agent-ledger</strong> <code>code-change</code> - Merged daily dashboard into WORK_IMPACT. render-work-impact.ps1 now also loads input-logs/*.json and events/+history/ ledger events. HTML template fully rewritten with new muted...</summary>
 
 - Kind: code-change
 - Actor: claude-sonnet-4-6

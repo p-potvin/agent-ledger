@@ -589,8 +589,10 @@ function applyCustom(){const f=document.getElementById('customFrom').value,t=doc
   function renderAll(){renderTopMetrics();renderHeatmap();renderBars();renderCommitStats();renderTechVolume();renderFilesTouched();renderConcentration();renderHighlights();const dowSeries=Array.isArray(data.dowSeries)?data.dowSeries:[];if(dowSeries.length>0)renderMicroBar("dowChart",dowSeries,"label","count");renderAgentSection();renderProjectCards();}
   setLang(lang);
 })();
-initCharts();
-render();
+window.addEventListener('load', function(){
+  try { initCharts(); } catch(e) { console.error('initCharts:', e); }
+  try { render(); } catch(e) { console.error('render:', e); }
+});
 </script>
 </main></body></html>
 
