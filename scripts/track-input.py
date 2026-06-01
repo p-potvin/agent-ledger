@@ -220,14 +220,21 @@ def _on_release(key) -> None:
 # Mouse listener
 # ---------------------------------------------------------------------------
 
+_mouse_last_time: float = 0.0   # epoch seconds of last mouse event
+
 def _on_move(x: int, y: int) -> None:
-    global _mouse_last
+    global _mouse_last, _mouse_last_time
+    now_t = time.monotonic()
     with _lock:
-        if _mouse_last is not None:
+        # If more than 5 minutes have passed since the last mouse event the
+        # system likely woke from sleep.  Reset the origin to avoid a huge
+        # phantom distance jump.
+        if _mouse_last is not None and (now_t - _mouse_last_time) < 300:
             dx = x - _mouse_last[0]
             dy = y - _mouse_last[1]
             _acc["mouse_px"] += math.sqrt(dx * dx + dy * dy)
-        _mouse_last = (x, y)
+        _mouse_last      = (x, y)
+        _mouse_last_time = now_t
 
 # ---------------------------------------------------------------------------
 # Entry point

