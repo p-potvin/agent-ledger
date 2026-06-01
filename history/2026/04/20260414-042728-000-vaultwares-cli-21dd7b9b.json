@@ -8,7 +8,7 @@
   "actor": "AI Agent",
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-cli",
-  "summary": "Backfill: commit 486f844 (2026-04-14T04:27:28-04:00) - Bootstrap vaultwares-cli Rust workspace | files=50 +83144 -0",
+  "summary": "Backfill: commit 486f844 (2026-04-14T04:27:28-04:00) - Bootstrap vaultwares-cli Rust workspace | files=50 +3000 -0",
   "commands": [
     "git log --since=2025-03-01T00:00:00Z --reverse --pretty=format:%H^%h^%cI^%s",
     "git show --name-only --pretty=format: 486f8449a31bb5083f4e8f1664f0f2418a4d6e4e",
