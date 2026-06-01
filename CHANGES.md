@@ -3,6 +3,30 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-01 05:28 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Fixed DAILY_DASHBOARD encoding corruption: replaced all 41 non-ASCII chars (em-dashes, arrows, operators, emojis) in the PS1 template with ASCII/entity equivalents using Python....</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: chat
+  Permissions: read-write (network: online)
+  CWD: C:\Users\Administrator\Desktop\pwsh  Branch: n/a
+  Tools used (this reply): Read, Edit, mcp__workspace__bash, mcp__VaultWares_MCP__MCP_Server___sh_run
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 05:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed DAILY_DASHBOARD encoding corruption: replaced all 41 non-ASCII chars (em-dashes, arrows, operators, emojis) in the PS1 template with ASCII/entity equivalents using Python. Switched file output to UTF-8 NoBOM to prevent browser BOM misparse. Dashboard now renders clean with 1516 ledger events and 2 input days loaded.
+- Files:
+  - `agent-ledger/scripts/render-daily-dashboard.ps1`
+  - `agent-ledger/DAILY_DASHBOARD.html`
+
+</details>
+
+<details>
 <summary><strong>2026-06-01 00:43 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,general,verification</code> - Completed double-hydration caching and async scanner optimizations in Vault Explorer. Refactored scanner.js to use asynchronous I/O and concurrent batching with a limit of 32 ta...</summary>
 
 - Kind: code-change,general,verification
@@ -322,7 +346,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-31 02:35 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Revised DAILY_DASHBOARD theme per user feedback: removed all cyan, muted all accent colors (gold #b8882e, violet #8a62c0, green #4e9954, amber #c49840, orange #a86840, red #a84e...</summary>
+<summary><strong>2026-05-31 02:35 - agent-ledger</strong> <code>code-change</code> - Revised DAILY_DASHBOARD theme per user feedback: removed all cyan, muted all accent colors (gold #b8882e, violet #8a62c0, green #4e9954, amber #c49840, orange #a86840, red #a84e...</summary>
 
 - Kind: code-change
 - Actor: claude-sonnet-4-6

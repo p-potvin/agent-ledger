@@ -34,8 +34,9 @@ if (-not $OutPath) {
     $OutPath = Join-Path $LedgerRoot "DAILY_DASHBOARD.html"
 }
 
-$LogDir     = Join-Path $LedgerRoot "input-logs"
-$HistoryDir = Join-Path $LedgerRoot "history"
+$LogDir      = Join-Path $LedgerRoot "input-logs"
+$HistoryDir  = Join-Path $LedgerRoot "history"
+$EventsDir   = Join-Path $LedgerRoot "events"
 
 # ---------------------------------------------------------------------------
 # 1. Load input-log files
@@ -64,16 +65,19 @@ if (Test-Path $LogDir) {
 # ---------------------------------------------------------------------------
 
 $ledgerEvents = [System.Collections.Generic.List[object]]::new()
+$seenIds      = [System.Collections.Generic.HashSet[string]]::new()
 
-if (Test-Path $HistoryDir) {
-    $cutoff = (Get-Date).AddDays(-$DaysBack).Date
-    Get-ChildItem -Path $HistoryDir -Filter "*.json" -Recurse -File |
+function Import-LedgerDir {
+    param([string]$Dir, [datetime]$Cutoff)
+    if (-not (Test-Path $Dir)) { return }
+    Get-ChildItem -Path $Dir -Filter "*.json" -Recurse -File |
         Sort-Object Name |
         ForEach-Object {
             try {
                 $raw = Get-Content $_.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
                 $dt  = [datetime]::Parse($raw.createdAt)
-                if ($dt.Date -ge $cutoff) {
+                $id  = if ($raw.id) { $raw.id } else { $_.BaseName }
+                if ($dt.Date -ge $Cutoff -and $seenIds.Add($id)) {
                     $ledgerEvents.Add([pscustomobject]@{
                         date    = $dt.ToString("yyyy-MM-dd")
                         project = if ($raw.project) { $raw.project } else { "General" }
@@ -85,6 +89,10 @@ if (Test-Path $HistoryDir) {
             } catch { }
         }
 }
+
+$cutoff = (Get-Date).AddDays(-$DaysBack).Date
+Import-LedgerDir -Dir $HistoryDir -Cutoff $cutoff
+Import-LedgerDir -Dir $EventsDir  -Cutoff $cutoff
 
 # ---------------------------------------------------------------------------
 # 3. Serialise to JSON for injection into HTML
@@ -293,9 +301,9 @@ section > h2{font-size:11px;font-weight:700;text-transform:uppercase;letter-spac
   <div>
     <div class="range-row">
       <label>Range</label>
-      <button class="range-btn active" data-range="1">Today</button>
+      <button class="range-btn" data-range="1">Today</button>
       <button class="range-btn" data-range="7">7 days</button>
-      <button class="range-btn" data-range="30">30 days</button>
+      <button class="range-btn active" data-range="30">30 days</button>
       <button class="range-btn" data-range="90">90 days</button>
       <button class="range-btn" data-range="custom">Custom</button>
     </div>
@@ -490,7 +498,7 @@ for(const d of INPUT_DAYS) dayMap[d.date] = d;
 /* ============================================================
    Range state
    ============================================================ */
-let activeRange = 1; // days; 0 = custom
+let activeRange = 30; // days; 0 = custom
 let customFrom, customTo;
 
 function rangeWindow(){
@@ -1006,7 +1014,8 @@ render();
 "@
 
 # Write output
-[System.IO.File]::WriteAllText($OutPath, $html, [System.Text.Encoding]::UTF8)
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
+[System.IO.File]::WriteAllText($OutPath, $html, $utf8NoBom)
 
 Write-Host "Dashboard rendered -> $OutPath" -ForegroundColor Cyan
 Write-Host "  Input days loaded : $($inputDays.Count)"  -ForegroundColor Green
