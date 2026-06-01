@@ -48,7 +48,22 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-06-01 05:28 - agent-ledger (formerly agent-ledger/stats-app)</strong> <span class="kind">code-change</span> - Fixed DAILY_DASHBOARD encoding corruption: replaced all 41 non-ASCII chars (em-dashes, arrows, operators, emojis) in the PS1 template with ASCII/entity equivalents using Python....</summary>
+    <summary><strong>2026-06-01 05:33 - agent-ledger (formerly agent-ledger/stats-app)</strong> <span class="kind">code-change</span> - Fixed renderer missing events: scanner was only reading history/ directory, missing all entries in events/ (the active write target). Added EventsDir variable, refactored into I...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> claude-sonnet-4-6</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: claude-sonnet-4-6 (role: main) Model: claude-sonnet-4-6 Thinking: false Mode: chat Permissions: read-write (network: online) CWD: C:\Users\Administrator\Desktop\pwsh  Branch: n/a Tools used (this reply): Edit, mcp__workspace__bash, mcp__VaultWares_MCP__MCP_Server___sh_run MCP servers accessed (this reply): none Time: 2026-06-01 05:33 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed renderer missing events: scanner was only reading history/ directory, missing all entries in events/ (the active write target). Added EventsDir variable, refactored into Import-LedgerDir function with dedup via seenIds HashSet, now scans both directories. Event count jumped from 1516 to 1926. Also changed default JS range from 1 day to 30 days so charts show data on first open.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>agent-ledger/scripts/render-daily-dashboard.ps1</code></li>
+        <li><code>agent-ledger/DAILY_DASHBOARD.html</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-01 05:28 - agent-ledger</strong> <span class="kind">code-change</span> - Fixed DAILY_DASHBOARD encoding corruption: replaced all 41 non-ASCII chars (em-dashes, arrows, operators, emojis) in the PS1 template with ASCII/entity equivalents using Python....</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> claude-sonnet-4-6</p>

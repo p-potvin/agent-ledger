@@ -1,0 +1,45 @@
+﻿{
+    "id":  "20260601-053306-229-agent-ledger-24785706",
+    "createdAt":  "2026-06-01T09:33:06.2296900Z",
+    "createdAtLocal":  "2026-06-01 05:33",
+    "timezone":  "Eastern Standard Time",
+    "project":  "agent-ledger",
+    "kind":  "code-change",
+    "actor":  "claude-sonnet-4-6",
+    "agentHeader":  "Agent: claude-sonnet-4-6 (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: false\r\nMode: chat\r\nPermissions: read-write (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\pwsh  Branch: n/a\r\nTools used (this reply): Edit, mcp__workspace__bash, mcp__VaultWares_MCP__MCP_Server___sh_run\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-01 05:33 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6",
+                    "thinking":  "false",
+                    "mode":  "chat",
+                    "permissions":  "read-write",
+                    "network":  "online",
+                    "toolsUsed":  [
+                                      "Edit",
+                                      "mcp__workspace__bash",
+                                      "mcp__VaultWares_MCP__MCP_Server___sh_run"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\pwsh",
+    "summary":  "Fixed renderer missing events: scanner was only reading history/ directory, missing all entries in events/ (the active write target). Added EventsDir variable, refactored into Import-LedgerDir function with dedup via seenIds HashSet, now scans both directories. Event count jumped from 1516 to 1926. Also changed default JS range from 1 day to 30 days so charts show data on first open.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "agent-ledger/scripts/render-daily-dashboard.ps1",
+                  "agent-ledger/DAILY_DASHBOARD.html"
+              ],
+    "planPath":  "",
+    "contentHash":  "24785706b9f0e40dd2638a936c8361b557a00773b52f25bf2681ce078310e857",
+    "git":  null
+}

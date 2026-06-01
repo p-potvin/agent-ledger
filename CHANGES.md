@@ -3,7 +3,31 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-06-01 05:28 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Fixed DAILY_DASHBOARD encoding corruption: replaced all 41 non-ASCII chars (em-dashes, arrows, operators, emojis) in the PS1 template with ASCII/entity equivalents using Python....</summary>
+<summary><strong>2026-06-01 05:33 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Fixed renderer missing events: scanner was only reading history/ directory, missing all entries in events/ (the active write target). Added EventsDir variable, refactored into I...</summary>
+
+- Kind: code-change
+- Actor: claude-sonnet-4-6
+- Agent Header:
+  ```text
+  Agent: claude-sonnet-4-6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: false
+  Mode: chat
+  Permissions: read-write (network: online)
+  CWD: C:\Users\Administrator\Desktop\pwsh  Branch: n/a
+  Tools used (this reply): Edit, mcp__workspace__bash, mcp__VaultWares_MCP__MCP_Server___sh_run
+  MCP servers accessed (this reply): none
+  Time: 2026-06-01 05:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed renderer missing events: scanner was only reading history/ directory, missing all entries in events/ (the active write target). Added EventsDir variable, refactored into Import-LedgerDir function with dedup via seenIds HashSet, now scans both directories. Event count jumped from 1516 to 1926. Also changed default JS range from 1 day to 30 days so charts show data on first open.
+- Files:
+  - `agent-ledger/scripts/render-daily-dashboard.ps1`
+  - `agent-ledger/DAILY_DASHBOARD.html`
+
+</details>
+
+<details>
+<summary><strong>2026-06-01 05:28 - agent-ledger</strong> <code>code-change</code> - Fixed DAILY_DASHBOARD encoding corruption: replaced all 41 non-ASCII chars (em-dashes, arrows, operators, emojis) in the PS1 template with ASCII/entity equivalents using Python....</summary>
 
 - Kind: code-change
 - Actor: claude-sonnet-4-6
