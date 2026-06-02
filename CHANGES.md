@@ -3,6 +3,30 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-02 17:29 - python-scripts</strong> <code>code-change</code> - Removed --disable-extensions, --enable-automation, and --no-sandbox from Playwright&#39;s default launch arguments to allow the Real-Debrid extension to load successfully inside the...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: o3-mini
+  Thinking: high
+  Mode: chat
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts\telegram  Branch: main
+  Tools used (this reply): replace_string_in_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 17:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Removed --disable-extensions, --enable-automation, and --no-sandbox from Playwright's default launch arguments to allow the Real-Debrid extension to load successfully inside the persistent context.
+- Files:
+  - `telegram/telethon_link_resolver.py`
+- Git: repo=python-scripts, branch=main, head=8e2fa98
+
+</details>
+
+<details>
 <summary><strong>2026-06-02 15:16 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Ran Playwright test suite successfully by fixing obsolete tab/favorite element selectors. Executed Start-AsrBenchmark.ps1 simulation to confirm ASR cold-boot initialization and ...</summary>
 
 - Kind: code-change,verification
