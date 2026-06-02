@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-06-02T17:42:01.4575119Z",
+    "lastUpdatedUtc":  "2026-06-02T17:57:01.4899025Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1950,7 +1950,8 @@
                                        "20260602-091431-698-vault-explorer-e17eeb5f",
                                        "20260602-091439-464-vault-explorer-b0f4bdf4",
                                        "20260602-091447-400-vaultwares-docs-5805e30e",
-                                       "20260602-100504-982-python-scripts-4e0cee52"
+                                       "20260602-100504-982-python-scripts-4e0cee52",
+                                       "20260602-134644-364-python-scripts-5eff16f2"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2864,17 +2865,18 @@
                                                                         "claude-sonnet-4-6",
                                                                         "Gemini 3.1 Pro (Preview)",
                                                                         "gemini-3.1-pro-preview",
-                                                                        "gemini-3.5-flash"
+                                                                        "gemini-3.5-flash",
+                                                                        "o3-mini"
                                                                     ],
-                                                         "count":  7
+                                                         "count":  8
                                                      }
                                                  ],
                                    "tools":  [
-                                                 "view_file",
+                                                 "run_command",
                                                  23,
                                                  "PowerShell",
                                                  23,
-                                                 "run_command",
+                                                 "view_file",
                                                  23,
                                                  "replace_file_content",
                                                  21,
@@ -2882,17 +2884,17 @@
                                                  18,
                                                  "git",
                                                  17,
-                                                 "apply_patch",
-                                                 11,
                                                  "functions.shell_command",
+                                                 11,
+                                                 "apply_patch",
                                                  11,
                                                  "shell_command",
                                                  10,
                                                  "Edit",
                                                  10,
-                                                 "multi_replace_file_content",
-                                                 9,
                                                  "Read",
+                                                 9,
+                                                 "multi_replace_file_content",
                                                  9,
                                                  "gh",
                                                  9,
@@ -2911,7 +2913,7 @@
                                                   "codex",
                                                   8,
                                                   "Github Copilot",
-                                                  4,
+                                                  5,
                                                   "Claude Code (Opus 4.7)",
                                                   2,
                                                   "claude-code",
@@ -2931,7 +2933,7 @@
                                                   "preload.js",
                                                   1
                                               ],
-                                   "totalEvents":  420,
+                                   "totalEvents":  421,
                                    "models":  [
                                                   "unknown",
                                                   319,
@@ -2953,41 +2955,43 @@
                                                   3,
                                                   "Gemini 3.5 Flash",
                                                   3,
-                                                  "claude-opus-4-5",
-                                                  2,
-                                                  "claude-haiku-4-5-20251001",
-                                                  2,
-                                                  "gemini-2.0",
-                                                  2,
-                                                  "gemini-2.5-flash-thinking",
-                                                  2,
                                                   "gemini-3.1-pro",
-                                                  2,
-                                                  "Gemini 3.1 Pro (Preview)",
-                                                  2,
-                                                  "GPT-5",
                                                   2,
                                                   "claude-opus-4-7",
                                                   2,
-                                                  "claude-sonnet-4-6-thinking",
-                                                  1,
-                                                  "gemini-3.1-pro-preview",
-                                                  1,
-                                                  "gemini-2.0-flash",
-                                                  1,
-                                                  "gemini-exp-1206",
-                                                  1,
-                                                  "Gemini 3.1 Pro",
-                                                  1,
+                                                  "gemini-2.0",
+                                                  2,
+                                                  "claude-haiku-4-5-20251001",
+                                                  2,
+                                                  "gemini-2.5-flash-thinking",
+                                                  2,
+                                                  "GPT-5",
+                                                  2,
+                                                  "Gemini 3.1 Pro (Preview)",
+                                                  2,
+                                                  "claude-opus-4-5",
+                                                  2,
                                                   "Gemini 3.1 Pro (Low)",
                                                   1,
                                                   "gemini-pro",
                                                   1,
+                                                  "claude-sonnet-4-6-thinking",
+                                                  1,
+                                                  "Gemini 3.1 Pro",
+                                                  1,
+                                                  "gemini-exp-1206",
+                                                  1,
                                                   "claude-opus-4-6",
+                                                  1,
+                                                  "o3-mini",
                                                   1,
                                                   "claude-sonnet-4-5",
                                                   1,
+                                                  "gemini-3.1-pro-preview",
+                                                  1,
                                                   "src/normalization.js",
+                                                  1,
+                                                  "gemini-2.0-flash",
                                                   1
                                               ]
                                },
@@ -3007,7 +3011,7 @@
                                    {
                                        "label":  "Tue",
                                        "dow":  1,
-                                       "count":  76
+                                       "count":  77
                                    },
                                    {
                                        "label":  "Wed",
@@ -3089,7 +3093,7 @@
                                         "hour":  12
                                     },
                                     {
-                                        "count":  11,
+                                        "count":  12,
                                         "hour":  13
                                     },
                                     {
@@ -3150,7 +3154,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-06-02 13:42",
+                 "generatedAtLocal":  "2026-06-02 13:57",
                  "series":  {
                                 "months":  [
                                                {
@@ -3167,7 +3171,7 @@
                                                },
                                                {
                                                    "month":  "2026-06",
-                                                   "count":  21
+                                                   "count":  22
                                                }
                                            ],
                                 "days":  [
@@ -4495,19 +4499,19 @@
                                                                   "vault-explorer",
                                                                   "vaultwares-docs"
                                                               ],
-                                                 "entries":  7,
+                                                 "entries":  8,
                                                  "day":  "2026-06-02",
                                                  "kinds":  {
-                                                               "general":  3,
+                                                               "general":  4,
                                                                "verification":  3,
-                                                               "code-change":  4
+                                                               "code-change":  5
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1613
+                                                  "count":  1614
                                               },
                                               {
                                                   "kind":  "verification",
@@ -4519,7 +4523,7 @@
                                               },
                                               {
                                                   "kind":  "general",
-                                                  "count":  51
+                                                  "count":  52
                                               },
                                               {
                                                   "kind":  "commands",
@@ -4721,10 +4725,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "resume_used":  1,
-                                                                        "credit_pipeline_used":  1,
-                                                                        "interview_started":  1,
                                                                         "router":  1,
+                                                                        "resume_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "credit_pipeline_used":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
@@ -4847,10 +4851,10 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "resume_used":  2,
-                                                                        "credit_pipeline_used":  1,
-                                                                        "interview_started":  2,
                                                                         "router":  2,
+                                                                        "resume_used":  2,
+                                                                        "interview_started":  2,
+                                                                        "credit_pipeline_used":  1,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
@@ -5380,6 +5384,7 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5401,11 +5406,10 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
-                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "secrets_redacted":  1,
+                                                                        "same_domain_only":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -5458,6 +5462,39 @@
                                                                      "insertions":  63486,
                                                                      "deletions":  17517,
                                                                      "files":  277
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "general":  4,
+                                                                   "code-change":  16
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "python-scripts",
+                                                     "entries":  18,
+                                                     "recent":  [
+                                                                    "Organized telegram/ directory: removed ~15 deprecated, intermediate, or redundant pipeline scripts. Moved all test scripts into telegram/tests/ and all documentation into telegr...",
+                                                                    "Created .env.example, .env, and requirements.txt inside telegram/. Refactored telethon_link_resolver.py to read keys via dotenv instead of hardcoded strings or separate text files.",
+                                                                    "Refactored telethon_link_resolver.py to extract all rentry link types, save to all_extracted_links.txt, and process unrestriction through Real-Debrid browser extension via Persi..."
+                                                                ],
+                                                     "firstDay":  "2026-05-26",
+                                                     "lastDay":  "2026-06-02",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
                                                                  }
                                                  },
                                                  {
@@ -5529,39 +5566,6 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  15,
-                                                                   "general":  3
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "python-scripts",
-                                                     "entries":  17,
-                                                     "recent":  [
-                                                                    "Fixed playwright 5000ms timeouts on rip.linkvertise.lol by updating telethon_link_resolver.py\u0027s bypass mechanism to use the TRW API end-point securely without headful DOM parsin...",
-                                                                    "Organized telegram/ directory: removed ~15 deprecated, intermediate, or redundant pipeline scripts. Moved all test scripts into telegram/tests/ and all documentation into telegr...",
-                                                                    "Created .env.example, .env, and requirements.txt inside telegram/. Refactored telethon_link_resolver.py to read keys via dotenv instead of hardcoded strings or separate text files."
-                                                                ],
-                                                     "firstDay":  "2026-05-26",
-                                                     "lastDay":  "2026-06-02",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
                                                                    "code-change":  15
                                                                },
                                                      "lineClean":  {
@@ -5594,38 +5598,6 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  14
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "vaultwares-decompile",
-                                                     "entries":  14,
-                                                     "recent":  [
-                                                                    "Backfill: commit 396cfda (2026-04-24T05:22:31-04:00) - Merge pull request #2 from p-potvin/copilot/update-vault-themes-branding | files=0 +373 -82",
-                                                                    "Backfill: commit 1481c89 (2026-04-24T08:10:29-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +50 -0",
-                                                                    "Backfill: commit efb1628 (2026-05-01T17:52:16-04:00) - Automated commit: Updated files in deconstructed-website-a-la-mode | files=2 +0 -2"
-                                                                ],
-                                                     "firstDay":  "2026-04-20",
-                                                     "lastDay":  "2026-05-01",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
                                                                    "plan":  8,
                                                                    "general":  1,
                                                                    "code-change":  5
@@ -5647,6 +5619,38 @@
                                                                 ],
                                                      "firstDay":  "2026-05-08",
                                                      "lastDay":  "2026-05-10",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  14
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "vaultwares-decompile",
+                                                     "entries":  14,
+                                                     "recent":  [
+                                                                    "Backfill: commit 396cfda (2026-04-24T05:22:31-04:00) - Merge pull request #2 from p-potvin/copilot/update-vault-themes-branding | files=0 +373 -82",
+                                                                    "Backfill: commit 1481c89 (2026-04-24T08:10:29-04:00) - chore: sync workspace changes and resolve PR templates | files=3 +50 -0",
+                                                                    "Backfill: commit efb1628 (2026-05-01T17:52:16-04:00) - Automated commit: Updated files in deconstructed-website-a-la-mode | files=2 +0 -2"
+                                                                ],
+                                                     "firstDay":  "2026-04-20",
+                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -16331,7 +16335,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-06-02T14:05:04.9820515Z",
+                 "_maxCreatedAtUtc":  "2026-06-02T17:46:44.3643797Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16339,7 +16343,7 @@
                            },
                  "totals":  {
                                 "projects":  46,
-                                "events":  1943,
+                                "events":  1944,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  81,
                                 "commitEventsWithStats":  679
