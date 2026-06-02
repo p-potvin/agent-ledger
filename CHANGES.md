@@ -3,6 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-02 00:06 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>general</code> - Midnight project file sync: processed DAILY_RECAP 2026-05-30/31, updated vault-explorer/TASKS.md (Gemini PR note), agent-ledger/TODO.md (3 dashboard tasks), verified all project...</summary>
+
+- Kind: general
+- Actor: Claude Scheduled Task
+- Agent Header:
+  ```text
+  Agent: Claude Scheduled Task (role: main)
+  Model: claude-haiku-4-5-20251001
+  Thinking: false
+  Mode: agent
+  Permissions: file-write (network: offline)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): workspace-bash, fs-operations
+  MCP servers accessed (this reply): VaultWares MCP
+  Time: 2026-06-02 00:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: Midnight project file sync: processed DAILY_RECAP 2026-05-30/31, updated vault-explorer/TASKS.md (Gemini PR note), agent-ledger/TODO.md (3 dashboard tasks), verified all project task files current with ledger, finalized DAILY_RECAP.md processing confirmation.
+- Commands:
+  - `Updated vault-explorer/TASKS.md`
+  - `Updated agent-ledger/TODO.md`
+  - `Finalized DAILY_RECAP.md`
+- Files:
+  - `agent-ledger/DAILY_RECAP.md`
+  - `vault-explorer/TASKS.md`
+  - `agent-ledger/TODO.md`
+
+</details>
+
+<details>
 <summary><strong>2026-06-01 18:10 - python-scripts</strong> <code>code-change</code> - Fixed playwright 5000ms timeouts on rip.linkvertise.lol by updating telethon_link_resolver.py&#39;s bypass mechanism to use the TRW API end-point securely without headful DOM parsin...</summary>
 
 - Kind: code-change
@@ -696,7 +725,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-31 00:42 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>general</code> - Ran /productivity:update: scanned 7 project TASKS.md files and last 20 ledger entries. Compiled active work summary. Today: CodeQL on 8 repos, Gemini smoke test (vault-explorer ...</summary>
+<summary><strong>2026-05-31 00:42 - General Tasks</strong> <code>general</code> - Ran /productivity:update: scanned 7 project TASKS.md files and last 20 ledger entries. Compiled active work summary. Today: CodeQL on 8 repos, Gemini smoke test (vault-explorer ...</summary>
 
 - Kind: general
 - Actor: claude-sonnet-4-6
