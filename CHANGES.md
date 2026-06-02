@@ -3,6 +3,38 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-02 17:51 - vaultwares-docs (formerly tmp-app)</strong> <code>verification</code> - Configured greencloud-vps as an exact-host tailnet DNS resolver with dnsmasq. Restored dnsmasq, installed /etc/dnsmasq.d/vaultwares-tailnet.conf with exact host-record answers f...</summary>
+
+- Kind: verification
+- Actor: GPT-5.2 Codex
+- Agent Header:
+  ```text
+  Agent: GPT-5.2 Codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): PowerShell, SSH, apply_patch
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 17:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Configured greencloud-vps as an exact-host tailnet DNS resolver with dnsmasq. Restored dnsmasq, installed /etc/dnsmasq.d/vaultwares-tailnet.conf with exact host-record answers for docs.vaultwares.ca, api.vaultwares.ca, hooks.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.73.93.84, enabled DNS on tailscale0 via UFW, verified direct resolver answers and HTTPS/TLS for docs and warden. Updated docs-content/operations/tailscale.mdx to document exact Restricted/Split DNS entries and warn against whole-zone forwarding through Tailscale DNS.
+- Commands:
+  - `ssh root@100.73.93.84 dnsmasq --test && systemctl enable --now dnsmasq`
+  - `ssh root@100.73.93.84 ufw allow in on tailscale0 to any port 53 proto udp/tcp`
+  - `nslookup docs.vaultwares.ca 100.73.93.84`
+  - `nslookup api.vaultwares.ca 100.73.93.84`
+  - `nslookup vaultwares.ca 100.73.93.84`
+  - `curl.exe --resolve docs.vaultwares.ca:443:100.73.93.84 https://docs.vaultwares.ca`
+  - `curl.exe --resolve warden.vaultwares.ca:443:100.73.93.84 https://warden.vaultwares.ca`
+- Files:
+  - `vaultwares-docs\docs-content\operations\tailscale.mdx`
+  - `/etc/dnsmasq.d/vaultwares-tailnet.conf`
+
+</details>
+
+<details>
 <summary><strong>2026-06-02 17:29 - python-scripts</strong> <code>code-change</code> - Removed --disable-extensions, --enable-automation, and --no-sandbox from Playwright&#39;s default launch arguments to allow the Real-Debrid extension to load successfully inside the...</summary>
 
 - Kind: code-change
@@ -188,7 +220,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-02 09:14 - vaultwares-docs (formerly tmp-app)</strong> <code>verification</code> - Verified tailnet/private access for vaultwares docs and secrets. The client-side override now points docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.7...</summary>
+<summary><strong>2026-06-02 09:14 - vaultwares-docs</strong> <code>verification</code> - Verified tailnet/private access for vaultwares docs and secrets. The client-side override now points docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.7...</summary>
 
 - Kind: verification
 - Actor: Claude Sonnet 4.6

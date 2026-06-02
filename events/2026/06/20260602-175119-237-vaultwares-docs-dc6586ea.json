@@ -1,0 +1,47 @@
+{
+  "id": "20260602-175119-237-vaultwares-docs-dc6586ea",
+  "createdAt": "2026-06-02T21:51:19.2370119Z",
+  "createdAtLocal": "2026-06-02 17:51",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "verification",
+  "actor": "GPT-5.2 Codex",
+  "agentHeader": "Agent: GPT-5.2 Codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): PowerShell, SSH, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-02 17:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "online",
+    "toolsUsed": [
+      "PowerShell",
+      "SSH",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Configured greencloud-vps as an exact-host tailnet DNS resolver with dnsmasq. Restored dnsmasq, installed /etc/dnsmasq.d/vaultwares-tailnet.conf with exact host-record answers for docs.vaultwares.ca, api.vaultwares.ca, hooks.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.73.93.84, enabled DNS on tailscale0 via UFW, verified direct resolver answers and HTTPS/TLS for docs and warden. Updated docs-content/operations/tailscale.mdx to document exact Restricted/Split DNS entries and warn against whole-zone forwarding through Tailscale DNS.",
+  "commands": [
+    "ssh root@100.73.93.84 dnsmasq --test && systemctl enable --now dnsmasq",
+    "ssh root@100.73.93.84 ufw allow in on tailscale0 to any port 53 proto udp/tcp",
+    "nslookup docs.vaultwares.ca 100.73.93.84",
+    "nslookup api.vaultwares.ca 100.73.93.84",
+    "nslookup vaultwares.ca 100.73.93.84",
+    "curl.exe --resolve docs.vaultwares.ca:443:100.73.93.84 https://docs.vaultwares.ca",
+    "curl.exe --resolve warden.vaultwares.ca:443:100.73.93.84 https://warden.vaultwares.ca"
+  ],
+  "files": [
+    "vaultwares-docs\\docs-content\\operations\\tailscale.mdx",
+    "/etc/dnsmasq.d/vaultwares-tailnet.conf"
+  ],
+  "planPath": "",
+  "contentHash": "dc6586ea16072af847fbc0a9ba883d9b04f7aac26d422b974767f2fca8a19f49",
+  "git": null
+}
