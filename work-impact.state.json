@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-06-02T13:57:01.2179525Z",
+    "lastUpdatedUtc":  "2026-06-02T14:12:01.2043092Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1949,7 +1949,8 @@
                                        "20260602-080205-123-python-scripts-90ea72e1",
                                        "20260602-091431-698-vault-explorer-e17eeb5f",
                                        "20260602-091439-464-vault-explorer-b0f4bdf4",
-                                       "20260602-091447-400-vaultwares-docs-5805e30e"
+                                       "20260602-091447-400-vaultwares-docs-5805e30e",
+                                       "20260602-100504-982-python-scripts-4e0cee52"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2862,9 +2863,10 @@
                                                                         "claude-haiku-4-5-20251001",
                                                                         "claude-sonnet-4-6",
                                                                         "Gemini 3.1 Pro (Preview)",
+                                                                        "gemini-3.1-pro-preview",
                                                                         "gemini-3.5-flash"
                                                                     ],
-                                                         "count":  6
+                                                         "count":  7
                                                      }
                                                  ],
                                    "tools":  [
@@ -2909,7 +2911,7 @@
                                                   "codex",
                                                   8,
                                                   "Github Copilot",
-                                                  3,
+                                                  4,
                                                   "Claude Code (Opus 4.7)",
                                                   2,
                                                   "claude-code",
@@ -2929,7 +2931,7 @@
                                                   "preload.js",
                                                   1
                                               ],
-                                   "totalEvents":  419,
+                                   "totalEvents":  420,
                                    "models":  [
                                                   "unknown",
                                                   319,
@@ -2951,39 +2953,41 @@
                                                   3,
                                                   "Gemini 3.5 Flash",
                                                   3,
-                                                  "GPT-5",
-                                                  2,
-                                                  "gemini-3.1-pro",
-                                                  2,
-                                                  "gemini-2.5-flash-thinking",
-                                                  2,
-                                                  "claude-opus-4-7",
+                                                  "claude-opus-4-5",
                                                   2,
                                                   "claude-haiku-4-5-20251001",
                                                   2,
                                                   "gemini-2.0",
                                                   2,
-                                                  "claude-opus-4-5",
+                                                  "gemini-2.5-flash-thinking",
+                                                  2,
+                                                  "gemini-3.1-pro",
                                                   2,
                                                   "Gemini 3.1 Pro (Preview)",
                                                   2,
-                                                  "gemini-exp-1206",
-                                                  1,
+                                                  "GPT-5",
+                                                  2,
+                                                  "claude-opus-4-7",
+                                                  2,
                                                   "claude-sonnet-4-6-thinking",
                                                   1,
-                                                  "claude-opus-4-6",
-                                                  1,
-                                                  "gemini-pro",
+                                                  "gemini-3.1-pro-preview",
                                                   1,
                                                   "gemini-2.0-flash",
                                                   1,
-                                                  "src/normalization.js",
+                                                  "gemini-exp-1206",
                                                   1,
-                                                  "claude-sonnet-4-5",
+                                                  "Gemini 3.1 Pro",
                                                   1,
                                                   "Gemini 3.1 Pro (Low)",
                                                   1,
-                                                  "Gemini 3.1 Pro",
+                                                  "gemini-pro",
+                                                  1,
+                                                  "claude-opus-4-6",
+                                                  1,
+                                                  "claude-sonnet-4-5",
+                                                  1,
+                                                  "src/normalization.js",
                                                   1
                                               ]
                                },
@@ -3003,7 +3007,7 @@
                                    {
                                        "label":  "Tue",
                                        "dow":  1,
-                                       "count":  75
+                                       "count":  76
                                    },
                                    {
                                        "label":  "Wed",
@@ -3073,7 +3077,7 @@
                                         "hour":  9
                                     },
                                     {
-                                        "count":  22,
+                                        "count":  23,
                                         "hour":  10
                                     },
                                     {
@@ -3146,7 +3150,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-06-02 09:57",
+                 "generatedAtLocal":  "2026-06-02 10:12",
                  "series":  {
                                 "months":  [
                                                {
@@ -3163,7 +3167,7 @@
                                                },
                                                {
                                                    "month":  "2026-06",
-                                                   "count":  20
+                                                   "count":  21
                                                }
                                            ],
                                 "days":  [
@@ -4491,19 +4495,19 @@
                                                                   "vault-explorer",
                                                                   "vaultwares-docs"
                                                               ],
-                                                 "entries":  6,
+                                                 "entries":  7,
                                                  "day":  "2026-06-02",
                                                  "kinds":  {
                                                                "general":  3,
                                                                "verification":  3,
-                                                               "code-change":  3
+                                                               "code-change":  4
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1612
+                                                  "count":  1613
                                               },
                                               {
                                                   "kind":  "verification",
@@ -4717,10 +4721,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  1,
                                                                         "resume_used":  1,
-                                                                        "interview_started":  1,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "router":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
@@ -4843,10 +4847,10 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  2,
                                                                         "resume_used":  2,
-                                                                        "interview_started":  2,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  2,
+                                                                        "router":  2,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
@@ -5376,7 +5380,6 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
-                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5398,10 +5401,11 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
+                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "same_domain_only":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -5525,8 +5529,8 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  14,
-                                                                   "general":  3
+                                                                   "general":  3,
+                                                                   "code-change":  15
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -5537,11 +5541,11 @@
 
                                                                     },
                                                      "project":  "python-scripts",
-                                                     "entries":  16,
+                                                     "entries":  17,
                                                      "recent":  [
-                                                                    "Created TRW API linkvertise bypass in trw_bypass_pipeline.py. Bypasses URLs via trw.lat, filters size/type, extracts RD links via extension context, and merges non-mega urls to ...",
                                                                     "Fixed playwright 5000ms timeouts on rip.linkvertise.lol by updating telethon_link_resolver.py\u0027s bypass mechanism to use the TRW API end-point securely without headful DOM parsin...",
-                                                                    "Organized telegram/ directory: removed ~15 deprecated, intermediate, or redundant pipeline scripts. Moved all test scripts into telegram/tests/ and all documentation into telegr..."
+                                                                    "Organized telegram/ directory: removed ~15 deprecated, intermediate, or redundant pipeline scripts. Moved all test scripts into telegram/tests/ and all documentation into telegr...",
+                                                                    "Created .env.example, .env, and requirements.txt inside telegram/. Refactored telethon_link_resolver.py to read keys via dotenv instead of hardcoded strings or separate text files."
                                                                 ],
                                                      "firstDay":  "2026-05-26",
                                                      "lastDay":  "2026-06-02",
@@ -16327,7 +16331,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-06-02T13:14:47.4001211Z",
+                 "_maxCreatedAtUtc":  "2026-06-02T14:05:04.9820515Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16335,7 +16339,7 @@
                            },
                  "totals":  {
                                 "projects":  46,
-                                "events":  1942,
+                                "events":  1943,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  81,
                                 "commitEventsWithStats":  679
