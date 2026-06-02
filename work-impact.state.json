@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-06-02T03:57:01.8183460Z",
+    "lastUpdatedUtc":  "2026-06-02T04:12:01.8899758Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1943,7 +1943,8 @@
                                        "20260601-121114-759-vault-explorer-e3b4f7ec",
                                        "20260601-122605-485-agent-ledger-5dabfc58",
                                        "20260601-175717-953-python-scripts-7df7e75d",
-                                       "20260601-181030-261-python-scripts-aa8bd5d9"
+                                       "20260601-181030-261-python-scripts-aa8bd5d9",
+                                       "20260602-000630-950-general-tasks-532f974d"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2630,9 +2631,9 @@
     "data":  {
                  "agentData":  {
                                    "mcpServers":  [
-                                                      "Windows-MCP",
-                                                      1,
                                                       "VaultWares MCP",
+                                                      2,
+                                                      "Windows-MCP",
                                                       1
                                                   ],
                                    "daySeries":  [
@@ -2842,14 +2843,24 @@
                                                                         "unknown"
                                                                     ],
                                                          "count":  14
+                                                     },
+                                                     {
+                                                         "actors":  [
+                                                                        "Claude Scheduled Task"
+                                                                    ],
+                                                         "day":  "2026-06-02",
+                                                         "models":  [
+                                                                        "claude-haiku-4-5-20251001"
+                                                                    ],
+                                                         "count":  1
                                                      }
                                                  ],
                                    "tools":  [
                                                  "view_file",
                                                  22,
-                                                 "PowerShell",
-                                                 21,
                                                  "run_command",
+                                                 21,
+                                                 "PowerShell",
                                                  21,
                                                  "replace_file_content",
                                                  20,
@@ -2869,9 +2880,9 @@
                                                  9,
                                                  "Read",
                                                  8,
-                                                 "functions.apply_patch",
-                                                 8,
                                                  "multi_replace_file_content",
+                                                 8,
+                                                 "functions.apply_patch",
                                                  8,
                                                  "mcp__VaultWares_MCP__MCP_Server___sh_run",
                                                  7
@@ -2885,30 +2896,32 @@
                                                   9,
                                                   "codex",
                                                   8,
+                                                  "Github Copilot",
+                                                  2,
                                                   "Claude Code (Opus 4.7)",
                                                   2,
                                                   "claude-code",
                                                   2,
-                                                  "Github Copilot",
-                                                  2,
-                                                  "claude-sonnet-4-5",
+                                                  "Claude",
                                                   1,
                                                   "preload.js",
                                                   1,
+                                                  "claude-sonnet-4-5",
+                                                  1,
                                                   "claude-sonnet-4-6 (scheduled task)",
                                                   1,
-                                                  "Claude",
+                                                  "Claude Scheduled Task",
                                                   1
                                               ],
-                                   "totalEvents":  413,
+                                   "totalEvents":  414,
                                    "models":  [
                                                   "unknown",
                                                   319,
                                                   "gpt-5.2",
                                                   19,
-                                                  "claude-sonnet-4-6",
-                                                  11,
                                                   "Gemini-1.5-Pro",
+                                                  11,
+                                                  "claude-sonnet-4-6",
                                                   11,
                                                   "Gemini 3.5 Flash (Medium)",
                                                   9,
@@ -2916,43 +2929,45 @@
                                                   8,
                                                   "Claude Haiku",
                                                   5,
-                                                  "Gemini 3 Flash",
+                                                  "gemini-3.5-flash",
                                                   3,
                                                   "Gemini 3.5 Flash",
                                                   3,
-                                                  "gemini-3.5-flash",
+                                                  "Gemini 3 Flash",
                                                   3,
-                                                  "claude-opus-4-5",
-                                                  2,
-                                                  "gemini-2.5-flash-thinking",
-                                                  2,
-                                                  "gemini-3.1-pro",
+                                                  "claude-opus-4-7",
                                                   2,
                                                   "gemini-2.0",
                                                   2,
+                                                  "gemini-2.5-flash-thinking",
+                                                  2,
                                                   "GPT-5",
                                                   2,
-                                                  "claude-opus-4-7",
+                                                  "claude-opus-4-5",
                                                   2,
-                                                  "Gemini 3.1 Pro",
-                                                  1,
+                                                  "gemini-3.1-pro",
+                                                  2,
                                                   "claude-sonnet-4-6-thinking",
                                                   1,
-                                                  "gemini-2.0-flash",
+                                                  "gemini-pro",
+                                                  1,
+                                                  "Gemini 3.1 Pro (Preview)",
+                                                  1,
+                                                  "claude-haiku-4-5-20251001",
                                                   1,
                                                   "gemini-exp-1206",
                                                   1,
                                                   "claude-sonnet-4-5",
                                                   1,
-                                                  "Gemini 3.1 Pro (Preview)",
-                                                  1,
-                                                  "gemini-pro",
+                                                  "claude-opus-4-6",
                                                   1,
                                                   "Gemini 3.1 Pro (Low)",
                                                   1,
+                                                  "Gemini 3.1 Pro",
+                                                  1,
                                                   "src/normalization.js",
                                                   1,
-                                                  "claude-opus-4-6",
+                                                  "gemini-2.0-flash",
                                                   1
                                               ]
                                },
@@ -2972,7 +2987,7 @@
                                    {
                                        "label":  "Tue",
                                        "dow":  1,
-                                       "count":  69
+                                       "count":  70
                                    },
                                    {
                                        "label":  "Wed",
@@ -3002,7 +3017,7 @@
                                ],
                  "hourSeries":  [
                                     {
-                                        "count":  15,
+                                        "count":  16,
                                         "hour":  0
                                     },
                                     {
@@ -3115,7 +3130,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-06-01 23:57",
+                 "generatedAtLocal":  "2026-06-02 00:12",
                  "series":  {
                                 "months":  [
                                                {
@@ -3132,7 +3147,7 @@
                                                },
                                                {
                                                    "month":  "2026-06",
-                                                   "count":  14
+                                                   "count":  15
                                                }
                                            ],
                                 "days":  [
@@ -4451,6 +4466,14 @@
                                                                "verification":  2,
                                                                "code-change":  12
                                                            }
+                                             },
+                                             {
+                                                 "projects":  "General Tasks",
+                                                 "entries":  1,
+                                                 "day":  "2026-06-02",
+                                                 "kinds":  {
+                                                               "general":  1
+                                                           }
                                              }
                                          ],
                                 "kinds":  [
@@ -4468,7 +4491,7 @@
                                               },
                                               {
                                                   "kind":  "general",
-                                                  "count":  48
+                                                  "count":  49
                                               },
                                               {
                                                   "kind":  "commands",
@@ -4662,7 +4685,7 @@
                                                                    "commands":  13,
                                                                    "verification":  29,
                                                                    "plan":  8,
-                                                                   "general":  20
+                                                                   "general":  21
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -4670,21 +4693,21 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  1,
                                                                         "resume_used":  1,
-                                                                        "interview_started":  1,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "router":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
-                                                     "entries":  113,
+                                                     "entries":  114,
                                                      "recent":  [
-                                                                    "Confirmed Dependabot alerts/security updates are available on all GitHub plans (no GHAS purchase required). Validated custom GitHub App \u0027gemini-code-assist-for-vaultwares\u0027 metad...",
                                                                     "Midday project file sync (scheduled task). Read DAILY_RECAP.md and 21 ledger events from 2026-05-30. Updated 3 files: (1) vault-explorer/TASKS.md: marked H1,1,1a,1b,1c,2,2a,2b,2...",
-                                                                    "Ran /productivity:update: scanned 7 project TASKS.md files and last 20 ledger entries. Compiled active work summary. Today: CodeQL on 8 repos, Gemini smoke test (vault-explorer ..."
+                                                                    "Ran /productivity:update: scanned 7 project TASKS.md files and last 20 ledger entries. Compiled active work summary. Today: CodeQL on 8 repos, Gemini smoke test (vault-explorer ...",
+                                                                    "Midnight project file sync: processed DAILY_RECAP 2026-05-30/31, updated vault-explorer/TASKS.md (Gemini PR note), agent-ledger/TODO.md (3 dashboard tasks), verified all project..."
                                                                 ],
                                                      "firstDay":  "2026-04-28",
-                                                     "lastDay":  "2026-05-31",
+                                                     "lastDay":  "2026-06-02",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4796,10 +4819,10 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  2,
                                                                         "resume_used":  2,
-                                                                        "interview_started":  2,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  2,
+                                                                        "router":  2,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
@@ -5329,7 +5352,6 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
-                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5351,10 +5373,11 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
+                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "same_domain_only":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -16280,17 +16303,17 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-06-01T22:10:30.2619497Z",
+                 "_maxCreatedAtUtc":  "2026-06-02T04:06:30.9507779Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
-                               "end":  "2026-06-01"
+                               "end":  "2026-06-02"
                            },
                  "totals":  {
                                 "projects":  46,
-                                "events":  1936,
+                                "events":  1937,
                                 "uniqueCommitsRecomputed":  679,
-                                "activeDays":  80,
+                                "activeDays":  81,
                                 "commitEventsWithStats":  679
                             }
              }
