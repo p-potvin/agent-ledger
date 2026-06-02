@@ -3,6 +3,32 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-02 13:46 - python-scripts</strong> <code>code-change,general</code> - Refactored telethon_link_resolver.py to extract all rentry link types, save to all_extracted_links.txt, and process unrestriction through Real-Debrid browser extension via Persi...</summary>
+
+- Kind: code-change,general
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: o3-mini
+  Thinking: high
+  Mode: chat
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts\telegram  Branch: main
+  Tools used (this reply): run_in_terminal, grep_search, read_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 13:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Refactored telethon_link_resolver.py to extract all rentry link types, save to all_extracted_links.txt, and process unrestriction through Real-Debrid browser extension via Persistent Context and user interaction (ENTER prompt) instead of the RealDebrid API, matching the user's workflow prototype.
+- Commands:
+  - `python -m py_compile telethon_link_resolver.py`
+- Files:
+  - `telegram/telethon_link_resolver.py`
+- Git: repo=python-scripts, branch=main, head=8e2fa98
+
+</details>
+
+<details>
 <summary><strong>2026-06-02 10:05 - python-scripts</strong> <code>code-change</code> - Created .env.example, .env, and requirements.txt inside telegram/. Refactored telethon_link_resolver.py to read keys via dotenv instead of hardcoded strings or separate text files.</summary>
 
 - Kind: code-change
