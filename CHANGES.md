@@ -3,7 +3,62 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-06-02 15:09 - vault-explorer (formerly Vault Explorer)</strong> <code>plan</code> - Initial planning phase for ASR subtitle pipeline stabilization, viewport boundaries for ASR menu, tooltip system integration, and python latency checks</summary>
+<summary><strong>2026-06-02 15:16 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Ran Playwright test suite successfully by fixing obsolete tab/favorite element selectors. Executed Start-AsrBenchmark.ps1 simulation to confirm ASR cold-boot initialization and ...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-2.5-pro-preview
+  Thinking: medium
+  Mode: chat
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): run_command, view_file, replace_file_content, write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 15:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ran Playwright test suite successfully by fixing obsolete tab/favorite element selectors. Executed Start-AsrBenchmark.ps1 simulation to confirm ASR cold-boot initialization and inference telemetry metrics extraction and persistence to BENCHMARKS.md. Verified that tooltip system and viewport-aware ASR context menu coordinate flipping/clamping are fully correct.
+- Commands:
+  - `node C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\scratch\test_playwright.js`
+  - `powershell -File .\powershell\Start-AsrBenchmark.ps1 -ForceSimulation`
+- Files:
+  - `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\scratch\test_playwright.js`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 15:13 - vault-explorer</strong> <code>code-change</code> - Created centralized tooltip system in js/tooltip.js, registered script in index.html, integrated viewport boundary-checking with flip/clamp behavior for the ASR context menu in ...</summary>
+
+- Kind: code-change
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-1.5-pro
+  Thinking: medium
+  Mode: code
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): write_to_file, replace_file_content, view_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 15:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created centralized tooltip system in js/tooltip.js, registered script in index.html, integrated viewport boundary-checking with flip/clamp behavior for the ASR context menu in js/player/subtitles.js, and added perf_counter() timing telemetry to parakeet_wrapper.py.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\tooltip.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\player\subtitles.js`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-media-processing\vaultwares_media_processing\parakeet_wrapper.py`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 15:09 - vault-explorer</strong> <code>plan</code> - Initial planning phase for ASR subtitle pipeline stabilization, viewport boundaries for ASR menu, tooltip system integration, and python latency checks</summary>
 
 - Kind: plan
 - Actor: Antigravity
