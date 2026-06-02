@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-06-02T11:57:02.8792970Z",
+    "lastUpdatedUtc":  "2026-06-02T12:12:02.2082181Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1945,7 +1945,8 @@
                                        "20260601-175717-953-python-scripts-7df7e75d",
                                        "20260601-181030-261-python-scripts-aa8bd5d9",
                                        "20260602-000630-950-general-tasks-532f974d",
-                                       "20260602-070109-620-agent-ledger-05d7dfef"
+                                       "20260602-070109-620-agent-ledger-05d7dfef",
+                                       "20260602-080205-123-python-scripts-90ea72e1"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2848,13 +2849,15 @@
                                                      {
                                                          "actors":  [
                                                                         "Claude Code",
-                                                                        "Claude Scheduled Task"
+                                                                        "Claude Scheduled Task",
+                                                                        "GitHub Copilot"
                                                                     ],
                                                          "day":  "2026-06-02",
                                                          "models":  [
-                                                                        "claude-haiku-4-5-20251001"
+                                                                        "claude-haiku-4-5-20251001",
+                                                                        "Gemini 3.1 Pro (Preview)"
                                                                     ],
-                                                         "count":  2
+                                                         "count":  3
                                                      }
                                                  ],
                                    "tools":  [
@@ -2870,13 +2873,13 @@
                                                  18,
                                                  "git",
                                                  17,
-                                                 "functions.shell_command",
-                                                 11,
                                                  "apply_patch",
                                                  11,
-                                                 "Edit",
-                                                 10,
+                                                 "functions.shell_command",
+                                                 11,
                                                  "shell_command",
+                                                 10,
+                                                 "Edit",
                                                  10,
                                                  "Read",
                                                  9,
@@ -2899,25 +2902,25 @@
                                                   "codex",
                                                   8,
                                                   "Github Copilot",
-                                                  2,
+                                                  3,
                                                   "Claude Code (Opus 4.7)",
                                                   2,
                                                   "claude-code",
                                                   2,
+                                                  "claude-sonnet-4-5",
+                                                  1,
                                                   "Claude",
                                                   1,
                                                   "Claude Code",
-                                                  1,
-                                                  "preload.js",
                                                   1,
                                                   "claude-sonnet-4-6 (scheduled task)",
                                                   1,
                                                   "Claude Scheduled Task",
                                                   1,
-                                                  "claude-sonnet-4-5",
+                                                  "preload.js",
                                                   1
                                               ],
-                                   "totalEvents":  415,
+                                   "totalEvents":  416,
                                    "models":  [
                                                   "unknown",
                                                   319,
@@ -2939,39 +2942,39 @@
                                                   3,
                                                   "Gemini 3 Flash",
                                                   3,
-                                                  "claude-opus-4-7",
-                                                  2,
-                                                  "gemini-2.0",
-                                                  2,
                                                   "GPT-5",
-                                                  2,
-                                                  "claude-haiku-4-5-20251001",
-                                                  2,
-                                                  "gemini-2.5-flash-thinking",
                                                   2,
                                                   "gemini-3.1-pro",
                                                   2,
+                                                  "gemini-2.5-flash-thinking",
+                                                  2,
+                                                  "claude-opus-4-7",
+                                                  2,
+                                                  "claude-haiku-4-5-20251001",
+                                                  2,
+                                                  "gemini-2.0",
+                                                  2,
                                                   "claude-opus-4-5",
                                                   2,
+                                                  "Gemini 3.1 Pro (Preview)",
+                                                  2,
+                                                  "gemini-exp-1206",
+                                                  1,
                                                   "claude-sonnet-4-6-thinking",
+                                                  1,
+                                                  "claude-opus-4-6",
                                                   1,
                                                   "gemini-pro",
                                                   1,
-                                                  "Gemini 3.1 Pro (Preview)",
-                                                  1,
-                                                  "gemini-exp-1206",
-                                                  1,
                                                   "gemini-2.0-flash",
                                                   1,
-                                                  "claude-sonnet-4-5",
+                                                  "src/normalization.js",
                                                   1,
-                                                  "claude-opus-4-6",
+                                                  "claude-sonnet-4-5",
                                                   1,
                                                   "Gemini 3.1 Pro (Low)",
                                                   1,
                                                   "Gemini 3.1 Pro",
-                                                  1,
-                                                  "src/normalization.js",
                                                   1
                                               ]
                                },
@@ -2991,7 +2994,7 @@
                                    {
                                        "label":  "Tue",
                                        "dow":  1,
-                                       "count":  71
+                                       "count":  72
                                    },
                                    {
                                        "label":  "Wed",
@@ -3053,7 +3056,7 @@
                                         "hour":  7
                                     },
                                     {
-                                        "count":  18,
+                                        "count":  19,
                                         "hour":  8
                                     },
                                     {
@@ -3134,7 +3137,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-06-02 07:57",
+                 "generatedAtLocal":  "2026-06-02 08:12",
                  "series":  {
                                 "months":  [
                                                {
@@ -3151,7 +3154,7 @@
                                                },
                                                {
                                                    "month":  "2026-06",
-                                                   "count":  16
+                                                   "count":  17
                                                }
                                            ],
                                 "days":  [
@@ -4474,21 +4477,22 @@
                                              {
                                                  "projects":  [
                                                                   "agent-ledger",
-                                                                  "General Tasks"
+                                                                  "General Tasks",
+                                                                  "python-scripts"
                                                               ],
-                                                 "entries":  2,
+                                                 "entries":  3,
                                                  "day":  "2026-06-02",
                                                  "kinds":  {
-                                                               "general":  1,
+                                                               "general":  2,
                                                                "verification":  1,
-                                                               "code-change":  1
+                                                               "code-change":  2
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1610
+                                                  "count":  1611
                                               },
                                               {
                                                   "kind":  "verification",
@@ -4500,7 +4504,7 @@
                                               },
                                               {
                                                   "kind":  "general",
-                                                  "count":  49
+                                                  "count":  50
                                               },
                                               {
                                                   "kind":  "commands",
@@ -4702,10 +4706,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  1,
                                                                         "resume_used":  1,
-                                                                        "interview_started":  1,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "router":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
@@ -4828,10 +4832,10 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  2,
                                                                         "resume_used":  2,
-                                                                        "interview_started":  2,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  2,
+                                                                        "router":  2,
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
@@ -5361,7 +5365,6 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
-                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5383,10 +5386,11 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
+                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "same_domain_only":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -5510,6 +5514,39 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "general":  3,
+                                                                   "code-change":  14
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "python-scripts",
+                                                     "entries":  16,
+                                                     "recent":  [
+                                                                    "Created TRW API linkvertise bypass in trw_bypass_pipeline.py. Bypasses URLs via trw.lat, filters size/type, extracts RD links via extension context, and merges non-mega urls to ...",
+                                                                    "Fixed playwright 5000ms timeouts on rip.linkvertise.lol by updating telethon_link_resolver.py\u0027s bypass mechanism to use the TRW API end-point securely without headful DOM parsin...",
+                                                                    "Organized telegram/ directory: removed ~15 deprecated, intermediate, or redundant pipeline scripts. Moved all test scripts into telegram/tests/ and all documentation into telegr..."
+                                                                ],
+                                                     "firstDay":  "2026-05-26",
+                                                     "lastDay":  "2026-06-02",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  15
                                                                },
                                                      "lineClean":  {
@@ -5538,39 +5575,6 @@
                                                                      "insertions":  18978,
                                                                      "deletions":  661,
                                                                      "files":  110
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  13,
-                                                                   "general":  2
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "python-scripts",
-                                                     "entries":  15,
-                                                     "recent":  [
-                                                                    "Fixed Telegram session re-login issue by using absolute __file__ paths for .session. Added strict pre-parser to only capture linkvertise.com URLs and mutate them to .lol prior t...",
-                                                                    "Created TRW API linkvertise bypass in trw_bypass_pipeline.py. Bypasses URLs via trw.lat, filters size/type, extracts RD links via extension context, and merges non-mega urls to ...",
-                                                                    "Fixed playwright 5000ms timeouts on rip.linkvertise.lol by updating telethon_link_resolver.py\u0027s bypass mechanism to use the TRW API end-point securely without headful DOM parsin..."
-                                                                ],
-                                                     "firstDay":  "2026-05-26",
-                                                     "lastDay":  "2026-06-01",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
                                                                  }
                                                  },
                                                  {
@@ -16312,7 +16316,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-06-02T11:01:09.6204933Z",
+                 "_maxCreatedAtUtc":  "2026-06-02T12:02:05.1233616Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16320,7 +16324,7 @@
                            },
                  "totals":  {
                                 "projects":  46,
-                                "events":  1938,
+                                "events":  1939,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  81,
                                 "commitEventsWithStats":  679
