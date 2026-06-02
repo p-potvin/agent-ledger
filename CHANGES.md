@@ -3,6 +3,34 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-02 08:02 - python-scripts</strong> <code>code-change,general</code> - Organized telegram/ directory: removed ~15 deprecated, intermediate, or redundant pipeline scripts. Moved all test scripts into telegram/tests/ and all documentation into telegr...</summary>
+
+- Kind: code-change,general
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Gemini 3.1 Pro (Preview)
+  Thinking: low
+  Mode: code
+  Permissions: autopilot (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): run_in_terminal, create_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 08:02 (TZ: Eastern Standard Time)
+  ```
+- Summary: Organized telegram/ directory: removed ~15 deprecated, intermediate, or redundant pipeline scripts. Moved all test scripts into telegram/tests/ and all documentation into telegram/docs/. Sourced configurations to write a comprehensive README.md detailing the Telegram end-to-end scraper pipeline.
+- Commands:
+  - `Remove-Item`
+  - `mkdir`
+  - `mv`
+- Files:
+  - `telegram\README.md`
+- Git: repo=python-scripts, branch=main, head=8e2fa98
+
+</details>
+
+<details>
 <summary><strong>2026-06-02 07:01 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change,verification</code> - Fixed work_impact page: (1) Stats now load on initial render - improved data initialization check; (2) Work activity tooltip encoding fixed by decoding URI-encoded project names...</summary>
 
 - Kind: code-change,verification
