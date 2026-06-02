@@ -3,6 +3,89 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-02 09:14 - vaultwares-docs (formerly tmp-app)</strong> <code>verification</code> - Verified tailnet/private access for vaultwares docs and secrets. The client-side override now points docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.7...</summary>
+
+- Kind: verification
+- Actor: Claude Sonnet 4.6
+- Agent Header:
+  ```text
+  Agent: Claude Sonnet 4.6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): PowerShell, SSH
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 09:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified tailnet/private access for vaultwares docs and secrets. The client-side override now points docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.73.93.84. Confirmed docs returns 200 with valid TLS and HTML content; secrets returns 200 after following the redirect to warden; warden returns 200 with valid TLS and the VaultWarden JSON landing payload. dnsmasq on vaultwares-1 was not needed for this path, so I disabled it, removed the temporary dnsmasq config, and removed the UFW UDP/TCP 53 allowances on tailscale0.
+- Commands:
+  - `curl.exe -sS -o NUL -w ... https://docs.vaultwares.ca`
+  - `curl.exe -sS -o NUL -w ... https://warden.vaultwares.ca`
+  - `curl.exe -sS -L -o NUL -w ... https://secrets.vaultwares.ca`
+  - `ssh root@100.73.93.84 systemctl disable --now dnsmasq`
+  - `ssh root@100.73.93.84 ufw delete allow in on tailscale0 to any port 53 proto udp/tcp`
+- Files:
+  - `C:\\Windows\\System32\\drivers\\etc\\hosts`
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 09:14 - vault-explorer (formerly Vault Explorer)</strong> <code>general</code> - Loaded context from checkpoint. Confirmed ASR pipeline fix and playback speed UI refactoring are complete and passing smoke tests.</summary>
+
+- Kind: general
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-3.5-flash
+  Thinking: low
+  Mode: chat
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): run_command
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 09:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Loaded context from checkpoint. Confirmed ASR pipeline fix and playback speed UI refactoring are complete and passing smoke tests.
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 09:14 - vault-explorer</strong> <code>code-change,verification</code> - Refactored video player speed controls to be icon-only. Replaced ASR subtitle modal with a new floating language context menu. Fixed ASR pipeline failure in parakeet_wrapper.py ...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-3.5-flash
+  Thinking: medium
+  Mode: code
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): replace_file_content, multi_replace_file_content, run_command, view_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 09:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Refactored video player speed controls to be icon-only. Replaced ASR subtitle modal with a new floating language context menu. Fixed ASR pipeline failure in parakeet_wrapper.py by implementing stereo-to-mono downmixing and silenced PyTorch/NeMo warning logs. Verified via Playwright smoke tests and Python native transcribing script.
+- Commands:
+  - `node tests/refactor_smoke_test.js`
+  - `python test_nemo_real_asr.py`
+- Files:
+  - `index.html`
+  - `js/player/player.js`
+  - `js/player/subtitles.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vaultwares-media-processing\vaultwares_media_processing\parakeet_wrapper.py`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
 <summary><strong>2026-06-02 08:02 - python-scripts</strong> <code>code-change,general</code> - Organized telegram/ directory: removed ~15 deprecated, intermediate, or redundant pipeline scripts. Moved all test scripts into telegram/tests/ and all documentation into telegr...</summary>
 
 - Kind: code-change,general
@@ -162,7 +245,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-01 12:11 - vault-explorer (formerly Vault Explorer)</strong> <code>plan</code> - Created implementation plan to modernize video player UI (playback speed icon and subtitle generation context menu) and debug the NeMo/Parakeet pipeline by downmixing input audi...</summary>
+<summary><strong>2026-06-01 12:11 - vault-explorer</strong> <code>plan</code> - Created implementation plan to modernize video player UI (playback speed icon and subtitle generation context menu) and debug the NeMo/Parakeet pipeline by downmixing input audi...</summary>
 
 - Kind: plan
 - Actor: Antigravity
@@ -287,7 +370,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-01 07:43 - vaultwares-docs (formerly tmp-app)</strong> <code>code-change,commands</code> - Added an explicit renamed-projects table to docs (agent-ledger schema page) so the old&#226;†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so th...</summary>
+<summary><strong>2026-06-01 07:43 - vaultwares-docs</strong> <code>code-change,commands</code> - Added an explicit renamed-projects table to docs (agent-ledger schema page) so the old&#226;†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so th...</summary>
 
 - Kind: code-change,commands
 - Actor: AI Agent

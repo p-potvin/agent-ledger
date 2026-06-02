@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260602-091439-464-vault-explorer-b0f4bdf4",
+    "createdAt":  "2026-06-02T13:14:39.4644184Z",
+    "createdAtLocal":  "2026-06-02 09:14",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "general",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-3.5-flash\r\nThinking: low\r\nMode: chat\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-02 09:14 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-3.5-flash",
+                    "thinking":  "low",
+                    "mode":  "chat",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  "run_command",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Loaded context from checkpoint. Confirmed ASR pipeline fix and playback speed UI refactoring are complete and passing smoke tests.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\adbd177b-f07c-46b3-bc04-3af2adb19aa9\\implementation_plan.md",
+    "contentHash":  "b0f4bdf480571b1e99b226ebc220f9151e0bae86d76b0c8c81bc3c9eb60277a3",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "0138f21",
+                "hasChanges":  true
+            }
+}
