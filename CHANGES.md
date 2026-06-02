@@ -3,6 +3,35 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-02 14:53 - vault-explorer (formerly Vault Explorer)</strong> <code>plan</code> - Created implementation plan for ASR IPC hardening, viewport boundary-checking for floating context menus, and centralized theme-aware tooltips.</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-1.5-pro
+  Thinking: high
+  Mode: plan
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 14:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created implementation plan for ASR IPC hardening, viewport boundary-checking for floating context menus, and centralized theme-aware tooltips.
+- Files:
+  - `src/normalization.js`
+  - `js/player/subtitles.js`
+  - `js/tooltip.js`
+  - `index.html`
+  - `index.css`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
 <summary><strong>2026-06-02 13:46 - python-scripts</strong> <code>code-change,general</code> - Refactored telethon_link_resolver.py to extract all rentry link types, save to all_extracted_links.txt, and process unrestriction through Real-Debrid browser extension via Persi...</summary>
 
 - Kind: code-change,general
@@ -86,7 +115,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-02 09:14 - vault-explorer (formerly Vault Explorer)</strong> <code>general</code> - Loaded context from checkpoint. Confirmed ASR pipeline fix and playback speed UI refactoring are complete and passing smoke tests.</summary>
+<summary><strong>2026-06-02 09:14 - vault-explorer</strong> <code>general</code> - Loaded context from checkpoint. Confirmed ASR pipeline fix and playback speed UI refactoring are complete and passing smoke tests.</summary>
 
 - Kind: general
 - Actor: Antigravity
