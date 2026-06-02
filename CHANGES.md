@@ -3,6 +3,34 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-02 10:05 - python-scripts</strong> <code>code-change</code> - Created .env.example, .env, and requirements.txt inside telegram/. Refactored telethon_link_resolver.py to read keys via dotenv instead of hardcoded strings or separate text files.</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: gemini-3.1-pro-preview
+  Thinking: medium
+  Mode: chat
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts\telegram  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 10:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created .env.example, .env, and requirements.txt inside telegram/. Refactored telethon_link_resolver.py to read keys via dotenv instead of hardcoded strings or separate text files.
+- Commands:
+  - `create_file`
+- Files:
+  - `telegram/.env`
+  - `telegram/requirements.txt`
+  - `telegram/telethon_link_resolver.py`
+- Git: repo=python-scripts, branch=main, head=8e2fa98
+
+</details>
+
+<details>
 <summary><strong>2026-06-02 09:14 - vaultwares-docs (formerly tmp-app)</strong> <code>verification</code> - Verified tailnet/private access for vaultwares docs and secrets. The client-side override now points docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.7...</summary>
 
 - Kind: verification
