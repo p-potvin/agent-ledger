@@ -43,6 +43,27 @@ function Normalize-RawProjectName {
     return $Name
 }
 
+function Should-ExcludeCommit {
+    param(
+        [string]$Project,
+        [string]$Commit
+    )
+    # Exclude specific outlier commits that skew statistics
+    $excludedCommits = @(
+        @{ project = 'vaultwares-cli'; commit = '486f844' }
+        @{ project = 'automation-suite'; datePattern = '2026-04-(14|22)' }
+    )
+
+    foreach ($excluded in $excludedCommits) {
+        if ($excluded.commit) {
+            if ($Project -eq $excluded.project -and $Commit -like "*$($excluded.commit)*") {
+                return $true
+            }
+        }
+    }
+    return $false
+}
+
 function ConvertTo-OneLine {
     param([AllowNull()][string]$Value)
     if ([string]::IsNullOrWhiteSpace($Value)) { return '' }
@@ -426,6 +447,11 @@ $eventDirs | ForEach-Object { Get-ChildItem -Path $_ -Recurse -File -Filter '*.j
                     }
 
                     [void]$processedCommitKeys.Add($commitKey)
+
+                    # Skip excluded outlier commits
+                    if ((Should-ExcludeCommit -Project $project -Commit $commitish)) {
+                        continue
+                    }
 
                     # Get commit timestamp and convert to local time for accurate day/month bucketing
                     $commitUtc = Get-CommitTimestamp -RepoRoot $repoRoot -Commitish $commitish

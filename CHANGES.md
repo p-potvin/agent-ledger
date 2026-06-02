@@ -3,6 +3,33 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-02 07:01 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change,verification</code> - Fixed work_impact page: (1) Stats now load on initial render - improved data initialization check; (2) Work activity tooltip encoding fixed by decoding URI-encoded project names...</summary>
+
+- Kind: code-change,verification
+- Actor: Claude Code
+- Agent Header:
+  ```text
+  Agent: Claude Code (role: main)
+  Model: claude-haiku-4-5-20251001
+  Thinking: medium
+  Mode: code
+  Permissions: autopilot (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): Edit, Read, PowerShell, TaskCreate, TaskUpdate
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 07:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed work_impact page: (1) Stats now load on initial render - improved data initialization check; (2) Work activity tooltip encoding fixed by decoding URI-encoded project names; (3) Moved KPI row down above focus blocks; (4) Added commit exclusion for outliers (vaultwares-cli 486f844); (5) Added missing modules: AI Model Usage, Tools Used, MCP Servers, Agent Activity by Day, Time-of-Day Rhythm (day-of-week breakdown); (6) Activity by project accordions verified working with proper rendering
+- Commands:
+  - `Edit: WorkImpactPage.tsx - reordered sections, added agent data components, fixed tooltip encoding`
+  - `Edit: update-work-impact-state.ps1 - added commit exclusion logic`
+- Files:
+  - `site/src/pages/WorkImpactPage.tsx`
+  - `scripts/update-work-impact-state.ps1`
+
+</details>
+
+<details>
 <summary><strong>2026-06-02 00:06 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>general</code> - Midnight project file sync: processed DAILY_RECAP 2026-05-30/31, updated vault-explorer/TASKS.md (Gemini PR note), agent-ledger/TODO.md (3 dashboard tasks), verified all project...</summary>
 
 - Kind: general
@@ -83,7 +110,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-01 12:26 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Fixed two issues: (1) LED cards and Chart.js widgets showing -- on page load -- moved initCharts()+render() into window.addEventListener(&#39;load&#39;,...) with try-catch so CDN timing...</summary>
+<summary><strong>2026-06-01 12:26 - agent-ledger</strong> <code>code-change</code> - Fixed two issues: (1) LED cards and Chart.js widgets showing -- on page load -- moved initCharts()+render() into window.addEventListener(&#39;load&#39;,...) with try-catch so CDN timing...</summary>
 
 - Kind: code-change
 - Actor: claude-sonnet-4-6

@@ -202,13 +202,20 @@ function Heatmap({
                             (k) =>
                               `${dict.kindLabels[k] || k}: ${fmtInt(kindsObj[k])}`,
                           );
+                        const decodedProjects = projects.map(p => {
+                          try {
+                            return decodeURIComponent(p);
+                          } catch {
+                            return p;
+                          }
+                        });
                         setTip({
                           x: ev.clientX + 12,
                           y: ev.clientY + 12,
                           title: `${key} · ${fmtInt(c)} ${dict.units.entries}`,
                           meta:
-                            (projects.length
-                              ? `${dict.labelProjects}: ${projects.join(', ')}`
+                            (decodedProjects.length
+                              ? `${dict.labelProjects}: ${decodedProjects.join(', ')}`
                               : '') +
                             (kindParts.length
                               ? '\n' + kindParts.join('\n')
@@ -328,7 +335,7 @@ export function WorkImpactPage() {
   const dict = I18N[lang];
 
   const streaks = useMemo(() => {
-    if (!data?.series?.days) return { current: 0, longest: 0 };
+    if (!data || !data.series?.days || data.series.days.length === 0) return { current: 0, longest: 0 };
     const activeDays = new Set(data.series.days.map((d) => d.day));
     if (activeDays.size === 0) return { current: 0, longest: 0 };
     const end = parseLocalDate(data.range?.end) || new Date();
@@ -424,55 +431,6 @@ export function WorkImpactPage() {
         {dict.intro}
       </p>
 
-      {/* KPI row */}
-      <section className="grid grid-cols-12 gap-3 mt-5">
-        <KpiCard
-          label={dict.metricEvents}
-          value={fmtInt(data.totals?.events || 0)}
-          accent
-        />
-        <KpiCard
-          label={dict.metricDays}
-          value={fmtInt(data.totals?.activeDays || 0)}
-        />
-        <KpiCard
-          label={dict.metricProjects}
-          value={fmtInt(data.totals?.projects || 0)}
-        />
-        <KpiCard
-          label={dict.metricStreak}
-          value={fmtInt(streaks.current)}
-          sub={`${dict.labels.max}: ${fmtInt(streaks.longest)} ${dict.units.days}`}
-        />
-        <KpiCard
-          label={dict.metricLongestStreak}
-          value={fmtInt(streaks.longest)}
-        />
-        <KpiCard
-          label={dict.metricBusiestDay}
-          value={busiest.bDay?.day || '-'}
-          sub={
-            busiest.bDay
-              ? `${fmtInt(busiest.bDay.entries || 0)} ${dict.units.entries}`
-              : undefined
-          }
-        />
-        <KpiCard
-          label={dict.metricBusiestWeek}
-          value={busiest.bWeek?.wk || '-'}
-          sub={
-            busiest.bWeek
-              ? `${fmtInt(busiest.bWeek.count)} ${dict.units.entries}`
-              : undefined
-          }
-        />
-        <KpiCard
-          label={dict.commitStatSamples}
-          value={fmtInt(commitSamples.length)}
-          sub={`${fmtInt(commitSamples.length)} ${dict.units.commits}`}
-        />
-      </section>
-
       {/* Heatmap + chart widgets */}
       <section className="grid grid-cols-12 gap-3 mt-5">
         <Card className="col-span-8 max-md:col-span-12">
@@ -526,6 +484,23 @@ export function WorkImpactPage() {
         <Card className="col-span-4 max-md:col-span-12">
           <Activity24 hourSeries={data.hourSeries || []} lang={lang} />
         </Card>
+        {data.dowSeries && data.dowSeries.length > 0 && (
+          <Card className="col-span-4 max-md:col-span-12">
+            <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
+              Time-of-Day Rhythm
+            </h2>
+            <div className="flex flex-col gap-2">
+              {data.dowSeries.map((d) => (
+                <BarRow
+                  key={d.label}
+                  label={d.label}
+                  count={d.count || 0}
+                  max={Math.max(...(data.dowSeries?.map((x) => x.count || 0) || [1]))}
+                />
+              ))}
+            </div>
+          </Card>
+        )}
       </section>
 
       {/* Monthly + Projects + Kinds */}
@@ -637,6 +612,121 @@ export function WorkImpactPage() {
         </Card>
       </section>
 
+      {/* KPI row - moved down to sit above focus metrics */}
+      <section className="grid grid-cols-12 gap-3 mt-5">
+        <KpiCard
+          label={dict.metricEvents}
+          value={fmtInt(data.totals?.events || 0)}
+          accent
+        />
+        <KpiCard
+          label={dict.metricDays}
+          value={fmtInt(data.totals?.activeDays || 0)}
+        />
+        <KpiCard
+          label={dict.metricProjects}
+          value={fmtInt(data.totals?.projects || 0)}
+        />
+        <KpiCard
+          label={dict.metricStreak}
+          value={fmtInt(streaks.current)}
+          sub={`${dict.labels.max}: ${fmtInt(streaks.longest)} ${dict.units.days}`}
+        />
+        <KpiCard
+          label={dict.metricLongestStreak}
+          value={fmtInt(streaks.longest)}
+        />
+        <KpiCard
+          label={dict.metricBusiestDay}
+          value={busiest.bDay?.day || '-'}
+          sub={
+            busiest.bDay
+              ? `${fmtInt(busiest.bDay.entries || 0)} ${dict.units.entries}`
+              : undefined
+          }
+        />
+        <KpiCard
+          label={dict.metricBusiestWeek}
+          value={busiest.bWeek?.wk || '-'}
+          sub={
+            busiest.bWeek
+              ? `${fmtInt(busiest.bWeek.count)} ${dict.units.entries}`
+              : undefined
+          }
+        />
+        <KpiCard
+          label={dict.commitStatSamples}
+          value={fmtInt(commitSamples.length)}
+          sub={`${fmtInt(commitSamples.length)} ${dict.units.commits}`}
+        />
+      </section>
+
+      {/* Agent & Tool Activity */}
+      {data.agentData && (data.agentData.tools?.length || data.agentData.mcpServers?.length || data.agentData.models?.length || data.agentData.actors?.length || data.agentData.daySeries?.length) && (
+        <section className="grid grid-cols-12 gap-3 mt-5">
+          {data.agentData.models && data.agentData.models.length > 0 && (
+            <Card className="col-span-6 max-md:col-span-12">
+              <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
+                AI Model Usage
+              </h2>
+              <div className="flex flex-col gap-2">
+                {data.agentData.models.map(([name, count]) => (
+                  <BarRow key={name} label={name} count={count} max={Math.max(...(data.agentData?.models?.map(([, c]) => c) || [1]))} />
+                ))}
+              </div>
+            </Card>
+          )}
+          {data.agentData.actors && data.agentData.actors.length > 0 && (
+            <Card className="col-span-6 max-md:col-span-12">
+              <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
+                Distinct Actors
+              </h2>
+              <div className="flex flex-col gap-2">
+                {data.agentData.actors.map(([name, count]) => (
+                  <BarRow key={name} label={name} count={count} max={Math.max(...(data.agentData?.actors?.map(([, c]) => c) || [1]))} />
+                ))}
+              </div>
+            </Card>
+          )}
+          {data.agentData.tools && data.agentData.tools.length > 0 && (
+            <Card className="col-span-6 max-md:col-span-12">
+              <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
+                Tools Used
+              </h2>
+              <div className="flex flex-col gap-2">
+                {data.agentData.tools.slice(0, 10).map(([name, count]) => (
+                  <BarRow key={name} label={name} count={count} max={Math.max(...(data.agentData?.tools?.map(([, c]) => c) || [1]))} />
+                ))}
+              </div>
+            </Card>
+          )}
+          {data.agentData.mcpServers && data.agentData.mcpServers.length > 0 && (
+            <Card className="col-span-6 max-md:col-span-12">
+              <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
+                MCP Servers
+              </h2>
+              <div className="flex flex-col gap-2">
+                {data.agentData.mcpServers.slice(0, 10).map(([name, count]) => (
+                  <BarRow key={name} label={name} count={count} max={Math.max(...(data.agentData?.mcpServers?.map(([, c]) => c) || [1]))} />
+                ))}
+              </div>
+            </Card>
+          )}
+          {data.agentData.daySeries && data.agentData.daySeries.length > 0 && (
+            <Card className="col-span-12">
+              <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
+                Agent Activity by Day
+              </h2>
+              <div className="flex flex-col gap-2">
+                {data.agentData.daySeries.slice(-14).map((d) => (
+                  <BarRow key={d.day} label={d.day} count={d.count || 0} max={Math.max(...(data.agentData?.daySeries?.map((x) => x.count || 0) || [1]))} />
+                ))}
+              </div>
+            </Card>
+          )}
+        </section>
+      )}
+
       {/* Project evidence cards */}
       <section className="mt-5">
         <h2 className="text-sm font-bold text-[var(--fg)] m-0 mb-2.5 flex items-center gap-2.5">
@@ -647,9 +737,17 @@ export function WorkImpactPage() {
         <p className="text-xs text-[var(--muted)] m-0 mb-2.5">
           {dict.evidenceHint}
         </p>
-        {projects.map((p) => (
-          <ProjectCard key={p.project} p={p} lang={lang} />
-        ))}
+        {projects.length > 0 ? (
+          <div className="space-y-0">
+            {projects.map((p) => (
+              <ProjectCard key={p.project} p={p} lang={lang} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-[var(--muted)] text-xs italic py-2">
+            {dict.noSummaries}
+          </div>
+        )}
       </section>
     </>
   );
