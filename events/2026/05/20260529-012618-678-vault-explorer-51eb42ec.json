@@ -1,0 +1,51 @@
+﻿{
+    "id":  "20260529-012618-678-vault-explorer-51eb42ec",
+    "createdAt":  "2026-05-29T05:26:18.6789512Z",
+    "createdAtLocal":  "2026-05-29 01:26",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-29 01:26 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Fixed search functionality in applyFilters to perform recursive, global search across all vault files (including inside virtual folders) instead of limiting it to current navigation visible files. Also corrected navigation path variable in navigateTo to properly capture directory paths instead of hardcoding \u0027root\u0027, and integrated rootItemsCache updates into the views refresh listener to keep search indices fresh. Fixed selectors and translation assertions in comprehensive_test.js so the integration tests pass perfectly.",
+    "commands":  [
+                     "node tests/refactor_smoke_test.js",
+                     "node tests/comprehensive_test.js"
+                 ],
+    "files":  [
+                  "js/navigation/filters.js",
+                  "js/navigation/directory.js",
+                  "tests/comprehensive_test.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "51eb42ec1a559f6ea97f25c1d44c0aa4a149f57d1cf19f2d407ce0421e2f00d4",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "c4f65a7",
+                "hasChanges":  true
+            }
+}

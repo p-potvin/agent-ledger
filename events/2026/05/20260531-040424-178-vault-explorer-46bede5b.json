@@ -1,0 +1,53 @@
+﻿{
+    "id":  "20260531-040424-178-vault-explorer-46bede5b",
+    "createdAt":  "2026-05-31T08:04:24.1783533Z",
+    "createdAtLocal":  "2026-05-31 04:04",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change,verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: gemini-2.5-flash-thinking\r\nThinking: very high\r\nMode: code\r\nPermissions: bypass (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): replace_file_content, run_command, view_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-31 04:04 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.5-flash-thinking",
+                    "thinking":  "very high",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "run_command",
+                                      "view_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Stabilized audio processing pipeline: 1) Pre-imported datasets to fix PyTorch/PyArrow conflict. 2) Patched shutil.rmtree to catch and ignore WinError 32 PermissionError on Windows temp directory cleanups. 3) Automatically converted stereo/multichannel audio to mono to prevent input shape mismatch in NeMo DecRNNT. 4) Integrated onNormalizeProgress IPC progress updates dynamically into both the top Titlebar task-badge and bottom status-bar progress zone. 5) Decoupled UI reloads from settings saving, only reloading the directory when structural values (globExclusions or defaultFolder) actually change.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-media-processing\\vaultwares_media_processing\\parakeet_wrapper.py",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\app.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\progress.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\settings.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "46bede5b716441322c5193387c06ce6c257093e2aae589e7ae4aed27deba090e",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "56a6a22",
+                "hasChanges":  true
+            }
+}

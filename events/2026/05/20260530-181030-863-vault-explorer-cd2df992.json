@@ -1,0 +1,56 @@
+﻿{
+    "id":  "20260530-181030-863-vault-explorer-cd2df992",
+    "createdAt":  "2026-05-30T22:10:30.8634512Z",
+    "createdAtLocal":  "2026-05-30 18:10",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-1.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): replace_file_content, view_file, run_command, grep_search\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-30 18:10 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-1.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "view_file",
+                                      "run_command",
+                                      "grep_search"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Added dynamic local ASR subtitle generation directly while watching a video in the HTML5 player. Integrated Plex/Jellyfin/Kodi NFO interoperability by parsing adjacent .nfo files in the file scanner, enabling NFO search matching, and rendering attributes in the File Properties modal. Updated ROADMAP.md to track accomplishments.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\index.html",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\player\\subtitles.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\src\\scanner.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\navigation\\properties.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\navigation\\filters.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\ROADMAP.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "cd2df99208ef7bf30843a7db7e6fd862701d00a957c5663be362193bd9565302",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "56a6a22",
+                "hasChanges":  true
+            }
+}

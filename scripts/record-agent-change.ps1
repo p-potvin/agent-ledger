@@ -28,7 +28,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 function Limit-Tokenish {
-    param([string]$Text, [int]$Limit = 1024)
+    param([string]$Text, [int]$Limit = 256)
     $parts = ($Text -split '\s+') | Where-Object { $_ }
     if ($parts.Count -le $Limit) {
         return $Text.Trim()
@@ -183,7 +183,7 @@ $dedupedMcpServersAccessed = Get-DedupedList $McpServersAccessed
 $normalizedFlags = Normalize-ObjectKeysToSnakeCase $Flags
 $normalizedMetrics = Normalize-ObjectKeysToSnakeCase $Metrics
 
-$limitedSummary = Limit-Tokenish $Summary 1024
+$limitedSummary = Limit-Tokenish $Summary 256
 $now = Get-Date
 $createdAt = $now.ToUniversalTime().ToString('o')
 $createdAtLocal = $now.ToString('yyyy-MM-dd HH:mm')

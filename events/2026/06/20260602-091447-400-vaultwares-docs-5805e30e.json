@@ -1,0 +1,43 @@
+{
+  "id": "20260602-091447-400-vaultwares-docs-5805e30e",
+  "createdAt": "2026-06-02T13:14:47.4001211Z",
+  "createdAtLocal": "2026-06-02 09:14",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "verification",
+  "actor": "Claude Sonnet 4.6",
+  "agentHeader": "Agent: Claude Sonnet 4.6 (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): PowerShell, SSH\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-02 09:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-6",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "online",
+    "toolsUsed": [
+      "PowerShell",
+      "SSH"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Verified tailnet/private access for vaultwares docs and secrets. The client-side override now points docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.73.93.84. Confirmed docs returns 200 with valid TLS and HTML content; secrets returns 200 after following the redirect to warden; warden returns 200 with valid TLS and the VaultWarden JSON landing payload. dnsmasq on vaultwares-1 was not needed for this path, so I disabled it, removed the temporary dnsmasq config, and removed the UFW UDP/TCP 53 allowances on tailscale0.",
+  "commands": [
+    "curl.exe -sS -o NUL -w ... https://docs.vaultwares.ca",
+    "curl.exe -sS -o NUL -w ... https://warden.vaultwares.ca",
+    "curl.exe -sS -L -o NUL -w ... https://secrets.vaultwares.ca",
+    "ssh root@100.73.93.84 systemctl disable --now dnsmasq",
+    "ssh root@100.73.93.84 ufw delete allow in on tailscale0 to any port 53 proto udp/tcp"
+  ],
+  "files": [
+    "C:\\\\Windows\\\\System32\\\\drivers\\\\etc\\\\hosts"
+  ],
+  "planPath": "",
+  "contentHash": "5805e30eeb40e4c52e3046b881498a3e7ba709bc0a607767d6e299bc6ec2d7cb",
+  "git": null
+}

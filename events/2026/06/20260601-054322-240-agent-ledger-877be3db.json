@@ -1,0 +1,47 @@
+﻿{
+    "id":  "20260601-054322-240-agent-ledger-877be3db",
+    "createdAt":  "2026-06-01T09:43:22.2405834Z",
+    "createdAtLocal":  "2026-06-01 05:43",
+    "timezone":  "Eastern Standard Time",
+    "project":  "agent-ledger",
+    "kind":  "code-change",
+    "actor":  "claude-sonnet-4-6",
+    "agentHeader":  "Agent: claude-sonnet-4-6 (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: false\r\nMode: chat\r\nPermissions: read-write (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\pwsh  Branch: n/a\r\nTools used (this reply): Read, Write, Edit, mcp__workspace__bash, mcp__VaultWares_MCP__MCP_Server___sh_run\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-01 05:43 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6",
+                    "thinking":  "false",
+                    "mode":  "chat",
+                    "permissions":  "read-write",
+                    "network":  "online",
+                    "toolsUsed":  [
+                                      "Read",
+                                      "Write",
+                                      "Edit",
+                                      "mcp__workspace__bash",
+                                      "mcp__VaultWares_MCP__MCP_Server___sh_run"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\pwsh",
+    "summary":  "Fixed all render-daily-dashboard.ps1 issues: (1) Switched from double-quoted heredoc to single-quoted @\u0027...\u0027@ to prevent dollar-sign/hash expansion. (2) Moved JSON injection to post-heredoc .Replace() calls with safe placeholder tokens __INPUT_DAYS__, __LEDGER_EVENTS__, __GENERATED_AT__. (3) Stripped null-byte padding from PS1 file that was preventing the Replace and WriteAllText calls from executing. Final output: 246k char HTML, 1927 ledger events, complete with initCharts/render, all charts working.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "agent-ledger/scripts/render-daily-dashboard.ps1",
+                  "agent-ledger/DAILY_DASHBOARD.html"
+              ],
+    "planPath":  "",
+    "contentHash":  "877be3dbe538513ec604233f7972e07242a5b83cc25cde9fa89628cfcb9870be",
+    "git":  null
+}

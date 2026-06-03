@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260531-222825-259-vault-explorer-baa4ec3b",
+    "createdAt":  "2026-06-01T02:28:25.2591936Z",
+    "createdAtLocal":  "2026-05-31 22:28",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "plan",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.0\r\nThinking: high\r\nMode: plan\r\nPermissions: ask (network: local Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): view_file,grep_search,write_to_file,run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-31 22:28 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.0",
+                    "thinking":  "high",
+                    "mode":  "plan",
+                    "permissions":  "ask",
+                    "network":  "local Windows",
+                    "toolsUsed":  "view_file,grep_search,write_to_file,run_command",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Investigated initial startup latency (2-minute scan delay). Identified synchronous fs calls in main thread as the primary bottleneck. Designed optimization plan using async batched fs operations and persistent caching. Developed a comprehensive, customer-ready streaming tab implementation plan detailing TMDB metadata caching, advanced quality/language torrent scoring, isolated async resolvers, and YouTube embed Error 153/152 workarounds.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "streaming_tab_plan.md"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\adbd177b-f07c-46b3-bc04-3af2adb19aa9\\streaming_tab_plan.md",
+    "contentHash":  "baa4ec3b07328447ad58374e8c28928b00f55be6f20b6cc921a4cc6625418cb1",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "0138f21",
+                "hasChanges":  true
+            }
+}
