@@ -1,0 +1,36 @@
+{
+  "id": "20260602-214407-873-vaultwares-docs-77b9551d",
+  "createdAt": "2026-06-03T01:44:07.8731440Z",
+  "createdAtLocal": "2026-06-02 21:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "verification",
+  "actor": "GPT-5.2 Codex",
+  "agentHeader": "Agent: GPT-5.2 Codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-02 21:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "online",
+    "toolsUsed": "PowerShell",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Checked current Windows hosts-file state after confirming Tailscale DNS ACL was present. Found local overrides still present for docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca pointing to 100.73.93.84, so this PC can still mask whether Tailscale restricted DNS is being used for those names. No server changes made.",
+  "commands": [
+    "Select-String -Path C:\\\\Windows\\\\System32\\\\drivers\\\\etc\\\\hosts -Pattern vaultwares\\\\.ca"
+  ],
+  "files": [
+    "C:\\\\Windows\\\\System32\\\\drivers\\\\etc\\\\hosts"
+  ],
+  "planPath": "",
+  "contentHash": "77b9551dd759145c1cb18c1e167fb05caca577aeb166822030cdd1fb5c7102b6",
+  "git": null
+}

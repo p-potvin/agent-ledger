@@ -1,0 +1,46 @@
+{
+  "id": "20260602-214239-096-vaultwares-docs-09136d8e",
+  "createdAt": "2026-06-03T01:42:39.0966134Z",
+  "createdAtLocal": "2026-06-02 21:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "verification",
+  "actor": "GPT-5.2 Codex",
+  "agentHeader": "Agent: GPT-5.2 Codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): PowerShell, SSH, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-02 21:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "online",
+    "toolsUsed": [
+      "PowerShell",
+      "SSH",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Checked ledger.vaultwares.ca and stats.vaultwares.ca for the tailnet DNS model. Confirmed ledger.vaultwares.ca is a real nginx vhost on greencloud-vps with certificate and webroot, added it to /etc/dnsmasq.d/vaultwares-tailnet.conf, restarted dnsmasq, verified DNS answer to 100.73.93.84 and HTTPS/TLS 200 via the tailnet address. Confirmed stats.vaultwares.ca has no nginx vhost and remains example/future-only, then updated network-map.mdx and tailscale.mdx to include ledger and clarify stats wording.",
+  "commands": [
+    "ssh root@100.73.93.84 cat /etc/nginx/sites-enabled/ledger.vaultwares.ca",
+    "nslookup ledger.vaultwares.ca 100.73.93.84",
+    "curl.exe --resolve ledger.vaultwares.ca:443:100.73.93.84 https://ledger.vaultwares.ca",
+    "nslookup stats.vaultwares.ca 100.73.93.84",
+    "git diff -- docs-content/operations/network-map.mdx docs-content/operations/tailscale.mdx"
+  ],
+  "files": [
+    "vaultwares-docs\\docs-content\\operations\\network-map.mdx",
+    "vaultwares-docs\\docs-content\\operations\\tailscale.mdx",
+    "/etc/dnsmasq.d/vaultwares-tailnet.conf"
+  ],
+  "planPath": "",
+  "contentHash": "09136d8e57b82516dc6453ed0432d227dbe3458e1f0b53a56e1448b4963b85c5",
+  "git": null
+}
