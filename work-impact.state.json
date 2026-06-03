@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-06-02T10:57:02.1687575Z",
+    "lastUpdatedUtc":  "2026-06-03T00:27:01.6079485Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1944,7 +1944,20 @@
                                        "20260601-122605-485-agent-ledger-5dabfc58",
                                        "20260601-175717-953-python-scripts-7df7e75d",
                                        "20260601-181030-261-python-scripts-aa8bd5d9",
-                                       "20260602-000630-950-general-tasks-532f974d"
+                                       "20260602-000630-950-general-tasks-532f974d",
+                                       "20260602-070109-620-agent-ledger-05d7dfef",
+                                       "20260602-080205-123-python-scripts-90ea72e1",
+                                       "20260602-091431-698-vault-explorer-e17eeb5f",
+                                       "20260602-091439-464-vault-explorer-b0f4bdf4",
+                                       "20260602-091447-400-vaultwares-docs-5805e30e",
+                                       "20260602-100504-982-python-scripts-4e0cee52",
+                                       "20260602-134644-364-python-scripts-5eff16f2",
+                                       "20260602-145329-977-vault-explorer-e5482dae",
+                                       "20260602-150945-237-vault-explorer-ff930522",
+                                       "20260602-151338-814-vault-explorer-d579c162",
+                                       "20260602-151631-607-vault-explorer-e8b352f7",
+                                       "20260602-172915-923-python-scripts-60b11a54",
+                                       "20260602-175119-237-vaultwares-docs-dc6586ea"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2846,124 +2859,149 @@
                                                      },
                                                      {
                                                          "actors":  [
-                                                                        "Claude Scheduled Task"
+                                                                        "Antigravity",
+                                                                        "Claude Code",
+                                                                        "Claude Scheduled Task",
+                                                                        "Claude Sonnet 4.6",
+                                                                        "GitHub Copilot",
+                                                                        "GPT-5.2 Codex"
                                                                     ],
                                                          "day":  "2026-06-02",
                                                          "models":  [
-                                                                        "claude-haiku-4-5-20251001"
+                                                                        "claude-haiku-4-5-20251001",
+                                                                        "claude-sonnet-4-6",
+                                                                        "Gemini 3.1 Pro (Preview)",
+                                                                        "gemini-1.5-pro",
+                                                                        "gemini-2.5-pro-preview",
+                                                                        "gemini-3.1-pro-preview",
+                                                                        "gemini-3.5-flash",
+                                                                        "gpt-5.2",
+                                                                        "o3-mini"
                                                                     ],
-                                                         "count":  1
+                                                         "count":  14
                                                      }
                                                  ],
                                    "tools":  [
                                                  "view_file",
-                                                 22,
-                                                 "run_command",
-                                                 21,
+                                                 26,
                                                  "PowerShell",
-                                                 21,
+                                                 24,
+                                                 "run_command",
+                                                 24,
                                                  "replace_file_content",
-                                                 20,
+                                                 23,
                                                  "write_to_file",
-                                                 18,
+                                                 21,
                                                  "git",
                                                  17,
+                                                 "apply_patch",
+                                                 12,
                                                  "functions.shell_command",
                                                  11,
-                                                 "apply_patch",
-                                                 11,
+                                                 "Edit",
+                                                 10,
                                                  "shell_command",
                                                  10,
-                                                 "Edit",
+                                                 "multi_replace_file_content",
                                                  9,
                                                  "gh",
                                                  9,
                                                  "Read",
-                                                 8,
-                                                 "multi_replace_file_content",
+                                                 9,
+                                                 "grep_search",
                                                  8,
                                                  "functions.apply_patch",
-                                                 8,
-                                                 "mcp__VaultWares_MCP__MCP_Server___sh_run",
-                                                 7
+                                                 8
                                              ],
                                    "actors":  [
                                                   "AI Agent",
                                                   345,
                                                   "Antigravity",
-                                                  41,
+                                                  47,
                                                   "claude-sonnet-4-6",
                                                   9,
                                                   "codex",
                                                   8,
                                                   "Github Copilot",
-                                                  2,
+                                                  6,
                                                   "Claude Code (Opus 4.7)",
                                                   2,
                                                   "claude-code",
                                                   2,
+                                                  "GPT-5.2 Codex",
+                                                  1,
                                                   "Claude",
                                                   1,
-                                                  "preload.js",
+                                                  "Claude Code",
+                                                  1,
+                                                  "Claude Sonnet 4.6",
+                                                  1,
+                                                  "claude-sonnet-4-6 (scheduled task)",
                                                   1,
                                                   "claude-sonnet-4-5",
                                                   1,
-                                                  "claude-sonnet-4-6 (scheduled task)",
+                                                  "preload.js",
                                                   1,
                                                   "Claude Scheduled Task",
                                                   1
                                               ],
-                                   "totalEvents":  414,
+                                   "totalEvents":  427,
                                    "models":  [
                                                   "unknown",
                                                   319,
                                                   "gpt-5.2",
-                                                  19,
+                                                  20,
                                                   "Gemini-1.5-Pro",
-                                                  11,
+                                                  14,
                                                   "claude-sonnet-4-6",
-                                                  11,
+                                                  12,
                                                   "Gemini 3.5 Flash (Medium)",
                                                   9,
                                                   "gemini-2.5-pro",
                                                   8,
+                                                  "gemini-3.5-flash",
+                                                  5,
                                                   "Claude Haiku",
                                                   5,
-                                                  "gemini-3.5-flash",
+                                                  "Gemini 3 Flash",
                                                   3,
                                                   "Gemini 3.5 Flash",
                                                   3,
-                                                  "Gemini 3 Flash",
-                                                  3,
+                                                  "gemini-3.1-pro",
+                                                  2,
                                                   "claude-opus-4-7",
                                                   2,
-                                                  "gemini-2.0",
+                                                  "o3-mini",
+                                                  2,
+                                                  "claude-haiku-4-5-20251001",
                                                   2,
                                                   "gemini-2.5-flash-thinking",
                                                   2,
                                                   "GPT-5",
                                                   2,
+                                                  "gemini-2.0",
+                                                  2,
+                                                  "Gemini 3.1 Pro (Preview)",
+                                                  2,
                                                   "claude-opus-4-5",
                                                   2,
-                                                  "gemini-3.1-pro",
-                                                  2,
-                                                  "claude-sonnet-4-6-thinking",
+                                                  "Gemini 3.1 Pro (Low)",
                                                   1,
                                                   "gemini-pro",
                                                   1,
-                                                  "Gemini 3.1 Pro (Preview)",
+                                                  "claude-sonnet-4-6-thinking",
                                                   1,
-                                                  "claude-haiku-4-5-20251001",
+                                                  "Gemini 3.1 Pro",
                                                   1,
                                                   "gemini-exp-1206",
                                                   1,
-                                                  "claude-sonnet-4-5",
+                                                  "gemini-2.5-pro-preview",
                                                   1,
                                                   "claude-opus-4-6",
                                                   1,
-                                                  "Gemini 3.1 Pro (Low)",
+                                                  "claude-sonnet-4-5",
                                                   1,
-                                                  "Gemini 3.1 Pro",
+                                                  "gemini-3.1-pro-preview",
                                                   1,
                                                   "src/normalization.js",
                                                   1,
@@ -2987,7 +3025,7 @@
                                    {
                                        "label":  "Tue",
                                        "dow":  1,
-                                       "count":  70
+                                       "count":  83
                                    },
                                    {
                                        "label":  "Wed",
@@ -3045,19 +3083,19 @@
                                         "hour":  6
                                     },
                                     {
-                                        "count":  10,
+                                        "count":  11,
                                         "hour":  7
                                     },
                                     {
-                                        "count":  18,
+                                        "count":  19,
                                         "hour":  8
                                     },
                                     {
-                                        "count":  19,
+                                        "count":  22,
                                         "hour":  9
                                     },
                                     {
-                                        "count":  22,
+                                        "count":  23,
                                         "hour":  10
                                     },
                                     {
@@ -3069,15 +3107,15 @@
                                         "hour":  12
                                     },
                                     {
-                                        "count":  11,
+                                        "count":  12,
                                         "hour":  13
                                     },
                                     {
-                                        "count":  23,
+                                        "count":  24,
                                         "hour":  14
                                     },
                                     {
-                                        "count":  28,
+                                        "count":  31,
                                         "hour":  15
                                     },
                                     {
@@ -3085,7 +3123,7 @@
                                         "hour":  16
                                     },
                                     {
-                                        "count":  35,
+                                        "count":  37,
                                         "hour":  17
                                     },
                                     {
@@ -3130,7 +3168,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-06-02 06:57",
+                 "generatedAtLocal":  "2026-06-02 20:27",
                  "series":  {
                                 "months":  [
                                                {
@@ -3147,7 +3185,7 @@
                                                },
                                                {
                                                    "month":  "2026-06",
-                                                   "count":  15
+                                                   "count":  28
                                                }
                                            ],
                                 "days":  [
@@ -4468,30 +4506,39 @@
                                                            }
                                              },
                                              {
-                                                 "projects":  "General Tasks",
-                                                 "entries":  1,
+                                                 "projects":  [
+                                                                  "agent-ledger",
+                                                                  "General Tasks",
+                                                                  "python-scripts",
+                                                                  "vault-explorer",
+                                                                  "vaultwares-docs"
+                                                              ],
+                                                 "entries":  14,
                                                  "day":  "2026-06-02",
                                                  "kinds":  {
-                                                               "general":  1
+                                                               "plan":  2,
+                                                               "general":  4,
+                                                               "verification":  5,
+                                                               "code-change":  8
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1609
+                                                  "count":  1617
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  151
+                                                  "count":  156
                                               },
                                               {
                                                   "kind":  "plan",
-                                                  "count":  108
+                                                  "count":  110
                                               },
                                               {
                                                   "kind":  "general",
-                                                  "count":  49
+                                                  "count":  52
                                               },
                                               {
                                                   "kind":  "commands",
@@ -4506,10 +4553,10 @@
                                                  {
                                                      "kinds":  {
                                                                    "commands":  1,
-                                                                   "plan":  38,
-                                                                   "general":  4,
-                                                                   "verification":  39,
-                                                                   "code-change":  169
+                                                                   "plan":  40,
+                                                                   "general":  5,
+                                                                   "verification":  41,
+                                                                   "code-change":  172
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  9674,
@@ -4520,14 +4567,14 @@
 
                                                                     },
                                                      "project":  "vault-explorer",
-                                                     "entries":  224,
+                                                     "entries":  230,
                                                      "recent":  [
-                                                                    "Answered user\u0027s senior developer architecture questions regarding: Big Functions, Long Execution Latencies, and Unacceptable Production Anti-Patterns. Drafted a detailed impleme...",
-                                                                    "Completed double-hydration caching and async scanner optimizations in Vault Explorer. Refactored scanner.js to use asynchronous I/O and concurrent batching with a limit of 32 ta...",
-                                                                    "Created implementation plan to modernize video player UI (playback speed icon and subtitle generation context menu) and debug the NeMo/Parakeet pipeline by downmixing input audi..."
+                                                                    "Initial planning phase for ASR subtitle pipeline stabilization, viewport boundaries for ASR menu, tooltip system integration, and python latency checks",
+                                                                    "Created centralized tooltip system in js/tooltip.js, registered script in index.html, integrated viewport boundary-checking with flip/clamp behavior for the ASR context menu in ...",
+                                                                    "Ran Playwright test suite successfully by fixing obsolete tab/favorite element selectors. Executed Start-AsrBenchmark.ps1 simulation to confirm ASR cold-boot initialization and ..."
                                                                 ],
                                                      "firstDay":  "2026-04-19",
-                                                     "lastDay":  "2026-06-01",
+                                                     "lastDay":  "2026-06-02",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4809,7 +4856,7 @@
                                                                    "code-change":  45,
                                                                    "handoff":  2,
                                                                    "commands":  2,
-                                                                   "verification":  9,
+                                                                   "verification":  11,
                                                                    "plan":  5,
                                                                    "general":  3
                                                                },
@@ -4826,14 +4873,14 @@
                                                                         "long_running_tasks":  2
                                                                     },
                                                      "project":  "vaultwares-docs",
-                                                     "entries":  63,
+                                                     "entries":  65,
                                                      "recent":  [
-                                                                    "Translate Mermaid diagram zoom toolbar labels to QC French (Ajuster / Remettre + aria labels); pushed to main.",
-                                                                    "Add simple, mandatory ops documentation: (1) webhook secret rotation checklist (EN+QC) for VW_GITHUB_WEBHOOK_SECRET, (2) services inventory table (EN+QC) including Prom-King/Ful...",
-                                                                    "Added an explicit renamed-projects table to docs (agent-ledger schema page) so the oldâ†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so th..."
+                                                                    "Added an explicit renamed-projects table to docs (agent-ledger schema page) so the oldâ†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so th...",
+                                                                    "Verified tailnet/private access for vaultwares docs and secrets. The client-side override now points docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.7...",
+                                                                    "Configured greencloud-vps as an exact-host tailnet DNS resolver with dnsmasq. Restored dnsmasq, installed /etc/dnsmasq.d/vaultwares-tailnet.conf with exact host-record answers f..."
                                                                 ],
                                                      "firstDay":  "2026-04-18",
-                                                     "lastDay":  "2026-06-01",
+                                                     "lastDay":  "2026-06-02",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -4949,10 +4996,10 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  37,
+                                                                   "code-change":  38,
                                                                    "handoff":  2,
                                                                    "commands":  8,
-                                                                   "verification":  9,
+                                                                   "verification":  10,
                                                                    "plan":  1,
                                                                    "general":  1
                                                                },
@@ -4968,14 +5015,14 @@
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "agent-ledger",
-                                                     "entries":  51,
+                                                     "entries":  52,
                                                      "recent":  [
-                                                                    "Fixed 3 bugs: (1) track-input.py Ctrl+S/C/V detection broken -- Ctrl+letter generates control chars (e.g. Ctrl+S=\\x13), now converts back via ord(raw)+96. (2) mouse_distance_m f...",
                                                                     "Merged daily dashboard into WORK_IMPACT. render-work-impact.ps1 now also loads input-logs/*.json and events/+history/ ledger events. HTML template fully rewritten with new muted...",
-                                                                    "Fixed two issues: (1) LED cards and Chart.js widgets showing -- on page load -- moved initCharts()+render() into window.addEventListener(\u0027load\u0027,...) with try-catch so CDN timing..."
+                                                                    "Fixed two issues: (1) LED cards and Chart.js widgets showing -- on page load -- moved initCharts()+render() into window.addEventListener(\u0027load\u0027,...) with try-catch so CDN timing...",
+                                                                    "Fixed work_impact page: (1) Stats now load on initial render - improved data initialization check; (2) Work activity tooltip encoding fixed by decoding URI-encoded project names..."
                                                                 ],
                                                      "firstDay":  "2026-04-28",
-                                                     "lastDay":  "2026-06-01",
+                                                     "lastDay":  "2026-06-02",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5434,6 +5481,39 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "code-change":  17,
+                                                                   "general":  4
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "python-scripts",
+                                                     "entries":  19,
+                                                     "recent":  [
+                                                                    "Created .env.example, .env, and requirements.txt inside telegram/. Refactored telethon_link_resolver.py to read keys via dotenv instead of hardcoded strings or separate text files.",
+                                                                    "Refactored telethon_link_resolver.py to extract all rentry link types, save to all_extracted_links.txt, and process unrestriction through Real-Debrid browser extension via Persi...",
+                                                                    "Removed --disable-extensions, --enable-automation, and --no-sandbox from Playwright\u0027s default launch arguments to allow the Real-Debrid extension to load successfully inside the..."
+                                                                ],
+                                                     "firstDay":  "2026-05-26",
+                                                     "lastDay":  "2026-06-02",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "commands":  2,
                                                                    "plan":  1,
                                                                    "verification":  6,
@@ -5533,8 +5613,9 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  13,
-                                                                   "general":  2
+                                                                   "plan":  8,
+                                                                   "general":  1,
+                                                                   "code-change":  5
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -5544,15 +5625,15 @@
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "python-scripts",
-                                                     "entries":  15,
+                                                     "project":  "tailnet-sync",
+                                                     "entries":  14,
                                                      "recent":  [
-                                                                    "Fixed Telegram session re-login issue by using absolute __file__ paths for .session. Added strict pre-parser to only capture linkvertise.com URLs and mutate them to .lol prior t...",
-                                                                    "Created TRW API linkvertise bypass in trw_bypass_pipeline.py. Bypasses URLs via trw.lat, filters size/type, extracts RD links via extension context, and merges non-mega urls to ...",
-                                                                    "Fixed playwright 5000ms timeouts on rip.linkvertise.lol by updating telethon_link_resolver.py\u0027s bypass mechanism to use the TRW API end-point securely without headful DOM parsin..."
+                                                                    "User approved optimization phase. Preparing implementation plan to migrate Wander.Network from REST to gRPC with Protobufs and streaming chunked file transfers.",
+                                                                    "Optimization plan approved. Executing gRPC migration. Scaffolding task list.",
+                                                                    "Optimization complete. Replaced REST controllers with gRPC SyncGrpcService. Updated SyncEngine to use Protobuf messages and stream file chunks over System.IO.Pipelines/FileStrea..."
                                                                 ],
-                                                     "firstDay":  "2026-05-26",
-                                                     "lastDay":  "2026-06-01",
+                                                     "firstDay":  "2026-05-08",
+                                                     "lastDay":  "2026-05-10",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5585,40 +5666,6 @@
                                                                 ],
                                                      "firstDay":  "2026-04-20",
                                                      "lastDay":  "2026-05-01",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "plan":  8,
-                                                                   "general":  1,
-                                                                   "code-change":  5
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "tailnet-sync",
-                                                     "entries":  14,
-                                                     "recent":  [
-                                                                    "User approved optimization phase. Preparing implementation plan to migrate Wander.Network from REST to gRPC with Protobufs and streaming chunked file transfers.",
-                                                                    "Optimization plan approved. Executing gRPC migration. Scaffolding task list.",
-                                                                    "Optimization complete. Replaced REST controllers with gRPC SyncGrpcService. Updated SyncEngine to use Protobuf messages and stream file chunks over System.IO.Pipelines/FileStrea..."
-                                                                ],
-                                                     "firstDay":  "2026-05-08",
-                                                     "lastDay":  "2026-05-10",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -16303,7 +16350,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-06-02T04:06:30.9507779Z",
+                 "_maxCreatedAtUtc":  "2026-06-02T21:51:19.2370119Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16311,7 +16358,7 @@
                            },
                  "totals":  {
                                 "projects":  46,
-                                "events":  1937,
+                                "events":  1950,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  81,
                                 "commitEventsWithStats":  679

@@ -3,6 +3,334 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-02 17:51 - vaultwares-docs (formerly tmp-app)</strong> <code>verification</code> - Configured greencloud-vps as an exact-host tailnet DNS resolver with dnsmasq. Restored dnsmasq, installed /etc/dnsmasq.d/vaultwares-tailnet.conf with exact host-record answers f...</summary>
+
+- Kind: verification
+- Actor: GPT-5.2 Codex
+- Agent Header:
+  ```text
+  Agent: GPT-5.2 Codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): PowerShell, SSH, apply_patch
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 17:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Configured greencloud-vps as an exact-host tailnet DNS resolver with dnsmasq. Restored dnsmasq, installed /etc/dnsmasq.d/vaultwares-tailnet.conf with exact host-record answers for docs.vaultwares.ca, api.vaultwares.ca, hooks.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.73.93.84, enabled DNS on tailscale0 via UFW, verified direct resolver answers and HTTPS/TLS for docs and warden. Updated docs-content/operations/tailscale.mdx to document exact Restricted/Split DNS entries and warn against whole-zone forwarding through Tailscale DNS.
+- Commands:
+  - `ssh root@100.73.93.84 dnsmasq --test && systemctl enable --now dnsmasq`
+  - `ssh root@100.73.93.84 ufw allow in on tailscale0 to any port 53 proto udp/tcp`
+  - `nslookup docs.vaultwares.ca 100.73.93.84`
+  - `nslookup api.vaultwares.ca 100.73.93.84`
+  - `nslookup vaultwares.ca 100.73.93.84`
+  - `curl.exe --resolve docs.vaultwares.ca:443:100.73.93.84 https://docs.vaultwares.ca`
+  - `curl.exe --resolve warden.vaultwares.ca:443:100.73.93.84 https://warden.vaultwares.ca`
+- Files:
+  - `vaultwares-docs\docs-content\operations\tailscale.mdx`
+  - `/etc/dnsmasq.d/vaultwares-tailnet.conf`
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 17:29 - python-scripts</strong> <code>code-change</code> - Removed --disable-extensions, --enable-automation, and --no-sandbox from Playwright&#39;s default launch arguments to allow the Real-Debrid extension to load successfully inside the...</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: o3-mini
+  Thinking: high
+  Mode: chat
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts\telegram  Branch: main
+  Tools used (this reply): replace_string_in_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 17:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Removed --disable-extensions, --enable-automation, and --no-sandbox from Playwright's default launch arguments to allow the Real-Debrid extension to load successfully inside the persistent context.
+- Files:
+  - `telegram/telethon_link_resolver.py`
+- Git: repo=python-scripts, branch=main, head=8e2fa98
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 15:16 - vault-explorer (formerly Vault Explorer)</strong> <code>code-change,verification</code> - Ran Playwright test suite successfully by fixing obsolete tab/favorite element selectors. Executed Start-AsrBenchmark.ps1 simulation to confirm ASR cold-boot initialization and ...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-2.5-pro-preview
+  Thinking: medium
+  Mode: chat
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): run_command, view_file, replace_file_content, write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 15:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ran Playwright test suite successfully by fixing obsolete tab/favorite element selectors. Executed Start-AsrBenchmark.ps1 simulation to confirm ASR cold-boot initialization and inference telemetry metrics extraction and persistence to BENCHMARKS.md. Verified that tooltip system and viewport-aware ASR context menu coordinate flipping/clamping are fully correct.
+- Commands:
+  - `node C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\scratch\test_playwright.js`
+  - `powershell -File .\powershell\Start-AsrBenchmark.ps1 -ForceSimulation`
+- Files:
+  - `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\scratch\test_playwright.js`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 15:13 - vault-explorer</strong> <code>code-change</code> - Created centralized tooltip system in js/tooltip.js, registered script in index.html, integrated viewport boundary-checking with flip/clamp behavior for the ASR context menu in ...</summary>
+
+- Kind: code-change
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-1.5-pro
+  Thinking: medium
+  Mode: code
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): write_to_file, replace_file_content, view_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 15:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created centralized tooltip system in js/tooltip.js, registered script in index.html, integrated viewport boundary-checking with flip/clamp behavior for the ASR context menu in js/player/subtitles.js, and added perf_counter() timing telemetry to parakeet_wrapper.py.
+- Files:
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\tooltip.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
+  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\player\subtitles.js`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-media-processing\vaultwares_media_processing\parakeet_wrapper.py`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 15:09 - vault-explorer</strong> <code>plan</code> - Initial planning phase for ASR subtitle pipeline stabilization, viewport boundaries for ASR menu, tooltip system integration, and python latency checks</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-1.5-pro
+  Thinking: high
+  Mode: plan
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): view_file, grep_search, list_dir
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 15:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Initial planning phase for ASR subtitle pipeline stabilization, viewport boundaries for ASR menu, tooltip system integration, and python latency checks
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 14:53 - vault-explorer</strong> <code>plan</code> - Created implementation plan for ASR IPC hardening, viewport boundary-checking for floating context menus, and centralized theme-aware tooltips.</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-1.5-pro
+  Thinking: high
+  Mode: plan
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 14:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created implementation plan for ASR IPC hardening, viewport boundary-checking for floating context menus, and centralized theme-aware tooltips.
+- Files:
+  - `src/normalization.js`
+  - `js/player/subtitles.js`
+  - `js/tooltip.js`
+  - `index.html`
+  - `index.css`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 13:46 - python-scripts</strong> <code>code-change,general</code> - Refactored telethon_link_resolver.py to extract all rentry link types, save to all_extracted_links.txt, and process unrestriction through Real-Debrid browser extension via Persi...</summary>
+
+- Kind: code-change,general
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: o3-mini
+  Thinking: high
+  Mode: chat
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts\telegram  Branch: main
+  Tools used (this reply): run_in_terminal, grep_search, read_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 13:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Refactored telethon_link_resolver.py to extract all rentry link types, save to all_extracted_links.txt, and process unrestriction through Real-Debrid browser extension via Persistent Context and user interaction (ENTER prompt) instead of the RealDebrid API, matching the user's workflow prototype.
+- Commands:
+  - `python -m py_compile telethon_link_resolver.py`
+- Files:
+  - `telegram/telethon_link_resolver.py`
+- Git: repo=python-scripts, branch=main, head=8e2fa98
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 10:05 - python-scripts</strong> <code>code-change</code> - Created .env.example, .env, and requirements.txt inside telegram/. Refactored telethon_link_resolver.py to read keys via dotenv instead of hardcoded strings or separate text files.</summary>
+
+- Kind: code-change
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: gemini-3.1-pro-preview
+  Thinking: medium
+  Mode: chat
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts\telegram  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 10:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created .env.example, .env, and requirements.txt inside telegram/. Refactored telethon_link_resolver.py to read keys via dotenv instead of hardcoded strings or separate text files.
+- Commands:
+  - `create_file`
+- Files:
+  - `telegram/.env`
+  - `telegram/requirements.txt`
+  - `telegram/telethon_link_resolver.py`
+- Git: repo=python-scripts, branch=main, head=8e2fa98
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 09:14 - vaultwares-docs</strong> <code>verification</code> - Verified tailnet/private access for vaultwares docs and secrets. The client-side override now points docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.7...</summary>
+
+- Kind: verification
+- Actor: Claude Sonnet 4.6
+- Agent Header:
+  ```text
+  Agent: Claude Sonnet 4.6 (role: main)
+  Model: claude-sonnet-4-6
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): PowerShell, SSH
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 09:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified tailnet/private access for vaultwares docs and secrets. The client-side override now points docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.73.93.84. Confirmed docs returns 200 with valid TLS and HTML content; secrets returns 200 after following the redirect to warden; warden returns 200 with valid TLS and the VaultWarden JSON landing payload. dnsmasq on vaultwares-1 was not needed for this path, so I disabled it, removed the temporary dnsmasq config, and removed the UFW UDP/TCP 53 allowances on tailscale0.
+- Commands:
+  - `curl.exe -sS -o NUL -w ... https://docs.vaultwares.ca`
+  - `curl.exe -sS -o NUL -w ... https://warden.vaultwares.ca`
+  - `curl.exe -sS -L -o NUL -w ... https://secrets.vaultwares.ca`
+  - `ssh root@100.73.93.84 systemctl disable --now dnsmasq`
+  - `ssh root@100.73.93.84 ufw delete allow in on tailscale0 to any port 53 proto udp/tcp`
+- Files:
+  - `C:\\Windows\\System32\\drivers\\etc\\hosts`
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 09:14 - vault-explorer</strong> <code>general</code> - Loaded context from checkpoint. Confirmed ASR pipeline fix and playback speed UI refactoring are complete and passing smoke tests.</summary>
+
+- Kind: general
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-3.5-flash
+  Thinking: low
+  Mode: chat
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): run_command
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 09:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Loaded context from checkpoint. Confirmed ASR pipeline fix and playback speed UI refactoring are complete and passing smoke tests.
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 09:14 - vault-explorer</strong> <code>code-change,verification</code> - Refactored video player speed controls to be icon-only. Replaced ASR subtitle modal with a new floating language context menu. Fixed ASR pipeline failure in parakeet_wrapper.py ...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-3.5-flash
+  Thinking: medium
+  Mode: code
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): replace_file_content, multi_replace_file_content, run_command, view_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 09:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Refactored video player speed controls to be icon-only. Replaced ASR subtitle modal with a new floating language context menu. Fixed ASR pipeline failure in parakeet_wrapper.py by implementing stereo-to-mono downmixing and silenced PyTorch/NeMo warning logs. Verified via Playwright smoke tests and Python native transcribing script.
+- Commands:
+  - `node tests/refactor_smoke_test.js`
+  - `python test_nemo_real_asr.py`
+- Files:
+  - `index.html`
+  - `js/player/player.js`
+  - `js/player/subtitles.js`
+  - `c:\Users\Administrator\Desktop\Github Repos\vaultwares-media-processing\vaultwares_media_processing\parakeet_wrapper.py`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
+- Git: repo=vault-explorer, branch=main, head=0138f21
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 08:02 - python-scripts</strong> <code>code-change,general</code> - Organized telegram/ directory: removed ~15 deprecated, intermediate, or redundant pipeline scripts. Moved all test scripts into telegram/tests/ and all documentation into telegr...</summary>
+
+- Kind: code-change,general
+- Actor: GitHub Copilot
+- Agent Header:
+  ```text
+  Agent: GitHub Copilot (role: main)
+  Model: Gemini 3.1 Pro (Preview)
+  Thinking: low
+  Mode: code
+  Permissions: autopilot (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
+  Tools used (this reply): run_in_terminal, create_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 08:02 (TZ: Eastern Standard Time)
+  ```
+- Summary: Organized telegram/ directory: removed ~15 deprecated, intermediate, or redundant pipeline scripts. Moved all test scripts into telegram/tests/ and all documentation into telegram/docs/. Sourced configurations to write a comprehensive README.md detailing the Telegram end-to-end scraper pipeline.
+- Commands:
+  - `Remove-Item`
+  - `mkdir`
+  - `mv`
+- Files:
+  - `telegram\README.md`
+- Git: repo=python-scripts, branch=main, head=8e2fa98
+
+</details>
+
+<details>
 <summary><strong>2026-06-02 07:01 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change,verification</code> - Fixed work_impact page: (1) Stats now load on initial render - improved data initialization check; (2) Work activity tooltip encoding fixed by decoding URI-encoded project names...</summary>
 
 - Kind: code-change,verification
@@ -134,7 +462,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-01 12:11 - vault-explorer (formerly Vault Explorer)</strong> <code>plan</code> - Created implementation plan to modernize video player UI (playback speed icon and subtitle generation context menu) and debug the NeMo/Parakeet pipeline by downmixing input audi...</summary>
+<summary><strong>2026-06-01 12:11 - vault-explorer</strong> <code>plan</code> - Created implementation plan to modernize video player UI (playback speed icon and subtitle generation context menu) and debug the NeMo/Parakeet pipeline by downmixing input audi...</summary>
 
 - Kind: plan
 - Actor: Antigravity
@@ -259,7 +587,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-01 07:43 - vaultwares-docs (formerly tmp-app)</strong> <code>code-change,commands</code> - Added an explicit renamed-projects table to docs (agent-ledger schema page) so the old&#226;†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so th...</summary>
+<summary><strong>2026-06-01 07:43 - vaultwares-docs</strong> <code>code-change,commands</code> - Added an explicit renamed-projects table to docs (agent-ledger schema page) so the old&#226;†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so th...</summary>
 
 - Kind: code-change,commands
 - Actor: AI Agent
