@@ -3,7 +3,40 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-06-02 21:44 - vaultwares-docs (formerly tmp-app)</strong> <code>verification</code> - Checked current Windows hosts-file state after confirming Tailscale DNS ACL was present. Found local overrides still present for docs.vaultwares.ca, secrets.vaultwares.ca, and w...</summary>
+<summary><strong>2026-06-02 22:30 - vaultwares-docs (formerly tmp-app)</strong> <code>handoff</code> - Archived DNS troubleshooting chat and published the final docs update. Committed and pushed vaultwares-docs commit d1e8553 (Document tailnet DNS routing) to origin/main. The com...</summary>
+
+- Kind: handoff
+- Actor: GPT-5.2 Codex
+- Agent Header:
+  ```text
+  Agent: GPT-5.2 Codex (role: main)
+  Model: gpt-5.2
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: online)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): PowerShell, git, npm
+  MCP servers accessed (this reply): none
+  Time: 2026-06-02 22:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Archived DNS troubleshooting chat and published the final docs update. Committed and pushed vaultwares-docs commit d1e8553 (Document tailnet DNS routing) to origin/main. The commit documents exact-host Tailscale restricted DNS via greencloud-vps dnsmasq, adds ledger.vaultwares.ca to the private network map, clarifies stats.vaultwares.ca as future/example-only, and includes regenerated page resources for network-map and tailscale. Build passed with npm run build; Vite reported only the existing large chunk warning. Left unrelated local pending changes in vaultwares-docs untouched: agent-ledger-schema docs/resources, pageResourcesManifest, deployment/services/webhook resource files, CODING_STANDARDS summary, and deploy-alerts resource.
+- Commands:
+  - `npm run generate:page-resources`
+  - `npm run build`
+  - `git fetch origin main`
+  - `git commit -m 'Document tailnet DNS routing'`
+  - `git push origin main`
+  - `git status --short --branch`
+- Files:
+  - `vaultwares-docs\\docs-content\\operations\\network-map.mdx`
+  - `vaultwares-docs\\docs-content\\operations\\tailscale.mdx`
+  - `vaultwares-docs\\src\\resources\\pages\\operations__network-map.json`
+  - `vaultwares-docs\\src\\resources\\pages\\operations__tailscale.json`
+
+</details>
+
+<details>
+<summary><strong>2026-06-02 21:44 - vaultwares-docs</strong> <code>verification</code> - Checked current Windows hosts-file state after confirming Tailscale DNS ACL was present. Found local overrides still present for docs.vaultwares.ca, secrets.vaultwares.ca, and w...</summary>
 
 - Kind: verification
 - Actor: GPT-5.2 Codex

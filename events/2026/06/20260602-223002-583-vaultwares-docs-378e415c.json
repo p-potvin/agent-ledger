@@ -1,0 +1,48 @@
+{
+  "id": "20260602-223002-583-vaultwares-docs-378e415c",
+  "createdAt": "2026-06-03T02:30:02.5836888Z",
+  "createdAtLocal": "2026-06-02 22:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "handoff",
+  "actor": "GPT-5.2 Codex",
+  "agentHeader": "Agent: GPT-5.2 Codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): PowerShell, git, npm\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-02 22:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "online",
+    "toolsUsed": [
+      "PowerShell",
+      "git",
+      "npm"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Archived DNS troubleshooting chat and published the final docs update. Committed and pushed vaultwares-docs commit d1e8553 (Document tailnet DNS routing) to origin/main. The commit documents exact-host Tailscale restricted DNS via greencloud-vps dnsmasq, adds ledger.vaultwares.ca to the private network map, clarifies stats.vaultwares.ca as future/example-only, and includes regenerated page resources for network-map and tailscale. Build passed with npm run build; Vite reported only the existing large chunk warning. Left unrelated local pending changes in vaultwares-docs untouched: agent-ledger-schema docs/resources, pageResourcesManifest, deployment/services/webhook resource files, CODING_STANDARDS summary, and deploy-alerts resource.",
+  "commands": [
+    "npm run generate:page-resources",
+    "npm run build",
+    "git fetch origin main",
+    "git commit -m 'Document tailnet DNS routing'",
+    "git push origin main",
+    "git status --short --branch"
+  ],
+  "files": [
+    "vaultwares-docs\\\\docs-content\\\\operations\\\\network-map.mdx",
+    "vaultwares-docs\\\\docs-content\\\\operations\\\\tailscale.mdx",
+    "vaultwares-docs\\\\src\\\\resources\\\\pages\\\\operations__network-map.json",
+    "vaultwares-docs\\\\src\\\\resources\\\\pages\\\\operations__tailscale.json"
+  ],
+  "planPath": "",
+  "contentHash": "378e415c4e2afc7d89e0501c6843e486a2a27092838a92f2ded0861a759017c6",
+  "git": null
+}
