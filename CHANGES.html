@@ -48,7 +48,49 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-06-02 17:51 - vaultwares-docs (formerly tmp-app)</strong> <span class="kind">verification</span> - Configured greencloud-vps as an exact-host tailnet DNS resolver with dnsmasq. Restored dnsmasq, installed /etc/dnsmasq.d/vaultwares-tailnet.conf with exact host-record answers f...</summary>
+    <summary><strong>2026-06-02 21:44 - vaultwares-docs (formerly tmp-app)</strong> <span class="kind">verification</span> - Checked current Windows hosts-file state after confirming Tailscale DNS ACL was present. Found local overrides still present for docs.vaultwares.ca, secrets.vaultwares.ca, and w...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> GPT-5.2 Codex</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: GPT-5.2 Codex (role: main) Model: gpt-5.2 Thinking: unknown Mode: agent Permissions: unknown (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): PowerShell MCP servers accessed (this reply): none Time: 2026-06-02 21:44 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Checked current Windows hosts-file state after confirming Tailscale DNS ACL was present. Found local overrides still present for docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca pointing to 100.73.93.84, so this PC can still mask whether Tailscale restricted DNS is being used for those names. No server changes made.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Select-String -Path C:\\Windows\\System32\\drivers\\etc\\hosts -Pattern vaultwares\\.ca</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\\Windows\\System32\\drivers\\etc\\hosts</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-02 21:42 - vaultwares-docs</strong> <span class="kind">verification</span> - Checked ledger.vaultwares.ca and stats.vaultwares.ca for the tailnet DNS model. Confirmed ledger.vaultwares.ca is a real nginx vhost on greencloud-vps with certificate and webro...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> GPT-5.2 Codex</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: GPT-5.2 Codex (role: main) Model: gpt-5.2 Thinking: unknown Mode: agent Permissions: unknown (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): PowerShell, SSH, apply_patch MCP servers accessed (this reply): none Time: 2026-06-02 21:42 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Checked ledger.vaultwares.ca and stats.vaultwares.ca for the tailnet DNS model. Confirmed ledger.vaultwares.ca is a real nginx vhost on greencloud-vps with certificate and webroot, added it to /etc/dnsmasq.d/vaultwares-tailnet.conf, restarted dnsmasq, verified DNS answer to 100.73.93.84 and HTTPS/TLS 200 via the tailnet address. Confirmed stats.vaultwares.ca has no nginx vhost and remains example/future-only, then updated network-map.mdx and tailscale.mdx to include ledger and clarify stats wording.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ssh root@100.73.93.84 cat /etc/nginx/sites-enabled/ledger.vaultwares.ca</code></li>
+        <li><code>nslookup ledger.vaultwares.ca 100.73.93.84</code></li>
+        <li><code>curl.exe --resolve ledger.vaultwares.ca:443:100.73.93.84 https://ledger.vaultwares.ca</code></li>
+        <li><code>nslookup stats.vaultwares.ca 100.73.93.84</code></li>
+        <li><code>git diff -- docs-content/operations/network-map.mdx docs-content/operations/tailscale.mdx</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-docs\docs-content\operations\network-map.mdx</code></li>
+        <li><code>vaultwares-docs\docs-content\operations\tailscale.mdx</code></li>
+        <li><code>/etc/dnsmasq.d/vaultwares-tailnet.conf</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-02 17:51 - vaultwares-docs</strong> <span class="kind">verification</span> - Configured greencloud-vps as an exact-host tailnet DNS resolver with dnsmasq. Restored dnsmasq, installed /etc/dnsmasq.d/vaultwares-tailnet.conf with exact host-record answers f...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> verification</p>
       <p><strong>Actor:</strong> GPT-5.2 Codex</p>
