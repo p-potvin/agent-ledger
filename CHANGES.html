@@ -48,7 +48,25 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-06-02 21:42 - vaultwares-docs (formerly tmp-app)</strong> <span class="kind">verification</span> - Checked ledger.vaultwares.ca and stats.vaultwares.ca for the tailnet DNS model. Confirmed ledger.vaultwares.ca is a real nginx vhost on greencloud-vps with certificate and webro...</summary>
+    <summary><strong>2026-06-02 21:44 - vaultwares-docs (formerly tmp-app)</strong> <span class="kind">verification</span> - Checked current Windows hosts-file state after confirming Tailscale DNS ACL was present. Found local overrides still present for docs.vaultwares.ca, secrets.vaultwares.ca, and w...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> GPT-5.2 Codex</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: GPT-5.2 Codex (role: main) Model: gpt-5.2 Thinking: unknown Mode: agent Permissions: unknown (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): PowerShell MCP servers accessed (this reply): none Time: 2026-06-02 21:44 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Checked current Windows hosts-file state after confirming Tailscale DNS ACL was present. Found local overrides still present for docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca pointing to 100.73.93.84, so this PC can still mask whether Tailscale restricted DNS is being used for those names. No server changes made.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Select-String -Path C:\\Windows\\System32\\drivers\\etc\\hosts -Pattern vaultwares\\.ca</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\\Windows\\System32\\drivers\\etc\\hosts</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-02 21:42 - vaultwares-docs</strong> <span class="kind">verification</span> - Checked ledger.vaultwares.ca and stats.vaultwares.ca for the tailnet DNS model. Confirmed ledger.vaultwares.ca is a real nginx vhost on greencloud-vps with certificate and webro...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> verification</p>
       <p><strong>Actor:</strong> GPT-5.2 Codex</p>
