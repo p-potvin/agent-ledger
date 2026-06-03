@@ -194,7 +194,7 @@ function Heatmap({
                       className={`w-[13px] h-[13px] rounded-[3px] cursor-default ${lvlColors[lvl]}`}
                       aria-label={`${key}: ${c}`}
                       onMouseEnter={(ev) => {
-                        const projects = rec?.projects || [];
+                        const projects: string[] = rec?.projects || [];
                         const kindsObj = rec?.kinds || {};
                         const kindParts = Object.keys(kindsObj)
                           .sort()
