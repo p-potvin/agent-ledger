@@ -1,0 +1,52 @@
+﻿{
+    "id":  "20260604-131233-868-agent-ledger-efcc606f",
+    "createdAt":  "2026-06-04T17:12:33.8680802Z",
+    "createdAtLocal":  "2026-06-04 13:12",
+    "timezone":  "Eastern Standard Time",
+    "project":  "agent-ledger",
+    "kind":  "code-change,verification",
+    "actor":  ":AGENT_NAME",
+    "agentHeader":  "Agent: :AGENT_NAME (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\site  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-04 13:12 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-4-7",
+                    "thinking":  "medium",
+                    "mode":  "agent",
+                    "permissions":  "allowlist",
+                    "network":  "local-windows",
+                    "toolsUsed":  [
+                                      "Read",
+                                      "Edit",
+                                      "Grep",
+                                      "Bash"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\site",
+    "summary":  "Pass 2 on WorkImpactPage: (1) fixed dowSeries BarRow max bug (same broken pattern as Agent activity section - Math.max(...arr.map() || [1]) gave -Infinity for empty arrays); precomputed once with Math.max(1, ...xs). (2) Renamed misleading Time-of-Day Rhythm title (it is day-of-week, not time-of-day; Activity24 widget is the actual time-of-day card) to weekdayRhythmTitle. (3) Internationalized previously hardcoded English titles in the Agent \u0026 Tool Activity section (models, actors, tools, mcpServers, daySeries) by adding dict keys in both en and qc. (4) Replaced redundant 8th KPI card (Commits sampled showed the same number as its sub line and as the commit-size card) with Avg entries / active day, computed as totals.events / totals.activeDays. (5) Collapsed duplicate alignedStart useMemo inside Heatmap into the existing memo to avoid recomputing parseLocalDate twice on every render. tsc --noEmit passes.",
+    "commands":  [
+                     "npx tsc --noEmit"
+                 ],
+    "files":  [
+                  "site/src/pages/WorkImpactPage.tsx",
+                  "site/src/i18n.ts"
+              ],
+    "planPath":  "",
+    "contentHash":  "efcc606f9ba895c48e2c4878f9bc501fc76f6c3d5f46492a0a76d80c58a065b0",
+    "git":  {
+                "repo":  "agent-ledger",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+                "branch":  "main",
+                "head":  "a0a75a50",
+                "hasChanges":  true
+            }
+}

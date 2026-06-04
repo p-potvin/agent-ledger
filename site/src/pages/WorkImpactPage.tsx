@@ -121,10 +121,10 @@ function Heatmap({
     meta: string;
   } | null>(null);
 
-  const { weeks, byDay, levelFn } = useMemo(() => {
+  const { weeks, byDay, levelFn, alignedStart } = useMemo(() => {
     const start = parseLocalDate(rangeStart);
     const end = parseLocalDate(rangeEnd);
-    if (!start || !end) return { weeks: 0, byDay: new Map(), levelFn: () => 0 };
+    if (!start || !end) return { weeks: 0, byDay: new Map<string, DaySeries>(), levelFn: () => 0, alignedStart: null as Date | null };
     const alignedStart = addDays(start, -start.getDay());
     const daysTotal =
       Math.round((end.getTime() - alignedStart.getTime()) / (24 * 3600 * 1000)) + 1;
@@ -148,11 +148,6 @@ function Heatmap({
       alignedStart,
     };
   }, [daySeries, rangeStart, rangeEnd]);
-
-  const alignedStart = useMemo(() => {
-    const start = parseLocalDate(rangeStart);
-    return start ? addDays(start, -start.getDay()) : null;
-  }, [rangeStart]);
 
   const lvlColors = [
     'bg-[var(--good0)]',
@@ -484,23 +479,26 @@ export function WorkImpactPage() {
         <Card className="col-span-4 max-md:col-span-12">
           <Activity24 hourSeries={data.hourSeries || []} lang={lang} />
         </Card>
-        {data.dowSeries && data.dowSeries.length > 0 && (
-          <Card className="col-span-4 max-md:col-span-12">
-            <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
-              Time-of-Day Rhythm
-            </h2>
-            <div className="flex flex-col gap-2">
-              {data.dowSeries.map((d) => (
-                <BarRow
-                  key={d.label}
-                  label={d.label}
-                  count={d.count || 0}
-                  max={Math.max(...(data.dowSeries?.map((x) => x.count || 0) || [1]))}
-                />
-              ))}
-            </div>
-          </Card>
-        )}
+        {data.dowSeries && data.dowSeries.length > 0 && (() => {
+          const dowMax = Math.max(1, ...data.dowSeries.map((x) => x.count || 0))
+          return (
+            <Card className="col-span-4 max-md:col-span-12">
+              <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
+                {dict.weekdayRhythmTitle}
+              </h2>
+              <div className="flex flex-col gap-2">
+                {data.dowSeries.map((d) => (
+                  <BarRow
+                    key={d.label}
+                    label={d.label}
+                    count={d.count || 0}
+                    max={dowMax}
+                  />
+                ))}
+              </div>
+            </Card>
+          )
+        })()}
       </section>
 
       {/* Monthly + Projects + Kinds */}
@@ -655,77 +653,114 @@ export function WorkImpactPage() {
           }
         />
         <KpiCard
-          label={dict.commitStatSamples}
-          value={fmtInt(commitSamples.length)}
-          sub={`${fmtInt(commitSamples.length)} ${dict.units.commits}`}
+          label={dict.metricAvgPerActiveDay}
+          value={
+            (data.totals?.activeDays || 0) > 0
+              ? fmt1((data.totals?.events || 0) / (data.totals?.activeDays || 1))
+              : '0'
+          }
+          sub={`${fmtInt(data.totals?.events || 0)} / ${fmtInt(data.totals?.activeDays || 0)} ${dict.units.days}`}
         />
       </section>
 
       {/* Agent & Tool Activity */}
-      {data.agentData && (data.agentData.tools?.length || data.agentData.mcpServers?.length || data.agentData.models?.length || data.agentData.actors?.length || data.agentData.daySeries?.length) && (
+      {(() => {
+        const ad = data.agentData
+        if (!ad) return null
+        const toTuples = (v: unknown): [string, number][] => {
+          if (!Array.isArray(v)) return []
+          // Well-formed: array of [name, count] tuples.
+          const tuples = v.filter((e): e is [string, number] => Array.isArray(e) && e.length >= 2 && typeof e[0] === 'string' && typeof e[1] === 'number')
+          if (tuples.length > 0) return tuples
+          // Recover legacy flattened format produced by PowerShell ConvertTo-Json
+          // unwrapping inner arrays: [name, count, name, count, ...].
+          if (v.length >= 2 && v.length % 2 === 0 && typeof v[0] === 'string' && typeof v[1] === 'number') {
+            const out: [string, number][] = []
+            for (let i = 0; i < v.length; i += 2) {
+              if (typeof v[i] === 'string' && typeof v[i + 1] === 'number') out.push([v[i] as string, v[i + 1] as number])
+            }
+            return out
+          }
+          return []
+        }
+        const models = toTuples(ad.models)
+        const actors = toTuples(ad.actors)
+        const tools = toTuples(ad.tools)
+        const mcpServers = toTuples(ad.mcpServers)
+        const daySeries = Array.isArray(ad.daySeries) ? ad.daySeries.filter((d) => d && typeof d === 'object') : []
+        const maxOf = (xs: number[]) => Math.max(1, ...xs)
+        const hasAny = models.length > 0 || actors.length > 0 || tools.length > 0 || mcpServers.length > 0 || daySeries.length > 0
+        if (!hasAny) return null
+        const modelsMax = maxOf(models.map(([, c]) => c))
+        const actorsMax = maxOf(actors.map(([, c]) => c))
+        const toolsMax = maxOf(tools.map(([, c]) => c))
+        const mcpMax = maxOf(mcpServers.map(([, c]) => c))
+        const dayMax = maxOf(daySeries.map((x) => x.count || 0))
+        return (
         <section className="grid grid-cols-12 gap-3 mt-5">
-          {data.agentData.models && data.agentData.models.length > 0 && (
+          {models.length > 0 && (
             <Card className="col-span-6 max-md:col-span-12">
               <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
-                AI Model Usage
+                {dict.agentModelsTitle}
               </h2>
               <div className="flex flex-col gap-2">
-                {data.agentData.models.map(([name, count]) => (
-                  <BarRow key={name} label={name} count={count} max={Math.max(...(data.agentData?.models?.map(([, c]) => c) || [1]))} />
+                {models.map(([name, count]) => (
+                  <BarRow key={name} label={name} count={count} max={modelsMax} />
                 ))}
               </div>
             </Card>
           )}
-          {data.agentData.actors && data.agentData.actors.length > 0 && (
+          {actors.length > 0 && (
             <Card className="col-span-6 max-md:col-span-12">
               <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
-                Distinct Actors
+                {dict.agentActorsTitle}
               </h2>
               <div className="flex flex-col gap-2">
-                {data.agentData.actors.map(([name, count]) => (
-                  <BarRow key={name} label={name} count={count} max={Math.max(...(data.agentData?.actors?.map(([, c]) => c) || [1]))} />
+                {actors.map(([name, count]) => (
+                  <BarRow key={name} label={name} count={count} max={actorsMax} />
                 ))}
               </div>
             </Card>
           )}
-          {data.agentData.tools && data.agentData.tools.length > 0 && (
+          {tools.length > 0 && (
             <Card className="col-span-6 max-md:col-span-12">
               <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
-                Tools Used
+                {dict.agentToolsTitle}
               </h2>
               <div className="flex flex-col gap-2">
-                {data.agentData.tools.slice(0, 10).map(([name, count]) => (
-                  <BarRow key={name} label={name} count={count} max={Math.max(...(data.agentData?.tools?.map(([, c]) => c) || [1]))} />
+                {tools.slice(0, 10).map(([name, count]) => (
+                  <BarRow key={name} label={name} count={count} max={toolsMax} />
                 ))}
               </div>
             </Card>
           )}
-          {data.agentData.mcpServers && data.agentData.mcpServers.length > 0 && (
+          {mcpServers.length > 0 && (
             <Card className="col-span-6 max-md:col-span-12">
               <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
-                MCP Servers
+                {dict.agentMcpTitle}
               </h2>
               <div className="flex flex-col gap-2">
-                {data.agentData.mcpServers.slice(0, 10).map(([name, count]) => (
-                  <BarRow key={name} label={name} count={count} max={Math.max(...(data.agentData?.mcpServers?.map(([, c]) => c) || [1]))} />
+                {mcpServers.slice(0, 10).map(([name, count]) => (
+                  <BarRow key={name} label={name} count={count} max={mcpMax} />
                 ))}
               </div>
             </Card>
           )}
-          {data.agentData.daySeries && data.agentData.daySeries.length > 0 && (
+          {daySeries.length > 0 && (
             <Card className="col-span-12">
               <h2 className="text-[11px] text-[var(--muted)] font-bold uppercase tracking-wider m-0 mb-2">
-                Agent Activity by Day
+                {dict.agentByDayTitle}
               </h2>
               <div className="flex flex-col gap-2">
-                {data.agentData.daySeries.slice(-14).map((d) => (
-                  <BarRow key={d.day} label={d.day} count={d.count || 0} max={Math.max(...(data.agentData?.daySeries?.map((x) => x.count || 0) || [1]))} />
+                {daySeries.slice(-14).map((d) => (
+                  <BarRow key={d.day} label={d.day} count={d.count || 0} max={dayMax} />
                 ))}
               </div>
             </Card>
           )}
         </section>
-      )}
+        )
+      })()}
 
       {/* Project evidence cards */}
       <section className="mt-5">

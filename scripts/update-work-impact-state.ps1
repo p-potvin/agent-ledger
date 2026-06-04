@@ -552,10 +552,12 @@ $eventDirs | ForEach-Object { Get-ChildItem -Path $_ -Recurse -File -Filter '*.j
 $agentDaySeries = @($agentDayBuckets.Values | Sort-Object -Property day | ForEach-Object {
     @{ day = $_.day; count = $_.count; actors = @($_.actors | Sort-Object); models = @($_.models | Sort-Object) }
 })
-$agentActorList = @($agentActorCounts.GetEnumerator() | Sort-Object -Property Value -Descending | ForEach-Object { @($_.Key, $_.Value) })
-$agentModelList = @($agentModelCounts.GetEnumerator() | Sort-Object -Property Value -Descending | ForEach-Object { @($_.Key, $_.Value) })
-$agentToolList  = @($agentToolCounts.GetEnumerator()  | Sort-Object -Property Value -Descending | Select-Object -First 15 | ForEach-Object { @($_.Key, $_.Value) })
-$agentMcpList   = @($agentMcpCounts.GetEnumerator()   | Sort-Object -Property Value -Descending | ForEach-Object { @($_.Key, $_.Value) })
+# Unary `,` wraps each pair so PowerShell's pipeline doesn't unwrap the inner
+# array — without it, ConvertTo-Json emits a flat [name,count,name,count,...].
+$agentActorList = @($agentActorCounts.GetEnumerator() | Sort-Object -Property Value -Descending | ForEach-Object { ,@($_.Key, $_.Value) })
+$agentModelList = @($agentModelCounts.GetEnumerator() | Sort-Object -Property Value -Descending | ForEach-Object { ,@($_.Key, $_.Value) })
+$agentToolList  = @($agentToolCounts.GetEnumerator()  | Sort-Object -Property Value -Descending | Select-Object -First 15 | ForEach-Object { ,@($_.Key, $_.Value) })
+$agentMcpList   = @($agentMcpCounts.GetEnumerator()   | Sort-Object -Property Value -Descending | ForEach-Object { ,@($_.Key, $_.Value) })
 
 $dowLabels = @('Mon','Tue','Wed','Thu','Fri','Sat','Sun')
 

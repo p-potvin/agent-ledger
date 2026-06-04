@@ -3,6 +3,328 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-04 17:51 - vault-central</strong> <code>code-change,verification</code> - Stabilized the video capture pipeline by transitioning from WebM blobs to JSON-wrapped WebP frame sequences. Added native HLS.js streaming support in both the offscreen preview ...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-2.0-flash
+  Thinking: high
+  Mode: code
+  Permissions: autopilot (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
+  Tools used (this reply): multi_replace_file_content, replace_file_content, view_file, run_command, write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-04 17:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Stabilized the video capture pipeline by transitioning from WebM blobs to JSON-wrapped WebP frame sequences. Added native HLS.js streaming support in both the offscreen preview processor and dashboard VideoPlayer component. Fixed direct video routing, Visibility/Focus mocks, and unified PreviewThumb compatibility.
+- Commands:
+  - `npm run build`
+- Files:
+  - `background/scripts/background.ts`
+  - `src/scripts/scraper-player.ts`
+  - `src/offscreen/processor.ts`
+  - `src/components/VideoPlayer.tsx`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
+- Git: repo=vault-central, branch=main, head=31c2b30
+
+</details>
+
+<details>
+<summary><strong>2026-06-04 17:47 - vault-central</strong> <code>plan</code> - Created implementation plan to stabilize the video capture pipeline, aligning background.ts with background.js, converting preview generation to WebP frames JSON format, and int...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gemini-advanced
+  Thinking: medium
+  Mode: plan
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
+  Tools used (this reply): write_to_file, view_file, run_command
+  MCP servers accessed (this reply): none
+  Time: 2026-06-04 17:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created implementation plan to stabilize the video capture pipeline, aligning background.ts with background.js, converting preview generation to WebP frames JSON format, and integrating HLS.js for direct M3U8 support.
+- Files:
+  - `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
+- Git: repo=vault-central, branch=main, head=31c2b30
+
+</details>
+
+<details>
+<summary><strong>2026-06-04 17:39 - health-ledger</strong> <code>handoff,plan</code> - Provided next-step sequence after Health Ledger inventory and Ollama sampling work: fix API gateway secret/TLS blind spot first, then dashboard, Alarm Joker, active Ollama hook ...</summary>
+
+- Kind: handoff,plan
+- Actor: Codex
+- Agent Header:
+  ```text
+  Agent: Codex (role: main)
+  Model: GPT-5
+  Thinking: medium
+  Mode: Default
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\health-ledger  Branch: main
+  Tools used (this reply): shell_command
+  MCP servers accessed (this reply): none
+  Time: 2026-06-04 17:39 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: secrets_redacted=True
+  - Metrics: {"recommended_next_step":"api_gateway_secret_tls_hardening"}
+- Summary: Provided next-step sequence after Health Ledger inventory and Ollama sampling work: fix API gateway secret/TLS blind spot first, then dashboard, Alarm Joker, active Ollama hook sampling, and Token Joker.
+- Commands:
+  - `No implementation command; planning response only`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\services.yaml`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\services-inventory.mdx`
+- Git: repo=health-ledger, branch=main, head=b1ad73f
+
+</details>
+
+<details>
+<summary><strong>2026-06-04 16:14 - vault-central</strong> <code>code-change,verification</code> - Mapped the remaining Console Mode design tokens to globals.css and updated VideoPlayer.css to use them. Flanked the video player seek bar with elapsed and total duration. Enhanc...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.0 Flash
+  Thinking: medium
+  Mode: code
+  Permissions: restricted (network: Windows local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
+  Tools used (this reply): replace_file_content, multi_replace_file_content, run_command
+  MCP servers accessed (this reply): none
+  Time: 2026-06-04 16:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Mapped the remaining Console Mode design tokens to globals.css and updated VideoPlayer.css to use them. Flanked the video player seek bar with elapsed and total duration. Enhanced sidebar label typography to use bold uppercase text-xs. Ran npm run build and verified that the extension packages correctly with 0 compilation errors. Executed vitest suite to ensure no regressions.
+- Commands:
+  - `npm run build`
+  - `npx vitest run`
+- Files:
+  - `src/styles/globals.css`
+  - `src/components/VideoPlayer.tsx`
+  - `src/components/VideoPlayer.css`
+  - `src/components/VaultDashboard.tsx`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
+- Git: repo=vault-central, branch=main, head=c8b5a7d
+
+</details>
+
+<details>
+<summary><strong>2026-06-04 13:30 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change,verification</code> - Pass 3 on WorkImpactPage agent section: discovered root cause is that update-work-impact-state.ps1 emits flattened arrays [name,count,name,count,...] instead of tuple arrays [[n...</summary>
+
+- Kind: code-change,verification
+- Actor: :AGENT_NAME
+- Agent Header:
+  ```text
+  Agent: :AGENT_NAME (role: main)
+  Model: claude-opus-4-7
+  Thinking: medium
+  Mode: agent
+  Permissions: allowlist (network: local-windows)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger\site  Branch: main
+  Tools used (this reply): Read, Edit, Grep, Bash
+  MCP servers accessed (this reply): none
+  Time: 2026-06-04 13:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pass 3 on WorkImpactPage agent section: discovered root cause is that update-work-impact-state.ps1 emits flattened arrays [name,count,name,count,...] instead of tuple arrays [[name,count],...] because PowerShells ForEach-Object pipeline unwraps single-element arrays returned by its script block. Fix at source: prefix each @(extglob.Key,extglob.Value) with the unary comma operator (,@(...)) so the pipeline preserves the inner array. Fix on frontend: extended toTuples helper to detect and recover the legacy flat format by walking pairs when no proper tuples are present (preserves existing prod data renderability without requiring a state regeneration). Verified against the live work-impact-data.json: actors=14, models=30, tools=15, mcpServers=2 — all recovered. tsc --noEmit passes. NOTE the apparent ProjectCard accordion breakage on prod was a side-effect of the agent section throwing during render, which unmounted the rest of the page; no separate fix needed there.
+- Commands:
+  - `npx tsc --noEmit`
+  - `node -e <recovery verification>`
+- Files:
+  - `site/src/pages/WorkImpactPage.tsx`
+  - `scripts/update-work-impact-state.ps1`
+- Git: repo=agent-ledger, branch=main, head=964696ff
+
+</details>
+
+<details>
+<summary><strong>2026-06-04 13:17 - vault-central</strong> <code>code-change,verification</code> - Completed modularization of VaultDashboard.tsx. Replaced inline settings modal with SettingsDialog, and replaced inline PIN setup modal with PinSetupDialog. Restored pinSetupOpe...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-2.5-pro
+  Thinking: high
+  Mode: code
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
+  Tools used (this reply): view_file, replace_file_content, run_command, command_status
+  MCP servers accessed (this reply): none
+  Time: 2026-06-04 13:17 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed modularization of VaultDashboard.tsx. Replaced inline settings modal with SettingsDialog, and replaced inline PIN setup modal with PinSetupDialog. Restored pinSetupOpen state for rendering control, and removed obsolete settings/PIN helper logic. Resolved Tailwind custom variable opacity build compilation error using standard CSS color-mix in globals.css. Ran project build and verified all 13 unit tests passed.
+- Commands:
+  - `npm run build`
+  - `npm run test`
+- Files:
+  - `src/components/VaultDashboard.tsx`
+  - `src/styles/globals.css`
+- Git: repo=vault-central, branch=main, head=c8b5a7d
+
+</details>
+
+<details>
+<summary><strong>2026-06-04 13:12 - agent-ledger</strong> <code>code-change,verification</code> - Pass 2 on WorkImpactPage: (1) fixed dowSeries BarRow max bug (same broken pattern as Agent activity section - Math.max(...arr.map() || [1]) gave -Infinity for empty arrays); pre...</summary>
+
+- Kind: code-change,verification
+- Actor: :AGENT_NAME
+- Agent Header:
+  ```text
+  Agent: :AGENT_NAME (role: main)
+  Model: claude-opus-4-7
+  Thinking: medium
+  Mode: agent
+  Permissions: allowlist (network: local-windows)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger\site  Branch: main
+  Tools used (this reply): Read, Edit, Grep, Bash
+  MCP servers accessed (this reply): none
+  Time: 2026-06-04 13:12 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pass 2 on WorkImpactPage: (1) fixed dowSeries BarRow max bug (same broken pattern as Agent activity section - Math.max(...arr.map() || [1]) gave -Infinity for empty arrays); precomputed once with Math.max(1, ...xs). (2) Renamed misleading Time-of-Day Rhythm title (it is day-of-week, not time-of-day; Activity24 widget is the actual time-of-day card) to weekdayRhythmTitle. (3) Internationalized previously hardcoded English titles in the Agent & Tool Activity section (models, actors, tools, mcpServers, daySeries) by adding dict keys in both en and qc. (4) Replaced redundant 8th KPI card (Commits sampled showed the same number as its sub line and as the commit-size card) with Avg entries / active day, computed as totals.events / totals.activeDays. (5) Collapsed duplicate alignedStart useMemo inside Heatmap into the existing memo to avoid recomputing parseLocalDate twice on every render. tsc --noEmit passes.
+- Commands:
+  - `npx tsc --noEmit`
+- Files:
+  - `site/src/pages/WorkImpactPage.tsx`
+  - `site/src/i18n.ts`
+- Git: repo=agent-ledger, branch=main, head=a0a75a50
+
+</details>
+
+<details>
+<summary><strong>2026-06-04 13:05 - agent-ledger</strong> <code>code-change,verification</code> - Fixed prod crash on WorkImpactPage: agentData.models/actors/tools/mcpServers entries that were not [string,number] tuples caused TypeError (destructured parameter not iterable) ...</summary>
+
+- Kind: code-change,verification
+- Actor: :AGENT_NAME
+- Agent Header:
+  ```text
+  Agent: :AGENT_NAME (role: main)
+  Model: claude-haiku-4-5
+  Thinking: medium
+  Mode: agent
+  Permissions: allowlist (network: local-windows)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger\site  Branch: main
+  Tools used (this reply): Read, Edit, Grep, Bash
+  MCP servers accessed (this reply): none
+  Time: 2026-06-04 13:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed prod crash on WorkImpactPage: agentData.models/actors/tools/mcpServers entries that were not [string,number] tuples caused TypeError (destructured parameter not iterable) when computing Math.max. Refactored the Agent & Tool Activity section to (1) filter incoming arrays to well-formed tuples via Array.isArray guards, (2) precompute max values once per category with Math.max(1, ...xs) instead of inline spread with || [1] fallback, and (3) wrap the outer conditional in an IIFE returning null when nothing is present, eliminating the React warning where (a?.length || b?.length || ...) could evaluate to a number 0 that React rendered as text. tsc --noEmit passes.
+- Commands:
+  - `npx tsc --noEmit`
+- Files:
+  - `site/src/pages/WorkImpactPage.tsx`
+- Git: repo=agent-ledger, branch=main, head=9c61a84c
+
+</details>
+
+<details>
+<summary><strong>2026-06-04 12:36 - Vault Central</strong> <code>plan</code> - Created implementation plan for theme modernization (Warm Mode dashboard, Console Mode player), video player layout parity with Vault Explorer, and modularizing Settings/PIN set...</summary>
+
+- Kind: plan
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-2.5-pro
+  Thinking: medium
+  Mode: plan
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
+  Tools used (this reply): write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-04 12:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created implementation plan for theme modernization (Warm Mode dashboard, Console Mode player), video player layout parity with Vault Explorer, and modularizing Settings/PIN setup dialogs.
+- Files:
+  - `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
+- Git: repo=vault-central, branch=main, head=c8b5a7d
+
+</details>
+
+<details>
+<summary><strong>2026-06-04 12:01 - vault-central</strong> <code>code-change,verification</code> - Completed modularization of VaultDashboard.tsx into separate modular files (PromptDialog.tsx, LockedBanner.tsx, PreviewThumb.tsx, and dashboard-utils.ts). Replaced the CPU-inten...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-2.0-flash
+  Thinking: high
+  Mode: code
+  Permissions: ask (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
+  Tools used (this reply): replace_file_content, multi_replace_file_content, view_file, run_command, command_status
+  MCP servers accessed (this reply): none
+  Time: 2026-06-04 12:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed modularization of VaultDashboard.tsx into separate modular files (PromptDialog.tsx, LockedBanner.tsx, PreviewThumb.tsx, and dashboard-utils.ts). Replaced the CPU-intensive WebM preview generator with a client-side Canvas-based WebP frame sequence extractor in processor.ts, scraper-player.ts, and background.ts. Tested compilation of typescript bundles and packaging. The build succeeded with code 0.
+- Commands:
+  - `npm run build`
+- Files:
+  - `src/components/VaultDashboard.tsx`
+  - `src/offscreen/processor.ts`
+  - `src/scripts/scraper-player.ts`
+  - `background/scripts/background.ts`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
+- Git: repo=vault-central, branch=main, head=c8b5a7d
+
+</details>
+
+<details>
+<summary><strong>2026-06-04 11:19 - health-ledger</strong> <code>code-change,handoff,verification</code> - Answered Health Ledger architecture questions, clarified API gateway TLS/secret state, split Prom-King/FullXXX service inventory into explicit prelanding, tube, and link-sharing...</summary>
+
+- Kind: code-change,handoff,verification
+- Actor: Codex
+- Agent Header:
+  ```text
+  Agent: Codex (role: main)
+  Model: GPT-5
+  Thinking: high
+  Mode: Default
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\health-ledger  Branch: main
+  Tools used (this reply): shell_command, apply_patch, multi_tool_use.parallel
+  MCP servers accessed (this reply): none
+  Time: 2026-06-04 11:19 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: secrets_redacted=True, gateway_secret_not_in_api_vhost=True, unrelated_vaultwares_docs_tasks_md_untouched=True, vw_state=LONG_RUNNING_TASKS applied; resume_id=health-ledger-ollama-inventory-20260604; no VW_STATE chat output; latest: health-ledger b1ad73f and vaultwares-docs 2a91249 pushed; Clopeux probe 22/22 + resource sample; greencloud active with api skipped for missing X_VW_GATEWAY_SECRET env.
+  - Metrics: {"clopeux_since_deploy_events":9090,"clopeux_since_deploy_ok":9040,"clopeux_since_deploy_failed":41,"clopeux_since_deploy_skipped":9,"greencloud_since_deploy_events":15423,"greencloud_since_deploy_ok":12313,"greenclou...
+- Summary: Answered Health Ledger architecture questions, clarified API gateway TLS/secret state, split Prom-King/FullXXX service inventory into explicit prelanding, tube, and link-sharing records, added Ollama resource sampling to Probe Joker, redeployed Health Ledger to greencloud and restarted Clopeux probe loop.
+- Commands:
+  - `node -c scripts/probe-joker.mjs`
+  - `JOKER_PROBE_LOCATION=Clopeux-Desktop node scripts/probe-joker.mjs --once -> 22/22 ok + 1 ollama_resource_sample`
+  - `npm run generate:page-resources`
+  - `npm run build`
+  - `git archive --format=tar HEAD | ssh root@100.73.93.84 tar -xf - -C /opt/health-ledger ...`
+  - `systemctl restart health-ledger-probe.service`
+  - `Start-ScheduledTask -TaskName HealthLedgerProbeJoker`
+  - `Joker stats aggregation from Clopeux and greencloud data/events`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\services.yaml`
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\scripts\probe-joker.mjs`
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\docs\ollama-environment.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\README.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\services-inventory.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\services-inventory-QC.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\src\resources\pages\operations__services-inventory.json`
+- Git: repo=health-ledger, branch=main, head=b1ad73f
+
+</details>
+
+<details>
 <summary><strong>2026-06-04 11:15 - OpenClaw</strong> <code>verification</code> - Cron: ran openclaw doctor --non-interactive per gateway restart update error from June 3. Doctor completed successfully &#226;€” no gateway errors. Memory search needs embedding prov...</summary>
 
 - Kind: verification
@@ -1208,7 +1530,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-02 07:01 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change,verification</code> - Fixed work_impact page: (1) Stats now load on initial render - improved data initialization check; (2) Work activity tooltip encoding fixed by decoding URI-encoded project names...</summary>
+<summary><strong>2026-06-02 07:01 - agent-ledger</strong> <code>code-change,verification</code> - Fixed work_impact page: (1) Stats now load on initial render - improved data initialization check; (2) Work activity tooltip encoding fixed by decoding URI-encoded project names...</summary>
 
 - Kind: code-change,verification
 - Actor: Claude Code

@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-06-04T15:12:26.4169084Z",
+    "lastUpdatedUtc":  "2026-06-04T21:57:02.3602800Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1983,7 +1983,19 @@
                                        "20260604-020246-036-health-ledger-7ac21bd1",
                                        "20260604-021000-259-vaultwares-mcp-1458f067",
                                        "20260604-021958-368-vaultwares-mcp-22b65d5a",
-                                       "20260604-044322-285-vault-central-9a0cc267"
+                                       "20260604-044322-285-vault-central-9a0cc267",
+                                       "20260604-111510-536-openclaw-4c8fe3f6",
+                                       "20260604-111939-870-health-ledger-8208b421",
+                                       "20260604-120122-427-vault-central-b4eca2e0",
+                                       "20260604-123652-275-vault-central-4cb34f82",
+                                       "20260604-130546-081-agent-ledger-5cb37fda",
+                                       "20260604-131233-868-agent-ledger-efcc606f",
+                                       "20260604-131758-217-vault-central-b457f1c6",
+                                       "20260604-133020-102-agent-ledger-0856f00c",
+                                       "20260604-161413-324-vault-central-4be7ba34",
+                                       "20260604-173945-153-health-ledger-38dfb8e4",
+                                       "20260604-174744-859-vault-central-fe45119e",
+                                       "20260604-175108-334-vault-central-3b364e90"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2670,10 +2682,14 @@
     "data":  {
                  "agentData":  {
                                    "mcpServers":  [
-                                                      "VaultWares MCP",
-                                                      2,
-                                                      "Windows-MCP",
-                                                      1
+                                                      [
+                                                          "VaultWares MCP",
+                                                          2
+                                                      ],
+                                                      [
+                                                          "Windows-MCP",
+                                                          1
+                                                      ]
                                                   ],
                                    "daySeries":  [
                                                      {
@@ -2892,135 +2908,279 @@
                                                      },
                                                      {
                                                          "actors":  [
+                                                                        ":AGENT_NAME",
                                                                         "AI Agent",
                                                                         "Antigravity",
                                                                         "Codex",
-                                                                        "GitHub Copilot"
+                                                                        "GitHub Copilot",
+                                                                        "openclaw-main"
                                                                     ],
                                                          "day":  "2026-06-04",
                                                          "models":  [
+                                                                        "claude-haiku-4-5",
+                                                                        "claude-opus-4-7",
                                                                         "claude-sonnet-4-6",
+                                                                        "Gemini 2.0 Flash",
                                                                         "gemini-2.0-flash",
+                                                                        "gemini-2.5-pro",
+                                                                        "gemini-advanced",
+                                                                        "glm-5",
                                                                         "GPT-5",
                                                                         "unknown"
                                                                     ],
-                                                         "count":  7
+                                                         "count":  19
                                                      }
                                                  ],
                                    "tools":  [
-                                                 "view_file",
-                                                 29,
-                                                 "replace_file_content",
-                                                 27,
-                                                 "powershell",
-                                                 26,
-                                                 "run_command",
-                                                 23,
-                                                 "shell_command",
-                                                 21,
-                                                 "apply_patch",
-                                                 20,
-                                                 "write_to_file",
-                                                 19,
-                                                 "git",
-                                                 19,
-                                                 "functions.shell_command",
-                                                 11,
-                                                 "multi_replace_file_content",
-                                                 11,
-                                                 "ssh",
-                                                 10,
-                                                 "gh",
-                                                 9,
-                                                 "functions.apply_patch",
-                                                 8,
-                                                 "web.run",
-                                                 8,
-                                                 "Edit",
-                                                 8
+                                                 [
+                                                     "view_file",
+                                                     33
+                                                 ],
+                                                 [
+                                                     "replace_file_content",
+                                                     31
+                                                 ],
+                                                 [
+                                                     "run_command",
+                                                     28
+                                                 ],
+                                                 [
+                                                     "powershell",
+                                                     26
+                                                 ],
+                                                 [
+                                                     "shell_command",
+                                                     23
+                                                 ],
+                                                 [
+                                                     "write_to_file",
+                                                     22
+                                                 ],
+                                                 [
+                                                     "apply_patch",
+                                                     21
+                                                 ],
+                                                 [
+                                                     "git",
+                                                     19
+                                                 ],
+                                                 [
+                                                     "multi_replace_file_content",
+                                                     14
+                                                 ],
+                                                 [
+                                                     "Read",
+                                                     11
+                                                 ],
+                                                 [
+                                                     "Edit",
+                                                     11
+                                                 ],
+                                                 [
+                                                     "functions.shell_command",
+                                                     11
+                                                 ],
+                                                 [
+                                                     "ssh",
+                                                     10
+                                                 ],
+                                                 [
+                                                     "gh",
+                                                     9
+                                                 ],
+                                                 [
+                                                     "multi_tool_use.parallel",
+                                                     9
+                                                 ]
                                              ],
                                    "actors":  [
-                                                  "AI Agent",
-                                                  326,
-                                                  "Antigravity",
-                                                  45,
-                                                  "claude-sonnet-4-6",
-                                                  9,
-                                                  "codex",
-                                                  9,
-                                                  "Github Copilot",
-                                                  8,
-                                                  "GPT-5.2 Codex",
-                                                  5,
-                                                  "Claude Code",
-                                                  1,
-                                                  "Claude",
-                                                  1,
-                                                  "preload.js",
-                                                  1,
-                                                  "claude-sonnet-4-6 (scheduled task)",
-                                                  1,
-                                                  "Claude Scheduled Task",
-                                                  1,
-                                                  "Claude Sonnet 4.6",
-                                                  1
+                                                  [
+                                                      "AI Agent",
+                                                      328
+                                                  ],
+                                                  [
+                                                      "Antigravity",
+                                                      49
+                                                  ],
+                                                  [
+                                                      "codex",
+                                                      11
+                                                  ],
+                                                  [
+                                                      "claude-sonnet-4-6",
+                                                      9
+                                                  ],
+                                                  [
+                                                      "Github Copilot",
+                                                      8
+                                                  ],
+                                                  [
+                                                      "GPT-5.2 Codex",
+                                                      5
+                                                  ],
+                                                  [
+                                                      ":AGENT_NAME",
+                                                      3
+                                                  ],
+                                                  [
+                                                      "preload.js",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "Claude Code",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "Claude",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "Claude Scheduled Task",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "claude-sonnet-4-6 (scheduled task)",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "Claude Sonnet 4.6",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "openclaw-main",
+                                                      1
+                                                  ]
                                               ],
-                                   "totalEvents":  408,
+                                   "totalEvents":  420,
                                    "models":  [
-                                                  "unknown",
-                                                  298,
-                                                  "gpt-5.2",
-                                                  24,
-                                                  "claude-sonnet-4-6",
-                                                  14,
-                                                  "gemini-1.5-pro",
-                                                  13,
-                                                  "Gemini 3.5 Flash (Medium)",
-                                                  9,
-                                                  "GPT-5",
-                                                  9,
-                                                  "gemini-2.0-flash",
-                                                  5,
-                                                  "gemini-3.5-flash",
-                                                  5,
-                                                  "gemini-2.5-pro",
-                                                  5,
-                                                  "Gemini 3.5 Flash",
-                                                  3,
-                                                  "claude-haiku-4-5-20251001",
-                                                  2,
-                                                  "gemini-3.1-pro",
-                                                  2,
-                                                  "o3-mini",
-                                                  2,
-                                                  "gemini-2.5-flash-thinking",
-                                                  2,
-                                                  "Gemini 3.1 Pro (Preview)",
-                                                  2,
-                                                  "gemini-2.0",
-                                                  2,
-                                                  "claude-sonnet-4-6-thinking",
-                                                  1,
-                                                  "claude-opus-4-6",
-                                                  1,
-                                                  "gemini-exp-1206",
-                                                  1,
-                                                  "gemini-3.1-pro-preview",
-                                                  1,
-                                                  "Gemini 3.1 Pro",
-                                                  1,
-                                                  "Gemini 1.5 Pro",
-                                                  1,
-                                                  "gemini-2.5-pro-preview",
-                                                  1,
-                                                  "gemini-pro",
-                                                  1,
-                                                  "Gemini 3.1 Pro (Low)",
-                                                  1,
-                                                  "src/normalization.js",
-                                                  1,
-                                                  "gemini-2.0-pro",
-                                                  1
+                                                  [
+                                                      "unknown",
+                                                      298
+                                                  ],
+                                                  [
+                                                      "gpt-5.2",
+                                                      24
+                                                  ],
+                                                  [
+                                                      "claude-sonnet-4-6",
+                                                      14
+                                                  ],
+                                                  [
+                                                      "gemini-1.5-pro",
+                                                      13
+                                                  ],
+                                                  [
+                                                      "GPT-5",
+                                                      11
+                                                  ],
+                                                  [
+                                                      "Gemini 3.5 Flash (Medium)",
+                                                      9
+                                                  ],
+                                                  [
+                                                      "gemini-2.0-flash",
+                                                      7
+                                                  ],
+                                                  [
+                                                      "gemini-2.5-pro",
+                                                      7
+                                                  ],
+                                                  [
+                                                      "gemini-3.5-flash",
+                                                      5
+                                                  ],
+                                                  [
+                                                      "Gemini 3.5 Flash",
+                                                      3
+                                                  ],
+                                                  [
+                                                      "claude-haiku-4-5-20251001",
+                                                      2
+                                                  ],
+                                                  [
+                                                      "gemini-2.5-flash-thinking",
+                                                      2
+                                                  ],
+                                                  [
+                                                      "o3-mini",
+                                                      2
+                                                  ],
+                                                  [
+                                                      "gemini-3.1-pro",
+                                                      2
+                                                  ],
+                                                  [
+                                                      "claude-opus-4-7",
+                                                      2
+                                                  ],
+                                                  [
+                                                      "Gemini 3.1 Pro (Preview)",
+                                                      2
+                                                  ],
+                                                  [
+                                                      "gemini-2.0",
+                                                      2
+                                                  ],
+                                                  [
+                                                      "gemini-advanced",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "Gemini 3.1 Pro",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "src/normalization.js",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "gemini-3.1-pro-preview",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "glm-5",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "gemini-exp-1206",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "claude-sonnet-4-6-thinking",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "Gemini 3.1 Pro (Low)",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "claude-haiku-4-5",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "gemini-pro",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "Gemini 2.0 Flash",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "claude-opus-4-6",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "gemini-2.0-pro",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "Gemini 1.5 Pro",
+                                                      1
+                                                  ],
+                                                  [
+                                                      "gemini-2.5-pro-preview",
+                                                      1
+                                                  ]
                                               ]
                                },
                  "exclusions":  {
@@ -3049,7 +3209,7 @@
                                    {
                                        "label":  "Thu",
                                        "dow":  3,
-                                       "count":  55
+                                       "count":  67
                                    },
                                    {
                                        "label":  "Fri",
@@ -3113,15 +3273,15 @@
                                         "hour":  10
                                     },
                                     {
-                                        "count":  15,
+                                        "count":  17,
                                         "hour":  11
                                     },
                                     {
-                                        "count":  6,
+                                        "count":  8,
                                         "hour":  12
                                     },
                                     {
-                                        "count":  11,
+                                        "count":  15,
                                         "hour":  13
                                     },
                                     {
@@ -3133,11 +3293,11 @@
                                         "hour":  15
                                     },
                                     {
-                                        "count":  25,
+                                        "count":  26,
                                         "hour":  16
                                     },
                                     {
-                                        "count":  32,
+                                        "count":  35,
                                         "hour":  17
                                     },
                                     {
@@ -3182,7 +3342,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-06-04 11:12",
+                 "generatedAtLocal":  "2026-06-04 17:57",
                  "series":  {
                                 "months":  [
                                                {
@@ -3199,7 +3359,7 @@
                                                },
                                                {
                                                    "month":  "2026-06",
-                                                   "count":  54
+                                                   "count":  66
                                                }
                                            ],
                                 "days":  [
@@ -4556,33 +4716,36 @@
                                              },
                                              {
                                                  "projects":  [
+                                                                  "agent-ledger",
                                                                   "health-ledger",
+                                                                  "OpenClaw",
+                                                                  "Vault Central",
                                                                   "vault-central",
                                                                   "vaultwares-mcp"
                                                               ],
-                                                 "entries":  7,
+                                                 "entries":  19,
                                                  "day":  "2026-06-04",
                                                  "kinds":  {
-                                                               "plan":  1,
-                                                               "handoff":  1,
-                                                               "general":  2,
-                                                               "verification":  3,
-                                                               "code-change":  3
+                                                               "code-change":  11,
+                                                               "handoff":  3,
+                                                               "verification":  12,
+                                                               "plan":  4,
+                                                               "general":  2
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1627
+                                                  "count":  1635
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  167
+                                                  "count":  176
                                               },
                                               {
                                                   "kind":  "plan",
-                                                  "count":  116
+                                                  "count":  119
                                               },
                                               {
                                                   "kind":  "general",
@@ -4594,7 +4757,7 @@
                                               },
                                               {
                                                   "kind":  "handoff",
-                                                  "count":  32
+                                                  "count":  34
                                               }
                                           ],
                                 "projects":  [
@@ -4740,6 +4903,41 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "plan":  7,
+                                                                   "general":  1,
+                                                                   "verification":  13,
+                                                                   "code-change":  116
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  45301,
+                                                                       "deletions":  25828,
+                                                                       "files":  654
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "vault-central",
+                                                     "entries":  126,
+                                                     "recent":  [
+                                                                    "Mapped the remaining Console Mode design tokens to globals.css and updated VideoPlayer.css to use them. Flanked the video player seek bar with elapsed and total duration. Enhanc...",
+                                                                    "Created implementation plan to stabilize the video capture pipeline, aligning background.ts with background.js, converting preview generation to WebP frames JSON format, and int...",
+                                                                    "Stabilized the video capture pipeline by transitioning from WebM blobs to JSON-wrapped WebP frame sequences. Added native HLS.js streaming support in both the offscreen preview ..."
+                                                                ],
+                                                     "firstDay":  "2026-03-13",
+                                                     "lastDay":  "2026-06-04",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  1745,
+                                                                          "deletions":  1287,
+                                                                          "files":  300
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  47046,
+                                                                     "deletions":  27115,
+                                                                     "files":  954
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "plan":  3,
                                                                    "general":  4,
                                                                    "verification":  9,
@@ -4775,41 +4973,6 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "plan":  6,
-                                                                   "general":  1,
-                                                                   "verification":  9,
-                                                                   "code-change":  112
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  45301,
-                                                                       "deletions":  25828,
-                                                                       "files":  654
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "vault-central",
-                                                     "entries":  121,
-                                                     "recent":  [
-                                                                    "Modernized Dashboard by adding a Bulk URL Import widget in the Advanced Settings panel. Stabilized the hover preview by implementing a native HTML5 video player fallback with Yo...",
-                                                                    "Implemented self-healing error handler inside PreviewThumb in VaultDashboard.tsx. When a stored WebM preview blob fails to decode (firing NS_ERROR_DOM_MEDIA_METADATA_ERR in Fire...",
-                                                                    "Researched and calculated storage capacity constraints for animated WebP vs JSON WebP frame sequences. Highlighted that animated WebP encoding requires WebAssembly/libwebp and t..."
-                                                                ],
-                                                     "firstDay":  "2026-03-13",
-                                                     "lastDay":  "2026-06-04",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  1745,
-                                                                          "deletions":  1287,
-                                                                          "files":  300
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  47046,
-                                                                     "deletions":  27115,
-                                                                     "files":  954
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
                                                                    "code-change":  30,
                                                                    "handoff":  14,
                                                                    "commands":  13,
@@ -4823,10 +4986,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "resume_used":  1,
-                                                                        "credit_pipeline_used":  1,
-                                                                        "interview_started":  1,
                                                                         "router":  1,
+                                                                        "resume_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "credit_pipeline_used":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
@@ -4920,8 +5083,8 @@
                                                                         "code_changes":  1,
                                                                         "medium_creates_github_jira_issue":  1,
                                                                         "no_secrets_logged":  1,
+                                                                        "token_joker_documented":  1,
                                                                         "no_live_loops_started":  1,
-                                                                        "clopeux_desktop_probe_name":  1,
                                                                         "credit_pipeline_used":  1,
                                                                         "medium_assigns_or_mentions_copilot":  1,
                                                                         "interview_started":  2,
@@ -4930,7 +5093,7 @@
                                                                         "medium_blocks_prod_changes":  1,
                                                                         "resume_used":  2,
                                                                         "long_running_tasks":  2,
-                                                                        "token_joker_documented":  1
+                                                                        "clopeux_desktop_probe_name":  1
                                                                     },
                                                      "project":  "vaultwares-docs",
                                                      "entries":  70,
@@ -4982,6 +5145,46 @@
                                                                      "insertions":  40661,
                                                                      "deletions":  11941,
                                                                      "files":  260
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  41,
+                                                                   "handoff":  2,
+                                                                   "commands":  8,
+                                                                   "verification":  13,
+                                                                   "plan":  1,
+                                                                   "general":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+                                                                        "dedup_checked":  1,
+                                                                        "resume_used":  1,
+                                                                        "append_events":  1,
+                                                                        "long_running_tasks":  1
+                                                                    },
+                                                     "project":  "agent-ledger",
+                                                     "entries":  55,
+                                                     "recent":  [
+                                                                    "Fixed prod crash on WorkImpactPage: agentData.models/actors/tools/mcpServers entries that were not [string,number] tuples caused TypeError (destructured parameter not iterable) ...",
+                                                                    "Pass 2 on WorkImpactPage: (1) fixed dowSeries BarRow max bug (same broken pattern as Agent activity section - Math.max(...arr.map() || [1]) gave -Infinity for empty arrays); pre...",
+                                                                    "Pass 3 on WorkImpactPage agent section: discovered root cause is that update-work-impact-state.ps1 emits flattened arrays [name,count,name,count,...] instead of tuple arrays [[n..."
+                                                                ],
+                                                     "firstDay":  "2026-04-28",
+                                                     "lastDay":  "2026-06-04",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
                                                                  }
                                                  },
                                                  {
@@ -5043,46 +5246,6 @@
                                                                 ],
                                                      "firstDay":  "2026-04-05",
                                                      "lastDay":  "2026-05-20",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  38,
-                                                                   "handoff":  2,
-                                                                   "commands":  8,
-                                                                   "verification":  10,
-                                                                   "plan":  1,
-                                                                   "general":  1
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-                                                                        "dedup_checked":  1,
-                                                                        "resume_used":  1,
-                                                                        "append_events":  1,
-                                                                        "long_running_tasks":  1
-                                                                    },
-                                                     "project":  "agent-ledger",
-                                                     "entries":  52,
-                                                     "recent":  [
-                                                                    "Merged daily dashboard into WORK_IMPACT. render-work-impact.ps1 now also loads input-logs/*.json and events/+history/ ledger events. HTML template fully rewritten with new muted...",
-                                                                    "Fixed two issues: (1) LED cards and Chart.js widgets showing -- on page load -- moved initCharts()+render() into window.addEventListener(\u0027load\u0027,...) with try-catch so CDN timing...",
-                                                                    "Fixed work_impact page: (1) Stats now load on initial render - improved data initialization check; (2) Work activity tooltip encoding fixed by decoding URI-encoded project names..."
-                                                                ],
-                                                     "firstDay":  "2026-04-28",
-                                                     "lastDay":  "2026-06-02",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5328,6 +5491,38 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "code-change":  26
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "vaultwares-dispatch",
+                                                     "entries":  26,
+                                                     "recent":  [
+                                                                    "Backfill: commit 07abdad (2026-04-24T07:24:18-04:00) - merge | files=3 +49 -0",
+                                                                    "Backfill: commit 758acf8 (2026-04-24T14:26:53-04:00) - Merge remote-tracking branch \u0027origin/jules-14558258200679654617-cbb13ad6\u0027 | files=0 +0 -0",
+                                                                    "Backfill: commit 1d2fe2b (2026-05-01T17:52:18-04:00) - Automated commit: Updated files in dispatch-wares | files=1 +0 -1"
+                                                                ],
+                                                     "firstDay":  "2026-03-14",
+                                                     "lastDay":  "2026-05-01",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "commands":  2,
                                                                    "plan":  5,
                                                                    "general":  2,
@@ -5351,38 +5546,6 @@
                                                                 ],
                                                      "firstDay":  "2026-04-23",
                                                      "lastDay":  "2026-05-19",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  26
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "vaultwares-dispatch",
-                                                     "entries":  26,
-                                                     "recent":  [
-                                                                    "Backfill: commit 07abdad (2026-04-24T07:24:18-04:00) - merge | files=3 +49 -0",
-                                                                    "Backfill: commit 758acf8 (2026-04-24T14:26:53-04:00) - Merge remote-tracking branch \u0027origin/jules-14558258200679654617-cbb13ad6\u0027 | files=0 +0 -0",
-                                                                    "Backfill: commit 1d2fe2b (2026-05-01T17:52:18-04:00) - Automated commit: Updated files in dispatch-wares | files=1 +0 -1"
-                                                                ],
-                                                     "firstDay":  "2026-03-14",
-                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5459,6 +5622,7 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5480,11 +5644,10 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
-                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "secrets_redacted":  1,
+                                                                        "same_domain_only":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -5574,6 +5737,41 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "commands":  2,
+                                                                   "plan":  1,
+                                                                   "verification":  6,
+                                                                   "code-change":  8
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "vw-jira-sync",
+                                                     "entries":  17,
+                                                     "recent":  [
+                                                                    "Removed JIRA token exposure from GitHub infrastructure. (1) Deleted JIRA_BASE_URL, JIRA_EMAIL, JIRA_TOKEN Actions secrets from all 41 repos (123 total) â€” tokens no longer stored...",
+                                                                    "Removed jira-sync.yml caller workflows from all 41 tracked repos (41/41 deleted). Added remove_caller_workflows.py. Webhook path on VPS is now the sole active Jira sync mechanis...",
+                                                                    "Updated all 41 GitHub repo webhooks to subscribe to dependabot_alert (in addition to existing events) using vw-jira-sync/scripts/deploy_webhooks.py in --events-only mode (no sec..."
+                                                                ],
+                                                     "firstDay":  "2026-05-18",
+                                                     "lastDay":  "2026-05-30",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  17
                                                                },
                                                      "lineClean":  {
@@ -5608,8 +5806,8 @@
                                                      "kinds":  {
                                                                    "commands":  2,
                                                                    "plan":  1,
-                                                                   "verification":  6,
-                                                                   "code-change":  8
+                                                                   "verification":  1,
+                                                                   "code-change":  11
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -5619,15 +5817,15 @@
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "vw-jira-sync",
-                                                     "entries":  17,
+                                                     "project":  "vaultwares-mcp",
+                                                     "entries":  15,
                                                      "recent":  [
-                                                                    "Removed JIRA token exposure from GitHub infrastructure. (1) Deleted JIRA_BASE_URL, JIRA_EMAIL, JIRA_TOKEN Actions secrets from all 41 repos (123 total) â€” tokens no longer stored...",
-                                                                    "Removed jira-sync.yml caller workflows from all 41 tracked repos (41/41 deleted). Added remove_caller_workflows.py. Webhook path on VPS is now the sole active Jira sync mechanis...",
-                                                                    "Updated all 41 GitHub repo webhooks to subscribe to dependabot_alert (in addition to existing events) using vw-jira-sync/scripts/deploy_webhooks.py in --events-only mode (no sec..."
+                                                                    "Switched MCPB manifest to start stdio server via python /server.py (instead of python -m vaultwares_fastmcp) per expected entrypoint usage; revalidated and repacked vaultwares-f...",
+                                                                    "Full live integration test of all 25 MCP tools on http://127.0.0.1:9020/mcp. Server was stopped (NSSM service), restarted it. Created tests/test_live_server.py with 28 test case...",
+                                                                    "Two changes: (1) Flattened fs_edit tool from edits:list[dict] to flat params (match, replace, count=0, create_backup=True) â€” consistent with fs_write style. (2) Expanded Tier ..."
                                                                 ],
-                                                     "firstDay":  "2026-05-18",
-                                                     "lastDay":  "2026-05-30",
+                                                     "firstDay":  "2026-05-01",
+                                                     "lastDay":  "2026-06-04",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5673,10 +5871,9 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "commands":  2,
-                                                                   "plan":  1,
-                                                                   "verification":  1,
-                                                                   "code-change":  11
+                                                                   "plan":  8,
+                                                                   "general":  1,
+                                                                   "code-change":  5
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -5686,15 +5883,15 @@
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "vaultwares-mcp",
-                                                     "entries":  15,
+                                                     "project":  "tailnet-sync",
+                                                     "entries":  14,
                                                      "recent":  [
-                                                                    "Switched MCPB manifest to start stdio server via python /server.py (instead of python -m vaultwares_fastmcp) per expected entrypoint usage; revalidated and repacked vaultwares-f...",
-                                                                    "Full live integration test of all 25 MCP tools on http://127.0.0.1:9020/mcp. Server was stopped (NSSM service), restarted it. Created tests/test_live_server.py with 28 test case...",
-                                                                    "Two changes: (1) Flattened fs_edit tool from edits:list[dict] to flat params (match, replace, count=0, create_backup=True) â€” consistent with fs_write style. (2) Expanded Tier ..."
+                                                                    "User approved optimization phase. Preparing implementation plan to migrate Wander.Network from REST to gRPC with Protobufs and streaming chunked file transfers.",
+                                                                    "Optimization plan approved. Executing gRPC migration. Scaffolding task list.",
+                                                                    "Optimization complete. Replaced REST controllers with gRPC SyncGrpcService. Updated SyncEngine to use Protobuf messages and stream file chunks over System.IO.Pipelines/FileStrea..."
                                                                 ],
-                                                     "firstDay":  "2026-05-01",
-                                                     "lastDay":  "2026-06-04",
+                                                     "firstDay":  "2026-05-08",
+                                                     "lastDay":  "2026-05-10",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5727,40 +5924,6 @@
                                                                 ],
                                                      "firstDay":  "2026-04-20",
                                                      "lastDay":  "2026-05-01",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "plan":  8,
-                                                                   "general":  1,
-                                                                   "code-change":  5
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "tailnet-sync",
-                                                     "entries":  14,
-                                                     "recent":  [
-                                                                    "User approved optimization phase. Preparing implementation plan to migrate Wander.Network from REST to gRPC with Protobufs and streaming chunked file transfers.",
-                                                                    "Optimization plan approved. Executing gRPC migration. Scaffolding task list.",
-                                                                    "Optimization complete. Replaced REST controllers with gRPC SyncGrpcService. Updated SyncEngine to use Protobuf messages and stream file chunks over System.IO.Pipelines/FileStrea..."
-                                                                ],
-                                                     "firstDay":  "2026-05-08",
-                                                     "lastDay":  "2026-05-10",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5906,6 +6069,68 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "plan":  1,
+                                                                   "handoff":  3,
+                                                                   "general":  4,
+                                                                   "verification":  2,
+                                                                   "code-change":  3
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+                                                                        "unrelated_vaultwares_docs_tasks_md_untouched":  1,
+                                                                        "vault_guardian_scope_added_conceptually":  1,
+                                                                        "probe_loop_deployed":  1,
+                                                                        "docs_updated":  1,
+                                                                        "production_incident_fixed":  1,
+                                                                        "no_deploy_performed":  1,
+                                                                        "docs_pointer_created":  1,
+                                                                        "no_live_loops_started":  1,
+                                                                        "prober_not_started":  1,
+                                                                        "no_secret_values_logged":  3,
+                                                                        "vaultwares_docs_clean":  1,
+                                                                        "secrets_redacted":  4,
+                                                                        "architecture_review":  1,
+                                                                        "host_independent_routing_model":  1,
+                                                                        "probe_once_run":  1,
+                                                                        "legacy_alert_writers_disabled":  1,
+                                                                        "gateway_secret_not_in_api_vhost":  1,
+                                                                        "no_continuous_loop_started":  1,
+                                                                        "moved_to_dedicated_repo":  1,
+                                                                        "no_file_changes":  1,
+                                                                        "prom_king_http_200":  1,
+                                                                        "no_secrets_logged":  1,
+                                                                        "ollama_environment_documented":  1,
+                                                                        "health_ledger_updated":  1,
+                                                                        "vw_state":  4,
+                                                                        "github_actions_cost_checked":  1,
+                                                                        "stale_probe_process_restarted":  1
+                                                                    },
+                                                     "project":  "health-ledger",
+                                                     "entries":  8,
+                                                     "recent":  [
+                                                                    "Implemented Health Ledger Probe Joker and CI Joker, fixed and deployed Prom-King link-sharing plus fullxxx.video 2257 monitoring fixes, deployed greencloud and Clopeux probe loo...",
+                                                                    "Answered Health Ledger architecture questions, clarified API gateway TLS/secret state, split Prom-King/FullXXX service inventory into explicit prelanding, tube, and link-sharing...",
+                                                                    "Provided next-step sequence after Health Ledger inventory and Ollama sampling work: fix API gateway secret/TLS blind spot first, then dashboard, Alarm Joker, active Ollama hook ..."
+                                                                ],
+                                                     "firstDay":  "2026-06-03",
+                                                     "lastDay":  "2026-06-04",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "plan":  3,
                                                                    "general":  3,
                                                                    "verification":  1
@@ -5920,10 +6145,10 @@
                                                                         "no_code_changes":  3,
                                                                         "target_clicks_disabled":  1,
                                                                         "own_dashboard":  1,
+                                                                        "medium_notify_only":  1,
                                                                         "safesearch_off":  1,
                                                                         "no_captcha_bypass":  1,
                                                                         "no_secrets_logged":  3,
-                                                                        "clopeux_desktop_probe_name":  1,
                                                                         "token_joker_planned":  1,
                                                                         "planning_only":  3,
                                                                         "search_human_like_behavior":  1,
@@ -5932,7 +6157,7 @@
                                                                         "joker_alarm_component":  1,
                                                                         "unattended_autonomy_restricted":  1,
                                                                         "vw_state":  2,
-                                                                        "medium_notify_only":  1,
+                                                                        "clopeux_desktop_probe_name":  1,
                                                                         "high_critical_customer_impact_gate":  1,
                                                                         "own_domain_behavior_only":  1,
                                                                         "ai_token_usage_research":  1
@@ -6051,65 +6276,6 @@
                                                                      "insertions":  1438,
                                                                      "deletions":  7,
                                                                      "files":  34
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "handoff":  1,
-                                                                   "general":  4,
-                                                                   "verification":  1,
-                                                                   "code-change":  2
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-                                                                        "no_live_loops_started":  1,
-                                                                        "ollama_environment_documented":  1,
-                                                                        "docs_updated":  1,
-                                                                        "probe_loop_deployed":  1,
-                                                                        "probe_once_run":  1,
-                                                                        "secrets_redacted":  2,
-                                                                        "no_secrets_logged":  1,
-                                                                        "docs_pointer_created":  1,
-                                                                        "moved_to_dedicated_repo":  1,
-                                                                        "no_continuous_loop_started":  1,
-                                                                        "legacy_alert_writers_disabled":  1,
-                                                                        "no_deploy_performed":  1,
-                                                                        "host_independent_routing_model":  1,
-                                                                        "prober_not_started":  1,
-                                                                        "no_file_changes":  1,
-                                                                        "no_secret_values_logged":  3,
-                                                                        "architecture_review":  1,
-                                                                        "vaultwares_docs_clean":  1,
-                                                                        "prom_king_http_200":  1,
-                                                                        "production_incident_fixed":  1,
-                                                                        "github_actions_cost_checked":  1,
-                                                                        "vault_guardian_scope_added_conceptually":  1,
-                                                                        "vw_state":  3,
-                                                                        "stale_probe_process_restarted":  1,
-                                                                        "health_ledger_updated":  1
-                                                                    },
-                                                     "project":  "health-ledger",
-                                                     "entries":  6,
-                                                     "recent":  [
-                                                                    "Reviewed proposed CI/assistant runner loop for non-production projects including vault-guardian. Confirmed GitHub Actions billing distinction from official GitHub docs: GitHub-h...",
-                                                                    "Documented host-independent runner routing and alert-profile model in vaultwares-docs and health-ledger. Clarified that greencloud-vps is current webhook ingress/control plane, ...",
-                                                                    "Implemented Health Ledger Probe Joker and CI Joker, fixed and deployed Prom-King link-sharing plus fullxxx.video 2257 monitoring fixes, deployed greencloud and Clopeux probe loo..."
-                                                                ],
-                                                     "firstDay":  "2026-06-03",
-                                                     "lastDay":  "2026-06-04",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
                                                                  }
                                                  },
                                                  {
@@ -6246,6 +6412,66 @@
                                                                    "code-change":  1
                                                                },
                                                      "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "deploy-flow-unification",
+                                                     "entries":  1,
+                                                     "recent":  [
+                                                                    "Standardized deployment flow docs + removed GitHub Actions deploys on main pushes across repos. Merged PRs: p-potvin/vaultwares-docs#18 (merge 9ac6a90), p-potvin/vaultwares-webs..."
+                                                                ],
+                                                     "firstDay":  "2026-05-25",
+                                                     "lastDay":  "2026-05-25",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "plan":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "Vault Central",
+                                                     "entries":  1,
+                                                     "recent":  [
+                                                                    "Created implementation plan for theme modernization (Warm Mode dashboard, Console Mode player), video player layout parity with Vault Explorer, and modularizing Settings/PIN set..."
+                                                                ],
+                                                     "firstDay":  "2026-06-04",
+                                                     "lastDay":  "2026-06-04",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  1
+                                                               },
+                                                     "lineClean":  {
                                                                        "insertions":  1,
                                                                        "deletions":  2,
                                                                        "files":  1
@@ -6273,7 +6499,7 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  1
+                                                                   "verification":  1
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -6283,13 +6509,13 @@
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "deploy-flow-unification",
+                                                     "project":  "OpenClaw",
                                                      "entries":  1,
                                                      "recent":  [
-                                                                    "Standardized deployment flow docs + removed GitHub Actions deploys on main pushes across repos. Merged PRs: p-potvin/vaultwares-docs#18 (merge 9ac6a90), p-potvin/vaultwares-webs..."
+                                                                    "Cron: ran openclaw doctor --non-interactive per gateway restart update error from June 3. Doctor completed successfully â€” no gateway errors. Memory search needs embedding prov..."
                                                                 ],
-                                                     "firstDay":  "2026-05-25",
-                                                     "lastDay":  "2026-05-25",
+                                                     "firstDay":  "2026-06-04",
+                                                     "lastDay":  "2026-06-04",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -16491,15 +16717,15 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-06-04T08:43:22.2853532Z",
+                 "_maxCreatedAtUtc":  "2026-06-04T21:51:08.3340947Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
                                "end":  "2026-06-04"
                            },
                  "totals":  {
-                                "projects":  47,
-                                "events":  1976,
+                                "projects":  49,
+                                "events":  1988,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  83,
                                 "commitEventsWithStats":  679
