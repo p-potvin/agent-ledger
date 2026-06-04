@@ -1,0 +1,86 @@
+{
+  "id": "20260603-162146-114-health-ledger-3f44a685",
+  "createdAt": "2026-06-03T20:21:46.1141022Z",
+  "createdAtLocal": "2026-06-03 16:21",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger  Branch: main\r\nTools used (this reply): shell_command, apply_patch, multi_tool_use.parallel\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-03 16:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "multi_tool_use.parallel"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "probe_loop_deployed": true,
+      "production_incident_fixed": true,
+      "no_secret_values_logged": true,
+      "vw_state": "resume: prom-king production 502 fixed on greencloud-vps by changing nginx FastCGI socket to php8.4; Prom-King/prelanding-page#19 closed; health-ledger-probe.service active/enabled on greencloud-vps under /opt/health-ledger; legacy vw-deploy-notify issue path disabled via /bin/true and vw-deny-watch/vw-token-expiry timers disabled; next work is dashboard compiler, Alarm Joker notifications, Token Joker replacement, and investigation of remaining Probe attention items.",
+      "legacy_alert_writers_disabled": true,
+      "prom_king_http_200": true
+    },
+    "metrics": {
+      "github_issue": 19,
+      "vps_probe_run_id": "20260603-162049",
+      "vps_probe_failed": 4,
+      "vps_probe_total": 15,
+      "vps_probe_skipped": 1,
+      "vps_probe_ok": 10,
+      "prom_king_status_code": 200,
+      "legacy_timers_disabled": 2
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger",
+  "summary": "Fixed prom-king.xyz production 502 by updating greencloud-vps nginx FastCGI socket from php8.2-fpm to php8.4-fpm, verified HTTP 200 and closed Prom-King/prelanding-page#19. Reviewed and disabled legacy GitHub-only alert writers on greencloud-vps. Deployed Health Ledger Probe Joker loop as health-ledger-probe.service under /opt/health-ledger with greencloud-vps location; service is active/enabled and writing rollups/events.",
+  "commands": [
+    "gh issue create --repo prom-king/prelanding-page",
+    "ssh root@100.73.93.84 nginx/php-fpm diagnostics",
+    "cp /etc/nginx/sites-available/prom-king.xyz.conf /etc/nginx/sites-available/prom-king.xyz.conf.bak-20260603-php84",
+    "sed -i php8.2-fpm.sock -> php8.4-fpm.sock",
+    "nginx -t && systemctl reload nginx",
+    "curl.exe -I https://prom-king.xyz/",
+    "npm run probe:once -- --service prom-king",
+    "tar --exclude .git/node_modules/data -czf health-ledger-vps-20260603.tgz",
+    "scp health-ledger archive to greencloud-vps",
+    "npm ci --omit=dev on VPS",
+    "systemctl enable --now health-ledger-probe.service",
+    "systemctl disable --now vw-deny-watch.timer vw-token-expiry-watch.timer",
+    "set vw-webhookd notifications.on_error_command to /bin/true",
+    "systemctl restart vw-webhookd.service",
+    "gh issue close Prom-King/prelanding-page#19"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\alert-audit.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\implementation-plan.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\ops\\systemd\\health-ledger-probe.service",
+    "/etc/nginx/sites-available/prom-king.xyz.conf",
+    "/etc/nginx/sites-available/prom-king.xyz.conf.bak-20260603-php84",
+    "/etc/vw-webhookd/config.yml",
+    "/etc/vw-webhookd/config.yml.bak-20260603-disable-legacy-alerts",
+    "/etc/systemd/system/health-ledger-probe.service",
+    "/opt/health-ledger/data/rollups/latest.json",
+    "/opt/health-ledger/data/events/2026/06/03.jsonl"
+  ],
+  "planPath": "",
+  "contentHash": "3f44a6859c962a2f87302c1c5d6c06cc00df32fb751127b8fa0077875d7944f2",
+  "git": {
+    "repo": "health-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/health-ledger",
+    "branch": "main",
+    "head": "428e9a9",
+    "hasChanges": true
+  }
+}

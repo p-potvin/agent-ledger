@@ -1,0 +1,51 @@
+﻿{
+    "id":  "20260603-031313-998-vault-central-82fa7fb6",
+    "createdAt":  "2026-06-03T07:13:13.9980268Z",
+    "createdAtLocal":  "2026-06-03 03:13",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-central",
+    "kind":  "code-change,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.0-flash\r\nThinking: high\r\nMode: code\r\nPermissions: bypass (network: Windows Local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): replace_file_content, multi_replace_file_content, run_command, view_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-03 03:13 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.0-flash",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows Local",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "multi_replace_file_content",
+                                      "run_command",
+                                      "view_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+    "summary":  "Modernized Dashboard by adding a Bulk URL Import widget in the Advanced Settings panel. Stabilized the hover preview by implementing a native HTML5 video player fallback with YouTube-style segment-hopping when WebM preview generation is unavailable or blocked by CSP. Fixed TypeScript compilation errors including arithmetic operations on video duration union types and null/undefined values on video src attributes.",
+    "commands":  [
+                     "npm run build"
+                 ],
+    "files":  [
+                  "src/components/VaultDashboard.tsx"
+              ],
+    "planPath":  "",
+    "contentHash":  "82fa7fb62697d59a2175356a724df094ad3f895f2e79558b0c09a368b399474e",
+    "git":  {
+                "repo":  "vault-central",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+                "branch":  "main",
+                "head":  "c8b5a7d",
+                "hasChanges":  true
+            }
+}

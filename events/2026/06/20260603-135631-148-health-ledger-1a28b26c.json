@@ -1,0 +1,73 @@
+{
+  "id": "20260603-135631-148-health-ledger-1a28b26c",
+  "createdAt": "2026-06-03T17:56:31.1486424Z",
+  "createdAtLocal": "2026-06-03 13:56",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "ops-health-probe",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger  Branch: main\r\nTools used (this reply): shell_command, apply_patch, multi_tool_use.parallel\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-03 13:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "multi_tool_use.parallel"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "no_continuous_loop_started": true,
+      "vw_state": "resume: health-ledger Probe Joker MVP added; docs pointer at vaultwares-docs/docs-content/operations/health-ledger.mdx; latest probe run 20260603-135530 at health-ledger/data/rollups/latest.json and data/events/2026/06/03.jsonl; do not start probe:loop without explicit approval/JOKER_ALLOW_LOOP=1.",
+      "probe_once_run": true,
+      "secrets_redacted": true,
+      "docs_pointer_created": true
+    },
+    "metrics": {
+      "skipped_secret_refs": 1,
+      "probe_failed": 5,
+      "probe_run_id": "20260603-135530",
+      "probe_ok": 9,
+      "probe_skipped": 1,
+      "probe_total": 15
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger",
+  "summary": "Added vaultwares-docs discoverability reference for health-ledger, implemented Probe Joker MVP in p-potvin/health-ledger, generated docs page resources, and ran one bounded Probe pass from Clopeux-Desktop. Probe run 20260603-135530 checked 15 paths: 9 ok, 5 failed, 1 skipped for missing secret ref. Continuous loop was not started.",
+  "commands": [
+    "npm install",
+    "npm run generate:page-resources",
+    "npm run check:probe",
+    "$env:JOKER_PROBE_LOCATION='Clopeux-Desktop'; npm run probe:once",
+    "git status --short"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\.gitignore",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\package.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\package-lock.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\scripts\\probe-joker.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\data\\events\\2026\\06\\03.jsonl",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\data\\rollups\\latest.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\health-ledger.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\resources\\pages\\operations__health-ledger.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\resources\\pages\\operations__services-inventory.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\resources\\pageResourcesManifest.ts"
+  ],
+  "planPath": "",
+  "contentHash": "1a28b26c628dd08d55faf0db26708c63820b10847ebaaef072b2a39e6b5def71",
+  "git": {
+    "repo": "health-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/health-ledger",
+    "branch": "main",
+    "head": "428e9a9",
+    "hasChanges": true
+  }
+}

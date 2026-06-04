@@ -1,0 +1,76 @@
+{
+  "id": "20260603-131848-233-vaultwares-docs-23ccc63e",
+  "createdAt": "2026-06-03T17:18:48.2339020Z",
+  "createdAtLocal": "2026-06-03 13:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-03 13:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "medium_assigns_or_mentions_copilot": true,
+      "docs_created": true,
+      "clopeux_desktop_probe_name": true,
+      "config_created": true,
+      "no_secrets_logged": true,
+      "token_joker_documented": true,
+      "code_changes": false,
+      "first_party_dashboard": true,
+      "no_live_loops_started": true,
+      "medium_creates_github_jira_issue": true,
+      "medium_blocks_prod_changes": true
+    },
+    "metrics": {
+      "files_created": 7,
+      "services_configured": 11,
+      "probe_locations": 2,
+      "live_requests_started": 0
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Created the initial ops/health-ledger foundation in vaultwares-docs. Added Health Ledger architecture, machine-readable services config, severity policy with Medium creating GitHub/Jira issues and assigning or mentioning @copilot while forbidding assistant/PR/prod actions, first-party dashboard scope, Token Joker design, existing alert audit checklist, and implementation plan. Corrected initial placement from Prom-King workspace root to vaultwares-docs per AGENTS path routing and removed the empty misplaced directory.",
+  "commands": [
+    "Get-Content instructions/ROUTER.md and selected summaries",
+    "Get-Content docs-content/operations/deployment-flow.mdx",
+    "Get-Content docs-content/operations/services-inventory.mdx",
+    "Get-Content docs-content/operations/deploy-alerts.mdx",
+    "Get-Content docs-content/operations/webhook-secret-rotation.mdx",
+    "Created ops/health-ledger docs and services.yaml with apply_patch",
+    "Moved ops/health-ledger into vaultwares-docs per AGENTS relative-path rule",
+    "Validated ASCII and services.yaml tab-free formatting",
+    "git status --short"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\ops\\health-ledger\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\ops\\health-ledger\\services.yaml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\ops\\health-ledger\\severity-policy.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\ops\\health-ledger\\dashboard.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\ops\\health-ledger\\token-joker.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\ops\\health-ledger\\alert-audit.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\ops\\health-ledger\\implementation-plan.md"
+  ],
+  "planPath": "",
+  "contentHash": "23ccc63e930202792c967d3a983cf1d7fe3090f852fe85d3c8f0726c1acd3e37",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "main",
+    "head": "f56c49d",
+    "hasChanges": true
+  }
+}

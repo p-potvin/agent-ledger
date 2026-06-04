@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-06-03T02:27:01.7381237Z",
+    "lastUpdatedUtc":  "2026-06-04T15:12:26.4169084Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1959,7 +1959,31 @@
                                        "20260602-172915-923-python-scripts-60b11a54",
                                        "20260602-175119-237-vaultwares-docs-dc6586ea",
                                        "20260602-214239-096-vaultwares-docs-09136d8e",
-                                       "20260602-214407-873-vaultwares-docs-77b9551d"
+                                       "20260602-214407-873-vaultwares-docs-77b9551d",
+                                       "20260602-223002-583-vaultwares-docs-378e415c",
+                                       "20260602-224230-635-vaultwares-docs-8ebfcd06",
+                                       "20260602-225949-410-vault-central-3410c2b0",
+                                       "20260603-000703-709-vault-central-f2c721f6",
+                                       "20260603-005609-017-vault-central-05aead6a",
+                                       "20260603-010413-237-prom-king-74526c13",
+                                       "20260603-011003-887-vault-central-373c74e6",
+                                       "20260603-013136-527-vault-central-1896d40b",
+                                       "20260603-022352-908-vault-central-15a97cfb",
+                                       "20260603-031313-998-vault-central-82fa7fb6",
+                                       "20260603-040758-397-prom-king-1ee9516f",
+                                       "20260603-090216-576-prom-king-09526132",
+                                       "20260603-130602-072-prom-king-8c2b3f0b",
+                                       "20260603-131848-233-vaultwares-docs-23ccc63e",
+                                       "20260603-134144-625-health-ledger-82beec4a",
+                                       "20260603-135631-148-health-ledger-1a28b26c",
+                                       "20260603-162146-114-health-ledger-3f44a685",
+                                       "20260604-004508-745-health-ledger-ed909ff3",
+                                       "20260604-011129-391-health-ledger-413fe7a0",
+                                       "20260604-020205-353-vault-central-0e2739d7",
+                                       "20260604-020246-036-health-ledger-7ac21bd1",
+                                       "20260604-021000-259-vaultwares-mcp-1458f067",
+                                       "20260604-021958-368-vaultwares-mcp-22b65d5a",
+                                       "20260604-044322-285-vault-central-9a0cc267"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2656,50 +2680,16 @@
                                                          "actors":  [
                                                                         "AI Agent",
                                                                         "Antigravity",
-                                                                        "Claude Code (Opus 4.7)"
-                                                                    ],
-                                                         "day":  "2026-05-18",
-                                                         "models":  [
-                                                                        "Claude Haiku",
-                                                                        "claude-opus-4-7",
-                                                                        "Gemini 3 Flash",
-                                                                        "Gemini-1.5-Pro",
-                                                                        "gemini-1.5-pro",
-                                                                        "gemini-2.5-pro",
-                                                                        "unknown"
-                                                                    ],
-                                                         "count":  30
-                                                     },
-                                                     {
-                                                         "actors":  [
-                                                                        "AI Agent",
-                                                                        "claude-code"
-                                                                    ],
-                                                         "day":  "2026-05-19",
-                                                         "models":  [
-                                                                        "Claude Haiku",
-                                                                        "claude-opus-4-5",
-                                                                        "unknown"
-                                                                    ],
-                                                         "count":  5
-                                                     },
-                                                     {
-                                                         "actors":  [
-                                                                        "AI Agent",
-                                                                        "Antigravity",
-                                                                        "claude-sonnet-4-5",
                                                                         "codex"
                                                                     ],
                                                          "day":  "2026-05-20",
                                                          "models":  [
-                                                                        "Claude Haiku",
-                                                                        "claude-sonnet-4-5",
                                                                         "Gemini 3.1 Pro (Low)",
                                                                         "Gemini 3.5 Flash (Medium)",
                                                                         "gpt-5.2",
                                                                         "unknown"
                                                                     ],
-                                                         "count":  53
+                                                         "count":  43
                                                      },
                                                      {
                                                          "actors":  [
@@ -2874,140 +2864,162 @@
                                                                         "claude-sonnet-4-6",
                                                                         "Gemini 3.1 Pro (Preview)",
                                                                         "gemini-1.5-pro",
+                                                                        "gemini-2.5-pro",
                                                                         "gemini-2.5-pro-preview",
                                                                         "gemini-3.1-pro-preview",
                                                                         "gemini-3.5-flash",
                                                                         "gpt-5.2",
                                                                         "o3-mini"
                                                                     ],
-                                                         "count":  16
+                                                         "count":  19
+                                                     },
+                                                     {
+                                                         "actors":  [
+                                                                        "AI Agent",
+                                                                        "Antigravity",
+                                                                        "antigravity"
+                                                                    ],
+                                                         "day":  "2026-06-03",
+                                                         "models":  [
+                                                                        "Gemini 1.5 Pro",
+                                                                        "gemini-1.5-pro",
+                                                                        "gemini-2.0-flash",
+                                                                        "gemini-2.0-pro",
+                                                                        "gpt-5",
+                                                                        "unknown"
+                                                                    ],
+                                                         "count":  14
+                                                     },
+                                                     {
+                                                         "actors":  [
+                                                                        "AI Agent",
+                                                                        "Antigravity",
+                                                                        "Codex",
+                                                                        "GitHub Copilot"
+                                                                    ],
+                                                         "day":  "2026-06-04",
+                                                         "models":  [
+                                                                        "claude-sonnet-4-6",
+                                                                        "gemini-2.0-flash",
+                                                                        "GPT-5",
+                                                                        "unknown"
+                                                                    ],
+                                                         "count":  7
                                                      }
                                                  ],
                                    "tools":  [
                                                  "view_file",
-                                                 26,
-                                                 "PowerShell",
+                                                 29,
+                                                 "replace_file_content",
+                                                 27,
+                                                 "powershell",
                                                  26,
                                                  "run_command",
-                                                 24,
-                                                 "replace_file_content",
                                                  23,
-                                                 "write_to_file",
+                                                 "shell_command",
                                                  21,
-                                                 "git",
-                                                 17,
                                                  "apply_patch",
-                                                 13,
+                                                 20,
+                                                 "write_to_file",
+                                                 19,
+                                                 "git",
+                                                 19,
                                                  "functions.shell_command",
                                                  11,
-                                                 "Edit",
-                                                 10,
-                                                 "shell_command",
-                                                 10,
+                                                 "multi_replace_file_content",
+                                                 11,
                                                  "ssh",
-                                                 9,
+                                                 10,
                                                  "gh",
                                                  9,
-                                                 "multi_replace_file_content",
-                                                 9,
-                                                 "Read",
-                                                 9,
                                                  "functions.apply_patch",
+                                                 8,
+                                                 "web.run",
+                                                 8,
+                                                 "Edit",
                                                  8
                                              ],
                                    "actors":  [
                                                   "AI Agent",
-                                                  345,
+                                                  326,
                                                   "Antigravity",
-                                                  47,
+                                                  45,
                                                   "claude-sonnet-4-6",
                                                   9,
                                                   "codex",
-                                                  8,
+                                                  9,
                                                   "Github Copilot",
-                                                  6,
+                                                  8,
                                                   "GPT-5.2 Codex",
-                                                  3,
-                                                  "Claude Code (Opus 4.7)",
-                                                  2,
-                                                  "claude-code",
-                                                  2,
+                                                  5,
                                                   "Claude Code",
                                                   1,
                                                   "Claude",
                                                   1,
-                                                  "Claude Sonnet 4.6",
+                                                  "preload.js",
                                                   1,
                                                   "claude-sonnet-4-6 (scheduled task)",
                                                   1,
-                                                  "claude-sonnet-4-5",
-                                                  1,
-                                                  "preload.js",
-                                                  1,
                                                   "Claude Scheduled Task",
+                                                  1,
+                                                  "Claude Sonnet 4.6",
                                                   1
                                               ],
-                                   "totalEvents":  429,
+                                   "totalEvents":  408,
                                    "models":  [
                                                   "unknown",
-                                                  319,
+                                                  298,
                                                   "gpt-5.2",
-                                                  22,
-                                                  "Gemini-1.5-Pro",
-                                                  14,
+                                                  24,
                                                   "claude-sonnet-4-6",
-                                                  12,
+                                                  14,
+                                                  "gemini-1.5-pro",
+                                                  13,
                                                   "Gemini 3.5 Flash (Medium)",
                                                   9,
-                                                  "gemini-2.5-pro",
-                                                  8,
+                                                  "GPT-5",
+                                                  9,
+                                                  "gemini-2.0-flash",
+                                                  5,
                                                   "gemini-3.5-flash",
                                                   5,
-                                                  "Claude Haiku",
+                                                  "gemini-2.5-pro",
                                                   5,
-                                                  "Gemini 3 Flash",
-                                                  3,
                                                   "Gemini 3.5 Flash",
                                                   3,
-                                                  "gemini-3.1-pro",
+                                                  "claude-haiku-4-5-20251001",
                                                   2,
-                                                  "claude-opus-4-7",
+                                                  "gemini-3.1-pro",
                                                   2,
                                                   "o3-mini",
                                                   2,
-                                                  "claude-haiku-4-5-20251001",
-                                                  2,
                                                   "gemini-2.5-flash-thinking",
-                                                  2,
-                                                  "GPT-5",
-                                                  2,
-                                                  "gemini-2.0",
                                                   2,
                                                   "Gemini 3.1 Pro (Preview)",
                                                   2,
-                                                  "claude-opus-4-5",
+                                                  "gemini-2.0",
                                                   2,
-                                                  "Gemini 3.1 Pro (Low)",
-                                                  1,
-                                                  "gemini-pro",
-                                                  1,
                                                   "claude-sonnet-4-6-thinking",
-                                                  1,
-                                                  "Gemini 3.1 Pro",
-                                                  1,
-                                                  "gemini-exp-1206",
-                                                  1,
-                                                  "gemini-2.5-pro-preview",
                                                   1,
                                                   "claude-opus-4-6",
                                                   1,
-                                                  "claude-sonnet-4-5",
+                                                  "gemini-exp-1206",
                                                   1,
                                                   "gemini-3.1-pro-preview",
                                                   1,
+                                                  "Gemini 3.1 Pro",
+                                                  1,
+                                                  "Gemini 1.5 Pro",
+                                                  1,
+                                                  "gemini-2.5-pro-preview",
+                                                  1,
+                                                  "gemini-pro",
+                                                  1,
+                                                  "Gemini 3.1 Pro (Low)",
+                                                  1,
                                                   "src/normalization.js",
                                                   1,
-                                                  "gemini-2.0-flash",
+                                                  "gemini-2.0-pro",
                                                   1
                                               ]
                                },
@@ -3022,22 +3034,22 @@
                                    {
                                        "label":  "Mon",
                                        "dow":  0,
-                                       "count":  90
+                                       "count":  60
                                    },
                                    {
                                        "label":  "Tue",
                                        "dow":  1,
-                                       "count":  85
+                                       "count":  83
                                    },
                                    {
                                        "label":  "Wed",
                                        "dow":  2,
-                                       "count":  67
+                                       "count":  71
                                    },
                                    {
                                        "label":  "Thu",
                                        "dow":  3,
-                                       "count":  48
+                                       "count":  55
                                    },
                                    {
                                        "label":  "Fri",
@@ -3061,27 +3073,27 @@
                                         "hour":  0
                                     },
                                     {
-                                        "count":  14,
+                                        "count":  15,
                                         "hour":  1
                                     },
                                     {
-                                        "count":  15,
+                                        "count":  18,
                                         "hour":  2
                                     },
                                     {
-                                        "count":  7,
+                                        "count":  8,
                                         "hour":  3
                                     },
                                     {
-                                        "count":  14,
+                                        "count":  16,
                                         "hour":  4
                                     },
                                     {
-                                        "count":  11,
+                                        "count":  10,
                                         "hour":  5
                                     },
                                     {
-                                        "count":  10,
+                                        "count":  8,
                                         "hour":  6
                                     },
                                     {
@@ -3093,7 +3105,7 @@
                                         "hour":  8
                                     },
                                     {
-                                        "count":  22,
+                                        "count":  23,
                                         "hour":  9
                                     },
                                     {
@@ -3101,15 +3113,15 @@
                                         "hour":  10
                                     },
                                     {
-                                        "count":  21,
+                                        "count":  15,
                                         "hour":  11
                                     },
                                     {
-                                        "count":  16,
+                                        "count":  6,
                                         "hour":  12
                                     },
                                     {
-                                        "count":  12,
+                                        "count":  11,
                                         "hour":  13
                                     },
                                     {
@@ -3125,7 +3137,7 @@
                                         "hour":  16
                                     },
                                     {
-                                        "count":  37,
+                                        "count":  32,
                                         "hour":  17
                                     },
                                     {
@@ -3133,23 +3145,23 @@
                                         "hour":  18
                                     },
                                     {
-                                        "count":  17,
+                                        "count":  16,
                                         "hour":  19
                                     },
                                     {
-                                        "count":  14,
+                                        "count":  12,
                                         "hour":  20
                                     },
                                     {
-                                        "count":  8,
+                                        "count":  7,
                                         "hour":  21
                                     },
                                     {
-                                        "count":  13,
+                                        "count":  15,
                                         "hour":  22
                                     },
                                     {
-                                        "count":  14,
+                                        "count":  12,
                                         "hour":  23
                                     }
                                 ],
@@ -3170,7 +3182,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-06-02 22:27",
+                 "generatedAtLocal":  "2026-06-04 11:12",
                  "series":  {
                                 "months":  [
                                                {
@@ -3187,7 +3199,7 @@
                                                },
                                                {
                                                    "month":  "2026-06",
-                                                   "count":  30
+                                                   "count":  54
                                                }
                                            ],
                                 "days":  [
@@ -4512,35 +4524,69 @@
                                                                   "agent-ledger",
                                                                   "General Tasks",
                                                                   "python-scripts",
+                                                                  "vault-central",
                                                                   "vault-explorer",
                                                                   "vaultwares-docs"
                                                               ],
-                                                 "entries":  16,
+                                                 "entries":  19,
                                                  "day":  "2026-06-02",
                                                  "kinds":  {
-                                                               "plan":  2,
+                                                               "plan":  3,
+                                                               "handoff":  2,
                                                                "general":  4,
                                                                "verification":  7,
                                                                "code-change":  8
+                                                           }
+                                             },
+                                             {
+                                                 "projects":  [
+                                                                  "health-ledger",
+                                                                  "Prom-King",
+                                                                  "vault-central",
+                                                                  "vaultwares-docs"
+                                                              ],
+                                                 "entries":  14,
+                                                 "day":  "2026-06-03",
+                                                 "kinds":  {
+                                                               "plan":  4,
+                                                               "general":  3,
+                                                               "verification":  6,
+                                                               "code-change":  7
+                                                           }
+                                             },
+                                             {
+                                                 "projects":  [
+                                                                  "health-ledger",
+                                                                  "vault-central",
+                                                                  "vaultwares-mcp"
+                                                              ],
+                                                 "entries":  7,
+                                                 "day":  "2026-06-04",
+                                                 "kinds":  {
+                                                               "plan":  1,
+                                                               "handoff":  1,
+                                                               "general":  2,
+                                                               "verification":  3,
+                                                               "code-change":  3
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1617
+                                                  "count":  1627
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  158
+                                                  "count":  167
                                               },
                                               {
                                                   "kind":  "plan",
-                                                  "count":  110
+                                                  "count":  116
                                               },
                                               {
                                                   "kind":  "general",
-                                                  "count":  52
+                                                  "count":  57
                                               },
                                               {
                                                   "kind":  "commands",
@@ -4548,7 +4594,7 @@
                                               },
                                               {
                                                   "kind":  "handoff",
-                                                  "count":  29
+                                                  "count":  32
                                               }
                                           ],
                                 "projects":  [
@@ -4729,6 +4775,41 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "plan":  6,
+                                                                   "general":  1,
+                                                                   "verification":  9,
+                                                                   "code-change":  112
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  45301,
+                                                                       "deletions":  25828,
+                                                                       "files":  654
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "vault-central",
+                                                     "entries":  121,
+                                                     "recent":  [
+                                                                    "Modernized Dashboard by adding a Bulk URL Import widget in the Advanced Settings panel. Stabilized the hover preview by implementing a native HTML5 video player fallback with Yo...",
+                                                                    "Implemented self-healing error handler inside PreviewThumb in VaultDashboard.tsx. When a stored WebM preview blob fails to decode (firing NS_ERROR_DOM_MEDIA_METADATA_ERR in Fire...",
+                                                                    "Researched and calculated storage capacity constraints for animated WebP vs JSON WebP frame sequences. Highlighted that animated WebP encoding requires WebAssembly/libwebp and t..."
+                                                                ],
+                                                     "firstDay":  "2026-03-13",
+                                                     "lastDay":  "2026-06-04",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  1745,
+                                                                          "deletions":  1287,
+                                                                          "files":  300
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  47046,
+                                                                     "deletions":  27115,
+                                                                     "files":  954
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  30,
                                                                    "handoff":  14,
                                                                    "commands":  13,
@@ -4742,10 +4823,10 @@
                                                                        "files":  0
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  1,
                                                                         "resume_used":  1,
-                                                                        "interview_started":  1,
                                                                         "credit_pipeline_used":  1,
+                                                                        "interview_started":  1,
+                                                                        "router":  1,
                                                                         "long_running_tasks":  1
                                                                     },
                                                      "project":  "General Tasks",
@@ -4766,40 +4847,6 @@
                                                                      "insertions":  0,
                                                                      "deletions":  0,
                                                                      "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "plan":  3,
-                                                                   "verification":  3,
-                                                                   "code-change":  106
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  45301,
-                                                                       "deletions":  25828,
-                                                                       "files":  654
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "vault-central",
-                                                     "entries":  112,
-                                                     "recent":  [
-                                                                    "Fixed Firefox media decoding error NS_ERROR_DOM_MEDIA_METADATA_ERR (0x806e0006) on video dashboard hover. The error occurred because Firefox cannot seek to currentTime = 0 on We...",
-                                                                    "Fixed another edge case where videoRef.current.load() was executing prematurely on mount because wasHovering initialized to false. By tracking hover history with a ref, .load() ...",
-                                                                    "Added aggressive debug logging across PreviewThumb, vault-client, background, and vault-runtime layers to trace missing WebM blobs. Repaired a missing early-return statement in ..."
-                                                                ],
-                                                     "firstDay":  "2026-03-13",
-                                                     "lastDay":  "2026-05-11",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  1745,
-                                                                          "deletions":  1287,
-                                                                          "files":  300
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  47046,
-                                                                     "deletions":  27115,
-                                                                     "files":  954
                                                                  }
                                                  },
                                                  {
@@ -4855,8 +4902,8 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  45,
-                                                                   "handoff":  2,
+                                                                   "code-change":  46,
+                                                                   "handoff":  4,
                                                                    "commands":  2,
                                                                    "verification":  13,
                                                                    "plan":  5,
@@ -4868,21 +4915,32 @@
                                                                        "files":  66
                                                                    },
                                                      "flagCounts":  {
-                                                                        "router":  2,
-                                                                        "resume_used":  2,
-                                                                        "interview_started":  2,
+                                                                        "config_created":  1,
+                                                                        "first_party_dashboard":  1,
+                                                                        "code_changes":  1,
+                                                                        "medium_creates_github_jira_issue":  1,
+                                                                        "no_secrets_logged":  1,
+                                                                        "no_live_loops_started":  1,
+                                                                        "clopeux_desktop_probe_name":  1,
                                                                         "credit_pipeline_used":  1,
-                                                                        "long_running_tasks":  2
+                                                                        "medium_assigns_or_mentions_copilot":  1,
+                                                                        "interview_started":  2,
+                                                                        "router":  2,
+                                                                        "docs_created":  1,
+                                                                        "medium_blocks_prod_changes":  1,
+                                                                        "resume_used":  2,
+                                                                        "long_running_tasks":  2,
+                                                                        "token_joker_documented":  1
                                                                     },
                                                      "project":  "vaultwares-docs",
-                                                     "entries":  67,
+                                                     "entries":  70,
                                                      "recent":  [
-                                                                    "Configured greencloud-vps as an exact-host tailnet DNS resolver with dnsmasq. Restored dnsmasq, installed /etc/dnsmasq.d/vaultwares-tailnet.conf with exact host-record answers f...",
-                                                                    "Checked ledger.vaultwares.ca and stats.vaultwares.ca for the tailnet DNS model. Confirmed ledger.vaultwares.ca is a real nginx vhost on greencloud-vps with certificate and webro...",
-                                                                    "Checked current Windows hosts-file state after confirming Tailscale DNS ACL was present. Found local overrides still present for docs.vaultwares.ca, secrets.vaultwares.ca, and w..."
+                                                                    "Archived DNS troubleshooting chat and published the final docs update. Committed and pushed vaultwares-docs commit d1e8553 (Document tailnet DNS routing) to origin/main. The com...",
+                                                                    "Pushed remaining user-owned vaultwares-docs changes and checked deployments. Published vaultwares-docs commit f56c49d (Update ledger schema docs) after npm run build passed, the...",
+                                                                    "Created the initial ops/health-ledger foundation in vaultwares-docs. Added Health Ledger architecture, machine-readable services config, severity policy with Medium creating Git..."
                                                                 ],
                                                      "firstDay":  "2026-04-18",
-                                                     "lastDay":  "2026-06-02",
+                                                     "lastDay":  "2026-06-03",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5173,6 +5231,38 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "code-change":  28
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "vaultwares-glass",
+                                                     "entries":  28,
+                                                     "recent":  [
+                                                                    "Backfill: commit 51287a0 (2026-04-24T07:24:42-04:00) - chore: remove tailwindcss plugin from vite preview configuration | files=1 +1 -2",
+                                                                    "Backfill: commit 84c902f (2026-04-30T00:29:22Z) - ðŸŽ¨ Palette: Enhance form accessibility and button focus states | files=2 +20 -11",
+                                                                    "Backfill: commit b2f2866 (2026-04-30T19:17:46-04:00) - Merge pull request #4 from p-potvin/palette-ux-improvements-4342842582149570691 | files=0 +20 -11"
+                                                                ],
+                                                     "firstDay":  "2026-03-15",
+                                                     "lastDay":  "2026-04-30",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  26,
                                                                    "plan":  2
                                                                },
@@ -5202,38 +5292,6 @@
                                                                      "insertions":  7724,
                                                                      "deletions":  719,
                                                                      "files":  109
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  28
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "vaultwares-glass",
-                                                     "entries":  28,
-                                                     "recent":  [
-                                                                    "Backfill: commit 51287a0 (2026-04-24T07:24:42-04:00) - chore: remove tailwindcss plugin from vite preview configuration | files=1 +1 -2",
-                                                                    "Backfill: commit 84c902f (2026-04-30T00:29:22Z) - ðŸŽ¨ Palette: Enhance form accessibility and button focus states | files=2 +20 -11",
-                                                                    "Backfill: commit b2f2866 (2026-04-30T19:17:46-04:00) - Merge pull request #4 from p-potvin/palette-ux-improvements-4342842582149570691 | files=0 +20 -11"
-                                                                ],
-                                                     "firstDay":  "2026-03-15",
-                                                     "lastDay":  "2026-04-30",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
                                                                  }
                                                  },
                                                  {
@@ -5270,38 +5328,6 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  26
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "vaultwares-dispatch",
-                                                     "entries":  26,
-                                                     "recent":  [
-                                                                    "Backfill: commit 07abdad (2026-04-24T07:24:18-04:00) - merge | files=3 +49 -0",
-                                                                    "Backfill: commit 758acf8 (2026-04-24T14:26:53-04:00) - Merge remote-tracking branch \u0027origin/jules-14558258200679654617-cbb13ad6\u0027 | files=0 +0 -0",
-                                                                    "Backfill: commit 1d2fe2b (2026-05-01T17:52:18-04:00) - Automated commit: Updated files in dispatch-wares | files=1 +0 -1"
-                                                                ],
-                                                     "firstDay":  "2026-03-14",
-                                                     "lastDay":  "2026-05-01",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
                                                                    "commands":  2,
                                                                    "plan":  5,
                                                                    "general":  2,
@@ -5325,6 +5351,38 @@
                                                                 ],
                                                      "firstDay":  "2026-04-23",
                                                      "lastDay":  "2026-05-19",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  26
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "vaultwares-dispatch",
+                                                     "entries":  26,
+                                                     "recent":  [
+                                                                    "Backfill: commit 07abdad (2026-04-24T07:24:18-04:00) - merge | files=3 +49 -0",
+                                                                    "Backfill: commit 758acf8 (2026-04-24T14:26:53-04:00) - Merge remote-tracking branch \u0027origin/jules-14558258200679654617-cbb13ad6\u0027 | files=0 +0 -0",
+                                                                    "Backfill: commit 1d2fe2b (2026-05-01T17:52:18-04:00) - Automated commit: Updated files in dispatch-wares | files=1 +0 -1"
+                                                                ],
+                                                     "firstDay":  "2026-03-14",
+                                                     "lastDay":  "2026-05-01",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5401,7 +5459,6 @@
                                                                         "own_domain_stealth_only":  4,
                                                                         "max_serp_pages":  1,
                                                                         "proxy_chain":  1,
-                                                                        "secrets_redacted":  1,
                                                                         "qa_allow_category_404":  1,
                                                                         "chat_vw_state_output":  1,
                                                                         "vw_state_resume_id":  1,
@@ -5423,10 +5480,11 @@
                                                                         "dns_origin_mismatch":  1,
                                                                         "seo":  1,
                                                                         "headed":  1,
+                                                                        "same_domain_only":  1,
                                                                         "addons":  1,
                                                                         "own_domain_only":  1,
                                                                         "deploy_assumption_fix":  1,
-                                                                        "same_domain_only":  1,
+                                                                        "secrets_redacted":  1,
                                                                         "vw_state_logged_only":  1
                                                                     },
                                                      "project":  "qa-automation",
@@ -5516,6 +5574,38 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "code-change":  17
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  1282,
+                                                                       "deletions":  24,
+                                                                       "files":  54
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "automation-suite",
+                                                     "entries":  17,
+                                                     "recent":  [
+                                                                    "Backfill: commit 2b2ec43 (2026-04-24T10:43:06-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=1 +1 -1",
+                                                                    "Backfill: commit 25683c2 (2026-04-25T21:05:22-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=2 +2 -2",
+                                                                    "Backfill: commit 7be29d9 (2026-05-01T17:52:12-04:00) - Automated commit: Updated files in automation-suite | files=2 +2 -2"
+                                                                ],
+                                                     "firstDay":  "2026-03-11",
+                                                     "lastDay":  "2026-05-16",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  131723,
+                                                                          "deletions":  62524,
+                                                                          "files":  706
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  133005,
+                                                                     "deletions":  62548,
+                                                                     "files":  760
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "commands":  2,
                                                                    "plan":  1,
                                                                    "verification":  6,
@@ -5547,38 +5637,6 @@
                                                                      "insertions":  0,
                                                                      "deletions":  0,
                                                                      "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  17
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  1282,
-                                                                       "deletions":  24,
-                                                                       "files":  54
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "automation-suite",
-                                                     "entries":  17,
-                                                     "recent":  [
-                                                                    "Backfill: commit 2b2ec43 (2026-04-24T10:43:06-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=1 +1 -1",
-                                                                    "Backfill: commit 25683c2 (2026-04-25T21:05:22-04:00) - Please provide the code changes or file diffs you would like me to summarize. | files=2 +2 -2",
-                                                                    "Backfill: commit 7be29d9 (2026-05-01T17:52:12-04:00) - Automated commit: Updated files in automation-suite | files=2 +2 -2"
-                                                                ],
-                                                     "firstDay":  "2026-03-11",
-                                                     "lastDay":  "2026-05-16",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  131723,
-                                                                          "deletions":  62524,
-                                                                          "files":  706
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  133005,
-                                                                     "deletions":  62548,
-                                                                     "files":  760
                                                                  }
                                                  },
                                                  {
@@ -5615,9 +5673,10 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "plan":  8,
-                                                                   "general":  1,
-                                                                   "code-change":  5
+                                                                   "commands":  2,
+                                                                   "plan":  1,
+                                                                   "verification":  1,
+                                                                   "code-change":  11
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -5627,15 +5686,15 @@
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "tailnet-sync",
-                                                     "entries":  14,
+                                                     "project":  "vaultwares-mcp",
+                                                     "entries":  15,
                                                      "recent":  [
-                                                                    "User approved optimization phase. Preparing implementation plan to migrate Wander.Network from REST to gRPC with Protobufs and streaming chunked file transfers.",
-                                                                    "Optimization plan approved. Executing gRPC migration. Scaffolding task list.",
-                                                                    "Optimization complete. Replaced REST controllers with gRPC SyncGrpcService. Updated SyncEngine to use Protobuf messages and stream file chunks over System.IO.Pipelines/FileStrea..."
+                                                                    "Switched MCPB manifest to start stdio server via python /server.py (instead of python -m vaultwares_fastmcp) per expected entrypoint usage; revalidated and repacked vaultwares-f...",
+                                                                    "Full live integration test of all 25 MCP tools on http://127.0.0.1:9020/mcp. Server was stopped (NSSM service), restarted it. Created tests/test_live_server.py with 28 test case...",
+                                                                    "Two changes: (1) Flattened fs_edit tool from edits:list[dict] to flat params (match, replace, count=0, create_backup=True) â€” consistent with fs_write style. (2) Expanded Tier ..."
                                                                 ],
-                                                     "firstDay":  "2026-05-08",
-                                                     "lastDay":  "2026-05-10",
+                                                     "firstDay":  "2026-05-01",
+                                                     "lastDay":  "2026-06-04",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5681,9 +5740,9 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "commands":  2,
-                                                                   "plan":  1,
-                                                                   "code-change":  10
+                                                                   "plan":  8,
+                                                                   "general":  1,
+                                                                   "code-change":  5
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -5693,15 +5752,15 @@
                                                      "flagCounts":  {
 
                                                                     },
-                                                     "project":  "vaultwares-mcp",
-                                                     "entries":  13,
+                                                     "project":  "tailnet-sync",
+                                                     "entries":  14,
                                                      "recent":  [
-                                                                    "Added MCPB desktop-extension support by creating root manifest.json (MCPB manifest spec v0.3) and .mcpbignore to keep bundles small. Installed @anthropic-ai/mcpb, validated mani...",
-                                                                    "Adjusted MCPB manifest to launch via python -m vaultwares_fastmcp (entry_point vaultwares_fastmcp/__main__.py) instead of server.py, then revalidated and repacked vaultwares-fas...",
-                                                                    "Switched MCPB manifest to start stdio server via python /server.py (instead of python -m vaultwares_fastmcp) per expected entrypoint usage; revalidated and repacked vaultwares-f..."
+                                                                    "User approved optimization phase. Preparing implementation plan to migrate Wander.Network from REST to gRPC with Protobufs and streaming chunked file transfers.",
+                                                                    "Optimization plan approved. Executing gRPC migration. Scaffolding task list.",
+                                                                    "Optimization complete. Replaced REST controllers with gRPC SyncGrpcService. Updated SyncEngine to use Protobuf messages and stream file chunks over System.IO.Pipelines/FileStrea..."
                                                                 ],
-                                                     "firstDay":  "2026-05-01",
-                                                     "lastDay":  "2026-05-13",
+                                                     "firstDay":  "2026-05-08",
+                                                     "lastDay":  "2026-05-10",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -5847,6 +5906,59 @@
                                                  },
                                                  {
                                                      "kinds":  {
+                                                                   "plan":  3,
+                                                                   "general":  3,
+                                                                   "verification":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+                                                                        "health_ledger_rename":  1,
+                                                                        "no_code_changes":  3,
+                                                                        "target_clicks_disabled":  1,
+                                                                        "own_dashboard":  1,
+                                                                        "safesearch_off":  1,
+                                                                        "no_captcha_bypass":  1,
+                                                                        "no_secrets_logged":  3,
+                                                                        "clopeux_desktop_probe_name":  1,
+                                                                        "token_joker_planned":  1,
+                                                                        "planning_only":  3,
+                                                                        "search_human_like_behavior":  1,
+                                                                        "no_service_changes":  2,
+                                                                        "supervised_autonomy_enabled":  1,
+                                                                        "joker_alarm_component":  1,
+                                                                        "unattended_autonomy_restricted":  1,
+                                                                        "vw_state":  2,
+                                                                        "medium_notify_only":  1,
+                                                                        "high_critical_customer_impact_gate":  1,
+                                                                        "own_domain_behavior_only":  1,
+                                                                        "ai_token_usage_research":  1
+                                                                    },
+                                                     "project":  "Prom-King",
+                                                     "entries":  7,
+                                                     "recent":  [
+                                                                    "Designed the Joker production health and incident-response architecture: continuous probes on greencloud-vps and operator PC, health-ledger metrics/dashboard, one-shot high-seve...",
+                                                                    "Updated the Joker health-ledger plan from user feedback: replace Grafana-first dashboard with a basic first-party dashboard, rename ops/joker to ops/health-ledger, define Medium...",
+                                                                    "Updated the health-ledger/Joker plan from user clarification: High/Critical unattended autonomy is restricted when the user does not answer, but supervised autonomy is allowed w..."
+                                                                ],
+                                                     "firstDay":  "2026-05-28",
+                                                     "lastDay":  "2026-06-03",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
                                                                    "code-change":  7
                                                                },
                                                      "lineClean":  {
@@ -5875,6 +5987,38 @@
                                                                      "insertions":  5321,
                                                                      "deletions":  61,
                                                                      "files":  88
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  6
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  2343,
+                                                                       "deletions":  138,
+                                                                       "files":  23
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "gallery-scraper",
+                                                     "entries":  6,
+                                                     "recent":  [
+                                                                    "Backfill: commit 18801b3 (2026-04-07T13:19:16-04:00) - Added configs, icons, published add-on | files=18 +480 -74",
+                                                                    "Backfill: commit 2ff69ca (2026-04-08T15:26:04-04:00) - Add initial project setup with package.json and webpack configuration | files=8 +1542 -5",
+                                                                    "Backfill: commit d55eb37 (2026-05-01T17:52:19-04:00) - Automated commit: Updated files in gallery-scraper | files=1 +0 -0"
+                                                                ],
+                                                     "firstDay":  "2026-04-07",
+                                                     "lastDay":  "2026-05-01",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  2343,
+                                                                     "deletions":  138,
+                                                                     "files":  23
                                                                  }
                                                  },
                                                  {
@@ -5911,34 +6055,61 @@
                                                  },
                                                  {
                                                      "kinds":  {
-                                                                   "code-change":  6
+                                                                   "handoff":  1,
+                                                                   "general":  4,
+                                                                   "verification":  1,
+                                                                   "code-change":  2
                                                                },
                                                      "lineClean":  {
-                                                                       "insertions":  2343,
-                                                                       "deletions":  138,
-                                                                       "files":  23
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
                                                                    },
                                                      "flagCounts":  {
-
+                                                                        "no_live_loops_started":  1,
+                                                                        "ollama_environment_documented":  1,
+                                                                        "docs_updated":  1,
+                                                                        "probe_loop_deployed":  1,
+                                                                        "probe_once_run":  1,
+                                                                        "secrets_redacted":  2,
+                                                                        "no_secrets_logged":  1,
+                                                                        "docs_pointer_created":  1,
+                                                                        "moved_to_dedicated_repo":  1,
+                                                                        "no_continuous_loop_started":  1,
+                                                                        "legacy_alert_writers_disabled":  1,
+                                                                        "no_deploy_performed":  1,
+                                                                        "host_independent_routing_model":  1,
+                                                                        "prober_not_started":  1,
+                                                                        "no_file_changes":  1,
+                                                                        "no_secret_values_logged":  3,
+                                                                        "architecture_review":  1,
+                                                                        "vaultwares_docs_clean":  1,
+                                                                        "prom_king_http_200":  1,
+                                                                        "production_incident_fixed":  1,
+                                                                        "github_actions_cost_checked":  1,
+                                                                        "vault_guardian_scope_added_conceptually":  1,
+                                                                        "vw_state":  3,
+                                                                        "stale_probe_process_restarted":  1,
+                                                                        "health_ledger_updated":  1
                                                                     },
-                                                     "project":  "gallery-scraper",
+                                                     "project":  "health-ledger",
                                                      "entries":  6,
                                                      "recent":  [
-                                                                    "Backfill: commit 18801b3 (2026-04-07T13:19:16-04:00) - Added configs, icons, published add-on | files=18 +480 -74",
-                                                                    "Backfill: commit 2ff69ca (2026-04-08T15:26:04-04:00) - Add initial project setup with package.json and webpack configuration | files=8 +1542 -5",
-                                                                    "Backfill: commit d55eb37 (2026-05-01T17:52:19-04:00) - Automated commit: Updated files in gallery-scraper | files=1 +0 -0"
+                                                                    "Reviewed proposed CI/assistant runner loop for non-production projects including vault-guardian. Confirmed GitHub Actions billing distinction from official GitHub docs: GitHub-h...",
+                                                                    "Documented host-independent runner routing and alert-profile model in vaultwares-docs and health-ledger. Clarified that greencloud-vps is current webhook ingress/control plane, ...",
+                                                                    "Implemented Health Ledger Probe Joker and CI Joker, fixed and deployed Prom-King link-sharing plus fullxxx.video 2257 monitoring fixes, deployed greencloud and Clopeux probe loo..."
                                                                 ],
-                                                     "firstDay":  "2026-04-07",
-                                                     "lastDay":  "2026-05-01",
+                                                     "firstDay":  "2026-06-03",
+                                                     "lastDay":  "2026-06-04",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
                                                                           "files":  0
                                                                       },
                                                      "lineRaw":  {
-                                                                     "insertions":  2343,
-                                                                     "deletions":  138,
-                                                                     "files":  23
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
                                                                  }
                                                  },
                                                  {
@@ -5997,38 +6168,6 @@
                                                                 ],
                                                      "firstDay":  "2026-05-22",
                                                      "lastDay":  "2026-05-26",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "general":  3
-                                                               },
-                                                     "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "Prom-King",
-                                                     "entries":  3,
-                                                     "recent":  [
-                                                                    "Tube-sites deploy verified; PK palette updated",
-                                                                    "GTM per-site enforcement + GA4-via-GTM playbook",
-                                                                    "PKT now injects GTM-WXGQJ7PR (shared container)"
-                                                                ],
-                                                     "firstDay":  "2026-05-28",
-                                                     "lastDay":  "2026-05-28",
                                                      "lineExcluded":  {
                                                                           "insertions":  0,
                                                                           "deletions":  0,
@@ -6107,36 +6246,6 @@
                                                                    "code-change":  1
                                                                },
                                                      "lineClean":  {
-                                                                       "insertions":  0,
-                                                                       "deletions":  0,
-                                                                       "files":  0
-                                                                   },
-                                                     "flagCounts":  {
-
-                                                                    },
-                                                     "project":  "deploy-flow-unification",
-                                                     "entries":  1,
-                                                     "recent":  [
-                                                                    "Standardized deployment flow docs + removed GitHub Actions deploys on main pushes across repos. Merged PRs: p-potvin/vaultwares-docs#18 (merge 9ac6a90), p-potvin/vaultwares-webs..."
-                                                                ],
-                                                     "firstDay":  "2026-05-25",
-                                                     "lastDay":  "2026-05-25",
-                                                     "lineExcluded":  {
-                                                                          "insertions":  0,
-                                                                          "deletions":  0,
-                                                                          "files":  0
-                                                                      },
-                                                     "lineRaw":  {
-                                                                     "insertions":  0,
-                                                                     "deletions":  0,
-                                                                     "files":  0
-                                                                 }
-                                                 },
-                                                 {
-                                                     "kinds":  {
-                                                                   "code-change":  1
-                                                               },
-                                                     "lineClean":  {
                                                                        "insertions":  1,
                                                                        "deletions":  2,
                                                                        "files":  1
@@ -6160,6 +6269,36 @@
                                                                      "insertions":  1,
                                                                      "deletions":  2,
                                                                      "files":  1
+                                                                 }
+                                                 },
+                                                 {
+                                                     "kinds":  {
+                                                                   "code-change":  1
+                                                               },
+                                                     "lineClean":  {
+                                                                       "insertions":  0,
+                                                                       "deletions":  0,
+                                                                       "files":  0
+                                                                   },
+                                                     "flagCounts":  {
+
+                                                                    },
+                                                     "project":  "deploy-flow-unification",
+                                                     "entries":  1,
+                                                     "recent":  [
+                                                                    "Standardized deployment flow docs + removed GitHub Actions deploys on main pushes across repos. Merged PRs: p-potvin/vaultwares-docs#18 (merge 9ac6a90), p-potvin/vaultwares-webs..."
+                                                                ],
+                                                     "firstDay":  "2026-05-25",
+                                                     "lastDay":  "2026-05-25",
+                                                     "lineExcluded":  {
+                                                                          "insertions":  0,
+                                                                          "deletions":  0,
+                                                                          "files":  0
+                                                                      },
+                                                     "lineRaw":  {
+                                                                     "insertions":  0,
+                                                                     "deletions":  0,
+                                                                     "files":  0
                                                                  }
                                                  }
                                              ]
@@ -16352,17 +16491,17 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-06-03T01:44:07.8731440Z",
+                 "_maxCreatedAtUtc":  "2026-06-04T08:43:22.2853532Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
-                               "end":  "2026-06-02"
+                               "end":  "2026-06-04"
                            },
                  "totals":  {
-                                "projects":  46,
-                                "events":  1952,
+                                "projects":  47,
+                                "events":  1976,
                                 "uniqueCommitsRecomputed":  679,
-                                "activeDays":  81,
+                                "activeDays":  83,
                                 "commitEventsWithStats":  679
                             }
              }

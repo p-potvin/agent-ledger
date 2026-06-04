@@ -1,0 +1,47 @@
+{
+  "id": "20260604-021958-368-vaultwares-mcp-22b65d5a",
+  "createdAt": "2026-06-04T06:19:58.3689763Z",
+  "createdAtLocal": "2026-06-04 02:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-mcp",
+  "kind": "code-change",
+  "actor": "GitHub Copilot",
+  "agentHeader": "Agent: GitHub Copilot (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp  Branch: main\r\nTools used (this reply): read_file, replace_string_in_file, multi_replace_string_in_file, run_in_terminal\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-04 02:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-6",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "read_file",
+      "replace_string_in_file",
+      "multi_replace_string_in_file",
+      "run_in_terminal"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp",
+  "summary": "Two changes: (1) Flattened fs_edit tool from edits:list[dict] to flat params (match, replace, count=0, create_backup=True) — consistent with fs_write style. (2) Expanded Tier 6 Ledger into two categories: agent_ledger_get_recent/agent_ledger_search (coding/project work from agent-ledger/events) and health_ledger_get_recent/health_ledger_search (deployments/server health from health-ledger/data/events JSONL). Fixed lowercase key bug in agent ledger filter. All 30/30 tests pass.",
+  "commands": [],
+  "files": [
+    "vaultwares_mcp/ledger_tools.py",
+    "vaultwares_mcp/server.py",
+    "tests/test_live_server.py"
+  ],
+  "planPath": "",
+  "contentHash": "22b65d5aede45f2405f19dc80b4562cb17e56ebef3afbc44bfd508f93cc7c24f",
+  "git": {
+    "repo": "vaultwares-mcp",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-mcp",
+    "branch": "main",
+    "head": "759760c",
+    "hasChanges": true
+  }
+}

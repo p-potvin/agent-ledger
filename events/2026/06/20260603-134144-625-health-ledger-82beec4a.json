@@ -1,0 +1,68 @@
+{
+  "id": "20260603-134144-625-health-ledger-82beec4a",
+  "createdAt": "2026-06-03T17:41:44.6251318Z",
+  "createdAtLocal": "2026-06-03 13:41",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger  Branch: main\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-03 13:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "no_secrets_logged": true,
+      "vaultwares_docs_clean": true,
+      "no_live_loops_started": true,
+      "moved_to_dedicated_repo": true,
+      "prober_not_started": true
+    },
+    "metrics": {
+      "files_in_health_ledger": 7,
+      "live_requests_started": 0,
+      "services_configured": 11,
+      "probe_locations": 2
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger",
+  "summary": "Moved the Health Ledger foundation from vaultwares-docs into the dedicated p-potvin/health-ledger repository at C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger. Expanded the repo README while preserving the user's Joker wording, moved services.yaml, severity policy, dashboard scope, Token Joker, alert audit, and implementation plan to repo root, removed the empty old vaultwares-docs ops directory, and updated root-relative data paths before starting any Probe Joker work.",
+  "commands": [
+    "Read parent Github Repos AGENTS.md and vaultwares-docs AGENTS.md",
+    "Checked health-ledger git status and remote origin",
+    "Moved Health Ledger files from vaultwares-docs/ops/health-ledger to health-ledger repo root with apply_patch",
+    "Removed empty vaultwares-docs ops directory after verifying it was empty",
+    "Validated no stale ops/health-ledger/operator-pc references",
+    "Validated ASCII files and services.yaml no tabs",
+    "Checked git status for health-ledger and vaultwares-docs"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\services.yaml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\severity-policy.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\dashboard.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\token-joker.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\alert-audit.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\implementation-plan.md"
+  ],
+  "planPath": "",
+  "contentHash": "82beec4a4eeea385bfe50f7ceded3b8cc4d9849a540967e9e69357689384b962",
+  "git": {
+    "repo": "health-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/health-ledger",
+    "branch": "main",
+    "head": "428e9a9",
+    "hasChanges": true
+  }
+}

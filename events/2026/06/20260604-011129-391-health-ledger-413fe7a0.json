@@ -1,0 +1,79 @@
+{
+  "id": "20260604-011129-391-health-ledger-413fe7a0",
+  "createdAt": "2026-06-04T05:11:29.3915723Z",
+  "createdAtLocal": "2026-06-04 01:11",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger  Branch: main\r\nTools used (this reply): web.run, shell_command, apply_patch, multi_tool_use.parallel\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-04 01:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "web.run",
+      "shell_command",
+      "apply_patch",
+      "multi_tool_use.parallel"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "no_deploy_performed": true,
+      "docs_updated": true,
+      "ollama_environment_documented": true,
+      "health_ledger_updated": true,
+      "no_secret_values_logged": true,
+      "host_independent_routing_model": true
+    },
+    "metrics": {
+      "runner_targets": 2,
+      "docs_resources_generated": 102,
+      "services": 11,
+      "environments": 3,
+      "project_routes": 3
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger",
+  "summary": "Documented host-independent runner routing and alert-profile model in vaultwares-docs and health-ledger. Clarified that greencloud-vps is current webhook ingress/control plane, not the definition of production; Clopeux-Desktop hosts production API. Added project_routes, environments, and AI remediation policy to health-ledger services.yaml including vault-guardian non-production and Ollama as its own environment. Documented Ollama monitoring via official /api/version, /api/tags, /api/ps plus hook-scoped resource metrics. Regenerated vaultwares-docs page resources and validated services.yaml plus Probe script.",
+  "commands": [
+    "web search official Ollama API docs",
+    "npm run generate:page-resources",
+    "npm run check:probe",
+    "node YAML parse services.yaml",
+    "git diff --check"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\health-ledger.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\deployment-flow.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\deploy-alerts.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\resources\\pages\\operations__health-ledger.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\resources\\pages\\operations__deployment-flow.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\resources\\pages\\operations__services-inventory.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\resources\\pages\\operations__deploy-alerts.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\resources\\pageResourcesManifest.ts",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\services.yaml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\docs\\runner-routing.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\docs\\ollama-environment.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\dashboard.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\severity-policy.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\implementation-plan.md"
+  ],
+  "planPath": "",
+  "contentHash": "413fe7a029e8d40692f59c21c33de28c6388806cd4f975d763a219b454c67d96",
+  "git": {
+    "repo": "health-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/health-ledger",
+    "branch": "main",
+    "head": "428e9a9",
+    "hasChanges": true
+  }
+}

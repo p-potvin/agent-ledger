@@ -1,0 +1,109 @@
+{
+  "id": "20260603-010413-237-prom-king-74526c13",
+  "createdAt": "2026-06-03T05:04:13.2373272Z",
+  "createdAtLocal": "2026-06-03 01:04",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): shell_command, view_image, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-03 01:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "view_image",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "vw_state": {
+        "interview": {
+          "askedQuestion": true,
+          "completed": true
+        },
+        "estimate": {
+          "rationale": "Benchmark plus live browser/proxy runs, artifact parsing, runner classification fix, and ledger reporting.",
+          "estimatedOutputTokens": 9000
+        },
+        "protocolsSelected": [
+          "networking",
+          "secrets",
+          "request_rate_limiting",
+          "verification",
+          "legal_compliance"
+        ],
+        "resume": {
+          "resumeId": "promking-proxy-benchmark-20260603",
+          "resumeMode": false
+        },
+        "routerCategories": [
+          "SOURCE_OF_TRUTH",
+          "SECURITY_POSTURE",
+          "SECRETS_HANDLING",
+          "NETWORK_INFRASTRUCTURE",
+          "REQUEST_RATE_LIMITING",
+          "VERIFICATION",
+          "LEGAL_COMPLIANCE",
+          "LONG_RUNNING_TASKS"
+        ],
+        "overlaysApplied": [
+          "LONG_RUNNING_TASKS"
+        ]
+      },
+      "target_clicks_disabled": true,
+      "no_captcha_bypass": true,
+      "safesearch_off": true,
+      "search_human_like_behavior": false,
+      "own_domain_behavior_only": true
+    },
+    "metrics": {
+      "proxy_used_gb_before": 0.095388991,
+      "proxy_used_gb_after": 0.098884904,
+      "proxy_used_gb_delta": 0.003495913,
+      "serp_sessions": 8,
+      "serp_max_pages": 2,
+      "serp_blocked_or_challenged": 4,
+      "serp_ok_reported": 4,
+      "serp_zero_results_extracted": 8,
+      "own_domain_urls": 2,
+      "prom_king_status": 502,
+      "prom_king_visited": 1,
+      "fullxxx_visited": 20,
+      "fullxxx_failures": 18
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Benchmarked IPoasis residential proxy for Prom-King qa-automation: checked proxy traffic before/after, ran 8 shallow SERP sessions across Google/DDG/Bing/Brave with SafeSearch off and target clicks disabled, ran capped own-domain stealth crawl for prom-king.xyz and fullxxx.video, and patched SERP runner status classification for DDG challenge text and zero-result extraction states. No CAPTCHA/challenge bypass attempted and no secret values recorded.",
+  "commands": [
+    "Invoke-RestMethod https://api.ipoasis.com/v1/plans with X-API-KEY from local key file (secret not logged)",
+    "curl.exe via SEARCH_PROXY_URLS for api.ipify.org, google generate_204, prom-king.xyz, fullxxx.video",
+    "npm run report:search-visibility with SEARCH_ENGINES=google,duckduckgo,bing,brave SEARCH_KEYWORDS=\"fullxxx video,fullxxx.video\" SEARCH_MAX_PAGES=2 SEARCH_CLICK_TARGETS=0",
+    "npm run report:own-domain-stealth with STEALTH_MAX_PAGES=20 STEALTH_MAX_DEPTH=4 resource blocking enabled",
+    "node -c scripts/run-search-visibility-report.mjs"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\scripts\\run-search-visibility-report.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\search-visibility\\20260603-005956\\results.json",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\search-visibility\\20260603-005956\\summary.md",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\own-domain-stealth\\20260603-010109\\summary.json",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\own-domain-stealth\\20260603-010109\\prom-king.xyz\\stealth-results.json",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\own-domain-stealth\\20260603-010109\\fullxxx.video\\stealth-results.json"
+  ],
+  "planPath": "",
+  "contentHash": "74526c134c983a72be8ffa8b78cafa1dc3ee2cdca04c9fbfc425f14c1ccf803c",
+  "git": {
+    "repo": "qa-automation",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+    "branch": "main",
+    "head": "e3b4c9f",
+    "hasChanges": true
+  }
+}

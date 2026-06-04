@@ -1,0 +1,54 @@
+{
+  "id": "20260602-224230-635-vaultwares-docs-8ebfcd06",
+  "createdAt": "2026-06-03T02:42:30.6350339Z",
+  "createdAtLocal": "2026-06-02 22:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "handoff",
+  "actor": "GPT-5.2 Codex",
+  "agentHeader": "Agent: GPT-5.2 Codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): PowerShell, git, npm, SSH, curl\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-02 22:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "online",
+    "toolsUsed": [
+      "PowerShell",
+      "git",
+      "npm",
+      "SSH",
+      "curl"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Pushed remaining user-owned vaultwares-docs changes and checked deployments. Published vaultwares-docs commit f56c49d (Update ledger schema docs) after npm run build passed, then verified webhook deploy on greencloud-vps updated /var/www/vaultwares-docs/dist at 22:38. Investigated stale ledger.vaultwares.ca: agent-ledger sync task was running locally, but VPS deploy failed with TS7006 in site/src/pages/WorkImpactPage.tsx. Fixed and pushed agent-ledger commit add0a201, verified webhook deploy exit=0 and /var/www/ledger.vaultwares.ca updated at 22:41. Verified docs and ledger HTTPS 200 with clean TLS via 100.73.93.84, hooks health 200, vw-webhookd/vaultwares-hooks/deny-watch/token-expiry timers active, and current GH token smoke test authenticates as p-potvin.",
+  "commands": [
+    "npm run build",
+    "git commit -m 'Update ledger schema docs'",
+    "git push origin main",
+    "ssh root@100.73.93.84 tail/grep /var/log/vw-webhookd.log",
+    "npm run build in agent-ledger/site",
+    "git commit -m 'Fix work impact build typing'",
+    "git push origin main",
+    "curl.exe --resolve docs.vaultwares.ca:443:100.73.93.84",
+    "curl.exe --resolve ledger.vaultwares.ca:443:100.73.93.84",
+    "curl.exe https://hooks.vaultwares.ca/health"
+  ],
+  "files": [
+    "vaultwares-docs\\\\docs-content\\\\operations\\\\agent-ledger-schema.mdx",
+    "vaultwares-docs\\\\instructions\\\\summaries\\\\CODING_STANDARDS.md",
+    "vaultwares-docs\\\\src\\\\resources\\\\pageResourcesManifest.ts",
+    "agent-ledger\\\\site\\\\src\\\\pages\\\\WorkImpactPage.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "8ebfcd06213b6a9153df8d32150884d31b3f2d01ce00de6132b98c7c7910b4db",
+  "git": null
+}

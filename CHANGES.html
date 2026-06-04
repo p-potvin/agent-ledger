@@ -48,7 +48,629 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
-    <summary><strong>2026-06-02 22:30 - vaultwares-docs (formerly tmp-app)</strong> <span class="kind">handoff</span> - Archived DNS troubleshooting chat and published the final docs update. Committed and pushed vaultwares-docs commit d1e8553 (Document tailnet DNS routing) to origin/main. The com...</summary>
+    <summary><strong>2026-06-04 11:15 - OpenClaw</strong> <span class="kind">verification</span> - Cron: ran openclaw doctor --non-interactive per gateway restart update error from June 3. Doctor completed successfully &#226;€” no gateway errors. Memory search needs embedding prov...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> openclaw-main</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: openclaw-main (role: main) Model: glm-5 Thinking: low Mode: dispatch Permissions: autopilot (network: Windows_NT 10.0.26200 (x64)) CWD: C:\Users\Administrator\Desktop\Github Repos\.openclaw\workspace  Branch: master Tools used (this reply): exec MCP servers accessed (this reply): none Time: 2026-06-04 11:15 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Cron: ran openclaw doctor --non-interactive per gateway restart update error from June 3. Doctor completed successfully &#226;€” no gateway errors. Memory search needs embedding provider (known). DAILY_RECAP.md does not exist; previous cron recap task was incomplete/stale &#226;€” skipped.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>openclaw doctor --non-interactive</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=workspace, branch=master</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-04 04:43 - vault-central</strong> <span class="kind">plan</span> - Researched and calculated storage capacity constraints for animated WebP vs JSON WebP frame sequences. Highlighted that animated WebP encoding requires WebAssembly/libwebp and t...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: gemini-2.0-flash Thinking: medium Mode: plan Permissions: bypass (network: Windows Local) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): run_command, search_web MCP servers accessed (this reply): none Time: 2026-06-04 04:43 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Researched and calculated storage capacity constraints for animated WebP vs JSON WebP frame sequences. Highlighted that animated WebP encoding requires WebAssembly/libwebp and thus triggers the same CSP limitations as WebM, whereas a JSON-based WebP frame flipbook relies purely on native canvas APIs, completely avoiding CSP/WASM issues.</p>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=c8b5a7d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-04 02:19 - vaultwares-mcp (formerly fastmcp)</strong> <span class="kind">code-change</span> - Two changes: (1) Flattened fs_edit tool from edits:list[dict] to flat params (match, replace, count=0, create_backup=True) &#226;€” consistent with fs_write style. (2) Expanded Tier ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> GitHub Copilot</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: GitHub Copilot (role: main) Model: claude-sonnet-4-6 Thinking: unknown Mode: agent Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-mcp  Branch: main Tools used (this reply): read_file, replace_string_in_file, multi_replace_string_in_file, run_in_terminal MCP servers accessed (this reply): none Time: 2026-06-04 02:19 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Two changes: (1) Flattened fs_edit tool from edits:list[dict] to flat params (match, replace, count=0, create_backup=True) &#226;€” consistent with fs_write style. (2) Expanded Tier 6 Ledger into two categories: agent_ledger_get_recent/agent_ledger_search (coding/project work from agent-ledger/events) and health_ledger_get_recent/health_ledger_search (deployments/server health from health-ledger/data/events JSONL). Fixed lowercase key bug in agent ledger filter. All 30/30 tests pass.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares_mcp/ledger_tools.py</code></li>
+        <li><code>vaultwares_mcp/server.py</code></li>
+        <li><code>tests/test_live_server.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-mcp, branch=main, head=759760c</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-04 02:10 - vaultwares-mcp</strong> <span class="kind">verification</span> - Full live integration test of all 25 MCP tools on http://127.0.0.1:9020/mcp. Server was stopped (NSSM service), restarted it. Created tests/test_live_server.py with 28 test case...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> GitHub Copilot</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: GitHub Copilot (role: main) Model: claude-sonnet-4-6 Thinking: unknown Mode: agent Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-mcp  Branch: main Tools used (this reply): read_file, create_file, replace_string_in_file, run_in_terminal MCP servers accessed (this reply): none Time: 2026-06-04 02:10 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Full live integration test of all 25 MCP tools on http://127.0.0.1:9020/mcp. Server was stopped (NSSM service), restarted it. Created tests/test_live_server.py with 28 test cases covering tools/list, Tier1 fs (fs_list_dir, fs_read, fs_write, fs_edit), Tier2 shell (sh_session_start/list/stop/run), Tier3 ssh (disabled check), Tier4 ops (journal/note/tasklog), Tier5 diag (status/usage/limits), Tier6 ledger (get_recent/search), Credit Optimizer (classify/recommend/estimate/optimize/analyze_batch), Fast Navigation (nav_fetch/nav_fetch_many), task_estimate. All 28/28 passed. Key finding: fs_edit uses {match, replace} format not {old, new}.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>tests/test_live_server.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-mcp, branch=main, head=759760c</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-04 02:02 - health-ledger</strong> <span class="kind">code-change,handoff,verification</span> - Implemented Health Ledger Probe Joker and CI Joker, fixed and deployed Prom-King link-sharing plus fullxxx.video 2257 monitoring fixes, deployed greencloud and Clopeux probe loo...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,handoff,verification</p>
+      <p><strong>Actor:</strong> Codex</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Codex (role: main) Model: GPT-5 Thinking: high Mode: Default Permissions: danger-full-access (network: enabled) CWD: C:\Users\Administrator\Desktop\Github Repos\health-ledger  Branch: main Tools used (this reply): shell_command, apply_patch, multi_tool_use.parallel MCP servers accessed (this reply): none Time: 2026-06-04 02:02 (TZ: Eastern Standard Time)</code></pre>
+      <p><strong>Telemetry:</strong></p>
+      <ul>
+        <li><strong>Flags:</strong> secrets_redacted=True, stale_probe_process_restarted=True, vw_state=LONG_RUNNING_TASKS applied; resume_id=health-ledger-prod-probe-ci-joker-20260604; no VW_STATE chat output; current status: implementation+deployment+verification complete with notes in ledger.</li>
+        <li><strong>Metrics:</strong> <code>{&quot;clopeux_foreground_total&quot;:18,&quot;clopeux_foreground_ok&quot;:18,&quot;clopeux_scheduled_latest_total&quot;:18,&quot;clopeux_scheduled_latest_ok&quot;:18,&quot;greencloud_service_active&quot;:true,&quot;greencloud_focused_promking_total&quot;:6,&quot;greencloud_focused...</code></li>
+      </ul>
+      <p class="summary"><strong>Summary:</strong> Implemented Health Ledger Probe Joker and CI Joker, fixed and deployed Prom-King link-sharing plus fullxxx.video 2257 monitoring fixes, deployed greencloud and Clopeux probe loops, added vault-guardian non-production routing, and verified current Clopeux scheduled probe is 18/18 OK.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>pnpm build</code></li>
+        <li><code>pnpm --filter ./server exec vitest run tests/ssrf.test.ts</code></li>
+        <li><code>node -c scripts/probe-joker.mjs; node -c scripts/ci-joker.mjs</code></li>
+        <li><code>JOKER_PROBE_LOCATION=Clopeux-Desktop node scripts/probe-joker.mjs --once</code></li>
+        <li><code>Start-ScheduledTask -TaskName HealthLedgerProbeJoker; verify data/rollups/latest.json</code></li>
+        <li><code>ssh root@100.73.93.84 systemctl is-active health-ledger-probe.service</code></li>
+        <li><code>npm run generate:page-resources</code></li>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\scripts\probe-joker.mjs</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\scripts\ci-joker.mjs</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\services.yaml</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\ops\systemd\health-ledger-probe.service</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\ops\windows\register-health-ledger-probe.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\ops\windows\register-health-ledger-ci-joker.ps1</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\health-ledger.mdx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\link-sharing\deploy\systemd\prom-king-links.service</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\link-sharing\scripts\deploy-link-sharing.sh</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=health-ledger, branch=main, head=8be98ba</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-04 02:02 - vault-central</strong> <span class="kind">code-change,verification</span> - Implemented self-healing error handler inside PreviewThumb in VaultDashboard.tsx. When a stored WebM preview blob fails to decode (firing NS_ERROR_DOM_MEDIA_METADATA_ERR in Fire...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: gemini-2.0-flash Thinking: high Mode: code Permissions: bypass (network: Windows Local) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): replace_file_content, multi_replace_file_content, run_command, view_file MCP servers accessed (this reply): none Time: 2026-06-04 02:02 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Implemented self-healing error handler inside PreviewThumb in VaultDashboard.tsx. When a stored WebM preview blob fails to decode (firing NS_ERROR_DOM_MEDIA_METADATA_ERR in Firefox), it is marked as failed and the UI falls back to the native video player instantly. Also resolved Zod&#39;s internal allowsEval JIT checking warning by explaining it is a non-fatal check.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/components/VaultDashboard.tsx</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=c8b5a7d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-04 01:11 - health-ledger</strong> <span class="kind">general</span> - Documented host-independent runner routing and alert-profile model in vaultwares-docs and health-ledger. Clarified that greencloud-vps is current webhook ingress/control plane, ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\health-ledger  Branch: main Tools used (this reply): web.run, shell_command, apply_patch, multi_tool_use.parallel MCP servers accessed (this reply): none Time: 2026-06-04 01:11 (TZ: Eastern Standard Time)</code></pre>
+      <p><strong>Telemetry:</strong></p>
+      <ul>
+        <li><strong>Flags:</strong> no_deploy_performed=True, docs_updated=True, ollama_environment_documented=True, health_ledger_updated=True, no_secret_values_logged=True, host_independent_routing_model=True</li>
+        <li><strong>Metrics:</strong> <code>{&quot;runner_targets&quot;:2,&quot;docs_resources_generated&quot;:102,&quot;services&quot;:11,&quot;environments&quot;:3,&quot;project_routes&quot;:3}</code></li>
+      </ul>
+      <p class="summary"><strong>Summary:</strong> Documented host-independent runner routing and alert-profile model in vaultwares-docs and health-ledger. Clarified that greencloud-vps is current webhook ingress/control plane, not the definition of production; Clopeux-Desktop hosts production API. Added project_routes, environments, and AI remediation policy to health-ledger services.yaml including vault-guardian non-production and Ollama as its own environment. Documented Ollama monitoring via official /api/version, /api/tags, /api/ps plus hook-scoped resource metrics. Regenerated vaultwares-docs page resources and validated services.yaml plus Probe script.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>web search official Ollama API docs</code></li>
+        <li><code>npm run generate:page-resources</code></li>
+        <li><code>npm run check:probe</code></li>
+        <li><code>node YAML parse services.yaml</code></li>
+        <li><code>git diff --check</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\health-ledger.mdx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\deployment-flow.mdx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\services-inventory.mdx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\deploy-alerts.mdx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\src\resources\pages\operations__health-ledger.json</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\src\resources\pages\operations__deployment-flow.json</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\src\resources\pages\operations__services-inventory.json</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\src\resources\pages\operations__deploy-alerts.json</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\src\resources\pageResourcesManifest.ts</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\services.yaml</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\README.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\docs\runner-routing.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\docs\ollama-environment.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\dashboard.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\severity-policy.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\implementation-plan.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=health-ledger, branch=main, head=428e9a9</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-04 00:45 - health-ledger</strong> <span class="kind">general</span> - Reviewed proposed CI/assistant runner loop for non-production projects including vault-guardian. Confirmed GitHub Actions billing distinction from official GitHub docs: GitHub-h...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\health-ledger  Branch: main Tools used (this reply): web.run, shell_command MCP servers accessed (this reply): none Time: 2026-06-04 00:45 (TZ: Eastern Standard Time)</code></pre>
+      <p><strong>Telemetry:</strong></p>
+      <ul>
+        <li><strong>Flags:</strong> architecture_review=True, no_file_changes=True, vault_guardian_scope_added_conceptually=True, github_actions_cost_checked=True, no_secret_values_logged=True</li>
+        <li><strong>Metrics:</strong> <code>{&quot;reviewed_sources&quot;:3}</code></li>
+      </ul>
+      <p class="summary"><strong>Summary:</strong> Reviewed proposed CI/assistant runner loop for non-production projects including vault-guardian. Confirmed GitHub Actions billing distinction from official GitHub docs: GitHub-hosted workflows consume Actions usage/minutes in private repos; self-hosted runner usage is documented as free in billing docs but GitHub also announced self-hosted private workflow platform charges from 2026, so safest low-cost design is to use GitHub webhooks as event source and run build/test entirely on tailnet infrastructure outside Actions. Recommended deploying a Clopeux-Desktop prober for local API and designing a separate low-severity build ledger for non-prod repos.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>web search official GitHub Actions billing docs</code></li>
+        <li><code>web open GitHub Actions billing docs</code></li>
+        <li><code>web open GitHub Actions 2026 pricing change announcement</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=health-ledger, branch=main, head=428e9a9</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 16:21 - health-ledger</strong> <span class="kind">general</span> - Fixed prom-king.xyz production 502 by updating greencloud-vps nginx FastCGI socket from php8.2-fpm to php8.4-fpm, verified HTTP 200 and closed Prom-King/prelanding-page#19. Revi...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\health-ledger  Branch: main Tools used (this reply): shell_command, apply_patch, multi_tool_use.parallel MCP servers accessed (this reply): none Time: 2026-06-03 16:21 (TZ: Eastern Standard Time)</code></pre>
+      <p><strong>Telemetry:</strong></p>
+      <ul>
+        <li><strong>Flags:</strong> probe_loop_deployed=True, production_incident_fixed=True, no_secret_values_logged=True, vw_state=resume: prom-king production 502 fixed on greencloud-vps by changing nginx FastCGI socket to php8.4; Prom-King/prelanding-page#19 closed; health-ledger-probe.service active/enabled on greencloud-vps under /opt/health-ledger; legacy vw-deploy-notify issue path disabled via /bin/true and vw-deny-watch/vw-token-expiry timers disabled; next work is dashboard compiler, Alarm Joker notifications, Token Joker replacement, and investigation of remaining Probe attention items., legacy_alert_writers_disabled=True, prom_king_http_200=True</li>
+        <li><strong>Metrics:</strong> <code>{&quot;github_issue&quot;:19,&quot;vps_probe_run_id&quot;:&quot;20260603-162049&quot;,&quot;vps_probe_failed&quot;:4,&quot;vps_probe_total&quot;:15,&quot;vps_probe_skipped&quot;:1,&quot;vps_probe_ok&quot;:10,&quot;prom_king_status_code&quot;:200,&quot;legacy_timers_disabled&quot;:2}</code></li>
+      </ul>
+      <p class="summary"><strong>Summary:</strong> Fixed prom-king.xyz production 502 by updating greencloud-vps nginx FastCGI socket from php8.2-fpm to php8.4-fpm, verified HTTP 200 and closed Prom-King/prelanding-page#19. Reviewed and disabled legacy GitHub-only alert writers on greencloud-vps. Deployed Health Ledger Probe Joker loop as health-ledger-probe.service under /opt/health-ledger with greencloud-vps location; service is active/enabled and writing rollups/events.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>gh issue create --repo prom-king/prelanding-page</code></li>
+        <li><code>ssh root@100.73.93.84 nginx/php-fpm diagnostics</code></li>
+        <li><code>cp /etc/nginx/sites-available/prom-king.xyz.conf /etc/nginx/sites-available/prom-king.xyz.conf.bak-20260603-php84</code></li>
+        <li><code>sed -i php8.2-fpm.sock -&gt; php8.4-fpm.sock</code></li>
+        <li><code>nginx -t &amp;&amp; systemctl reload nginx</code></li>
+        <li><code>curl.exe -I https://prom-king.xyz/</code></li>
+        <li><code>npm run probe:once -- --service prom-king</code></li>
+        <li><code>tar --exclude .git/node_modules/data -czf health-ledger-vps-20260603.tgz</code></li>
+        <li><code>scp health-ledger archive to greencloud-vps</code></li>
+        <li><code>npm ci --omit=dev on VPS</code></li>
+        <li><code>systemctl enable --now health-ledger-probe.service</code></li>
+        <li><code>systemctl disable --now vw-deny-watch.timer vw-token-expiry-watch.timer</code></li>
+        <li><code>set vw-webhookd notifications.on_error_command to /bin/true</code></li>
+        <li><code>systemctl restart vw-webhookd.service</code></li>
+        <li><code>gh issue close Prom-King/prelanding-page#19</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\README.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\alert-audit.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\implementation-plan.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\ops\systemd\health-ledger-probe.service</code></li>
+        <li><code>/etc/nginx/sites-available/prom-king.xyz.conf</code></li>
+        <li><code>/etc/nginx/sites-available/prom-king.xyz.conf.bak-20260603-php84</code></li>
+        <li><code>/etc/vw-webhookd/config.yml</code></li>
+        <li><code>/etc/vw-webhookd/config.yml.bak-20260603-disable-legacy-alerts</code></li>
+        <li><code>/etc/systemd/system/health-ledger-probe.service</code></li>
+        <li><code>/opt/health-ledger/data/rollups/latest.json</code></li>
+        <li><code>/opt/health-ledger/data/events/2026/06/03.jsonl</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=health-ledger, branch=main, head=428e9a9</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 13:56 - health-ledger</strong> <span class="kind">ops-health-probe</span> - Added vaultwares-docs discoverability reference for health-ledger, implemented Probe Joker MVP in p-potvin/health-ledger, generated docs page resources, and ran one bounded Prob...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> ops-health-probe</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\health-ledger  Branch: main Tools used (this reply): shell_command, apply_patch, multi_tool_use.parallel MCP servers accessed (this reply): none Time: 2026-06-03 13:56 (TZ: Eastern Standard Time)</code></pre>
+      <p><strong>Telemetry:</strong></p>
+      <ul>
+        <li><strong>Flags:</strong> no_continuous_loop_started=True, vw_state=resume: health-ledger Probe Joker MVP added; docs pointer at vaultwares-docs/docs-content/operations/health-ledger.mdx; latest probe run 20260603-135530 at health-ledger/data/rollups/latest.json and data/events/2026/06/03.jsonl; do not start probe:loop without explicit approval/JOKER_ALLOW_LOOP=1., probe_once_run=True, secrets_redacted=True, docs_pointer_created=True</li>
+        <li><strong>Metrics:</strong> <code>{&quot;skipped_secret_refs&quot;:1,&quot;probe_failed&quot;:5,&quot;probe_run_id&quot;:&quot;20260603-135530&quot;,&quot;probe_ok&quot;:9,&quot;probe_skipped&quot;:1,&quot;probe_total&quot;:15}</code></li>
+      </ul>
+      <p class="summary"><strong>Summary:</strong> Added vaultwares-docs discoverability reference for health-ledger, implemented Probe Joker MVP in p-potvin/health-ledger, generated docs page resources, and ran one bounded Probe pass from Clopeux-Desktop. Probe run 20260603-135530 checked 15 paths: 9 ok, 5 failed, 1 skipped for missing secret ref. Continuous loop was not started.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm install</code></li>
+        <li><code>npm run generate:page-resources</code></li>
+        <li><code>npm run check:probe</code></li>
+        <li><code>$env:JOKER_PROBE_LOCATION=&#39;Clopeux-Desktop&#39;; npm run probe:once</code></li>
+        <li><code>git status --short</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\.gitignore</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\package.json</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\package-lock.json</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\scripts\probe-joker.mjs</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\data\events\2026\06\03.jsonl</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\data\rollups\latest.json</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\health-ledger.mdx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\services-inventory.mdx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\src\resources\pages\operations__health-ledger.json</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\src\resources\pages\operations__services-inventory.json</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\src\resources\pageResourcesManifest.ts</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=health-ledger, branch=main, head=428e9a9</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 13:41 - health-ledger</strong> <span class="kind">code-change</span> - Moved the Health Ledger foundation from vaultwares-docs into the dedicated p-potvin/health-ledger repository at C:\Users\Administrator\Desktop\Github Repos\health-ledger. Expand...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gpt-5 Thinking: unknown Mode: default Permissions: danger-full-access (network: enabled) CWD: C:\Users\Administrator\Desktop\Github Repos\health-ledger  Branch: main Tools used (this reply): shell_command, apply_patch MCP servers accessed (this reply): none Time: 2026-06-03 13:41 (TZ: Eastern Standard Time)</code></pre>
+      <p><strong>Telemetry:</strong></p>
+      <ul>
+        <li><strong>Flags:</strong> no_secrets_logged=True, vaultwares_docs_clean=True, no_live_loops_started=True, moved_to_dedicated_repo=True, prober_not_started=True</li>
+        <li><strong>Metrics:</strong> <code>{&quot;files_in_health_ledger&quot;:7,&quot;live_requests_started&quot;:0,&quot;services_configured&quot;:11,&quot;probe_locations&quot;:2}</code></li>
+      </ul>
+      <p class="summary"><strong>Summary:</strong> Moved the Health Ledger foundation from vaultwares-docs into the dedicated p-potvin/health-ledger repository at C:\Users\Administrator\Desktop\Github Repos\health-ledger. Expanded the repo README while preserving the user&#39;s Joker wording, moved services.yaml, severity policy, dashboard scope, Token Joker, alert audit, and implementation plan to repo root, removed the empty old vaultwares-docs ops directory, and updated root-relative data paths before starting any Probe Joker work.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Read parent Github Repos AGENTS.md and vaultwares-docs AGENTS.md</code></li>
+        <li><code>Checked health-ledger git status and remote origin</code></li>
+        <li><code>Moved Health Ledger files from vaultwares-docs/ops/health-ledger to health-ledger repo root with apply_patch</code></li>
+        <li><code>Removed empty vaultwares-docs ops directory after verifying it was empty</code></li>
+        <li><code>Validated no stale ops/health-ledger/operator-pc references</code></li>
+        <li><code>Validated ASCII files and services.yaml no tabs</code></li>
+        <li><code>Checked git status for health-ledger and vaultwares-docs</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\README.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\services.yaml</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\severity-policy.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\dashboard.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\token-joker.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\alert-audit.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\health-ledger\implementation-plan.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=health-ledger, branch=main, head=428e9a9</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 13:18 - vaultwares-docs (formerly tmp-app)</strong> <span class="kind">code-change</span> - Created the initial ops/health-ledger foundation in vaultwares-docs. Added Health Ledger architecture, machine-readable services config, severity policy with Medium creating Git...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gpt-5 Thinking: unknown Mode: default Permissions: danger-full-access (network: enabled) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): shell_command, apply_patch MCP servers accessed (this reply): none Time: 2026-06-03 13:18 (TZ: Eastern Standard Time)</code></pre>
+      <p><strong>Telemetry:</strong></p>
+      <ul>
+        <li><strong>Flags:</strong> medium_assigns_or_mentions_copilot=True, docs_created=True, clopeux_desktop_probe_name=True, config_created=True, no_secrets_logged=True, token_joker_documented=True, code_changes=False, first_party_dashboard=True, no_live_loops_started=True, medium_creates_github_jira_issue=True, medium_blocks_prod_changes=True</li>
+        <li><strong>Metrics:</strong> <code>{&quot;files_created&quot;:7,&quot;services_configured&quot;:11,&quot;probe_locations&quot;:2,&quot;live_requests_started&quot;:0}</code></li>
+      </ul>
+      <p class="summary"><strong>Summary:</strong> Created the initial ops/health-ledger foundation in vaultwares-docs. Added Health Ledger architecture, machine-readable services config, severity policy with Medium creating GitHub/Jira issues and assigning or mentioning @copilot while forbidding assistant/PR/prod actions, first-party dashboard scope, Token Joker design, existing alert audit checklist, and implementation plan. Corrected initial placement from Prom-King workspace root to vaultwares-docs per AGENTS path routing and removed the empty misplaced directory.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Get-Content instructions/ROUTER.md and selected summaries</code></li>
+        <li><code>Get-Content docs-content/operations/deployment-flow.mdx</code></li>
+        <li><code>Get-Content docs-content/operations/services-inventory.mdx</code></li>
+        <li><code>Get-Content docs-content/operations/deploy-alerts.mdx</code></li>
+        <li><code>Get-Content docs-content/operations/webhook-secret-rotation.mdx</code></li>
+        <li><code>Created ops/health-ledger docs and services.yaml with apply_patch</code></li>
+        <li><code>Moved ops/health-ledger into vaultwares-docs per AGENTS relative-path rule</code></li>
+        <li><code>Validated ASCII and services.yaml tab-free formatting</code></li>
+        <li><code>git status --short</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\ops\health-ledger\README.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\ops\health-ledger\services.yaml</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\ops\health-ledger\severity-policy.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\ops\health-ledger\dashboard.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\ops\health-ledger\token-joker.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\ops\health-ledger\alert-audit.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\ops\health-ledger\implementation-plan.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=f56c49d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 13:06 - Prom-King</strong> <span class="kind">plan</span> - Updated the health-ledger/Joker plan from user clarification: High/Critical unattended autonomy is restricted when the user does not answer, but supervised autonomy is allowed w...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gpt-5 Thinking: unknown Mode: default Permissions: danger-full-access (network: enabled) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): shell_command MCP servers accessed (this reply): none Time: 2026-06-03 13:06 (TZ: Eastern Standard Time)</code></pre>
+      <p><strong>Telemetry:</strong></p>
+      <ul>
+        <li><strong>Flags:</strong> joker_alarm_component=True, supervised_autonomy_enabled=True, planning_only=True, no_code_changes=True, ai_token_usage_research=True, clopeux_desktop_probe_name=True, unattended_autonomy_restricted=True, no_secrets_logged=True</li>
+        <li><strong>Metrics:</strong> <code>{&quot;code_changes&quot;:0,&quot;architecture_changes&quot;:4,&quot;research_items_added&quot;:1}</code></li>
+      </ul>
+      <p class="summary"><strong>Summary:</strong> Updated the health-ledger/Joker plan from user clarification: High/Critical unattended autonomy is restricted when the user does not answer, but supervised autonomy is allowed when the user is present during an emergency; renamed operator-pc to Clopeux-Desktop; restored Joker alarm as a first-class architecture component; added medium-high research item for centralizing AI token usage/telemetry across hosts while preserving secret safety.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Reviewed current user clarification and revised the health-ledger operating model</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 09:02 - Prom-King</strong> <span class="kind">plan</span> - Updated the Joker health-ledger plan from user feedback: replace Grafana-first dashboard with a basic first-party dashboard, rename ops/joker to ops/health-ledger, define Medium...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gpt-5 Thinking: unknown Mode: default Permissions: danger-full-access (network: enabled) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): shell_command MCP servers accessed (this reply): none Time: 2026-06-03 09:02 (TZ: Eastern Standard Time)</code></pre>
+      <p><strong>Telemetry:</strong></p>
+      <ul>
+        <li><strong>Flags:</strong> no_secrets_logged=True, medium_notify_only=True, high_critical_customer_impact_gate=True, health_ledger_rename=True, no_code_changes=True, own_dashboard=True, no_service_changes=True, token_joker_planned=True, planning_only=True</li>
+        <li><strong>Metrics:</strong> <code>{&quot;code_changes&quot;:0,&quot;services_changed&quot;:0,&quot;new_components_planned&quot;:3}</code></li>
+      </ul>
+      <p class="summary"><strong>Summary:</strong> Updated the Joker health-ledger plan from user feedback: replace Grafana-first dashboard with a basic first-party dashboard, rename ops/joker to ops/health-ledger, define Medium as notification-only including critical non-crashing bugs, gate High/Critical automation on paying-customer impact, add audit of existing GitHub-runner alert leaks, and add a second token-maintenance Joker reachable by webhook for regular token rotation and stale-token response.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Reviewed user requirement deltas in current thread</code></li>
+        <li><code>Updated planned architecture and severity model in response before implementation</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 04:07 - Prom-King</strong> <span class="kind">plan</span> - Designed the Joker production health and incident-response architecture: continuous probes on greencloud-vps and operator PC, health-ledger metrics/dashboard, one-shot high-seve...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gpt-5 Thinking: unknown Mode: default Permissions: danger-full-access (network: enabled) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): shell_command, web.run MCP servers accessed (this reply): none Time: 2026-06-03 04:07 (TZ: Eastern Standard Time)</code></pre>
+      <p><strong>Telemetry:</strong></p>
+      <ul>
+        <li><strong>Flags:</strong> vw_state=@{interview=; resume=; estimate=; overlaysApplied=System.Object[]; routerCategories=System.Object[]; protocolsSelected=System.Object[]}, no_service_changes=True, planning_only=True, no_secrets_logged=True, no_code_changes=True</li>
+        <li><strong>Metrics:</strong> <code>{&quot;protocol_summaries_read&quot;:10,&quot;deployment_docs_read&quot;:4,&quot;external_official_sources_checked&quot;:3,&quot;code_changes&quot;:0}</code></li>
+      </ul>
+      <p class="summary"><strong>Summary:</strong> Designed the Joker production health and incident-response architecture: continuous probes on greencloud-vps and operator PC, health-ledger metrics/dashboard, one-shot high-severity incident gate, silent-observer lockout, tailnet recovery webhook, and guarded AI remediation via single leased incident agent and PR/review/deploy verification. Reviewed VaultWares router summaries plus deployment-flow, services-inventory, webhook-secret-rotation, and deploy-alerts before drafting the plan.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Get-Content vaultwares-docs/instructions/ROUTER.md and selected protocol summaries</code></li>
+        <li><code>Get-Content vaultwares-docs/docs-content/operations/deployment-flow.mdx</code></li>
+        <li><code>Get-Content vaultwares-docs/docs-content/operations/services-inventory.mdx</code></li>
+        <li><code>Get-Content vaultwares-docs/docs-content/operations/webhook-secret-rotation.mdx</code></li>
+        <li><code>Get-Content vaultwares-docs/docs-content/operations/deploy-alerts.mdx</code></li>
+        <li><code>Browsed official Prometheus Alertmanager, Prometheus blackbox_exporter, and Grafana contact-point docs for monitoring stack primitives</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\ROUTER.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\SOURCE_OF_TRUTH.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\NETWORK_INFRASTRUCTURE.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\AUTOMATION_POLICY.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\DEPLOYMENT_POLICY.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\INCIDENT_RESPONSE.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\deployment-flow.mdx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\services-inventory.mdx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\webhook-secret-rotation.mdx</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\deploy-alerts.mdx</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 03:13 - vault-central</strong> <span class="kind">code-change,verification</span> - Modernized Dashboard by adding a Bulk URL Import widget in the Advanced Settings panel. Stabilized the hover preview by implementing a native HTML5 video player fallback with Yo...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: gemini-2.0-flash Thinking: high Mode: code Permissions: bypass (network: Windows Local) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): replace_file_content, multi_replace_file_content, run_command, view_file MCP servers accessed (this reply): none Time: 2026-06-03 03:13 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Modernized Dashboard by adding a Bulk URL Import widget in the Advanced Settings panel. Stabilized the hover preview by implementing a native HTML5 video player fallback with YouTube-style segment-hopping when WebM preview generation is unavailable or blocked by CSP. Fixed TypeScript compilation errors including arithmetic operations on video duration union types and null/undefined values on video src attributes.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/components/VaultDashboard.tsx</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=c8b5a7d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 02:23 - vault-central</strong> <span class="kind">code-change,verification</span> - Locked dashboard theme to Warm mode, scaled typography for accessibility, modernized settings and pagination layout, and updated browser sync hover/active states.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: Gemini 1.5 Pro Thinking: high Mode: code Permissions: ask (network: local) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): replace_file_content, run_command, view_file MCP servers accessed (this reply): none Time: 2026-06-03 02:23 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Locked dashboard theme to Warm mode, scaled typography for accessibility, modernized settings and pagination layout, and updated browser sync hover/active states.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/components/VaultDashboard.tsx</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=c8b5a7d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 01:31 - vault-central</strong> <span class="kind">code-change,verification</span> - Fixed compilation error in VaultDashboard by changing displayItems playlist reference to items. Resolved WASM worker execution blockers in manifest.json CSP by explicitly adding...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: gemini-2.0-pro Thinking: high Mode: code Permissions: autopilot (network: local) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): replace_file_content, run_command, view_file MCP servers accessed (this reply): none Time: 2026-06-03 01:31 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed compilation error in VaultDashboard by changing displayItems playlist reference to items. Resolved WASM worker execution blockers in manifest.json CSP by explicitly adding blob: to script-src and adding worker-src &#39;self&#39; blob:; built the extension successfully and verified with Playwright test suite.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+        <li><code>npx playwright test</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/components/VaultDashboard.tsx</code></li>
+        <li><code>manifest.json</code></li>
+      </ul>
+      <p><strong>Plan:</strong> <code>C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md</code></p>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=c8b5a7d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 01:10 - vault-central</strong> <span class="kind">plan</span> - Prepared implementation plan for porting the custom HTML5 video player component from vault-explorer to vault-central, including seek canvas preview, playlist navigation, custom...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: gemini-2.0-flash Thinking: medium Mode: plan Permissions: ask (network: local) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): view_file, write_to_file, grep_search MCP servers accessed (this reply): none Time: 2026-06-03 01:10 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Prepared implementation plan for porting the custom HTML5 video player component from vault-explorer to vault-central, including seek canvas preview, playlist navigation, custom styled controls, and PiP/minimized states.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md</code></li>
+      </ul>
+      <p><strong>Plan:</strong> <code>C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md</code></p>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=c8b5a7d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 01:04 - Prom-King</strong> <span class="kind">verification</span> - Benchmarked IPoasis residential proxy for Prom-King qa-automation: checked proxy traffic before/after, ran 8 shallow SERP sessions across Google/DDG/Bing/Brave with SafeSearch o...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gpt-5 Thinking: unknown Mode: default Permissions: danger-full-access (network: enabled) CWD: C:\Users\Administrator\Desktop\Prom-King\qa-automation  Branch: main Tools used (this reply): shell_command, view_image, apply_patch MCP servers accessed (this reply): none Time: 2026-06-03 01:04 (TZ: Eastern Standard Time)</code></pre>
+      <p><strong>Telemetry:</strong></p>
+      <ul>
+        <li><strong>Flags:</strong> vw_state=@{interview=; estimate=; protocolsSelected=System.Object[]; resume=; routerCategories=System.Object[]; overlaysApplied=System.Object[]}, target_clicks_disabled=True, no_captcha_bypass=True, safesearch_off=True, search_human_like_behavior=False, own_domain_behavior_only=True</li>
+        <li><strong>Metrics:</strong> <code>{&quot;proxy_used_gb_before&quot;:0.095388991,&quot;proxy_used_gb_after&quot;:0.098884904,&quot;proxy_used_gb_delta&quot;:0.003495913,&quot;serp_sessions&quot;:8,&quot;serp_max_pages&quot;:2,&quot;serp_blocked_or_challenged&quot;:4,&quot;serp_ok_reported&quot;:4,&quot;serp_zero_results_extra...</code></li>
+      </ul>
+      <p class="summary"><strong>Summary:</strong> Benchmarked IPoasis residential proxy for Prom-King qa-automation: checked proxy traffic before/after, ran 8 shallow SERP sessions across Google/DDG/Bing/Brave with SafeSearch off and target clicks disabled, ran capped own-domain stealth crawl for prom-king.xyz and fullxxx.video, and patched SERP runner status classification for DDG challenge text and zero-result extraction states. No CAPTCHA/challenge bypass attempted and no secret values recorded.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>Invoke-RestMethod https://api.ipoasis.com/v1/plans with X-API-KEY from local key file (secret not logged)</code></li>
+        <li><code>curl.exe via SEARCH_PROXY_URLS for api.ipify.org, google generate_204, prom-king.xyz, fullxxx.video</code></li>
+        <li><code>npm run report:search-visibility with SEARCH_ENGINES=google,duckduckgo,bing,brave SEARCH_KEYWORDS=&quot;fullxxx video,fullxxx.video&quot; SEARCH_MAX_PAGES=2 SEARCH_CLICK_TARGETS=0</code></li>
+        <li><code>npm run report:own-domain-stealth with STEALTH_MAX_PAGES=20 STEALTH_MAX_DEPTH=4 resource blocking enabled</code></li>
+        <li><code>node -c scripts/run-search-visibility-report.mjs</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\qa-automation\scripts\run-search-visibility-report.mjs</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\qa-automation\test-results\search-visibility\20260603-005956\results.json</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\qa-automation\test-results\search-visibility\20260603-005956\summary.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\qa-automation\test-results\own-domain-stealth\20260603-010109\summary.json</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\qa-automation\test-results\own-domain-stealth\20260603-010109\prom-king.xyz\stealth-results.json</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\qa-automation\test-results\own-domain-stealth\20260603-010109\fullxxx.video\stealth-results.json</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=qa-automation, branch=main, head=e3b4c9f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 00:56 - vault-central</strong> <span class="kind">code-change,verification</span> - Stabilized FFmpeg media pipeline in Firefox sandboxed extension environment by replacing dynamic worker blob URL creation with a static worker file bundled and copied via Vite. ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: antigravity (role: main) Model: gemini-1.5-pro Thinking: high Mode: code Permissions: autopilot (network: local) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): replace_file_content, run_command, view_file MCP servers accessed (this reply): none Time: 2026-06-03 00:56 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Stabilized FFmpeg media pipeline in Firefox sandboxed extension environment by replacing dynamic worker blob URL creation with a static worker file bundled and copied via Vite. Updated CSP in manifest.json to allow connect-src data: and blob: and exposed worker/core files in web_accessible_resources. Passed static extension URLs from processor to sandbox instead of transferring core bytes. Verified with build and test passes.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+        <li><code>npm run test</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>manifest.json</code></li>
+        <li><code>vite.config.ts</code></li>
+        <li><code>vite.config.js</code></li>
+        <li><code>src/offscreen/processor.ts</code></li>
+        <li><code>src/offscreen/sandbox.ts</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=c8b5a7d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-03 00:07 - vault-central</strong> <span class="kind">code-change,general,verification</span> - Resolved PreviewThumb component syntax corruption in VaultDashboard.tsx. Re-synchronized submodules and fixed import paths targeting vaultwares-themes instead of vault-themes. A...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,general,verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-1.5-pro Thinking: high Mode: code Permissions: bypass (network: windows) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): view_file, replace_file_content, run_command, write_to_file MCP servers accessed (this reply): none Time: 2026-06-03 00:07 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Resolved PreviewThumb component syntax corruption in VaultDashboard.tsx. Re-synchronized submodules and fixed import paths targeting vaultwares-themes instead of vault-themes. Added DOM.Iterable to tsconfig.json compiler options to resolve NodeListOf iteration compilation errors. Fixed write encoding mismatch on Windows in generate-themes.py to resolve Vite/Rolldown build loader errors. Successfully compiled the extension build and ran all 13 unit tests without failures.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+        <li><code>npm run test</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/components/VaultDashboard.tsx</code></li>
+        <li><code>scripts/generate-themes.py</code></li>
+        <li><code>src/lib/vault-runtime.ts</code></li>
+        <li><code>tsconfig.json</code></li>
+        <li><code>vite.config.ts</code></li>
+        <li><code>vite.config.js</code></li>
+      </ul>
+      <p><strong>Plan:</strong> <code>C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md</code></p>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=c8b5a7d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-02 22:59 - vault-central</strong> <span class="kind">plan</span> - Created implementation plan to stabilize video capture and WebM preview generation, including focus/visibility faking, direct video wrapper, and sandbox FFmpeg integration.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: gemini-2.5-pro Thinking: high Mode: plan Permissions: ask (network: local) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main Tools used (this reply): write_to_file MCP servers accessed (this reply): none Time: 2026-06-02 22:59 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Created implementation plan to stabilize video capture and WebM preview generation, including focus/visibility faking, direct video wrapper, and sandbox FFmpeg integration.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md</code></li>
+      </ul>
+      <p><strong>Plan:</strong> <code>C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md</code></p>
+      <p><strong>Git:</strong> repo=vault-central, branch=main, head=c8b5a7d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-02 22:42 - vaultwares-docs</strong> <span class="kind">handoff</span> - Pushed remaining user-owned vaultwares-docs changes and checked deployments. Published vaultwares-docs commit f56c49d (Update ledger schema docs) after npm run build passed, the...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> handoff</p>
+      <p><strong>Actor:</strong> GPT-5.2 Codex</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: GPT-5.2 Codex (role: main) Model: gpt-5.2 Thinking: unknown Mode: agent Permissions: unknown (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): PowerShell, git, npm, SSH, curl MCP servers accessed (this reply): none Time: 2026-06-02 22:42 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Pushed remaining user-owned vaultwares-docs changes and checked deployments. Published vaultwares-docs commit f56c49d (Update ledger schema docs) after npm run build passed, then verified webhook deploy on greencloud-vps updated /var/www/vaultwares-docs/dist at 22:38. Investigated stale ledger.vaultwares.ca: agent-ledger sync task was running locally, but VPS deploy failed with TS7006 in site/src/pages/WorkImpactPage.tsx. Fixed and pushed agent-ledger commit add0a201, verified webhook deploy exit=0 and /var/www/ledger.vaultwares.ca updated at 22:41. Verified docs and ledger HTTPS 200 with clean TLS via 100.73.93.84, hooks health 200, vw-webhookd/vaultwares-hooks/deny-watch/token-expiry timers active, and current GH token smoke test authenticates as p-potvin.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npm run build</code></li>
+        <li><code>git commit -m &#39;Update ledger schema docs&#39;</code></li>
+        <li><code>git push origin main</code></li>
+        <li><code>ssh root@100.73.93.84 tail/grep /var/log/vw-webhookd.log</code></li>
+        <li><code>npm run build in agent-ledger/site</code></li>
+        <li><code>git commit -m &#39;Fix work impact build typing&#39;</code></li>
+        <li><code>git push origin main</code></li>
+        <li><code>curl.exe --resolve docs.vaultwares.ca:443:100.73.93.84</code></li>
+        <li><code>curl.exe --resolve ledger.vaultwares.ca:443:100.73.93.84</code></li>
+        <li><code>curl.exe https://hooks.vaultwares.ca/health</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-docs\\docs-content\\operations\\agent-ledger-schema.mdx</code></li>
+        <li><code>vaultwares-docs\\instructions\\summaries\\CODING_STANDARDS.md</code></li>
+        <li><code>vaultwares-docs\\src\\resources\\pageResourcesManifest.ts</code></li>
+        <li><code>agent-ledger\\site\\src\\pages\\WorkImpactPage.tsx</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-06-02 22:30 - vaultwares-docs</strong> <span class="kind">handoff</span> - Archived DNS troubleshooting chat and published the final docs update. Committed and pushed vaultwares-docs commit d1e8553 (Document tailnet DNS routing) to origin/main. The com...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> handoff</p>
       <p><strong>Actor:</strong> GPT-5.2 Codex</p>
@@ -7723,36 +8345,6 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-05-20 12:00 - vaultwares-realtime (formerly realtime-stt)</strong> <span class="kind">code-change</span> - Improve form accessibility and keyboard navigation in SettingsWindow: Used QLabel.setBuddy() and mnemonics (&amp;) for form labels next to comboboxes, spinboxes, and buttons in gui_...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: Claude Haiku Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-realtime  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-20 12:00 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Improve form accessibility and keyboard navigation in SettingsWindow: Used QLabel.setBuddy() and mnemonics (&amp;) for form labels next to comboboxes, spinboxes, and buttons in gui_overlay/overlay_window.py. Setting a buddy on a QLabel links it to an input field semantically, allowing screen readers to announce the label when the field is focused. Ampersand mnemonic adds quick Alt+Key navigation shortcuts.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>gui_overlay/overlay_window.py</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vaultwares-realtime, branch=main, head=unknown</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-20 12:00 - vaultwares-realtime</strong> <span class="kind">general</span> - Feature Registry Synchronization and PII Redaction Pipeline Proposal: Updated README.md features section with recent accomplishments (Fault-Tolerant Hardware Management, Multi-s...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> general</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: Claude Haiku Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-realtime  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-20 12:00 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Feature Registry Synchronization and PII Redaction Pipeline Proposal: Updated README.md features section with recent accomplishments (Fault-Tolerant Hardware Management, Multi-segment handling optimization, Dynamic Peak AGC). Proposing new security feature: Real-Time PII Redaction Pipeline. Aligns with VaultWares privacy-first philosophy, ensuring sensitive data like SSNs or credit cards aren&#39;t inadvertently broadcasted or logged during real-time transcription.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>README.md</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vaultwares-realtime, branch=main, head=unknown</p>
-    </div>
-  </details>
-  <details>
     <summary><strong>2026-05-20 11:54 - agent-ledger</strong> <span class="kind">handoff</span> - Committed appended event JSONs (no duplicates detected) and regenerated CHANGES/WORK_IMPACT; pushed to main.</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> handoff</p>
@@ -8156,866 +8748,6 @@
         <li><code>vaultwares-realtime/.git</code></li>
       </ul>
       <p><strong>Git:</strong> repo=vaultwares-media-processing, branch=main, head=9228e6f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-20 02:48 - vaultwares-adk</strong> <span class="kind">code-change</span> - Scaffolded Columbo agent (codebase forensics &amp; recipe extraction) in vaultwares-adk. Created columbo.agent.md (81 lines &#226;€” personality definition with YAML frontmatter, 5-tier ...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk  Branch: feat/columbo-agent Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-20 02:48 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Scaffolded Columbo agent (codebase forensics &amp; recipe extraction) in vaultwares-adk. Created columbo.agent.md (81 lines &#226;€” personality definition with YAML frontmatter, 5-tier audit taxonomy, 9-phase lifecycle, HITL protocol, Columbo detective personality, relates to Cheddar Bob and WorkflowAgent). Created columbo.py (672 lines &#226;€” ColumboAgent class inheriting ExtrovertAgent with full pipeline: _audit_inputs with filesystem checks and confidence scoring, _blind_pass reading README/test-names/dir-structure without opening code, _sighted_pass walking source tree and flagging contradictions, _gap_map building priority-sorted interview queue, _interview with HITL placeholders, _compose_recipe writing intent.md/port.yaml/interview.md/revisions.md and scaffolding ux/domain/assets/tests dirs, _round_trip_verify placeholder, _handoff with final report; CLI entry point via argparse). Created 3 SVG icons (magnifying-glass, recipe-book, audit-shield) in assets/columbo/. Updated docs/AGENT_MANIFEST.md with Columbo entry under new Forensics &amp; Extraction section. Pushed to feat/columbo-agent branch, PR #9 opened at github.com/p-potvin/vaultwares-adk/pull/9. Next: test run against vaultwares-themes beachhead (task #2 pending).</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git checkout -b feat/columbo-agent</code></li>
-        <li><code>git add columbo.agent.md columbo.py assets/columbo/*.svg docs/AGENT_MANIFEST.md</code></li>
-        <li><code>git commit</code></li>
-        <li><code>git push -u origin feat/columbo-agent</code></li>
-        <li><code>gh pr create</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\columbo.agent.md</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\columbo.py</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\assets\columbo\magnifying-glass.svg</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\assets\columbo\recipe-book.svg</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\assets\columbo\audit-shield.svg</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\docs\AGENT_MANIFEST.md</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vaultwares-adk, branch=feat/columbo-agent, head=0e51e67</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-20 02:28 - vw-jira-sync</strong> <span class="kind">code-change</span> - Wired jira-sync runbook into agent routing chain. (1) KNOWLEDGE_SCOUT.md: new row warning that renaming a GitHub repo without vw-jira-sync updates creates duplicate Jira issues;...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-20 02:28 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Wired jira-sync runbook into agent routing chain. (1) KNOWLEDGE_SCOUT.md: new row warning that renaming a GitHub repo without vw-jira-sync updates creates duplicate Jira issues; links to operations/jira-sync.mdx. (2) New RENAMING protocol (summaries + notes): 6-step procedure, do/don&#39;t rules, done criteria; added to ROUTER.md table with keywords &#39;rename,github rename,repo rename,jira rename&#39;. (3) vw-jira-sync/AGENTS.md: appended key agent facts section &#226;€” rename procedure, adding repos, secrets, mapping file invariant. Committed 139c251 (vaultwares-docs) and 5f0025e (vw-jira-sync).</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git commit 139c251 vaultwares-docs</code></li>
-        <li><code>git commit 5f0025e vw-jira-sync</code></li>
-        <li><code>git push origin main (both)</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>vaultwares-docs/KNOWLEDGE_SCOUT.md</code></li>
-        <li><code>vaultwares-docs/instructions/ROUTER.md</code></li>
-        <li><code>vaultwares-docs/instructions/summaries/RENAMING.md</code></li>
-        <li><code>vaultwares-docs/instructions/notes/RENAMING.md</code></li>
-        <li><code>vw-jira-sync/AGENTS.md</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vw-jira-sync, branch=main, head=5f0025e</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-20 01:48 - vaultwares-adk</strong> <span class="kind">plan</span> - Started vault-port (working name) agent scaffolding in vaultwares-adk. Pivot: vaultwares-adk is VaultWares&#39;s own Python multi-agent framework (Redis-based, ExtrovertAgent/Lonely...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-20 01:48 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Started vault-port (working name) agent scaffolding in vaultwares-adk. Pivot: vaultwares-adk is VaultWares&#39;s own Python multi-agent framework (Redis-based, ExtrovertAgent/LonelyManager bases, formerly agentciation), NOT Botpress&#39;s TypeScript ADK &#226;€” the Botpress adk skill loaded earlier is not applicable. Learned conventions from README + docs/GUIDELINES.md + cheddar_bob.agent.md + agents/image_agent.py: two-file pattern (definitions/&lt;name&gt;.md with YAML frontmatter + agents/&lt;name&gt;_agent.py inheriting ExtrovertAgent, AGENT_TYPE, SKILLS, _perform_task dispatcher, _publish_result to Redis); style is personality-over-role with creative names, must relate to existing agent, numbered lifecycle. Located vaultwares-themes (beachhead &#226;€” has assets/, brand/, components/, theme-manager/, vaultwares_themes/, colors_and_type.css, qt_exporter.py, theme_manager.py, PQC_PROTOCOL_IMPLEMENTATION.md). Proposed: agent name options (Distiller/Reduction/Cartographer/Marlowe/vault-port plain) leaning Distiller; 9-step lifecycle (wake/audit/blind-pass/sighted-pass/gap-map/interview/compose/round-trip/handoff); monolithic v1 (handler-per-phase via _perform_task) vs team-from-day-one (Auditor/Surveyor/Reader/Interrogator/Composer/Verifier), leaning monolithic v1; relates to Cheddar Bob (intent vs pixel) and WorkflowAgent (higher altitude extraction). Tasks created: #1 Learn framework (completed), #2 Inventory vaultwares-themes (pending), #3 Scaffold vault-port agent (pending). Awaiting user pick on name and architecture before scaffolding.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>Get-ChildItem vault*</code></li>
-        <li><code>Read vaultwares-adk/README.md</code></li>
-        <li><code>Read vaultwares-adk/docs/GUIDELINES.md</code></li>
-        <li><code>Read vaultwares-adk/docs/cheddar_bob.agent.md</code></li>
-        <li><code>Read vaultwares-adk/agents/image_agent.py</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\README.md</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\docs\GUIDELINES.md</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\docs\cheddar_bob.agent.md</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-adk\agents\image_agent.py</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-20 01:42 - vaultwares-docs</strong> <span class="kind">code-change</span> - Created docs-content/operations/jira-sync.mdx: full runbook for GitHub&#226;†’Jira sync. Covers architecture, 41-project map, issue label scheme, PR status mapping, secrets, adding r...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> claude-sonnet-4-5</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: claude-sonnet-4-5 (role: main) Model: claude-sonnet-4-5 Thinking: unknown Mode: agent Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-20 01:42 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Created docs-content/operations/jira-sync.mdx: full runbook for GitHub&#226;†’Jira sync. Covers architecture, 41-project map, issue label scheme, PR status mapping, secrets, adding repos/orgs, repo rename procedure (tested i-dub-thee&#226;†’vaultwares-asttro), backfill/deploy CLI reference, troubleshooting. Added operations/jira-sync to docs.json nav. Committed 39a4f14, pushed to main.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git add docs-content/operations/jira-sync.mdx docs.json</code></li>
-        <li><code>git commit -m &#39;docs(ops): add GitHub&#226;†’Jira sync runbook&#39;</code></li>
-        <li><code>git push origin main</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>docs-content/operations/jira-sync.mdx</code></li>
-        <li><code>docs.json</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=39a4f14</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-20 01:06 - vw-jira-sync</strong> <span class="kind">code-change</span> - Added Prom-King org support. 4 new projects: PKLS/PKPRE/PKQA/PKTS. Added repo_owners config map for multi-org GitHub owner routing. Updated backfill.py, create_projects.py, depl...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-20 01:06 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Added Prom-King org support. 4 new projects: PKLS/PKPRE/PKQA/PKTS. Added repo_owners config map for multi-org GitHub owner routing. Updated backfill.py, create_projects.py, deploy_caller_workflows.py to use repo_owner() helper. Secrets distributed and caller workflows deployed to all 4 PK repos. Backfills running in background.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>python scripts/create_projects.py --repo link-sharing ... (4/4 created)</code></li>
-        <li><code>python scripts/deploy_caller_workflows.py --strategy main --repo link-sharing ... (4/4)</code></li>
-        <li><code>git push origin main (commit 18e3f9b)</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>config.yaml</code></li>
-        <li><code>scripts/backfill.py</code></li>
-        <li><code>scripts/create_projects.py</code></li>
-        <li><code>scripts/deploy_caller_workflows.py</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vw-jira-sync, branch=main, head=18e3f9b</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-20 00:40 - vaultwares-docs</strong> <span class="kind">code-change</span> - Adjusted router semantics so the ROUTER routine runs first, then other routines only when relevant, then selected summaries are opened; updated vaultwares-docs AGENTS.md stub ac...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-20 00:40 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Adjusted router semantics so the ROUTER routine runs first, then other routines only when relevant, then selected summaries are opened; updated vaultwares-docs AGENTS.md stub accordingly; re-applied repo-wide pre-instructions to propagate the updated wording; ran sync-global-instructions.ps1.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>powershell -File scripts\\apply-preinstructions-to-repos.ps1</code></li>
-        <li><code>powershell -File scripts\\sync-global-instructions.ps1</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\ROUTER.md</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\AGENTS.md</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\templates\AGENTS.stub.md</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=a73261d</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-20 00:21 - vaultwares-docs</strong> <span class="kind">code-change</span> - Implemented routines-first assistant protocol TOC: added instructions/ROUTER.md plus 25 protocol summaries and notes; added HANDLING_BUGS and NETWORK_INFRASTRUCTURE protocols; p...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-20 00:21 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Implemented routines-first assistant protocol TOC: added instructions/ROUTER.md plus 25 protocol summaries and notes; added HANDLING_BUGS and NETWORK_INFRASTRUCTURE protocols; pointed BRAND_TOKENS_UI to the updated vaultwares-themes design system; generated docs-content mirror pages under docs-content/ai-tools/assistant-protocols and wired navigation; replaced vaultwares-docs AGENTS.md and CLAUDE.md with minimal pre-instructions; added scripts to generate mirrors, validate, and apply pre-instructions; applied/created minimal AGENTS.md + CLAUDE.md across all repos under C:\\Users\\Administrator\\Desktop\\Github Repos with backups stored under vaultwares-docs\\instructions\\legacy; ran npm run build and sync-global-instructions.ps1.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>node scripts\\generate-assistant-protocol-mirrors.mjs</code></li>
-        <li><code>powershell -File scripts\\apply-preinstructions-to-repos.ps1</code></li>
-        <li><code>npm run build</code></li>
-        <li><code>powershell -File scripts\\sync-global-instructions.ps1</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\ROUTER.md</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\HANDLING_BUGS.md</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\instructions\summaries\NETWORK_INFRASTRUCTURE.md</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\scripts\apply-preinstructions-to-repos.ps1</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\scripts\generate-assistant-protocol-mirrors.mjs</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\ai-tools\assistant-protocols\index.mdx</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vaultwares-docs, branch=main, head=a73261d</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-20 00:19 - vw-jira-sync</strong> <span class="kind">code-change</span> - Restructured Jira integration from 1 project (VW) with Epics to 37 per-repo projects (Option A). Created create_projects.py script; updated config.yaml with repo_project_keys; r...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-20 00:19 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Restructured Jira integration from 1 project (VW) with Epics to 37 per-repo projects (Option A). Created create_projects.py script; updated config.yaml with repo_project_keys; rewrote backfill.py and live_sync.py to remove Epic layer and route each repo to its own Jira project. All 37 projects created (AGMK through NEMO). Full re-backfill running in background.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>python scripts/create_projects.py  # 37/37 created</code></li>
-        <li><code>git push origin main (commit 7252e67)</code></li>
-        <li><code>python scripts/backfill.py  # running in background</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>config.yaml</code></li>
-        <li><code>scripts/create_projects.py</code></li>
-        <li><code>scripts/backfill.py</code></li>
-        <li><code>scripts/live_sync.py</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vw-jira-sync, branch=main, head=7252e67</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-19 22:16 - General Tasks</strong> <span class="kind">code-change</span> - Full workspace local cleanup across all repos: (1) Deleted Vercel artifacts: vercel.json, .vercelignore, .vercel/ from vaultwares-docs, vaultwares-website, agent-ledger, vaultwa...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> claude-code</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: claude-code (role: main) Model: claude-opus-4-5 Thinking: unknown Mode: agent Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\weekly-menu  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-19 22:16 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Full workspace local cleanup across all repos: (1) Deleted Vercel artifacts: vercel.json, .vercelignore, .vercel/ from vaultwares-docs, vaultwares-website, agent-ledger, vaultwares-glass, vault-flows. (2) Deleted PyInstaller .spec files from vaultwares-pipelines, vaultwares-realtime, vaultwares-media-processing. (3) Fixed .gitmodules in 18 repos: vault-themes&#226;†’vaultwares-themes, vaultwares-agentciation&#226;†’vaultwares-adk, vaultwares_adk path&#226;†’vaultwares-adk. (4) Renamed stale submodule checkout dirs to match new names across all repos. (5) Bulk sed replacement in root .md files: vault-themes&#226;†’vaultwares-themes, vaultwares-agentciation&#226;†’vaultwares-adk, vault-video-enhancer&#226;†’vaultwares-media-processing. Skipped CHANGES.md (historical). (6) Committed and pushed all changes directly to main (vault-* and utility repos) or to feature/phase5-sync branches (vaultwares-realtime, vaultwares-media-processing). Final check: zero old dirs, zero vercel files, zero spec files, zero old names in root .md files.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>sed -i &#39;s/vault-themes/vaultwares-themes/g; s/vaultwares-agentciation/vaultwares-adk/g&#39; .gitmodules</code></li>
-        <li><code>git rm --cached vault-themes vaultwares-agentciation &amp;&amp; mv vault-themes vaultwares-themes</code></li>
-        <li><code>git submodule sync</code></li>
-        <li><code>find . -maxdepth 1 -name &#39;*.md&#39; | xargs sed -i &#39;s/vault-themes/vaultwares-themes/g&#39;</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>.gitmodules</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=weekly-menu, branch=main, head=86c0849</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-19 21:01 - vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing</strong> <span class="kind">code-change</span> - Python dash-vs-underscore import fix: (1) vaultwares-themes: created vaultwares_themes/__init__.py importlib shim (loads theme_manager + qt_exporter, exposes VaultTheme/VaultThe...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> claude-code</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: claude-code (role: main) Model: claude-opus-4-5 Thinking: unknown Mode: agent Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-media-processing  Branch: feature/phase5-sync Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-19 21:01 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Python dash-vs-underscore import fix: (1) vaultwares-themes: created vaultwares_themes/__init__.py importlib shim (loads theme_manager + qt_exporter, exposes VaultTheme/VaultThemeManager/QtThemeExporter), added pyproject.toml, fixed .gitignore (removed __init__.* pattern that was suppressing __init__.py). (2) vaultwares-adk: added pyproject.toml, fixed shim _MODULES list (added agent_ledger before extrovert_agent), fixed dual sys.modules registration to support both absolute and relative imports. Both pushed to main. (3) vaultwares-realtime + vaultwares-media-processing: large PyInstaller build/dist artifacts (1.6GB .exe/.pyz) were blocking push; created clean feature/phase5-sync branches from origin/main, generated diffs excluding build/dist, applied and committed, pushed, created PRs #62 and #15. Convention: dashed checkout dirs stay as-is, consumers do sys.path.insert(0, &#39;vaultwares-themes&#39;) then from vaultwares_themes import ...</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git add vaultwares_themes/ pyproject.toml .gitignore &amp;&amp; git commit &amp;&amp; git push origin main</code></li>
-        <li><code>git diff HEAD..main -- . &#39;:(exclude)build&#39; &#39;:(exclude)dist&#39; &gt; /tmp/clean.patch</code></li>
-        <li><code>git checkout -b feature/phase5-sync origin/main &amp;&amp; git apply clean.patch &amp;&amp; git commit &amp;&amp; git push</code></li>
-        <li><code>gh api repos/p-potvin/vaultwares-media-processing/pulls --method POST ...</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>vaultwares-themes/vaultwares_themes/__init__.py</code></li>
-        <li><code>vaultwares-themes/pyproject.toml</code></li>
-        <li><code>vaultwares-themes/.gitignore</code></li>
-        <li><code>vaultwares-adk/vaultwares_adk/__init__.py</code></li>
-        <li><code>vaultwares-adk/pyproject.toml</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vaultwares-media-processing, branch=feature/phase5-sync, head=ba8d70e</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-19 17:18 - VaultWares &#226;€” System Verification &amp; Maintenance Complete</strong> <span class="kind">verification</span> - Comprehensive system verification completed successfully: (1) PowerShell scripts validated - all 16 scripts in ~/desktop/pwsh/ have correct paths; (2) All 40+ repos pulled succe...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> verification</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-19 17:18 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Comprehensive system verification completed successfully: (1) PowerShell scripts validated - all 16 scripts in ~/desktop/pwsh/ have correct paths; (2) All 40+ repos pulled successfully (33 up-to-date, 7 fast-forward, 1 branch conflict expected); (3) Full rebuild executed - 19 successful builds (vault-guardian, wander, vaultwares-cli, and 16 others), 3 failures (vault-explorer, no-more-groceries, vaultwares-decompile due to Electron build issues), 2 failures (vaultwares-realtime, vaultwares-media-processing due to PyInstaller missing from LFS issue - expected); (4) 25 application shortcuts verified and present in ~/desktop/VaultWares Applications/; (5) Icon transparency fix completed - processed 20 SVG files and 20 ICO files, removed all white backgrounds and made them transparent. System is fully operational and unblocked.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>Validate-PowerShell-Scripts</code></li>
-        <li><code>Pull-All-Repos</code></li>
-        <li><code>Rebuild-All-VaultWares</code></li>
-        <li><code>Process-Icons-Transparent</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>20 SVG icons (transparent)</code></li>
-        <li><code>20 ICO icons (transparent)</code></li>
-        <li><code>25 shortcuts (verified)</code></li>
-        <li><code>40+ repos (synced)</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-19 12:00 - vaultwares-realtime</strong> <span class="kind">code-change</span> - Improve UX of settings spinboxes and drag handle: Added pt and px suffixes to size spinboxes (size_spin and outline_width_spin) and added tooltip and accessible name to invisibl...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: Claude Haiku Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-realtime  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-19 12:00 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Improve UX of settings spinboxes and drag handle: Added pt and px suffixes to size spinboxes (size_spin and outline_width_spin) and added tooltip and accessible name to invisible drag handle in SubtitleWindow. Unit suffixes provide immediate visual context without requiring external labels. Tooltips and accessible names improve discoverability for screen readers.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>gui_overlay/overlay_window.py</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vaultwares-realtime, branch=main, head=unknown</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-19 12:00 - vaultwares-realtime</strong> <span class="kind">code-change</span> - Clarify documentation for the rolling caption display logic: Consolidated and reworded the two-line comment in update_caption within gui_overlay/overlay_window.py. Changed from ...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: Claude Haiku Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-realtime  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-19 12:00 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Clarify documentation for the rolling caption display logic: Consolidated and reworded the two-line comment in update_caption within gui_overlay/overlay_window.py. Changed from implying an actionable TODO to describing intentional feature: Rolling 2-line display prevents visual duplication by ensuring a stable top-to-bottom flow.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>gui_overlay/overlay_window.py</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vaultwares-realtime, branch=main, head=unknown</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 23:56 - link-sharing</strong> <span class="kind">verification</span> - Prepared the production environment on the GreenCloud VPS (100.73.93.84) to host the link-sharing service. Installed PostgreSQL 15, Node.js 22 LTS, and enabled Corepack (pnpm v1...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> verification</p>
-      <p><strong>Actor:</strong> Antigravity</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: Antigravity (role: main) Model: Gemini 3 Flash Thinking: true Mode: build Permissions: danger-full-access (network: online) CWD: C:\Users\Administrator\Desktop\business\link-sharing  Branch: main Tools used (this reply): run_command, write_to_file MCP servers accessed (this reply): none Time: 2026-05-18 23:56 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Prepared the production environment on the GreenCloud VPS (100.73.93.84) to host the link-sharing service. Installed PostgreSQL 15, Node.js 22 LTS, and enabled Corepack (pnpm v11.1.3). Configured Nginx proxy routing, systemd service unit rules, unprivileged deployment user keys, sudoers restart permissions, and added webhook targets to vw-deployd. Generated a deploy key for GitHub integration.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>apt install postgresql</code></li>
-        <li><code>apt install nodejs</code></li>
-        <li><code>ssh-keygen</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>/var/www/deploy-scripts/deploy-link-sharing.sh</code></li>
-        <li><code>/etc/nginx/sites-available/link-sharing.conf</code></li>
-        <li><code>/etc/systemd/system/prom-king-links.service</code></li>
-        <li><code>/etc/vw-deployd/config.yml</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=link-sharing, branch=main, head=bd85998</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 23:51 - link-sharing</strong> <span class="kind">code-change</span> - Created production deployment configs and deployment bash script (deploy.sh, link-sharing.service, nginx.conf) in scripts/ directory for the link-sharing service on GreenCloud V...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> Antigravity</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: Antigravity (role: main) Model: Gemini 3 Flash Thinking: true Mode: build Permissions: danger-full-access (network: online) CWD: C:\Users\Administrator\Desktop\business\link-sharing  Branch: main Tools used (this reply): write_to_file, run_command, list_dir, view_file MCP servers accessed (this reply): none Time: 2026-05-18 23:51 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Created production deployment configs and deployment bash script (deploy.sh, link-sharing.service, nginx.conf) in scripts/ directory for the link-sharing service on GreenCloud VPS. Verified compile stability via local pnpm build which completed with zero errors for all workspace modules (client and server).</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>pnpm build</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>scripts/deploy.sh</code></li>
-        <li><code>scripts/link-sharing.service</code></li>
-        <li><code>scripts/nginx.conf</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=link-sharing, branch=main, head=bd85998</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 20:23 - VaultWares &#226;€” Post-Refactoring Cleanup &amp; Infrastructure Verification</strong> <span class="kind">verification</span> - CLAUDE.md updated: replaced all vault-themes references with vaultwares-themes, vaultwares-agentciation with vaultwares-adk, removed misleading empty lines. Documentation audit:...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> verification</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 20:23 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> CLAUDE.md updated: replaced all vault-themes references with vaultwares-themes, vaultwares-agentciation with vaultwares-adk, removed misleading empty lines. Documentation audit: zero old project references in docs-content; all clean. CI/CD audit: confirmed no Vercel presence, no GitHub runners with direct SSH deployment capabilities; webhook-only self-hosted runner model verified. Business folder move: not found locally (user stated &#39;no worries&#39;). LFS issue root-caused in vaultwares-realtime/media-processing: large build artifacts (1.6GB+ binaries) incorrectly committed to git; proper .gitignore in place but historical objects remain in pack database. System resource timeouts encountered during final LFS cleanup; pending system stability for git gc and force push. Refactoring 99% complete pending LFS resolution and system recovery.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>Search-old-references</code></li>
-        <li><code>Audit-ci-cd-workflows</code></li>
-        <li><code>Verify-github-actions</code></li>
-        <li><code>Record-completion</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>CLAUDE.md (updated)</code></li>
-        <li><code>vaultwares-docs (clean)</code></li>
-        <li><code>GitHub workflows (clean)</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 20:01 - vault-explorer</strong> <span class="kind">code-change</span> - Fully implemented 5-minute background preview generation queue scheduler, paste action with pasteFiles IPC integration, zip-selection IPC integration for compressed archives, co...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> Antigravity</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: Antigravity (role: main) Model: gemini-1.5-pro Thinking: true Mode: agent Permissions: full (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): write_to_file, run_command, replace_file_content, view_file MCP servers accessed (this reply): none Time: 2026-05-18 20:01 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Fully implemented 5-minute background preview generation queue scheduler, paste action with pasteFiles IPC integration, zip-selection IPC integration for compressed archives, confirm dialog and deleteItem IPC integration for permanent deletes, dynamic glassmorphic Properties dialog triggered by context menu or Alt+Enter, F5 key binding for refresh, Escape key binding for back folder transition, arrow keys card focus navigation, and custom clipboard notification toast. Swapped sort-order select element for a robust up/down chevron icon-only sorting button.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>index.html</code></li>
-        <li><code>main.js</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=c15224e</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 19:58 - vault-explorer</strong> <span class="kind">plan</span> - Created implementation plan to address titlebar overlaps, remove fake terminology, bind keys (Esc, F5, Arrow key file focus), implement 5-minute background FFMPEG generation idl...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> Antigravity</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: Antigravity (role: main) Model: Gemini 3 Flash Thinking: false Mode: agent Permissions: full (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): write_to_file MCP servers accessed (this reply): none Time: 2026-05-18 19:58 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Created implementation plan to address titlebar overlaps, remove fake terminology, bind keys (Esc, F5, Arrow key file focus), implement 5-minute background FFMPEG generation idle time, toast feedbacks, paste/cut/copy/zip context options, dimensions/size badges, smart folder size caching with Everything fallback, and fix symbolic link deletion.</p>
-      <p><strong>Plan:</strong> <code>C:\Users\Administrator\.gemini\antigravity\brain\217b4911-f632-48d5-832c-8e83f0787a69\implementation_plan.md</code></p>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=c15224e</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 17:50 - VaultWares &#226;€” Project Rename Refactoring (Phase 5 PR Workflow)</strong> <span class="kind">verification</span> - PR workflow transition initiated. 11 of 13 repos successfully pushed to main via batch sync (weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-pl...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> verification</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 17:50 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> PR workflow transition initiated. 11 of 13 repos successfully pushed to main via batch sync (weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-player, vaultwares-cli, vaultwares-template, windows-customizer, i-dub-thee, vaultwares-studio). vaultwares-realtime and vaultwares-media-processing require PR workflow instead of direct push: created feature branches (feature/rename-to-vaultwares-realtime, feature/rename-to-vaultwares-media-processing) with cherry-picked commits (c93337d, 7b849b0) from reflog. Attempted commits and pushes timeout at system level; appears to be local resource constraint requiring investigation. Status: awaiting system stability to complete PR creation and merge.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git checkout -b feature/rename-*</code></li>
-        <li><code>git cherry-pick &lt;commit&gt;</code></li>
-        <li><code>git add -A &amp;&amp; git commit</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>vaultwares-realtime/.git</code></li>
-        <li><code>vaultwares-media-processing/.git</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 17:41 - vw-jira-sync</strong> <span class="kind">verification</span> - GitHub Actions live sync workflow now operational on all 37 repos. Fixed startup_failure by removing restrictive permissions block. Fixed Jira 401 by re-distributing JIRA_TOKEN....</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> verification</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 17:41 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> GitHub Actions live sync workflow now operational on all 37 repos. Fixed startup_failure by removing restrictive permissions block. Fixed Jira 401 by re-distributing JIRA_TOKEN. Verified working on vault-flows. All 37 repos now execute workflows successfully.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>Removed permissions block from .github/workflows/sync.yml (commit ada569e)</code></li>
-        <li><code>Re-distributed JIRA_TOKEN to all 37 repos via distribute_secrets.py (37/37 success)</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>.github/workflows/sync.yml</code></li>
-        <li><code>scripts/distribute_secrets.py</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vw-jira-sync, branch=main, head=ada569e</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 17:09 - VaultWares &#226;€” Project Rename Refactoring (Phase 5)</strong> <span class="kind">verification</span> - Phase 5 completion: Successfully rebased and pushed 11 of 13 directly-affected repos. Weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-player, v...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> verification</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 17:09 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Phase 5 completion: Successfully rebased and pushed 11 of 13 directly-affected repos. Weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-player, vaultwares-cli, vaultwares-template, windows-customizer, i-dub-thee all synced with pull/rebase/push cycle; vaultwares-studio and vaultwares-pipelines from prior work. vaultwares-realtime and vaultwares-media-processing encountered HTTP 500 errors on GitHub API (network/server issue); commits are staged locally but push is blocked. Fixed vaultwares-cli remote misconfiguration (renamed &#39;vaultwares-cli&#39; to &#39;origin&#39;). Batch script successfully resolved rebase conflicts with --ours strategy. All Phase 5 synchronization logic complete except final push of 2 repos pending GitHub recovery.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git pull &amp;&amp; git rebase origin/main &amp;&amp; git push origin main (10 repos bulk)</code></li>
-        <li><code>git remote rename vaultwares-cli origin &amp;&amp; git push (vaultwares-cli fix)</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>weekly-menu/.git</code></li>
-        <li><code>debrid-media-manager/.git</code></li>
-        <li><code>auto-backup/.git</code></li>
-        <li><code>vault-central/.git</code></li>
-        <li><code>vault-flows/.git</code></li>
-        <li><code>vault-player/.git</code></li>
-        <li><code>vaultwares-cli/.git</code></li>
-        <li><code>vaultwares-template/.git</code></li>
-        <li><code>windows-customizer/.git</code></li>
-        <li><code>i-dub-thee/.git</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 17:05 - vw-jira-sync</strong> <span class="kind">code-change</span> - Fixed GitHub Actions workflow startup_failure affecting 35/37 repos. Root cause: restrictive permissions block in reusable workflow prevented job creation. Removed permissions b...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 17:05 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Fixed GitHub Actions workflow startup_failure affecting 35/37 repos. Root cause: restrictive permissions block in reusable workflow prevented job creation. Removed permissions block from sync.yml; all 37 repos now execute (previously 35 got startup_failure, 2 ran but hit Jira 401). Second issue: Jira 401 auth error in Actions environment &#226;€” token likely corrupted during gh secret set distribution. Re-distributed JIRA_TOKEN to vault-flows as test.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>Edit .github/workflows/sync.yml: removed restrictive permissions block</code></li>
-        <li><code>git push to vw-jira-sync main (commit ada569e)</code></li>
-        <li><code>Re-ran vault-flows workflow: now shows failure (not startup_failure)</code></li>
-        <li><code>Re-distributed JIRA_TOKEN to vault-flows using gh secret set</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>.github/workflows/sync.yml</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vw-jira-sync, branch=main, head=ada569e</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 16:55 - vaultwares-website</strong> <span class="kind">code-change</span> - Phase 5 per-repo sync: vaultwares-realtime (c93337d), vaultwares-studio (34a0266), vaultwares-media-processing (7b849b0 w/rebase conflicts), vaultwares-pipelines (8c0099c). All ...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 16:55 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Phase 5 per-repo sync: vaultwares-realtime (c93337d), vaultwares-studio (34a0266), vaultwares-media-processing (7b849b0 w/rebase conflicts), vaultwares-pipelines (8c0099c). All completed: submodule renames (vault-themes&#226;†’vaultwares-themes, vaultwares_agentciation&#226;†’vaultwares_adk), Python pkg renames where applicable, Phase 3 cross-repo updates, pull --rebase, push. Remaining: realtime 2nd push retry (HTTP 500 on first attempt), media-processing push status check, then remaining cross-repo-only repos (weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-player, vaultwares-cli, vaultwares-template, windows-customizer, i-dub-thee).</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git pull --rebase origin main</code></li>
-        <li><code>git push origin main</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>vaultwares-realtime</code></li>
-        <li><code>vaultwares-studio</code></li>
-        <li><code>vaultwares-media-processing</code></li>
-        <li><code>vaultwares-pipelines</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vaultwares-pipelines, branch=main, head=8c0099c</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 13:30 - vault-explorer</strong> <span class="kind">verification</span> - Finished entire Vault Explorer refactoring checklist, including: (1) 10-part WebM preview stitching with audio using FFmpeg; (2) Background conversion of legacy MP4 previews to ...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> verification</p>
-      <p><strong>Actor:</strong> Antigravity</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: Antigravity (role: main) Model: Gemini-1.5-Pro Thinking: true Mode: agent Permissions: full (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): browser_subagent, run_command, write_to_file MCP servers accessed (this reply): none Time: 2026-05-18 13:30 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Finished entire Vault Explorer refactoring checklist, including: (1) 10-part WebM preview stitching with audio using FFmpeg; (2) Background conversion of legacy MP4 previews to WebM; (3) Exclusions glob settings panel in index.html with interactive success toasts; (4) Native symbolic folders deletion fix in Node backend; (5) Multi-agent benchmark tracking in BENCHMARKS.md; (6) 14 sleek light/dark themes fully exported; (7) Verified entire system with a visual subagent including toasts, theme picking, and bilingual toggle.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>node C:\Users\Administrator\.gemini\antigravity\brain\217b4911-f632-48d5-832c-8e83f0787a69\scratch\patch-settings-robust.js</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>index.html</code></li>
-        <li><code>main.js</code></li>
-        <li><code>preload.js</code></li>
-        <li><code>themes.css</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=94d195f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 13:23 - vault-explorer</strong> <span class="kind">code-change</span> - Revamped complete UI style system with 14 new themes matching vault-themes UI Kit guidelines, removed old dark-focused styles and glassmorphism, injected high-performance custom...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> Antigravity</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: Antigravity (role: sub-agent) Model: Gemini-1.5-Pro Thinking: true Mode: agent Permissions: full (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): replace_file_content, view_file MCP servers accessed (this reply): none Time: 2026-05-18 13:23 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Revamped complete UI style system with 14 new themes matching vault-themes UI Kit guidelines, removed old dark-focused styles and glassmorphism, injected high-performance custom inline style blocks, updated Titlebar with premium VaultWares SVG logo and custom interactive bilingual EN/QC language switch, and fully localized the application UI labels and dynamic text states.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>index.html</code></li>
-        <li><code>TASKS.md</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=94d195f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 13:19 - vault-explorer</strong> <span class="kind">plan</span> - Completed Phase 2 Manager Initialization. Started Redis at localhost:6379, instantiated worker-1 (Executor) and worker-2 (Executor) for concurrent Phase 3 execution rounds.</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> Antigravity</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: Antigravity (role: main) Model: gemini-2.5-pro Thinking: true Mode: chat Permissions: full (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): run_command MCP servers accessed (this reply): none Time: 2026-05-18 13:19 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Completed Phase 2 Manager Initialization. Started Redis at localhost:6379, instantiated worker-1 (Executor) and worker-2 (Executor) for concurrent Phase 3 execution rounds.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>index.html</code></li>
-        <li><code>main.js</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=94d195f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 13:08 - vault-explorer</strong> <span class="kind">plan</span> - Completed Phase 1 Socratic Interview. Outlining full project scope for solid UI kit revamp, dynamic sequential WebM generation queue with 2 threads, bilingual support, glob excl...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> Antigravity</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: Antigravity (role: main) Model: gemini-2.5-pro Thinking: true Mode: chat Permissions: full (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): run_command MCP servers accessed (this reply): none Time: 2026-05-18 13:08 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Completed Phase 1 Socratic Interview. Outlining full project scope for solid UI kit revamp, dynamic sequential WebM generation queue with 2 threads, bilingual support, glob exclusions, and symlink deletion fix.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>index.html</code></li>
-        <li><code>main.js</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=94d195f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 13:04 - vault-explorer</strong> <span class="kind">plan</span> - Proceeding with Phase 1 Socratic Interview. Discussing background thumbnail processing queue speed and OS process priority mapping.</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> Antigravity</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: Antigravity (role: main) Model: gemini-2.5-pro Thinking: true Mode: chat Permissions: full (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): run_command MCP servers accessed (this reply): none Time: 2026-05-18 13:04 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Proceeding with Phase 1 Socratic Interview. Discussing background thumbnail processing queue speed and OS process priority mapping.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>main.js</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=94d195f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 12:28 - vault-explorer</strong> <span class="kind">plan</span> - Initiated Stephane Bellavance workflow, explained the multi-agent flow protocol, mapped the architecture, and started Phase 1 Socratic Interview.</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> Antigravity</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: Antigravity (role: main) Model: gemini-2.5-pro Thinking: true Mode: chat Permissions: full (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): list_dir, view_file, run_command, grep_search MCP servers accessed (this reply): none Time: 2026-05-18 12:28 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Initiated Stephane Bellavance workflow, explained the multi-agent flow protocol, mapped the architecture, and started Phase 1 Socratic Interview.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>main.js</code></li>
-        <li><code>index.html</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=94d195f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 12:18 - vault-explorer</strong> <span class="kind">plan</span> - Phase 1 Socratic Interview. Greatly enriched TASKS.md with highly explicit backend/frontend implementation blueprints, ffmpeg concatenators, symlink deletion tips, select elemen...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 12:18 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Phase 1 Socratic Interview. Greatly enriched TASKS.md with highly explicit backend/frontend implementation blueprints, ffmpeg concatenators, symlink deletion tips, select element arrow fixes, global array sorting patterns, and EverythingSearch fallback debouncers to ensure worker determinism.</p>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=94d195f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 12:17 - vaultwares-adk</strong> <span class="kind">plan</span> - Round 3 of vault-port Socratic interview answered. Q7: refusal is internal-only, client never sees it &#226;€” confirms public/private dual-state design with precomputed graceful-piv...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 12:17 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Round 3 of vault-port Socratic interview answered. Q7: refusal is internal-only, client never sees it &#226;€” confirms public/private dual-state design with precomputed graceful-pivot catalog and persona discipline (no tone breaks, decisions framed as collaboration). Q8: sidecar confirmed &#226;€” generalized to dual-stream output principle (public recipe + private audit trail covering contradictions, blockers, low-confidence regions, alternate hypotheses). Q9: full vault-themes scope (go big or go home) &#226;€” pressure tests token structure, multi-theme handling, visual identity constraints, asset preservation, component contracts, and crucially the EN/FR bilingual + 15-20% French-length tolerance as implicit cross-cutting requirement class. Synthesized 11 locked decisions in summary table. Listed 7 open items (A recipe layout, B pattern catalog seed, C interview catalog, D graceful pivot catalog, E ADK structure, F reconstruction protocol, G validation strategy). Offered two paths: keep designing vs start scaffolding. Recommended starting scaffolding with ADK structure (E) as entry point &#226;€” file structure exposes holes faster than discussion. No code written yet; awaiting user choice on design-vs-scaffold.</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 12:05 - vault-explorer</strong> <span class="kind">plan</span> - Phase 1 Socratic Interview. Updated TASKS.md checklist to comprehensively include all 18 specific bug fixes, UI adjustments, sorting fixes, context menu visual feedback, and eve...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 12:05 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Phase 1 Socratic Interview. Updated TASKS.md checklist to comprehensively include all 18 specific bug fixes, UI adjustments, sorting fixes, context menu visual feedback, and everything-search background threads requested by the user.</p>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=94d195f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 12:01 - vault-explorer</strong> <span class="kind">plan</span> - Phase 1 Socratic Interview complete. Summarized the full scope of work including the new GUI Verification Standard, WebM audio-supported preview generation (10 clips of 2s), and...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 12:01 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Phase 1 Socratic Interview complete. Summarized the full scope of work including the new GUI Verification Standard, WebM audio-supported preview generation (10 clips of 2s), and bilingual theme integration, and requested user confirmation.</p>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=94d195f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 12:00 - vaultwares-realtime</strong> <span class="kind">code-change</span> - Enhance keyboard accessibility and user interaction speed in the Settings window: Added keyboard shortcuts (Ctrl+B, Ctrl+I, Ctrl+U) to formatting buttons and updated their toolt...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: Claude Haiku Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-realtime  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 12:00 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Enhance keyboard accessibility and user interaction speed in the Settings window: Added keyboard shortcuts (Ctrl+B, Ctrl+I, Ctrl+U) to formatting buttons and updated their tooltips. Additionally, defined :focus pseudo-states in QSS for interactive widgets. Adding shortcuts speeds up power-user interactions while explicit focus states ensure WCAG keyboard navigation compliance.</p>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>gui_overlay/overlay_window.py</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vaultwares-realtime, branch=main, head=unknown</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 11:54 - vault-explorer</strong> <span class="kind">plan</span> - Phase 1 Socratic Interview. Read gemini_mechant_chagement_preinstructions.md and detailed the entire multi-agent flow step-by-step for the user, summarizing task types, agent ty...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 11:54 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Phase 1 Socratic Interview. Read gemini_mechant_chagement_preinstructions.md and detailed the entire multi-agent flow step-by-step for the user, summarizing task types, agent types, personalities, and user roles as requested.</p>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=94d195f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 11:51 - vault-explorer</strong> <span class="kind">plan</span> - Phase 1 Socratic Interview. Restated understanding of the .thumbs WebM structure (10 segments of 2s each, stitched with audio) and theme revamp goals. Transitioned to asking abo...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 11:51 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Phase 1 Socratic Interview. Restated understanding of the .thumbs WebM structure (10 segments of 2s each, stitched with audio) and theme revamp goals. Transitioned to asking about affected files and modules to preserve.</p>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=94d195f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 11:45 - General Tasks</strong> <span class="kind">code-change</span> - Phase 4 complete. Two standalone renames pushed: vault-themes -&gt; vaultwares-themes (33 file edits + dist-to-vault-themes subfolder renamed; CSS brand tokens preserved per scope ...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 11:45 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Phase 4 complete. Two standalone renames pushed: vault-themes -&gt; vaultwares-themes (33 file edits + dist-to-vault-themes subfolder renamed; CSS brand tokens preserved per scope decision) and vaultwares-agentciation -&gt; vaultwares-adk (32 file edits + Python pkg vaultwares_agentciation -&gt; vaultwares_adk + display brand + CLI args). For vaultwares-adk, my initial commit accidentally landed on a feature/protocol-manifest-updates Jules PR branch; recovered by cherry-picking onto main, pushing, deleting the wrong branch. agent-ledger project-aliases.json updated with the two new aliases and pushed (915ac1c). update-work-impact.ps1 -FullRebuild reconfirmed historical buckets resolve correctly: vault-themes (31 events) -&gt; vaultwares-themes, vaultwares-agentciation (47 events) -&gt; vaultwares-adk. Phase 5 (per-repo pull/conflict/commit/sync) ready to begin.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>PowerShell substitution</code></li>
-        <li><code>Move-Item folder rename</code></li>
-        <li><code>gh repo rename</code></li>
-        <li><code>git checkout main + cherry-pick + push</code></li>
-        <li><code>update-work-impact.ps1 -FullRebuild</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>vaultwares-themes</code></li>
-        <li><code>vaultwares-adk</code></li>
-        <li><code>agent-ledger/project-aliases.json</code></li>
-        <li><code>agent-ledger/work-impact.state.json</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=agent-ledger, branch=main, head=915ac1c</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 11:40 - vw-jira-sync</strong> <span class="kind">verification</span> - Backfill of p-potvin GitHub history into Jira project VW completed cleanly. Background process b6y6b9i0q exited code 0, ran ~36 min (started 06:41, finished 07:26). No errors, n...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> verification</p>
-      <p><strong>Actor:</strong> Claude Code (Opus 4.7)</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: Claude Code (Opus 4.7) (role: main) Model: claude-opus-4-7 Thinking: true Mode: agent Permissions: unknown (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): PowerShell, Bash, Write, Edit, TaskCreate, TaskUpdate MCP servers accessed (this reply): none Time: 2026-05-18 11:40 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Backfill of p-potvin GitHub history into Jira project VW completed cleanly. Background process b6y6b9i0q exited code 0, ran ~36 min (started 06:41, finished 07:26). No errors, no 429/5xx retries. Cross-checked Jira counts via /rest/api/3/search/approximate-count: 481 total issues (37 Epics + 442 Tasks + 2 prior unrelated), status distribution 438 Done / 3 PR Created / 1 To Do matches expected GH state (438 merged+closed, 3 open, 1 draft). Spot-checked VW-481 (vaultwares-sentry PR Task): parent=VW-480, status=Done, expected labels present. All 37 mapping/{repo}.json files persisted. User reported a &#39;quota filled in middle&#39; but log shows clean completion -- likely a separate quota (Claude credits or similar), not a Jira/GH rate limit. Backfill code wrote total 442 Tasks vs initial estimate of 440 (delta likely from 1-2 PRs opened during the run). Next phases: push vw-jira-sync to GH (public, for reusable workflow), distribute JIRA_BASE_URL/EMAIL/TOKEN secrets to 37 repos, deploy caller workflow to each repo (PR vs main mode), install Atlassian &#39;GitHub for Jira&#39; Marketplace app.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>tail backfill.log</code></li>
-        <li><code>POST /rest/api/3/search/approximate-count</code></li>
-        <li><code>GET /rest/api/3/issue/VW-481</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>vw-jira-sync/backfill.log</code></li>
-        <li><code>vw-jira-sync/mapping/*.json</code></li>
-        <li><code>vw-jira-sync/scripts/live_sync.py</code></li>
-        <li><code>vw-jira-sync/scripts/distribute_secrets.py</code></li>
-        <li><code>vw-jira-sync/scripts/deploy_caller_workflows.py</code></li>
-        <li><code>vw-jira-sync/.github/workflows/sync.yml</code></li>
-        <li><code>vw-jira-sync/.github/workflow-templates/jira-sync.yml</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 11:38 - vault-explorer</strong> <span class="kind">plan</span> - Initiated Phase 1 of &#39;mechant-changement&#39; flow: Socratic Interview. Checked initial rules, skills, and repos, and prepared to lock down requirements for vault theme migration, b...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 11:38 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Initiated Phase 1 of &#39;mechant-changement&#39; flow: Socratic Interview. Checked initial rules, skills, and repos, and prepared to lock down requirements for vault theme migration, broken thumbnails, virtual folder fixes, glob patterns, and layout revamp.</p>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=94d195f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 11:10 - vault-explorer</strong> <span class="kind">plan</span> - Acknowledged &#39;le st&#233;phane bellavance&#39; trigger and initiated Phase 1: Socratic Interview to define scope, goals, and success criteria for fixing the vault-explorer project and im...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> plan</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 11:10 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Acknowledged &#39;le st&#233;phane bellavance&#39; trigger and initiated Phase 1: Socratic Interview to define scope, goals, and success criteria for fixing the vault-explorer project and implementing requested features.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git branch</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>index.html</code></li>
-        <li><code>main.js</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=vault-explorer, branch=main, head=94d195f</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 06:36 - General Tasks</strong> <span class="kind">verification</span> - Phase 3 complete. All 11 project renames landed: vaultwares-docs, cultural-rhythm/nexus-flow/nexus-orchestrator (3x package.json identity), vaultwares-identity-manager, vaultwar...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> verification</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 06:36 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Phase 3 complete. All 11 project renames landed: vaultwares-docs, cultural-rhythm/nexus-flow/nexus-orchestrator (3x package.json identity), vaultwares-identity-manager, vaultwares-website (folder unchanged, package + CI + cross-refs), vaultwares-decompile (folder rename + 27 src/doc files + .builds), vaultwares-glass (folder + sln + Vercel + native demos + 23 files), vaultwares-dispatch (folder + frontend/web subfolder + 9 files + .builds), vaultwares-realtime (folder + stt_engine python pkg + 23 files + .builds), vaultwares-studio (folder + studio_core pkg + 17 files), vaultwares-media-processing (folder via robocopy /MOVE workaround after Move-Item locks + vault_enhancer pkg + 13 files + .builds; vwipl preserved per spec). Business: business/promking/{tube-sites,qa-automation} created; fullxxx-video-work and link-sharing/qa-automation deleted. Cross-repo cleanup: 23 .github/STYLE.md and INSTRUCTIONS.md files + 5 misc files updated to point at new canonical names; ALLOWED_ORIGINS env list + nginx vhost example fixed. Absolutely-final workspace-wide scan returns zero matches for old project names in active code/docs (frozen audit trail in events/, archive/, history/, .omx/logs, data/ snapshots preserved per design; vault-themes and vaultwares-agentciation submodule copies deferred per user). All changes uncommitted across affected repos per main-branch policy.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>PowerShell bulk substitutions</code></li>
-        <li><code>Move-Item</code></li>
-        <li><code>robocopy /MIR /MOVE fallback</code></li>
-        <li><code>gh repo rename x8</code></li>
-        <li><code>gh repo rename tube-site tube-sites</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>vaultwares-docs</code></li>
-        <li><code>vaultwares-website</code></li>
-        <li><code>vaultwares-identity-manager</code></li>
-        <li><code>vaultwares-decompile</code></li>
-        <li><code>vaultwares-glass</code></li>
-        <li><code>vaultwares-dispatch</code></li>
-        <li><code>vaultwares-realtime</code></li>
-        <li><code>vaultwares-studio</code></li>
-        <li><code>vaultwares-media-processing</code></li>
-        <li><code>business/promking/tube-sites</code></li>
-        <li><code>business/promking/qa-automation</code></li>
-        <li><code>.builds/rebuild-all.ps1</code></li>
-        <li><code>.builds/create-shortcuts.ps1</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 06:26 - General Tasks</strong> <span class="kind">code-change</span> - Phase 3 progress through #11: all 11 renames complete except media-processing folder rename (robocopy /MOVE in progress due to persistent file watcher lock on Move-Item). Rename...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-05-18 06:26 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Phase 3 progress through #11: all 11 renames complete except media-processing folder rename (robocopy /MOVE in progress due to persistent file watcher lock on Move-Item). Renames executed in order: vaultwares-docs / 3x react-example trio / vaultwares-identity-manager / vaultwares-website / vaultwares-decompile (full folder rename) / vaultwares-glass (folder + sln + Vercel + 23 src edits) / vaultwares-dispatch (folder + frontend/web subfolder + 9 file edits) / vaultwares-realtime (folder + stt_engine python pkg + 23 in-file edits) / vaultwares-studio (folder + studio_core pkg + 17 in-file edits) / vaultwares-media-processing (vault_enhancer python pkg renamed inside; folder move via robocopy in flight). Business restructure done: business/promking/{tube-sites,qa-automation} created, fullxxx-video-work and link-sharing/qa-automation deleted. All .builds/icons + launchers + rebuild-all + create-shortcuts updated for each rename. Two cross-cutting items remain: workspace-wide cleanup of .github/STYLE.md and INSTRUCTIONS.md cross-references (~20 files reference glass-ui by name in other repos), and final folder rename retry for media-processing.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>PowerShell Move-Item</code></li>
-        <li><code>robocopy /MIR /MOVE</code></li>
-        <li><code>Edit tool x100+</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>vaultwares-decompile</code></li>
-        <li><code>vaultwares-glass</code></li>
-        <li><code>vaultwares-dispatch</code></li>
-        <li><code>vaultwares-realtime</code></li>
-        <li><code>vaultwares-studio</code></li>
-        <li><code>vaultwares-media-processing</code></li>
-        <li><code>business/promking/tube-sites</code></li>
-        <li><code>business/promking/qa-automation</code></li>
-        <li><code>.builds/rebuild-all.ps1</code></li>
-        <li><code>.builds/create-shortcuts.ps1</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-05-18 05:47 - vw-jira-sync</strong> <span class="kind">code-change</span> - Built initial vw-jira-sync workspace: config.yaml (37 tracked repos, status_map: open-&gt;&#39;PR Created&#39;, draft-&gt;&#39;To Do&#39;, merged/closed-&gt;&#39;Done&#39;), requirements.txt (requests + PyYAML)...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> Claude Code (Opus 4.7)</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: Claude Code (Opus 4.7) (role: main) Model: claude-opus-4-7 Thinking: true Mode: agent Permissions: unknown (network: online) CWD: C:\Users\Administrator\Desktop\Github Repos\vw-jira-sync  Branch: n/a Tools used (this reply): Write, Edit, Bash, PowerShell, Grep, Read, TaskCreate, TaskUpdate MCP servers accessed (this reply): none Time: 2026-05-18 05:47 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Built initial vw-jira-sync workspace: config.yaml (37 tracked repos, status_map: open-&gt;&#39;PR Created&#39;, draft-&gt;&#39;To Do&#39;, merged/closed-&gt;&#39;Done&#39;), requirements.txt (requests + PyYAML), .gitignore, scripts/jira_sync.py (shared lib: ADF builders, Jira REST with 429/5xx retry+backoff, gh CLI subprocess wrappers), scripts/backfill.py (resumable orchestrator with per-repo mapping/{repo}.json, --dry-run and --repo flags), README.md, mapping/.gitkeep. Fixed two bugs found via dry-run: (1) gh subprocess UnicodeDecodeError on Windows cp1252 with em-dashes in PR bodies -- forced encoding=&#39;utf-8&#39; errors=&#39;replace&#39;. (2) save_mapping was persisting in dry-run, polluting state between previews -- wrapped all 3 call sites with &#39;if not dry_run&#39;. Also added merge-commit filter (parents &gt; 1) to direct-commit classification to avoid logging GH-generated &#39;Merge pull request #N from...&#39; commits as direct pushes. Final dry-run preview against nemo-playground (smallest non-zero repo) produced clean output: 1 Epic + 1 Task (&#39;[nemo-playground#1] Add live real-time STT pipeline...&#39;) with parent: VW-Epic, status -&gt; Done, 12 comment posts (Copilot review_inline + reviews), 1 direct commit -&gt; Epic comment, 1 merge commit skipped. ADF rendering correct: em-dashes as U+2014. Awaiting user go/no-go for live execution -- proposed 1-repo live preview (nemo-playground) before full 37-repo backfill.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>python scripts/backfill.py --dry-run --repo nemo-playground</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>vw-jira-sync/config.yaml</code></li>
-        <li><code>vw-jira-sync/scripts/jira_sync.py</code></li>
-        <li><code>vw-jira-sync/scripts/backfill.py</code></li>
-        <li><code>vw-jira-sync/requirements.txt</code></li>
-        <li><code>vw-jira-sync/README.md</code></li>
-        <li><code>vw-jira-sync/.gitignore</code></li>
-      </ul>
     </div>
   </details>
 </main>

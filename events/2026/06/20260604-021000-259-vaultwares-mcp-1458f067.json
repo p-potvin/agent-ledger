@@ -1,0 +1,45 @@
+{
+  "id": "20260604-021000-259-vaultwares-mcp-1458f067",
+  "createdAt": "2026-06-04T06:10:00.2598315Z",
+  "createdAtLocal": "2026-06-04 02:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-mcp",
+  "kind": "verification",
+  "actor": "GitHub Copilot",
+  "agentHeader": "Agent: GitHub Copilot (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp  Branch: main\r\nTools used (this reply): read_file, create_file, replace_string_in_file, run_in_terminal\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-04 02:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-6",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "read_file",
+      "create_file",
+      "replace_string_in_file",
+      "run_in_terminal"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp",
+  "summary": "Full live integration test of all 25 MCP tools on http://127.0.0.1:9020/mcp. Server was stopped (NSSM service), restarted it. Created tests/test_live_server.py with 28 test cases covering tools/list, Tier1 fs (fs_list_dir, fs_read, fs_write, fs_edit), Tier2 shell (sh_session_start/list/stop/run), Tier3 ssh (disabled check), Tier4 ops (journal/note/tasklog), Tier5 diag (status/usage/limits), Tier6 ledger (get_recent/search), Credit Optimizer (classify/recommend/estimate/optimize/analyze_batch), Fast Navigation (nav_fetch/nav_fetch_many), task_estimate. All 28/28 passed. Key finding: fs_edit uses {match, replace} format not {old, new}.",
+  "commands": [],
+  "files": [
+    "tests/test_live_server.py"
+  ],
+  "planPath": "",
+  "contentHash": "1458f06711b4eab4c417342924578a7bf20b0ed13a922d07287d8e4c4e83033b",
+  "git": {
+    "repo": "vaultwares-mcp",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-mcp",
+    "branch": "main",
+    "head": "759760c",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "20260603-130602-072-prom-king-8c2b3f0b",
+  "createdAt": "2026-06-03T17:06:02.0720834Z",
+  "createdAtLocal": "2026-06-03 13:06",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-03 13:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": "shell_command",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "joker_alarm_component": true,
+      "supervised_autonomy_enabled": true,
+      "planning_only": true,
+      "no_code_changes": true,
+      "ai_token_usage_research": true,
+      "clopeux_desktop_probe_name": true,
+      "unattended_autonomy_restricted": true,
+      "no_secrets_logged": true
+    },
+    "metrics": {
+      "code_changes": 0,
+      "architecture_changes": 4,
+      "research_items_added": 1
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Updated the health-ledger/Joker plan from user clarification: High/Critical unattended autonomy is restricted when the user does not answer, but supervised autonomy is allowed when the user is present during an emergency; renamed operator-pc to Clopeux-Desktop; restored Joker alarm as a first-class architecture component; added medium-high research item for centralizing AI token usage/telemetry across hosts while preserving secret safety.",
+  "commands": [
+    "Reviewed current user clarification and revised the health-ledger operating model"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "8c2b3f0b83ece435ae992aba1a0fda5ab87ef8bc1a48301b3e4d4719c08271ee",
+  "git": null
+}

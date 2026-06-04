@@ -1,0 +1,85 @@
+{
+  "id": "20260604-111939-870-health-ledger-8208b421",
+  "createdAt": "2026-06-04T15:19:39.8704577Z",
+  "createdAtLocal": "2026-06-04 11:19",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "code-change,handoff,verification",
+  "actor": "Codex",
+  "agentHeader": "Agent: Codex (role: main)\r\nModel: GPT-5\r\nThinking: high\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger  Branch: main\r\nTools used (this reply): shell_command, apply_patch, multi_tool_use.parallel\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-04 11:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "high",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "multi_tool_use.parallel"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "secrets_redacted": true,
+      "gateway_secret_not_in_api_vhost": true,
+      "unrelated_vaultwares_docs_tasks_md_untouched": true,
+      "vw_state": "LONG_RUNNING_TASKS applied; resume_id=health-ledger-ollama-inventory-20260604; no VW_STATE chat output; latest: health-ledger b1ad73f and vaultwares-docs 2a91249 pushed; Clopeux probe 22/22 + resource sample; greencloud active with api skipped for missing X_VW_GATEWAY_SECRET env."
+    },
+    "metrics": {
+      "clopeux_since_deploy_events": 9090,
+      "clopeux_since_deploy_ok": 9040,
+      "clopeux_since_deploy_failed": 41,
+      "clopeux_since_deploy_skipped": 9,
+      "greencloud_since_deploy_events": 15423,
+      "greencloud_since_deploy_ok": 12313,
+      "greencloud_since_deploy_failed": 2083,
+      "greencloud_since_deploy_skipped": 1027,
+      "clopeux_latest_total": 22,
+      "clopeux_latest_ok": 22,
+      "clopeux_latest_resource_samples": 1,
+      "greencloud_latest_total": 19,
+      "greencloud_latest_ok": 18,
+      "greencloud_latest_skipped": 1,
+      "ollama_installed_model_count": 2,
+      "ollama_running_model_count": 0,
+      "ollama_gpu_memory_used_mib": 1849,
+      "ollama_gpu_memory_total_mib": 12288,
+      "health_ledger_commit": "b1ad73f",
+      "vaultwares_docs_commit": "2a91249"
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger",
+  "summary": "Answered Health Ledger architecture questions, clarified API gateway TLS/secret state, split Prom-King/FullXXX service inventory into explicit prelanding, tube, and link-sharing records, added Ollama resource sampling to Probe Joker, redeployed Health Ledger to greencloud and restarted Clopeux probe loop.",
+  "commands": [
+    "node -c scripts/probe-joker.mjs",
+    "JOKER_PROBE_LOCATION=Clopeux-Desktop node scripts/probe-joker.mjs --once -> 22/22 ok + 1 ollama_resource_sample",
+    "npm run generate:page-resources",
+    "npm run build",
+    "git archive --format=tar HEAD | ssh root@100.73.93.84 tar -xf - -C /opt/health-ledger ...",
+    "systemctl restart health-ledger-probe.service",
+    "Start-ScheduledTask -TaskName HealthLedgerProbeJoker",
+    "Joker stats aggregation from Clopeux and greencloud data/events"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\services.yaml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\scripts\\probe-joker.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\docs\\ollama-environment.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\resources\\pages\\operations__services-inventory.json"
+  ],
+  "planPath": "",
+  "contentHash": "8208b421b18b36f04d0733c34f9602ab1d2893f143d93f012ca389947303a6dc",
+  "git": {
+    "repo": "health-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/health-ledger",
+    "branch": "main",
+    "head": "b1ad73f",
+    "hasChanges": false
+  }
+}
