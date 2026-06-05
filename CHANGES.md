@@ -3,6 +3,77 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-06-05 00:30 - vault-central</strong> <code>code-change,verification</code> - Updated VideoPlayer.tsx style and layout to match user-provided reference screenshot exactly: removed duplicate PiP button from bottom controls, restructured seek bar layout, ce...</summary>
+
+- Kind: code-change,verification
+- Actor: Antigravity
+- Agent Header:
+  ```text
+  Agent: Antigravity (role: main)
+  Model: gemini-2.0-flash
+  Thinking: medium
+  Mode: code
+  Permissions: autopilot (network: local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
+  Tools used (this reply): multi_replace_file_content, run_command
+  MCP servers accessed (this reply): none
+  Time: 2026-06-05 00:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated VideoPlayer.tsx style and layout to match user-provided reference screenshot exactly: removed duplicate PiP button from bottom controls, restructured seek bar layout, centered video inside viewport with aspect-ratio constraint and thin red border, capitalized title text, and updated play/speed controls.
+- Commands:
+  - `npm run build`
+- Files:
+  - `src/components/VideoPlayer.tsx`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
+- Git: repo=vault-central, branch=main, head=31c2b30
+
+</details>
+
+<details>
+<summary><strong>2026-06-04 18:00 - health-ledger</strong> <code>code-change,verification</code> - Implemented Health Ledger API gateway probe correction and first-party dashboard. Greencloud API gateway now loads X_VW_GATEWAY_SECRET from /etc/health-ledger/gateway.env throug...</summary>
+
+- Kind: code-change,verification
+- Actor: Codex
+- Agent Header:
+  ```text
+  Agent: Codex (role: main)
+  Model: gpt-5
+  Thinking: medium
+  Mode: default
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\health-ledger  Branch: main
+  Tools used (this reply): shell_command, apply_patch, multi_tool_use.parallel
+  MCP servers accessed (this reply): none
+  Time: 2026-06-04 18:00 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: direct_main_push=health-ledger_and_vaultwares-docs, secrets_redacted=true, vw_state=completed_current_turn_no_chat_dump
+  - Metrics: {"health_ledger_commit":"3ae925e","clopeux_ok":22,"vaultwares_docs_commit":"778062f","greencloud_total":19,"clopeux_total":22,"greencloud_ok":19,"greencloud_skipped":0,"dashboard_port":8790}
+- Summary: Implemented Health Ledger API gateway probe correction and first-party dashboard. Greencloud API gateway now loads X_VW_GATEWAY_SECRET from /etc/health-ledger/gateway.env through a systemd drop-in, nginx sets the matching gateway header without exposing the value, vaultwares-api probes /openapi.json, and health-ledger-dashboard.service is deployed on greencloud-vps at 127.0.0.1:8790. Local dashboard is running on Clopeux-Desktop at http://127.0.0.1:8790. Verification: Clopeux probe 22/22 OK with 1 resource sample; greencloud probe 19/19 OK, 0 skipped; dashboard services active.
+- Commands:
+  - `npm run check:dashboard`
+  - `npm run check:probe`
+  - `JOKER_PROBE_LOCATION=Clopeux-Desktop node scripts/probe-joker.mjs --once`
+  - `node scripts/dashboard-server.mjs`
+  - `git commit -m "Add Health Ledger dashboard service"`
+  - `git push origin main`
+  - `git archive --format=tar HEAD | ssh root@100.73.93.84 ... deploy health-ledger`
+  - `ssh root@100.73.93.84 JOKER_PROBE_LOCATION=greencloud-vps node scripts/probe-joker.mjs --once`
+  - `curl http://127.0.0.1:8790/api/dashboard`
+  - `git commit -m "Document Health Ledger dashboard service" in vaultwares-docs`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\scripts\dashboard-server.mjs`
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\ops\systemd\health-ledger-dashboard.service`
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\services.yaml`
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\README.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\dashboard.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\health-ledger.mdx`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\services-inventory.mdx`
+- Git: repo=health-ledger, branch=main, head=3ae925e
+
+</details>
+
+<details>
 <summary><strong>2026-06-04 17:51 - vault-central</strong> <code>code-change,verification</code> - Stabilized the video capture pipeline by transitioning from WebM blobs to JSON-wrapped WebP frame sequences. Added native HLS.js streaming support in both the offscreen preview ...</summary>
 
 - Kind: code-change,verification

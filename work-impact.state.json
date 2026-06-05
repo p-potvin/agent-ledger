@@ -1,6 +1,6 @@
 ﻿{
     "schemaVersion":  1,
-    "lastUpdatedUtc":  "2026-06-04T21:57:02.3602800Z",
+    "lastUpdatedUtc":  "2026-06-05T04:27:01.9484886Z",
     "config":  {
                    "startDate":  "2026-03-11",
                    "primaryCommitMetric":  "cleanChurnLines",
@@ -1995,7 +1995,8 @@
                                        "20260604-161413-324-vault-central-4be7ba34",
                                        "20260604-173945-153-health-ledger-38dfb8e4",
                                        "20260604-174744-859-vault-central-fe45119e",
-                                       "20260604-175108-334-vault-central-3b364e90"
+                                       "20260604-175108-334-vault-central-3b364e90",
+                                       "20260604-180014-439-health-ledger-bb593164"
                                    ],
                       "commitKeys":  [
                                          "C:/Users/Administrator/Desktop/Github Repos/vaultwares-website\n7e1ffdf",
@@ -2926,9 +2927,10 @@
                                                                         "gemini-advanced",
                                                                         "glm-5",
                                                                         "GPT-5",
+                                                                        "gpt-5",
                                                                         "unknown"
                                                                     ],
-                                                         "count":  19
+                                                         "count":  20
                                                      }
                                                  ],
                                    "tools":  [
@@ -2950,7 +2952,7 @@
                                                  ],
                                                  [
                                                      "shell_command",
-                                                     23
+                                                     24
                                                  ],
                                                  [
                                                      "write_to_file",
@@ -2958,7 +2960,7 @@
                                                  ],
                                                  [
                                                      "apply_patch",
-                                                     21
+                                                     22
                                                  ],
                                                  [
                                                      "git",
@@ -2985,11 +2987,11 @@
                                                      10
                                                  ],
                                                  [
-                                                     "gh",
-                                                     9
+                                                     "multi_tool_use.parallel",
+                                                     10
                                                  ],
                                                  [
-                                                     "multi_tool_use.parallel",
+                                                     "gh",
                                                      9
                                                  ]
                                              ],
@@ -3004,7 +3006,7 @@
                                                   ],
                                                   [
                                                       "codex",
-                                                      11
+                                                      12
                                                   ],
                                                   [
                                                       "claude-sonnet-4-6",
@@ -3051,7 +3053,7 @@
                                                       1
                                                   ]
                                               ],
-                                   "totalEvents":  420,
+                                   "totalEvents":  421,
                                    "models":  [
                                                   [
                                                       "unknown",
@@ -3071,7 +3073,7 @@
                                                   ],
                                                   [
                                                       "GPT-5",
-                                                      11
+                                                      12
                                                   ],
                                                   [
                                                       "Gemini 3.5 Flash (Medium)",
@@ -3209,7 +3211,7 @@
                                    {
                                        "label":  "Thu",
                                        "dow":  3,
-                                       "count":  67
+                                       "count":  68
                                    },
                                    {
                                        "label":  "Fri",
@@ -3301,7 +3303,7 @@
                                         "hour":  17
                                     },
                                     {
-                                        "count":  35,
+                                        "count":  36,
                                         "hour":  18
                                     },
                                     {
@@ -3342,7 +3344,7 @@
                                                  "insertions":  618341
                                              }
                                },
-                 "generatedAtLocal":  "2026-06-04 17:57",
+                 "generatedAtLocal":  "2026-06-05 00:27",
                  "series":  {
                                 "months":  [
                                                {
@@ -3359,7 +3361,7 @@
                                                },
                                                {
                                                    "month":  "2026-06",
-                                                   "count":  66
+                                                   "count":  67
                                                }
                                            ],
                                 "days":  [
@@ -4723,25 +4725,25 @@
                                                                   "vault-central",
                                                                   "vaultwares-mcp"
                                                               ],
-                                                 "entries":  19,
+                                                 "entries":  20,
                                                  "day":  "2026-06-04",
                                                  "kinds":  {
-                                                               "code-change":  11,
-                                                               "handoff":  3,
-                                                               "verification":  12,
                                                                "plan":  4,
-                                                               "general":  2
+                                                               "handoff":  3,
+                                                               "general":  2,
+                                                               "verification":  13,
+                                                               "code-change":  12
                                                            }
                                              }
                                          ],
                                 "kinds":  [
                                               {
                                                   "kind":  "code-change",
-                                                  "count":  1635
+                                                  "count":  1636
                                               },
                                               {
                                                   "kind":  "verification",
-                                                  "count":  176
+                                                  "count":  177
                                               },
                                               {
                                                   "kind":  "plan",
@@ -6072,8 +6074,8 @@
                                                                    "plan":  1,
                                                                    "handoff":  3,
                                                                    "general":  4,
-                                                                   "verification":  2,
-                                                                   "code-change":  3
+                                                                   "verification":  3,
+                                                                   "code-change":  4
                                                                },
                                                      "lineClean":  {
                                                                        "insertions":  0,
@@ -6092,7 +6094,7 @@
                                                                         "prober_not_started":  1,
                                                                         "no_secret_values_logged":  3,
                                                                         "vaultwares_docs_clean":  1,
-                                                                        "secrets_redacted":  4,
+                                                                        "secrets_redacted":  5,
                                                                         "architecture_review":  1,
                                                                         "host_independent_routing_model":  1,
                                                                         "probe_once_run":  1,
@@ -6105,16 +6107,17 @@
                                                                         "no_secrets_logged":  1,
                                                                         "ollama_environment_documented":  1,
                                                                         "health_ledger_updated":  1,
-                                                                        "vw_state":  4,
+                                                                        "direct_main_push":  1,
+                                                                        "vw_state":  5,
                                                                         "github_actions_cost_checked":  1,
                                                                         "stale_probe_process_restarted":  1
                                                                     },
                                                      "project":  "health-ledger",
-                                                     "entries":  8,
+                                                     "entries":  9,
                                                      "recent":  [
-                                                                    "Implemented Health Ledger Probe Joker and CI Joker, fixed and deployed Prom-King link-sharing plus fullxxx.video 2257 monitoring fixes, deployed greencloud and Clopeux probe loo...",
                                                                     "Answered Health Ledger architecture questions, clarified API gateway TLS/secret state, split Prom-King/FullXXX service inventory into explicit prelanding, tube, and link-sharing...",
-                                                                    "Provided next-step sequence after Health Ledger inventory and Ollama sampling work: fix API gateway secret/TLS blind spot first, then dashboard, Alarm Joker, active Ollama hook ..."
+                                                                    "Provided next-step sequence after Health Ledger inventory and Ollama sampling work: fix API gateway secret/TLS blind spot first, then dashboard, Alarm Joker, active Ollama hook ...",
+                                                                    "Implemented Health Ledger API gateway probe correction and first-party dashboard. Greencloud API gateway now loads X_VW_GATEWAY_SECRET from /etc/health-ledger/gateway.env throug..."
                                                                 ],
                                                      "firstDay":  "2026-06-03",
                                                      "lastDay":  "2026-06-04",
@@ -6149,7 +6152,6 @@
                                                                         "safesearch_off":  1,
                                                                         "no_captcha_bypass":  1,
                                                                         "no_secrets_logged":  3,
-                                                                        "token_joker_planned":  1,
                                                                         "planning_only":  3,
                                                                         "search_human_like_behavior":  1,
                                                                         "no_service_changes":  2,
@@ -6157,10 +6159,11 @@
                                                                         "joker_alarm_component":  1,
                                                                         "unattended_autonomy_restricted":  1,
                                                                         "vw_state":  2,
+                                                                        "ai_token_usage_research":  1,
                                                                         "clopeux_desktop_probe_name":  1,
                                                                         "high_critical_customer_impact_gate":  1,
                                                                         "own_domain_behavior_only":  1,
-                                                                        "ai_token_usage_research":  1
+                                                                        "token_joker_planned":  1
                                                                     },
                                                      "project":  "Prom-King",
                                                      "entries":  7,
@@ -16717,7 +16720,7 @@
                                        }
                                    ],
                  "_minCreatedAtUtc":  "2026-03-11T06:02:52.0000000Z",
-                 "_maxCreatedAtUtc":  "2026-06-04T21:51:08.3340947Z",
+                 "_maxCreatedAtUtc":  "2026-06-04T22:00:14.4390823Z",
                  "schemaVersion":  1,
                  "range":  {
                                "start":  "2026-03-11",
@@ -16725,7 +16728,7 @@
                            },
                  "totals":  {
                                 "projects":  49,
-                                "events":  1988,
+                                "events":  1989,
                                 "uniqueCommitsRecomputed":  679,
                                 "activeDays":  83,
                                 "commitEventsWithStats":  679
