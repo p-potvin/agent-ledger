@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260606-065112-607-prom-king-link-sharing-0d5917be",
+    "createdAt":  "2026-06-06T10:51:12.6072963Z",
+    "createdAtLocal":  "2026-06-06 06:51",
+    "timezone":  "Eastern Standard Time",
+    "project":  "prom-king/link-sharing",
+    "kind":  "general,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-1.5-pro-002\r\nThinking: medium\r\nMode: chat\r\nPermissions: yolo (network: windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\link-sharing  Branch: main\r\nTools used (this reply): run_command, write_to_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-06 06:51 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-1.5-pro-002",
+                    "thinking":  "medium",
+                    "mode":  "chat",
+                    "permissions":  "yolo",
+                    "network":  "windows",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "write_to_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\link-sharing",
+    "summary":  "Executed get_all_account_links.py scratch script to fetch all active links across user\u0027s Keep2Share, FileBoom, and KatFile accounts using their REST APIs (traversing 11 FileBoom folders and 1 Keep2Share folder). Successfully saved 180 links to telegram/output/extracted_account_links.txt and copied them to the link-sharing project root.",
+    "commands":  [
+                     "python scratch/get_all_account_links.py"
+                 ],
+    "files":  [
+                  "extracted_account_links.txt"
+              ],
+    "planPath":  "",
+    "contentHash":  "0d5917beda7dd05a4d3fccae19e208ddb468b57907f6cd4ba72080c675f807bf",
+    "git":  {
+                "repo":  "link-sharing",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/link-sharing",
+                "branch":  "main",
+                "head":  "68b0149",
+                "hasChanges":  true
+            }
+}

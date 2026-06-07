@@ -1,0 +1,40 @@
+{
+  "id": "20260606-042819-591-vaultwares-docs-3eb52088",
+  "createdAt": "2026-06-06T08:28:19.5919274Z",
+  "createdAtLocal": "2026-06-06 04:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-06 04:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Updated local operations docs for monitor.vaultwares.ca deployment: services inventory EN/QC now lists V.A.U.L.T Monitor as a tailnet-only SPA plus /monitor/* proxy, network map EN/QC includes monitor.vaultwares.ca on greencloud-vps with Clopeux-Desktop:9001 proxy path, and tailscale EN includes monitor.vaultwares.ca in private hostnames. Changes are local and intentionally not committed because the vaultwares-docs checkout already had unrelated dirty/deleted files.",
+  "commands": [
+    "git diff -- docs-content/operations/services-inventory.mdx docs-content/operations/services-inventory-QC.mdx docs-content/operations/network-map.mdx docs-content/operations/network-map-QC.mdx docs-content/operations/tailscale.mdx"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\network-map.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\network-map-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\tailscale.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "3eb52088bc28b54b9d6be85c7062eb4a2aa596e45f2c570f6e469cd15da1009f",
+  "git": null
+}

@@ -6,8 +6,7 @@
     1. Verifies Python + pip are available
     2. Installs pynput and pyperclip
     3. Registers a Windows Scheduled Task that starts the tracker at every logon
-    4. Registers a Windows Scheduled Task that renders the dashboard daily at midnight
-    5. Optionally starts the tracker immediately
+    4. Optionally starts the tracker immediately
 
 .PARAMETER PythonExe
     Path to pythonw.exe (silent, no console window). Defaults to "pythonw" on PATH.
@@ -29,9 +28,7 @@ $ErrorActionPreference = "Stop"
 $ScriptDir     = Split-Path $MyInvocation.MyCommand.Path -Parent
 $LedgerRoot    = Split-Path $ScriptDir -Parent
 $TrackerScript = Join-Path $ScriptDir "track-input.py"
-$RenderScript  = Join-Path $ScriptDir "render-daily-dashboard.ps1"
 $TrackerTask   = "VaultWares-InputTracker"
-$RendererTask  = "VaultWares-DailyDashboard"
 
 # ---------------------------------------------------------------------------
 # 1. Sanity checks
@@ -46,10 +43,6 @@ Write-Host ""
 if (-not (Test-Path $TrackerScript)) {
     throw "Tracker script not found: $TrackerScript"
 }
-if (-not (Test-Path $RenderScript)) {
-    Write-Warning "Renderer not found at: $RenderScript  (dashboard task will still be registered)"
-}
-
 # Resolve pythonw full path
 $pythonResolved = (Get-Command $PythonExe -ErrorAction SilentlyContinue)?.Source
 if (-not $pythonResolved) {
@@ -110,45 +103,13 @@ Register-ScheduledTask `
     -Trigger    @($trackerTriggerLogon, $trackerTriggerUnlock) `
     -Settings   $trackerSettings `
     -RunLevel   Highest `
-    -Description "VaultWares: silently tracks keystrokes, mouse movement, saves, and copy/paste events. Starts at logon + unlock, restarts automatically on crash." `
+    -Description "VaultWares: silently tracks privacy-safe input metrics and batches them to vaultwares-pipelines. Starts at logon + unlock, restarts automatically on crash." `
     | Out-Null
 
 Write-Host "  Task '$TrackerTask' registered — starts at every logon." -ForegroundColor Green
 
 # ---------------------------------------------------------------------------
-# 4. Register renderer task (runs daily at 00:05)
-# ---------------------------------------------------------------------------
-
-Write-Host ""
-Write-Host "Registering scheduled task: $RendererTask ..." -ForegroundColor Yellow
-
-Unregister-ScheduledTask -TaskName $RendererTask -Confirm:$false -ErrorAction SilentlyContinue | Out-Null
-
-$midnight = (Get-Date -Hour 0 -Minute 5 -Second 0).ToString("HH:mm")
-
-$renderAction = New-ScheduledTaskAction `
-    -Execute    $conhost `
-    -Argument   "--headless powershell.exe -NoProfile -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -File `"$RenderScript`" -LedgerRoot `"$LedgerRoot`"" `
-    -WorkingDirectory $LedgerRoot
-
-$renderTrigger  = New-ScheduledTaskTrigger -Daily -At $midnight
-$renderSettings = New-ScheduledTaskSettingsSet `
-    -ExecutionTimeLimit (New-TimeSpan -Minutes 5) `
-    -StartWhenAvailable
-
-Register-ScheduledTask `
-    -TaskName   $RendererTask `
-    -Action     $renderAction `
-    -Trigger    $renderTrigger `
-    -Settings   $renderSettings `
-    -RunLevel   Highest `
-    -Description "VaultWares: renders DAILY_DASHBOARD.html from input-logs + agent ledger." `
-    | Out-Null
-
-Write-Host "  Task '$RendererTask' registered — runs daily at 00:05." -ForegroundColor Green
-
-# ---------------------------------------------------------------------------
-# 5. Optionally start tracker now
+# 4. Optionally start tracker now
 # ---------------------------------------------------------------------------
 
 if ($StartNow) {
@@ -168,11 +129,14 @@ Write-Host ""
 Write-Host "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" -ForegroundColor DarkGray
 Write-Host "Setup complete." -ForegroundColor Cyan
 Write-Host ""
-Write-Host "  Tracker logs  →  $LedgerRoot\input-logs\YYYY-MM-DD.json"
-Write-Host "  Dashboard     →  $LedgerRoot\DAILY_DASHBOARD.html"
+$apiBase = $env:VW_PIPELINES_URL
+if (-not $apiBase) { $apiBase = "http://127.0.0.1:9001" }
+Write-Host "  API endpoint  →  $apiBase/api/telemetry/input/batches"
+Write-Host "  Spool fallback→  $LedgerRoot\input-spool\YYYY-MM-DD.jsonl"
 Write-Host ""
-Write-Host "To render the dashboard manually at any time, run:" -ForegroundColor DarkGray
-Write-Host "  .\render-daily-dashboard.ps1" -ForegroundColor White
+Write-Host "Set VW_PIPELINES_URL and VW_PIPELINES_API_KEY before starting the task if the defaults do not match this machine." -ForegroundColor DarkGray
+Write-Host "Replay failed batches with:" -ForegroundColor DarkGray
+Write-Host "  python .\replay-input-spool.py" -ForegroundColor White
 Write-Host ""
 Write-Host "To start tracker immediately without rebooting:" -ForegroundColor DarkGray
 Write-Host "  .\setup-input-tracker.ps1 -StartNow" -ForegroundColor White

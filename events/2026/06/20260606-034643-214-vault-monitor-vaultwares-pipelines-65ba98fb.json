@@ -1,0 +1,57 @@
+{
+  "id": "20260606-034643-214-vault-monitor-vaultwares-pipelines-65ba98fb",
+  "createdAt": "2026-06-06T07:46:43.2145718Z",
+  "createdAtLocal": "2026-06-06 03:46",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor vaultwares-pipelines",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-06 03:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Implemented V.A.U.L.T Monitor v1: created new vault-monitor React/Vite presentation app with vaultwares-themes submodule/tokens, overview/health/agents/logs/search views, manual Kiwi status check, Vite proxy to vaultwares-pipelines, and README data-boundary/DB-ingestion note. Added vaultwares-pipelines /monitor read-only router for overview, health-ledger, agent-ledger, Kiwi, and events search; adapters normalize recent health JSONL, agent events, WorkImpact model/tool/MCP aggregates, bounded search filters, stale/missing-source states, and remove secret-like keys/local roots from browser JSON. Work respected dirty unrelated pipelines/theme files. estimated_output_tokens >=8000; LONG_RUNNING_TASKS state handled in-ledger by this completion entry.",
+  "commands": [
+    ".venv\\\\Scripts\\\\python.exe -m py_compile app\\\\routers\\\\monitor\\\\__init__.py api_server.py tests\\\\test_monitor_router.py",
+    "inline FastAPI TestClient fixture_api_check=passed",
+    "npm run build",
+    "Start-Process .venv\\\\Scripts\\\\python.exe api_server.py on 127.0.0.1:9001",
+    "Start-Process npm run dev -- --host 127.0.0.1",
+    "Playwright desktop/mobile final check: Search gateway results true, console errors none"
+  ],
+  "files": [
+    "vaultwares-pipelines/api_server.py",
+    "vaultwares-pipelines/app/routers/monitor/__init__.py",
+    "vaultwares-pipelines/tests/test_monitor_router.py",
+    "vault-monitor/.gitmodules",
+    "vault-monitor/.gitignore",
+    "vault-monitor/.env.example",
+    "vault-monitor/README.md",
+    "vault-monitor/package.json",
+    "vault-monitor/index.html",
+    "vault-monitor/tsconfig.json",
+    "vault-monitor/vite.config.ts",
+    "vault-monitor/src/main.tsx",
+    "vault-monitor/src/App.tsx",
+    "vault-monitor/src/api.ts",
+    "vault-monitor/src/types.ts",
+    "vault-monitor/src/styles.css",
+    "vault-monitor/src/vite-env.d.ts"
+  ],
+  "planPath": "",
+  "contentHash": "65ba98fb1ccca6c5876a208168d3de728feeecd3323bf95dfab7e7e747e3b872",
+  "git": null
+}

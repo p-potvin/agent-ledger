@@ -1,0 +1,40 @@
+{
+  "id": "20260606-042821-749-vaultwares-pipelines-2b0ad02a",
+  "createdAt": "2026-06-06T08:28:21.7491357Z",
+  "createdAtLocal": "2026-06-06 04:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-pipelines",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-06 04:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Restarted the local vaultwares-pipelines API runtime for monitor deployment on the Tailscale interface 100.71.101.21:9001 with UVICORN_RELOAD=0. The previous api_server.py reload pair was bound to 127.0.0.1 only, causing monitor.vaultwares.ca /monitor/* to return 504 from greencloud-vps. Verified local tailnet API response and deployed monitor proxy response. Follow-up: make this a durable vaultwares-pipelines-owned Windows service or scheduled task rather than relying on this hidden process.",
+  "commands": [
+    "Stop api_server.py processes bound to 127.0.0.1:9001",
+    "Start-Process .venv\\\\Scripts\\\\python.exe api_server.py with API_HOST=100.71.101.21 API_PORT=9001 UVICORN_RELOAD=0",
+    "Get-NetTCPConnection -LocalPort 9001",
+    "curl http://100.71.101.21:9001/monitor/overview?kiwi_check=false",
+    "curl --resolve monitor.vaultwares.ca:443:100.73.93.84 https://monitor.vaultwares.ca/monitor/overview?kiwi_check=false"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-pipelines\\api_server.py"
+  ],
+  "planPath": "",
+  "contentHash": "2b0ad02a0f3aab19ff285e9a134547591c524670a689c58d4fbb1854cc62590c",
+  "git": null
+}

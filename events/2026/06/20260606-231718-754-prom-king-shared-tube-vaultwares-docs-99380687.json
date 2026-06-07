@@ -1,0 +1,55 @@
+{
+  "id": "20260606-231718-754-prom-king-shared-tube-vaultwares-docs-99380687",
+  "createdAt": "2026-06-07T03:17:18.7549327Z",
+  "createdAtLocal": "2026-06-06 23:17",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube + vaultwares-docs",
+  "kind": "code-change,handoff,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: autopilot (network: Windows 11 local + tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Bash, Read, Edit, Write, Grep, PowerShell, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-06 23:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows 11 local + tailnet",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "PowerShell",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Docs audit: side-by-side comparison of every doc claim vs current deployed reality, then patched the 11 stale claims found. Patches across 8 files in shared-tube (CHANGES.md, CLAUDE.md, docs/conventions.md, docs/fetcher-sources.md, docs/postgres.md, docs/router-integration.md, scripts/README.md, scripts/deploy-shared-tube.sh) + 1 in vaultwares-docs (docs-content/adr/0001-shared-tube-rebuild.mdx). Key corrections: CLAUDE.md status rewritten ('v0.1 scaffold only' was a year behind reality — both sites live under HTTPS with populated catalog); deploy-shared-tube.sh stripped of the rsync-to-/var/www step (apps actually run from /srv/repos/.../apps/<site>/ via systemd WorkingDirectory; rsync was useless); fetcher-sources.md registry rewritten with real per-source status (5 working: pornxp.bz/1porn.tv/fullvideos/xvideos/xhamster; 2 broken: spankbang 403 / redtube empty API) + wire format updated for one-videos-event-per-item + new persisted SSE event + ERROR page N log surface; router-integration.md split topology into app-SSR (tailnet, trusted IP) vs admin-browser (same-origin via nginx with gateway-secret snippet) and added 4 new wire format events (persisted, closed, error from FastAPI, log-with-stderr) plus admin-browser fetch pattern; conventions.md clarified pnpm 10.4.1 vs Corepack shimming from system pnpm 11; postgres.md fetch_runs.log shape now documented as JSONB {error, stderr_tail}; ADR-001 file tree no longer claims output:'hybrid' + 7 new deviation entries (#5 pornxp.com->.bz / 1porn->.tv, #6 /srv/repos not /var/www, #7 xvideos 1-indexed, #8 fxv HTTPS via certbot, #9 same-origin admin via nginx+gateway-secret, #10 chunked CLI emit + 10 MiB pipe limit, #11 per-row autocommit no batch transaction, #12 no public bearer fallback) + aligned action items §7/§10/§12 with their respective deviations. CHANGES.md got a full 2026-06-06 session entry covering live deploy + TLS + MCP fix + CORS fix + fetcher source fixes + fetcher pipeline fixes (spawn/buffer/transaction). Discovered the",
+  "commands": [
+    "git commit + push (shared-tube docs)",
+    "git commit + push (vaultwares-docs ADR)",
+    "git commit + push (vaultwares-docs ADR residuals)"
+  ],
+  "files": [
+    "shared-tube/CHANGES.md",
+    "shared-tube/CLAUDE.md",
+    "shared-tube/docs/conventions.md",
+    "shared-tube/docs/fetcher-sources.md",
+    "shared-tube/docs/postgres.md",
+    "shared-tube/docs/router-integration.md",
+    "shared-tube/scripts/README.md",
+    "shared-tube/scripts/deploy-shared-tube.sh",
+    "vaultwares-docs/docs-content/adr/0001-shared-tube-rebuild.mdx"
+  ],
+  "planPath": "vaultwares-docs/docs-content/adr/0001-shared-tube-rebuild.mdx",
+  "contentHash": "99380687b29d1bdca39acbde8b9aefe29d8f7816b1c8e71dddc2e1d62ad2a407",
+  "git": null
+}

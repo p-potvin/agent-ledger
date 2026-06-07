@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { IconActivity, IconList } from '../icons';
+import { IconActivity, IconDatabase, IconList } from '../icons';
 import { IconChevronRight } from '../icons';
 import { I18N, useLangState } from '../i18n';
 
@@ -35,6 +35,10 @@ export function Nav() {
           <NavLink to="/changes" className={linkClass}>
             <IconList width={14} height={14} />
             {dict.changesTitle}
+          </NavLink>
+          <NavLink to="/input-tracker" className={linkClass}>
+            <IconDatabase width={14} height={14} />
+            {dict.inputTrackerNav}
           </NavLink>
         </nav>
       </div>

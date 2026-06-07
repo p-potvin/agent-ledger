@@ -1,0 +1,56 @@
+{
+  "id": "20260606-005128-099-prom-king-shared-tube-vaultwares-mcp-87b3d123",
+  "createdAt": "2026-06-06T04:51:28.0997919Z",
+  "createdAtLocal": "2026-06-06 00:51",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube + vaultwares-mcp",
+  "kind": "code-change,general,handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: autopilot (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Write, Edit, Bash, PowerShell, AskUserQuestion, TaskCreate, TaskUpdate, ToolSearch, mcp__VaultWares_MCP__MCP_Server___ssh_run\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-06 00:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "AskUserQuestion",
+      "TaskCreate",
+      "TaskUpdate",
+      "ToolSearch",
+      "mcp__VaultWares_MCP__MCP_Server___ssh_run"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Deploy handoff. SSH from this session is gated by VAULTWARES_MCP_ENABLE_SSH=0; cannot drive remote deploy. Wrote shared-tube/scripts/bootstrap-greencloud.sh (idempotent, root-runnable one-shot): backs up live WP /var/www/{fullxxx.video,prom-king.xyz} to /var/backups/wp-archive-<ts>.tar.gz, clones repo to /srv/repos/Prom-King/shared-tube, installs deploy-shared-tube.sh + lockfile, installs systemd units (not started), writes /etc/shared-tube/{fxv,pkt}.env with CHANGEME placeholders, installs nginx vhosts in sites-available (not enabled), idempotently merges vw-webhookd.targets.yml into /etc/vw-webhookd/config.yml, runs pnpm install+build as vwdeploy, verifies pipelines promking router presence on disk. Default mode is staged (nothing user-visible past step 1). WP_RETIRE=1 mode does actual cutover (rsync dist into /var/www, enable+start systemd, swap nginx vhosts, probe /2257 + /llms.txt). Prints 6-step cutover checklist on staged run. Pushed to Prom-King/shared-tube main (commit de0ac28). VAULTWARES-MCP CRITICAL: filed CRITICAL.md at repo root + header warning in CLAUDE.md flagging that vaultwares_mcp/server.py imports four ledger functions (get_agent_ledger_entries, search_agent_ledger, get_health_ledger_entries, search_health_ledger) from ledger_tools.py which only defines get_ledger_entries — ImportError at module load takes down every tool the server exposes (ssh_run, sh_run, fs_*, credit_*, nav_*, ops_*, ledger_*). tests/test_live_server.py references hallucinated names too, giving false-positive coverage. Recommended remediation: either rewrite ledger_tools.py to export the expected names (basing on get_ledger_entries + the health-ledger design doc) or remove the four imports + their server.py registrations (around lines 39-43 + 348-400) + rewrite tests. Add a python -c 'import vaultwares_mcp.server' smoke gate. Pushed to VaultWares/fastmcp (note remote moved to VaultWares/vaultwares-mcp.git per remote message) main (commit c6d7f73).",
+  "commands": [
+    "git commit + push (vaultwares-mcp CRITICAL.md)",
+    "git commit + push (shared-tube scripts/bootstrap-greencloud.sh)"
+  ],
+  "files": [
+    "vaultwares-mcp/CRITICAL.md",
+    "vaultwares-mcp/CLAUDE.md",
+    "shared-tube/scripts/bootstrap-greencloud.sh",
+    "shared-tube/scripts/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "87b3d1237abed5d5db354bbfae3c9df80a0fce97d39808abd7ec822f2b772087",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "de0ac28",
+    "hasChanges": false
+  }
+}

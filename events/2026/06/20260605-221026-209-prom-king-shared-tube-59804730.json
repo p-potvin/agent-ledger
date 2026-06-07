@@ -1,0 +1,57 @@
+{
+  "id": "20260605-221026-209-prom-king-shared-tube-59804730",
+  "createdAt": "2026-06-06T02:10:26.2092420Z",
+  "createdAtLocal": "2026-06-05 22:10",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: autopilot (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Write, Edit, Bash, PowerShell, AskUserQuestion, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-05 22:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "AskUserQuestion",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "ADR-001 step 1: scaffolded Prom-King/shared-tube pnpm monorepo. Root: pnpm-workspace.yaml, package.json (pnpm@10.4.1, Node 22), tsconfig.base.json, eslint flat config, prettier, vitest, .env.example, .gitignore. shared/ package @promking/shared-tube with Drizzle schema (videos/actors/studios/categories/joins/fetch_runs/settings/users/favourites + FTS index on videos.title), per-site tokens (fxv/pkt), undici+jsdom fetcher engine, fetcher CLI (NDJSON output for FastAPI subprocess), 7 source-config stubs (pornxp, 1porn, fullvideos, xvideos, xhamster, spankbang, redtube), Astro component shells (Header, Footer, VideoCard, PlayerModal, ConsentBanner, AgeGate, AdSlot). apps/fxv + apps/pkt Astro 5 + React 19 + @astrojs/node standalone, per-site config.ts. Locked decisions confirmed: router on FastAPI side of vaultwares-pipelines (fetcher shells out to TS CLI), Astro 5 + React 19, @promking/* scope, same fleet Postgres new DB 'promking'. Two build issues hit + fixed: stripped .ts from relative imports (TS 5.7 default), replaced Astro 4 hybrid with Astro 5 static default. pnpm install (524 pkgs) + pnpm -r build green; both apps prerender index.astro.",
+  "commands": [
+    "pnpm install --prefer-offline",
+    "pnpm -r build"
+  ],
+  "files": [
+    "shared-tube/pnpm-workspace.yaml",
+    "shared-tube/package.json",
+    "shared-tube/shared/src/db/schema.ts",
+    "shared-tube/shared/src/fetcher/engine.ts",
+    "shared-tube/shared/src/fetcher/cli.ts",
+    "shared-tube/apps/fxv/astro.config.mjs",
+    "shared-tube/apps/pkt/astro.config.mjs"
+  ],
+  "planPath": "vaultwares-docs/docs-content/adr/0001-shared-tube-rebuild.mdx",
+  "contentHash": "59804730b9bec5a5d9beefd8e49bb6824cf707d3ecab13d208fdac8a6aa1373d",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "9a67e03",
+    "hasChanges": true
+  }
+}

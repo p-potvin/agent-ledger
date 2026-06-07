@@ -1,0 +1,55 @@
+{
+  "id": "20260606-013528-513-prom-king-shared-tube-vaultwares-vaultwares-mcp-aee09b82",
+  "createdAt": "2026-06-06T05:35:28.5138183Z",
+  "createdAtLocal": "2026-06-06 01:35",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs",
+  "kind": "code-change,handoff,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: autopilot (network: greencloud-vps (tailnet) + clopeux-desktop)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Bash, PowerShell, Read, Edit, Write, TaskCreate, TaskUpdate, mcp__VaultWares_MCP__MCP_Server___ssh_run\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-06 01:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "greencloud-vps (tailnet) + clopeux-desktop",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write",
+      "TaskCreate",
+      "TaskUpdate",
+      "mcp__VaultWares_MCP__MCP_Server___ssh_run"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Two-stage: TLS for fullxxx.video + MCP issue #2 fix. (A) certbot certonly --webroot -w /var/www/_acme -d fullxxx.video -d www.fullxxx.video on greencloud-vps; cert valid through 2026-09-04 with auto-renewal. Swapped fxv vhost to HTTPS (mirroring prom-king.xyz shape: port 80 -> 308, www -> 301, apex HTTPS -> Node app); external probe of all routes 200. Baked HTTPS conf back into shared-tube repo (commit 9ffd755). (B) MCP issue #2 (hallucinated ledger tools breaking server import): rewrote vaultwares_mcp/ledger_tools.py with all 4 required functions (get_agent_ledger_entries, search_agent_ledger, get_health_ledger_entries, search_health_ledger). Agent-ledger reads camelCase JSON one-file-per-event; health-ledger reads JSONL day files (data/events/YYYY/MM/DD.jsonl) with event_type/run_id/service_id/ok filters. Roots overridable via VW_AGENT_LEDGER_ROOT and VW_HEALTH_LEDGER_ROOT. Pre-split names kept as aliases. Caught schema mismatch on first verify (real schema is camelCase + model nested under runtime.model, not PascalCase) and fixed. Added tests/test_import_smoke.py — the gate that should have existed: runs import vaultwares_mcp.server in fresh interpreter, verifies all 4 functions present + callable + return list on default args, <2s. Updated CRITICAL.md to RESOLVED (kept as institutional memory), replaced CLAUDE.md warning header with forward-looking note. Documented in vaultwares-docs/docs-content/operations/mcp-ledger-tools.mdx + added LEDGER_LOOKUP row to instructions/ROUTER.md for continuity/probe-history queries. Verified server import OK from .venv. Pushed vaultwares-mcp commit 20a102e (fix #2 auto-closed the issue) + vaultwares-docs commit 45552f1. Posted detailed fix comment on https://github.com/VaultWares/vaultwares-mcp/issues/2#issuecomment-4637544532.",
+  "commands": [
+    "ssh root@greencloud-vps certbot certonly --webroot -w /var/www/_acme -d fullxxx.video -d www.fullxxx.video",
+    "rewrite /etc/nginx/sites-available/fullxxx.video.conf to HTTPS, reload nginx",
+    "python tests/test_import_smoke.py (3 OK)",
+    "gh issue close 2 (already auto-closed by fix-keyword)",
+    "gh issue comment 2"
+  ],
+  "files": [
+    "shared-tube/scripts/nginx/fullxxx.video.conf",
+    "vaultwares-mcp/vaultwares_mcp/ledger_tools.py",
+    "vaultwares-mcp/tests/test_import_smoke.py",
+    "vaultwares-mcp/CRITICAL.md",
+    "vaultwares-mcp/CLAUDE.md",
+    "vaultwares-docs/docs-content/operations/mcp-ledger-tools.mdx",
+    "vaultwares-docs/instructions/ROUTER.md"
+  ],
+  "planPath": "vaultwares-docs/docs-content/adr/0001-shared-tube-rebuild.mdx",
+  "contentHash": "aee09b829b1a95852e936a9391982c485211571dbe62e96d116b727758dedb32",
+  "git": null
+}

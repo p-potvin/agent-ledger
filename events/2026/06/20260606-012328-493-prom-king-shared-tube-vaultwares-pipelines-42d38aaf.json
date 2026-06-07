@@ -1,0 +1,65 @@
+{
+  "id": "20260606-012328-493-prom-king-shared-tube-vaultwares-pipelines-42d38aaf",
+  "createdAt": "2026-06-06T05:23:28.4933877Z",
+  "createdAtLocal": "2026-06-06 01:23",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube + vaultwares-pipelines",
+  "kind": "code-change,handoff,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: autopilot (network: greencloud-vps (tailnet))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Edit, Write, AskUserQuestion, TaskCreate, TaskUpdate, mcp__VaultWares_MCP__MCP_Server___ssh_run\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-06 01:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "greencloud-vps (tailnet)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write",
+      "AskUserQuestion",
+      "TaskCreate",
+      "TaskUpdate",
+      "mcp__VaultWares_MCP__MCP_Server___ssh_run"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "DEPLOY LIVE. SSH'd to greencloud-vps as root via ~/.ssh/tube-site-vps (vwdeploy account has nologin). Surveyed: node 22.22.2, pnpm 11.1.3 with corepack auto-pinning to 10.4.1, PostgreSQL 15.18, vw-webhookd + nginx active, both old WP installs present + already broken externally (HTTP 404 on both domains before my touch — cert paths invalid in old vhosts). Ran bootstrap-greencloud.sh staged: backed up live WP to /var/backups/wp-archive-20260606-011143.tar.gz (35M), cloned Prom-King/shared-tube to /srv/repos/Prom-King/shared-tube (after patching script to use fleet GIT_ASKPASS at /var/www/deploy-scripts/git-askpass-vw-gh-token.sh), pnpm install+build clean. Verified pipelines (running locally on clopeux-desktop as PID 6104 via .venv/Scripts/python.exe api_server.py launched by start_dev_background.cmd at boot): merge code was on disk but apscheduler ImportError silently killed the try/except router import → 0 promking routes registered. Installed apscheduler 3.11.2 via 'uv pip install' into vaultwares-pipelines/.venv, appended PROMKING_DATABASE_URL=postgres://postgres:postgres@localhost:5432/promking + PROMKING_SHARED_TUBE_PATH=C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\shared-tube to vaultwares-pipelines/.env, killed PID 6104 + relaunched. Verified all 8 /api/promking/* routes in openapi + /stats returns {} (empty DB, no rows). Tailnet reachability greencloud→pipelines 79ms. Then WP_RETIRE=1 cutover hit three issues, all fixed inline + folded back into repo: (1) bootstrap installed vhosts to sites-available/<name> (no .conf) but symlinked sites-enabled/<name>.conf pointing at pre-existing certbot files; fixed bootstrap to use .conf consistently. (2) systemd ran node from /var/www/<domain>/ after rsync, but @astrojs/node standalone externalizes react/react-dom and the rsync'd dir has no node_modules → ERR_MODULE_NOT_FOUND; switched systemd units to run from /srv/repos/Prom-King/shared-tube/apps/<site>/ where pnpm workspace symlinks resolve, dropped the /var/www rsync entirely. (3) prom-king.xyz.conf put the www→apex 301 inside the apex server block, 301-redirected every request; split into a dedicated www-only server stanza. fullxxx.video has no letsencrypt cert on",
+  "commands": [
+    "scp scripts/bootstrap-greencloud.sh root@greencloud-vps:/tmp/",
+    "bash /tmp/bootstrap-greencloud.sh (staged)",
+    "uv pip install apscheduler asyncpg into vaultwares-pipelines/.venv",
+    "edit vaultwares-pipelines/.env (PROMKING_DATABASE_URL+PROMKING_SHARED_TUBE_PATH)",
+    "restart api_server.py",
+    "WP_RETIRE=1 bash /tmp/bootstrap-greencloud.sh",
+    "rewrote systemd units to run from /srv/repos",
+    "rewrote prom-king.xyz.conf with split www stanza",
+    "git push origin main"
+  ],
+  "files": [
+    "shared-tube/scripts/bootstrap-greencloud.sh",
+    "shared-tube/scripts/nginx/fullxxx.video.conf",
+    "shared-tube/scripts/nginx/prom-king.xyz.conf",
+    "shared-tube/scripts/systemd/fxv.service",
+    "shared-tube/scripts/systemd/pkt.service",
+    "vaultwares-pipelines/.env (PROMKING_*)"
+  ],
+  "planPath": "vaultwares-docs/docs-content/adr/0001-shared-tube-rebuild.mdx",
+  "contentHash": "42d38aafe950db0c102bece606de7d955ecc1b6c837e231196440285775543c7",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "75c2d78",
+    "hasChanges": false
+  }
+}

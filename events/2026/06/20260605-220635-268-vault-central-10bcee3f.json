@@ -1,0 +1,52 @@
+﻿{
+    "id":  "20260605-220635-268-vault-central-10bcee3f",
+    "createdAt":  "2026-06-06T02:06:35.2685942Z",
+    "createdAtLocal":  "2026-06-05 22:06",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-central",
+    "kind":  "code-change,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-1.5-pro\r\nThinking: medium\r\nMode: code\r\nPermissions: autopilot (network: Windows Local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): replace_file_content, run_command, view_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-05 22:06 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-1.5-pro",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "autopilot",
+                    "network":  "Windows Local",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "run_command",
+                                      "view_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+    "summary":  "Identified duplicate compiled .js files checked into git that masked the new TSX code in Vite resolution. Removed 20 duplicate .js files and updated vite.config.ts to explicitly prioritize .tsx and .ts extensions over .js.",
+    "commands":  [
+                     "git rm -f ...",
+                     "npm run build",
+                     "npm run test"
+                 ],
+    "files":  [
+                  "vite.config.ts"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\89762b3e-5644-4f25-ae55-07560156c9e0\\implementation_plan.md",
+    "contentHash":  "10bcee3fd83fa8cba69cb09ddfee808deca84724b06d2459bcf46d9b59e35b07",
+    "git":  {
+                "repo":  "vault-central",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+                "branch":  "main",
+                "head":  "31c2b30",
+                "hasChanges":  true
+            }
+}

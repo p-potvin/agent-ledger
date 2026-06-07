@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260607-080940-327-general-tasks-59167771",
+    "createdAt":  "2026-06-07T12:09:40.3272991Z",
+    "createdAtLocal":  "2026-06-07 08:09",
+    "timezone":  "Eastern Standard Time",
+    "project":  "General Tasks",
+    "kind":  "plan",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: Gemini 3.5 Flash\r\nThinking: low\r\nMode: plan\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-scripts\\scripts  Branch: main\r\nTools used (this reply): write_to_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-07 08:09 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.5 Flash",
+                    "thinking":  "low",
+                    "mode":  "plan",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  "write_to_file",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-scripts\\scripts",
+    "summary":  "Created implementation plan to move dataset_builder, telegram, and .venv folders to python-zipper/ repository, link to GitHub, and update NSSM service.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\a28b6950-76ce-415f-be96-871943d7863d\\implementation_plan.md"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\a28b6950-76ce-415f-be96-871943d7863d\\implementation_plan.md",
+    "contentHash":  "59167771c6a6abf15a94841e962d031905278effbe9cd929fb224c76a246cc09",
+    "git":  {
+                "repo":  "python-scripts",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/python-scripts",
+                "branch":  "main",
+                "head":  "8130f86",
+                "hasChanges":  true
+            }
+}

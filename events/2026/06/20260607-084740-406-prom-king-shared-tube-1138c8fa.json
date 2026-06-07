@@ -1,0 +1,69 @@
+{
+  "id": "20260607-084740-406-prom-king-shared-tube-1138c8fa",
+  "createdAt": "2026-06-07T12:47:40.4063299Z",
+  "createdAtLocal": "2026-06-07 08:47",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube",
+  "kind": "code-change,handoff,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: autopilot (network: Windows 11 local + tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Bash, Read, Edit, Write, WebSearch, WebFetch, PowerShell, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-07 08:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows 11 local + tailnet",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "WebSearch",
+      "WebFetch",
+      "PowerShell",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "SEO pass. User asked how tube sites get many pages indexed + how their search pages rank for arbitrary query terms. Researched (web search rate-limited; supplemented with WebFetch on Google's Schema docs which confirmed SearchAction sitelinks searchbox was deprecated Oct 2024 — do NOT add that schema). Shipped path-segment search /search/[q] mirroring the tube-site pattern (URL+title+H1 contain the keyword, JSON-LD ItemList + BreadcrumbList when results exist, noindex on empty result sets to avoid doorway pages, canonical points at self). /search?q= now 301-redirects to /search/<slug> so users + crawlers converge on the indexable form. sitemap.xml harvests every taxonomy term name into /search/<slug> URLs. robots.txt declared with Disallow /admin/, Disallow /search?, Allow /search/. JSON-LD module shared/src/seo/schema.ts: WebSite (site identity, every page via Layout), VideoObject (videos, already had it — now consolidated), ItemList (listings + archives + search results), BreadcrumbList (taxonomy archives + search). Layout meta hardening: og:type switches between video.other/website, og:image:alt + full twitter card set, pagination canonical now self (page 2 canonical = page 2, NOT collapsing to /videos/). actor/studio/category archives now emit BreadcrumbList + ItemList. /videos/ paginated listing same. All ported to both fxv + pkt. Local pnpm -r build green. Redeployed greencloud, services restarted. External probes confirmed: /robots.txt 200 with correct body; /sitemap.xml 200; /search/big-natural-tits 200 with title 'Big Natural Tits videos — FullXXX.video' + canonical + noindex (correct: empty result set) + application/ld+json; /search?q=blonde+test → 301 → /search/blonde-test; /search (bare) form-only; /videos/?page=2 self-canonical. Pushed commit 0f4ed58 to Prom-King/shared-tube main. Five open follow-ups carry into next session: spankbang Cloudflare bypass, redtube JSON API audit, dedicated",
+  "commands": [
+    "pnpm -r build",
+    "ssh root@greencloud-vps git pull + pnpm -r build + systemctl restart",
+    "curl probes for SEO surfaces",
+    "git commit + push origin main"
+  ],
+  "files": [
+    "shared-tube/shared/src/seo/schema.ts",
+    "shared-tube/shared/src/components/Layout.astro",
+    "shared-tube/shared/package.json",
+    "shared-tube/apps/fxv/src/pages/robots.txt.ts",
+    "shared-tube/apps/pkt/src/pages/robots.txt.ts",
+    "shared-tube/apps/fxv/src/pages/search/[q].astro",
+    "shared-tube/apps/pkt/src/pages/search/[q].astro",
+    "shared-tube/apps/fxv/src/pages/search.astro",
+    "shared-tube/apps/pkt/src/pages/search.astro",
+    "shared-tube/apps/fxv/src/pages/sitemap.xml.ts",
+    "shared-tube/apps/pkt/src/pages/sitemap.xml.ts",
+    "shared-tube/apps/fxv/src/pages/videos/index.astro",
+    "shared-tube/apps/fxv/src/pages/actor/[slug].astro",
+    "shared-tube/apps/fxv/src/pages/studio/[slug].astro",
+    "shared-tube/apps/fxv/src/pages/category/[slug].astro"
+  ],
+  "planPath": "vaultwares-docs/docs-content/adr/0001-shared-tube-rebuild.mdx",
+  "contentHash": "1138c8faaee6e88bb67ec6395d5a3651e0bd1acb8537fb4870b8cff3d532ef58",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "0f4ed58",
+    "hasChanges": false
+  }
+}

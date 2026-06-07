@@ -1,0 +1,50 @@
+﻿{
+    "id":  "20260605-021439-902-vault-central-4e14284f",
+    "createdAt":  "2026-06-05T06:14:39.9022322Z",
+    "createdAtLocal":  "2026-06-05 02:14",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-central",
+    "kind":  "code-change,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-1.5-pro\r\nThinking: medium\r\nMode: code\r\nPermissions: autopilot (network: Windows Local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): multi_replace_file_content, run_command, command_status\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-05 02:14 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-1.5-pro",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "autopilot",
+                    "network":  "Windows Local",
+                    "toolsUsed":  [
+                                      "multi_replace_file_content",
+                                      "run_command",
+                                      "command_status"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+    "summary":  "Refactored VideoPlayer.tsx to implement 1500ms mouse-idle controls auto-fade logic, thinner and absolute top/bottom overlay bars, maximized seek bar layout on the single deck line, icon-only speed button, hidden AI button, and bottom-bar PiP button.",
+    "commands":  [
+                     "npm run build"
+                 ],
+    "files":  [
+                  "src/components/VideoPlayer.tsx"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\89762b3e-5644-4f25-ae55-07560156c9e0\\implementation_plan.md",
+    "contentHash":  "4e14284f1a8cea9e0d9a651f2eaa5b387a8f311ea78fa9822ca6d9113c76a6aa",
+    "git":  {
+                "repo":  "vault-central",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+                "branch":  "main",
+                "head":  "31c2b30",
+                "hasChanges":  true
+            }
+}

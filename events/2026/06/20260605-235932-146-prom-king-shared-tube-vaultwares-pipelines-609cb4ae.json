@@ -1,0 +1,77 @@
+{
+  "id": "20260605-235932-146-prom-king-shared-tube-vaultwares-pipelines-609cb4ae",
+  "createdAt": "2026-06-06T03:59:32.1469676Z",
+  "createdAtLocal": "2026-06-05 23:59",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube + vaultwares-pipelines",
+  "kind": "code-change,handoff,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: autopilot (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Write, Edit, Read, Bash, PowerShell, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-05 23:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Read",
+      "Bash",
+      "PowerShell",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "ADR-001 §6/7/8 merge + §9/10/11/12 in one pass. PIPELINES: merged feat/promking-router into main (commit 66c9e3a), dedup'd asyncpg between origin/main + branch, pushed origin/main. Pre-session unrelated unstaged deletions preserved via stash->pop. SHARED-TUBE: §9 shipped full Astro page set both apps (config-agnostic, mirrored fxv->pkt): home SSR with Hot+Newest+graceful-API-down, 4 legal SSG, /videos/ listing SSR paginated, /videos/[slug] single SSR with JSON-LD VideoObject, taxonomy archives (actor/studio/category), search SSR with FTS, sitemap.xml SSR with all paths+videos+terms, llms.txt SSG. New shared/ pieces: src/api/pipelines.ts typed client, src/components/Layout.astro full doc shell with tokens-as-CSS-vars+GTM+meta+JSON-LD, VideoGrid+Pagination, src/pages/legal.ts. shared/package.json exports map += ./api/* ./pages/*. §10 React admin at /admin per app: App.tsx bearer-token signin against pipelines /me with localStorage persist, Fetcher/Console.tsx with live SSE stream via fetch+reader (EventSource can't set headers) + source picker + recent runs table, Catalog/Bulk.tsx term browser, Stats/Dashboard.tsx, SQL/Panel.tsx with 10 canned queries + copy-to-clipboard. §11 scripts/: deploy-shared-tube.sh honouring all deployment-flow invariants, systemd units (fxv 4321 / pkt 4322), nginx vhosts with /admin+SSE buffering disabled and /_astro long cache, vw-webhookd.targets.yml fragment with PROMKING_SHARED_TUBE_PATH env, deploy-vaultwares-pipelines.patch.md additions doc, scripts/README.md bootstrap recipe. §12 local smoke: pnpm -r build green, drizzle generate+migrate produced 11 tables in local promking DB, pnpm preview served home (200, graceful API-down rendering), /2257 (200), /llms.txt (200 correct text), /sitemap.xml (200 valid XML). Pushed to Prom-King/shared-tube main (commits a1fdc3c + 6783748). ADR-001 action items §6-§12 all checked off.",
+  "commands": [
+    "git merge --no-ff feat/promking-router",
+    "git push origin main (pipelines)",
+    "pnpm db:generate + db:migrate",
+    "pnpm -r build",
+    "pnpm preview + curl probes",
+    "git push origin main (shared-tube)"
+  ],
+  "files": [
+    "vaultwares-pipelines/api_server.py",
+    "vaultwares-pipelines/requirements.txt",
+    "vaultwares-pipelines/app/routers/promking/",
+    "shared-tube/shared/src/api/pipelines.ts",
+    "shared-tube/shared/src/components/Layout.astro",
+    "shared-tube/shared/src/components/VideoGrid.astro",
+    "shared-tube/shared/src/components/Pagination.astro",
+    "shared-tube/shared/src/pages/legal.ts",
+    "shared-tube/shared/package.json",
+    "shared-tube/shared/drizzle/0000_melted_chimera.sql",
+    "shared-tube/apps/fxv/src/pages/",
+    "shared-tube/apps/pkt/src/pages/",
+    "shared-tube/apps/fxv/src/admin/",
+    "shared-tube/apps/pkt/src/admin/",
+    "shared-tube/scripts/deploy-shared-tube.sh",
+    "shared-tube/scripts/systemd/fxv.service",
+    "shared-tube/scripts/systemd/pkt.service",
+    "shared-tube/scripts/nginx/fullxxx.video.conf",
+    "shared-tube/scripts/nginx/prom-king.xyz.conf",
+    "shared-tube/scripts/vw-webhookd.targets.yml",
+    "shared-tube/scripts/README.md",
+    "shared-tube/CHANGES.md",
+    "vaultwares-docs/docs-content/adr/0001-shared-tube-rebuild.mdx"
+  ],
+  "planPath": "vaultwares-docs/docs-content/adr/0001-shared-tube-rebuild.mdx",
+  "contentHash": "609cb4ae6bee127ac6dbb09f44257f18b93f390e0ab40a64f9831aa8c3f6d2de",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "6783748",
+    "hasChanges": false
+  }
+}

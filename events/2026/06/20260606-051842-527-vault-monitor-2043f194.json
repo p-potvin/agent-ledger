@@ -1,0 +1,40 @@
+{
+  "id": "20260606-051842-527-vault-monitor-2043f194",
+  "createdAt": "2026-06-06T09:18:42.5270595Z",
+  "createdAtLocal": "2026-06-06 05:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-06 05:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Verified updated DNS for monitor.vaultwares.ca. Normal DNS now resolves monitor.vaultwares.ca to tailnet IP 100.73.93.84. Verified https://monitor.vaultwares.ca/ returns 200 without curl --resolve, /monitor/overview?kiwi_check=false returns normalized vaultwares-pipelines data with health ok and agents ok, and Playwright Chromium renders the app through normal DNS with title and h1 V.A.U.L.T Monitor, live data present, and no console errors.",
+  "commands": [
+    "Resolve-DnsName monitor.vaultwares.ca",
+    "curl.exe -I https://monitor.vaultwares.ca/",
+    "curl.exe https://monitor.vaultwares.ca/monitor/overview?kiwi_check=false",
+    "Playwright Chromium render via normal DNS"
+  ],
+  "files": [
+    "/etc/dnsmasq.d/vaultwares-tailnet.conf",
+    "/etc/nginx/sites-available/monitor.vaultwares.ca.conf"
+  ],
+  "planPath": "",
+  "contentHash": "2043f1946550a34a60c9686842690fb601f1ed8f824c99fc960bce629061c0fc",
+  "git": null
+}

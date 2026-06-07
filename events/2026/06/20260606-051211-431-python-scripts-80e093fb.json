@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260606-051211-431-python-scripts-80e093fb",
+    "createdAt":  "2026-06-06T09:12:11.4319568Z",
+    "createdAtLocal":  "2026-06-06 05:12",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-scripts",
+    "kind":  "plan",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-1.5-pro\r\nThinking: high\r\nMode: plan\r\nPermissions: autopilot (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-scripts  Branch: main\r\nTools used (this reply): run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-06 05:12 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-1.5-pro",
+                    "thinking":  "high",
+                    "mode":  "plan",
+                    "permissions":  "autopilot",
+                    "network":  "local",
+                    "toolsUsed":  "run_command",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-scripts",
+    "summary":  "Updated implementation plan to prioritize uploading to FileBoom (fboom) first, falling back to Keep2Share (k2s) as a safety, using the same extracted access token.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\20e533f8-cd7f-44d3-8e86-392e2eb460eb\\implementation_plan.md",
+    "contentHash":  "80e093fb07cc919fc8d6f8c0c278a3491b1e6e589594c5df73a738b829b0b64d",
+    "git":  {
+                "repo":  "python-scripts",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/python-scripts",
+                "branch":  "main",
+                "head":  "0a7437b",
+                "hasChanges":  true
+            }
+}

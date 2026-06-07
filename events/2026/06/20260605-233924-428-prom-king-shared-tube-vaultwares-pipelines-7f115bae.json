@@ -1,0 +1,69 @@
+{
+  "id": "20260605-233924-428-prom-king-shared-tube-vaultwares-pipelines-7f115bae",
+  "createdAt": "2026-06-06T03:39:24.4284757Z",
+  "createdAtLocal": "2026-06-05 23:39",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube + vaultwares-pipelines",
+  "kind": "code-change,handoff,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: autopilot (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Write, Edit, Read, Bash, PowerShell, TaskCreate, TaskUpdate, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-05 23:39 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Read",
+      "Bash",
+      "PowerShell",
+      "TaskCreate",
+      "TaskUpdate",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "ADR-001 §6+§7+§8 in one pass. SHARED-TUBE: ported 6 PHP fetchers to TS source configs from tube-sites/fullxxx-video/includes/video-fetcher.php + tube-sites/promking-tube/includes/video-fetcher.php. Real hosts: pornxp.fo (not .com) + listing/detail dual-stage; 1porn.tv (not .com) listing-only with data-preview MP4 as embed; xvideos.com listing-only with /embedframe/id derivation; xhamster.com listing-only (source URL is embed); spankbang.com listing with /<key>/embed/ derivation; redtube.com JSON API (added customFetch escape hatch to SourceConfig). New _filters.ts shares URL/content reject patterns + absolutize + parseDuration. Selector gotcha doc: div.list-videos div.item uses descendant combinator (space) not '>'. Scaffold pushed to Prom-King/shared-tube main (commit 87cc3d9). PIPELINES: created branch feat/promking-router from main, added app/routers/promking/ with 9 modules (__init__, db asyncpg pool, _models pydantic, videos with FTS, taxonomies, settings_routes, stats, fetcher with subprocess+SSE+persistence, cron with APScheduler replacing node-cron). Mounted via include_router in api_server.py; lifespan hooks start/stop the scheduler. requirements.txt += asyncpg>=0.29 + apscheduler>=3.10. py_compile clean on all 9 modules. Pipelines branch committed locally (c129170); not pushed pending owner sign-off. ADR-001 patched: 2 new Implementation deviations (node-cron->APScheduler, host renames pornxp.com->pornxp.fo / 1porn.com->1porn.tv). Open: Drizzle migrations not yet applied to promking DB, so the router queries will fail with 'relation does not exist' until db:generate + db:migrate run.",
+  "commands": [
+    "git push origin main (shared-tube)",
+    "git commit on feat/promking-router (pipelines, no push)",
+    "python -m py_compile app/routers/promking/*.py",
+    "pnpm -r build (shared-tube)"
+  ],
+  "files": [
+    "shared-tube/shared/src/fetcher/types.ts",
+    "shared-tube/shared/src/fetcher/engine.ts",
+    "shared-tube/shared/src/fetcher/sources/_filters.ts",
+    "shared-tube/shared/src/fetcher/sources/pornxp.ts",
+    "shared-tube/shared/src/fetcher/sources/1porn.ts",
+    "shared-tube/shared/src/fetcher/sources/xvideos.ts",
+    "shared-tube/shared/src/fetcher/sources/xhamster.ts",
+    "shared-tube/shared/src/fetcher/sources/spankbang.ts",
+    "shared-tube/shared/src/fetcher/sources/redtube.ts",
+    "shared-tube/CHANGES.md",
+    "vaultwares-pipelines/app/routers/promking/__init__.py",
+    "vaultwares-pipelines/app/routers/promking/db.py",
+    "vaultwares-pipelines/app/routers/promking/_models.py",
+    "vaultwares-pipelines/app/routers/promking/videos.py",
+    "vaultwares-pipelines/app/routers/promking/taxonomies.py",
+    "vaultwares-pipelines/app/routers/promking/settings_routes.py",
+    "vaultwares-pipelines/app/routers/promking/stats.py",
+    "vaultwares-pipelines/app/routers/promking/fetcher.py",
+    "vaultwares-pipelines/app/routers/promking/cron.py",
+    "vaultwares-pipelines/api_server.py",
+    "vaultwares-pipelines/requirements.txt",
+    "vaultwares-docs/docs-content/adr/0001-shared-tube-rebuild.mdx"
+  ],
+  "planPath": "vaultwares-docs/docs-content/adr/0001-shared-tube-rebuild.mdx",
+  "contentHash": "7f115baef43beaf235dac215cc857f0c609d20246bc6588f709ddd1fdb5a23d5",
+  "git": null
+}
