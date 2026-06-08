@@ -1,0 +1,55 @@
+{
+  "id": "20260608-025709-232-agent-ledger-941b6f66",
+  "createdAt": "2026-06-08T06:57:09.2324544Z",
+  "createdAtLocal": "2026-06-08 02:57",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "plan,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: windows-local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): Bash, Read, Grep, TaskCreate, ToolSearch\r\nMCP servers accessed (this reply): VaultWares MCP, computer-use\r\nTime: 2026-06-08 02:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "windows-local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Grep",
+      "TaskCreate",
+      "ToolSearch"
+    ],
+    "mcpServersAccessed": [
+      "VaultWares MCP",
+      "computer-use"
+    ]
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Investigated 3 symptoms. (1) Webhook 504: deploy.sh runs synchronously (git+pwsh+npm ci+npm build+rsync) exceeding GitHub 10s; deploy DOES complete (data JSONs refreshed 06-08 06:23) but every delivery marked failed. Fix: receiver must fork/queue and 200 immediately. (2) Untracked input-logs/2026-06-03..06-08.json never commit because scripts/sync-agent-ledger.ps1 candidatePaths (lines 30-49) omits 'input-logs'. Modified 2026-06-02.json same issue. Fix: add 'input-logs' to array. (3) Broken UI: deployed CSS byte-identical to local dist (24641b), all --vault-* tokens + vw-* classes present; JS 283KB intact; data fresh. Server-side CSS not the issue — need visual inspection (computer-use denied). Also: vaultwares-themes submodule has 15 .ts files deleted (tokens, components, icons/index.ts) — same pattern as ebae4382 restore commit; recurring systemic deletion.",
+  "commands": [
+    "gh api repos/p-potvin/agent-ledger/hooks/631225122/deliveries",
+    "curl -sk https://ledger.vaultwares.ca/"
+  ],
+  "files": [
+    "scripts/sync-agent-ledger.ps1",
+    "deploy/deploy.sh",
+    "site/src/index.css",
+    "vaultwares-themes"
+  ],
+  "planPath": "",
+  "contentHash": "941b6f660a29091804ec02e3c5d65efc8beda94470057e164a7dc18f97ac4065",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "f35e4c6b",
+    "hasChanges": true
+  }
+}

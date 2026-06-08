@@ -6,6 +6,10 @@
 - [x] **DAILY_DASHBOARD Theme Refinement** — Revised theme with muted accent colors, reduced LED dots (6px soft glow), removed glassmorphism/gradient backgrounds, removed scanline overlays, switched heatmap to violet color levels. Fixed scheduled task registration for `conhost.exe --headless`.
 - [x] **Productivity System Sync** — Executed `/productivity:update` routine to scan 7 project TASKS.md files and last 20 ledger entries. Compiled active work summary across CodeQL enablement, Gemini smoke test, Dependabot webhooks, and tube-sites fixes.
 
+## Completed (2026-06-02)
+
+- [x] **Work Impact Page Fixes & Enhancements** — Fixed WorkImpactPage.tsx and update-work-impact-state.ps1. Resolved data loading on initial render; fixed work activity tooltip by decoding URI-encoded project names; reordered KPI row above focus blocks; added commit exclusion for outliers. Added missing modules: AI Model Usage, Tools Used, MCP Servers, Agent Activity by Day, Time-of-Day Rhythm. Verified activity-by-project accordions render correctly.
+
 ## Remaining
 
 - [ ] Update `scripts/render-agent-ledger.ps1` to include archived entries from the `archive/` or `history/` directories in `CHANGES.html`.

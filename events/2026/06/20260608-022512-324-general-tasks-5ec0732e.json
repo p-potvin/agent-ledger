@@ -1,0 +1,42 @@
+{
+  "id": "20260608-022512-324-general-tasks-5ec0732e",
+  "createdAt": "2026-06-08T06:25:12.3246450Z",
+  "createdAtLocal": "2026-06-08 02:25",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: windows-local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-08 02:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "windows-local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Second restoration pass — committed .ts deletions since 2026-06-03. Scanned all 49 repos. Found 22 committed-deleted .ts files still absent from HEAD across 2 repos: vault-central (14, all from 31c2b30 'feat: refactor vault dashboard with component-based architecture, TypeScript support, and full backup/import functionality' on June 4 — included playwright.config.ts, all tests/*.spec.ts + tests/*.test.ts, testing/* fixtures) and agent-ledger (8, all from 2b1ade5 — site/{i18n,vite.config}.ts and stats-app/{src/lib/{aliases,i18n,types,utils},src/vite-env.d,vite.config}.ts). Restored each via git checkout <commit>^ -- <file>, committed per-repo, pushed. Pushes: agent-ledger e7b994e6..ebae4382 main, vault-central 6c06d22..d62ef88 main. Final sweep confirmed 0 still-absent committed-deleted .ts files in any repo. Excluded node_modules/vendor/dist/build/.next/.turbo/.nuxt/out/coverage/.venv/venv/third_party/bower_components/.pnpm-store/.yarn/target.",
+  "commands": [
+    "git log --since='2026-06-03' --diff-filter=D per repo",
+    "git checkout 31c2b30^ -- <files> in vault-central",
+    "git checkout 2b1ade5^ -- <files> in agent-ledger",
+    "git commit + git push origin main per repo"
+  ],
+  "files": [
+    "22 restored .ts files across vault-central and agent-ledger"
+  ],
+  "planPath": "",
+  "contentHash": "5ec0732eb82ce1aaabb9e3390954a328209f8aab73b343940ec1e771f28eedef",
+  "git": null
+}

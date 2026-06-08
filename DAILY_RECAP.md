@@ -49,4 +49,27 @@
 
 ---
 
-**[PENDING: 2026-06-02 — Daily recap created, awaiting Midnight agent verification]**
+**[PROCESSED: 2026-06-03 — Midnight sync completed]**
+- Updated `agent-ledger/TODO.md` — added Work Impact Page Fixes (2026-06-02) to Completed section
+- Created `vaultwares-docs/TASKS.md` — logged Tailnet DNS configuration and verification work
+- Created `python-scripts/TASKS.md` — logged Telegram scraper pipeline cleanup and refactor
+- All project task files synced with ledger entries
+- Files synchronized: agent-ledger/TODO.md ✓, vaultwares-docs/TASKS.md ✓, python-scripts/TASKS.md ✓
+
+---
+
+**[PROCESSED: 2026-06-04 — Midnight sync completed]**
+- No new Daily Recap entries since 2026-06-03 sync
+- All project task files remain current with prior sync
+- No changes required
+
+---
+
+**[PROCESSED: 2026-06-05 — Midnight sync completed]**
+- Verified 2026-06-02 Daily Recap entries against project task files
+- All 3 projects have current TASKS.md files:
+  - `vaultwares-docs/TASKS.md` — Tailnet DNS resolver configuration and verification tasks marked complete ✓
+  - `python-scripts/TASKS.md` — Telegram scraper pipeline cleanup and refactor marked complete ✓
+  - `agent-ledger/TODO.md` — Work Impact Page fixes marked complete ✓
+- No discrepancies between recap and project files
+- Sync complete — all projects current
