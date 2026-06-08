@@ -5,7 +5,7 @@ This repo is the append-only ledger for AI-agent activity across local and cloud
 ## Layout
 
 - `events/YYYY/MM/*.json` - source-of-truth event records. These are conflict-resistant because every entry gets its own file.
-- `input-spool/YYYY-MM-DD.jsonl` - append-only fallback batches written only when `vaultwares-pipelines` is unavailable.
+- `input-spool/YYYY-MM-DD.jsonl` - append-only fallback batches written only when `vaultwares-api` is unavailable.
 - `CHANGES.md` - generated readable ledger for this repo.
 - `CHANGES.html` - generated browser-ready ledger with expandable sections.
 - `WORK_IMPACT.html` - generated work-impact dashboard. It combines ledger events, work-impact state, and `input-logs` when present.
@@ -15,10 +15,11 @@ This repo is the append-only ledger for AI-agent activity across local and cloud
 - `site/` - React/Vite internal dashboard source for Work Impact, ledger, and `/input-tracker` views.
 - `scripts/record-agent-change.ps1` - local intake command for agents and hooks.
 - `scripts/render-agent-ledger.ps1` - rebuilds readable ledgers from event files.
-- `scripts/render-work-impact.ps1` - rebuilds `WORK_IMPACT.html` from ledger state. Input tracker widgets now read normalized pipelines APIs in the React site.
+- `scripts/render-work-impact.ps1` - rebuilds `WORK_IMPACT.html` from ledger state. Input tracker widgets now read normalized VaultWares API endpoints in the React site.
 - `scripts/update-work-impact.ps1` / `scripts/update-work-impact-state.ps1` - rebuild the persisted aggregate state consumed by Work Impact.
-- `scripts/track-input.py` - optional local input tracker for privacy-safe keystroke, pointer, focus, and command cadence metrics. It batches to `vaultwares-pipelines`.
+- `scripts/track-input.py` - optional local input tracker for privacy-safe keystroke, pointer, focus, and command cadence metrics. It batches to `vaultwares-api`.
 - `scripts/replay-input-spool.py` - replays append-only tracker spool files after API outages.
+- `scripts/import-input-logs.py` - imports legacy `input-logs/YYYY-MM-DD.json` files into the API with stable idempotent batch/event ids.
 - `scripts/setup-input-tracker.ps1` - installs tracker dependencies and registers the Windows input-tracker scheduled task.
 - `scripts/sync-agent-ledger.ps1` - pulls, renders, commits, and pushes queued ledger changes.
 - `scripts/setup-agent-ledger-scheduler.ps1` - registers a Windows scheduled task for automatic sync.
@@ -68,7 +69,7 @@ Open `C:\Users\Administrator\Desktop\Github Repos\CHANGES.html` in Firefox for a
 
 ## Input tracker and dashboard widgets
 
-The optional input tracker records local activity as privacy-safe minute rollups and posts batches to `vaultwares-pipelines`:
+The optional input tracker records local activity as privacy-safe minute rollups and posts batches to `vaultwares-api`:
 
 ```powershell
 & "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\setup-input-tracker.ps1" -StartNow
@@ -79,8 +80,15 @@ The tracker task is named `VaultWares-InputTracker`. It starts at logon and unlo
 Set these environment variables for non-default deployments:
 
 ```powershell
-$env:VW_PIPELINES_URL = "http://127.0.0.1:9001"
-$env:VW_PIPELINES_API_KEY = "<local service key>"
+$env:VW_API_URL = "http://127.0.0.1:9001"
+$env:VW_TELEMETRY_API_KEY = "<local service key>"
+```
+
+Legacy hourly JSON can be imported through the API before restarting a stale tracker:
+
+```powershell
+python "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\import-input-logs.py" --since 2026-06-06 --dry-run
+python "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\import-input-logs.py" --since 2026-06-06
 ```
 
 If the API is unavailable, the tracker writes append-only JSONL batches under `input-spool/`. Replay them after the API recovers:
@@ -89,7 +97,7 @@ If the API is unavailable, the tracker writes append-only JSONL batches under `i
 python "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\replay-input-spool.py"
 ```
 
-The React/Vite dashboard route `/input-tracker` reads `GET /monitor/input-tracker` only. The browser does not scan `input-logs`, open spool files, or connect to Postgres directly. Existing `input-logs/*.json` files are legacy import material; durable storage and rollups now belong behind `vaultwares-pipelines`.
+The React/Vite dashboard route `/input-tracker` reads `GET /monitor/input-tracker` only. The browser does not scan `input-logs`, open spool files, or connect to Postgres directly. Existing `input-logs/*.json` files are legacy import material; durable storage and rollups now belong behind `vaultwares-api`.
 
 ## Project aliases (rename continuity)
 
@@ -120,5 +128,5 @@ This writes:
 
 ## Deployment (protected)
 
-This repo is deployed to `ledger.vaultwares.ca` and `stats.vaultwares.ca` for internal use only. The stats SPA serves work-impact, changes, and input-tracker pages on the tailnet; all live data comes through `vaultwares-pipelines`.
+This repo is deployed to `ledger.vaultwares.ca` and `stats.vaultwares.ca` for internal use only. The stats SPA serves work-impact, changes, and input-tracker pages on the tailnet; all live data comes through `vaultwares-api`.
 **Read DEPLOY.md** to know more details.

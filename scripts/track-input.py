@@ -2,7 +2,7 @@
 """
 VaultWares input tracker.
 
-Collects privacy-safe input metrics, batches them to vaultwares-pipelines, and
+Collects privacy-safe input metrics, batches them to vaultwares-api, and
 falls back to append-only JSONL spool files when the API is unavailable.
 
 No raw typed text, clipboard contents, secrets, or unhashed window titles are
@@ -20,6 +20,7 @@ import socket
 import sys
 import threading
 import time
+import traceback
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
@@ -42,12 +43,17 @@ except ImportError:
 SCRIPT_DIR = Path(__file__).parent.resolve()
 ROOT_DIR = SCRIPT_DIR.parent
 SPOOL_DIR = Path(os.environ.get("VW_INPUT_SPOOL_DIR") or (ROOT_DIR / "input-spool"))
-PIPELINES_URL = os.environ.get("VW_PIPELINES_URL", "http://127.0.0.1:9001").rstrip("/")
+API_URL = (os.environ.get("VW_API_URL") or os.environ.get("VW_PIPELINES_URL") or "http://127.0.0.1:9001").rstrip("/")
 API_KEY = os.environ.get("VW_PIPELINES_API_KEY") or os.environ.get("VW_TELEMETRY_API_KEY") or ""
 FLUSH_EVERY = max(10, int(os.environ.get("VW_INPUT_BATCH_SECONDS", "60")))
+STATE_DIR = Path(os.environ.get("VW_INPUT_STATE_DIR") or (ROOT_DIR / "input-state"))
+HEALTH_PATH = STATE_DIR / "input-tracker-health.json"
+ERROR_PATH = STATE_DIR / "input-tracker-errors.jsonl"
+LOCK_PATH = STATE_DIR / "input-tracker.lock"
 PX_PER_METER = 96 / 0.0254
 SOURCE = "agent-ledger-input-tracker"
 SESSION_ID = f"{socket.gethostname()}-{uuid.uuid4().hex[:12]}"
+_lock_handle = None
 
 _lock = threading.Lock()
 _mouse_last = None
@@ -98,6 +104,75 @@ def _hash(value: str) -> str:
     if not value:
         return "redacted"
     return hashlib.sha256(value.encode("utf-8", errors="ignore")).hexdigest()[:16]
+
+
+def _atomic_write_json(path: Path, payload: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+    tmp.replace(path)
+
+
+def _health(status: str, **extra: Any) -> None:
+    payload = {
+        "status": status,
+        "session_id": SESSION_ID,
+        "pid": os.getpid(),
+        "api_url": API_URL,
+        "spool_dir": str(SPOOL_DIR),
+        "updated_at": _iso(_utc_now()),
+        "privacy": {
+            "raw_text": False,
+            "clipboard_contents": False,
+            "window_titles": "hashed_or_redacted",
+        },
+        **extra,
+    }
+    try:
+        _atomic_write_json(HEALTH_PATH, payload)
+    except Exception:
+        pass
+
+
+def _error(context: str, exc: BaseException) -> None:
+    try:
+        STATE_DIR.mkdir(parents=True, exist_ok=True)
+        row = {
+            "timestamp": _iso(_utc_now()),
+            "session_id": SESSION_ID,
+            "pid": os.getpid(),
+            "context": context,
+            "error_type": type(exc).__name__,
+            "message": str(exc)[:500],
+            "traceback": traceback.format_exc(limit=4),
+        }
+        with ERROR_PATH.open("a", encoding="utf-8") as handle:
+            handle.write(json.dumps(row, ensure_ascii=False, separators=(",", ":"), default=str) + "\n")
+    except Exception:
+        pass
+
+
+def _acquire_single_instance() -> bool:
+    global _lock_handle
+    STATE_DIR.mkdir(parents=True, exist_ok=True)
+    _lock_handle = LOCK_PATH.open("a+", encoding="utf-8")
+    try:
+        if platform.system().lower() == "windows":
+            import msvcrt
+
+            msvcrt.locking(_lock_handle.fileno(), msvcrt.LK_NBLCK, 1)
+        else:
+            import fcntl
+
+            fcntl.flock(_lock_handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        _health("duplicate_exit", message="another tracker instance holds the lock")
+        return False
+    _lock_handle.seek(0)
+    _lock_handle.truncate()
+    _lock_handle.write(str(os.getpid()))
+    _lock_handle.flush()
+    return True
 
 
 def _foreground_window() -> tuple[str, str]:
@@ -308,7 +383,7 @@ def _post_batch(batch: Dict[str, Any]) -> None:
     headers = {"Content-Type": "application/json", "User-Agent": "agent-ledger-input-tracker/2"}
     if API_KEY:
         headers["x-api-key"] = API_KEY
-    request = Request(f"{PIPELINES_URL}/api/telemetry/input/batches", data=body, headers=headers, method="POST")
+    request = Request(f"{API_URL}/api/telemetry/input/batches", data=body, headers=headers, method="POST")
     with urlopen(request, timeout=5) as response:
         if response.status >= 300:
             raise URLError(f"status {response.status}")
@@ -319,6 +394,7 @@ def _spool_batch(batch: Dict[str, Any]) -> None:
     path = SPOOL_DIR / f"{datetime.now().strftime('%Y-%m-%d')}.jsonl"
     with path.open("a", encoding="utf-8") as handle:
         handle.write(json.dumps(batch, ensure_ascii=False, separators=(",", ":")) + "\n")
+    _health("spooled", last_batch_id=batch.get("batch_id"), spool_file=str(path))
 
 
 def _flush_loop() -> None:
@@ -331,22 +407,30 @@ def _flush_loop() -> None:
             batch = _build_batch(started_at, ended_at, snap)
             started_at = ended_at
             if not batch:
+                _health("online_idle", last_flush_at=_iso(ended_at))
                 continue
             try:
                 _post_batch(batch)
-            except Exception:
+                _health("online", last_batch_id=batch.get("batch_id"), last_post_at=_iso(_utc_now()))
+            except Exception as exc:
+                _error("post_batch", exc)
                 _spool_batch(batch)
-        except Exception:
-            pass
+        except Exception as exc:
+            _error("flush_loop", exc)
+            _health("error", message=str(exc)[:500])
 
 
 def main() -> None:
+    if not _acquire_single_instance():
+        return
+    _health("starting")
     thread = threading.Thread(target=_flush_loop, daemon=True)
     thread.start()
     kb = keyboard.Listener(on_press=_on_press, on_release=_on_release)
     ms = mouse.Listener(on_move=_on_move, on_click=_on_click, on_scroll=_on_scroll)
     kb.start()
     ms.start()
+    _health("listening")
     kb.join()
 
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Replay input tracker JSONL spool files into vaultwares-pipelines."""
+"""Replay input tracker JSONL spool files into vaultwares-api."""
 
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ from urllib.request import Request, urlopen
 
 ROOT_DIR = Path(__file__).parent.resolve().parent
 SPOOL_DIR = Path(os.environ.get("VW_INPUT_SPOOL_DIR") or (ROOT_DIR / "input-spool"))
-PIPELINES_URL = os.environ.get("VW_PIPELINES_URL", "http://127.0.0.1:9001").rstrip("/")
+API_URL = (os.environ.get("VW_API_URL") or os.environ.get("VW_PIPELINES_URL") or "http://127.0.0.1:9001").rstrip("/")
 API_KEY = os.environ.get("VW_PIPELINES_API_KEY") or os.environ.get("VW_TELEMETRY_API_KEY") or ""
 
 
@@ -21,7 +21,7 @@ def post_batch(batch: dict) -> None:
     if API_KEY:
         headers["x-api-key"] = API_KEY
     body = json.dumps(batch, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
-    request = Request(f"{PIPELINES_URL}/api/telemetry/input/batches", data=body, headers=headers, method="POST")
+    request = Request(f"{API_URL}/api/telemetry/input/batches", data=body, headers=headers, method="POST")
     with urlopen(request, timeout=10) as response:
         if response.status >= 300:
             raise URLError(f"status {response.status}")

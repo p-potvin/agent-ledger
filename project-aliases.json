@@ -131,6 +131,14 @@
       "notes": "Old repo name before MCP server was folded into vaultwares-mcp."
     },
     {
+      "canonical": "vaultwares-api",
+      "aliases": ["vaultwares-pipelines"],
+      "renamedAt": "2026-06-08",
+      "previousRemote": "p-potvin/vaultwares-pipelines",
+      "newRemote": "p-potvin/vaultwares-api",
+      "notes": "Canonical API service name. Repo rename is staged after DB/API wiring; alias keeps telemetry and monitor history grouped during transition."
+    },
+    {
       "canonical": "vaultwares-docs",
       "aliases": ["tmp-app"],
       "notes": "Package.json placeholder from agent input. vw-jira-sync split out as its own project."

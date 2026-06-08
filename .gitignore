@@ -4,3 +4,6 @@ stats-app/dist/
 site/node_modules/
 site/dist/
 site/public/data/*.json
+input-state/
+input-spool/
+scripts/__pycache__/

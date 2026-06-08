@@ -1,0 +1,47 @@
+{
+  "id": "20260608-055436-284-agent-ledger-0c27afcd",
+  "createdAt": "2026-06-08T09:54:36.2840140Z",
+  "createdAtLocal": "2026-06-08 05:54",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-08 05:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Implemented tracker recovery/client wiring for API-first telemetry: added idempotent legacy input-log importer, moved tracker/replay scripts to VW_API_URL with VW_TELEMETRY_API_KEY support, added tracker health/error state plus single-instance lock, updated scheduled task to the real Python runtime, imported June 6-8 legacy logs through the API, verified duplicate replay, and restarted one online tracker process posting to vaultwares-api.",
+  "commands": [
+    "python scripts/import-input-logs.py --since 2026-06-06 --dry-run",
+    "python scripts/import-input-logs.py --since 2026-06-06",
+    "python scripts/import-input-logs.py --since 2026-06-06",
+    "Stop-ScheduledTask/Set-ScheduledTask/Start-ScheduledTask VaultWares-InputTracker",
+    "Get-CimInstance Win32_Process track-input.py",
+    "Get-Content input-state/input-tracker-health.json"
+  ],
+  "files": [
+    "agent-ledger/scripts/import-input-logs.py",
+    "agent-ledger/scripts/track-input.py",
+    "agent-ledger/scripts/replay-input-spool.py",
+    "agent-ledger/scripts/setup-input-tracker.ps1",
+    "agent-ledger/project-aliases.json",
+    "agent-ledger/README.md",
+    "agent-ledger/.gitignore"
+  ],
+  "planPath": "",
+  "contentHash": "0c27afcd96be555b1ae3bb9c99857a2f965930f8765f652f17c2ae6732b82fc6",
+  "git": null
+}

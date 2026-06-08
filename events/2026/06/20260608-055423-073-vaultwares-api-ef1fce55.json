@@ -1,0 +1,46 @@
+{
+  "id": "20260608-055423-073-vaultwares-api-ef1fce55",
+  "createdAt": "2026-06-08T09:54:23.0735523Z",
+  "createdAtLocal": "2026-06-08 05:54",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-08 05:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Implemented API-first telemetry plumbing: renamed the Windows API service to vaultwares-api, removed the legacy vault-pipelines-api service registration, configured telemetry DB/API-key env without exposing secrets, added explicit Postgres telemetry migration runner/schema file, updated OpenAPI/API ownership labels, and verified local/proxied health plus DB-backed telemetry summary. VW_STATE: long_running_tasks=true; resume_scope=api-db-tracker-first-steps; secrets_redacted=true.",
+  "commands": [
+    "python -m py_compile API telemetry modules",
+    "python scripts/apply-telemetry-migrations.py",
+    "Restart-Service vaultwares-api",
+    "Invoke-WebRequest /openapi.json /health /api/telemetry/input/summary",
+    "psql telemetry table checks"
+  ],
+  "files": [
+    "vaultwares-pipelines/api_server.py",
+    "vaultwares-pipelines/app/routers/telemetry/db.py",
+    "vaultwares-pipelines/app/routers/telemetry/__init__.py",
+    "vaultwares-pipelines/app/routers/monitor/__init__.py",
+    "vaultwares-pipelines/migrations/telemetry/001_input_telemetry.sql",
+    "vaultwares-pipelines/scripts/apply-telemetry-migrations.py",
+    "vaultwares-pipelines/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "ef1fce5589895b32289070541468f3c79e36c397711ef71cf32679d705f15a88",
+  "git": null
+}
