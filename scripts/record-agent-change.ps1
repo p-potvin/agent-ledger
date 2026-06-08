@@ -140,6 +140,38 @@ function Get-DedupedList {
     return @($result)
 }
 
+function Publish-AgentLedgerEventToApi {
+    param([object]$Event)
+
+    if ($env:VW_AGENT_LEDGER_API_SYNC -eq '0') { return }
+
+    $apiBase = $env:VW_API_URL
+    if (-not $apiBase) { $apiBase = $env:VW_PIPELINES_URL }
+    if (-not $apiBase) { $apiBase = 'http://127.0.0.1:9001' }
+    $apiBase = $apiBase.TrimEnd('/')
+
+    $apiKey = $env:VW_TELEMETRY_API_KEY
+    if (-not $apiKey) { $apiKey = $env:VW_PIPELINES_API_KEY }
+
+    $headers = @{ Accept = 'application/json' }
+    if ($apiKey) { $headers['x-api-key'] = $apiKey }
+
+    try {
+        $body = $Event | ConvertTo-Json -Depth 20 -Compress
+        Invoke-RestMethod `
+            -Method Post `
+            -Uri "$apiBase/api/ledger/agent/events" `
+            -Headers $headers `
+            -ContentType 'application/json' `
+            -Body $body `
+            -TimeoutSec 8 `
+            -ErrorAction Stop | Out-Null
+    }
+    catch {
+        Write-Warning "Recorded local ledger event, but API sync failed: $($_.Exception.Message)"
+    }
+}
+
 $ledgerRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 if (-not $WorkspaceRoot) {
     $WorkspaceRoot = Split-Path $ledgerRoot -Parent
@@ -266,6 +298,7 @@ $event = [ordered]@{
 }
 
 $event | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $eventPath -Encoding utf8
+Publish-AgentLedgerEventToApi -Event $event
 & (Join-Path $PSScriptRoot 'render-agent-ledger.ps1') | Out-Null
 
 Write-Output "Recorded ledger event: $eventPath"

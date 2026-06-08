@@ -4,10 +4,10 @@ export type Lang = 'en' | 'qc';
 
 const base = {
   title: 'Work Impact',
-  subtitle: 'Agent-ledger activity through the pipelines API',
+  subtitle: 'Agent-ledger activity through vaultwares-api',
   intro: 'A compact operational view of recorded agent work, command evidence, verification, and project activity.',
   changesTitle: 'Agent Ledger',
-  changesSubtitle: 'Recent ledger entries served through vaultwares-pipelines.',
+  changesSubtitle: 'Recent ledger entries served from the vaultwares-api database.',
   inputTrackerTitle: 'Input Tracker',
   inputTrackerSubtitle: 'Privacy-safe local input telemetry, batched through vaultwares-pipelines.',
   inputTrackerNav: 'Input',
@@ -108,9 +108,9 @@ export const I18N = {
   qc: {
     ...base,
     title: 'Impact du travail',
-    subtitle: 'Activite agent-ledger via API pipelines',
+    subtitle: 'Activite agent-ledger via vaultwares-api',
     changesTitle: 'Registre Agent',
-    changesSubtitle: 'Entrees recentes servies par vaultwares-pipelines.',
+    changesSubtitle: 'Entrees recentes servies par la base vaultwares-api.',
     inputTrackerTitle: 'Traceur Input',
     inputTrackerSubtitle: 'Telemetrie locale privee, envoyee par lots a vaultwares-pipelines.',
     inputTrackerNav: 'Input',

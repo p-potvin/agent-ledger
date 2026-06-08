@@ -1,20 +1,12 @@
 import { useEffect, useState } from 'react';
 import type { ChangeEvent, InputTrackerData, WorkImpactData } from './types';
 
-const API_BASE = (import.meta.env.VITE_PIPELINES_API_BASE || '').replace(/\/$/, '');
+const API_BASE = (import.meta.env.VITE_API_BASE || import.meta.env.VITE_PIPELINES_API_BASE || '').replace(/\/$/, '');
 
-async function getJson<T>(paths: string[]): Promise<T> {
-  let lastError: unknown;
-  for (const path of paths) {
-    try {
-      const response = await fetch(`${API_BASE}${path}`, { headers: { Accept: 'application/json' } });
-      if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
-      return (await response.json()) as T;
-    } catch (error) {
-      lastError = error;
-    }
-  }
-  throw lastError instanceof Error ? lastError : new Error('request failed');
+async function getJson<T>(path: string): Promise<T> {
+  const response = await fetch(`${API_BASE}${path}`, { headers: { Accept: 'application/json' } });
+  if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
+  return (await response.json()) as T;
 }
 
 function unwrapWorkImpact(payload: WorkImpactData): WorkImpactData {
@@ -30,7 +22,7 @@ export function useWorkImpactData() {
   const [error, setError] = useState('');
   useEffect(() => {
     let cancelled = false;
-    getJson<WorkImpactData>(['/monitor/work-impact', '/data/work-impact-data.json'])
+    getJson<WorkImpactData>('/monitor/work-impact')
       .then((payload) => {
         if (!cancelled) setData(unwrapWorkImpact(payload));
       })
@@ -53,7 +45,7 @@ export function useChangesData() {
   const [error, setError] = useState('');
   useEffect(() => {
     let cancelled = false;
-    getJson<{ events?: ChangeEvent[] } | ChangeEvent[]>(['/monitor/changes', '/data/changes-data.json'])
+    getJson<{ events?: ChangeEvent[] } | ChangeEvent[]>('/monitor/changes')
       .then((payload) => {
         if (cancelled) return;
         const list = Array.isArray(payload) ? payload : payload.events || [];
@@ -78,7 +70,7 @@ export function useInputTrackerData() {
   const [error, setError] = useState('');
   useEffect(() => {
     let cancelled = false;
-    getJson<InputTrackerData>(['/monitor/input-tracker'])
+    getJson<InputTrackerData>('/monitor/input-tracker')
       .then((payload) => {
         if (!cancelled) setData(payload);
       })

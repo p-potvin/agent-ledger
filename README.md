@@ -20,6 +20,7 @@ This repo is the append-only ledger for AI-agent activity across local and cloud
 - `scripts/track-input.py` - optional local input tracker for privacy-safe keystroke, pointer, focus, and command cadence metrics. It batches to `vaultwares-api`.
 - `scripts/replay-input-spool.py` - replays append-only tracker spool files after API outages.
 - `scripts/import-input-logs.py` - imports legacy `input-logs/YYYY-MM-DD.json` files into the API with stable idempotent batch/event ids.
+- `scripts/import-agent-ledger-events.py` - backfills append-only ledger event files into the API/Postgres ledger tables.
 - `scripts/setup-input-tracker.ps1` - installs tracker dependencies and registers the Windows input-tracker scheduled task.
 - `scripts/sync-agent-ledger.ps1` - pulls, renders, commits, and pushes queued ledger changes.
 - `scripts/setup-agent-ledger-scheduler.ps1` - registers a Windows scheduled task for automatic sync.
@@ -47,7 +48,7 @@ This repo is the append-only ledger for AI-agent activity across local and cloud
 
 The `kind` field accepts a comma-separated string of canonical values: `plan`, `commands`, `code-change`, `verification`, `handoff`, `general`. Unknown values are accepted but aggregate under `general` in charts. See `vaultwares-docs/docs-content/operations/agent-ledger-schema.mdx` for the full schema.
 
-The script deduplicates matching content, writes an event file, and regenerates both readable ledgers.
+The script deduplicates matching content, writes an event file, makes a best-effort POST to `POST /api/ledger/agent/events`, and regenerates both readable ledgers. Set `VW_AGENT_LEDGER_API_SYNC=0` for emergency local-only operation.
 
 ## Sync to GitHub
 
@@ -97,7 +98,20 @@ If the API is unavailable, the tracker writes append-only JSONL batches under `i
 python "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\replay-input-spool.py"
 ```
 
-The React/Vite dashboard route `/input-tracker` reads `GET /monitor/input-tracker` only. The browser does not scan `input-logs`, open spool files, or connect to Postgres directly. Existing `input-logs/*.json` files are legacy import material; durable storage and rollups now belong behind `vaultwares-api`.
+The React/Vite dashboard routes read API endpoints only:
+
+- `/work-impact` -> `GET /monitor/work-impact`
+- `/changes` -> `GET /monitor/changes`
+- `/input-tracker` -> `GET /monitor/input-tracker`
+
+The browser does not scan `events`, `input-logs`, open spool files, or connect to Postgres directly. Existing `input-logs/*.json` files are legacy import material; durable storage and rollups now belong behind `vaultwares-api`.
+
+Backfill historical ledger events through the API:
+
+```powershell
+python "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\import-agent-ledger-events.py" --dry-run
+python "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\import-agent-ledger-events.py"
+```
 
 ## Project aliases (rename continuity)
 
