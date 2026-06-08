@@ -53,9 +53,11 @@ export function useChangesData() {
   const [error, setError] = useState('');
   useEffect(() => {
     let cancelled = false;
-    getJson<{ events?: ChangeEvent[] }>(['/monitor/changes', '/data/changes-data.json'])
+    getJson<{ events?: ChangeEvent[] } | ChangeEvent[]>(['/monitor/changes', '/data/changes-data.json'])
       .then((payload) => {
-        if (!cancelled) setEvents(payload.events || []);
+        if (cancelled) return;
+        const list = Array.isArray(payload) ? payload : payload.events || [];
+        setEvents(list);
       })
       .catch((err) => {
         if (!cancelled) setError(err.message || String(err));

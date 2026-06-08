@@ -518,8 +518,9 @@ $eventDirs | ForEach-Object { Get-ChildItem -Path $_ -Recurse -File -Filter '*.j
             $agentTotalEvents += 1
             $actor2 = if ($e2.actor) { [string]$e2.actor } else { 'Unknown' }
             $model2 = if ($e2.runtime.model) { [string]$e2.runtime.model } else { 'unknown' }
+            $actorIsKnown = ($actor2 -and $actor2 -ne 'Unknown' -and $actor2 -ne 'unknown')
 
-            Add-Count -Table $agentActorCounts -Key $actor2
+            if ($actorIsKnown) { Add-Count -Table $agentActorCounts -Key $actor2 }
             Add-Count -Table $agentModelCounts -Key $model2
 
             $tools2 = @($e2.runtime.toolsUsed)
@@ -544,7 +545,7 @@ $eventDirs | ForEach-Object { Get-ChildItem -Path $_ -Recurse -File -Filter '*.j
                 }
             }
             $agentDayBuckets[$day2].count += 1
-            [void]$agentDayBuckets[$day2].actors.Add($actor2)
+            if ($actorIsKnown) { [void]$agentDayBuckets[$day2].actors.Add($actor2) }
             [void]$agentDayBuckets[$day2].models.Add($model2)
         }
     }

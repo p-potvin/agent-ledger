@@ -1,0 +1,58 @@
+{
+  "id": "20260608-033349-799-agent-ledger-65f3ab78",
+  "createdAt": "2026-06-08T07:33:49.7998965Z",
+  "createdAtLocal": "2026-06-08 03:33",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: windows-local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, TaskCreate, TaskUpdate, AskUserQuestion, ExitPlanMode\r\nMCP servers accessed (this reply): VaultWares MCP\r\nTime: 2026-06-08 03:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "windows-local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "TaskCreate",
+      "TaskUpdate",
+      "AskUserQuestion",
+      "ExitPlanMode"
+    ],
+    "mcpServersAccessed": "VaultWares MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Executed approved plan to stop auto-commit noise and clean git history. (1) Disabled scheduled task AgentLedgerSync (was committing every 5 min); kept AgentLedgerWorkImpactRefresh, VaultWares-AgentLedger-Archive, VaultWares-InputTracker running. (2) Snapshotted working tree to Desktop\\agent-ledger-snapshot-20260608-0319 (2608 files, 20MB) before rewrite. (3) Installed git-filter-repo 2.47.0 via pip --user. (4) First attempt with filter-repo commit.skip() failed: when consecutive ancestor commits are dropped, surviving commits' trees get rebuilt from their own file_changes — lost all events/input-logs/history. (5) Wrote custom Python plumbing script (Desktop\\rewrite-history.py) that walks topo order, drops auto-commits by mapping their SHA to first-parent's mapped SHA, and uses git commit-tree to rebuild kept commits with their ORIGINAL trees (preserving all inherited data). Walked 2781 commits, kept 101, dropped 2680. New HEAD tree e4cfc852 matches original ebae4382 tree exactly. (6) Force-pushed be7382db to origin/main with --force-with-lease=da6035e9 sentinel. (7) Repointed local working clone via reset --hard after backing up 5 in-flight tracked deltas. (8) Re-ran render-agent-ledger.ps1 + update-work-impact.ps1 + render-work-impact.ps1 to regenerate CHANGES/WORK_IMPACT. (9) Catch-up commit 47c05a33 with 2 new events + 6 days input-logs + regenerated derived files. Final state: 102 commits on main (101 real + 1 catch-up), 0 'Record agent ledger events' remaining, all data dirs intact (9 input-logs, 402 events, 1698 history files). Site still serves 200. Out of scope: webhook 504 (vw-webhookd async-dispatch fix) and i18n.ts shadowing i18n.tsx (CSS bundle missing utilities).",
+  "commands": [
+    "Disable-ScheduledTask -TaskName AgentLedgerSync",
+    "python rewrite-history.py",
+    "git filter-repo --replace-text NUL",
+    "git push --force-with-lease=main:<old-sha> origin main",
+    "git reset --hard origin/main",
+    "pwsh scripts/render-work-impact.ps1"
+  ],
+  "files": [
+    "scripts/sync-agent-ledger.ps1",
+    "C:/Users/Administrator/Desktop/rewrite-history.py",
+    "C:/Users/Administrator/Desktop/agent-ledger-snapshot-20260608-0319/",
+    "C:/Users/Administrator/.claude/plans/the-deletion-was-caused-replicated-globe.md"
+  ],
+  "planPath": "",
+  "contentHash": "65f3ab78f3a5acbf9b72c3ec737f83ff44a6a98361fde10efee0930870012c10",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "47c05a33",
+    "hasChanges": true
+  }
+}
