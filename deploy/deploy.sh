@@ -36,7 +36,7 @@ npm run build
 
 # 4. Deploy to web root
 echo "--- Deploying to $DEPLOY_DIR ---"
-rsync -a --delete "$SITE_DIR/dist/" "$DEPLOY_DIR/"
+rsync -a --delete --exclude '.well-known/' "$SITE_DIR/dist/" "$DEPLOY_DIR/"
 
 # 5. Reload nginx (if config changed)
 if nginx -t 2>/dev/null; then
