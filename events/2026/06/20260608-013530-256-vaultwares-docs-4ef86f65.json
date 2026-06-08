@@ -1,0 +1,53 @@
+{
+  "id": "20260608-013530-256-vaultwares-docs-4ef86f65",
+  "createdAt": "2026-06-08T05:35:30.2569844Z",
+  "createdAtLocal": "2026-06-08 01:35",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: windows-local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Read, Write, Edit, PowerShell, Bash, Grep, Glob\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-08 01:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "windows-local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "PowerShell",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Added create-skill SKILL.md (vaultwares-docs/skills/create-skill/) that runs a 7-12 question interrogation to author a new skill, drafts the source file, requires user confirmation, then triggers sync-global-skills.ps1 as integrated final step (with on-disk verification of all 6 host targets + ledger). Added SKILL_SYNC protocol category to ROUTER.md and assistant-protocols index (EN+QC) with summary, notes, skill-sync.mdx and skill-sync-QC.mdx documenting source-of-truth path, host adapter registry, authoring flow, out-of-scope items. Disseminated create-skill to all 6 hosts (Claude Code/Codex/Gemini/OpenCode verbatim 6421b; Windsurf 6331b; VS Code 6385b) — verified all present on disk.",
+  "commands": [
+    "sync-global-skills.ps1 -SkillName create-skill",
+    "Test-Path on 6 host targets"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\skills\\create-skill\\SKILL.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\summaries\\SKILL_SYNC.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\notes\\SKILL_SYNC.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\ROUTER.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\ai-tools\\assistant-protocols\\skill-sync.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\ai-tools\\assistant-protocols\\skill-sync-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\ai-tools\\assistant-protocols\\index.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\ai-tools\\assistant-protocols\\index-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\resources\\pages\\ai-tools__assistant-protocols.json"
+  ],
+  "planPath": "",
+  "contentHash": "4ef86f652d6e01cf11824b8cdd99c1bcf71e59b062c093d551ceccedfd3a4d5c",
+  "git": null
+}

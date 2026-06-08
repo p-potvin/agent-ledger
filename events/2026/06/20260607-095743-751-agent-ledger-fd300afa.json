@@ -1,0 +1,43 @@
+{
+  "id": "20260607-095743-751-agent-ledger-fd300afa",
+  "createdAt": "2026-06-07T13:57:43.7515202Z",
+  "createdAtLocal": "2026-06-07 09:57",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-07 09:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Published stats dashboard build fix for Vite env typing after restoring the input tracker UI/API flow already present in the checkout. Verified npm install, npm run build, and tracker/replay script compile before avoiding generated pyc changes.",
+  "commands": [
+    "npm install",
+    "npm run build",
+    "python -m py_compile scripts/track-input.py scripts/replay-input-spool.py"
+  ],
+  "files": [
+    "agent-ledger/site/src/vite-env.d.ts",
+    "agent-ledger/site/src/pages/InputTrackerPage.tsx",
+    "agent-ledger/site/src/useData.ts",
+    "agent-ledger/scripts/track-input.py",
+    "agent-ledger/scripts/replay-input-spool.py",
+    "agent-ledger/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "fd300afa94cfcfe44849ee4919d638c593283c87f766041476473a6148c1014d",
+  "git": null
+}

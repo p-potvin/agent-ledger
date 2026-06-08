@@ -1,0 +1,39 @@
+{
+  "id": "20260607-095743-792-vaultwares-docs-a26d77c4",
+  "createdAt": "2026-06-07T13:57:43.7922849Z",
+  "createdAtLocal": "2026-06-07 09:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-07 09:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Documented stats.vaultwares.ca as a real tailnet-only service, with agent-ledger owning the stats SPA and vaultwares-pipelines owning telemetry/API access. Verified current tailnet DNS still refuses stats.vaultwares.ca via greencloud-vps DNS, and SSH reaches the VPS but Tailscale SSH rejects the local administrator username mapping.",
+  "commands": [
+    "Resolve-DnsName stats.vaultwares.ca -Server 100.73.93.84",
+    "ssh BatchMode greencloud-vps hostname whoami"
+  ],
+  "files": [
+    "vaultwares-docs/docs-content/operations/services-inventory.mdx",
+    "vaultwares-docs/docs-content/operations/network-map.mdx",
+    "vaultwares-docs/docs-content/operations/tailscale.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "a26d77c483fcad111408b549129a504c29ea5fba8ff3faad64496bf2ee850e74",
+  "git": null
+}

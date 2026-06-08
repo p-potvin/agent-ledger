@@ -1,0 +1,40 @@
+{
+  "id": "20260607-181152-294-vaultwares-infrastructure-e6c67bf6",
+  "createdAt": "2026-06-07T22:11:52.2942107Z",
+  "createdAtLocal": "2026-06-07 18:11",
+  "timezone": "Eastern Standard Time",
+  "project": "VaultWares Infrastructure",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-07 18:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Verified post-fix service state for stats.vaultwares.ca and local logging. stats.vaultwares.ca resolves through tailnet DNS, returns HTTPS 200 for SPA routes, proxies telemetry summary through vaultwares-pipelines, stat.vaultwares.ca redirects to stats.vaultwares.ca, nginx and dnsmasq are active on greencloud-vps, and local Kiwi logging home returns HTTP 200. Input tracker API is reachable but reports stale data from the latest received event earlier on 2026-06-07.",
+  "commands": [
+    "Resolve-DnsName stats.vaultwares.ca",
+    "curl https://stats.vaultwares.ca/changes",
+    "curl https://stats.vaultwares.ca/api/telemetry/input/summary",
+    "curl -k https://localhost:5959/home"
+  ],
+  "files": [
+    "/etc/nginx/sites-available/stats.vaultwares.ca.conf",
+    "/etc/dnsmasq.d/vaultwares-tailnet.conf"
+  ],
+  "planPath": "",
+  "contentHash": "e6c67bf6f80a796b39b4b4a5b8fa2eff0faea17b7f98b7143e51c7ead6c6c67a",
+  "git": null
+}
