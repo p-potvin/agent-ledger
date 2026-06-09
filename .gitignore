@@ -7,3 +7,6 @@ site/public/data/*.json
 input-state/
 input-spool/
 scripts/__pycache__/
+
+# Backfill checkpoint - transient
+.backfill-agent-ledger-progress.json

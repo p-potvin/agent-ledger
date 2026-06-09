@@ -1,0 +1,56 @@
+{
+  "id": "20260608-034940-783-agent-ledger-fc74606f",
+  "createdAt": "2026-06-08T07:49:40.7831038Z",
+  "createdAtLocal": "2026-06-08 03:49",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: windows-local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Read, TaskCreate, TaskUpdate, ToolSearch\r\nMCP servers accessed (this reply): VaultWares MCP\r\nTime: 2026-06-08 03:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "windows-local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Read",
+      "TaskCreate",
+      "TaskUpdate",
+      "ToolSearch"
+    ],
+    "mcpServersAccessed": "VaultWares MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Three live fixes + wrapper for webhook async-dispatch. (1) Deleted site/src/i18n.ts that shadowed i18n.tsx and broke tsc, which aborted deploy.sh before vite build — so deployed bundle was built without @tailwindcss/vite plugin and shipped 0 utility classes. New bundle 23211 bytes has 202 utility rules (.flex/.grid/.rounded/.p-*/.text-* etc), confirmed live at /assets/index-Cf2H494I.css. (2) useChangesData now accepts both {events:[]} and bare ChangeEvent[] payloads — /changes was showing 'No events' because render emits bare array; deployed JSON has 403 events, now reachable. (3) update-work-impact-state.ps1: skip Add-Count and per-day actor set when actor is 'Unknown'/'unknown'; full rebuild purged old counts. Live top actors now AI Agent (284), Antigravity (82), claude-sonnet-4-6 (9), Github Copilot (8) — no Unknown. (4) Webhook 504: SSH MCP disabled, so I committed deploy/deploy-async.sh wrapper that takes flock, setsid+nohup+disown the real deploy, and exits 0 immediately. User must reconfigure vw-webhookd on greencloud-vps to invoke deploy-async.sh in place of deploy.sh — concrete instructions delivered. Commits: 936e5f1e (fixes), 390651c6 (wrapper). Site self-deployed on push to 936e5f1e; webhook still returning 504 until vw-webhookd wired to wrapper.",
+  "commands": [
+    "npm run build",
+    "pwsh scripts/update-work-impact.ps1 -FullRebuild",
+    "git push origin main"
+  ],
+  "files": [
+    "site/src/i18n.ts (deleted)",
+    "site/src/useData.ts",
+    "scripts/update-work-impact-state.ps1",
+    "deploy/deploy-async.sh"
+  ],
+  "planPath": "",
+  "contentHash": "fc74606fc3162813f9abb97cd6f2253045766b2272343ea022395e778705486b",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "390651c6",
+    "hasChanges": true
+  }
+}

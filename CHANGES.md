@@ -3,7 +3,781 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-06-08 03:33 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change,commands,verification</code> - Executed approved plan to stop auto-commit noise and clean git history. (1) Disabled scheduled task AgentLedgerSync (was committing every 5 min); kept AgentLedgerWorkImpactRefre...</summary>
+<summary><strong>2026-06-08 21:39 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>verification</code> - Dual-write smoke test: confirming event lands in both events/ JSON and API DB after backfill</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-7
+  Thinking: medium
+  Mode: agent
+  Permissions: ask (network: windows-local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): VaultWares MCP
+  Time: 2026-06-08 21:39 (TZ: Eastern Standard Time)
+  ```
+- Summary: Dual-write smoke test: confirming event lands in both events/ JSON and API DB after backfill
+- Git: repo=vaultwares-api, branch=main, head=13d8aa1
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 20:08 - vaultwares-api (formerly vaultwares-pipelines)</strong> <code>code-change,plan</code> - Fixed panel dragging getting stuck: root cause was panel.mouseup stopPropagation killing the window listener. Now uses capture-phase mouseup on document, window blur listener, a...</summary>
+
+- Kind: code-change,plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-6
+  Thinking: high
+  Mode: code
+  Permissions: autopilot (network: windows-vps)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
+  Tools used (this reply): multi_replace_file_content, replace_file_content, run_command, write_to_file, view_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 20:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed panel dragging getting stuck: root cause was panel.mouseup stopPropagation killing the window listener. Now uses capture-phase mouseup on document, window blur listener, and ESC fallback. Added fab flash animation on download, float button status indicators (green/red border), Firefox scrollbar CSS with theme variables on all panel children, CSS selector live-filtering for the media list, and fixed buttonSize to 18px. Created implementation plan for Nomos8k-atd upscaler pipeline.
+- Commands:
+  - `node -e "new Function(require('fs').readFileSync('tampermonkey_script.js','utf8'))"`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\python-zipper\tampermonkey_script.js`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\a28b6950-76ce-415f-be96-871943d7863d\implementation_plan.md`
+- Git: repo=python-zipper, branch=main, head=8b297f7
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 15:20 - vaultwares-api</strong> <code>code-change,verification</code> - Fixed panel dragging sticking to the cursor and triggering on header switch/label clicks. Added a floating quick-download button overlay next to highlighted media elements on ho...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gemini-1.5-pro
+  Thinking: high
+  Mode: code
+  Permissions: autopilot (network: windows-vps)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
+  Tools used (this reply): replace_file_content, run_command, write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 15:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed panel dragging sticking to the cursor and triggering on header switch/label clicks. Added a floating quick-download button overlay next to highlighted media elements on hover.
+- Commands:
+  - `node -e "try { new Function(require('fs').readFileSync('tampermonkey_script.js', 'utf8')); console.log('Syntax OK'); } catch (e) { process.exit(1); }"`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\python-zipper\tampermonkey_script.js`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\a28b6950-76ce-415f-be96-871943d7863d\implementation_plan.md`
+- Git: repo=python-zipper, branch=main, head=8b297f7
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 15:12 - vaultwares-api</strong> <code>code-change,verification</code> - Fixed drag-and-drop stuck overlay, optimized DOM scanner updates via link serialization diffing to prevent feedback loops/tooltip closure, and implemented isInterestingMedia def...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gemini-1.5-pro
+  Thinking: high
+  Mode: code
+  Permissions: autopilot (network: windows-vps)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
+  Tools used (this reply): replace_file_content, run_command, write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 15:12 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed drag-and-drop stuck overlay, optimized DOM scanner updates via link serialization diffing to prevent feedback loops/tooltip closure, and implemented isInterestingMedia default check rules for high-value media inside python-zipper's tampermonkey_script.js.
+- Commands:
+  - `node -e "try { new Function(require('fs').readFileSync('tampermonkey_script.js', 'utf8')); console.log('Syntax OK'); } catch (e) { process.exit(1); }"`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\python-zipper\tampermonkey_script.js`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\a28b6950-76ce-415f-be96-871943d7863d\implementation_plan.md`
+- Git: repo=python-zipper, branch=main, head=8b297f7
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 15:06 - vaultwares-api</strong> <code>code-change,verification</code> - Renamed vaultwares-pipelines to vaultwares-api across workflow bootstrap files, agents documents, and html templates in vaultwares-api. Renamed Python Server to VaultWares API i...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: gemini-1.5-pro
+  Thinking: high
+  Mode: code
+  Permissions: autopilot (network: windows-vps)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main
+  Tools used (this reply): replace_file_content, run_command, write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 15:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: Renamed vaultwares-pipelines to vaultwares-api across workflow bootstrap files, agents documents, and html templates in vaultwares-api. Renamed Python Server to VaultWares API in python-zipper extension scripts and updated port and service documentation to port 9001 vaultwares-api in README.
+- Commands:
+  - `Restart-Service -Name 'vaultwares-api'`
+  - `Invoke-RestMethod -Uri 'http://127.0.0.1:9001/health'`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-api\.github\workflows\bootstrap-vault-flows.yml`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-api\.github\agents\README.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-api\api_server.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\python-zipper\tampermonkey_script.js`
+  - `C:\Users\Administrator\Desktop\Github Repos\python-zipper\README.md`
+- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\a28b6950-76ce-415f-be96-871943d7863d\implementation_plan.md`
+- Git: repo=vaultwares-api, branch=main, head=13d8aa1
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 14:30 - vault-flows</strong> <code>code-change</code> - Pushed vault-flows main commit 43e560c. Updated API naming reference in the frontend client comment to vaultwares-api and left vaultwares-themes submodule drift unstaged.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 14:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pushed vault-flows main commit 43e560c. Updated API naming reference in the frontend client comment to vaultwares-api and left vaultwares-themes submodule drift unstaged.
+- Commands:
+  - `git diff --check`
+  - `git push origin main`
+- Files:
+  - `src/api/client.ts`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 14:30 - vault-monitor</strong> <code>code-change</code> - Pushed vault-monitor main commit 49112c1. Updated README data-boundary wording so V.A.U.L.T Monitor points at vaultwares-api instead of vaultwares-pipelines.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 14:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pushed vault-monitor main commit 49112c1. Updated README data-boundary wording so V.A.U.L.T Monitor points at vaultwares-api instead of vaultwares-pipelines.
+- Commands:
+  - `git diff --check`
+  - `git push origin main`
+- Files:
+  - `README.md`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 14:30 - vaultwares-docs (formerly tmp-app)</strong> <code>code-change</code> - Pushed vaultwares-docs main commit 04cdc8e. Updated active docs references from vaultwares-pipelines to vaultwares-api, kept explicit transitional formerly notes where needed, r...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 14:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pushed vaultwares-docs main commit 04cdc8e. Updated active docs references from vaultwares-pipelines to vaultwares-api, kept explicit transitional formerly notes where needed, regenerated page resources, and left vaultwares-themes submodule drift unstaged. Docs build remains blocked by installed TypeScript 6.0.3 missing standard lib files.
+- Commands:
+  - `npm run generate:page-resources`
+  - `npm install`
+  - `npm run build`
+  - `git push origin main`
+- Files:
+  - `docs-content/operations/services-inventory.mdx`
+  - `docs-content/operations/network-map.mdx`
+  - `docs-content/operations/tailscale.mdx`
+  - `docs-content/adr/0001-shared-tube-rebuild.mdx`
+  - `src/resources/pageResourcesManifest.ts`
+  - `src/resources/pages/*.json`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 14:30 - health-ledger</strong> <code>code-change</code> - Pushed health-ledger main commit 54c86cf. Alarm Joker now defaults to Medium+ notification behavior, test alerts default to medium, docs/systemd/env examples reflect the Medium ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 14:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pushed health-ledger main commit 54c86cf. Alarm Joker now defaults to Medium+ notification behavior, test alerts default to medium, docs/systemd/env examples reflect the Medium threshold, and service ownership references now point at p-potvin/vaultwares-api.
+- Commands:
+  - `npm run test:alarm`
+  - `npm run check:alarm`
+  - `git push origin main`
+- Files:
+  - `scripts/alarm-joker.mjs`
+  - `scripts/alarm-joker.test.mjs`
+  - `docs/alarm-notifications.md`
+  - `ops/alarm.env.example`
+  - `ops/systemd/health-ledger-alarm.service`
+  - `services.yaml`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 14:30 - vaultwares-api</strong> <code>code-change</code> - Pushed vaultwares-api main commit 13d8aa1. Standardized API service naming and metadata, loosened request logging to important events by default, documented query-param correlat...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 14:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pushed vaultwares-api main commit 13d8aa1. Standardized API service naming and metadata, loosened request logging to important events by default, documented query-param correlationId format, added Kiwi sender identity fields, serialized ComfyUI workflow jobs with optional safe callbacks, and updated local remote to p-potvin/vaultwares-api after GitHub reported the move.
+- Commands:
+  - `gh --version`
+  - `gh auth status`
+  - `python -m pytest tests/test_api_gateway.py -q`
+  - `python -m py_compile api_server.py`
+  - `git push origin main`
+- Files:
+  - `CONTRIBUTING.md`
+  - `README.md`
+  - `api_server.py`
+  - `tests/test_api_gateway.py`
+  - `pyproject.toml`
+  - `package.json`
+  - `requirements.txt`
+  - `VPS_GATEWAY.md`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 12:51 - vaultwares-docs</strong> <code>code-change</code> - Updated central operations services inventory with the API correlationId standard, important-only request logging default, Kiwi source/client logging requirement, and one-at-a-t...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 12:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated central operations services inventory with the API correlationId standard, important-only request logging default, Kiwi source/client logging requirement, and one-at-a-time ComfyUI workflow queue contract with private/tailnet callbacks.
+- Commands:
+  - `git diff -- docs-content\\operations\\services-inventory.mdx`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\services-inventory.mdx`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 12:51 - health-ledger</strong> <code>code-change</code> - Corrected Alarm Joker notification floor to Medium and up: default candidate threshold is medium, test alerts default to medium, systemd/env template and notification docs now m...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 12:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Corrected Alarm Joker notification floor to Medium and up: default candidate threshold is medium, test alerts default to medium, systemd/env template and notification docs now match the Medium+ behavior while High/Critical still enter silent_observer incident lock.
+- Commands:
+  - `npm run test:alarm`
+  - `npm run check:alarm`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\scripts\alarm-joker.mjs`
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\scripts\alarm-joker.test.mjs`
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\docs\alarm-notifications.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\ops\systemd\health-ledger-alarm.service`
+  - `C:\Users\Administrator\Desktop\Github Repos\health-ledger\ops\alarm.env.example`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 12:51 - vaultwares-api</strong> <code>code-change</code> - Updated vaultwares-api deployment behavior: standardized query-param correlationId handling with VaultWares vw_API_cxxxxxxx generation, reduced default request logging to import...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 12:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated vaultwares-api deployment behavior: standardized query-param correlationId handling with VaultWares vw_API_cxxxxxxx generation, reduced default request logging to important events only, added Kiwi syslog source/client/peer/origin fields, serialized ComfyUI workflow execution behind an API-level lock, added optional private/tailnet callbackUrl completion notifications, documented the correlation/logging/job-queue contract, restarted vaultwares-api, and verified /health plus /openapi.json.
+- Commands:
+  - `.\\.venv\\Scripts\\python.exe -m pytest tests\\test_api_gateway.py -q`
+  - `.\\.venv\\Scripts\\python.exe -m py_compile api_server.py`
+  - `Restart-Service vaultwares-api -Force`
+  - `Invoke-WebRequest http://127.0.0.1:9001/health?correlationId=vw_API_c123abc4&sourceApp=codex`
+  - `Invoke-WebRequest http://127.0.0.1:9001/openapi.json?correlationId=vw_API_c7654321&sourceApp=codex`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\api_server.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\tests\test_api_gateway.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-pipelines\README.md`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 12:01 - vaultwares-api</strong> <code>code-change,verification</code> - Loosened vaultwares-api request limiting and completed request correlation/Kiwi logging fix. Pushed c20fb25 to main. Broad API gate now has loose floors of 3000/min public and 3...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 12:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Loosened vaultwares-api request limiting and completed request correlation/Kiwi logging fix. Pushed c20fb25 to main. Broad API gate now has loose floors of 3000/min public and 30000/min trusted, job submission floor 120/min, inbound X-Correlation-ID/X-Request-ID/correlationId is preserved, request.start/request.complete/request.blocked/request.crashed are logged with correlationId, and Kiwi logging defaults to local syslog UDP 127.0.0.1:514 with optional HTTP JSON collector env. Restarted Windows service vaultwares-api and verified /health 200 preserved correlation ID. Tests: py_compile api_server.py, targeted gateway/monitor/telemetry tests 12 passed, full pytest 115 passed.
+- Commands:
+  - `.\\.venv\\Scripts\\python.exe -m pytest -q`
+  - `Restart-Service -Name vaultwares-api -Force`
+  - `Invoke-WebRequest http://127.0.0.1:9001/health with X-Correlation-ID`
+  - `git push origin main`
+- Files:
+  - `vaultwares-pipelines/api_server.py`
+  - `vaultwares-pipelines/tests/test_api_gateway.py`
+  - `vaultwares-pipelines/API_START.md`
+  - `vaultwares-pipelines/VPS_GATEWAY.md`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 12:01 - health-ledger</strong> <code>code-change,verification</code> - Switched Alarm Joker notification path from SMS wording to Twilio WhatsApp and added Proton Bridge local SMTP support. Pushed 04fd2b2 to main. Alarm notifications now default to...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 12:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Switched Alarm Joker notification path from SMS wording to Twilio WhatsApp and added Proton Bridge local SMTP support. Pushed 04fd2b2 to main. Alarm notifications now default to high-or-higher, WhatsApp adapter normalizes whatsapp: addresses and supports transitional SMS env aliases plus optional Twilio ContentSid/template variables, Proton Bridge provider defaults to 127.0.0.1:1025 with Bridge SMTP credentials, systemd alarm floor is high, docs/env examples updated, and node --test coverage was added for WhatsApp behavior without exposing secrets. Verified npm run test:alarm and npm run check:alarm.
+- Commands:
+  - `npm run test:alarm`
+  - `npm run check:alarm`
+  - `git push origin main`
+- Files:
+  - `health-ledger/scripts/alarm-joker.mjs`
+  - `health-ledger/scripts/alarm-joker.test.mjs`
+  - `health-ledger/package.json`
+  - `health-ledger/docs/alarm-notifications.md`
+  - `health-ledger/ops/alarm.env.example`
+  - `health-ledger/ops/systemd/health-ledger-alarm.service`
+  - `health-ledger/README.md`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 11:21 - vaultwares-adk (formerly vaultwares-agentciation)</strong> <code>code-change,verification</code> - Finished ADK side of the final rename cleanup: restored ExtrovertAgent lifecycle initialization by moving action counter, GitHub skills, status thread, and coordinator listener ...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 11:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Finished ADK side of the final rename cleanup: restored ExtrovertAgent lifecycle initialization by moving action counter, GitHub skills, status thread, and coordinator listener setup back into __init__, which lets canonical vaultwares_adk consumers instantiate and start image/text/video/workflow processors. Pushed commit 5bbd6ac. Verification: python -m py_compile extrovert_agent.py vaultwares_adk/__init__.py passed; representative pipelines processor smoke tests passed; full vaultwares-pipelines pytest passed 112 tests after the ADK fix.
+- Commands:
+  - `python -m py_compile extrovert_agent.py vaultwares_adk/__init__.py`
+  - `python -m pytest selected pipelines processor smoke`
+  - `python -m pytest`
+  - `git push origin main`
+- Files:
+  - `vaultwares-adk/extrovert_agent.py`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 11:21 - vaultwares-api</strong> <code>code-change,verification</code> - Finished final ledger migration cleanup in vaultwares-api/vaultwares-pipelines: replaced stale vaultwares_agentciation imports with canonical vaultwares_adk resolution, added ai...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 11:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Finished final ledger migration cleanup in vaultwares-api/vaultwares-pipelines: replaced stale vaultwares_agentciation imports with canonical vaultwares_adk resolution, added ai_model/adk_imports.py to resolve local/sibling ADK checkouts, updated run-spa-stream paths to vaultwares-adk, changed tests to use vaultwares_adk and current vaultwares-themes naming, removed the Pydantic v2 warning in the agent ledger model, rebased over remote main, and pushed commit 289b01d. Verification: old-name scan outside vaultwares-themes returned no active matches; full pytest passed 112 tests with existing dependency deprecation warnings only.
+- Commands:
+  - `rg vaultwares_agentciation vaultwares-pipelines --glob !vaultwares-themes/**`
+  - `python -m py_compile selected pipelines files`
+  - `python -m pytest tests/test_telemetry_input_router.py tests/test_monitor_router.py`
+  - `python -m pytest`
+  - `git pull --rebase origin main`
+  - `git push origin main`
+- Files:
+  - `vaultwares-pipelines/ai_model/adk_imports.py`
+  - `vaultwares-pipelines/ai_model/__init__.py`
+  - `vaultwares-pipelines/ai_model/image/processor.py`
+  - `vaultwares-pipelines/ai_model/text/processor.py`
+  - `vaultwares-pipelines/ai_model/video/processor.py`
+  - `vaultwares-pipelines/ai_model/workflow_export_agent.py`
+  - `vaultwares-pipelines/ai_model/workflows/base.py`
+  - `vaultwares-pipelines/app/routers/telemetry/agent_ledger.py`
+  - `vaultwares-pipelines/tests/conftest.py`
+  - `vaultwares-pipelines/tests/test_monitor_router.py`
+  - `vaultwares-pipelines/tests/test_theme_manager.py`
+  - `vaultwares-pipelines/run-spa-stream.cmd`
+  - `vaultwares-pipelines/run-spa-stream.cmd.fixed`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 07:49 - agent-ledger</strong> <code>code-change,verification</code> - Completed agent-ledger side of ledger API migration: React/Vite data hooks now use vaultwares-api monitor endpoints only with no static file fallbacks, dashboard copy names vaul...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 07:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed agent-ledger side of ledger API migration: React/Vite data hooks now use vaultwares-api monitor endpoints only with no static file fallbacks, dashboard copy names vaultwares-api DB source, record-agent-change posts new ledger events to /api/ledger/agent/events best-effort, and import-agent-ledger-events.py backfills append-only events to the API with idempotent replay. npm run build passed. Public stats proxy returns real DB-backed ledger data for /monitor/work-impact and /monitor/changes. Pushed commit af3fd836. VW_STATE: long_running_task=true; scope=ledger_api_db_migration; pushed_commit=af3fd836.
+- Commands:
+  - `npm run build`
+  - `python scripts/import-agent-ledger-events.py --dry-run`
+  - `python scripts/import-agent-ledger-events.py`
+  - `python scripts/import-agent-ledger-events.py duplicate replay`
+  - `Invoke-WebRequest https://stats.vaultwares.ca/monitor/work-impact`
+  - `Invoke-WebRequest https://stats.vaultwares.ca/monitor/changes?limit=3`
+  - `git push origin main`
+- Files:
+  - `agent-ledger/site/src/useData.ts`
+  - `agent-ledger/site/src/i18n.tsx`
+  - `agent-ledger/scripts/record-agent-change.ps1`
+  - `agent-ledger/scripts/import-agent-ledger-events.py`
+  - `agent-ledger/README.md`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 07:49 - vaultwares-api</strong> <code>code-change,verification</code> - Completed ledger DB/API migration for vaultwares-api: added Postgres agent_ledger_events migration, DB helper, telemetry ingestion/search routes, DB-backed monitor /changes /wor...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 07:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed ledger DB/API migration for vaultwares-api: added Postgres agent_ledger_events migration, DB helper, telemetry ingestion/search routes, DB-backed monitor /changes /work-impact /agent-ledger /events/search adapters, migration runner support for ordered SQL files, README endpoint docs, and monitor tests updated for DB helpers. Backfilled 409 append-only agent-ledger events into Postgres with duplicate replay proving idempotency. Verified OpenAPI routes, local API, public stats proxy source=vaultwares-api storage=postgres, and live work-impact/changes. Pytest collection remains blocked by pre-existing missing vaultwares_agentciation import. MCP ledger lookup tool failed with undefined get_agent_ledger_entries. VW_STATE: long_running_task=true; scope=ledger_api_db_migration; pushed_commit=f8b65ea.
+- Commands:
+  - `python -m py_compile app routers and migration script`
+  - `python scripts/apply-telemetry-migrations.py`
+  - `Restart-Service vaultwares-api -Force`
+  - `Invoke-WebRequest http://127.0.0.1:9001/openapi.json`
+  - `Invoke-WebRequest https://stats.vaultwares.ca/monitor/work-impact`
+  - `Invoke-WebRequest https://stats.vaultwares.ca/monitor/changes?limit=3`
+  - `git push origin main`
+- Files:
+  - `vaultwares-pipelines/migrations/telemetry/002_agent_ledger.sql`
+  - `vaultwares-pipelines/app/routers/telemetry/agent_ledger.py`
+  - `vaultwares-pipelines/app/routers/telemetry/agent_ledger_db.py`
+  - `vaultwares-pipelines/app/routers/monitor/__init__.py`
+  - `vaultwares-pipelines/app/routers/telemetry/__init__.py`
+  - `vaultwares-pipelines/scripts/apply-telemetry-migrations.py`
+  - `vaultwares-pipelines/tests/test_monitor_router.py`
+  - `vaultwares-pipelines/README.md`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 07:19 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>commands</code> - Cleaned the API-first telemetry rollout for direct main pushes: excluded unrelated api_server.py dirty media-pipeline work from the API commit, ignored local API stack dumps, re...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 07:19 (TZ: Eastern Standard Time)
+  ```
+- Summary: Cleaned the API-first telemetry rollout for direct main pushes: excluded unrelated api_server.py dirty media-pipeline work from the API commit, ignored local API stack dumps, reverted tracked pyc noise from syntax checks, staged only scoped API/docs/agent-ledger source changes and ledger event files, and prepared separate main-branch commits per project.
+- Commands:
+  - `git status --short per repo`
+  - `git restore tracked pyc files`
+  - `git add scoped source/docs files`
+  - `git diff --cached --stat`
+- Files:
+  - `vaultwares-pipelines/.gitignore`
+  - `agent-ledger/.gitignore`
+  - `agent-ledger/events/2026/06/*.json`
+  - `vaultwares-docs/docs-content/operations/services-inventory.mdx`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 05:54 - vaultwares-docs</strong> <code>code-change</code> - Updated services inventory to name vaultwares-api as the stats/ledger telemetry API owner while keeping vaultwares-pipelines as the transitional alias during the repo rename path.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 05:54 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated services inventory to name vaultwares-api as the stats/ledger telemetry API owner while keeping vaultwares-pipelines as the transitional alias during the repo rename path.
+- Commands:
+  - `git diff --check docs-content/operations/services-inventory.mdx`
+  - `Resolve-DnsName stats.vaultwares.ca`
+  - `Invoke-WebRequest https://api.vaultwares.ca/openapi.json`
+- Files:
+  - `vaultwares-docs/docs-content/operations/services-inventory.mdx`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 05:54 - agent-ledger</strong> <code>code-change</code> - Implemented tracker recovery/client wiring for API-first telemetry: added idempotent legacy input-log importer, moved tracker/replay scripts to VW_API_URL with VW_TELEMETRY_API_...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 05:54 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented tracker recovery/client wiring for API-first telemetry: added idempotent legacy input-log importer, moved tracker/replay scripts to VW_API_URL with VW_TELEMETRY_API_KEY support, added tracker health/error state plus single-instance lock, updated scheduled task to the real Python runtime, imported June 6-8 legacy logs through the API, verified duplicate replay, and restarted one online tracker process posting to vaultwares-api.
+- Commands:
+  - `python scripts/import-input-logs.py --since 2026-06-06 --dry-run`
+  - `python scripts/import-input-logs.py --since 2026-06-06`
+  - `python scripts/import-input-logs.py --since 2026-06-06`
+  - `Stop-ScheduledTask/Set-ScheduledTask/Start-ScheduledTask VaultWares-InputTracker`
+  - `Get-CimInstance Win32_Process track-input.py`
+  - `Get-Content input-state/input-tracker-health.json`
+- Files:
+  - `agent-ledger/scripts/import-input-logs.py`
+  - `agent-ledger/scripts/track-input.py`
+  - `agent-ledger/scripts/replay-input-spool.py`
+  - `agent-ledger/scripts/setup-input-tracker.ps1`
+  - `agent-ledger/project-aliases.json`
+  - `agent-ledger/README.md`
+  - `agent-ledger/.gitignore`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 05:54 - vaultwares-api</strong> <code>code-change</code> - Implemented API-first telemetry plumbing: renamed the Windows API service to vaultwares-api, removed the legacy vault-pipelines-api service registration, configured telemetry DB...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-08 05:54 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented API-first telemetry plumbing: renamed the Windows API service to vaultwares-api, removed the legacy vault-pipelines-api service registration, configured telemetry DB/API-key env without exposing secrets, added explicit Postgres telemetry migration runner/schema file, updated OpenAPI/API ownership labels, and verified local/proxied health plus DB-backed telemetry summary. VW_STATE: long_running_tasks=true; resume_scope=api-db-tracker-first-steps; secrets_redacted=true.
+- Commands:
+  - `python -m py_compile API telemetry modules`
+  - `python scripts/apply-telemetry-migrations.py`
+  - `Restart-Service vaultwares-api`
+  - `Invoke-WebRequest /openapi.json /health /api/telemetry/input/summary`
+  - `psql telemetry table checks`
+- Files:
+  - `vaultwares-pipelines/api_server.py`
+  - `vaultwares-pipelines/app/routers/telemetry/db.py`
+  - `vaultwares-pipelines/app/routers/telemetry/__init__.py`
+  - `vaultwares-pipelines/app/routers/monitor/__init__.py`
+  - `vaultwares-pipelines/migrations/telemetry/001_input_telemetry.sql`
+  - `vaultwares-pipelines/scripts/apply-telemetry-migrations.py`
+  - `vaultwares-pipelines/README.md`
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 04:46 - agent-ledger</strong> <code>code-change,verification</code> - Webhook 504 fix completed end-to-end via SSH. Server side: chmod +x deploy-async.sh; backed up /etc/vw-webhookd/config.yml to .bak-20260608-044330; sed-edited line 30 swapping d...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-7
+  Thinking: medium
+  Mode: agent
+  Permissions: ask (network: windows-local+ssh-greencloud-vps)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): Bash, PowerShell, TaskUpdate, ssh
+  MCP servers accessed (this reply): VaultWares MCP
+  Time: 2026-06-08 04:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Webhook 504 fix completed end-to-end via SSH. Server side: chmod +x deploy-async.sh; backed up /etc/vw-webhookd/config.yml to .bak-20260608-044330; sed-edited line 30 swapping deploy.sh for deploy-async.sh in p-potvin/agent-ledger target; systemctl restart vw-webhookd. Initial test failed because vwdeploy couldn't write /var/log/agent-ledger-deploy.log (only root could create). Fixed: touch + chown vwdeploy:vwdeploy + chmod 644 the log file, plus added logrotate.d entry for weekly rotation. Two empty-commit smoke tests confirm: GitHub deliveries 08:43:58, 08:44:20, 08:45:11 all OK 200 with dur=0.03-0.04 (was constant 10.0s timeout). vw-webhookd log shows 'exit=0, deploy-async: dispatched' followed by detached deploy running git fetch+reset, npm ci (88 pkgs), vite build (same Cf2H494I.css hash 23211 bytes / B2i2DrKs.js 283434 bytes), rsync to /var/www/ledger.vaultwares.ca/assets (timestamps Jun 8 04:45 UTC). One pre-existing non-fatal rsync warning about .well-known/acme-challenge perms — not introduced here.
+- Commands:
+  - `ssh root@greencloud-vps chmod +x deploy/deploy-async.sh`
+  - `sed -i config.yml swap`
+  - `systemctl restart vw-webhookd`
+  - `touch+chown /var/log/agent-ledger-deploy.log`
+  - `git push origin main (smoke tests)`
+- Files:
+  - `/etc/vw-webhookd/config.yml`
+  - `/opt/sites/agent-ledger/deploy/deploy-async.sh`
+  - `/var/log/agent-ledger-deploy.log`
+  - `/etc/logrotate.d/agent-ledger-deploy`
+- Git: repo=agent-ledger, branch=main, head=71af0676
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 03:49 - agent-ledger</strong> <code>code-change,verification</code> - Three live fixes + wrapper for webhook async-dispatch. (1) Deleted site/src/i18n.ts that shadowed i18n.tsx and broke tsc, which aborted deploy.sh before vite build — so deployed...</summary>
+
+- Kind: code-change,verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-7
+  Thinking: high
+  Mode: agent
+  Permissions: ask (network: windows-local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): Bash, PowerShell, Edit, Write, Read, TaskCreate, TaskUpdate, ToolSearch
+  MCP servers accessed (this reply): VaultWares MCP
+  Time: 2026-06-08 03:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: Three live fixes + wrapper for webhook async-dispatch. (1) Deleted site/src/i18n.ts that shadowed i18n.tsx and broke tsc, which aborted deploy.sh before vite build — so deployed bundle was built without @tailwindcss/vite plugin and shipped 0 utility classes. New bundle 23211 bytes has 202 utility rules (.flex/.grid/.rounded/.p-*/.text-* etc), confirmed live at /assets/index-Cf2H494I.css. (2) useChangesData now accepts both {events:[]} and bare ChangeEvent[] payloads — /changes was showing 'No events' because render emits bare array; deployed JSON has 403 events, now reachable. (3) update-work-impact-state.ps1: skip Add-Count and per-day actor set when actor is 'Unknown'/'unknown'; full rebuild purged old counts. Live top actors now AI Agent (284), Antigravity (82), claude-sonnet-4-6 (9), Github Copilot (8) — no Unknown. (4) Webhook 504: SSH MCP disabled, so I committed deploy/deploy-async.sh wrapper that takes flock, setsid+nohup+disown the real deploy, and exits 0 immediately. User must reconfigure vw-webhookd on greencloud-vps to invoke deploy-async.sh in place of deploy.sh — concrete instructions delivered. Commits: 936e5f1e (fixes), 390651c6 (wrapper). Site self-deployed on push to 936e5f1e; webhook still returning 504 until vw-webhookd wired to wrapper.
+- Commands:
+  - `npm run build`
+  - `pwsh scripts/update-work-impact.ps1 -FullRebuild`
+  - `git push origin main`
+- Files:
+  - `site/src/i18n.ts (deleted)`
+  - `site/src/useData.ts`
+  - `scripts/update-work-impact-state.ps1`
+  - `deploy/deploy-async.sh`
+- Git: repo=agent-ledger, branch=main, head=390651c6
+
+</details>
+
+<details>
+<summary><strong>2026-06-08 03:33 - agent-ledger</strong> <code>code-change,commands,verification</code> - Executed approved plan to stop auto-commit noise and clean git history. (1) Disabled scheduled task AgentLedgerSync (was committing every 5 min); kept AgentLedgerWorkImpactRefre...</summary>
 
 - Kind: code-change,commands,verification
 - Actor: AI Agent
@@ -67,7 +841,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-08 02:25 - General Tasks (formerly General Tasks (workspace), Workspace Git Sync, VaultWares protocols, Prom King monetization projects, business workspace, business, business tube sites, business WordPress tube sites, Test, VaultWares Secrets, vaultwares-secrets, vaultwares-console)</strong> <code>code-change,verification</code> - Second restoration pass — committed .ts deletions since 2026-06-03. Scanned all 49 repos. Found 22 committed-deleted .ts files still absent from HEAD across 2 repos: vault-centr...</summary>
+<summary><strong>2026-06-08 02:25 - General Tasks</strong> <code>code-change,verification</code> - Second restoration pass — committed .ts deletions since 2026-06-03. Scanned all 49 repos. Found 22 committed-deleted .ts files still absent from HEAD across 2 repos: vault-centr...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -122,7 +896,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-08 01:35 - vaultwares-docs (formerly tmp-app)</strong> <code>code-change,verification</code> - Added create-skill SKILL.md (vaultwares-docs/skills/create-skill/) that runs a 7-12 question interrogation to author a new skill, drafts the source file, requires user confirmat...</summary>
+<summary><strong>2026-06-08 01:35 - vaultwares-docs</strong> <code>code-change,verification</code> - Added create-skill SKILL.md (vaultwares-docs/skills/create-skill/) that runs a 7-12 question interrogation to author a new skill, drafts the source file, requires user confirmat...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -156,7 +930,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-07 20:01 - vaultwares-pipelines</strong> <code>code-change,verification</code> - Bypassed rate limiter for local media pipeline paths in api_server.py to resolve 429 errors. Implemented layout-aware and semantic media filtering in tampermonkey_script.js, and...</summary>
+<summary><strong>2026-06-07 20:01 - vaultwares-api</strong> <code>code-change,verification</code> - Bypassed rate limiter for local media pipeline paths in api_server.py to resolve 429 errors. Implemented layout-aware and semantic media filtering in tampermonkey_script.js, and...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -185,7 +959,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-07 19:43 - vaultwares-pipelines</strong> <code>code-change,verification</code> - Implemented in-memory job progress tracking in api_server.py, a telemetry jobs dashboard tab in tampermonkey_script.js, a global toggle switch for DOM highlights, and a debounce...</summary>
+<summary><strong>2026-06-07 19:43 - vaultwares-api</strong> <code>code-change,verification</code> - Implemented in-memory job progress tracking in api_server.py, a telemetry jobs dashboard tab in tampermonkey_script.js, a global toggle switch for DOM highlights, and a debounce...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -214,7 +988,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-07 19:35 - vaultwares-pipelines</strong> <code>plan</code> - Updated implementation plan for the dashboard telemetry tab and real-time DOM element highlighting with a global toggle switch.</summary>
+<summary><strong>2026-06-07 19:35 - vaultwares-api</strong> <code>plan</code> - Updated implementation plan for the dashboard telemetry tab and real-time DOM element highlighting with a global toggle switch.</summary>
 
 - Kind: plan
 - Actor: AI Agent
@@ -237,7 +1011,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-07 19:21 - vaultwares-pipelines</strong> <code>code-change,verification</code> - Resolved the api_server.py startup hang by replacing KiwiLogHandler&#39;s Lock with RLock to eliminate reentrancy deadlock under logging.Handler. Also added request/urllib3 filters ...</summary>
+<summary><strong>2026-06-07 19:21 - vaultwares-api</strong> <code>code-change,verification</code> - Resolved the api_server.py startup hang by replacing KiwiLogHandler&#39;s Lock with RLock to eliminate reentrancy deadlock under logging.Handler. Also added request/urllib3 filters ...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -363,7 +1137,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-07 18:11 - vaultwares-pipelines</strong> <code>commands</code> - Restarted the local vaultwares-pipelines FastAPI process after confirming the running process did not expose the newly implemented input tracker and telemetry routes. Verified /...</summary>
+<summary><strong>2026-06-07 18:11 - vaultwares-api</strong> <code>commands</code> - Restarted the local vaultwares-pipelines FastAPI process after confirming the running process did not expose the newly implemented input tracker and telemetry routes. Verified /...</summary>
 
 - Kind: commands
 - Actor: AI Agent
@@ -650,7 +1424,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-07 09:57 - vaultwares-pipelines</strong> <code>code-change,verification</code> - Added V.A.U.L.T Monitor input telemetry API: POST /api/telemetry/input/batches, summary/search endpoints, Postgres-backed idempotent input batch/event storage, monitor input tra...</summary>
+<summary><strong>2026-06-07 09:57 - vaultwares-api</strong> <code>code-change,verification</code> - Added V.A.U.L.T Monitor input telemetry API: POST /api/telemetry/input/batches, summary/search endpoints, Postgres-backed idempotent input batch/event storage, monitor input tra...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -1534,7 +2308,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-06 04:28 - vaultwares-pipelines</strong> <code>commands</code> - Restarted the local vaultwares-pipelines API runtime for monitor deployment on the Tailscale interface 100.71.101.21:9001 with UVICORN_RELOAD=0. The previous api_server.py reloa...</summary>
+<summary><strong>2026-06-06 04:28 - vaultwares-api</strong> <code>commands</code> - Restarted the local vaultwares-pipelines API runtime for monitor deployment on the Tailscale interface 100.71.101.21:9001 with UVICORN_RELOAD=0. The previous api_server.py reloa...</summary>
 
 - Kind: commands
 - Actor: AI Agent

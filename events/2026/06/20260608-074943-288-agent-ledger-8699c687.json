@@ -1,0 +1,46 @@
+{
+  "id": "20260608-074943-288-agent-ledger-8699c687",
+  "createdAt": "2026-06-08T11:49:43.2888544Z",
+  "createdAtLocal": "2026-06-08 07:49",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-08 07:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Completed agent-ledger side of ledger API migration: React/Vite data hooks now use vaultwares-api monitor endpoints only with no static file fallbacks, dashboard copy names vaultwares-api DB source, record-agent-change posts new ledger events to /api/ledger/agent/events best-effort, and import-agent-ledger-events.py backfills append-only events to the API with idempotent replay. npm run build passed. Public stats proxy returns real DB-backed ledger data for /monitor/work-impact and /monitor/changes. Pushed commit af3fd836. VW_STATE: long_running_task=true; scope=ledger_api_db_migration; pushed_commit=af3fd836.",
+  "commands": [
+    "npm run build",
+    "python scripts/import-agent-ledger-events.py --dry-run",
+    "python scripts/import-agent-ledger-events.py",
+    "python scripts/import-agent-ledger-events.py duplicate replay",
+    "Invoke-WebRequest https://stats.vaultwares.ca/monitor/work-impact",
+    "Invoke-WebRequest https://stats.vaultwares.ca/monitor/changes?limit=3",
+    "git push origin main"
+  ],
+  "files": [
+    "agent-ledger/site/src/useData.ts",
+    "agent-ledger/site/src/i18n.tsx",
+    "agent-ledger/scripts/record-agent-change.ps1",
+    "agent-ledger/scripts/import-agent-ledger-events.py",
+    "agent-ledger/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "8699c687c42da00b1d04d1e5f0af302bea9087a3213a273012fdc27e650a7e6d",
+  "git": null
+}

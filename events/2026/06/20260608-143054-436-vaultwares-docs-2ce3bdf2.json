@@ -1,0 +1,44 @@
+{
+  "id": "20260608-143054-436-vaultwares-docs-2ce3bdf2",
+  "createdAt": "2026-06-08T18:30:54.4362436Z",
+  "createdAtLocal": "2026-06-08 14:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-08 14:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Pushed vaultwares-docs main commit 04cdc8e. Updated active docs references from vaultwares-pipelines to vaultwares-api, kept explicit transitional formerly notes where needed, regenerated page resources, and left vaultwares-themes submodule drift unstaged. Docs build remains blocked by installed TypeScript 6.0.3 missing standard lib files.",
+  "commands": [
+    "npm run generate:page-resources",
+    "npm install",
+    "npm run build",
+    "git push origin main"
+  ],
+  "files": [
+    "docs-content/operations/services-inventory.mdx",
+    "docs-content/operations/network-map.mdx",
+    "docs-content/operations/tailscale.mdx",
+    "docs-content/adr/0001-shared-tube-rebuild.mdx",
+    "src/resources/pageResourcesManifest.ts",
+    "src/resources/pages/*.json"
+  ],
+  "planPath": "",
+  "contentHash": "2ce3bdf26067511b7a12893afe2189fc6d767694248007134bc75667f6e26634",
+  "git": null
+}

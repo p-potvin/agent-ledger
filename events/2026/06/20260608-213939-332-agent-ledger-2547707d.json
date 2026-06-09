@@ -1,0 +1,41 @@
+{
+  "id": "20260608-213939-332-agent-ledger-2547707d",
+  "createdAt": "2026-06-09T01:39:39.3324190Z",
+  "createdAtLocal": "2026-06-08 21:39",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: windows-local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): VaultWares MCP\r\nTime: 2026-06-08 21:39 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "windows-local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": "VaultWares MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+  "summary": "Dual-write smoke test: confirming event lands in both events/ JSON and API DB after backfill",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "2547707d692d77e21745ceb2d0ef0c4c52b6e4c8018dd594f9510282120f03ec",
+  "git": {
+    "repo": "vaultwares-api",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+    "branch": "main",
+    "head": "13d8aa1",
+    "hasChanges": true
+  }
+}
