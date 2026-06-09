@@ -12,7 +12,14 @@ set -euo pipefail
 
 REPO_DIR="/opt/sites/agent-ledger"
 SITE_DIR="$REPO_DIR/site"
-DEPLOY_DIR="/var/www/ledger.vaultwares.ca"
+
+# During the ledger.vaultwares.ca → stats.vaultwares.ca cutover, ship the
+# same build to both web roots. Once stats is the sole tenant, drop the
+# legacy entry from DEPLOY_DIRS (or replace its nginx vhost with a 301).
+DEPLOY_DIRS=(
+    "/var/www/stats.vaultwares.ca"
+    "/var/www/ledger.vaultwares.ca"
+)
 
 echo "=== agent-ledger deploy: $(date -u) ==="
 
@@ -34,9 +41,15 @@ cd "$SITE_DIR"
 npm ci --prefer-offline
 npm run build
 
-# 4. Deploy to web root
-echo "--- Deploying to $DEPLOY_DIR ---"
-rsync -a --delete --exclude '.well-known/' "$SITE_DIR/dist/" "$DEPLOY_DIR/"
+# 4. Deploy to web root(s)
+for DEPLOY_DIR in "${DEPLOY_DIRS[@]}"; do
+    if [ ! -d "$DEPLOY_DIR" ]; then
+        echo "--- Skipping $DEPLOY_DIR (does not exist) ---"
+        continue
+    fi
+    echo "--- Deploying to $DEPLOY_DIR ---"
+    rsync -a --delete --exclude '.well-known/' "$SITE_DIR/dist/" "$DEPLOY_DIR/"
+done
 
 # 5. Reload nginx (if config changed)
 if nginx -t 2>/dev/null; then

@@ -24,7 +24,7 @@ export function Nav() {
           />
           <IconChevronRight width={14} height={14} className="text-[var(--v-gold-dim)]" />
           <h1 className="text-lg font-bold m-0 flex items-center gap-2">
-            {dict.changesTitle}
+            {dict.siteTitle}
           </h1>
         </div>
         <nav className="flex items-center gap-2 ml-auto">

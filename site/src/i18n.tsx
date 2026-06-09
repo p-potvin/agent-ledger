@@ -3,14 +3,17 @@ import { createContext, useContext, useMemo, useState, type ReactNode } from 're
 export type Lang = 'en' | 'qc';
 
 const base = {
-  title: 'Work Impact',
+  // Brand shown in the header chevron crumb. The three tabs use the
+  // per-tab title keys below.
+  siteTitle: 'VaultWares Overview',
+  title: 'Team Work',
   subtitle: 'Agent-ledger activity through vaultwares-api',
   intro: 'A compact operational view of recorded agent work, command evidence, verification, and project activity.',
-  changesTitle: 'Agent Ledger',
+  changesTitle: 'The Ledger',
   changesSubtitle: 'Recent ledger entries served from the vaultwares-api database.',
-  inputTrackerTitle: 'Input Tracker',
-  inputTrackerSubtitle: 'Privacy-safe local input telemetry, batched through vaultwares-pipelines.',
-  inputTrackerNav: 'Input',
+  inputTrackerTitle: 'Personal Stats',
+  inputTrackerSubtitle: 'Privacy-safe local input telemetry, batched through vaultwares-api.',
+  inputTrackerNav: 'Personal Stats',
   range: 'Range',
   generated: 'Generated',
   generatedSuffix: '',
@@ -107,13 +110,14 @@ export const I18N = {
   en: base,
   qc: {
     ...base,
-    title: 'Impact du travail',
+    siteTitle: 'Survol VaultWares',
+    title: 'Travail d\'equipe',
     subtitle: 'Activite agent-ledger via vaultwares-api',
-    changesTitle: 'Registre Agent',
+    changesTitle: 'Le Registre',
     changesSubtitle: 'Entrees recentes servies par la base vaultwares-api.',
-    inputTrackerTitle: 'Traceur Input',
-    inputTrackerSubtitle: 'Telemetrie locale privee, envoyee par lots a vaultwares-pipelines.',
-    inputTrackerNav: 'Input',
+    inputTrackerTitle: 'Stats personnelles',
+    inputTrackerSubtitle: 'Telemetrie locale privee, envoyee par lots a vaultwares-api.',
+    inputTrackerNav: 'Stats personnelles',
     generated: 'Genere',
     noEvents: 'Aucun evenement',
     errors: { loading: 'Chargement...', failedToLoad: 'Chargement echoue' },
