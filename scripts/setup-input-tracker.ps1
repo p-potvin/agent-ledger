@@ -9,7 +9,12 @@
     4. Optionally starts the tracker immediately
 
 .PARAMETER PythonExe
-    Path to pythonw.exe (silent, no console window). Defaults to "pythonw" on PATH.
+    Path to python.exe. We deliberately use python.exe (not pythonw.exe) so the
+    conhost --headless wrapper stays attached to the daemon for its full
+    lifetime — the scheduled task then displays State=Running while the
+    tracker runs, instead of going back to Ready on every fire. conhost
+    --headless suppresses the console window so there is no visible flash.
+    Defaults to "python" on PATH.
 
 .PARAMETER StartNow
     Switch — if present, starts the tracker task immediately after registration.
@@ -53,14 +58,13 @@ if ($PythonExe) {
 if (-not $pythonResolved) {
     $py = (Get-Command "python" -ErrorAction SilentlyContinue)?.Source
     if ($py) {
-        $pythonResolved = Join-Path (Split-Path $py -Parent) "pythonw.exe"
-        if (-not (Test-Path $pythonResolved)) { $pythonResolved = $py }
+        $pythonResolved = $py
     } else {
         throw "Python not found on PATH. Install Python 3.8+ first."
     }
 }
 if ($pythonResolved -like "*\WindowsApps\*") {
-    $pythonCore = Get-ChildItem "$env:LOCALAPPDATA\Python" -Recurse -Filter pythonw.exe -ErrorAction SilentlyContinue |
+    $pythonCore = Get-ChildItem "$env:LOCALAPPDATA\Python" -Recurse -Filter python.exe -ErrorAction SilentlyContinue |
         Sort-Object LastWriteTime -Descending |
         Select-Object -First 1
     if ($pythonCore) { $pythonResolved = $pythonCore.FullName }
