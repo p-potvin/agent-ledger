@@ -10,11 +10,9 @@
 
 .PARAMETER PythonExe
     Path to python.exe. We deliberately use python.exe (not pythonw.exe) so the
-    conhost --headless wrapper stays attached to the daemon for its full
-    lifetime — the scheduled task then displays State=Running while the
-    tracker runs, instead of going back to Ready on every fire. conhost
-    --headless suppresses the console window so there is no visible flash.
-    Defaults to "python" on PATH.
+    scheduled task stays attached to the daemon for its full lifetime and shows
+    State=Running while the tracker runs. Defaults to the local Python install,
+    then python on PATH.
 
 .PARAMETER StartNow
     Switch — if present, starts the tracker task immediately after registration.
@@ -25,7 +23,7 @@
 [CmdletBinding()]
 param(
     [string]$PythonExe  = "",
-    [string]$ApiUrl = "http://127.0.0.1:9001",
+    [string]$ApiUrl = "http://100.67.25.118:9001",
     [switch]$StartNow
 )
 
@@ -34,6 +32,7 @@ $ErrorActionPreference = "Stop"
 $ScriptDir     = Split-Path $MyInvocation.MyCommand.Path -Parent
 $LedgerRoot    = Split-Path $ScriptDir -Parent
 $TrackerScript = Join-Path $ScriptDir "track-input.py"
+$TrackerLauncher = Join-Path $ScriptDir "start-input-tracker.ps1"
 $TrackerTask   = "VaultWares-InputTracker"
 
 # ---------------------------------------------------------------------------
@@ -49,25 +48,34 @@ Write-Host ""
 if (-not (Test-Path $TrackerScript)) {
     throw "Tracker script not found: $TrackerScript"
 }
+if (-not (Test-Path $TrackerLauncher)) {
+    throw "Tracker launcher not found: $TrackerLauncher"
+}
 # Resolve pythonw full path. Avoid the WindowsApps shim for scheduled tasks.
 $pythonResolved = $null
 if ($PythonExe) {
-    $pythonResolved = (Get-Command $PythonExe -ErrorAction SilentlyContinue)?.Source
+    $pythonCommand = Get-Command $PythonExe -ErrorAction SilentlyContinue
+    if ($pythonCommand) { $pythonResolved = $pythonCommand.Source }
     if (-not $pythonResolved -and (Test-Path $PythonExe)) { $pythonResolved = $PythonExe }
 }
 if (-not $pythonResolved) {
-    $py = (Get-Command "python" -ErrorAction SilentlyContinue)?.Source
-    if ($py) {
-        $pythonResolved = $py
-    } else {
-        throw "Python not found on PATH. Install Python 3.8+ first."
-    }
+    $pythonCore = Get-ChildItem "$env:LOCALAPPDATA\Python" -Recurse -Filter python.exe -ErrorAction SilentlyContinue |
+        Sort-Object LastWriteTime -Descending |
+        Select-Object -First 1
+    if ($pythonCore) { $pythonResolved = $pythonCore.FullName }
+}
+if (-not $pythonResolved) {
+    $pythonCommand = Get-Command "python" -ErrorAction SilentlyContinue
+    if ($pythonCommand) { $pythonResolved = $pythonCommand.Source }
 }
 if ($pythonResolved -like "*\WindowsApps\*") {
     $pythonCore = Get-ChildItem "$env:LOCALAPPDATA\Python" -Recurse -Filter python.exe -ErrorAction SilentlyContinue |
         Sort-Object LastWriteTime -Descending |
         Select-Object -First 1
     if ($pythonCore) { $pythonResolved = $pythonCore.FullName }
+}
+if (-not $pythonResolved) {
+    throw "Python not found. Install Python 3.8+ first."
 }
 Write-Host "Python:  $pythonResolved" -ForegroundColor Green
 
@@ -77,7 +85,7 @@ Write-Host "Python:  $pythonResolved" -ForegroundColor Green
 
 Write-Host ""
 Write-Host "Installing Python dependencies..." -ForegroundColor Yellow
-& python -m pip install --quiet --upgrade pynput pyperclip
+& $pythonResolved -m pip install --quiet --upgrade pynput pyperclip
 if ($LASTEXITCODE -ne 0) {
     Write-Warning "pip install returned non-zero. Tracker may still work if packages are already installed."
 } else {
@@ -93,31 +101,31 @@ Write-Host "Registering scheduled task: $TrackerTask ..." -ForegroundColor Yello
 
 Unregister-ScheduledTask -TaskName $TrackerTask -Confirm:$false -ErrorAction SilentlyContinue | Out-Null
 
-$conhost = "$env:SystemRoot\System32\conhost.exe"
-$quotedApi = $ApiUrl.Replace("'", "''")
+$taskPowerShell = Join-Path $env:SystemRoot "System32\WindowsPowerShell\v1.0\powershell.exe"
+if (-not (Test-Path $taskPowerShell)) { $taskPowerShell = (Get-Command "powershell.exe" -ErrorAction Stop).Source }
+[Environment]::SetEnvironmentVariable("VW_API_URL", $ApiUrl, "User")
 $trackerAction = New-ScheduledTaskAction `
-    -Execute    $conhost `
-    -Argument   "--headless powershell.exe -NoProfile -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -Command `"`$env:VW_API_URL='$quotedApi'; & '$pythonResolved' '$TrackerScript'`"" `
+    -Execute    $taskPowerShell `
+    -Argument   "-NoProfile -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -File `"$TrackerLauncher`" -PythonExe `"$pythonResolved`"" `
     -WorkingDirectory $ScriptDir
 
 $trackerTriggerLogon  = New-ScheduledTaskTrigger -AtLogOn
-# Also trigger on workstation unlock so the tracker resumes after a locked screen
-$trackerTriggerUnlock = New-CimInstance -Namespace ROOT\Microsoft\Windows\TaskScheduler `
-    -ClassName MSFT_TaskSessionStateChangeTrigger `
-    -Property @{ StateChange = 8; Enabled = $true } -ClientOnly   # 8 = SESSION_UNLOCK
 $trackerSettings = New-ScheduledTaskSettingsSet `
+    -AllowStartIfOnBatteries `
+    -DontStopIfGoingOnBatteries `
     -ExecutionTimeLimit (New-TimeSpan -Hours 0)  `
     -MultipleInstances  IgnoreNew                `
     -RestartCount       99                       `
     -RestartInterval    (New-TimeSpan -Minutes 1)`
     -StartWhenAvailable
+$trackerPrincipal = New-ScheduledTaskPrincipal -GroupId "BUILTIN\Administrators" -RunLevel Highest
 
 Register-ScheduledTask `
     -TaskName   $TrackerTask `
     -Action     $trackerAction `
-    -Trigger    @($trackerTriggerLogon, $trackerTriggerUnlock) `
+    -Trigger    $trackerTriggerLogon `
     -Settings   $trackerSettings `
-    -RunLevel   Highest `
+    -Principal  $trackerPrincipal `
     -Description "VaultWares: silently tracks privacy-safe input metrics and batches them to vaultwares-api. Starts at logon + unlock, restarts automatically on crash." `
     | Out-Null
 
@@ -146,7 +154,7 @@ Write-Host "Setup complete." -ForegroundColor Cyan
 Write-Host ""
 $apiBase = $env:VW_API_URL
 if (-not $apiBase) { $apiBase = $env:VW_PIPELINES_URL }
-if (-not $apiBase) { $apiBase = "http://127.0.0.1:9001" }
+if (-not $apiBase) { $apiBase = "http://100.67.25.118:9001" }
 Write-Host "  API endpoint  →  $apiBase/api/telemetry/input/batches"
 Write-Host "  Spool fallback→  $LedgerRoot\input-spool\YYYY-MM-DD.jsonl"
 Write-Host ""
