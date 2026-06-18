@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260611-070400-685-prom-king-957d2622",
+    "createdAt":  "2026-06-11T11:04:00.6850523Z",
+    "createdAtLocal":  "2026-06-11 07:04",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "code-change,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: medium\r\nMode: code\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop  Branch: n/a\r\nTools used (this reply): view_file, multi_replace_file_content, replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-11 07:04 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "view_file",
+                                      "multi_replace_file_content",
+                                      "replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop",
+    "summary":  "GTM: replaced runtime document.createElement injection in Layout.astro with canonical GA4 two-script pattern (async src + inline gtag config) via Fragment set:html. Both G-2SLE1L6M4H (FXV) and G-6LEWHEX5EP (PKT) ids were already in configs, only the rendering was broken. Build verified clean, pushed to main. Crawler fix: restored missing \u0027import { firefox } from @playwright/test\u0027 that was dropped when user added scrapingAnt import; re-ran Firefox profile crawler.",
+    "commands":  [
+                     "pnpm build",
+                     "git push origin main",
+                     "node ./scripts/run-fullxxx-crawl-firefox-profile.mjs"
+                 ],
+    "files":  [
+                  "shared-tube/shared/src/components/Layout.astro",
+                  "qa-automation/scripts/run-fullxxx-crawl-firefox-profile.mjs"
+              ],
+    "planPath":  "",
+    "contentHash":  "957d26223e02c137fb8390bac541a2fbb28e515aa7bc6146ce97809ac3b73577",
+    "git":  null
+}

@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260601-052826-440-agent-ledger-09556243",
+    "createdAt":  "2026-06-01T09:28:26.4409706Z",
+    "createdAtLocal":  "2026-06-01 05:28",
+    "timezone":  "Eastern Standard Time",
+    "project":  "agent-ledger",
+    "kind":  "code-change",
+    "actor":  "claude-sonnet-4-6",
+    "agentHeader":  "Agent: claude-sonnet-4-6 (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: false\r\nMode: chat\r\nPermissions: read-write (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\pwsh  Branch: n/a\r\nTools used (this reply): Read, Edit, mcp__workspace__bash, mcp__VaultWares_MCP__MCP_Server___sh_run\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-01 05:28 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6",
+                    "thinking":  "false",
+                    "mode":  "chat",
+                    "permissions":  "read-write",
+                    "network":  "online",
+                    "toolsUsed":  [
+                                      "Read",
+                                      "Edit",
+                                      "mcp__workspace__bash",
+                                      "mcp__VaultWares_MCP__MCP_Server___sh_run"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\pwsh",
+    "summary":  "Fixed DAILY_DASHBOARD encoding corruption: replaced all 41 non-ASCII chars (em-dashes, arrows, operators, emojis) in the PS1 template with ASCII/entity equivalents using Python. Switched file output to UTF-8 NoBOM to prevent browser BOM misparse. Dashboard now renders clean with 1516 ledger events and 2 input days loaded.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "agent-ledger/scripts/render-daily-dashboard.ps1",
+                  "agent-ledger/DAILY_DASHBOARD.html"
+              ],
+    "planPath":  "",
+    "contentHash":  "0955624376d382b4086e3041784240f70e44641b0102e8601c66f6376360e7fd",
+    "git":  null
+}

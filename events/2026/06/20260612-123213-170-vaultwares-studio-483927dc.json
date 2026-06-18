@@ -1,0 +1,51 @@
+{
+  "id": "20260612-123213-170-vaultwares-studio-483927dc",
+  "createdAt": "2026-06-12T16:32:13.1702546Z",
+  "createdAtLocal": "2026-06-12 12:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-12 12:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Two viewport fixes. (1) viewer.js:197 'undefined position' crash on Apply+Preview Pattern. Root cause: requestAnimationFrame's now and performance.now() use slightly different time bases in QtWebEngine, so on the very first step (now - startedAt) can be slightly negative, Math.floor gives -1, Math.min(frames.length-1, -1) is -1, frames[-1] is undefined, frame.position throws. Fix: clamp index with Math.max(0, ...) and add defensive guard that re-schedules instead of crashing if frame is malformed. (2) Camera angle presets to unstick from confusing poses. New JS hooks: window.snapToView('top'|'bottom'|'front'|'back'|'left'|'right'|'iso') snaps the orbit camera to a named world-space direction at the current orbit distance, forces world +Y up, dodges the gimbal pole when snapping straight vertical. window.flipCameraUp() rolls 180 deg around the forward axis (negates camera.up + re-lookAt) for one-click 'right myself'. New compact button grid in viewport panel: Top/Front/Side/Iso/Flip Up via QGridLayout (2x2 + full-width flip row). Strings in EN+QC. Suite: 77/77 pass, ViewportTab imports clean.",
+  "commands": [
+    "pytest tests/ -x -q --ignore=tests/test_viewer_server.py",
+    "python -c 'ViewportTab import smoke test'"
+  ],
+  "files": [
+    "vaultwares-studio/vaultwares_studio/webviewer/viewer.js",
+    "vaultwares-studio/gui/viewport.py",
+    "vaultwares-studio/gui/strings.py"
+  ],
+  "planPath": "",
+  "contentHash": "483927dce05b60ff69e66e4b6e7a39b58241211a331e3b96c2b4e96c88971afd",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

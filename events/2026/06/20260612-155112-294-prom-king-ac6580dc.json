@@ -1,0 +1,50 @@
+﻿{
+    "id":  "20260612-155112-294-prom-king-ac6580dc",
+    "createdAt":  "2026-06-12T19:51:12.2946205Z",
+    "createdAtLocal":  "2026-06-12 15:51",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "code-change,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 15:51 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+    "summary":  "Updated Safe Mode toggle visibility to be restricted to developer/Tailscale IP range (localhost/127.0.0.1/::1/100.64.0.0/10/fd7a:115c:a1e0::/48).",
+    "commands":  [
+                     "pnpm build"
+                 ],
+    "files":  [
+                  "shared-tube/shared/src/components/Header.astro",
+                  "shared-tube/shared/src/security/safe-mode.ts"
+              ],
+    "planPath":  "",
+    "contentHash":  "ac6580dce06b0c839ab0bae4bdab03462f52b829f5034ab9d374fa769724a69f",
+    "git":  {
+                "repo":  "vaultwares-api",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+                "branch":  "main",
+                "head":  "eff400e",
+                "hasChanges":  true
+            }
+}

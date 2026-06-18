@@ -1,0 +1,60 @@
+{
+  "id": "20260608-214614-569-agent-ledger-1e3a9aa5",
+  "createdAt": "2026-06-09T01:46:14.5691571Z",
+  "createdAtLocal": "2026-06-08 21:46",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change,handoff,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: windows-local+ssh-greencloud-vps)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Read, TaskCreate, TaskUpdate, ToolSearch, Agent, ssh\r\nMCP servers accessed (this reply): VaultWares MCP\r\nTime: 2026-06-08 21:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "windows-local+ssh-greencloud-vps",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Read",
+      "TaskCreate",
+      "TaskUpdate",
+      "ToolSearch",
+      "Agent",
+      "ssh"
+    ],
+    "mcpServersAccessed": "VaultWares MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+  "summary": "Shipped 7 workstreams. (A) shared-tube snake_case to camelCase mapper at shared/src/api/pipelines.ts; commit 4aac7fd; deployed manually to greencloud-vps after fixing vwdeploy group (added to www-data) and chown of /var/www/{fullxxx,prom-king}; fxv.service+pkt.service restarted; fullxxx.video now renders thumbnails + real durations (31m/27m/32m/57m/36m); pkt has 0 videos in DB (separate). (B.1) VaultWares-InputTracker task verified healthy: LastRun=9:16PM, PID 14624 running with online status, posting to /api/telemetry/input/batches successfully. (B.2) New scripts/backfill-input-logs.py converts old hourly schema to minute_rollup events; idempotent via legacy:date:hour event_id; 82 events backfilled across 9 days (2026-05-31..06-08); DB confirmed 83 legacy rows. (B.3) vaultwares-api app/routers/monitor/__init__.py: get_input_tracker(hours=24) and the /monitor/input-tracker + /monitor/overview routes now accept ?hours= up to 14 days; restarted api_server.py (old PID 20756 -> new PID 35384); verified hours=168 returns 243k keystrokes vs 35k for 24h; agent-ledger useData.ts useInputTrackerData fixed (was passing bare string to getJson() which expects array) and bumped to hours=168. (C.1) scripts/backfill-agent-ledger-to-api.py walks events/+history/ in 250-event batches; utf-8-sig handles PowerShell BOM; 2,124 received / 1,707 newly inserted / 417 deduped (dual-write was partially on) / 0 errors; agent_ledger_events spans 2026-01-18..2026-06-09. (C.2) Set VW_AGENT_LEDGER_API_SYNC=1 in user env; dual-write verified end-to-end (recorded test event landed in both events/2026/06/20260608-213939*.json AND agent_ledger_events row 2125). (C.3) AgentLedgerWorkImpactRefresh task fired (LastRun=21:40:13, Result=0); changes-data.json + work-impact-data.json regenerated; fallback chain intact. Commits: agent-ledger d1bd79d4, vaultwares-api 9f685b3, shared-tube 4aac7fd.",
+  "commands": [
+    "python scripts/backfill-input-logs.py",
+    "python scripts/backfill-agent-ledger-to-api.py --reset",
+    "Set-Process-Restart api_server.py",
+    "systemctl restart fxv pkt"
+  ],
+  "files": [
+    "agent-ledger/scripts/backfill-input-logs.py",
+    "agent-ledger/scripts/backfill-agent-ledger-to-api.py",
+    "agent-ledger/site/src/useData.ts",
+    "vaultwares-api/app/routers/monitor/__init__.py",
+    "prom-king/shared-tube/shared/src/api/pipelines.ts"
+  ],
+  "planPath": "",
+  "contentHash": "1e3a9aa5ef6b4917ac242cb52a321753b5552e3b2a0cbf62364ff8bf38f63995",
+  "git": {
+    "repo": "vaultwares-api",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+    "branch": "main",
+    "head": "9f685b3",
+    "hasChanges": true
+  }
+}

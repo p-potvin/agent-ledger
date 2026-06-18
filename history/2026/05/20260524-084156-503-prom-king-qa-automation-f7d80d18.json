@@ -1,0 +1,47 @@
+{
+  "id": "20260524-084156-503-prom-king-qa-automation-f7d80d18",
+  "createdAt": "2026-05-24T12:41:56.5033273Z",
+  "createdAtLocal": "2026-05-24 08:41",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/qa-automation",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): apply_patch, shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-24 08:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "apply_patch",
+      "shell_command"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "firefox_profile": "true",
+      "headed": "true",
+      "addons": "best_effort"
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Added a Firefox-profile crawler runner that launches a headed persistent Firefox context from a copied user profile to preserve add-ons/state, with optional FIREFOX_EXECUTABLE_PATH and FIREFOX_LAUNCH_TIMEOUT_MS.",
+  "commands": [
+    "npx playwright install firefox",
+    "npm run test:fullxxx:crawl:firefox-profile"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\scripts\\run-fullxxx-crawl-firefox-profile.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\package.json",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\.env.example",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\README.md"
+  ],
+  "planPath": "",
+  "contentHash": "f7d80d1885c4f45a2cedeb2e4338de80243743975faf6df497ed8135b51995c0",
+  "git": null
+}

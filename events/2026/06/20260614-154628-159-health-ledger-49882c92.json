@@ -1,0 +1,49 @@
+{
+  "id": "20260614-154628-159-health-ledger-49882c92",
+  "createdAt": "2026-06-14T19:46:28.1593559Z",
+  "createdAtLocal": "2026-06-14 15:46",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-14 15:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger",
+  "summary": "Completed approved live monitoring-state verification. Confirmed ledger.vaultwares.ca HTTPS certificate principal mismatch and HTTP pyLoad login redirect, pyload.vaultwares.ca HTTPS-to-HTTP redirect issue, monitor.vaultwares.ca core monitor endpoints returning 200, local input tracker currently running, and health-ledger coverage missing ledger/pyload/media-stack services.",
+  "commands": [
+    "Invoke-WebRequest/curl live checks for ledger.vaultwares.ca, pyload.vaultwares.ca, monitor.vaultwares.ca, stats.vaultwares.ca, and OVH direct monitor API",
+    "Invoke-RestMethod shape checks for /monitor/overview, /monitor/health-ledger, /monitor/agent-ledger, /monitor/logging/kiwi, /monitor/events/search, and /monitor/input-tracker",
+    "Get-ScheduledTask/Get-Process/local file timestamp checks for HealthLedger* and VaultWares-InputTracker"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\services.yaml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\data\\rollups\\latest.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\data\\rollups\\tokens-latest.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor\\src\\api.ts",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor\\vite.config.ts",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\DEPLOY.md"
+  ],
+  "planPath": "",
+  "contentHash": "49882c92412c07e6ffcd53dfcb44209426ae77ca78217d4b598bc6a429333934",
+  "git": {
+    "repo": "health-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/health-ledger",
+    "branch": "main",
+    "head": "df8f353",
+    "hasChanges": true
+  }
+}

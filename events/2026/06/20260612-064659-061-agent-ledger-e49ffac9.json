@@ -1,0 +1,46 @@
+{
+  "id": "20260612-064659-061-agent-ledger-e49ffac9",
+  "createdAt": "2026-06-12T10:46:59.0619993Z",
+  "createdAtLocal": "2026-06-12 06:46",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 06:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Updated input tracker, spool replay, import/backfill, setup, and ledger sync defaults from local/Clopeux API to the OVH-hosted VaultWares API at 100.67.25.118:9001. Restarted the tracker loop; it is running with VW_API_URL from the user environment.",
+  "commands": [
+    "rg stale API endpoints",
+    "python -m py_compile agent-ledger scripts",
+    "PowerShell parser checks"
+  ],
+  "files": [
+    "agent-ledger/scripts/track-input.py",
+    "agent-ledger/scripts/replay-input-spool.py",
+    "agent-ledger/scripts/import-input-logs.py",
+    "agent-ledger/scripts/import-agent-ledger-events.py",
+    "agent-ledger/scripts/backfill-input-logs.py",
+    "agent-ledger/scripts/backfill-agent-ledger-to-api.py",
+    "agent-ledger/scripts/record-agent-change.ps1",
+    "agent-ledger/scripts/setup-input-tracker.ps1",
+    "agent-ledger/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "e49ffac992b7f2b9304f1c986d10e920dfe8ba6798bf724a6500169482f45f91",
+  "git": null
+}

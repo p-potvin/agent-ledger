@@ -1,0 +1,47 @@
+{
+  "id": "20260610-185128-390-vaultwares-studio-8b8a5595",
+  "createdAt": "2026-06-10T22:51:28.3906732Z",
+  "createdAtLocal": "2026-06-10 18:51",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Write, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 18:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Write",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "User saw rainbow blob/starburst in viewport. A/B verified with new tools/viewport_screenshot.py (renders scene in real ViewportTab, grabs framebuffer): rewritten cloud.ply renders the backyard correctly and well-framed (lawn/shrub/patio visible, matches Open3D preview); raw worker splat.ply renders foggier from same camera (curiosity logged). Diagnosis: user's app session predated the auto-framing + resume-latest fixes -> old default camera inside background gaussians (rainbow fog), manual zoom-out = translucent shell starburst. Instructed full app restart. Screenshot tool committed (also future M2 camera-preview backend).",
+  "commands": [
+    "viewport_screenshot.py x2 (original vs rewrite)",
+    "git push origin main"
+  ],
+  "files": [
+    "tools/viewport_screenshot.py"
+  ],
+  "planPath": "",
+  "contentHash": "8b8a5595166cc3887ca5c4b45fa657b59016ab8e637fedfd713c1e1c361629db",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "cec2155",
+    "hasChanges": true
+  }
+}

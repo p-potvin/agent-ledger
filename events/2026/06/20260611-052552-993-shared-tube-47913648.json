@@ -1,0 +1,47 @@
+﻿{
+    "id":  "20260611-052552-993-shared-tube-47913648",
+    "createdAt":  "2026-06-11T09:25:52.9933390Z",
+    "createdAtLocal":  "2026-06-11 05:25",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "code-change,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-1.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop  Branch: n/a\r\nTools used (this reply): run_command, view_file, replace_file_content, write_to_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-11 05:25 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-1.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "view_file",
+                                      "replace_file_content",
+                                      "write_to_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop",
+    "summary":  "Fixed media preview and video source extraction for fullvideos and 1porn sources. Corrected selector for fullvideos detail extraction and enabled needsDetailPage + detail extractor in 1porn to fetch real direct video URLs and qualities. Purged 77 corrupted video entries where embed_url = preview_url from the local database, ran local scraper runs, and verified that 70 new records are correctly persisted with distinct previewUrl and high-quality embedUrl values.",
+    "commands":  [
+                     "pnpm --filter @promking/shared-tube build",
+                     "pnpm --filter @promking/shared-tube fetcher:run --site=fxv --source=fullvideos --pages=1"
+                 ],
+    "files":  [
+                  "shared/src/fetcher/sources/1porn.ts",
+                  "shared/src/fetcher/sources/fullvideos.ts"
+              ],
+    "planPath":  "",
+    "contentHash":  "479136488c4946a0420892fb5da5cb110ab28d1f0a40d5265c668ebda10ca8c3",
+    "git":  null
+}

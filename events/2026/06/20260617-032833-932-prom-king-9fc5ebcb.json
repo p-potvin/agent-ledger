@@ -1,0 +1,60 @@
+{
+  "id": "20260617-032833-932-prom-king-9fc5ebcb",
+  "createdAt": "2026-06-17T07:28:33.9323269Z",
+  "createdAtLocal": "2026-06-17 03:28",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: win32)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Read, Edit, Write, PowerShell, Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-17 03:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "win32",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "PowerShell",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "MOST URGENT + URGENT shipped. (1) Tube pagination: new dedicated routes /featured /new /hot /trending across all 4 apps (16 route files generated from shared template), shared SectionPage.astro renders the full paginated listing, new SectionPager component drops a 'Page 1 2 3 ... | View all X ->' strip under every homepage VideoGrid, new SectionStrip provides Browse: Featured | New | Hot | Trending pills at top of every homepage. Existing Pagination.astro extended to support numeric page buttons when totalPages known. shared/sections.ts exposes section catalog. Until views/featured-flag exist in DB all 4 sections run the same query; ready to differentiate when signals land. (2) Stream proxy: pickUrl now prefers 720p first (was 2160p), and new fast path tries DB-stored qualities before re-fetching the source page - cuts Cloudflare hits dramatically for stable signed URLs, falls back to live re-fetch only if CDN rejects. Verified pnpm typecheck clean across all 4 apps (38 files each, 0/0/0). Synced FXV->PKT->OPH/SPN. Deferred to follow-up tasks: FlareSolverr hook for SPN, PKT thumbnails 404 investigation, admin pagination/filter-as-show/tab-switch crash/stats styling.",
+  "commands": [
+    "pnpm typecheck"
+  ],
+  "files": [
+    "shared-tube/shared/src/sections.ts",
+    "shared-tube/shared/src/components/SectionPage.astro",
+    "shared-tube/shared/src/components/SectionPager.astro",
+    "shared-tube/shared/src/components/SectionStrip.astro",
+    "shared-tube/shared/src/components/Pagination.astro",
+    "shared-tube/apps/fxv/src/pages/featured.astro",
+    "shared-tube/apps/fxv/src/pages/new.astro",
+    "shared-tube/apps/fxv/src/pages/hot.astro",
+    "shared-tube/apps/fxv/src/pages/trending.astro",
+    "shared-tube/apps/fxv/src/pages/api/stream/[slug].ts",
+    "shared-tube/apps/fxv/src/pages/index.astro"
+  ],
+  "planPath": "",
+  "contentHash": "9fc5ebcbfc933a6e18f351ae4433f370a7e35f2d05c60c3e0ee2e49065892d14",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "2323703",
+    "hasChanges": true
+  }
+}

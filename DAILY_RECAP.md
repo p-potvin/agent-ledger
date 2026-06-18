@@ -73,3 +73,69 @@
   - `agent-ledger/TODO.md` — Work Impact Page fixes marked complete ✓
 - No discrepancies between recap and project files
 - Sync complete — all projects current
+
+---
+
+**[PROCESSED: 2026-06-09 � Midnight sync completed]**
+- No new Daily Recap entries since 2026-06-05 sync
+- All project task files remain current
+- No changes required
+
+
+---
+
+**[PROCESSED: 2026-06-10 — Midnight sync completed]**
+- Processed 2026-06-09 Daily Recap entries
+- Projects updated:
+  - `vaultwares-studio/TODO.md` — Marked M0 Remote Execution Foundation as complete (Live verification & Docker Hub push tasks) ✓
+  - `health-ledger/TASKS.md` — Created new task file, logged PostgreSQL Health Check work as complete ✓
+- Note: Prom-King project not found in Github Repos directory (not included in sync)
+- All accessible projects current with ledger entries
+- Sync complete
+
+---
+
+**[PROCESSED: 2026-06-11 — Midnight sync completed]**
+- Processed 2026-06-11 Daily Ledger entries (no Daily Recap section; entries pulled from ledger_get_recent)
+- Projects updated:
+  - `vaultwares-studio/TODO.md` — Added M2 viewport features (Blender-style axis gizmo, SuperSplat infinite zoom, embedded-viewport fix, camera authoring), M3 slice 1 shipped (robot_lab), COLMAP mapper non-determinism fix ✓
+  - `vaultwares-api/TASKS.md` — Replaced generic template with actual work: PostgreSQL migration to OVH, API cutover to OVH with telemetry ✓
+  - `vaultwares-mcp/TASKS.md` — Created new task file, logged MCP installation and deployment on OVH ✓
+  - `health-ledger/TASKS.md` — Added pg-watchdog recovery entries from 2026-06-11 ✓
+- All accessible projects current with ledger entries
+- Sync complete
+## 2026-06-11 Daily Recap
+
+### vaultwares-studio
+- M2 camera staging workflow: Renamed usd_cameras ? camera_staging with NEEDS_USER_INPUT flow, backwards-compatible job manifest migration, guided-mode pause logic for zero captured cameras, fixed handler metadata race condition, and validated all 4 existing job manifests load without manual edit (71/71 tests pass).
+- Viewer.js navigation fixes: Added pointer-leave synthetic pointerup to fix OrbitControls hang on cursor exit from QtWebEngine, implemented real WASD fly (forward/back along look vector, strafe via right, E/Q for vertical with Shift speed multiplier, camera+pivot move together), status text updated.
+- Camera behavior post-alignment: Fixed gimbal pole crossing by clamping minPolarAngle/maxPolarAngle to [0.05, p-0.05], added camera rewriting in gravity_align to rotate captured poses to aligned frame, retroactively rotated 7 Spiral captures from local-run-20260610-165858 (backed up pre-alignment).
+- Gravity alignment implementation: New gravity_align.py with PCA scene-up detection, Rodrigues rotation, idempotent application to cloud.ply + quaternions + summary.json, fixed Windows mmap lock in plyfile via detach+gc, 27/27 focused tests pass, verified on local-run-20260610-165858.
+- Walk patterns library: Added parametric paths (orbit, dolly_in/out, crane_up, figure_8, doorway_reveal, retrace_steps) + SceneBounds + registry, diagnosed Y-axis camera bug (scene up = 87.5� off +Y), 13/13 walk pattern tests + 20/20 camera path tests pass.
+- Dashboard-viewport sync regression fix: _load_existing_job was not emitting manifest_changed signal, breaking viewport set_job path for "Open Job Manifest" button (worked only from job-runner path). Two-line fix + emit signal. 67/67 full tests pass.
+- Black-screen viewer diagnosis: PLY integrity confirmed (477731 splats, 112.7 MB, no NaN/inf, geometry-only changes post-alignment), URL framing validated, narrowed hypotheses to HTTP disk cache vs. quaternion order convention.
+
+### vps-ovhcloud media stack
+- Docker Compose v2 deployment: Installed on OVH, deployed pyload-ng + hotio qBittorrent/Sonarr/Radarr/Lidarr/Prowlarr/Whisparr under /opt/vw-media-stack with persistent data in /srv/vw-media, preserved native Jackett, added nginx tailnet listeners for hotio UIs, documented services. Host-side response checks: qBittorrent 401, arr apps 200, pyLoad 200, Jackett 400 (setup response).
+- Network reachability repairs: Added dnsmasq host-records for media hostnames (pyload, jackett, qbittorrent, sonarr, radarr, lidarr, prowlarr, whisparr) pointing to Greencloud 100.73.93.84, added nginx tailnet-only HTTP proxy vhosts, fixed dnsmasq backup parse failure after restart, verified direct DNS and forced tailnet proxy status codes. Local Windows DNS still needs NRPT entries or Tailscale suffix route for new media names.
+
+### vaultwares-api
+- PostgreSQL 18?16 migration to OVH: Dumped local Clopeux-Desktop vaultwares/promking DBs, migrated to remote apidb PG16 cluster on 100.67.25.118:5433, restored PG16-compatible SQL snapshots, verified /healthz db=up, row counts matched (vaultwares live telemetry had +1 row due to writes during migration).
+- API cutover to OVH: Updated OVH API env to include telemetry key and bind 0.0.0.0:9001, restricted direct 9001 UFW ingress to this workstation over tailscale0, restarted vaultwares-api.service, verified /healthz and https://api.vaultwares.ca, paused InputTracker during migration, updated User VW_API_URL env var to http://100.67.25.118:9001, restarted tracker, verified post-restart telemetry batches reached OVH Postgres.
+
+### vaultwares-mcp
+- FastMCP deployment on OVH: Installed vaultwares-mcp at /opt/vaultwares-mcp with isolated Python venv, systemd service bound to 127.0.0.1:9020, streamable HTTP at /mcp. Added OVH nginx vhost for local MCP service, Greencloud as TLS edge with Let's Encrypt cert, dnsmasq routing via Greencloud tailnet IP 100.73.93.84. Verified 23 tools via https://mcp.vaultwares.ca/mcp, updated vaultwares-docs service inventory + tailscale hostname list + network map.
+
+### health-ledger
+- pg-watchdog recovery: PostgreSQL 18 on Clopeux-Desktop recovered after 2 consecutive probe failures; pg_isready now accepting connections on 127.0.0.1:5432. One restart attempt failed but subsequent probe succeeded.
+
+---
+
+**[PROCESSED: 2026-06-12 — Midnight sync completed]**
+- Processed 2026-06-09 and 2026-06-10 Daily Recap entries
+- Projects updated:
+  - `vaultwares-studio/TODO.md` — Added Quality Gating on Input policy note (2026-06-10, frame selection, capture guidelines) ✓
+  - `health-ledger/TASKS.md` — Added PostgreSQL Monitoring entry (2026-06-10, pg-watchdog recovery at 03:43–03:44) ✓
+- Note: Prom-King project not found in Github Repos; sync focused on accessible projects
+- All accessible projects verified current with ledger entries
+- Sync complete

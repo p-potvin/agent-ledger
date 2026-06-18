@@ -1,0 +1,53 @@
+﻿{
+    "id":  "20260612-070320-193-prom-king-cfd730aa",
+    "createdAt":  "2026-06-12T11:03:20.1938391Z",
+    "createdAtLocal":  "2026-06-12 07:03",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "code-change,verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 3.5 Flash\r\nThinking: medium\r\nMode: code\r\nPermissions: ask (network: Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): replace_file_content, run_command, grep_search, write_to_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 07:03 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.5 Flash",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "Windows",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "run_command",
+                                      "grep_search",
+                                      "write_to_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King",
+    "summary":  "Updated all API IP references from 100.71.101.21 to 100.67.25.118 across the codebase, nginx configuration templates, environment files, and bootstrap scripts. Cleaned dist and successfully rebuilt the shared-tube packages.",
+    "commands":  [
+                     "pnpm install",
+                     "pnpm build"
+                 ],
+    "files":  [
+                  "shared-tube/shared/src/api/promking-api.ts",
+                  "shared-tube/apps/fxv/src/config.ts",
+                  "shared-tube/apps/pkt/src/config.ts",
+                  "shared-tube/.env.local",
+                  "shared-tube/.env.example",
+                  "shared-tube/scripts/bootstrap-greencloud.sh",
+                  "shared-tube/scripts/nginx/fullxxx.video.conf",
+                  "shared-tube/scripts/nginx/prom-king.xyz.conf"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\0b4efc5b-0936-46da-8370-2250d51d4176\\implementation_plan.md",
+    "contentHash":  "cfd730aae0c0d974d00af2eabb70352827a948f0f40fd710ffd7c39f1b02b74e",
+    "git":  null
+}

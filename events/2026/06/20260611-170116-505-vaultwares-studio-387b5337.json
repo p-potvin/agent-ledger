@@ -1,0 +1,32 @@
+{
+  "id": "20260611-170116-505-vaultwares-studio-387b5337",
+  "createdAt": "2026-06-11T21:01:16.5054199Z",
+  "createdAtLocal": "2026-06-11 17:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: low\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-11 17:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": null,
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Answered manifest question: yesterday's job manifest.json (local-run-20260610-165858) is reusable as-is. Gravity alignment rewrote cloud.ply, cloud_preview.ply in place and added gravity_aligned flag + alignment matrix to summary.json. Manifest stage records and artifact paths are unchanged, so the viewer + downstream consumers will pick up the aligned cloud without manifest changes. For NEW jobs the pipeline now writes stage.metadata.gravity_aligned + alignment_tilt_degrees into the manifest at reconstruction time. Offered to backfill yesterday's manifest for consistency.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "387b5337131d6b7b81005e3b8c000d6224abffc4d3528e6aea89512aab198d83",
+  "git": null
+}

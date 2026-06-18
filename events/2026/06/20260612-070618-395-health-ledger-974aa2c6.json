@@ -1,0 +1,45 @@
+{
+  "id": "20260612-070618-395-health-ledger-974aa2c6",
+  "createdAt": "2026-06-12T11:06:18.3959095Z",
+  "createdAtLocal": "2026-06-12 07:06",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 07:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fixed HealthLedgerProbeJoker, HealthLedgerTokenJoker, and HealthLedgerAlarmJoker scheduled task launch. Replaced fragile/refused task registration with machine-wide Windows PowerShell actions, Administrators group principal, startup and logon triggers, stable working directories, battery-safe daemon settings, and 99 restart attempts. Re-registered tasks, verified all three are Running with LastTaskResult=267009, fresh health logs, and pushed commit fdf1ccf to main.",
+  "commands": [
+    "PowerShell parser checks for health-ledger scheduler scripts",
+    "register-health-ledger-probe.ps1",
+    "register-health-ledger-token.ps1",
+    "register-health-ledger-alarm.ps1",
+    "Get-ScheduledTask/Get-ScheduledTaskInfo HealthLedger*Joker",
+    "health-ledger log tail checks",
+    "git commit fdf1ccf",
+    "git push origin main"
+  ],
+  "files": [
+    "health-ledger/ops/windows/register-health-ledger-probe.ps1",
+    "health-ledger/ops/windows/register-health-ledger-token.ps1",
+    "health-ledger/ops/windows/register-health-ledger-alarm.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "974aa2c65adfb4ea236ad489068ca04f0e3c5edf6865fc595b7986d5367764f1",
+  "git": null
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20260610-142409-604-vaultwares-studio-d40bcd4f",
+  "createdAt": "2026-06-10T18:24:09.6043586Z",
+  "createdAtLocal": "2026-06-10 14:24",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + huggingface.co API)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Write, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 14:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + huggingface.co API",
+    "toolsUsed": [
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "New 68.4s walkthrough video registered only 7/137 (sequential AND exhaustive identical => blur/feature starvation, not matcher). Frames show multi-room walking capture in low light with motion blur. Shipped blur-aware dense sampling: extract ~560 JPEG frames (q2, 7x smaller upload than PNG), keep sharpest ~280 via per-bucket variance-of-Laplacian (frame_selection.py); pipeline globs jpg+png; 35 tests green; pushed. Retry on new video running in background (~USD 0.25). Spend so far ~USD 0.12 total.",
+  "commands": [
+    "pytest (35 passed)",
+    "git push origin main",
+    "headless_remote_run.py retry (bg)"
+  ],
+  "files": [
+    "vaultwares_studio/frame_selection.py",
+    "vaultwares_studio/pipeline.py",
+    "tests/test_frame_selection.py"
+  ],
+  "planPath": "",
+  "contentHash": "d40bcd4fbc0dc60527d73ecb141a48ee908da1626d9008d054bec0a6926767cb",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "dad33c9",
+    "hasChanges": true
+  }
+}

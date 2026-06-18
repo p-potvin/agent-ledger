@@ -1,0 +1,55 @@
+{
+  "id": "20260610-193616-401-vaultwares-studio-bfe45f57",
+  "createdAt": "2026-06-10T23:36:16.4010980Z",
+  "createdAtLocal": "2026-06-10 19:36",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Write, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 19:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "While Standard recon runs: (1) embedded-viewport fix attempt committed (Mica disabled on FluentWindow + WA_NativeWindow on web view — user verifies next launch); (2) M3 slice 1 shipped (96a1076): robot_lab package with NavSimBackend contract, 2.5D occupancy grid from splat preview cloud (floor estimate + body-band obstacles + BFS geodesic field), grid-nav PointNav simulator (forward/turn/stop, goal vector + 16-ray scan, geodesic-progress reward, SPL, reachable-episode sampling), gymnasium wrapper for SB3 PPO, run_episode trajectory recorder for viewport replay. Deps gymnasium+stable-baselines3 added (venv + requirements). 48 tests green incl. synthetic-room navigation reaching goal. Next steps laid out for user: recon lands -> walk-pattern cameras -> staging -> render approval; then PPO training demo on the backyard grid, timeline UI, gui split, cost retest.",
+  "commands": [
+    "uv pip install gymnasium stable-baselines3",
+    "pytest (48 passed)",
+    "git push origin main (96a1076, +deps)"
+  ],
+  "files": [
+    "vaultwares_studio/robot_lab/occupancy.py",
+    "vaultwares_studio/robot_lab/gridnav.py",
+    "vaultwares_studio/robot_lab/base.py",
+    "tests/test_robot_lab.py",
+    "gui_app.py",
+    "gui/viewport.py",
+    "requirements.txt"
+  ],
+  "planPath": "",
+  "contentHash": "bfe45f571702fa74b2195a1325fa987aca9c08e2fa661d0b1da80988946be835",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "c8339b8",
+    "hasChanges": true
+  }
+}

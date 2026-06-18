@@ -1,0 +1,42 @@
+{
+  "id": "20260617-115046-899-vaultwares-docs-7eb560e7",
+  "createdAt": "2026-06-17T15:50:46.8994166Z",
+  "createdAtLocal": "2026-06-17 11:50",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change,handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: win32)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Edit, Bash, Glob\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-17 11:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "win32",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "Glob"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Added hard rule to vaultwares-docs/AGENTS.md (root pre-instructions): every torrent + debrid lookup, magnet resolution, and stream URL fetch MUST route through Comet at http://100.67.25.118:5173. Comet rotates outbound IPs - direct calls to Real-Debrid/AllDebrid/Torrentio/Jackett/Prowlarr/Bitmagnet/MediaFusion would IP-ban the debrid account. Also documents Comet manifest limitation (tt/kitsu IDs only) and flags that porn-tube catalog integration depends on configuring adult Prowlarr indexers + a shim that proxies through Comet's scrapers. Committed a51b371, pushed to main. The other unstaged changes in the repo (network-map.mdx, ROUTER.md, summaries/BRAND_TOKENS_UI.md, summaries/GIT_BRANCH_POLICY.md, vaultwares-themes submodule) were NOT touched - left to user. Earlier in same session ran a feasibility test: queried Comet manifest (confirmed Stremio addon with idPrefixes ['tt','kitsu']), 10 random FXV titles via Prowlarr returned 0 hits with 0 indexers configured. Conclusion: stack is wired but coverage is zero until adult indexers land in Prowlarr (next step).",
+  "commands": [
+    "git commit",
+    "git push"
+  ],
+  "files": [
+    "vaultwares-docs/AGENTS.md"
+  ],
+  "planPath": "",
+  "contentHash": "7eb560e7243b9e892b0a49281f3e298335493f8eb63944712d9a25e51b4c67be",
+  "git": null
+}

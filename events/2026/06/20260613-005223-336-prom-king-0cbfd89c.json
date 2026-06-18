@@ -1,0 +1,54 @@
+﻿{
+    "id":  "20260613-005223-336-prom-king-0cbfd89c",
+    "createdAt":  "2026-06-13T04:52:23.3360690Z",
+    "createdAtLocal":  "2026-06-13 00:52",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "code-change,general,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): write_to_file, replace_file_content, multi_replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-13 00:52 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "write_to_file",
+                                      "replace_file_content",
+                                      "multi_replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King",
+    "summary":  "Fixed relative thumbnail/preview URLs for FXV sources (pornxp, 1porn). Enabled multiple sources in PKT. Fixed console log scroll behavior by keeping it constrained to the container ref. Added read-only live SQL execution router endpoint, registered it, and implemented interactive SQL panels with textarea editor and dynamic scrollable results tables in both fxv and pkt frontends. Rebuilt project successfully.",
+    "commands":  [
+                     "pnpm build",
+                     ".\\start_dev_background.cmd"
+                 ],
+    "files":  [
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\fetcher\\sources\\pornxp.ts",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\fetcher\\sources\\1porn.ts",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\pkt\\src\\admin\\Fetcher\\Console.tsx",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\fxv\\src\\admin\\Fetcher\\Console.tsx",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\_models.py",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\query.py",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\__init__.py",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\pkt\\src\\admin\\SQL\\Panel.tsx",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\fxv\\src\\admin\\SQL\\Panel.tsx"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\7f82b1fd-da6f-47c7-822e-a5f07ce82f41\\implementation_plan.md",
+    "contentHash":  "0cbfd89c7cd6b5353623ec20f44408e58e44f2ee2789543801cc3e22ce8eaf2a",
+    "git":  null
+}

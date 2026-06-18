@@ -1,0 +1,42 @@
+{
+  "id": "20260611-183936-169-vps-ovhcloud-media-stack-7cf33829",
+  "createdAt": "2026-06-11T22:39:36.1695691Z",
+  "createdAtLocal": "2026-06-11 18:39",
+  "timezone": "Eastern Standard Time",
+  "project": "vps-ovhcloud media stack",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-11 18:39 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fixed media hostnames redirecting to the API main/TLS vhost. Root cause was HSTS/browser HTTPS upgrade while Greencloud media vhosts were HTTP-only; HTTPS requests for media hostnames fell into the existing api.vaultwares.ca TLS server. Issued Let's Encrypt SAN certificate media.vaultwares.ca for pyload, jackett, qbittorrent, sonarr, radarr, lidarr, prowlarr, whisparr; added Greencloud tailnet-only HTTPS listeners on 100.73.93.84:443 proxying to OVH services; kept public HTTP challenge-only vhost non-proxying. Verified normal HTTPS from this Windows host reaches the intended services instead of API.",
+  "commands": [
+    "curl -I forced HTTP/HTTPS checks for media hostnames",
+    "certbot certonly --webroot --cert-name media.vaultwares.ca -d pyload... -d whisparr...",
+    "nginx -t && systemctl reload nginx on greencloud-vps",
+    "curl -I https://media-hostnames from Windows normal DNS"
+  ],
+  "files": [
+    "remote-greencloud:/etc/nginx/sites-available/vw-media-acme.conf",
+    "remote-greencloud:/etc/nginx/sites-available/vw-media-tailnet.conf",
+    "remote-greencloud:/etc/letsencrypt/live/media.vaultwares.ca/fullchain.pem",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "7cf33829d202015148e51638ff3acdd2d58240eb8b22d8fae88f4c65a5ecc2f3",
+  "git": null
+}

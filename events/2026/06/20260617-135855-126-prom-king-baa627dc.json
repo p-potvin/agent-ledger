@@ -1,0 +1,49 @@
+{
+  "id": "20260617-135855-126-prom-king-baa627dc",
+  "createdAt": "2026-06-17T17:58:55.1263383Z",
+  "createdAtLocal": "2026-06-17 13:58",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: ovhcloud-vps via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Edit, Read, Bash, SSH, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-17 13:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "ovhcloud-vps via tailnet",
+    "toolsUsed": [
+      "Edit",
+      "Read",
+      "Bash",
+      "SSH",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "*arr file naming + zipper leak fix + uploader extension. (1) Sonarr/Radarr/Lidarr/Whisparr all configured with proper naming presets that produce clean hierarchical paths when mirrored to gDrive (Sonarr: Series Title (Year)/Season XX/Series - SxxEyy - Title; Whisparr: Site Title (Studio)/Site Title - Release-Date - Episode Title). (2) Found python-zipper is a web-scraper service inside vaultwares-api - NO telegram code anywhere in deployed code despite user description, so parked telegram per their choice. (3) Patched post_download.py to os.remove(file_path) after successful Fileboom upload - was leaking files indefinitely. Best-effort cleanup with FileNotFoundError swallowed, only fires when fileboom_url is set. Committed d8179c1 and pushed to vaultwares-api main, scp'd to host, restarted vaultwares-api.service (active). (4) Added ZIPPER_DEST_DIR (note: hardcoded as a Windows-style path string 'C:/Users/Administrator/Desktop/Github Repos/python-zipper/.downloaded' which becomes a literal Linux directory) to the uploader FLAT_MAP under category zipper, syntax check passed. The hardcoded Windows path in routes_media.py is a latent landmine - should be moved to /srv/vw-media/data/downloads/zipper for sanity at some point.",
+  "commands": [
+    "git commit",
+    "git push",
+    "scp",
+    "systemctl restart vaultwares-api",
+    "bash -n",
+    "python3"
+  ],
+  "files": [
+    "vaultwares-api/app/services/zipper/post_download.py",
+    "--ovhcloud /usr/local/bin/vw-tube-uploader.sh",
+    "--ovhcloud sonarr/radarr/lidarr/whisparr naming configs"
+  ],
+  "planPath": "",
+  "contentHash": "baa627dc35fdc406bf082a75604242b37e5aa60cab5b7ca5f88c804b46afa4ba",
+  "git": null
+}

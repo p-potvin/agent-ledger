@@ -1,0 +1,47 @@
+{
+  "id": "20260610-160410-368-vaultwares-studio-7e87c6d4",
+  "createdAt": "2026-06-10T20:04:10.3686205Z",
+  "createdAtLocal": "2026-06-10 16:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + huggingface.co API)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 16:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + huggingface.co API",
+    "toolsUsed": [
+      "PowerShell",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "User fixed gui_app.py line 134 (vault-themes -> vaultwares-themes submodule path) — committed+pushed their fix. New capture inputs/backyard_99s_cloudy.mp4 verified (99.5s, 1920x1080 landscape 60fps, 293MB; cloudy=diffuse light, good). Draft run launched in background (~6fps extraction -> ~600 frames -> sharpest 280). Answering questions: pro setups beyond parallax (GNSS/RTK, IMU/VIO ARKit poses, LiDAR, stereo rigs, GCPs, markers); zoom breaks shared-intrinsics assumption (and iPhone zoom switches physical lenses) — lock one lens.",
+  "commands": [
+    "git push (user theme fix)",
+    "ffprobe backyard video",
+    "headless_remote_run.py --video inputs/backyard_99s_cloudy.mp4 --preset draft --yes (bg)"
+  ],
+  "files": [
+    "gui_app.py"
+  ],
+  "planPath": "",
+  "contentHash": "7e87c6d4a8b513db87d493e85b49a24bdf3971406c6d2477e90ee4275e5bb1df",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "8acfa3b",
+    "hasChanges": true
+  }
+}

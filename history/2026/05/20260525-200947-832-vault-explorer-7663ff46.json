@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260525-200947-832-vault-explorer-7663ff46",
+    "createdAt":  "2026-05-26T00:09:47.8327219Z",
+    "createdAtLocal":  "2026-05-25 20:09",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 20:09 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Fixed soundcard ModuleNotFoundError by reordering venv priority in getRobustPythonExe(): vault-explorer/.venv now wins for all scripts (soundcard/pycaw/sounddevice all present). Added getMediaProcessingPythonExe() in normalization.js so normalize-audio and run-asr-benchmark keep routing to vaultwares-media-processing venv which has NeMo/Demucs.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "src/utils.js",
+                  "src/normalization.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "7663ff46a5f9cd19bfa906ef7f8d2e4f17d758b6558cd60741675267694c6acb",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

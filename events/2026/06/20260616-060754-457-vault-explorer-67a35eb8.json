@@ -1,0 +1,50 @@
+{
+  "id": "20260616-060754-457-vault-explorer-67a35eb8",
+  "createdAt": "2026-06-16T10:07:54.4572355Z",
+  "createdAtLocal": "2026-06-16 06:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 06:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Two fixes following the vf rebuild. (1) Category subtabs (Collections/Albums/Playlists) now show ONLY user-created virtual folders of that type at root (no vault files mixed in) - was lumping rootFolders + all matching-type vault files; the All subtab still shows top-level folders + all vault files. js/navigation/filters.js applyFilters root branch split into 'category subtab' vs 'all' cases. (2) Rebuilt js/favorites.js renderFavorites for robustness: stops saving settings on every render (only when sanitization actually pruned entries); auto-prunes paths the scanner can't resolve (moved/deleted files) and shows a one-shot gold notice atop the grid telling the user N missing favorites were pruned; defensive fallbacks for missing search-box/sort/filter elements; uses DocumentFragment for grid append; status bar updates after render. Also hardened src/scanner.js scan-specific-files IPC handler to filter non-string/empty entries before .map().toLowerCase() so one bad path can't reject the whole IPC call. The favorites tab now degrades gracefully instead of going blank when any single favorited file is missing.",
+  "commands": [
+    "node --check (3 files)",
+    "node smoke test (subtab pool projection)"
+  ],
+  "files": [
+    "js/navigation/filters.js",
+    "js/favorites.js",
+    "src/scanner.js"
+  ],
+  "planPath": "",
+  "contentHash": "67a35eb86bcc480dc265ef47737eba10dd694952bba4f9f2545e7660777751cf",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "1a6636a",
+    "hasChanges": true
+  }
+}

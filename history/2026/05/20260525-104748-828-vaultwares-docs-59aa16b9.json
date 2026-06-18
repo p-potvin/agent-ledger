@@ -1,0 +1,62 @@
+{
+  "id": "20260525-104748-828-vaultwares-docs-59aa16b9",
+  "createdAt": "2026-05-25T14:47:48.8286417Z",
+  "createdAtLocal": "2026-05-25 10:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 10:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Refreshed docs navigation/settings content to match the current React+Vite generated-manifest system (removed legacy Mintlify docs.json + old favicon.svg), updated development + AI-tool setup pages, and adjusted .prose-vw underline styling so block links (Cards) don’t underline all text.",
+  "commands": [
+    "npm run generate:page-resources",
+    "npm run build",
+    "git commit -m 'docs: refresh navigation + link styling'",
+    "git push origin main"
+  ],
+  "files": [
+    "vaultwares-docs/README.md",
+    "vaultwares-docs/docs-content/ai-tools/assistant-protocols/docs-standards-QC.mdx",
+    "vaultwares-docs/docs-content/ai-tools/assistant-protocols/docs-standards.mdx",
+    "vaultwares-docs/docs-content/ai-tools/claude-code-QC.mdx",
+    "vaultwares-docs/docs-content/ai-tools/claude-code.mdx",
+    "vaultwares-docs/docs-content/ai-tools/windsurf-QC.mdx",
+    "vaultwares-docs/docs-content/ai-tools/windsurf.mdx",
+    "vaultwares-docs/docs-content/development-QC.mdx",
+    "vaultwares-docs/docs-content/development.mdx",
+    "vaultwares-docs/docs-content/essentials/navigation-QC.mdx",
+    "vaultwares-docs/docs-content/essentials/navigation.mdx",
+    "vaultwares-docs/docs-content/essentials/settings-QC.mdx",
+    "vaultwares-docs/docs-content/essentials/settings.mdx",
+    "vaultwares-docs/docs.json",
+    "vaultwares-docs/favicon.svg",
+    "vaultwares-docs/instructions/summaries/DOCS_STANDARDS.md",
+    "vaultwares-docs/src/index.css",
+    "vaultwares-docs/src/markdownComponents.tsx",
+    "vaultwares-docs/src/resources/pages/ai-tools__assistant-protocols__docs-standards.json",
+    "vaultwares-docs/src/resources/pages/ai-tools__claude-code.json",
+    "vaultwares-docs/src/resources/pages/ai-tools__windsurf.json",
+    "vaultwares-docs/src/resources/pages/development.json",
+    "vaultwares-docs/src/resources/pages/essentials__navigation.json",
+    "vaultwares-docs/src/resources/pages/essentials__settings.json"
+  ],
+  "planPath": "",
+  "contentHash": "59aa16b9fad67c37b6582675562196ecfa29d30db4ad3dd40de872e569a8ca4f",
+  "git": null
+}

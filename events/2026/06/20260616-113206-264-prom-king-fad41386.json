@@ -1,0 +1,40 @@
+{
+  "id": "20260616-113206-264-prom-king-fad41386",
+  "createdAt": "2026-06-16T15:32:06.2640262Z",
+  "createdAtLocal": "2026-06-16 11:32",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-haiku-4-5-20251001\r\nThinking: medium\r\nMode: plan\r\nPermissions: ask (network: win32)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Edit, Read, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 11:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-haiku-4-5-20251001",
+    "thinking": "medium",
+    "mode": "plan",
+    "permissions": "ask",
+    "network": "win32",
+    "toolsUsed": [
+      "Edit",
+      "Read",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Updated admin tools plan (Phase 1) with: (1) batch taxonomy assignment endpoint to tag multiple videos at once, (2) gender property + update endpoint for pornstars taxonomy (renamed from actors), (3) database schema migration prereq (rename actors→pornstars table, add gender column), (4) schema changes to _models.py and taxonomies.py. Total Phase 1 endpoints now: 5 taxonomy + 4 video. All references updated from 'actors' to 'pornstars'.",
+  "commands": [
+    "--none"
+  ],
+  "files": [
+    "ADMIN_PLAN.md"
+  ],
+  "planPath": "",
+  "contentHash": "fad41386cfc574a5af0e7248968756ae61a8bed04e58bf13cb5d8f7acd6416aa",
+  "git": null
+}

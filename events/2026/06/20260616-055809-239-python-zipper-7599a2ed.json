@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20260616-055809-239-python-zipper-7599a2ed",
+    "createdAt":  "2026-06-16T09:58:09.2395679Z",
+    "createdAtLocal":  "2026-06-16 05:58",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-zipper",
+    "kind":  "code-change,verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local/windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 05:58 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6",
+                    "thinking":  "high",
+                    "mode":  "agent",
+                    "permissions":  "ask",
+                    "network":  "local/windows",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "summary":  "Fixed drag stuck bug: in stopDrag(), GM_setValue was called BEFORE isDragging=false. If GM API failed, isDragging stayed true permanently causing both FAB and panel to follow mouse forever. Fix: capture values, reset isDragging/dragTarget first, then GM_setValue in try/catch. Restarted server.py (PID 32888 was old process without new routes). Verified /api/upscaler/status returns {available:true, models:[\u00274xNomos8k_atd\u0027], cuda:false} confirming spandrel+model detected, button will now enable on page load.",
+    "commands":  [
+                     "Stop-Process -Id 32888 -Force",
+                     "Start-Process python dataset_builder/server.py"
+                 ],
+    "files":  [
+                  "tampermonkey_script.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "7599a2eda03ceb5a9b79d5c1f2dac6a6c0c216c926a8df4dc80519ae1a2675f2",
+    "git":  null
+}

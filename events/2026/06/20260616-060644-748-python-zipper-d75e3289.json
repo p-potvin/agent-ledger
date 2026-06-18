@@ -1,0 +1,40 @@
+﻿{
+    "id":  "20260616-060644-748-python-zipper-d75e3289",
+    "createdAt":  "2026-06-16T10:06:44.7483073Z",
+    "createdAtLocal":  "2026-06-16 06:06",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-zipper",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: low\r\nMode: agent\r\nPermissions: ask (network: local/windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): multi_replace_file_content\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 06:06 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6",
+                    "thinking":  "low",
+                    "mode":  "agent",
+                    "permissions":  "ask",
+                    "network":  "local/windows",
+                    "toolsUsed":  "multi_replace_file_content",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "summary":  "Fixed drag: getComputedStyle(el).right returns \u0027auto\u0027 for fixed elements in some browser contexts causing parseInt=NaN and snap to pos 20 on every drag start. Replaced with direct el.style.right reads which are always valid since we set inline styles on init and update them during every drag frame.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "tampermonkey_script.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "d75e32898c32203bd97f6031df2900e50a837ffe38c982cd7c545952147b8ce0",
+    "git":  null
+}

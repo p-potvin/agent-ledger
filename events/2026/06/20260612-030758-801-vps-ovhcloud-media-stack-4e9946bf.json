@@ -1,0 +1,40 @@
+{
+  "id": "20260612-030758-801-vps-ovhcloud-media-stack-4e9946bf",
+  "createdAt": "2026-06-12T07:07:58.8010587Z",
+  "createdAtLocal": "2026-06-12 03:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vps-ovhcloud media stack",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 03:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Installed FlareSolverr on OVH as part of the /opt/vw-media-stack Docker Compose project using ghcr.io/flaresolverr/flaresolverr:latest. Bound it to 100.67.25.118:8191, ensured UFW allows 8191 on tailscale0, verified from OVH and from the Windows workstation over Tailscale that http://100.67.25.118:8191 returns the FlareSolverr ready JSON, and confirmed Prowlarr can resolve the Docker service name flaresolverr internally. Updated services-inventory.mdx with the intended flaresolverr.vaultwares.ca mapping.",
+  "commands": [
+    "ssh ubuntu@100.67.25.118 update /opt/vw-media-stack/docker-compose.yml with flaresolverr service",
+    "sudo docker compose config --quiet; sudo docker compose pull flaresolverr; sudo docker compose up -d flaresolverr",
+    "curl http://100.67.25.118:8191/ from OVH and Windows workstation",
+    "sudo docker exec prowlarr getent hosts flaresolverr"
+  ],
+  "files": [
+    "remote-ovh:/opt/vw-media-stack/docker-compose.yml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "4e9946bfe6323f249cc7b588a266b4292fa535fa679c1b5118284464563c1118",
+  "git": null
+}

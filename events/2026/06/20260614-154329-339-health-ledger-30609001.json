@@ -1,0 +1,53 @@
+{
+  "id": "20260614-154329-339-health-ledger-30609001",
+  "createdAt": "2026-06-14T19:43:29.3393521Z",
+  "createdAtLocal": "2026-06-14 15:43",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-14 15:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger",
+  "summary": "Verified current monitoring state from local Health Ledger rollups, read-only MCP health ledger entries, scheduler state, and dashboard/API configuration. Found latest Clopeux probe active, public API checks skipped locally due missing gateway secret, OVH direct API and input-tracker endpoint reported OK in rollup, ledger.vaultwares.ca and pyload absent from health-ledger services/search data, and live endpoint probing paused for request-rate approval.",
+  "commands": [
+    "Read vaultwares-docs ROUTER and selected protocol summaries",
+    "Queried health_ledger_get_recent and health_ledger_search for current entries, ledger.vaultwares.ca, pyload, and Clopeux",
+    "Read health-ledger services.yaml, probe-joker.mjs, dashboard-server.mjs, rollups, package scripts, scheduled task state",
+    "Read vault-monitor API/proxy config and agent-ledger DEPLOY.md",
+    "Paused before bounded live endpoint requests per REQUEST_RATE_LIMITING"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\services.yaml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\scripts\\probe-joker.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\scripts\\dashboard-server.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\data\\rollups\\latest.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\data\\rollups\\tokens-latest.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor\\src\\api.ts",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor\\vite.config.ts",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\DEPLOY.md"
+  ],
+  "planPath": "",
+  "contentHash": "30609001539517ee3fb4b691fbf84b8ea3dbba98c000cf2d378e1290edd18029",
+  "git": {
+    "repo": "health-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/health-ledger",
+    "branch": "main",
+    "head": "df8f353",
+    "hasChanges": true
+  }
+}

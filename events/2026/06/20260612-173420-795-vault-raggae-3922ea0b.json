@@ -1,0 +1,50 @@
+﻿{
+    "id":  "20260612-173420-795-vault-raggae-3922ea0b",
+    "createdAt":  "2026-06-12T21:34:20.7954961Z",
+    "createdAtLocal":  "2026-06-12 17:34",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-pro\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local)\r\nCWD: D:\\vault-raggae\\deploy\\compose  Branch: main\r\nTools used (this reply): replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 17:34 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "D:\\vault-raggae\\deploy\\compose",
+    "summary":  "Configured correct cloud embedding model name (nvidia/llama-nemotron-embed-vl-1b-v2) and set filter generator/query rewriter to cloud API by setting their server URLs to empty strings. Re-ran document ingestion successfully with 7/8 documents parsed and loaded into Milvus vector store.",
+    "commands":  [
+                     "docker compose up -d",
+                     "uv run python scripts/batch_ingestion.py"
+                 ],
+    "files":  [
+                  "deploy/compose/vault-raggae.env"
+              ],
+    "planPath":  "",
+    "contentHash":  "3922ea0befe5b2cc5891fddea296d8ca5f839f0d9f87beca0804274eca923826",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "D:/vault-raggae",
+                "branch":  "main",
+                "head":  "329875a",
+                "hasChanges":  true
+            }
+}

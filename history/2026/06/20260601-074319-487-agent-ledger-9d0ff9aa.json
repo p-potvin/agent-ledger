@@ -1,0 +1,36 @@
+{
+  "id": "20260601-074319-487-agent-ledger-9d0ff9aa",
+  "createdAt": "2026-06-01T11:43:19.4875956Z",
+  "createdAtLocal": "2026-06-01 07:43",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-01 07:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Updated archive-old-ledger-entries.ps1 to be rename-aware: ledger root is now resolved from script location (or -LedgerRoot), script normalizes event relative paths using project-aliases.json so legacy layouts like events/<project>/YYYY/MM archive under canonical project folders in history/ even after renames. Added collision-safe move behavior (skip + warning if target exists). Verified the script runs cleanly with -ThresholdDays 100000 (no moves).",
+  "commands": [
+    "& \"C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\scripts\\archive-old-ledger-entries.ps1\" -LedgerRoot \"C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\" -ThresholdDays 100000"
+  ],
+  "files": [
+    "agent-ledger/scripts/archive-old-ledger-entries.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "9d0ff9aa2f6ea912157f52cbdbbaf821e3d6f957335b41def9e7df930bf04c71",
+  "git": null
+}

@@ -1,0 +1,40 @@
+{
+  "id": "20260614-161821-673-shared-tube-2633c374",
+  "createdAt": "2026-06-14T20:18:21.6737076Z",
+  "createdAtLocal": "2026-06-14 16:18",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "general,plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: plan\r\nPermissions: ask (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): WebFetch, Read, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-14 16:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "plan",
+    "permissions": "ask",
+    "network": "local-windows",
+    "toolsUsed": [
+      "WebFetch",
+      "Read",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Inspected Claude Design handoff bundle. Contains only tokens + manifest, no UI kits/components/icons built. Real implementation at shared-tube/design-system/{ui_kits,assets/logos} with 4 apps scaffolded (fxv, pkt, oneporn, sexyprn). Reference screenshots confirm SPN/OPH are visual clones of PKT with identical PK crown — matches user complaint. Preparing visual-audit + per-site identity + SVG icon plan.",
+  "commands": [],
+  "files": [
+    ".claude-design-handoff/prom-king-design-system/README.md",
+    "shared-tube/design-system",
+    "shared-tube/apps"
+  ],
+  "planPath": "",
+  "contentHash": "2633c3743b5c7d6e67da0130966b51828b6a4beca6ae492c4eb3e4937e64285c",
+  "git": null
+}

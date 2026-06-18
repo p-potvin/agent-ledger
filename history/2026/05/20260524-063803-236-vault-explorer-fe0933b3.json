@@ -1,0 +1,50 @@
+﻿{
+    "id":  "20260524-063803-236-vault-explorer-fe0933b3",
+    "createdAt":  "2026-05-24T10:38:03.2365910Z",
+    "createdAtLocal":  "2026-05-24 06:38",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-24 06:38 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Natively ran the fully chained Vault Explorer AI pipeline on local hardware via Playwright. Resolved the Protobuf version mismatch inside Electron sandbox by injecting PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python. Fixed ASR writing by correcting DummySeg attribute errors in audio_normalize.py. Measured native audio vocal isolation \u0026 transcription pipeline (19.36s) and native GPU RealESRGAN Vulkan super-resolution (8.88s) with perfect file preservation.",
+    "commands":  [
+                     "node tests/run_real_benchmarks.js"
+                 ],
+    "files":  [
+                  "src/normalization.js",
+                  "python-scripts/audio_normalize.py",
+                  "tests/run_real_benchmarks.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "fe0933b32fcc20ae98e2cd23692a3713e3d7bbe515c4507710ef076f32de10c5",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "914fdc9",
+                "hasChanges":  true
+            }
+}

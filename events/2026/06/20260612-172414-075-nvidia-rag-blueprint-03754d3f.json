@@ -1,0 +1,50 @@
+﻿{
+    "id":  "20260612-172414-075-nvidia-rag-blueprint-03754d3f",
+    "createdAt":  "2026-06-12T21:24:14.0758173Z",
+    "createdAtLocal":  "2026-06-12 17:24",
+    "timezone":  "Eastern Standard Time",
+    "project":  "NVIDIA RAG Blueprint",
+    "kind":  "code-change,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-1.5-pro\r\nThinking: medium\r\nMode: code\r\nPermissions: bypass (network: local)\r\nCWD: D:\\vault-raggae\\deploy\\compose  Branch: main\r\nTools used (this reply): view_file, replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 17:24 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-1.5-pro",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "view_file",
+                                      "replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "D:\\vault-raggae\\deploy\\compose",
+    "summary":  "Configured Nvidia RAG Blueprint to run on Cloud NIMs rather than local on-prem NIM container endpoints. Updated OCR_HTTP_ENDPOINT, YOLOX_HTTP_ENDPOINT, APP_EMBEDDINGS_SERVERURL, APP_NVINGEST_PAGEELEMENTSURL, etc. to point to ai.api.nvidia.com and integrate.api.nvidia.com in vault-raggae.env. Restarted the docker-compose services and verified health.",
+    "commands":  [
+                     "docker compose --env-file vault-raggae.env -f docker-compose-ingestor-server.yaml -f docker-compose-rag-server.yaml up -d"
+                 ],
+    "files":  [
+                  "D:\\vault-raggae\\deploy\\compose\\vault-raggae.env"
+              ],
+    "planPath":  "",
+    "contentHash":  "03754d3ff7d44eb607293abfc3ec5264853cc6a4b8360be30bbb5cefbd3e1abb",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "D:/vault-raggae",
+                "branch":  "main",
+                "head":  "329875a",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "20260616-113152-441-vault-explorer-045aca6b",
+  "createdAt": "2026-06-16T15:31:52.4412788Z",
+  "createdAtLocal": "2026-06-16 11:31",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 11:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Five fixes for streaming UX. (1) js/streaming/rd-flow.js startRDDebridFlow: 'response is not defined' ReferenceError on stream re-open caused by let response = await... being block-scoped inside the for-loop; the post-loop branch then read undefined 'response' when no attempt succeeded (e.g. all 5 fallbacks failed on a freshly-cached but already-added magnet). Hoisted let response = null above the loop. (2) js/streaming/rd-flow.js triggerRDStream: always auto-pick the best ranked torrent that matches the user's quality ceiling and start the flow immediately (~400ms toast); the manual list is still pre-rendered hidden so the existing 'Choose Manually' button on the loading screen reveals it as an escape hatch. Removed the isAutoSelectEnabled() conditional. (3) js/streaming/trailer.js YouTube embed: previous fix passed origin=file://... (Electron) which YouTube rejects. Switched to youtube-nocookie.com, only pass origin when running from http(s), added a window-level postMessage listener that catches IFrame API onError codes 2/5/100/101/150 and auto-flips to the 'Open in YouTube' fallback button, plus a listening-handshake postMessage on iframe load. (4) index.html streaming top bar: replaced the 3-row toolbar (title row / subtab row / providers row) with a single 42px-tall row containing [Movies][Series] | [All][Netflix][Disney+][Apple TV+][Prime] | margin-auto [Search input + button]. Dropped the redundant 'Streaming' title (the main tab bar already shows it) and the 'Watch Providers:' label. (5) index.css + js/navigation/tabs.js: body now gets a tab-<name>-active class on every switch; body.tab-streaming-active .main-area gets padding:0 / overflow:hidden and #tmdb-container fills 100% width/height so the streaming surface is truly full-bleed. Static-only verification: node --check on all 3 touched JS files.",
+  "commands": [
+    "node --check rd-flow.js",
+    "node --check trailer.js",
+    "node --check tabs.js"
+  ],
+  "files": [
+    "js/streaming/rd-flow.js",
+    "js/streaming/trailer.js",
+    "index.html",
+    "index.css",
+    "js/navigation/tabs.js"
+  ],
+  "planPath": "",
+  "contentHash": "045aca6b9638846f8870ef401490c46faa525f6c90312a45a1f7d4243ec39af9",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "1a6636a",
+    "hasChanges": true
+  }
+}

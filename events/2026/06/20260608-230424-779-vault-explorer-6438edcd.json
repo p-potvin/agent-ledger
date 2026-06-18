@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260608-230424-779-vault-explorer-6438edcd",
+    "createdAt":  "2026-06-09T03:04:24.7794706Z",
+    "createdAtLocal":  "2026-06-08 23:04",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "Mistral Vibe",
+    "agentHeader":  "Agent: Mistral Vibe (role: main)\r\nModel: mistral-medium-3.5\r\nThinking: direct\r\nMode: code\r\nPermissions: full (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-08 23:04 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "mistral-medium-3.5",
+                    "thinking":  "direct",
+                    "mode":  "code",
+                    "permissions":  "full",
+                    "network":  "local",
+                    "toolsUsed":  "edit",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Fixed Vault tab favorites and virtual folders: 1) Favorites subtab now correctly displays only favorited files (removed virtual:// paths from favorites, cleaned up rendering). 2) Virtual folders now properly appear first in sorting. 3) Fixed adding files to virtual folders with duplicate names (improved folder lookup to check current nav path first, then root, then any match). 4) Improved getTargetFolder to handle nested paths correctly. 5) Fixed filters to properly hide files in virtual folders at root level while showing them inside their folders. 6) Enhanced add-to-folder dialog to show parent path for folders with duplicate names.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "js\\favorites.js",
+                  "js\\navigation\\filters.js",
+                  "js\\navigation\\keybindings.js",
+                  "js\\navigation\\card-events.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "6438edcd2e14bdf27478c1f5b31874fe16f81fb930062d5f4c7edff2303504e4",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "e147ae8",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "20260616-111657-356-prom-king-14f9f93b",
+  "createdAt": "2026-06-16T15:16:57.3565648Z",
+  "createdAtLocal": "2026-06-16 11:16",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-haiku-4-5-20251001\r\nThinking: medium\r\nMode: plan\r\nPermissions: ask (network: win32)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Write, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 11:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-haiku-4-5-20251001",
+    "thinking": "medium",
+    "mode": "plan",
+    "permissions": "ask",
+    "network": "win32",
+    "toolsUsed": [
+      "Write",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Admin tools implementation plan covering 6 phases: Phase 1 (batch operations on videos/taxonomies via FastAPI + React UI), Phase 2 (catalog browser with filters), Phase 3 (fetcher upgrades), Phase 4 (moderation queue), Phase 5 (stats dashboard), Phase 6 (SQL panel + cross-cutting features like URL state, toasts, keyboard shortcuts). Phase 1 is user-prioritized and gates subsequent phases. Includes API endpoint specs, UI component structure, implementation order, and acceptance criteria.",
+  "commands": [
+    "--none"
+  ],
+  "files": [
+    "ADMIN_PLAN.md"
+  ],
+  "planPath": "",
+  "contentHash": "14f9f93b6f33ccb6928d9742a4899b8ea49029368f0d67c598dafd16b18d0701",
+  "git": null
+}

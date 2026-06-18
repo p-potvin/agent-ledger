@@ -1,0 +1,60 @@
+{
+  "id": "20260615-015842-797-shared-tube-07628dcc",
+  "createdAt": "2026-06-15T05:58:42.7973885Z",
+  "createdAtLocal": "2026-06-15 01:58",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "fix,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: medium\r\nMode: default\r\nPermissions: never (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell, ssh, git, pnpm, curl, systemctl, Playwright, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-15 01:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "medium",
+    "mode": "default",
+    "permissions": "never",
+    "network": "enabled",
+    "toolsUsed": [
+      "PowerShell",
+      "ssh",
+      "git",
+      "pnpm",
+      "curl",
+      "systemctl",
+      "Playwright",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Deployed OPH/SPN admin dashboard and passkey parity to OVH by fast-forwarding shared-tube from b018500 to c685158, rebuilding oneporn/sexyprn, restarting services, and verifying live admin/passkey/API behavior.",
+  "commands": [
+    "ssh -F none -i $env:USERPROFILE\\.ssh\\tube-site-vps ubuntu@100.67.25.118 git/status/service checks",
+    "ssh -F none ... git pull --ff-only; corepack pnpm install --frozen-lockfile; corepack pnpm --filter @promking/site-oneporn build; corepack pnpm --filter @promking/site-sexyprn build; sudo systemctl restart oneporn sexyprn",
+    "curl live /admin, /auth/login/options, /api/promking/stats for 1pornhub.vip and sexyprn.lol",
+    "pnpm --filter @promking/site-oneporn typecheck",
+    "pnpm --filter @promking/site-sexyprn typecheck",
+    "Python Playwright authenticated-shell smoke against live OPH/SPN dashboards with /auth/me mocked only"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\oneporn\\src\\admin\\App.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\sexyprn\\src\\admin\\App.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\oneporn\\src\\admin\\webauthn.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\sexyprn\\src\\admin\\webauthn.ts",
+    "/srv/repos/Prom-King/shared-tube on vps-26883e66"
+  ],
+  "planPath": "",
+  "contentHash": "07628dcc961e0f1c17749846f2025459b40a3292a38e51052a52dac83dcd449d",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "c685158",
+    "hasChanges": false
+  }
+}

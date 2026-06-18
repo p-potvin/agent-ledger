@@ -1,0 +1,50 @@
+{
+  "id": "20260610-140443-578-vaultwares-studio-53ee6d4c",
+  "createdAt": "2026-06-10T18:04:43.5780330Z",
+  "createdAtLocal": "2026-06-10 14:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + huggingface.co API)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 14:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + huggingface.co API",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "First real remote run was an infra SUCCESS with a data-quality failure, exactly per design: worker image pulled on l4x1, COLMAP ran, registered only 3/24 frames (12s clip at fixed 2fps too sparse), worker returned structured too_few_registered_images with capture tips, pipeline fell back to placeholders, actual cost USD 0.03 (vs 0.20 est). Fixes pushed (2103509): compute_extraction_fps targets ~100 frames (2-10fps clamp; 12s clip now samples 8fps/96 frames), fps recorded in stage metadata, hf_jobs runner downloads error.json on remote failure and surfaces code+detail in the message. 31 tests green. Retry of the draft reconstruction with dense sampling running in background.",
+  "commands": [
+    "headless_remote_run.py retry (bg)",
+    "pytest (31 passed)",
+    "git push origin main (2103509)"
+  ],
+  "files": [
+    "vaultwares_studio/pipeline.py",
+    "vaultwares_studio/runners/hf_jobs.py",
+    "tests/test_runners.py"
+  ],
+  "planPath": "",
+  "contentHash": "53ee6d4cddde5db5cc175c8f076aa1f11107df2813afc5bce717cac00bf28378",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "2103509",
+    "hasChanges": true
+  }
+}

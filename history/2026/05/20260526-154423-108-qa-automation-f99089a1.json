@@ -1,0 +1,66 @@
+{
+  "id": "20260526-154423-108-qa-automation-f99089a1",
+  "createdAt": "2026-05-26T19:44:23.1089938Z",
+  "createdAtLocal": "2026-05-26 15:44",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5.2\r\nThinking: medium\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): apply_patch, shell_command, multi_tool_use.parallel\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 15:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5.2",
+    "thinking": "medium",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "apply_patch",
+      "shell_command",
+      "multi_tool_use.parallel"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "max_pages": "40_default",
+      "bandwidth_guardrails": "block image,media,font; block_third_party=1",
+      "own_domain_only": "true",
+      "ip_rotation": "ipoasis_rotate_per_domain_session",
+      "stealth_behavior": "enabled_on_own_domains",
+      "max_depth": "4"
+    },
+    "metrics": {
+      "prom_king_pages": 4,
+      "fullxxx_pages": 40,
+      "blocked": 0,
+      "failures": 0
+    }
+  },
+  "workspaceRoot": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Implemented own-domain stealth crawl runner (Node/Playwright) that generates rotating IPoasis proxies per domain session (via proxy-chain anonymization), crawls same-domain links up to depth 4 with conservative page cap, blocks heavy resources (image/media/font) and optionally third-party requests to protect bandwidth, and runs human-like behavior + age-gate handling only on prom-king.xyz/fullxxx.video. Executed a run with default limits and wrote JSON artifacts.",
+  "commands": [
+    "npm run report:own-domain-stealth",
+    "node -c .\\\\scripts\\\\run-own-domain-stealth.mjs"
+  ],
+  "files": [
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\scripts\\\\run-own-domain-stealth.mjs",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\package.json",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\package-lock.json",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\.env.example",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\README.md",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\own-domain-stealth\\\\20260526-153952\\\\summary.json",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\own-domain-stealth\\\\20260526-153952\\\\prom-king.xyz\\\\stealth-results.json",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\own-domain-stealth\\\\20260526-153952\\\\fullxxx.video\\\\stealth-results.json"
+  ],
+  "planPath": "",
+  "contentHash": "f99089a1021bdae06b3abf01b97777a30f0785f5157f4ee925175a5dc4a50b84",
+  "git": {
+    "repo": "qa-automation",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+    "branch": "main",
+    "head": "393f6b4",
+    "hasChanges": true
+  }
+}

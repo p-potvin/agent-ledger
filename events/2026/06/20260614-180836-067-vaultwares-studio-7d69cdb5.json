@@ -1,0 +1,54 @@
+﻿{
+    "id":  "20260614-180836-067-vaultwares-studio-7d69cdb5",
+    "createdAt":  "2026-06-14T22:08:36.0673302Z",
+    "createdAtLocal":  "2026-06-14 18:08",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change,verification",
+    "actor":  ":AGENT_NAME",
+    "agentHeader":  "Agent: :AGENT_NAME (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: autopilot (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-14 18:08 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-4-7",
+                    "thinking":  "high",
+                    "mode":  "agent",
+                    "permissions":  "autopilot",
+                    "network":  "local-windows",
+                    "toolsUsed":  [
+                                      "Read",
+                                      "Edit",
+                                      "Grep",
+                                      "Bash"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Refine pipeline v1 (combine-frames, retrain from scratch). Added --refine-from \u003cbase-job-id\u003e to tools/headless_remote_run.py: pulls \u003cbase-job\u003e/reconstruction/in/frames.zip from clopeux/vw-studio-artifacts and caches it at \u003cnew-job\u003e/frames/_base_frames.zip; persists refine_from_job_id and refine_base_frames_zip in manifest.metadata. Added DigitalTwinStudioRunner._merge_refine_base_frames(base_zip): unzips base frames into self.frames_dir with a base_ prefix, AFTER blur-pruning the new frames (don\\\u0027t re-prune the base set). Wired into _run_frame_extraction so frame_extraction now produces a combined ~560-frame namespace for COLMAP. Worker is unchanged: it sees a single frames.zip and runs the standard sequential -\u003e mapper-retry -\u003e vocab-tree-fallback pipeline + splatfacto from scratch. Skipped (deferred to v2): COLMAP image_registrator + splatfacto --load-dir resume from sunny model.zip, which would actually skip the hour-long training but needs preserving the base sparse model and matching cameras across jobs.",
+    "commands":  [
+                     ".venv/Scripts/python.exe -m pytest tests/ -x -q --ignore=tests/test_viewer_server.py",
+                     ".venv/Scripts/python.exe tools/headless_remote_run.py --help"
+                 ],
+    "files":  [
+                  "tools/headless_remote_run.py",
+                  "vaultwares_studio/pipeline.py",
+                  "tests/test_vaultwares_studio.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "7d69cdb5f7d6d0da4ff81aeaec5ac251e0b32313464d3f397ec14f79aa830521",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "main",
+                "head":  "fac0979",
+                "hasChanges":  true
+            }
+}

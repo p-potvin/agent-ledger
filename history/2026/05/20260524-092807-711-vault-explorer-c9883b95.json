@@ -1,0 +1,50 @@
+﻿{
+    "id":  "20260524-092807-711-vault-explorer-c9883b95",
+    "createdAt":  "2026-05-24T13:28:07.7118672Z",
+    "createdAtLocal":  "2026-05-24 09:28",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Vault Explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-24 09:28 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Integrated TorrentioRD inside src/realdebrid.js. Implemented fetching of IMDB IDs from TMDB external IDs API using TMDB_BEARER_TOKEN, followed by scraping of cached torrents/streams via Torrentio. Included robust parsing for quality, torrent description, seeds, and size, plus a dynamic YTS scraper fallback. Updated the front-end to supply TMDB movie IDs and media types to the scraping bridge, and displayed the stream details and release descriptions inside a newly improved dialog button list.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "src/realdebrid.js",
+                  "src/tmdb.js",
+                  "js/app.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "c9883b95c857722fc8b982ee44622e4fb30d9be76a1b2c49c2fdaaa41167aea7",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "914fdc9",
+                "hasChanges":  true
+            }
+}

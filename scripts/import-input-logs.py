@@ -18,7 +18,7 @@ from urllib.request import Request, urlopen
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 INPUT_LOG_DIR = ROOT_DIR / "input-logs"
-API_URL = (os.environ.get("VW_API_URL") or os.environ.get("VW_PIPELINES_URL") or "http://127.0.0.1:9001").rstrip("/")
+API_URL = (os.environ.get("VW_API_URL") or os.environ.get("VW_PIPELINES_URL") or "http://100.67.25.118:9001").rstrip("/")
 API_KEY = os.environ.get("VW_TELEMETRY_API_KEY") or os.environ.get("VW_PIPELINES_API_KEY") or ""
 SOURCE = "agent-ledger-input-log-import"
 

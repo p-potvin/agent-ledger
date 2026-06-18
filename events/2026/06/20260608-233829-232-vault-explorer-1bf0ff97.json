@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260608-233829-232-vault-explorer-1bf0ff97",
+    "createdAt":  "2026-06-09T03:38:29.2328554Z",
+    "createdAtLocal":  "2026-06-08 23:38",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "Mistral Vibe",
+    "agentHeader":  "Agent: Mistral Vibe (role: main)\r\nModel: mistral-medium-3.5\r\nThinking: direct\r\nMode: code\r\nPermissions: full (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-08 23:38 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "mistral-medium-3.5",
+                    "thinking":  "direct",
+                    "mode":  "code",
+                    "permissions":  "full",
+                    "network":  "local",
+                    "toolsUsed":  "edit",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Fixed multiple issues: 1) Favorites subtab now shows/hides grids correctly (file-grid hidden, favorites-grid shown). 2) Fixed preview generation messages staying stuck by adding error handling to hide badge on error/completion. 3) Improved loading indicators to always show when navigating/switching tabs. 4) Fixed subtitle loading to only load 1 preferred track instead of all available subtitles, with proper language matching. 5) Improved folder lookup for add-to-folder to handle duplicate names by checking current nav path first.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "js\\navigation\\tabs.js",
+                  "js\\app.js",
+                  "js\\navigation\\directory.js",
+                  "js\\player\\player.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "1bf0ff97100aa4193256d6fea734883d970c5822287359d5eb0eea1939bc8199",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "e147ae8",
+                "hasChanges":  true
+            }
+}

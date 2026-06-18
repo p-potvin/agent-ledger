@@ -1,0 +1,49 @@
+{
+  "id": "20260613-231019-936-health-ledger-2ea2b4a7",
+  "createdAt": "2026-06-14T03:10:19.9365267Z",
+  "createdAtLocal": "2026-06-13 23:10",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-13 23:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Checked OVH/Greencloud Health Ledger deployment. Greencloud Probe/Dashboard active and passing; refreshed /opt/health-ledger from current repo excluding data/state/secrets; installed and enabled Health Ledger Token Joker on Greencloud; fixed Token Joker location labeling and OVH CI unit allow flag; added Token Joker Linux systemd units and token syntax check. Greencloud reaches OVH over Tailscale/API: ping OK, ports 443/9001 open, API healthz 200. Alarm env installed on Greencloud with restrictive permissions and Proton Bridge listener is up on 127.0.0.1:1025/1143, but Alarm email test fails with Bridge SMTP invalid username/password, so alarm service remains disabled to avoid noisy failed sends. OVH host SSH access from this Windows profile is denied for tested users, so local OVH systemd/Postgres and OVH-to-Greencloud reverse probe could not be inspected directly.",
+  "commands": [
+    "Read VaultWares router and deployment/health-ledger docs",
+    "ssh root@100.73.93.84 systemctl/curl/tailscale checks",
+    "scp/tar refreshed health-ledger deployment to greencloud excluding .env/data/state/.git/node_modules",
+    "npm run check:alarm; npm run check:probe; npm run check:dashboard; npm run check:ci-joker; npm run check:token",
+    "systemctl enable --now health-ledger-token.service",
+    "npm run alarm:test on greencloud"
+  ],
+  "files": [
+    "health-ledger/.env.example",
+    "health-ledger/package.json",
+    "health-ledger/scripts/token-joker.mjs",
+    "health-ledger/ops/systemd/health-ledger-ci-ovh.service",
+    "health-ledger/ops/systemd/health-ledger-token.service",
+    "health-ledger/ops/systemd/health-ledger-token-ovh.service",
+    "health-ledger/.env",
+    "/opt/health-ledger",
+    "/etc/health-ledger/alarm.env"
+  ],
+  "planPath": "",
+  "contentHash": "2ea2b4a757838357dd5408a7fbdea47603c14acb462df71e71bf389efe7b555e",
+  "git": null
+}

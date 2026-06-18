@@ -1,0 +1,57 @@
+{
+  "id": "20260616-094928-399-shared-tube-65b105fe",
+  "createdAt": "2026-06-16T13:49:28.3992872Z",
+  "createdAtLocal": "2026-06-16 09:49",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 09:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local-windows",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Brand mark v2 + copy differentiation. FXV: replaced split-panel logo with user-supplied dark-chip + lowercase italic 'fx' + hot pink dot, applied across logo/monogram/3 favicons. SPN: 'spn' abbreviation was ambiguous, replaced logo.svg with full 'sexyprn' wordmark on cyan gradient (128x64 horizontal pill); favicons keep 'sp'/'s' abbreviation. OPH '1Ph' unchanged. Copy work: rewrote per-site longName, tagline, description, menuItems, trendingSearches for OPH (hot/trending/viral voice) and SPN (daily-curated/playful voice); polished PKT (broad-appeal) and FXV (premium-editorial). SPN displayName lowercased to 'sexyprn' to match new logo. OPH menu now Hot Now/Trending Today/Viral Clips/Fresh Drops/Hot Pornstars/Breaking Studios/This Week/Categories. SPN menu now Today's Picks/Fresh Drops/Sweet & Sexy/HD Sexy/Pornstars/Studios We Love/Categories/Morning Picks. Version 0.1.5 -> 0.1.6.",
+  "commands": [],
+  "files": [
+    "shared-tube/apps/fxv/public/logo.svg",
+    "shared-tube/apps/fxv/public/favicon.svg",
+    "shared-tube/apps/fxv/public/favicon-16x16.svg",
+    "shared-tube/apps/fxv/public/favicon-32x32.svg",
+    "shared-tube/apps/fxv/public/favicon-48x48.svg",
+    "shared-tube/apps/fxv/public/monogram.svg",
+    "shared-tube/apps/sexyprn/public/logo.svg",
+    "shared-tube/apps/fxv/src/config.ts",
+    "shared-tube/apps/pkt/src/config.ts",
+    "shared-tube/apps/oneporn/src/config.ts",
+    "shared-tube/apps/sexyprn/src/config.ts"
+  ],
+  "planPath": "",
+  "contentHash": "65b105feb8a58f061b9ce816613ed84e287b2edd2ca9ac9fd9a9398c8ffd03fd",
+  "git": {
+    "repo": "qa-automation",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+    "branch": "main",
+    "head": "3c57668",
+    "hasChanges": true
+  }
+}

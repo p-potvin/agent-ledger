@@ -1,0 +1,32 @@
+{
+  "id": "20260613-210507-484-vaultwares-studio-b0cc8033",
+  "createdAt": "2026-06-14T01:05:07.4844358Z",
+  "createdAtLocal": "2026-06-13 21:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "general,handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-13 21:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": null,
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Session handoff for new chat. User observed second walkthrough.mp4 with new orbit framing (radius_scale=2.5) shows subject as tiny island in middle of sparse outlier splats — overshot from too-close to too-far. Better fix: compute orbit distance from transforms.json camera trajectory rather than cloud percentile bounding box; deferred. User asked about cosmos_output purpose: confirmed it's the final mp4 deliverable + placeholder annotations (Cosmos-Reason2/Transfer integration TBD). User wants to pause-and-validate before cosmos. Wrote self-contained handoff summary covering: where MVP stands (e2e proven on local-run-20260613-040022 at ~0.24 USD), three open priorities (queue sunny full recon at standard preset ~0.80 USD, tune orbit framing v3 using transforms.json, add NEEDS_USER_INPUT pause to cosmos_output), critical recovery dance for launcher-death pattern (proven 3+ times today, recovery via HfApi.list_repo_files + hf_hub_download + in-process pipeline tail), architecture quick-reference with file:line pointers, today's deployed worker changes (retry_mapper x4, vocab_tree via direct CLI, MIN_REGISTERED dynamic, smart picker v2 config filter + region spread, DB always archived), today's framing/UI fixes, mandatory protocol reminders (credit pipeline first, ledger last, don't poll), test suite status (77/77).",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "b0cc8033558e58f214abaf28edc815f040ff3ef63a60c9a3185bfabec4080796",
+  "git": null
+}

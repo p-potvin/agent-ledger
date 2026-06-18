@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260527-231442-781-vault-explorer-cb81007c",
+    "createdAt":  "2026-05-28T03:14:42.7813772Z",
+    "createdAtLocal":  "2026-05-27 23:14",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-refactor-modules\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-27 23:14 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Prioritized KinoCheck premium trailers in js/hover-card.js interactive popup previews with fallback to TMDB videos.",
+    "commands":  [
+                     "node --check js/hover-card.js"
+                 ],
+    "files":  [
+                  "js/hover-card.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "cb81007ce1036c39e01c1a32e613abaa0bda02bc45472e53954354ce9ee481d5",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "vw-codex-refactor-modules",
+                "head":  "259adaf",
+                "hasChanges":  true
+            }
+}

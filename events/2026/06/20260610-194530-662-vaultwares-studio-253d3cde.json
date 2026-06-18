@@ -1,0 +1,47 @@
+{
+  "id": "20260610-194530-662-vaultwares-studio-253d3cde",
+  "createdAt": "2026-06-10T23:45:30.6628653Z",
+  "createdAtLocal": "2026-06-10 19:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 19:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "User-requested Blender-style axis gizmo added to the splat viewport: corner widget on its own transparent WebGL canvas synced to camera orientation per frame; click axis balls (positive solid / negative faded) to snap views around the orbit target, drag to orbit; pole snap dodges up-vector singularity. Screenshot-verified over the backyard splat. Pushed. Standard recon still running in background.",
+  "commands": [
+    "viewport_screenshot -> gizmo verified",
+    "git push origin main"
+  ],
+  "files": [
+    "vaultwares_studio/webviewer/viewer.js"
+  ],
+  "planPath": "",
+  "contentHash": "253d3cde0fb6ccefd1cf24667e7cc46d4962cd2dc635436e1872889a660d170b",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "a82d5a1",
+    "hasChanges": true
+  }
+}

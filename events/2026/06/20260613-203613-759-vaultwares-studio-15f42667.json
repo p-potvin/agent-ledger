@@ -1,0 +1,42 @@
+{
+  "id": "20260613-203613-759-vaultwares-studio-15f42667",
+  "createdAt": "2026-06-14T00:36:13.7590302Z",
+  "createdAtLocal": "2026-06-13 20:36",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: low\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-13 20:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": "Bash",
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "First real splat walkthrough mp4 of the day. cosmos_output background bash b7wvm20tu completed exit 0. HF Render Job 6a2df6c1234ca64b60122524: SCHEDULING -> RUNNING -> COMPLETED in 137s, actual cost ~0.03 USD (cheaper than the 0.11 est). Downloaded walkthrough.mp4 to data/jobs/local-run-20260613-040022/deliverables/walkthrough.mp4: 2.5 MB, 1920x1080, h264, 6.033s @ ~30 fps. Confirms remote render path works end-to-end with full bundle (model.zip + processed_min.zip + camera_path.json). No launcher death this time — quick job stayed inside polling envelope. Total spend on this successful job: 0.20 (recon) + 0.03 (render) = 0.23 USD. Render duration is half nominal (camera_path was 12s but mp4 is 6s) — ns-render defaulted to 60 fps playback of 30-fps-sampled camera path. Non-blocking; fix by adding --frame-rate 30 to the render entrypoint. End-to-end MVP path proven: video -> remote recon -> gravity alignment -> camera staging with preset orbit -> remote splat render -> watchable mp4.",
+  "commands": [
+    "ffprobe data/jobs/local-run-20260613-040022/deliverables/walkthrough.mp4"
+  ],
+  "files": [
+    "vaultwares-studio/data/jobs/local-run-20260613-040022/deliverables/walkthrough.mp4"
+  ],
+  "planPath": "",
+  "contentHash": "15f426678dfade1b473626876d04cba3835e5d1788ba1872346b4fa1a5f15e78",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

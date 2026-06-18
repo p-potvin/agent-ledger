@@ -1,0 +1,56 @@
+{
+  "id": "20260610-081614-304-vaultwares-studio-cfcb4a2d",
+  "createdAt": "2026-06-10T12:16:14.3040122Z",
+  "createdAtLocal": "2026-06-10 08:16",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + huggingface.co API)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Write, Edit, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 08:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + huggingface.co API",
+    "toolsUsed": [
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Token + worker image + M2 start. (1) Re-imported fixed HF token (classic write role) into keyring. (2) Echo test launched real HF Job attempt: dataset clopeux/vw-studio-artifacts created + input uploaded OK, but run_job returned 402 Payment Required — HF Jobs needs pre-paid credits; blocked on user topping up balance. (3) Worker image now builds server-side via private Docker Space clopeux/vw-studio-worker (tools/push_worker_space.py + monitor_worker_space.py): build 1 failed (pytorch-devel base too heavy for builder), switched base to ghcr.io/nerfstudio-project/nerfstudio:latest; build 2 failed (pip not on PATH in that image); build 3 with python alias + python3 -m pip is BUILDING now. worker_image set in data/remote_compute.json (now gitignored). (4) M2 slice 1 shipped: QtWebEngine spike OK; vendored three.js 0.160 + GaussianSplats3D 0.4.7; vw:// scheme handler; gui/viewport.py tab with QWebChannel bridge + Capture Camera to captured_cameras.json; wired into gui_app; offscreen smoke OK; 30 tests green. Pushed 4bd290f, 4ffc62f, 813eee3.",
+  "commands": [
+    "push_worker_space.py x3",
+    "monitor_worker_space.py (bg)",
+    "run_echo_smoke_test -> 402 credits",
+    "pytest (30 passed)",
+    "git push origin main"
+  ],
+  "files": [
+    "gui/viewport.py",
+    "vaultwares_studio/webviewer/viewer.js",
+    "docker/worker/Dockerfile",
+    "gui_app.py",
+    "TODO.md"
+  ],
+  "planPath": "",
+  "contentHash": "cfcb4a2d503a0d61f8661c7086d334ac3c94be6f4dc2c4c11d495b0ff490057b",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "4ffc62f",
+    "hasChanges": true
+  }
+}

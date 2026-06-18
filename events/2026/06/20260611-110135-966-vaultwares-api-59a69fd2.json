@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260611-110135-966-vaultwares-api-59a69fd2",
+    "createdAt":  "2026-06-11T15:01:35.9665469Z",
+    "createdAtLocal":  "2026-06-11 11:01",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-api",
+    "kind":  "plan",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-1.5-pro\r\nThinking: medium\r\nMode: plan\r\nPermissions: ask (network: local-windows-ssh-to-vps)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): write_to_file, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-11 11:01 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-1.5-pro",
+                    "thinking":  "medium",
+                    "mode":  "plan",
+                    "permissions":  "ask",
+                    "network":  "local-windows-ssh-to-vps",
+                    "toolsUsed":  [
+                                      "write_to_file",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Updated implementation plan to target api.vaultwares.ca on VPS, open ports on tailscale0, and add mcp.vaultwares.ca to dnsmasq.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\a28b6950-76ce-415f-be96-871943d7863d\\implementation_plan.md"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\a28b6950-76ce-415f-be96-871943d7863d\\implementation_plan.md",
+    "contentHash":  "59a69fd2f9578b80c255f1e804865616b6f66ed3fc61524cbec8156366207408",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "cda4906",
+                "hasChanges":  false
+            }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "20260616-053743-158-vault-explorer-d6bbfe89",
+  "createdAt": "2026-06-16T09:37:43.1581537Z",
+  "createdAtLocal": "2026-06-16 05:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Write, Grep, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 05:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Rebuilt the virtual folders feature from scratch on a stable-ID schema. NEW: js/navigation/virtual-folders.js (window.vf, ~290 lines) is the single owner: stores at appSettings.virtualFolders v2 = {folders:[{id,name,type,parentId}], items:{[id]:[paths]}}; provides list/get/byName/create/rename/remove(cascading)/move(cycle-safe)/addItems(type-enforced)/removeItems/itemsOf/descendants/breadcrumb/pruneMissing; one-shot migrateLegacy walks old folders+folderContents, resolves parent-name-paths to new ids, hydrates from folderContents preferring it over legacy items[], deletes legacy keys after. WIRED: app.js calls vf.migrateLegacy at boot; index.html loads vf before filters.js; filters.js replaces name-path getTargetFolder with id-based + adds buildNavPath helper, applyFilters now uses vf.list/itemsOf/itemAccepts and removed the in-hot-path auto-migration block; directory.js navigateTo accepts a vf id or legacy name-path (resolved through chain walk), back-button uses parentId; card.js fakeFolder click/drop/rename go through vf (drop+rename now type-enforced); card-events.js add-to-folder/paste-into-folder/remove-folder/delete-item all id-based, killed the duplicate dead else-if(action==='open-folder') branch; keybindings.js create-dialog calls vf.create (no manual dedup), add-to-folder dialog uses vf.list by type and stores ids as select values, Delete-key uses vf.remove/removeItems; src/ipc/system.ipc.js submenu emits add-to-folder:<id> with full path label. VERIFIED: node --check on all 8 touched files, plus node-runtime smoke test confirms migration preserves nested parent chain, hydrates items from BOTH legacy stores, rename keeps contents (was the orphan bug), remove cascades to descendants+items, type-mix rejected ({added:1,rejected:2} for mixed batch), duplicate-name blocked, pruneMissing drops dangling. Legacy folders/folderContents wiped after migration.",
+  "commands": [
+    "node --check (8 files)",
+    "node smoke test (vf module)"
+  ],
+  "files": [
+    "js/navigation/virtual-folders.js",
+    "js/navigation/filters.js",
+    "js/navigation/directory.js",
+    "js/navigation/card.js",
+    "js/navigation/card-events.js",
+    "js/navigation/keybindings.js",
+    "src/ipc/system.ipc.js",
+    "js/app.js",
+    "index.html"
+  ],
+  "planPath": "",
+  "contentHash": "d6bbfe89bfc46e8ca52908c3f72bd7bea5ff47df1c99e3c82da8dbc54fb02c5b",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "1a6636a",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "20260612-090710-995-vaultwares-docs-397964cb",
+  "createdAt": "2026-06-12T13:07:10.9954412Z",
+  "createdAtLocal": "2026-06-12 09:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 09:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Cleaned current operations docs for OVH API routing and pushed main commits f4afe43 and 4efd17e. Updated services inventory, network maps, Tailscale split-DNS guidance, Health Ledger notes, shared tube ADR, generated page resources, and pinned TypeScript 5.9.3 so docs build succeeds. Documented that OVH nginx owns api.vaultwares.ca HTTPS 443 and Tailscale Serve must stay disabled on that port.",
+  "commands": [
+    "npm run generate:page-resources",
+    "npm run build",
+    "git commit",
+    "git push origin main"
+  ],
+  "files": [
+    "vaultwares-docs/docs-content/operations/services-inventory.mdx",
+    "vaultwares-docs/docs-content/operations/network-map.mdx",
+    "vaultwares-docs/docs-content/operations/tailscale.mdx",
+    "vaultwares-docs/docs-content/operations/health-ledger.mdx",
+    "vaultwares-docs/docs-content/adr/0001-shared-tube-rebuild.mdx",
+    "vaultwares-docs/package.json",
+    "vaultwares-docs/package-lock.json"
+  ],
+  "planPath": "",
+  "contentHash": "397964cb327186ba84ff1580605b4a34e8875e671360be9514d1cdd9997d48be",
+  "git": null
+}

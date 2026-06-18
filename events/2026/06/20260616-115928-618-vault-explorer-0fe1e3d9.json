@@ -1,0 +1,57 @@
+{
+  "id": "20260616-115928-618-vault-explorer-0fe1e3d9",
+  "createdAt": "2026-06-16T15:59:28.6184646Z",
+  "createdAtLocal": "2026-06-16 11:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 11:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Four fixes for the video player + streaming UX. (1) js/player/clip.js line 1460 SyntaxError 'Missing } in template expression' caused by a stray ']' inside : '' -> ''. This was breaking the entire renderer-side script chain (clip.js loaded but never parsed). (2) Removed the now-dead Auto-Select Best Stream setting end to end: index.html settings panel checkbox + label removed; js/settings/core.js stopped reading/writing settings-stream-auto-select; js/streaming/ranking.js isAutoSelectEnabled() function deleted (no callers remain); streamAutoSelect translation keys dropped from translations.en.js and translations.qc.js. (3) Added a Stream Quality picker to the player bar where the playback-speed picker used to be: index.html hides the speed dropdown (kept the speed code intact, just display:none) and inserts a new quality-dropdown-container with #btn-quality and #quality-menu; js/player/player.js initPlayer registers window.refreshQualityMenu which buckets window.currentTorrentList by quality label (2160p/1080p/720p/...), keeps the best-ranked rep per bucket, sorts descending, and on click stashes vp.currentTime in window._resumePosAfterSwitch and calls startRDDebridFlow with the chosen torrent; playStream now seeks to _resumePosAfterSwitch on loadedmetadata when present (takes precedence over saved server progress); playItem hides the picker for local files. (4) Expanded the subtitle picker: bug fix in player.js streaming path that never set window._allAvailableSubtitles (so the menu showed only the auto-loaded sub); index.html adds 3 quick-lang search buttons (English / French Canadian / French) under a 'Search OpenSubtitles' header; src/scanner.js find-subtitles IPC accepts a 4th langsOverride param (defaults to 'en,fr,es') used to narrow the search per click; js/player/subtitles.js adds searchAndLoadSubtitlesByLang(lang) that asks for 'fr-CA,fr' for the Canadian preset, sorts results with the exact lang code first, merges new hits into _allAvailableSubtitles, and lets",
+  "commands": [
+    "node --check (9 files)"
+  ],
+  "files": [
+    "js/player/clip.js",
+    "index.html",
+    "js/settings/core.js",
+    "js/streaming/ranking.js",
+    "js/translations.en.js",
+    "js/translations.qc.js",
+    "js/player/player.js",
+    "js/player/subtitles.js",
+    "src/scanner.js"
+  ],
+  "planPath": "",
+  "contentHash": "0fe1e3d93d77994a04e2ba74053457800505878e8ed43f1d8ca6165e2d73c40d",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "1a6636a",
+    "hasChanges": true
+  }
+}

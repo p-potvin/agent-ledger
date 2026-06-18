@@ -1,0 +1,72 @@
+{
+  "id": "20260524-095351-865-qa-automation-2622b7fc",
+  "createdAt": "2026-05-24T13:53:51.8654343Z",
+  "createdAtLocal": "2026-05-24 09:53",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: medium\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): apply_patch, shell_command, update_plan, multi_tool_use.parallel\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-24 09:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "medium",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "apply_patch",
+      "shell_command",
+      "update_plan",
+      "multi_tool_use.parallel"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "engines": "google,duckduckgo,bing,brave",
+      "max_serp_pages": "12",
+      "own_domain_stealth_only": "true",
+      "chat_vw_state_output": "suppressed",
+      "ip_rotation": "pre_session_when_configured",
+      "vw_state_resume_id": "prom-king-search-visibility-2026-05-24",
+      "browser_rotation": "firefox-profile,kameleo-chroma,kameleo-junglefox,edge",
+      "search_visibility": "true",
+      "smoke_session_count": "1",
+      "session_count_full": "84",
+      "safe_search": "once_per_session_ip_random_by_default"
+    },
+    "metrics": {
+      "smoke_sessions": 1,
+      "smoke_pages_checked": 1,
+      "static_checks_passed": 3,
+      "blocked_states": 0
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Implemented search visibility SERP runner for Prom King and FullXXX. Added npm report command, documented environment switches and safety boundaries, verified syntax, TypeScript, diff whitespace, and a one-session DuckDuckGo smoke run. Full run defaults cover 84 engine-keyword sessions through SERP page 12 with browser rotation, optional IP rotation, per-session SafeSearch, organic result collection, target-domain first appearance reporting, and own-domain-only stealth checks after landing on prom-king.xyz or fullxxx.video.",
+  "commands": [
+    "node -c .\\scripts\\run-search-visibility-report.mjs",
+    "npx tsc --noEmit",
+    "='duckduckgo'; ='prom-king.xyz'; ='1'; ='1'; ='edge,firefox-profile'; ='0'; ='0'; ='1'; ='0'; ='none'; npm run report:search-visibility",
+    "git diff --check"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\scripts\\run-search-visibility-report.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\package.json",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\.env.example",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\search-visibility\\20260524-095318\\results.json",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\search-visibility\\20260524-095318\\summary.md"
+  ],
+  "planPath": "",
+  "contentHash": "2622b7fcf46167aac7df1e4c76a7e0d3ecc8fa1d2e2e4b1c1b705197a3a3fa97",
+  "git": {
+    "repo": "qa-automation",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+    "branch": "main",
+    "head": "393f6b4",
+    "hasChanges": true
+  }
+}

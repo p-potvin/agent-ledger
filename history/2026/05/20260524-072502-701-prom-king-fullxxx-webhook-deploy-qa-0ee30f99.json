@@ -1,0 +1,54 @@
+{
+  "id": "20260524-072502-701-prom-king-fullxxx-webhook-deploy-qa-0ee30f99",
+  "createdAt": "2026-05-24T11:25:02.7016291Z",
+  "createdAtLocal": "2026-05-24 07:25",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/fullxxx-webhook-deploy-qa",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-24 07:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "dns_origin_mismatch": "173.249.194.15",
+      "qa_allow_category_404": "true",
+      "deploy_assumption_fix": "true",
+      "no_vw_state_in_chat": "true"
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Reverted mistaken GitHub Actions deployment workflow edits (deploy is tailnet webhook, not GH runner), verified DNS points fullxxx.video to 173.249.194.15 (not the old VPS), and updated qa-automation crawler to optionally tolerate legacy /category/* 404s via CRAWL_ALLOW_CATEGORY_404.",
+  "commands": [
+    "Resolve-DnsName fullxxx.video",
+    "git revert fa6496f 677641a",
+    "git push origin main (tube-sites)",
+    "npx tsc --noEmit",
+    "git commit/push (qa-automation)"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\.github\\workflows\\deploy-fullxxx-video.yml",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\tests\\fullxxx-crawl.spec.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\.env.example",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\AGENTS.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\ROUTER.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\summaries\\LONG_RUNNING_TASKS.md"
+  ],
+  "planPath": "",
+  "contentHash": "0ee30f99bff834964765115abc89724fb9ccbf2c17892c7ed0ac76cba950c3f0",
+  "git": null
+}

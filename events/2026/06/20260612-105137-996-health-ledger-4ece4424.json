@@ -1,0 +1,42 @@
+{
+  "id": "20260612-105137-996-health-ledger-4ece4424",
+  "createdAt": "2026-06-12T14:51:37.9960154Z",
+  "createdAtLocal": "2026-06-12 10:51",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 10:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fixed HealthLedgerCiJoker after hidden scheduled-task rewrite. The CI listener was still responding from an older orphaned PowerShell/Node process, while the interactive-token hidden task failed to start on demand with 0x800710E0. Stopped only the stale ci-joker listener process tree, re-registered HealthLedgerCiJoker with C:\\Windows\\System32\\conhost.exe --headless, explicit WindowsPowerShell path, Hidden=True, boot+logon triggers, and elevated BUILTIN\\Administrators group principal. Verified Task Scheduler reports Running/Hidden=True/LogonType=Group, node is listening on 127.0.0.1:8788, /health returns 200, and the registration script was updated to preserve this working hidden configuration.",
+  "commands": [
+    "Get-ScheduledTask/Get-ScheduledTaskInfo HealthLedgerCiJoker",
+    "Get-NetTCPConnection 127.0.0.1:8788 and Win32_Process parent chain",
+    "Register-ScheduledTask HealthLedgerCiJoker with hidden conhost action and BUILTIN\\Administrators principal",
+    "Invoke-WebRequest http://127.0.0.1:8788/health",
+    "PowerShell [scriptblock]::Create parse check",
+    "git diff/status for health-ledger"
+  ],
+  "files": [
+    "C:\\Windows\\System32\\Tasks\\HealthLedgerCiJoker",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\ops\\windows\\register-health-ledger-ci-joker.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "4ece44246e231964bc75ef15f32c161026dc3a3a0c243b94b5c2db49390a6499",
+  "git": null
+}

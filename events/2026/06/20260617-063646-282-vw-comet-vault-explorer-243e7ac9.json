@@ -1,0 +1,46 @@
+{
+  "id": "20260617-063646-282-vw-comet-vault-explorer-243e7ac9",
+  "createdAt": "2026-06-17T10:36:46.2826709Z",
+  "createdAtLocal": "2026-06-17 06:36",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-comet + vault-explorer",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + vps-ovhcloud via Tailscale SSH)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-17 06:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + vps-ovhcloud via Tailscale SSH",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Comet refactor done. Switched to shared network namespace: comet and comet-postgres now use network_mode service:comet-vpn, all egress via Mullvad ca-mtr-wg-002 (146.70.198.153). Enabled PROXY_DEBRID_STREAM=True with password saved at .access/comet_proxy_password.txt, set PUBLIC_BASE_URL=http://100.67.25.118:5173 so rewritten playback URLs route through the tailnet endpoint. Removed GLOBAL_PROXY_URL (was incorrectly proxying scraper traffic). DNS via gluetun default forwards local container names (prowlarr, mullvad-gateway) to Docker embedded resolver. Comet returning 166 results for Interstellar test. vault-explorer side already patched: client.js loads COMET_STREAM_BASE from env or .access/comet_config.txt; search.js queries Comet first with Torrentio/EZTV/YTS fallback. User needs to update saved Comet config to include the new proxy password (one-time /configure step) before vault-explorer playback URLs will work.",
+  "commands": [
+    "docker compose down && up -d (refactor)",
+    "sed cleanup DNS settings",
+    "openssl rand -hex 16 for proxy password"
+  ],
+  "files": [
+    "vw-comet docker-compose.yml",
+    ".env.comet",
+    "vault-explorer client.js",
+    "vault-explorer search.js",
+    ".access comet_proxy_password.txt"
+  ],
+  "planPath": "",
+  "contentHash": "243e7ac9585e09219e97afc560965ee57a87aaa12e4e601a31a615795b8584b0",
+  "git": null
+}

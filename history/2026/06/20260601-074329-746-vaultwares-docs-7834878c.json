@@ -1,0 +1,37 @@
+{
+  "id": "20260601-074329-746-vaultwares-docs-7834878c",
+  "createdAt": "2026-06-01T11:43:29.7469290Z",
+  "createdAtLocal": "2026-06-01 07:43",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change,commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-01 07:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Added an explicit renamed-projects table to docs (agent-ledger schema page) so the old→new project name mapping is visible in vaultwares-docs. Regenerated page resources so the rendered docs include the update.",
+  "commands": [
+    "npm run generate:page-resources"
+  ],
+  "files": [
+    "vaultwares-docs/docs-content/operations/agent-ledger-schema.mdx",
+    "vaultwares-docs/src/resources/pages/operations__agent-ledger-schema.json"
+  ],
+  "planPath": "",
+  "contentHash": "7834878c388315d1534041779c7809145c38a22bc42313d6a270d37e859a727f",
+  "git": null
+}

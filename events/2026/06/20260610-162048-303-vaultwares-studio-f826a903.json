@@ -1,0 +1,45 @@
+{
+  "id": "20260610-162048-303-vaultwares-studio-f826a903",
+  "createdAt": "2026-06-10T20:20:48.3039150Z",
+  "createdAtLocal": "2026-06-10 16:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: low\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 16:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "ARKit-pose ingestion added to ROADMAP watch items per user request (candidate M1.5): device VIO poses seed/replace COLMAP, give absolute scale, survive feature-poor scenes; integration seam = nerfstudio transforms.json with known poses at the worker ns-process-data step. Pushed 1c9136b. Backyard run in flight: 280/597 sharpest frames kept, 127MB uploaded, remote job RUNNING since 16:14.",
+  "commands": [
+    "git push (1c9136b)"
+  ],
+  "files": [
+    "ROADMAP.md"
+  ],
+  "planPath": "",
+  "contentHash": "f826a9033d71d1d1445950749ee005f646872dc20174ee84317db6c94acedbf1",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "1c9136b",
+    "hasChanges": true
+  }
+}

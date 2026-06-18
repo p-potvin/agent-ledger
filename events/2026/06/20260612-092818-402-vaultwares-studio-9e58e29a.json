@@ -1,0 +1,38 @@
+{
+  "id": "20260612-092818-402-vaultwares-studio-9e58e29a",
+  "createdAt": "2026-06-12T13:28:18.4023990Z",
+  "createdAtLocal": "2026-06-12 09:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "general,plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Read, Grep, Bash\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-12 09:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Bash"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "MVP readiness assessment. Confirmed end-to-end pipeline is shippable today: video intake -> frame extraction -> remote HF Jobs reconstruction (proven yesterday at 0.36 USD draft preset, retry-mapper safety net in place) -> gravity-aligned cloud + .splat fast loader (7.38x compression) -> camera_staging with NEEDS_USER_INPUT pause for capture -> cosmos_output local walkthrough mp4 fallback. Remote ns-render walkthrough path exists at pipeline.py:1004 (_run_remote_render with render_entrypoint.py on worker) but requires processed_min.zip alongside model.zip in reconstruction/remote_out/ — yesterday's bundle only has model.zip so remote render would silently fall back to local builder. 77/77 tests pass. Gaps for a polished demo: (1) Walk pattern presets exist in walk_patterns.py but no GUI surface to pick orbit/dolly/retrace_steps as the render path — currently captures-only path. (2) GUI split is partial — DashboardWidget/SettingsTab/Window still in gui_app.py (1307 lines). (3) Remote walkthrough render unverified end-to-end this session. Asked user which dimension to harden before ship (input/render-path/UX) so I can target one focused pass.",
+  "commands": [],
+  "files": [
+    "vaultwares-studio/vaultwares_studio/pipeline.py"
+  ],
+  "planPath": "",
+  "contentHash": "9e58e29a0910122003b7d34e3e2bee105be9107a67ff67d9f3115e1ac77fe0fb",
+  "git": null
+}

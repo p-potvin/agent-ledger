@@ -1,0 +1,51 @@
+﻿{
+    "id":  "20260526-000345-584-vault-explorer-78432074",
+    "createdAt":  "2026-05-26T04:03:45.5843357Z",
+    "createdAtLocal":  "2026-05-26 00:03",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 00:03 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Renamed the TMDB tab to Movies/Series (Films/Séries in French/QC) and redesigned the movies poster results cards to use a non-stretching aspect-ratio: 2/3 container with a click handler on the entire card to trigger streams. Extended the Settings panel to include advanced streaming preferences for Auto-Select Best Stream, Max Stream Quality (4K, 1080p, 720p), and Preferred Language (English, French/VF, Multilingual). Upgraded triggerRDStream to perform intelligent sorting and filtering on the scraped torrent links, iteratively attempting to unrestrict candidates via Real-Debrid automatically before displaying manual options if auto-select fails or is disabled.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "index.html",
+                  "js/translations.js",
+                  "js/settings.js",
+                  "js/app.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "78432074da1de267a9b472a1c9ae8608f0fed49284831bfe0b42dd41dfb166a8",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

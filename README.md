@@ -81,7 +81,7 @@ The tracker task is named `VaultWares-InputTracker`. It starts at logon and unlo
 Set these environment variables for non-default deployments:
 
 ```powershell
-$env:VW_API_URL = "http://127.0.0.1:9001"
+$env:VW_API_URL = "http://100.67.25.118:9001"
 $env:VW_TELEMETRY_API_KEY = "<local service key>"
 ```
 

@@ -1,0 +1,64 @@
+{
+  "id": "20260616-064625-350-shared-tube-bb995f20",
+  "createdAt": "2026-06-16T10:46:25.3503307Z",
+  "createdAtLocal": "2026-06-16 06:46",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change,plan,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): WebFetch, Read, Write, Edit, Bash, TaskCreate, TaskUpdate, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 06:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local-windows",
+    "toolsUsed": [
+      "WebFetch",
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Visual identity pass for the 4 tube sites (FXV, PKT, OPH, SPN). Captured 24 baseline screenshots via Playwright. Rewrote BrandTokens (motion, signature, density, chip-radius, gradient). OPH now denser+gradient vs FXV; SPN now pill-shaped+airier vs PKT. SPN cyan accent darkened #06b6d4 to #0891b2 to pass WCAG AA on white. Layout.astro emits new vars + chip-strip fade mask + body data-attrs. Replaced OPH+SPN brand marks (logo+monogram+3 favicons each) — they were shipping the PKT 'PK' crown verbatim. New marks use SVG <text> + Google-Fonts @import. Authored shared icon library: 27 icons x 2 stroke variants (precise/friendly) at design-system/assets/icons/. Updated Header.astro (chip fade, accent-gradient on search button), SuggestionStrip.astro (chip fade), VideoCard.astro (OPH edge + SPN glow hover signatures). HANDOFF.md + AUDIT.md written. Version bumped 0.1.4 -> 0.1.5. After-screenshots deferred to user.",
+  "commands": [
+    "node scripts/visual-audit-capture.mjs",
+    "node design-system/assets/icons/_generate.mjs"
+  ],
+  "files": [
+    "shared-tube/shared/src/tokens/index.ts",
+    "shared-tube/shared/src/tokens/oneporn.ts",
+    "shared-tube/shared/src/tokens/sexyprn.ts",
+    "shared-tube/shared/src/components/Layout.astro",
+    "shared-tube/shared/src/components/Header.astro",
+    "shared-tube/shared/src/components/SuggestionStrip.astro",
+    "shared-tube/shared/src/components/VideoCard.astro",
+    "shared-tube/apps/oneporn/public/logo.svg",
+    "shared-tube/apps/sexyprn/public/logo.svg",
+    "shared-tube/design-system/AUDIT.md",
+    "shared-tube/design-system/HANDOFF.md",
+    "shared-tube/design-system/assets/icons/_generate.mjs",
+    "qa-automation/scripts/visual-audit-capture.mjs"
+  ],
+  "planPath": "",
+  "contentHash": "bb995f20f2e4aebf2a7698d1033b71fc7ea0dca7c126e791ec69d53524d35cc8",
+  "git": {
+    "repo": "qa-automation",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+    "branch": "main",
+    "head": "3c57668",
+    "hasChanges": true
+  }
+}

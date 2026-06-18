@@ -1,0 +1,53 @@
+{
+  "id": "20260611-182520-586-vaultwares-studio-dc5fc9d9",
+  "createdAt": "2026-06-11T22:25:20.5860256Z",
+  "createdAtLocal": "2026-06-11 18:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Grep, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-11 18:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "Grep",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "M2 stage rename usd_cameras -> camera_staging with NEEDS_USER_INPUT flow + backwards-compat migration. (1) Rename in pipeline.py STAGE_DEFINITIONS, handlers dict, method (_run_camera_staging), title now 'Camera Staging'. (2) run_stage now respects handler-set terminal state: if stage.state == RUNNING after the handler returns it auto-completes, otherwise it just persists (so handlers can set NEEDS_USER_INPUT and return without being clobbered). (3) Pause logic in camera_staging: in guided mode with zero captured cameras, first invocation generates default preset+prompt cameras then sets state=NEEDS_USER_INPUT with a user-readable message inviting them to capture poses in the viewport. Metadata flag pausedForUserInput keys the second-run detection. (4) Hit a real bug during testing — the handler replaces stage.metadata = {...} wholesale further down, wiping the pause flag. Fixed by reading already_paused at the top of the handler before any mutation. (5) Manifest migration shim in JobManifest.from_dict: legacy 'usd_cameras' stage keys and current_stage_key remap to 'camera_staging' on load, so all 4 existing job manifests open without manual edit (verified via load_job_manifest on each). (6) gui_app.py reference updated to accept both keys for any pre-migration callers. Tests: 3 new cases (pause+resume in guided, no-pause outside guided, legacy key migration) + updated 3 existing references. Full suite: 71/71 pass.",
+  "commands": [
+    "pytest tests/ -x -q --ignore=tests/test_viewer_server.py",
+    "python -c 'load_job_manifest on all 4 jobs'"
+  ],
+  "files": [
+    "vaultwares-studio/vaultwares_studio/pipeline.py",
+    "vaultwares-studio/gui_app.py",
+    "vaultwares-studio/tests/test_camera_paths.py",
+    "vaultwares-studio/tests/test_vaultwares_studio.py"
+  ],
+  "planPath": "",
+  "contentHash": "dc5fc9d9f522eb3b19da14e54fea5959cb146371a3820e99e2fe7e654a2999c4",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

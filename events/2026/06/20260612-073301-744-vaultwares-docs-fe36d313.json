@@ -1,0 +1,40 @@
+{
+  "id": "20260612-073301-744-vaultwares-docs-fe36d313",
+  "createdAt": "2026-06-12T11:33:01.7440951Z",
+  "createdAtLocal": "2026-06-12 07:33",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 07:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Documented the Health Ledger probe triangle and Tailscale ACL requirement. operations/health-ledger now lists vps-ovhcloud as a probe location and states that host-owned services should be probed from other hosts. operations/tailscale now notes tag:server to tag:server 80/443 is required for OVH-to-Greencloud HTTPS probe traffic. Pushed 82ce103 to main.",
+  "commands": [
+    "Read VaultWares router summaries and deployment docs",
+    "Updated health-ledger and tailscale operation docs",
+    "git commit 82ce103",
+    "git push origin main"
+  ],
+  "files": [
+    "vaultwares-docs/docs-content/operations/health-ledger.mdx",
+    "vaultwares-docs/docs-content/operations/tailscale.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "fe36d313883e02f98e36d387d899e030bbe5fd3805ff9d2e39704c60b38d99a4",
+  "git": null
+}

@@ -1,0 +1,50 @@
+﻿{
+    "id":  "20260612-155942-276-prom-king-37ad988c",
+    "createdAt":  "2026-06-12T19:59:42.2763137Z",
+    "createdAtLocal":  "2026-06-12 15:59",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "code-change,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 15:59 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+    "summary":  "Fixed Safe Mode toggle visibility in production: implemented cookie-based developer override (?dev=true setting pkt_dev=true cookie) and made IP parser robust to ports/brackets for IPv6/IPv4-mapped-IPv6.",
+    "commands":  [
+                     "pnpm build"
+                 ],
+    "files":  [
+                  "shared-tube/shared/src/components/Header.astro",
+                  "shared-tube/shared/src/security/safe-mode.ts"
+              ],
+    "planPath":  "",
+    "contentHash":  "37ad988cd8d133c041a2fa3150953c6f27dbe6901a493d425b51229d8d3180ba",
+    "git":  {
+                "repo":  "vaultwares-api",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+                "branch":  "main",
+                "head":  "eff400e",
+                "hasChanges":  true
+            }
+}

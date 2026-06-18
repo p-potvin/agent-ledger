@@ -1,0 +1,49 @@
+{
+  "id": "20260612-225742-690-vaultwares-studio-801d139b",
+  "createdAt": "2026-06-13T02:57:42.6905817Z",
+  "createdAtLocal": "2026-06-12 22:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-12 22:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Smart init-pair picker + DB archival to close out the init-pair lottery. User pasted Gemini diagnosis aligning with mine: failure is mapper init-pair, not matcher. Gemini's init_max_reg_trials suggestion isn't a real COLMAP flag in current builds (real lever is init_num_trials, which I already bumped); other directional advice was correct. Implementation: (1) new smart_init_pair_candidates(database_path, top_n=4) reads two_view_geometries.rows from the COLMAP database, decodes pair_id via the kMaxNumImages=2147483647 encoding, ranks pairs by num_matches * temporal_distance, requires temporal gap >= 30 frames (~5 sec at 6 fps) so spatial baseline is real, dedupes by image_id so each candidate samples a different region of the capture. (2) retry_mapper rewritten: each attempt now passes explicit --Mapper.init_image_id1/2 from the smart picker plus a progressively-relaxed threshold ladder (8/4/2/1.5 init_min_tri_angle, 50/30/20/15 init_min_num_inliers, abs_pose floors). If the DB yields no good explicit candidates (all pairs too temporally close), falls back to COLMAP heuristic + init_num_trials=2000 across the same threshold ladder. (3) Worker now archives colmap/database.db as colmap_database.db inside processed_min.zip so we can audit past failures locally without re-running. Discussed with user: zero-padding already done (frame_%05d.jpg); local run path exists via pipeline.py local fallback; Gemini's deterministic-RANSAC suggestion does not help when same DB yields 280/280 vs 3/280 across runs (proven by stats dump). Worker syntax compiles, 77/77 tests pass. CHANGES NOT YET DEPLOYED: needs tools/push_worker_space.py before next remote recon.",
+  "commands": [
+    "pytest tests/ -x -q --ignore=tests/test_viewer_server.py",
+    "python -m py_compile docker/worker/recon_entrypoint.py"
+  ],
+  "files": [
+    "vaultwares-studio/docker/worker/recon_entrypoint.py"
+  ],
+  "planPath": "",
+  "contentHash": "801d139b910ada19ee4467111874e5d41258301683549d5f6a289e6e9972e253",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

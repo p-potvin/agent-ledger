@@ -1,0 +1,53 @@
+{
+  "id": "20260612-094800-102-vaultwares-studio-1afb1cd1",
+  "createdAt": "2026-06-12T13:48:00.1021644Z",
+  "createdAtLocal": "2026-06-12 09:48",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,plan,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, Grep, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-12 09:48 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Walk-pattern picker landed + yesterday's job smoke-tested. (1) gui/viewport.py: new Walk Pattern QComboBox listing all 7 patterns (orbit/dolly_in/dolly_out/crane_up/figure_8/doorway_reveal/retrace_steps) + Apply+Preview Pattern button. _apply_pattern handler builds bounds from cloud_preview.ply, instantiates a CameraEntity via walk_patterns.build_pattern, writes the sampled path to usd/camera_path.json so cosmos_output picks it up, then plays the same frames live via window.playPath. retrace_steps falls back to a readable status message if transforms.json is unavailable. Status strings added to gui/strings.py (EN+QC). _find_transforms_json checks 3 candidate paths. (2) Smoke-test on local-run-20260610-165858: orbit pattern (8s, 9 keyframes) wrote camera_path.json cleanly, cosmos_output re-ran in 0.6s without crash, produced mp4. BUT the mp4 is only 19186 bytes = the 7-frame slideshow fallback at 1280x720 @ 1fps, NOT a splat-rendered walkthrough. Yesterday's prior walkthrough was the same size, so this matches existing behavior - it's not a regression. (3) Root cause for slideshow-only: pipeline.py:1004 _run_remote_render needs both model.zip AND processed_min.zip in reconstruction/remote_out/. Yesterday's job has model.zip only. Worker entrypoint at docker/worker/recon_entrypoint.py:297 emits processed_min.zip only when --keep-checkpoint is on AND processed/transforms.json + processed/sparse_pc.ply exist. pipeline.py:713 does pass --keep-checkpoint, so a FRESH recon today should produce both archives. (4) Restored yesterday's pre-test artifacts (camera_path.json, walkthrough mp4) so the smoke test left no trace. 77/77 tests still pass.",
+  "commands": [
+    "pytest tests/ -x -q --ignore=tests/test_viewer_server.py",
+    "python -c 'orbit pattern + cosmos_output rerun on yesterday job'"
+  ],
+  "files": [
+    "vaultwares-studio/gui/viewport.py",
+    "vaultwares-studio/gui/strings.py",
+    "vaultwares-studio/data/jobs/local-run-20260610-165858/usd/camera_path.json"
+  ],
+  "planPath": "",
+  "contentHash": "1afb1cd1963491a3443c51f34d9eeefe99471562b70d852da80db4d18c9b8c4c",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

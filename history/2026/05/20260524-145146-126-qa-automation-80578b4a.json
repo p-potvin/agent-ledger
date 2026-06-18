@@ -1,0 +1,64 @@
+{
+  "id": "20260524-145146-126-qa-automation-80578b4a",
+  "createdAt": "2026-05-24T18:51:46.1265407Z",
+  "createdAtLocal": "2026-05-24 14:51",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5.2\r\nThinking: medium\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): apply_patch, shell_command, multi_tool_use.parallel\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-24 14:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5.2",
+    "thinking": "medium",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "apply_patch",
+      "shell_command",
+      "multi_tool_use.parallel"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "ignore_https_errors_auto": "scrapingant_proxy_detected",
+      "ip_rotation_mandatory": "true",
+      "proxy_mode": "proxy.scrapingant.com:8080",
+      "proxy_provider": "scrapingant",
+      "own_domain_stealth_only": "true",
+      "secrets_redacted": "true"
+    },
+    "metrics": {
+      "smoke_sessions": 1,
+      "smoke_pages_checked": 1,
+      "smoke_results_count": 10,
+      "smoke_status_ok": 1
+    }
+  },
+  "workspaceRoot": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Configured ScrapingAnt as the rotation proxy (local .env) and updated the search visibility runner to automatically enable ignoreHTTPSErrors when a scrapingant.com proxy URL is detected. This avoids TLS trust failures seen with ScrapingAnt proxy mode in Firefox/Chromium. Added SEARCH_IGNORE_HTTPS_ERRORS to docs/env example. Verified with a 1-session DuckDuckGo run (Edge provider) using the proxy path.",
+  "commands": [
+    "node -c .\\\\scripts\\\\run-search-visibility-report.mjs",
+    "='duckduckgo'; ='prom-king.xyz'; ='1'; ='1'; ='0'; ='0'; ='1'; npm run report:search-visibility"
+  ],
+  "files": [
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\scripts\\\\run-search-visibility-report.mjs",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\.env",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\.env.example",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\README.md",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\search-visibility\\\\20260524-145030\\\\results.json",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\search-visibility\\\\20260524-145030\\\\summary.md"
+  ],
+  "planPath": "",
+  "contentHash": "80578b4a1b0863d7b3396b7915ab86a67a9a21a21fafadbba1439f0a25f7f588",
+  "git": {
+    "repo": "qa-automation",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+    "branch": "main",
+    "head": "393f6b4",
+    "hasChanges": true
+  }
+}

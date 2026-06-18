@@ -1,0 +1,69 @@
+{
+  "id": "20260616-152642-270-prom-king-48a359fd",
+  "createdAt": "2026-06-16T19:26:42.2704456Z",
+  "createdAtLocal": "2026-06-16 15:26",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change,db-migration,deployment,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): powershell, ssh, scp, pg_dump, psql, git, uv, pnpm, Invoke-WebRequest\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 15:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "powershell",
+      "ssh",
+      "scp",
+      "pg_dump",
+      "psql",
+      "git",
+      "uv",
+      "pnpm",
+      "Invoke-WebRequest"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "unrelated_api_worktree_left": true,
+      "long_running_tasks_applied": false,
+      "estimated_output_tokens": "under_8000",
+      "ovh_db_migrated": true,
+      "pushed_main": true,
+      "public_admin_version": "0.1.7",
+      "db_backup": "\\/opt\\/vaultwares-api-deploy-backups\\/db\\/promking-before-pornstars-20260616T191954Z.dump",
+      "deployment_verified": true
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Implemented the tube-site admin batch interface plan, migrated the OVH promking database from actors/video_actors to pornstars/video_pornstars with a pg_dump backup, recorded the Drizzle migration hash, pushed vaultwares-api main commit 0bd7d2f and shared-tube main commits a1e8a77/e408d2e to trigger deployments, and verified public API/admin routes plus OVH service/database state.",
+  "commands": [
+    "uv run python -m pytest tests/test_promking_batch_contracts.py tests/test_promking_video_filters.py tests/test_promking_fetcher.py -q",
+    "uv run python -m py_compile app\\routers\\promking\\_models.py app\\routers\\promking\\taxonomies.py app\\routers\\promking\\videos.py app\\routers\\promking\\fetcher.py",
+    "pnpm -r typecheck",
+    "pnpm -r build",
+    "ssh -F NUL -i $env:USERPROFILE\\.ssh\\tube-site-vps ubuntu@100.67.25.118 pg_dump/psql migration commands",
+    "git push origin main in vaultwares-api",
+    "git push origin main in shared-tube",
+    "Invoke-WebRequest public API/admin smoke checks"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\_models.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\taxonomies.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\videos.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\fetcher.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\drizzle\\0002_admin_batch_actions.sql",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\db\\schema.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\components\\Header.astro",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\*\\src\\pages\\admin.astro"
+  ],
+  "planPath": "",
+  "contentHash": "48a359fd09d07a17ddc297cbc00b15d6306529ee5cb6965c4c3551836261cd04",
+  "git": null
+}

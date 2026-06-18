@@ -1,0 +1,47 @@
+{
+  "id": "20260610-185638-499-vaultwares-studio-9ed3607b",
+  "createdAt": "2026-06-10T22:56:38.4991360Z",
+  "createdAtLocal": "2026-06-10 18:56",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Write, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 18:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Write",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "User's embedded Viewport tab still misrenders (same widget works top-level — qfluentwidgets window-effects + QWebEngineView compositing suspected; M2 polish item). Shipped tools/view_splat.py: the ViewportTab as a standalone window (what the debug screenshots used) — opens latest started job by default, accepts job dir or any .ply, camera capture functional. Launched it on the user's desktop and verified Scene loaded; left it OPEN for them to fly the backyard. Pushed cec2155+.",
+  "commands": [
+    "view_splat.py launched + Scene loaded (left open)",
+    "git push origin main"
+  ],
+  "files": [
+    "tools/view_splat.py"
+  ],
+  "planPath": "",
+  "contentHash": "9ed3607bda3608644a75d3915581efe04f94a3eaf626c4b71e86ec017636a53f",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "df53d7c",
+    "hasChanges": true
+  }
+}

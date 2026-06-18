@@ -1,0 +1,50 @@
+{
+  "id": "20260612-123439-729-vaultwares-studio-06126bb4",
+  "createdAt": "2026-06-12T16:34:39.7296645Z",
+  "createdAtLocal": "2026-06-12 12:34",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: low\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-12 12:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Viewport tab UI polish, no new features. (1) Top toolbar: status label moved to its own row below the action buttons so it stops competing with Reload/Capture for space. Buttons now setMinimumHeight 30 for consistent click targets. Outer margins 10px / spacing 8px. (2) Side panel split into 3 clear sections with bold 10.5pt headers and thin HLine separators between them: View (camera angle presets), Walk Path (pattern picker + Apply), Captures (camera list + reorder + preview). Each section has its own labelled heading + separator below it. (3) Captures reorder controls (Move Up / Move Down / Delete) compressed into one horizontal row to free vertical space for the list. Camera list got setMinimumHeight 100 so it never collapses to nothing. (4) Consistent button heights everywhere — 30px primary, 28px secondary. (5) Status label gets palette(mid) subtitle styling so it reads as supporting text, not a primary control. Strings: 3 new section headers in EN+QC. Tests: 77/77 still pass, ViewportTab imports clean.",
+  "commands": [
+    "pytest tests/ -x -q --ignore=tests/test_viewer_server.py",
+    "python -c 'ViewportTab import smoke test'"
+  ],
+  "files": [
+    "vaultwares-studio/gui/viewport.py",
+    "vaultwares-studio/gui/strings.py"
+  ],
+  "planPath": "",
+  "contentHash": "06126bb44a0eaa9dfa2544da13ac4d271d756962d267dd6e653f8c51641f2af0",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

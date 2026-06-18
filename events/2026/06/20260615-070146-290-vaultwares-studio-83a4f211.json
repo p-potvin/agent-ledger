@@ -1,0 +1,57 @@
+﻿{
+    "id":  "20260615-070146-290-vaultwares-studio-83a4f211",
+    "createdAt":  "2026-06-15T11:01:46.2903501Z",
+    "createdAtLocal":  "2026-06-15 07:01",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change,commands",
+    "actor":  ":AGENT_NAME",
+    "agentHeader":  "Agent: :AGENT_NAME (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: autopilot (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-15 07:01 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-4-7",
+                    "thinking":  "high",
+                    "mode":  "agent",
+                    "permissions":  "autopilot",
+                    "network":  "local-windows",
+                    "toolsUsed":  [
+                                      "Read",
+                                      "Edit",
+                                      "Write",
+                                      "Bash",
+                                      "Grep"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "GPU SIFT probe was a win: 52sec sequential match for 375 frames (vs 67min for 1734 frames CPU; 70x speedup). Test job recovered locally (423976 gaussians draft preset, gravity-aligned, packed 13MB). Queued cloudy refine on GPU-SIFT image: HF 6a2fdb25234ca64b60124c92 / local-run-20260615-065732. Worker rebuild pushed with TF32 + nvrtc warning fixes: sitecustomize.py drops torch.set_float32_matmul_precision(high) at every python startup (no PyTorch env var for this); nvidia-cuda-nvrtc-cu12 pip-installed for CuDNN runtime kernel compilation. Vast.ai runner scaffolded: vaultwares_studio/runners/vast_ai.py with VastAiConfig (price ceiling, min hardware, ssh key discovery), get/set_vast_api_key keyring helpers, find_best_offer using vast.ai bundles search API, VastAiStageRunner subclass with cost-confirmation gate, _destroy hard-wired to finally block, lifecycle steps (_rent, _wait_for_ssh, _transfer_inputs, _run_remote_worker, _fetch_outputs) stubbed with NotImplementedError + clear TODOs for first paid integration test.",
+    "commands":  [
+                     ".venv/Scripts/python.exe -m pytest tests/ -x -q --ignore=tests/test_viewer_server.py",
+                     ".venv/Scripts/python.exe tools/push_worker_space.py",
+                     ".venv/Scripts/python.exe tools/headless_remote_run.py --video cloudy1 --video cloudy2 --preset refine --refine-from local-run-20260614-234541 --yes"
+                 ],
+    "files":  [
+                  "docker/worker/recon_entrypoint.py",
+                  "docker/worker/Dockerfile",
+                  "vaultwares_studio/runners/vast_ai.py",
+                  "vaultwares_studio/runners/__init__.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "83a4f211a5f4ca1792db8cf6c9539cf81ac86a4ca654187ad18a88a0d34e31ba",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "main",
+                "head":  "fac0979",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "20260617-120619-586-prom-king-a8624716",
+  "createdAt": "2026-06-17T16:06:19.5862677Z",
+  "createdAtLocal": "2026-06-17 12:06",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: ovhcloud-vps via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Bash, SSH\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-17 12:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "ovhcloud-vps via tailnet",
+    "toolsUsed": [
+      "Bash",
+      "SSH"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Wired FlareSolverr proxy into Prowlarr on ovhcloud. Both containers share docker network vw-media_default so prowlarr reaches flaresolverr at http://flaresolverr:8191/ (verified HTTP 200 from inside the prowlarr container). User had already created tag 'flaresolverr' (id=1); POSTed indexerProxy via API (test=200, create=201). Final state: 1 proxy registered (id=1, impl=FlareSolverr, host=http://flaresolverr:8191/, requestTimeout=60s, tags=[1]). Operator next step: apply the flaresolverr tag to any indexer that needs Cloudflare bypass when adding adult indexers.",
+  "commands": [
+    "curl POST /api/v1/indexerProxy/test",
+    "curl POST /api/v1/indexerProxy"
+  ],
+  "files": [
+    "--ovhcloud prowlarr config (no repo file)"
+  ],
+  "planPath": "",
+  "contentHash": "a8624716216b60e2d49df48dab5158d364963b9692cdd76ec26487c079605093",
+  "git": null
+}

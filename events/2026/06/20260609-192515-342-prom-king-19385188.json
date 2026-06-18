@@ -1,0 +1,86 @@
+{
+  "id": "20260609-192515-342-prom-king-19385188",
+  "createdAt": "2026-06-09T23:25:15.3428797Z",
+  "createdAtLocal": "2026-06-09 19:25",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch, multi_tool_use.parallel\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-09 19:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "multi_tool_use.parallel"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "generated_artifacts_removed": "true",
+      "ids_mode_default": "monitor",
+      "redteam_dry_run_verified": "true",
+      "external_live_red_team_run": "skipped_without_volume_approval"
+    },
+    "metrics": {
+      "shared_tube_build": "passed",
+      "shared_tube_typecheck": "passed",
+      "shared_tube_lint": "passed",
+      "prelanding_ids_tests": 2,
+      "qa_ids_tests": 14,
+      "shared_ids_tests": 3
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Implemented bot attack/defense continuation: QA IDS scoring core and Express adapter, red-team safety gates and dry-run run schema, prelanding Express IDS middleware, shared-tube Astro IDS middleware for PKT/FXV, env/docs updates, and targeted verification. Preserved existing search visibility runner edit.",
+  "commands": [
+    "qa-automation: npm run test:ids",
+    "qa-automation: python -m py_compile qa_automation_routine.py",
+    "qa-automation: npm run test:list",
+    "qa-automation: npm run test:funnel and npm run test:postback against local server",
+    "qa-automation: REDTEAM_DRY_RUN=1 npm run report:own-domain-stealth",
+    "qa-automation: REDTEAM_DRY_RUN=1 python qa_automation_routine.py --urls http://127.0.0.1:3000 --platform playwright --depth 1 --mode aggressive",
+    "prelanding-page: pnpm install --force",
+    "prelanding-page: pnpm vitest run server/security/ids.test.ts",
+    "prelanding-page: pnpm check",
+    "shared-tube: pnpm --filter @promking/shared-tube test -- src/security/ids.test.ts",
+    "shared-tube: pnpm -r typecheck",
+    "shared-tube: pnpm -r build",
+    "shared-tube: pnpm lint"
+  ],
+  "files": [
+    "qa-automation/lib/ids-core.js",
+    "qa-automation/lib/ids-express.js",
+    "qa-automation/lib/red-team-safety.js",
+    "qa-automation/server.js",
+    "qa-automation/qa_automation_routine.py",
+    "qa-automation/scripts/run-own-domain-stealth.mjs",
+    "qa-automation/.env.example",
+    "qa-automation/README.md",
+    "qa-automation/ANTI_BOT_TEST_PLAN.md",
+    "qa-automation/TODO.md",
+    "qa-automation/tests/ids-core.test.mjs",
+    "qa-automation/tests/ids-qa-server.test.mjs",
+    "qa-automation/tests/red-team-safety.test.mjs",
+    "prelanding-page/server/security/ids.ts",
+    "prelanding-page/server/security/ids.test.ts",
+    "prelanding-page/server/_core/index.ts",
+    "prelanding-page/.env.example",
+    "prelanding-page/pnpm-lock.yaml",
+    "shared-tube/shared/src/security/ids.ts",
+    "shared-tube/shared/src/security/ids.test.ts",
+    "shared-tube/apps/pkt/src/middleware.ts",
+    "shared-tube/apps/fxv/src/middleware.ts",
+    "shared-tube/.env.example"
+  ],
+  "planPath": "",
+  "contentHash": "193851884b5b9d6c16853e8d8f7da7ff3b0fe6d08cb60b99371b749f7bc1d7ec",
+  "git": null
+}

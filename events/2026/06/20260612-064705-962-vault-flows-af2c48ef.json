@@ -1,0 +1,40 @@
+{
+  "id": "20260612-064705-962-vault-flows-af2c48ef",
+  "createdAt": "2026-06-12T10:47:05.9625407Z",
+  "createdAtLocal": "2026-06-12 06:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 06:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Updated vault-flows Vite proxy and workflow helper scripts to default to the OVH-hosted VaultWares API, and refreshed comments from pipelines wording to vaultwares-api ownership.",
+  "commands": [
+    "python -m py_compile vault-flows scripts",
+    "git diff --check"
+  ],
+  "files": [
+    "vault-flows/vite.config.ts",
+    "vault-flows/scripts/probe_workflows.py",
+    "vault-flows/scripts/dump_workflows_diagnostic.py",
+    "vault-flows/scripts/convert_proven_workflows.py"
+  ],
+  "planPath": "",
+  "contentHash": "af2c48efdeebf702f46ab390cae23111a543fdf23634197f49f3ea0c467af31f",
+  "git": null
+}

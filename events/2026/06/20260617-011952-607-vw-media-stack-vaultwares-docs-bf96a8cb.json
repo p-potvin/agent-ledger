@@ -1,0 +1,47 @@
+{
+  "id": "20260617-011952-607-vw-media-stack-vaultwares-docs-bf96a8cb",
+  "createdAt": "2026-06-17T05:19:52.6076494Z",
+  "createdAtLocal": "2026-06-17 01:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-media-stack / vaultwares-docs",
+  "kind": "code-change,commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-6\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + vps-ovhcloud via Tailscale SSH)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, Edit, Read, WebFetch, Grep\r\nMCP servers accessed (this reply): computer-use\r\nTime: 2026-06-17 01:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-6",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + vps-ovhcloud via Tailscale SSH",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Read",
+      "WebFetch",
+      "Grep"
+    ],
+    "mcpServersAccessed": "computer-use"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Deployed Comet Stremio addon on vps-ovhcloud. Created /opt/vw-comet/ compose project with 3 containers: comet (g0ldyy/comet on port 5171), comet-postgres (PostgreSQL 18), comet-vpn (gluetun pinned to Mullvad ca-mtr-wg-002 Montreal, exit IP 146.70.198.153). Comet proxies all outbound traffic through the VPN HTTP proxy (GLOBAL_PROXY_URL=http://comet-vpn:8888). Joined vw-media_default Docker network so Comet can reach prowlarr/jackett/etc. Added UFW rule for port 5171 on tailscale0. Updated vaultwares-docs network-map.mdx with explicit SSH command block for OVH VPS. Port 5170 blocked by Tailscale ACL so used 5171 instead.",
+  "commands": [
+    "docker compose up -d (comet stack)",
+    "ufw allow 5171/tcp on tailscale0",
+    "ssh ubuntu@100.67.25.118"
+  ],
+  "files": [
+    "/opt/vw-comet/docker-compose.yml",
+    "/opt/vw-comet/.env",
+    "/opt/vw-comet/.env.comet",
+    "vaultwares-docs/docs-content/operations/network-map.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "bf96a8cb20cbc217dfa55312d58ecfe38518ab65383411e53642f62e7b3ba7ca",
+  "git": null
+}

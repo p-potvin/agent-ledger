@@ -1,0 +1,44 @@
+{
+  "id": "20260614-071126-071-health-ledger-09ac543d",
+  "createdAt": "2026-06-14T11:11:26.0715660Z",
+  "createdAtLocal": "2026-06-14 07:11",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-14 07:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Investigated Health Ledger degraded state after user pointed to .access/protonmail-bridge-smtp-credentials.txt. Verified the credential file SMTP block already matches health-ledger .env, so degradation is not from a stale local copy. Greencloud Proton Bridge is listening on 127.0.0.1:1025/1143, but the Bridge account is locked and SMTP auth fails with 454 invalid username or password. OVH Bridge can listen when started under ubuntu but reports no active accounts. Token Joker reports token:bridge-smtp-password as high invalid; other config_required items are low because optional env vars are not visible to token-joker. No secret values logged.",
+  "commands": [
+    "Parse credential file shape without values",
+    "Compare SMTP_USER/SMTP_PASS equality between credential file and health-ledger .env",
+    "Inspect Greencloud Bridge CLI state with redaction",
+    "Run Greencloud SMTP verify through nodemailer without printing credentials",
+    "Run token-joker --once and inspect attention summary",
+    "Verify Bridge listener and health-ledger services"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\.access\\protonmail-bridge-smtp-credentials.txt",
+    "health-ledger/.env",
+    "/etc/health-ledger/alarm.env",
+    "/root/proton-bridge-headless.log"
+  ],
+  "planPath": "",
+  "contentHash": "09ac543d71d6cdc9a4132b9f345dd1cd0eef7f633445194eacc74d222dd9a5c2",
+  "git": null
+}

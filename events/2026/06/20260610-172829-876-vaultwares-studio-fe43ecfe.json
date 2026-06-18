@@ -1,0 +1,49 @@
+{
+  "id": "20260610-172829-876-vaultwares-studio-fe43ecfe",
+  "createdAt": "2026-06-10T21:28:29.8767548Z",
+  "createdAtLocal": "2026-06-10 17:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: low\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + huggingface.co API)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 17:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + huggingface.co API",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "M1 LIVE VERIFICATION PASSED. backyard_99s_cloudy.mp4: 280/280 frames registered (CPU SIFT, avg 12.5k keypoints, 2407 verified pairs), splatfacto draft trained to completion, 477,731 gaussians exported. Artifacts verified locally: cloud.ply 107MB full-attribute splat (is_gaussian_ply True), cloud_preview.ply 2.9MB, cloud.usda 367MB, model.zip checkpoint (for M2 ns-render). All 5 stages complete, degraded=False, runner=hf-jobs, USD 0.36 actual (28.5 min; cost optimizations queued in TODO). Total verification spend ~USD 1.10 over the session. M0+M1 now fully verified end-to-end; user can fly the backyard in the Viewport tab.",
+  "commands": [
+    "headless_remote_run -> exit 0",
+    "is_gaussian_ply check",
+    "git push origin main"
+  ],
+  "files": [
+    "TODO.md",
+    "data/jobs/local-run-20260610-165858/reconstruction/cloud.ply"
+  ],
+  "planPath": "",
+  "contentHash": "fe43ecfe77448a24019613ee8614aa0b69e359a9621735143020eb6c0c8b14e5",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "8d97f0f",
+    "hasChanges": true
+  }
+}

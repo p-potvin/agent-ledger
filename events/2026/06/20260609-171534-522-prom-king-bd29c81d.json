@@ -1,0 +1,60 @@
+{
+  "id": "20260609-171534-522-prom-king-bd29c81d",
+  "createdAt": "2026-06-09T21:15:34.5226427Z",
+  "createdAtLocal": "2026-06-09 17:15",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-09 17:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "english_only": true,
+      "search_seo_pages": true,
+      "visual_gate_pending": true
+    },
+    "metrics": {
+      "local_smoke_pages": 4,
+      "frontend_tests": 4,
+      "sitemap_seed_cap": 500
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Added SEO-oriented search pages for PKT and FXV in shared-tube: canonical slug normalization, crawlable search landing clusters, dynamic search result pages with thin-page noindex, and bounded sitemap search seed expansion. Verified tests, typecheck, lint, build, and local smoke checks.",
+  "commands": [
+    "pnpm --filter @promking/shared-tube test -- src/seo/search.test.ts src/api/promking-api.test.ts",
+    "pnpm -r typecheck",
+    "pnpm lint",
+    "pnpm -r build",
+    "Invoke-WebRequest http://localhost:4322/search",
+    "Invoke-WebRequest http://localhost:4322/search/Free%20HD!!!%20XXX",
+    "Invoke-WebRequest http://localhost:4321/search",
+    "Invoke-WebRequest http://localhost:4321/search/Premium%20Studio!!!"
+  ],
+  "files": [
+    "shared-tube/shared/src/seo/search.ts",
+    "shared-tube/shared/src/seo/search.test.ts",
+    "shared-tube/apps/pkt/src/pages/search.astro",
+    "shared-tube/apps/pkt/src/pages/search/[q].astro",
+    "shared-tube/apps/pkt/src/pages/sitemap.xml.ts",
+    "shared-tube/apps/fxv/src/pages/search.astro",
+    "shared-tube/apps/fxv/src/pages/search/[q].astro",
+    "shared-tube/apps/fxv/src/pages/sitemap.xml.ts",
+    "shared-tube/apps/pkt/src/tube.ts",
+    "shared-tube/apps/fxv/src/tube.ts"
+  ],
+  "planPath": "",
+  "contentHash": "bd29c81d76a1fee81556cc18cf450504fda7d5b0935ba77aeb04014ceaf376f2",
+  "git": null
+}

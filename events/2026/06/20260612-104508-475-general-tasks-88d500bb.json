@@ -1,0 +1,43 @@
+{
+  "id": "20260612-104508-475-general-tasks-88d500bb",
+  "createdAt": "2026-06-12T14:45:08.4752982Z",
+  "createdAtLocal": "2026-06-12 10:45",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 10:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Rewrote local Windows scheduled tasks for HealthLedger and input tracker to use the VaultWares hidden scheduled-task pattern. Updated HealthLedgerAlarmJoker, HealthLedgerProbeJoker, HealthLedgerTokenJoker, HealthLedgerCiJoker, and VaultWares-InputTracker to launch through C:\\Windows\\System32\\conhost.exe --headless with PowerShell -WindowStyle Hidden. Set Task Scheduler Hidden=True for all five. HealthLedgerCiJoker was re-registered from the stored-password principal to the same elevated BUILTIN\\Administrators group principal used by the other tasks so the hidden setting could be applied without a password. Verification showed all five hidden, using conhost, and LastTaskResult=0.",
+  "commands": [
+    "Get-ScheduledTask -TaskName healthLedger/input-tracker patterns",
+    "Set-ScheduledTask with conhost.exe --headless actions and Hidden=True",
+    "Register-ScheduledTask HealthLedgerCiJoker with BUILTIN\\Administrators group principal",
+    "Get-ScheduledTaskInfo verification for five target tasks"
+  ],
+  "files": [
+    "C:\\Windows\\System32\\Tasks\\HealthLedgerAlarmJoker",
+    "C:\\Windows\\System32\\Tasks\\HealthLedgerCiJoker",
+    "C:\\Windows\\System32\\Tasks\\HealthLedgerProbeJoker",
+    "C:\\Windows\\System32\\Tasks\\HealthLedgerTokenJoker",
+    "C:\\Windows\\System32\\Tasks\\VaultWares-InputTracker"
+  ],
+  "planPath": "",
+  "contentHash": "88d500bb030feb28b09656e402bdb7a5f60eddc5d44c4ff7a89d9848b8386d30",
+  "git": null
+}

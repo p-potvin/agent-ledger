@@ -1,0 +1,58 @@
+﻿{
+    "id":  "20260612-152835-391-prom-king-0bcbd7ed",
+    "createdAt":  "2026-06-12T19:28:35.3917864Z",
+    "createdAtLocal":  "2026-06-12 15:28",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "code-change,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): replace_file_content, write_to_file, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 15:28 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "write_to_file",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+    "summary":  "Refactored PornXP thumbnail extractor to support data-src and avoid spinner placeholders. Implemented premium Safe Mode toggle and badges for non-Pro/Pro users with glassmorphic styles. Re-built monorepo successfully.",
+    "commands":  [
+                     "pnpm build"
+                 ],
+    "files":  [
+                  "shared-tube/shared/src/fetcher/sources/pornxp.ts",
+                  "shared-tube/shared/src/security/safe-mode.ts",
+                  "shared-tube/shared/src/index.ts",
+                  "shared-tube/shared/package.json",
+                  "shared-tube/shared/src/components/Header.astro",
+                  "shared-tube/shared/src/components/PlayerModal.astro",
+                  "shared-tube/shared/src/components/VideoCard.astro",
+                  "shared-tube/apps/pkt/src/pages/videos/[slug].astro",
+                  "shared-tube/apps/fxv/src/pages/videos/[slug].astro"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\0b4efc5b-0936-46da-8370-2250d51d4176\\implementation_plan.md",
+    "contentHash":  "0bcbd7ed0702c1496915653e2ca25890190d212dcc23f8f0a1771ae5fd981343",
+    "git":  {
+                "repo":  "vaultwares-api",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+                "branch":  "main",
+                "head":  "6d59971",
+                "hasChanges":  true
+            }
+}

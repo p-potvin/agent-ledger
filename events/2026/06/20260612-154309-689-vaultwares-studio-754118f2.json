@@ -1,0 +1,38 @@
+{
+  "id": "20260612-154309-689-vaultwares-studio-754118f2",
+  "createdAt": "2026-06-12T19:43:09.6890427Z",
+  "createdAtLocal": "2026-06-12 15:43",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "general,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: low\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-12 15:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": "Bash",
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "User queued recon after worker push. HF Job 6a2c611b871c005b5352b810 created at 2026-06-12 19:42 UTC, status SCHEDULING. This is the first run with the hardened recon_entrypoint: retry_mapper expanded to 4 attempts, exhaustive replaced by vocab_tree, MIN_REGISTERED scaled to 50% of frame count, standard preset at downscale=1. Will watch passively for completion via HF Jobs API; not polling.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "754118f216b30e74d0f4575d7f1c8b76c777f5c38feb98d6dad371cee7027be9",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "20260615-023146-990-monitoring-and-prom-king-tube-operations-07fc4aa4",
+  "createdAt": "2026-06-15T06:31:46.9903016Z",
+  "createdAtLocal": "2026-06-15 02:31",
+  "timezone": "Eastern Standard Time",
+  "project": "Monitoring and Prom-King tube operations",
+  "kind": "code-change,verification",
+  "actor": "Codex",
+  "agentHeader": "Agent: Codex (role: main)\r\nModel: GPT-5\r\nThinking: high\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-15 02:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "high",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "linkvertise_writes_performed": false,
+      "shared_tube_runner_online": true,
+      "ovh_deployed": true,
+      "dry_run_verified": true
+    },
+    "metrics": {
+      "shared_tube_action_run": 27527592394,
+      "linkvertise_candidates_verified": 2
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+  "summary": "Installed and verified the shared-tube OVH self-hosted runner/deploy workflow, then added and deployed VaultWares API Linkvertise automation that generates deterministic Linkvertise URLs from link_sharing.fileboom_url rows. Verified shared-tube action run 27527592394 succeeded, vaultwares-api 0.2.2 is live on OVH, /healthz is OK, and dry-run sync with refresh=true regenerated 2 Fileboom-backed candidates without writing.",
+  "commands": [
+    "pnpm -r typecheck",
+    "pnpm -r build",
+    "gh run watch 27527592394 --repo Prom-King/shared-tube --exit-status",
+    ".\\.venv\\Scripts\\python.exe -m pytest tests/test_linkvertise_sync.py tests/test_promking_video_filters.py -q",
+    "python -m py_compile app\\services\\zipper\\linkvertise.py app\\services\\zipper\\post_download.py app\\routers\\promking\\link_sharing.py api\\app.py",
+    "git push origin main",
+    "ssh -F none -i \"$env:USERPROFILE\\.ssh\\tube-site-vps\" ubuntu@100.67.25.118 \"sudo systemctl restart vaultwares-api\"",
+    "curl -X POST http://127.0.0.1:9001/api/promking/link-sharing/linkvertise/sync --data {dry_run:true,refresh:true,limit:2,target_mode:fileboom}"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\.github\\workflows\\deploy-ovh.yml",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\scripts\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\services\\zipper\\linkvertise.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\services\\zipper\\post_download.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\link_sharing.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\tests\\test_linkvertise_sync.py"
+  ],
+  "planPath": "",
+  "contentHash": "07fc4aa4155ca4b705a4d678ff1c34942158bdf554d7ac0fa6f83b30ad31c66c",
+  "git": {
+    "repo": "vaultwares-api",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+    "branch": "main",
+    "head": "1c7116f",
+    "hasChanges": true
+  }
+}

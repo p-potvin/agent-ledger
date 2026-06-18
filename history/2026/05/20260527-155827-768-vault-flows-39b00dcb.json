@@ -1,0 +1,50 @@
+{
+  "id": "20260527-155827-768-vault-flows-39b00dcb",
+  "createdAt": "2026-05-27T19:58:27.7686349Z",
+  "createdAtLocal": "2026-05-27 15:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-27 15:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Round 3 feedback fixes — eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. Added a useEffect in FlowCanvas that propagates store data changes (params, label) to rfNodes while leaving position/measured state untouched (preserves the visibility:hidden fix from earlier sessions). Identity-checks on params and label avoid spurious re-renders. (2) Toast system: new src/ui/components/Toast.tsx with module-level event hub (pushToast/dismissToast from anywhere) and ToastHost mounted at App root; renders top-right stack with auto-dismiss (6s default, 4s for success); three tones (error/success/info) with matching tokens. App.tsx now pushes 'success' on clean run, 'error' on per-node or top-level failure + auto-opens the inspector. (3) Execution errors moved to TOP of NodeParamPanel — banner with the failure detail + a Reset button; the old bottom error block was removed. Per-node text/json outputs still render below (image results render inline ON the comfyui_workflow node). (4) Removed the auto-created Display node from loadFromComfyWorkflow; the master flow is now just the single comfyui_workflow node, with results rendering inline (gallery + thumbnails). Eliminates the disconnected 'Result' node that felt orphaned. (5) Inline image result on ComfyUIWorkflowNode: when the workflow succeeds and the result has imageUrl/imageUrls, the gallery renders inside the node card itself; click any thumb opens full-size in a new tab. (6) New InlineSeedInput in canvas/nodes/inline.tsx — number input with a dice button (Lucide Dice5) that fills a 31-bit random int. ComfyUIWorkflowNode routes any input key named 'seed' through this control. (7) Size presets dropdown — when a workflow exposes both 'width' and 'height' in input_paths, a single 'size' InlineSelect drives both (512², 768², 1024², portrait/landscape variants, Custom reveals manual w/h number inputs). Exported SIZE_PRESETS array from inline.tsx. (8) NodeId pill — small mono badge at the bottom of every node card showing 'node#<short-id>'; tooltip on hover reveals the full id. shortenNodeId helper formats numeric/short/UUID ids consistently. (9) Persisted last-used inputs: ComfyUIWorkflowNode reads localStorage['vw:lastInputs:<workflow_id>'] on mount if all inputs are empty, prefills non-image fields (upload tokens excluded — they expire); debounced 400ms save on every input change. Each user gets their own browser-local memory of last prompt/seed/size per workflow. Deployed dist (assets/index-BxACQy3N.js).",
+  "commands": [
+    "npm run build",
+    "scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/"
+  ],
+  "files": [
+    "vault-flows/src/canvas/FlowCanvas.tsx",
+    "vault-flows/src/canvas/nodes/BaseNode.tsx",
+    "vault-flows/src/canvas/nodes/inline.tsx",
+    "vault-flows/src/canvas/nodes/ComfyUIWorkflowNode.tsx",
+    "vault-flows/src/store/flowStore.ts",
+    "vault-flows/src/ui/NodeParamPanel.tsx",
+    "vault-flows/src/ui/components/Toast.tsx",
+    "vault-flows/src/App.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "39b00dcb7434f096f071baf7ef766222a7f3188d7362595b044eb68d8ad9881a",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "f4e4b75",
+    "hasChanges": true
+  }
+}

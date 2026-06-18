@@ -1,0 +1,53 @@
+{
+  "id": "20260610-132524-085-vaultwares-studio-2e12adb1",
+  "createdAt": "2026-06-10T17:25:24.0853881Z",
+  "createdAtLocal": "2026-06-10 13:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + huggingface.co API)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Edit, Write, Read, WebSearch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 13:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + huggingface.co API",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Read",
+      "WebSearch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Live verification round: echo test PASSED (15s, ~USD 0.00, full upload/exec/download round-trip) after user added USD 10 credits. Real-video run (my-room.mp4, 12s iPhone clip, 24 frames, draft preset): local stages + 50MB frames.zip upload OK, but run_job with image=hf.co/spaces/clopeux/vw-studio-worker returns 500 'Failed to call Jobs backend' (reproduced 3x). Root cause hypothesis: Docker Space stuck in APP_STARTING (no HTTP healthcheck port) so Jobs backend cannot use it as image source. Fixes: (1) pipeline now catches all exceptions (HfHubHTTPError is not RuntimeError — fallback previously bypassed); (2) vw_stage.py idle mode now serves HTTP 200 stub on :7860 so the Space reaches RUNNING. Rebuild + retry probe running in background. Also answered user GitHub-token concern: no GitHub credentials touched in any session; only HF token stored in keyring; suggested checking GitHub/HF security logs and that token rotation on HF side logs out old sessions.",
+  "commands": [
+    "run_echo_smoke_test -> OK 15s",
+    "headless_remote_run.py --preset draft --yes -> 500 at run_job",
+    "restart_space + retry -> 500 (APP_STARTING)",
+    "push_worker_space.py rebuild + probe (bg)"
+  ],
+  "files": [
+    "vaultwares_studio/pipeline.py",
+    "docker/worker/vw_stage.py",
+    "tools/headless_remote_run.py"
+  ],
+  "planPath": "",
+  "contentHash": "2e12adb1e6007166d9eaf550dfee373104b1bd9da4f8d9da82b1bacfb47cbc34",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "4ffc62f",
+    "hasChanges": true
+  }
+}

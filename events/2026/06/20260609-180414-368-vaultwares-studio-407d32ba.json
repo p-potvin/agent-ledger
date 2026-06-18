@@ -1,0 +1,44 @@
+{
+  "id": "20260609-180414-368-vaultwares-studio-407d32ba",
+  "createdAt": "2026-06-09T22:04:14.3682560Z",
+  "createdAtLocal": "2026-06-09 18:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: plan\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Agent, WebSearch, WebFetch, Write, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-09 18:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "plan",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Agent",
+      "WebSearch",
+      "WebFetch",
+      "Write",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Planned vaultwares-studio v1.0 (planning only, no implementation). Explored repo state (5-stage pipeline, PySide6 GUI, placeholders for Cosmos/Isaac/RL). Approved milestone plan M0-M6, remote-first: HF Jobs primary compute backend (PRO, per-minute, custom Docker worker image with COLMAP/nerfstudio/habitat/Cosmos), SSH 48GB GPU backend second; local PC stays light (hosts VaultWares API). Habitat-Sim runs natively in Linux worker (no WSL2). Milestones: M0 StageRunner+HfJobs runner+manifest v2+cost guardrails; M1 remote splatfacto reconstruction+full-attr PLY+PLY-to-USD; M2 QWebEngineView+GaussianSplats3D viewport, keyframed camera staging, gui/ split; M3 Robot Lab (gridnav local CPU + Habitat remote, SB3 PPO PointNav); M4 Cosmos Reason 2-2B remote annotation+ObjectNav; M5 packaging/onboarding/spend dashboard (EN/QC deferred per user); M6 Isaac deferred. cuTile assessed: watch item only. Researched: HF Spaces/ZeroGPU not viable (120s cap), HF Jobs is. Plan persisted to .omx/plans/plan-v1-remote-first-20260609.md; ROADMAP.md rewritten.",
+  "commands": [
+    "Explore/Plan subagents",
+    "WebSearch HF Jobs + cuTile"
+  ],
+  "files": [
+    "vaultwares-studio\\.omx\\plans\\plan-v1-remote-first-20260609.md",
+    "vaultwares-studio\\ROADMAP.md"
+  ],
+  "planPath": "",
+  "contentHash": "407d32ba59674dad207f047f6e2ec0d5699ef5a99a91c9de5538a1631b72336a",
+  "git": null
+}

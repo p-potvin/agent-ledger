@@ -1,0 +1,50 @@
+﻿{
+    "id":  "20260526-194302-460-vault-explorer-1e23554c",
+    "createdAt":  "2026-05-26T23:43:02.4601404Z",
+    "createdAtLocal":  "2026-05-26 19:43",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 19:43 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Extended the subtitle lookup and download systems to support remote media streaming URLs, query by media titles, and gracefully cache to temp directories. Programmatically hid Next and Previous player and PiP overlay buttons during streaming modes while preserving their visibility for local file sequences.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\src\\scanner.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\preload.js",
+                  "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\player.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "1e23554c9ac2faa2141754dbf5d6e9b076361d2cb2e9725d202dad19f597fc58",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

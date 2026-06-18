@@ -1,0 +1,50 @@
+{
+  "id": "20260610-163054-070-vaultwares-studio-adfb0201",
+  "createdAt": "2026-06-10T20:30:54.0705341Z",
+  "createdAtLocal": "2026-06-10 16:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + huggingface.co API)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Edit, Read, TaskStop\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 16:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + huggingface.co API",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Read",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "BREAKTHROUGH: 3-registered pattern across 3 different videos isolated to the WORKER, not footage. Local OpenCV SIFT diagnostic on the exact failing backyard frames: 4000 keypoints/frame, 700-2500 RANSAC inliers per consecutive pair — footage excellent. Worker container COLMAP GPU feature path silently produces garbage on L4 (suspected CUDA arch/driver mismatch). Cancelled the doomed in-flight job (saved spend). Fix pushed: ns-process-data --no-gpu (CPU SIFT) + colmap database.db telemetry (keypoints/raw matches/verified matches logged per attempt). Worker rebuilding; backyard rerun chained in background. pycolmap bindings crashed natively on Windows (unusable for diagnostics); OpenCV path worked.",
+  "commands": [
+    "local OpenCV SIFT diagnostic",
+    "cancel_job 6a29c358",
+    "push_worker_space + monitor + headless rerun (bg)",
+    "git push origin main"
+  ],
+  "files": [
+    "docker/worker/recon_entrypoint.py"
+  ],
+  "planPath": "",
+  "contentHash": "adfb0201846dc8af13d51591ec01c6eb616b26b6415dce45c8720bcd0a2a0e74",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "1899fba",
+    "hasChanges": true
+  }
+}

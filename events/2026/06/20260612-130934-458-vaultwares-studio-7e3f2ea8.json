@@ -1,0 +1,43 @@
+{
+  "id": "20260612-130934-458-vaultwares-studio-7e3f2ea8",
+  "createdAt": "2026-06-12T17:09:34.4588769Z",
+  "createdAtLocal": "2026-06-12 13:09",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "general,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, TaskOutput\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-12 13:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "TaskOutput"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Second consecutive HF Job COLMAP failure on user's video input. Status: still RUNNING in exhaustive matching fallback (HF Job 6a2c2ff4871c005b5352b55b on backyard_134s_sunny.mp4), 25 min in. Sequential matching finished retry_mapper 2 with 2/270 images registered. Root cause is input video quality, not pipeline: keypoint match rate is 150-180/5000-8000 = 2-3% between consecutive frames. SfM needs ~20%+ for stable registration. Backyards are a known-hard SfM target due to (a) large textureless areas (grass, sidewalks, sky), (b) repeating textures (fence slats, lawn) that produce false matches, (c) sunlight shadow drift between frames. Yesterday's cloudy backyard succeeding 280/280 was lucky given the same underlying constraints. Recommended user re-record with: textured scene focus (around plants/structures, not open lawn), slower camera movement (70%+ frame overlap), consistent lighting (cloudy actually beats sunny for SfM). Awaiting user decision: kill now (lose ~0.33 USD), let exhaustive finish (probably succeeds but 30-45 min more + 0.40-0.60 USD more), or accept partial reconstruction.",
+  "commands": [
+    "python -c 'HfApi inspect_job + fetch_job_logs on 6a2c2ff4871c005b5352b55b'"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "7e3f2ea89cdca311770f2eda513286fa6b29a2a9f20a4a34618df2a38afe5c62",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

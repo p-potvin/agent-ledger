@@ -1,0 +1,52 @@
+{
+  "id": "20260611-174538-549-vaultwares-studio-6a6a8344",
+  "createdAt": "2026-06-11T21:45:38.5493284Z",
+  "createdAtLocal": "2026-06-11 17:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Grep\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-11 17:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Three fixes for post-alignment camera behavior. (1) Diagnosed 'inverted on 2 axes' as OrbitControls crossing the gimbal pole — default min/maxPolarAngle is [0, pi] so dragging through straight-down flips both up and right axes at once. Fix: viewer.js now sets viewer.controls.minPolarAngle/maxPolarAngle to [0.05, pi-0.05] right after viewer.start(), mirroring the clamp the axis gizmo already had. (2) Captured cameras (Spiral 1-7 in local-run-20260610-165858) were stored in the pre-alignment frame so Preview Path would fly to a stale lookAt point. Added _rewrite_captured_cameras to gravity_align: applies the same rotation matrix to every pose's position/lookAt/up using a tmp+replace write. Extended align_cloud signature with captured_cameras_path kwarg and wired pipeline._gravity_align to pass usd_dir / captured_cameras.json. (3) Retroactively rotated the 7 Spiral captures on yesterday's job using the matrix already saved to summary.json (backed up to captured_cameras.pre_align_backup.json first); all 7 still share the same lookAt as expected, now ~(-0.11, 0.28, -0.45) which sits near the aligned cloud centroid. Confirmed initial framing math: position (-0.15, 1.00, 2.10) at pitch 18.4 deg below horizon, NOT top-down — the user's top-down screenshot was somewhere they orbited to. Tests: tests/test_gravity_align.py +1 case for captured-camera rotation incl up vector and missing-up handling. Full focused suite 28/28 pass.",
+  "commands": [
+    "pytest tests/test_gravity_align.py tests/test_walk_patterns.py tests/test_camera_paths.py",
+    "python rotate_captured_cameras.py (one-off)"
+  ],
+  "files": [
+    "vaultwares-studio/vaultwares_studio/webviewer/viewer.js",
+    "vaultwares-studio/vaultwares_studio/gravity_align.py",
+    "vaultwares-studio/vaultwares_studio/pipeline.py",
+    "vaultwares-studio/tests/test_gravity_align.py",
+    "vaultwares-studio/data/jobs/local-run-20260610-165858/usd/captured_cameras.json"
+  ],
+  "planPath": "",
+  "contentHash": "6a6a8344c06df769fc2d5bee356aa2ad146807e79aab942e13646a4cb989117d",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

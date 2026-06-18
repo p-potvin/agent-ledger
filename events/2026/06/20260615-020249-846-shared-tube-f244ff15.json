@@ -1,0 +1,53 @@
+{
+  "id": "20260615-020249-846-shared-tube-f244ff15",
+  "createdAt": "2026-06-15T06:02:49.8469274Z",
+  "createdAtLocal": "2026-06-15 02:02",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: medium\r\nMode: default\r\nPermissions: never (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell, ssh, systemctl, rg, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-15 02:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "medium",
+    "mode": "default",
+    "permissions": "never",
+    "network": "enabled",
+    "toolsUsed": [
+      "PowerShell",
+      "ssh",
+      "systemctl",
+      "rg",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Verified shared-tube does not currently have a GitHub Actions deploy workflow or an active OVH vw-webhookd runner; deployment was manual. Canonical deploy flow remains GitHub webhook to greencloud vw-webhookd, not GitHub Actions server deploy.",
+  "commands": [
+    "rg/check .github workflows and deploy scripts in shared-tube",
+    "ssh -F none to OVH: systemctl/list deploy runner and webhook services",
+    "read deployment-flow/services-inventory/webhook-secret-rotation/deploy-alerts runbooks",
+    "gh api repos/Prom-King/shared-tube/hooks"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\scripts\\vw-webhookd.targets.yml",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\scripts\\deploy-shared-tube.sh",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\deployment-flow.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "f244ff15ce424462c3e04bbaec9db12b51d6a2625e6140b28313d0e90e80be58",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "c685158",
+    "hasChanges": false
+  }
+}

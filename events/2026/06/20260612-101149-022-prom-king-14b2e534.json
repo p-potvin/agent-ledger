@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260612-101149-022-prom-king-14b2e534",
+    "createdAt":  "2026-06-12T14:11:49.0224519Z",
+    "createdAtLocal":  "2026-06-12 10:11",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-1.5-pro\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): write_to_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 10:11 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-1.5-pro",
+                    "thinking":  "medium",
+                    "mode":  "agent",
+                    "permissions":  "bypass",
+                    "network":  "local",
+                    "toolsUsed":  "write_to_file",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Retrieved valid admin JWT bearer token from vaultwares-api on vps-ovhcloud and wrote it to .access/bearer_token.txt for user authentication.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\.access\\bearer_token.txt"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\0b4efc5b-0936-46da-8370-2250d51d4176\\implementation_plan.md",
+    "contentHash":  "14b2e53436913ae5c8fcc883796141f4095bfcbde48d03b62ef0f3bd77c7d008",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "8f0357b",
+                "hasChanges":  false
+            }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260526-091042-386-vault-explorer-0e4b4bea",
+    "createdAt":  "2026-05-26T13:10:42.3861919Z",
+    "createdAtLocal":  "2026-05-26 09:10",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 09:10 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Bypassed Torrentio debrid proxy 502 Bad Gateway failures by executing direct public Torrentio metadata queries from the client, resolving and unrestricting cached torrents directly via Real-Debrid API. Solved Videotron/ISP DNS blocking of yts.mx by implementing an automated fallback rotating through active YTS mirrors (yts.lt, yts.pm, yts.ae) with custom AbortSignal timeouts. Cleaned TMDB trailing period titles before scraping to ensure correct matching.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "src/realdebrid.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "0e4b4bead46ca09545a591c248213aed07a4a6947de6bedd9f0b64f2bb301685",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

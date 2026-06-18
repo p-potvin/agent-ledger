@@ -1,0 +1,42 @@
+﻿{
+    "id":  "20260610-220104-553-general-tasks-cad17803",
+    "createdAt":  "2026-06-11T02:01:04.5532469Z",
+    "createdAtLocal":  "2026-06-10 22:01",
+    "timezone":  "Eastern Standard Time",
+    "project":  "General Tasks",
+    "kind":  "general,plan",
+    "actor":  "not",
+    "agentHeader":  "Agent: not (role: paste)\r\nModel: VW_STATE\r\nThinking: into\r\nMode: chat rule. Verified file written and is non-empty.\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 22:01 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "paste",
+                    "model":  "VW_STATE",
+                    "thinking":  "into",
+                    "mode":  "chat rule. Verified file written and is non-empty.",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator",
+    "summary":  "Wrote QWEN.md at C:\\Users\\Administrator\\QWEN.md (replaced 0-byte stub) to bootstrap Qwen Code host context for the VaultWares workspace. The file does NOT duplicate Tier-1 VaultWares protocols from vaultwares-docs/ROUTER.md; it acts as a Qwen Code host adapter that points to the ROUTER, mandates the ROUTER routine (always first) and the ledger routine (always last), captures the pause-and-ask request-safety gate, the LONG_RUNNING_TASKS overlay rules (VW_STATE_REF, interview gate), coding standards headlines, brand/token rules, and host-specific environment notes (Windows 11, Ollama at localhost:11434, Tailscale, Anaconda venvs, scheduled scripts). Includes anti-patterns and an explicit",
+    "commands":  [
+                     "Get-Content C:\\Users\\Administrator\\QWEN.md"
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\QWEN.md"
+              ],
+    "planPath":  "do",
+    "contentHash":  "cad17803ac49cfeb6ca9656e3761169b2e1b7902f0fe6dd68a7799fc8103a2ee",
+    "git":  null
+}

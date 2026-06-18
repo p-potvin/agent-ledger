@@ -1,0 +1,65 @@
+{
+  "id": "20260609-140037-155-prom-king-shared-tube-vaultwares-api-604daa10",
+  "createdAt": "2026-06-09T18:00:37.1554332Z",
+  "createdAtLocal": "2026-06-09 14:00",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube + vaultwares-api",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5\r\nThinking: high\r\nMode: default\r\nPermissions: danger-full-access; approval never (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch, update_plan, tool_search\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-09 14:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5",
+    "thinking": "high",
+    "mode": "default",
+    "permissions": "danger-full-access; approval never",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "update_plan",
+      "tool_search"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "pkt_step_4_gate": true,
+      "long_running_tasks": true,
+      "visual_gate_pending": true,
+      "fxv_step_4_pending": true
+    },
+    "metrics": {
+      "frontend_tests": 2,
+      "backend_tests": 1,
+      "estimated_output_tokens": 12000
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Implemented shared tube layout skeleton and PKT step-4 branding gate: renamed API client to PromKing/VaultWares API language, removed public iframe/source paths, added shared tube layout components, applied PKT branding/copy, added related taxonomy filters in vaultwares-api, and verified typecheck/build/lint/tests. Stopping before PKT step-5 differentiation for user review.",
+  "commands": [
+    "pnpm --filter @promking/shared-tube test -- src/api/promking-api.test.ts",
+    ".\\.venv\\Scripts\\python.exe -m pytest tests/test_promking_video_filters.py",
+    "pnpm -r typecheck",
+    "pnpm -r build",
+    "pnpm lint",
+    "rg scans for iframe/disabled sources/old pipelines language",
+    "Invoke-WebRequest http://localhost:4322/"
+  ],
+  "files": [
+    "shared-tube/shared/src/api/promking-api.ts",
+    "shared-tube/shared/src/components/Header.astro",
+    "shared-tube/shared/src/components/TubePageFrame.astro",
+    "shared-tube/shared/src/components/TaxonomyRail.astro",
+    "shared-tube/apps/pkt/src/config.ts",
+    "shared-tube/apps/pkt/src/pages/index.astro",
+    "shared-tube/apps/pkt/src/pages/videos/[slug].astro",
+    "shared-tube/shared/src/fetcher/sources/index.ts",
+    "vaultwares-api/app/routers/promking/videos.py",
+    "vaultwares-api/app/routers/promking/taxonomies.py"
+  ],
+  "planPath": "",
+  "contentHash": "604daa106de639fe72527de98a7ab98ceec52eb456578230336deea4b4537297",
+  "git": null
+}

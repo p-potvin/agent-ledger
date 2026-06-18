@@ -43,7 +43,7 @@ except ImportError:
 SCRIPT_DIR = Path(__file__).parent.resolve()
 ROOT_DIR = SCRIPT_DIR.parent
 SPOOL_DIR = Path(os.environ.get("VW_INPUT_SPOOL_DIR") or (ROOT_DIR / "input-spool"))
-API_URL = (os.environ.get("VW_API_URL") or os.environ.get("VW_PIPELINES_URL") or "http://127.0.0.1:9001").rstrip("/")
+API_URL = (os.environ.get("VW_API_URL") or os.environ.get("VW_PIPELINES_URL") or "http://100.67.25.118:9001").rstrip("/")
 API_KEY = os.environ.get("VW_PIPELINES_API_KEY") or os.environ.get("VW_TELEMETRY_API_KEY") or ""
 FLUSH_EVERY = max(10, int(os.environ.get("VW_INPUT_BATCH_SECONDS", "60")))
 STATE_DIR = Path(os.environ.get("VW_INPUT_STATE_DIR") or (ROOT_DIR / "input-state"))

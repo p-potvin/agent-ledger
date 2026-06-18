@@ -1,0 +1,50 @@
+{
+  "id": "20260610-192752-828-vaultwares-studio-1a6db947",
+  "createdAt": "2026-06-10T23:27:52.8287587Z",
+  "createdAtLocal": "2026-06-10 19:27",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Write, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 19:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Camera authoring per user request (their captures targeted the old room scene; coordinate frames differ per training anyway). tools/author_cameras.py: walk pattern recreates the user's capture trajectory (processed_min transforms.json poses x dataparser_transforms normalization, moving-average smoothed, look-ahead aim) — collision-free by construction; spiral fallback tuned below canopy. Validated spiral via new explicit-pose screenshots on the draft splat (final stops good, perimeter clips hedges -> walk preferred). Will run author_cameras --pattern walk on the Standard job when it lands, then stage + ask about render. Standard recon still running.",
+  "commands": [
+    "author_cameras + viewport_screenshot x6 (visual validation)",
+    "git push origin main"
+  ],
+  "files": [
+    "tools/author_cameras.py",
+    "tools/viewport_screenshot.py",
+    "vaultwares_studio/webviewer/viewer.js"
+  ],
+  "planPath": "",
+  "contentHash": "1a6db9471775be14ded04c16739b5ca0c59f70bd42b3bb37bc25567f659e6993",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "9d190ee",
+    "hasChanges": true
+  }
+}

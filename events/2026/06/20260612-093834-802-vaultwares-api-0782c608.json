@@ -1,0 +1,46 @@
+{
+  "id": "20260612-093834-802-vaultwares-api-0782c608",
+  "createdAt": "2026-06-12T13:38:34.8021411Z",
+  "createdAtLocal": "2026-06-12 09:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 09:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Created OVH-backed deployment runner for vaultwares-api main pushes. Greencloud vw-webhookd now has target p-potvin/vaultwares-api -> /var/www/deploy-scripts/deploy-vaultwares-api.sh. Greencloud wrapper runs as vwdeploy and dispatches over tailnet SSH to ubuntu@100.67.25.118. OVH deploy script /usr/local/bin/deploy-vaultwares-api.sh clones/fetches main into /srv/repos/p-potvin/vaultwares-api, updates /opt/vaultwares-api with rsync while preserving .env/.venv/runtime data/logs/uploads/certs, installs requirements, py-compiles api_server.py, restarts vaultwares-api.service, and checks local health. Verified manual end-to-end dispatch of current main SHA 614ff35e0283c6393b732c88dbfe3da96195c660, API health 200, OpenAPI 200, hooks health 200, and GitHub webhook ping success.",
+  "commands": [
+    "ssh greencloud add vwdeploy target and wrapper",
+    "ssh ovh install /usr/local/bin/deploy-vaultwares-api.sh",
+    "systemctl restart vw-webhookd.service",
+    "sudo -u vwdeploy env VW_AFTER=<sha> /var/www/deploy-scripts/deploy-vaultwares-api.sh",
+    "gh api -X POST repos/p-potvin/vaultwares-api/hooks/628183679/pings",
+    "curl https://api.vaultwares.ca/healthz",
+    "curl https://api.vaultwares.ca/openapi.json"
+  ],
+  "files": [
+    "greencloud:/etc/vw-webhookd/config.yml",
+    "greencloud:/var/www/deploy-scripts/deploy-vaultwares-api.sh",
+    "ovh:/usr/local/bin/deploy-vaultwares-api.sh",
+    "ovh:/srv/repos/p-potvin/vaultwares-api",
+    "ovh:/opt/vaultwares-api"
+  ],
+  "planPath": "",
+  "contentHash": "0782c608b3548bd8de2dc73a2d1153567f89c4ad2b04d71a23815b9eb95e968b",
+  "git": null
+}

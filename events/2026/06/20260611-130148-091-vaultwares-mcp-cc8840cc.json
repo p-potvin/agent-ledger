@@ -1,0 +1,49 @@
+{
+  "id": "20260611-130148-091-vaultwares-mcp-cc8840cc",
+  "createdAt": "2026-06-11T17:01:48.0915386Z",
+  "createdAtLocal": "2026-06-11 13:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-mcp",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-11 13:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Installed vaultwares-mcp on OVH at /opt/vaultwares-mcp with an isolated Python venv and systemd service bound to 127.0.0.1:9020 using streamable HTTP at /mcp. Added OVH nginx mcp.vaultwares.ca vhost for the local MCP service, then used Greencloud as the actual TLS edge for mcp.vaultwares.ca with a Let's Encrypt certificate issued on Greencloud and nginx proxying over tailnet to OVH. Updated Greencloud dnsmasq so mcp.vaultwares.ca resolves to Greencloud tailnet IP 100.73.93.84. Verified FastMCP tool listing through https://mcp.vaultwares.ca/mcp returns 23 tools and diag_status is present. Updated vaultwares-docs service inventory, tailscale hostname list, and network map for the MCP route.",
+  "commands": [
+    "python3 -m venv /opt/vaultwares-mcp/.venv",
+    "pip install -e /opt/vaultwares-mcp",
+    "systemctl enable --now vaultwares-mcp.service",
+    "certbot certonly --webroot -w /var/www/letsencrypt -d mcp.vaultwares.ca",
+    "nginx -t && systemctl reload nginx",
+    "dnsmasq --test && systemctl restart dnsmasq",
+    "FastMCP StreamableHttpTransport https://mcp.vaultwares.ca/mcp list_tools"
+  ],
+  "files": [
+    "remote:OVH:/opt/vaultwares-mcp",
+    "remote:OVH:/etc/systemd/system/vaultwares-mcp.service",
+    "remote:OVH:/etc/nginx/sites-available/mcp.vaultwares.ca.conf",
+    "remote:Greencloud:/etc/nginx/sites-available/mcp.vaultwares.ca.conf",
+    "remote:Greencloud:/etc/dnsmasq.d/vaultwares-tailnet.conf",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\tailscale.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\network-map.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "cc8840cc0ae65bf711c58e1dd0fdae92a76027b707cc12752168f3b650dd7317",
+  "git": null
+}

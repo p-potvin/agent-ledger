@@ -1,0 +1,37 @@
+{
+  "id": "20260612-031618-643-vps-ovhcloud-media-stack-389ebaf7",
+  "createdAt": "2026-06-12T07:16:18.6430012Z",
+  "createdAtLocal": "2026-06-12 03:16",
+  "timezone": "Eastern Standard Time",
+  "project": "vps-ovhcloud media stack",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 03:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Debugged Prowlarr to qBittorrent container-to-container communication. Verified Docker DNS resolves qbittorrent from the prowlarr container, unauthenticated qBittorrent API returns 403 as expected, and authenticated login from prowlarr to http://qbittorrent:8080 succeeds with HTTP 204 followed by /api/v2/app/version returning HTTP 200 v5.2.1. qBittorrent is still using a startup-generated temporary admin password, so Prowlarr configuration needs that current password or a permanent WebUI password must be set first.",
+  "commands": [
+    "sudo docker exec prowlarr getent hosts qbittorrent",
+    "sudo docker exec prowlarr curl http://qbittorrent:8080/",
+    "sudo docker exec prowlarr curl http://qbittorrent:8080/api/v2/app/version",
+    "authenticated qBittorrent API login test from prowlarr container without printing password"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "389ebaf769b52c0bc1159c9b74c1f8c0a3fcca01c0bbe51257ccf086d4351f2c",
+  "git": null
+}

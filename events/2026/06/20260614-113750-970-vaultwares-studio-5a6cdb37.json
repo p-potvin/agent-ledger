@@ -1,0 +1,51 @@
+﻿{
+    "id":  "20260614-113750-970-vaultwares-studio-5a6cdb37",
+    "createdAt":  "2026-06-14T15:37:50.9705932Z",
+    "createdAtLocal":  "2026-06-14 11:37",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change",
+    "actor":  ":AGENT_NAME",
+    "agentHeader":  "Agent: :AGENT_NAME (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: autopilot (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-14 11:37 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-4-7",
+                    "thinking":  "medium",
+                    "mode":  "agent",
+                    "permissions":  "autopilot",
+                    "network":  "local-windows",
+                    "toolsUsed":  [
+                                      "Read",
+                                      "Edit",
+                                      "Bash",
+                                      "Grep"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Added FPS pointer-lock camera mode to viewer.js. Right-click+hold locks the cursor and enters game-style mouselook (yaw around world +Y, pitch around camera-right, roll forced to 0 via Euler YXZ, pitch clamped to +/-89deg). WASD walks along camera horizontal-forward (pitch does not slow walking); QE raises/lowers along world up. On lock, OrbitControls is disabled; on release, target snaps to camera_pos + forward*3 so capture poses and post-FPS orbit pivot stay coherent. Also enforced camera.up=(0,1,0) at scene load so gravity-aligned splats no longer start upside down (removes need to hit Flip Up on every load). Status line updated to advertise the new control. captureCamera() unchanged — still derives lookAt from controls.target, which the FPS handler keeps on the camera ray.",
+    "commands":  [
+                     ".venv/Scripts/python.exe tools/view_splat.py"
+                 ],
+    "files":  [
+                  "vaultwares_studio/webviewer/viewer.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "5a6cdb37de8753cb0fdec17e7877b9e0369f7da769bc75bb1d16d9d88c94c6c9",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "main",
+                "head":  "fac0979",
+                "hasChanges":  true
+            }
+}

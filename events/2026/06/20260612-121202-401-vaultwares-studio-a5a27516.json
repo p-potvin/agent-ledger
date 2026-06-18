@@ -1,0 +1,50 @@
+{
+  "id": "20260612-121202-401-vaultwares-studio-a5a27516",
+  "createdAt": "2026-06-12T16:12:02.4016793Z",
+  "createdAtLocal": "2026-06-12 12:12",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Bash, TaskOutput, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-12 12:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "TaskOutput",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Verification recon on backyard_99s_cloudy timed out on HF Jobs (job 6a2c13c07c68f455eff13b30, status ERROR 'Job timeout'). Pulled worker logs: COLMAP sequential matching failed to find a good init pair, retry_mapper from commit 5ab7219 ran twice and only registered 3/280 images, then fell through to exhaustive matching which doesn't fit in the 45 min ceiling. This is SfM non-determinism — same exact video succeeded yesterday in 27 min. Bumped timeout_seconds in pipeline.py: max(3600, preset.est_minutes * 60 * 6) so draft preset now has 90 min ceiling. Happy path still finishes in ~15 min; exhaustive fallback now has room. Cost impact bounded: worst case 90 min @ ~0.80 USD/h = ~1.20 USD per job, ~3x our budgeted estimate. Queued draft recon on new backyard_134s_sunny.mp4 (395 MB, 134s, dropped 11:48): tools/headless_remote_run.py --video inputs/backyard_134s_sunny.mp4 --preset draft --yes, background bash bya6ehkrd. Will use the new 90-min ceiling. Telling user the GUI viewer + walk-pattern picker are ready to test on yesterday's job in parallel.",
+  "commands": [
+    "python -c 'HfApi inspect_job + fetch_job_logs on 6a2c13c07c68f455eff13b30'",
+    "python tools/headless_remote_run.py --video inputs/backyard_134s_sunny.mp4 --preset draft --yes (background bash bya6ehkrd)"
+  ],
+  "files": [
+    "vaultwares-studio/vaultwares_studio/pipeline.py"
+  ],
+  "planPath": "",
+  "contentHash": "a5a275163cf3b76e0f30ce0dbdfb61320042db16c23b8720e30e8bf66e1c5fa6",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

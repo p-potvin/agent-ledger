@@ -1,0 +1,48 @@
+{
+  "id": "20260614-190730-649-health-ledger-1a4a3f1f",
+  "createdAt": "2026-06-14T23:07:30.6492893Z",
+  "createdAtLocal": "2026-06-14 19:07",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-14 19:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger",
+  "summary": "Documented correct OVH SSH access as ubuntu@100.67.25.118 with the tube-site-vps key, clarified that Clopeux RDP should only be reachable from the operator other PC, and completed the previously blocked OVH checks. Verified OVH media containers are running, media container-to-container works from prowlarr including FlareSolverr/pyLoad/Arr services and Mullvad-shared Jackett/qBittorrent, OVH host reaches its API and Greencloud, Clopeux/Greencloud RDP from OVH is blocked as expected, qBittorrent/Jackett route external traffic through Mullvad while tailnet routes stay outside tunnel, and Clopeux qa_runner is now running. Found Docker bridge traffic to OVH host tailnet-published ports is blocked by host firewall/routing unless using service names or explicit host rules.",
+  "commands": [
+    "ssh -i \"$env:USERPROFILE\\.ssh\\tube-site-vps\" ubuntu@100.67.25.118 hostname/id/date",
+    "sudo docker ps/network/ss inspection on OVH",
+    "OVH host and in-container curl/socket probes for media stack, QA wireproxy, Greencloud, API, and tailnet paths",
+    "OVH container egress and route checks for mullvad-gateway/qbittorrent/jackett/sonarr/prowlarr/qa_runner",
+    "docker inspect qa_runner and health-ledger qa-automation-clopeux probe on Clopeux"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\network-map.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\data\\rollups\\latest.json"
+  ],
+  "planPath": "",
+  "contentHash": "1a4a3f1f0e2a03316fa348a044777645fdb84168a28646f9407e5fd2170b7ef4",
+  "git": {
+    "repo": "health-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/health-ledger",
+    "branch": "main",
+    "head": "df8f353",
+    "hasChanges": true
+  }
+}

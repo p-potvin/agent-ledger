@@ -1,0 +1,67 @@
+{
+  "id": "20260525-150001-058-qa-automation-295d09ca",
+  "createdAt": "2026-05-25T19:00:01.0582519Z",
+  "createdAtLocal": "2026-05-25 15:00",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5.2\r\nThinking: medium\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): apply_patch, shell_command, web.run\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 15:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5.2",
+    "thinking": "medium",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "apply_patch",
+      "shell_command",
+      "web.run"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "proxy_chain": "proxy-chain anonymizeProxy",
+      "safesearch_default": "off",
+      "proxy_provider": "ipoasis",
+      "rotation_mandatory": "true",
+      "own_domain_stealth_only": "true",
+      "google_result": "captcha_blocked",
+      "secrets_not_printed": "true"
+    },
+    "metrics": {
+      "google_sessions": 1,
+      "google_blocked": 1,
+      "google_pages_checked": 1
+    }
+  },
+  "workspaceRoot": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Set SafeSearch default to off. Integrated IPoasis dynamic residential proxies via API token and enabled proxy-chain anonymization so Chromium can use authenticated upstream proxies for HTTPS CONNECT. Added configurable navigation timeout and improved screenshot capture (no phantom paths on failure). Ran one Google session for keyword \"fullxxx video\"; Google returned a Sorry/CAPTCHA challenge (blocked_or_challenged), with screenshots saved.",
+  "commands": [
+    "npm install",
+    "node -c .\\\\scripts\\\\run-search-visibility-report.mjs",
+    "='google'; ='fullxxx video'; ='1'; ='1'; ='edge'; ='1'; ='0'; ='1'; ='0'; ='120000'; ='off'; npm run report:search-visibility"
+  ],
+  "files": [
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\scripts\\\\run-search-visibility-report.mjs",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\package.json",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\package-lock.json",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\.env.example",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\README.md",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\search-visibility\\\\20260525-145902\\\\results.json",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\search-visibility\\\\20260525-145902\\\\summary.md",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\search-visibility\\\\20260525-145902\\\\screenshots\\\\001-google-fullxxx-video-blocked-p1.png"
+  ],
+  "planPath": "",
+  "contentHash": "295d09ca513e89c14f01036c1e8d33a5250aa64033eee79594608c87f58f7f69",
+  "git": {
+    "repo": "qa-automation",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+    "branch": "main",
+    "head": "393f6b4",
+    "hasChanges": true
+  }
+}

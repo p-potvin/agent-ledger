@@ -1,0 +1,40 @@
+{
+  "id": "20260612-083234-956-vaultwares-api-9d896a34",
+  "createdAt": "2026-06-12T12:32:34.9568845Z",
+  "createdAtLocal": "2026-06-12 08:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 08:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Diagnosed OVH API HTTPS edge. Direct FastAPI listener on http://100.67.25.118:9001/healthz is healthy with DB up, but remote tailnet clients fail TLS to https://api.vaultwares.ca with tlsv1 alert internal error before HTTP. Nginx test/reload/restart succeeded; reversible trials using default_server and ssl_ecdh_curve prime256v1 did not fix and were reverted. Created GitHub issue p-potvin/vaultwares-api#63 for follow-up.",
+  "commands": [
+    "ssh root@100.73.93.84 curl https://api.vaultwares.ca/healthz",
+    "ssh ubuntu@100.67.25.118 curl http://127.0.0.1:9001/healthz",
+    "ssh ubuntu@100.67.25.118 nginx -t && systemctl reload nginx",
+    "gh issue create --repo p-potvin/vaultwares-api --title 'OVH nginx API TLS fails for remote tailnet clients'"
+  ],
+  "files": [
+    "/etc/nginx/sites-enabled/api.vaultwares.ca.conf",
+    "/etc/nginx/sites-enabled/mcp.vaultwares.ca.conf"
+  ],
+  "planPath": "",
+  "contentHash": "9d896a34883d12135571d456925c0fabbcf414ac3e423365eb58b9deee2b61fe",
+  "git": null
+}

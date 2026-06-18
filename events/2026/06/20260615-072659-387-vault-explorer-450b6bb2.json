@@ -1,0 +1,52 @@
+{
+  "id": "20260615-072659-387-vault-explorer-450b6bb2",
+  "createdAt": "2026-06-15T11:26:59.3879935Z",
+  "createdAtLocal": "2026-06-15 07:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-15 07:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Modularized 3 large files. (1) js/streaming.js (1439 lines) -> js/streaming/ split into ranking.js (prefs+RD cache batch+scoreTorrent), badges.js (external link badges), trailer.js (KinoCheck/TMDB), details-modal.js (modal+season picker+close handlers), rd-flow.js (triggerRDStream+startRDDebridFlow). Dropped ~280 lines of dead commented-out old startRDDebridFlow. Promoted shared _currentModalImdbId to window for the one cross-module ref. (2) src/realdebrid.js (918 lines) -> src/realdebrid/ directory (index.js aggregator so require('./src/realdebrid') still resolves, no main.js change): client.js (fetchWithTimeout+.env+tokens+checkRealDebridCache), search.js (Torrentio/EZTV/YTS), stream.js (rd-stream-torrent/rd-torrent-status), proxy.js (CONNECT tunnel+downloader utils), proxy-handlers.js (rd-unrestrict-url/rd-download-file/rd-test-proxy). (3) js/settings.js (771 lines) -> js/settings/: theme.js, pill-tags.js, benchmark.js (initBenchmarkDashboard lifted out), debrid-downloader.js (initDebridDownloader lifted out), core.js (trimmed initSettingsListeners delegating to the two). Updated index.html script tags. Verified: node --check on all 16 new files, mock-ipcMain load test registered all 6 RD handlers, no dangling refs. Slicing done via line-range script to guarantee byte-identical extraction.",
+  "commands": [
+    "node --check",
+    "node -e require('./src/realdebrid') mock ipcMain test",
+    "git rm js/streaming.js src/realdebrid.js js/settings.js"
+  ],
+  "files": [
+    "js/streaming/*.js",
+    "src/realdebrid/*.js",
+    "js/settings/*.js",
+    "index.html"
+  ],
+  "planPath": "",
+  "contentHash": "450b6bb263265c36c3b5ba9488d91a476f441ab67d299ca1892e015ef7ee9f1c",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "1a6636a",
+    "hasChanges": true
+  }
+}

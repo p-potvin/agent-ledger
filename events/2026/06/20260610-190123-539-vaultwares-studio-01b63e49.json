@@ -1,0 +1,46 @@
+{
+  "id": "20260610-190123-539-vaultwares-studio-01b63e49",
+  "createdAt": "2026-06-10T23:01:23.5394099Z",
+  "createdAtLocal": "2026-06-10 19:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 19:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "ROOT CAUSE of all 'viewer doesnt work' reports found by the USER: 2 leftover test-created jobs in data/jobs. The pytest suite wrote real manifests there, incl. test_remote_reconstruction completing a fake 250-random-gaussian splat — resume-latest surfaced it as the active job; the rainbow starburst screenshot WAS the test fixture. My screenshot tool hardcoded the backyard path, masking it. Fix: autouse conftest fixture monkeypatches JOBS_DIR to tmp_path; verified pytest leaves data/jobs untouched (1 folder before/after, 36 green). User confirms the real backyard now loads. Computer-use access was declined; not needed after user's find.",
+  "commands": [
+    "pytest (36 passed, 0 job leaks)",
+    "git push origin main"
+  ],
+  "files": [
+    "tests/conftest.py"
+  ],
+  "planPath": "",
+  "contentHash": "01b63e4954674dd05c9a999d48e858c426e017fb529725cd03fe3a443bdb2e68",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "1e80739",
+    "hasChanges": true
+  }
+}

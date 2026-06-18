@@ -1,0 +1,51 @@
+{
+  "id": "20260613-204134-436-vaultwares-studio-27a077d8",
+  "createdAt": "2026-06-14T00:41:34.4362608Z",
+  "createdAtLocal": "2026-06-13 20:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, Edit, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-13 20:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Fixed orbit defaults: walk_patterns.orbit radius_scale 0.9 -> 2.5, altitude 0.35 -> 0.45. Why: original 0.9 put camera at 1.55 m from centroid for this 1.72 m radius scene, which is INSIDE the dense subject and surrounded by sparse outlier splats — rendered walkthrough showed nothing recognizable. Math: FOV=60deg framing requires camera distance >= radius/tan(30deg) ~= 1.73*radius, so radius_scale=2.0 is the minimum; 2.5 gives headroom for outliers. Verified new framing on local-run-20260613-040022: camera distance 1.55 m -> 4.85 m, altitude 0.6 m -> 0.88 m above centroid. _default_orbit_path in pipeline.py inherits the new defaults via walk_patterns.orbit. 23/23 walk_patterns + camera_paths tests pass (existing tests check structure not magnitudes, so safe to bump). Re-running cosmos_output for the same job to validate before queueing the 0.80 USD sunny full recon: background bash bmqzojh5x, ~0.03 USD, ~2-3 min. Backed up first walkthrough.mp4 to walkthrough.precosmos.backup.mp4 for comparison. Camera_path.json backed up to camera_path.precosmos.backup.json.",
+  "commands": [
+    "pytest tests/test_walk_patterns.py tests/test_camera_paths.py",
+    "python -c 'orbit defaults verify + write camera_path + reset cosmos'",
+    "python -c 'runner.run_stage cosmos_output (background bash bmqzojh5x)'"
+  ],
+  "files": [
+    "vaultwares-studio/vaultwares_studio/walk_patterns.py",
+    "vaultwares-studio/data/jobs/local-run-20260613-040022/usd/camera_path.json",
+    "vaultwares-studio/data/jobs/local-run-20260613-040022/deliverables/walkthrough.precosmos.backup.mp4"
+  ],
+  "planPath": "",
+  "contentHash": "27a077d8ce4539f142fe7a5988c34e87ba112fa9a3ad256532e815ea63f8ab95",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

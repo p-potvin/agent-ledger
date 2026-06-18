@@ -1,0 +1,51 @@
+{
+  "id": "20260612-121830-574-vault-raggae-84ce9a2e",
+  "createdAt": "2026-06-12T16:18:30.5747453Z",
+  "createdAtLocal": "2026-06-12 12:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 12:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Debugged local Milvus startup failure. Root cause: milvusdb/milvus:v2.4.13 has Entrypoint ['/tini','--'] and no default Cmd, so the existing milvus-3060 container launched only /tini -- and exited. Created GitHub issue p-potvin/vault-raggae#1. Added docker-compose.milvus.yml with etcd, MinIO, and Milvus standalone using command ['milvus','run','standalone']; removed the broken stopped milvus-3060 container and started the compose stack. Verified milvus-3060, milvus-3060-etcd, and milvus-3060-minio are running and http://localhost:9091/healthz returns OK. Did not log secret values from .env.",
+  "commands": [
+    "docker ps -a --format ...",
+    "docker inspect milvus-3060 --format ...",
+    "docker run --rm --entrypoint /milvus/bin/milvus milvusdb/milvus:v2.4.13 --help",
+    "gh issue create --repo p-potvin/vault-raggae --title ...",
+    "docker compose -f docker-compose.milvus.yml config",
+    "docker rm milvus-3060",
+    "docker compose -f docker-compose.milvus.yml up -d",
+    "docker compose -f docker-compose.milvus.yml ps",
+    "Invoke-WebRequest -UseBasicParsing -Uri http://localhost:9091/healthz"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae\\docker-compose.milvus.yml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae\\README.md"
+  ],
+  "planPath": "",
+  "contentHash": "84ce9a2e1137ced34fa443edeac0ed8c147a55caa02655164ec7759a75d151ee",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "81efa81",
+    "hasChanges": true
+  }
+}

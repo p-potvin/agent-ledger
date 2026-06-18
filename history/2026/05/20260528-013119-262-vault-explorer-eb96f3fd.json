@@ -1,0 +1,54 @@
+﻿{
+    "id":  "20260528-013119-262-vault-explorer-eb96f3fd",
+    "createdAt":  "2026-05-28T05:31:19.2629437Z",
+    "createdAtLocal":  "2026-05-28 01:31",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-refactor-modules\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-28 01:31 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Modernized the Vault Explorer UI/UX by fixing critical regressions. Renamed the double-defined initNavigationListeners function in keybindings.js to prevent collision with directory.js, which restored scroll pagination, search, sort, filter, and lasso select listeners. Added live search, filter, and sort capabilities to the Library/Favorites tab with active caching to prevent disk I/O. Added click-outside-to-deselect behavior, proper contextmenu preventDefault() logic on right-click for first-time triggers, picture-in-picture background playback persistence during tab switching, and subtitle cleanup on player close.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "js/navigation/keybindings.js",
+                  "js/app.js",
+                  "js/navigation/directory.js",
+                  "js/navigation/tabs.js",
+                  "js/favorites.js",
+                  "js/player/player.js",
+                  "index.html"
+              ],
+    "planPath":  "",
+    "contentHash":  "eb96f3fdc356138760751c0ffec0b8a0d08164a0ae19bad15beedf435521da2a",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "vw-codex-refactor-modules",
+                "head":  "259adaf",
+                "hasChanges":  true
+            }
+}

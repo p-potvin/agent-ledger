@@ -1,0 +1,38 @@
+{
+  "id": "20260526-110817-823-agent-ledger-2a8e9875",
+  "createdAt": "2026-05-26T15:08:17.8233279Z",
+  "createdAtLocal": "2026-05-26 11:08",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "bug",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 11:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Investigated fishy WORK_IMPACT spikes on 2026-04-14 and 2026-04-25; identified dominant commits and opened issue #10 about commit-date bucketing.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "2a8e987560e6dfce0640ed62e8ea4a30b7cc85bf0885fdb722c09565682394f5",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "efa5464",
+    "hasChanges": true
+  }
+}

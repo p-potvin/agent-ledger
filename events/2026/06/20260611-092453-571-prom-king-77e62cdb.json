@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260611-092453-571-prom-king-77e62cdb",
+    "createdAt":  "2026-06-11T13:24:53.5712207Z",
+    "createdAtLocal":  "2026-06-11 09:24",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "code-change,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-3.5-flash\r\nThinking: medium\r\nMode: code\r\nPermissions: autopilot (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop  Branch: n/a\r\nTools used (this reply): view_file, write_to_file, replace_file_content, run_command, command_status\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-11 09:24 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-3.5-flash",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "autopilot",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "view_file",
+                                      "write_to_file",
+                                      "replace_file_content",
+                                      "run_command",
+                                      "command_status"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop",
+    "summary":  "Replaced dynamic stream 302 redirects with a range-aware direct byte-streaming proxy in apps/fxv and apps/pkt API routes. This successfully bypasses client IP-bound token validation on CDN files. Executed manual sequential sync crawl for both pkt and fxv to populate the catalogs (persisting 33 new videos for pkt and 32 new videos for fxv), verifying database integration.",
+    "commands":  [
+                     "git add .",
+                     "git commit -m ...",
+                     "git push origin main"
+                 ],
+    "files":  [
+                  "apps/fxv/src/pages/api/stream/[slug].ts",
+                  "apps/pkt/src/pages/api/stream/[slug].ts"
+              ],
+    "planPath":  "",
+    "contentHash":  "77e62cdbbed89cff5cf3504e3ef677097478f2409bdae4f5a6c66518c91a2477",
+    "git":  null
+}

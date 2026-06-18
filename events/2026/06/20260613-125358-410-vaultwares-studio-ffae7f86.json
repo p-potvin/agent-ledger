@@ -1,0 +1,40 @@
+{
+  "id": "20260613-125358-410-vaultwares-studio-ffae7f86",
+  "createdAt": "2026-06-13T16:53:58.4102386Z",
+  "createdAtLocal": "2026-06-13 12:53",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-13 12:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": "Bash",
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Recon job 6a2d0e2f234ca64b60121665 on backyard_clip_62-99s.mp4 with picker v2 worker: COMPLETED. Sequential matching alone registered 280/280 images (100% on first try) — picker v2 / smart pairs / vocab_tree never fired because sequential cleared the 140/280 threshold immediately. DB stats nearly identical to previous runs (13099 keypoints, 2841 verified pairs, 1418 matches/pair) confirming matcher consistency. Variance proven again to be purely in COLMAP incremental_mapper init RNG: same DB has produced 3, 8, 23, and 280 registered images across runs this session. Today's 280/280 result is RNG luck, not code-driven validation of picker v2. Picker v2 still untested in the wild (needs an unlucky sequential run to fire). Bundle is COMPLETE: includes model.zip + processed_min.zip + new colmap_database.db (628 MB). Real remote walkthrough render path now unlocked — cosmos_output stage should produce a true splat walkthrough mp4 instead of the slideshow fallback. Next step decisions for user: trigger cosmos_output for the walkthrough, run camera_staging with NEEDS_USER_INPUT pause, validate the gravity-aligned splat in the viewport.",
+  "commands": [
+    "python -c 'HfApi fetch_job_logs 6a2d0e2f234ca64b60121665'"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "ffae7f86a282b9155e521e1934a51988458a894d8727562ab2abcccf2d3938ef",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

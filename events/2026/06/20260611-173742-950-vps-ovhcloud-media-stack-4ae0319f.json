@@ -1,0 +1,43 @@
+{
+  "id": "20260611-173742-950-vps-ovhcloud-media-stack-4ae0319f",
+  "createdAt": "2026-06-11T21:37:42.9503344Z",
+  "createdAtLocal": "2026-06-11 17:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vps-ovhcloud media stack",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-11 17:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Installed Docker Compose v2 on OVH, deployed pyload-ng plus hotio qBittorrent/Sonarr/Radarr/Lidarr/Prowlarr/Whisparr under /opt/vw-media-stack with persistent data in /srv/vw-media, preserved native Jackett service, added nginx tailnet listeners for hotio UIs, and documented the services. Host-side checks returned qBittorrent 401, arr apps 200, pyLoad 200, Jackett 400 cookie/setup response. Local workstation can reach existing allowed ports 8003/9117 and 443/9001, but new high ports do not reach OVH on tailscale0; tcpdump saw zero packets on 8081, so tailnet ACL needs to allow 8081, 8989, 7878, 8686, 9696, 6969 for direct port access.",
+  "commands": [
+    "ssh ubuntu@100.67.25.118 apt-get install docker-compose-v2 and deploy /opt/vw-media-stack/docker-compose.yml",
+    "ssh ubuntu@100.67.25.118 docker compose up -d",
+    "ssh ubuntu@100.67.25.118 nginx -t && systemctl reload nginx",
+    "curl/Test-NetConnection checks for 8003, 9117, 8081, 8989, 7878, 8686, 9696, 6969",
+    "tcpdump on tailscale0 for 8081 and 8003"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx",
+    "remote:/opt/vw-media-stack/docker-compose.yml",
+    "remote:/etc/nginx/sites-available/vw-media-tailnet.conf",
+    "remote:/srv/vw-media/"
+  ],
+  "planPath": "",
+  "contentHash": "4ae0319fb945aed38796629c028802a9bb0eb6f7a348e9f3a8fcf4fbfee5b4e4",
+  "git": null
+}

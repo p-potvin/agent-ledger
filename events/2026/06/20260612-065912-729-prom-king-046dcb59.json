@@ -1,0 +1,45 @@
+﻿{
+    "id":  "20260612-065912-729-prom-king-046dcb59",
+    "createdAt":  "2026-06-12T10:59:12.7297916Z",
+    "createdAtLocal":  "2026-06-12 06:59",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 3.5 Flash\r\nThinking: medium\r\nMode: plan\r\nPermissions: ask (network: Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): view_file, write_to_file, grep_search, list_dir\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 06:59 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.5 Flash",
+                    "thinking":  "medium",
+                    "mode":  "plan",
+                    "permissions":  "ask",
+                    "network":  "Windows",
+                    "toolsUsed":  [
+                                      "view_file",
+                                      "write_to_file",
+                                      "grep_search",
+                                      "list_dir"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King",
+    "summary":  "Created implementation plan to update all hardcoded API IP addresses from 100.71.101.21 to 100.67.25.118.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\0b4efc5b-0936-46va-8370-2250d51d4176\\implementation_plan.md"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\0b4efc5b-0936-46da-8370-2250d51d4176\\implementation_plan.md",
+    "contentHash":  "046dcb5986138ce97d9aa126a5d561b43b5831fec7bfc4e9785abc02b1c6cb38",
+    "git":  null
+}

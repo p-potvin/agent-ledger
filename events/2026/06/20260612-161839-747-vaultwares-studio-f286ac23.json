@@ -1,0 +1,47 @@
+{
+  "id": "20260612-161839-747-vaultwares-studio-f286ac23",
+  "createdAt": "2026-06-12T20:18:39.7479883Z",
+  "createdAtLocal": "2026-06-12 16:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-12 16:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "User's first run with hardened worker hit a different failure: retry_mapper attempt 1 actually registered 23/280 images = 8.21% (huge improvement vs the 2-3 we kept seeing), correctly fell through to vocab_tree as designed, vocab_tree download succeeded (153 MB cached), but the vocab_tree INVOCATION failed: 'Unrecognized options: --vocab-tree-path'. The installed nerfstudio version on the worker doesn't accept that flag. My recon_entrypoint.py change passes an arg that doesn't exist in this nerfstudio. Bug to fix: either find the correct flag for this nerfstudio version, or bypass ns-process-data --matching-method=vocab_tree and invoke colmap vocab_tree_matcher directly on the existing database (then ns-process-data --skip-colmap to convert). Deferred until next worker push. For now: trimmed inputs/backyard_99s_cloudy.mp4 to 62s-99.5s = 37.47s clip (106 MB, ffmpeg stream-copy ~0.4s) as inputs/backyard_clip_62-99s.mp4. Queued draft preset recon on the clip via background bash bhgj9anst. Tests user's hypothesis that the later half of the cloudy video has clearer SfM features. If sequential or retry_mapper succeed without falling through to vocab_tree, the broken flag doesn't matter for this test.",
+  "commands": [
+    "ffmpeg -ss 62 -to 99.5 -c copy backyard_clip_62-99s.mp4",
+    "python tools/headless_remote_run.py --video inputs/backyard_clip_62-99s.mp4 --preset draft --yes (background bash bhgj9anst)"
+  ],
+  "files": [
+    "vaultwares-studio/inputs/backyard_clip_62-99s.mp4"
+  ],
+  "planPath": "",
+  "contentHash": "f286ac236602de6449648e1e6b465dbcc5a40821d4727d04d3186fba046a2d61",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

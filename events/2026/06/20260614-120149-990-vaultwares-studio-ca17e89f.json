@@ -1,0 +1,54 @@
+﻿{
+    "id":  "20260614-120149-990-vaultwares-studio-ca17e89f",
+    "createdAt":  "2026-06-14T16:01:49.9904452Z",
+    "createdAtLocal":  "2026-06-14 12:01",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change",
+    "actor":  ":AGENT_NAME",
+    "agentHeader":  "Agent: :AGENT_NAME (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: autopilot (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Write, Grep, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-14 12:01 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-4-7",
+                    "thinking":  "high",
+                    "mode":  "agent",
+                    "permissions":  "autopilot",
+                    "network":  "local-windows",
+                    "toolsUsed":  [
+                                      "Read",
+                                      "Edit",
+                                      "Write",
+                                      "Grep",
+                                      "Bash"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Per-job sticky Flip Up + game-style FPS pitch fix. (a) Viewer now persists the Flip Up state to \u003cjob\u003e/usd/viewer_state.json via a new ViewportBridge.viewerFlipChanged(bool) slot. JS flipCameraUp toggles isFlipped and notifies Python; Python loads the JSON on reload_scene and appends flip=1 to the viewer URL when set; JS auto-calls flipCameraUp({silent: true}) at load. Fixes gravity_align PCA-skewness occasionally guessing up-down backward on backyard scenes without making the user click Flip Up every reload. (b) Rewrote FPS pointer-lock math: previous axis-angle premultiply with reject-on-overshoot was rejecting EVERY pitch delta when the camera started polar (single-axis movement symptom the user reported). New approach snapshots camera.quaternion at FPS entry as fpsBaseQuat, accumulates scalar fpsYaw + fpsPitch, builds orientation as qPitch * qYaw * fpsBaseQuat each frame. Pitch trivially clamped to +/-88.8deg; base preserves any Flip Up roll so mouselook stays correct after righting. Also noted user workflow: P key in the viewer toggles dot visualization to surface sparse regions for next capture session (saved to memory).",
+    "commands":  [
+                     ".venv/Scripts/python.exe -m pytest tests/ -x -q --ignore=tests/test_viewer_server.py",
+                     ".venv/Scripts/python.exe tools/view_splat.py"
+                 ],
+    "files":  [
+                  "gui/viewport.py",
+                  "vaultwares_studio/webviewer/viewer.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "ca17e89f622fe8d121d9b79c02a3994b1bc3173625f3c46a74e05ef972daea38",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "main",
+                "head":  "fac0979",
+                "hasChanges":  true
+            }
+}

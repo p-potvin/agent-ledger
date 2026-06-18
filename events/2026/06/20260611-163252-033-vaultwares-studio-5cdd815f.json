@@ -1,0 +1,57 @@
+{
+  "id": "20260611-163252-033-vaultwares-studio-5cdd815f",
+  "createdAt": "2026-06-11T20:32:52.0335048Z",
+  "createdAtLocal": "2026-06-11 16:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, Grep, Glob, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-11 16:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Implemented gravity-alignment baked into reconstruction stage. New vaultwares_studio/gravity_align.py: PCA on preview cloud picks smallest-variance axis as scene up, skewness-of-projections heuristic resolves sign (sparse sky tail = +up), Rodrigues rotation sends that axis to +Y. Applies rotation to (a) cloud.ply positions and per-splat quaternions via composed Hamilton product, (b) cloud_preview.ply positions, (c) summary.json (gravity_aligned flag + alignment matrix block). Idempotent: skips if summary.gravity_aligned. SH bands 1-3 (f_rest) deliberately left untouched — known limitation documented in module docstring; geometry correct, view-dependent shading subtly drifts. Wired into pipeline._run_reconstruction after PLY conversion via new _gravity_align method on DigitalTwinStudioRunner. Best-effort: catches and logs unless strict_mode. Hit a Windows mmap lock bug in plyfile during read->write of the same path; fixed by deep-copying arrays via _detach_splat + gc.collect to release the mmap. Tests: tests/test_gravity_align.py (7 cases) all pass. Full run: 27/27 across gravity_align + walk_patterns + camera_paths. End-to-end verified on local-run-20260610-165858: pre-alignment up axis = (-0.09, -0.04, 0.995) at 87.53 deg off +Y; post-alignment thin axis is aligned to Y, splat count preserved at 477731, sh_rest shape (477731, 45) intact. Backup at reconstruction/pre_align_backup/. Follow-up: walk_patterns.retrace_steps consumes transforms.json poses that may be in pre-alignment frame; deferred (not implemented this turn).",
+  "commands": [
+    "pytest tests/test_gravity_align.py tests/test_walk_patterns.py tests/test_camera_paths.py",
+    "python -c 'align_cloud on local-run-20260610-165858'"
+  ],
+  "files": [
+    "vaultwares-studio/vaultwares_studio/gravity_align.py",
+    "vaultwares-studio/vaultwares_studio/pipeline.py",
+    "vaultwares-studio/tests/test_gravity_align.py",
+    "vaultwares-studio/data/jobs/local-run-20260610-165858/reconstruction/cloud.ply",
+    "vaultwares-studio/data/jobs/local-run-20260610-165858/reconstruction/cloud_preview.ply",
+    "vaultwares-studio/data/jobs/local-run-20260610-165858/reconstruction/summary.json"
+  ],
+  "planPath": "",
+  "contentHash": "5cdd815f8e796cc9b5064006c4115429725316aa75407baaf4592d32452c26a8",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "5ab7219",
+    "hasChanges": true
+  }
+}

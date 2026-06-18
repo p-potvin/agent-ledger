@@ -1,0 +1,60 @@
+{
+  "id": "20260523-175542-940-vaultwares-docs-b45216d7",
+  "createdAt": "2026-05-23T21:55:42.9409095Z",
+  "createdAtLocal": "2026-05-23 17:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-23 17:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Stopped the still-running node translate-docs.mjs process after it generated external Google Translate traffic. Added mandatory request-loop safety to vaultwares-docs/AGENTS.md and workspace root AGENTS.md. Added REQUEST_RATE_LIMITING protocol to ROUTER, summaries, notes, and assistant-protocol docs (EN/QC). Updated NETWORK_INFRASTRUCTURE to route request loops through REQUEST_RATE_LIMITING. Reworked translate-docs.mjs and test-translate.mjs to use local Ollama Gemma4 at localhost:11434, require --yes before any request loop, expose delay/limit/model/env controls, and removed @vitalets/google-translate-api from package files. Ran global instruction sync successfully to Claude Code, VS Code, Windsurf, Gemini, Codex, OpenCode, and Claude Desktop. Built docs, preview-checked assistant protocol routes, committed 4d0ebda to main, pushed, verified GitHub webhook delivery HTTP 200 and live docs route 200. Created/closed issue #17.",
+  "commands": [
+    "Stop-Process -Id 31672 -Force",
+    "git restore -- docs-content",
+    "gh issue create --repo p-potvin/vaultwares-docs --title \"Document request-loop safety and local Gemma4 translation path\"",
+    "npm uninstall @vitalets/google-translate-api --save-dev",
+    "node scripts/generate-assistant-protocol-mirrors.mjs",
+    "powershell -ExecutionPolicy Bypass -File scripts\\\\sync-global-instructions.ps1",
+    "node --check translate-docs.mjs",
+    "node --check test-translate.mjs",
+    "node translate-docs.mjs --dry-run",
+    "npm run build",
+    "npm run preview -- --host 127.0.0.1 --port 4173 --strictPort",
+    "git commit -m \"Add request-loop safety protocol\"",
+    "git push origin main",
+    "gh api repos/p-potvin/vaultwares-docs/hooks/624603635/deliveries",
+    "curl.exe -I https://docs.vaultwares.ca/ai-tools/assistant-protocols/request-rate-limiting"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\AGENTS.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\AGENTS.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\ROUTER.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\summaries\\REQUEST_RATE_LIMITING.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\notes\\REQUEST_RATE_LIMITING.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\ai-tools\\assistant-protocols\\request-rate-limiting.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\ai-tools\\assistant-protocols\\request-rate-limiting-QC.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\translate-docs.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\test-translate.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\package.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\package-lock.json"
+  ],
+  "planPath": "",
+  "contentHash": "b45216d771a1d50df0b5fc72f373e1b1adc5b50c5b16c94f580ea88f1002475e",
+  "git": null
+}

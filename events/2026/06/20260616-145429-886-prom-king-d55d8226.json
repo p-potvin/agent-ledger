@@ -1,0 +1,67 @@
+{
+  "id": "20260616-145429-886-prom-king-d55d8226",
+  "createdAt": "2026-06-16T18:54:29.8865452Z",
+  "createdAtLocal": "2026-06-16 14:54",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): powershell, uv, pnpm, eslint, vite, playwright\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 14:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "powershell",
+      "uv",
+      "pnpm",
+      "eslint",
+      "vite",
+      "playwright"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "full_lint_has_preexisting_failures": true,
+      "long_running_tasks_applied": false,
+      "estimated_output_tokens": "under_8000",
+      "gui_verified": true
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Implemented the Phase 1 admin batch interface for Prom-King tube sites: backend batch contracts/endpoints in vaultwares-api, shared-tube admin batch UI for terms and videos across fxv/pkt/oneporn/sexyprn, and Drizzle schema/migration updates for disabled videos, taxonomy soft delete, and expanded pornstar gender handling. Verified backend contract tests, Python compile, shared-tube typecheck/build, targeted eslint on changed admin files, and a mocked local Playwright admin smoke.",
+  "commands": [
+    "uv run python -m pytest tests/test_promking_batch_contracts.py tests/test_promking_video_filters.py -q",
+    "uv run python -m py_compile app\\routers\\promking\\_models.py app\\routers\\promking\\taxonomies.py app\\routers\\promking\\videos.py",
+    "pnpm -r typecheck",
+    "pnpm -r build",
+    "pnpm exec eslint <changed-admin-files>",
+    "pnpm --filter @promking/site-fxv dev --host 127.0.0.1 --port 4321",
+    "node playwright admin smoke script"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\_models.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\taxonomies.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\videos.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\tests\\test_promking_batch_contracts.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\db\\schema.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\drizzle\\0002_admin_batch_actions.sql",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\fxv\\src\\admin\\Catalog\\BatchActions.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\fxv\\src\\admin\\Catalog\\VideoBatchActions.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\pkt\\src\\admin\\Catalog\\BatchActions.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\pkt\\src\\admin\\Catalog\\VideoBatchActions.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\oneporn\\src\\admin\\Catalog\\BatchActions.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\oneporn\\src\\admin\\Catalog\\VideoBatchActions.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\sexyprn\\src\\admin\\Catalog\\BatchActions.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\sexyprn\\src\\admin\\Catalog\\VideoBatchActions.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "d55d8226e5a483cff5c2f2f9210ae14a87eb7da07bc5012b52d0af7efdfc2e28",
+  "git": null
+}

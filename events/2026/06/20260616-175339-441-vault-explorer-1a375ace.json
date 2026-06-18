@@ -1,0 +1,59 @@
+{
+  "id": "20260616-175339-441-vault-explorer-1a375ace",
+  "createdAt": "2026-06-16T21:53:39.4416386Z",
+  "createdAtLocal": "2026-06-16 17:53",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 17:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "11 fixes across priority levels. HIGH: (18) After-close stream lockup root-caused: vp.src='' resolved to the document base URL which fired MEDIA_ERR_SRC_NOT_SUPPORTED and parked the <video> element in error state; subsequent vp.src=newUrl silently no-op'd. Fixed in js/player/player.js close handler with vp.removeAttribute('src'); vp.load() — now returns the element to NETWORK_EMPTY. Also clears window.activeRDFlowId and window._resumePosAfterSwitch on close. MED: (19) src/previews.js generateThumbAndPreview now writes to .tmp paths and atomically renames on success; pre-existing thumb/webm are never touched until both new outputs land. On partial output or thrown error, originals stay intact and a terminal failure progress event is sent so the toolbar spinner clears (was sticking forever). LOW: (20) .tmdb-grid CSS minmax 130->160px, row-gap 32px, column-gap 18px; scroll-near-bottom auto-paginate handler on #tmdb-container (kept manual Load More as fallback). (21) New IPC set-window-fullscreen + main-process handler that calls BrowserWindow.setFullScreen; document fullscreenchange now mirrors OS fullscreen so screen-edge resize cursors don't appear. New body.player-idle CSS class fades out custom-controls + player-topbar and hides cursor after 2s of no mouse activity. (22) Volume icon click toggles mute, restoring the pre-mute % from localStorage; volume slider blurs on pointerup + on volume-container mouseleave so the :focus-within doesn't keep it open after click. (23) src/utils.js _killTree helper uses taskkill /T /F on Windows so process trees (ffmpeg children, python workers) are killed not just the immediate proc — fixes the 5+ orphan zombies after exit. (24) Subtitle submenu active-state was reverse-derived from track.label/srclang/src and collapsed any duplicate-language entries onto the first match; now tracks window._selectedSubtitleIdx explicitly, including the Off option. (25) Settings panel inline",
+  "commands": [
+    "node --check (9 files)"
+  ],
+  "files": [
+    "js/player/player.js",
+    "src/previews.js",
+    "src/utils.js",
+    "main.js",
+    "preload.js",
+    "index.css",
+    "index.html",
+    "js/tmdb.js",
+    "js/player/subtitles.js",
+    "js/streaming/trailer.js",
+    "js/streaming/badges.js"
+  ],
+  "planPath": "",
+  "contentHash": "1a375ace81d4e9207c76b8901496821b6fd13499a7e3c2c8229c03dd3c702774",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "1a6636a",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "20260611-180654-618-vaultwares-studio-0cdee1fb",
+  "createdAt": "2026-06-11T22:06:54.6184462Z",
+  "createdAtLocal": "2026-06-11 18:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Grep\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-11 18:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Three viewer.js fixes for navigation + pointer behavior. (1) Pointer-leave teleport fix: OrbitControls calls setPointerCapture but QtWebEngine does not reliably forward pointer events once the cursor leaves the WebEngine widget bounds, so the drag never receives pointerup and the next pointermove on re-entry registers a huge delta. Tracking active pointers on the renderer canvas and dispatching a synthetic pointerup on pointerleave cleanly ends the drag. (2) Real WASD fly: the status text already advertised 'WASD to fly' but the vendored OrbitControls only does arrow-key pan, so the user could only arc around the orbit target and never translate toward an arbitrary point (the 'can't go toward the house' issue). Added a heldKeys set + requestAnimationFrame loop that translates BOTH camera.position and controls.target by the same delta — the orbit pivot moves with the camera so WASD reads as first-person walking. W/S = forward/back along the look vector, A/D = strafe via right = forward x up, E/Q = world-up raise/lower. Shift triples speed. blur listener clears the held set so alt-tabbing doesn't leave keys stuck. Speed scales with orbit distance so the same key feel works far and close. (3) Updated status text to reflect the actual control set. Full test suite (excluding test_viewer_server which we already skipped): 68/68 pass.",
+  "commands": [
+    "pytest tests/ -x -q --ignore=tests/test_viewer_server.py"
+  ],
+  "files": [
+    "vaultwares-studio/vaultwares_studio/webviewer/viewer.js"
+  ],
+  "planPath": "",
+  "contentHash": "0cdee1fbc23a03c3089ec40ac5f621f3f9674337d2a0244d43146293f790c96b",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

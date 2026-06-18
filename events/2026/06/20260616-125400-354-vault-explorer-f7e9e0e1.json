@@ -1,0 +1,56 @@
+{
+  "id": "20260616-125400-354-vault-explorer-f7e9e0e1",
+  "createdAt": "2026-06-16T16:54:00.3548240Z",
+  "createdAtLocal": "2026-06-16 12:54",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 12:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Eight UX fixes. (1) Dev Mode setting + toast/console gating: new settings-dev-mode checkbox (key devMode); js/utils.js showToast now drops a denylist of chatty success/info messages ('direct high-speed', 'subtitles loading', 'subtitles ready', 'auto-selecting', 'switching to', 'loaded ', etc.) when devMode is off, AND clears the pending toast queue whenever an error toast fires so urgent messages stand alone; console.log/info/debug are wrapped to no-ops when devMode is off (warn/error always pass). window.isDevMode() helper exposed. (2) Quality switch auto-resume: the seekOnce handler in playStream now calls vp.play() after seeking so the new stream actually resumes (the upfront vp.play() often rejected because src was still loading). (3) Subtitles 'Search OpenSubtitles' collapsed under a 'More subtitles…' toggle in the menu (caret rotates ▸/▾); the existing tracks list always shows. (4) Spanish dropped from the default OpenSubtitles search (en,fr) — new settings checkbox 'Include Spanish Subtitles' (settings-subs-include-es / key subsIncludeSpanish) re-enables it via langsParam='en,fr,es' in src/scanner.js. (5) Hover popup repositioned: targetTop now = rect.bottom - expHeight (anchor popup BOTTOM to card BOTTOM) instead of rect.top - 60, eliminating the dead-zone under the popup that caused rapid hover toggling. (6) Shift+Esc toggles video-modal.minimized (PiP) instead of closing; plain Esc still closes. (7) #settings-panel z-index bumped 2000 -> 100001 so it sits above the player modal (10000), toasts (99999) and debrid dialog (10500). (8) Player error handler now ignores errors when video-modal is hidden OR vp.src is empty — kills the spurious 'Video source could not be loaded' toast that fired every time vp.src='' on close. Verified: node --check on all 6 touched JS",
+  "commands": [
+    "node --check (6 files)"
+  ],
+  "files": [
+    "js/utils.js",
+    "js/settings/core.js",
+    "js/player/player.js",
+    "js/player/subtitles.js",
+    "js/hover-card.js",
+    "src/scanner.js",
+    "index.html",
+    "index.css"
+  ],
+  "planPath": "",
+  "contentHash": "f7e9e0e137124b334849677dafe9672223608036f250751a0abe2c34bb16eeee",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "1a6636a",
+    "hasChanges": true
+  }
+}

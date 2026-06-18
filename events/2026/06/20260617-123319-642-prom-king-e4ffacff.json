@@ -1,0 +1,43 @@
+{
+  "id": "20260617-123319-642-prom-king-e4ffacff",
+  "createdAt": "2026-06-17T16:33:19.6424104Z",
+  "createdAtLocal": "2026-06-17 12:33",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: ovhcloud-vps via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Bash, SSH\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-17 12:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "ovhcloud-vps via tailnet",
+    "toolsUsed": [
+      "Bash",
+      "SSH"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Wired the full *arr media stack on ovhcloud. State: (1) FlareSolverr indexerProxy at http://flaresolverr:8191/ on tag id=1, (2) 4 Prowlarr Applications registered with fullSync + correct per-app sync categories: Sonarr (TV 5000s + anime 5070), Radarr (Movies 2000s), Lidarr (Music 3000s), Whisparr (XXX 6000s), (3) 4 qBittorrent categories created (tv-sonarr, movies-radarr, music-lidarr, xxx-whisparr), (4) qBittorrent download client wired into each *arr app at host=mullvad-gateway port=8080 with per-app category. Fixed broken qbit config the user had got stuck (WebUI was binding to 100.67.25.118 but that IP wasn't in the qbit/mullvad-gateway shared namespace) - rewrote via python script while qbit was killed: WebUI.Address=* and added 172.18.0.0/16 to AuthSubnetWhitelist (docker net for vw-media_default) so *arr apps can connect auth-free. User has already started adding indexers (12 visible: 1337x, BigFANGroup, kickasstorrents.ws, Knaben, MyPornClub, +7). Reminder: tag indexers behind Cloudflare with the 'flaresolverr' tag (id=1) to route them through FlareSolverr.",
+  "commands": [
+    "docker exec qbittorrent",
+    "docker kill/start qbittorrent",
+    "curl POST /api/v1/applications",
+    "curl POST /api/v3/downloadclient"
+  ],
+  "files": [
+    "--ovhcloud /srv/vw-media/config/qbittorrent/config/qBittorrent.conf",
+    "--ovhcloud prowlarr/sonarr/radarr/lidarr/whisparr API state"
+  ],
+  "planPath": "",
+  "contentHash": "e4ffacfff4a3de647aff6fe8b56b2b8ea5b56775b273c8b64cbc1ae196f92baf",
+  "git": null
+}

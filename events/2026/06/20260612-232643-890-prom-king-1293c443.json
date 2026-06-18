@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260612-232643-890-prom-king-1293c443",
+    "createdAt":  "2026-06-13T03:26:43.8903105Z",
+    "createdAtLocal":  "2026-06-12 23:26",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "plan",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-1.5-pro\r\nThinking: medium\r\nMode: plan\r\nPermissions: ask (network: local)\r\nCWD: D:\\vault-raggae  Branch: main\r\nTools used (this reply): write_to_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 23:26 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-1.5-pro",
+                    "thinking":  "medium",
+                    "mode":  "plan",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  "write_to_file",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "D:\\vault-raggae",
+    "summary":  "Updated implementation plan to bypass local RAG server, stop all Docker containers to reclaim 15GB RAM, and implement a direct query script targeting the Nemotron-3 Ultra 550B API.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\0b4efc5b-0936-46da-8370-2250d51d4176\\implementation_plan.md"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\0b4efc5b-0936-46da-8370-2250d51d4176\\implementation_plan.md",
+    "contentHash":  "1293c443c029e4e2c408786e4005f5e402c6c16aa001ac0a75a8508bf87ea3c8",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "D:/vault-raggae",
+                "branch":  "main",
+                "head":  "329875a",
+                "hasChanges":  true
+            }
+}

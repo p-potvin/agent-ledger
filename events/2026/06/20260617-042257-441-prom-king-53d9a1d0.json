@@ -1,0 +1,56 @@
+{
+  "id": "20260617-042257-441-prom-king-53d9a1d0",
+  "createdAt": "2026-06-17T08:22:57.4411601Z",
+  "createdAtLocal": "2026-06-17 04:22",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change,handoff,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: win32)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Edit, Write, PowerShell, Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-17 04:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "win32",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "PowerShell",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "All seven queued tasks (#17-#23) shipped + pushed to main in one pass. shared-tube b4438ab (v0.2.0): tube pagination (16 dedicated /featured /new /hot /trending routes + homepage SectionPager/SectionStrip), playback fast path (DB-qualities first, 720p preferred), FlareSolverr passthrough (env-gated FLARESOLVERR_URL, triggers on 403 or Cloudflare interstitial), /api/thumb proxy (Referer-rewriting host-allowlisted image proxy for PKT thumbnails 404s), full admin rewrite (BatchActions+VideoBatchActions with AbortController per fetch, page-size 50/100/250/500, top+bottom action panels and pagers, Show-as-filter instead of select-as-filter, fresh URLSearchParams every call to fix gender=female param leak, Select all visible / Invert visible / Clear), StatsDashboard scoped to current site with KPI cards + monospace tables + danger-coloured errors. vaultwares-api 5f1f3c3: /taxonomies/{kind}?offset=, /taxonomies/{kind}/count, /videos/count, /stats?site=<brand>. Verified pnpm typecheck clean across all 4 apps (39 files each, 0/0/0) and py_compile clean on three FastAPI modules. Untracked fetcher.py change + tests/test_promking_fetcher.py NOT committed (pre-existing local work, not mine). User now needs to: (1) ensure FLARESOLVERR_URL env var set on app hosts, (2) rebuild + restart all 4 Astro app systemd units, (3) restart FastAPI router.",
+  "commands": [
+    "git commit",
+    "git push",
+    "pnpm typecheck",
+    "py_compile"
+  ],
+  "files": [
+    "shared-tube/shared/src/sections.ts",
+    "shared-tube/shared/src/components/SectionPage.astro",
+    "shared-tube/apps/fxv/src/pages/api/stream/[slug].ts",
+    "shared-tube/apps/fxv/src/pages/api/thumb.ts",
+    "shared-tube/apps/fxv/src/admin/Catalog/BatchActions.tsx",
+    "shared-tube/apps/fxv/src/admin/Catalog/VideoBatchActions.tsx",
+    "shared-tube/apps/fxv/src/admin/Stats/Dashboard.tsx",
+    "vaultwares-api/app/routers/promking/taxonomies.py",
+    "vaultwares-api/app/routers/promking/videos.py",
+    "vaultwares-api/app/routers/promking/stats.py"
+  ],
+  "planPath": "",
+  "contentHash": "53d9a1d07ce898851f530739b3f615b4845becf1296dd3cb79f8b9c7ad2fc6f1",
+  "git": null
+}

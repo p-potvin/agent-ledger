@@ -1,0 +1,37 @@
+{
+  "id": "20260610-143048-703-vaultwares-studio-96e691a9",
+  "createdAt": "2026-06-10T18:30:48.7033904Z",
+  "createdAtLocal": "2026-06-10 14:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: low\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + huggingface.co API)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): PowerShell, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 14:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + huggingface.co API",
+    "toolsUsed": [
+      "PowerShell",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Run #3 final verdict: 3/280 registered even with blur-filtered dense sampling + exhaustive matching (job 6a29abc9, USD 0.08). Footage is definitively unusable for SfM (fast multi-room walk, low light). Per user's standing rule: no further mitigation or paid attempts; waiting for a clean capture (one room, slow walk, lights on, AE/AF lock, 30-60s landscape). Total verification spend ~USD 0.20. All infra links verified working: transport, worker image, COLMAP, escalation, error surfacing, fallback, spend ledger.",
+  "commands": [
+    "headless_remote_run.py run3 -> too_few_registered_images 3/280"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "96e691a978b721dce7c644a20c00cc5e143939084dfefcdff7858a83996f7d1b",
+  "git": null
+}

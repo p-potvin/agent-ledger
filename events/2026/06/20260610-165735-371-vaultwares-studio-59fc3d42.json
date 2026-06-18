@@ -1,0 +1,48 @@
+{
+  "id": "20260610-165735-371-vaultwares-studio-59fc3d42",
+  "createdAt": "2026-06-10T20:57:35.3719075Z",
+  "createdAtLocal": "2026-06-10 16:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + huggingface.co API)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 16:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + huggingface.co API",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "CPU-SIFT fix CONFIRMED by telemetry: backyard run registered 280/280 frames (avg 12475 keypoints/img, 2410 verified pairs, avg 745 matches) — GPU COLMAP in the L4 container was the root cause of all prior 3-registered failures. Run then failed at ns-train exit 2: worker's newer nerfstudio removed the 'none' choice for --vis (flag filter only catches unknown flags, not invalid values). Fix: entrypoint normalizes --vis none -> tensorboard when help lacks the choice (pushed). Worker rebuilding + backyard rerun chained in background. Note: CPU sequential matching added ~20 min job time (USD 0.30 actual); GPU matching re-enable (extraction-only --no-gpu split) noted as future optimization.",
+  "commands": [
+    "fetch_job_logs 6a29c9ea (280/280 + vis error)",
+    "push_worker_space + monitor + rerun (bg)",
+    "git push origin main"
+  ],
+  "files": [
+    "docker/worker/recon_entrypoint.py"
+  ],
+  "planPath": "",
+  "contentHash": "59fc3d4281f8ddf9902a5fcfa7443c139c1fb34473f2a884386b465fcb7e1c8c",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "d1c433b",
+    "hasChanges": true
+  }
+}

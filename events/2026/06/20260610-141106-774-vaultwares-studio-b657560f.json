@@ -1,0 +1,50 @@
+{
+  "id": "20260610-141106-774-vaultwares-studio-b657560f",
+  "createdAt": "2026-06-10T18:11:06.7746807Z",
+  "createdAtLocal": "2026-06-10 14:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + huggingface.co API)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Edit, Read, TaskStop\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 14:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + huggingface.co API",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Read",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Retry with 96 frames (8fps adaptive) still registered only 3/96 — inspected extracted frames: dim room, fast rotation-only pan, black curtain/bare walls, motion blur = COLMAP worst case; not a sampling problem. Added exhaustive-matching escalation in recon_entrypoint (sequential first, exhaustive retry before failing; capture tips now lead with walk-dont-pan). Fixed monitor_worker_space to leave the Space RUNNING (paused Space likely 500s as image source; free CPU tier). Worker rebuilding + one final retry (~USD 0.06) running in background. If exhaustive still <10 registered, verdict: footage unusable for SfM, user needs a slow walking capture with better light. Spend so far: ~USD 0.07 total across echo + 2 recon attempts.",
+  "commands": [
+    "TaskStop stale chain",
+    "push_worker_space + monitor + headless_remote_run (bg)",
+    "git push origin main"
+  ],
+  "files": [
+    "docker/worker/recon_entrypoint.py",
+    "tools/monitor_worker_space.py"
+  ],
+  "planPath": "",
+  "contentHash": "b657560fbab9e8209f7334db32ed3bb17438e21d70eaa9630da26fac208859cb",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "df52753",
+    "hasChanges": true
+  }
+}

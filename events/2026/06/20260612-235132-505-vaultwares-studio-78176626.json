@@ -1,0 +1,34 @@
+{
+  "id": "20260612-235132-505-vaultwares-studio-78176626",
+  "createdAt": "2026-06-13T03:51:32.5052381Z",
+  "createdAtLocal": "2026-06-12 23:51",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "general,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Read\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-12 23:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": "Read",
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "First test of smart picker + DB archive landed: FAILED 8/280 (sequential), 0/280 after vocab_tree augmentation. Worker logs show two real bugs in my picker. Bug 1: dedup-by-image-id over-constrained the selection to one tight image-ID cluster. Run 1 chose (91,123)(89,121)(92,124)(86,120) — all within image IDs 86-124, one ~6s region of a 37s clip. Run 2 after vocab_tree picked (79,126)(84,125)(77,127)(80,128) — same cluster slightly shifted. Gave mapper 4 near-identical seeds instead of 4 diverse seeds across the capture timeline. Bug 2: no two_view_geometries.config filter. Likely most of those tightly-clustered high-match pairs are planar (matches on ground or wall), which cannot bootstrap a 3D model regardless of count. Bonus finding: vocab_tree augmentation made registration WORSE (8 -> 0) by polluting the verified-pair pool with noise the mapper couldn't reconcile on this scene. Same DB also showed sequential alone giving 8/280 today vs 3/280 earlier today, confirming sequential's incremental_mapper init is also RNG-dependent (previously thought deterministic). Holding worker push until I can inspect two_view_geometries.config distribution from the now-archived database locally. Fix plan if planar dominates: filter picker to config IN (2,3), region-spread candidates across the timeline instead of pure image-id dedup, possibly skip vocab_tree on detected-planar scenes.",
+  "commands": [
+    "python -c 'inspect b3kw53qwe.output for worker log dump'"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "781766265eb52ea39bdc47b41ddff4d848b90ee85d9efea971d35f66ad6350cd",
+  "git": null
+}

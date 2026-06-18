@@ -107,7 +107,7 @@
     },
     {
       "canonical": "vaultwares-media-processing",
-      "aliases": ["VaultWares Media Processing"],
+      "aliases": ["VaultWares Media Processing", "video-transcriber-translator", "vault-enhancer", "vault_enhancer"],
       "notes": "Case variant from agent input."
     },
     {
@@ -138,6 +138,12 @@
       "newRemote": "p-potvin/vaultwares-api",
       "notes": "Canonical API service name. Repo rename is staged after DB/API wiring; alias keeps telemetry and monitor history grouped during transition."
     },
+    {
+      "canonical": "python-zipper",
+      "aliases": ["python-scripts"],
+      "notes": "Python web server for download management"
+    },
+    
     {
       "canonical": "vaultwares-docs",
       "aliases": ["tmp-app"],

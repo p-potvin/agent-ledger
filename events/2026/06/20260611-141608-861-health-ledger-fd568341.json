@@ -1,0 +1,37 @@
+{
+  "id": "20260611-141608-861-health-ledger-fd568341",
+  "createdAt": "2026-06-11T18:16:08.8612803Z",
+  "createdAtLocal": "2026-06-11 14:16",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "verification",
+  "actor": "pg-watchdog",
+  "agentHeader": "Agent: pg-watchdog (role: subagent)\r\nModel: unknown\r\nThinking: unknown\r\nMode: dispatch\r\nPermissions: autopilot (network: clopeux-desktop)\r\nCWD: C:\\Windows\\System32  Branch: n/a\r\nTools used (this reply): pg_isready, Restart-Service\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-11 14:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "subagent",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "dispatch",
+    "permissions": "autopilot",
+    "network": "clopeux-desktop",
+    "toolsUsed": [
+      "pg_isready",
+      "Restart-Service"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Windows\\System32",
+  "summary": "pg-watchdog: PG recovered. Previous consecutive failures: 2. pg_isready: 127.0.0.1:5432 - accepting connections",
+  "commands": [],
+  "files": [
+    "health-ledger\\scripts\\pg-watchdog.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "fd5683418dbd214c5ad3efa45f74436e1f3cf7166da0163992c1505135d065df",
+  "git": null
+}

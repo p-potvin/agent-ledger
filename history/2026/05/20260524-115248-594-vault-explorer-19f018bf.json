@@ -1,0 +1,52 @@
+﻿{
+    "id":  "20260524-115248-594-vault-explorer-19f018bf",
+    "createdAt":  "2026-05-24T15:52:48.5944196Z",
+    "createdAtLocal":  "2026-05-24 11:52",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-24 11:52 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Fixed three critical bugs: 1) Favorites star button styling and markup by using a robust solid yellow gold #E5A93B and #ffffff fallback and adding padding/margin resets to prevent deforming/clipping. 2) Fixed sorting menu white-on-white text in Console dark mode by switching popup background from \u000bar(--vault-warm-raised) to the adaptive \u000bar(--vault-card-bg) and adding CSS hover classes. 3) Resolved instant socket hang up in the proxy CONNECT tunnel by rewriting the parser to parse usernames, passwords, and custom ports natively using built-in URL parsing instead of simple colon splitting.",
+    "commands":  [
+                     "node tests/comprehensive_test.js"
+                 ],
+    "files":  [
+                  "js/navigation.js",
+                  "js/app.js",
+                  "index.html",
+                  "index.css",
+                  "src/realdebrid.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "19f018bf927f4dc6aa02e12a5ed596ccacd10d07e23ee727740a3b1ff6a0fba2",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "914fdc9",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "20260609-051210-891-health-ledger-7128af19",
+  "createdAt": "2026-06-09T09:12:10.8915478Z",
+  "createdAtLocal": "2026-06-09 05:12",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "verification",
+  "actor": "pg-watchdog",
+  "agentHeader": "Agent: pg-watchdog (role: subagent)\r\nModel: unknown\r\nThinking: unknown\r\nMode: dispatch\r\nPermissions: autopilot (network: clopeux-desktop)\r\nCWD: C:\\Windows\\System32  Branch: n/a\r\nTools used (this reply): pg_isready, Restart-Service\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-09 05:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "subagent",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "dispatch",
+    "permissions": "autopilot",
+    "network": "clopeux-desktop",
+    "toolsUsed": [
+      "pg_isready",
+      "Restart-Service"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Windows\\System32",
+  "summary": "pg-watchdog: PG probe failed (attempt 1/2). pg_isready: 127.0.0.1:5432 - no response",
+  "commands": [],
+  "files": [
+    "health-ledger\\scripts\\pg-watchdog.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "7128af19d052ecf1ae034ec9b9c4b8d0e198d9225db99c972fed9be0a2df9275",
+  "git": null
+}

@@ -1,0 +1,44 @@
+{
+  "id": "20260611-122231-485-vaultwares-api-e5589c4d",
+  "createdAt": "2026-06-11T16:22:31.4856313Z",
+  "createdAtLocal": "2026-06-11 12:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "commands,handoff,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-11 12:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Cut over local VaultWares input tracker to the OVH VPS API over Tailscale. Updated OVH API env to include telemetry key and bind on 0.0.0.0:9001, restricted direct 9001 ingress in UFW to this workstation over tailscale0, restarted vaultwares-api, and verified direct /healthz plus https://api.vaultwares.ca/healthz. Updated Greencloud dnsmasq exact-host record for api.vaultwares.ca to 100.67.25.118 while leaving hooks/warden/secrets/monitor/stats on Greencloud because those services still run there. Paused VaultWares-InputTracker, saved User VW_API_URL=http://100.67.25.118:9001, restarted the task, and verified post-restart telemetry batches reached OVH Postgres.",
+  "commands": [
+    "ssh ubuntu@100.67.25.118 systemctl restart vaultwares-api.service",
+    "ufw allow in on tailscale0 from 100.71.101.21 to any port 9001 proto tcp",
+    "Stop-ScheduledTask -TaskName VaultWares-InputTracker",
+    "Set User VW_API_URL=http://100.67.25.118:9001",
+    "Start-ScheduledTask -TaskName VaultWares-InputTracker",
+    "Resolve-DnsName api.vaultwares.ca -Server 100.73.93.84 -Type A",
+    "Invoke-RestMethod https://api.vaultwares.ca/healthz"
+  ],
+  "files": [
+    "remote:/opt/vaultwares-api/.env",
+    "remote:/etc/dnsmasq.d/vaultwares-tailnet.conf",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\input-state\\input-tracker-health.json"
+  ],
+  "planPath": "",
+  "contentHash": "e5589c4d7bad4fd30318133c8b47926ed401b20f65bf7f1f186907f51bf401d7",
+  "git": null
+}

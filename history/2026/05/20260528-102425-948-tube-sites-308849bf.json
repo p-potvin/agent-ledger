@@ -1,0 +1,60 @@
+{
+  "id": "20260528-102425-948-tube-sites-308849bf",
+  "createdAt": "2026-05-28T14:24:25.9489441Z",
+  "createdAtLocal": "2026-05-28 10:24",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-sites",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): functions.shell_command, functions.apply_patch, web.run\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-28 10:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "functions.shell_command",
+      "functions.apply_patch",
+      "web.run"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "request_rate_limiting_needed": false,
+      "consent_mode_v2": true,
+      "estimated_output_tokens": 1800,
+      "overlays_applied": ""
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Added configurable GTM + GA4 wiring, Consent Mode v2 defaults/updates, and a lightweight consent banner for both tube plugins (promking-tube + fullxxx-video). Added optional prior-blocking for plugin-injected marketing scripts (ad snippets) until Marketing consent is granted.",
+  "commands": [
+    "rg -n gtag/GTM/GA4 references",
+    "php -l (changed PHP files)",
+    "git status --porcelain"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\includes\\admin-settings.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\includes\\ads.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\assets\\js\\tube-consent.js",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\assets\\css\\tube-consent.css",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\promking-tube.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\templates\\single-pkt_video.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\admin-settings.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\ads.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\helpers.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\assets\\js\\tube-consent.js",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\assets\\css\\tube-consent.css",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\fullxxx-video.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\README.md"
+  ],
+  "planPath": "",
+  "contentHash": "308849bfccf286a24aa9e4a42577ca946ee22788910f1280e671dfc25e25c4ee",
+  "git": null
+}

@@ -1,0 +1,49 @@
+{
+  "id": "20260613-203427-032-vaultwares-studio-696f2766",
+  "createdAt": "2026-06-14T00:34:27.0320460Z",
+  "createdAtLocal": "2026-06-13 20:34",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, Read, Edit, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-13 20:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Three things. (1) Triggered cosmos_output in background bash b7wvm20tu — runs _run_remote_render which uploads model.zip + processed_min.zip + camera_path.json (orbit) to HF Dataset and spawns the render entrypoint as a paid HF Job. ~.10, ~15 min. Launcher-death risk same as last time; recovery dance proven if needed. (2) Lowered viewer sensitivity per user feedback: viewer.controls.rotateSpeed/panSpeed 1.0 -> 0.5, zoomSpeed 1.0 -> 0.6, WASD baseSpeed multiplier 0.6 -> 0.35 with floor 0.25 (was 0.4). Shift sprint unchanged at 3x. 77/77 tests still green. (3) Explained camera origins to user: 4 default cameras come from camera_director.py — Entrance/Workbench/Overhead/Prompt Hero — hardcoded at world (0, 1.6, 4.8) etc with implicit metric scale assumption. They DON'T scale or translate relative to actual scene bounds, which is a real bug for non-origin-centered scenes (backyards after gravity alignment land their centroid somewhere arbitrary). 'Scene Orbit' render path (from _default_orbit_path in pipeline.py) IS scene-aware though, so the walkthrough video itself uses the right framing. Also flagged: user's need for the Flip Up button is itself a real-bug-signal — likely camera.up drift during orbit interactions where GaussianSplats3D's initial up vector doesn't perfectly match (0,1,0); polar clamp prevents pole crossing but not roll. Worth a focused pass to add an explicit camera.up.set(0,1,0) after interactions. Asked user about queueing the sunny full recon sequential vs parallel with cosmos.",
+  "commands": [
+    "python -c 'cosmos_output via runner.run_stage (background bash b7wvm20tu)'",
+    "pytest tests/ -x -q --ignore=tests/test_viewer_server.py"
+  ],
+  "files": [
+    "vaultwares-studio/vaultwares_studio/webviewer/viewer.js"
+  ],
+  "planPath": "",
+  "contentHash": "696f2766249bf4098d50a6d678a49d5da9db82fedc2a5f7f9e29038bdb845650",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

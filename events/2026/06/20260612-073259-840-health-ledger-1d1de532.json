@@ -1,0 +1,43 @@
+{
+  "id": "20260612-073259-840-health-ledger-1d1de532",
+  "createdAt": "2026-06-12T11:32:59.8401178Z",
+  "createdAtLocal": "2026-06-12 07:32",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 07:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Reworked Health Ledger probe routing to avoid Greencloud self-probing. services.yaml now assigns Greencloud-hosted services to Clopeux-Desktop and vps-ovhcloud, assigns OVH API probes to Greencloud and Clopeux, and keeps OVH direct API checks off OVH itself. Deployed services.yaml to /opt/health-ledger on greencloud-vps and vps-ovhcloud, restarted both health-ledger-probe.service units, verified Greencloud dropped from 19 checks to 5 and OVH rose to 18 checks. Added OVH /etc/hosts mappings for Greencloud private names; remaining OVH failures are blocked TCP 80/443 from OVH to Greencloud, likely Tailscale ACL. Pushed b325b12 to main.",
+  "commands": [
+    "node YAML probe-matrix validation",
+    "scp services.yaml to greencloud-vps and vps-ovhcloud",
+    "systemctl restart health-ledger-probe.service on both VPSes",
+    "journalctl rollup checks",
+    "OVH /etc/hosts exact-name mapping",
+    "TCP 80/443 check from OVH to Greencloud",
+    "git commit b325b12",
+    "git push origin main"
+  ],
+  "files": [
+    "health-ledger/services.yaml"
+  ],
+  "planPath": "",
+  "contentHash": "1d1de53236a0cb6ef4da1df01eb410389f692e03dbad1199cb406407d5e76698",
+  "git": null
+}

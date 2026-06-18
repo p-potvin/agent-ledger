@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260612-144924-312-prom-king-vaultwares-api-73e5ac83",
+    "createdAt":  "2026-06-12T18:49:24.3128549Z",
+    "createdAtLocal":  "2026-06-12 14:49",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King \u0026 VaultWares API",
+    "kind":  "verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.0-flash\r\nThinking: high\r\nMode: code\r\nPermissions: bypass (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 14:49 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.0-flash",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "local",
+                    "toolsUsed":  "run_command",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Triggered and verified 20-page manual fetch runs for both sites (fxv and pkt) using pornxp source. Verified database settings cursor advanced to 21 for both, pre-insertion local deduplication (similar titles/durations) successfully ran on both, and a total of 1388 new videos were persisted successfully.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "73e5ac83b21a8f6d663d4f8a90715b7a4f8543e48a2f0d5706ded4b347968474",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "9d75865",
+                "hasChanges":  false
+            }
+}

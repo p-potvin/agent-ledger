@@ -1,0 +1,46 @@
+{
+  "id": "20260612-083232-807-health-ledger-cafa64d9",
+  "createdAt": "2026-06-12T12:32:32.8078793Z",
+  "createdAtLocal": "2026-06-12 08:32",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 08:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Verified the OVH/Greencloud probe triangle after server-to-server communication changes. Fixed Greencloud nginx tailnet certificate selection by adding explicit 100.73.93.84:443 SSL listeners for private VaultWares vhosts so OVH probes no longer receive the media certificate. Fresh vps-ovhcloud rollup now reports no failing services; greencloud-vps still reports vaultwares-api HTTPS failures.",
+  "commands": [
+    "ssh ubuntu@100.67.25.118 curl https://docs.vaultwares.ca/",
+    "ssh root@100.73.93.84 nginx -T",
+    "ssh root@100.73.93.84 nginx -t && systemctl reload nginx",
+    "ssh ubuntu@100.67.25.118 read /opt/health-ledger/data/rollups/latest.json",
+    "ssh root@100.73.93.84 read /opt/health-ledger/data/rollups/latest.json"
+  ],
+  "files": [
+    "/etc/nginx/sites-enabled/docs.vaultwares.ca.conf",
+    "/etc/nginx/sites-enabled/hooks.vaultwares.ca.conf",
+    "/etc/nginx/sites-enabled/secrets.vaultwares.ca.conf",
+    "/etc/nginx/sites-enabled/warden.vaultwares.ca.conf",
+    "/etc/nginx/sites-enabled/monitor.vaultwares.ca.conf",
+    "/etc/nginx/sites-enabled/stats.vaultwares.ca.conf",
+    "/etc/nginx/sites-enabled/mcp.vaultwares.ca.conf"
+  ],
+  "planPath": "",
+  "contentHash": "cafa64d92d36ffafdcbba93686e8a652033b1944d5979ac9a5593ee832d22118",
+  "git": null
+}

@@ -1,0 +1,47 @@
+﻿{
+    "id":  "20260612-144539-467-prom-king-vaultwares-api-4d79a3a8",
+    "createdAt":  "2026-06-12T18:45:39.4674251Z",
+    "createdAtLocal":  "2026-06-12 14:45",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King \u0026 VaultWares API",
+    "kind":  "verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.0-flash\r\nThinking: high\r\nMode: code\r\nPermissions: bypass (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 14:45 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.0-flash",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "local",
+                    "toolsUsed":  "run_command",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Triggered and successfully verified a 20-page back-catalog manual fetch run on production VPS for fxv/pornxp. Confirmed that page index P was correctly advanced from 1 to 21, duplicate URLs were filtered, title/duration matches rejected 43 candidates, and 677 unique videos were persisted.",
+    "commands":  [
+                     "ssh -i ... \u0027python3 /tmp/trigger.py\u0027",
+                     "ssh -i ... \u0027python3 -u /tmp/stream.py\u0027"
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "4d79a3a89accd59be4668f153da78785c6725da7d0294b083a8337260ece0f8b",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "9d75865",
+                "hasChanges":  false
+            }
+}

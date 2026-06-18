@@ -1,0 +1,56 @@
+{
+  "id": "20260609-183538-513-vaultwares-studio-366c66f8",
+  "createdAt": "2026-06-09T22:35:38.5135975Z",
+  "createdAtLocal": "2026-06-09 18:35",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Write, Edit, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-09 18:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "M0 remote execution foundation implemented and pushed to main (b87bc6c). New vaultwares_studio/runners package: StageRunner abstraction (StageContext/StageResult/CancelToken/cost estimates), LocalStageRunner (Popen streamed output, process-tree cancel, timeout), HfJobsStageRunner (cost-consent gate before any network call, private HF dataset artifact transport jobs/<id>/<stage>/{in,out}, job launch/poll>=10s/cancel, output download, cost metadata, echo smoke test). Manifest schema v2 (placement/runner/params/cost per stage, spend_ledger, v1 migration; reconstruction defaults to remote). pipeline._run_command delegates to LocalStageRunner. docker/worker image v1 (COLMAP+nerfstudio+hub, vw_stage.py bootstrap) + build_worker_image.ps1. GUI Settings: HF token via keyring, artifact repo, flavor, cost-confirm dialog, echo test button. 19 pytest tests pass. ROADMAP/TODO rewritten; plan of record committed at docs/plans/plan-v1-remote-first-20260609.md. Remaining M0: live cpu-basic echo job (needs user's HF token) and worker image build/push.",
+  "commands": [
+    "pytest tests -q (19 passed)",
+    "uv pip install psutil keyring",
+    "git push origin main (b87bc6c)"
+  ],
+  "files": [
+    "vaultwares_studio/runners/base.py",
+    "vaultwares_studio/runners/local.py",
+    "vaultwares_studio/runners/hf_jobs.py",
+    "vaultwares_studio/pipeline.py",
+    "gui_app.py",
+    "docker/worker/Dockerfile",
+    "tests/test_runners.py"
+  ],
+  "planPath": "",
+  "contentHash": "366c66f8858e2f17e629a8d25ef16785413fbdbf3ea044bd6662b5800e343e06",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "b87bc6c",
+    "hasChanges": true
+  }
+}

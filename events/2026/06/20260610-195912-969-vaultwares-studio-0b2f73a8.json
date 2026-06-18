@@ -1,0 +1,50 @@
+{
+  "id": "20260610-195912-969-vaultwares-studio-0b2f73a8",
+  "createdAt": "2026-06-10T23:59:12.9691434Z",
+  "createdAtLocal": "2026-06-10 19:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + huggingface.co API)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Edit, Read, TaskStop\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 19:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + huggingface.co API",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Read",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Standard run bug found: COLMAP incremental mapper non-determinism — 2/280 registered from a database with telemetry IDENTICAL to the successful 280/280 draft run (12475 avg keypoints, 2408 verified pairs); degenerate RANSAC init pair. Cancelled the in-flight job mid-exhaustive (cost control). Fix: retry_mapper() re-runs only colmap mapper on the existing database with relaxed init (tri-angle 8 then 4, lower inlier floors, multiple_models 0), picks largest model, regenerates transforms via ns-process-data --skip-colmap (~2 min vs ~25 for exhaustive, which remains the last rung). Worker rebuilding + Standard rerun chained in background (user pre-approved the rerun).",
+  "commands": [
+    "TaskStop + cancel_job 6a29f12e",
+    "fetch_job_logs diagnosis",
+    "push_worker_space + monitor + rerun (bg)",
+    "git push origin main"
+  ],
+  "files": [
+    "docker/worker/recon_entrypoint.py"
+  ],
+  "planPath": "",
+  "contentHash": "0b2f73a833d27762d839a521b34a57afa9b177e4a859a1246c1a92da3e0ecd6f",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "5ab7219",
+    "hasChanges": true
+  }
+}

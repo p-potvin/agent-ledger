@@ -1,0 +1,54 @@
+{
+  "id": "20260610-181740-161-vaultwares-studio-f72815c0",
+  "createdAt": "2026-06-10T22:17:40.1612137Z",
+  "createdAtLocal": "2026-06-10 18:17",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Edit, Write, Read, Glob\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 18:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Read",
+      "Glob"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Viewport tab fixed and verified rendering the real backyard splat (user-reported failure). Root cause found via new JS-console capture: Chromium Fetch API refuses custom vw:// scheme for the splat fetch even with FetchApiAllowed (worker contexts). Replaced scheme transport with loopback-only HTTP server (127.0.0.1 random port, traversal-guarded /job mapping); vendored qwebchannel.js; added --enable-unsafe-swiftshader for RDP/VM WebGL; scene auto-framing from preview-cloud centroid/radius; load-progress status. Windowed verification: Scene loaded with 477k gaussians. 36 tests green. Also answered: HF Inference Providers credits cannot run COLMAP/training batch jobs (inference-only) but may cover M4 annotation inference — noted. Pushed.",
+  "commands": [
+    "windowed viewport test -> Scene loaded",
+    "pytest (36 passed)",
+    "git push origin main"
+  ],
+  "files": [
+    "gui/viewport.py",
+    "vaultwares_studio/webviewer/index.html",
+    "vaultwares_studio/webviewer/viewer.js",
+    "gui_app.py",
+    "tests/test_viewer_server.py"
+  ],
+  "planPath": "",
+  "contentHash": "f72815c0f2563945536ad9bf75461f42da7e71ff22c05da89185b08d2a4c5b24",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "ae1a6c5",
+    "hasChanges": true
+  }
+}

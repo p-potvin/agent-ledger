@@ -1,0 +1,39 @@
+{
+  "id": "20260610-081935-863-vaultwares-studio-b96e980c",
+  "createdAt": "2026-06-10T12:19:35.8631016Z",
+  "createdAtLocal": "2026-06-10 08:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: low\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + huggingface.co API)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Read, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 08:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + huggingface.co API",
+    "toolsUsed": [
+      "Read",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Worker image build SUCCEEDED on attempt 3: hf.co/spaces/clopeux/vw-studio-worker (base ghcr.io/nerfstudio-project/nerfstudio:latest + python alias + huggingface_hub/plyfile/trimesh + vw_stage.py/recon_entrypoint.py). Space auto-paused after build — it exists only to hold the image. Remote reconstruction infra is now fully ready; the only remaining blocker for live M0/M1 verification (echo test + first real Draft reconstruction) is the user adding pre-paid credits to their HF account (Jobs returned 402).",
+  "commands": [
+    "monitor_worker_space.py: BUILDING -> APP_STARTING -> paused"
+  ],
+  "files": [
+    "docker/worker/Dockerfile"
+  ],
+  "planPath": "",
+  "contentHash": "b96e980cf525dfef800c831deb805036915437a764197cd8b0b7a4cc0bcdbab3",
+  "git": null
+}

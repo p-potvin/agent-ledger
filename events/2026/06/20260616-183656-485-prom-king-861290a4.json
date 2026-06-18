@@ -1,0 +1,50 @@
+{
+  "id": "20260616-183656-485-prom-king-861290a4",
+  "createdAt": "2026-06-16T22:36:56.4859246Z",
+  "createdAtLocal": "2026-06-16 18:36",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: win32)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Edit, Write, PowerShell, Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 18:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "win32",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "PowerShell",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Phase 1.5 admin batching shipped. API: list_terms now supports ?q= ILIKE and ?gender= (comma-list / null / has / all); list_videos + get_video support ?actor_gender= filter on embedded pornstar arrays. Shared SSR client defaults gender to 'female' for pornstars and actor_gender to 'female' on listVideos/getVideo so public sites auto-filter without touching every page. Admin: BatchActions.tsx rebuilt with quick-select dropdown (All/None/Invert/Has-gender/No-gender/Females/Males/Trans/Other/Not-females/Not-males) + dedicated Invert button; gender modal replaced per-row form with a single dropdown applied to all selected. New TaxonomyPicker.tsx (debounced name-autocomplete chip multi-select, gender=all bypass). VideoBatchActions.tsx swapped 'Term IDs' integer field for the picker. Synced across fxv/pkt/oneporn/sexyprn. Fixed param-offset bug in videos.py (gender param appended only when concrete values present). Verified: pnpm typecheck clean (0/0/0 across 4 apps), py_compile clean. Ingest unchanged - existing INSERT ON CONFLICT (slug) DO UPDATE preserves gender on re-encounter.",
+  "commands": [
+    "pnpm typecheck",
+    "py_compile"
+  ],
+  "files": [
+    "vaultwares-api/app/routers/promking/taxonomies.py",
+    "vaultwares-api/app/routers/promking/videos.py",
+    "shared-tube/shared/src/api/promking-api.ts",
+    "shared-tube/apps/fxv/src/admin/Catalog/BatchActions.tsx",
+    "shared-tube/apps/fxv/src/admin/Catalog/VideoBatchActions.tsx",
+    "shared-tube/apps/fxv/src/admin/Catalog/TaxonomyPicker.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "861290a4893d81e641e502e5e4e6a1536ce0e37d581fd02daa938c9dc72c97b2",
+  "git": null
+}

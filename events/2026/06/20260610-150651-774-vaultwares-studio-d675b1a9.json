@@ -1,0 +1,38 @@
+{
+  "id": "20260610-150651-774-vaultwares-studio-d675b1a9",
+  "createdAt": "2026-06-10T19:06:51.7741550Z",
+  "createdAtLocal": "2026-06-10 15:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "general,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: chat\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): PowerShell, TaskStop, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 15:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "chat",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "TaskStop",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Answered capture-technique questions: corrected 'slow panning is best' (rotation gives no parallax; slow WALK with gentle sweep), endorsed 0.5x ultra-wide for small rooms (one lens for whole clip), explained splat coverage rule (multi-angle = solid, single-angle = billboard), doorway transitions (keep both spaces' features in frame; first test = single room), depth is triangulation not cues (no absolute scale -> miniatures reconstruct as full-size, valid creative technique), outdoors/backyard is feature-rich and easier than dim rooms (avoid movers/sky/reflections). GUI 'didn't build' diagnosed: app launches fine via .venv\\\\Scripts\\\\python.exe gui_app.py (verified by launching+closing it); user likely used system python or stale Apr dist EXE. Viewing tiers: Viewport tab, Open3D fallback, external 3DGS viewers/usdview. Waiting on user's clean capture.",
+  "commands": [
+    "launched gui_app.py via venv -> window opened OK (then closed)"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "d675b1a96e975e97bf8d077f9e02a29d4fac6a0c5b404d892ac5f323b14d35a3",
+  "git": null
+}

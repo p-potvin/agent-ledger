@@ -1,0 +1,51 @@
+﻿{
+    "id":  "20260614-121459-709-vaultwares-studio-41fa5076",
+    "createdAt":  "2026-06-14T16:14:59.7096344Z",
+    "createdAtLocal":  "2026-06-14 12:14",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change",
+    "actor":  ":AGENT_NAME",
+    "agentHeader":  "Agent: :AGENT_NAME (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: autopilot (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-14 12:14 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-4-7",
+                    "thinking":  "medium",
+                    "mode":  "agent",
+                    "permissions":  "autopilot",
+                    "network":  "local-windows",
+                    "toolsUsed":  [
+                                      "Read",
+                                      "Edit",
+                                      "Bash"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Replaced pointer-lock FPS with right-click-drag free-look. Right-mouse down (alone or with left) enters look mode: stop event propagation so OrbitControls right-click pan does not fire, snapshot camera.quaternion as lookBaseQuat, reset yaw/pitch deltas, disable OrbitControls. mousemove applies axis-angle yaw around worldUp + pitch around right-after-yaw, scalar pitch clamped to +/-88.8deg. mouseup on right exits. Cursor stays visible throughout (no pointer lock) — user reported hiding the cursor made framing imprecise, and right-click+hold not visibly doing anything was confusing. WASD still walks in free-look using horizontal-projected forward. Removed FPS pointer-lock code (mode rename fpsMode-\u003elookMode, fpsYaw/Pitch-\u003elookYaw/Pitch, FPS_TARGET_DISTANCE-\u003eLOOK_TARGET_DISTANCE) and the both-buttons trigger (right alone is now the canonical binding; both-buttons no longer special-cased).",
+    "commands":  [
+                     ".venv/Scripts/python.exe -m pytest tests/ -x -q --ignore=tests/test_viewer_server.py",
+                     ".venv/Scripts/python.exe tools/view_splat.py"
+                 ],
+    "files":  [
+                  "vaultwares_studio/webviewer/viewer.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "41fa50762c90b75ee46580b137b3e17310c2724e1c38171a6d5506beaf4a85e7",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "main",
+                "head":  "fac0979",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,66 @@
+{
+  "id": "20260609-165246-292-prom-king-shared-tube-vaultwares-api-eaef3da7",
+  "createdAt": "2026-06-09T20:52:46.2920076Z",
+  "createdAtLocal": "2026-06-09 16:52",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube + vaultwares-api",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5\r\nThinking: high\r\nMode: default\r\nPermissions: danger-full-access; approval never (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch, update_plan\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-09 16:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5",
+    "thinking": "high",
+    "mode": "default",
+    "permissions": "danger-full-access; approval never",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "update_plan"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "visual_gate_pending": true,
+      "pkt_step_5_complete": true,
+      "fxv_step_5_complete": true,
+      "long_running_tasks": true
+    },
+    "metrics": {
+      "backend_tests": 1,
+      "frontend_tests": 2,
+      "local_smoke_pages": 2
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Applied selected differentiation: PKT option 3 now focuses monetization on video detail pages with player ad, sticky right-rail ad, and separate studio/actor/category related sections; FXV now uses the classier studio-first option with studios prioritized in rails, More from this studio under player, native video-card ads every 10 cards, and bottom banner placement. Reverified typecheck, build, lint, focused API/backend tests, source scans, and local homepage smoke checks for both sites.",
+  "commands": [
+    "pnpm --filter @promking/site-pkt typecheck",
+    "pnpm -r typecheck",
+    "pnpm lint",
+    "pnpm -r build",
+    "pnpm --filter @promking/shared-tube test -- src/api/promking-api.test.ts",
+    ".\\.venv\\Scripts\\python.exe -m pytest tests/test_promking_video_filters.py",
+    "rg scans for iframe/old pipeline/disabled source names",
+    "Invoke-WebRequest http://localhost:4322/",
+    "Invoke-WebRequest http://localhost:4321/"
+  ],
+  "files": [
+    "shared-tube/apps/pkt/src/pages/videos/[slug].astro",
+    "shared-tube/apps/pkt/src/pages/videos/index.astro",
+    "shared-tube/apps/fxv/src/config.ts",
+    "shared-tube/apps/fxv/src/tube.ts",
+    "shared-tube/apps/fxv/src/pages/index.astro",
+    "shared-tube/apps/fxv/src/pages/videos/[slug].astro",
+    "shared-tube/apps/fxv/src/pages/videos/index.astro",
+    "shared-tube/shared/src/components/VideoGrid.astro",
+    "shared-tube/shared/src/components/TaxonomyRail.astro",
+    "shared-tube/shared/src/components/NativeVideoAd.astro"
+  ],
+  "planPath": "",
+  "contentHash": "eaef3da7bcfa40a89beb4062b6f1bc00bea511aee4363bd56aa8a741434ecaf8",
+  "git": null
+}

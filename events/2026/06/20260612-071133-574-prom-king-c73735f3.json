@@ -1,0 +1,52 @@
+﻿{
+    "id":  "20260612-071133-574-prom-king-c73735f3",
+    "createdAt":  "2026-06-12T11:11:33.5741391Z",
+    "createdAtLocal":  "2026-06-12 07:11",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "code-change,verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 3.5 Flash\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): view_file, replace_file_content, multi_replace_file_content, run_command, write_to_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 07:11 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.5 Flash",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "Windows",
+                    "toolsUsed":  [
+                                      "view_file",
+                                      "replace_file_content",
+                                      "multi_replace_file_content",
+                                      "run_command",
+                                      "write_to_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King",
+    "summary":  "Completed theme and layout changes. Removed popular links bar and sticky header effect from both sites. Configured PKT to use a light theme with logo orange (#d84a2c) as accent. Custom styled PKT sidebar rail to render on the left, card hover shadows/pill backgrounds to be theme-aware, and rail list items to use borders and underlines. Successfully built project and started dev server quietly.",
+    "commands":  [
+                     "pnpm build",
+                     "pnpm dev \u003e dev.log 2\u003e\u00261"
+                 ],
+    "files":  [
+                  "shared/src/components/Header.astro",
+                  "shared/src/tokens/pkt.ts",
+                  "shared/src/components/Layout.astro",
+                  "shared/src/components/TubePageFrame.astro",
+                  "shared/src/components/VideoCard.astro",
+                  "shared/src/components/TaxonomyRail.astro"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\0b4efc5b-0936-46da-8370-2250d51d4176\\implementation_plan.md",
+    "contentHash":  "c73735f3ce96001a069e8dd8e01f12acdf4472244d4205ac46dc996ad325dc70",
+    "git":  null
+}

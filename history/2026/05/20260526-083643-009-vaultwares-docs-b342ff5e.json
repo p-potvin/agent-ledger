@@ -1,0 +1,40 @@
+{
+  "id": "20260526-083643-009-vaultwares-docs-b342ff5e",
+  "createdAt": "2026-05-26T12:36:43.0097398Z",
+  "createdAtLocal": "2026-05-26 08:36",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): powershell, git\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-26 08:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "powershell",
+      "git"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Translate Mermaid diagram zoom toolbar labels to QC French (Ajuster / Remettre + aria labels); pushed to main.",
+  "commands": [
+    "git commit",
+    "git push origin main"
+  ],
+  "files": [
+    "src/MermaidBlock.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "b342ff5ebd4a4ade2713af251ef906446a9d5867e55715e181a8cbadd06e13d7",
+  "git": null
+}

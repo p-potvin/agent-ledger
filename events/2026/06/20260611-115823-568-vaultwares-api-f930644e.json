@@ -1,0 +1,44 @@
+{
+  "id": "20260611-115823-568-vaultwares-api-f930644e",
+  "createdAt": "2026-06-11T15:58:23.5684721Z",
+  "createdAtLocal": "2026-06-11 11:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-11 11:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Started PostgreSQL migration from Clopeux-Desktop local PG18 to vps-ovhcloud 100.67.25.118. Read VaultWares router/deployment docs. Dumped local vaultwares/promking DBs, saved manifest and hashes under C:\\Users\\Administrator\\Desktop\\db-migrations\\vps-ovhcloud-20260611-114948. Found OVH apidb PG16 cluster on 5433, made remote pre-restore dumps, restored PG16-compatible SQL snapshots into vaultwares/promking, restarted vaultwares-api.service, verified /healthz db=up. Promking row counts matched; vaultwares live telemetry was off by one row versus current local source because local API kept writing during migration, so final cutover needs write pause/final snapshot. estimated_output_tokens=2200; LONG_RUNNING_TASKS not applied.",
+  "commands": [
+    "Read vaultwares-docs router and deployment/backup/network summaries",
+    "pg_dump local vaultwares/promking to custom and PG16-compatible SQL files",
+    "SSH/SCP via C:\\Users\\Administrator\\.ssh\\tube-site-vps to ubuntu@100.67.25.118",
+    "Remote pg_dump pre-restore backups for apidb cluster",
+    "Restore PG16-compatible SQL into remote apidb cluster on port 5433",
+    "systemctl restart vaultwares-api.service and curl http://127.0.0.1:9001/healthz"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\db-migrations\\vps-ovhcloud-20260611-114948",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\ROUTER.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\deployment-flow.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "f930644e6a78e4cc0f27c140e5110058ea07525fde5850b353b0b1517c17fd2f",
+  "git": null
+}

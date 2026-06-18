@@ -1,0 +1,45 @@
+{
+  "id": "20260527-151107-639-vault-flows-bf65db3f",
+  "createdAt": "2026-05-27T19:11:07.6391679Z",
+  "createdAtLocal": "2026-05-27 15:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-27 15:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Quick-win feedback fixes: (1) Added --vault-copper #C77C45 + --vault-copper-muted in src/index.css; remapped --vault-signal-relay to copper so all existing 'relay' references (Transform node, validation badges) automatically pick up the new color. New Tailwind utility vw-copper. (2) WorkflowLibrary auto-refresh on login — added key={currentUser ?? 'guest'} so the library remounts and re-fetches the catalog when auth state flips, no page reload needed. (3) Param panel hidden by default — added paramPanelOpen state (default false), floating top-right toggle button (PanelRightOpen/Close from Lucide) on the canvas, the right inspector aside only renders when toggled. (4) Per-node execution-state LED in the canvas BaseNode header: muted/grey idle, copper pending, online green succeeded, alert red failed; pulses while in pending state. Derived from the global executionStatus + the per-node executionResults entry. Deployed dist (assets/index-CDo5-Dpt.js) atomically.",
+  "commands": [
+    "npm run build",
+    "scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/"
+  ],
+  "files": [
+    "vault-flows/src/index.css",
+    "vault-flows/src/App.tsx",
+    "vault-flows/src/canvas/nodes/BaseNode.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "bf65db3f622f386c89ad6148ab39c828b0d90782ba7000716b6a95084803fc19",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "main",
+    "head": "f4e4b75",
+    "hasChanges": true
+  }
+}

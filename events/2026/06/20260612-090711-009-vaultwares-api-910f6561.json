@@ -1,0 +1,39 @@
+{
+  "id": "20260612-090711-009-vaultwares-api-910f6561",
+  "createdAt": "2026-06-12T13:07:11.0096288Z",
+  "createdAtLocal": "2026-06-12 09:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 09:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fixed OVH API HTTPS for remote tailnet clients. Root cause was Tailscale Serve intercepting HTTPS 443 on vps-ovhcloud before nginx, causing TLS internal_error from Greencloud and local clients while OVH-local nginx tests passed. Ran sudo tailscale serve reset on OVH, verified nginx is the only IPv4 100.67.25.118:443 owner, confirmed https://api.vaultwares.ca/healthz returns DB-up JSON and /openapi.json returns 200 from both Greencloud and local, then closed vaultwares-api issue 63.",
+  "commands": [
+    "sudo tailscale serve reset",
+    "curl -sk https://api.vaultwares.ca/healthz",
+    "curl -sk https://api.vaultwares.ca/openapi.json",
+    "gh issue close 63 --repo p-potvin/vaultwares-api"
+  ],
+  "files": [
+    "/etc/nginx/sites-enabled/api.vaultwares.ca.conf"
+  ],
+  "planPath": "",
+  "contentHash": "910f656193606ead3f36104bbee1fe8e00dc69c22cbd6a5de6ec7c7f49420d32",
+  "git": null
+}

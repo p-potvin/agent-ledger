@@ -1,0 +1,41 @@
+{
+  "id": "20260612-064708-602-vaultwares-api-67f10331",
+  "createdAt": "2026-06-12T10:47:08.6023280Z",
+  "createdAtLocal": "2026-06-12 06:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 06:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Updated deploy/client examples and local worker defaults to target the OVH-hosted VaultWares API instead of local/Clopeux API. Verified direct OVH healthz and telemetry summary; could not SSH to OVH with the current key; api.vaultwares.ca HTTPS currently fails from Windows while direct HTTP 100.67.25.118:9001 works.",
+  "commands": [
+    "Invoke-WebRequest http://100.67.25.118:9001/healthz",
+    "Invoke-WebRequest http://100.67.25.118:9001/api/telemetry/input/summary",
+    "ssh root@100.67.25.118 permission denied",
+    "python -m py_compile vaultwares-api scripts"
+  ],
+  "files": [
+    "vaultwares-api/noddit_vps_nginx.conf.example",
+    "vaultwares-api/run_local_worker.py",
+    "vaultwares-api/test_worker_pipeline.py"
+  ],
+  "planPath": "",
+  "contentHash": "67f103311d61822bf55d02646be1ba1778f610562f1090b6a76fea3d4bcff8b3",
+  "git": null
+}

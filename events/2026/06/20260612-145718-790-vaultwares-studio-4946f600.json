@@ -1,0 +1,50 @@
+{
+  "id": "20260612-145718-790-vaultwares-studio-4946f600",
+  "createdAt": "2026-06-12T18:57:18.7902902Z",
+  "createdAtLocal": "2026-06-12 14:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-12 14:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Four worker + preset changes for SfM robustness, all in docker/worker/recon_entrypoint.py and presets.py. (1) retry_mapper: 2 -> 4 progressively-relaxed attempts. Original 2 (init_min_tri_angle 8/4, inliers 50/30) plus 2 new (init_min_tri_angle 2/1.5, inliers 20/15, abs_pose_min_num_inliers 10/8). Each attempt ~2 min, so 4 attempts = ~8 min insurance before giving up on the mapper init lottery. (2) Matching loop swapped 'exhaustive' for 'vocab_tree'. Added ensure_vocab_tree() helper that lazily downloads vocab_tree_flickr100K_words256K.bin from demuc.de/colmap on first use, caches at /tmp/. ns-process-data invocation appends --vocab-tree-path when matching=vocab_tree. Falls back gracefully (stops at sequential) if download fails. vocab_tree is O(n log n) vs exhaustive's O(n^2), runs in ~10 min instead of 30-45, and catches loop closures sequential misses. (3) MIN_REGISTERED dynamic: new MIN_REGISTERED_RATIO=0.5 constant, per-job target = max(MIN_REGISTERED_IMAGES=10, frame_count * 0.5). For typical 280-frame job, fails at <140 instead of <10. Error message rewritten to point at scene texture + capture motion + lighting + glass/water/mirror traps. (4) presets.py standard: downscale_factor 2 -> 1 (full-res training), est_minutes 35 -> 60. Tradeoff: 4x pixels per training iteration but sharper final splat. Standard remains DEFAULT_PRESET_KEY. Draft and high left unchanged. Worker syntax compiles, full suite 77/77 still passes. CHANGES NOT YET DEPLOYED: worker image must be rebuilt via tools/push_worker_space.py before next remote recon picks up the changes.",
+  "commands": [
+    "python -m py_compile docker/worker/recon_entrypoint.py",
+    "pytest tests/ -x -q --ignore=tests/test_viewer_server.py"
+  ],
+  "files": [
+    "vaultwares-studio/docker/worker/recon_entrypoint.py",
+    "vaultwares-studio/vaultwares_studio/presets.py"
+  ],
+  "planPath": "",
+  "contentHash": "4946f6004547efbbcdb4f62002f62d0bfe3f2227f05746ef9397967f80058fdd",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "20260612-064701-014-vaultwares-docs-e46dfd68",
+  "createdAt": "2026-06-12T10:47:01.0148796Z",
+  "createdAtLocal": "2026-06-12 06:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 06:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Updated operations docs and generated page resources so VaultWares API ownership points to vps-ovhcloud / 100.67.25.118 instead of Clopeux-Desktop. Regenerated docs resources and updated the network drawio source.",
+  "commands": [
+    "npm run generate:page-resources",
+    "rg stale API endpoints"
+  ],
+  "files": [
+    "vaultwares-docs/docs-content/operations/services-inventory.mdx",
+    "vaultwares-docs/docs-content/operations/services-inventory-QC.mdx",
+    "vaultwares-docs/docs-content/operations/network-map.mdx",
+    "vaultwares-docs/docs-content/operations/network-map-QC.mdx",
+    "vaultwares-docs/docs-content/operations/tailscale.mdx",
+    "vaultwares-docs/docs-content/operations/tailscale-QC.mdx",
+    "vaultwares-docs/docs-content/adr/0001-shared-tube-rebuild.mdx",
+    "vaultwares-docs/images/diagrams/vaultwares-network.drawio",
+    "vaultwares-docs/src/resources/pages/operations__network-map.json",
+    "vaultwares-docs/src/resources/pages/operations__services-inventory.json",
+    "vaultwares-docs/src/resources/pages/operations__tailscale.json",
+    "vaultwares-docs/src/resources/pages/adr__0001-shared-tube-rebuild.json"
+  ],
+  "planPath": "",
+  "contentHash": "e46dfd680df99d7486db6988c55052cd66850a8f4402545be99a71a2fba4e52b",
+  "git": null
+}

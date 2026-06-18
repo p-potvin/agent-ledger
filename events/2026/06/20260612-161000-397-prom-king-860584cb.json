@@ -1,0 +1,54 @@
+﻿{
+    "id":  "20260612-161000-397-prom-king-860584cb",
+    "createdAt":  "2026-06-12T20:10:00.3977608Z",
+    "createdAtLocal":  "2026-06-12 16:10",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "code-change,verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 1.5 Pro\r\nThinking: medium\r\nMode: code\r\nPermissions: restricted (network: Windows Local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 16:10 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 1.5 Pro",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "restricted",
+                    "network":  "Windows Local",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Adjusted Safe Mode toggle logic in getSafeModeState to default to off in production unless developer bypass is detected. Passed request/address parameters to properly detect developer IP. Expanded the randomized content database with a broader selection of safe titles. Incremented the project version to v0.1.1 across all workspace packages and rendered it inside Header.astro as an HTML comment.",
+    "commands":  [
+                     "pnpm build"
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\security\\safe-mode.ts",
+                  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\components\\Header.astro",
+                  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\components\\VideoCard.astro",
+                  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\components\\PlayerModal.astro",
+                  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\pkt\\src\\pages\\videos\\[slug].astro",
+                  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\fxv\\src\\pages\\videos\\[slug].astro"
+              ],
+    "planPath":  "",
+    "contentHash":  "860584cbe52ecbce6afe1d9b654ba91a4a076e7990de0ec4b0cda5c824c78fda",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "28cc5f4",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "20260613-225408-660-health-ledger-8e13af66",
+  "createdAt": "2026-06-14T02:54:08.6600151Z",
+  "createdAtLocal": "2026-06-13 22:54",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-13 22:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Planned OVH/health-ledger deployment verification. Router categories: SOURCE_OF_TRUTH, SECURITY_POSTURE, SECRETS_HANDLING, NETWORK_INFRASTRUCTURE, REQUEST_RATE_LIMITING, VERIFICATION, LEDGER_LOOKUP, AUTOMATION_POLICY, DEPLOYMENT_POLICY, HANDLING_BUGS. Overlay LONG_RUNNING_TASKS applied; estimated_output_tokens=9000 because task spans OVH API/DB, health-ledger, Proton Bridge mail delivery, and Joker systemd deployment checks. VW_STATE={resumeId=hl-ovh-20260613, routerCategories=[...], overlaysApplied=[LONG_RUNNING_TASKS], interview={askedQuestion=true,completed=false}, resume={resumeMode=false}}. Waiting for approval before bounded live SSH/HTTP/API checks; no secrets read or logged.",
+  "commands": [
+    "Get-Content vaultwares-docs/AGENTS.md",
+    "Get-Content vaultwares-docs/instructions/ROUTER.md",
+    "Get-Content selected protocol summaries and deployment docs",
+    "rg --files for health-ledger/deployment artifacts"
+  ],
+  "files": [
+    "vaultwares-docs/AGENTS.md",
+    "vaultwares-docs/instructions/ROUTER.md",
+    "vaultwares-docs/docs-content/operations/deployment-flow.mdx",
+    "vaultwares-docs/docs-content/operations/services-inventory.mdx",
+    "vaultwares-docs/docs-content/operations/deploy-alerts.mdx",
+    "vaultwares-docs/docs-content/operations/mcp-ledger-tools.mdx",
+    "health-ledger"
+  ],
+  "planPath": "",
+  "contentHash": "8e13af66053e43ddb006af561f6914b398f403788ab4cfd8d3b4264006b811f7",
+  "git": null
+}

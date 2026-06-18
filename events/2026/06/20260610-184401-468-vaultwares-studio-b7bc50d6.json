@@ -1,0 +1,48 @@
+{
+  "id": "20260610-184401-468-vaultwares-studio-b7bc50d6",
+  "createdAt": "2026-06-10T22:44:01.4686978Z",
+  "createdAtLocal": "2026-06-10 18:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 18:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Second viewport bug (user: tab empty, console clean): dashboard created a fresh EMPTY job at every launch, so the viewport and Open Latest Job pointed at an artifact-less manifest; the backyard job was unreachable except via file picker. Fix: startup resumes the latest job with completed stages (_latest_started_manifest), falling back to newest then create. User had cleaned data/jobs to the single successful backyard job. Verified through the REAL Window (not standalone): startup manifest = local-run-20260610-165858, Viewport tab renders Scene loaded. 36 tests green. Pushed.",
+  "commands": [
+    "real-app windowed smoke -> REAL APP VIEWPORT OK",
+    "pytest (36 passed)",
+    "git push origin main"
+  ],
+  "files": [
+    "gui_app.py"
+  ],
+  "planPath": "",
+  "contentHash": "b7bc50d64931e79a7a86269336c844d9465bce67fce9391717bdb55c54824bc2",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "ff822ab",
+    "hasChanges": true
+  }
+}

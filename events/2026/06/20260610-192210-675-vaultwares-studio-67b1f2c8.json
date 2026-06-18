@@ -1,0 +1,52 @@
+{
+  "id": "20260610-192210-675-vaultwares-studio-67b1f2c8",
+  "createdAt": "2026-06-10T23:22:10.6753305Z",
+  "createdAtLocal": "2026-06-10 19:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + huggingface.co API)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Edit, Write, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 19:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + huggingface.co API",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "User approved Standard reconstruction — launched in background (~USD 0.55, backyard video, banks render bundle). While it runs, shipped M2 slice 3: captured-cameras panel in the viewport (list/reorder/delete stops, persisted to captured_cameras.json which the usd_cameras stage consumes) + Preview Path (window.playPath flies the viewer camera along the Catmull-Rom path at 30fps, user input cancels) — free preview before the paid render. Default EN strings for the standalone viewer + EN/QC catalog entries. Compile + offscreen panel smoke + 43 tests green. Pushed.",
+  "commands": [
+    "headless_remote_run --preset standard --yes (bg)",
+    "offscreen camera panel smoke OK",
+    "pytest (43 passed)",
+    "git push origin main"
+  ],
+  "files": [
+    "gui/viewport.py",
+    "vaultwares_studio/webviewer/viewer.js",
+    "gui_app.py"
+  ],
+  "planPath": "",
+  "contentHash": "67b1f2c82d27dcff588108e742b2a5e9b1b7e21ed205a4c5e4a6448ee0693bf6",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "ae9fafd",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "20260610-172144-020-vaultwares-studio-e913d4b6",
+  "createdAt": "2026-06-10T21:21:44.0202900Z",
+  "createdAtLocal": "2026-06-10 17:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: chat\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): PowerShell, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-10 17:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "chat",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Answered cost question: HF Jobs CPU flavors are NOT free (billed per minute, cpu-basic ~USD 0.05/h); Spaces free CPU tier is free but 2 vCPU + no job semantics + ToS-gray as batch compute; ZeroGPU unusable (2-min GPU slices vs 5-10 min continuous training). Real waste identified: COLMAP (CPU work since fix) bills GPU rates inside the l4x1 job (~USD 0.27 of 0.30/run). Plan recorded in TODO: (1) retest GPU matching with CPU extraction (~USD 0.15/run if extraction-only bug), else (2) user-proposed two-job split SfM on cpu-upgrade + training on l4x1 (~USD 0.17/run). Decision after first green run. Current backyard run RUNNING since 17:00.",
+  "commands": [
+    "git push origin main"
+  ],
+  "files": [
+    "TODO.md"
+  ],
+  "planPath": "",
+  "contentHash": "e913d4b6ee608189835db0a6a3333228efcf20e2cf1e7fec468ca4c0dc0593d4",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "e91f9e7",
+    "hasChanges": true
+  }
+}

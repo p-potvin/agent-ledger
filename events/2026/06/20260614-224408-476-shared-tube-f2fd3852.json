@@ -1,0 +1,58 @@
+{
+  "id": "20260614-224408-476-shared-tube-f2fd3852",
+  "createdAt": "2026-06-15T02:44:08.4767814Z",
+  "createdAtLocal": "2026-06-14 22:44",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "bugfix,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: medium\r\nMode: default\r\nPermissions: never (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): shell_command, apply_patch, tool_search, node_repl, gh, playwright-python\r\nMCP servers accessed (this reply): node_repl\r\nTime: 2026-06-14 22:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "medium",
+    "mode": "default",
+    "permissions": "never",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "tool_search",
+      "node_repl",
+      "gh",
+      "playwright-python"
+    ],
+    "mcpServersAccessed": "node_repl"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Investigated urgent OPH/SPN admin dashboard regression. Created GitHub issue Prom-King/shared-tube#1, verified current origin/main commit c685158 contains the OPH/SPN admin dashboard implementation and matching admin site prop support, ran targeted oneporn/sexyprn typechecks and builds successfully, and browser-smoked both local /admin pages plus /contact navigation with no console/page/request errors. Also stopped the earlier Telethon run on request; health-ledger local input-tracker heartbeat removal and python-zipper PYLOAD_API_URL override remain as earlier local edits.",
+  "commands": [
+    "gh issue create --repo Prom-King/shared-tube --title \"Fix OPH/SPN admin dashboards to match FXV/PKT\"",
+    "pnpm --filter @promking/site-oneporn typecheck",
+    "pnpm --filter @promking/site-sexyprn typecheck",
+    "pnpm --filter @promking/site-oneporn build",
+    "pnpm --filter @promking/site-sexyprn build",
+    "Playwright Python smoke: /admin and /contact on local oneporn/sexyprn previews",
+    "gh issue comment 1 --repo Prom-King/shared-tube ..."
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\oneporn\\src\\admin\\App.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\sexyprn\\src\\admin\\App.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\oneporn\\src\\pages\\videos\\[slug].astro",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\sexyprn\\src\\pages\\videos\\[slug].astro"
+  ],
+  "planPath": "",
+  "contentHash": "f2fd3852d8e1a6376f34322d122e823bd6317ba103daf8a4b4378e1d604183e9",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "c685158",
+    "hasChanges": false
+  }
+}

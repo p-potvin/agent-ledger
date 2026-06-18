@@ -41,7 +41,7 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parent.parent
 DIRS = (ROOT / "events", ROOT / "history")
-DEFAULT_API_URL = "http://127.0.0.1:9001"
+DEFAULT_API_URL = "http://100.67.25.118:9001"
 CHECKPOINT = ROOT / ".backfill-agent-ledger-progress.json"
 BATCH_SIZE = 250  # well under the API's max 5000
 

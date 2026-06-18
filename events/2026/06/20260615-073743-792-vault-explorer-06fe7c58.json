@@ -1,0 +1,47 @@
+{
+  "id": "20260615-073743-792-vault-explorer-06fe7c58",
+  "createdAt": "2026-06-15T11:37:43.7925462Z",
+  "createdAtLocal": "2026-06-15 07:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-15 07:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Mapped type-segregation system (collections/albums/playlists). Read filters.js, card.js, card-events.js, keybindings.js, directory.js, tabs.js, favorites.js, system.ipc.js, app.js, index.html, ROADMAP.md, TODO.md. Key finding: ROADMAP 1.5 says types cannot be mixed, but enforcement is partial - create-folder assigns type, add-to-folder dialog (showAddToFolderDialog) filters folder options by item type and resolves targetFolder requiring matching expectedType, BUT drag-drop onto fakeFolder (card.js) and the native context-menu add-to-folder submenu (system.ipc.js folderSubmenu lists ALL folders unfiltered) bypass type checks. Inside-folder display filtering (matchesCategoryType in filters.js) hides mismatched items at render time. So mixing is mostly prevented at the curated dialog entry points but NOT at drag-drop / native-menu, and display-time hiding masks any mismatches that slip in.",
+  "commands": [
+    "Read x10",
+    "Grep x2"
+  ],
+  "files": [
+    "js/navigation/filters.js",
+    "js/navigation/card.js",
+    "js/navigation/card-events.js",
+    "src/ipc/system.ipc.js",
+    "js/navigation/keybindings.js"
+  ],
+  "planPath": "",
+  "contentHash": "06fe7c5885cfe183f3f5f17265cf0495145866a75ec0b3cefd8ec34bb1638560",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "1a6636a",
+    "hasChanges": true
+  }
+}

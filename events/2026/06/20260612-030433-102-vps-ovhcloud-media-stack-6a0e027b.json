@@ -1,0 +1,36 @@
+{
+  "id": "20260612-030433-102-vps-ovhcloud-media-stack-6a0e027b",
+  "createdAt": "2026-06-12T07:04:33.1026982Z",
+  "createdAtLocal": "2026-06-12 03:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vps-ovhcloud media stack",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-12 03:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Checked whether flaresolverr.vaultwares.ca was added for OVH 100.67.25.118:8191. Greencloud dnsmasq and nginx contain no flaresolverr/8191 entries; OVH has no listener on 127.0.0.1:8191 or 100.67.25.118:8191. Default DNS resolves flaresolverr.vaultwares.ca to public Greencloud IP via fallback/wildcard, not a configured tailnet media route.",
+  "commands": [
+    "ssh root@100.73.93.84 grep dnsmasq/nginx for flaresolverr or 8191",
+    "ssh ubuntu@100.67.25.118 ss/curl checks for 8191",
+    "Resolve-DnsName flaresolverr.vaultwares.ca default and against 100.73.93.84"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "6a0e027baa106f465af7f66182daf53b7da7d4adf6a1087b7609b18dc561d473",
+  "git": null
+}

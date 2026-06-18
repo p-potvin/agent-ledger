@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260614-121833-654-vaultwares-studio-d10726e3",
+    "createdAt":  "2026-06-14T16:18:33.6545184Z",
+    "createdAtLocal":  "2026-06-14 12:18",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change",
+    "actor":  ":AGENT_NAME",
+    "agentHeader":  "Agent: :AGENT_NAME (role: main)\r\nModel: claude-opus-4-7\r\nThinking: low\r\nMode: agent\r\nPermissions: autopilot (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Edit, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-14 12:18 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-4-7",
+                    "thinking":  "low",
+                    "mode":  "agent",
+                    "permissions":  "autopilot",
+                    "network":  "local-windows",
+                    "toolsUsed":  [
+                                      "Edit",
+                                      "Bash"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Two viewport tweaks. (1) Lowered OrbitControls.rotateSpeed from 0.5 to 0.25 — left-drag orbit was too hot, especially after the free-look path was tuned slower. (2) Moved the contextmenu suppression from rendererCanvas to document. The native right-click menu fires on right-mouse-UP, and during free-look the cursor often drifts off the canvas before release, so the previous canvas-scoped listener missed the event and the menu opened on whatever element was under the pointer at release.",
+    "commands":  [
+                     ".venv/Scripts/python.exe tools/view_splat.py"
+                 ],
+    "files":  [
+                  "vaultwares_studio/webviewer/viewer.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "d10726e3a19635c2000475bb1e98c6785f623add11840d035fa4dac012e8415a",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "main",
+                "head":  "fac0979",
+                "hasChanges":  true
+            }
+}

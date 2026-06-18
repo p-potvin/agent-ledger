@@ -1,0 +1,47 @@
+{
+  "id": "20260612-223112-423-vaultwares-studio-304f7efa",
+  "createdAt": "2026-06-13T02:31:12.4238349Z",
+  "createdAtLocal": "2026-06-12 22:31",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, Edit, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-12 22:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Three worker fixes informed by a key stats finding. STATS DUMP: pulled colmap_db_stats + registered counts from 5 HF Jobs. Yesterday's success and today's failure on backyard_99s_cloudy.mp4 produced IDENTICAL match databases (12476 keypoints both, 3266 vs 3253 pairs, 745 vs 747 verified matches/pair) but registered 280/280 vs 3/280. PROOF the failure is purely mapper RNG lottery, not video content. Today's 62-99s trim had the BEST stats of any run (1418 avg matches, 2842 verified pairs) and still registered only 3. Matcher loves the footage; mapper rolls badly. FIX 1: bypass ns-process-data --matching-method vocab_tree (the --vocab-tree-path flag is rejected by this nerfstudio version). New vocab_tree_augment_and_remap() helper calls 'colmap vocab_tree_matcher' directly on the existing sequential database to ADD matches, then runs retry_mapper. Reuses sequential's feature extraction work. FIX 2: rewrote main matching flow as linear sequential -> retry_mapper -> vocab_tree+retry_mapper instead of a 2-iteration loop. Cleaner state, no re-extraction. FIX 3: bumped --Mapper.init_num_trials from COLMAP default 200 to 1000/1500/2000/2000 across the 4 retry_mapper attempts. The stats dump proved the lever is init-pair RNG: more trials = more rolls at the same matches finding a good seed pair, near-free CPU. Could be the single biggest win of this session if it kicks the mapper out of its current bad-luck streak on backyard captures. Worker syntax compiles, 77/77 tests pass. CHANGES NOT YET DEPLOYED: needs tools/push_worker_space.py before next remote recon.",
+  "commands": [
+    "pytest tests/ -x -q --ignore=tests/test_viewer_server.py",
+    "python -c 'pull stats from 5 HF jobs'"
+  ],
+  "files": [
+    "vaultwares-studio/docker/worker/recon_entrypoint.py"
+  ],
+  "planPath": "",
+  "contentHash": "304f7efab022d37e90dc12fd8233bb77f12e83ddcbe3d64e2903ce2cdb71bab2",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

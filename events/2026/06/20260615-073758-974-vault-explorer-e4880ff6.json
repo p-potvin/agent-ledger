@@ -1,0 +1,51 @@
+{
+  "id": "20260615-073758-974-vault-explorer-e4880ff6",
+  "createdAt": "2026-06-15T11:37:58.9747289Z",
+  "createdAtLocal": "2026-06-15 07:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: subagent)\r\nModel: claude-opus-4-8\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: local Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): Read, Grep, Glob\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-15 07:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "subagent",
+    "model": "claude-opus-4-8",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local Windows",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Glob"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Mapped virtual-folders data model: appSettings.folders {name,parent,items(legacy),type} and appSettings.folderContents map. Documented legacy items vs folderContents migration in filters.js, the ~9 duplicated key-construction sites (parent/name), and a read/write key mismatch in filters.js (uses currentNavPath directly vs root/-prefixed writes).",
+  "commands": [
+    "grep folderContents key sites"
+  ],
+  "files": [
+    "js/navigation/filters.js",
+    "js/navigation/directory.js",
+    "js/navigation/card-events.js",
+    "js/navigation/keybindings.js",
+    "js/navigation/card.js",
+    "src/ipc/system.ipc.js"
+  ],
+  "planPath": "",
+  "contentHash": "e4880ff606ad692c22926b79d3c5ee09b40f63b646cf0ff62fb6140ac9a3f451",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "6e8249f0",
+    "hasChanges": true
+  }
+}

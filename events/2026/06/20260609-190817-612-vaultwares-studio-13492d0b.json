@@ -1,0 +1,56 @@
+{
+  "id": "20260609-190817-612-vaultwares-studio-13492d0b",
+  "createdAt": "2026-06-09T23:08:17.6127023Z",
+  "createdAtLocal": "2026-06-09 19:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Write, Edit, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-09 19:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "M1 remote gaussian-splat reconstruction implemented and pushed to main (25415c4). Also restored my-room.mp4 and test_input.mp4 (deleted by mistake, git restore). New: presets.py (Draft/Standard/High + local-debug; flavor+cost per preset), splat_io.py (full-attribute 3DGS PLY I/O via plyfile, decimated cloud_preview.ply, lossless PLY-to-USD as UsdGeomPoints + primvars:gsplat:* with native 26.03 schema probe; worked around usd-core 24.11 Vt.FloatArray.FromNumpy float32 bug), docker/worker/recon_entrypoint.py (frames.zip -> ns-process-data sequential -> ns-train splatfacto with flag probing -> ns-export; error.json incl. too_few_registered_images). pipeline.py reconstruction honors remote placement with frames packing, spend recording, CostDenied/failure fallback to local 250-iter path then placeholders. hf_jobs.py streams remote logs with % progress parsing. GUI: preset dropdown, pre-run cost confirm, viewer prefers preview ply. 30 pytest tests pass; gui/worker scripts compile. Remaining: build/push worker image, live remote recon verification (needs HF token).",
+  "commands": [
+    "git restore my-room.mp4 test_input.mp4",
+    "pytest tests -q (30 passed)",
+    "git push origin main (25415c4)"
+  ],
+  "files": [
+    "vaultwares_studio/presets.py",
+    "vaultwares_studio/splat_io.py",
+    "vaultwares_studio/pipeline.py",
+    "vaultwares_studio/runners/hf_jobs.py",
+    "docker/worker/recon_entrypoint.py",
+    "gui_app.py",
+    "tests/test_remote_reconstruction.py"
+  ],
+  "planPath": "",
+  "contentHash": "13492d0bbe0245f89bfeb9ec0c76b0775b9ad188fc0a4d7568a9a64341201f1b",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "25415c4",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260525-174935-492-vault-explorer-d6ce5926",
+    "createdAt":  "2026-05-25T21:49:35.4921759Z",
+    "createdAtLocal":  "2026-05-25 17:49",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 17:49 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Fixed COM thread mode initialization conflict in livestream_translator.py by importing pycaw AudioUtilities before soundcard and sounddevice, resolving the OSError and crash on loopback livestream startup.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "python-scripts/livestream_translator.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "d6ce59262e0ac3fee6aa9e2c0759e7f79f18cf46511e6f196bb8281b3cac0025",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

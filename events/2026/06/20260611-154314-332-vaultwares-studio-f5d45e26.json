@@ -1,0 +1,54 @@
+{
+  "id": "20260611-154314-332-vaultwares-studio-f5d45e26",
+  "createdAt": "2026-06-11T19:43:14.3325236Z",
+  "createdAtLocal": "2026-06-11 15:43",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, Grep, Glob, WebFetch, AskUserQuestion, TaskCreate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-11 15:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob",
+      "WebFetch",
+      "AskUserQuestion",
+      "TaskCreate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Added vaultwares_studio/walk_patterns.py with parametric walkthrough patterns (orbit, dolly_in, dolly_out, crane_up, figure_8, doorway_reveal, retrace_steps) plus SceneBounds, WALK_PATTERNS registry, build_pattern, and bounds_from_preview_ply. Refactored pipeline.py _default_orbit_path to delegate to walk_patterns.orbit. Added tests/test_walk_patterns.py (13 cases, all pass alongside test_camera_paths.py: 20/20). Skipped 'spiral' per user request; retrace_steps consumes Nerfstudio transforms.json to replay the source-video trajectory as a first-person walkthrough. Also diagnosed reported viewer Y-axis camera bug: PCA on cloud_preview.ply for local-run-20260610-165858 shows scene up vector = (-0.09, -0.04, 0.995), 87.5 deg off +Y — the splat ships in a +Z-up frame while viewer.js hardcodes cameraUp [0,1,0], so OrbitControls only feels level at azimuths that happen to align with the scene horizon. Recommended fix: gravity-align the cloud in reconstruction post-process (not implemented this turn, awaiting user confirmation).",
+  "commands": [
+    "pytest tests/test_walk_patterns.py tests/test_camera_paths.py"
+  ],
+  "files": [
+    "vaultwares-studio/vaultwares_studio/walk_patterns.py",
+    "vaultwares-studio/vaultwares_studio/pipeline.py",
+    "vaultwares-studio/tests/test_walk_patterns.py"
+  ],
+  "planPath": "",
+  "contentHash": "f5d45e26981741da10bec8e354c54495e3edb71deb90a76bb47ea8fd3799dd05",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "5ab7219",
+    "hasChanges": true
+  }
+}

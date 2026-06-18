@@ -1,0 +1,51 @@
+{
+  "id": "20260613-203204-264-vaultwares-studio-37219dc4",
+  "createdAt": "2026-06-14T00:32:04.2642525Z",
+  "createdAtLocal": "2026-06-13 20:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, Read, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-13 20:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Recovered the dead-launcher local-run-20260613-040022 by pulling artifacts directly from HF Dataset clopeux/vw-studio-artifacts: prefix jobs/local-run-20260613-040022/reconstruction/out/. All 5 files present (splat.ply 108 MB, summary.json 437 B, model.zip 314 MB, processed_min.zip 473 MB, colmap_database.db 628 MB). Downloaded to expected paths (~2 min via hf_hub_download). Ran the post-download recon tail in-process: convert_splat_outputs (435523 gaussians -> cloud.ply + 200k preview, 6.5s), _gravity_align (rotated 80.8 deg to +Y, skewness +2.35, flipped=True), _write_packed_splat (13 MB). Marked reconstruction COMPLETE with placement=remote, runner=hf-jobs, artifacts attached. Ran camera_staging twice: first call paused at NEEDS_USER_INPUT with 4 default cameras, second call completed (renderPath: Scene Orbit, 4 cameras 0 captured). Manifest state now ready for cosmos_output. User dismissed the next-step prompt; standing by for instruction.",
+  "commands": [
+    "python -c 'hf_hub_download 5 artifacts'",
+    "python -c 'convert_splat_outputs + gravity_align + packed_splat + camera_staging x2'"
+  ],
+  "files": [
+    "vaultwares-studio/data/jobs/local-run-20260613-040022/manifest.json",
+    "vaultwares-studio/data/jobs/local-run-20260613-040022/reconstruction/cloud.ply",
+    "vaultwares-studio/data/jobs/local-run-20260613-040022/reconstruction/cloud.splat",
+    "vaultwares-studio/data/jobs/local-run-20260613-040022/reconstruction/remote_out/colmap_database.db"
+  ],
+  "planPath": "",
+  "contentHash": "37219dc494c2f871c4d7cb2b85fa97d0e68866b8a7044b4bc75ff68569d150ef",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "7943618",
+    "hasChanges": true
+  }
+}

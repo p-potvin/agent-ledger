@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260525-161112-071-vault-explorer-4e5b6c3a",
+    "createdAt":  "2026-05-25T20:11:12.0711998Z",
+    "createdAtLocal":  "2026-05-25 16:11",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-25 16:11 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Fixed application crashes when scanning iCloud Photos or cloud-backed directories containing de-synchronized or offline placeholder files by wrapping all individual file processing operations and filesystem checks inside robust try/catch blocks within findVideosAsync and _processFileNodes inside src/scanner.js.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "src/scanner.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "4e5b6c3a62ab97cd56189df05b0cc32261f7cb99b1257b45f598cc43e3562150",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "f435a44",
+                "hasChanges":  true
+            }
+}

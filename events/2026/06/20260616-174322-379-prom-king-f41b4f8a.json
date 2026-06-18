@@ -1,0 +1,41 @@
+{
+  "id": "20260616-174322-379-prom-king-f41b4f8a",
+  "createdAt": "2026-06-16T21:43:22.3797790Z",
+  "createdAtLocal": "2026-06-16 17:43",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: plan\r\nPermissions: ask (network: win32)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 17:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "plan",
+    "permissions": "ask",
+    "network": "win32",
+    "toolsUsed": [
+      "Read",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Audited shipped Phase 1 admin batching (BatchActions.tsx, VideoBatchActions.tsx, taxonomies.py, videos.py) and identified gaps user flagged: (1) Gender action shows per-row dropdowns instead of single-value-to-all; (2) Video taxonomy add takes comma-separated integer IDs; (3) No selection filters by gender; (4) No invert-selection; (5) No gender propagation/inheritance on dedupe; (6) No public-side gender filter (female-only default). Drafted plan covering: selection toolbar with gender quick-filters + invert, true batch gender/category/studio actions, name-based autocomplete for video taxonomy assignment, ingest gender-inherit, public read filter (default female, admin all). Asked user one clarification: whether apply-category/apply-studio on pornstars means new many-to-many junction tables for pornstar pages or a video-side tag operation.",
+  "commands": [
+    "--none"
+  ],
+  "files": [
+    "shared-tube/apps/fxv/src/admin/Catalog/BatchActions.tsx",
+    "shared-tube/apps/fxv/src/admin/Catalog/VideoBatchActions.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "f41b4f8ad6a46a4a53249ecc234fb7a184b279ff54038ae0a65bd79cb0f52cbb",
+  "git": null
+}

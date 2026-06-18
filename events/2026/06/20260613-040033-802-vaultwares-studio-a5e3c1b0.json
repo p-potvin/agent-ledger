@@ -1,0 +1,38 @@
+{
+  "id": "20260613-040033-802-vaultwares-studio-a5e3c1b0",
+  "createdAt": "2026-06-13T08:00:33.8029319Z",
+  "createdAtLocal": "2026-06-13 04:00",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: low\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-13 04:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Queued picker v2 verification: tools/headless_remote_run.py --video inputs/backyard_clip_62-99s.mp4 --preset draft --yes (background bash bcqgy9njq). Same clip that failed at 8/280 with picker v1. Worker now has config filter (IN 2,3), region-spread, and DB-archived-on-failure.",
+  "commands": [
+    "python tools/headless_remote_run.py --video inputs/backyard_clip_62-99s.mp4 --preset draft --yes (background bash bcqgy9njq)"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "a5e3c1b0d0a4108f0df61a49953b72d33776bca97efbe21b3487217cf81eb368",
+  "git": null
+}

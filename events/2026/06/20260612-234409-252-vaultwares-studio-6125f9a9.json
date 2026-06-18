@@ -1,0 +1,32 @@
+{
+  "id": "20260612-234409-252-vaultwares-studio-6125f9a9",
+  "createdAt": "2026-06-13T03:44:09.2529074Z",
+  "createdAtLocal": "2026-06-12 23:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "general,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: allowlist (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-12 23:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "Windows 11 local",
+    "toolsUsed": null,
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "User reports smart picker fed mapper good pairs but init still failed; worker now downloading vocab_tree. Most likely root cause: planar degeneracy. Backyard captures have most verified matches on the ground plane (lawn, pavers) so the fundamental matrix is rank-deficient and no 3D model can bootstrap regardless of match count. COLMAP two_view_geometries.config column tags this: 2 or 3 = calibrated/uncalibrated (3D-recoverable), 4/5/6 = planar/panoramic (cannot bootstrap a 3D solve). Current smart_init_pair_candidates does not filter by config, so it probably handed mapper four planar pairs in a row. Vocab_tree adds more matches but on a planar scene those will also be planar, so the augmented database may not recover either. Plan: wait for run to complete, extract processed_min.zip locally, query two_view_geometries grouped by config; if planar fraction is high, add config IN (2,3) filter to picker and an early-fail message for fully-planar captures. Not modifying code yet — want the DB audit first to confirm hypothesis.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "6125f9a9f6ca0f9b0f58bf05b866f130cc587529852d44b7ea20edb88474c864",
+  "git": null
+}

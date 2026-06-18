@@ -1,0 +1,45 @@
+﻿{
+    "id":  "20260616-045323-909-python-zipper-f1442b32",
+    "createdAt":  "2026-06-16T08:53:23.9098873Z",
+    "createdAtLocal":  "2026-06-16 04:53",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-zipper",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local/windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): multi_replace_file_content, view_file, grep_search\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-16 04:53 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6",
+                    "thinking":  "high",
+                    "mode":  "agent",
+                    "permissions":  "ask",
+                    "network":  "local/windows",
+                    "toolsUsed":  [
+                                      "multi_replace_file_content",
+                                      "view_file",
+                                      "grep_search"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "summary":  "tampermonkey_script.js v7.2.0: (1) Api.port 9001-\u003e5171 (local python-zipper). (2) Fab/panel positions persisted via GM_setValue on dragend, restored via GM_getValue on init. (3) Removed setTimeout(100) race for upscale btn - now synchronous onclick setup; updateStatus restores localStorage active state after confirming availability. (4) Log messages updated to say port 5171. dataset_builder/server.py: (1) Added VAULTWARES_API=http://100.67.25.118:9001 constant. (2) Added MODELS_DIR constant. (3) /api/upscaler/status: local spandrel+model check. (4) /api/jobs + /api/abort proxy to OVHCloud. (5) /api/open-downloaded: local os.startfile. Flow: TM-\u003e5171-\u003eOVHCloud only for job tracking; upscaling always local.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "tampermonkey_script.js",
+                  "dataset_builder/server.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "f1442b326744af5b892d605b56f14ef3fac3ba8c82d58a912541d8e3aa11b349",
+    "git":  null
+}

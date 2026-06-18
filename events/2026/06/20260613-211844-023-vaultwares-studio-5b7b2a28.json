@@ -1,0 +1,55 @@
+﻿{
+    "id":  "20260613-211844-023-vaultwares-studio-5b7b2a28",
+    "createdAt":  "2026-06-14T01:18:44.0233670Z",
+    "createdAtLocal":  "2026-06-13 21:18",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change,commands,verification",
+    "actor":  ":AGENT_NAME",
+    "agentHeader":  "Agent: :AGENT_NAME (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: autopilot (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-13 21:18 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-4-7",
+                    "thinking":  "medium",
+                    "mode":  "agent",
+                    "permissions":  "autopilot",
+                    "network":  "local-windows",
+                    "toolsUsed":  [
+                                      "Read",
+                                      "Edit",
+                                      "Bash",
+                                      "Grep"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Session 2026-06-13 priorities #1-#3. (1) Queued sunny full recon: HF Job 6a2dfffe871c005b5352c1df via local-run-20260613-211202, 280 frames packed, status RUNNING. (2) Orbit framing now derived from camera trajectory: added walk_patterns.bounds_from_transforms_json(path, center=None) which uses median camera-to-centroid distance (outlier-robust vs splat-cloud bbox); _default_orbit_path prefers trajectory bounds with radius_scale=1.0, falls back to bbox. New helper _resolve_transforms_json extracts transforms.json from processed_min.zip if not yet on disk. (3) cosmos_output now pauses once in guided mode (NEEDS_USER_INPUT, pausedForUserInput=True) when remote_runner is set and camera_path.json exists, so user can validate splat in viewport before paying for walkthrough render. Mirrors _run_camera_staging pattern. Tests: +3 bounds_from_transforms_json + 2 cosmos_output pause. All 82/82 passing.",
+    "commands":  [
+                     ".venv/Scripts/python.exe tools/headless_remote_run.py --video inputs/backyard_134s_sunny.mp4 --preset standard --yes",
+                     ".venv/Scripts/python.exe -m pytest tests/ -x -q"
+                 ],
+    "files":  [
+                  "vaultwares_studio/walk_patterns.py",
+                  "vaultwares_studio/pipeline.py",
+                  "tests/test_walk_patterns.py",
+                  "tests/test_camera_paths.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "5b7b2a285a37717877aa4e8c5d15b37046fe0b2f3c10689a709ce7f75f3ba9ee",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "main",
+                "head":  "7943618",
+                "hasChanges":  true
+            }
+}

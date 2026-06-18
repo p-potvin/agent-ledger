@@ -1,0 +1,43 @@
+{
+  "id": "20260528-152027-825-tube-sites-3d7e2008",
+  "createdAt": "2026-05-28T19:20:27.8251720Z",
+  "createdAtLocal": "2026-05-28 15:20",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-sites",
+  "kind": "handoff,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): functions.shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-28 15:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": "functions.shell_command",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "deploy_status": "queued",
+      "runner_blocked": true,
+      "deploy_run_id": 26596556363
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Verified live fullxxx.video is still serving the old homepage and old fullxxx-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck queued (self-hosted runner not picking it up).",
+  "commands": [
+    "Invoke-WebRequest https://fullxxx.video/ (grep for tubeshell markers)",
+    "Invoke-WebRequest https://fullxxx.video/wp-content/plugins/fullxxx-video/assets/css/tubeshell/theme.css (saw old light palette)",
+    "gh workflow run 'Deploy fullxxx-video to fullxxx.video'",
+    "gh run view 26596556363"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\.github\\workflows\\deploy-fullxxx-video.yml"
+  ],
+  "planPath": "",
+  "contentHash": "3d7e20083f7932287f206f5d3253fc432749be301fbad78c05074a6d0040acea",
+  "git": null
+}

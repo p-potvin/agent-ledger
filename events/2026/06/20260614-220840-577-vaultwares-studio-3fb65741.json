@@ -1,0 +1,55 @@
+﻿{
+    "id":  "20260614-220840-577-vaultwares-studio-3fb65741",
+    "createdAt":  "2026-06-15T02:08:40.5771953Z",
+    "createdAtLocal":  "2026-06-14 22:08",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change",
+    "actor":  ":AGENT_NAME",
+    "agentHeader":  "Agent: :AGENT_NAME (role: main)\r\nModel: claude-opus-4-7\r\nThinking: maximum\r\nMode: agent\r\nPermissions: autopilot (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-14 22:08 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-4-7",
+                    "thinking":  "maximum",
+                    "mode":  "agent",
+                    "permissions":  "autopilot",
+                    "network":  "local-windows",
+                    "toolsUsed":  [
+                                      "Read",
+                                      "Edit",
+                                      "Bash",
+                                      "Grep"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Refine v2: COLMAP image_registrator + splatfacto checkpoint resume. Worker (docker/worker/recon_entrypoint.py): added --refine-mode flag; refine_mode_setup unzips processed_min.zip into base_processed/ and lays out processed/colmap/database.db + processed/colmap/sparse/0/{cameras,images,points3D}.bin; queries the database to identify NEW vs base image names (skips feature-extraction on base). refine_register_new_images runs feature_extractor (single_camera, --image_list_path), sequential_matcher, vocab_tree_matcher (cross-clip), image_registrator against base sparse model, optional bundle_adjuster, then ns-process-data --skip-colmap to regenerate transforms.json from the joint model. ns-train splatfacto resumes via --load-dir \u003cunzipped model.zip\u003e/nerfstudio_models. Extracted finish_export() shared by standard + refine modes. Also: archive sparse/*.bin in processed_min.zip going forward (so future bundles are v2-compatible) — picks the most recently mtime-d cameras.bin dir (handles retry_mapper paths). Pipeline (_run_remote_reconstruction): when manifest.metadata.refine_from_job_id is set, passes extra_repo_inputs=[base/model.zip, base/processed_min.zip] and appends --refine-mode to worker command. Launcher (_run_frame_extraction): in refine mode, primary video extraction is renamed to clip0_*, extras get clip1_/clip2_/..., base merge keeps ORIGINAL names so colmap_database lookups hit. New refine preset: 5000 iterations, est 25 min. Pushed worker to hf.co/spaces/clopeux/vw-studio-worker — Space is BUILDING.",
+    "commands":  [
+                     ".venv/Scripts/python.exe -m pytest tests/ -x -q --ignore=tests/test_viewer_server.py",
+                     ".venv/Scripts/python.exe tools/push_worker_space.py"
+                 ],
+    "files":  [
+                  "docker/worker/recon_entrypoint.py",
+                  "vaultwares_studio/pipeline.py",
+                  "vaultwares_studio/presets.py",
+                  "tests/test_vaultwares_studio.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "3fb657419212c0a63ad21fffaf8eceab74bb56057b4b7c04ee1e73d665e2b0d6",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "main",
+                "head":  "fac0979",
+                "hasChanges":  true
+            }
+}
