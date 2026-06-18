@@ -3,7 +3,268 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-06-18 01:00 - vault-explorer (formerly Vault Explorer)</strong> <code>feature</code> - Implemented new VaultWares custom icons into js/icons.js: photo editor (layers, crop, exposure), music player (equalizer, shuffle, repeat), streaming (pip, cast, download), live...</summary>
+<summary><strong>2026-06-18 17:15 - vault-explorer (formerly Vault Explorer)</strong> <code>feature</code> - Unified Albums/Photos section by removing Photos top-level tab; added folder chooser to all empty states; implemented per-tab default folders (Audio, Albums, Playlists, Misc) wi...</summary>
+
+- Kind: feature
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\.windsurf\worktrees\vault-explorer\vault-explorer-8ff736c6  Branch: cascade/review-working-changes-8ff736
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-18 17:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Unified Albums/Photos section by removing Photos top-level tab; added folder chooser to all empty states; implemented per-tab default folders (Audio, Albums, Playlists, Misc) with global Vault fallback; added Default Folders section to Settings UI.
+- Files:
+  - `js/albums.js,js/photos.js,js/audio.js,js/playlists.js,js/misc.js,js/utils.js,js/navigation/tabs.js,js/navigation/filters.js,js/settings/core.js,index.html,TASKS.md`
+- Git: repo=vault-explorer-8ff736c6, branch=cascade/review-working-changes-8ff736, head=a88b0a9
+
+</details>
+
+<details>
+<summary><strong>2026-06-18 16:57 - vaultwares-api + shared-tube</strong> <code>code-change</code> - Round 2: Diagnosed deploy chain end-to-end. (1) Tailscale ACL missing tag:vps-greencloud as SSH src to tag:vps-ovhcloud &#226;€” user added it via admin console. (2) After ACL add, f...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-7
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): Read, Edit, Write, Grep, Bash, PowerShell, Monitor, AskUserQuestion
+  MCP servers accessed (this reply): none
+  Time: 2026-06-18 16:57 (TZ: Eastern Standard Time)
+  ```
+- Summary: Round 2: Diagnosed deploy chain end-to-end. (1) Tailscale ACL missing tag:vps-greencloud as SSH src to tag:vps-ovhcloud â€” user added it via admin console. (2) After ACL add, first sessions died with 'could not stream to recorder' â€” user dropped recorder from rule. (3) Lock-file footgun on OVH: fs.protected_regular=2 blocks root from O_CREAT-opening ubuntu-owned files in /var/lock; moved to /var/lib/vw-deploy with chmod 0666 + fallback. (4) vaultwares-api tests: extracted build_gender_clause helper, added 12 unit tests + 1 source-grep regression guard for taxonomies.py â€” all 13 pass. (5) shared-tube /api/stream: oneporn/pkt/sexyprn carried stale handler without FlareSolverr fallback â€” synced to fxv. Astro inlines import.meta.env at build time so runtime EnvironmentFile never reached the bundle â€” added process.env fallback. (6) FLARESOLVERR_URL added to /etc/shared-tube/*.env on both OVH and greencloud. (7) Verified webhook deploys fire automatically for both repos. Outstanding: MP4 IP-binding means even fresh flaresolverr-resolved URLs 502 on byte-range proxy from datacenter IPs. Filed follow-up task.
+- Commands:
+  - `ssh ubuntu@100.67.25.118 sudo /usr/local/bin/deploy-vaultwares-api.sh`
+  - `pnpm -F site-oneporn -F site-sexyprn run build`
+  - `git push origin main (both repos)`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-api\app\routers\promking\videos.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-api\tests\test_promking_gender_clause.py`
+  - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\apps\fxv\src\pages\api\stream\[slug].ts`
+  - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\apps\oneporn\src\pages\api\stream\[slug].ts`
+  - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\.env.example`
+  - `/usr/local/bin/deploy-vaultwares-api.sh (OVH)`
+- Plan: ` `
+
+</details>
+
+<details>
+<summary><strong>2026-06-18 16:08 - vault-explorer</strong> <code>feature</code> - Wired default home tab to user settings: default is &#39;files&#39; (Vault), settings dropdown now lists all redesigned tabs (Files, Photos, Audio, Albums, Playlists, Streaming, Livestr...</summary>
+
+- Kind: feature
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\.windsurf\worktrees\vault-explorer\vault-explorer-8ff736c6  Branch: cascade/review-working-changes-8ff736
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-18 16:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Wired default home tab to user settings: default is 'files' (Vault), settings dropdown now lists all redesigned tabs (Files, Photos, Audio, Albums, Playlists, Streaming, Livestream, Misc), and startup logic validates the saved value against valid tabs with fallback to Files.
+- Files:
+  - `js/app.js,js/settings/core.js,index.html,TASKS.md`
+- Git: repo=vault-explorer-8ff736c6, branch=cascade/review-working-changes-8ff736, head=a88b0a9
+
+</details>
+
+<details>
+<summary><strong>2026-06-18 15:49 - vaultwares-api (formerly vaultwares-pipelines)</strong> <code>code-change</code> - Fixed promking gender filter 500. pornstars.gender is a Postgres ENUM; cast to ::text in ANY(...) clauses across videos.list_videos, videos.get_video, taxonomies.list_terms, tax...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-7
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): Read, Edit, Grep, Bash, PowerShell, AskUserQuestion
+  MCP servers accessed (this reply): none
+  Time: 2026-06-18 15:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed promking gender filter 500. pornstars.gender is a Postgres ENUM; cast to ::text in ANY(...) clauses across videos.list_videos, videos.get_video, taxonomies.list_terms, taxonomies.count_terms. Bumped 0.1.3 -> 0.1.4. Committed 7e3b637 and pushed to origin/main. Webhook did NOT auto-deploy (OVH HEAD was 3 commits behind). Triggered /usr/local/bin/deploy-vaultwares-api.sh manually on vps-ovhcloud; first run failed with xec 9> Permission denied at /var/lock/vw-deploy-vaultwares-api.lock despite running as root â€” recreating the lock file fresh fixed it. Service restarted, /healthz green, all 4 previously-failing URLs now 200. Follow-ups for the user: (1) the deploy webhook to vaultwares-api appears not to be firing on push; (2) the lock-file open-as-root failure is reproducible and worth tracing.
+- Commands:
+  - `git push origin main`
+  - `ssh ubuntu@100.67.25.118 sudo /usr/local/bin/deploy-vaultwares-api.sh 7e3b637`
+  - `curl http://100.67.25.118:9001/api/promking/videos?site=oneporn&limit=12&actor_gender=female`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-api\app\routers\promking\videos.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-api\app\routers\promking\taxonomies.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-api\pyproject.toml`
+- Plan: ` `
+
+</details>
+
+<details>
+<summary><strong>2026-06-18 15:46 - vault-explorer</strong> <code>documentation</code> - Updated TASKS.md with Phase 2 (Redesigned Tabs &amp; Media UX) progress tracker: completed startup bug fix, Photos/Photo Editor, Audio/Audio Bar, Albums/Playlists/Misc tabs, and que...</summary>
+
+- Kind: documentation
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\.windsurf\worktrees\vault-explorer\vault-explorer-8ff736c6  Branch: cascade/review-working-changes-8ff736
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-18 15:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated TASKS.md with Phase 2 (Redesigned Tabs & Media UX) progress tracker: completed startup bug fix, Photos/Photo Editor, Audio/Audio Bar, Albums/Playlists/Misc tabs, and queued next tasks (video player context menu, settings segmentation, custom icons, keyboard shortcut mapper).
+- Files:
+  - `TASKS.md`
+- Git: repo=vault-explorer-8ff736c6, branch=cascade/review-working-changes-8ff736, head=a88b0a9
+
+</details>
+
+<details>
+<summary><strong>2026-06-18 15:35 - vaultwares-api</strong> <code>general</code> - Investigated 500 on /api/promking/videos?actor_gender=female (and equivalent on /taxonomies/pornstars?gender=female). Root cause: pornstars.gender is a Postgres ENUM (gender) bu...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-7
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
+  Tools used (this reply): Read, Grep, Glob, Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-06-18 15:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Investigated 500 on /api/promking/videos?actor_gender=female (and equivalent on /taxonomies/pornstars?gender=female). Root cause: pornstars.gender is a Postgres ENUM (gender) but the filter does gender = ANY($N::text[]), which Postgres rejects without a cast. Affects videos.list_videos, videos.get_video, taxonomies.list_terms, taxonomies.count_terms. 'all' / 'null' paths work because they avoid the ANY comparison. Reproduced live against http://100.67.25.118:9001. No code changes yet â€” reported back to user for go/no-go on the fix.
+- Commands:
+  - `curl http://100.67.25.118:9001/api/promking/videos?site=oneporn&limit=12&actor_gender=female`
+  - `curl http://100.67.25.118:9001/api/promking/videos?site=fxv&limit=2&actor_gender=female`
+  - `curl http://100.67.25.118:9001/api/promking/taxonomies/pornstars?site=oneporn&limit=2&gender=female`
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-api\app\routers\promking\videos.py`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-api\app\routers\promking\taxonomies.py`
+  - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\shared\src\db\schema.ts`
+- Plan: ` `
+
+</details>
+
+<details>
+<summary><strong>2026-06-18 15:17 - vault-explorer</strong> <code>feature</code> - Implemented real Photo Editor canvas operations: rotate 90deg, horizontal flip, brightness/contrast/saturation sliders, grayscale/sepia/invert filters, reset, and save-to-downlo...</summary>
+
+- Kind: feature
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-18 15:17 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented real Photo Editor canvas operations: rotate 90deg, horizontal flip, brightness/contrast/saturation sliders, grayscale/sepia/invert filters, reset, and save-to-download. Added adjustment panel UI to the modal.
+- Files:
+  - `js/photo-editor.js,index.html`
+- Git: repo=vault-explorer, branch=main, head=62eba5d
+
+</details>
+
+<details>
+<summary><strong>2026-06-18 03:19 - vault-explorer</strong> <code>feature</code> - Wired Albums, Playlists, and Misc tabs with real content renderers. Albums groups photos by folder into clickable cards that jump to Photos tab. Playlists groups audio by folder...</summary>
+
+- Kind: feature
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-18 03:19 (TZ: Eastern Standard Time)
+  ```
+- Summary: Wired Albums, Playlists, and Misc tabs with real content renderers. Albums groups photos by folder into clickable cards that jump to Photos tab. Playlists groups audio by folder into cards that jump to Audio tab. Misc shows non-media files with document icons.
+- Files:
+  - `js/albums.js,js/playlists.js,js/misc.js,index.html`
+- Git: repo=vault-explorer, branch=main, head=62eba5d
+
+</details>
+
+<details>
+<summary><strong>2026-06-18 03:15 - vault-explorer</strong> <code>feature</code> - Next phase: Photos tab masonry renderer, Photo Editor modal with canvas/zoom/filmstrip, Audio tab sidebar+tracklist, Audio Bottom Bar playback controls with prev/play/next/progr...</summary>
+
+- Kind: feature
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-18 03:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Next phase: Photos tab masonry renderer, Photo Editor modal with canvas/zoom/filmstrip, Audio tab sidebar+tracklist, Audio Bottom Bar playback controls with prev/play/next/progress/volume. Fixed remaining vault->files references in tests.
+- Files:
+  - `js/photos.js,js/photo-editor.js,js/audio.js,js/audio-bar.js,js/navigation/tabs.js,index.html,tests/refactor_smoke_test.js,tests/comprehensive_test.js`
+- Git: repo=vault-explorer, branch=main, head=62eba5d
+
+</details>
+
+<details>
+<summary><strong>2026-06-18 01:09 - vault-explorer</strong> <code>feature</code> - Implemented DESIGN.md redesign: 8 top tabs, Photos river layout, Audio sidebar+tracklist, Audio bottom bar, Photo Editor modal, custom icons, cyan-&gt;blue theme, JetBrains Mono ty...</summary>
+
+- Kind: feature
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-06-18 01:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented DESIGN.md redesign: 8 top tabs, Photos river layout, Audio sidebar+tracklist, Audio bottom bar, Photo Editor modal, custom icons, cyan->blue theme, JetBrains Mono typography, favorites as default collection
+- Files:
+  - `index.html,index.css,themes.js,js/icons.js,js/navigation/tabs.js,js/navigation/filters.js,js/navigation/keybindings.js,js/app.js,js/favorites.js`
+- Git: repo=vault-explorer, branch=main, head=62eba5d
+
+</details>
+
+<details>
+<summary><strong>2026-06-18 01:00 - vault-explorer</strong> <code>feature</code> - Implemented new VaultWares custom icons into js/icons.js: photo editor (layers, crop, exposure), music player (equalizer, shuffle, repeat), streaming (pip, cast, download), live...</summary>
 
 - Kind: feature
 - Actor: AI Agent
@@ -2933,7 +3194,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-14 00:16 - vaultwares-api (formerly vaultwares-pipelines)</strong> <code>code-change,verification</code> - Identified and fixed 500 errors in vaultwares-api. The issue was that queries were checking embed_type &lt;&gt; &#39;iframe&#39;, but the public.embed_type enum had &#39;iframe&#39; dropped in migrat...</summary>
+<summary><strong>2026-06-14 00:16 - vaultwares-api</strong> <code>code-change,verification</code> - Identified and fixed 500 errors in vaultwares-api. The issue was that queries were checking embed_type &lt;&gt; &#39;iframe&#39;, but the public.embed_type enum had &#39;iframe&#39; dropped in migrat...</summary>
 
 - Kind: code-change,verification
 - Actor: Antigravity
@@ -13353,720 +13614,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\services-inventory.mdx`
   - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\webhook-secret-rotation.mdx`
   - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\docs-content\operations\deploy-alerts.mdx`
-
-</details>
-
-<details>
-<summary><strong>2026-06-03 03:13 - vault-central</strong> <code>code-change,verification</code> - Modernized Dashboard by adding a Bulk URL Import widget in the Advanced Settings panel. Stabilized the hover preview by implementing a native HTML5 video player fallback with Yo...</summary>
-
-- Kind: code-change,verification
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-2.0-flash
-  Thinking: high
-  Mode: code
-  Permissions: bypass (network: Windows Local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
-  Tools used (this reply): replace_file_content, multi_replace_file_content, run_command, view_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-03 03:13 (TZ: Eastern Standard Time)
-  ```
-- Summary: Modernized Dashboard by adding a Bulk URL Import widget in the Advanced Settings panel. Stabilized the hover preview by implementing a native HTML5 video player fallback with YouTube-style segment-hopping when WebM preview generation is unavailable or blocked by CSP. Fixed TypeScript compilation errors including arithmetic operations on video duration union types and null/undefined values on video src attributes.
-- Commands:
-  - `npm run build`
-- Files:
-  - `src/components/VaultDashboard.tsx`
-- Git: repo=vault-central, branch=main, head=c8b5a7d
-
-</details>
-
-<details>
-<summary><strong>2026-06-03 02:23 - vault-central</strong> <code>code-change,verification</code> - Locked dashboard theme to Warm mode, scaled typography for accessibility, modernized settings and pagination layout, and updated browser sync hover/active states.</summary>
-
-- Kind: code-change,verification
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: Gemini 1.5 Pro
-  Thinking: high
-  Mode: code
-  Permissions: ask (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
-  Tools used (this reply): replace_file_content, run_command, view_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-03 02:23 (TZ: Eastern Standard Time)
-  ```
-- Summary: Locked dashboard theme to Warm mode, scaled typography for accessibility, modernized settings and pagination layout, and updated browser sync hover/active states.
-- Commands:
-  - `npm run build`
-- Files:
-  - `src/components/VaultDashboard.tsx`
-- Git: repo=vault-central, branch=main, head=c8b5a7d
-
-</details>
-
-<details>
-<summary><strong>2026-06-03 01:31 - vault-central</strong> <code>code-change,verification</code> - Fixed compilation error in VaultDashboard by changing displayItems playlist reference to items. Resolved WASM worker execution blockers in manifest.json CSP by explicitly adding...</summary>
-
-- Kind: code-change,verification
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-2.0-pro
-  Thinking: high
-  Mode: code
-  Permissions: autopilot (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
-  Tools used (this reply): replace_file_content, run_command, view_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-03 01:31 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed compilation error in VaultDashboard by changing displayItems playlist reference to items. Resolved WASM worker execution blockers in manifest.json CSP by explicitly adding blob: to script-src and adding worker-src 'self' blob:; built the extension successfully and verified with Playwright test suite.
-- Commands:
-  - `npm run build`
-  - `npx playwright test`
-- Files:
-  - `src/components/VaultDashboard.tsx`
-  - `manifest.json`
-- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
-- Git: repo=vault-central, branch=main, head=c8b5a7d
-
-</details>
-
-<details>
-<summary><strong>2026-06-03 01:10 - vault-central</strong> <code>plan</code> - Prepared implementation plan for porting the custom HTML5 video player component from vault-explorer to vault-central, including seek canvas preview, playlist navigation, custom...</summary>
-
-- Kind: plan
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-2.0-flash
-  Thinking: medium
-  Mode: plan
-  Permissions: ask (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
-  Tools used (this reply): view_file, write_to_file, grep_search
-  MCP servers accessed (this reply): none
-  Time: 2026-06-03 01:10 (TZ: Eastern Standard Time)
-  ```
-- Summary: Prepared implementation plan for porting the custom HTML5 video player component from vault-explorer to vault-central, including seek canvas preview, playlist navigation, custom styled controls, and PiP/minimized states.
-- Files:
-  - `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
-- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
-- Git: repo=vault-central, branch=main, head=c8b5a7d
-
-</details>
-
-<details>
-<summary><strong>2026-06-03 01:04 - Prom-King</strong> <code>verification</code> - Benchmarked IPoasis residential proxy for Prom-King qa-automation: checked proxy traffic before/after, ran 8 shallow SERP sessions across Google/DDG/Bing/Brave with SafeSearch o...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: gpt-5
-  Thinking: unknown
-  Mode: default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\qa-automation  Branch: main
-  Tools used (this reply): shell_command, view_image, apply_patch
-  MCP servers accessed (this reply): none
-  Time: 2026-06-03 01:04 (TZ: Eastern Standard Time)
-  ```
-- Telemetry:
-  - Flags: vw_state=@{interview=; estimate=; protocolsSelected=System.Object[]; resume=; routerCategories=System.Object[]; overlaysApplied=System.Object[]}, target_clicks_disabled=True, no_captcha_bypass=True, safesearch_off=True, search_human_like_behavior=False, own_domain_behavior_only=True
-  - Metrics: {"proxy_used_gb_before":0.095388991,"proxy_used_gb_after":0.098884904,"proxy_used_gb_delta":0.003495913,"serp_sessions":8,"serp_max_pages":2,"serp_blocked_or_challenged":4,"serp_ok_reported":4,"serp_zero_results_extra...
-- Summary: Benchmarked IPoasis residential proxy for Prom-King qa-automation: checked proxy traffic before/after, ran 8 shallow SERP sessions across Google/DDG/Bing/Brave with SafeSearch off and target clicks disabled, ran capped own-domain stealth crawl for prom-king.xyz and fullxxx.video, and patched SERP runner status classification for DDG challenge text and zero-result extraction states. No CAPTCHA/challenge bypass attempted and no secret values recorded.
-- Commands:
-  - `Invoke-RestMethod https://api.ipoasis.com/v1/plans with X-API-KEY from local key file (secret not logged)`
-  - `curl.exe via SEARCH_PROXY_URLS for api.ipify.org, google generate_204, prom-king.xyz, fullxxx.video`
-  - `npm run report:search-visibility with SEARCH_ENGINES=google,duckduckgo,bing,brave SEARCH_KEYWORDS="fullxxx video,fullxxx.video" SEARCH_MAX_PAGES=2 SEARCH_CLICK_TARGETS=0`
-  - `npm run report:own-domain-stealth with STEALTH_MAX_PAGES=20 STEALTH_MAX_DEPTH=4 resource blocking enabled`
-  - `node -c scripts/run-search-visibility-report.mjs`
-- Files:
-  - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\scripts\run-search-visibility-report.mjs`
-  - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\test-results\search-visibility\20260603-005956\results.json`
-  - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\test-results\search-visibility\20260603-005956\summary.md`
-  - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\test-results\own-domain-stealth\20260603-010109\summary.json`
-  - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\test-results\own-domain-stealth\20260603-010109\prom-king.xyz\stealth-results.json`
-  - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\test-results\own-domain-stealth\20260603-010109\fullxxx.video\stealth-results.json`
-- Git: repo=qa-automation, branch=main, head=e3b4c9f
-
-</details>
-
-<details>
-<summary><strong>2026-06-03 00:56 - vault-central</strong> <code>code-change,verification</code> - Stabilized FFmpeg media pipeline in Firefox sandboxed extension environment by replacing dynamic worker blob URL creation with a static worker file bundled and copied via Vite. ...</summary>
-
-- Kind: code-change,verification
-- Actor: antigravity
-- Agent Header:
-  ```text
-  Agent: antigravity (role: main)
-  Model: gemini-1.5-pro
-  Thinking: high
-  Mode: code
-  Permissions: autopilot (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
-  Tools used (this reply): replace_file_content, run_command, view_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-03 00:56 (TZ: Eastern Standard Time)
-  ```
-- Summary: Stabilized FFmpeg media pipeline in Firefox sandboxed extension environment by replacing dynamic worker blob URL creation with a static worker file bundled and copied via Vite. Updated CSP in manifest.json to allow connect-src data: and blob: and exposed worker/core files in web_accessible_resources. Passed static extension URLs from processor to sandbox instead of transferring core bytes. Verified with build and test passes.
-- Commands:
-  - `npm run build`
-  - `npm run test`
-- Files:
-  - `manifest.json`
-  - `vite.config.ts`
-  - `vite.config.js`
-  - `src/offscreen/processor.ts`
-  - `src/offscreen/sandbox.ts`
-- Git: repo=vault-central, branch=main, head=c8b5a7d
-
-</details>
-
-<details>
-<summary><strong>2026-06-03 00:07 - vault-central</strong> <code>code-change,general,verification</code> - Resolved PreviewThumb component syntax corruption in VaultDashboard.tsx. Re-synchronized submodules and fixed import paths targeting vaultwares-themes instead of vault-themes. A...</summary>
-
-- Kind: code-change,general,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: gemini-1.5-pro
-  Thinking: high
-  Mode: code
-  Permissions: bypass (network: windows)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
-  Tools used (this reply): view_file, replace_file_content, run_command, write_to_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-03 00:07 (TZ: Eastern Standard Time)
-  ```
-- Summary: Resolved PreviewThumb component syntax corruption in VaultDashboard.tsx. Re-synchronized submodules and fixed import paths targeting vaultwares-themes instead of vault-themes. Added DOM.Iterable to tsconfig.json compiler options to resolve NodeListOf iteration compilation errors. Fixed write encoding mismatch on Windows in generate-themes.py to resolve Vite/Rolldown build loader errors. Successfully compiled the extension build and ran all 13 unit tests without failures.
-- Commands:
-  - `npm run build`
-  - `npm run test`
-- Files:
-  - `src/components/VaultDashboard.tsx`
-  - `scripts/generate-themes.py`
-  - `src/lib/vault-runtime.ts`
-  - `tsconfig.json`
-  - `vite.config.ts`
-  - `vite.config.js`
-- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
-- Git: repo=vault-central, branch=main, head=c8b5a7d
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 22:59 - vault-central</strong> <code>plan</code> - Created implementation plan to stabilize video capture and WebM preview generation, including focus/visibility faking, direct video wrapper, and sandbox FFmpeg integration.</summary>
-
-- Kind: plan
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-2.5-pro
-  Thinking: high
-  Mode: plan
-  Permissions: ask (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-central  Branch: main
-  Tools used (this reply): write_to_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 22:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created implementation plan to stabilize video capture and WebM preview generation, including focus/visibility faking, direct video wrapper, and sandbox FFmpeg integration.
-- Files:
-  - `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
-- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\89762b3e-5644-4f25-ae55-07560156c9e0\implementation_plan.md`
-- Git: repo=vault-central, branch=main, head=c8b5a7d
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 22:42 - vaultwares-docs</strong> <code>handoff</code> - Pushed remaining user-owned vaultwares-docs changes and checked deployments. Published vaultwares-docs commit f56c49d (Update ledger schema docs) after npm run build passed, the...</summary>
-
-- Kind: handoff
-- Actor: GPT-5.2 Codex
-- Agent Header:
-  ```text
-  Agent: GPT-5.2 Codex (role: main)
-  Model: gpt-5.2
-  Thinking: unknown
-  Mode: agent
-  Permissions: unknown (network: online)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): PowerShell, git, npm, SSH, curl
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 22:42 (TZ: Eastern Standard Time)
-  ```
-- Summary: Pushed remaining user-owned vaultwares-docs changes and checked deployments. Published vaultwares-docs commit f56c49d (Update ledger schema docs) after npm run build passed, then verified webhook deploy on greencloud-vps updated /var/www/vaultwares-docs/dist at 22:38. Investigated stale ledger.vaultwares.ca: agent-ledger sync task was running locally, but VPS deploy failed with TS7006 in site/src/pages/WorkImpactPage.tsx. Fixed and pushed agent-ledger commit add0a201, verified webhook deploy exit=0 and /var/www/ledger.vaultwares.ca updated at 22:41. Verified docs and ledger HTTPS 200 with clean TLS via 100.73.93.84, hooks health 200, vw-webhookd/vaultwares-hooks/deny-watch/token-expiry timers active, and current GH token smoke test authenticates as p-potvin.
-- Commands:
-  - `npm run build`
-  - `git commit -m 'Update ledger schema docs'`
-  - `git push origin main`
-  - `ssh root@100.73.93.84 tail/grep /var/log/vw-webhookd.log`
-  - `npm run build in agent-ledger/site`
-  - `git commit -m 'Fix work impact build typing'`
-  - `git push origin main`
-  - `curl.exe --resolve docs.vaultwares.ca:443:100.73.93.84`
-  - `curl.exe --resolve ledger.vaultwares.ca:443:100.73.93.84`
-  - `curl.exe https://hooks.vaultwares.ca/health`
-- Files:
-  - `vaultwares-docs\\docs-content\\operations\\agent-ledger-schema.mdx`
-  - `vaultwares-docs\\instructions\\summaries\\CODING_STANDARDS.md`
-  - `vaultwares-docs\\src\\resources\\pageResourcesManifest.ts`
-  - `agent-ledger\\site\\src\\pages\\WorkImpactPage.tsx`
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 22:30 - vaultwares-docs</strong> <code>handoff</code> - Archived DNS troubleshooting chat and published the final docs update. Committed and pushed vaultwares-docs commit d1e8553 (Document tailnet DNS routing) to origin/main. The com...</summary>
-
-- Kind: handoff
-- Actor: GPT-5.2 Codex
-- Agent Header:
-  ```text
-  Agent: GPT-5.2 Codex (role: main)
-  Model: gpt-5.2
-  Thinking: unknown
-  Mode: agent
-  Permissions: unknown (network: online)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): PowerShell, git, npm
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 22:30 (TZ: Eastern Standard Time)
-  ```
-- Summary: Archived DNS troubleshooting chat and published the final docs update. Committed and pushed vaultwares-docs commit d1e8553 (Document tailnet DNS routing) to origin/main. The commit documents exact-host Tailscale restricted DNS via greencloud-vps dnsmasq, adds ledger.vaultwares.ca to the private network map, clarifies stats.vaultwares.ca as future/example-only, and includes regenerated page resources for network-map and tailscale. Build passed with npm run build; Vite reported only the existing large chunk warning. Left unrelated local pending changes in vaultwares-docs untouched: agent-ledger-schema docs/resources, pageResourcesManifest, deployment/services/webhook resource files, CODING_STANDARDS summary, and deploy-alerts resource.
-- Commands:
-  - `npm run generate:page-resources`
-  - `npm run build`
-  - `git fetch origin main`
-  - `git commit -m 'Document tailnet DNS routing'`
-  - `git push origin main`
-  - `git status --short --branch`
-- Files:
-  - `vaultwares-docs\\docs-content\\operations\\network-map.mdx`
-  - `vaultwares-docs\\docs-content\\operations\\tailscale.mdx`
-  - `vaultwares-docs\\src\\resources\\pages\\operations__network-map.json`
-  - `vaultwares-docs\\src\\resources\\pages\\operations__tailscale.json`
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 21:44 - vaultwares-docs</strong> <code>verification</code> - Checked current Windows hosts-file state after confirming Tailscale DNS ACL was present. Found local overrides still present for docs.vaultwares.ca, secrets.vaultwares.ca, and w...</summary>
-
-- Kind: verification
-- Actor: GPT-5.2 Codex
-- Agent Header:
-  ```text
-  Agent: GPT-5.2 Codex (role: main)
-  Model: gpt-5.2
-  Thinking: unknown
-  Mode: agent
-  Permissions: unknown (network: online)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 21:44 (TZ: Eastern Standard Time)
-  ```
-- Summary: Checked current Windows hosts-file state after confirming Tailscale DNS ACL was present. Found local overrides still present for docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca pointing to 100.73.93.84, so this PC can still mask whether Tailscale restricted DNS is being used for those names. No server changes made.
-- Commands:
-  - `Select-String -Path C:\\Windows\\System32\\drivers\\etc\\hosts -Pattern vaultwares\\.ca`
-- Files:
-  - `C:\\Windows\\System32\\drivers\\etc\\hosts`
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 21:42 - vaultwares-docs</strong> <code>verification</code> - Checked ledger.vaultwares.ca and stats.vaultwares.ca for the tailnet DNS model. Confirmed ledger.vaultwares.ca is a real nginx vhost on greencloud-vps with certificate and webro...</summary>
-
-- Kind: verification
-- Actor: GPT-5.2 Codex
-- Agent Header:
-  ```text
-  Agent: GPT-5.2 Codex (role: main)
-  Model: gpt-5.2
-  Thinking: unknown
-  Mode: agent
-  Permissions: unknown (network: online)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): PowerShell, SSH, apply_patch
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 21:42 (TZ: Eastern Standard Time)
-  ```
-- Summary: Checked ledger.vaultwares.ca and stats.vaultwares.ca for the tailnet DNS model. Confirmed ledger.vaultwares.ca is a real nginx vhost on greencloud-vps with certificate and webroot, added it to /etc/dnsmasq.d/vaultwares-tailnet.conf, restarted dnsmasq, verified DNS answer to 100.73.93.84 and HTTPS/TLS 200 via the tailnet address. Confirmed stats.vaultwares.ca has no nginx vhost and remains example/future-only, then updated network-map.mdx and tailscale.mdx to include ledger and clarify stats wording.
-- Commands:
-  - `ssh root@100.73.93.84 cat /etc/nginx/sites-enabled/ledger.vaultwares.ca`
-  - `nslookup ledger.vaultwares.ca 100.73.93.84`
-  - `curl.exe --resolve ledger.vaultwares.ca:443:100.73.93.84 https://ledger.vaultwares.ca`
-  - `nslookup stats.vaultwares.ca 100.73.93.84`
-  - `git diff -- docs-content/operations/network-map.mdx docs-content/operations/tailscale.mdx`
-- Files:
-  - `vaultwares-docs\docs-content\operations\network-map.mdx`
-  - `vaultwares-docs\docs-content\operations\tailscale.mdx`
-  - `/etc/dnsmasq.d/vaultwares-tailnet.conf`
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 17:51 - vaultwares-docs</strong> <code>verification</code> - Configured greencloud-vps as an exact-host tailnet DNS resolver with dnsmasq. Restored dnsmasq, installed /etc/dnsmasq.d/vaultwares-tailnet.conf with exact host-record answers f...</summary>
-
-- Kind: verification
-- Actor: GPT-5.2 Codex
-- Agent Header:
-  ```text
-  Agent: GPT-5.2 Codex (role: main)
-  Model: gpt-5.2
-  Thinking: unknown
-  Mode: agent
-  Permissions: unknown (network: online)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): PowerShell, SSH, apply_patch
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 17:51 (TZ: Eastern Standard Time)
-  ```
-- Summary: Configured greencloud-vps as an exact-host tailnet DNS resolver with dnsmasq. Restored dnsmasq, installed /etc/dnsmasq.d/vaultwares-tailnet.conf with exact host-record answers for docs.vaultwares.ca, api.vaultwares.ca, hooks.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.73.93.84, enabled DNS on tailscale0 via UFW, verified direct resolver answers and HTTPS/TLS for docs and warden. Updated docs-content/operations/tailscale.mdx to document exact Restricted/Split DNS entries and warn against whole-zone forwarding through Tailscale DNS.
-- Commands:
-  - `ssh root@100.73.93.84 dnsmasq --test && systemctl enable --now dnsmasq`
-  - `ssh root@100.73.93.84 ufw allow in on tailscale0 to any port 53 proto udp/tcp`
-  - `nslookup docs.vaultwares.ca 100.73.93.84`
-  - `nslookup api.vaultwares.ca 100.73.93.84`
-  - `nslookup vaultwares.ca 100.73.93.84`
-  - `curl.exe --resolve docs.vaultwares.ca:443:100.73.93.84 https://docs.vaultwares.ca`
-  - `curl.exe --resolve warden.vaultwares.ca:443:100.73.93.84 https://warden.vaultwares.ca`
-- Files:
-  - `vaultwares-docs\docs-content\operations\tailscale.mdx`
-  - `/etc/dnsmasq.d/vaultwares-tailnet.conf`
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 17:29 - python-zipper</strong> <code>code-change</code> - Removed --disable-extensions, --enable-automation, and --no-sandbox from Playwright&#39;s default launch arguments to allow the Real-Debrid extension to load successfully inside the...</summary>
-
-- Kind: code-change
-- Actor: GitHub Copilot
-- Agent Header:
-  ```text
-  Agent: GitHub Copilot (role: main)
-  Model: o3-mini
-  Thinking: high
-  Mode: chat
-  Permissions: ask (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts\telegram  Branch: main
-  Tools used (this reply): replace_string_in_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 17:29 (TZ: Eastern Standard Time)
-  ```
-- Summary: Removed --disable-extensions, --enable-automation, and --no-sandbox from Playwright's default launch arguments to allow the Real-Debrid extension to load successfully inside the persistent context.
-- Files:
-  - `telegram/telethon_link_resolver.py`
-- Git: repo=python-scripts, branch=main, head=8e2fa98
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 15:16 - vault-explorer</strong> <code>code-change,verification</code> - Ran Playwright test suite successfully by fixing obsolete tab/favorite element selectors. Executed Start-AsrBenchmark.ps1 simulation to confirm ASR cold-boot initialization and ...</summary>
-
-- Kind: code-change,verification
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-2.5-pro-preview
-  Thinking: medium
-  Mode: chat
-  Permissions: ask (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): run_command, view_file, replace_file_content, write_to_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 15:16 (TZ: Eastern Standard Time)
-  ```
-- Summary: Ran Playwright test suite successfully by fixing obsolete tab/favorite element selectors. Executed Start-AsrBenchmark.ps1 simulation to confirm ASR cold-boot initialization and inference telemetry metrics extraction and persistence to BENCHMARKS.md. Verified that tooltip system and viewport-aware ASR context menu coordinate flipping/clamping are fully correct.
-- Commands:
-  - `node C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\scratch\test_playwright.js`
-  - `powershell -File .\powershell\Start-AsrBenchmark.ps1 -ForceSimulation`
-- Files:
-  - `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\scratch\test_playwright.js`
-- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
-- Git: repo=vault-explorer, branch=main, head=0138f21
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 15:13 - vault-explorer</strong> <code>code-change</code> - Created centralized tooltip system in js/tooltip.js, registered script in index.html, integrated viewport boundary-checking with flip/clamp behavior for the ASR context menu in ...</summary>
-
-- Kind: code-change
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-1.5-pro
-  Thinking: medium
-  Mode: code
-  Permissions: ask (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): write_to_file, replace_file_content, view_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 15:13 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created centralized tooltip system in js/tooltip.js, registered script in index.html, integrated viewport boundary-checking with flip/clamp behavior for the ASR context menu in js/player/subtitles.js, and added perf_counter() timing telemetry to parakeet_wrapper.py.
-- Files:
-  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\tooltip.js`
-  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\index.html`
-  - `c:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\player\subtitles.js`
-  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-media-processing\vaultwares_media_processing\parakeet_wrapper.py`
-- Git: repo=vault-explorer, branch=main, head=0138f21
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 15:09 - vault-explorer</strong> <code>plan</code> - Initial planning phase for ASR subtitle pipeline stabilization, viewport boundaries for ASR menu, tooltip system integration, and python latency checks</summary>
-
-- Kind: plan
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-1.5-pro
-  Thinking: high
-  Mode: plan
-  Permissions: ask (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): view_file, grep_search, list_dir
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 15:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Initial planning phase for ASR subtitle pipeline stabilization, viewport boundaries for ASR menu, tooltip system integration, and python latency checks
-- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
-- Git: repo=vault-explorer, branch=main, head=0138f21
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 14:53 - vault-explorer</strong> <code>plan</code> - Created implementation plan for ASR IPC hardening, viewport boundary-checking for floating context menus, and centralized theme-aware tooltips.</summary>
-
-- Kind: plan
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-1.5-pro
-  Thinking: high
-  Mode: plan
-  Permissions: ask (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): write_to_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 14:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created implementation plan for ASR IPC hardening, viewport boundary-checking for floating context menus, and centralized theme-aware tooltips.
-- Files:
-  - `src/normalization.js`
-  - `js/player/subtitles.js`
-  - `js/tooltip.js`
-  - `index.html`
-  - `index.css`
-- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
-- Git: repo=vault-explorer, branch=main, head=0138f21
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 13:46 - python-zipper</strong> <code>code-change,general</code> - Refactored telethon_link_resolver.py to extract all rentry link types, save to all_extracted_links.txt, and process unrestriction through Real-Debrid browser extension via Persi...</summary>
-
-- Kind: code-change,general
-- Actor: GitHub Copilot
-- Agent Header:
-  ```text
-  Agent: GitHub Copilot (role: main)
-  Model: o3-mini
-  Thinking: high
-  Mode: chat
-  Permissions: ask (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts\telegram  Branch: main
-  Tools used (this reply): run_in_terminal, grep_search, read_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 13:46 (TZ: Eastern Standard Time)
-  ```
-- Summary: Refactored telethon_link_resolver.py to extract all rentry link types, save to all_extracted_links.txt, and process unrestriction through Real-Debrid browser extension via Persistent Context and user interaction (ENTER prompt) instead of the RealDebrid API, matching the user's workflow prototype.
-- Commands:
-  - `python -m py_compile telethon_link_resolver.py`
-- Files:
-  - `telegram/telethon_link_resolver.py`
-- Git: repo=python-scripts, branch=main, head=8e2fa98
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 10:05 - python-zipper</strong> <code>code-change</code> - Created .env.example, .env, and requirements.txt inside telegram/. Refactored telethon_link_resolver.py to read keys via dotenv instead of hardcoded strings or separate text files.</summary>
-
-- Kind: code-change
-- Actor: GitHub Copilot
-- Agent Header:
-  ```text
-  Agent: GitHub Copilot (role: main)
-  Model: gemini-3.1-pro-preview
-  Thinking: medium
-  Mode: chat
-  Permissions: ask (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts\telegram  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 10:05 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created .env.example, .env, and requirements.txt inside telegram/. Refactored telethon_link_resolver.py to read keys via dotenv instead of hardcoded strings or separate text files.
-- Commands:
-  - `create_file`
-- Files:
-  - `telegram/.env`
-  - `telegram/requirements.txt`
-  - `telegram/telethon_link_resolver.py`
-- Git: repo=python-scripts, branch=main, head=8e2fa98
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 09:14 - vaultwares-docs</strong> <code>verification</code> - Verified tailnet/private access for vaultwares docs and secrets. The client-side override now points docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.7...</summary>
-
-- Kind: verification
-- Actor: Claude Sonnet 4.6
-- Agent Header:
-  ```text
-  Agent: Claude Sonnet 4.6 (role: main)
-  Model: claude-sonnet-4-6
-  Thinking: unknown
-  Mode: agent
-  Permissions: unknown (network: online)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): PowerShell, SSH
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 09:14 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified tailnet/private access for vaultwares docs and secrets. The client-side override now points docs.vaultwares.ca, secrets.vaultwares.ca, and warden.vaultwares.ca to 100.73.93.84. Confirmed docs returns 200 with valid TLS and HTML content; secrets returns 200 after following the redirect to warden; warden returns 200 with valid TLS and the VaultWarden JSON landing payload. dnsmasq on vaultwares-1 was not needed for this path, so I disabled it, removed the temporary dnsmasq config, and removed the UFW UDP/TCP 53 allowances on tailscale0.
-- Commands:
-  - `curl.exe -sS -o NUL -w ... https://docs.vaultwares.ca`
-  - `curl.exe -sS -o NUL -w ... https://warden.vaultwares.ca`
-  - `curl.exe -sS -L -o NUL -w ... https://secrets.vaultwares.ca`
-  - `ssh root@100.73.93.84 systemctl disable --now dnsmasq`
-  - `ssh root@100.73.93.84 ufw delete allow in on tailscale0 to any port 53 proto udp/tcp`
-- Files:
-  - `C:\\Windows\\System32\\drivers\\etc\\hosts`
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 09:14 - vault-explorer</strong> <code>general</code> - Loaded context from checkpoint. Confirmed ASR pipeline fix and playback speed UI refactoring are complete and passing smoke tests.</summary>
-
-- Kind: general
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-3.5-flash
-  Thinking: low
-  Mode: chat
-  Permissions: ask (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): run_command
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 09:14 (TZ: Eastern Standard Time)
-  ```
-- Summary: Loaded context from checkpoint. Confirmed ASR pipeline fix and playback speed UI refactoring are complete and passing smoke tests.
-- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
-- Git: repo=vault-explorer, branch=main, head=0138f21
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 09:14 - vault-explorer</strong> <code>code-change,verification</code> - Refactored video player speed controls to be icon-only. Replaced ASR subtitle modal with a new floating language context menu. Fixed ASR pipeline failure in parakeet_wrapper.py ...</summary>
-
-- Kind: code-change,verification
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-3.5-flash
-  Thinking: medium
-  Mode: code
-  Permissions: ask (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): replace_file_content, multi_replace_file_content, run_command, view_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 09:14 (TZ: Eastern Standard Time)
-  ```
-- Summary: Refactored video player speed controls to be icon-only. Replaced ASR subtitle modal with a new floating language context menu. Fixed ASR pipeline failure in parakeet_wrapper.py by implementing stereo-to-mono downmixing and silenced PyTorch/NeMo warning logs. Verified via Playwright smoke tests and Python native transcribing script.
-- Commands:
-  - `node tests/refactor_smoke_test.js`
-  - `python test_nemo_real_asr.py`
-- Files:
-  - `index.html`
-  - `js/player/player.js`
-  - `js/player/subtitles.js`
-  - `c:\Users\Administrator\Desktop\Github Repos\vaultwares-media-processing\vaultwares_media_processing\parakeet_wrapper.py`
-- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\adbd177b-f07c-46b3-bc04-3af2adb19aa9\implementation_plan.md`
-- Git: repo=vault-explorer, branch=main, head=0138f21
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 08:02 - python-zipper</strong> <code>code-change,general</code> - Organized telegram/ directory: removed ~15 deprecated, intermediate, or redundant pipeline scripts. Moved all test scripts into telegram/tests/ and all documentation into telegr...</summary>
-
-- Kind: code-change,general
-- Actor: GitHub Copilot
-- Agent Header:
-  ```text
-  Agent: GitHub Copilot (role: main)
-  Model: Gemini 3.1 Pro (Preview)
-  Thinking: low
-  Mode: code
-  Permissions: autopilot (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-scripts  Branch: main
-  Tools used (this reply): run_in_terminal, create_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 08:02 (TZ: Eastern Standard Time)
-  ```
-- Summary: Organized telegram/ directory: removed ~15 deprecated, intermediate, or redundant pipeline scripts. Moved all test scripts into telegram/tests/ and all documentation into telegram/docs/. Sourced configurations to write a comprehensive README.md detailing the Telegram end-to-end scraper pipeline.
-- Commands:
-  - `Remove-Item`
-  - `mkdir`
-  - `mv`
-- Files:
-  - `telegram\README.md`
-- Git: repo=python-scripts, branch=main, head=8e2fa98
-
-</details>
-
-<details>
-<summary><strong>2026-06-02 07:01 - agent-ledger</strong> <code>code-change,verification</code> - Fixed work_impact page: (1) Stats now load on initial render - improved data initialization check; (2) Work activity tooltip encoding fixed by decoding URI-encoded project names...</summary>
-
-- Kind: code-change,verification
-- Actor: Claude Code
-- Agent Header:
-  ```text
-  Agent: Claude Code (role: main)
-  Model: claude-haiku-4-5-20251001
-  Thinking: medium
-  Mode: code
-  Permissions: autopilot (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): Edit, Read, PowerShell, TaskCreate, TaskUpdate
-  MCP servers accessed (this reply): none
-  Time: 2026-06-02 07:01 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed work_impact page: (1) Stats now load on initial render - improved data initialization check; (2) Work activity tooltip encoding fixed by decoding URI-encoded project names; (3) Moved KPI row down above focus blocks; (4) Added commit exclusion for outliers (vaultwares-cli 486f844); (5) Added missing modules: AI Model Usage, Tools Used, MCP Servers, Agent Activity by Day, Time-of-Day Rhythm (day-of-week breakdown); (6) Activity by project accordions verified working with proper rendering
-- Commands:
-  - `Edit: WorkImpactPage.tsx - reordered sections, added agent data components, fixed tooltip encoding`
-  - `Edit: update-work-impact-state.ps1 - added commit exclusion logic`
-- Files:
-  - `site/src/pages/WorkImpactPage.tsx`
-  - `scripts/update-work-impact-state.ps1`
 
 </details>
 

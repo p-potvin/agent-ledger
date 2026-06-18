@@ -172,8 +172,8 @@ const en: I18nStrings = {
 
   agentTitle:            'AI Agent Activity',
   agentHint:             'Extracted from ledger events with MCP/tool metadata.',
-  activityTitle:         'Activity Patterns',
-  activityHint:          'Hour of day and day of week distributions.',
+  activityTitle:         'Activity Pulse',
+  activityHint:          'When work happens - hourly and daily patterns.',
 
   noCommitData:              'No commit size data available.',
   commitLineDataUnavailable: 'Commit line data unavailable.',
@@ -283,8 +283,8 @@ const qc: I18nStrings = {
 
   agentTitle:            'Activité des agents IA',
   agentHint:             'Extraite des événements du registre avec métadonnées MCP/outil.',
-  activityTitle:         'Modèles d\'activité',
-  activityHint:          'Distributions par heure et jour de la semaine.',
+  activityTitle:         'Pouls d\'activité',
+  activityHint:          'Quand le travail se produit - motifs horaires et quotidiens.',
 
   noCommitData:              'Aucune donnée de taille de commit disponible.',
   commitLineDataUnavailable: 'Données de lignes de commit indisponibles.',

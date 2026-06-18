@@ -7,7 +7,7 @@
   "totalEvents": 2435,
   "activeDays": 101,
   "totalProjects": 45,
-  "streakCurrent": 8,
+  "streakCurrent": 15,
   "streakLongest": 86,
   "busiestDay": "2026-05-13",
   "busiestDayCount": 38,
@@ -151,7 +151,7 @@
   ],
 
   "commitStats": {
-    "mean": 690,
+    "mean": 92,
     "median": 42,
     "mode": 12,
     "samples": 672
@@ -172,46 +172,43 @@
   ],
 
   "monthBoxes": [
-    { "month": "Mar", "min": 11, "q1": 25, "median": 89, "q3": 345, "max": 7452 },
-    { "month": "Apr", "min": 0, "q1": 18, "median": 56, "q3": 234, "max": 83144 },
-    { "month": "May", "min": 0, "q1": 22, "median": 78, "q3": 289, "max": 45406 },
-    { "month": "Jun", "min": 0, "q1": 15, "median": 42, "q3": 187, "max": 29687 }
+    { "month": "Mar", "min": 11, "q1": 25, "median": 42, "q3": 148, "max": 902 },
+    { "month": "Apr", "min": 11, "q1": 21, "median": 48, "q3": 105, "max": 7452 },
+    { "month": "May", "min": 58, "q1": 85, "median": 148, "q3": 283, "max": 7452 },
+    { "month": "Jun", "min": 58, "q1": 77, "median": 85, "q3": 200, "max": 1012 }
   ],
 
   "commitOutliers": [
     "2026-03-23: windows-customizer - +29,687 lines (a1d4b42) - Major refactoring",
     "2026-04-14: vaultwares-cli - +83,144 lines (486f844) - Massive CLI overhaul",
     "2026-04-26: vault-flows - +45,406 lines (37dfb53) - Flow system migration",
-    "2026-04-26: vault-flows - +45,406 lines (0998411) - Parallel flow rewrite",
-    "2026-04-26: vault-flows - +21,863 lines (b73cd57) - Component restructuring",
-    "2026-04-26: vault-flows - +21,846 lines (7ee8c91) - Pipeline consolidation",
-    "2026-04-26: vault-flows - +21,839 lines (9e01d2b) - Integration overhaul"
+    "2026-04-26: vault-flows - +45,406 lines (0998411) - Parallel flow rewrite"
   ],
 
   "techVolume": {
     "raw": {
       "label": "Raw",
-      "insertions": 285400,
-      "deletions": 38200,
-      "files": 3150,
-      "churn": 323600,
-      "net": 247200
+      "insertions": 1472222,
+      "deletions": 199023,
+      "files": 7567,
+      "churn": 1671245,
+      "net": 1273199
     },
     "clean": {
       "label": "Clean",
-      "insertions": 265800,
-      "deletions": 25400,
-      "files": 2480,
-      "churn": 291200,
-      "net": 240400
+      "insertions": 618341,
+      "deletions": 114474,
+      "files": 4682,
+      "churn": 732815,
+      "net": 503867
     },
     "excluded": {
       "label": "Excluded",
-      "insertions": 19600,
-      "deletions": 12800,
-      "files": 670,
-      "churn": 32400,
-      "net": 6800
+      "insertions": 853881,
+      "deletions": 84549,
+      "files": 2885,
+      "churn": 938430,
+      "net": 769332
     }
   },
 
@@ -219,7 +216,7 @@
     "mean": 3.2,
     "median": 2,
     "p90": 8,
-    "max": 1736
+    "max": 26
   },
 
   "concentration": [
@@ -281,8 +278,9 @@
       "101 active days",
       "86-day longest streak",
       "2,400 commits analyzed",
-      "291,200 lines of clean code",
-      "7 major outliers removed from stats (>20k lines)",
+      "732,815 lines of clean code churn",
+      "938,430 lines of excluded/vendor code",
+      "4 major outliers removed from stats (>20k lines)",
       "Founded March 8th, 2026 - VaultWares anniversary"
     ],
     "topProjects": ["vault-explorer", "vault-flows", "vaultwares-api", "vault-central"]
@@ -475,7 +473,7 @@
     },
     {
       "name": "vaultwares-docs",
-      "aliases": ["tmp-app", "vaultwares-docs / vw-jira-sync"],
+      "aliases": ["tmp-app"],
       "entries": 82,
       "first": "2026-03-11",
       "last": "2026-06-17",

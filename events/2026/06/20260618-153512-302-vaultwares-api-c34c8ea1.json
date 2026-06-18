@@ -1,0 +1,46 @@
+{
+  "id": "20260618-153512-302-vaultwares-api-c34c8ea1",
+  "createdAt": "2026-06-18T19:35:12.3022710Z",
+  "createdAtLocal": "2026-06-18 15:35",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Grep, Glob, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-18 15:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Investigated 500 on /api/promking/videos?actor_gender=female (and equivalent on /taxonomies/pornstars?gender=female). Root cause: pornstars.gender is a Postgres ENUM (gender) but the filter does gender = ANY($N::text[]), which Postgres rejects without a cast. Affects videos.list_videos, videos.get_video, taxonomies.list_terms, taxonomies.count_terms. 'all' / 'null' paths work because they avoid the ANY comparison. Reproduced live against http://100.67.25.118:9001. No code changes yet — reported back to user for go/no-go on the fix.",
+  "commands": [
+    "curl http://100.67.25.118:9001/api/promking/videos?site=oneporn&limit=12&actor_gender=female",
+    "curl http://100.67.25.118:9001/api/promking/videos?site=fxv&limit=2&actor_gender=female",
+    "curl http://100.67.25.118:9001/api/promking/taxonomies/pornstars?site=oneporn&limit=2&gender=female"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\videos.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\taxonomies.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\db\\schema.ts"
+  ],
+  "planPath": " ",
+  "contentHash": "c34c8ea1b3b5927c94f70f2cabfc0259529d2d4d843a60602f4d9b4a18da45c8",
+  "git": null
+}

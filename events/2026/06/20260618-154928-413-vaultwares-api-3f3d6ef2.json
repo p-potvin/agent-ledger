@@ -1,0 +1,47 @@
+{
+  "id": "20260618-154928-413-vaultwares-api-3f3d6ef2",
+  "createdAt": "2026-06-18T19:49:28.4138538Z",
+  "createdAtLocal": "2026-06-18 15:49",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Edit, Grep, Bash, PowerShell, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-18 15:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "PowerShell",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Fixed promking gender filter 500. pornstars.gender is a Postgres ENUM; cast to ::text in ANY(...) clauses across videos.list_videos, videos.get_video, taxonomies.list_terms, taxonomies.count_terms. Bumped 0.1.3 -> 0.1.4. Committed 7e3b637 and pushed to origin/main. Webhook did NOT auto-deploy (OVH HEAD was 3 commits behind). Triggered /usr/local/bin/deploy-vaultwares-api.sh manually on vps-ovhcloud; first run failed with \u001bxec 9> Permission denied at /var/lock/vw-deploy-vaultwares-api.lock despite running as root — recreating the lock file fresh fixed it. Service restarted, /healthz green, all 4 previously-failing URLs now 200. Follow-ups for the user: (1) the deploy webhook to vaultwares-api appears not to be firing on push; (2) the lock-file open-as-root failure is reproducible and worth tracing.",
+  "commands": [
+    "git push origin main",
+    "ssh ubuntu@100.67.25.118 sudo /usr/local/bin/deploy-vaultwares-api.sh 7e3b637",
+    "curl http://100.67.25.118:9001/api/promking/videos?site=oneporn&limit=12&actor_gender=female"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\videos.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\taxonomies.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\pyproject.toml"
+  ],
+  "planPath": " ",
+  "contentHash": "3f3d6ef26676e71657adaf152b76f8915f3e4a7009f2474e4ee10695e6c2e836",
+  "git": null
+}

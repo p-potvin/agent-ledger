@@ -1,0 +1,52 @@
+{
+  "id": "20260618-165743-113-vaultwares-api-shared-tube-8352c6a6",
+  "createdAt": "2026-06-18T20:57:43.1132100Z",
+  "createdAtLocal": "2026-06-18 16:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api + shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Edit, Write, Grep, Bash, PowerShell, Monitor, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-18 16:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "Bash",
+      "PowerShell",
+      "Monitor",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Round 2: Diagnosed deploy chain end-to-end. (1) Tailscale ACL missing tag:vps-greencloud as SSH src to tag:vps-ovhcloud — user added it via admin console. (2) After ACL add, first sessions died with 'could not stream to recorder' — user dropped recorder from rule. (3) Lock-file footgun on OVH: fs.protected_regular=2 blocks root from O_CREAT-opening ubuntu-owned files in /var/lock; moved to /var/lib/vw-deploy with chmod 0666 + fallback. (4) vaultwares-api tests: extracted build_gender_clause helper, added 12 unit tests + 1 source-grep regression guard for taxonomies.py — all 13 pass. (5) shared-tube /api/stream: oneporn/pkt/sexyprn carried stale handler without FlareSolverr fallback — synced to fxv. Astro inlines import.meta.env at build time so runtime EnvironmentFile never reached the bundle — added process.env fallback. (6) FLARESOLVERR_URL added to /etc/shared-tube/*.env on both OVH and greencloud. (7) Verified webhook deploys fire automatically for both repos. Outstanding: MP4 IP-binding means even fresh flaresolverr-resolved URLs 502 on byte-range proxy from datacenter IPs. Filed follow-up task.",
+  "commands": [
+    "ssh ubuntu@100.67.25.118 sudo /usr/local/bin/deploy-vaultwares-api.sh",
+    "pnpm -F site-oneporn -F site-sexyprn run build",
+    "git push origin main (both repos)"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\videos.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\tests\\test_promking_gender_clause.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\fxv\\src\\pages\\api\\stream\\[slug].ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\oneporn\\src\\pages\\api\\stream\\[slug].ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\.env.example",
+    "/usr/local/bin/deploy-vaultwares-api.sh (OVH)"
+  ],
+  "planPath": " ",
+  "contentHash": "8352c6a6ffd8cd8a2685272a26c8736a04ac826efa4894c501e085b0aef3f470",
+  "git": null
+}
