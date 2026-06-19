@@ -3,7 +3,9 @@
 import { useState } from 'react'
 import { getI18n, type Lang } from './lib/i18n'
 import type { WorkImpactData } from './lib/types'
-import data from './lib/data'
+import dataRaw from './lib/data.json'
+
+const data = dataRaw as WorkImpactData
 
 import Header           from './components/Header'
 import KpiCard          from './components/KpiCard'

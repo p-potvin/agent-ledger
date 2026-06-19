@@ -31,31 +31,41 @@ pwsh -NoProfile -File scripts/update-work-impact.ps1
 pwsh -NoProfile -File scripts/render-work-impact.ps1
 pwsh -NoProfile -File scripts/render-agent-ledger.ps1
 
-# 3a. Build site/ (legacy ledger.vaultwares.ca dashboard)
-echo "--- Building site/ ---"
-cd "$SITE_DIR"
-npm ci --prefer-offline
-npm run build
+# Pipelines are decoupled: a failure in one app's build does NOT abort
+# the other. We capture per-app exit status, deploy only on success,
+# and exit non-zero at the end if any pipeline failed.
+SITE_STATUS="skipped"
+STATS_STATUS="skipped"
 
-if [ -d "$LEDGER_DEPLOY_DIR" ] && [ ! -L "$LEDGER_DEPLOY_DIR" ]; then
-    echo "--- Deploying site/ → $LEDGER_DEPLOY_DIR ---"
-    rsync -a --delete --exclude '.well-known/' "$SITE_DIR/dist/" "$LEDGER_DEPLOY_DIR/"
-else
-    echo "--- Skipping $LEDGER_DEPLOY_DIR (missing or is a symlink) ---"
-fi
+build_and_deploy() {
+    local name="$1" src_dir="$2" dest_dir="$3" status_var="$4"
+    echo "--- Building $name ---"
+    if ! ( cd "$src_dir" && npm ci --prefer-offline && npm run build ); then
+        echo "!!! Build of $name failed — skipping deploy to $dest_dir" >&2
+        printf -v "$status_var" '%s' "build-failed"
+        return 1
+    fi
+    if [ ! -d "$dest_dir" ] || [ -L "$dest_dir" ]; then
+        echo "--- Skipping $dest_dir (missing or is a symlink) ---"
+        printf -v "$status_var" '%s' "dest-missing"
+        return 0
+    fi
+    echo "--- Deploying $name → $dest_dir ---"
+    if ! rsync -a --delete --exclude '.well-known/' "$src_dir/dist/" "$dest_dir/"; then
+        echo "!!! rsync to $dest_dir failed" >&2
+        printf -v "$status_var" '%s' "rsync-failed"
+        return 1
+    fi
+    printf -v "$status_var" '%s' "ok"
+}
 
-# 3b. Build stats-app/ (new Work Impact dashboard for stats.vaultwares.ca)
-echo "--- Building stats-app/ ---"
-cd "$STATS_APP_DIR"
-npm ci --prefer-offline
-npm run build
+# 3a. site/ → /var/www/ledger.vaultwares.ca (legacy)
+build_and_deploy "site/"      "$SITE_DIR"      "$LEDGER_DEPLOY_DIR" SITE_STATUS  || true
 
-if [ -d "$STATS_DEPLOY_DIR" ] && [ ! -L "$STATS_DEPLOY_DIR" ]; then
-    echo "--- Deploying stats-app/ → $STATS_DEPLOY_DIR ---"
-    rsync -a --delete --exclude '.well-known/' "$STATS_APP_DIR/dist/" "$STATS_DEPLOY_DIR/"
-else
-    echo "--- Skipping $STATS_DEPLOY_DIR (missing or is a symlink) ---"
-fi
+# 3b. stats-app/ → /var/www/stats.vaultwares.ca (new Work Impact dashboard)
+build_and_deploy "stats-app/" "$STATS_APP_DIR" "$STATS_DEPLOY_DIR"  STATS_STATUS || true
+
+echo "--- Pipeline summary: site=$SITE_STATUS stats-app=$STATS_STATUS ---"
 
 # 5. Reload nginx (if config changed)
 if nginx -t 2>/dev/null; then
