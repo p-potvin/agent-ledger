@@ -73,7 +73,7 @@ export function useInputTrackerData() {
     // Wider window than the API default (24h) so the dashboard reflects the
     // backfilled history. Wrapped in an array so getJson's fallback chain
     // semantics still apply (single-element array = no fallback).
-    getJson<InputTrackerData>(['/monitor/input-tracker?hours=168'])
+    getJson<InputTrackerData>('/monitor/input-tracker?hours=168')
       .then((payload) => {
         if (!cancelled) setData(payload);
       })
