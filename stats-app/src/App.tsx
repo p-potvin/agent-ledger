@@ -5,7 +5,11 @@ import { getI18n, type Lang } from './lib/i18n'
 import type { WorkImpactData } from './lib/types'
 import dataRaw from './lib/data.json'
 
-const data = dataRaw as WorkImpactData
+// data.json is generated at deploy time by stats-app/scripts/generate-data.mjs
+// from the live /monitor/work-impact API. TS can't structurally compare the
+// runtime-shaped projects[].kinds (Partial<Record>) against ProjectSummary's
+// Record<string, number>, so go through unknown.
+const data = dataRaw as unknown as WorkImpactData
 
 import Header           from './components/Header'
 import KpiCard          from './components/KpiCard'

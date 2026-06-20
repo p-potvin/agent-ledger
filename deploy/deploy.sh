@@ -62,7 +62,13 @@ build_and_deploy() {
 # 3a. site/ → /var/www/ledger.vaultwares.ca (legacy)
 build_and_deploy "site/"      "$SITE_DIR"      "$LEDGER_DEPLOY_DIR" SITE_STATUS  || true
 
-# 3b. stats-app/ → /var/www/stats.vaultwares.ca (new Work Impact dashboard)
+# 3b. Regenerate stats-app's bundled data.json from the live API, then build.
+#     The script writes src/lib/data.json which vite imports at build time.
+echo "--- Regenerating stats-app data from /monitor/work-impact ---"
+( cd "$STATS_APP_DIR" && node scripts/generate-data.mjs ) || \
+    echo "!!! stats-app data regeneration failed; build will use last committed data.json" >&2
+
+# 3c. stats-app/ → /var/www/stats.vaultwares.ca (new Work Impact dashboard)
 build_and_deploy "stats-app/" "$STATS_APP_DIR" "$STATS_DEPLOY_DIR"  STATS_STATUS || true
 
 echo "--- Pipeline summary: site=$SITE_STATUS stats-app=$STATS_STATUS ---"
