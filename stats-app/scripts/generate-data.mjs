@@ -1,68 +1,179 @@
 #!/usr/bin/env node
-// generate-data.mjs — fetch /monitor/work-impact from vaultwares-api,
-// transform the nested API shape into the flat shape stats-app expects,
-// and write to src/lib/data.json so the next vite build bundles fresh data.
+// generate-data.mjs — produce stats-app/src/lib/data.json on every deploy.
 //
-// Run from the stats-app/ directory (deploy.sh chdirs there before build):
-//   node scripts/generate-data.mjs
+// Sources (both read at deploy time on greencloud):
+//   1. /monitor/work-impact — fresh event totals/series from vaultwares-api
+//   2. /var/www/ledger.vaultwares.ca/data/work-impact-data.json — legacy
+//      renderer output, supplies lineStats / commitSamples that the API
+//      doesn't compute. Slightly behind the API on days but the derived
+//      metrics (commit-size distribution, files-touched, techVolume) are
+//      computed there with pathRegex exclusions already applied.
+//
+// Transforms:
+//   - Cutoff date 2026-03-11 (VaultWares foundation). Earlier events in the
+//     DB (early-2026 telemetry seeding) are dropped from every series.
+//   - Project consolidation via project-aliases.json so renames don't
+//     fracture the totals (e.g. vaultwares-pipelines → vaultwares-api).
+//   - Known commit outliers (giant-diff rewrites) listed in COMMIT_OUTLIERS
+//     are kept visible but excluded from commitStats math.
 //
 // Env (with sensible greencloud-vps defaults):
-//   STATS_API_URL  default https://api.vaultwares.ca/monitor/work-impact
-//   STATS_DATA_OUT default src/lib/data.json
+//   STATS_API_URL          default https://api.vaultwares.ca/monitor/work-impact
+//   STATS_LEGACY_PATH      default /var/www/ledger.vaultwares.ca/data/work-impact-data.json
+//   STATS_LEGACY_URL       fallback if the local file isn't present (e.g. dev)
+//   STATS_ALIASES_PATH     default ../project-aliases.json (relative to stats-app/)
+//   STATS_DATA_OUT         default src/lib/data.json
+//   STATS_CUTOFF_DATE      default 2026-03-11
 
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const API_URL = process.env.STATS_API_URL || "https://api.vaultwares.ca/monitor/work-impact";
+const LEGACY_PATH = process.env.STATS_LEGACY_PATH || "/var/www/ledger.vaultwares.ca/data/work-impact-data.json";
+const LEGACY_URL  = process.env.STATS_LEGACY_URL || "https://ledger.vaultwares.ca/data/work-impact-data.json";
+const ALIASES_PATH = resolve(process.env.STATS_ALIASES_PATH || "../project-aliases.json");
 const OUT_PATH = resolve(process.env.STATS_DATA_OUT || "src/lib/data.json");
+const CUTOFF = process.env.STATS_CUTOFF_DATE || "2026-03-11";
+
+// Giant single-commit rewrites that skew the commit-size distribution.
+// Listed so users can see them but excluded from commitStats math.
+const COMMIT_OUTLIERS = [
+  { day: "2026-03-23", project: "windows-customizer", commit: "a1d4b42", cleanChurnLines: 29687, note: "Major refactoring"   },
+  { day: "2026-04-14", project: "vaultwares-cli",     commit: "486f844", cleanChurnLines: 83144, note: "Massive CLI overhaul" },
+  { day: "2026-04-26", project: "vault-flows",        commit: "37dfb53", cleanChurnLines: 45406, note: "Flow system migration"},
+  { day: "2026-04-26", project: "vault-flows",        commit: "0998411", cleanChurnLines: 45406, note: "Parallel flow rewrite"},
+];
 
 const log = (...a) => console.log("[generate-data]", ...a);
 const die = (msg, err) => { console.error("[generate-data] FATAL:", msg, err ?? ""); process.exit(1); };
 
-log("fetch", API_URL);
-const res = await fetch(API_URL, { headers: { Accept: "application/json" } }).catch(e => die("fetch failed", e));
-if (!res.ok) die(`HTTP ${res.status} ${res.statusText}`);
-const payload = await res.json().catch(e => die("response is not JSON", e));
+// ---------- Sources -----------------------------------------------------------
 
-const d = payload.data ?? payload;
-if (!d || !d.totals || !d.series) die("response missing data.totals / data.series", payload);
+log("fetch api", API_URL);
+const apiRes = await fetch(API_URL, { headers: { Accept: "application/json" } }).catch(e => die("api fetch failed", e));
+if (!apiRes.ok) die(`api HTTP ${apiRes.status}`);
+const apiPayload = await apiRes.json().catch(e => die("api response not JSON", e));
+const api = apiPayload.data ?? apiPayload;
+if (!api?.totals || !api?.series) die("api response missing data.totals/series", apiPayload);
 
-// --- Derived metrics that the API doesn't compute ---------------------------
+let legacy = null;
+try {
+  legacy = JSON.parse(await readFile(LEGACY_PATH, "utf8"));
+  log("read legacy file", LEGACY_PATH);
+} catch {
+  log("legacy file not found, trying URL", LEGACY_URL);
+  try {
+    const r = await fetch(LEGACY_URL);
+    if (r.ok) legacy = await r.json();
+  } catch { /* legacy stays null */ }
+}
+const legacyData = legacy?.data ?? null;
 
-const days = (d.series.days || []).slice().sort((a, b) => a.day.localeCompare(b.day));
-const daySeries = days.map(r => ({ date: r.day, count: Number(r.entries ?? r.count ?? 0) }));
+let aliasesRaw = null;
+try { aliasesRaw = JSON.parse(await readFile(ALIASES_PATH, "utf8")); }
+catch (e) { log("aliases file not readable, projects will not be consolidated", e?.message); }
 
-// Streaks count consecutive days where count > 0; "current" is the streak
-// ending at the LATEST date in the range (not strictly "today" — the API
-// trims to the last day with activity).
-function streaks(series) {
-  let cur = 0, longest = 0, runEnd = -1;
-  for (let i = 0; i < series.length; i++) {
-    if (series[i].count > 0) {
-      cur += 1;
-      if (cur > longest) longest = cur;
-      runEnd = i;
-    } else {
-      cur = 0;
-    }
+// ---------- Project aliasing -------------------------------------------------
+
+const aliasMap = new Map();
+if (aliasesRaw?.projects) {
+  for (const entry of aliasesRaw.projects) {
+    if (!entry?.canonical) continue;
+    aliasMap.set(entry.canonical.toLowerCase(), entry.canonical);
+    for (const a of entry.aliases || []) aliasMap.set(String(a).toLowerCase(), entry.canonical);
   }
-  const current = runEnd === series.length - 1 ? cur || streakBack(series) : 0;
+}
+const canon = (name) => {
+  if (!name) return "General Tasks";
+  const hit = aliasMap.get(String(name).toLowerCase());
+  return hit || name;
+};
+
+// ---------- Cutoff + per-day filter, recompute totals ------------------------
+
+const rawDays = (api.series.days || []).filter(d => d.day && d.day >= CUTOFF);
+rawDays.sort((a, b) => a.day.localeCompare(b.day));
+
+// Fill zero-event days between CUTOFF and the last seen date so streak math
+// and the heatmap reflect actual gaps, not the API's sparse omit-zero output.
+function eachDay(fromStr, toStr) {
+  const out = [];
+  const d = new Date(fromStr + "T00:00:00Z");
+  const end = new Date(toStr + "T00:00:00Z");
+  while (d <= end) {
+    out.push(d.toISOString().slice(0, 10));
+    d.setUTCDate(d.getUTCDate() + 1);
+  }
+  return out;
+}
+const lastSeen = rawDays.at(-1)?.day || CUTOFF;
+const byDayCount = new Map(rawDays.map(d => [d.day, Number(d.entries ?? d.count ?? 0)]));
+const daySeries = eachDay(CUTOFF, lastSeen).map(date => ({
+  date,
+  count: byDayCount.get(date) ?? 0,
+}));
+
+const totalEvents = daySeries.reduce((s, r) => s + r.count, 0);
+const activeDays = daySeries.filter(r => r.count > 0).length;
+
+// Per-day project set after aliasing → recompute distinct projects post-cutoff.
+const projectsSet = new Set();
+for (const d of rawDays) for (const p of d.projects || []) projectsSet.add(canon(p));
+const totalProjects = projectsSet.size;
+
+// ---------- byMonth — recompute from filtered daySeries (drop pre-cutoff) ---
+
+const monthCounts = new Map();
+for (const r of daySeries) {
+  const m = r.date.slice(0, 7);
+  monthCounts.set(m, (monthCounts.get(m) || 0) + r.count);
+}
+const byMonth = [...monthCounts.entries()]
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([label, count]) => ({ label, count }));
+
+// ---------- byKind — keep as-is (kinds aren't time-filtered) -----------------
+
+const byKind = (api.series.kinds || []).map(k => ({ label: k.kind, count: Number(k.count || 0) }));
+
+// ---------- byProject — consolidate via aliases, sort desc -------------------
+
+const projectCounts = new Map();
+for (const p of api.series.projects || []) {
+  const key = canon(p.project);
+  projectCounts.set(key, (projectCounts.get(key) || 0) + Number(p.entries ?? p.count ?? 0));
+}
+const byProject = [...projectCounts.entries()]
+  .sort(([, a], [, b]) => b - a)
+  .map(([label, count]) => ({ label, count }));
+
+// ---------- hour / dow -------------------------------------------------------
+
+const byHour = (api.hourSeries || []).map(h => ({ label: String(h.hour).padStart(2, "0"), count: Number(h.count || 0) }));
+const byDow  = (api.dowSeries  || []).map(r => ({ label: r.label, count: Number(r.count || 0) }));
+
+// ---------- Streaks ----------------------------------------------------------
+
+function streaks(series) {
+  let cur = 0, longest = 0;
+  for (const r of series) {
+    if (r.count > 0) { cur += 1; if (cur > longest) longest = cur; }
+    else cur = 0;
+  }
+  let current = 0;
+  for (let i = series.length - 1; i >= 0; i--) {
+    if (series[i].count > 0) current += 1; else break;
+  }
   return { current, longest };
 }
-function streakBack(series) {
-  let n = 0;
-  for (let i = series.length - 1; i >= 0; i--) {
-    if (series[i].count > 0) n += 1; else break;
-  }
-  return n;
-}
 const { current: streakCurrent, longest: streakLongest } = streaks(daySeries);
+
+// ---------- Busiest day / week -----------------------------------------------
 
 const busiestDayEntry = daySeries.reduce((best, r) => (r.count > (best?.count ?? -1) ? r : best), null);
 const busiestDay = busiestDayEntry?.date ?? "";
 const busiestDayCount = busiestDayEntry?.count ?? 0;
 
-// ISO week (YYYY-Www) from a YYYY-MM-DD date.
 function isoWeek(dateStr) {
   const d = new Date(dateStr + "T00:00:00Z");
   const day = d.getUTCDay() || 7;
@@ -79,64 +190,205 @@ for (const r of daySeries) {
 let busiestWeek = "", busiestWeekCount = 0;
 for (const [w, c] of weekCounts) if (c > busiestWeekCount) { busiestWeek = w; busiestWeekCount = c; }
 
-// --- BarList shapes (label, count) ------------------------------------------
+// ---------- commitStats / commitBuckets / monthBoxes from legacy samples -----
 
-const byMonth   = (d.series.months   || []).map(m => ({ label: m.month, count: Number(m.count || 0) }));
-const byKind    = (d.series.kinds    || []).map(k => ({ label: k.kind,  count: Number(k.count || 0) }));
-const byProject = (d.series.projects || []).map(p => ({ label: p.project, count: Number(p.entries ?? p.count ?? 0) }));
+const outlierKeys = new Set(COMMIT_OUTLIERS.map(o => o.commit));
 
-const byHour = (d.hourSeries || []).map(h => ({ label: String(h.hour).padStart(2, "0"), count: Number(h.count || 0) }));
-const byDow  = (d.dowSeries  || []).map(r => ({ label: r.label, count: Number(r.count || 0) }));
+const allSamples  = legacyData?.commitSamples ?? [];
+const goodSamples = allSamples.filter(s => !outlierKeys.has(s.commit) && (s.day ?? "") >= CUTOFF);
 
-// --- agentData ---------------------------------------------------------------
+function quantile(sorted, q) {
+  if (sorted.length === 0) return 0;
+  const idx = q * (sorted.length - 1);
+  const lo = Math.floor(idx), hi = Math.ceil(idx);
+  return lo === hi ? sorted[lo] : sorted[lo] + (idx - lo) * (sorted[hi] - sorted[lo]);
+}
+function modeOf(values) {
+  const counts = new Map();
+  for (const v of values) counts.set(v, (counts.get(v) || 0) + 1);
+  let mode = 0, best = 0;
+  for (const [v, c] of counts) if (c > best) { mode = v; best = c; }
+  return mode;
+}
 
-const a = d.agentData || {};
+const cleanChurns = goodSamples.map(s => Number(s.cleanChurnLines || 0)).sort((a, b) => a - b);
+const commitStats = goodSamples.length
+  ? {
+      mean:    Math.round(cleanChurns.reduce((a, b) => a + b, 0) / cleanChurns.length),
+      median:  Math.round(quantile(cleanChurns, 0.5)),
+      mode:    modeOf(cleanChurns),
+      samples: goodSamples.length,
+    }
+  : { mean: 0, median: 0, mode: 0, samples: 0 };
+
+// Log-ish histogram buckets matching the legacy UI (powers of ~2)
+const BUCKET_EDGES = [0, 10, 25, 50, 100, 250, 500, 1000, 2500, 5000];
+const commitBuckets = BUCKET_EDGES.map((edge, i) => {
+  const upper = BUCKET_EDGES[i + 1] ?? Infinity;
+  const count = cleanChurns.filter(v => v >= edge && v < upper).length;
+  return { edge: edge.toString(), count };
+});
+
+// Per-month box plot from clean churn
+const samplesByMonth = new Map();
+for (const s of goodSamples) {
+  const m = (s.month || (s.day ?? "").slice(0, 7));
+  if (!m) continue;
+  if (!samplesByMonth.has(m)) samplesByMonth.set(m, []);
+  samplesByMonth.get(m).push(Number(s.cleanChurnLines || 0));
+}
+const monthBoxes = [...samplesByMonth.entries()]
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([month, arr]) => {
+    arr.sort((a, b) => a - b);
+    return {
+      month,
+      min:    arr[0] ?? 0,
+      q1:     Math.round(quantile(arr, 0.25)),
+      median: Math.round(quantile(arr, 0.5)),
+      q3:     Math.round(quantile(arr, 0.75)),
+      max:    arr[arr.length - 1] ?? 0,
+    };
+  });
+
+// Largest-clean-churn list, EXCLUDING the known outliers
+const commitOutliersList = COMMIT_OUTLIERS.map(o =>
+  `${o.day}: ${o.project} - +${o.cleanChurnLines.toLocaleString()} lines (${o.commit}) - ${o.note}`
+);
+
+// ---------- techVolume — straight from legacy lineStats ----------------------
+
+const lsRaw      = legacyData?.lineStats?.raw      || { files: 0, insertions: 0, deletions: 0 };
+const lsClean    = legacyData?.lineStats?.clean    || { files: 0, insertions: 0, deletions: 0 };
+const lsExcluded = legacyData?.lineStats?.excluded || { files: 0, insertions: 0, deletions: 0 };
+const techRow = (label, x) => ({
+  label,
+  insertions: x.insertions || 0,
+  deletions:  x.deletions  || 0,
+  files:      x.files      || 0,
+  churn:     (x.insertions || 0) + (x.deletions || 0),
+  net:       (x.insertions || 0) - (x.deletions || 0),
+});
+const techVolume = {
+  raw:      techRow("Raw",      lsRaw),
+  clean:    techRow("Clean",    lsClean),
+  excluded: techRow("Excluded", lsExcluded),
+};
+
+// ---------- filesTouched per commit (mean/median/p90/max) -------------------
+
+const filesPer = goodSamples.map(s => Number(s.filesClean ?? s.filesTouched ?? 0)).sort((a, b) => a - b);
+const filesTouched = filesPer.length
+  ? {
+      mean:   +(filesPer.reduce((a, b) => a + b, 0) / filesPer.length).toFixed(1),
+      median: Math.round(quantile(filesPer, 0.5)),
+      p90:    Math.round(quantile(filesPer, 0.9)),
+      max:    filesPer[filesPer.length - 1],
+    }
+  : { mean: 0, median: 0, p90: 0, max: 0 };
+
+// ---------- concentration: top-5 project share -------------------------------
+
+const top5 = byProject.slice(0, 5);
+const top5Sum = top5.reduce((s, p) => s + p.count, 0);
+const concentration = top5.map(p => ({
+  label: p.label,
+  count: Math.round((p.count / (top5Sum || 1)) * 100),
+}));
+
+// ---------- highlights -------------------------------------------------------
+
+const mostConsistentMonth = byMonth.length
+  ? byMonth.reduce((best, m) => (m.count > (best?.count ?? -1) ? m : best)).label
+  : "";
+const widestProjectDay = rawDays.length
+  ? rawDays.reduce((best, d) => (((d.projects || []).length) > ((best?.projects || []).length) ? d : best), null)?.day || ""
+  : "";
+const highlights = {
+  mostConsistentMonth,
+  widestProjectDay,
+  strongestWeek: busiestWeek,
+  milestones: [],
+  topProjects: byProject.slice(0, 5).map(p => p.label),
+};
+
+// ---------- agentData --------------------------------------------------------
+
+const a = api.agentData || {};
 const agentData = {
-  totalEvents:    Number(a.totalEvents ?? d.totals.events ?? 0),
+  totalEvents:    Number(a.totalEvents ?? totalEvents),
   distinctActors: Array.isArray(a.actors) ? a.actors.length : 0,
   modelsUsed:     Array.isArray(a.models) ? a.models.length : 0,
   toolsUsed:      Array.isArray(a.tools)  ? a.tools.length  : 0,
   topTools:    (a.tools     || []).slice(0, 10).map(t => ({ label: t.name, count: Number(t.count || 0) })),
   topMcp:      (a.mcpServers|| []).slice(0, 10).map(t => ({ label: t.name, count: Number(t.count || 0) })),
   topActors:   (a.actors    || []).slice(0, 10).map(t => ({ label: t.name, count: Number(t.count || 0) })),
-  dayActivity: (a.daySeries || []).map(r => ({ label: r.day, count: Number(r.count || 0) })),
+  dayActivity: (a.daySeries || []).filter(r => (r.day ?? "") >= CUTOFF).map(r => ({ label: r.day, count: Number(r.count || 0) })),
 };
 
-// --- Projects detail (best-effort from series.projects) ---------------------
+// ---------- Projects detail (best-effort, aliased) --------------------------
 
-const projects = (d.series.projects || []).slice(0, 50).map(p => ({
-  name: p.project,
-  aliases: [],
-  entries: Number(p.entries ?? p.count ?? 0),
-  first: p.firstDay || "",
-  last:  p.lastDay  || "",
-  kinds: p.kinds || {},
-  recentSummaries: Array.isArray(p.recent) ? p.recent.slice(0, 5) : [],
-}));
+const projectsAgg = new Map();
+for (const p of api.series.projects || []) {
+  const name = canon(p.project);
+  const entries = Number(p.entries ?? p.count ?? 0);
+  const existing = projectsAgg.get(name);
+  if (!existing) {
+    projectsAgg.set(name, {
+      name,
+      aliases: Array.isArray(p.aliases) ? p.aliases : (p.project !== name ? [p.project] : []),
+      entries,
+      first: p.firstDay || "",
+      last:  p.lastDay  || "",
+      kinds: { ...(p.kinds || {}) },
+      recentSummaries: Array.isArray(p.recent) ? p.recent.slice(0, 5) : [],
+    });
+  } else {
+    existing.entries += entries;
+    if (p.project !== name && !existing.aliases.includes(p.project)) existing.aliases.push(p.project);
+    if (p.firstDay && (!existing.first || p.firstDay < existing.first)) existing.first = p.firstDay;
+    if (p.lastDay  && (!existing.last  || p.lastDay  > existing.last))  existing.last  = p.lastDay;
+    for (const [k, v] of Object.entries(p.kinds || {})) existing.kinds[k] = (existing.kinds[k] || 0) + v;
+    for (const s of (p.recent || []).slice(0, 5 - existing.recentSummaries.length)) existing.recentSummaries.push(s);
+  }
+}
+const projects = [...projectsAgg.values()]
+  .sort((a, b) => b.entries - a.entries)
+  .slice(0, 50);
 
-// --- Final payload matching stats-app/src/lib/types.ts WorkImpactData -------
+// ---------- Final payload ----------------------------------------------------
 
 const out = {
-  generatedAt: payload.generated_at || new Date().toISOString(),
-  rangeStart:  d.range?.start || "",
-  rangeEnd:    d.range?.end   || "",
+  generatedAt: apiPayload.generated_at || new Date().toISOString(),
+  rangeStart:  CUTOFF,
+  rangeEnd:    daySeries.at(-1)?.date || CUTOFF,
   lang: "en",
 
-  totalEvents:     Number(d.totals.events     || 0),
-  activeDays:      Number(d.totals.activeDays || 0),
-  totalProjects:   Number(d.totals.projects   || 0),
+  totalEvents,
+  activeDays,
+  totalProjects,
   streakCurrent,
   streakLongest,
   busiestDay,
   busiestDayCount,
   busiestWeek,
   busiestWeekCount,
-  totalCommits:    Number(d.totals.commitEventsWithStats ?? d.totals.events ?? 0),
+  totalCommits: Number(legacyData?.totals?.uniqueCommitsRecomputed ?? legacyData?.totals?.commitEventsWithStats ?? api.totals.commitEventsWithStats ?? api.totals.events ?? 0),
 
   daySeries,
   byMonth,
   byKind,
   byProject,
+
+  commitStats,
+  commitBuckets,
+  monthBoxes,
+  commitOutliers: commitOutliersList,
+
+  techVolume,
+  filesTouched,
+  concentration,
+  highlights,
 
   byHour,
   byDow,
@@ -146,4 +398,5 @@ const out = {
 };
 
 await writeFile(OUT_PATH, JSON.stringify(out, null, 2) + "\n", "utf8");
-log("wrote", OUT_PATH, `(${out.totalEvents} events, ${out.activeDays} active days, range ${out.rangeStart} → ${out.rangeEnd})`);
+log("wrote", OUT_PATH,
+  `(${out.totalEvents} events, ${out.activeDays} active days, ${out.totalProjects} projects, range ${out.rangeStart} → ${out.rangeEnd})`);
