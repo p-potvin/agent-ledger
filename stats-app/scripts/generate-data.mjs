@@ -43,6 +43,10 @@ const COMMIT_OUTLIERS = [
   { day: "2026-04-26", project: "vault-flows",        commit: "37dfb53", cleanChurnLines: 45406, note: "Flow system migration"},
   { day: "2026-04-26", project: "vault-flows",        commit: "0998411", cleanChurnLines: 45406, note: "Parallel flow rewrite"},
 ];
+// Any commit with more clean churn than this gets auto-flagged + excluded
+// from commitStats so future mega-commits don't quietly poison the math.
+// They still appear in the commitOutliers list so the reader sees them.
+const AUTO_OUTLIER_THRESHOLD = 15000;
 
 const log = (...a) => console.log("[generate-data]", ...a);
 const die = (msg, err) => { console.error("[generate-data] FATAL:", msg, err ?? ""); process.exit(1); };
@@ -73,7 +77,7 @@ let aliasesRaw = null;
 try { aliasesRaw = JSON.parse(await readFile(ALIASES_PATH, "utf8")); }
 catch (e) { log("aliases file not readable, projects will not be consolidated", e?.message); }
 
-// ---------- Project aliasing -------------------------------------------------
+// ---------- Project aliasing + fork exclusion --------------------------------
 
 const aliasMap = new Map();
 if (aliasesRaw?.projects) {
@@ -88,6 +92,8 @@ const canon = (name) => {
   const hit = aliasMap.get(String(name).toLowerCase());
   return hit || name;
 };
+const forkSet = new Set((aliasesRaw?.forks || []).map(s => String(s).toLowerCase()));
+const isOwn = (name) => !forkSet.has(String(name).toLowerCase());
 
 // ---------- Cutoff + per-day filter, recompute totals ------------------------
 
@@ -117,8 +123,12 @@ const totalEvents = daySeries.reduce((s, r) => s + r.count, 0);
 const activeDays = daySeries.filter(r => r.count > 0).length;
 
 // Per-day project set after aliasing → recompute distinct projects post-cutoff.
+// Forks are excluded so external repos cloned for reference don't pad the count.
 const projectsSet = new Set();
-for (const d of rawDays) for (const p of d.projects || []) projectsSet.add(canon(p));
+for (const d of rawDays) for (const p of d.projects || []) {
+  const c = canon(p);
+  if (isOwn(c)) projectsSet.add(c);
+}
 const totalProjects = projectsSet.size;
 
 // ---------- byMonth — recompute from filtered daySeries (drop pre-cutoff) ---
@@ -141,6 +151,7 @@ const byKind = (api.series.kinds || []).map(k => ({ label: k.kind, count: Number
 const projectCounts = new Map();
 for (const p of api.series.projects || []) {
   const key = canon(p.project);
+  if (!isOwn(key)) continue;
   projectCounts.set(key, (projectCounts.get(key) || 0) + Number(p.entries ?? p.count ?? 0));
 }
 const byProject = [...projectCounts.entries()]
@@ -182,20 +193,50 @@ function isoWeek(dateStr) {
   const week = Math.ceil(((d - yearStart) / 86400000 + 1) / 7);
   return `${d.getUTCFullYear()}-W${String(week).padStart(2, "0")}`;
 }
+// ISO week label "2026-W17" → Monday Apr 20, 2026 → human range "Apr 20-26"
+const MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+function isoWeekToRange(weekStr) {
+  const m = /^(\d{4})-W(\d{2})$/.exec(weekStr);
+  if (!m) return weekStr;
+  const year = +m[1], week = +m[2];
+  // ISO week 1 = the week containing the first Thursday. Equivalently, the
+  // Monday of week 1 is Jan 4 of that year, rolled back to its Monday.
+  const jan4 = new Date(Date.UTC(year, 0, 4));
+  const jan4Day = jan4.getUTCDay() || 7;            // 1..7 (Mon..Sun)
+  const week1Monday = new Date(jan4);
+  week1Monday.setUTCDate(jan4.getUTCDate() - jan4Day + 1);
+  const start = new Date(week1Monday);
+  start.setUTCDate(week1Monday.getUTCDate() + (week - 1) * 7);
+  const end = new Date(start);
+  end.setUTCDate(start.getUTCDate() + 6);
+  const sm = start.getUTCMonth(), em = end.getUTCMonth();
+  if (sm === em) return `${MONTH_NAMES[sm]} ${start.getUTCDate()}-${end.getUTCDate()}`;
+  return `${MONTH_NAMES[sm]} ${start.getUTCDate()} - ${MONTH_NAMES[em]} ${end.getUTCDate()}`;
+}
 const weekCounts = new Map();
 for (const r of daySeries) {
   const w = isoWeek(r.date);
   weekCounts.set(w, (weekCounts.get(w) || 0) + r.count);
 }
-let busiestWeek = "", busiestWeekCount = 0;
-for (const [w, c] of weekCounts) if (c > busiestWeekCount) { busiestWeek = w; busiestWeekCount = c; }
+let busiestWeekIso = "", busiestWeekCount = 0;
+for (const [w, c] of weekCounts) if (c > busiestWeekCount) { busiestWeekIso = w; busiestWeekCount = c; }
+const busiestWeek = busiestWeekIso ? isoWeekToRange(busiestWeekIso) : "";
 
 // ---------- commitStats / commitBuckets / monthBoxes from legacy samples -----
 
-const outlierKeys = new Set(COMMIT_OUTLIERS.map(o => o.commit));
+const namedOutlierKeys = new Set(COMMIT_OUTLIERS.map(o => o.commit));
 
-const allSamples  = legacyData?.commitSamples ?? [];
-const goodSamples = allSamples.filter(s => !outlierKeys.has(s.commit) && (s.day ?? "") >= CUTOFF);
+const allSamples = legacyData?.commitSamples ?? [];
+// Auto-flag any future commit above AUTO_OUTLIER_THRESHOLD so a fresh
+// mega-rewrite doesn't quietly skew the mean before someone notices.
+const autoOutliers = allSamples
+  .filter(s =>
+    !namedOutlierKeys.has(s.commit) &&
+    (s.day ?? "") >= CUTOFF &&
+    Number(s.cleanChurnLines || 0) > AUTO_OUTLIER_THRESHOLD,
+  );
+const allOutlierKeys = new Set([...namedOutlierKeys, ...autoOutliers.map(s => s.commit)]);
+const goodSamples = allSamples.filter(s => !allOutlierKeys.has(s.commit) && (s.day ?? "") >= CUTOFF);
 
 function quantile(sorted, q) {
   if (sorted.length === 0) return 0;
@@ -251,10 +292,17 @@ const monthBoxes = [...samplesByMonth.entries()]
     };
   });
 
-// Largest-clean-churn list, EXCLUDING the known outliers
-const commitOutliersList = COMMIT_OUTLIERS.map(o =>
-  `${o.day}: ${o.project} - +${o.cleanChurnLines.toLocaleString()} lines (${o.commit}) - ${o.note}`
-);
+// Named outliers (curated narrative) + auto-detected mega-commits since.
+const commitOutliersList = [
+  ...COMMIT_OUTLIERS.map(o =>
+    `${o.day}: ${o.project} - +${o.cleanChurnLines.toLocaleString()} lines (${o.commit}) - ${o.note}`,
+  ),
+  ...autoOutliers
+    .sort((a, b) => Number(b.cleanChurnLines || 0) - Number(a.cleanChurnLines || 0))
+    .map(s =>
+      `${s.day}: ${s.project} - +${Number(s.cleanChurnLines || 0).toLocaleString()} lines (${s.commit}) - auto-detected (> ${AUTO_OUTLIER_THRESHOLD.toLocaleString()} clean lines)`,
+    ),
+];
 
 // ---------- techVolume — straight from legacy lineStats ----------------------
 
@@ -331,6 +379,7 @@ const agentData = {
 const projectsAgg = new Map();
 for (const p of api.series.projects || []) {
   const name = canon(p.project);
+  if (!isOwn(name)) continue;
   const entries = Number(p.entries ?? p.count ?? 0);
   const existing = projectsAgg.get(name);
   if (!existing) {
