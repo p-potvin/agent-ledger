@@ -163,6 +163,97 @@
       "canonical": "no-more-groceries",
       "aliases": ["No More Groceries"],
       "notes": "Case variant from agent input."
+    },
+
+    {"_comment": "--- Compound-name + namespace normalization (stats-app generator) ---"},
+
+    {
+      "canonical": "vault-explorer",
+      "aliases": ["vw-comet + vault-explorer", "vault-explorer + vw-comet"],
+      "notes": "Multi-project events where vault-explorer is the dominant target. Compound names from agent input."
+    },
+    {
+      "canonical": "vaultwares-themes",
+      "aliases": ["vault-themes, vault-player", "vault-themes + vaultwares-docs"],
+      "notes": "Multi-project events centered on themes. vault-themes is already aliased to vaultwares-themes above."
+    },
+    {
+      "canonical": "vaultwares-website",
+      "aliases": ["vaultwares-website + vaultwares-themes"],
+      "notes": "Compound from agent input; themes work was part of the website touch-up."
+    },
+    {
+      "canonical": "vault-monitor",
+      "aliases": ["vault-monitor vaultwares-pipelines"],
+      "notes": "Space-separated compound from agent input."
+    },
+    {
+      "canonical": "shared-tube",
+      "aliases": [
+        "Prom-King/shared-tube",
+        "Prom-King/shared-tube + vaultwares-pipelines",
+        "Prom-King/shared-tube + vaultwares-api",
+        "Prom-King/shared-tube + vaultwares-mcp",
+        "Prom-King/shared-tube + vaultwares-docs",
+        "Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs",
+        "shared-tube + brume2"
+      ],
+      "notes": "Namespace-prefixed + multi-project compounds. shared-tube is the dominant target across all these events."
+    },
+    {
+      "canonical": "content-disseminator",
+      "aliases": ["Prom-King/content-disseminator"],
+      "notes": "Namespace-prefixed variant."
+    },
+    {
+      "canonical": "link-sharing",
+      "aliases": ["prom-king/link-sharing"],
+      "notes": "Namespace-prefixed lowercase variant."
+    },
+    {
+      "canonical": "vault-central",
+      "aliases": ["Vault Central"],
+      "notes": "Display-cased variant from agent input."
+    },
+    {
+      "canonical": "vw-media-stack",
+      "aliases": ["vw-media-stack / vaultwares-docs", "vps-ovhcloud media stack", "vps-ovhcloud-media-stack"],
+      "notes": "Slash-compound + descriptive variants from agent input."
+    },
+    {
+      "canonical": "vaultwares-api",
+      "aliases": ["vaultwares-api + shared-tube", "vaultwares-webhooks"],
+      "notes": "Compound + vaultwares-webhooks is the vw-webhookd surface that lives in the vaultwares-api repo."
+    },
+    {
+      "canonical": "tube-sites",
+      "aliases": [
+        "Prom-King Keep2Share & ShareVerge Pipeline",
+        "Prom-King & VaultWares API",
+        "Monitoring and Prom-King tube operations"
+      ],
+      "notes": "Tube-site operational descriptors from agent input. fullxxx + prom-king sub-pipelines roll up here."
+    },
+    {
+      "canonical": "General Tasks",
+      "aliases": [
+        "VaultWares SSOT",
+        "VaultWares SSOT (20 repos)",
+        "VaultWares Infrastructure",
+        "VaultWares Project File Sync",
+        "VaultWares — Post-Refactoring Cleanup & Infrastructure Verification",
+        "VaultWares — Project Rename Refactoring (Phase 5)",
+        "VaultWares — Project Rename Refactoring (Phase 5 PR Workflow)",
+        "VaultWares — System Verification & Maintenance Complete",
+        "vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing",
+        "deploy-flow-unification"
+      ],
+      "notes": "Meta-workspace labels + multi-repo refactor sessions from agent input. These describe cross-cutting work, not a single project."
+    },
+    {
+      "canonical": "nvidia-rag",
+      "aliases": ["NVIDIA RAG", "NVIDIA RAG Ingestion", "NVIDIA RAG Blueprint"],
+      "notes": "Two NVIDIA RAG demo paths counted as one canonical."
     }
   ]
 }
