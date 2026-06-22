@@ -91,9 +91,17 @@ export interface InputTrackerData {
     correction_ratio?: number;
     click_to_travel_ratio?: number;
   };
+  kpis?: {
+    focus?: Record<string, number | string | null>;
+    typing?: Record<string, number | string | null>;
+    pointer?: Record<string, number | string | null>;
+    rhythm?: Record<string, number | string | null>;
+    reliability?: Record<string, number | string | null>;
+  };
   key_latency_buckets?: { name: string; count: number }[];
   click_hotspots?: { name: string; count: number }[];
   focus_categories?: { name: string; count: number }[];
+  focus_windows?: { name: string; category?: string; count: number }[];
   events?: Array<{
     event_id?: string;
     event_type?: string;

@@ -122,6 +122,9 @@ a {
 .vw-led {
   animation: vw-led-pulse 2.4s ease-in-out infinite;
 }
+.vw-status-led {
+  animation: vw-led-pulse 7.5s ease-in-out infinite;
+}
 
 /* === Scrollbar (Console) === */
 ::-webkit-scrollbar {
