@@ -29,21 +29,22 @@ This repo is the append-only ledger for AI-agent activity across local and cloud
 ## Record an event
 
 ```powershell
-# Single kind
 & "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\record-agent-change.ps1" `
-  -Project "vault-flows" `
-  -Kind "code-change" `
-  -Summary "Updated workflow validation and ran node --test." `
-  -Commands @("node --test") `
-  -Files @("src/validation.js", "test/validation.test.js")
-
-# Multi-kind (comma-separated — counted under both buckets in dashboards)
-& "C:\Users\Administrator\Desktop\Github Repos\agent-ledger\scripts\record-agent-change.ps1" `
-  -Project "vault-flows" `
-  -Kind "code-change,verification" `
-  -Summary "Added helper and confirmed tests pass." `
-  -Commands @("node --test") `
-  -Files @("src/helper.js")
+  -Project "<repo name or General Tasks>" `
+  -Kind "<plan|commands|code-change|verification|handoff|general>" `
+  -Summary "<1024 characters max summary of code changed, commands run, or plan made>" `
+  -Commands @("<important command 1>", "<important command 2>") `
+  -Files @("<important file 1>", "<important file 2>") `
+  -PlanPath "< >" `
+  -Actor "<$env:AGENT_NAME>" `
+  -AgentRole "<main|subagent>" `
+  -Model "<name of your model, e.g. claude-opus-4-7 >" `
+  -Thinking "<low|medium|high|very high|maximum>" `
+  -Mode "<plan|agent|chat|code|dispatch|design>" `
+  -Permissions "<bypass|autopilot|yolo|ask|allowlist|restricted>" `
+  -Network "<name of your environment's OS, cloud or local, etc.>" `
+  -ToolsUsed @("<tool 1>", "<tool 2>") `
+  -McpServersAccessed = @("<mcp 1>", "<mcp 2>") `
 ```
 
 The `kind` field accepts a comma-separated string of canonical values: `plan`, `commands`, `code-change`, `verification`, `handoff`, `general`. Unknown values are accepted but aggregate under `general` in charts. See `vaultwares-docs/docs-content/operations/agent-ledger-schema.mdx` for the full schema.
