@@ -1,0 +1,6 @@
+# Issue #18: shell scripts must always be checked out with LF.
+# A Windows CRLF checkout of deploy/deploy.sh broke the greencloud webhook
+# deploy ("$'\r': command not found", "set: pipefail\r: invalid option name")
+# before it could self-heal. Force LF for all shell scripts repo-wide so a
+# Windows working copy can never reintroduce CRLF into the committed tree.
+*.sh text eol=lf
