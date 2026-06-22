@@ -19,6 +19,18 @@ STATS_DEPLOY_DIR="/var/www/stats.vaultwares.ca"
 
 echo "=== agent-ledger deploy: $(date -u) ==="
 
+# 0. Self-heal ownership before doing anything else. Manual root interventions
+# occasionally leave files in $REPO_DIR root-owned, which then breaks the
+# vwdeploy-run git/npm/rsync steps below. The script is installed root-owned
+# at /usr/local/sbin/ and vwdeploy has NOPASSWD sudo for it
+# (see /etc/sudoers.d/agent-ledger-deploy).
+if [ -x /usr/local/sbin/agent-ledger-fix-ownership.sh ]; then
+    sudo -n /usr/local/sbin/agent-ledger-fix-ownership.sh || \
+        echo "!!! ownership self-heal failed; continuing anyway" >&2
+else
+    echo "!!! /usr/local/sbin/agent-ledger-fix-ownership.sh missing; skipping self-heal" >&2
+fi
+
 # 1. Pull latest
 cd "$REPO_DIR"
 git fetch origin main
