@@ -1,0 +1,52 @@
+﻿{
+    "id":  "20260620-122930-960-agent-ledger-f2240bfb",
+    "createdAt":  "2026-06-20T16:29:30.9607820Z",
+    "createdAtLocal":  "2026-06-20 12:29",
+    "timezone":  "Eastern Standard Time",
+    "project":  "agent-ledger",
+    "kind":  "code-change,verification",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-1.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: GreenCloud + OVH + Local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): run_command, view_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-20 12:29 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-1.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "GreenCloud + OVH + Local",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "view_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+    "summary":  "Identified and fixed local environment issue where VW_API_URL used HTTPS instead of plain HTTP for port 9001. Marked agent-ledger\u0027s deploy-async.sh as executable in the git index to resolve permission denied (exit 126) on greencloud-vps webhooks. Ran manual deployments and backfilled historical ledger events (708 records) and hourly legacy input logs to the Postgres database via the API, successfully syncing stats.vaultwares.ca and ledger.vaultwares.ca.",
+    "commands":  [
+                     "git update-index --chmod=+x deploy/deploy-async.sh",
+                     "python scripts\\backfill-agent-ledger-to-api.py",
+                     "python scripts\\backfill-input-logs.py"
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\site\\src\\useData.ts",
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\deploy\\deploy-async.sh"
+              ],
+    "planPath":  "",
+    "contentHash":  "f2240bfb362f4c6f8f80e73597ea09c92e355c99783c5c1b084796b5ccc24425",
+    "git":  {
+                "repo":  "agent-ledger",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+                "branch":  "main",
+                "head":  "af2c89b9",
+                "hasChanges":  true
+            }
+}

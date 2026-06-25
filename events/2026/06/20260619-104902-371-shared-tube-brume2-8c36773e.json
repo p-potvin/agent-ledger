@@ -1,0 +1,50 @@
+{
+  "id": "20260619-104902-371-shared-tube-brume2-8c36773e",
+  "createdAt": "2026-06-19T14:49:02.3711156Z",
+  "createdAtLocal": "2026-06-19 10:49",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube + brume2",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Edit, Grep, Bash, PowerShell, Monitor, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-19 10:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "PowerShell",
+      "Monitor",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "End-to-end playback now works. Pipeline: (1) Flashed Brume2 fresh; configured WAN to ISP-router DHCP, LAN-side static 10.0.0.50. (2) Installed tinyproxy via opkg on brume2 (tailnet IP 100.114.136.28), UCI config: Listen=tailnet, Allow=100.64.0.0/10, ConnectPort=80/443/8080. (3) Added Brume2 incoming Tailscale ACL rule for tag:vps-ovhcloud + tag:vps-greencloud on port 8888. (4) Shared-tube handler updated: STREAM_OUTBOUND_PROXY env, hostname allowlist (fullvideos.xxx, 1porn.tv, pornxp.{bz,fo,sh}), undici.ProxyAgent dispatcher, flaresolverr proxy.url payload param, maxTimeout 60s when proxied. Pinned undici to ^6.21 (Node 22 ships undici 6.24 — v8 ProxyAgent was incompatible with built-in fetch dispatcher, raising 'invalid onRequestStart method'). Brume residential WAN 74.57.201.206 (Bell/Videotron) — CF passes without challenge. Final test: curl -r 0-262143 on /api/stream/lexi-luna...?site=oneporn returns HTTP 206 ftypisom MP4 bytes for the 552MB upstream file. Shipped as 0.2.2/0.2.3/0.2.4 with proper webhook deploys to greencloud + OVH.",
+  "commands": [
+    "opkg install tinyproxy on brume2",
+    "uci set tinyproxy + add firewall accept on tailscale0",
+    "git push origin main (shared-tube 1511f4c)",
+    "curl -i -r 0-262143 https://1pornhub.vip/api/stream/...?site=oneporn"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\fxv\\src\\pages\\api\\stream\\[slug].ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\.env.example",
+    "/etc/config/tinyproxy (brume2)",
+    "/etc/shared-tube/*.env (OVH+greencloud)"
+  ],
+  "planPath": " ",
+  "contentHash": "8c36773e1e6078904dc3696e510513a0defa37e95f1cda0b7e9aaf7f6992b9c0",
+  "git": null
+}

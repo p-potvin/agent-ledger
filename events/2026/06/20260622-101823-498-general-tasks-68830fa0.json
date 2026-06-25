@@ -1,0 +1,43 @@
+{
+  "id": "20260622-101823-498-general-tasks-68830fa0",
+  "createdAt": "2026-06-22T14:18:23.4989310Z",
+  "createdAtLocal": "2026-06-22 10:18",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "handoff",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-8\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + vps-ovhcloud + greencloud + GitHub)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, Write, Edit, PowerShell, Monitor\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 10:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + vps-ovhcloud + greencloud + GitHub",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "PowerShell",
+      "Monitor"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "SESSION HANDOFF (Mon 22 Jun 2026). Major deliverables: (1) Comet deployed /opt/vw-comet on OVH, http://100.67.25.118:5173, comet-vpn Mullvad Montreal ca-mtr-wg-004, PROXY_DEBRID_STREAM on, scrapers via prowlarr/jackett/torrentio/mediafusion/bitmagnet, centralizes ALL Real-Debrid. (2) PPD pipeline: /srv/vw-media/uploads/upload-to-drive.py systemd timer 15min - rclone move to gdrive:VaultWares/media, linkvertise GraphQL wrap, SQLite links.db, arr unmonitor. (3) wallpaper-foundry (C:/Users/Administrator/Desktop/Prom-King/wallpaper-foundry): ComfyUI API client comfy_generate.py + build_prompt.py rotation + chosen workflow '60s wallpapers with Gemini description.json' (4096sq) -> D:/prom-king/wallpaper-foundry/out -> PK Wallpaper Sync scheduled task (15min, ImageMagick 16:9 derive + scp) -> OVH wallpapers/ -> same Drive+linkvertise pipeline. (4) Prom-King SSoT docs pushed to github.com/Prom-King/docs. (5) agent-ledger #18 fixed (CRLF deploy.sh + .gitattributes) and stats-app cross-platform lockfile - ledger+stats.vaultwares.ca live. (6) qbittorrent+jackett netns fix (stale after gateway recreate); qbit WebUI on tailnet http://100.67.25.118:8081. (7) Telegram stream to @clopeux_prowlarr_bot chat 6501437985: 4 arr apps grab/import + uploader move-failure. OPEN ITEMS: monitor.vaultwares.ca move-error panel (next); RedGIFS upload blocked (Cloudflare, manual only); vault-explorer Comet integration in search.js needs user RD key test; Lidarr no on-import telegram trigger; gateway-recreate breaks qbit/jackett netns (needs guard); stats-app/scripts root-owned recurrence risk. Full detail in prior ledger events this date.",
+  "commands": [],
+  "files": [
+    "Prom-King/docs",
+    "wallpaper-foundry",
+    "/srv/vw-media/uploads/upload-to-drive.py",
+    "agent-ledger/.gitattributes"
+  ],
+  "planPath": "",
+  "contentHash": "68830fa0529fa8cb8f7f0f8324bb05d3144ec41521dbbc1268663a8594ba1da5",
+  "git": null
+}

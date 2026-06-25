@@ -1,0 +1,42 @@
+{
+  "id": "20260622-071321-393-agent-ledger-11d196ec",
+  "createdAt": "2026-06-22T11:13:21.3932856Z",
+  "createdAtLocal": "2026-06-22 07:13",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 07:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Diagnosed VaultWares-InputTracker scheduler state after user restart attempt: task reports Running with LastTaskResult 1, but the active PowerShell/Python tracker processes are from 1 AM, health file is stale from 7:10 AM, and task MultipleInstances is IgnoreNew. Attempted StopExisting settings update was rejected because this Windows scheduled-task cmdlet only supports Parallel, Queue, and IgnoreNew; no task setting changed. Proper restart requires explicit Stop-ScheduledTask then Start-ScheduledTask.",
+  "commands": [
+    "Get-ScheduledTask -TaskName VaultWares-InputTracker | Get-ScheduledTaskInfo",
+    "Get-Content agent-ledger/input-state/input-tracker-health.json",
+    "Get-CimInstance Win32_Process | Where-Object CommandLine like track-input.py/start-input-tracker.ps1",
+    "Get-ScheduledTask settings MultipleInstances",
+    "attempted Set-ScheduledTask MultipleInstances StopExisting rejected by enum"
+  ],
+  "files": [
+    "agent-ledger/input-state/input-tracker-health.json",
+    "agent-ledger/input-state/input-tracker-errors.jsonl",
+    "agent-ledger/scripts/setup-input-tracker.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "11d196ec4d8a48b7897f92b23df37113992a56f64aab45905b366af32c99ff8d",
+  "git": null
+}

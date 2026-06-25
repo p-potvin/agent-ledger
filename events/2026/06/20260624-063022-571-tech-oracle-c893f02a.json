@@ -1,0 +1,60 @@
+{
+  "id": "20260624-063022-571-tech-oracle-c893f02a",
+  "createdAt": "2026-06-24T10:30:22.5711075Z",
+  "createdAtLocal": "2026-06-24 06:30",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: code\r\nPermissions: allowlist (network: Windows 11 Clopeux-Desktop + greencloud-vps + brume2 tinyproxy probed)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-24 06:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "code",
+    "permissions": "allowlist",
+    "network": "Windows 11 Clopeux-Desktop + greencloud-vps + brume2 tinyproxy probed",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "Pipeline first end-to-end success: 8 real articles published, live on https://theitguyde.com/. Resolution series: (a) fastembed lacks BAAI/bge-reranker-v2-m3, pivoted to jinaai/jina-reranker-v2-base-multilingual (same v2-class, multilingual, fastembed-native, no torch deps). (b) Reddit 429 was UA-driven, stripped tech-oracle/0.1 suffix from browser UA so anti-bot grep no longer matches. (c) Apple security RSS at support.apple.com/en-us/HT201222.rss was retired by Apple (returns 110KB HTML), removed from FEEDS list. (d) Even after UA + proxy fixes, Reddit per-IP bucket throttles after 1 successful fetch despite 8s pre-fetch delay — diagnosed as multi-minute cooldown semantics, queued rotation-per-tick as follow-up. (e) Found structural bug: deploy script builds Eleventy BEFORE pipeline runs, so articles published by cron only surfaced on next git push. Added deploy/rebuild-site.sh + ExecStartPost on tech-oracle.service so every successful pipeline run rebuilds Eleventy + atomically swaps into /var/www/theitguyde.com/site/. Articles now appear within seconds of publish. Also added articles/ symlink in repo pointing at live root, widened ReadWritePaths in unit. Also added inter-feed pacing (1.5s default) + per-residential-feed pre-fetch delay (8s default).",
+  "commands": [
+    "git push cc701eb d562cd4 420cdae 5abaa81 4975724 95dcbce",
+    "ssh root manually rebuild site to surface 8 articles",
+    "systemctl start tech-oracle.service x several",
+    "live python tests of fetch_feed against reddit + apple_security"
+  ],
+  "files": [
+    "tech-oracle/src/tech_oracle/rag/rerank.py",
+    "tech-oracle/src/tech_oracle/ingest/feeds.py",
+    "tech-oracle/src/tech_oracle/ingest/rss.py",
+    "tech-oracle/deploy/tech-oracle.service",
+    "tech-oracle/deploy/deploy-tech-oracle.sh",
+    "tech-oracle/deploy/rebuild-site.sh (new)",
+    "tech-oracle/README.md",
+    "greencloud:/srv/repos/Prom-King/tech-oracle/articles symlink",
+    "greencloud:/var/www/theitguyde.com/site/articles/* (8 live HTML files)"
+  ],
+  "planPath": "",
+  "contentHash": "c893f02a9b3863bff7c21a5a00e8bb0f60641e1f8a64836b7151f379ba760c14",
+  "git": {
+    "repo": "tech-oracle",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/tech-oracle",
+    "branch": "main",
+    "head": "95dcbce",
+    "hasChanges": false
+  }
+}

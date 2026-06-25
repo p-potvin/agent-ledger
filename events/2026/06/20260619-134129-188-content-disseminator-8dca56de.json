@@ -1,0 +1,58 @@
+{
+  "id": "20260619-134129-188-content-disseminator-8dca56de",
+  "createdAt": "2026-06-19T17:41:29.1881682Z",
+  "createdAtLocal": "2026-06-19 13:41",
+  "timezone": "Eastern Standard Time",
+  "project": "content-disseminator",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-19 13:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "endpoint_added": "api_content_disseminator_ingest",
+      "external_requests": "none",
+      "estimated_output_tokens": "5200",
+      "live_api_sync": "not_run",
+      "upload_batch": "not_run"
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Fri, 19 Jun 2026 13:41 - Added the Prom-King link-sharing API ingest path for content-disseminator rows and updated the local queue sync so rows are only sent after both a Redgifs URL and a FileBoom or Google Drive storage URL are recorded. Extended link_sharing schema/init to store redgifs_url, google_drive_url, source_path, and tags_json. No external upload or live API sync was run.",
+  "commands": [
+    "Read VaultWares network/rate-limit/secrets/deployment summaries and deployment-flow/services-inventory docs",
+    "Inspected link-sharing Fastify/Postgres schema and route patterns",
+    "pnpm --dir server build",
+    "pnpm --dir server test",
+    "python -m unittest discover -s tests -v with PYTHONPATH=src",
+    "python -m compileall src tests",
+    "python -m content_disseminator sync-api --api-url https://links.prom-king.xyz/api/content-disseminator/ingest --token-env ADMIN_API_KEY --limit 1 --dry-run with PYTHONPATH=src"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\link-sharing\\drizzle\\schema.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\link-sharing\\server\\init-db.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\link-sharing\\server\\routes\\admin.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\link-sharing\\server\\tests\\content-disseminator-ingest.test.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\src\\content_disseminator\\cli.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\src\\content_disseminator\\store.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\tests\\test_store_sync.py"
+  ],
+  "planPath": "",
+  "contentHash": "8dca56de1ad7c1d722fc89d66128bd78189daf8f67cc579ceb85bab578bb3716",
+  "git": null
+}

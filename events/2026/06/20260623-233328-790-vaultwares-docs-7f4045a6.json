@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20260623-233328-790-vaultwares-docs-7f4045a6",
+    "createdAt":  "2026-06-24T03:33:28.7900630Z",
+    "createdAtLocal":  "2026-06-23 23:33",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-docs",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-1.5-pro\r\nThinking: medium\r\nMode: code\r\nPermissions: ask (network: windows-local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): replace_file_content, view_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-23 23:33 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-1.5-pro",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "windows-local",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "view_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "summary":  "Updated command-line-tool.mdx and command-line-tool-QC.mdx documentation. Changed registry paths to C:\\Users\\Administrator\\Desktop\\pwsh\\VaultWares CLI\\vw-commands.ps1. Added documentation for new Workspace Management, System Monitoring, Media Pipeline, Backup \u0026 Recovery, and Service Management scripts.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\command-line-tool.mdx",
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\command-line-tool-QC.mdx"
+              ],
+    "planPath":  "",
+    "contentHash":  "7f4045a691bf6ac54b520cd40949683d49d075164b686655300565bfe9e2d6e3",
+    "git":  null
+}

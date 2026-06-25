@@ -1,0 +1,43 @@
+﻿{
+    "id":  "20260624-003420-320-vaultwares-cli-452ef1db",
+    "createdAt":  "2026-06-24T04:34:20.3201528Z",
+    "createdAtLocal":  "2026-06-24 00:34",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-cli",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-1.5-pro\r\nThinking: medium\r\nMode: code\r\nPermissions: ask (network: windows-local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): replace_file_content, view_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-24 00:34 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-1.5-pro",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "windows-local",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "view_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "summary":  "Added dynamic command-specific help parser (Show-CommandHelp) in vw.ps1 using PowerShell Get-Help. Formats script parameter syntax dynamically and cleanly overrides script paths/names with \u0027vw \u003ccommand_name\u003e\u0027 syntax.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\Desktop\\pwsh\\VaultWares CLI\\vw.ps1"
+              ],
+    "planPath":  "",
+    "contentHash":  "452ef1db008684ff914e77951420ac20d5858aaa32df4f95202eaf7941809d26",
+    "git":  null
+}

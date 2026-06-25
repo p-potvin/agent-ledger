@@ -62,6 +62,10 @@ _ctrl_held = False
 _shift_held = False
 _last_key_time = None
 _last_activity_time = time.monotonic()
+_active_block_started_time = _last_activity_time
+_last_focus_check_time = 0.0
+_focus_started_time = _last_activity_time
+_focus_initialized = False
 _seq = 0
 
 _acc: Dict[str, Any] = {
@@ -81,12 +85,22 @@ _acc: Dict[str, Any] = {
     "context_switches": 0,
     "micro_pauses": 0,
     "rest_blocks": 0,
+    "active_starts_after_rest": 0,
+    "rest_gap_seconds_total": 0.0,
+    "rest_gap_seconds_max": 0.0,
+    "focus_streak_seconds_total": 0.0,
+    "focus_streak_samples": 0,
+    "longest_focus_streak_seconds": 0.0,
+    "switch_recovery_seconds_total": 0.0,
+    "switch_recovery_samples": 0,
+    "longest_active_block_seconds": 0.0,
     "active_seconds": 0.0,
     "key_latency_buckets": {"lt_120ms": 0, "120_250ms": 0, "250_500ms": 0, "500_1000ms": 0, "gt_1000ms": 0},
     "click_hotspots": {},
 }
 _focus_category = "unknown"
 _window_hash = "redacted"
+_window_name = "unknown"
 
 _CTRL_KEYS = {keyboard.Key.ctrl_l, keyboard.Key.ctrl_r}
 _SHIFT_KEYS = {keyboard.Key.shift, keyboard.Key.shift_r}
@@ -104,6 +118,49 @@ def _hash(value: str) -> str:
     if not value:
         return "redacted"
     return hashlib.sha256(value.encode("utf-8", errors="ignore")).hexdigest()[:16]
+
+
+def _safe_window_label(process_name: str, title: str) -> tuple[str, str]:
+    haystack = f"{process_name} {title}".lower()
+    rules = [
+        ("firefox", "browser", "Firefox"),
+        ("chrome", "browser", "Chrome"),
+        ("msedge", "browser", "Edge"),
+        ("edge", "browser", "Edge"),
+        ("explorer", "browser", "Explorer"),
+        ("github", "browser", "GitHub"),
+        ("docs", "browser", "Docs"),
+        ("code", "development", "Visual Studio Code"),
+        ("cursor", "development", "Cursor"),
+        ("devenv", "development", "Visual Studio"),
+        ("visual studio", "development", "Visual Studio"),
+        ("terminal", "development", "Terminal"),
+        ("powershell", "development", "PowerShell"),
+        ("pwsh", "development", "PowerShell"),
+        ("cmd", "development", "Command Prompt"),
+        ("git", "development", "Git"),
+        ("python", "development", "Python"),
+        ("slack", "communication", "Slack"),
+        ("teams", "communication", "Teams"),
+        ("discord", "communication", "Discord"),
+        ("outlook", "communication", "Outlook"),
+        ("mail", "communication", "Mail"),
+        ("comfy", "media", "ComfyUI"),
+        ("ollama", "ai", "Ollama"),
+        ("obsidian", "notes", "Obsidian"),
+        ("notepad", "notes", "Notepad"),
+        ("settings", "system", "Settings"),
+        ("taskmgr", "system", "Task Manager"),
+    ]
+    for token, category, label in rules:
+        if token in haystack:
+            return category, label
+    cleaned = process_name.rsplit("\\", 1)[-1].rsplit("/", 1)[-1].lower()
+    if cleaned.endswith(".exe"):
+        cleaned = cleaned[:-4]
+    if cleaned:
+        return "other", cleaned[:40]
+    return ("unknown" if not title else "other"), "unknown"
 
 
 def _atomic_write_json(path: Path, payload: Dict[str, Any]) -> None:
@@ -175,9 +232,9 @@ def _acquire_single_instance() -> bool:
     return True
 
 
-def _foreground_window() -> tuple[str, str]:
+def _foreground_window() -> tuple[str, str, str]:
     if platform.system().lower() != "windows":
-        return "unknown", "redacted"
+        return "unknown", "redacted", "unknown"
     try:
         import ctypes
 
@@ -186,28 +243,89 @@ def _foreground_window() -> tuple[str, str]:
         buff = ctypes.create_unicode_buffer(length + 1)
         ctypes.windll.user32.GetWindowTextW(hwnd, buff, length + 1)
         title = (buff.value or "").strip()
+        pid = ctypes.c_ulong()
+        ctypes.windll.user32.GetWindowThreadProcessId(hwnd, ctypes.byref(pid))
+        process_name = ""
+        if pid.value:
+            access = 0x1000
+            handle = ctypes.windll.kernel32.OpenProcess(access, False, pid.value)
+            if handle:
+                try:
+                    exe_buff = ctypes.create_unicode_buffer(260)
+                    size = ctypes.c_ulong(len(exe_buff))
+                    if ctypes.windll.kernel32.QueryFullProcessImageNameW(handle, 0, exe_buff, ctypes.byref(size)):
+                        process_name = exe_buff.value
+                finally:
+                    ctypes.windll.kernel32.CloseHandle(handle)
     except Exception:
-        return "unknown", "redacted"
-    lowered = title.lower()
-    if any(token in lowered for token in ("code", "visual studio", "cursor", "terminal", "powershell", "cmd", "git")):
-        category = "development"
-    elif any(token in lowered for token in ("browser", "chrome", "firefox", "edge", "docs", "github")):
-        category = "browser"
-    elif any(token in lowered for token in ("slack", "teams", "discord", "mail", "outlook")):
-        category = "communication"
+        return "unknown", "redacted", "unknown"
+    category, window_name = _safe_window_label(process_name, title)
+    return category, _hash(title), window_name
+
+
+def _spool_backlog_stats() -> tuple[int, int]:
+    try:
+        if not SPOOL_DIR.exists():
+            return 0, 0
+        batches = 0
+        bytes_total = 0
+        for path in SPOOL_DIR.glob("*.jsonl"):
+            try:
+                bytes_total += path.stat().st_size
+                with path.open("r", encoding="utf-8") as handle:
+                    batches += sum(1 for line in handle if line.strip())
+            except OSError:
+                continue
+        return batches, bytes_total
+    except Exception:
+        return 0, 0
+
+
+def _refresh_focus(now: float, recovery_gap: float) -> None:
+    global _focus_category, _window_hash, _window_name, _last_focus_check_time, _focus_started_time, _focus_initialized
+    if now - _last_focus_check_time < 1.0:
+        return
+    _last_focus_check_time = now
+    category, window_hash, window_name = _foreground_window()
+    changed = category != _focus_category or window_name != _window_name
+    if not _focus_initialized:
+        _focus_initialized = True
+        _focus_started_time = now
+        changed = False
+    if changed:
+        ended_streak = max(0.0, now - _focus_started_time)
+        _acc["context_switches"] += 1
+        _acc["focus_streak_seconds_total"] += ended_streak
+        _acc["focus_streak_samples"] += 1
+        _acc["longest_focus_streak_seconds"] = max(float(_acc["longest_focus_streak_seconds"]), ended_streak)
+        _acc["switch_recovery_seconds_total"] += max(0.0, recovery_gap)
+        _acc["switch_recovery_samples"] += 1
+        _focus_started_time = now
     else:
-        category = "other" if title else "unknown"
-    return category, _hash(title)
+        _acc["longest_focus_streak_seconds"] = max(float(_acc["longest_focus_streak_seconds"]), max(0.0, now - _focus_started_time))
+    _focus_category = category
+    _window_hash = window_hash
+    _window_name = window_name
 
 
 def _touch_activity() -> None:
-    global _last_activity_time
+    global _last_activity_time, _active_block_started_time
     now = time.monotonic()
     gap = now - _last_activity_time
     if 30 <= gap < 300:
         _acc["micro_pauses"] += 1
     elif gap >= 300:
         _acc["rest_blocks"] += 1
+        _acc["active_starts_after_rest"] += 1
+        _acc["rest_gap_seconds_total"] += gap
+        _acc["rest_gap_seconds_max"] = max(float(_acc["rest_gap_seconds_max"]), gap)
+        active_block = max(0.0, _last_activity_time - _active_block_started_time)
+        _acc["longest_active_block_seconds"] = max(float(_acc["longest_active_block_seconds"]), active_block)
+        _active_block_started_time = now
+    else:
+        active_block = max(0.0, now - _active_block_started_time)
+        _acc["longest_active_block_seconds"] = max(float(_acc["longest_active_block_seconds"]), active_block)
+    _refresh_focus(now, gap)
     _last_activity_time = now
 
 
@@ -329,19 +447,23 @@ def _on_scroll(x: int, y: int, dx: int, dy: int) -> None:
 
 
 def _snapshot() -> Dict[str, Any]:
-    global _focus_category, _window_hash
     with _lock:
         snap = json.loads(json.dumps(_acc))
+        now = time.monotonic()
+        if _focus_initialized:
+            current_focus_streak = max(0.0, now - _focus_started_time)
+            snap["current_focus_streak_seconds"] = current_focus_streak
+            snap["longest_focus_streak_seconds"] = max(float(snap["longest_focus_streak_seconds"]), current_focus_streak)
+        current_active_block = max(0.0, now - _active_block_started_time)
+        snap["longest_active_block_seconds"] = max(float(snap["longest_active_block_seconds"]), current_active_block)
+        backlog_batches, backlog_bytes = _spool_backlog_stats()
+        snap["spool_backlog_batches"] = backlog_batches
+        snap["spool_backlog_bytes"] = backlog_bytes
         for key in _acc:
             if isinstance(_acc[key], dict):
                 _acc[key] = {k: 0 for k in _acc[key]}
             else:
                 _acc[key] = 0.0 if isinstance(_acc[key], float) else 0
-        category, window_hash = _foreground_window()
-        if category != _focus_category:
-            snap["context_switches"] += 1
-        _focus_category = category
-        _window_hash = window_hash
     return snap
 
 
@@ -361,6 +483,7 @@ def _build_batch(started_at: datetime, ended_at: datetime, snap: Dict[str, Any])
         "metrics": metrics,
         "dimensions": {
             "focus_category": _focus_category,
+            "window_name": _window_name,
             "window_hash": _window_hash,
             "privacy_level": "redacted",
         },

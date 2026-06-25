@@ -1,0 +1,44 @@
+{
+  "id": "20260622-065056-289-agent-ledger-90af27be",
+  "createdAt": "2026-06-22T10:50:56.2891897Z",
+  "createdAtLocal": "2026-06-22 06:50",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 06:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Input tracker UI update: moved API status into the header with a slow 7.5s status-colored LED, added tooltip info buttons across widgets, added Flow Stability and restored context/hidden input stats, humanized latency buckets and click hotspot labels, added focus-window display support, and added a local Vite proxy for monitor API validation.",
+  "commands": [
+    "npm run build",
+    "python -m py_compile agent-ledger/scripts/track-input.py",
+    "Invoke-WebRequest http://127.0.0.1:5177/monitor/input-tracker?hours=168",
+    "Browser DOM validation for input tracker"
+  ],
+  "files": [
+    "agent-ledger/scripts/track-input.py",
+    "agent-ledger/site/src/pages/InputTrackerPage.tsx",
+    "agent-ledger/site/src/i18n.tsx",
+    "agent-ledger/site/src/index.css",
+    "agent-ledger/site/src/types.ts",
+    "agent-ledger/site/vite.config.ts"
+  ],
+  "planPath": "",
+  "contentHash": "90af27bec1fe744e8b4b7eccefbc99729ebb299d55577f579338f1b5139ad1d7",
+  "git": null
+}

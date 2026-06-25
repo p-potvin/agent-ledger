@@ -1,0 +1,60 @@
+{
+  "id": "20260619-141837-846-content-disseminator-735f67fe",
+  "createdAt": "2026-06-19T18:18:37.8467547Z",
+  "createdAtLocal": "2026-06-19 14:18",
+  "timezone": "Eastern Standard Time",
+  "project": "content-disseminator",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-19 14:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "pushed_commit": "7fa7bdc",
+      "uploaded_assets": "0",
+      "api_sync": "not_run",
+      "external_requests": "linkvertise_one_page_load",
+      "linkvertise_result": "cloudflare_blocked"
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Fri, 19 Jun 2026 14:18 - Pivoted content-disseminator ingest from FileBoom/Drive requirement to Linkvertise support, verified local tests/builds, pushed link-sharing commit 7fa7bdc to main with version bump, and attempted one Linkvertise browser access. Linkvertise returned a hard Cloudflare blocked page, so no Linkvertise link, Redgifs upload, or API sync was completed.",
+  "commands": [
+    "python -m unittest discover -s tests -v with PYTHONPATH=src",
+    "python -m compileall src tests",
+    "pnpm --dir server test",
+    "pnpm --dir server build",
+    "git commit -m \"Fri, 19 Jun 2026 14:19 - Accept Linkvertise ingest links\"",
+    "git push origin main",
+    "playwright-cli goto https://linkvertise.com",
+    "playwright-cli snapshot",
+    "sqlite aggregate count check for queued/uploaded/uploads"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\link-sharing\\package.json",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\link-sharing\\server\\package.json",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\link-sharing\\server\\routes\\admin.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\link-sharing\\server\\tests\\content-disseminator-ingest.test.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\src\\content_disseminator\\cli.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\src\\content_disseminator\\store.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\tests\\test_store_sync.py"
+  ],
+  "planPath": "",
+  "contentHash": "735f67fe323a5e8711f26da5e87fe67e1151bc71f967da06d600d15c2d0c9728",
+  "git": null
+}

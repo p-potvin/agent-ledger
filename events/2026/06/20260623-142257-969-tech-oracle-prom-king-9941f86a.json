@@ -1,0 +1,49 @@
+{
+  "id": "20260623-142257-969-tech-oracle-prom-king-9941f86a",
+  "createdAt": "2026-06-23T18:22:57.9697278Z",
+  "createdAtLocal": "2026-06-23 14:22",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle (Prom-King)",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Clopeux-Desktop (Windows 11))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: n/a\r\nTools used (this reply): Bash, Edit, Write, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-23 14:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Clopeux-Desktop (Windows 11)",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "tech-oracle: cross-encoder reranker added to RAG pipeline (Tue, 23 Jun 2026). User flagged we forgot reranking. Also raised Qwen3 question - clarified Gemini does NOT use Qwen3 (uses Google's own text-embedding-005), but Qwen3-Embedding-0.6B IS a strong open option (~+8-9 MTEB points over BGE-small). Recommended adding reranker BEFORE swapping embedder because the specific failure we saw (Chrome-Stable-Update scoring 0.65 against macOS-Photos query by 'update' keyword) is a textbook cross-encoder fix; Qwen3 swap is corpus-density-bound. Build: tech_oracle/rag/rerank.py wraps fastembed.rerank.cross_encoder.TextCrossEncoder (ONNX, no torch dep). Default BAAI/bge-reranker-base (~1GB, ~280M params). Outputs sigmoid-normalized 0-1 scores. retrieve_related_per_item now does two-stage flow by default: bi-encoder recall (pull top_k*5 at min_score 0.45) then cross-encoder precision (drop <0.4 rerank, return top_k). SearchHit.score gets replaced with the rerank score so downstream prompts see the more meaningful number. CLI rag search is rerank-on by default with --no-rerank escape; output table shows both rerank and bi-encoder scores. Live test on the actual 65-item corpus PROVED the value: 'my printer wont print after windows update' query - bi-encoder had near-flat 0.67-0.73 top-5, reranker found ONE clearly-best HP-driver-complaint item and promoted 0.674->0.821 while demoting all other printer chatter to <0.15. 'macos icloud photos stuck' query - bi-encoder returned 8 false-positives in 0.55-0.57 band (Chrome updates, unrelated printer items); reranker zeroed EVERY ONE to 0.000 (corpus genuinely has no macOS-Photos content; correct behavior). Distribution is decisively bimodal vs bi-encoder mushy 0.4-0.7: rerank says match=0.5+, plausible=0.1-0.5, no-match=<0.05. Cost: one-time 90s 1GB download; ~30-50ms per pair on CPU; ~5-7s extra per synthesis batch (well within budget). UTF-8 stdout fix applied to cli.py module",
+  "commands": [
+    "uv pip install -e .",
+    "uv run tech-oracle rag search 'my printer wont print after windows update' --top-k 3",
+    "uv run tech-oracle rag search 'my printer wont print after windows update' --no-rerank --top-k 3",
+    "PYTHONIOENCODING=utf-8 uv run python (side-by-side script)"
+  ],
+  "files": [
+    "tech-oracle/src/tech_oracle/rag/rerank.py",
+    "tech-oracle/src/tech_oracle/rag/__init__.py",
+    "tech-oracle/src/tech_oracle/rag/retrieve.py",
+    "tech-oracle/src/tech_oracle/cli.py",
+    "tech-oracle/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "9941f86acb57f1cd7dc3e8b7a9477479985420b6c75d9db00e833087fc8648a2",
+  "git": null
+}

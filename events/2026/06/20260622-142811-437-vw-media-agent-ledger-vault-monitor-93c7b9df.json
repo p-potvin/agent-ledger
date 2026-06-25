@@ -1,0 +1,60 @@
+{
+  "id": "20260622-142811-437-vw-media-agent-ledger-vault-monitor-93c7b9df",
+  "createdAt": "2026-06-22T18:28:11.4370246Z",
+  "createdAtLocal": "2026-06-22 14:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-media + agent-ledger + vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Clopeux-Desktop (Windows 11))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Bash, Edit, Read, Grep, Glob, TaskCreate, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 14:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Clopeux-Desktop (Windows 11)",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Read",
+      "Grep",
+      "Glob",
+      "TaskCreate",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Shipped 3 fixes (Mon, 22 Jun 2026 14:30). (#1 OVH netns) Installed /usr/local/sbin/mullvad-netns-restart-deps.sh + mullvad-netns-restart-deps.service that listens to docker events for mullvad-gateway start events and restarts qbittorrent + jackett (settle 5s); fixes the recurring stale-netns problem when mullvad-gateway is recreated. Service active (running) on ovhcloud. (#2 monitor.vaultwares.ca move-error panel) Added GET /monitor/uploads to vaultwares-api app/routers/monitor/__init__.py reading /srv/vw-media/uploads/links.db (recent uploads) + parsing FAIL/run-complete/ERROR lines from upload.log; folded uploads block into /monitor/overview. Path overrides via VW_UPLOADS_DB/VW_UPLOADS_LOG. Frontend vault-monitor: added UploadsSummary type, getUploads() client, and MovePipelinePanel in Overview (en + qc strings) showing 24h totals + recent failures + collapsible 'other errors' details. Deployed: scp'd patched __init__.py to /opt/vaultwares-api on OVH + systemctl restart vaultwares-api; built and tar+ssh'd vault-monitor/dist to /var/www/monitor.vaultwares.ca on greencloud (atomic swap, chowned to vwdeploy). Verified via curl: /monitor/uploads returns 200 with status=ok, totals_24h={ok:4,fail:0,skip:26,runs:60}, 4 recent_uploads. (#3 stats-app ownership) Installed /usr/local/sbin/agent-ledger-fix-ownership.sh (root 0755) + /etc/sudoers.d/agent-ledger-deploy (vwdeploy NOPASSWD) + /etc/tmpfiles.d/agent-ledger.conf (boot backstop). First run chowned 61 stray non-vwdeploy entries. Edited agent-ledger/deploy/deploy.sh adding step 0 self-heal; bumped stats-app to 0.1.1 (versioning rule); commit fd7a17b2 pushed; webhook deployed and stats.vaultwares.ca index.html refreshed at 14:26.",
+  "commands": [
+    "ssh root@100.67.25.118 'install netns watcher + systemd unit'",
+    "scp app/routers/monitor/__init__.py root@100.67.25.118:/opt/vaultwares-api/",
+    "ssh root@100.67.25.118 'systemctl restart vaultwares-api'",
+    "npm run build (vault-monitor)",
+    "tar+ssh deploy of dist/ to greencloud /var/www/monitor.vaultwares.ca",
+    "ssh root@100.73.93.84 'install agent-ledger-fix-ownership + sudoers + tmpfiles.d'",
+    "git commit + push agent-ledger main fd7a17b2"
+  ],
+  "files": [
+    "/usr/local/sbin/mullvad-netns-restart-deps.sh (ovhcloud)",
+    "/etc/systemd/system/mullvad-netns-restart-deps.service (ovhcloud)",
+    "vaultwares-api/app/routers/monitor/__init__.py",
+    "vault-monitor/src/types.ts",
+    "vault-monitor/src/api.ts",
+    "vault-monitor/src/App.tsx",
+    "/usr/local/sbin/agent-ledger-fix-ownership.sh (greencloud)",
+    "/etc/sudoers.d/agent-ledger-deploy (greencloud)",
+    "/etc/tmpfiles.d/agent-ledger.conf (greencloud)",
+    "agent-ledger/deploy/deploy.sh",
+    "agent-ledger/stats-app/package.json"
+  ],
+  "planPath": "",
+  "contentHash": "93c7b9df240237c78a61ab572add64ad1cfd0a7813f5351d6e5ab7d32676a7ed",
+  "git": null
+}

@@ -1,0 +1,52 @@
+﻿{
+    "id":  "20260624-023558-861-vaultwares-api-c29d85e6",
+    "createdAt":  "2026-06-24T06:35:58.8616799Z",
+    "createdAtLocal":  "2026-06-24 02:35",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-api",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: gemini-2.0-flash-exp\r\nThinking: low\r\nMode: code\r\nPermissions: ask (network: windows-local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): view_file, multi_replace_file_content, replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-24 02:35 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.0-flash-exp",
+                    "thinking":  "low",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "windows-local",
+                    "toolsUsed":  [
+                                      "view_file",
+                                      "multi_replace_file_content",
+                                      "replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+    "summary":  "Updated WebAuthn verification endpoints in api/routes_webauthn.py to support flat payloads and dynamically extract the challenge from clientDataJSON when not provided at the root.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\api\\routes_webauthn.py",
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\api\\app.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "c29d85e6f2578583f31e7f51583ed4a241d4a7d42613899fa6ffac8259d9e88d",
+    "git":  {
+                "repo":  "vaultwares-api",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+                "branch":  "main",
+                "head":  "3b823ce",
+                "hasChanges":  true
+            }
+}

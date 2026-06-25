@@ -1,0 +1,50 @@
+{
+  "id": "20260622-231111-891-tech-oracle-prom-king-b9489bad",
+  "createdAt": "2026-06-23T03:11:11.8910848Z",
+  "createdAtLocal": "2026-06-22 23:11",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle (Prom-King)",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Clopeux-Desktop (Windows 11))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: n/a\r\nTools used (this reply): Bash, Edit, Write, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 23:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Clopeux-Desktop (Windows 11)",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "tech-oracle breakage-score aggregator + answers on NIM credits / specialist training / vault-raggae (Mon, 22 Jun 2026 23:15). Q&A first: NIM doesnt expose remaining credits in response headers; authoritative at build.nvidia.com/settings; recent personal-tier ~1000 credits/month at 1 credit per chat call; our full-cadence run rate is ~1620/month (over free tier - mitigations are 1h cron, relevance gating, Ollama-on-Clopeux overflow via NIM_BASE_URL override). LoRA/specialist training - park it, premature without ground-truth (no reader CTR / article success signal yet); the A/B already showed 8B ~= 70B on this task so the upside ceiling for specialization is small until publishing pipeline closes the loop. COLMAP is photogrammetry (Structure-from-Motion), not LLM-related - noted. Vault-raggae - good plan, already scaffolded (docker-compose.milvus.yml + test_embedding/test_lance), correct architecture is embeddings + retrieval local (free), inference remote on NIM; index past predictions + enriched items in local Milvus, retrieve top-K at synthesis time, no credit burn on retrieval; but order it AFTER the scoring aggregator + the 70B fix-path split so theres signal lift to measure against. Build this turn: tech_oracle/scoring/ module with categories.py (12 curated consumer categories: windows-update, office-and-outlook, consumer-billing, copilot, ios-bluetooth, macos-icloud, ios-icloud, chrome, printer, banking-app, streaming-tv, other-consumer fallback; multi-categorization - one item can hit multiple categories) and aggregate.py (compute_scores walks items with severity>=medium, items without grounded entities.company are skipped, low-info items get half-weight, emits BreakageScore per company,category bucket). On-demand compute, no scores table - aggregation is a single Python pass over rows pulled by the store. CLI: tech-oracle scores [-o file] prints current scores; items export-batch now auto-includes computed scores (was",
+  "commands": [
+    "uv pip install -e .",
+    "uv run tech-oracle scores",
+    "uv run tech-oracle items export-batch tests/fixtures/live_batch.json --hours 168 --limit 30 --unprocessed"
+  ],
+  "files": [
+    "tech-oracle/src/tech_oracle/scoring/__init__.py",
+    "tech-oracle/src/tech_oracle/scoring/categories.py",
+    "tech-oracle/src/tech_oracle/scoring/aggregate.py",
+    "tech-oracle/src/tech_oracle/__init__.py",
+    "tech-oracle/src/tech_oracle/cli.py",
+    "tech-oracle/README.md",
+    "tech-oracle/tests/fixtures/live_batch.json"
+  ],
+  "planPath": "",
+  "contentHash": "b9489baddf3496c9c6002cd19ab2750edcff4795b558149fcb6389989f96911f",
+  "git": null
+}

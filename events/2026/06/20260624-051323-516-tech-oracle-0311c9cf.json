@@ -1,0 +1,62 @@
+{
+  "id": "20260624-051323-516-tech-oracle-0311c9cf",
+  "createdAt": "2026-06-24T09:13:23.5165790Z",
+  "createdAtLocal": "2026-06-24 05:13",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: code\r\nPermissions: allowlist (network: Windows 11 Clopeux-Desktop + greencloud-vps via tailnet + brume2 tinyproxy verified)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, Grep, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-24 05:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "code",
+    "permissions": "allowlist",
+    "network": "Windows 11 Clopeux-Desktop + greencloud-vps via tailnet + brume2 tinyproxy verified",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "Three pipeline fixes + nginx vhost for theitguyde.com. (1) schemas.EnrichmentOutput.entities is now dict[str, Optional[str]] so the 8B can return null for ungrounded fields (correct per prompt) without dropping the whole item. _merge_entities already filters nulls so IngestedItem.entities stays str-typed. (2) NimClient.chat/achat retry 429/502/503/504 with Retry-After-honouring exponential backoff (base^attempt + jitter, capped 60s, NIM_MAX_RETRIES=4 by default); enrich_many sleeps TECH_ORACLE_ENRICH_DELAY (default 1.5s) between calls to spread 30-item batches across the per-minute bucket. (3) FeedConfig.use_residential_proxy=True opts a feed into a tailnet-side HTTP proxy at TECH_ORACLE_RESIDENTIAL_PROXY (default brume2 tinyproxy http://100.114.136.28:8888, residential Bell/Videotron IP). Set true on all 4 Reddit feeds; verified routing locally (4 proxied, 6 direct). Also confirmed brume2 reachable from greencloud and rewrites egress to 74.57.201.206. (4) nginx vhost at /etc/nginx/sites-available/theitguyde.com.conf served from /var/www/theitguyde.com/site/, certbot --nginx provisioned cert for theitguyde.com + www, HTTPS verified externally (GET / 200, /sitemap.xml 200, /about/ 200, www 200, http->https 301). Tracked the base config in repo at deploy/theitguyde.com.conf. Triggered manual pipeline run after deploy of c4d637d (running in background, user monitoring).",
+  "commands": [
+    "git commit ffa7bc5 (3 pipeline fixes) + push",
+    "git commit c4d637d (nginx config) + push",
+    "ssh root@100.73.93.84 nginx vhost install + certbot --nginx",
+    "curl checks against https://theitguyde.com/",
+    "systemctl start tech-oracle.service",
+    "PYTHONIOENCODING=utf-8 uv run python smoke test (schema accepts null, 4 feeds proxied, retry helper)"
+  ],
+  "files": [
+    "tech-oracle/src/tech_oracle/schemas.py",
+    "tech-oracle/src/tech_oracle/client.py",
+    "tech-oracle/src/tech_oracle/enrich/worker.py",
+    "tech-oracle/src/tech_oracle/ingest/feeds.py",
+    "tech-oracle/src/tech_oracle/ingest/rss.py",
+    "tech-oracle/deploy/theitguyde.com.conf",
+    "greencloud:/etc/nginx/sites-available/theitguyde.com.conf",
+    "greencloud:/etc/letsencrypt/live/theitguyde.com/"
+  ],
+  "planPath": "",
+  "contentHash": "0311c9cf3b3c934b2716f018dd5d0fbfbaa9ec7434ace1d706f8347f6b704682",
+  "git": {
+    "repo": "tech-oracle",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/tech-oracle",
+    "branch": "main",
+    "head": "c4d637d",
+    "hasChanges": false
+  }
+}

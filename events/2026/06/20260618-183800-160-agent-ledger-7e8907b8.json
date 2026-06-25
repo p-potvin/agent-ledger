@@ -1,0 +1,44 @@
+{
+  "id": "20260618-183800-160-agent-ledger-7e8907b8",
+  "createdAt": "2026-06-18T22:38:00.1609927Z",
+  "createdAtLocal": "2026-06-18 18:38",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Bash, SSH, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-18 18:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local-windows",
+    "toolsUsed": [
+      "Bash",
+      "SSH",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Attempted to deploy new stats-app to stats.vaultwares.ca. Wired stats-app build into deploy/deploy.sh (commit 6c7c6bf, pushed to main) so site/ ships to ledger.vaultwares.ca and stats-app/ ships to stats.vaultwares.ca. Broke /var/www/stats.vaultwares.ca symlink on greencloud-vps to allow independent content, then restored it after both builds failed: site/ has pre-existing TS error in src/useData.ts:76 (string[] vs string), stats-app/ App.tsx has 3 TS errors (unused WorkImpactData import, missing ./lib/data module resolution because src/lib has data.json not data.ts and tsconfig lacks resolveJsonModule, and untyped projects.map(p)). No live state changed - stats.vaultwares.ca still serves the legacy site/ build via the restored symlink. Awaiting user direction on whether to fix stats-app TS errors or treat data.json import differently.",
+  "commands": [
+    "ssh root@greencloud-vps deploy.sh",
+    "git push origin main",
+    "rsync -a stats-app/dist/ /var/www/stats.vaultwares.ca/"
+  ],
+  "files": [
+    "deploy/deploy.sh",
+    "stats-app/src/App.tsx",
+    "stats-app/src/lib/data.json"
+  ],
+  "planPath": "",
+  "contentHash": "7e8907b8aea86bde81f1399dacd3083209026660ca36bb55f6906d876dfb090b",
+  "git": null
+}

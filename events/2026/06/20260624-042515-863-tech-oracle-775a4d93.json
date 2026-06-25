@@ -1,0 +1,69 @@
+{
+  "id": "20260624-042515-863-tech-oracle-775a4d93",
+  "createdAt": "2026-06-24T08:25:15.8633989Z",
+  "createdAtLocal": "2026-06-24 04:25",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: code\r\nPermissions: allowlist (network: Windows 11 Clopeux-Desktop + greencloud-vps via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, TaskCreate, TaskUpdate, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-24 04:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "code",
+    "permissions": "allowlist",
+    "network": "Windows 11 Clopeux-Desktop + greencloud-vps via tailnet",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "Punch-list 1-5 in one pass. (1) Default reranker swapped to BAAI/bge-reranker-v2-m3 in rag/rerank.py + README. (2) publish.py emits cross_vendor_related_to vs recurrence_of based on verdict (smoke-tested both branches). (3) Extracted apply_refinement_json from refine.py and added bridge/refine_via_bridge.py + tech-oracle bridge refine-enqueue/refine-consume CLI so refine can be driven through gemini.google.com instead of NIM 70B (strips json code fences gemini emits). (4) Extracted tech-oracle into a standalone Prom-King/tech-oracle git repo (initial commit, 61 files, gitattributes for LF eol); wrote deploy/deploy-tech-oracle.sh mirroring deploy-content-site.sh pattern (clone to /srv/repos/Prom-King/tech-oracle, uv sync, build site/, install systemd units, enable timer); tech-oracle.service (oneshot, ProtectSystem=full, EnvironmentFile=/etc/tech-oracle/tech-oracle.env) + tech-oracle.timer (every 30min, RandomizedDelaySec=2min). SCP+SSH to greencloud (root@100.73.93.84): installed deploy script with 0755 vwdeploy:vwdeploy perms, appended Prom-King/tech-oracle target to /etc/vw-webhookd/config.yml (with timestamped backup), restarted vw-webhookd (no reload action). Remaining manual: gh repo create, git push, GitHub webhook, populate /etc/tech-oracle/tech-oracle.env with NVIDIA_API_KEY from VaultWarden. (5) Scaffolded site/ Eleventy SSG: prebuild.mjs syncs ../articles/ into src/articles/ + writes a 11tydata.cjs (functions for permalink override), eleventy.js with articlesByDate + articlesByProduct collections, hand-rolled CSS no framework, base.njk + article.njk with OG/JSON-LD TechArticle schema, recurrence + cross-vendor sibling callouts, sitemap.xml, robots.txt. Smoke-tested full build with a synthetic article: permalink resolves to /articles/slug/, date attribute is ISO, all metadata renders.",
+  "commands": [
+    "git init + 2 commits",
+    "scp deploy-tech-oracle.sh root@100.73.93.84:/var/www/deploy-scripts/",
+    "ssh root chmod chown + awk append config.yml + systemctl restart vw-webhookd",
+    "npm install && npm run build (Eleventy)"
+  ],
+  "files": [
+    "tech-oracle/src/tech_oracle/rag/rerank.py",
+    "tech-oracle/src/tech_oracle/publish.py",
+    "tech-oracle/src/tech_oracle/refine.py",
+    "tech-oracle/src/tech_oracle/bridge/refine_via_bridge.py",
+    "tech-oracle/src/tech_oracle/cli.py",
+    "tech-oracle/deploy/deploy-tech-oracle.sh",
+    "tech-oracle/deploy/tech-oracle.service",
+    "tech-oracle/deploy/tech-oracle.timer",
+    "tech-oracle/site/.eleventy.js",
+    "tech-oracle/site/prebuild.mjs",
+    "tech-oracle/site/src/index.njk",
+    "tech-oracle/site/src/_includes/base.njk",
+    "tech-oracle/site/src/_includes/article.njk",
+    "tech-oracle/site/src/style.css",
+    "tech-oracle/README.md",
+    "greencloud:/var/www/deploy-scripts/deploy-tech-oracle.sh",
+    "greencloud:/etc/vw-webhookd/config.yml"
+  ],
+  "planPath": "",
+  "contentHash": "775a4d93ca65c27565881ef14621bea0e74c7028fdae7520679bd260e732a473",
+  "git": {
+    "repo": "tech-oracle",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/tech-oracle",
+    "branch": "main",
+    "head": "5210b4f",
+    "hasChanges": false
+  }
+}

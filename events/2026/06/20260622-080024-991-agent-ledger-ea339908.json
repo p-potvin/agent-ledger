@@ -1,0 +1,43 @@
+{
+  "id": "20260622-080024-991-agent-ledger-ea339908",
+  "createdAt": "2026-06-22T12:00:24.9915111Z",
+  "createdAtLocal": "2026-06-22 08:00",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 08:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Mon, 22 Jun 2026 08:44 - Investigated why the 2026-06-22 push to p-potvin/agent-ledger main did not produce a live deploy on greencloud-vps. Verified the GitHub webhook chain is healthy: vw-webhookd logged push after=343cec091d802148f7bb5776facf27fbb54f3af3, dispatched /opt/sites/agent-ledger/deploy/deploy-async.sh, and returned exit=0. Root cause is downstream on greencloud: /var/log/agent-ledger-deploy.log shows /opt/sites/agent-ledger/deploy/deploy.sh fails immediately with CRLF parsing errors (line 10 $'\\r' command not found; line 11 set: pipefail\\r invalid option name). The greencloud checkout is stale at af2c89b and dirty; git ls-files --eol shows deploy/deploy.sh index=lf working-tree=crlf. Created issue #18 in p-potvin/agent-ledger to track the CRLF-corrupted deploy script and stale server checkout.",
+  "commands": [
+    "ssh root@100.73.93.84 grep/tail on /var/log/vw-webhookd.log and /var/log/agent-ledger-deploy.log",
+    "ssh root@100.73.93.84 git -C /opt/sites/agent-ledger ls-files --eol ...",
+    "gh issue create -R p-potvin/agent-ledger ..."
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\deployment-flow.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\webhook-secret-rotation.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\deploy-alerts.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\deploy\\deploy-async.sh",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\deploy\\deploy.sh"
+  ],
+  "planPath": "",
+  "contentHash": "ea339908bccd0c583c022c063410b4a74fb5118c3e42d94e02854f2cb8e20a24",
+  "git": null
+}

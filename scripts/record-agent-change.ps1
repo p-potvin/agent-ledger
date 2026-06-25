@@ -148,6 +148,9 @@ function Publish-AgentLedgerEventToApi {
     $apiBase = $env:VW_API_URL
     if (-not $apiBase) { $apiBase = $env:VW_PIPELINES_URL }
     if (-not $apiBase) { $apiBase = 'http://100.67.25.118:9001' }
+    if ($apiBase -like 'https://100.67.25.118*') {
+        $apiBase = $apiBase -replace 'https://', 'http://'
+    }
     $apiBase = $apiBase.TrimEnd('/')
 
     $apiKey = $env:VW_TELEMETRY_API_KEY

@@ -1,0 +1,42 @@
+{
+  "id": "20260619-185322-589-content-disseminator-8f2cbe80",
+  "createdAt": "2026-06-19T22:53:22.5899669Z",
+  "createdAtLocal": "2026-06-19 18:53",
+  "timezone": "Eastern Standard Time",
+  "project": "content-disseminator",
+  "kind": "code-change,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Read, Edit, Write, PowerShell, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-19 18:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "PowerShell",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Added --firefox flag to scripts/redgifs_login.py. Mullvad Browser + Selenium combination times out on the WebDriver handshake reliably (urllib3 ReadTimeoutError after 120s) due to Mullvad anti-fingerprinting blocking the geckodriver communication channel. Regular Firefox works end-to-end with Selenium - tested: opened https://www.redgifs.com/signup in isolated .firefox-profile, user logged in manually, closed window, script exited cleanly. Session cookies now persist in .firefox-profile for future Selenium-driven runs. NOTE for follow-up: redgifs_mullvad_uploader.py still uses find_mullvad() exclusively - if user wants automated uploads to work, that script needs the same --firefox flag wired through. Not modified here per scope.",
+  "commands": [
+    "uv run --with selenium python scripts/redgifs_login.py --firefox --signin --idle-min 30"
+  ],
+  "files": [
+    "Prom-King content-disseminator scripts redgifs_login.py"
+  ],
+  "planPath": "",
+  "contentHash": "8f2cbe806c3338ba6fa47b21c5708fbca59cb6388d0f9beee991a5a378740010",
+  "git": null
+}

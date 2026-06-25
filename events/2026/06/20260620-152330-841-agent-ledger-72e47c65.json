@@ -1,0 +1,46 @@
+{
+  "id": "20260620-152330-841-agent-ledger-72e47c65",
+  "createdAt": "2026-06-20T19:23:30.8419512Z",
+  "createdAtLocal": "2026-06-20 15:23",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local-windows + greencloud (ssh))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Bash, SSH, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-20 15:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local-windows + greencloud (ssh)",
+    "toolsUsed": [
+      "Bash",
+      "SSH",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Three refinements to stats.vaultwares.ca generator: (1) project-aliases.json gains top-level forks list with OneTrainer and video-depth-anything; generator filters fork names from byProject, projects, totalProjects. Total projects 53 -> 51. (2) busiestWeek now ships as human date range Apr 20-26 instead of ISO 2026-W17 by computing Monday of ISO week from Jan 4 anchor + 6-day extension. (3) Added AUTO_OUTLIER_THRESHOLD=15000 clean churn lines. Generator auto-flags commits above threshold in addition to the 4 named hardcoded outliers, lists them in commitOutliers with auto-detected note. Caught 6 more vault-flows + vaultwares-cli rewrites on 2026-04-26 and 2026-05-01 totaling another 121k churn lines that were quietly inflating mean. commitStats.mean dropped 784 -> 609, samples 675 -> 669. Live: index-4mXPVMJ3.js, all values verified. Commit pushed.",
+  "commands": [
+    "ssh root@greencloud-vps",
+    "scp generate-data.mjs project-aliases.json",
+    "node scripts/generate-data.mjs",
+    "npm run build",
+    "rsync -a --delete dist/ /var/www/stats.vaultwares.ca/",
+    "git push origin main"
+  ],
+  "files": [
+    "agent-ledger/stats-app/scripts/generate-data.mjs",
+    "agent-ledger/project-aliases.json"
+  ],
+  "planPath": "",
+  "contentHash": "72e47c65c75e28c5307056c3de782a7cc0ed091baae7e5bc223623c87e78c273",
+  "git": null
+}

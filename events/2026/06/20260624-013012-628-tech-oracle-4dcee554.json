@@ -1,0 +1,62 @@
+{
+  "id": "20260624-013012-628-tech-oracle-4dcee554",
+  "createdAt": "2026-06-24T05:30:12.6283952Z",
+  "createdAtLocal": "2026-06-24 01:30",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: code\r\nPermissions: allowlist (network: Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: n/a\r\nTools used (this reply): Read, Write, Edit, Bash, TaskCreate, TaskUpdate, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-24 01:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "code",
+    "permissions": "allowlist",
+    "network": "Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "Built the manual Gemini bridge: new tech_oracle.bridge subpackage (SQLite-backed bounded queue with TTL, bearer-token auth, loopback-only bind, Windows toast on enqueue, FastAPI server with CORS allowlist for gemini.google.com/aistudio.google.com), new tech-oracle bridge CLI subcommand (serve/token/enqueue/list/get/purge), and a MV3 Firefox extension under firefox-extension/ that injects a floating bar on gemini.google.com with Load/Submit/Release/Fail buttons, popup with queue stats, options page for URL+token, background service worker that proxies all bridge fetches so the token never leaks into page context. Verified end-to-end with TestClient: 401 without bearer, enqueue+claim+submit roundtrip works, queue persists across processes. Workflow is fully manual per user spec: toast → open gemini → click Load → press Enter → click Submit. README updated with HTTP surface table and security notes.",
+  "commands": [
+    "uv run tech-oracle bridge --help",
+    "uv run python -c (FastAPI TestClient validation)"
+  ],
+  "files": [
+    "tech-oracle/src/tech_oracle/bridge/__init__.py",
+    "tech-oracle/src/tech_oracle/bridge/models.py",
+    "tech-oracle/src/tech_oracle/bridge/queue.py",
+    "tech-oracle/src/tech_oracle/bridge/auth.py",
+    "tech-oracle/src/tech_oracle/bridge/notify.py",
+    "tech-oracle/src/tech_oracle/bridge/server.py",
+    "tech-oracle/src/tech_oracle/cli.py",
+    "tech-oracle/firefox-extension/manifest.json",
+    "tech-oracle/firefox-extension/content.js",
+    "tech-oracle/firefox-extension/content.css",
+    "tech-oracle/firefox-extension/background.js",
+    "tech-oracle/firefox-extension/common.js",
+    "tech-oracle/firefox-extension/popup.html",
+    "tech-oracle/firefox-extension/popup.js",
+    "tech-oracle/firefox-extension/options.html",
+    "tech-oracle/firefox-extension/options.js",
+    "tech-oracle/firefox-extension/README.md",
+    "tech-oracle/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "4dcee554ecf1c5744d846051a603ec24bd8ee387fa9ec38ce21621eb4cec2705",
+  "git": null
+}

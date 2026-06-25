@@ -1,0 +1,42 @@
+{
+  "id": "20260622-144911-296-vw-media-ovhcloud-c71dc6d6",
+  "createdAt": "2026-06-22T18:49:11.2964095Z",
+  "createdAtLocal": "2026-06-22 14:49",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-media (ovhcloud)",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Clopeux-Desktop (Windows 11) -> ssh ovhcloud)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Bash, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 14:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Clopeux-Desktop (Windows 11) -> ssh ovhcloud",
+    "toolsUsed": [
+      "Bash",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Live-tested #1 mullvad-netns-restart-deps watcher (Mon, 22 Jun 2026 14:50). First test exposed 2 bugs: (a) docker events --filter container=NAME resolves to container ID at startup, so recreates emit a new ID that the filter silently misses — qbit+jackett ended up Exited(128) with 'No such container 18ed9549...' (the dead OLD netns); (b) on recovery, 'docker start' on the dependents fails with the same netns error — needs 'docker compose up -d' to rebind them to the new gateway. Both fixed: rewrote /usr/local/sbin/mullvad-netns-restart-deps.sh to filter by 'label=com.docker.compose.service=mullvad-gateway' (per-event match, survives recreates) and to bring deps back with 'docker compose --env-file .env.mullvad -f docker-compose.yml -f docker-compose.mullvad.yml -f docker-compose.mullvad.qbittorrent.yml -f docker-compose.mullvad.jackett.yml --profile vpn up -d qbittorrent jackett' instead of docker restart. Second test passed end-to-end: --force-recreate mullvad-gateway → new cid b879c7635902 → watcher logged 'settling 8s' then 'compose up -d qbittorrent jackett ok' at 18:47:49 → qbit returns 401 (WebUI alive) on 127.0.0.1:8081, jackett returns 301 on 100.67.25.118:9117, mullvad-gateway healthy. Settle window currently 8s; compose-up output captured to /tmp/mullvad-netns-restart-deps.last.log.",
+  "commands": [
+    "docker compose --env-file .env.mullvad ... --profile vpn up -d --force-recreate mullvad-gateway",
+    "systemctl restart mullvad-netns-restart-deps",
+    "journalctl -t mullvad-netns-restart-deps",
+    "curl -sS http://100.67.25.118:9117/ + http://127.0.0.1:8081/"
+  ],
+  "files": [
+    "/usr/local/sbin/mullvad-netns-restart-deps.sh (ovhcloud)"
+  ],
+  "planPath": "",
+  "contentHash": "c71dc6d68d4e57363167cdaed709c7957196184b5725aee6d8dee3ee71f7407a",
+  "git": null
+}

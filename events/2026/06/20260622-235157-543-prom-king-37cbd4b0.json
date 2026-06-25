@@ -1,0 +1,59 @@
+﻿{
+    "id":  "20260622-235157-543-prom-king-37cbd4b0",
+    "createdAt":  "2026-06-23T03:51:57.5438274Z",
+    "createdAtLocal":  "2026-06-22 23:51",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): write_to_file, replace_file_content, multi_replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 23:51 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "write_to_file",
+                                      "replace_file_content",
+                                      "multi_replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Implemented centralized affiliate injection engine and catalog taxonomy filtering. Added \u0027View Videos\u0027 button to taxonomy rows mapping to active filters on the video catalog with a clearable filter banner. Created AffiliateSettings UI tab to configure raw ad snippets and choose rotation modes (request vs temporal). Created AffiliateAds component rendering ad containers (banner, overlay, popunder, popover, interstitial, cam widget) and updated Layout.astro and PlayerModal.astro. Synced admin tools across all 4 tube applications and verified typecheck/build successfully.",
+    "commands":  [
+                     "pnpm typecheck",
+                     "pnpm run build"
+                 ],
+    "files":  [
+                  "apps/pkt/src/admin/Catalog/Bulk.tsx",
+                  "apps/pkt/src/admin/Catalog/BatchActions.tsx",
+                  "apps/pkt/src/admin/Catalog/VideoBatchActions.tsx",
+                  "apps/pkt/src/admin/App.tsx",
+                  "apps/pkt/src/admin/Affiliates/Settings.tsx",
+                  "shared/src/components/AffiliateAds.astro",
+                  "shared/src/components/Layout.astro",
+                  "shared/src/components/PlayerModal.astro"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\372848f3-1b92-4045-8389-b120974659ee\\implementation_plan.md",
+    "contentHash":  "37cbd4b07916e0bce40073af11f7f7206bbb68ff649e358eaadf16441ec6c393",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "1511f4c",
+                "hasChanges":  true
+            }
+}

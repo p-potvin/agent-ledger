@@ -1,0 +1,52 @@
+{
+  "id": "20260622-214438-896-tech-oracle-prom-king-992251a8",
+  "createdAt": "2026-06-23T01:44:38.8969156Z",
+  "createdAtLocal": "2026-06-22 21:44",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle (Prom-King)",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Clopeux-Desktop (Windows 11))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: n/a\r\nTools used (this reply): Bash, Edit, Write, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 21:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Clopeux-Desktop (Windows 11)",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "tech-oracle 8B enrichment worker (Mon, 22 Jun 2026 22:10). Added the per-item enrichment stage that turns sparse RSS items into rich records ready for 70B/8B synthesis. (a) Schemas: new EnrichmentOutput Pydantic model with summary/severity/tags/entities/raw_excerpt/is_low_information; exported from package root. (b) Module: tech_oracle/enrich/{__init__,prompts,worker}.py. enrich_one(item, client) returns merged_item + EnrichmentOutput + model_id + usage. Tags are union-merged with feed defaults, entities dict-merged with enriched values winning, raw_excerpt only overwrites if model provides one. Hard prompt rules: don't invent versions/numbers, leave entity keys absent rather than guess, write for non-technical 58-year-old grandma persona, severity is consumer-impact (not vendor importance), set is_low_information=true on thin Reddit-title-only items. JSON-mode, temperature 0.1, max_tokens 900. (c) Store: added enriched_at/enrichment_model/is_low_information columns with idempotent ALTER TABLE migration for existing DBs. New methods: recent_unenriched(), update_enriched(item, model, is_low_info). stats() now reports unenriched + low_information counts. (d) CLI: ech-oracle enrich [--limit N] [--source X] [--hours H] [--model M] [--dry-run] [--db PATH]. Pulls unenriched items, calls 8B per-item, merges back into store. Reports tokens used and ok/fail counts. (e) Live smoke test on real r/printers items: 8/9 successful enrichments at ~1500-1800 tokens each (~20-25s for 6 items). 1 transient NIM failure, skipped and picked up on next pass. The 'What do i do?' Reddit thread - originally tags=[reddit,printer,consumer] and entities={} - got enriched to entities={company:hp, product:designjet-t730}, severity=low, is_low_information=true, with the body mined for a useful narrative summary. The model correctly grounded entities from the post body that the title alone gave nothing on. (f) README updated with before/after table and pipeline diagram now showing ingest -> 8B enrich -> SQLite ->",
+  "commands": [
+    "uv pip install -e .",
+    "uv run tech-oracle enrich --limit 6 --model meta/llama-3.1-8b-instruct",
+    "uv run tech-oracle enrich --limit 3 --model meta/llama-3.1-8b-instruct",
+    "uv run tech-oracle items stats"
+  ],
+  "files": [
+    "tech-oracle/src/tech_oracle/schemas.py",
+    "tech-oracle/src/tech_oracle/__init__.py",
+    "tech-oracle/src/tech_oracle/enrich/__init__.py",
+    "tech-oracle/src/tech_oracle/enrich/prompts.py",
+    "tech-oracle/src/tech_oracle/enrich/worker.py",
+    "tech-oracle/src/tech_oracle/ingest/store.py",
+    "tech-oracle/src/tech_oracle/cli.py",
+    "tech-oracle/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "992251a8f5115c606bbc95efd0b0423cb26332a6c7f75e518817d6d6f28c2ee4",
+  "git": null
+}

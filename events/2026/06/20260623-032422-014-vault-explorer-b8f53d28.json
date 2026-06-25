@@ -1,0 +1,47 @@
+{
+  "id": "20260623-032422-014-vault-explorer-b8f53d28",
+  "createdAt": "2026-06-23T07:24:22.0148406Z",
+  "createdAtLocal": "2026-06-23 03:24",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-23 03:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Tue, 23 Jun 2026 00:18 - Updated the centralized tooltip to Windows 11 style using #win-tooltip, pointer-only hover behavior, mouse-move/scroll/resize dismissal, native title suppression/restoration, and no focus-triggered tooltip. Added a focused Electron/Playwright tooltip regression test. GitHub issue: https://github.com/p-potvin/vault-explorer/issues/37. Verified with node tests\\tooltip_behavior_test.js, node tests\\refactor_smoke_test.js, visual Electron proof run, and git diff --check.",
+  "commands": [
+    "gh issue create --title 'Fix Windows-style tooltip hide and focus behavior'",
+    "node tests\\tooltip_behavior_test.js",
+    "node tests\\refactor_smoke_test.js",
+    "git diff --check"
+  ],
+  "files": [
+    "js\\tooltip.js",
+    "index.css",
+    "tests\\tooltip_behavior_test.js"
+  ],
+  "planPath": "",
+  "contentHash": "b8f53d282c2af16b6e9a0c05dfd1d8f2cde5c5c7b4427bb27694d1985cd2cd18",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ccf452b",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,43 @@
+﻿{
+    "id":  "20260624-084735-967-general-tasks-4f582036",
+    "createdAt":  "2026-06-24T12:47:35.9679508Z",
+    "createdAtLocal":  "2026-06-24 08:47",
+    "timezone":  "Eastern Standard Time",
+    "project":  "General Tasks",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.0-flash-exp\r\nThinking: medium\r\nMode: code\r\nPermissions: bypass (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\pwsh\\VaultWares CLI  Branch: n/a\r\nTools used (this reply): write_to_file, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-24 08:47 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.0-flash-exp",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "write_to_file",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\pwsh\\VaultWares CLI",
+    "summary":  "Added custom parameter value completions for the record-change subcommand parameters (Project, Kind, Thinking, Mode, Permissions, AgentRole, Actor). The Project list is resolved dynamically from the project-aliases.json file. Handled quoting of spaces in value suggestions.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\Desktop\\pwsh\\VaultWares CLI\\vw-completion.ps1"
+              ],
+    "planPath":  "",
+    "contentHash":  "4f58203610e636ea403e21fb7baca019606341dea39a66ac00bfa0d266f5f7da",
+    "git":  null
+}

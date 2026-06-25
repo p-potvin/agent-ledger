@@ -1,0 +1,43 @@
+{
+  "id": "20260622-090816-845-agent-ledger-d3b6524f",
+  "createdAt": "2026-06-22T13:08:16.8453556Z",
+  "createdAtLocal": "2026-06-22 09:08",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change,commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + greencloud-vps via tailnet SSH + GitHub)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, Monitor, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 09:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + greencloud-vps via tailnet SSH + GitHub",
+    "toolsUsed": [
+      "Bash",
+      "Monitor",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fixed stats-app build failure blocking stats.vaultwares.ca (follow-up from #18). Two layered root causes: (1) committed stats-app/package-lock.json was malformed JSON (a funding array contained an object key near line 1507) so npm ci rejected it with EUSAGE. Regenerated from package.json -> valid (commit 59d9894). (2) That regeneration was done on Windows and omitted linux-x64-gnu native binaries, so greencloud build then failed with 'Cannot find module ../lightningcss.linux-x64-gnu.node'. Regenerated the lockfile ON the greencloud Linux target (as vwdeploy): result is cross-platform (81 entries, contains BOTH lightningcss-linux-x64-gnu and win32-x64-msvc). scp'd back, committed (5c5b753f), verified npm ci passes on Windows too. Pushed to main -> webhook auto-deployed: 'Pipeline summary: site=ok stats-app=ok', '=== Deploy complete ==='. Verified stats.vaultwares.ca HTTP 200 (901 bytes, rebuilt Work Impact dashboard) and ledger.vaultwares.ca HTTP 200. This also confirms the #18 webhook path works end-to-end (push -> webhook -> deploy-async -> deploy.sh -> both apps built+deployed). NOTE: lightningcss/rollup/esbuild platform-native deps mean lockfiles must carry all platforms; regenerate on Linux (or with all platforms) if this recurs.",
+  "commands": [
+    "ssh greencloud: rm package-lock.json && npm install (linux)",
+    "scp lockfile back to PC",
+    "git push origin main (5c5b753f)",
+    "curl https://stats.vaultwares.ca"
+  ],
+  "files": [
+    "agent-ledger/stats-app/package-lock.json"
+  ],
+  "planPath": "",
+  "contentHash": "d3b6524f042200fcd77b68f7106db890f82692bf2332877d03483633396bd62c",
+  "git": null
+}

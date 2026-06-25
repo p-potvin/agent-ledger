@@ -1,0 +1,41 @@
+{
+  "id": "20260622-092334-314-vw-media-stack-e7a209d5",
+  "createdAt": "2026-06-22T13:23:34.3148225Z",
+  "createdAtLocal": "2026-06-22 09:23",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-media-stack",
+  "kind": "code-change,handoff,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + vps-ovhcloud via Tailscale SSH)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 09:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + vps-ovhcloud via Tailscale SSH",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Restored qbittorrent + jackett network access (regression from this session's VPN key fix). Root cause: qbit and jackett use network_mode service:mullvad-gateway; when mullvad-gateway was force-recreated for the Bold Crow VPN key swap, the dependents stayed pinned to the destroyed gateway netns (container:fd1fbb75...) while the live gateway became 18ed9549 -> both qbit (8081) and jackett (9117) returned HTTP 000, and nginx tailnet vhost on 100.67.25.118:8081 returned 502. Fix: docker compose --profile vpn ...all 4 overlays... up -d --force-recreate qbittorrent jackett. After: qbit netns now = 18ed9549 (matches gateway), qbit 127.0.0.1:8081 -> 401 (WebUI up), jackett 9117 -> 301, qbit reachable from PC over tailnet via nginx -> 401 (login). So qbit WebUI is accessible tailnet-wide at http://100.67.25.118:8081 (nginx vhost + UFW 8081/tailscale0 already existed). Jackett restored for Comet's scraper. FRAGILITY FLAGGED: recreating mullvad-gateway always breaks qbit/jackett netns; must recreate dependents after. IP-ban analysis: qbit never touches Real-Debrid (BitTorrent only via Toronto tunnel); Comet centralizes ALL RD via comet-vpn Montreal incl PROXY_DEBRID_STREAM -> no double-IP RD risk. Remaining ask: move-failure (OVH->gDrive) error dashboard into monitor.vaultwares.ca - pending scope decision.",
+  "commands": [
+    "docker compose up -d --force-recreate qbittorrent jackett",
+    "curl qbit/jackett reachability"
+  ],
+  "files": [
+    "/opt/vw-media-stack/docker-compose.mullvad.qbittorrent.yml",
+    "/opt/vw-media-stack/docker-compose.mullvad.jackett.yml"
+  ],
+  "planPath": "",
+  "contentHash": "e7a209d5694945b2b23148660f3b8ac319e74303271912a452465c3fe3d75c81",
+  "git": null
+}

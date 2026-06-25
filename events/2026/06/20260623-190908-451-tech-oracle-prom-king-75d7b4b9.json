@@ -1,0 +1,51 @@
+{
+  "id": "20260623-190908-451-tech-oracle-prom-king-75d7b4b9",
+  "createdAt": "2026-06-23T23:09:08.4514181Z",
+  "createdAtLocal": "2026-06-23 19:09",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle (Prom-King)",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Clopeux-Desktop (Windows 11) -> ssh greencloud)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: n/a\r\nTools used (this reply): Bash, Edit, Write, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-23 19:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Clopeux-Desktop (Windows 11) -> ssh greencloud",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "tech-oracle: pipeline orchestrator + dedup with cross-vendor logic + Markdown publisher (Tue, 23 Jun 2026 03:00). theitguyde.com is set up pointing to greencloud. Hosting analysis: greencloud has 6.0GB available RAM, load avg 0.04, 24-day uptime - comfortably hosts the full RAG (~2GB peak when both BGE-small embedder + BGE-reranker-base loaded). Recommend fork-and-exit cron pattern (not daemon) so the 2GB only allocates during runs, leaving headroom for website traffic. OVH not recommended - heavily loaded with media stack. Dedup question (3 parts): (1) time factor for recurring same-vendor bugs - solved via DUPLICATE_WINDOW_DAYS=30 / RECURRENCE_WINDOW_DAYS=180 thresholds; (2) same-bug different-vendor (Pixel vs Huawei) - solved via CROSS_VENDOR_PENALTY=0.5 multiplier when affected_products disjoint; (3) concept grouping (Pixel/Google/Android) - free from BGE-small pretraining, only our domain-specific taxonomy needs hand-curation (scoring/categories.py). Build: tech_oracle/rag/predictions_store.py adds a second lancedb table 'predictions' in the same dir as items, schema mirrors TechPrediction with vector(384) embedding + status field tracking new/duplicate-of/recurrence-of. tech_oracle/dedup.py runs bi-encoder candidates -> cross-encoder rerank -> verdict classification (new/duplicate/recurrence/cross-vendor-new) with time + product-disjoint rules. tech_oracle/publish.py renders TechPrediction -> Markdown with YAML frontmatter (title, date, prediction_id, confidence, publish_window, affected_products, tags, search_terms, verdict if recurrence/cross-vendor) and a tight body (lead, symptoms, fix steps, products, sources, search-terms footer). Recurrence framing auto-adds 'It's back:' prefix. tech_oracle/pipeline.py orchestrator runs ingest->enrich->index->synth+refine->dedup+publish with --skip-X flags per stage, idempotent via SQLite cursors. CLI: 'tech-oracle run-pipeline' with full flag set + Rich-table reporting. Live smoke test on 25 items in store: 1m58s total (115s synth+refine, <1s publish), 5 articles written under tests/fixtures/articles/2026-06/. Article quality: clean Markdown with frontmatter, plain-language fix steps (e.g. 'Open",
+  "commands": [
+    "ssh root@100.73.93.84 'free -h; uptime; ps aux --sort=-%mem'",
+    "uv pip install -e .",
+    "uv run tech-oracle run-pipeline --skip-ingest --skip-enrich --skip-index --synth-lookback-hours 168 --synth-limit 25 --max-predictions 5 --articles-root tests/fixtures/articles",
+    "PYTHONIOENCODING=utf-8 uv run python (dedup unit test against 3 crafted predictions)"
+  ],
+  "files": [
+    "tech-oracle/src/tech_oracle/rag/predictions_store.py",
+    "tech-oracle/src/tech_oracle/dedup.py",
+    "tech-oracle/src/tech_oracle/publish.py",
+    "tech-oracle/src/tech_oracle/pipeline.py",
+    "tech-oracle/src/tech_oracle/cli.py",
+    "tech-oracle/README.md",
+    "tech-oracle/tests/fixtures/articles/2026-06/*.md"
+  ],
+  "planPath": "",
+  "contentHash": "75d7b4b9664b626501e2a8697527c89dcb6bd44d882af14e35b6cd46e9849dc2",
+  "git": null
+}

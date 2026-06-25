@@ -1,0 +1,43 @@
+﻿{
+    "id":  "20260624-125538-857-vaultwares-mcp-9be4c877",
+    "createdAt":  "2026-06-24T16:55:38.8570534Z",
+    "createdAtLocal":  "2026-06-24 12:55",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-mcp",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: gemini-3.1-pro\r\nThinking: low\r\nMode: code\r\nPermissions: ask (network: clopeux-desktop)\r\nCWD: C:\\Users\\Administrator\\Desktop\\pwsh\\VaultWares CLI  Branch: n/a\r\nTools used (this reply): replace_file_content\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-24 12:55 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-3.1-pro",
+                    "thinking":  "low",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "clopeux-desktop",
+                    "toolsUsed":  "replace_file_content",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\pwsh\\VaultWares CLI",
+    "summary":  "Updated MCP client configs (gemini, codex, vibe, vscode) to proxy vaultwares-mcp over SSH to the OVH server instead of running it locally.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\.gemini\\antigravity\\mcp_config.json",
+                  "C:\\Users\\Administrator\\.codex\\config.toml",
+                  "C:\\Users\\Administrator\\.vibe\\config.toml",
+                  "C:\\Users\\Administrator\\.vscode\\mcp.json"
+              ],
+    "planPath":  "",
+    "contentHash":  "9be4c87793a12bb7e27dffef981df21167db75d94b47193990d4d7064138defb",
+    "git":  null
+}

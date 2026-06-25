@@ -1,0 +1,53 @@
+{
+  "id": "20260622-084535-136-agent-ledger-d8e28d3a",
+  "createdAt": "2026-06-22T12:45:35.1369715Z",
+  "createdAtLocal": "2026-06-22 08:45",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change,commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + greencloud-vps via tailnet SSH + GitHub)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): Bash, Read, Write, Monitor, spawn_task\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 08:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + greencloud-vps via tailnet SSH + GitHub",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Write",
+      "Monitor",
+      "spawn_task"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Fixed issue #18 (greencloud webhook deploys die on CRLF-corrupted deploy.sh). Part 1 repo: added .gitattributes (*.sh text eol=lf), committed + pushed direct to main (e7ac686, agent-ledger exception), rebased over concurrent ledger pushes with autostash, staged only .gitattributes (left pre-existing dirty tree untouched). Part 2 greencloud (ssh root@100.73.93.84 via id_ed25519, acted as vwdeploy): repo was stuck at af2c89b with CRLF deploy.sh. Verified deploy.sh diff vs origin/main was CRLF-only (no unique server logic). First reset --hard failed on root-owned stats-app/scripts/generate-data.mjs (out-of-band root write Jun 20) - verified that file identical to repo, chowned dir to vwdeploy, reset succeeded -> clean tree at e7ac686, deploy.sh now LF. Reran deploy.sh as vwdeploy: ran to '=== Deploy complete ===' with NO CRLF errors; site/ built+deployed; ledger.vaultwares.ca returns HTTP 200. Commented + closed #18. SEPARATE follow-up surfaced (spawned task chip): stats-app npm ci reproducibly fails despite valid v3 lockfile present (npm 10.9.7/node v22) - was always broken, only unmasked now that deploy reaches stats-app build; stats.vaultwares.ca not updating until fixed.",
+  "commands": [
+    "git push origin main (e7ac686)",
+    "ssh root@100.73.93.84 chown vwdeploy stats-app/scripts",
+    "sudo -u vwdeploy git reset --hard origin/main",
+    "sudo -u vwdeploy bash deploy/deploy.sh",
+    "gh issue close 18"
+  ],
+  "files": [
+    "agent-ledger/.gitattributes",
+    "/opt/sites/agent-ledger/deploy/deploy.sh"
+  ],
+  "planPath": "",
+  "contentHash": "d8e28d3add2ca012c6a66084137c8f9858675b26795cfff9317dd47e94d73e6b",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "e7ac6869",
+    "hasChanges": true
+  }
+}

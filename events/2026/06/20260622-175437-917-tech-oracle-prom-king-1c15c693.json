@@ -1,0 +1,57 @@
+{
+  "id": "20260622-175437-917-tech-oracle-prom-king-1c15c693",
+  "createdAt": "2026-06-22T21:54:37.9179628Z",
+  "createdAtLocal": "2026-06-22 17:54",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle (Prom-King)",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Clopeux-Desktop (Windows 11))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: n/a\r\nTools used (this reply): Bash, Edit, Write, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 17:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Clopeux-Desktop (Windows 11)",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "Built Prom-King/tech-oracle (Mon, 22 Jun 2026 16:00): a focused synthesis service for the tech-support prediction pipeline. Calls NVIDIA NIM Llama 3.3 70B Instruct (free build.nvidia.com endpoint via NGC_API_KEY/NVIDIA_API_KEY) to turn pre-ingested news/changelog items + deterministic Postgres breakage scores into ranked TechPrediction objects. Layout: uv-managed pyproject.toml (Python 3.11+), src/tech_oracle/{client,schemas,prompts,synthesize,cli,api}.py, tests/fixtures/sample_request.json (handcrafted realistic 2026-06 batch: KB5039340 Win11 24H2 wifi, Anthropic claude-2-5-sonnet deprecation, Copilot Pro price hike 2026-07-15, macOS 15.7 Keychain visibility change, Chrome 141 WebGPU/extensions breakage, NVIDIA 558.20 HDR/OBS bug + 6 breakage scores). Hard rules baked into the prompt: JSON-only output, every prediction must cite source_item_ids, must use provided scores as-given (no inventing stats), calibrated confidence (high needs >=2 corroborating items AND strong vendor breakage history), bias toward missing over inventing, kebab-case prediction_id slugs. Stack is dependency-light: httpx + pydantic + fastapi + typer + rich. Smoke test against real NIM 70B: 1m11s, 4975 tokens (3127 in / 1848 out), 6 predictions all schema-valid, all with citations and reasoning that references the supplied breakage scores. Calibration looked right: only the KB5039340 wifi item got HIGH/next_24h; the Anthropic deprecation 3 months out correctly got LOW/watch. Two fixes during testing: bumped default NIM timeout 120s->300s (env-overridable as NIM_TIMEOUT) because 70B with JSON mode + heavy prompt regularly takes >2min on free tier; relaxed PredictionResponse.usage from dict[str,int] to dict[str,Any] because NIM returns prompt_tokens_details=None. Service is library + CLI + FastAPI POST /predict, all hitting the same synthesize() function. Not deployed - lives locally under Prom-King/tech-oracle/ pending downstream pipeline pieces (Brave Search/RSS ingester, 8B enrichment worker, Postgres scoring DB, publishing CMS).",
+  "commands": [
+    "uv venv && uv pip install -e .",
+    "uv run tech-oracle health",
+    "uv run tech-oracle predict tests/fixtures/sample_request.json -o tests/fixtures/sample_response.json",
+    "curl https://integrate.api.nvidia.com/v1/chat/completions"
+  ],
+  "files": [
+    "Prom-King/tech-oracle/pyproject.toml",
+    "Prom-King/tech-oracle/src/tech_oracle/__init__.py",
+    "Prom-King/tech-oracle/src/tech_oracle/client.py",
+    "Prom-King/tech-oracle/src/tech_oracle/schemas.py",
+    "Prom-King/tech-oracle/src/tech_oracle/prompts.py",
+    "Prom-King/tech-oracle/src/tech_oracle/synthesize.py",
+    "Prom-King/tech-oracle/src/tech_oracle/cli.py",
+    "Prom-King/tech-oracle/src/tech_oracle/api.py",
+    "Prom-King/tech-oracle/tests/fixtures/sample_request.json",
+    "Prom-King/tech-oracle/tests/fixtures/sample_response.json",
+    "Prom-King/tech-oracle/README.md",
+    "Prom-King/tech-oracle/.env.example",
+    "Prom-King/tech-oracle/.gitignore"
+  ],
+  "planPath": "",
+  "contentHash": "1c15c693a3be8aaaa7e798d334430d4fa9f06f81ac232377329237566f368ac4",
+  "git": null
+}

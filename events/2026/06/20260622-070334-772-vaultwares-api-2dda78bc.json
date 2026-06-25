@@ -1,0 +1,39 @@
+{
+  "id": "20260622-070334-772-vaultwares-api-2dda78bc",
+  "createdAt": "2026-06-22T11:03:34.7727321Z",
+  "createdAtLocal": "2026-06-22 07:03",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 07:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Input telemetry KPI summary update: added kpi aggregation helpers for focus, typing, pointer, rhythm, and reliability signals; exposed kpis in input summary and monitor fallback; extended telemetry router tests for the KPI math.",
+  "commands": [
+    ".\\\\.venv\\\\Scripts\\\\python.exe -m pytest tests/test_telemetry_input_router.py -q",
+    "git diff --check app/routers/monitor/__init__.py app/routers/telemetry/db.py tests/test_telemetry_input_router.py"
+  ],
+  "files": [
+    "vaultwares-api/app/routers/telemetry/db.py",
+    "vaultwares-api/app/routers/monitor/__init__.py",
+    "vaultwares-api/tests/test_telemetry_input_router.py"
+  ],
+  "planPath": "",
+  "contentHash": "2dda78bcb3addefa87856cfd9fd499d3285fd329fbf0accf06f9cceaa07f0161",
+  "git": null
+}

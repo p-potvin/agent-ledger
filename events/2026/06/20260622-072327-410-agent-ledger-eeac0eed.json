@@ -1,0 +1,36 @@
+{
+  "id": "20260622-072327-410-agent-ledger-eeac0eed",
+  "createdAt": "2026-06-22T11:23:27.4100446Z",
+  "createdAtLocal": "2026-06-22 07:23",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 07:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Mon, 22 Jun 2026 08:27 - Explained the provenance of the active Codex/VaultWares rules, including workspace AGENTS.md routing, VaultWares protocol docs, mandatory ledger/versioning/timestamp expectations, and the local OmX commit-message PreToolUse guard.",
+  "commands": [],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\AGENTS.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\AGENTS.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\ROUTER.md"
+  ],
+  "planPath": "",
+  "contentHash": "eeac0eed964952016b7ab7a06d47b6241f03d1cb719b429549126f6ca9ea5f43",
+  "git": null
+}

@@ -1,0 +1,60 @@
+{
+  "id": "20260622-213219-588-tech-oracle-prom-king-9fcce5d9",
+  "createdAt": "2026-06-23T01:32:19.5887444Z",
+  "createdAtLocal": "2026-06-22 21:32",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle (Prom-King)",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Clopeux-Desktop (Windows 11))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: n/a\r\nTools used (this reply): Bash, Edit, Write, TaskCreate, TaskUpdate, TaskStop\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 21:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Clopeux-Desktop (Windows 11)",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "TaskCreate",
+      "TaskUpdate",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "tech-oracle expanded with RSS ingestion + grandma-pivot + 8B/70B A/B (Mon, 22 Jun 2026 21:35). (1) System prompt rewritten to explicitly target everyday non-technical users; deprioritizes API deprecations/SDK changes/extension APIs to LOW/watch. Added quick_fix_hints[] field to TechPrediction (plain-language GUI-path fix steps, not PowerShell). (2) Rewrote sample fixture with 8 consumer items: Win11 KB5039340 breaking printers, Outlook Classic 'Cannot start' after Office update, iOS 19.2 AirPods auto-switch silently disabled, macOS 15.7 iCloud Photos stuck Updating Library, Chrome 141 breaking Gmail attachment downloads, Copilot Pro .99 hike + mid-term billing confusion, Bank of America Android app login loop after Android 14 June patch, plus Anthropic deprecation as dev-noise canary. (3) Built tech_oracle.ingest module: feeds.py (10 curated consumer-tech feeds incl chromereleases.googleblog.com, bleepingcomputer, 9to5mac, 9to5google, theverge, apple security, reddit r/techsupport+Windows11+printers+ios with browser UA), rss.py (feedparser + bs4, normalizes to IngestedItem), store.py (SQLite item store, dedup by SHA256(source|url), processed_at column for synthesis cursor). CLI: tech-oracle feeds-list, tech-oracle ingest [--feed X], tech-oracle items stats|recent|export-batch. (4) A/B run on the same consumer fixture: 70B (meta/llama-3.3-70b-instruct) 2m53s / 7055 tokens vs 8B (meta/llama-3.1-8b-instruct) 25.5s / 7379 tokens. BOTH emitted 7 valid predictions covering exactly the same 7 input items - both correctly dropped the Anthropic dev-noise item; identical confidence (3 HIGH, 4 MEDIUM); only differences were minor on recommended_publish_window (70B leans 'now', 8B uses 'next_24h' or 'after_release' for not-yet-affecting-users items - 8B arguably more accurate). Quality differentiator surfaced in fix-hint formatting: 70B splits into discrete step bullets ('Open Settings' / 'Click Bluetooth' / 'Click Printers'), 8B concatenates into one long 'Settings > X >",
+  "commands": [
+    "uv pip install -e .",
+    "uv run tech-oracle predict --model meta/llama-3.3-70b-instruct ...",
+    "uv run tech-oracle predict --model meta/llama-3.1-8b-instruct ...",
+    "uv run python tests/compare_runs.py response_70b.json response_8b.json",
+    "uv run tech-oracle ingest --feed chrome_releases|bleepingcomputer|reddit_printers",
+    "uv run tech-oracle items stats|recent"
+  ],
+  "files": [
+    "tech-oracle/src/tech_oracle/prompts.py",
+    "tech-oracle/src/tech_oracle/schemas.py",
+    "tech-oracle/src/tech_oracle/ingest/__init__.py",
+    "tech-oracle/src/tech_oracle/ingest/feeds.py",
+    "tech-oracle/src/tech_oracle/ingest/rss.py",
+    "tech-oracle/src/tech_oracle/ingest/store.py",
+    "tech-oracle/src/tech_oracle/cli.py",
+    "tech-oracle/tests/fixtures/sample_request.json",
+    "tech-oracle/tests/fixtures/response_70b.json",
+    "tech-oracle/tests/fixtures/response_8b.json",
+    "tech-oracle/tests/compare_runs.py",
+    "tech-oracle/pyproject.toml",
+    "tech-oracle/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "9fcce5d9d3c3a6340ddb3df51378feebbc9c64fc5267ac3511174d82726e338c",
+  "git": null
+}

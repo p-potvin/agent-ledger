@@ -1,0 +1,47 @@
+{
+  "id": "20260620-151529-459-agent-ledger-056da72c",
+  "createdAt": "2026-06-20T19:15:29.4596953Z",
+  "createdAtLocal": "2026-06-20 15:15",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local-windows + greencloud (ssh))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Bash, SSH, Edit, Write, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-20 15:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local-windows + greencloud (ssh)",
+    "toolsUsed": [
+      "Bash",
+      "SSH",
+      "Edit",
+      "Write",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Restored three judgment-call fixes that yesterdays runtime-fetch overwrite had dropped from stats.vaultwares.ca: (1) cutoff 2026-03-11 VaultWares foundation date applied to every series. (2) project consolidation via project-aliases.json brings totalProjects from 124 raw to 88 then to 53 after adding 14 compound/namespace/meta aliases. (3) four known commit outliers windows-customizer +29.7k, vaultwares-cli +83k, vault-flows +45.4k x2 are listed in commitOutliers but excluded from commitStats math, samples 679 -> 675. Generator also pulls lineStats and commitSamples from greencloud /var/www/ledger.vaultwares.ca/data/work-impact-data.json so techVolume, commitBuckets, monthBoxes, filesTouched are now populated. daySeries zero-filled between cutoff and last seen day so streak math reflects real gaps. Live now: totalEvents 2485, activeDays 99, totalProjects 53, range 2026-03-11 to 2026-06-20, streakCurrent 88. Commits: agent-ledger 33d2cc49 (generator + cutoff + outliers + alias-application + zero-fill), agent-ledger HEAD (project-aliases.json expansion). 2 honest singletons remain: OpenClaw and video-depth-anything.",
+  "commands": [
+    "ssh root@greencloud-vps",
+    "node scripts/generate-data.mjs",
+    "npm run build",
+    "rsync dist/ /var/www/stats.vaultwares.ca/",
+    "git push origin main"
+  ],
+  "files": [
+    "agent-ledger/stats-app/scripts/generate-data.mjs",
+    "agent-ledger/project-aliases.json"
+  ],
+  "planPath": "",
+  "contentHash": "056da72c1d8d119df089619ea68a9f2f8befa90106a6cf172d49a66060ecebc9",
+  "git": null
+}

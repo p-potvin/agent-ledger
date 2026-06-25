@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20260623-202440-772-general-tasks-14deedb3",
+    "createdAt":  "2026-06-24T00:24:40.7727359Z",
+    "createdAtLocal":  "2026-06-23 20:24",
+    "timezone":  "Eastern Standard Time",
+    "project":  "General Tasks",
+    "kind":  "general",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-3.5-flash\r\nThinking: medium\r\nMode: chat\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): view_file, write_to_file, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-23 20:24 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-3.5-flash",
+                    "thinking":  "medium",
+                    "mode":  "chat",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "view_file",
+                                      "write_to_file",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "summary":  "Organized 79 PowerShell scripts in the workspace into a structured Markdown table categorizing names, locations, purposes, duplicates, and utility value (one-time vs production/useful).",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\d5e3b4ae-de4e-4fb6-a873-f52a5d71a347\\script_analysis.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "14deedb37967d8aed5453823728681df4f3579dfe299d21931bf9ea20ae3ea7b",
+    "git":  null
+}

@@ -1,0 +1,44 @@
+{
+  "id": "20260622-075517-541-prom-king-173c575b",
+  "createdAt": "2026-06-22T11:55:17.5415636Z",
+  "createdAtLocal": "2026-06-22 07:55",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change,handoff",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-8\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Read, Write, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 07:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Scaffolded prom-king/docs as the Prom-King SSoT mirroring VaultWares layout (instructions/ROUTER.md + summaries + docs-content). 24 markdown files. ROUTER.md with category table + project pages table + ops runbooks table; routes to summaries (CONTENT_PIPELINES, REQUEST_SAFETY, SECRETS_HANDLING, LEGAL_COMPLIANCE, DEPLOYMENT). docs-content: overview (mission, entity boundary vs VaultWares, /K, PKT ad-friendly pivot, Stage-2 blocker), architecture (Mermaid system map + 3 content->money pipelines + traffic->money), infrastructure (hosts/domains/containers/secrets/jobs/DBs), monetization (linkvertise reverse-engineered GraphQL, CrakRevenue, Drive host). Per-project pages: shared-tube (Astro 4-site monorepo, current), tube-sites-repo (legacy WP), prelanding-page (funnel+CrakRevenue control plane), link-sharing (Fastify redirect/file-host, pre-prod), content-disseminator (owned-clip queue, RedGIFS blocked), wallpaper-foundry (full AI->Drive->PPD pipeline), qa-automation (Playwright+anti-bot/IDS). Ops runbooks: ppd-linkvertise-pipeline, wallpaper-pipeline, media-stack. Filled docs/CLAUDE.md + docs/AGENTS.md stubs to route to the new ROUTER; made orphaned docs/ROUTER.md a pointer. Grounded in actual filesystem survey + READMEs (not memory). Left root Prom-King/CLAUDE.md + AGENTS.md untouched (still point to VaultWares) - user may want to repoint after creating the GitHub repo. Local-only, no git init per user.",
+  "commands": [
+    "find docs -type f"
+  ],
+  "files": [
+    "Prom-King/docs/instructions/ROUTER.md",
+    "Prom-King/docs/docs-content/architecture.md",
+    "Prom-King/docs/docs-content/overview.md",
+    "Prom-King/docs/docs-content/infrastructure.md",
+    "Prom-King/docs/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "173c575b71354388566c1ce6bcb44b026610f7465c1248cb55906071bd88c815",
+  "git": null
+}

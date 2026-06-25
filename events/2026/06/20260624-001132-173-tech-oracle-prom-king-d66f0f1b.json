@@ -1,0 +1,47 @@
+{
+  "id": "20260624-001132-173-tech-oracle-prom-king-d66f0f1b",
+  "createdAt": "2026-06-24T04:11:32.1732751Z",
+  "createdAtLocal": "2026-06-24 00:11",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle (Prom-King)",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Clopeux-Desktop (Windows 11))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Bash, Edit, Read, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-24 00:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Clopeux-Desktop (Windows 11)",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Read",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "tech-oracle handoff before chat switch (Tue, 23 Jun 2026). Built this turn: (a) DedupVerdict split rerank_score into rerank_score_raw + rerank_score_effective; predictions_store schema gained matched_rerank_raw / matched_rerank_effective / matched_cross_vendor columns; pipeline writes both at publish time. Cross-vendor remains a business-logic override but raw cross-encoder signal preserved for audit. Backward-compat property .rerank_score returns effective. (b) CLI installed globally via uv tool install --force . - verified working: ech-oracle health from C:\\Users\\Administrator\\ resolves to /c/Users/Administrator/.local/bin/tech-oracle and hits NIM 70B successfully. (c) Markdown publisher now extracts incident_date from earliest source published_at (fallback discovered_at), writes frontmatter incident_date: YYYY-MM-DD and an italicized lead 'First reported on [source] on [Month Day, Year].' just below the H1. User confirmed Phase 3 via clever workaround: Firefox extension + local web server + Gemini Flash 3.5 Extended Thinking. Pipeline queues queries to local server; extension polls; user clicks injected button in gemini.google.com; extension submits query and reads response (recommend using Gemini's Copy button for clean Markdown vs DOM scrape); response POSTs back to server; article gets UPDATE section appended; publishes. Real article seen: android-17-qpr1-beta-5-pixel-issue-jun2026.md - the appended UPDATE section has SPECIFIC technical fixes (Disable Accessibility Magnification with reasoning about input classification latency, clear Pixel Launcher cache, toggle Smooth Display, diagnostic safe-mode boot, adb shell getevent + logcat commands) - exactly what generic AI slop can't produce. This approach works. Threat model noted: Google ToS gray area (use dedicated account; jitter delays 200-800ms), Gemini UI changes break extension (manual fallback path), Markdown extraction tricky (prefer Copy button), localhost server is exfil surface (bind 127.0.0.1 only + shared-secret",
+  "commands": [
+    "uv tool install --force .",
+    "tech-oracle health",
+    "C:\\Users\\Administrator\\Desktop\\articles\\2026-06\\android-17-qpr1-beta-5-pixel-issue-jun2026.md (Gemini-generated UPDATE inspected)"
+  ],
+  "files": [
+    "tech-oracle/src/tech_oracle/dedup.py",
+    "tech-oracle/src/tech_oracle/rag/predictions_store.py",
+    "tech-oracle/src/tech_oracle/pipeline.py",
+    "tech-oracle/src/tech_oracle/publish.py"
+  ],
+  "planPath": "",
+  "contentHash": "d66f0f1b26b044e21ac7d3392793752e86684fdbed2b67a315ca2ae37dc7a9e9",
+  "git": null
+}

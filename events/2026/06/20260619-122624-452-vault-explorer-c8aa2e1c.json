@@ -1,0 +1,55 @@
+{
+  "id": "20260619-122624-452-vault-explorer-c8aa2e1c",
+  "createdAt": "2026-06-19T16:26:24.4522662Z",
+  "createdAtLocal": "2026-06-19 12:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\.windsurf\\worktrees\\vault-explorer\\vault-explorer-8ff736c6  Branch: cascade/review-working-changes-8ff736\r\nTools used (this reply): edit, write_to_file, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-19 12:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "edit",
+      "write_to_file",
+      "run_command"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "cwd": "C:\\Users\\Administrator\\.windsurf\\worktrees\\vault-explorer\\vault-explorer-8ff736c6",
+  "summary": "Added recursive PowerShell runners for all enhancements in scripts/pwsh/ and sorted passive preview generation by date modified descending.",
+  "commands": [],
+  "files": [
+    "python-scripts/generate_previews.py",
+    "package.json",
+    "scripts/pwsh/Start-AudioNormalization.ps1",
+    "scripts/pwsh/Start-PreviewGenerator.ps1",
+    "scripts/pwsh/Start-AsrBenchmark.ps1",
+    "scripts/pwsh/Start-LivestreamTranslator.ps1",
+    "scripts/pwsh/Start-RtxVsrEnhancement.ps1",
+    "scripts/pwsh/Start-RealesrganImageEnhancement.ps1",
+    "scripts/pwsh/Start-ImageMagickEnhancement.ps1",
+    "scripts/pwsh/Start-ThumbnailEnhancement.ps1",
+    "scripts/pwsh/Start-SubtitleGeneration.ps1",
+    "scripts/pwsh/Start-Translation.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "c8aa2e1c3d12441d88258aab49e20eb409ddecf2bd7c3ad200e3692f6ccf7443",
+  "git": {
+    "repo": "vault-explorer-8ff736c6",
+    "root": "C:/Users/Administrator/.windsurf/worktrees/vault-explorer/vault-explorer-8ff736c6",
+    "branch": "cascade/review-working-changes-8ff736",
+    "head": "d18700d",
+    "hasChanges": true
+  }
+}

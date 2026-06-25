@@ -1,0 +1,39 @@
+{
+  "id": "20260619-174352-720-vw-media-stack-3e7bcc11",
+  "createdAt": "2026-06-19T21:43:52.7209576Z",
+  "createdAtLocal": "2026-06-19 17:43",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-media-stack",
+  "kind": "commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-7\r\nThinking: low\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + vps-ovhcloud via Tailscale SSH)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-19 17:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + vps-ovhcloud via Tailscale SSH",
+    "toolsUsed": [
+      "Bash",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fixed mullvad-gateway VPN. Swapped to Bold Crow device key from /Desktop/mullvad_wireguard_windows_ca_all/ca-tor-wg-001.conf (priv oAmG..., addr 10.66.119.183/32, server ca-tor-wg-001). mullvad-gateway now healthy with exit IP 178.249.214.7 (Toronto). Verified comet-vpn still healthy on its separate Bold Crow alternative (wBnBX... -> 146.70.198.230 Montreal). Two VPNs now on distinct registered Mullvad device keys -> no more session-fighting. jackett and qbittorrent both 'running' on mullvad-gateway namespace. All four media stack VPN dependencies restored.",
+  "commands": [
+    "docker compose --profile vpn up -d --force-recreate mullvad-gateway"
+  ],
+  "files": [
+    "/opt/vw-media-stack/.env.mullvad"
+  ],
+  "planPath": "",
+  "contentHash": "3e7bcc11dd879f9a643244e204137d2c1d5796f8a5c071155f63a7894efe031d",
+  "git": null
+}

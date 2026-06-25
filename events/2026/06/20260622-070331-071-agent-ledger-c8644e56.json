@@ -1,0 +1,45 @@
+{
+  "id": "20260622-070331-071-agent-ledger-c8644e56",
+  "createdAt": "2026-06-22T11:03:31.0714454Z",
+  "createdAtLocal": "2026-06-22 07:03",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 07:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Input tracker KPI capture update: added local capture for focus streak duration, switch recovery time, active block length, rest gap duration, active starts after rest, and spool backlog counts/bytes. Added a focused tracker pytest and surfaced KPI Signals in the input-tracker UI with typed kpis support and bilingual labels. The VaultWares-InputTracker scheduled task remains running and was not restarted.",
+  "commands": [
+    ".\\\\.venv\\\\Scripts\\\\python.exe -m pytest tests/test_track_input_metrics.py -q",
+    "npm run build",
+    "python -m py_compile agent-ledger/scripts/track-input.py",
+    "Browser DOM validation for KPI Signals and console logs",
+    "Get-ScheduledTask -TaskName VaultWares-InputTracker"
+  ],
+  "files": [
+    "agent-ledger/scripts/track-input.py",
+    "agent-ledger/tests/test_track_input_metrics.py",
+    "agent-ledger/site/src/pages/InputTrackerPage.tsx",
+    "agent-ledger/site/src/i18n.tsx",
+    "agent-ledger/site/src/types.ts",
+    "agent-ledger/site/src/index.css"
+  ],
+  "planPath": "",
+  "contentHash": "c8644e56c81832488782c7540077730fc4320077f6eb50e602bbf84ec5148c6d",
+  "git": null
+}

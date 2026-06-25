@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20260624-183859-481-vaultwares-mcp-ad145bd9",
+    "createdAt":  "2026-06-24T22:38:59.4813192Z",
+    "createdAtLocal":  "2026-06-24 18:38",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-mcp",
+    "kind":  "config",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: gemini-3.1-pro\r\nThinking: low\r\nMode: code\r\nPermissions: ask (network: clopeux-desktop)\r\nCWD: C:\\Users\\Administrator\\Desktop\\pwsh\\VaultWares CLI  Branch: n/a\r\nTools used (this reply): replace_file_content\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-24 18:38 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-3.1-pro",
+                    "thinking":  "low",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "clopeux-desktop",
+                    "toolsUsed":  "replace_file_content",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\pwsh\\VaultWares CLI",
+    "summary":  "Switched all local MCP client configurations to use the streamable-http SSE URL directly over Tailnet. Reconfigured OVH service to bind to the 100.x.x.x tailnet address instead of localhost.",
+    "commands":  [
+                     "ssh",
+                     "curl"
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\.gemini\\antigravity\\mcp_config.json",
+                  "C:\\Users\\Administrator\\.codex\\config.toml",
+                  "C:\\Users\\Administrator\\.vibe\\config.toml",
+                  "C:\\Users\\Administrator\\.vscode\\mcp.json"
+              ],
+    "planPath":  "",
+    "contentHash":  "ad145bd9f55f168daf654a4c9bd83898b78d40d3bce190d29a9f7f9a6215f914",
+    "git":  null
+}

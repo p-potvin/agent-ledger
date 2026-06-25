@@ -1,0 +1,44 @@
+{
+  "id": "20260618-235108-083-agent-ledger-5ff4eebe",
+  "createdAt": "2026-06-19T03:51:08.0837871Z",
+  "createdAtLocal": "2026-06-18 23:51",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Bash, SSH, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-18 23:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local-windows",
+    "toolsUsed": [
+      "Bash",
+      "SSH",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Deployed the new stats-app React dashboard to https://stats.vaultwares.ca (tailnet-only). Fixed three TS errors in stats-app: enabled resolveJsonModule in tsconfig.app.json, switched App.tsx to import data.json by explicit extension and cast via WorkImpactData (also satisfies noUnusedLocals + types projects.map(p) via inference). Decoupled deploy.sh into site/ and stats-app/ pipelines via a build_and_deploy helper so a build failure in one app does not abort the other (prints final summary line site=... stats-app=...). Broke and recreated /var/www/stats.vaultwares.ca symlink-into-real-dir on greencloud-vps. Verified: stats serves new index.html (901 bytes, Work Impact title), ledger still serves legacy site (497 bytes, unchanged content cached from prior deploy). Pipeline summary on this run: site=build-failed (pre-existing TS error in site/useData.ts:76, unchanged), stats-app=ok. Two commits pushed: 6c7c6bf (wire stats-app into deploy.sh) and d79daf0 (fix + decouple).",
+  "commands": [
+    "git push origin main",
+    "ssh root@greencloud-vps deploy.sh",
+    "rsync -a stats-app/dist/ /var/www/stats.vaultwares.ca/"
+  ],
+  "files": [
+    "deploy/deploy.sh",
+    "stats-app/src/App.tsx",
+    "stats-app/tsconfig.app.json"
+  ],
+  "planPath": "",
+  "contentHash": "5ff4eebe5c6f633f7b074cbfbc2f7085ba23e9ebe2ad2295184cbf93651f2fd1",
+  "git": null
+}

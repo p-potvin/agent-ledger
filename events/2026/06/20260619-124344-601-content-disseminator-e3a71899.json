@@ -1,0 +1,59 @@
+{
+  "id": "20260619-124344-601-content-disseminator-e3a71899",
+  "createdAt": "2026-06-19T16:43:44.6012036Z",
+  "createdAtLocal": "2026-06-19 12:43",
+  "timezone": "Eastern Standard Time",
+  "project": "content-disseminator",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-19 12:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "rate_limit_gate": "required",
+      "external_requests": "none",
+      "estimated_output_tokens": "4200",
+      "anti_bot_bypass": "excluded"
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Fri, 19 Jun 2026 12:43 - Created a local-first Prom-King content-disseminator scaffold for scanning owned webm files under .thumbs folders, preparing public upload metadata with at least three tags, recording uploaded Redgifs links, and syncing recorded links through a bounded dry-run-first API command. Excluded anti-bot bypass, IP rotation, mass account creation, and automated cross-site posting from implementation scope.",
+  "commands": [
+    "Get-Content vaultwares-docs instructions ROUTER and selected summaries",
+    "Select-String MEMORY.md for Prom-King and agent-ledger context",
+    "python -m unittest discover -s tests -v with PYTHONPATH=src",
+    "python -m compileall src tests",
+    "python -m content_disseminator --help with PYTHONPATH=src",
+    "python -m content_disseminator init --db data\\test.sqlite with PYTHONPATH=src",
+    "python -m content_disseminator sync-api --db data\\test.sqlite --api-url http://127.0.0.1:9/redgifs --limit 1 --dry-run with PYTHONPATH=src"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\pyproject.toml",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\.gitignore",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\src\\content_disseminator\\__init__.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\src\\content_disseminator\\__main__.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\src\\content_disseminator\\api.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\src\\content_disseminator\\cli.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\src\\content_disseminator\\scanner.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\src\\content_disseminator\\store.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\tests\\test_scanner.py"
+  ],
+  "planPath": "",
+  "contentHash": "e3a718996c81deb5e196c9800a55c9e825f2429ba069bb00acb2bc3e6826c9a3",
+  "git": null
+}

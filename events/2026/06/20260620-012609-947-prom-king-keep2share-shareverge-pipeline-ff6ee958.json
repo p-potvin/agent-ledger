@@ -1,0 +1,51 @@
+﻿{
+    "id":  "20260620-012609-947-prom-king-keep2share-shareverge-pipeline-ff6ee958",
+    "createdAt":  "2026-06-20T05:26:09.9471678Z",
+    "createdAtLocal":  "2026-06-20 01:26",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King Keep2Share \u0026 ShareVerge Pipeline",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.0-flash-exp\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows Local / Greencloud VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator  Branch: n/a\r\nTools used (this reply): run_command, write_to_file, replace_file_content\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-20 01:26 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.0-flash-exp",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "Windows Local / Greencloud VPS",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "write_to_file",
+                                      "replace_file_content"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator",
+    "summary":  "Solidified RedGIFS uploader script (regular Firefox, proxy, headless options). Implemented K2S downloader scripts, 4chan posting automation (using FlareSolverr \u0026 Anti-Captcha API), Telegram channel bot poster, and Reddit/Twitter Selenium automation scripts. Integrated all actions into content-disseminator CLI.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\src\\content_disseminator\\cli.py",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\scripts\\redgifs_mullvad_uploader.py",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\scripts\\k2s_login.py",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\scripts\\k2s_downloader.py",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\scripts\\fourchan_poster.py",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\scripts\\telegram_poster.py",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\scripts\\reddit_poster.py",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator\\scripts\\twitter_poster.py"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\97ce2f58-1fcd-4a4c-884d-77259a5b34a9\\implementation_plan.md",
+    "contentHash":  "ff6ee958220e26ae6b00eb5fcfbe6379e6e94b3abb6eff974d79ae98d9f1472c",
+    "git":  null
+}

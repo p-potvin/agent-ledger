@@ -1,0 +1,39 @@
+{
+  "id": "20260622-065100-109-vaultwares-api-bb6b2c5e",
+  "createdAt": "2026-06-22T10:51:00.1097987Z",
+  "createdAtLocal": "2026-06-22 06:51",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 06:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Input telemetry summary update: aggregate focus durations from active_seconds, expose focus_windows by privacy-safe app/window label, add monitor fallback shape, and cover the new aggregation with telemetry router tests.",
+  "commands": [
+    ".\\\\.venv\\\\Scripts\\\\python.exe -m pytest tests/test_telemetry_input_router.py -q -vv",
+    "uv run pytest tests/test_telemetry_input_router.py -q (blocked by malformed uv.lock wheel filename metadata)"
+  ],
+  "files": [
+    "vaultwares-api/app/routers/telemetry/db.py",
+    "vaultwares-api/app/routers/monitor/__init__.py",
+    "vaultwares-api/tests/test_telemetry_input_router.py"
+  ],
+  "planPath": "",
+  "contentHash": "bb6b2c5e061439b37d62e72283c28785ef7dd5c3a3cef65c63f333321488ee5d",
+  "git": null
+}

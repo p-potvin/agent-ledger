@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260619-043356-865-vault-explorer-e89beeff",
+    "createdAt":  "2026-06-19T08:33:56.8650849Z",
+    "createdAtLocal":  "2026-06-19 04:33",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "feature",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\.windsurf\\worktrees\\vault-explorer\\vault-explorer-8ff736c6  Branch: cascade/review-working-changes-8ff736\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-19 04:33 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\.windsurf\\worktrees\\vault-explorer\\vault-explorer-8ff736c6",
+    "summary":  "Adjusted formatBytes to show decimals only for GB/TB. Added explicit tools/models path resolution for Real-ESRGAN. Rewrote idle preview runner to crawl all videos, queue 10 missing previews every 30s while idle, and stop when done. Fixed stuck \u0027Generating Previews: 0/0 (0%)\u0027 alert by sending isBatchComplete before resetting counters. Smoke test passed.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "js/utils.js,src/ipc/media.ipc.js,js/navigation/idle.js,src/previews.js,js/progress.js,js/app.js,TASKS.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "e89beeff79af39650d6704e37cd8761b916e64fa4b61cf006c167002d4cb39b3",
+    "git":  {
+                "repo":  "vault-explorer-8ff736c6",
+                "root":  "C:/Users/Administrator/.windsurf/worktrees/vault-explorer/vault-explorer-8ff736c6",
+                "branch":  "cascade/review-working-changes-8ff736",
+                "head":  "a88b0a9",
+                "hasChanges":  false
+            }
+}

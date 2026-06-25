@@ -1,0 +1,54 @@
+{
+  "id": "20260623-134920-698-tech-oracle-prom-king-14672ecd",
+  "createdAt": "2026-06-23T17:49:20.6988209Z",
+  "createdAtLocal": "2026-06-23 13:49",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle (Prom-King)",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Clopeux-Desktop (Windows 11))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: n/a\r\nTools used (this reply): Bash, Edit, Write, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-23 13:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Clopeux-Desktop (Windows 11)",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "tech-oracle local RAG: lancedb + fastembed BGE-small (Mon, 22 Jun 2026 23:55 -> Tue, 23 Jun 2026). Picked the lightweight path the user worried about: ONNX-runtime BGE-small-en-v1.5 (no torch dep; ~150-300MB RAM, CPU-only) via fastembed, lancedb as embedded single-process vector store (no etcd/MinIO sidecars unlike Milvus). New deps: lancedb>=0.13, fastembed>=0.4 (brought onnxruntime, pyarrow, tokenizers - NO torch). New module tech_oracle/rag/{embed,store}.py: embed.py wraps fastembed.TextEmbedding with lazy lru_cache + normalize-to-unit + zero-vector for empty strings; store.py opens/creates a lancedb table 'items' with item_id+metadata+vec(384), search() returns SearchHit dataclasses with cosine similarity converted from L2 distance (vectors are unit-normalized so cosine = 1 - L2_sq/2). New SQLite migration: indexed_at column + items_indexed_idx. New store methods: recent_unindexed, mark_indexed, get_by_ids; stats() now reports unindexed count. New CLI: tech-oracle rag {index,search,stats}. UTF-8 stdout reconfigure at cli.py module top to fix UnicodeEncodeError from emoji in Reddit titles (Windows cp1252 codec breaks Rich tables on U+1F62B etc). Smoke test on the 65-item corpus: cold first-run 14.93s including 5-file ~6s model download; warm subsequent embedding ~120ms/item; lancedb disk 0.143 MB for 65 vectors (projected ~140MB at 100k); per-query warm latency ~200ms. Real semantic search proved working: 'my printer wont print after windows update' returned r/printers items with scores 0.731-0.712 (no literal word match - true semantic recall); 'outlook keeps crashing' returned 0.575 max (correctly low - we have ZERO outlook items in the index yet, signal scaling exactly as expected); 'spacex starship mars rocket' returned no hits above 0.5 (no false positives on unrelated queries). Resource verdict: invisible on a desktop being actively used - ComfyUI",
+  "commands": [
+    "uv pip install -e .",
+    "uv run tech-oracle rag index --limit 100",
+    "uv run tech-oracle rag search 'my printer wont print after windows update' --top-k 3",
+    "uv run tech-oracle rag search 'outlook keeps crashing when i open it' --top-k 3",
+    "uv run tech-oracle rag stats"
+  ],
+  "files": [
+    "tech-oracle/pyproject.toml",
+    "tech-oracle/src/tech_oracle/rag/__init__.py",
+    "tech-oracle/src/tech_oracle/rag/embed.py",
+    "tech-oracle/src/tech_oracle/rag/store.py",
+    "tech-oracle/src/tech_oracle/ingest/store.py",
+    "tech-oracle/src/tech_oracle/__init__.py",
+    "tech-oracle/src/tech_oracle/cli.py",
+    "tech-oracle/README.md",
+    "tech-oracle/.tech-oracle.lance/"
+  ],
+  "planPath": "",
+  "contentHash": "14672ecd7a325f77f3d21ed331d6ef82bbd294a8f1d72fd2aa4d2413eeec348d",
+  "git": null
+}

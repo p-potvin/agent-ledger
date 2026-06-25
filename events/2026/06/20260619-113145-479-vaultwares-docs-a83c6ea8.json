@@ -1,0 +1,49 @@
+{
+  "id": "20260619-113145-479-vaultwares-docs-a83c6ea8",
+  "createdAt": "2026-06-19T15:31:45.4791170Z",
+  "createdAtLocal": "2026-06-19 11:31",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Edit, Write, Grep, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-19 11:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Documented today's playback fix end-to-end. New SoT page residential-egress-proxy.mdx covers Brume2 tinyproxy architecture, why CF+IP-binding required residential egress, all components (tinyproxy UCI, OpenWrt firewall, Tailscale ACL, shared-tube handler, env), operational invariants (undici v6 pin for Node 22, FlareSolverr maxTimeout 60s when proxied, SPOF for playback), troubleshooting, and Brume replacement runbook. Updated network-map (Brume IP + role change), services-inventory (proxy surface), deployment-flow (lockfile path change due to fs.protected_regular=2 + tag:vps-greencloud SSH ACL requirement), tailscale (same ACL invariants + session-recording pitfall). Added pointer in NETWORK_INFRASTRUCTURE summary and expanded keywords in ROUTER. Commit eec43a1 pushed.",
+  "commands": [
+    "git commit + push docs(operations) eec43a1"
+  ],
+  "files": [
+    "docs-content/operations/residential-egress-proxy.mdx",
+    "docs-content/operations/deployment-flow.mdx",
+    "docs-content/operations/network-map.mdx",
+    "docs-content/operations/services-inventory.mdx",
+    "docs-content/operations/tailscale.mdx",
+    "instructions/ROUTER.md",
+    "instructions/summaries/NETWORK_INFRASTRUCTURE.md"
+  ],
+  "planPath": " ",
+  "contentHash": "a83c6ea890cc49ffcefc7cffe876c9c6caacfc36becb994a576d9467b2e49ebf",
+  "git": null
+}

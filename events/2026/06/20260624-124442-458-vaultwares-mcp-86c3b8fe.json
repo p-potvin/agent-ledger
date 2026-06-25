@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260624-124442-458-vaultwares-mcp-86c3b8fe",
+    "createdAt":  "2026-06-24T16:44:42.4589322Z",
+    "createdAtLocal":  "2026-06-24 12:44",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-mcp",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: gemini-2.0-pro\r\nThinking: medium\r\nMode: code\r\nPermissions: ask (network: clopeux-desktop)\r\nCWD: C:\\Users\\Administrator\\Desktop\\pwsh\\VaultWares CLI  Branch: n/a\r\nTools used (this reply): write_to_file, replace_file_content, multi_replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-24 12:44 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.0-pro",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "clopeux-desktop",
+                    "toolsUsed":  [
+                                      "write_to_file",
+                                      "replace_file_content",
+                                      "multi_replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\pwsh\\VaultWares CLI",
+    "summary":  "Implemented vw_cli_tools module exposing pwsh/node scripts as MCP tools. Deployed vaultwares-mcp to OVH and updated mcp-ledger-tools.mdx.",
+    "commands":  [
+                     "scp",
+                     "systemctl daemon-reload",
+                     "systemctl restart vaultwares-mcp"
+                 ],
+    "files":  [
+                  "vaultwares-mcp/vaultwares_mcp/vw_cli_tools.py",
+                  "vaultwares-mcp/vaultwares_mcp/server.py",
+                  "vaultwares-docs/docs-content/operations/mcp-ledger-tools.mdx"
+              ],
+    "planPath":  "",
+    "contentHash":  "86c3b8fe803f365dede76bfe4c0275350ec042cc7919cc817335e8d7454f9b98",
+    "git":  null
+}

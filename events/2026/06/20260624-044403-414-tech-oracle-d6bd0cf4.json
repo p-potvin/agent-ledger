@@ -1,0 +1,60 @@
+{
+  "id": "20260624-044403-414-tech-oracle-d6bd0cf4",
+  "createdAt": "2026-06-24T08:44:03.4141218Z",
+  "createdAtLocal": "2026-06-24 04:44",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: code\r\nPermissions: allowlist (network: Windows 11 Clopeux-Desktop + greencloud-vps via tailnet + github.com via gh)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: main\r\nTools used (this reply): Bash, Edit, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-24 04:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "code",
+    "permissions": "allowlist",
+    "network": "Windows 11 Clopeux-Desktop + greencloud-vps via tailnet + github.com via gh",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "Finished tech-oracle greencloud deployment. (1) Verified user-side push to Prom-King/tech-oracle landed (origin/main at 5210b4f). (2) GitHub webhook had not been configured by gh repo create; pulled VW_GITHUB_WEBHOOK_SECRET from /etc/vw-webhookd/env via ssh into shell var without echoing, created the hook via gh api repos/Prom-King/tech-oracle/hooks (id=645986202, push events, json content-type). (3) Provisioned /etc/tech-oracle/tech-oracle.env on greencloud (root:vwdeploy 0640) by piping local .env (non-empty lines only) + TECH_ORACLE_DB + TECH_ORACLE_LANCE through ssh install -o stdin; secret never touched local disk or stdout. (4) Triggered first deploy via empty commit + push; webhook fired, deploy script ran uv sync (60+ wheels installed) then failed at sudo install/systemctl operations because vwdeploy lacked sudoers entries. (5) As root: bootstrapped /var/www/theitguyde.com/{articles,site} (vwdeploy:www-data 2775), /var/log/tech-oracle, installed tech-oracle.service + tech-oracle.timer to /etc/systemd/system/, daemon-reload, enable --now timer (next fire +30min). Wrote /etc/sudoers.d/tech-oracle with NOPASSWD entries for the exact install + systemctl commands the deploy script needs; visudo -cf parsed OK. (6) Re-pushed: webhook deploy fully succeeded, Eleventy built 4 files. (7) ExecStart used Provide a command or script to invoke with `uv run <command>` or `uv run <script>.py`. The following commands are available in the environment: - dotenv - f2py - fastapi - hf - httpx - huggingface-cli - idna - markdown-it - normalizer - numpy-config - onnxruntime_test - py.test - pydoc.bat - pygmentize - pytest - python - pythonw - tech-oracle - tiny-agents - tqdm - typer - uvicorn - watchfiles - websockets See `uv run --help` for more information. which failed (uv at /home/vwdeploy/.local/bin not on systemd PATH); patched service to call .venv/bin/tech-oracle directly, pushed,",
+  "commands": [
+    "gh api repos/Prom-King/tech-oracle/hooks POST",
+    "ssh root@100.73.93.84 install -d/install -m644/systemctl enable --now",
+    "cat .env | ssh install /dev/stdin /etc/tech-oracle/tech-oracle.env",
+    "git commit --allow-empty + git push origin main (x3 deploys)",
+    "systemctl start tech-oracle.service"
+  ],
+  "files": [
+    "Prom-King/tech-oracle local repo (4 commits on main)",
+    "greencloud:/etc/vw-webhookd/config.yml",
+    "greencloud:/etc/tech-oracle/tech-oracle.env",
+    "greencloud:/etc/sudoers.d/tech-oracle",
+    "greencloud:/etc/systemd/system/tech-oracle.service",
+    "greencloud:/etc/systemd/system/tech-oracle.timer",
+    "greencloud:/var/www/theitguyde.com/{articles,site}",
+    "greencloud:/srv/repos/Prom-King/tech-oracle",
+    "greencloud:/srv/repos/Prom-King/tech-oracle/var/{.tech-oracle.db,lance}",
+    "github:Prom-King/tech-oracle hook id 645986202"
+  ],
+  "planPath": "",
+  "contentHash": "d6bd0cf4c6cc812a3d2030ce238228be3d73681b3f606612d0775b057624e87a",
+  "git": {
+    "repo": "tech-oracle",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/tech-oracle",
+    "branch": "main",
+    "head": "ebc303b",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,47 @@
+﻿{
+    "id":  "20260622-235315-875-prom-king-9ff6ddcb",
+    "createdAt":  "2026-06-23T03:53:15.8751834Z",
+    "createdAtLocal":  "2026-06-22 23:53",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "handoff",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini\r\nThinking: medium\r\nMode: dispatch\r\nPermissions: bypass (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 23:53 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini",
+                    "thinking":  "medium",
+                    "mode":  "dispatch",
+                    "permissions":  "bypass",
+                    "network":  "local",
+                    "toolsUsed":  "run_command",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Finished development of affiliate links integration and catalog filters. Successfully pushed 24 changed files to remote main branch under version 0.2.5. Ready for deployment/operator testing.",
+    "commands":  [
+                     "git push origin main"
+                 ],
+    "files":  [
+                  "package.json",
+                  "walkthrough.md"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\372848f3-1b92-4045-8389-b120974659ee\\implementation_plan.md",
+    "contentHash":  "9ff6ddcb28664fb45f65af2138d5b7071891739454b48bda6495e10896744c76",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "6b117b0",
+                "hasChanges":  false
+            }
+}

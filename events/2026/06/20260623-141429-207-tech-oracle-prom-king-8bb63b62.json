@@ -1,0 +1,54 @@
+{
+  "id": "20260623-141429-207-tech-oracle-prom-king-8bb63b62",
+  "createdAt": "2026-06-23T18:14:29.2073974Z",
+  "createdAtLocal": "2026-06-23 14:14",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle (Prom-King)",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Clopeux-Desktop (Windows 11))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: n/a\r\nTools used (this reply): Bash, Edit, Write, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-23 14:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Clopeux-Desktop (Windows 11)",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "tech-oracle: embedding model benchmark + RAG-augmented synthesis wired (Tue, 23 Jun 2026). User asked for concrete numbers on bigger embedding models + live-vs-cron tradeoff, then to wire retrieval into synthesis. Benchmark inline (tests/benchmark_embed.py + resource_compat.py) compared BGE-small vs BGE-base on the same 65-item live corpus. Results: BGE-base is 2.8x slower per item (193.9 ms vs 69.5 ms), uses ~500MB more RSS (1567 vs 1068 MB), disk 1.75x (0.223 MB vs 0.127 MB at 65 items). Surprise: BGE-small actually scored HIGHER on direct-match queries (printer 0.731 vs 0.707, outlook 0.597 vs 0.541) - BGE-base's only clear win was better off-topic category discrimination (returned tech-news instead of printer noise on spacex query). Recommendation: stay on BGE-small until corpus reaches ~10k items. Live-vs-cron: both invisible on Clopeux at our load (sustained <0.1% CPU, ~120ms bursts per item). Cron simpler operationally; daemon offers freshness in minutes which we dont need. Build: tech_oracle/rag/retrieve.py with retrieve_related_per_item(items, rag_store, top_k, min_score) and hit_to_compact helper. Filters items in current batch out of results (only HISTORICAL context surfaces). Prompts: _compact_item now takes optional related[] argument; build_user_message takes related_past_items dict[item_id, list[dict]] and appends a NOTE telling the model to use them for dedup/clustering only - never for citations. Synthesize signature gained rag_store/rag_top_k/rag_min_score kwargs (defaults: 3 / 0.65); cleanly no-ops if lancedb/fastembed unavailable. CLI predict has --rag --rag-top-k --rag-min-score --lance flags. End-to-end test on the consumer fixture with --rag --refine: 2m50s wall, 12919 tokens, 7 predictions all with grandma-readable discrete step bullets, no-fix predictions correctly hit the 'Wait for the vendor' fallback + refine notes. Tracing what RAG",
+  "commands": [
+    "uv pip install psutil",
+    "uv run python tests/benchmark_embed.py",
+    "uv run tech-oracle predict tests/fixtures/sample_request.json --rag --model meta/llama-3.1-8b-instruct --quiet -o tests/fixtures/response_rag_8b.json",
+    "uv run tech-oracle predict tests/fixtures/sample_request.json --rag --refine --quiet -o tests/fixtures/response_rag_split.json"
+  ],
+  "files": [
+    "tech-oracle/tests/benchmark_embed.py",
+    "tech-oracle/tests/resource_compat.py",
+    "tech-oracle/src/tech_oracle/rag/retrieve.py",
+    "tech-oracle/src/tech_oracle/rag/__init__.py",
+    "tech-oracle/src/tech_oracle/prompts.py",
+    "tech-oracle/src/tech_oracle/synthesize.py",
+    "tech-oracle/src/tech_oracle/cli.py",
+    "tech-oracle/README.md",
+    "tech-oracle/tests/fixtures/response_rag_8b.json",
+    "tech-oracle/tests/fixtures/response_rag_split.json"
+  ],
+  "planPath": "",
+  "contentHash": "8bb63b620af89a2697009513ae458353577f5237359a8feb6ff371dc684149e5",
+  "git": null
+}

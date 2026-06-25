@@ -1,0 +1,47 @@
+{
+  "id": "20260622-082829-740-prom-king-edbd7a21",
+  "createdAt": "2026-06-22T12:28:29.7409610Z",
+  "createdAtLocal": "2026-06-22 08:28",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change,commands,verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-8\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + GitHub + public HTTP probes)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Bash, Read, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-22 08:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + GitHub + public HTTP probes",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Pushed Prom-King SSoT to github.com/Prom-King/docs (merged GitHub-initialized main, our files winning -X ours, 1f21f39..fba1330). 25 files live. Updated root Prom-King/CLAUDE.md + AGENTS.md to route to docs/instructions/ROUTER.md + GitHub URL (were pointing to VaultWares). Probed links.* domains per request: both links.prom-king.xyz and links.fullxxx.video resolve to 173.249.194.15 (greencloud-vps), served by nginx/1.22.1 fronting the link-sharing redirect plane (Fastify) - /health returns {status:ok}, /f/:slug is a live handled route (404 for unknown slug, CL 41), / returns {error:Not Found} (CL 21). Service is UP but no slugs populated = effectively unused. Despite link-sharing render.yaml, live deploy is greencloud not Render. Folded confirmed finding into infrastructure.md + projects/link-sharing.md (removed VERIFY). gh authed as p-potvin, https.",
+  "commands": [
+    "git merge origin/main --allow-unrelated-histories -X ours",
+    "git push -u origin main",
+    "curl https://links.prom-king.xyz/health",
+    "nslookup links.*"
+  ],
+  "files": [
+    "Prom-King/CLAUDE.md",
+    "Prom-King/AGENTS.md",
+    "Prom-King/docs/docs-content/infrastructure.md",
+    "Prom-King/docs/docs-content/projects/link-sharing.md"
+  ],
+  "planPath": "",
+  "contentHash": "edbd7a211b68dc7019b39f86749d287582dc613497e0c337aeca6eb7783ed9a9",
+  "git": null
+}

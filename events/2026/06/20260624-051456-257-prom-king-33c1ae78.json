@@ -1,0 +1,58 @@
+﻿{
+    "id":  "20260624-051456-257-prom-king-33c1ae78",
+    "createdAt":  "2026-06-24T09:14:56.2575509Z",
+    "createdAtLocal":  "2026-06-24 05:14",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: gemini-2.0-flash-thinking\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): replace_file_content, run_command, view_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-24 05:14 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.0-flash-thinking",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "windows",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "run_command",
+                                      "view_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Added sort dropdown (name, video count, ID) and pageSize option 10 to Admin Catalog BatchActions UI, implemented sorting in taxonomies backend API (including LEFT JOIN for counting when no site filter is present), added a button to select all matching terms across all pages by querying backend with a high limit, updated fetcher runs backend API and frontend Console page to filter runs by the active site, and aligned/styled the recent runs table to match stats dashboard design.",
+    "commands":  [
+                     "pnpm -r typecheck",
+                     "pnpm build",
+                     "python -m pytest tests/ -k promking"
+                 ],
+    "files":  [
+                  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\admin\\Catalog\\BatchActions.tsx",
+                  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\admin\\Fetcher\\Console.tsx",
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\taxonomies.py",
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\fetcher.py",
+                  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\api\\app.py",
+                  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\package.json",
+                  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\package.json"
+              ],
+    "planPath":  "",
+    "contentHash":  "33c1ae78541cedeafea7b8e941c41fd2ccbc278361f75152797079a849070d84",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "08fb3aa",
+                "hasChanges":  true
+            }
+}
