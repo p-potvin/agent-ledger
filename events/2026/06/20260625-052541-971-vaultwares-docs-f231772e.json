@@ -1,0 +1,38 @@
+{
+  "id": "20260625-052541-971-vaultwares-docs-f231772e",
+  "createdAt": "2026-06-25T09:25:41.9711620Z",
+  "createdAtLocal": "2026-06-25 05:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 05:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Thu, 25 Jun 2026 05:26 - Updated deployment, service inventory, and Health Ledger operations documentation for distributed cross-host probes, tailnet heartbeat port 8791, signed rollup ingestion, probe cadence, and monitoring ownership. Changes were pushed to main at commit e2a37f1.",
+  "commands": [
+    "git push origin main"
+  ],
+  "files": [
+    "vaultwares-docs/docs-content/operations/services-inventory.mdx",
+    "vaultwares-docs/docs-content/operations/health-ledger.mdx",
+    "vaultwares-docs/docs-content/operations/tailscale.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "f231772e7db27396b5354da56c2b41a169324c76c212ee74721940c9243afb3f",
+  "git": null
+}

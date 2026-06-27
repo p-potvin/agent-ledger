@@ -1,0 +1,52 @@
+{
+  "id": "20260625-052437-855-shared-tube-5b533065",
+  "createdAt": "2026-06-25T09:24:37.8556246Z",
+  "createdAtLocal": "2026-06-25 05:24",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Glob, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 05:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local-windows",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "Glob",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Fix /api/stream/[slug] returning 502 for what is really a 404. The handler now: (a) catches PromKingApiError(404) and surfaces it as 404 instead of generic 'API error' 502; (b) returns 404 (not 502) when source page fetch succeeds but contains zero <source> tags — this is the case the user hit (sexyprn cum-fantasy) and 502 was triggering NS_BINDING_ABORTED in the browser; (c) tries EVERY DB-stored quality URL in preference order on the fast path, not just the single picked one (one stale signed URL no longer kills the whole request); (d) tries every freshly extracted source URL on the slow path; (e) falls back to embedUrl when extraction yields zero sources; (f) widens the site query-param cast from 'fxv'|'pkt' to the full Site union so oneporn/sexyprn type cleanly. Replaced pickUrl() with orderCandidates() that returns ALL candidates sorted by preference. Edited apps/sexyprn/src/pages/api/stream/[slug].ts and synced to fxv/oneporn/pkt (the 4 files were byte-identical before and after). Type-check clean on all 4 apps. Tue, 24 Jun 2026.",
+  "commands": [
+    "pnpm --filter @promking/site-sexyprn exec tsc --noEmit -p .",
+    "pnpm --filter @promking/site-fxv --filter @promking/site-pkt --filter @promking/site-oneporn exec tsc --noEmit -p ."
+  ],
+  "files": [
+    "shared-tube/apps/sexyprn/src/pages/api/stream/[slug].ts",
+    "shared-tube/apps/fxv/src/pages/api/stream/[slug].ts",
+    "shared-tube/apps/oneporn/src/pages/api/stream/[slug].ts",
+    "shared-tube/apps/pkt/src/pages/api/stream/[slug].ts"
+  ],
+  "planPath": "",
+  "contentHash": "5b5330651984dfe49f6d90603686e671f03779f2e2405c87e5083f7b16037dca",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "0c92d3b",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "20260625-024225-162-vault-monitor-c0c6e17a",
+  "createdAt": "2026-06-25T06:42:25.1625994Z",
+  "createdAtLocal": "2026-06-25 02:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 02:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Thu, 25 Jun 2026 10:50 - Updated the move-pipeline stats cards to keep the 24h number as the primary value and render the overall total in a smaller right-side slot. Added bilingual Overall/Global labels, extended UploadsSummary typing, and adjusted Stat styling for the secondary value row. Build passes.",
+  "commands": [
+    "npm run build",
+    "git diff --check"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor\\src\\App.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor\\src\\types.ts",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor\\src\\styles.css"
+  ],
+  "planPath": "",
+  "contentHash": "c0c6e17abeea3700fffdc2ed56f1b2df7c414037e3d3f2f1f531ce8d60aafd4e",
+  "git": null
+}

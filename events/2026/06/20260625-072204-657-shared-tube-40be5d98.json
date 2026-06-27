@@ -1,0 +1,59 @@
+{
+  "id": "20260625-072204-657-shared-tube-40be5d98",
+  "createdAt": "2026-06-25T11:22:04.6572506Z",
+  "createdAtLocal": "2026-06-25 07:22",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local-windows + ssh to ovhcloud/greencloud)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 07:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local-windows + ssh to ovhcloud/greencloud",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Deployed v0.2.15 then v0.2.16 to greencloud (fxv,pkt) + OVH (sexyprn,oneporn) via the vw-deploy webhook chain. vaultwares-api also pushed (v0.1.9, SHA 0605d5b) with the new POST /api/promking/videos/{slug}/view endpoint — confirmed live via OVH deploy log. shared-tube v0.2.15 (SHA e1a4f95) deployed but uncovered two production-only bugs that v0.2.16 (SHA f984d56) then fixed: (1) Layout.astro carried a hardcoded <!-- v0.2.5 --> comment that violated the project's 'version MUST be printed as an HTML comment' rule and never updated across pushes; replaced with the same dynamic Fragment set:html pattern Header.astro uses. (2) Favicon route 500'd on every call because the default FAVICON_CACHE_DIR was /srv/cache/favicons (root-owned, ubuntu can't mkdir); changed default to ~/.cache/promking-favicons and wrapped mkdir/writeFile in best-effort try/catch + outer try/catch in the route so a broken cache layer 204s instead of 500s. Post-fix verification: GET https://sexyprn.lol -> HTTP 200, comment shows <!-- v0.2.16 -->; GET /api/favicon/studio/brazzers -> HTTP 200 with 339 bytes real PNG; GET /api/favicon/studio/fake-taxi -> HTTP 204 (DDG had nothing, onerror fallback fires); GET /api/stream/creampies-for-charity?site=sexyprn AND /api/stream/cum-fantasy?site=sexyprn -> both HTTP 302 (embedUrl redirect fallback firing — source page has no extractable <source> tags, so we hand the viewer off to the upstream embed instead of dying with the previous 502/NS_BINDING_ABORTED). Thu, 25 Jun 2026 07:30.",
+  "commands": [
+    "git push origin main (vaultwares-api -> 0605d5b)",
+    "git push origin main (shared-tube -> e1a4f95)",
+    "git push origin main (shared-tube -> f984d56)",
+    "ssh root@100.73.93.84 tail /var/log/vw-deploy/shared-tube.log",
+    "ssh ubuntu@100.67.25.118 tail /var/log/vw-deploy/shared-tube.log",
+    "Invoke-WebRequest https://sexyprn.lol/ + /api/favicon/studio/* + /api/stream/*"
+  ],
+  "files": [
+    "shared-tube/shared/package.json",
+    "shared-tube/package.json",
+    "shared-tube/shared/src/components/Layout.astro",
+    "shared-tube/shared/src/favicon/index.ts",
+    "shared-tube/apps/*/src/pages/api/favicon/studio/[slug].ts",
+    "vaultwares-api/pyproject.toml",
+    "vaultwares-api/app/routers/promking/videos.py"
+  ],
+  "planPath": "",
+  "contentHash": "40be5d986600f47b5735d314555858793d98f13ad7c39d51902a0daeb0476977",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "f984d56",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260626-170954-433-vault-guardian-67fdd855",
+    "createdAt":  "2026-06-26T21:09:54.4339966Z",
+    "createdAtLocal":  "2026-06-26 17:09",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-guardian",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-6-thinking\r\nThinking: low\r\nMode: agent\r\nPermissions: allowlist (network: Clopeux-Desktop)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian  Branch: main\r\nTools used (this reply): replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-26 17:09 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6-thinking",
+                    "thinking":  "low",
+                    "mode":  "agent",
+                    "permissions":  "allowlist",
+                    "network":  "Clopeux-Desktop",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian",
+    "summary":  "Fixed \u0027Cannot locate resource ms-appx:///Microsoft.UI.Xaml/Themes/themeresources.xaml\u0027 crash. Added Bootstrap.Initialize(0x00020001) before Application.Start() in Program.cs. This registers the Windows App SDK runtime with MRT Core so ms-appx:// URIs resolve correctly in unpackaged mode. Bootstrap.Shutdown() called in finally block after message loop exits.",
+    "commands":  [
+                     "dotnet build src/VaultGuardian.UI/VaultGuardian.UI.csproj"
+                 ],
+    "files":  [
+                  "src/VaultGuardian.UI/Program.cs"
+              ],
+    "planPath":  "",
+    "contentHash":  "67fdd85542563b64c1dcbd61d6fde1f798de39cdc4722265630cfb5dcc98d7c6",
+    "git":  {
+                "repo":  "vault-guardian",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-guardian",
+                "branch":  "main",
+                "head":  "9f66ab7",
+                "hasChanges":  true
+            }
+}

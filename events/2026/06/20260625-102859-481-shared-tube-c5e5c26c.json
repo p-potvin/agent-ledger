@@ -1,0 +1,62 @@
+{
+  "id": "20260625-102859-481-shared-tube-c5e5c26c",
+  "createdAt": "2026-06-25T14:28:59.4810735Z",
+  "createdAtLocal": "2026-06-25 10:28",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local-windows + ssh greencloud + ssh ovhcloud)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 10:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local-windows + ssh greencloud + ssh ovhcloud",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Deployed v0.2.17 (SHA 64cb5f4) + vaultwares-api v0.1.10 (SHA 9a1a5b1) to greencloud (fxv,pkt) and OVH (sexyprn,oneporn). Polish pass: global link styling (no underline anywhere, replaced with a 2px accent bar that grows from centre on hover; pills/header brand/sidebar rail opt out); pornstar gold star via global a[href^=/actor/]::before so every model link site-wide gets a brand-tinted ⭐ with no per-template work; studio favicons extended to TaxonomyRail, SuggestionStrip (auto-detected via /studio/ href), and studio detail h1 — .st-studio-icon resized to 1.15em with -0.18em vertical-align so it scales with font and sits on baseline; TaxonomyRail title differentiation (gradient accent banners with inset shadow, bordered card frame, PKT keeps minimal style via brand override); new /category/trending, /actor/trending, /studio/trending hubs in all 4 apps (12 files) using new shared TaxonomyDirectory.astro component, with baked-in simulated fallback term lists so the pages are never blank even when the catalog is empty (per user 'simulate the trends, as long as the pages show something'); Footer rewrite — long marketing about paragraph + ~75-chip trending-searches cloud matching the user's fullvideos.xxx reference screenshot, generic fallback ensures every page gets the SEO surface; Layout.astro hardcoded <!-- v0.2.5 --> replaced with dynamic Fragment; fetcher: FetchedVideo gains views?:number|null, fullvideos.ts parses listing .wrap badge via new parseViewsCount() handling 12.5K/1.2M/1,234 forms, vaultwares-api persists it on INSERT (coerced to int, 0 on missing). Type-check + Python AST clean. Both deploys finished and services restarted on both hosts. User said 'i'll handle verifications' so skipping live curl. Thu, 25 Jun 2026 ~10:30 EDT.",
+  "commands": [
+    "git push origin main (shared-tube 64cb5f4)",
+    "git push origin main (vaultwares-api 9a1a5b1)",
+    "ssh ubuntu@100.67.25.118 awk over /var/log/vw-deploy/*.log"
+  ],
+  "files": [
+    "shared-tube/shared/package.json",
+    "shared-tube/package.json",
+    "shared-tube/shared/src/components/Layout.astro",
+    "shared-tube/shared/src/components/Footer.astro",
+    "shared-tube/shared/src/components/TaxonomyRail.astro",
+    "shared-tube/shared/src/components/TaxonomyDirectory.astro (new)",
+    "shared-tube/shared/src/components/SuggestionStrip.astro",
+    "shared-tube/shared/src/fetcher/types.ts",
+    "shared-tube/shared/src/fetcher/sources/fullvideos.ts",
+    "shared-tube/apps/*/src/pages/(category|actor|studio)/trending.astro (12 new)",
+    "shared-tube/apps/*/src/pages/studio/[slug].astro (4 edits)",
+    "vaultwares-api/pyproject.toml",
+    "vaultwares-api/app/routers/promking/fetcher.py"
+  ],
+  "planPath": "",
+  "contentHash": "c5e5c26c2962d672b364d0b0d2d8764bbcf4b3174ae81ec5bbf1052336d194c8",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "64cb5f4",
+    "hasChanges": false
+  }
+}

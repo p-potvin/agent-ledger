@@ -1,0 +1,32 @@
+{
+  "id": "20260625-032007-631-vault-monitor-4679621d",
+  "createdAt": "2026-06-25T07:20:07.6310588Z",
+  "createdAtLocal": "2026-06-25 03:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 03:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Thu, 25 Jun 2026 03:22 - Localization decision locked: use one persisted EN/QC locale in the shared sidebar, consumed by all five tabs. Remove duplicated per-page language controls while preserving both existing translation sets.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "4679621d4d7d69a746c09536020279342e616928018260e3cf7ecf9707f99f9d",
+  "git": null
+}

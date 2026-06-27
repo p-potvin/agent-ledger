@@ -1,0 +1,40 @@
+{
+  "id": "20260625-213411-093-health-ledger-0c72abdc",
+  "createdAt": "2026-06-26T01:34:11.0937806Z",
+  "createdAtLocal": "2026-06-25 21:34",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "verification",
+  "actor": "pg-watchdog",
+  "agentHeader": "Agent: pg-watchdog (role: subagent)\r\nModel: unknown\r\nThinking: unknown\r\nMode: dispatch\r\nPermissions: autopilot (network: clopeux-desktop)\r\nCWD: C:\\Windows\\System32  Branch: n/a\r\nTools used (this reply): pg_isready, Restart-Service\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 21:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "subagent",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "dispatch",
+    "permissions": "autopilot",
+    "network": "clopeux-desktop",
+    "toolsUsed": [
+      "pg_isready",
+      "Restart-Service"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Windows\\System32",
+  "summary": "pg-watchdog: PG unreachable after 508 probes; restart FAILED: Cannot find any service with service name 'postgresql-x64-18'.. pg_isready: 127.0.0.1:5432 - no response",
+  "commands": [
+    "C:\\Program Files\\PostgreSQL\\18\\bin\\pg_isready.exe -h 127.0.0.1 -p 5432 -t 3",
+    "Restart-Service postgresql-x64-18 -Force"
+  ],
+  "files": [
+    "health-ledger\\scripts\\pg-watchdog.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "0c72abdce959ab572e58c80cf59640d0619efe13f54da1245eba2560e17dd1ba",
+  "git": null
+}

@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260625-220140-819-vaultwares-studio-16caaf92",
+    "createdAt":  "2026-06-26T02:01:40.8196108Z",
+    "createdAtLocal":  "2026-06-25 22:01",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-6-thinking\r\nThinking: low\r\nMode: agent\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): multi_replace_file_content\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 22:01 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6-thinking",
+                    "thinking":  "low",
+                    "mode":  "agent",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  "multi_replace_file_content",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Corrected README cost table: refine row now exposes the CPU-waste problem (~90 min COLMAP vocab-tree matching at L4 GPU rates = ~1.20 wasted, only ~15 min is actual GPU). Planned fix noted: split into cpu-upgrade SfM + l4x1 training = ~0.17 total. Removed misleading \u0027no re-upload cost\u0027 framing since xet makes HF uploads negligible regardless. --resume-job value is saving local frame re-extraction, not upload time.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "README.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "16caaf92d9e09f72796b830d6ea2a0372c26fa7ba331e15711234d4320733fe7",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "main",
+                "head":  "47a90ed",
+                "hasChanges":  true
+            }
+}

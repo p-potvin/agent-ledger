@@ -1,0 +1,39 @@
+{
+  "id": "20260625-032728-821-agent-ledger-fff5a49e",
+  "createdAt": "2026-06-25T07:27:28.8214084Z",
+  "createdAtLocal": "2026-06-25 03:27",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 03:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Thu, 25 Jun 2026 03:31 - Planned migration of stats-app Work Impact and site Personal Stats/Ledger page code into vault-monitor, followed by legacy hostname redirects. Existing frontend trees and deploy steps remain until user visual acceptance, then are deleted to eliminate duplicate ownership.",
+  "commands": [
+    "Inspected site, stats-app, and deploy configuration"
+  ],
+  "files": [
+    "agent-ledger/site",
+    "agent-ledger/stats-app",
+    "agent-ledger/deploy/deploy.sh",
+    "agent-ledger/deploy/nginx-ledger.conf"
+  ],
+  "planPath": "",
+  "contentHash": "fff5a49eaa48541aea1eef1046561c202f2817464a6d1349ce4ad2b821f3c264",
+  "git": null
+}

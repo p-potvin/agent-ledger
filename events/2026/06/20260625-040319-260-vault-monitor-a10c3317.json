@@ -1,0 +1,46 @@
+{
+  "id": "20260625-040319-260-vault-monitor-a10c3317",
+  "createdAt": "2026-06-25T08:03:19.2608377Z",
+  "createdAtLocal": "2026-06-25 04:03",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 04:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Replaced the old monitor frontend with the warm-sidebar unified five-route React application for Work Impact, Personal Stats, Ledger, Cross-ledger Search, and Services. Imported the proven agent-ledger pages, centralized locale and API access, added service filters/search URL state/cancellation, preserved enriched Work Impact metrics, added focused tests, built version 1.0.0, pushed main, and verified all five production routes plus APIs.",
+  "commands": [
+    "npm test",
+    "npm run build",
+    "git push origin main",
+    "curl https://monitor.vaultwares.ca/{work-impact,personal-stats,ledger,search,services}"
+  ],
+  "files": [
+    "src/App.tsx",
+    "src/api.ts",
+    "src/i18n.tsx",
+    "src/pages",
+    "src/features",
+    "src/styles.css",
+    "package.json",
+    "index.html"
+  ],
+  "planPath": "",
+  "contentHash": "a10c3317daa50100b16d2ea02f4c27063a679b9a430d2431e435b24adcac6db3",
+  "git": null
+}

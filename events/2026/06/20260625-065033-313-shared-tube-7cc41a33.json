@@ -1,0 +1,66 @@
+{
+  "id": "20260625-065033-313-shared-tube-7cc41a33",
+  "createdAt": "2026-06-25T10:50:33.3137035Z",
+  "createdAtLocal": "2026-06-25 06:50",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, Glob, Grep, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 06:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local-windows",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "Glob",
+      "Grep",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Multi-part feature pass (NOT YET DEPLOYED to greencloud, per user 'do other tasks before deploying then'). Bumped shared-tube root + @promking/shared-tube to 0.2.15. (1) UI: sexyprn-specific .st-header__nav a:hover override paints the nav button background var(--accent-text)=white with --accent label color so the hover area is visible on the dark header (default 8% accent-alpha rgba was invisible on the light theme's high-contrast palette). (2) UI: global rule in Layout.astro removes hover underline from .st-pill / [data-chip-strip] / .st-suggestions__list / .st-header__menu anchors (global a:hover { text-decoration: underline } was bleeding through). (3) UI: added view-count increment endpoint. vaultwares-api: new POST /api/promking/videos/{slug}/view in app/routers/promking/videos.py that bumps videos.views and updated_at. Client: new incrementViews(site, slug) on PromKingApiClient in shared/src/api/promking-api.ts. Call site: each of the 4 apps/<site>/src/pages/videos/[slug].astro now fires-and-forgets the bump on every detail SSR + optimistically +1s the rendered video.views so the user sees the new count immediately. (4) Favicon system using DuckDuckGo icon proxy. New module shared/src/favicon/index.ts (exported via @promking/shared-tube/favicon): studioHost(slug) derives <slug>.com with a baked-in override map for the common multi-word studios (brazzers/naughty-america/team-skeet/etc.) + STUDIO_HOSTS_JSON env for runtime extension. getStudioFavicon(slug) reads from / writes to FAVICON_CACHE_DIR (/srv/cache/favicons in prod, ./.cache/favicons in dev) with 30-day positive TTL + 6-hour negative cache (.miss markers prevent DDG hammering). Heuristic: DDG <200 byte response = placeholder, treated as miss. New API route /api/favicon/studio/[slug] in each of 4 apps streams cached bytes (Blob-wrapped to satisfy DOM Response BodyInit) with 1-day browser cache + 7-day shared-CDN cache; returns 204 on miss so <img onerror> fallback fires. UI: studio favicon <img class='st-studio-icon'> rendered next to studio name",
+  "commands": [
+    "pnpm --filter @promking/shared-tube exec tsc --noEmit -p .",
+    "pnpm -r --filter '@promking/site-*' exec tsc --noEmit -p .",
+    "python -c 'import ast; ast.parse(open(...))'"
+  ],
+  "files": [
+    "shared-tube/shared/package.json",
+    "shared-tube/shared/src/favicon/index.ts",
+    "shared-tube/shared/src/api/promking-api.ts",
+    "shared-tube/shared/src/components/Header.astro",
+    "shared-tube/shared/src/components/Layout.astro",
+    "shared-tube/shared/src/components/VideoCard.astro",
+    "shared-tube/apps/sexyprn/src/pages/api/favicon/studio/[slug].ts",
+    "shared-tube/apps/fxv/src/pages/api/favicon/studio/[slug].ts",
+    "shared-tube/apps/pkt/src/pages/api/favicon/studio/[slug].ts",
+    "shared-tube/apps/oneporn/src/pages/api/favicon/studio/[slug].ts",
+    "shared-tube/apps/sexyprn/src/pages/videos/[slug].astro",
+    "shared-tube/apps/fxv/src/pages/videos/[slug].astro",
+    "shared-tube/apps/pkt/src/pages/videos/[slug].astro",
+    "shared-tube/apps/oneporn/src/pages/videos/[slug].astro",
+    "vaultwares-api/app/routers/promking/videos.py"
+  ],
+  "planPath": "",
+  "contentHash": "7cc41a33965c4acd9d356ecb7ac9c4724d6e643d26bcd920264e9c1770aa33c1",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "0c92d3b",
+    "hasChanges": true
+  }
+}

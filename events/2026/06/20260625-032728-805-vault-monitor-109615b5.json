@@ -1,0 +1,39 @@
+{
+  "id": "20260625-032728-805-vault-monitor-109615b5",
+  "createdAt": "2026-06-25T07:27:28.8055106Z",
+  "createdAtLocal": "2026-06-25 03:27",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 03:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Thu, 25 Jun 2026 03:31 - Completed the approved design for consolidating Work Impact, Personal Stats, Ledger, Cross-ledger Search, and Services into vault-monitor. Locked destination-owned React/Vite architecture based on agent-ledger/site, shared warm sidebar, global EN/QC locale, exact imported page content, read-only services UI, improved two-ledger search, user-owned visual QA, permanent legacy redirects, and delayed deletion of old frontends until acceptance.",
+  "commands": [
+    "Inspected current frontend shells, routes, styles, and data adapters",
+    "Reviewed VaultWares and Prom-King routing and infrastructure rules"
+  ],
+  "files": [
+    "vault-monitor/src/App.tsx",
+    "agent-ledger/site/src/App.tsx",
+    "agent-ledger/stats-app/src/App.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "109615b576154a417f2094700ae763f3293a18261af88630318d739783fdd7da",
+  "git": null
+}

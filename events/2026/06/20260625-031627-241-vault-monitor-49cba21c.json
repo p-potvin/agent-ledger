@@ -1,0 +1,46 @@
+{
+  "id": "20260625-031627-241-vault-monitor-49cba21c",
+  "createdAt": "2026-06-25T07:16:27.2418158Z",
+  "createdAtLocal": "2026-06-25 03:16",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 03:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Thu, 25 Jun 2026 03:18 - Grounded the five-tab vault-monitor consolidation plan. Confirmed stats and ledger frontends live in agent-ledger, all current pages consume normalized vaultwares-api monitor endpoints, vault-monitor retains the warm left rail and cross-ledger search, and Health Ledger services.yaml is the existing monitoring inventory. Identified hostname retirement/redirect behavior as the first product decision because it affects nginx, deploy scripts, and duplicate build ownership.",
+  "commands": [
+    "Read VaultWares protocol summaries",
+    "Inspect vault-monitor source and git state",
+    "Inspect agent-ledger stats-app and site source",
+    "Inspect vaultwares-api monitor routes",
+    "Inspect health-ledger services.yaml",
+    "Read deployment-flow and services-inventory"
+  ],
+  "files": [
+    "vault-monitor/src/App.tsx",
+    "agent-ledger/site/src/App.tsx",
+    "agent-ledger/stats-app/src/App.tsx",
+    "vaultwares-api/app/routers/monitor/__init__.py",
+    "health-ledger/services.yaml",
+    "vaultwares-docs/docs-content/operations/deployment-flow.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "49cba21c8a3b4adf42b6540df9ccf544beba07d426dc856379edb1a162fbddd3",
+  "git": null
+}

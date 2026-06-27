@@ -1,0 +1,32 @@
+{
+  "id": "20260625-032155-704-vault-monitor-1ca01637",
+  "createdAt": "2026-06-25T07:21:55.7043529Z",
+  "createdAtLocal": "2026-06-25 03:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 03:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Thu, 25 Jun 2026 03:24 - Selected destination-owned consolidation architecture. Proposed vault-monitor as the sole Vite/React app based on agent-ledger/site, with routes /work-impact, /personal-stats, /ledger, /search, and /services; a shared warm sidebar and global EN/QC state; local copied page code; vaultwares-api as the only browser data boundary; and permanent legacy-host redirects.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "1ca01637da523850c7e2cec6ee1c398a1d385eb5237139bc6ef6594f6a533ca0",
+  "git": null
+}

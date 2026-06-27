@@ -1,0 +1,68 @@
+{
+  "id": "20260625-135019-872-shared-tube-5050537c",
+  "createdAt": "2026-06-25T17:50:19.8720941Z",
+  "createdAtLocal": "2026-06-25 13:50",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local-windows + ssh greencloud + ssh ovhcloud + psql migration on OVH:5433)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 13:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local-windows + ssh greencloud + ssh ovhcloud + psql migration on OVH:5433",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Deployed shared-tube v0.2.18 (SHA 8146d18) + vaultwares-api v0.1.11 (SHA 46f170e). ROOT CAUSE for the still-underlined links and invisible stars: Layout.astro's <style> block was scoped (Astro default cid-attribute scoping), so every site-wide rule I'd written only matched anchors carrying Layout's cid — i.e. zero descendants. Adding is:global made all the rules I'd shipped previously (no-underline + gold star + .st-studio-icon + pill exceptions) actually reach VideoCard / TaxonomyRail / SuggestionStrip / Header / Footer. Also dropped the decorative ::after-bar approach (too much false-positive coverage), switched star glyph from U+2B50 to U+2605 for reliable cross-font rendering, applied user's exact .st-studio-icon CSS (margin-right:5px, vertical-align:middle, margin-bottom:1px), added svg { overflow: visible !important } for the thumbs-down icon halo. New: default movie-clapper SVG fallback for favicon route (no more 204 gaps), drag-to-scroll on every horizontal chip strip ([data-chip-strip], .st-header__menu/nav, .st-suggestions__list, .st-footer__searches-grid) via global pointer event script with 6px movement threshold to swallow accidental clicks, removed footer max-width:78ch, Pagination windowSize 2→4 (now shows up to 9 inline numeric buttons) + new countVideos() client method + every category/actor/studio/search/videos-index page in all 4 apps fetches total in parallel and passes totalPages to <Pagination>. NEW SCHEMA: ALTER TABLE videos ADD COLUMN description TEXT applied directly to live OVH:5433/promking via psql (additive, no data loss). Drizzle schema + VideoDetail pydantic model + get_video SQL all updated. New VideoDescription.astro shared component: SSR-renders full text (SEO-friendly) but client-side clamps to 3 lines with Show more/less toggle that auto-hides when content already fits, wired into all 4 detail pages. fullvideos.ts now extracts description from .video_description / .description / .info_video",
+  "commands": [
+    "git push origin main (shared-tube 8146d18)",
+    "git push origin main (vaultwares-api 46f170e)",
+    "ssh ubuntu@100.67.25.118 psql -p 5433 -d promking -c 'ALTER TABLE videos ADD COLUMN IF NOT EXISTS description TEXT'",
+    "ssh greencloud + ssh ovhcloud watch deploy logs"
+  ],
+  "files": [
+    "shared-tube/shared/package.json",
+    "shared-tube/package.json",
+    "shared-tube/shared/src/components/Layout.astro (is:global + scoping fix)",
+    "shared-tube/shared/src/components/Footer.astro (no max-width)",
+    "shared-tube/shared/src/components/Pagination.astro (window=4)",
+    "shared-tube/shared/src/components/VideoDescription.astro (new)",
+    "shared-tube/shared/src/api/promking-api.ts (countVideos)",
+    "shared-tube/shared/src/db/schema.ts (description column)",
+    "shared-tube/shared/src/types/index.ts (description in VideoDetail)",
+    "shared-tube/shared/src/fetcher/types.ts (description in FetchedVideo)",
+    "shared-tube/shared/src/fetcher/sources/fullvideos.ts (description extraction)",
+    "shared-tube/apps/*/src/pages/api/favicon/studio/[slug].ts (fallback SVG)",
+    "shared-tube/apps/*/src/pages/(category|actor|studio|search)/[slug].astro + videos/index.astro + videos/[slug].astro (totalPages + VideoDescription)",
+    "vaultwares-api/pyproject.toml",
+    "vaultwares-api/app/routers/promking/_models.py (description in VideoDetail)",
+    "vaultwares-api/app/routers/promking/videos.py (select description)",
+    "vaultwares-api/app/routers/promking/fetcher.py (persist description)"
+  ],
+  "planPath": "",
+  "contentHash": "5050537c822141db649d3665aad632d04c0e5b6ddeae47b7148239d0bbe9a272",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "8146d18",
+    "hasChanges": true
+  }
+}

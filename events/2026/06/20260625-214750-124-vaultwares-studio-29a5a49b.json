@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260625-214750-124-vaultwares-studio-29a5a49b",
+    "createdAt":  "2026-06-26T01:47:50.1247864Z",
+    "createdAtLocal":  "2026-06-25 21:47",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-6-thinking\r\nThinking: low\r\nMode: agent\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): run_command, write_to_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 21:47 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6-thinking",
+                    "thinking":  "low",
+                    "mode":  "agent",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "write_to_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+    "summary":  "Confirmed HF job 6a2fdb25234ca64b60124c92 (refine, local-run-20260615-065732) DID launch but credit exhausted mid-run. Only artifact uploaded to clopeux/vw-studio-artifacts is the input frames.zip — no output artifacts (no splat.ply, summary.json, model.zip). Nothing to recover. Re-queuing the refine job is the only path forward. Machine has no outbound internet (DNS fails on api.huggingface.co), so HF job status cannot be polled from here.",
+    "commands":  [
+                     "python tools/_check_hf_artifacts.py"
+                 ],
+    "files":  [
+                  "data/jobs/local-run-20260615-065732/manifest.json"
+              ],
+    "planPath":  "",
+    "contentHash":  "29a5a49bdbeeefb197b5f356b06e9b877c2040576a08cbc2ab47dcb270dcf5f1",
+    "git":  {
+                "repo":  "agent-ledger",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+                "branch":  "main",
+                "head":  "56b164a8",
+                "hasChanges":  true
+            }
+}

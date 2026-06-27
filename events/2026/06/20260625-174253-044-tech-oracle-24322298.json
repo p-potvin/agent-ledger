@@ -1,0 +1,55 @@
+{
+  "id": "20260625-174253-044-tech-oracle-24322298",
+  "createdAt": "2026-06-25T21:42:53.0442515Z",
+  "createdAtLocal": "2026-06-25 17:42",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: code\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, TaskCreate, TaskUpdate, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 17:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "TaskCreate",
+      "TaskUpdate",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "Implemented draft/publish gate for articles. Pipeline now emits status: draft in all article frontmatter. Eleventy collections filter to status === published only. Draft articles don't render individual pages either (permalink returns false). Added articles CLI subcommand with list (--status filter) and publish (flip draft→published) commands. Created JULES.md with instructions for Google's Jules agent to scan drafts, research real fixes, rewrite articles, and submit PRs. Jules gets tasks via Google Cloud UI and scans the repo directly.",
+  "commands": [
+    "uv run tech-oracle articles --help",
+    "uv run python -c 'render_markdown test'"
+  ],
+  "files": [
+    "src/tech_oracle/publish.py",
+    "site/.eleventy.js",
+    "site/prebuild.mjs",
+    "src/tech_oracle/cli.py",
+    "JULES.md"
+  ],
+  "planPath": " ",
+  "contentHash": "2432229804617cbb21f8d6970ce7cabc79d697e4ec55c709882aa605498a8483",
+  "git": {
+    "repo": "tech-oracle",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/tech-oracle",
+    "branch": "main",
+    "head": "829bad1",
+    "hasChanges": true
+  }
+}

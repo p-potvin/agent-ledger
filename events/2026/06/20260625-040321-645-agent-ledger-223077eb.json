@@ -1,0 +1,44 @@
+{
+  "id": "20260625-040321-645-agent-ledger-223077eb",
+  "createdAt": "2026-06-25T08:03:21.6453319Z",
+  "createdAtLocal": "2026-06-25 04:03",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 04:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Configured path-aware permanent redirects from the legacy ledger and stats hosts to the unified monitor while preserving the stat.vaultwares.ca alias and ACME behavior. Bumped legacy app versions without deleting source, pushed main, installed the active nginx configs, validated nginx, reloaded it, and verified the required 308 targets.",
+  "commands": [
+    "npm run build",
+    "git push origin main",
+    "nginx -t",
+    "systemctl reload nginx"
+  ],
+  "files": [
+    "deploy/nginx-ledger.conf",
+    "deploy/nginx-stats-redirect.conf",
+    "site/package.json",
+    "site/index.html",
+    "stats-app/package.json",
+    "stats-app/index.html"
+  ],
+  "planPath": "",
+  "contentHash": "223077ebe57641b472e763540423287ad072ecc1063c65a45ccd0b3a874f928f",
+  "git": null
+}

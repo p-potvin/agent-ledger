@@ -1,0 +1,52 @@
+﻿{
+    "id":  "20260625-220029-817-vaultwares-studio-0ef0b904",
+    "createdAt":  "2026-06-26T02:00:29.8174713Z",
+    "createdAtLocal":  "2026-06-25 22:00",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-6-thinking\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): write_to_file, multi_replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 22:00 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6-thinking",
+                    "thinking":  "medium",
+                    "mode":  "agent",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "write_to_file",
+                                      "multi_replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Added 3 resume-job tests to test_remote_reconstruction.py (skip_inputs_upload propagation, prior HF prefix assertion, manifest round-trip). Updated README.md: new description, What You Can Run Today, Remote Compute section with preset cost table (draft ~0.20, standard ~0.80, refine ~1.60, high ~1.88), headless run/resume/recover commands, updated Features. Updated TESTING.md: 83 tests, added Remote Compute Verification section. Full suite: 83/83 passing.",
+    "commands":  [
+                     "pytest tests/ -q"
+                 ],
+    "files":  [
+                  "tests/test_remote_reconstruction.py",
+                  "README.md",
+                  "TESTING.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "0ef0b90442f8bcd32d0b7436a43737071cc6079cc8a35746044e7a0c1f1c898b",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "main",
+                "head":  "47a90ed",
+                "hasChanges":  true
+            }
+}

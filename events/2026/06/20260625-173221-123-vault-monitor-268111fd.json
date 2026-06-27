@@ -1,0 +1,47 @@
+{
+  "id": "20260625-173221-123-vault-monitor-268111fd",
+  "createdAt": "2026-06-25T21:32:21.1237328Z",
+  "createdAtLocal": "2026-06-25 17:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local-windows + greencloud (ssh))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Bash, SSH, Edit, Read, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 17:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local-windows + greencloud (ssh)",
+    "toolsUsed": [
+      "Bash",
+      "SSH",
+      "Edit",
+      "Read",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Restored work-impact judgment-call transforms in vault-monitor that the unify-monitor migration had silently dropped. Root cause: ALIASES map was migrated as a constant but adaptWorkImpact never actually invoked it, so live data showed raw names like vaultwares-pipelines instead of vaultwares-api. The 14 compound/junk aliases I added yesterday + the FORKS list also did not survive. Fixes: (1) aliases.ts now has 14 added compound/namespace/meta-workspace aliases plus FORKS readonly array for OneTrainer + video-depth-anything, plus normalizeProject + isOwnedProject helpers. (2) src/api.ts adaptWorkImpact now applies, in order: WORK_IMPACT_CUTOFF 2026-03-11 filter, alias normalization on byProject and totalProjects (via per-day project lists), fork drop, zero-fill of daySeries between cutoff and last seen day, recompute streakCurrent + streakLongest over the zero-filled series, format busiestWeek as date range Apr 20-26 via isoWeekToRange. (3) adapter.test.ts gained 3 regression cases pinning the aliasing/forks/cutoff/busiestWeek so the next migration cannot drop them again. 4 of 4 tests pass. Build clean. Webhook deploy fired on push of 17279c7; new bundle index-DUNHjrGI.js live at /var/www/monitor.vaultwares.ca. Snapshot data.json untouched; the named/auto commit-outlier constants in api.ts are ready for when the API ever returns commitSamples we can re-aggregate.",
+  "commands": [
+    "npx vitest run",
+    "npm run build",
+    "git push origin main",
+    "ssh root@greencloud-vps"
+  ],
+  "files": [
+    "vault-monitor/src/api.ts",
+    "vault-monitor/src/features/work-impact/lib/aliases.ts",
+    "vault-monitor/src/features/work-impact/adapter.test.ts"
+  ],
+  "planPath": "",
+  "contentHash": "268111fd3d37231ab07275dda54e6463e2c6ab9ed38695366082f0c65a01541e",
+  "git": null
+}

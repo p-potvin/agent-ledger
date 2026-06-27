@@ -1,0 +1,37 @@
+{
+  "id": "20260625-032728-822-health-ledger-c45a3334",
+  "createdAt": "2026-06-25T07:27:28.8223590Z",
+  "createdAtLocal": "2026-06-25 03:27",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 03:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Thu, 25 Jun 2026 03:31 - Planned expansion of Health Ledger inventory and normalized probe coverage for VaultWares, Prom-King, and shared sites, apps, APIs, databases, containers, systemd units/timers, Windows scheduled tasks, runners, and Jokers, including explicit stale and unmonitored states.",
+  "commands": [
+    "Inspected services.yaml, probe capabilities, and operational docs"
+  ],
+  "files": [
+    "health-ledger/services.yaml",
+    "health-ledger/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "c45a333488ba8b529e1cd4360b4a65fb66d1e829184d7f1ae9aef9f3b6d778d3",
+  "git": null
+}

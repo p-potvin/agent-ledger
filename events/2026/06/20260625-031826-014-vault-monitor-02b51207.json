@@ -1,0 +1,32 @@
+{
+  "id": "20260625-031826-014-vault-monitor-02b51207",
+  "createdAt": "2026-06-25T07:18:26.0144535Z",
+  "createdAtLocal": "2026-06-25 03:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-25 03:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Thu, 25 Jun 2026 03:20 - Application shell decision locked: the warm vault-monitor left sidebar becomes the sole navigation around all five tabs. Imported Work Impact, Personal Stats, and Ledger pages retain their internal content layouts but do not retain standalone headers or nested navigation.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "02b512074c44e40b6d14d25015708e2b1911b7f5a3cc1620d2d16739125e4421",
+  "git": null
+}

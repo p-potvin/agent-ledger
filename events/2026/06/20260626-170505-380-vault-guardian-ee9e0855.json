@@ -1,0 +1,51 @@
+﻿{
+    "id":  "20260626-170505-380-vault-guardian-ee9e0855",
+    "createdAt":  "2026-06-26T21:05:05.3804160Z",
+    "createdAtLocal":  "2026-06-26 17:05",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-guardian",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-6-thinking\r\nThinking: low\r\nMode: agent\r\nPermissions: allowlist (network: Clopeux-Desktop)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian  Branch: main\r\nTools used (this reply): replace_file_content, write_to_file, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-26 17:05 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6-thinking",
+                    "thinking":  "low",
+                    "mode":  "agent",
+                    "permissions":  "allowlist",
+                    "network":  "Clopeux-Desktop",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "write_to_file",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian",
+    "summary":  "Fixed startup breakpoint caused by missing DISABLE_XAML_GENERATED_MAIN. Added define constant to csproj and created Program.cs with standard WinUI 3 unpackaged app entry point (ComWrappersSupport, DispatcherQueueSynchronizationContext, Application.Start). Build: 0 errors.",
+    "commands":  [
+                     "dotnet build src/VaultGuardian.UI/VaultGuardian.UI.csproj"
+                 ],
+    "files":  [
+                  "src/VaultGuardian.UI/VaultGuardian.UI.csproj",
+                  "src/VaultGuardian.UI/Program.cs"
+              ],
+    "planPath":  "",
+    "contentHash":  "ee9e0855bf82f3176ab40d2ebe34b84e6bd0975585e6641d9ab5354e4f2bfada",
+    "git":  {
+                "repo":  "vault-guardian",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-guardian",
+                "branch":  "main",
+                "head":  "f95ac96",
+                "hasChanges":  true
+            }
+}
