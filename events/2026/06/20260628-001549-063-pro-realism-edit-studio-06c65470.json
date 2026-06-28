@@ -1,0 +1,43 @@
+{
+  "id": "20260628-001549-063-pro-realism-edit-studio-06c65470",
+  "createdAt": "2026-06-28T04:15:49.0633200Z",
+  "createdAtLocal": "2026-06-28 00:15",
+  "timezone": "Eastern Standard Time",
+  "project": "Pro-Realism-Edit-Studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 00:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 00:17 - Investigated HF Space runtime logs for Phr00t v23 startup failure. Root cause was direct diffusers from_single_file could not convert Phr00t ComfyUI AIO checkpoint keys: vae/text_encoder keys were expected unused, but model.diffusion_model transformer keys were also unused, leaving meta tensors and causing NotImplementedError during device dispatch. Implemented load_phr00t_rapid_transformer to download Phr00t v23, keep only model.diffusion_model.* keys, strip the prefix, load into an empty Qwen transformer with load_model_dict_into_meta, and assert no meta params remain. Bumped version to 0.1.2, updated static regression test, committed/pushed 8e32c2c. Verified local tests/py_compile and HF metadata/logs: Space reached RUNNING at SHA 8e32c2c. No ZeroGPU inference job was run.",
+  "commands": [
+    "hf spaces logs clopeux/Pro-Realism-Edit-Studio | Select-Object -Last 220",
+    "hf spaces info clopeux/Pro-Realism-Edit-Studio",
+    "python tests\\\\test_external_sources.py",
+    "python -m py_compile app.py tests\\\\test_external_sources.py",
+    "git commit -m \"Sun, 28 Jun 2026 00:14 - Convert Phr00t v23 transformer keys\"",
+    "git push origin main"
+  ],
+  "files": [
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\app.py",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\README.md",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\tests\\test_external_sources.py"
+  ],
+  "planPath": "",
+  "contentHash": "06c654706b4431be32c2764c8db1e1db1761680aeba6300c566cf712297c8612",
+  "git": null
+}

@@ -1,0 +1,42 @@
+{
+  "id": "20260628-093256-813-vault-monitor-85cef607",
+  "createdAt": "2026-06-28T13:32:56.8137999Z",
+  "createdAtLocal": "2026-06-28 09:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 09:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 12:19 - Removed the unintended Tailscale AppConnector advertisement on greencloud with tailscale set --advertise-connector=false. Confirmed the current DNS outage is not nginx or the monitor app: HTTPS to greencloud tailnet IP works, dnsmasq has the monitor.vaultwares.ca host-record and answers locally, but Clopeux-Desktop and OVH cannot reach 100.73.93.84:53. Current client netmap has GREENCLOUD_53_FILTER_COUNT=0, while the VaultWares Tailscale runbook requires TCP+UDP 53 to greencloud/tag:server when it is the split-DNS nameserver. Likely root cause is the recent Tailscale ACL/rules edit removed the DNS port allowance; dnsmasq process/socket buildup is downstream from failed DNS attempts.",
+  "commands": [
+    "ssh root@100.73.93.84 tailscale set --advertise-connector=false",
+    "tailscale debug netmap DNS and packet-filter parse",
+    "ssh ubuntu@100.67.25.118 dig/tcp checks to 100.73.93.84:53",
+    "ssh root@100.73.93.84 dnsmasq/dig/UFW checks",
+    "Select-String tailscale.mdx for expected DNS ACL"
+  ],
+  "files": [
+    "greencloud-vps:Tailscale AppConnector preference",
+    "greencloud-vps:/etc/dnsmasq.d/vaultwares-tailnet.conf",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\tailscale.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "85cef6073cd49c11f9d1a3c43167651f3f9b42f015817d93d6b6047d11bb12a8",
+  "git": null
+}

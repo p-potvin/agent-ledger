@@ -1,0 +1,40 @@
+{
+  "id": "20260628-065148-093-general-tasks-9321eec7",
+  "createdAt": "2026-06-28T10:51:48.0937006Z",
+  "createdAtLocal": "2026-06-28 06:51",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 06:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 05:52 - Read-only OVH deploy auth check after greencloud GitHub App wiring. OVH has no /etc/vw-github-app, no /usr/local/bin/vw-github-app-token, and no /var/www/deploy-scripts/git-askpass-vw-gh-token.sh. The only observed Prom-King checkout is /srv/repos/Prom-King/shared-tube owned ubuntu:ubuntu; its origin remote is an HTTPS URL with embedded credentials, and git ls-remote origin HEAD succeeds. Conclusion: OVH deployments currently work through embedded remote credentials, not the new GitHub App helper. No changes made.",
+  "commands": [
+    "ssh ubuntu@100.67.25.118 check github app helper/key/askpass presence",
+    "ssh ubuntu@100.67.25.118 grep OVH deploy scripts for GIT_ASKPASS/Prom-King/github.com",
+    "ssh ubuntu@100.67.25.118 inspect /srv/repos/Prom-King/shared-tube remote redacted",
+    "ssh ubuntu@100.67.25.118 git ls-remote origin HEAD redacted"
+  ],
+  "files": [
+    "ovh:/srv/repos/Prom-King/shared-tube/.git/config",
+    "ovh:/var/www/deploy-scripts/deploy-shared-tube.sh"
+  ],
+  "planPath": "",
+  "contentHash": "9321eec7365ad8fb8b85c1ddb8f3d2cdc59db81c5865e6871b7d1de646575aa4",
+  "git": null
+}

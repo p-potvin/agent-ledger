@@ -1,0 +1,46 @@
+{
+  "id": "20260627-223803-488-general-tasks-37beccd1",
+  "createdAt": "2026-06-28T02:38:03.4889692Z",
+  "createdAtLocal": "2026-06-27 22:38",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-27 22:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fri, 27 Jun 2026 00:22 - Diagnosed Codex Desktop new-chat/permissions behavior. Found Codex Desktop package OpenAI.Codex_26.623.4041.0 running, embedded resources codex-cli 0.142.2, local CODEX_CLI_PATH/npm codex-cli 0.142.3, and old active tooltip thread from 2026-06-23 using disabled/danger sandbox. New 2026-06-27 projectless thread 019f0be4-a6e3-7100-82f0-bf3b1c00d4db was created under C:\\Users\\Administrator\\Documents\\Codex\\2026-06-27\\ca with managed workspaceWrite permissions limited to C:\\Users\\Administrator\\Documents\\Codex and networkAccess=false. Global desktop state still has active workspace root C:\\Users\\Administrator\\Desktop\\Github Repos and local agent mode full-access, but the new thread is listed under projectless-thread-ids and has heartbeat permissions workspaceWrite/auto_review. Logs also show unknown feature-key warnings from config and transient vaultwares_mcp timeout, but endpoint 100.67.25.118:9020 was reachable on single check. No config changes made.",
+  "commands": [
+    "Get-Process / Win32_Process Codex diagnostics",
+    "codex --version and embedded codex.exe --version checks",
+    "Read .codex config.toml with secret redaction",
+    "Query .codex state_5.sqlite recent threads",
+    "Query .codex logs_2.sqlite warnings/errors",
+    "Read .codex-global-state.json selected keys",
+    "Test-NetConnection 100.67.25.118:9020 single check"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\.codex\\config.toml",
+    "C:\\Users\\Administrator\\.codex\\.codex-global-state.json",
+    "C:\\Users\\Administrator\\.codex\\state_5.sqlite",
+    "C:\\Users\\Administrator\\.codex\\logs_2.sqlite",
+    "C:\\Users\\Administrator\\.codex\\session_index.jsonl"
+  ],
+  "planPath": "",
+  "contentHash": "37beccd1a7a2e8c154c4d9853484b251cc57fb52f883b653829603091e12dc3b",
+  "git": null
+}

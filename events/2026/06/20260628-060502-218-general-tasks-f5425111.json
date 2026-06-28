@@ -1,0 +1,43 @@
+{
+  "id": "20260628-060502-218-general-tasks-f5425111",
+  "createdAt": "2026-06-28T10:05:02.2181917Z",
+  "createdAtLocal": "2026-06-28 06:05",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 06:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 05:32 - Investigated request to replace deploy PAT with GitHub App. Current Prom-King deploy scripts use HTTPS GitHub remotes plus /var/www/deploy-scripts/git-askpass-vw-gh-token.sh reading /etc/vw-webhookd/gh-token; fresh git ls-remote against Prom-King/content-site with current helper returns 403, even though running deployments/services may currently appear healthy. Official GitHub App docs checked: app creation/installation requires GitHub owner UI flow; server side can mint short-lived installation access tokens from App ID/private key/installation ID. Proposed design: one GitHub App installable on both p-potvin and Prom-King, with Contents read and Issues write, plus helper/caching askpass on greencloud and Token Joker GitHub App health check. No deploy auth changes made yet.",
+  "commands": [
+    "ssh root@100.73.93.84 inspect /var/www/deploy-scripts deploy auth",
+    "ssh root@100.73.93.84 inspect Prom-King repo remotes",
+    "ssh root@100.73.93.84 git ls-remote https://github.com/Prom-King/content-site.git with GIT_ASKPASS",
+    "Official GitHub App docs lookup"
+  ],
+  "files": [
+    "greencloud:/var/www/deploy-scripts/git-askpass-vw-gh-token.sh",
+    "greencloud:/var/www/deploy-scripts/deploy-content-site.sh",
+    "greencloud:/var/www/deploy-scripts/deploy-link-sharing.sh",
+    "greencloud:/var/www/deploy-scripts/deploy-shared-tube.sh",
+    "greencloud:/var/www/deploy-scripts/deploy-tech-oracle.sh"
+  ],
+  "planPath": "",
+  "contentHash": "f54251117604b60bb4f148ac518069c6c6af8eb4dc11f255c15d04372e3bba70",
+  "git": null
+}

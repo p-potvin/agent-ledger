@@ -1,0 +1,44 @@
+{
+  "id": "20260628-104754-055-vault-monitor-ab2f9a97",
+  "createdAt": "2026-06-28T14:47:54.0556267Z",
+  "createdAtLocal": "2026-06-28 10:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 10:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 12:47 - Fixed the tailnet split-DNS outage. Reverted greencloud AppConnector advertisement to false. Confirmed the Tailscale ACL rule was present on greencloud's compiled netmap and that the root cause was dnsmasq runtime behavior: Debian starts dnsmasq with --local-service, and without explicit interfaces remote tailnet clients were rejected because tailscale0 is /32. Added interface=lo and interface=tailscale0 to /etc/dnsmasq.d/vaultwares-tailnet.conf, restarted dnsmasq, verified OVH can resolve monitor.vaultwares.ca through 100.73.93.84 and tcp53/tcp443 are open, and verified monitor.vaultwares.ca plus /monitor/overview return 200 from Clopeux-Desktop. Added a matching note to vaultwares-docs operations/tailscale.mdx; not pushed yet.",
+  "commands": [
+    "ssh root@100.73.93.84 tailscale set --advertise-connector=false",
+    "ssh root@100.73.93.84 edit /etc/dnsmasq.d/vaultwares-tailnet.conf",
+    "dnsmasq --test",
+    "systemctl restart dnsmasq",
+    "ssh ubuntu@100.67.25.118 dig @100.73.93.84 monitor.vaultwares.ca",
+    "curl.exe -I https://monitor.vaultwares.ca/",
+    "curl.exe https://monitor.vaultwares.ca/monitor/overview?kiwi_check=false"
+  ],
+  "files": [
+    "greencloud-vps:/etc/dnsmasq.d/vaultwares-tailnet.conf",
+    "greencloud-vps:/etc/dnsmasq.d/vaultwares-tailnet.conf.bak-20260628-1226",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\tailscale.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "ab2f9a97679d394a88e0ba2e0e0cb7c30e05ee0c83cf328902bbb536c1fe4009",
+  "git": null
+}

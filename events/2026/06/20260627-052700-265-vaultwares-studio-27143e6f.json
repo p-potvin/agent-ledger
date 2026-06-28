@@ -1,0 +1,53 @@
+﻿{
+    "id":  "20260627-052700-265-vaultwares-studio-27143e6f",
+    "createdAt":  "2026-06-27T09:27:00.2655492Z",
+    "createdAtLocal":  "2026-06-27 05:27",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: gemini 3.1 pro (low)\r\nThinking: low\r\nMode: chat\r\nPermissions: autopilot (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): write_to_file, replace_file_content\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-27 05:27 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini 3.1 pro (low)",
+                    "thinking":  "low",
+                    "mode":  "chat",
+                    "permissions":  "autopilot",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "write_to_file",
+                                      "replace_file_content"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Refactored the Studio GUI to drop qfluentwidgets and use standard PySide6 widgets with VaultWares Redesign themes. Implemented a top horizontal menu (Warm mode) and content stacked widget (Console mode). Created modular widgets: dashboard_view, settings_view, and integration_view.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "gui_app.py",
+                  "vaultwares_studio/gui/main_window.py",
+                  "vaultwares_studio/gui/dashboard_view.py",
+                  "vaultwares_studio/gui/settings_view.py",
+                  "vaultwares_studio/gui/integration_view.py"
+              ],
+    "planPath":  "artifacts/implementation_plan.md",
+    "contentHash":  "27143e6fe640ad766168d1570a0f0bcebf63175ffe086c43bd84b3e751a725e8",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "main",
+                "head":  "15dc738",
+                "hasChanges":  true
+            }
+}

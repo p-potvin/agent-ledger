@@ -1,0 +1,45 @@
+{
+  "id": "20260628-052207-694-general-tasks-f1564f80",
+  "createdAt": "2026-06-28T09:22:07.6944609Z",
+  "createdAtLocal": "2026-06-28 05:22",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 05:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 04:47 - With user approval, ran a bounded read-only GitHub API scope check using the deployed greencloud GH_TOKEN. Confirmed Prom-King org is visible, p-potvin/vaultwares-docs is accessible, but Prom-King/content-site, Prom-King/prelanding-page, Prom-King/link-sharing, Prom-King/shared-tube, Prom-King/tech-oracle, and Prom-King/tube-sites all return GitHub 404. No token values were logged.",
+  "commands": [
+    "ssh root@100.73.93.84 grep deploy scripts for Prom-King repo references",
+    "ssh root@100.73.93.84 sudo -u vwdeploy gh api repos/Prom-King/content-site",
+    "ssh root@100.73.93.84 sudo -u vwdeploy gh api repos/Prom-King/prelanding-page",
+    "ssh root@100.73.93.84 sudo -u vwdeploy gh api repos/Prom-King/link-sharing",
+    "ssh root@100.73.93.84 sudo -u vwdeploy gh api repos/Prom-King/shared-tube",
+    "ssh root@100.73.93.84 sudo -u vwdeploy gh api repos/Prom-King/tech-oracle",
+    "ssh root@100.73.93.84 sudo -u vwdeploy gh api repos/Prom-King/tube-sites",
+    "ssh root@100.73.93.84 sudo -u vwdeploy gh api orgs/Prom-King",
+    "ssh root@100.73.93.84 sudo -u vwdeploy gh api repos/p-potvin/vaultwares-docs"
+  ],
+  "files": [
+    "greencloud:/etc/vw-webhookd/env",
+    "greencloud:/etc/vw-webhookd/gh-token"
+  ],
+  "planPath": "",
+  "contentHash": "f1564f8080e6289ddb8024e1642db4432706e7c840cf0244ca5e8b5f983b941e",
+  "git": null
+}

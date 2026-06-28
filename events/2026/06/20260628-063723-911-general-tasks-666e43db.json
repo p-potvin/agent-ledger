@@ -1,0 +1,53 @@
+{
+  "id": "20260628-063723-911-general-tasks-666e43db",
+  "createdAt": "2026-06-28T10:37:23.9111554Z",
+  "createdAtLocal": "2026-06-28 06:37",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 06:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 05:47 - Wired the installed Prom-King Deployment GitHub App (App ID 4165781) into greencloud deploy authentication without logging private key or token values. Installed key/config under /etc/vw-github-app, added /usr/local/bin/vw-github-app-token to mint/cache short-lived installation tokens, updated /var/www/deploy-scripts/git-askpass-vw-gh-token.sh to use GitHub App tokens when VW_GITHUB_OWNER is set and legacy PAT fallback otherwise, and marked Prom-King deploy scripts with VW_GITHUB_OWNER=Prom-King. Verification: GitHub App token API access works for Prom-King/content-site, link-sharing, shared-tube, tech-oracle; git ls-remote works as vwdeploy for content-site, link-sharing, shared-tube, tech-oracle; p-potvin/vaultwares-docs legacy fallback still works; helper py_compile and bash -n for touched scripts passed; permissions checked root:vwdeploy with private key/app env 0640 and scripts 0750.",
+  "commands": [
+    "ssh root@100.73.93.84 install /etc/vw-github-app/private-key.pem and app.env",
+    "ssh root@100.73.93.84 create /usr/local/bin/vw-github-app-token",
+    "ssh root@100.73.93.84 update /var/www/deploy-scripts/git-askpass-vw-gh-token.sh",
+    "ssh root@100.73.93.84 update Prom-King deploy scripts with VW_GITHUB_OWNER=Prom-King",
+    "ssh root@100.73.93.84 gh api repos/Prom-King/content-site/link-sharing/shared-tube/tech-oracle with app token",
+    "ssh root@100.73.93.84 sudo -u vwdeploy git ls-remote Prom-King repos with app askpass",
+    "ssh root@100.73.93.84 sudo -u vwdeploy git ls-remote p-potvin/vaultwares-docs with legacy fallback",
+    "ssh root@100.73.93.84 python3 -m py_compile /usr/local/bin/vw-github-app-token",
+    "ssh root@100.73.93.84 bash -n touched deploy scripts"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\.access\\prom-king-deployment.2026-06-28.private-key.pem",
+    "greencloud:/etc/vw-github-app/app.env",
+    "greencloud:/etc/vw-github-app/private-key.pem",
+    "greencloud:/usr/local/bin/vw-github-app-token",
+    "greencloud:/var/www/deploy-scripts/git-askpass-vw-gh-token.sh",
+    "greencloud:/var/www/deploy-scripts/deploy-content-site.sh",
+    "greencloud:/var/www/deploy-scripts/deploy-link-sharing.sh",
+    "greencloud:/var/www/deploy-scripts/deploy-shared-tube.sh",
+    "greencloud:/var/www/deploy-scripts/deploy-tech-oracle.sh",
+    "greencloud:/var/www/deploy-scripts/deploy-tube-sites.sh"
+  ],
+  "planPath": "",
+  "contentHash": "666e43db187d552dea14d850437fa023ecce1866f98237e9df1a8a7ba477b9b1",
+  "git": null
+}

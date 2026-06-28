@@ -1,0 +1,48 @@
+{
+  "id": "20260627-072541-827-tech-oracle-17d8ceee",
+  "createdAt": "2026-06-27T11:25:41.8277460Z",
+  "createdAtLocal": "2026-06-27 07:25",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: medium\r\nMode: code\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: main\r\nTools used (this reply): Read, Edit, PowerShell, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-27 07:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-6",
+    "thinking": "medium",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "PowerShell",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "Fixed Aperture/Ollama integration. Root cause: PowerShell Invoke-WebRequest corrupts byte arrays, mangling the 5-byte Connect protocol envelope. Fix: write binary payload to temp file, send via curl.exe --data-binary. Confirmed working: test chat created conversation 377dcd21900304d8 with 132KB response. Also confirmed the correct Connect envelope format is 5 bytes (1 flag + 4 BE uint32 length), not 4 bytes as initially assumed.",
+  "commands": [
+    "curl.exe --data-binary Aperture test",
+    "git push origin main"
+  ],
+  "files": [
+    "utils/tech-oracle-local-tick.ps1"
+  ],
+  "planPath": " ",
+  "contentHash": "17d8ceee57fc4868887e78a5ee094d2fca4efd5298e7a1d0f09392d9e3501008",
+  "git": {
+    "repo": "tech-oracle",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/tech-oracle",
+    "branch": "main",
+    "head": "e938a58",
+    "hasChanges": true
+  }
+}

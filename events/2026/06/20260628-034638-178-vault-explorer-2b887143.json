@@ -1,0 +1,53 @@
+﻿{
+    "id":  "20260628-034638-178-vault-explorer-2b887143",
+    "createdAt":  "2026-06-28T07:46:38.1784114Z",
+    "createdAtLocal":  "2026-06-28 03:46",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: restricted (network: Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): view_file, replace_file_content, run_command, grep_search\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 03:46 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "restricted",
+                    "network":  "Windows",
+                    "toolsUsed":  [
+                                      "view_file",
+                                      "replace_file_content",
+                                      "run_command",
+                                      "grep_search"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Resolved environment variable configuration bug in built/packaged app by centralizing dotenv loading logic to early startup in main.js checking process.cwd(), execPath, and local dirs. Bundled .env inside package.json files array. Appended tmdbBearerToken dynamically to system settings loadSettings() to restore TMDB tokens in the frontend. Fixed YouTube Error 152 by making the HTTP referer/origin spoofing and response headers removal case-insensitive. Centralized utils child_process overrides at very startup of main.js and added child_process.exec override to ensure complete subprocess tree cleanup on app exit.",
+    "commands":  [
+                     "npm run dist"
+                 ],
+    "files":  [
+                  "main.js",
+                  "package.json",
+                  "src/utils.js"
+              ],
+    "planPath":  "",
+    "contentHash":  "2b887143d0cac7a33db89f404d364535c58bcd70d9c680a33a50d2212a723352",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "main",
+                "head":  "85f5e8b",
+                "hasChanges":  true
+            }
+}

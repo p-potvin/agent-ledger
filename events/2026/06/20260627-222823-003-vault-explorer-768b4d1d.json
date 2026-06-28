@@ -1,0 +1,49 @@
+{
+  "id": "20260627-222823-003-vault-explorer-768b4d1d",
+  "createdAt": "2026-06-28T02:28:23.0034544Z",
+  "createdAtLocal": "2026-06-27 22:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-27 22:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Sat, 27 Jun 2026 00:12 - Confirmed Windows-style tooltip changes are still present in vault-explorer source and packaged dist/win-unpacked/resources/app.asar. Source is on main at 85f5e8b, index.html loads index.css and js/tooltip.js, old global-tooltip/vw-tooltip selectors are absent, tooltip_behavior_test.js passes. Likely cause if UI still looks old: running an old already-open or installed app instance rather than current source/dist build, or judging the new Windows dark tooltip as visually similar.",
+  "commands": [
+    "git status --short",
+    "Select-String tooltip markers in js/tooltip.js index.css tests/tooltip_behavior_test.js",
+    "node tests\\tooltip_behavior_test.js",
+    "node node_modules\\@electron\\asar\\bin\\asar.js extract dist\\win-unpacked\\resources\\app.asar <temp>",
+    "Select-String packaged tooltip markers"
+  ],
+  "files": [
+    "js\\tooltip.js",
+    "index.css",
+    "tests\\tooltip_behavior_test.js",
+    "dist\\win-unpacked\\resources\\app.asar"
+  ],
+  "planPath": "",
+  "contentHash": "768b4d1d0a2740c8f20c58ed113dd351437dc8be215a738faa80e1f86c985faa",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "85f5e8b",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "20260628-074955-312-health-ledger-70b68e16",
+  "createdAt": "2026-06-28T11:49:55.3128535Z",
+  "createdAtLocal": "2026-06-28 07:49",
+  "timezone": "Eastern Standard Time",
+  "project": "health-ledger",
+  "kind": "documentation",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 07:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 10:52 - Repointed GitHub deploy credential inventory away from live PAT validation to the Prom-King GitHub App private key using age_only tracking, added the App key rotation runbook, and deprecated the old deploy PAT runbook. Verified tokens.yaml parsing and token-joker syntax without running live token checks.",
+  "commands": [
+    "node yaml parse tokens.yaml",
+    "npm run check:token",
+    "git diff --check",
+    "diff secret-pattern scan"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\tokens.yaml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\token-joker.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\runbooks\\rotate-github-deploy-app.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\runbooks\\rotate-github-deploy-pat.md"
+  ],
+  "planPath": "",
+  "contentHash": "70b68e1630071232b382101a46e57cb55af822deee8bb91603f7b907a8eb2987",
+  "git": null
+}

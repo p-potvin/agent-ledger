@@ -1,0 +1,59 @@
+{
+  "id": "20260627-042458-169-tech-oracle-b39995b6",
+  "createdAt": "2026-06-27T08:24:58.1692036Z",
+  "createdAtLocal": "2026-06-27 04:24",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + greencloud VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, PowerShell, TaskCreate, TaskUpdate, AskUserQuestion, Agent\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-27 04:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-6",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + greencloud VPS",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell",
+      "TaskCreate",
+      "TaskUpdate",
+      "AskUserQuestion",
+      "Agent"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle",
+  "summary": "Phase 0-4 complete. Deployed draft gate to greencloud, patched 568 existing articles to status: draft (site intentionally empty). Configured rclone SFTP remote for greencloud, synced 568 articles to D:\\tech-oracle\\articles\\.staging, sorted into draft/ folder. Added 3 article-serving endpoints to bridge server (GET /articles, GET /articles/current, POST /articles/set-current) for Ollama web_fetch. Created utils/tech-oracle-local-tick.ps1 scheduled task script: rclone sync, sort by status, pick next draft, Jules API call (jules.googleapis.com), Ollama chat via Aperture (4-byte BE uint32 length prefix + JSON). Registered TechOracle-LocalTick scheduled task at :08/:38 every 30min. Updated Jules prompt to use status: draft grep. Updated Ollama prompt URL to localhost:8765/articles/current.",
+  "commands": [
+    "git push origin main",
+    "ssh root@greencloud sed articles to draft",
+    "rclone sync greencloud:/articles/",
+    "Register-ScheduledTask TechOracle-LocalTick"
+  ],
+  "files": [
+    "src/tech_oracle/bridge/server.py",
+    "src/tech_oracle/bridge/models.py",
+    "utils/tech-oracle-local-tick.ps1",
+    "utils/jules-tech-oracle-prompt.md",
+    "utils/ollama-tech-oracle-prompt.md"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\prancy-coalescing-bear.md",
+  "contentHash": "b39995b6b61a1c7b798873c46bede627eb1c17cf6c2ee6b0beb940e80bacfa43",
+  "git": {
+    "repo": "tech-oracle",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/tech-oracle",
+    "branch": "main",
+    "head": "eb1c5f2",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "20260628-091503-657-vault-monitor-4ef4760c",
+  "createdAt": "2026-06-28T13:15:03.6576819Z",
+  "createdAtLocal": "2026-06-28 09:15",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 09:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 12:10 - Checked dnsmasq after the unintended Tailscale app was removed. dnsmasq is active on greencloud, syntax check passes, /etc/dnsmasq.d/vaultwares-tailnet.conf includes host-record=monitor.vaultwares.ca,100.73.93.84, and greencloud local dig via 127.0.0.1 and 100.73.93.84 returns 100.73.93.84. From Clopeux-Desktop, DNS to 100.73.93.84 still times out and TCP 53 fails while TCP 22 and 443 succeed. Current likely remaining fault is tailnet ACL/packet-filter path for port 53 or dnsmasq --local-service rejecting non-local tailnet clients because tailscale0 is /32. Also observed greencloud still has Tailscale AppConnector Advertise=true; left unchanged.",
+  "commands": [
+    "ssh root@100.73.93.84 systemctl/dnsmasq/config checks",
+    "Resolve-DnsName monitor.vaultwares.ca",
+    "nslookup monitor.vaultwares.ca 100.73.93.84",
+    "dig @127.0.0.1 monitor.vaultwares.ca on greencloud",
+    "TCP probes to 100.73.93.84 ports 53/443/22"
+  ],
+  "files": [
+    "greencloud-vps:/etc/dnsmasq.d/vaultwares-tailnet.conf",
+    "greencloud-vps:/lib/systemd/system/dnsmasq.service",
+    "greencloud-vps:Tailscale/dnsmasq runtime state"
+  ],
+  "planPath": "",
+  "contentHash": "4ef4760cd5831054a66461576061855aa2bae8bec084d9ed18342c3df7c67899",
+  "git": null
+}

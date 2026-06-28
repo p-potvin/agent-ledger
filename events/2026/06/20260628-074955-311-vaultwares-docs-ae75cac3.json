@@ -1,0 +1,43 @@
+{
+  "id": "20260628-074955-311-vaultwares-docs-ae75cac3",
+  "createdAt": "2026-06-28T11:49:55.3112487Z",
+  "createdAtLocal": "2026-06-28 07:49",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "documentation",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 07:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 10:52 - Updated deployment-flow, deploy-alerts, webhook-secret-rotation, and secrets-handling docs to remove old Prom-King PAT deploy-auth guidance and document GitHub App installation-token auth on greencloud and OVH. Regenerated page resources and verified vaultwares-docs build.",
+  "commands": [
+    "npm run generate:page-resources",
+    "git diff --check",
+    "npm run build",
+    "rg stale Prom-King PAT deploy-auth phrases"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\deployment-flow.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\deploy-alerts.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\webhook-secret-rotation.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\notes\\SECRETS_HANDLING.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\summaries\\SECRETS_HANDLING.md"
+  ],
+  "planPath": "",
+  "contentHash": "ae75cac3e84a9c42f4b9ae79de5752ae2400bfa4c34136e6ec5b2c4028141d84",
+  "git": null
+}

@@ -1,0 +1,44 @@
+{
+  "id": "20260628-085120-311-vault-monitor-12f721b2",
+  "createdAt": "2026-06-28T12:51:20.3114388Z",
+  "createdAtLocal": "2026-06-28 08:51",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 08:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 11:58 - Restored monitor.vaultwares.ca reachability. Root cause was tailnet DNS/app-connector mismatch: monitor.vaultwares.ca was configured as a Tailscale app-connector domain, but greencloud-vps was not advertising connector capability, causing normal DNS lookups to time out while direct HTTPS to 100.73.93.84 worked. Applied tailscale set --advertise-connector=true on greencloud-vps, verified DNS resolves to 100.73.93.84 and monitor SPA/API routes return 200, and closed p-potvin/vault-monitor#1.",
+  "commands": [
+    "gh issue create --repo p-potvin/vault-monitor",
+    "Resolve-DnsName monitor.vaultwares.ca",
+    "curl.exe -I https://monitor.vaultwares.ca/",
+    "ssh root@100.73.93.84 nginx and tailscale checks",
+    "ssh root@100.73.93.84 tailscale set --advertise-connector=true",
+    "curl.exe https://monitor.vaultwares.ca/monitor/services",
+    "gh issue close 1 --repo p-potvin/vault-monitor"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+    "greencloud-vps:/etc/nginx/sites-enabled/monitor.vaultwares.ca.conf",
+    "greencloud-vps:Tailscale AppConnector preference"
+  ],
+  "planPath": "",
+  "contentHash": "12f721b2ad8565cf8b0ab4133c9128eaa154e7f4a764a7be03184b75df94ae99",
+  "git": null
+}

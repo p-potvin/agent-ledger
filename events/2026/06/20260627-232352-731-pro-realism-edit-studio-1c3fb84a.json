@@ -1,0 +1,49 @@
+{
+  "id": "20260627-232352-731-pro-realism-edit-studio-1c3fb84a",
+  "createdAt": "2026-06-28T03:23:52.7314304Z",
+  "createdAtLocal": "2026-06-27 23:23",
+  "timezone": "Eastern Standard Time",
+  "project": "Pro-Realism-Edit-Studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-27 23:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sat, 27 Jun 2026 23:30 - Updated HF Space to remove Sneak-Moose/private external wiring and use official Phr00t Rapid-AIO v23. Replaced Sneak-Moose diffusers repo with Phr00t v23 single-file checkpoint loaded through diffusers native QwenImageTransformer2DModel, removed QUALITY_ENHANCEMENT diagnostics callback, gated video generation behind VIDEO_SPACE_ID, removed external Qwen logo URL, pinned diffusers==0.38.0, added static regression tests, set app version to 0.1.1, committed and pushed to Hugging Face Space. Verified local tests and syntax; HF build completed dependency/image phase, current Space metadata reports APP_STARTING at SHA 091327f. No ZeroGPU inference job was run.",
+  "commands": [
+    "hf download Phr00t/Qwen-Image-Edit-Rapid-AIO --dry-run",
+    "python tests\\\\test_external_sources.py",
+    "python -m py_compile app.py qwenimage\\\\pipeline_qwenimage_edit_plus.py qwenimage\\\\transformer_qwenimage.py qwenimage\\\\qwen_fa3_processor.py tests\\\\test_external_sources.py",
+    "git commit -m \"Sat, 27 Jun 2026 23:22 - Use Phr00t v23 official source\"",
+    "git push origin main",
+    "hf spaces logs clopeux/Pro-Realism-Edit-Studio",
+    "git commit -m \"Sat, 27 Jun 2026 23:29 - Fix Phr00t v23 startup loader\"",
+    "git push origin main",
+    "hf spaces info clopeux/Pro-Realism-Edit-Studio"
+  ],
+  "files": [
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\app.py",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\README.md",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\requirements.txt",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\AGENT.md",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\CLAUDE.md",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\tests\\test_external_sources.py"
+  ],
+  "planPath": "",
+  "contentHash": "1c3fb84a424b27ef61ae0838aa7ddd0d2c6437b4c7ebf4c2a67b4921147e6ded",
+  "git": null
+}

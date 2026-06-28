@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260628-011213-759-vaultwares-studio-a7a71647",
+    "createdAt":  "2026-06-28T05:12:13.7593135Z",
+    "createdAtLocal":  "2026-06-28 01:12",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change",
+    "actor":  ":AGENT_NAME",
+    "agentHeader":  "Agent: :AGENT_NAME (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: autopilot (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, Read, Edit, Grep\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-06-28 01:12 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-4-7",
+                    "thinking":  "high",
+                    "mode":  "agent",
+                    "permissions":  "autopilot",
+                    "network":  "local-windows",
+                    "toolsUsed":  [
+                                      "Bash",
+                                      "Read",
+                                      "Edit",
+                                      "Grep"
+                                  ],
+                    "mcpServersAccessed":  "VaultWares_MCP"
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Fix cpu-upgrade OOM on SfM jobs (root cause of 6a3fc7875f9c8079e0fb703c exit 137 OOMKilled). (1) ns-process-data now invoked with --num-downscales 0 instead of 3 — skips the 1x/2x/4x/8x image pyramid that splatfacto never reads. The parallel pool that built it peaked RAM above 32 GB on 500 frames at 1920x1080. (2) os.environ.setdefault(OMP_NUM_THREADS, 4) at top of main() so every COLMAP subprocess (feature_extractor, sequential_matcher, vocab_tree_matcher in standard + refine paths) inherits the cap. 8 vCPU * full SIFT parallelism was multiplying peak memory by 8x. Combined: keeps peak RSS under 32 GB for refine-scale joint sets too. Reviewed other 4 recent ERROR jobs and confirmed they were unrelated (CUDA driver on CPU node from pre-revert state, old worker image without --sfm-only, 20-frame test too few for mapper init). Pushed worker; Space RUNNING_BUILDING. Plan once built: queue cloudy refine against sunny base local-run-20260614-234541 via headless_remote_run.py --preset refine --refine-from local-run-20260614-234541 --video cloudy1 --video cloudy2 --yes.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "docker/worker/recon_entrypoint.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "a7a716471b69335c8c6d37dc5a51399cfff51a98d567490740b2e859217d4d97",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "main",
+                "head":  "99c2ab2",
+                "hasChanges":  true
+            }
+}

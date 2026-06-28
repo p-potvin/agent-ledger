@@ -1,0 +1,44 @@
+{
+  "id": "20260627-230425-848-pro-realism-edit-studio-b9c397de",
+  "createdAt": "2026-06-28T03:04:25.8480622Z",
+  "createdAtLocal": "2026-06-27 23:04",
+  "timezone": "Eastern Standard Time",
+  "project": "Pro-Realism-Edit-Studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-27 23:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sat, 27 Jun 2026 23:03 - Inspected D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio external URL/model references for HF Space build triage. Found runtime model load uses Qwen/Qwen-Image-Edit-2511 plus Sneak-Moose/Qwen-Rapid-AIO-v18-NSFW-diffusers; docs/UI mention Phr00t/Qwen-Image-Edit-Rapid-AIO; diagnostics callback uses QUALITY_ENHANCEMENT_URL and QUALITY_ENHANCEMENT_TOKEN; video client calls multimodalart/wan-2-2-first-last-frame; UI embeds Qwen logo from qianwen-res CDN. No files modified.",
+  "commands": [
+    "rg -n \"https?://|Sneak|sneak|Qwen|QUALITY_ENHANCEMENT_URL|MODEL|from_pretrained|hf_hub|download|spaces|huggingface|endpoint|url\" -S D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio",
+    "Get-Content D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\AGENT.md",
+    "Get-Content D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\CLAUDE.md",
+    "Get-Content D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\requirements.txt",
+    "git -C D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio log --oneline -5"
+  ],
+  "files": [
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\app.py",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\README.md",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\AGENT.md",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\CLAUDE.md",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\requirements.txt"
+  ],
+  "planPath": "",
+  "contentHash": "b9c397ded57928858c771ca2f53ce82d3c190f09dc89c62fa0b4aa5d2388bef7",
+  "git": null
+}

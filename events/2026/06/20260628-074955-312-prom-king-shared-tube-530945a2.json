@@ -1,0 +1,43 @@
+{
+  "id": "20260628-074955-312-prom-king-shared-tube-530945a2",
+  "createdAt": "2026-06-28T11:49:55.3128707Z",
+  "createdAtLocal": "2026-06-28 07:49",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 07:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 10:52 - Migrated shared-tube deploy auth source scripts to Prom-King GitHub App askpass by exporting VW_GITHUB_OWNER=Prom-King, updating bootstrap clone auth wording/env, and patching live greencloud and OVH source checkouts. Fixed greencloud vw-github-app-token cache chmod bug to match OVH. Verified greencloud vwdeploy and OVH ubuntu can mint fresh App tokens and git ls-remote Prom-King/shared-tube over credential-free HTTPS without running a deploy.",
+  "commands": [
+    "wsl bash -n deploy-shared-tube.sh and bootstrap-greencloud.sh",
+    "ssh greencloud bash -n /srv/repos/Prom-King/shared-tube/scripts/deploy-shared-tube.sh",
+    "ssh ovh bash -n /srv/repos/Prom-King/shared-tube/scripts/deploy-shared-tube.sh",
+    "git ls-remote https://github.com/Prom-King/shared-tube.git HEAD via App askpass on greencloud and OVH"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\scripts\\deploy-shared-tube.sh",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\scripts\\bootstrap-greencloud.sh",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\scripts\\README.md",
+    "/usr/local/bin/vw-github-app-token",
+    "/srv/repos/Prom-King/shared-tube/scripts/deploy-shared-tube.sh"
+  ],
+  "planPath": "",
+  "contentHash": "530945a28151e5b5e7327ee9cc9f0f8519672a7ded4e2a7e2298c3a77e9db3be",
+  "git": null
+}

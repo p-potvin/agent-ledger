@@ -1,0 +1,49 @@
+﻿{
+    "id":  "20260628-003342-502-prom-king-docs-a677dd56",
+    "createdAt":  "2026-06-28T04:33:42.5027442Z",
+    "createdAtLocal":  "2026-06-28 00:33",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King/docs",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: antigravity\r\nThinking: low\r\nMode: code\r\nPermissions: autopilot (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\docs  Branch: main\r\nTools used (this reply): run_command, replace_file_content\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 00:33 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "antigravity",
+                    "thinking":  "low",
+                    "mode":  "code",
+                    "permissions":  "autopilot",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "replace_file_content"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\docs",
+    "summary":  "Updated media-stack.md with Usenet reference resources",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "Prom-King/docs/docs-content/operations/media-stack.md"
+              ],
+    "planPath":  "c:\\Users\\Administrator\\.gemini\\antigravity\\brain\\feac4371-c19f-474e-b6e2-315d92cb4ec8\\artifacts\\implementation_plan.md",
+    "contentHash":  "a677dd56ea0378cd7ac1f2c65fc9efc134bdd61bbaf06dc1273794b6bd7d3fe8",
+    "git":  {
+                "repo":  "docs",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/docs",
+                "branch":  "main",
+                "head":  "a18be43",
+                "hasChanges":  true
+            }
+}

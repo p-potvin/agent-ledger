@@ -1,0 +1,51 @@
+﻿{
+    "id":  "20260627-233133-320-prom-king-docs-18222194",
+    "createdAt":  "2026-06-28T03:31:33.3208010Z",
+    "createdAtLocal":  "2026-06-27 23:31",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King/docs",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: antigravity\r\nThinking: medium\r\nMode: code\r\nPermissions: autopilot (network: local + ovh)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\docs  Branch: main\r\nTools used (this reply): run_command, replace_file_content, multi_replace_file_content\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-27 23:31 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "antigravity",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "autopilot",
+                    "network":  "local + ovh",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "replace_file_content",
+                                      "multi_replace_file_content"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\docs",
+    "summary":  "Configured SABnzbd to add Easynews server and 140G monthly quota",
+    "commands":  [
+                     "docker compose stop sabnzbd",
+                     "docker compose start sabnzbd"
+                 ],
+    "files":  [
+                  "/srv/vw-media/config/sabnzbd/sabnzbd.ini"
+              ],
+    "planPath":  " ",
+    "contentHash":  "18222194fa95c262d9440960a8c63cc4ffa4d85b4dcaf77908e8252ce620bd03",
+    "git":  {
+                "repo":  "docs",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/docs",
+                "branch":  "main",
+                "head":  "a18be43",
+                "hasChanges":  true
+            }
+}
