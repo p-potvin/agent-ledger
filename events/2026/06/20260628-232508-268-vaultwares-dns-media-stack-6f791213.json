@@ -1,0 +1,44 @@
+{
+  "id": "20260628-232508-268-vaultwares-dns-media-stack-6f791213",
+  "createdAt": "2026-06-29T03:25:08.2683615Z",
+  "createdAtLocal": "2026-06-28 23:25",
+  "timezone": "Eastern Standard Time",
+  "project": "VaultWares DNS / media stack",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 23:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 23:32 - Investigated slow/degraded Prowlarr and other media *arr services. Local health-ledger rollup shows media services degraded from clopeux-desktop public hostname probes with ~10.3-10.7s network errors while FlareSolverr direct tailnet probe is healthy. OVH host and containers are healthy; Prowlarr local check on 127.0.0.1:9696 returned 200 in ~5 ms. Public prowlarr.vaultwares.ca lookup/request spent ~11s in DNS, while DNS-bypassed HTTPS via Greencloud returned 302 in 132 ms. Greencloud dnsmasq has exact host records but AAAA lookup for prowlarr.vaultwares.ca times out, dnsmasq logs max concurrent DNS queries, and upstream is Tailscale DNS, matching a split-DNS forwarding loop/stall.",
+  "commands": [
+    "Read VaultWares and Prom-King routing/media-stack docs",
+    "Inspected health-ledger services.yaml, probe-joker.mjs, fleet-rollup.mjs, fleet-latest.json",
+    "SSH read-only OVH docker/systemd/resource checks",
+    "SSH read-only Greencloud dnsmasq/nginx/DNS checks",
+    "Single curl checks for Prowlarr local/public/DNS-bypassed"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\services.yaml",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\scripts\\probe-joker.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger\\scripts\\fleet-rollup.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\tailscale.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "6f7912139b1542f9604f4504e85ed8db984935ce9297292e95a609eb221676f3",
+  "git": null
+}

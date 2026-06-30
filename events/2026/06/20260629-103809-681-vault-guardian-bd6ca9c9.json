@@ -1,0 +1,67 @@
+{
+  "id": "20260629-103809-681-vault-guardian-bd6ca9c9",
+  "createdAt": "2026-06-29T14:38:09.6812150Z",
+  "createdAtLocal": "2026-06-29 10:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-guardian",
+  "kind": "general",
+  "actor": "Codex",
+  "agentHeader": "Agent: Codex (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: Default\r\nPermissions: danger-full-access; approval never (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian  Branch: vw-codex-ingress-telemetry-mitm\r\nTools used (this reply): shell_command, apply_patch, update_plan\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-29 10:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "Default",
+    "permissions": "danger-full-access; approval never",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "update_plan"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian",
+  "summary": "Mon, 29 Jun 2026 10:37 - Implemented ingress privacy telemetry, bounded full-trace triggers, browser-profile MITM service wiring, WinUI Ingress controls, and verified launch/UI presence without live MITM traffic.",
+  "commands": [
+    "dotnet test tests\\VaultGuardian.Core.Tests\\VaultGuardian.Core.Tests.csproj -p:Platform=x64 -v:minimal",
+    "dotnet build VaultGuardian.slnx -v:minimal",
+    "Start-Process VaultGuardian.UI.exe; UI Automation selected Ingress and found telemetry/MITM/full-trace controls"
+  ],
+  "files": [
+    "src/VaultGuardian.Core/Ingress/Telemetry/IngressContentEvent.cs",
+    "src/VaultGuardian.Core/Ingress/Telemetry/PrivacyWatchProfile.cs",
+    "src/VaultGuardian.Core/Ingress/Telemetry/PrivacyWatchProfileStore.cs",
+    "src/VaultGuardian.Core/Ingress/Telemetry/PrivacyTelemetryAnalyzer.cs",
+    "src/VaultGuardian.Core/Ingress/Telemetry/PrivacyTelemetryStore.cs",
+    "src/VaultGuardian.Core/Ingress/Telemetry/IngressTelemetryPipeline.cs",
+    "src/VaultGuardian.Core/Ingress/Tracing/FullTraceModels.cs",
+    "src/VaultGuardian.Core/Ingress/Tracing/FullTraceManager.cs",
+    "src/VaultGuardian.Core/Ingress/Mitm/MitmProxyModels.cs",
+    "src/VaultGuardian.Core/Ingress/Mitm/MitmFlowImporter.cs",
+    "src/VaultGuardian.Core/Ingress/Mitm/MitmProxyService.cs",
+    "src/VaultGuardian.Core/Diagnostics/IManagedProcessLauncher.cs",
+    "src/VaultGuardian.Core/Diagnostics/ManagedProcessLauncher.cs",
+    "src/VaultGuardian.Core/Observability/SystemMetrics.cs",
+    "src/VaultGuardian.Core/Observability/LiveMonitorService.cs",
+    "src/VaultGuardian.Core/AppSettings.cs",
+    "src/VaultGuardian.UI/App.xaml.cs",
+    "src/VaultGuardian.UI/MainWindow.xaml",
+    "src/VaultGuardian.UI/MainWindow.xaml.cs",
+    "tests/VaultGuardian.Core.Tests/IngressTelemetryPipelineTests.cs"
+  ],
+  "planPath": "",
+  "contentHash": "bd6ca9c93c858b5d70ac86ba559f093ce8c08b30c61513c387759c232b1ffb37",
+  "git": {
+    "repo": "vault-guardian",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-guardian",
+    "branch": "vw-codex-ingress-telemetry-mitm",
+    "head": "882a175",
+    "hasChanges": true
+  }
+}

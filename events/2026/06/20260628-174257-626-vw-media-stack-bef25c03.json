@@ -1,0 +1,39 @@
+{
+  "id": "20260628-174257-626-vw-media-stack-bef25c03",
+  "createdAt": "2026-06-28T21:42:57.6264176Z",
+  "createdAtLocal": "2026-06-28 17:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-media-stack",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 17:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 17:43 - Decrypted legacy OVH tube uploads from rclone crypt into plain Google Drive. Ran rclone copy from vw_gdrive_crypt:tube to vw_gdrive:VaultWares/media/tube with transfers=2/checkers=4, no source deletion. Rclone hit a transient Google Drive rateLimitExceeded but retry succeeded. Verified source and destination match exactly: 295 files, 47,450,351,921 bytes. Plain destination now has music/, pyload/, and xxx/.",
+  "commands": [
+    "rclone copy vw_gdrive_crypt:tube vw_gdrive:VaultWares/media/tube --transfers 2 --checkers 4",
+    "rclone size vw_gdrive_crypt:tube --json",
+    "rclone size vw_gdrive:VaultWares/media/tube --json",
+    "rclone lsf --recursive --files-only vw_gdrive:VaultWares/media/tube"
+  ],
+  "files": [
+    "/var/log/vaultwares/rclone-decrypt-tube-20260628T201103Z.log"
+  ],
+  "planPath": "",
+  "contentHash": "bef25c03f2b304b76bc1987294426820d323fbcfb15f191ba9e3c8e189df94dc",
+  "git": null
+}

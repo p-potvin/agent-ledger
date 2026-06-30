@@ -1,0 +1,40 @@
+{
+  "id": "20260628-235853-284-vaultwares-dns-media-stack-af29f55c",
+  "createdAt": "2026-06-29T03:58:53.2842089Z",
+  "createdAtLocal": "2026-06-28 23:58",
+  "timezone": "Eastern Standard Time",
+  "project": "VaultWares DNS / media stack",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 23:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 23:36 - Applied reversible Greencloud dnsmasq fix for slow media *arr hostnames. Backed up /etc/dnsmasq.d/vaultwares-tailnet.conf to /etc/dnsmasq.d/vaultwares-tailnet.conf.bak-20260628-2357, added exact local=/hostname/ zones for existing private host-record names so AAAA/unknown lookups no longer forward into Tailscale DNS, validated with dnsmasq --test, and restarted dnsmasq. Verification: Greencloud A prowlarr.vaultwares.ca returns 100.73.93.84; Greencloud AAAA returns immediate no-data; Windows curl to https://prowlarr.vaultwares.ca returned 302 in 0.193s with 0.054s DNS; OVH curl returned 302 in 0.100s with 0.016s DNS. Revert path: copy backup over the config and restart dnsmasq.",
+  "commands": [
+    "ssh root@100.73.93.84 backup/edit dnsmasq config, dnsmasq --test, systemctl restart dnsmasq",
+    "dig @127.0.0.1 prowlarr.vaultwares.ca A/AAAA on Greencloud",
+    "curl.exe https://prowlarr.vaultwares.ca/ from Windows",
+    "curl https://prowlarr.vaultwares.ca/ from OVH"
+  ],
+  "files": [
+    "/etc/dnsmasq.d/vaultwares-tailnet.conf",
+    "/etc/dnsmasq.d/vaultwares-tailnet.conf.bak-20260628-2357"
+  ],
+  "planPath": "",
+  "contentHash": "af29f55c93c52d2bb8daf4417daf75ffa6fea067176a69752e8ad3c0a22639d8",
+  "git": null
+}

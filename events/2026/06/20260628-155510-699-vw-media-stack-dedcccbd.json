@@ -1,0 +1,43 @@
+{
+  "id": "20260628-155510-699-vw-media-stack-dedcccbd",
+  "createdAt": "2026-06-28T19:55:10.6995158Z",
+  "createdAtLocal": "2026-06-28 15:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-media-stack",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 15:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 15:59 - Removed active rclone crypt writers from live hosts. On OVH, changed /usr/local/bin/vw-tube-uploader.sh from vw_gdrive_crypt:tube to vw_gdrive:VaultWares/media/tube and /usr/local/bin/vw-backup.sh from vw_gdrive_crypt:VaultWares/backups to vw_gdrive:VaultWares/backups. On Greencloud, changed /usr/local/bin/vw-backup.sh and /etc/vw-backup/env to vw_gdrive:VaultWares/backups. Verified bash syntax, active refs, timers, and redacted rclone config shape. Found prior encrypted tube namespace on OVH has music/, pyload/, xxx/ under vw_gdrive_crypt:tube; future writes are plain, legacy crypt remote left for recovery only.",
+  "commands": [
+    "ssh ubuntu@100.67.25.118 systemctl/rclone/script audit with secrets redacted",
+    "ssh ubuntu@100.67.25.118 patched vw-tube-uploader.sh and vw-backup.sh",
+    "ssh root@100.73.93.84 patched vw-backup.sh and /etc/vw-backup/env",
+    "bash -n remote scripts",
+    "grep active rclone/crypt refs on OVH and Greencloud"
+  ],
+  "files": [
+    "/usr/local/bin/vw-tube-uploader.sh",
+    "/usr/local/bin/vw-backup.sh",
+    "/etc/vw-backup/env",
+    "/etc/vw-backup/rclone.conf"
+  ],
+  "planPath": "",
+  "contentHash": "dedcccbdc57c5c0d0e6f346cbda639f1da7bf50cb38a382fb8bc8675cc42c1bc",
+  "git": null
+}

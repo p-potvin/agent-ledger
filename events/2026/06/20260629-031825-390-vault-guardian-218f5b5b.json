@@ -1,0 +1,54 @@
+{
+  "id": "20260629-031825-390-vault-guardian-218f5b5b",
+  "createdAt": "2026-06-29T07:18:25.3900293Z",
+  "createdAtLocal": "2026-06-29 03:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-guardian",
+  "kind": "bugfix",
+  "actor": "Codex GPT-5",
+  "agentHeader": "Agent: Codex GPT-5 (role: coding-agent)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: Default\r\nPermissions: danger-full-access; approval never (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian  Branch: main\r\nTools used (this reply): powershell, dotnet, git, gh, ui-automation\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-29 03:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "coding-agent",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "Default",
+    "permissions": "danger-full-access; approval never",
+    "network": "enabled",
+    "toolsUsed": [
+      "powershell",
+      "dotnet",
+      "git",
+      "gh",
+      "ui-automation"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian",
+  "summary": "Mon, 29 Jun 2026 03:48 - Fixed WinUI launch failfast tracked in GitHub issue #5 by removing manual Windows App SDK bootstrap from the self-contained UI entry point, pinning the UI to Microsoft.WindowsAppSDK 1.7.250606001, and removing the explicit Microsoft.Windows.SDK.BuildTools.MSIX package reference. Added regression tests covering the startup contract and stable runtime payload. Verified dotnet test, dotnet build, successful visible main window launch, and GUI navigation/actions.",
+  "commands": [
+    "dotnet test tests\\VaultGuardian.Core.Tests\\VaultGuardian.Core.Tests.csproj -p:Platform=x64 -v:minimal",
+    "dotnet build VaultGuardian.slnx -v:minimal",
+    "launched src\\VaultGuardian.UI\\bin\\x64\\Debug\\net10.0-windows10.0.26100.0\\win-x64\\VaultGuardian.UI.exe and verified visible VaultGuardian windows",
+    "GUI automation selected Performance, Dashboard, View Network Details, Close Details",
+    "gh issue comment 5 with fix summary and verification"
+  ],
+  "files": [
+    "src/VaultGuardian.UI/Program.cs",
+    "src/VaultGuardian.UI/VaultGuardian.UI.csproj",
+    "tests/VaultGuardian.Core.Tests/WinUiStartupConfigurationTests.cs"
+  ],
+  "planPath": "",
+  "contentHash": "218f5b5be3adf41d76cf967bc6d8a293f62c3ea77d24f3d136327a5ae352deda",
+  "git": {
+    "repo": "vault-guardian",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-guardian",
+    "branch": "main",
+    "head": "0e70a8d",
+    "hasChanges": true
+  }
+}

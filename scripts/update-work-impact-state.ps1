@@ -367,8 +367,20 @@ $eventDirs | ForEach-Object { Get-ChildItem -Path $_ -Recurse -File -Filter '*.j
         if ($processedEventIds.Contains($eventId)) { return }
 
         $utc = Safe-ParseUtc ([string]$e.createdAt)
-        if (-not $utc) { return }
-        $local = To-LocalTime $utc
+        $local = $null
+        if ($e.createdAtLocal) {
+            try {
+                $local = [datetime]::SpecifyKind([datetime]::Parse([string]$e.createdAtLocal, [System.Globalization.CultureInfo]::InvariantCulture), [System.DateTimeKind]::Local)
+            } catch { }
+        }
+        if (-not $local -and $utc) {
+            $local = To-LocalTime $utc
+        }
+        if (-not $local) { return }
+        
+        # Ensure $utc exists for minUtc/maxUtc tracking
+        if (-not $utc) { $utc = $local.ToUniversalTime() }
+
         if ($local -lt $startLocal) { return }
 
         $project = if ($e.project) { [string]$e.project } else { 'General Tasks' }
@@ -450,7 +462,7 @@ $eventDirs | ForEach-Object { Get-ChildItem -Path $_ -Recurse -File -Filter '*.j
 
                     # Skip excluded outlier commits
                     if ((Should-ExcludeCommit -Project $project -Commit $commitish)) {
-                        continue
+                        return
                     }
 
                     # Get commit timestamp and convert to local time for accurate day/month bucketing
@@ -503,8 +515,18 @@ $eventDirs | ForEach-Object { Get-ChildItem -Path $_ -Recurse -File -Filter '*.j
         if (-not $e2) { return }
 
         $utc2 = Safe-ParseUtc ([string]$e2.createdAt)
-        if (-not $utc2) { return }
-        $local2 = To-LocalTime $utc2
+        $local2 = $null
+        if ($e2.createdAtLocal) {
+            try {
+                $local2 = [datetime]::SpecifyKind([datetime]::Parse([string]$e2.createdAtLocal, [System.Globalization.CultureInfo]::InvariantCulture), [System.DateTimeKind]::Local)
+            } catch { }
+        }
+        if (-not $local2 -and $utc2) {
+            $local2 = To-LocalTime $utc2
+        }
+        if (-not $local2) { return }
+        if (-not $utc2) { $utc2 = $local2.ToUniversalTime() }
+        
         if ($local2 -lt $startLocal) { return }
 
         $hour2 = [int]$local2.Hour

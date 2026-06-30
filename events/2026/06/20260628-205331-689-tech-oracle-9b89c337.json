@@ -1,0 +1,38 @@
+{
+  "id": "20260628-205331-689-tech-oracle-9b89c337",
+  "createdAt": "2026-06-29T00:53:31.6891706Z",
+  "createdAtLocal": "2026-06-28 20:53",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-28 20:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sun, 28 Jun 2026 20:54 - Updated tech-oracle-local-tick.ps1 Step 5 to call Ollama directly at http://localhost:11434/api/chat using model llama3.2 and a messages array with role=user/content=<prompt>. Removed the Aperture Connect-protocol binary payload path from the script and kept the bridge current-article call. Added stream=false so Invoke-RestMethod receives one JSON response. Verified PowerShell parser success without running scheduled task or making API calls.",
+  "commands": [
+    "PowerShell parser ParseFile on utils/tech-oracle-local-tick.ps1",
+    "Select-String verification for Ollama URL/model/messages and no Aperture references",
+    "git diff -- utils/tech-oracle-local-tick.ps1"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tech-oracle\\utils\\tech-oracle-local-tick.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "9b89c337a73e914db0ac99ab49e8d4fa56a61deaea9dcd13025561185127508a",
+  "git": null
+}

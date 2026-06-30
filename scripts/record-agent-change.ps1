@@ -179,8 +179,6 @@ $ledgerRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 if (-not $WorkspaceRoot) {
     $WorkspaceRoot = Split-Path $ledgerRoot -Parent
 }
-$eventsRoot = Join-Path $ledgerRoot 'events'
-New-Item -ItemType Directory -Path $eventsRoot -Force | Out-Null
 
 . (Join-Path $PSScriptRoot 'resolve-project-alias.ps1')
 $aliasMapPath = Join-Path $ledgerRoot 'project-aliases.json'
@@ -196,6 +194,13 @@ if (-not $Project) {
 }
 
 $Project = Resolve-ProjectAlias -Project $Project -AliasMapPath $aliasMapPath
+
+if ($Project -eq 'health-ledger') {
+    $eventsRoot = Join-Path $WorkspaceRoot 'health-ledger\events'
+} else {
+    $eventsRoot = Join-Path $ledgerRoot 'events'
+}
+New-Item -ItemType Directory -Path $eventsRoot -Force | Out-Null
 
 # Multi-kind normalization: split, dedupe, sort for stable hash; keep unknown values verbatim
 $rawParts = ($Kind -split ',') | ForEach-Object { $_.Trim() } | Where-Object { $_ }
