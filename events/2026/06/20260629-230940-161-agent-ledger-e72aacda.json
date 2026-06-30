@@ -1,0 +1,38 @@
+{
+  "id": "20260629-230940-161-agent-ledger-e72aacda",
+  "createdAt": "2026-06-30T03:09:40.1619767Z",
+  "createdAtLocal": "2026-06-29 23:09",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "code-change,commands,verification",
+  "actor": "Antigravity",
+  "agentHeader": "Agent: Antigravity (role: main)\r\nModel: gemini-2.5-pro\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-29 23:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gemini-2.5-pro",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Fixed event date parsing to prefer createdAtLocal across both vaultwares-api and update-work-impact-state.ps1. Investigated commit count freeze (caused by previous silent pipeline failure falling back to raw api event counts). Verified local state rebuild yields accurate 515 unique commits and respects local boundaries.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "e72aacda049835704e1ede1ac37fb813788ea218a2bcdcae0304684f85582f22",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "553b5efa",
+    "hasChanges": false
+  }
+}
