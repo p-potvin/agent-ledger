@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib.util
 import sys
 import types
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -71,3 +72,52 @@ def test_activity_records_focus_recovery_rest_gaps_and_spool_backlog(tmp_path, m
     assert snap["longest_active_block_seconds"] > 0
     assert snap["spool_backlog_batches"] == 2
     assert snap["spool_backlog_bytes"] > 0
+
+
+def test_idle_resume_records_natural_path_until_next_click(monkeypatch):
+    tracker = _load_tracker()
+    clock = {"now": 2000.0}
+
+    monkeypatch.setattr(tracker.time, "monotonic", lambda: clock["now"])
+    monkeypatch.setattr(tracker, "_foreground_window", lambda: ("development", "hash-dev", "PowerShell"))
+
+    tracker._last_activity_time = 1960.0
+    tracker._active_block_started_time = 1960.0
+    tracker._last_focus_check_time = 0.0
+    tracker._focus_initialized = True
+    tracker._focus_category = "development"
+    tracker._window_hash = "hash-dev"
+    tracker._window_name = "PowerShell"
+    tracker._mouse_last = None
+
+    tracker._on_move(10, 10)
+    clock["now"] = 2000.2
+    tracker._on_press(types.SimpleNamespace(char="x"))
+    clock["now"] = 2000.4
+    tracker._on_move(30, 40)
+    clock["now"] = 2000.6
+    tracker._on_click(30, 40, "left", True)
+
+    snap = tracker._snapshot()
+    natural_paths = snap["natural_paths"]
+
+    assert len(natural_paths) == 1
+    path = natural_paths[0]
+    assert path["trigger"] == "idle_resume"
+    assert path["stats"]["point_count"] == 2
+    assert path["stats"]["key_count"] == 1
+    assert path["key_presses"][0]["value"] == "x"
+    assert path["mouse_path"][0]["x"] == 10
+    assert path["click_target"]["x"] == 30
+
+    batch = tracker._build_batch(
+        datetime(2026, 7, 2, 13, 0, tzinfo=timezone.utc),
+        datetime(2026, 7, 2, 13, 1, tzinfo=timezone.utc),
+        snap,
+    )
+
+    assert batch is not None
+    assert [event["event_type"] for event in batch["events"]] == ["minute_rollup", "natural_path"]
+    natural_event = batch["events"][1]
+    assert natural_event["metrics"]["key_presses"][0]["value"] == "x"
+    assert natural_event["dimensions"]["privacy_level"] == "raw_keys_owner_opt_in"

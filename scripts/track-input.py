@@ -2,11 +2,11 @@
 """
 VaultWares input tracker.
 
-Collects privacy-safe input metrics, batches them to vaultwares-api, and
-falls back to append-only JSONL spool files when the API is unavailable.
+Collects input metrics, batches them to vaultwares-api, and falls back to
+append-only JSONL spool files when the API is unavailable.
 
-No raw typed text, clipboard contents, secrets, or unhashed window titles are
-written by this process.
+Minute rollups avoid raw typed text. Natural path segments intentionally store
+raw key presses during owner opt-in behavior capture windows.
 """
 
 from __future__ import annotations
@@ -51,6 +51,8 @@ HEALTH_PATH = STATE_DIR / "input-tracker-health.json"
 ERROR_PATH = STATE_DIR / "input-tracker-errors.jsonl"
 LOCK_PATH = STATE_DIR / "input-tracker.lock"
 PX_PER_METER = 96 / 0.0254
+NATURAL_PATH_MAX_POINTS = max(100, int(os.environ.get("VW_INPUT_NATURAL_PATH_MAX_POINTS", "2000")))
+NATURAL_PATH_MAX_KEYS = max(100, int(os.environ.get("VW_INPUT_NATURAL_PATH_MAX_KEYS", "2000")))
 SOURCE = "agent-ledger-input-tracker"
 SESSION_ID = f"{socket.gethostname()}-{uuid.uuid4().hex[:12]}"
 _lock_handle = None
@@ -67,6 +69,9 @@ _last_focus_check_time = 0.0
 _focus_started_time = _last_activity_time
 _focus_initialized = False
 _seq = 0
+_natural_path_seq = 0
+_natural_path = None
+_natural_paths = []
 
 _acc: Dict[str, Any] = {
     "keystrokes": 0,
@@ -118,6 +123,13 @@ def _hash(value: str) -> str:
     if not value:
         return "redacted"
     return hashlib.sha256(value.encode("utf-8", errors="ignore")).hexdigest()[:16]
+
+
+def _is_key(key: Any, candidates: set[Any]) -> bool:
+    try:
+        return key in candidates
+    except TypeError:
+        return False
 
 
 def _safe_window_label(process_name: str, title: str) -> tuple[str, str]:
@@ -179,7 +191,7 @@ def _health(status: str, **extra: Any) -> None:
         "spool_dir": str(SPOOL_DIR),
         "updated_at": _iso(_utc_now()),
         "privacy": {
-            "raw_text": False,
+            "raw_text": "natural_paths_raw_keys_owner_opt_in",
             "clipboard_contents": False,
             "window_titles": "hashed_or_redacted",
         },
@@ -301,6 +313,7 @@ def _refresh_focus(now: float, recovery_gap: float) -> None:
         _acc["switch_recovery_seconds_total"] += max(0.0, recovery_gap)
         _acc["switch_recovery_samples"] += 1
         _focus_started_time = now
+        _start_natural_path("context_switch", now)
     else:
         _acc["longest_focus_streak_seconds"] = max(float(_acc["longest_focus_streak_seconds"]), max(0.0, now - _focus_started_time))
     _focus_category = category
@@ -314,6 +327,7 @@ def _touch_activity() -> None:
     gap = now - _last_activity_time
     if 30 <= gap < 300:
         _acc["micro_pauses"] += 1
+        _start_natural_path("idle_resume", now, idle_gap_seconds=gap)
     elif gap >= 300:
         _acc["rest_blocks"] += 1
         _acc["active_starts_after_rest"] += 1
@@ -322,11 +336,121 @@ def _touch_activity() -> None:
         active_block = max(0.0, _last_activity_time - _active_block_started_time)
         _acc["longest_active_block_seconds"] = max(float(_acc["longest_active_block_seconds"]), active_block)
         _active_block_started_time = now
+        _start_natural_path("idle_resume", now, idle_gap_seconds=gap)
     else:
         active_block = max(0.0, now - _active_block_started_time)
         _acc["longest_active_block_seconds"] = max(float(_acc["longest_active_block_seconds"]), active_block)
     _refresh_focus(now, gap)
     _last_activity_time = now
+
+
+def _context_snapshot() -> Dict[str, Any]:
+    return {
+        "focus_category": _focus_category,
+        "window_name": _window_name,
+        "window_hash": _window_hash,
+    }
+
+
+def _start_natural_path(trigger: str, now: float, idle_gap_seconds: float | None = None) -> None:
+    global _natural_path, _natural_path_seq
+    if _natural_path is not None:
+        return
+    _natural_path_seq += 1
+    started_at = _utc_now()
+    _natural_path = {
+        "path_id": f"{SESSION_ID}:path:{_natural_path_seq}",
+        "trigger": trigger,
+        "started_at": _iso(started_at),
+        "started_monotonic": now,
+        "start_context": _context_snapshot(),
+        "mouse_path": [],
+        "key_presses": [],
+        "distance_px": 0.0,
+        "idle_gap_seconds": round(idle_gap_seconds, 3) if idle_gap_seconds is not None else None,
+    }
+
+
+def _key_payload(key: Any, now: float) -> Dict[str, Any]:
+    value = None
+    kind = "special"
+    try:
+        if hasattr(key, "char") and key.char is not None:
+            value = str(key.char)
+            kind = "char"
+    except Exception:
+        value = None
+    if value is None and key == keyboard.Key.space:
+        value = " "
+        kind = "char"
+    if value is None:
+        value = str(key).replace("Key.", "")
+    elapsed_ms = 0
+    if _natural_path is not None:
+        elapsed_ms = int(max(0.0, now - float(_natural_path["started_monotonic"])) * 1000)
+    return {
+        "t_ms": elapsed_ms,
+        "value": value,
+        "kind": kind,
+        "ctrl": bool(_ctrl_held),
+        "shift": bool(_shift_held),
+    }
+
+
+def _append_natural_key(key: Any, now: float) -> None:
+    if _natural_path is None:
+        return
+    keys = _natural_path["key_presses"]
+    if len(keys) < NATURAL_PATH_MAX_KEYS:
+        keys.append(_key_payload(key, now))
+
+
+def _append_natural_point(x: int, y: int, now: float) -> None:
+    if _natural_path is None:
+        return
+    points = _natural_path["mouse_path"]
+    elapsed_ms = int(max(0.0, now - float(_natural_path["started_monotonic"])) * 1000)
+    if points:
+        dx = x - int(points[-1]["x"])
+        dy = y - int(points[-1]["y"])
+        _natural_path["distance_px"] += math.sqrt(dx * dx + dy * dy)
+    if len(points) < NATURAL_PATH_MAX_POINTS:
+        points.append({"t_ms": elapsed_ms, "x": int(x), "y": int(y)})
+
+
+def _finalize_natural_path(now: float, ended_reason: str, click_target: Dict[str, Any] | None = None) -> None:
+    global _natural_path
+    if _natural_path is None:
+        return
+    duration_ms = int(max(0.0, now - float(_natural_path["started_monotonic"])) * 1000)
+    points = _natural_path["mouse_path"]
+    keys = _natural_path["key_presses"]
+    if not points and not keys and not click_target:
+        _natural_path = None
+        return
+    distance_px = float(_natural_path.get("distance_px") or 0.0)
+    finished = {
+        "path_id": _natural_path["path_id"],
+        "trigger": _natural_path["trigger"],
+        "started_at": _natural_path["started_at"],
+        "ended_at": _iso(_utc_now()),
+        "duration_ms": duration_ms,
+        "mouse_path": points,
+        "key_presses": keys,
+        "click_target": click_target or {},
+        "stats": {
+            "point_count": len(points),
+            "key_count": len(keys),
+            "distance_px": round(distance_px, 3),
+            "distance_m": round(distance_px / PX_PER_METER, 4),
+            "idle_gap_seconds": _natural_path.get("idle_gap_seconds"),
+            "ended_reason": ended_reason,
+        },
+        "start_context": _natural_path["start_context"],
+        "end_context": _context_snapshot(),
+    }
+    _natural_paths.append(finished)
+    _natural_path = None
 
 
 def _record_latency() -> None:
@@ -365,12 +489,14 @@ def _on_press(key: Any) -> None:
     with _lock:
         _touch_activity()
         _record_latency()
+        now = time.monotonic()
+        _append_natural_key(key, now)
         _acc["keystrokes"] += 1
 
-        if key in _CTRL_KEYS:
+        if _is_key(key, _CTRL_KEYS):
             _ctrl_held = True
             return
-        if key in _SHIFT_KEYS:
+        if _is_key(key, _SHIFT_KEYS):
             _shift_held = True
             return
         if key == keyboard.Key.backspace:
@@ -411,9 +537,9 @@ def _on_press(key: Any) -> None:
 def _on_release(key: Any) -> None:
     global _ctrl_held, _shift_held
     with _lock:
-        if key in _CTRL_KEYS:
+        if _is_key(key, _CTRL_KEYS):
             _ctrl_held = False
-        if key in _SHIFT_KEYS:
+        if _is_key(key, _SHIFT_KEYS):
             _shift_held = False
 
 
@@ -422,6 +548,7 @@ def _on_move(x: int, y: int) -> None:
     now = time.monotonic()
     with _lock:
         _touch_activity()
+        _append_natural_point(x, y, now)
         if _mouse_last is not None and (now - _mouse_last_time) < 300:
             dx = x - _mouse_last[0]
             dy = y - _mouse_last[1]
@@ -438,6 +565,8 @@ def _on_click(x: int, y: int, button: Any, pressed: bool) -> None:
         _acc["clicks"] += 1
         key = f"{max(0, int(x // 160))}:{max(0, int(y // 120))}"
         _acc["click_hotspots"][key] = _acc["click_hotspots"].get(key, 0) + 1
+        click_target = {"x": int(x), "y": int(y), "button": str(button)}
+        _finalize_natural_path(time.monotonic(), "click", click_target)
 
 
 def _on_scroll(x: int, y: int, dx: int, dy: int) -> None:
@@ -449,6 +578,8 @@ def _on_scroll(x: int, y: int, dx: int, dy: int) -> None:
 def _snapshot() -> Dict[str, Any]:
     with _lock:
         snap = json.loads(json.dumps(_acc))
+        snap["natural_paths"] = json.loads(json.dumps(_natural_paths))
+        _natural_paths.clear()
         now = time.monotonic()
         if _focus_initialized:
             current_focus_streak = max(0.0, now - _focus_started_time)
@@ -469,35 +600,65 @@ def _snapshot() -> Dict[str, Any]:
 
 def _build_batch(started_at: datetime, ended_at: datetime, snap: Dict[str, Any]) -> Dict[str, Any] | None:
     global _seq
-    if snap["keystrokes"] == 0 and snap["mouse_px"] == 0 and snap["clicks"] == 0 and snap["scroll_ticks"] == 0:
+    natural_paths = snap.pop("natural_paths", [])
+    has_rollup = not (snap["keystrokes"] == 0 and snap["mouse_px"] == 0 and snap["clicks"] == 0 and snap["scroll_ticks"] == 0)
+    if not has_rollup and not natural_paths:
         return None
     _seq += 1
     duration = max(1.0, (ended_at - started_at).total_seconds())
     mouse_px = float(snap.pop("mouse_px", 0.0))
     metrics = {**snap, "active_seconds": duration, "mouse_distance_m": round(mouse_px / PX_PER_METER, 4)}
-    event = {
-        "event_id": f"{SESSION_ID}:{_seq}",
-        "event_type": "minute_rollup",
-        "timestamp": _iso(ended_at),
-        "bucket_start": _iso(started_at),
-        "metrics": metrics,
-        "dimensions": {
-            "focus_category": _focus_category,
-            "window_name": _window_name,
-            "window_hash": _window_hash,
-            "privacy_level": "redacted",
-        },
-    }
-    event["checksum"] = _hash(json.dumps(event, sort_keys=True, separators=(",", ":"), default=str))
+    events = []
+    if has_rollup:
+        event = {
+            "event_id": f"{SESSION_ID}:{_seq}",
+            "event_type": "minute_rollup",
+            "timestamp": _iso(ended_at),
+            "bucket_start": _iso(started_at),
+            "metrics": metrics,
+            "dimensions": {
+                "focus_category": _focus_category,
+                "window_name": _window_name,
+                "window_hash": _window_hash,
+                "privacy_level": "redacted",
+            },
+        }
+        event["checksum"] = _hash(json.dumps(event, sort_keys=True, separators=(",", ":"), default=str))
+        events.append(event)
+    for index, path in enumerate(natural_paths, start=1):
+        event = {
+            "event_id": f"{path.get('path_id') or SESSION_ID + ':path:' + str(_seq) + ':' + str(index)}",
+            "event_type": "natural_path",
+            "timestamp": path.get("ended_at") or _iso(ended_at),
+            "bucket_start": path.get("started_at") or _iso(started_at),
+            "metrics": {
+                "path_id": path.get("path_id"),
+                "trigger": path.get("trigger"),
+                "started_at": path.get("started_at"),
+                "ended_at": path.get("ended_at"),
+                "duration_ms": path.get("duration_ms", 0),
+                "mouse_path": path.get("mouse_path") or [],
+                "key_presses": path.get("key_presses") or [],
+                "click_target": path.get("click_target") or {},
+                "stats": path.get("stats") or {},
+            },
+            "dimensions": {
+                "start_context": path.get("start_context") or {},
+                "end_context": path.get("end_context") or {},
+                "privacy_level": "raw_keys_owner_opt_in",
+            },
+        }
+        event["checksum"] = _hash(json.dumps(event, sort_keys=True, separators=(",", ":"), default=str))
+        events.append(event)
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "source": SOURCE,
         "host": {"hostname": socket.gethostname(), "platform": platform.platform()},
         "session_id": SESSION_ID,
         "batch_id": f"{SESSION_ID}:{_seq}:{uuid.uuid4().hex[:8]}",
         "started_at": _iso(started_at),
         "ended_at": _iso(ended_at),
-        "events": [event],
+        "events": events,
     }
 
 
