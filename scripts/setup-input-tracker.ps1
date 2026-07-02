@@ -114,7 +114,7 @@ $trackerSettings = New-ScheduledTaskSettingsSet `
     -AllowStartIfOnBatteries `
     -DontStopIfGoingOnBatteries `
     -ExecutionTimeLimit (New-TimeSpan -Hours 0)  `
-    -MultipleInstances  IgnoreNew                `
+    -MultipleInstances  Parallel                 `
     -RestartCount       99                       `
     -RestartInterval    (New-TimeSpan -Minutes 1)`
     -StartWhenAvailable

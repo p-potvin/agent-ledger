@@ -9,7 +9,8 @@
 #>
 [CmdletBinding()]
 param(
-    [string]$PythonExe = ""
+    [string]$PythonExe = "",
+    [switch]$NoRestartExisting
 )
 
 Set-StrictMode -Version Latest
@@ -18,6 +19,7 @@ $ErrorActionPreference = "Stop"
 $ScriptDir = Split-Path $MyInvocation.MyCommand.Path -Parent
 $LedgerRoot = Split-Path $ScriptDir -Parent
 $TrackerScript = Join-Path $ScriptDir "track-input.py"
+$LauncherScript = [System.IO.Path]::GetFullPath($PSCommandPath)
 $StateDir = Join-Path $LedgerRoot "input-state"
 
 if (-not (Test-Path $TrackerScript)) {
@@ -25,6 +27,42 @@ if (-not (Test-Path $TrackerScript)) {
 }
 if (-not (Test-Path $StateDir)) {
     New-Item -ItemType Directory -Path $StateDir -Force | Out-Null
+}
+
+$logPath = Join-Path $StateDir ("input-tracker-task-{0}.log" -f (Get-Date -Format "yyyyMMdd"))
+
+function Write-TrackerLog {
+    param([string]$Message)
+    $line = "{0} {1}" -f (Get-Date -Format "yyyy-MM-ddTHH:mm:ssK"), $Message
+    try {
+        Add-Content -Path $logPath -Value $line -Encoding UTF8 -ErrorAction Stop
+    }
+    catch {
+        # The previous long-running wrapper may still hold the log file while
+        # we are trying to stop it. Logging must never block the restart path.
+    }
+}
+
+function Stop-ExistingTrackerProcesses {
+    $scriptPath = [System.IO.Path]::GetFullPath($TrackerScript)
+    $processes = Get-CimInstance Win32_Process -ErrorAction SilentlyContinue |
+        Where-Object {
+            $_.ProcessId -ne $PID -and
+            $_.CommandLine -and
+            (
+                $_.CommandLine.IndexOf($scriptPath, [System.StringComparison]::OrdinalIgnoreCase) -ge 0 -or
+                $_.CommandLine.IndexOf($LauncherScript, [System.StringComparison]::OrdinalIgnoreCase) -ge 0
+            )
+        }
+
+    foreach ($process in $processes) {
+        Write-TrackerLog "Stopping existing tracker process PID $($process.ProcessId) before launch"
+        Stop-Process -Id $process.ProcessId -Force -ErrorAction SilentlyContinue
+    }
+}
+
+if (-not $NoRestartExisting) {
+    Stop-ExistingTrackerProcesses
 }
 
 $apiUrl = [Environment]::GetEnvironmentVariable("VW_API_URL", "User")
@@ -62,7 +100,6 @@ if ($pythonResolved -like "*\WindowsApps\*") {
     if ($pythonCore) { $pythonResolved = $pythonCore.FullName }
 }
 
-$logPath = Join-Path $StateDir ("input-tracker-task-{0}.log" -f (Get-Date -Format "yyyyMMdd"))
 Set-Location $ScriptDir
 
 & $pythonResolved $TrackerScript *>> $logPath
