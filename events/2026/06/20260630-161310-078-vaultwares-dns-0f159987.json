@@ -1,0 +1,41 @@
+﻿{
+    "id":  "20260630-161310-078-vaultwares-dns-0f159987",
+    "createdAt":  "2026-06-30T20:13:10.0786933Z",
+    "createdAtLocal":  "2026-06-30 16:13",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-dns",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-3-opus-20240229\r\nThinking: low\r\nMode: plan\r\nPermissions: autopilot (network: OVH + Greencloud VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop  Branch: n/a\r\nTools used (this reply): run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-30 16:13 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-3-opus-20240229",
+                    "thinking":  "low",
+                    "mode":  "plan",
+                    "permissions":  "autopilot",
+                    "network":  "OVH + Greencloud VPS",
+                    "toolsUsed":  "run_command",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop",
+    "summary":  "Fixed pyload SSL errors by reverting DNS back to Greencloud and resolving internal Docker port mapping mismatches inside OVH pyload.cfg.",
+    "commands":  [
+                     "sed -i \u0027s/8003/8000/g\u0027 pyload.cfg",
+                     "docker restart pyload-ng"
+                 ],
+    "files":  [
+                  "/srv/vw-media/config/pyload-ng/settings/pyload.cfg"
+              ],
+    "planPath":  "",
+    "contentHash":  "0f159987d737f0598ea2e5cd961bcf1e752a667dd264c9cfc3366a850d6c7dc9",
+    "git":  null
+}

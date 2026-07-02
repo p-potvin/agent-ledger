@@ -1,0 +1,56 @@
+{
+  "id": "20260630-193855-374-vault-explorer-7876ce9c",
+  "createdAt": "2026-06-30T23:38:55.3746297Z",
+  "createdAtLocal": "2026-06-30 19:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "general,verification",
+  "actor": "Codex GPT-5",
+  "agentHeader": "Agent: Codex GPT-5 (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): shell_command, rg\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-30 19:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "rg"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Tue, 30 Jun 2026 00:05 - Assessed Vault Explorer portability to Amazon Fire Stick / Android TV class devices. Inspected Electron package target, main/preload IPC surface, filesystem/FFmpeg/Python/native-tool dependencies, streaming/Real-Debrid/Usenet paths, and keyboard/hover UI assumptions. No files changed.",
+  "commands": [
+    "Get-Content vaultwares-docs instructions summaries",
+    "rg --files",
+    "Get-Content package.json README.md main.js preload.js",
+    "rg Electron/IPC/native/media/debrid patterns",
+    "Get-Content src IPC/streaming files"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\package.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\main.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\preload.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\src\\ipc\\media.ipc.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\src\\realdebrid\\client.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\src\\realdebrid\\stream.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\src\\usenet\\stream.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\js\\navigation\\keybindings.js"
+  ],
+  "planPath": "",
+  "contentHash": "7876ce9c92ef7e0b51b2a946c681e1ef7e2a5720e90356d8336707848e078b48",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "09d3c62",
+    "hasChanges": true
+  }
+}

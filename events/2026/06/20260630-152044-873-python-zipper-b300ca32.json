@@ -1,0 +1,51 @@
+{
+  "id": "20260630-152044-873-python-zipper-b300ca32",
+  "createdAt": "2026-06-30T19:20:44.8737845Z",
+  "createdAtLocal": "2026-06-30 15:20",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5 Codex\r\nThinking: unknown\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): shell_command, apply_patch, multi_tool_use.parallel\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-30 15:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5 Codex",
+    "thinking": "unknown",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "multi_tool_use.parallel"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Tue, 30 Jun 2026 06:45 - Tested the real Linkvertise input file. Local file linkvertise\\input\\links.txt had 36 active lines and parsed/scheduled offline into two 18-link waves. Synced it to OVH /srv/vw-linkvertise/input/links.txt with backup. Ran one authorized live item from the real file, link_id c33f4a7fa57c3d4e, through ca-mtr-wg-004 with Flaresolverr cap 1; gateway stayed healthy, downloads_count stayed 0, and state failed on a bizseasky tracker URL. Added bizseasky.com to the resolver ignored candidate host list, verified 38 passing tests, synced and rebuilt OVH downloader. Did not run an additional live request after the patch.",
+  "commands": [
+    "uv run --project linkvertise python -m linkvertise_downloader.cli --input linkvertise\\input\\links.txt --max-links 36 --dry-run",
+    "scp linkvertise\\input\\links.txt ubuntu@100.67.25.118:/tmp/vw-linkvertise-links.txt",
+    "ssh ubuntu@100.67.25.118 docker compose run --rm downloader python -m linkvertise_downloader.cli --max-links 1 --run-due --yes-live",
+    "uv run --with pytest --project linkvertise pytest linkvertise\\tests"
+  ],
+  "files": [
+    "linkvertise/input/links.txt",
+    "linkvertise/src/linkvertise_downloader/resolver.py",
+    "linkvertise/tests/test_resolver.py"
+  ],
+  "planPath": "",
+  "contentHash": "b300ca32a43484bba83705f779bde428ebaa060f283e57fb7be22c93d844c823",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "16d4dd6",
+    "hasChanges": true
+  }
+}

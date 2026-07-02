@@ -1,0 +1,49 @@
+{
+  "id": "20260630-172716-064-python-zipper-b768bcfc",
+  "createdAt": "2026-06-30T21:27:16.0649882Z",
+  "createdAtLocal": "2026-06-30 17:27",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5 Codex\r\nThinking: unknown\r\nMode: Default\r\nPermissions: danger-full-access approval-never (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): shell_command, view_image\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-30 17:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5 Codex",
+    "thinking": "unknown",
+    "mode": "Default",
+    "permissions": "danger-full-access approval-never",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "view_image"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Tue, 30 Jun 2026 17:19 - Ran one direct OVH no-VPN Linkvertise browser inspection from Docker bridge egress. Confirmed container public IP 51.79.55.113, initial Linkvertise page was Cloudflare blocked, and new tab led to Cloudflare 5xx landing; no Linkvertise cooldown or payload page was reached.",
+  "commands": [
+    "ssh root@100.67.25.118 docker run -i --rm -v /srv/vw-linkvertise:/srv/vw-linkvertise vw-linkvertise-downloader:latest python - <<PY",
+    "scp /srv/vw-linkvertise/artifacts/manual-flow-direct-ovh-c33f4a7fa57c3d4e-20260630-212505/report.json and screenshots",
+    "ssh root@100.67.25.118 docker run -i --rm vw-linkvertise-downloader:latest python api.ipify.org"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\linkvertise\\artifacts\\manual-flow-direct-ovh-c33f4a7fa57c3d4e-20260630-212505\\report.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\linkvertise\\artifacts\\manual-flow-direct-ovh-c33f4a7fa57c3d4e-20260630-212505\\00-step-0.png",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\linkvertise\\artifacts\\manual-flow-direct-ovh-c33f4a7fa57c3d4e-20260630-212505\\08-step-8.png"
+  ],
+  "planPath": "",
+  "contentHash": "b768bcfcc3daff24ab5d0f83e5a121273ad1b744cfa5d56826328934c2b07296",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "16d4dd6",
+    "hasChanges": true
+  }
+}

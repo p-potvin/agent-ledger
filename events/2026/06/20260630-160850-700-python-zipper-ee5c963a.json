@@ -1,0 +1,53 @@
+{
+  "id": "20260630-160850-700-python-zipper-ee5c963a",
+  "createdAt": "2026-06-30T20:08:50.7003853Z",
+  "createdAtLocal": "2026-06-30 16:08",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5 Codex\r\nThinking: unknown\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): shell_command, apply_patch, multi_tool_use.parallel\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-30 16:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5 Codex",
+    "thinking": "unknown",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "multi_tool_use.parallel"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Tue, 30 Jun 2026 16:05 - Ran full 36-link OVH Linkvertise test after adding new-tab handling. First full run exposed bugs: completed records dropped profile metadata and same filename hd overwrote outputs. Added tests and fixes to preserve profile/wave on done, download into per-link directories, and ignore chargebee asset URLs. Verified 40 passing tests, deployed/rebuilt OVH, backed up previous downloads and reran full 36-link test. Final state: 36 records, 23 done, 13 failed blocked/no external URL, 0 wait states. Downloads: 23 files, 1,408,888 bytes total, stored under per-link directories; file command identifies them as JPEG 1080x607. All 23 downloaded files share the same SHA256, so remaining issue is likely resolver selecting a repeated hd preview/asset instead of distinct final payloads. Gateway healthy; env left at MAX_LINKS=36 LINKVERTISE_RATE=36/70m FLARESOLVERR_CAP=36.",
+  "commands": [
+    "uv run --with pytest --project linkvertise pytest linkvertise\\tests",
+    "ssh ubuntu@100.67.25.118 /opt/vw-linkvertise/bin/linkvertise-run-once",
+    "ssh ubuntu@100.67.25.118 state/download summary checks"
+  ],
+  "files": [
+    "linkvertise/src/linkvertise_downloader/state.py",
+    "linkvertise/src/linkvertise_downloader/runner.py",
+    "linkvertise/src/linkvertise_downloader/resolver.py",
+    "linkvertise/tests/test_state.py",
+    "linkvertise/tests/test_runner.py",
+    "linkvertise/tests/test_resolver.py"
+  ],
+  "planPath": "",
+  "contentHash": "ee5c963a91458a4a44d4f533cb00694d07b64aad2f0fb447ef9a21a97eacbe6a",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "16d4dd6",
+    "hasChanges": true
+  }
+}

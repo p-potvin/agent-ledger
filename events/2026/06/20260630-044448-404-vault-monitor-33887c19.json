@@ -1,0 +1,47 @@
+﻿{
+    "id":  "20260630-044448-404-vault-monitor-33887c19",
+    "createdAt":  "2026-06-30T08:44:48.4049675Z",
+    "createdAtLocal":  "2026-06-30 04:44",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-monitor",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: autopilot (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-30 04:44 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "autopilot",
+                    "network":  "local",
+                    "toolsUsed":  "run_command",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+    "summary":  "Vault Monitor UI Hotfix: Changed .app-shell from grid to flex layout to prevent overlap during zoom 0.8 scaling. Added explicit toggle button for collapsing the sidebar and implemented correct hiding logic for text and labels when collapsed.",
+    "commands":  [
+                     "pnpm build"
+                 ],
+    "files":  [
+                  "src/styles.css",
+                  "src/App.tsx"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\61356df7-5bb1-448d-8185-f3747863bba1\\implementation_plan.md",
+    "contentHash":  "33887c19b470e6dc2e87bfa6b020cf2033cf6473096ead95f0088bad6a9c0b4a",
+    "git":  {
+                "repo":  "vault-monitor",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+                "branch":  "main",
+                "head":  "732df9d",
+                "hasChanges":  true
+            }
+}

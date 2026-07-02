@@ -1,0 +1,75 @@
+{
+  "id": "20260630-220142-403-vault-tv-1bc4e7ab",
+  "createdAt": "2026-07-01T02:01:42.4033319Z",
+  "createdAtLocal": "2026-06-30 22:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "code-change,verification",
+  "actor": "Codex GPT-5",
+  "agentHeader": "Agent: Codex GPT-5 (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: vw-codex-vault-tv-thin-client\r\nTools used (this reply): shell_command, apply_patch, update_plan, Playwright\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-30 22:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "update_plan",
+      "Playwright"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Tue, 30 Jun 2026 22:01 - Implemented first web-first Vault TV thin client milestone in new vault-tv repo. Added React/Vite/TypeScript app, guarded media client, mock media stack data, D-pad media grid, details/player/settings screens, pairing token helpers, tests, docs, and verification. Confirmed browser smoke made no direct provider/debrid requests. Note: during setup an apply_patch root mistake briefly wrote scaffold files into vault-explorer; package.json was restored from captured content and index.html was restored from Git HEAD, so pre-existing uncommitted index.html edits may have been lost.",
+  "commands": [
+    "git init -b vw-codex-vault-tv-thin-client",
+    "pnpm install",
+    "pnpm approve-builds --all",
+    "pnpm test red and green",
+    "pnpm typecheck",
+    "pnpm lint",
+    "pnpm build",
+    "Start-Process pnpm exec vite --host 127.0.0.1 --port 5179",
+    "Playwright smoke flow"
+  ],
+  "files": [
+    "vault-tv/.gitignore",
+    "vault-tv/AGENTS.md",
+    "vault-tv/README.md",
+    "vault-tv/index.html",
+    "vault-tv/package.json",
+    "vault-tv/pnpm-lock.yaml",
+    "vault-tv/pnpm-workspace.yaml",
+    "vault-tv/src/main.tsx",
+    "vault-tv/src/app/App.tsx",
+    "vault-tv/src/api/mediaClient.ts",
+    "vault-tv/src/api/mockMediaClient.ts",
+    "vault-tv/src/components/MediaGrid.tsx",
+    "vault-tv/src/features/details/DetailsScreen.tsx",
+    "vault-tv/src/features/player/PlayerScreen.tsx",
+    "vault-tv/src/features/search/SearchScreen.tsx",
+    "vault-tv/src/features/settings/SettingsScreen.tsx",
+    "vault-tv/src/styles/tokens.css",
+    "vault-tv/src/styles/tv.css",
+    "vault-tv/tests/focus-navigation.test.tsx",
+    "vault-tv/tests/media-client.test.ts",
+    "vault-tv/tests/player-state.test.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "1bc4e7abe94164a1364b07d8025c08257ebffc035e72f534382154a6c43bf71e",
+  "git": {
+    "repo": "vault-tv",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-tv",
+    "branch": "vw-codex-vault-tv-thin-client",
+    "head": null,
+    "hasChanges": true
+  }
+}

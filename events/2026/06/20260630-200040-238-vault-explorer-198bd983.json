@@ -1,0 +1,51 @@
+{
+  "id": "20260630-200040-238-vault-explorer-198bd983",
+  "createdAt": "2026-07-01T00:00:40.2386936Z",
+  "createdAtLocal": "2026-06-30 20:00",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "general,plan",
+  "actor": "Codex GPT-5",
+  "agentHeader": "Agent: Codex GPT-5 (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): shell_command, apply_patch, update_plan\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-30 20:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "update_plan"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Tue, 30 Jun 2026 19:45 - Added a future-self implementation plan for a separate Vault TV thin client app targeting Fire TV / Android TV. The plan keeps Vault Explorer as the desktop workstation, moves TV playback into a new vault-tv app, requires all torrent/debrid/provider lookup to stay server-side through VaultWares media endpoints/Comet, and defines tasks for API contract, D-pad navigation, playback, pairing auth, packaging, and verification.",
+  "commands": [
+    "Get-Content brainstorming and writing-plans skills",
+    "Get-Content VaultWares protocol summaries",
+    "New-Item docs/superpowers/plans",
+    "apply_patch add 2026-06-30-vault-tv-thin-client.md",
+    "Select-String placeholder self-review",
+    "git status --short"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer\\docs\\superpowers\\plans\\2026-06-30-vault-tv-thin-client.md"
+  ],
+  "planPath": "",
+  "contentHash": "198bd98323c073b9f34b968d75f68a12f532cb41af63b9b9fe4148ab1b6105d5",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "09d3c62",
+    "hasChanges": true
+  }
+}

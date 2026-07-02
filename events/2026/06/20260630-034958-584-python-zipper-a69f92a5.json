@@ -1,0 +1,54 @@
+{
+  "id": "20260630-034958-584-python-zipper-a69f92a5",
+  "createdAt": "2026-06-30T07:49:58.5849544Z",
+  "createdAtLocal": "2026-06-30 03:49",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "implementation",
+  "actor": "Codex",
+  "agentHeader": "Agent: Codex (role: main)\r\nModel: GPT-5\r\nThinking: tdd\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): shell_command, apply_patch, update_plan\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-30 03:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "tdd",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "update_plan"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Tue, 30 Jun 2026 03:51 - Implemented the linkvertise scaffold from the approved plan: dry-run-first CLI, input parser, allowed Mullvad profile policy, two-wave 0-9 and 9-22 minute scheduler, 50-70 minute systemd timer template, JSON session state with one-hour idle/resume handling, bounded Flaresolverr client, separate vw-linkvertise Docker compose stack, OVH deployment/validation scripts, examples, docs, and tests. No live Linkvertise, Flaresolverr challenge, OVH deployment, or external request batch was run; Mullvad config contents were not read.",
+  "commands": [
+    "uv run --with pytest pytest linkvertise/tests",
+    "uv run --project linkvertise python -m linkvertise_downloader.cli --input linkvertise\\input\\links.example.txt --max-links 2 --dry-run",
+    "uv run --project linkvertise python -m linkvertise_downloader.cli profiles --source C:\\Users\\Administrator\\Desktop\\Backups\\mullvad_wireguard_windows_ca_all --dry-run",
+    "docker compose -f linkvertise\\docker\\docker-compose.yml config",
+    "uv run --project linkvertise python -m compileall linkvertise\\src",
+    "git diff --check",
+    "git ls-files -- linkvertise/*.conf linkvertise/**/*.conf"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\linkvertise",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\.gitignore",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\README.md"
+  ],
+  "planPath": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\.omx\\plans\\linkvertise-ovh-mullvad-plan.md",
+  "contentHash": "a69f92a53d355a90b066ead03e38e58b9765443b1924a662ff06abd62d0d2172",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "16d4dd6",
+    "hasChanges": true
+  }
+}

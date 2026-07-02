@@ -1,0 +1,54 @@
+{
+  "id": "20260630-174959-372-vaultwares-studio-3dceb9f9",
+  "createdAt": "2026-06-30T21:49:59.3722650Z",
+  "createdAtLocal": "2026-06-30 17:49",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: code\r\nPermissions: ask (network: local-windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, PowerShell, WebSearch, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-30 17:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "local-windows",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell",
+      "WebSearch",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Added experimental cpu-upgrade lab path. New preset 'lab-cpu-3000' (split_jobs=True, unrestricted_frames=True, frame_cap=3000, sfm_timeout_seconds=43200, sfm_image_override='hf.co/spaces/{owner}/vw-studio-recon-lab'). Added 4 fields to QualityPreset (unrestricted_frames, frame_cap, sfm_timeout_seconds, sfm_image_override). pipeline.py: _run_frame_extraction honours preset flags (skip prune, hard-cap by truncating list_frames slice); _run_split_remote_reconstruction honours sfm_timeout_seconds + sfm_image_override (with {owner} interpolation). New docker/lab/Dockerfile (mirrors worker, adds VW_LAB=1). New tools/push_lab_space.py (uploads lab Dockerfile + shared entrypoints from docker/worker/). New tools/queue_lab_recon.py (self-contained launcher: creates manifest, runs video_intake + frame_extraction locally, zips, fires HF Job A --sfm-only against lab Space; marks reconstruction stage NEEDS_USER_INPUT after so GUI knows GPU leg is pending). GPU 3DGRUT image deferred per user — they want to iterate install in HF console first. All 7 tests in test_remote_reconstruction.py still pass.",
+  "commands": [
+    "./.venv/Scripts/python.exe -m pytest tests/test_remote_reconstruction.py -x -q"
+  ],
+  "files": [
+    "vaultwares_studio/presets.py",
+    "vaultwares_studio/pipeline.py",
+    "docker/lab/Dockerfile",
+    "tools/push_lab_space.py",
+    "tools/queue_lab_recon.py"
+  ],
+  "planPath": "",
+  "contentHash": "3dceb9f9a567680fd2e1d1a30b26e2b15d6af1b40d15f0e857bed7e3a2d90f52",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "c406051",
+    "hasChanges": true
+  }
+}

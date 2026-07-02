@@ -294,7 +294,12 @@ if ($state.data) {
             $pb.lineClean = $p.lineClean
             $pb.lineExcluded = $p.lineExcluded
         }
+        $rehydratedKeys = New-Object System.Collections.Generic.HashSet[string]
         foreach ($s in @($rehydrate.commitSamples)) {
+            $k = [string]$s.commitKey
+            if ($k -and $rehydratedKeys.Contains($k)) { continue }
+            if ($k) { [void]$rehydratedKeys.Add($k) }
+            
             $commitSamples.Add($s) | Out-Null
             # Only mark as processed if this commit already has line data.
             # Zero-stat commits are re-tried on the next run so the regex fix
@@ -303,7 +308,7 @@ if ($state.data) {
             $hasStats = (($s.rawChurnLines -ne $null) -and ([int]$s.rawChurnLines -gt 0)) -or
                         (($s.cleanChurnLines -ne $null) -and ([int]$s.cleanChurnLines -gt 0)) -or
                         (($s.filesTouched -ne $null) -and ([int]$s.filesTouched -gt 0))
-            if ($s.commitKey -and $hasStats) { [void]$processedCommitKeys.Add([string]$s.commitKey) }
+            if ($k -and $hasStats) { [void]$processedCommitKeys.Add($k) }
         }
         $commitEventsWithStats = [int]$rehydrate.totals.commitEventsWithStats
         $minUtc = Safe-ParseUtc ([string]$rehydrate._minCreatedAtUtc)

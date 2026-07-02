@@ -1,0 +1,56 @@
+﻿{
+    "id":  "20260630-043111-083-vault-monitor-fd46e59c",
+    "createdAt":  "2026-06-30T08:31:11.0832799Z",
+    "createdAtLocal":  "2026-06-30 04:31",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-monitor",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: gemini-2.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: autopilot (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): replace_file_content, view_file, run_command, grep_search, write_to_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-30 04:31 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "autopilot",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "view_file",
+                                      "run_command",
+                                      "grep_search",
+                                      "write_to_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+    "summary":  "Vault Monitor UI Polish \u0026 PromKing API Hotfix: Added 80% zoom on app-shell, collapsible sidebar toggle in App.tsx, InfoTooltips for widget clarifications, humanized strings for MCP tools, and fixed the 503 error on PromKing link-sharing API by altering the production postgres database to add missing columns.",
+    "commands":  [
+                     "pnpm build",
+                     "Invoke-RestMethod API"
+                 ],
+    "files":  [
+                  "src/styles.css",
+                  "src/App.tsx",
+                  "update-work-impact-state.ps1",
+                  "WorkImpactPage.tsx"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\61356df7-5bb1-448d-8185-f3747863bba1\\implementation_plan.md",
+    "contentHash":  "fd46e59c91befda20b2d7812e7a1d932286c911a3c0ad5be23ed0f98918234a8",
+    "git":  {
+                "repo":  "vault-monitor",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+                "branch":  "main",
+                "head":  "732df9d",
+                "hasChanges":  true
+            }
+}

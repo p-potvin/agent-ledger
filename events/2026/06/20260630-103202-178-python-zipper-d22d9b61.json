@@ -1,0 +1,50 @@
+{
+  "id": "20260630-103202-178-python-zipper-d22d9b61",
+  "createdAt": "2026-06-30T14:32:02.1789902Z",
+  "createdAtLocal": "2026-06-30 10:32",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5 Codex\r\nThinking: unknown\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): shell_command, apply_patch, multi_tool_use.parallel\r\nMCP servers accessed (this reply): none\r\nTime: 2026-06-30 10:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5 Codex",
+    "thinking": "unknown",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "multi_tool_use.parallel"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Tue, 30 Jun 2026 06:32 - Corrected Linkvertise Mullvad profile source to C:\\Users\\Administrator\\Desktop\\Programming\\mullvad_wireguard_windows_ca_all and installed the exact alphabetic ca-mtr-wg-004.conf through ca-yyc-wg-202.conf slice on OVH. Verified the folder currently yields 26 files, not 29; ca-mtr-wg-001.conf through ca-mtr-wg-003.conf are before the requested lower bound and remain unused. Updated deploy helper and README, ran 38 passing tests, synced source to /opt/vw-linkvertise, verified /opt/vw-linkvertise/mullvad-profiles has 26 configs, first ca-mtr-wg-004.conf, last ca-yyc-wg-202.conf, gateway healthy and timer enabled.",
+  "commands": [
+    "uv run --with pytest --project linkvertise pytest linkvertise\\tests",
+    "scp vw-linkvertise-profiles.tar.gz ubuntu@100.67.25.118:/tmp/",
+    "ssh ubuntu@100.67.25.118 install 26 profile configs into /opt/vw-linkvertise/mullvad-profiles"
+  ],
+  "files": [
+    "linkvertise/scripts/deploy_to_ovh.ps1",
+    "linkvertise/README.md",
+    "linkvertise/tests/test_profile_policy.py"
+  ],
+  "planPath": "",
+  "contentHash": "d22d9b6147f2ee65d57035a54063760da8dc1c9d7c7fc76b211a39afaff1219a",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "16d4dd6",
+    "hasChanges": true
+  }
+}
