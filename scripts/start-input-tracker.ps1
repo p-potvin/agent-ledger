@@ -19,8 +19,8 @@ $ErrorActionPreference = "Stop"
 $ScriptDir = Split-Path $MyInvocation.MyCommand.Path -Parent
 $LedgerRoot = Split-Path $ScriptDir -Parent
 $TrackerScript = Join-Path $ScriptDir "track-input.py"
-$LauncherScript = [System.IO.Path]::GetFullPath($PSCommandPath)
 $StateDir = Join-Path $LedgerRoot "input-state"
+$RestartMarkerPath = Join-Path $StateDir "input-tracker-restart.json"
 
 if (-not (Test-Path $TrackerScript)) {
     throw "Tracker script not found: $TrackerScript"
@@ -43,21 +43,61 @@ function Write-TrackerLog {
     }
 }
 
+function Get-CurrentProcessLineage {
+    $lineage = @{}
+    $currentPid = $PID
+    while ($currentPid) {
+        $lineage[[int]$currentPid] = $true
+        $current = Get-CimInstance Win32_Process -Filter "ProcessId = $currentPid" -ErrorAction SilentlyContinue
+        if (-not $current -or -not $current.ParentProcessId -or $lineage.ContainsKey([int]$current.ParentProcessId)) {
+            break
+        }
+        $currentPid = [int]$current.ParentProcessId
+    }
+    return $lineage
+}
+
 function Stop-ExistingTrackerProcesses {
     $scriptPath = [System.IO.Path]::GetFullPath($TrackerScript)
-    $processes = Get-CimInstance Win32_Process -ErrorAction SilentlyContinue |
+    $currentLineage = Get-CurrentProcessLineage
+    $processes = @(Get-CimInstance Win32_Process -ErrorAction SilentlyContinue |
         Where-Object {
-            $_.ProcessId -ne $PID -and
+            -not $currentLineage.ContainsKey([int]$_.ProcessId) -and
             $_.CommandLine -and
-            (
-                $_.CommandLine.IndexOf($scriptPath, [System.StringComparison]::OrdinalIgnoreCase) -ge 0 -or
-                $_.CommandLine.IndexOf($LauncherScript, [System.StringComparison]::OrdinalIgnoreCase) -ge 0
-            )
+            $_.CommandLine.IndexOf($scriptPath, [System.StringComparison]::OrdinalIgnoreCase) -ge 0
+        })
+
+    if ($processes.Count -gt 0) {
+        $marker = [ordered]@{
+            requested_at = (Get-Date).ToString("o")
+            requester_pid = $PID
+            target_pids = @($processes | ForEach-Object { [int]$_.ProcessId })
         }
+        try {
+            $marker | ConvertTo-Json -Depth 4 | Set-Content -Path $RestartMarkerPath -Encoding UTF8 -ErrorAction Stop
+        }
+        catch {
+            Write-TrackerLog "Unable to write restart marker before replacement: $($_.Exception.Message)"
+        }
+    }
 
     foreach ($process in $processes) {
         Write-TrackerLog "Stopping existing tracker process PID $($process.ProcessId) before launch"
         Stop-Process -Id $process.ProcessId -Force -ErrorAction SilentlyContinue
+    }
+}
+
+function Test-RecentControlledRestart {
+    if (-not (Test-Path $RestartMarkerPath)) {
+        return $false
+    }
+    try {
+        $marker = Get-Content -Raw -Path $RestartMarkerPath | ConvertFrom-Json
+        $requestedAt = [datetime]$marker.requested_at
+        return ((Get-Date) - $requestedAt).TotalMinutes -lt 5
+    }
+    catch {
+        return $false
     }
 }
 
@@ -103,4 +143,9 @@ if ($pythonResolved -like "*\WindowsApps\*") {
 Set-Location $ScriptDir
 
 & $pythonResolved $TrackerScript *>> $logPath
-exit $LASTEXITCODE
+$exitCode = $LASTEXITCODE
+if ($exitCode -ne 0 -and (Test-RecentControlledRestart)) {
+    Write-TrackerLog "Tracker child exited with $exitCode during a controlled replacement; reporting success to Task Scheduler"
+    exit 0
+}
+exit $exitCode

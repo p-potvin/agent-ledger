@@ -101,12 +101,12 @@ Write-Host "Registering scheduled task: $TrackerTask ..." -ForegroundColor Yello
 
 Unregister-ScheduledTask -TaskName $TrackerTask -Confirm:$false -ErrorAction SilentlyContinue | Out-Null
 
-$taskPowerShell = Join-Path $env:SystemRoot "System32\WindowsPowerShell\v1.0\powershell.exe"
-if (-not (Test-Path $taskPowerShell)) { $taskPowerShell = (Get-Command "powershell.exe" -ErrorAction Stop).Source }
+$taskConhost = (Get-Command "conhost.exe" -ErrorAction Stop).Source
+$taskPowerShell = (Get-Command "pwsh.exe" -ErrorAction Stop).Source
 [Environment]::SetEnvironmentVariable("VW_API_URL", $ApiUrl, "User")
 $trackerAction = New-ScheduledTaskAction `
-    -Execute    $taskPowerShell `
-    -Argument   "-NoProfile -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -File `"$TrackerLauncher`" -PythonExe `"$pythonResolved`"" `
+    -Execute    $taskConhost `
+    -Argument   "--headless `"$taskPowerShell`" -NoProfile -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -File `"$TrackerLauncher`" -PythonExe `"$pythonResolved`"" `
     -WorkingDirectory $ScriptDir
 
 $trackerTriggerLogon  = New-ScheduledTaskTrigger -AtLogOn
