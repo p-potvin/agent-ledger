@@ -1,0 +1,56 @@
+{
+  "id": "20260701-054131-435-vault-explorer-2c593a12",
+  "createdAt": "2026-07-01T09:41:31.4354961Z",
+  "createdAtLocal": "2026-07-01 05:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "verification",
+  "actor": "Codex GPT-5",
+  "agentHeader": "Agent: Codex GPT-5 (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: Default\r\nPermissions: danger-full-access/approval-never (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): shell_command, apply_patch, update_plan\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-01 05:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "Default",
+    "permissions": "danger-full-access/approval-never",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "update_plan"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Wed, 01 Jul 2026 05:42 - Verified virtual folder API, renderer context-menu actions, native context menu templates, create dialog, nested navigation/back, empty/focus states, and fixed Ctrl+V paste parity inside virtual folders. Created issue https://github.com/p-potvin/vault-explorer/issues/39 for the keyboard paste defect.",
+  "commands": [
+    "node inline API assertions for js/navigation/virtual-folders.js",
+    "node --check js/navigation/virtual-folders.js js/navigation/filters.js js/navigation/directory.js js/navigation/card.js js/navigation/card-events.js js/navigation/keybindings.js src/ipc/system.ipc.js",
+    "node inline native context menu template assertions for src/ipc/system.ipc.js",
+    "Playwright Electron renderer context-menu verification with patched show-context-menu IPC",
+    "Playwright Electron keyboard paste regression: RED before keybindings fix, GREEN after"
+  ],
+  "files": [
+    "js/navigation/keybindings.js",
+    "js/navigation/virtual-folders.js",
+    "js/navigation/filters.js",
+    "js/navigation/directory.js",
+    "js/navigation/card.js",
+    "js/navigation/card-events.js",
+    "src/ipc/system.ipc.js"
+  ],
+  "planPath": "",
+  "contentHash": "2c593a1267dc1838f904ee5a6817af9c3d03345df245f1295f67d402271acc84",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "51c2079",
+    "hasChanges": true
+  }
+}

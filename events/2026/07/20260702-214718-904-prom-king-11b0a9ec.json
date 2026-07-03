@@ -1,0 +1,44 @@
+{
+  "id": "20260702-214718-904-prom-king-11b0a9ec",
+  "createdAt": "2026-07-03T01:47:18.9044915Z",
+  "createdAtLocal": "2026-07-02 21:47",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows local + SSH to greencloud (100.73.93.84) + SSH to ovhcloud (100.67.25.118))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator  Branch: n/a\r\nTools used (this reply): run_command, view_file, ask_question\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-02 21:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows local + SSH to greencloud (100.73.93.84) + SSH to ovhcloud (100.67.25.118)",
+    "toolsUsed": [
+      "run_command",
+      "view_file",
+      "ask_question"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\content-disseminator",
+  "summary": "Added dnsmasq DNS entries for comet.vaultwares.ca and flaresolverr.vaultwares.ca on greencloud (100.73.93.84) matching the existing media service pattern (local= + host-record= pointing to 100.73.93.84). Added host-record entries for comet, flaresolverr, and sabnzbd on ovhcloud (100.67.25.118) dnsmasq pointing to ovhcloud itself. Verified: all three services (comet, flaresolverr, SABnzbd) have internet access, can communicate with each other over the vw-media_default Docker network, and are reachable from the tailnet. Fixed ovhcloud dnsmasq startup failure caused by backup file in /etc/dnsmasq.d/ being parsed as config. Cleaned backup files on both VPSes.",
+  "commands": [
+    "ssh root@100.73.93.84 sed vaultwares-tailnet.conf",
+    "ssh root@100.73.93.84 systemctl restart dnsmasq",
+    "ssh root@100.67.25.118 echo host-record >> vaultwares-tailnet.conf",
+    "ssh root@100.67.25.118 systemctl restart dnsmasq"
+  ],
+  "files": [
+    "/etc/dnsmasq.d/vaultwares-tailnet.conf (greencloud)",
+    "/etc/dnsmasq.d/vaultwares-tailnet.conf (ovhcloud)"
+  ],
+  "planPath": "",
+  "contentHash": "11b0a9ecaa0dc8d8a2df00db5efb84e99666e10b0337a30675dbf8ad4a306041",
+  "git": null
+}

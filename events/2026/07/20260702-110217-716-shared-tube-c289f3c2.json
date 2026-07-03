@@ -1,0 +1,52 @@
+{
+  "id": "20260702-110217-716-shared-tube-c289f3c2",
+  "createdAt": "2026-07-02T15:02:17.7160073Z",
+  "createdAtLocal": "2026-07-02 11:02",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Edit, Write, Read, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-02 11:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Edit",
+      "Write",
+      "Read",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "shared-tube v0.2.24 (514c4f7..583be76) + vaultwares-api (d7fe9da..72029c1) pushed to main. (1) Marketing tab replaces Affiliates; consolidated shared/src/admin/Marketing/Settings.tsx with auto-save on blur + tooltips + manual Save-now footer. (2) Multi-spot ad schema in shared/src/ads/spots.ts; native_ad type added; NativeVideoAd renders operator snippets. Legacy affiliate_settings shape auto-migrates. (3) Rebuild button + POST /api/promking/rebuild spawns deploy-shared-tube.sh. (4) Links CRUD: POST/PATCH/DELETE endpoints (slug non-editable). Frontend gains +New, Edit modal, Delete, direct-link column. (5) Stats expansion: views summary, catalog_health, fetch_activity_7d, top_videos, top_studios/pornstars/categories by view_sum, favourites_total. Not-tracked banner names likes/watch-time/impressions. (6) pornxp 403 real fix: added pxp.cool to PROXIED_HOST_RE (site + CDN now share egress; signed URLs are IP-bound so mismatched exits caused the 403), added CDN->Referer map + Sec-Fetch-* headers. (7) Small: SQL panel <ul> max-height, fetch # left-aligned. Live test: fresh signed URL with Referer=pxp.cool returns 206.",
+  "commands": [
+    "pnpm --filter @promking/shared-tube typecheck",
+    "pnpm -r build",
+    "python -m pytest tests/test_promking_*.py",
+    "git push origin main x2"
+  ],
+  "files": [
+    "shared/src/ads/spots.ts",
+    "shared/src/admin/Marketing/Settings.tsx",
+    "shared/src/admin/Links/Dashboard.tsx",
+    "shared/src/admin/Stats/Dashboard.tsx",
+    "apps/fxv/src/pages/api/stream/[slug].ts",
+    "vaultwares-api/app/routers/promking/rebuild.py",
+    "vaultwares-api/app/routers/promking/link_sharing.py",
+    "vaultwares-api/app/routers/promking/stats.py"
+  ],
+  "planPath": "",
+  "contentHash": "c289f3c2b12d16c63d33d1118d784043b6d3a052c2d2f0f9a08828c2e60568ce",
+  "git": null
+}

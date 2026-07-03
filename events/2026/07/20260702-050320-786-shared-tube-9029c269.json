@@ -1,0 +1,48 @@
+{
+  "id": "20260702-050320-786-shared-tube-9029c269",
+  "createdAt": "2026-07-02T09:03:20.7861736Z",
+  "createdAtLocal": "2026-07-02 05:03",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Edit, Read, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-02 05:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Edit",
+      "Read",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "shared-tube v0.2.22: (1) term-scoped fetching — SourceConfig.termUrl for pornxp /tags/{name verbatim}, 1porn /{models|sites|categories}/{slug}/, fullvideos tries /networks/+/sites/ for studios; engine candidate resolution w/ stickiness; CLI --termType/Name/Slug; FastAPI FetchRunRequest term fields + _drive_term_run (cursor-ignoring). (2) Catalog per-term Fetch button w/ source picker + pages/all + toasts. (3) pornxp 403 fix: stream proxy sends source-site Referer+Accept on CDN candidates, reads title= rendition labels, stored-embed fallback. (4) SFW toggle now honors pkt_safe_mode cookie for all users (was isDev-gated); SAFE_TITLES 70->120; FNV-1a seed. (5) /actor -> /pornstar rename across 4 apps + redirects. (6) source views: detail-page extraction for fullvideos+1porn. Verified: shared typecheck, 20/20 vitest, 4/4 app builds, 5/5 pytest.",
+  "commands": [
+    "pnpm --filter @promking/shared-tube typecheck",
+    "pnpm --filter @promking/site-fxv build",
+    "python -m pytest tests/test_promking_fetcher.py"
+  ],
+  "files": [
+    "shared/src/fetcher/engine.ts",
+    "shared/src/fetcher/sources/pornxp.ts",
+    "shared/src/admin/Catalog/BatchActions.tsx",
+    "apps/fxv/src/pages/api/stream/[slug].ts",
+    "shared/src/security/safe-mode.ts",
+    "vaultwares-api/app/routers/promking/fetcher.py"
+  ],
+  "planPath": "",
+  "contentHash": "9029c2692a72110791fe63e4591a5b7b0e0227d00dada71114e83d780a6abb4a",
+  "git": null
+}

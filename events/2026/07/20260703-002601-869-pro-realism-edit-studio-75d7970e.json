@@ -1,0 +1,42 @@
+{
+  "id": "20260703-002601-869-pro-realism-edit-studio-75d7970e",
+  "createdAt": "2026-07-03T04:26:01.8693554Z",
+  "createdAtLocal": "2026-07-03 00:26",
+  "timezone": "Eastern Standard Time",
+  "project": "Pro-Realism-Edit-Studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-03 00:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fri, 03 Jul 2026 00:31 - Updated Pro-Realism-Edit-Studio to use YOLO-boxed SAM masks as the primary detailer substrate, with heuristic masks only as fallback. Added lazy YOLO/SAM loaders, YOLO person boxes, SAM box masks, optional DA-3 preservation hook behind ENHANCE_DA3_PRESERVE_ENABLED, and updated metadata/tests to version 1.0.3. Pushed commit 7263844. Verified py_compile, unittest discovery, and git diff --check before push. No ZeroGPU generation job was run.",
+  "commands": [
+    "python -m py_compile D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\app.py",
+    "python -m unittest discover -s D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\tests",
+    "git -C D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio diff --check",
+    "git -C D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio push origin main"
+  ],
+  "files": [
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\app.py",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\README.md",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\requirements.txt",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\tests\\test_enhance_stage.py"
+  ],
+  "planPath": "",
+  "contentHash": "75d7970edc9ce0226080e5b1400e42623b40bafed3380301105052395c9e6880",
+  "git": null
+}

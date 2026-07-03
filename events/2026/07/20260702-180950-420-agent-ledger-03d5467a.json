@@ -1,0 +1,51 @@
+{
+  "id": "20260702-180950-420-agent-ledger-03d5467a",
+  "createdAt": "2026-07-02T22:09:50.4203235Z",
+  "createdAtLocal": "2026-07-02 18:09",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "fix",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5 Codex\r\nThinking: unknown\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-02 18:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5 Codex",
+    "thinking": "unknown",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Thu, 02 Jul 2026 18:12: Fixed VaultWares Input Tracker scheduled task crash by keeping the task on conhost.exe --headless pwsh.exe and narrowing restart cleanup to old track-input.py Python children so the launcher no longer kills its own wrapper.",
+  "commands": [
+    "git commit af048d0c",
+    "git push origin main",
+    "Get-ScheduledTask -TaskName VaultWares-InputTracker",
+    "Get-ScheduledTaskInfo -TaskName VaultWares-InputTracker",
+    "Get-Content input-state\\input-tracker-health.json",
+    "uv run --with pytest python -m pytest tests/test_track_input_metrics.py -q"
+  ],
+  "files": [
+    "scripts/setup-input-tracker.ps1",
+    "scripts/start-input-tracker.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "03d5467a4a4151a0d83b802baf9255571aef0f5bb32fa7b2b47434e8be8e5fee",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "af048d0c",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "20260703-003831-367-pro-realism-edit-studio-ceecdea3",
+  "createdAt": "2026-07-03T04:38:31.3676998Z",
+  "createdAtLocal": "2026-07-03 00:38",
+  "timezone": "Eastern Standard Time",
+  "project": "Pro-Realism-Edit-Studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-03 00:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fri, 03 Jul 2026 00:45 - Added mounted bucket/cache support for Pro-Realism-Edit-Studio and pushed commit c8494c8. Attached clopeux/Pro-Realism-Edit-Studio-storage to /models using HfApi.set_space_volumes, set MODEL_BUCKET_DIR=/models as a Space variable, and updated app.py to set HF_HOME/HF_HUB_CACHE/TRANSFORMERS_CACHE/DIFFUSERS_CACHE/TORCH_HOME/ULTRALYTICS_CACHE_DIR before model imports. Main hf_hub_download/load_config/from_pretrained calls now use the bucket-backed cache when mounted. Verified py_compile, unittest discovery, and git diff --check. No ZeroGPU inference job was run. Runtime was still RUNNING_APP_STARTING when checked, and SDK runtime response had not yet surfaced volumes.",
+  "commands": [
+    "python -m py_compile D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\app.py",
+    "python -m unittest discover -s D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\tests",
+    "git -C D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio diff --check",
+    "git -C D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio push origin main",
+    "HfApi.set_space_volumes clopeux/Pro-Realism-Edit-Studio bucket clopeux/Pro-Realism-Edit-Studio-storage:/models",
+    "HfApi.add_space_variable MODEL_BUCKET_DIR=/models"
+  ],
+  "files": [
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\app.py",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\README.md",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio\\tests\\test_enhance_stage.py"
+  ],
+  "planPath": "",
+  "contentHash": "ceecdea3a331f96ace67e2995ee4c216305fd60eca7df2a05d4b12d2ae877047",
+  "git": null
+}

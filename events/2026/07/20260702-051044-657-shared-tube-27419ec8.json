@@ -1,0 +1,38 @@
+{
+  "id": "20260702-051044-657-shared-tube-27419ec8",
+  "createdAt": "2026-07-02T09:10:44.6579220Z",
+  "createdAtLocal": "2026-07-02 05:10",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-02 05:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": "PowerShell",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Committed + pushed v0.2.22 to main on both repos. shared-tube: 3a0633a..9be1079 (60 files: term-scoped fetching, catalog Fetch button, pornxp 403 Referer fix, SFW cookie fix + SAFE_TITLES 70->120, /actor->/pornstar rename+redirects, source views). vaultwares-api: 302103c..d7fe9da (term-run fields + _drive_term_run). Both need OVH deploy to go live. Dependabot warnings on push are pre-existing, not from these changes.",
+  "commands": [
+    "git push origin main (Prom-King/shared-tube)",
+    "git push origin main (p-potvin/vaultwares-api)"
+  ],
+  "files": [
+    "shared/src/fetcher/engine.ts",
+    "vaultwares-api/app/routers/promking/fetcher.py"
+  ],
+  "planPath": "",
+  "contentHash": "27419ec838c4190e0182719210974206e50f5e9c7c29d94ceff94ef2a1da226d",
+  "git": null
+}

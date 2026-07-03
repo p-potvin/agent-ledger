@@ -1,0 +1,47 @@
+{
+  "id": "20260702-135515-580-agent-ledger-86be9e6c",
+  "createdAt": "2026-07-02T17:55:15.5808003Z",
+  "createdAtLocal": "2026-07-02 13:55",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "feature",
+  "actor": "GPT-5 Codex",
+  "agentHeader": "Agent: GPT-5 Codex (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): apply_patch, pytest, git\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-02 13:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "apply_patch",
+      "pytest",
+      "git"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Thu, 02 Jul 2026 13:44 - Added Input Tracker natural path capture for context switches and idle resumes, recording bounded mouse paths plus owner opt-in raw key sequences until the next click.",
+  "commands": [
+    "uv run --with pytest python -m pytest tests/test_track_input_metrics.py -q"
+  ],
+  "files": [
+    "scripts/track-input.py",
+    "tests/test_track_input_metrics.py"
+  ],
+  "planPath": "",
+  "contentHash": "86be9e6c1e0922953ed61265345142d5c62daa2ba558cc019c71fc3d80a6e2c7",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "d345008",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "20260701-005332-917-vaultwares-docs-3099b42d",
+  "createdAt": "2026-07-01T04:53:32.9173132Z",
+  "createdAtLocal": "2026-07-01 00:53",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "docs,project-onboarding,protocol,verification",
+  "actor": "Codex GPT-5",
+  "agentHeader": "Agent: Codex GPT-5 (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: vw-codex-vault-tv-thin-client\r\nTools used (this reply): shell_command, apply_patch, Playwright, using-git-worktrees\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-01 00:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "Playwright",
+      "using-git-worktrees"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Wed, 01 Jul 2026 00:53 - Added Vault TV documentation and created the PROJECT_CREATION router protocol in an isolated vaultwares-docs worktree. Added software/vault-tv docs, assistant protocol docs, ROUTER category, protocol summary/notes, product catalog entries, and targeted generated page resources. Verification: npm ci, targeted page resource generation, npm run build, and Playwright smoke over assistant protocols/project-creation and software/vault-tv passed with no console/page/request failures.",
+  "commands": [
+    "git worktree add vw-codex-vault-tv-docs origin/main",
+    "npm ci",
+    "npm run generate:page-resources",
+    "git submodule update --init --recursive",
+    "npm run build",
+    "targeted resource regeneration for changed docs pages",
+    "Playwright docs smoke on localhost:5180",
+    "git add -A"
+  ],
+  "files": [
+    "vaultwares-docs/instructions/ROUTER.md",
+    "vaultwares-docs/instructions/summaries/PROJECT_CREATION.md",
+    "vaultwares-docs/instructions/notes/PROJECT_CREATION.md",
+    "vaultwares-docs/docs-content/ai-tools/assistant-protocols/project-creation.mdx",
+    "vaultwares-docs/docs-content/ai-tools/assistant-protocols/project-creation-QC.mdx",
+    "vaultwares-docs/docs-content/software/vault-tv.mdx",
+    "vaultwares-docs/docs-content/software/vault-tv-QC.mdx",
+    "vaultwares-docs/docs-content/getting-started/products-and-services.mdx",
+    "vaultwares-docs/docs-content/getting-started/products-and-services-QC.mdx",
+    "vaultwares-docs/src/resources/pageResourcesManifest.ts"
+  ],
+  "planPath": "",
+  "contentHash": "3099b42d7a847a5426c80ef5d760264cce4fd79310ace552042714edaee9052b",
+  "git": {
+    "repo": "vault-tv",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-tv",
+    "branch": "vw-codex-vault-tv-thin-client",
+    "head": null,
+    "hasChanges": true
+  }
+}
