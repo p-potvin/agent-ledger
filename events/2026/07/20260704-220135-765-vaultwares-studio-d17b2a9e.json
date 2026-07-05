@@ -1,0 +1,57 @@
+{
+  "id": "20260704-220135-765-vaultwares-studio-d17b2a9e",
+  "createdAt": "2026-07-05T02:01:35.7658264Z",
+  "createdAtLocal": "2026-07-04 22:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change,handoff,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local-windows+HF-Spaces+HF-Jobs)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, PowerShell, WebFetch, WebSearch, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-04 22:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "local-windows+HF-Spaces+HF-Jobs",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell",
+      "WebFetch",
+      "WebSearch",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Session close: MASt3R end-to-end pipeline validated locally on RTX 3060. Pivoted from HF Jobs (60min at ~.86 with random-init splatfacto bug) to local venv+uv (100min, GPU 100% pass 2, 500 poses, 500k pts, loss 0.91). Fixed 15 gotchas across HF and local paths -- documented in D:\\3D Reconstruction\\HANDOFF.md. HF entrypoint aligned to local config (retrieval-Na-k with sim_matrix, ply_file_path, torch.load monkey-patch, niter1/niter2 args) so L4 comparison is 1 command away when user decides. User deferred L4 comparison to a different video.",
+  "commands": [
+    "./.venv/Scripts/python.exe run_mast3r_local.py --frames-dir ... --out .\\runs\\first --max-images 500 --threads 1",
+    "./.venv/Scripts/python.exe tools/push_lab_space.py"
+  ],
+  "files": [
+    "D:\\3D Reconstruction\\HANDOFF.md",
+    "D:\\3D Reconstruction\\run_mast3r_local.py",
+    "D:\\3D Reconstruction\\requirements.txt",
+    "D:\\3D Reconstruction\\setup_env.ps1",
+    "docker/lab/mast3r_entrypoint.py"
+  ],
+  "planPath": "",
+  "contentHash": "d17b2a9ec7888066972e2860240d9224192c0956879ef883312b2ff8d6cc5bcb",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "51a31df",
+    "hasChanges": true
+  }
+}

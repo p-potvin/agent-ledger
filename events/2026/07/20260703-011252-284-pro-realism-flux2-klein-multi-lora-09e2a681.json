@@ -1,0 +1,39 @@
+{
+  "id": "20260703-011252-284-pro-realism-flux2-klein-multi-lora-09e2a681",
+  "createdAt": "2026-07-03T05:12:52.2843353Z",
+  "createdAtLocal": "2026-07-03 01:12",
+  "timezone": "Eastern Standard Time",
+  "project": "Pro-Realism-FLUX2-Klein-Multi-LoRA",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-03 01:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fri, 03 Jul 2026 00:52 - Duplicated M3st3rJ4k3l/FLUX.2-Klein-Multi-LoRA to clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA on ZeroGPU hardware zero-a10g, cloned it locally to D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA, set ENABLE_LOGGING=No as a Space variable, and ran py_compile on Python modules. No ZeroGPU inference job was run. Local clone is clean but LoRA files are Git LFS pointer files because git-lfs is not installed locally.",
+  "commands": [
+    "HfApi.duplicate_space M3st3rJ4k3l/FLUX.2-Klein-Multi-LoRA -> clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA hardware=zero-a10g",
+    "git clone https://huggingface.co/spaces/clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA",
+    "python -m py_compile app.py config.py control_tools.py image_utils.py logging_utils.py lora_registry.py ui_theme.py upscale.py",
+    "HfApi.add_space_variable ENABLE_LOGGING=No"
+  ],
+  "files": [
+    "D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA"
+  ],
+  "planPath": "",
+  "contentHash": "09e2a6813ac8439b4f255303e6e16339445fcd5472f9558584b3dea0d865ebb0",
+  "git": null
+}

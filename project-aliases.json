@@ -9,7 +9,9 @@
   "projects": [
     {
       "canonical": "vaultwares-glass",
-      "aliases": ["glass-ui"],
+      "aliases": [
+        "glass-ui"
+      ],
       "renamedAt": "2026-05-17",
       "previousRemote": "p-potvin/glass-ui",
       "newRemote": "p-potvin/vaultwares-glass",
@@ -17,42 +19,56 @@
     },
     {
       "canonical": "vaultwares-dispatch",
-      "aliases": ["dispatch-wares"],
+      "aliases": [
+        "dispatch-wares"
+      ],
       "renamedAt": "2026-05-17",
       "previousRemote": "p-potvin/dispatch-wares",
       "newRemote": "p-potvin/vaultwares-dispatch"
     },
     {
       "canonical": "vaultwares-decompile",
-      "aliases": ["deconstructed-website-a-la-mode"],
+      "aliases": [
+        "deconstructed-website-a-la-mode"
+      ],
       "renamedAt": "2026-05-17",
       "previousRemote": "p-potvin/deconstructed-website-a-la-mode",
       "newRemote": "p-potvin/vaultwares-decompile"
     },
     {
       "canonical": "vaultwares-media-processing",
-      "aliases": ["vault-video-enhancer", "VaultWares Media Processing", "video-transcriber-translator"],
+      "aliases": [
+        "vault-video-enhancer",
+        "VaultWares Media Processing",
+        "video-transcriber-translator"
+      ],
       "renamedAt": "2026-05-17",
       "previousRemote": "p-potvin/vault-video-enhancer",
       "newRemote": "p-potvin/vaultwares-media-processing"
     },
     {
       "canonical": "vaultwares-realtime",
-      "aliases": ["realtime-stt"],
+      "aliases": [
+        "realtime-stt"
+      ],
       "renamedAt": "2026-05-17",
       "previousRemote": "p-potvin/realtime-stt",
       "newRemote": "p-potvin/vaultwares-realtime"
     },
     {
       "canonical": "vaultwares-studio",
-      "aliases": ["usd-playground"],
+      "aliases": [
+        "usd-playground"
+      ],
       "renamedAt": "2026-05-17",
       "previousRemote": "p-potvin/usd-playground",
       "newRemote": "p-potvin/vaultwares-studio"
     },
     {
       "canonical": "vaultwares-website",
-      "aliases": ["vaultwares-v1"],
+      "aliases": [
+        "vaultwares-v1"
+      ],
       "renamedAt": "2026-05-17",
       "previousRemote": "p-potvin/vaultwares-v1",
       "newRemote": "p-potvin/vaultwares-website",
@@ -60,13 +76,17 @@
     },
     {
       "canonical": "vaultwares-docs",
-      "aliases": ["tmp-app"],
+      "aliases": [
+        "tmp-app"
+      ],
       "renamedAt": "2026-05-17",
       "notes": "Package.json placeholder fix; folder + remote unchanged. Alias retained for audit only."
     },
     {
       "canonical": "vaultwares-identity-manager",
-      "aliases": ["vaultwares-auto-signup"],
+      "aliases": [
+        "vaultwares-auto-signup"
+      ],
       "renamedAt": "2026-05-17",
       "notes": "Folder + remote unchanged; only package.json + Chrome extension manifest identity. Alias retained for audit only."
     },
@@ -79,16 +99,10 @@
       "notes": "Repo identity unchanged but git remote was misconfigured (pointed at p-potvin/vault-themes). Recorded for audit only."
     },
     {
-      "canonical": "tube-sites",
-      "aliases": ["tube-site", "promking-tube", "Prom-King\\tube-sites", "Prom-King/tube-sites", "Prom-King tube-sites", "Prom-King\\\\tube-sites", "prom-king.xyz", "fullxxx.video", "prom-king/fullxxx-video-and-qa-automation", "prom-king/fullxxx-webhook-deploy-qa"],
-      "renamedAt": "2026-05-17",
-      "previousRemote": "Prom-King/tube-site",
-      "newRemote": "Prom-King/tube-sites",
-      "notes": "Business folder. Includes namespace-prefixed variants and fullxxx.video domains from agent input."
-    },
-    {
       "canonical": "vaultwares-themes",
-      "aliases": ["vault-themes"],
+      "aliases": [
+        "vault-themes"
+      ],
       "renamedAt": "2026-05-18",
       "previousRemote": "p-potvin/vault-themes",
       "newRemote": "p-potvin/vaultwares-themes",
@@ -96,100 +110,154 @@
     },
     {
       "canonical": "vaultwares-adk",
-      "aliases": ["vaultwares-agentciation"],
+      "aliases": [
+        "vaultwares-agentciation"
+      ],
       "renamedAt": "2026-05-18",
       "previousRemote": "p-potvin/vaultwares-agentciation",
       "newRemote": "p-potvin/vaultwares-adk",
       "notes": "Folder + remote + Python pkg (vaultwares_agentciation -> vaultwares_adk) + display brand (VaultWares Agentciation -> VaultWares ADK) + CLI args (--agentciation-root -> --adk-root). Class identifiers and method bodies unchanged."
     },
-
-    {"_comment": "--- Agent input normalization aliases (not real renames) ---"},
-
+    {
+      "_comment": "--- Agent input normalization aliases (not real renames) ---"
+    },
     {
       "canonical": "vault-explorer",
-      "aliases": ["Vault Explorer"],
+      "aliases": [
+        "Vault Explorer"
+      ],
       "notes": "Case variant from agent input."
     },
     {
       "canonical": "vaultwares-media-processing",
-      "aliases": ["VaultWares Media Processing", "video-transcriber-translator", "vault-enhancer", "vault_enhancer"],
+      "aliases": [
+        "VaultWares Media Processing",
+        "video-transcriber-translator",
+        "vault-enhancer",
+        "vault_enhancer"
+      ],
       "notes": "Case variant from agent input."
     },
     {
       "canonical": "qa-automation",
-      "aliases": ["Prom-King/qa-automation"],
+      "aliases": [
+        "Prom-King/qa-automation"
+      ],
       "notes": "Namespace-prefixed variant from agent input. fullxxx variants moved to tube-sites."
     },
     {
       "canonical": "prelanding-page",
-      "aliases": ["Prom-King/prelanding-page", "prom-king-prelanding-page"],
+      "aliases": [
+        "Prom-King/prelanding-page",
+        "prom-king-prelanding-page"
+      ],
       "notes": "Namespace-prefixed variant from agent input."
     },
     {
       "canonical": "agent-ledger",
-      "aliases": ["agent-ledger/stats-app"],
+      "aliases": [
+        "agent-ledger/stats-app"
+      ],
       "notes": "Sub-project slug from agent input."
     },
     {
       "canonical": "vaultwares-mcp",
-      "aliases": ["fastmcp"],
+      "aliases": [
+        "fastmcp"
+      ],
       "notes": "Old repo name before MCP server was folded into vaultwares-mcp."
     },
     {
       "canonical": "vaultwares-api",
-      "aliases": ["vaultwares-pipelines"],
-      "renamedAt": "2026-06-08",
+      "aliases": [
+        "vaultwares-pipelines",
+        "vaultwares-api + shared-tube",
+        "vaultwares-webhooks",
+        "vaultwares-api"
+      ],
+      "renamedAt": "2026-07-05",
       "previousRemote": "p-potvin/vaultwares-pipelines",
       "newRemote": "p-potvin/vaultwares-api",
       "notes": "Canonical API service name. Repo rename is staged after DB/API wiring; alias keeps telemetry and monitor history grouped during transition."
     },
     {
       "canonical": "python-zipper",
-      "aliases": ["python-scripts"],
+      "aliases": [
+        "python-scripts"
+      ],
       "notes": "Python web server for download management"
     },
-    
     {
       "canonical": "vaultwares-docs",
-      "aliases": ["tmp-app"],
+      "aliases": [
+        "tmp-app"
+      ],
       "notes": "Package.json placeholder from agent input. vw-jira-sync split out as its own project."
     },
     {
       "canonical": "vw-jira-sync",
-      "aliases": ["vaultwares-docs / vw-jira-sync", "General Tasks / vw-jira-sync"],
+      "aliases": [
+        "vaultwares-docs / vw-jira-sync",
+        "General Tasks / vw-jira-sync"
+      ],
       "notes": "Split out from vaultwares-docs and General Tasks — vw-jira-sync is its own canonical project."
     },
     {
       "canonical": "General Tasks",
-      "aliases": ["General Tasks (workspace)", "Workspace Git Sync", "VaultWares protocols", "Prom King monetization projects", "business workspace", "business", "business tube sites", "business WordPress tube sites", "Test", "VaultWares Secrets", "vaultwares-secrets", "vaultwares-console"],
+      "aliases": [
+        "General Tasks (workspace)",
+        "Workspace Git Sync",
+        "VaultWares protocols",
+        "Prom King monetization projects",
+        "business workspace",
+        "business",
+        "business tube sites",
+        "business WordPress tube sites",
+        "Test",
+        "VaultWares Secrets",
+        "vaultwares-secrets",
+        "vaultwares-console"
+      ],
       "notes": "Junk meta-names from agent input bucketed into General Tasks."
     },
     {
       "canonical": "no-more-groceries",
-      "aliases": ["No More Groceries"],
+      "aliases": [
+        "No More Groceries"
+      ],
       "notes": "Case variant from agent input."
     },
-
-    {"_comment": "--- Compound-name + namespace normalization (stats-app generator) ---"},
-
+    {
+      "_comment": "--- Compound-name + namespace normalization (stats-app generator) ---"
+    },
     {
       "canonical": "vault-explorer",
-      "aliases": ["vw-comet + vault-explorer", "vault-explorer + vw-comet"],
+      "aliases": [
+        "vw-comet + vault-explorer",
+        "vault-explorer + vw-comet"
+      ],
       "notes": "Multi-project events where vault-explorer is the dominant target. Compound names from agent input."
     },
     {
       "canonical": "vaultwares-themes",
-      "aliases": ["vault-themes, vault-player", "vault-themes + vaultwares-docs"],
+      "aliases": [
+        "vault-themes, vault-player",
+        "vault-themes + vaultwares-docs"
+      ],
       "notes": "Multi-project events centered on themes. vault-themes is already aliased to vaultwares-themes above."
     },
     {
       "canonical": "vaultwares-website",
-      "aliases": ["vaultwares-website + vaultwares-themes"],
+      "aliases": [
+        "vaultwares-website + vaultwares-themes"
+      ],
       "notes": "Compound from agent input; themes work was part of the website touch-up."
     },
     {
       "canonical": "vault-monitor",
-      "aliases": ["vault-monitor vaultwares-pipelines"],
+      "aliases": [
+        "vault-monitor vaultwares-pipelines"
+      ],
       "notes": "Space-separated compound from agent input."
     },
     {
@@ -201,43 +269,53 @@
         "Prom-King/shared-tube + vaultwares-mcp",
         "Prom-King/shared-tube + vaultwares-docs",
         "Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs",
-        "shared-tube + brume2"
-      ],
-      "notes": "Namespace-prefixed + multi-project compounds. shared-tube is the dominant target across all these events."
-    },
-    {
-      "canonical": "content-disseminator",
-      "aliases": ["Prom-King/content-disseminator"],
-      "notes": "Namespace-prefixed variant."
-    },
-    {
-      "canonical": "link-sharing",
-      "aliases": ["prom-king/link-sharing"],
-      "notes": "Namespace-prefixed lowercase variant."
-    },
-    {
-      "canonical": "vault-central",
-      "aliases": ["Vault Central"],
-      "notes": "Display-cased variant from agent input."
-    },
-    {
-      "canonical": "vw-media-stack",
-      "aliases": ["vw-media-stack / vaultwares-docs", "vps-ovhcloud media stack", "vps-ovhcloud-media-stack"],
-      "notes": "Slash-compound + descriptive variants from agent input."
-    },
-    {
-      "canonical": "vaultwares-api",
-      "aliases": ["vaultwares-api + shared-tube", "vaultwares-webhooks"],
-      "notes": "Compound + vaultwares-webhooks is the vw-webhookd surface that lives in the vaultwares-api repo."
-    },
-    {
-      "canonical": "tube-sites",
-      "aliases": [
+        "shared-tube + brume2",
+        "tube-sites",
+        "tube-site",
+        "promking-tube",
+        "Prom-King\\tube-sites",
+        "Prom-King/tube-sites",
+        "Prom-King tube-sites",
+        "Prom-King\\\\tube-sites",
+        "prom-king.xyz",
+        "fullxxx.video",
+        "prom-king/fullxxx-video-and-qa-automation",
+        "prom-king/fullxxx-webhook-deploy-qa",
         "Prom-King Keep2Share & ShareVerge Pipeline",
         "Prom-King & VaultWares API",
         "Monitoring and Prom-King tube operations"
       ],
-      "notes": "Tube-site operational descriptors from agent input. fullxxx + prom-king sub-pipelines roll up here."
+      "notes": "Namespace-prefixed + multi-project compounds. shared-tube is the dominant target across all these events. Includes tube-sites + subprojects rolled into shared-tube."
+    },
+    {
+      "canonical": "content-disseminator",
+      "aliases": [
+        "Prom-King/content-disseminator"
+      ],
+      "notes": "Namespace-prefixed variant."
+    },
+    {
+      "canonical": "link-sharing",
+      "aliases": [
+        "prom-king/link-sharing"
+      ],
+      "notes": "Namespace-prefixed lowercase variant."
+    },
+    {
+      "canonical": "vault-central",
+      "aliases": [
+        "Vault Central"
+      ],
+      "notes": "Display-cased variant from agent input."
+    },
+    {
+      "canonical": "vw-media-stack",
+      "aliases": [
+        "vw-media-stack / vaultwares-docs",
+        "vps-ovhcloud media stack",
+        "vps-ovhcloud-media-stack"
+      ],
+      "notes": "Slash-compound + descriptive variants from agent input."
     },
     {
       "canonical": "General Tasks",
@@ -256,8 +334,13 @@
       "notes": "Meta-workspace labels + multi-repo refactor sessions from agent input. These describe cross-cutting work, not a single project."
     },
     {
-      "canonical": "nvidia-rag",
-      "aliases": ["NVIDIA RAG", "NVIDIA RAG Ingestion", "NVIDIA RAG Blueprint"],
+      "canonical": "vault-raggae",
+      "aliases": [
+        "nvidia-rag",
+        "NVIDIA RAG",
+        "NVIDIA RAG Ingestion",
+        "NVIDIA RAG Blueprint"
+      ],
       "notes": "Two NVIDIA RAG demo paths counted as one canonical."
     }
   ]

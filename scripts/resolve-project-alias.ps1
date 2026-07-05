@@ -2,49 +2,44 @@
 # Dot-source this file: . "$PSScriptRoot\resolve-project-alias.ps1"
 # Then call: Resolve-ProjectAlias -Project $name -AliasMapPath $path
 #
-# The map (project-aliases.json) lists each canonical project with its historical
-# aliases. The resolver normalizes any alias to its canonical name so old ledger
+# Note: -AliasMapPath is kept for backwards compatibility with existing scripts,
+# but the data is now fetched from the VaultWares API at http://100.67.25.118:9001/
+#
+# The resolver normalizes any alias to its canonical name so old ledger
 # events (frozen audit trail) and freshly-recorded events bucket together in the
-# work-impact dashboard. Lookup is case-insensitive. Cache is keyed by map path +
-# last-write-time so editing the JSON invalidates the cache without restart.
+# work-impact dashboard. Lookup is case-insensitive.
 
 if (-not (Get-Variable -Name '__ProjectAliasCache' -Scope Script -ErrorAction SilentlyContinue)) {
-    $script:__ProjectAliasCache = @{}
+    $script:__ProjectAliasCache = $null
+    $script:__ProjectAliasCacheTime = [DateTime]::MinValue
 }
 
 function Get-ProjectAliasMap {
-    param(
-        [Parameter(Mandatory = $true)][string]$AliasMapPath
-    )
-
-    if (-not (Test-Path -LiteralPath $AliasMapPath)) {
-        return $null
+    # Cache for 10 minutes to avoid spamming the API on heavy local script usage
+    if ($script:__ProjectAliasCache -and ([DateTime]::UtcNow - $script:__ProjectAliasCacheTime).TotalMinutes -lt 10) {
+        return $script:__ProjectAliasCache
     }
 
-    $fileInfo = Get-Item -LiteralPath $AliasMapPath
-    $cacheKey = "$($fileInfo.FullName)|$($fileInfo.LastWriteTimeUtc.Ticks)"
-
-    if ($script:__ProjectAliasCache.ContainsKey($cacheKey)) {
-        return $script:__ProjectAliasCache[$cacheKey]
-    }
-
+    $apiUrl = "http://100.67.25.118:9001/projects/aliases"
     $raw = $null
+    
     try {
-        $raw = Get-Content -Raw -LiteralPath $AliasMapPath | ConvertFrom-Json
+        $response = Invoke-RestMethod -Uri $apiUrl -Method Get -TimeoutSec 5
+        $raw = $response
     }
     catch {
-        Write-Warning "resolve-project-alias: could not parse '$AliasMapPath' ($($_.Exception.Message)). Returning empty map."
+        Write-Warning "resolve-project-alias: could not fetch aliases from API ($($_.Exception.Message)). Returning empty map."
         return $null
     }
 
-    if (-not $raw -or -not $raw.projects) {
+    if (-not $raw) {
         return $null
     }
 
     $aliasToCanonical = @{}
     $canonicalSet = @{}
 
-    foreach ($entry in $raw.projects) {
+    foreach ($entry in $raw) {
         $canonical = [string]$entry.canonical
         if ([string]::IsNullOrWhiteSpace($canonical)) { continue }
         $canonicalSet[$canonical.ToLowerInvariant()] = $canonical
@@ -57,7 +52,8 @@ function Get-ProjectAliasMap {
             if ([string]::IsNullOrWhiteSpace($a)) { continue }
             $aKey = $a.ToLowerInvariant()
             if ($aliasToCanonical.ContainsKey($aKey) -and $aliasToCanonical[$aKey] -ne $canonical) {
-                throw "resolve-project-alias: alias '$a' is claimed by both '$($aliasToCanonical[$aKey])' and '$canonical' in $AliasMapPath."
+                Write-Warning "resolve-project-alias: alias '$a' is claimed by both '$($aliasToCanonical[$aKey])' and '$canonical' from API."
+                continue
             }
             $aliasToCanonical[$aKey] = $canonical
         }
@@ -66,21 +62,23 @@ function Get-ProjectAliasMap {
     $map = [pscustomobject]@{
         aliasToCanonical = $aliasToCanonical
         canonicalSet = $canonicalSet
+        rawData = $raw
     }
 
-    $script:__ProjectAliasCache[$cacheKey] = $map
+    $script:__ProjectAliasCache = $map
+    $script:__ProjectAliasCacheTime = [DateTime]::UtcNow
     return $map
 }
 
 function Resolve-ProjectAlias {
     param(
         [Parameter(Mandatory = $true)][AllowEmptyString()][string]$Project,
-        [Parameter(Mandatory = $true)][string]$AliasMapPath
+        [Parameter(Mandatory = $false)][string]$AliasMapPath # Ignored now, kept for compat
     )
 
     if ([string]::IsNullOrWhiteSpace($Project)) { return $Project }
 
-    $map = Get-ProjectAliasMap -AliasMapPath $AliasMapPath
+    $map = Get-ProjectAliasMap
     if (-not $map) { return $Project }
 
     $key = $Project.ToLowerInvariant()
@@ -102,21 +100,15 @@ function Get-ProjectAliases {
     # the renderer to print "(formerly X)" suffixes. Empty list if none.
     param(
         [Parameter(Mandatory = $true)][string]$Canonical,
-        [Parameter(Mandatory = $true)][string]$AliasMapPath
+        [Parameter(Mandatory = $false)][string]$AliasMapPath # Ignored now, kept for compat
     )
 
     if ([string]::IsNullOrWhiteSpace($Canonical)) { return @() }
-    if (-not (Test-Path -LiteralPath $AliasMapPath)) { return @() }
+    
+    $map = Get-ProjectAliasMap
+    if (-not $map -or -not $map.rawData) { return @() }
 
-    try {
-        $raw = Get-Content -Raw -LiteralPath $AliasMapPath | ConvertFrom-Json
-    }
-    catch {
-        return @()
-    }
-    if (-not $raw -or -not $raw.projects) { return @() }
-
-    foreach ($entry in $raw.projects) {
+    foreach ($entry in $map.rawData) {
         if ([string]$entry.canonical -ieq $Canonical) {
             if ($entry.aliases) { return @($entry.aliases) }
             return @()

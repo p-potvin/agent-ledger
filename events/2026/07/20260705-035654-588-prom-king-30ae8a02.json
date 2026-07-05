@@ -1,0 +1,55 @@
+{
+  "id": "20260705-035654-588-prom-king-30ae8a02",
+  "createdAt": "2026-07-05T07:56:54.5889404Z",
+  "createdAtLocal": "2026-07-05 03:56",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows (Clopeux-Desktop) + git push to GitHub)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Edit, Write, Grep, Bash, git, SSH\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-05 03:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows (Clopeux-Desktop) + git push to GitHub",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "Bash",
+      "git",
+      "SSH"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Marketing tab save/rebuild trust + shared /api/monitor/deploys endpoint. Ships: (1) client+server snippet validator (shared/src/ads/validate.ts mirrored in settings_routes.validate_affiliate_settings) with 32KiB cap, balanced script/style/noscript tags, no stray </head>|</body>, no empty active snippets; warnings for document.write/meta-refresh/mixed-content. 11 vitest cases. (2) PUT /settings/{site} now echoes updated + updated_at + warnings; Marketing tab replaces local state with server echo, toast reads 'Saved: N head (M active) at HH:MM'. DB state chip shows spots|legacy|empty so the oneporn legacy-shape confusion is visible. (3) Site-scoped rebuild: RebuildRequest.site wired through rebuild.py -> deploy-shared-tube.sh --site=<site> using pnpm --filter @promking/<site>... and restarting only <site>.service. (4) GET /api/monitor/deploys?project=&site=&logs= reads /var/lib/vw-deploy/status/<project>.json (atomic-written by each deploy script), detects in-flight via existing .lock, includes per-app version/sha/systemd/last_build/log_tail. Same endpoint feeds Marketing tab AND vault-monitor's new Deployments panel (src/features/deploys/DeploysPanel.tsx). (5) Post-rebuild live probe: after phase=ok, admin fetches origin/?vwprobe=<rand> up to 3x/30s and asserts head-tag signatures in HTML -> green/red banner. (6) Docs: new operations/deploy-status-api.mdx with schema+onboarding checklist; DEPLOY_STATUS row added to both vaultwares-docs/ROUTER.md and Prom-King/docs/ROUTER.md so future agents discover the endpoint. Pushed: Prom-King/shared-tube 33cd60e (v0.2.30), p-potvin/vaultwares-api 4f3ebf5 (v0.2.9), p-potvin/vault-monitor 2f9d52c, p-potvin/vaultwares-docs 0f0d97b, Prom-King/docs dc11e6b. All typechecks + tests green (31 vitest, 5 pytest, vault-monitor tsc).",
+  "commands": [
+    "pnpm --filter @promking/shared-tube typecheck && test",
+    "pytest tests/test_promking_fetcher.py",
+    "npx tsc --noEmit (vault-monitor)",
+    "git push origin main (4 repos)"
+  ],
+  "files": [
+    "Prom-King/shared-tube/shared/src/ads/validate.ts",
+    "Prom-King/shared-tube/shared/src/admin/Marketing/Settings.tsx",
+    "Prom-King/shared-tube/scripts/deploy-shared-tube.sh",
+    "Github Repos/vaultwares-api/app/routers/monitor/__init__.py",
+    "Github Repos/vaultwares-api/app/routers/promking/rebuild.py",
+    "Github Repos/vaultwares-api/app/routers/promking/settings_routes.py",
+    "Github Repos/vaultwares-api/scripts/post-deploy.sh",
+    "Github Repos/vault-monitor/src/features/deploys/DeploysPanel.tsx",
+    "Github Repos/vaultwares-docs/docs-content/operations/deploy-status-api.mdx"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\in-the-marketing-tab-glowing-lantern.md",
+  "contentHash": "30ae8a0297de6d6894d157c493d9c2cfea1eb2c6c51e3fda0973150195e90e67",
+  "git": null
+}
