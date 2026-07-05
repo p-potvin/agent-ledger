@@ -1,0 +1,53 @@
+﻿{
+    "id":  "20260705-082712-692-vault-monitor-infrastructure-d6049155",
+    "createdAt":  "2026-07-05T12:27:12.6921328Z",
+    "createdAtLocal":  "2026-07-05 08:27",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-monitor / infrastructure",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: gemini-2.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local+OVH+Greencloud)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): write_to_file, multi_replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-05 08:27 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local+OVH+Greencloud",
+                    "toolsUsed":  [
+                                      "write_to_file",
+                                      "multi_replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+    "summary":  "Fixed pyload-ng and comet networking on OVH and Greencloud. Implemented Work Impact commit data aggregations on the vault-monitor frontend so UI ignores snapshot when raw samples are available.",
+    "commands":  [
+                     "docker compose up -d pyload-ng"
+                 ],
+    "files":  [
+                  "src/features/work-impact/lib/commitAggregators.ts",
+                  "src/api.ts",
+                  "/etc/nginx/sites-available/vw-media-tailnet.conf",
+                  "/opt/vw-media-stack/docker-compose.yml"
+              ],
+    "planPath":  "file:///C:/Users/Administrator/.gemini/antigravity-ide/brain/c76b70fe-e619-4ba4-bbb7-4ce9ba28195e/walkthrough.md",
+    "contentHash":  "d6049155e410cde3ab78228b43890a82c9099289219e7e77c21f286c906f7de9",
+    "git":  {
+                "repo":  "vault-monitor",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+                "branch":  "main",
+                "head":  "dda6846",
+                "hasChanges":  true
+            }
+}

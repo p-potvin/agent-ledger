@@ -1,643 +1,2831 @@
 {
-  "generatedAt": "2026-06-17T22:00:00Z",
-  "rangeStart": "2026-03-08",
-  "rangeEnd": "2026-06-18",
+  "generatedAt": "2026-07-05T09:28:34.120699Z",
+  "rangeStart": "2026-03-11",
+  "rangeEnd": "2026-07-05",
   "lang": "en",
-
-  "totalEvents": 2435,
-  "activeDays": 101,
-  "totalProjects": 45,
-  "streakCurrent": 15,
-  "streakLongest": 86,
-  "busiestDay": "2026-05-13",
-  "busiestDayCount": 38,
-  "busiestWeek": "2026-W19",
-  "busiestWeekCount": 156,
-  "totalCommits": 2400,
-
+  "totalEvents": 2826,
+  "activeDays": 115,
+  "totalProjects": 70,
+  "streakCurrent": 103,
+  "streakLongest": 103,
+  "busiestDay": "2026-06-12",
+  "busiestDayCount": 100,
+  "busiestWeek": "Apr 13-19",
+  "busiestWeekCount": 315,
+  "totalCommits": 2854,
   "daySeries": [
-    {"date": "2026-03-08", "count": 15},
-    {"date": "2026-03-09", "count": 12},
-    {"date": "2026-03-10", "count": 8},
-    {"date": "2026-03-11", "count": 8},
-    {"date": "2026-03-12", "count": 10},
-    {"date": "2026-03-13", "count": 5},
-    {"date": "2026-03-14", "count": 0},
-    {"date": "2026-03-15", "count": 12},
-    {"date": "2026-03-16", "count": 0},
-    {"date": "2026-03-17", "count": 0},
-    {"date": "2026-03-18", "count": 0},
-    {"date": "2026-03-19", "count": 0},
-    {"date": "2026-03-20", "count": 0},
-    {"date": "2026-03-21", "count": 0},
-    {"date": "2026-03-22", "count": 0},
-    {"date": "2026-03-23", "count": 14},
-    {"date": "2026-03-24", "count": 0},
-    {"date": "2026-03-25", "count": 0},
-    {"date": "2026-03-26", "count": 0},
-    {"date": "2026-03-27", "count": 8},
-    {"date": "2026-03-28", "count": 0},
-    {"date": "2026-03-29", "count": 0},
-    {"date": "2026-03-30", "count": 0},
-    {"date": "2026-03-31", "count": 0},
-    {"date": "2026-04-01", "count": 0},
-    {"date": "2026-04-02", "count": 0},
-    {"date": "2026-04-03", "count": 0},
-    {"date": "2026-04-04", "count": 0},
-    {"date": "2026-04-05", "count": 0},
-    {"date": "2026-04-06", "count": 0},
-    {"date": "2026-04-07", "count": 0},
-    {"date": "2026-04-08", "count": 0},
-    {"date": "2026-04-09", "count": 0},
-    {"date": "2026-04-10", "count": 0},
-    {"date": "2026-04-11", "count": 5},
-    {"date": "2026-04-12", "count": 0},
-    {"date": "2026-04-13", "count": 0},
-    {"date": "2026-04-14", "count": 15},
-    {"date": "2026-04-15", "count": 0},
-    {"date": "2026-04-16", "count": 0},
-    {"date": "2026-04-17", "count": 0},
-    {"date": "2026-04-18", "count": 0},
-    {"date": "2026-04-19", "count": 18},
-    {"date": "2026-04-20", "count": 0},
-    {"date": "2026-04-21", "count": 0},
-    {"date": "2026-04-22", "count": 0},
-    {"date": "2026-04-23", "count": 0},
-    {"date": "2026-04-24", "count": 0},
-    {"date": "2026-04-25", "count": 0},
-    {"date": "2026-04-26", "count": 22},
-    {"date": "2026-04-27", "count": 0},
-    {"date": "2026-04-28", "count": 0},
-    {"date": "2026-04-29", "count": 0},
-    {"date": "2026-04-30", "count": 0},
-    {"date": "2026-05-01", "count": 0},
-    {"date": "2026-05-02", "count": 0},
-    {"date": "2026-05-03", "count": 42},
-    {"date": "2026-05-04", "count": 31},
-    {"date": "2026-05-05", "count": 28},
-    {"date": "2026-05-06", "count": 19},
-    {"date": "2026-05-07", "count": 17},
-    {"date": "2026-05-08", "count": 15},
-    {"date": "2026-05-09", "count": 0},
-    {"date": "2026-05-10", "count": 0},
-    {"date": "2026-05-11", "count": 47},
-    {"date": "2026-05-12", "count": 32},
-    {"date": "2026-05-13", "count": 38},
-    {"date": "2026-05-14", "count": 34},
-    {"date": "2026-05-15", "count": 25},
-    {"date": "2026-05-16", "count": 28},
-    {"date": "2026-05-17", "count": 31},
-    {"date": "2026-05-18", "count": 27},
-    {"date": "2026-05-19", "count": 8},
-    {"date": "2026-05-20", "count": 29},
-    {"date": "2026-05-21", "count": 0},
-    {"date": "2026-05-22", "count": 0},
-    {"date": "2026-05-23", "count": 0},
-    {"date": "2026-05-24", "count": 0},
-    {"date": "2026-05-25", "count": 0},
-    {"date": "2026-05-26", "count": 0},
-    {"date": "2026-05-27", "count": 0},
-    {"date": "2026-05-28", "count": 0},
-    {"date": "2026-05-29", "count": 0},
-    {"date": "2026-05-30", "count": 0},
-    {"date": "2026-05-31", "count": 0},
-    {"date": "2026-06-01", "count": 0},
-    {"date": "2026-06-02", "count": 0},
-    {"date": "2026-06-03", "count": 0},
-    {"date": "2026-06-04", "count": 0},
-    {"date": "2026-06-05", "count": 0},
-    {"date": "2026-06-06", "count": 0},
-    {"date": "2026-06-07", "count": 0},
-    {"date": "2026-06-08", "count": 0},
-    {"date": "2026-06-09", "count": 12},
-    {"date": "2026-06-10", "count": 0},
-    {"date": "2026-06-11", "count": 0},
-    {"date": "2026-06-12", "count": 0},
-    {"date": "2026-06-13", "count": 0},
-    {"date": "2026-06-14", "count": 18},
-    {"date": "2026-06-15", "count": 19},
-    {"date": "2026-06-16", "count": 26},
-    {"date": "2026-06-17", "count": 32},
-    {"date": "2026-06-18", "count": 15}
+    {
+      "date": "2026-03-11",
+      "count": 1
+    },
+    {
+      "date": "2026-03-12",
+      "count": 11
+    },
+    {
+      "date": "2026-03-13",
+      "count": 3
+    },
+    {
+      "date": "2026-03-14",
+      "count": 6
+    },
+    {
+      "date": "2026-03-15",
+      "count": 8
+    },
+    {
+      "date": "2026-03-16",
+      "count": 26
+    },
+    {
+      "date": "2026-03-17",
+      "count": 0
+    },
+    {
+      "date": "2026-03-18",
+      "count": 6
+    },
+    {
+      "date": "2026-03-19",
+      "count": 1
+    },
+    {
+      "date": "2026-03-20",
+      "count": 18
+    },
+    {
+      "date": "2026-03-21",
+      "count": 3
+    },
+    {
+      "date": "2026-03-22",
+      "count": 1
+    },
+    {
+      "date": "2026-03-23",
+      "count": 8
+    },
+    {
+      "date": "2026-03-24",
+      "count": 0
+    },
+    {
+      "date": "2026-03-25",
+      "count": 4
+    },
+    {
+      "date": "2026-03-26",
+      "count": 3
+    },
+    {
+      "date": "2026-03-27",
+      "count": 25
+    },
+    {
+      "date": "2026-03-28",
+      "count": 1
+    },
+    {
+      "date": "2026-03-29",
+      "count": 8
+    },
+    {
+      "date": "2026-03-30",
+      "count": 6
+    },
+    {
+      "date": "2026-03-31",
+      "count": 15
+    },
+    {
+      "date": "2026-04-01",
+      "count": 32
+    },
+    {
+      "date": "2026-04-02",
+      "count": 1
+    },
+    {
+      "date": "2026-04-03",
+      "count": 1
+    },
+    {
+      "date": "2026-04-04",
+      "count": 25
+    },
+    {
+      "date": "2026-04-05",
+      "count": 11
+    },
+    {
+      "date": "2026-04-06",
+      "count": 39
+    },
+    {
+      "date": "2026-04-07",
+      "count": 6
+    },
+    {
+      "date": "2026-04-08",
+      "count": 2
+    },
+    {
+      "date": "2026-04-09",
+      "count": 5
+    },
+    {
+      "date": "2026-04-10",
+      "count": 6
+    },
+    {
+      "date": "2026-04-11",
+      "count": 5
+    },
+    {
+      "date": "2026-04-12",
+      "count": 4
+    },
+    {
+      "date": "2026-04-13",
+      "count": 20
+    },
+    {
+      "date": "2026-04-14",
+      "count": 19
+    },
+    {
+      "date": "2026-04-15",
+      "count": 5
+    },
+    {
+      "date": "2026-04-16",
+      "count": 25
+    },
+    {
+      "date": "2026-04-17",
+      "count": 91
+    },
+    {
+      "date": "2026-04-18",
+      "count": 85
+    },
+    {
+      "date": "2026-04-19",
+      "count": 70
+    },
+    {
+      "date": "2026-04-20",
+      "count": 16
+    },
+    {
+      "date": "2026-04-21",
+      "count": 27
+    },
+    {
+      "date": "2026-04-22",
+      "count": 42
+    },
+    {
+      "date": "2026-04-23",
+      "count": 19
+    },
+    {
+      "date": "2026-04-24",
+      "count": 90
+    },
+    {
+      "date": "2026-04-25",
+      "count": 37
+    },
+    {
+      "date": "2026-04-26",
+      "count": 15
+    },
+    {
+      "date": "2026-04-27",
+      "count": 12
+    },
+    {
+      "date": "2026-04-28",
+      "count": 69
+    },
+    {
+      "date": "2026-04-29",
+      "count": 38
+    },
+    {
+      "date": "2026-04-30",
+      "count": 14
+    },
+    {
+      "date": "2026-05-01",
+      "count": 73
+    },
+    {
+      "date": "2026-05-02",
+      "count": 22
+    },
+    {
+      "date": "2026-05-03",
+      "count": 70
+    },
+    {
+      "date": "2026-05-04",
+      "count": 30
+    },
+    {
+      "date": "2026-05-05",
+      "count": 31
+    },
+    {
+      "date": "2026-05-06",
+      "count": 16
+    },
+    {
+      "date": "2026-05-07",
+      "count": 20
+    },
+    {
+      "date": "2026-05-08",
+      "count": 33
+    },
+    {
+      "date": "2026-05-09",
+      "count": 11
+    },
+    {
+      "date": "2026-05-10",
+      "count": 30
+    },
+    {
+      "date": "2026-05-11",
+      "count": 30
+    },
+    {
+      "date": "2026-05-12",
+      "count": 29
+    },
+    {
+      "date": "2026-05-13",
+      "count": 29
+    },
+    {
+      "date": "2026-05-14",
+      "count": 26
+    },
+    {
+      "date": "2026-05-15",
+      "count": 25
+    },
+    {
+      "date": "2026-05-16",
+      "count": 29
+    },
+    {
+      "date": "2026-05-17",
+      "count": 15
+    },
+    {
+      "date": "2026-05-18",
+      "count": 45
+    },
+    {
+      "date": "2026-05-19",
+      "count": 5
+    },
+    {
+      "date": "2026-05-20",
+      "count": 53
+    },
+    {
+      "date": "2026-05-21",
+      "count": 29
+    },
+    {
+      "date": "2026-05-22",
+      "count": 31
+    },
+    {
+      "date": "2026-05-23",
+      "count": 34
+    },
+    {
+      "date": "2026-05-24",
+      "count": 33
+    },
+    {
+      "date": "2026-05-25",
+      "count": 46
+    },
+    {
+      "date": "2026-05-26",
+      "count": 64
+    },
+    {
+      "date": "2026-05-27",
+      "count": 14
+    },
+    {
+      "date": "2026-05-28",
+      "count": 19
+    },
+    {
+      "date": "2026-05-29",
+      "count": 5
+    },
+    {
+      "date": "2026-05-30",
+      "count": 21
+    },
+    {
+      "date": "2026-05-31",
+      "count": 15
+    },
+    {
+      "date": "2026-06-01",
+      "count": 14
+    },
+    {
+      "date": "2026-06-02",
+      "count": 19
+    },
+    {
+      "date": "2026-06-03",
+      "count": 14
+    },
+    {
+      "date": "2026-06-04",
+      "count": 20
+    },
+    {
+      "date": "2026-06-05",
+      "count": 21
+    },
+    {
+      "date": "2026-06-06",
+      "count": 30
+    },
+    {
+      "date": "2026-06-07",
+      "count": 31
+    },
+    {
+      "date": "2026-06-08",
+      "count": 34
+    },
+    {
+      "date": "2026-06-09",
+      "count": 10
+    },
+    {
+      "date": "2026-06-10",
+      "count": 40
+    },
+    {
+      "date": "2026-06-11",
+      "count": 41
+    },
+    {
+      "date": "2026-06-12",
+      "count": 100
+    },
+    {
+      "date": "2026-06-13",
+      "count": 22
+    },
+    {
+      "date": "2026-06-14",
+      "count": 44
+    },
+    {
+      "date": "2026-06-15",
+      "count": 16
+    },
+    {
+      "date": "2026-06-16",
+      "count": 20
+    },
+    {
+      "date": "2026-06-17",
+      "count": 23
+    },
+    {
+      "date": "2026-06-18",
+      "count": 15
+    },
+    {
+      "date": "2026-06-19",
+      "count": 46
+    },
+    {
+      "date": "2026-06-20",
+      "count": 7
+    },
+    {
+      "date": "2026-06-21",
+      "count": 3
+    },
+    {
+      "date": "2026-06-22",
+      "count": 43
+    },
+    {
+      "date": "2026-06-23",
+      "count": 19
+    },
+    {
+      "date": "2026-06-24",
+      "count": 36
+    },
+    {
+      "date": "2026-06-25",
+      "count": 50
+    },
+    {
+      "date": "2026-06-26",
+      "count": 4
+    },
+    {
+      "date": "2026-06-27",
+      "count": 20
+    },
+    {
+      "date": "2026-06-28",
+      "count": 45
+    },
+    {
+      "date": "2026-06-29",
+      "count": 27
+    },
+    {
+      "date": "2026-06-30",
+      "count": 31
+    },
+    {
+      "date": "2026-07-01",
+      "count": 13
+    },
+    {
+      "date": "2026-07-02",
+      "count": 22
+    },
+    {
+      "date": "2026-07-03",
+      "count": 4
+    },
+    {
+      "date": "2026-07-04",
+      "count": 11
+    },
+    {
+      "date": "2026-07-05",
+      "count": 13
+    }
   ],
-
   "byMonth": [
-    { "label": "Mar", "count": 58 },
-    { "label": "Apr", "count": 88 },
-    { "label": "May", "count": 311 },
-    { "label": "Jun", "count": 104 }
+    {
+      "label": "2026-03",
+      "count": 154
+    },
+    {
+      "label": "2026-04",
+      "count": 831
+    },
+    {
+      "label": "2026-05",
+      "count": 933
+    },
+    {
+      "label": "2026-06",
+      "count": 845
+    },
+    {
+      "label": "2026-07",
+      "count": 63
+    }
   ],
-
   "byKind": [
-    { "label": "code-change", "count": 987 },
-    { "label": "commands", "count": 452 },
-    { "label": "plan", "count": 318 },
-    { "label": "verification", "count": 289 },
-    { "label": "handoff", "count": 156 },
-    { "label": "general", "count": 218 }
+    {
+      "label": "code-change",
+      "count": 2113
+    },
+    {
+      "label": "verification",
+      "count": 498
+    },
+    {
+      "label": "plan",
+      "count": 224
+    },
+    {
+      "label": "general",
+      "count": 145
+    },
+    {
+      "label": "commands",
+      "count": 128
+    },
+    {
+      "label": "handoff",
+      "count": 66
+    },
+    {
+      "label": "feature",
+      "count": 19
+    },
+    {
+      "label": "bugfix",
+      "count": 5
+    },
+    {
+      "label": "documentation",
+      "count": 5
+    },
+    {
+      "label": "deployment",
+      "count": 4
+    },
+    {
+      "label": "implementation",
+      "count": 4
+    },
+    {
+      "label": "deploy",
+      "count": 3
+    },
+    {
+      "label": "design-doc",
+      "count": 3
+    },
+    {
+      "label": "docs",
+      "count": 3
+    },
+    {
+      "label": "fix",
+      "count": 3
+    },
+    {
+      "label": "infrastructure",
+      "count": 3
+    },
+    {
+      "label": "project-onboarding",
+      "count": 3
+    },
+    {
+      "label": "config",
+      "count": 2
+    },
+    {
+      "label": "analysis",
+      "count": 1
+    },
+    {
+      "label": "bug",
+      "count": 1
+    },
+    {
+      "label": "db-migration",
+      "count": 1
+    },
+    {
+      "label": "improvement",
+      "count": 1
+    },
+    {
+      "label": "maintenance",
+      "count": 1
+    },
+    {
+      "label": "ops",
+      "count": 1
+    },
+    {
+      "label": "ops-health-probe",
+      "count": 1
+    },
+    {
+      "label": "protocol",
+      "count": 1
+    },
+    {
+      "label": "research",
+      "count": 1
+    }
   ],
-
   "byProject": [
-    { "label": "vaultwares-api", "count": 183 },
-    { "label": "vault-explorer", "count": 263 },
-    { "label": "vault-flows", "count": 159 },
-    { "label": "vault-central", "count": 141 },
-    { "label": "vaultwares-studio", "count": 140 },
-    { "label": "vaultwares-media-processing", "count": 127 },
-    { "label": "vaultwares-realtime", "count": 122 },
-    { "label": "General Tasks", "count": 122 },
-    { "label": "tube-sites", "count": 103 },
-    { "label": "Prom-King", "count": 86 }
+    {
+      "label": "vault-explorer",
+      "count": 312
+    },
+    {
+      "label": "vaultwares-api",
+      "count": 203
+    },
+    {
+      "label": "shared-tube",
+      "count": 182
+    },
+    {
+      "label": "vaultwares-studio",
+      "count": 161
+    },
+    {
+      "label": "vault-flows",
+      "count": 159
+    },
+    {
+      "label": "General Tasks",
+      "count": 149
+    },
+    {
+      "label": "vault-central",
+      "count": 144
+    },
+    {
+      "label": "vaultwares-media-processing",
+      "count": 127
+    },
+    {
+      "label": "vaultwares-realtime",
+      "count": 122
+    },
+    {
+      "label": "vaultwares-docs",
+      "count": 120
+    },
+    {
+      "label": "Prom-King",
+      "count": 106
+    },
+    {
+      "label": "agent-ledger",
+      "count": 89
+    },
+    {
+      "label": "python-zipper",
+      "count": 73
+    },
+    {
+      "label": "health-ledger",
+      "count": 70
+    },
+    {
+      "label": "no-more-groceries",
+      "count": 56
+    },
+    {
+      "label": "vaultwares-adk",
+      "count": 55
+    },
+    {
+      "label": "vaultwares-cli",
+      "count": 50
+    },
+    {
+      "label": "vaultwares-website",
+      "count": 50
+    },
+    {
+      "label": "vaultwares-themes",
+      "count": 40
+    },
+    {
+      "label": "vault-monitor",
+      "count": 34
+    },
+    {
+      "label": "link-sharing",
+      "count": 33
+    },
+    {
+      "label": "vaultwares-template",
+      "count": 31
+    },
+    {
+      "label": "vaultwares-glass",
+      "count": 28
+    },
+    {
+      "label": "vault-player",
+      "count": 28
+    },
+    {
+      "label": "traffic-pulse",
+      "count": 27
+    },
+    {
+      "label": "vaultwares-dispatch",
+      "count": 26
+    },
+    {
+      "label": "cultural-rhythm",
+      "count": 24
+    },
+    {
+      "label": "vault-guardian",
+      "count": 22
+    },
+    {
+      "label": "windows-customizer",
+      "count": 22
+    },
+    {
+      "label": "qa-automation",
+      "count": 22
+    },
+    {
+      "label": "vaultwares-mcp",
+      "count": 22
+    },
+    {
+      "label": "vw-jira-sync",
+      "count": 21
+    },
+    {
+      "label": "vw-media-stack",
+      "count": 20
+    },
+    {
+      "label": "content-disseminator",
+      "count": 18
+    },
+    {
+      "label": "automation-suite",
+      "count": 17
+    },
+    {
+      "label": "agentic-markup",
+      "count": 15
+    },
+    {
+      "label": "vaultwares-decompile",
+      "count": 14
+    },
+    {
+      "label": "tailnet-sync",
+      "count": 14
+    },
+    {
+      "label": "Pro-Realism-Edit-Studio",
+      "count": 13
+    },
+    {
+      "label": "weekly-menu",
+      "count": 12
+    },
+    {
+      "label": "prelanding-page",
+      "count": 11
+    },
+    {
+      "label": "scripts",
+      "count": 10
+    },
+    {
+      "label": "tech-oracle",
+      "count": 10
+    },
+    {
+      "label": "tech-oracle (Prom-King)",
+      "count": 10
+    },
+    {
+      "label": "vaultwares-identity-manager",
+      "count": 9
+    },
+    {
+      "label": "auto-backup",
+      "count": 7
+    },
+    {
+      "label": "debrid-media-manager",
+      "count": 6
+    },
+    {
+      "label": "gallery-scraper",
+      "count": 6
+    },
+    {
+      "label": "event-horizon",
+      "count": 5
+    },
+    {
+      "label": "PKT Wallpapers",
+      "count": 5
+    },
+    {
+      "label": "vaultwares-toolkit",
+      "count": 5
+    },
+    {
+      "label": "vault-raggae",
+      "count": 4
+    },
+    {
+      "label": "Prom-King docs",
+      "count": 3
+    },
+    {
+      "label": "Prom-King shared-tube",
+      "count": 3
+    },
+    {
+      "label": "Prom-King/docs",
+      "count": 3
+    },
+    {
+      "label": "vault-media-stack (OVH)",
+      "count": 3
+    },
+    {
+      "label": "vault-tv",
+      "count": 3
+    },
+    {
+      "label": "Pro-Realism-FLUX2-Klein-Multi-LoRA",
+      "count": 2
+    },
+    {
+      "label": "VaultWares DNS / media stack",
+      "count": 2
+    },
+    {
+      "label": "vaultwares-dns",
+      "count": 2
+    },
+    {
+      "label": "wallpaper-foundry",
+      "count": 2
+    },
+    {
+      "label": "Health Ledger Release",
+      "count": 1
+    },
+    {
+      "label": "OpenClaw",
+      "count": 1
+    },
+    {
+      "label": "Prom-King docs release",
+      "count": 1
+    },
+    {
+      "label": "vaultwares-adk consumers",
+      "count": 1
+    },
+    {
+      "label": "vaultwares-api, agent-ledger",
+      "count": 1
+    },
+    {
+      "label": "vaultwares-backups",
+      "count": 1
+    },
+    {
+      "label": "vw-media (ovhcloud)",
+      "count": 1
+    },
+    {
+      "label": "vw-media + agent-ledger + vault-monitor",
+      "count": 1
+    },
+    {
+      "label": "wallpaper-foundry / vw-media-stack",
+      "count": 1
+    }
   ],
-
   "commitStats": {
-    "mean": 92,
-    "median": 42,
-    "mode": 12,
-    "samples": 672
+    "mean": 1076,
+    "median": 78,
+    "mode": 2,
+    "samples": 10
   },
-
   "commitBuckets": [
-    { "edge": "0-10", "count": 287 },
-    { "edge": "10-25", "count": 156 },
-    { "edge": "25-50", "count": 89 },
-    { "edge": "50-100", "count": 67 },
-    { "edge": "100-200", "count": 34 },
-    { "edge": "200-400", "count": 21 },
-    { "edge": "400-800", "count": 12 },
-    { "edge": "800-1600", "count": 8 },
-    { "edge": "1600-3200", "count": 5 },
-    { "edge": "3200-6400", "count": 3 },
-    { "edge": "6400+", "count": 0 }
+    {
+      "edge": "0",
+      "count": 1
+    },
+    {
+      "edge": "10",
+      "count": 1
+    },
+    {
+      "edge": "25",
+      "count": 1
+    },
+    {
+      "edge": "50",
+      "count": 3
+    },
+    {
+      "edge": "100",
+      "count": 0
+    },
+    {
+      "edge": "250",
+      "count": 1
+    },
+    {
+      "edge": "500",
+      "count": 1
+    },
+    {
+      "edge": "1000",
+      "count": 1
+    },
+    {
+      "edge": "2500",
+      "count": 0
+    },
+    {
+      "edge": "5000",
+      "count": 1
+    }
   ],
-
   "monthBoxes": [
-    { "month": "Mar", "min": 11, "q1": 25, "median": 42, "q3": 148, "max": 902 },
-    { "month": "Apr", "min": 11, "q1": 21, "median": 48, "q3": 105, "max": 7452 },
-    { "month": "May", "min": 58, "q1": 85, "median": 148, "q3": 283, "max": 7452 },
-    { "month": "Jun", "min": 58, "q1": 77, "median": 85, "q3": 200, "max": 1012 }
+    {
+      "month": "2026-06",
+      "min": 14,
+      "q1": 63,
+      "median": 86,
+      "q3": 526,
+      "max": 8216
+    },
+    {
+      "month": "2026-07",
+      "min": 2,
+      "q1": 43,
+      "median": 69,
+      "q3": 263,
+      "max": 1474
+    }
   ],
-
   "commitOutliers": [
     "2026-03-23: windows-customizer - +29,687 lines (a1d4b42) - Major refactoring",
     "2026-04-14: vaultwares-cli - +83,144 lines (486f844) - Massive CLI overhaul",
     "2026-04-26: vault-flows - +45,406 lines (37dfb53) - Flow system migration",
-    "2026-04-26: vault-flows - +45,406 lines (0998411) - Parallel flow rewrite"
+    "2026-04-26: vault-flows - +45,406 lines (0998411) - Parallel flow rewrite",
+    "2026-06-30: p-potvin/agent-ledger - +131,109 lines (553b5ef) - auto-detected (> 15,000 clean lines)",
+    "2026-06-28: p-potvin/agent-ledger - +102,517 lines (9386542) - auto-detected (> 15,000 clean lines)",
+    "2026-06-27: p-potvin/agent-ledger - +92,389 lines (0182bc3) - auto-detected (> 15,000 clean lines)",
+    "2026-07-03: p-potvin/agent-ledger - +49,412 lines (167312b) - auto-detected (> 15,000 clean lines)",
+    "2026-06-25: p-potvin/agent-ledger - +34,186 lines (b862a07) - auto-detected (> 15,000 clean lines)",
+    "2026-06-30: p-potvin/agent-ledger - +23,695 lines (dc640a3) - auto-detected (> 15,000 clean lines)",
+    "2026-07-05: p-potvin/agent-ledger - +23,478 lines (a6cd67d) - auto-detected (> 15,000 clean lines)"
   ],
-
   "techVolume": {
     "raw": {
       "label": "Raw",
-      "insertions": 1472222,
-      "deletions": 199023,
-      "files": 7567,
-      "churn": 1671245,
-      "net": 1273199
+      "insertions": 0,
+      "deletions": 0,
+      "files": 0,
+      "churn": 0,
+      "net": 0
     },
     "clean": {
       "label": "Clean",
-      "insertions": 618341,
-      "deletions": 114474,
-      "files": 4682,
-      "churn": 732815,
-      "net": 503867
+      "insertions": 0,
+      "deletions": 0,
+      "files": 0,
+      "churn": 0,
+      "net": 0
     },
     "excluded": {
       "label": "Excluded",
-      "insertions": 853881,
-      "deletions": 84549,
-      "files": 2885,
-      "churn": 938430,
-      "net": 769332
+      "insertions": 0,
+      "deletions": 0,
+      "files": 0,
+      "churn": 0,
+      "net": 0
     }
   },
-
   "filesTouched": {
-    "mean": 3.2,
-    "median": 2,
-    "p90": 8,
-    "max": 26
+    "mean": 0,
+    "median": 0,
+    "p90": 0,
+    "max": 0
   },
-
   "concentration": [
-    { "label": "vault-explorer", "count": 263 },
-    { "label": "vault-flows", "count": 159 },
-    { "label": "vaultwares-api", "count": 183 },
-    { "label": "vault-central", "count": 141 },
-    { "label": "vaultwares-studio", "count": 140 },
-    { "label": "vaultwares-media-processing", "count": 127 },
-    { "label": "vaultwares-realtime", "count": 122 },
-    { "label": "General Tasks", "count": 122 },
-    { "label": "tube-sites", "count": 103 },
-    { "label": "Prom-King", "count": 86 }
+    {
+      "label": "vault-explorer",
+      "count": 31
+    },
+    {
+      "label": "vaultwares-api",
+      "count": 20
+    },
+    {
+      "label": "shared-tube",
+      "count": 18
+    },
+    {
+      "label": "vaultwares-studio",
+      "count": 16
+    },
+    {
+      "label": "vault-flows",
+      "count": 16
+    }
   ],
-
-  "byHour": [
-    { "label": "00", "count": 5 },
-    { "label": "01", "count": 3 },
-    { "label": "02", "count": 8 },
-    { "label": "03", "count": 12 },
-    { "label": "04", "count": 15 },
-    { "label": "05", "count": 8 },
-    { "label": "06", "count": 22 },
-    { "label": "07", "count": 18 },
-    { "label": "08", "count": 35 },
-    { "label": "09", "count": 42 },
-    { "label": "10", "count": 48 },
-    { "label": "11", "count": 55 },
-    { "label": "12", "count": 62 },
-    { "label": "13", "count": 58 },
-    { "label": "14", "count": 45 },
-    { "label": "15", "count": 52 },
-    { "label": "16", "count": 68 },
-    { "label": "17", "count": 72 },
-    { "label": "18", "count": 85 },
-    { "label": "19", "count": 78 },
-    { "label": "20", "count": 65 },
-    { "label": "21", "count": 52 },
-    { "label": "22", "count": 48 },
-    { "label": "23", "count": 35 }
-  ],
-
-  "byDow": [
-    { "label": "Mon", "count": 312 },
-    { "label": "Tue", "count": 345 },
-    { "label": "Wed", "count": 402 },
-    { "label": "Thu", "count": 378 },
-    { "label": "Fri", "count": 385 },
-    { "label": "Sat", "count": 215 },
-    { "label": "Sun", "count": 198 }
-  ],
-
   "highlights": {
-    "mostConsistentMonth": "May 2026",
-    "widestProjectDay": "2026-05-13 (14 projects)",
-    "strongestWeek": "2026-W19 (156 events)",
-    "milestones": [
-      "2,435 total events recorded",
-      "101 active days",
-      "86-day longest streak",
-      "2,400 commits analyzed",
-      "732,815 lines of clean code churn",
-      "938,430 lines of excluded/vendor code",
-      "4 major outliers removed from stats (>20k lines)",
-      "Founded March 8th, 2026 - VaultWares anniversary"
-    ],
-    "topProjects": ["vault-explorer", "vault-flows", "vaultwares-api", "vault-central"]
-  },
-
-  "agentData": {
-    "totalEvents": 2435,
-    "distinctActors": 8,
-    "modelsUsed": 15,
-    "toolsUsed": 42,
-    "topTools": [
-      { "label": "read_file", "count": 845 },
-      { "label": "grep_search", "count": 592 },
-      { "label": "edit_file", "count": 418 },
-      { "label": "bash_command", "count": 333 },
-      { "label": "create_file", "count": 287 },
-      { "label": "semantic_search", "count": 175 }
-    ],
-    "topMcp": [
-      { "label": "mcp_github", "count": 287 },
-      { "label": "mcp_filesystem", "count": 245 },
-      { "label": "mcp_process", "count": 156 },
-      { "label": "mcp_http", "count": 98 },
-      { "label": "mcp_terminal", "count": 87 }
-    ],
-    "topActors": [
-      { "label": "AI Agent", "count": 1245 },
-      { "label": "Claude Code", "count": 587 },
-      { "label": "GitHub Copilot", "count": 312 },
-      { "label": "Mistral Vibe", "count": 276 }
-    ],
-    "dayActivity": [
-      { "label": "00", "count": 5 },
-      { "label": "01", "count": 3 },
-      { "label": "02", "count": 8 },
-      { "label": "03", "count": 12 },
-      { "label": "04", "count": 15 },
-      { "label": "05", "count": 8 },
-      { "label": "06", "count": 22 },
-      { "label": "07", "count": 18 },
-      { "label": "08", "count": 35 },
-      { "label": "09", "count": 42 },
-      { "label": "10", "count": 48 },
-      { "label": "11", "count": 55 },
-      { "label": "12", "count": 62 },
-      { "label": "13", "count": 58 },
-      { "label": "14", "count": 45 },
-      { "label": "15", "count": 52 },
-      { "label": "16", "count": 68 },
-      { "label": "17", "count": 72 },
-      { "label": "18", "count": 85 },
-      { "label": "19", "count": 78 },
-      { "label": "20", "count": 65 },
-      { "label": "21", "count": 52 },
-      { "label": "22", "count": 48 },
-      { "label": "23", "count": 35 }
+    "mostConsistentMonth": "2026-05",
+    "widestProjectDay": "2026-05-01",
+    "strongestWeek": "Apr 13-19",
+    "milestones": [],
+    "topProjects": [
+      "vault-explorer",
+      "vaultwares-api",
+      "shared-tube",
+      "vaultwares-studio",
+      "vault-flows"
     ]
   },
-
+  "byHour": [
+    {
+      "label": "00",
+      "count": 108
+    },
+    {
+      "label": "01",
+      "count": 103
+    },
+    {
+      "label": "02",
+      "count": 100
+    },
+    {
+      "label": "03",
+      "count": 113
+    },
+    {
+      "label": "04",
+      "count": 124
+    },
+    {
+      "label": "05",
+      "count": 142
+    },
+    {
+      "label": "06",
+      "count": 109
+    },
+    {
+      "label": "07",
+      "count": 141
+    },
+    {
+      "label": "08",
+      "count": 112
+    },
+    {
+      "label": "09",
+      "count": 111
+    },
+    {
+      "label": "10",
+      "count": 103
+    },
+    {
+      "label": "11",
+      "count": 110
+    },
+    {
+      "label": "12",
+      "count": 114
+    },
+    {
+      "label": "13",
+      "count": 84
+    },
+    {
+      "label": "14",
+      "count": 143
+    },
+    {
+      "label": "15",
+      "count": 158
+    },
+    {
+      "label": "16",
+      "count": 139
+    },
+    {
+      "label": "17",
+      "count": 159
+    },
+    {
+      "label": "18",
+      "count": 140
+    },
+    {
+      "label": "19",
+      "count": 104
+    },
+    {
+      "label": "20",
+      "count": 103
+    },
+    {
+      "label": "21",
+      "count": 80
+    },
+    {
+      "label": "22",
+      "count": 121
+    },
+    {
+      "label": "23",
+      "count": 133
+    }
+  ],
+  "byDow": [
+    {
+      "label": "Mon",
+      "count": 412
+    },
+    {
+      "label": "Tue",
+      "count": 368
+    },
+    {
+      "label": "Wed",
+      "count": 368
+    },
+    {
+      "label": "Thu",
+      "count": 321
+    },
+    {
+      "label": "Fri",
+      "count": 576
+    },
+    {
+      "label": "Sat",
+      "count": 369
+    },
+    {
+      "label": "Sun",
+      "count": 440
+    }
+  ],
+  "agentData": {
+    "totalEvents": 2854,
+    "distinctActors": 31,
+    "modelsUsed": 66,
+    "toolsUsed": 100,
+    "topTools": [
+      {
+        "label": "run_command",
+        "count": 228
+      },
+      {
+        "label": "Bash",
+        "count": 171
+      },
+      {
+        "label": "replace_file_content",
+        "count": 170
+      },
+      {
+        "label": "Edit",
+        "count": 168
+      },
+      {
+        "label": "Read",
+        "count": 167
+      },
+      {
+        "label": "view_file",
+        "count": 144
+      },
+      {
+        "label": "write_to_file",
+        "count": 134
+      },
+      {
+        "label": "PowerShell",
+        "count": 105
+      },
+      {
+        "label": "Write",
+        "count": 98
+      },
+      {
+        "label": "multi_replace_file_content",
+        "count": 82
+      }
+    ],
+    "topMcp": [
+      {
+        "label": "computer-use",
+        "count": 1
+      },
+      {
+        "label": "VaultWares MCP",
+        "count": 1
+      }
+    ],
+    "topActors": [
+      {
+        "label": "AI Agent",
+        "count": 2270
+      },
+      {
+        "label": "Antigravity",
+        "count": 295
+      },
+      {
+        "label": "codex",
+        "count": 45
+      },
+      {
+        "label": "GitHub Copilot",
+        "count": 40
+      },
+      {
+        "label": "claude-code",
+        "count": 38
+      },
+      {
+        "label": "Codex",
+        "count": 27
+      },
+      {
+        "label": "pg-watchdog",
+        "count": 25
+      },
+      {
+        "label": ":AGENT_NAME",
+        "count": 22
+      },
+      {
+        "label": "claude-sonnet-4-6",
+        "count": 19
+      },
+      {
+        "label": "gpt-5.2-codex",
+        "count": 17
+      }
+    ],
+    "dayActivity": [
+      {
+        "label": "2026-03-11",
+        "count": 1
+      },
+      {
+        "label": "2026-03-12",
+        "count": 11
+      },
+      {
+        "label": "2026-03-13",
+        "count": 3
+      },
+      {
+        "label": "2026-03-14",
+        "count": 6
+      },
+      {
+        "label": "2026-03-15",
+        "count": 8
+      },
+      {
+        "label": "2026-03-16",
+        "count": 26
+      },
+      {
+        "label": "2026-03-18",
+        "count": 6
+      },
+      {
+        "label": "2026-03-19",
+        "count": 1
+      },
+      {
+        "label": "2026-03-20",
+        "count": 18
+      },
+      {
+        "label": "2026-03-21",
+        "count": 3
+      },
+      {
+        "label": "2026-03-22",
+        "count": 1
+      },
+      {
+        "label": "2026-03-23",
+        "count": 8
+      },
+      {
+        "label": "2026-03-25",
+        "count": 4
+      },
+      {
+        "label": "2026-03-26",
+        "count": 3
+      },
+      {
+        "label": "2026-03-27",
+        "count": 25
+      },
+      {
+        "label": "2026-03-28",
+        "count": 1
+      },
+      {
+        "label": "2026-03-29",
+        "count": 8
+      },
+      {
+        "label": "2026-03-30",
+        "count": 6
+      },
+      {
+        "label": "2026-03-31",
+        "count": 15
+      },
+      {
+        "label": "2026-04-01",
+        "count": 32
+      },
+      {
+        "label": "2026-04-02",
+        "count": 1
+      },
+      {
+        "label": "2026-04-03",
+        "count": 1
+      },
+      {
+        "label": "2026-04-04",
+        "count": 25
+      },
+      {
+        "label": "2026-04-05",
+        "count": 11
+      },
+      {
+        "label": "2026-04-06",
+        "count": 39
+      },
+      {
+        "label": "2026-04-07",
+        "count": 6
+      },
+      {
+        "label": "2026-04-08",
+        "count": 2
+      },
+      {
+        "label": "2026-04-09",
+        "count": 5
+      },
+      {
+        "label": "2026-04-10",
+        "count": 6
+      },
+      {
+        "label": "2026-04-11",
+        "count": 5
+      },
+      {
+        "label": "2026-04-12",
+        "count": 4
+      },
+      {
+        "label": "2026-04-13",
+        "count": 20
+      },
+      {
+        "label": "2026-04-14",
+        "count": 19
+      },
+      {
+        "label": "2026-04-15",
+        "count": 5
+      },
+      {
+        "label": "2026-04-16",
+        "count": 25
+      },
+      {
+        "label": "2026-04-17",
+        "count": 91
+      },
+      {
+        "label": "2026-04-18",
+        "count": 85
+      },
+      {
+        "label": "2026-04-19",
+        "count": 70
+      },
+      {
+        "label": "2026-04-20",
+        "count": 16
+      },
+      {
+        "label": "2026-04-21",
+        "count": 27
+      },
+      {
+        "label": "2026-04-22",
+        "count": 42
+      },
+      {
+        "label": "2026-04-23",
+        "count": 19
+      },
+      {
+        "label": "2026-04-24",
+        "count": 90
+      },
+      {
+        "label": "2026-04-25",
+        "count": 37
+      },
+      {
+        "label": "2026-04-26",
+        "count": 15
+      },
+      {
+        "label": "2026-04-27",
+        "count": 12
+      },
+      {
+        "label": "2026-04-28",
+        "count": 69
+      },
+      {
+        "label": "2026-04-29",
+        "count": 38
+      },
+      {
+        "label": "2026-04-30",
+        "count": 14
+      },
+      {
+        "label": "2026-05-01",
+        "count": 73
+      },
+      {
+        "label": "2026-05-02",
+        "count": 22
+      },
+      {
+        "label": "2026-05-03",
+        "count": 70
+      },
+      {
+        "label": "2026-05-04",
+        "count": 30
+      },
+      {
+        "label": "2026-05-05",
+        "count": 31
+      },
+      {
+        "label": "2026-05-06",
+        "count": 16
+      },
+      {
+        "label": "2026-05-07",
+        "count": 20
+      },
+      {
+        "label": "2026-05-08",
+        "count": 33
+      },
+      {
+        "label": "2026-05-09",
+        "count": 11
+      },
+      {
+        "label": "2026-05-10",
+        "count": 30
+      },
+      {
+        "label": "2026-05-11",
+        "count": 30
+      },
+      {
+        "label": "2026-05-12",
+        "count": 29
+      },
+      {
+        "label": "2026-05-13",
+        "count": 29
+      },
+      {
+        "label": "2026-05-14",
+        "count": 26
+      },
+      {
+        "label": "2026-05-15",
+        "count": 25
+      },
+      {
+        "label": "2026-05-16",
+        "count": 29
+      },
+      {
+        "label": "2026-05-17",
+        "count": 15
+      },
+      {
+        "label": "2026-05-18",
+        "count": 45
+      },
+      {
+        "label": "2026-05-19",
+        "count": 5
+      },
+      {
+        "label": "2026-05-20",
+        "count": 53
+      },
+      {
+        "label": "2026-05-21",
+        "count": 29
+      },
+      {
+        "label": "2026-05-22",
+        "count": 31
+      },
+      {
+        "label": "2026-05-23",
+        "count": 34
+      },
+      {
+        "label": "2026-05-24",
+        "count": 33
+      },
+      {
+        "label": "2026-05-25",
+        "count": 46
+      },
+      {
+        "label": "2026-05-26",
+        "count": 64
+      },
+      {
+        "label": "2026-05-27",
+        "count": 14
+      },
+      {
+        "label": "2026-05-28",
+        "count": 19
+      },
+      {
+        "label": "2026-05-29",
+        "count": 5
+      },
+      {
+        "label": "2026-05-30",
+        "count": 21
+      },
+      {
+        "label": "2026-05-31",
+        "count": 15
+      },
+      {
+        "label": "2026-06-01",
+        "count": 14
+      },
+      {
+        "label": "2026-06-02",
+        "count": 19
+      },
+      {
+        "label": "2026-06-03",
+        "count": 14
+      },
+      {
+        "label": "2026-06-04",
+        "count": 20
+      },
+      {
+        "label": "2026-06-05",
+        "count": 21
+      },
+      {
+        "label": "2026-06-06",
+        "count": 30
+      },
+      {
+        "label": "2026-06-07",
+        "count": 31
+      },
+      {
+        "label": "2026-06-08",
+        "count": 34
+      },
+      {
+        "label": "2026-06-09",
+        "count": 10
+      },
+      {
+        "label": "2026-06-10",
+        "count": 40
+      },
+      {
+        "label": "2026-06-11",
+        "count": 41
+      },
+      {
+        "label": "2026-06-12",
+        "count": 100
+      },
+      {
+        "label": "2026-06-13",
+        "count": 22
+      },
+      {
+        "label": "2026-06-14",
+        "count": 44
+      },
+      {
+        "label": "2026-06-15",
+        "count": 16
+      },
+      {
+        "label": "2026-06-16",
+        "count": 20
+      },
+      {
+        "label": "2026-06-17",
+        "count": 23
+      },
+      {
+        "label": "2026-06-18",
+        "count": 15
+      },
+      {
+        "label": "2026-06-19",
+        "count": 46
+      },
+      {
+        "label": "2026-06-20",
+        "count": 7
+      },
+      {
+        "label": "2026-06-21",
+        "count": 3
+      },
+      {
+        "label": "2026-06-22",
+        "count": 43
+      },
+      {
+        "label": "2026-06-23",
+        "count": 19
+      },
+      {
+        "label": "2026-06-24",
+        "count": 36
+      },
+      {
+        "label": "2026-06-25",
+        "count": 50
+      },
+      {
+        "label": "2026-06-26",
+        "count": 4
+      },
+      {
+        "label": "2026-06-27",
+        "count": 20
+      },
+      {
+        "label": "2026-06-28",
+        "count": 45
+      },
+      {
+        "label": "2026-06-29",
+        "count": 27
+      },
+      {
+        "label": "2026-06-30",
+        "count": 31
+      },
+      {
+        "label": "2026-07-01",
+        "count": 13
+      },
+      {
+        "label": "2026-07-02",
+        "count": 22
+      },
+      {
+        "label": "2026-07-03",
+        "count": 4
+      },
+      {
+        "label": "2026-07-04",
+        "count": 11
+      },
+      {
+        "label": "2026-07-05",
+        "count": 13
+      }
+    ]
+  },
   "projects": [
     {
-      "name": "vaultwares-api",
-      "aliases": ["vaultwares-pipelines"],
-      "entries": 183,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 98, "plan": 42, "commands": 28, "verification": 15 },
+      "name": "vault-explorer",
+      "aliases": [
+        "Vault Explorer",
+        "vault-explorer + vw-comet",
+        "vw-comet + vault-explorer"
+      ],
+      "entries": 312,
+      "first": "2026-04-19",
+      "last": "2026-07-01",
+      "kinds": {
+        "code-change": 203,
+        "plan": 45,
+        "verification": 49,
+        "commands": 1,
+        "general": 26,
+        "handoff": 1,
+        "design-doc": 3,
+        "feature": 17,
+        "documentation": 1,
+        "bugfix": 3,
+        "improvement": 1
+      },
       "recentSummaries": [
-        "Migrated vaultwares-pipelines to vaultwares-api with full backward compatibility.",
-        "Updated API endpoints for better performance and consistency.",
-        "Added comprehensive error handling and logging."
+        "Backfill: commit 99908f1 (2026-04-19T01:53:09-04:00) - Initial commit | files=3 +162 -0",
+        "Backfill: commit 6cbad38 (2026-04-19T02:05:02-04:00) - created vault-explorer | files=7 +6301 -0",
+        "Backfill: commit ab4afae (2026-04-19T02:38:35-04:00) - ok | files=4 +320 -333",
+        "Backfill: commit 11e9a32 (2026-04-19T09:20:05-04:00) - feat: implement video preview generation, hardware-accelerated playback, and UI enhancements for file management | files=5 +701 -110",
+        "Backfill: commit b1b0a31 (2026-04-24T08:10:31-04:00) - chore: sync workspace changes and resolve PR templates | files=6 +78 -33"
       ]
     },
     {
-      "name": "vault-explorer",
-      "aliases": ["Vault Explorer"],
-      "entries": 263,
-      "first": "2026-04-19",
-      "last": "2026-06-18",
-      "kinds": { "code-change": 184, "verification": 43, "plan": 43, "general": 24, "commands": 1, "handoff": 1 },
+      "name": "vaultwares-api",
+      "aliases": [
+        "vaultwares-pipelines",
+        "vaultwares-api + shared-tube",
+        "vaultwares-webhooks"
+      ],
+      "entries": 203,
+      "first": "2026-04-04",
+      "last": "2026-07-05",
+      "kinds": {
+        "code-change": 176,
+        "verification": 29,
+        "general": 4,
+        "commands": 6,
+        "plan": 9,
+        "handoff": 2,
+        "implementation": 1,
+        "feature": 1,
+        "deploy": 1
+      },
       "recentSummaries": [
-        "Fix NSIS mmap build crash: add files exclusion list and asarUnpack to package.json.",
-        "Wire RealESRGAN and ImageMagick AI image enhancements in image viewer.",
-        "Created DESIGN.md design source of truth for vault-explorer."
+        "Backfill: commit 43bbbab (2026-04-04T09:34:10-04:00) - Initial commit | files=18 +888 -0",
+        "Backfill: commit 3307fa9 (2026-04-04T13:34:13Z) - Initial plan | files=0 +0 -0",
+        "Backfill: commit 89a9177 (2026-04-04T13:55:19Z) - Add multi-modal manipulation framework for SmolVLM2-500M-Instruct | files=50 +6362 -0",
+        "Backfill: commit 03b8a36 (2026-04-04T13:56:00Z) - Remove __pycache__ from tracking; update .gitignore | files=30 +7 -0",
+        "Backfill: commit 38f6834 (2026-04-04T10:27:31-04:00) - Merge pull request #1 from p-potvin/copilot/add-multi-modal-manipulation-module | files=0 +6369 -0"
+      ]
+    },
+    {
+      "name": "shared-tube",
+      "aliases": [
+        "tube-site",
+        "tube-sites",
+        "promking-tube",
+        "Prom-King Keep2Share & ShareVerge Pipeline",
+        "Prom-King & VaultWares API",
+        "Prom-King/shared-tube",
+        "Prom-King/shared-tube + vaultwares-pipelines",
+        "Prom-King/tube-sites",
+        "Prom-King\\\\tube-sites",
+        "Prom-King tube-sites",
+        "Prom-King/shared-tube + vaultwares-api",
+        "Monitoring and Prom-King tube operations",
+        "Prom-King/fullxxx-video-and-qa-automation",
+        "Prom-King/fullxxx-webhook-deploy-qa",
+        "Prom-King/shared-tube + vaultwares-docs",
+        "Prom-King/shared-tube + vaultwares-mcp",
+        "Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs",
+        "shared-tube + brume2"
+      ],
+      "entries": 182,
+      "first": "2026-04-23",
+      "last": "2026-07-04",
+      "kinds": {
+        "code-change": 128,
+        "verification": 49,
+        "commands": 9,
+        "plan": 14,
+        "general": 11,
+        "handoff": 15,
+        "bugfix": 1,
+        "fix": 1
+      },
+      "recentSummaries": [
+        "Backfill: commit 9fb8698 (2026-04-23T11:37:13-04:00) - Initial commit | files=1 +2 -0",
+        "Backfill: commit 622bb00 (2026-04-29T13:20:32-04:00) - Add PromKing Tube WordPress plugin v1.0.0 - full tube site with CrakRevenue ad zones, affiliate link integration, and video management | files=12 +1341 -0",
+        "Backfill: commit 140e628 (2026-04-29T13:55:08-04:00) - feat: add automated video fetcher (15/day, no duplicates, WP cron) | files=2 +516 -0",
+        "Backfill: commit b9e63a6 (2026-04-29T16:11:26-04:00) - feat: add fullxxx-video WordPress plugin v2.0 — multi-source scraper (pornxp.fo, topvid.tv, freesexvideos.xxx), duration deduplication, hotlinked thumbnails, hover previews, natural CrakRevenue ad integration, DMCA compliance | files=11 +1467 -0",
+        "Backfill: commit 3615591 (2026-05-01T04:05:43-04:00) - pushing claude changes | files=6 +265 -12"
+      ]
+    },
+    {
+      "name": "vaultwares-studio",
+      "aliases": [
+        "usd-playground"
+      ],
+      "entries": 161,
+      "first": "2026-04-09",
+      "last": "2026-07-04",
+      "kinds": {
+        "plan": 7,
+        "code-change": 127,
+        "verification": 66,
+        "commands": 17,
+        "general": 14,
+        "handoff": 2
+      },
+      "recentSummaries": [
+        "Planned vaultwares-studio v1.0 (planning only, no implementation). Explored repo state (5-stage pipeline, PySide6 GUI, placeholders for Cosmos/Isaac/RL). Approved milestone plan M0-M6, remote-first: HF Jobs primary compute backend (PRO, per-minute, custom Docker worker image with COLMAP/nerfstudio/habitat/Cosmos), SSH 48GB GPU backend second; local PC stays light (hosts VaultWares API). Habitat-Sim runs natively in Linux worker (no WSL2). Milestones: M0 StageRunner+HfJobs runner+manifest v2+cost guardrails; M1 remote splatfacto reconstruction+full-attr PLY+PLY-to-USD; M2 QWebEngineView+GaussianSplats3D viewport, keyframed camera staging, gui/ split; M3 Robot Lab (gridnav local CPU + Habitat remote, SB3 PPO PointNav); M4 Cosmos Reason 2-2B remote annotation+ObjectNav; M5 packaging/onboarding/spend dashboard (EN/QC deferred per user); M6 Isaac deferred. cuTile assessed: watch item only. Researched: HF Spaces/ZeroGPU not viable (120s cap), HF Jobs is. Plan persisted to .omx/plans/plan-v1-remote-first-20260609.md; ROADMAP.md rewritten.",
+        "M0 remote execution foundation implemented and pushed to main (b87bc6c). New vaultwares_studio/runners package: StageRunner abstraction (StageContext/StageResult/CancelToken/cost estimates), LocalStageRunner (Popen streamed output, process-tree cancel, timeout), HfJobsStageRunner (cost-consent gate before any network call, private HF dataset artifact transport jobs/<id>/<stage>/{in,out}, job launch/poll>=10s/cancel, output download, cost metadata, echo smoke test). Manifest schema v2 (placement/runner/params/cost per stage, spend_ledger, v1 migration; reconstruction defaults to remote). pipeline._run_command delegates to LocalStageRunner. docker/worker image v1 (COLMAP+nerfstudio+hub, vw_stage.py bootstrap) + build_worker_image.ps1. GUI Settings: HF token via keyring, artifact repo, flavor, cost-confirm dialog, echo test button. 19 pytest tests pass. ROADMAP/TODO rewritten; plan of record committed at docs/plans/plan-v1-remote-first-20260609.md. Remaining M0: live cpu-basic echo job (needs user's HF token) and worker image build/push.",
+        "M1 remote gaussian-splat reconstruction implemented and pushed to main (25415c4). Also restored my-room.mp4 and test_input.mp4 (deleted by mistake, git restore). New: presets.py (Draft/Standard/High + local-debug; flavor+cost per preset), splat_io.py (full-attribute 3DGS PLY I/O via plyfile, decimated cloud_preview.ply, lossless PLY-to-USD as UsdGeomPoints + primvars:gsplat:* with native 26.03 schema probe; worked around usd-core 24.11 Vt.FloatArray.FromNumpy float32 bug), docker/worker/recon_entrypoint.py (frames.zip -> ns-process-data sequential -> ns-train splatfacto with flag probing -> ns-export; error.json incl. too_few_registered_images). pipeline.py reconstruction honors remote placement with frames packing, spend recording, CostDenied/failure fallback to local 250-iter path then placeholders. hf_jobs.py streams remote logs with % progress parsing. GUI: preset dropdown, pre-run cost confirm, viewer prefers preview ply. 30 pytest tests pass; gui/worker scripts compile. Remaining: build/push worker image, live remote recon verification (needs HF token).",
+        "HF remote-compute setup: stored user's HF token from .access/huggingface_token.txt into Windows keyring (service vaultwares-studio) and enabled data/remote_compute.json. User approved live echo test + building the worker image via a private HF Space (local Docker/WSL broken). Echo test blocked: 403 on dataset creation. Diagnosis via whoami: user clopeux, PRO, fine-grained token with job.write + repo.content.read but NO repo write/create permission. Waiting on user to add 'Write access to contents/settings of repos under personal namespace' to the token (or issue a classic Write token) at huggingface.co/settings/tokens. Next: re-run echo test, create private Docker Space vw-studio-worker for server-side image build, then M1 live recon verification.",
+        "Token + worker image + M2 start. (1) Re-imported fixed HF token (classic write role) into keyring. (2) Echo test launched real HF Job attempt: dataset clopeux/vw-studio-artifacts created + input uploaded OK, but run_job returned 402 Payment Required — HF Jobs needs pre-paid credits; blocked on user topping up balance. (3) Worker image now builds server-side via private Docker Space clopeux/vw-studio-worker (tools/push_worker_space.py + monitor_worker_space.py): build 1 failed (pytorch-devel base too heavy for builder), switched base to ghcr.io/nerfstudio-project/nerfstudio:latest; build 2 failed (pip not on PATH in that image); build 3 with python alias + python3 -m pip is BUILDING now. worker_image set in data/remote_compute.json (now gitignored). (4) M2 slice 1 shipped: QtWebEngine spike OK; vendored three.js 0.160 + GaussianSplats3D 0.4.7; vw:// scheme handler; gui/viewport.py tab with QWebChannel bridge + Capture Camera to captured_cameras.json; wired into gui_app; offscreen smoke OK; 30 tests green. Pushed 4bd290f, 4ffc62f, 813eee3."
       ]
     },
     {
       "name": "vault-flows",
       "aliases": [],
       "entries": 159,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 89, "plan": 34, "commands": 22, "verification": 14 },
+      "first": "2026-04-06",
+      "last": "2026-06-12",
+      "kinds": {
+        "code-change": 158,
+        "general": 1,
+        "verification": 1
+      },
       "recentSummaries": [
-        "Added Face Filter preset using gemma4 vision via Ollama for human face detection.",
-        "Pushed vault-flows main commit with updated API naming reference.",
-        "Implemented comprehensive face detection and filtering pipeline."
-      ]
-    },
-    {
-      "name": "vault-central",
-      "aliases": ["Vault Central", "vaultwares-central"],
-      "entries": 141,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 78, "plan": 31, "commands": 22, "general": 10 },
-      "recentSummaries": [
-        "Implemented real-time STT processing pipeline.",
-        "Added configuration validation for real-time services.",
-        "Fixed palette and theme lookup issues."
-      ]
-    },
-    {
-      "name": "vaultwares-studio",
-      "aliases": ["usd-playground"],
-      "entries": 140,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 72, "plan": 38, "commands": 21, "general": 9 },
-      "recentSummaries": [
-        "Created comprehensive USD playground with advanced rendering capabilities.",
-        "Added real-time 3D scene manipulation and visualization.",
-        "Implemented cross-platform USD file handling."
-      ]
-    },
-    {
-      "name": "vaultwares-media-processing",
-      "aliases": ["vault-video-enhancer", "VaultWares Media Processing", "video-transcriber-translator", "vault-enhancer", "vault_enhancer"],
-      "entries": 127,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 68, "plan": 32, "commands": 19, "verification": 8 },
-      "recentSummaries": [
-        "Implemented AI-powered video enhancement and transcription.",
-        "Added RealESRGAN integration for high-quality image upscaling.",
-        "Created comprehensive media processing workflows."
-      ]
-    },
-    {
-      "name": "vaultwares-realtime",
-      "aliases": ["realtime-stt"],
-      "entries": 122,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 65, "plan": 28, "commands": 21, "general": 8 },
-      "recentSummaries": [
-        "Implemented real-time speech-to-text processing.",
-        "Added PII detection and redaction in real-time audio streams.",
-        "Created configurable real-time processing pipeline."
+        "Backfill: commit 9184c46 (2026-04-06T16:30:34-04:00) - Initial commit | files=50 +4513 -0",
+        "Backfill: commit 6a48ba5 (2026-04-06T20:30:41Z) - Initial plan | files=0 +0 -0",
+        "Backfill: commit 0c4e294 (2026-04-06T20:45:14Z) - feat: add React/Vite frontend from vaultwares-pipelines with CI/CD pipeline | files=33 +5167 -1",
+        "Backfill: commit b14ee86 (2026-04-06T20:48:28Z) - fix: address code review - useCallback, interval cleanup, workflow permissions | files=3 +24 -13",
+        "Backfill: commit 152ea77 (2026-04-06T20:50:37Z) - style: fix JSX entities and spacing in feature components | files=3 +4 -4"
       ]
     },
     {
       "name": "General Tasks",
-      "aliases": ["General Tasks (workspace)", "Workspace Git Sync", "VaultWares protocols", "Prom King monetization projects", "business workspace", "business", "business tube sites", "business WordPress tube sites", "Test", "VaultWares Secrets", "vaultwares-secrets", "vaultwares-console"],
-      "entries": 122,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "general": 45, "plan": 38, "commands": 25, "code-change": 14 },
+      "aliases": [
+        "Test",
+        "VaultWares Infrastructure",
+        "VaultWares SSOT",
+        "Workspace Git Sync",
+        "business",
+        "business tube sites",
+        "business WordPress tube sites",
+        "business workspace",
+        "deploy-flow-unification",
+        "General Tasks (workspace)",
+        "Prom King monetization projects",
+        "VaultWares Project File Sync",
+        "VaultWares protocols",
+        "VaultWares Secrets",
+        "VaultWares SSOT (20 repos)",
+        "VaultWares — Post-Refactoring Cleanup & Infrastructure Verification",
+        "VaultWares — Project Rename Refactoring (Phase 5 PR Workflow)",
+        "VaultWares — Project Rename Refactoring (Phase 5)",
+        "VaultWares — System Verification & Maintenance Complete",
+        "vaultwares-console",
+        "vaultwares-secrets",
+        "vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing"
+      ],
+      "entries": 149,
+      "first": "2026-04-28",
+      "last": "2026-07-01",
+      "kinds": {
+        "general": 23,
+        "code-change": 40,
+        "plan": 14,
+        "verification": 43,
+        "handoff": 15,
+        "commands": 17,
+        "analysis": 1,
+        "fix": 1
+      },
       "recentSummaries": [
-        "Workspace synchronization and coordination tasks.",
-        "VaultWares protocols and business operations management.",
-        "Cross-project infrastructure and tooling maintenance."
+        "Debugged pasted PowerShell auto-backup script. Identified undefined timestamp, JSON state loading as PSCustomObject instead of hashtable, incorrect backup destination construction for absolute/relative paths, robocopy output being mistaken for exit code, /LOG overwriting the same log file, and interactive Read-Host prompts blocking scheduled runs. Prepared corrected script with safe destination naming, state save/load fixes, robocopy LASTEXITCODE handling, and noninteractive scheduled behavior.",
+        "Followed up on PowerShell backup script destination layout. Explained that the previous safe path helper intentionally mirrored the absolute source path, causing nested C\\Users\\... folders under the timestamp. Provided replacement Get-SafeBackupPath logic that uses only the source folder leaf name, with an optional short hash suffix to prevent collisions when multiple source directories share the same final folder name.",
+        "Applied requested PowerShell backup changes in C:\\Users\\Administrator\\Desktop\\pwsh. Updated AutoBackup.ps1 to use collision-safe destination folder names like workflows-1F5642C9 instead of preserving absolute C\\Users\\... paths. Added RunAutoBackupHidden.vbs to launch AutoBackup.ps1 with WScript.Shell window style 0 and wait for completion. Updated CreateScheduledTask.ps1 to generate/use the hidden VBS launcher and re-registered the AutoDirectoryBackup scheduled task to execute wscript.exe instead of PowerShell.exe directly. Verified both PowerShell scripts parse and confirmed the registered task action.",
+        "Updated the PowerShell backup system from timestamped snapshots to two fixed backup slots. AutoBackup.ps1 now writes changed-source backups to Scheduled_Backups\\latest\\<source-name>-<hash> and writes a safety copy to Scheduled_Backups\\daily\\<source-name>-<hash> once per calendar day. Switched fixed-slot copies to robocopy /MIR so the overwritten backup reflects deletions. State now tracks lastDailyBackupDate per source. Updated CreateScheduledTask.ps1 to run every 5 minutes and re-registered the hidden wscript-based AutoDirectoryBackup task. Verified PowerShell syntax, task action, PT5M repetition interval, and sample destination paths.",
+        "Converted 20 OMX agent TOML definitions to Markdown format. Created corresponding skill directories in .gemini/skills with SKILL.md files and generated .md mirrors in .gemini/agents. This migration enables the AI assistant to utilize these agent personas as modular skills, rules, or workflows."
       ]
     },
     {
-      "name": "tube-sites",
-      "aliases": ["tube-site", "promking-tube", "Prom-King/tube-sites", "Prom-King tube-sites", "prom-king.xyz", "fullxxx.video", "prom-king/fullxxx-video-and-qa-automation", "prom-king/fullxxx-webhook-deploy-qa"],
-      "entries": 103,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 58, "commands": 22, "plan": 18, "general": 5 },
+      "name": "vault-central",
+      "aliases": [
+        "Vault Central"
+      ],
+      "entries": 144,
+      "first": "2026-03-08",
+      "last": "2026-06-06",
+      "kinds": {
+        "code-change": 126,
+        "verification": 21,
+        "plan": 14,
+        "general": 1
+      },
       "recentSummaries": [
-        "Implemented comprehensive tube site management and automation.",
-        "Added content scraping and processing workflows.",
-        "Created automated QA and testing for tube site operations."
+        "Backfill: commit 9c0af32 (2026-03-08T16:38:16-04:00) - Initial commit | files=2 +676 -0",
+        "Backfill: commit d9f8e15 (2026-03-08T16:43:24-04:00) - Update README.md | files=1 +5 -2",
+        "Backfill: commit 1a7c49e (2026-03-13T13:16:28-04:00) - update | files=5 +144 -0",
+        "Backfill: commit 4416066 (2026-03-15T21:27:50-04:00) - update version | files=1 +1 -1",
+        "Backfill: commit f025443 (2026-03-20T05:10:44-04:00) - Update README.md with detailed features, installation instructions, and usage guide | files=1 +44 -2"
+      ]
+    },
+    {
+      "name": "vaultwares-media-processing",
+      "aliases": [
+        "vault-video-enhancer",
+        "video-transcriber-translator",
+        "VaultWares Media Processing"
+      ],
+      "entries": 127,
+      "first": "2026-03-13",
+      "last": "2026-05-20",
+      "kinds": {
+        "code-change": 113,
+        "commands": 4,
+        "plan": 6,
+        "verification": 3,
+        "general": 1
+      },
+      "recentSummaries": [
+        "Backfill: commit cc845ca (2026-03-14T00:59:53Z) - added translation to the module | files=4 +76 -23",
+        "Backfill: commit cd1c8ba (2026-03-13T21:43:59-04:00) - fix zip segments | files=3 +5 -3",
+        "Backfill: commit e47a506 (2026-03-14T00:32:21-04:00) - added recursive translation, api rate limit prevention, visual feedback, etc. | files=5 +521 -48",
+        "Backfill: commit 2b95b77 (2026-03-14T01:23:20-04:00) - added filters for smaller segmentation | files=2 +7 -1",
+        "Backfill: commit 791f502 (2026-03-15T21:33:52-04:00) - Update README.md | files=1 +1 -1"
+      ]
+    },
+    {
+      "name": "vaultwares-realtime",
+      "aliases": [
+        "realtime-stt"
+      ],
+      "entries": 122,
+      "first": "2026-03-26",
+      "last": "2026-05-20",
+      "kinds": {
+        "code-change": 106,
+        "plan": 3,
+        "verification": 9,
+        "general": 4
+      },
+      "recentSummaries": [
+        "Backfill: commit bcc55c9 (2026-03-26T16:03:11-04:00) - Initialize readme with project description | files=1 +1 -0",
+        "Backfill: commit 7309bba (2026-03-26T17:39:23-04:00) - feat: Initial commit of Real-Time Speech-to-Text project | files=14 +1419 -1",
+        "Backfill: commit 0e33c34 (2026-03-27T11:58:51-04:00) - Initial commit for Vault Themes library | files=3 +42 -0",
+        "Backfill: commit 2855c1d (2026-03-27T12:14:29-04:00) - Added default files | files=11 +839 -0",
+        "Backfill: commit 004ea2f (2026-03-27T12:24:08-04:00) - Delete theme_manager.py | files=1 +0 -42"
+      ]
+    },
+    {
+      "name": "vaultwares-docs",
+      "aliases": [],
+      "entries": 120,
+      "first": "2026-01-18",
+      "last": "2026-07-05",
+      "kinds": {
+        "code-change": 88,
+        "plan": 6,
+        "general": 5,
+        "verification": 21,
+        "handoff": 5,
+        "commands": 3,
+        "documentation": 2,
+        "docs": 2,
+        "project-onboarding": 1,
+        "protocol": 1
+      },
+      "recentSummaries": [
+        "Backfill: commit 0074c78 (2026-01-18T09:10:11-05:00) - Initial commit | files=28 +2077 -0",
+        "Backfill: commit 645c022 (2026-01-18T14:05:36-05:00) - Update docs.json | files=1 +92 -40",
+        "Backfill: commit 61d093d (2026-01-18T14:05:56-05:00) - Update getting-started/overview.mdx | files=1 +61 -0",
+        "Backfill: commit 31ea35c (2026-01-18T14:06:25-05:00) - Update getting-started/system-requirements.mdx | files=1 +140 -0",
+        "Backfill: commit d910132 (2026-01-18T14:07:03-05:00) - Update getting-started/quick-installation.mdx | files=1 +251 -0"
       ]
     },
     {
       "name": "Prom-King",
       "aliases": [],
-      "entries": 86,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 45, "plan": 22, "commands": 15, "general": 4 },
+      "entries": 106,
+      "first": "2026-05-28",
+      "last": "2026-07-05",
+      "kinds": {
+        "deploy": 1,
+        "general": 11,
+        "verification": 35,
+        "plan": 27,
+        "code-change": 53,
+        "commands": 17,
+        "handoff": 9,
+        "db-migration": 1,
+        "deployment": 1
+      },
       "recentSummaries": [
-        "Monetization projects and business operations management.",
-        "Automated workflows for content processing and distribution.",
-        "Cross-platform business logic implementation."
-      ]
-    },
-    {
-      "name": "vaultwares-docs",
-      "aliases": ["tmp-app"],
-      "entries": 82,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 35, "plan": 28, "commands": 12, "general": 7 },
-      "recentSummaries": [
-        "Created comprehensive documentation and knowledge base.",
-        "Added JIRA synchronization and project management workflows.",
-        "Implemented automated documentation generation."
+        "Tube-sites deploy verified; PK palette updated",
+        "GTM per-site enforcement + GA4-via-GTM playbook",
+        "PKT now injects GTM-WXGQJ7PR (shared container)",
+        "Benchmarked IPoasis residential proxy for Prom-King qa-automation: checked proxy traffic before/after, ran 8 shallow SERP sessions across Google/DDG/Bing/Brave with SafeSearch off and target clicks disabled, ran capped own-domain stealth crawl for prom-king.xyz and fullxxx.video, and patched SERP runner status classification for DDG challenge text and zero-result extraction states. No CAPTCHA/challenge bypass attempted and no secret values recorded.",
+        "Designed the Joker production health and incident-response architecture: continuous probes on greencloud-vps and operator PC, health-ledger metrics/dashboard, one-shot high-severity incident gate, silent-observer lockout, tailnet recovery webhook, and guarded AI remediation via single leased incident agent and PR/review/deploy verification. Reviewed VaultWares router summaries plus deployment-flow, services-inventory, webhook-secret-rotation, and deploy-alerts before drafting the plan."
       ]
     },
     {
       "name": "agent-ledger",
-      "aliases": ["agent-ledger/stats-app"],
-      "entries": 68,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 31, "plan": 18, "commands": 15, "general": 4 },
+      "aliases": [
+        "agent-ledger/stats-app"
+      ],
+      "entries": 89,
+      "first": "2026-04-28",
+      "last": "2026-07-02",
+      "kinds": {
+        "code-change": 65,
+        "verification": 30,
+        "commands": 12,
+        "handoff": 3,
+        "bug": 1,
+        "plan": 3,
+        "general": 3,
+        "feature": 1,
+        "fix": 1
+      },
       "recentSummaries": [
-        "Created this comprehensive stats dashboard for work impact analysis.",
-        "Implemented data processing and visualization components.",
-        "Added automated data generation and processing scripts."
+        "Implemented the local-first agent ledger: append-only JSON event capture, generated CHANGES.md rendering, GitHub sync script, Windows scheduler helper, workspace/provider instruction files, and global Codex/Gemini/Claude/OpenClaw instruction hooks.",
+        "Verified ledger recording and rendering, added repo-local agent instructions for cloud workers in agent-ledger, and registered the AgentLedgerSync Windows scheduled task to run the sync script every five minutes.",
+        "Confirmed AgentLedgerSync already auto-fetches via git pull --rebase --autostash every five minutes. Updated render-agent-ledger.ps1 so generated CHANGES.md files use clickable HTML details/summary sections: each event is visible as a compact one-line quick glance, with commands/files/full details expandable on click. Re-rendered both agent-ledger\\CHANGES.md and workspace CHANGES.md and verified the sync scheduled task action and PT5M interval.",
+        "Added browser-ready ledger output for users who open the ledger in Firefox. render-agent-ledger.ps1 now writes CHANGES.html alongside CHANGES.md in both agent-ledger and the workspace root, using native HTML details/summary sections for clickable expand/collapse. README now documents opening C:\\Users\\Administrator\\Desktop\\Github Repos\\CHANGES.html in Firefox for the quick-glance expandable view. Verified the renderer parses and generated both HTML files.",
+        "Fixed the ledger sync script after manual sync hit 'Cannot rebase onto multiple branches'. sync-agent-ledger.ps1 now fetches origin and rebases explicitly onto origin/main instead of using ambiguous git pull --rebase --autostash. Also added CHANGES.html to the sync add list so the browser-ready quick-glance view is committed and pushed with the Markdown ledger."
       ]
     },
     {
-      "name": "vaultwares-adk",
-      "aliases": ["vaultwares-agentciation"],
-      "entries": 54,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 27, "plan": 18, "commands": 9 },
+      "name": "python-zipper",
+      "aliases": [
+        "python-scripts"
+      ],
+      "entries": 73,
+      "first": "2026-05-25",
+      "last": "2026-06-30",
+      "kinds": {
+        "code-change": 46,
+        "general": 9,
+        "plan": 15,
+        "verification": 24,
+        "handoff": 1,
+        "commands": 7,
+        "implementation": 1
+      },
       "recentSummaries": [
-        "Implemented multi-agent coordination via Redis pub/sub.",
-        "Added extrovert_agent and cheddar_bob personas.",
-        "Wired omni_agent to ADK dispatcher pipeline."
-      ]
-    },
-    {
-      "name": "vaultwares-themes",
-      "aliases": ["vault-themes"],
-      "entries": 40,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 22, "plan": 12, "commands": 6 },
-      "recentSummaries": [
-        "Added LED pulse keyframes to index.css.",
-        "Rewrote VaultThemeManager to support dark/light variants.",
-        "Exported qt_exporter.py integration for PySide6 apps."
-      ]
-    },
-    {
-      "name": "vaultwares-website",
-      "aliases": ["vaultwares-v1"],
-      "entries": 50,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 25, "plan": 15, "commands": 10 },
-      "recentSummaries": [
-        "Created comprehensive VaultWares website with modern design.",
-        "Implemented responsive layout and interactive components.",
-        "Added product documentation and demo sections."
-      ]
-    },
-    {
-      "name": "vaultwares-cli",
-      "aliases": [],
-      "entries": 47,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 22, "plan": 15, "commands": 10 },
-      "recentSummaries": [
-        "Fixed git remote misconfiguration issues.",
-        "Added comprehensive CLI tooling for repository management.",
-        "Implemented automated synchronization and backup workflows."
-      ]
-    },
-    {
-      "name": "vaultwares-glass",
-      "aliases": ["glass-ui"],
-      "entries": 28,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 15, "plan": 8, "commands": 5 },
-      "recentSummaries": [
-        "Created modern glass-themed UI components.",
-        "Implemented cross-platform glass effect rendering.",
-        "Added comprehensive styling and theming system."
-      ]
-    },
-    {
-      "name": "vaultwares-dispatch",
-      "aliases": ["dispatch-wares"],
-      "entries": 26,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 14, "plan": 8, "commands": 4 },
-      "recentSummaries": [
-        "Implemented efficient task dispatching and load balancing.",
-        "Added multi-agent coordination and communication protocols.",
-        "Created scalable message queue system."
-      ]
-    },
-    {
-      "name": "vaultwares-mcp",
-      "aliases": ["fastmcp"],
-      "entries": 16,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 8, "plan": 5, "commands": 3 },
-      "recentSummaries": [
-        "Created comprehensive MCP server for multi-model coordination.",
-        "Implemented efficient tool calling and response handling.",
-        "Added support for multiple AI providers and models."
-      ]
-    },
-    {
-      "name": "vw-jira-sync",
-      "aliases": ["vaultwares-docs / vw-jira-sync", "General Tasks / vw-jira-sync"],
-      "entries": 17,
-      "first": "2026-05-18",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 9, "plan": 5, "commands": 3 },
-      "recentSummaries": [
-        "Implemented JIRA synchronization for project management.",
-        "Added automated issue tracking and workflow management.",
-        "Created comprehensive reporting and analytics system."
+        "Added Ollama gemma4 integration to dynamically adjust MIDI scales based on typing and clicking speed in input_to_midi.py",
+        "Installed dependencies in .venv, added benchmark code to track Ollama response time, and ran script in background.",
+        "Rewrote input_to_midi.py to implement a 20-loop generative transition engine mapping mouse Y to pitch and typing APM to tempo/arpeggiation, making keystrokes a melodic bonus.",
+        "Created telegram_link_resolver.py to parse Telegram export result.json, resolve URL redirects via requests, and generated a PowerShell script to schedule the task daily.",
+        "Created telethon_link_resolver.py. Added Telethon library into .venv to scrape live messages via Telegram API directly instead of needing manual exports."
       ]
     },
     {
       "name": "health-ledger",
       "aliases": [],
-      "entries": 48,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 24, "plan": 12, "commands": 8, "general": 4 },
+      "entries": 70,
+      "first": "2026-06-03",
+      "last": "2026-07-05",
+      "kinds": {
+        "code-change": 20,
+        "ops-health-probe": 1,
+        "general": 3,
+        "handoff": 3,
+        "verification": 44,
+        "plan": 6,
+        "commands": 2,
+        "documentation": 1
+      },
       "recentSummaries": [
-        "Created health tracking and monitoring system.",
-        "Implemented comprehensive wellness and fitness tracking.",
-        "Added automated reporting and analytics for health data."
+        "Moved the Health Ledger foundation from vaultwares-docs into the dedicated p-potvin/health-ledger repository at C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger. Expanded the repo README while preserving the user's Joker wording, moved services.yaml, severity policy, dashboard scope, Token Joker, alert audit, and implementation plan to repo root, removed the empty old vaultwares-docs ops directory, and updated root-relative data paths before starting any Probe Joker work.",
+        "Added vaultwares-docs discoverability reference for health-ledger, implemented Probe Joker MVP in p-potvin/health-ledger, generated docs page resources, and ran one bounded Probe pass from Clopeux-Desktop. Probe run 20260603-135530 checked 15 paths: 9 ok, 5 failed, 1 skipped for missing secret ref. Continuous loop was not started.",
+        "Fixed prom-king.xyz production 502 by updating greencloud-vps nginx FastCGI socket from php8.2-fpm to php8.4-fpm, verified HTTP 200 and closed Prom-King/prelanding-page#19. Reviewed and disabled legacy GitHub-only alert writers on greencloud-vps. Deployed Health Ledger Probe Joker loop as health-ledger-probe.service under /opt/health-ledger with greencloud-vps location; service is active/enabled and writing rollups/events.",
+        "Reviewed proposed CI/assistant runner loop for non-production projects including vault-guardian. Confirmed GitHub Actions billing distinction from official GitHub docs: GitHub-hosted workflows consume Actions usage/minutes in private repos; self-hosted runner usage is documented as free in billing docs but GitHub also announced self-hosted private workflow platform charges from 2026, so safest low-cost design is to use GitHub webhooks as event source and run build/test entirely on tailnet infrastructure outside Actions. Recommended deploying a Clopeux-Desktop prober for local API and designing a separate low-severity build ledger for non-prod repos.",
+        "Documented host-independent runner routing and alert-profile model in vaultwares-docs and health-ledger. Clarified that greencloud-vps is current webhook ingress/control plane, not the definition of production; Clopeux-Desktop hosts production API. Added project_routes, environments, and AI remediation policy to health-ledger services.yaml including vault-guardian non-production and Ollama as its own environment. Documented Ollama monitoring via official /api/version, /api/tags, /api/ps plus hook-scoped resource metrics. Regenerated vaultwares-docs page resources and validated services.yaml plus Probe script."
       ]
     },
     {
       "name": "no-more-groceries",
-      "aliases": ["No More Groceries"],
+      "aliases": [
+        "No More Groceries"
+      ],
       "entries": 56,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 28, "plan": 18, "commands": 10 },
+      "first": "2026-04-19",
+      "last": "2026-05-01",
+      "kinds": {
+        "code-change": 56
+      },
       "recentSummaries": [
-        "Created comprehensive grocery management system.",
-        "Implemented automated shopping list generation and optimization.",
-        "Added recipe planning and ingredient tracking."
+        "Backfill: commit 0a74fd0 (2026-04-19T20:18:37-04:00) - Initial commit | files=3 +164 -0",
+        "Backfill: commit 9581d7e (2026-04-19T20:21:16-04:00) - Add monorepo root package.json | files=1 +15 -0",
+        "Backfill: commit b6fd105 (2026-04-19T20:22:49-04:00) - Add root AGENTS file | files=1 +3 -0",
+        "Backfill: commit 8bcb997 (2026-04-19T20:29:05-04:00) - Add roadmap for grocery deals SPA | files=1 +36 -0",
+        "Backfill: commit 078a53c (2026-04-19T20:29:19-04:00) - Add task backlog | files=1 +33 -0"
+      ]
+    },
+    {
+      "name": "vaultwares-adk",
+      "aliases": [
+        "vaultwares-agentciation"
+      ],
+      "entries": 55,
+      "first": "2026-04-04",
+      "last": "2026-07-02",
+      "kinds": {
+        "code-change": 43,
+        "plan": 7,
+        "handoff": 2,
+        "verification": 2,
+        "general": 2
+      },
+      "recentSummaries": [
+        "Backfill: commit cc366bd (2026-04-04T23:35:12-04:00) - Initial commit | files=2 +23 -0",
+        "Backfill: commit 5f472ae (2026-04-04T23:36:25-04:00) - Add files via upload | files=6 +154 -2",
+        "Backfill: commit 21f6fb7 (2026-04-05T03:43:41Z) - Add ExtrovertAgent, LonelyManager, redis.conf, requirements.txt, __init__.py; enhance md files | files=8 +1072 -33",
+        "Backfill: commit c22da6e (2026-04-05T03:44:48Z) - Make ALERT_CHANNEL explicit in LonelyManager class constants | files=1 +1 -0",
+        "Backfill: commit ace2189 (2026-04-05T00:18:41-04:00) - Merge pull request #1 from p-potvin/copilot/add-extrovert-agent-redis-connection | files=0 +1073 -33"
+      ]
+    },
+    {
+      "name": "vaultwares-cli",
+      "aliases": [],
+      "entries": 50,
+      "first": "2026-04-14",
+      "last": "2026-06-24",
+      "kinds": {
+        "code-change": 32,
+        "verification": 3,
+        "commands": 3,
+        "handoff": 4,
+        "plan": 8
+      },
+      "recentSummaries": [
+        "Backfill: commit 486f844 (2026-04-14T04:27:28-04:00) - Bootstrap vaultwares-cli Rust workspace | files=50 +3000 -0",
+        "Backfill: commit fd226f6 (2026-04-14T04:39:14-04:00) - Initial commit | files=35 +2626 -0",
+        "Backfill: commit 2e6942d (2026-04-14T04:48:32-04:00) - merge conflicts | files=5 +3752 -351",
+        "Backfill: commit 411c89c (2026-04-14T04:50:55-04:00) - merge conflicts | files=2 +12 -6",
+        "Backfill: commit 0be8efa (2026-04-14T09:36:41Z) - feat(cli): colorize diff additions and removals in /diff output | files=1 +46 -3"
+      ]
+    },
+    {
+      "name": "vaultwares-website",
+      "aliases": [
+        "vaultwares-website + vaultwares-themes"
+      ],
+      "entries": 50,
+      "first": "2026-03-10",
+      "last": "2026-05-22",
+      "kinds": {
+        "code-change": 48,
+        "verification": 2
+      },
+      "recentSummaries": [
+        "Backfill: commit 7e1ffdf (2026-03-10T22:02:52-04:00) - Initial commit | files=1 +11 -0",
+        "Backfill: commit 835abea (2026-03-10T22:03:04-04:00) - feat: Initialize VaultWares E-Store frontend project | files=26 +7447 -5",
+        "Backfill: commit 62cda4c (2026-03-10T23:16:27-04:00) - feat: Add user authentication and product display | files=15 +2375 -104",
+        "Backfill: commit 3ff0f4c (2026-03-10T23:36:03-04:00) - feat: Update website metadata and product catalog | files=4 +77 -71",
+        "Backfill: commit fc0b21d (2026-03-12T00:01:09-04:00) - feat: Integrate Google Analytics and streamline auth | files=12 +216 -796"
+      ]
+    },
+    {
+      "name": "vaultwares-themes",
+      "aliases": [
+        "vault-themes",
+        "vault-themes + vaultwares-docs",
+        "vault-themes, vault-player"
+      ],
+      "entries": 40,
+      "first": "2026-03-27",
+      "last": "2026-06-28",
+      "kinds": {
+        "code-change": 38,
+        "plan": 1,
+        "verification": 1
+      },
+      "recentSummaries": [
+        "Backfill: commit c6cf107 (2026-03-27T12:27:01-04:00) - Initial commit | files=11 +837 -0",
+        "Backfill: commit 7da9da8 (2026-03-27T12:29:22-04:00) - add theme manager | files=3 +42 -0",
+        "Backfill: commit 4eddfa0 (2026-03-27T12:50:26-04:00) - update .gitignore to exclude Python cache files and compiled bytecode | files=1 +5 -1",
+        "Backfill: commit d8bbf8e (2026-03-27T14:42:13-04:00) - Delete __pycache__/__init__.cpython-312.pyc | files=1 +0 -0",
+        "Backfill: commit a0e63d1 (2026-04-13T15:58:51-04:00) - push local changes | files=3 +272 -39"
+      ]
+    },
+    {
+      "name": "vault-monitor",
+      "aliases": [
+        "vault-monitor vaultwares-pipelines"
+      ],
+      "entries": 34,
+      "first": "2026-06-06",
+      "last": "2026-07-05",
+      "kinds": {
+        "code-change": 15,
+        "verification": 7,
+        "plan": 13,
+        "implementation": 1
+      },
+      "recentSummaries": [
+        "Deployed V.A.U.L.T Monitor to monitor.vaultwares.ca. Pushed vault-monitor main through bf5fcd71a9ff1aff718490080199adcddf2974a6 after fixing the cross-platform lockfile and adding @types/node for vite.config.ts. Installed VPS deploy script at /var/www/deploy-scripts/deploy-vault-monitor.sh, deployed static files to /var/www/monitor.vaultwares.ca, issued Lets Encrypt cert expiring 2026-09-04, added nginx tailnet-only HTTPS vhost with SPA fallback and /monitor/* proxy to vaultwares-pipelines, added dnsmasq tailnet host-record, fixed vw-webhookd targets mapping, and registered GitHub push webhook id 637012999. Verified static 200 via tailnet resolve, public HTTPS 403, webhook active, API overview through monitor proxy, and desktop/mobile Playwright render with no console errors. VW_STATE: resume_id=vault-monitor-deploy-2026-06-06; estimated_output_tokens>=8000; completed=deploy_static_nginx_dns_webhook_verification; caveat=current normal DNS on this PC still resolves public IP unless Tailscale restricted DNS is updated for monitor.vaultwares.ca.",
+        "Verified updated DNS for monitor.vaultwares.ca. Normal DNS now resolves monitor.vaultwares.ca to tailnet IP 100.73.93.84. Verified https://monitor.vaultwares.ca/ returns 200 without curl --resolve, /monitor/overview?kiwi_check=false returns normalized vaultwares-pipelines data with health ok and agents ok, and Playwright Chromium renders the app through normal DNS with title and h1 V.A.U.L.T Monitor, live data present, and no console errors.",
+        "Implemented V.A.U.L.T Monitor UI phase from the VaultWares Revisited redesign: warm navigation shell, aubergine console work areas, gold selected states, LED status indicators, bilingual EN/QC copy, overview/health/agents/logs/search views, route/search state handling, API degraded states, responsive mobile layout, and aria-current navigation. Imported redesign CSS/icons from the vaultwares-themes submodule without editing the theme repo. Verification: npm run build passed; Playwright checked local live-data Vite at http://127.0.0.1:5174 with tailnet API proxy, desktop route navigation/back, QC toggle/lang, search empty and gateway result states, hover/focus, mobile health layout/no global overflow, and no page/console errors. VW_STATE: estimated_output_tokens >=8000; LONG_RUNNING_TASKS applied; resume point is post-UI-verification, modified files src/App.tsx and src/styles.css, no commit/deploy performed.",
+        "Pushed redesigned V.A.U.L.T Monitor UI to main at commit 00ec3e3. Verified npm build, monitor.vaultwares.ca HTTP 200, deployed Playwright smoke for Overview -> Health -> Agents -> back plus QC toggle, API synced state, and no console/page/request failures. Current monitor snapshot: Health Ledger ok with 19 OK / 3 failed / 0 skipped from Clopeux-Desktop run 20260607-085258; failures are Ollama local runtime endpoints; active incidents 0; Agent Ledger ok with 376 events; Kiwi online at https://localhost:5959/home with 200 via API and direct title Kiwi Syslog Server NG. VW_STATE: estimated_output_tokens >=8000, LONG_RUNNING_TASKS applied, router categories source/submodule/secrets/network/request/ui/git/pr/verification/gui/docs/ledger/deployment/bugs.",
+        "Pushed vault-monitor main commit 49112c1. Updated README data-boundary wording so V.A.U.L.T Monitor points at vaultwares-api instead of vaultwares-pipelines."
+      ]
+    },
+    {
+      "name": "link-sharing",
+      "aliases": [
+        "prom-king/link-sharing"
+      ],
+      "entries": 33,
+      "first": "2026-04-23",
+      "last": "2026-06-30",
+      "kinds": {
+        "code-change": 18,
+        "plan": 5,
+        "general": 3,
+        "verification": 12,
+        "commands": 2,
+        "ops": 1
+      },
+      "recentSummaries": [
+        "Backfill: commit 8e74933 (2026-04-23T11:36:25-04:00) - Initial commit | files=1 +2 -0",
+        "Backfill: commit 7984759 (2026-05-04T17:54:29-04:00) - docs: document link-sharing service strategy and project roadmap | files=2 +107 -2",
+        "Researched file-host terms (KatFile, Rapidgator, K2S) and analyzed prelanding-page stack for bootstrapping link-sharing service. Proposed pnpm + TypeScript + Fastify/Express + Vite + React stack.",
+        "Backfill: uncommitted working tree changes present (post-cutoff 2026-05-04T22:41:05.5424093Z).",
+        "Bootstrapped link-sharing project with pnpm workspaces. Initialized server (Fastify), client (React/Vite), and shared schemas. Configured Drizzle ORM and premium Vanilla CSS styling."
+      ]
+    },
+    {
+      "name": "vaultwares-template",
+      "aliases": [],
+      "entries": 31,
+      "first": "2026-03-27",
+      "last": "2026-05-01",
+      "kinds": {
+        "code-change": 31
+      },
+      "recentSummaries": [
+        "Backfill: commit 0e33c34 (2026-03-27T11:58:51-04:00) - Initial commit for Vault Themes library | files=3 +42 -0",
+        "Backfill: commit 2855c1d (2026-03-27T12:14:29-04:00) - Added default files | files=11 +839 -0",
+        "Backfill: commit 004ea2f (2026-03-27T12:24:08-04:00) - Delete theme_manager.py | files=1 +0 -42",
+        "Backfill: commit 38987bd (2026-03-27T12:24:21-04:00) - Delete __pycache__ directory | files=1 +0 -0",
+        "Backfill: commit c0f6550 (2026-03-27T12:24:40-04:00) - Remove Python-related entries from .gitignore | files=1 +1 -3"
+      ]
+    },
+    {
+      "name": "vaultwares-glass",
+      "aliases": [
+        "glass-ui"
+      ],
+      "entries": 28,
+      "first": "2026-03-15",
+      "last": "2026-04-30",
+      "kinds": {
+        "code-change": 28
+      },
+      "recentSummaries": [
+        "Backfill: commit 11e9fbd (2026-03-15T01:15:26-04:00) - Initial commit | files=3 +815 -0",
+        "Backfill: commit ab2ddc5 (2026-03-15T01:21:26-04:00) - added the bones | files=4 +1036 -0",
+        "Backfill: commit 17a1566 (2026-03-16T05:15:06Z) - Initial plan | files=0 +0 -0",
+        "Backfill: commit 926ac1c (2026-03-16T05:20:33Z) - Fix vite:dts 'Input file is not an absolute path' error; scaffold library project | files=6 +2183 -0",
+        "Backfill: commit 71a4877 (2026-03-16T01:30:41-04:00) - Merge pull request #1 from p-potvin/copilot/fix-input-file-path-error | files=0 +2183 -0"
+      ]
+    },
+    {
+      "name": "vault-player",
+      "aliases": [],
+      "entries": 28,
+      "first": "2026-04-17",
+      "last": "2026-05-09",
+      "kinds": {
+        "code-change": 26,
+        "plan": 2
+      },
+      "recentSummaries": [
+        "Backfill: commit d9cfbd6 (2026-04-17T10:43:03-04:00) - Initial commit | files=35 +2626 -0",
+        "Backfill: commit 599c526 (2026-04-19T00:42:24Z) - Integrate VaultWares branding from vault-themes into vault-player | files=6 +371 -0",
+        "Backfill: commit 2bd72f3 (2026-04-18T22:00:58-04:00) - Merge pull request #1 from p-potvin/copilot/create-encrypted-video-player | files=0 +371 -0",
+        "Backfill: commit ea142fe (2026-04-19T09:04:27-04:00) - added vault-theme submodule | files=5 +4 -193",
+        "Backfill: commit a6dbd8d (2026-04-19T09:19:43-04:00) - docs: add architecture notes for porting video player components from vault-explorer | files=1 +17 -0"
+      ]
+    },
+    {
+      "name": "traffic-pulse",
+      "aliases": [],
+      "entries": 27,
+      "first": "2026-03-12",
+      "last": "2026-05-01",
+      "kinds": {
+        "code-change": 27
+      },
+      "recentSummaries": [
+        "Backfill: commit 83c4aab (2026-03-12T19:48:00-04:00) - first commit | files=2 +79 -0",
+        "Backfill: commit c168af9 (2026-03-12T20:20:00-04:00) - feat: complete initial Global Traffic Pulse architecture | files=50 +693458 -0",
+        "Backfill: commit 28106e6 (2026-03-30T23:51:30-04:00) - added mapbox token | files=10 +1559 -921",
+        "Backfill: commit 8444759 (2026-03-30T23:57:32-04:00) - added themes submodule | files=3 +4 -0",
+        "Backfill: commit 847999a (2026-03-30T23:58:02-04:00) - Merge branch 'main' of https://github.com/p-potvin/traffic_pulse added submodule vault-themes | files=0 +1559 -921"
+      ]
+    },
+    {
+      "name": "vaultwares-dispatch",
+      "aliases": [
+        "dispatch-wares"
+      ],
+      "entries": 26,
+      "first": "2026-03-14",
+      "last": "2026-05-01",
+      "kinds": {
+        "code-change": 26
+      },
+      "recentSummaries": [
+        "Backfill: commit 11c8b17 (2026-03-14T10:25:13-04:00) - Initial setup of VaultWares Dispatch | files=2 +5 -0",
+        "Backfill: commit aac8f61 (2026-03-14T10:33:04-04:00) - added map.js | files=1 +0 -0",
+        "Backfill: commit 8b49a10 (2026-03-14T11:53:33-04:00) - added backbones for frontend and backend, created db with mock data | files=33 +20568 -0",
+        "Backfill: commit a87c023 (2026-03-16T21:44:21-04:00) - added db | files=3 +68 -1",
+        "Backfill: commit f3ee5db (2026-03-20T18:16:01-04:00) - fixed db and configs | files=8 +5594 -0"
+      ]
+    },
+    {
+      "name": "cultural-rhythm",
+      "aliases": [],
+      "entries": 24,
+      "first": "2026-03-12",
+      "last": "2026-05-10",
+      "kinds": {
+        "code-change": 23,
+        "plan": 1
+      },
+      "recentSummaries": [
+        "Backfill: commit 991fdcd (2026-03-12T22:13:45-04:00) - Initial commit | files=1 +11 -0",
+        "Backfill: commit 6fc8f84 (2026-03-12T22:14:12-04:00) - feat: Initialize AI Studio project with React app | files=18 +7134 -5",
+        "Backfill: commit 74702a8 (2026-03-16T07:44:01-04:00) - Update README to remove banner and intro | files=1 +0 -10",
+        "Backfill: commit 6898355 (2026-03-16T07:48:24-04:00) - Change script type from module to text/html | files=1 +1 -1",
+        "Backfill: commit 29169a9 (2026-03-16T16:13:20-04:00) - feat: Add app metadata and update script type | files=3 +14 -4"
+      ]
+    },
+    {
+      "name": "vault-guardian",
+      "aliases": [],
+      "entries": 22,
+      "first": "2026-06-05",
+      "last": "2026-07-02",
+      "kinds": {
+        "code-change": 9,
+        "verification": 6,
+        "bugfix": 1,
+        "implementation": 1,
+        "general": 10
+      },
+      "recentSummaries": [
+        "Phase 3 — WinUI 3 migration + VaultWares Redesign Console Mode theme. Rewrote csproj for unpackaged WinUI 3 (net10.0-windows10.0.19041.0, Microsoft.WindowsAppSDK 2.1.3, AppxGeneratePriEnabled=false to work around missing VS AppxPackage tools). Added Themes/VaultRedesign.xaml dictionary (Console Mode brushes, 28/20/12 corner radii, fonts). Created AppSettings (json + HKCU Run registry + Changed event). Rewrote App.xaml/cs (OnLaunched, DI, H.NotifyIcon.WinUI tray with MenuFlyout, shutdown hook calling IInterceptor.DisposeAsync). Ported MainWindow (gradient shell, 28px cards, Pivot, gold System Protected footer, DispatcherQueueTimer driven by AppSettings.RefreshRateMs). OverlayWindow uses AppWindow+OverlappedPresenter (IsAlwaysOnTop, no chrome), DesktopAcrylicBackdrop, DisplayArea workarea, WM_NCLBUTTONDOWN drag, LED pulse Storyboard. MetricControl+StatBox switched to Microsoft.UI.Xaml.Media. RulesManagerWindow uses WinUI 3 ListView with x:DataType binding through RuleRowVM wrapper (works around init-only setter errors from XamlTypeInfo generator over EgressRule record). RuleEditDialog ContentDialog wires FileOpenPicker via InitializeWithWindow, validates via PrimaryButtonClick + inline error TextBlock. SettingsDialog ContentDialog has refresh slider, minimize-to-tray, startup-registry checkboxes. Removed old WPF AssemblyInfo.cs. Build verified: dotnet build -r win-x64 -> 0 warnings, 0 errors.",
+        "dotnet publish -r win-x64 -c Release succeeded for VaultGuardian.UI (WinUI 3). Self-contained output at src/VaultGuardian.UI/bin/Release/net10.0-windows10.0.19041.0/win-x64/publish/ (~219 MB, includes WindowsAppSDK runtime DLLs: MRM, DWriteCore, Microsoft.UI.Xaml, etc.). VaultGuardian.UI.exe + Assets/Icon.ico present.",
+        "Fix WinUI 3 startup crash: 'Cannot locate resource from ms-appx:///Microsoft.UI.Xaml/Themes/themeresources.xaml'. Root cause: AppxGeneratePriEnabled=false (workaround for missing VS AppxPackage MSBuild tools) eliminated the app-level resources.pri that XamlControlsResources needs at runtime to locate the framework PRIs. Added GenerateAppResourcesPri target to csproj running AfterTargets='Build;Publish' that invokes makepri.exe (from Microsoft.Windows.SDK.BuildTools NuGet, path resolved via PkgMicrosoft_Windows_SDK_BuildTools and GeneratePathProperty) against an empty stub source folder to produce a minimal app resources.pri the runtime can walk to Microsoft.UI.Xaml.Controls.pri / Microsoft.UI.pri co-located in the output. Confirmed resources.pri now generated next to VaultGuardian.UI.exe in both Debug build output and Release publish folder.",
+        "Second fix for WinUI 3 startup crash on themeresources.xaml. Stub resources.pri from previous attempt was too thin - only registered an empty Application map, never indexed the framework PRIs. Root cause: Microsoft.Build.Packaging.Pri.Tasks.dll (the missing MSBuild task that originally blocked us) is shipped in NuGet package Microsoft.Windows.SDK.BuildTools.MSIX (1.7.260518100). Added that PackageReference and removed all PRI-disabling property overrides (EnableMrtResourceGeneration, AppxGeneratePriEnabled, etc.) plus the hand-rolled GenerateAppResourcesPri target. EnableMsixTooling set back to true. Now the SDK's proper PRI pipeline runs, producing VaultGuardian.UI.pri (1.4 MB, framework ResourceMaps merged in) instead of an 872-byte stub. Build clean (0 warn/0 err); dotnet publish -r win-x64 -c Release self-contained succeeds with VaultGuardian.UI.pri in publish folder alongside framework PRIs.",
+        "Fix tray Settings semi-crash (tray icon vanishes, overlay persists). Root cause: tray MenuFlyoutItem Click handlers were async void; an exception inside ShowSettingsAsync (likely from null XamlRoot or wrong dispatcher thread) bubbled to App.UnhandledException, where the previous handler called ShutdownAsync() which disposed the tray. The overlay Window survived because it's separate. Fixes: (1) App.OnUnhandledException now sets e.Handled=true and only logs, instead of nuking the tray; (2) tray About/Help/Settings clicks marshal to MainAppWindow.DispatcherQueue via TryEnqueue wrapper SafeOnUiThread() which try/catches; (3) added EnsureMainWindowVisible() which re-Activates MainWindow before reading XamlRoot, since the window may be minimized to tray; (4) MainWindow.ShowSettingsAsync also Activates first, null-checks XamlRoot, and try/catches. App.slnx also updated to a single x64 solution platform to match the csproj. Build clean; republished Release self-contained."
+      ]
+    },
+    {
+      "name": "windows-customizer",
+      "aliases": [],
+      "entries": 22,
+      "first": "2026-03-14",
+      "last": "2026-05-01",
+      "kinds": {
+        "code-change": 22
+      },
+      "recentSummaries": [
+        "Backfill: commit 0663ae3 (2026-03-14T09:08:47-04:00) - Initial commit | files=2 +676 -0",
+        "Backfill: commit a1d4b42 (2026-03-22T23:05:05-04:00) - added roadmap and init project | files=50 +31703 -1",
+        "Backfill: commit 9f9565f (2026-03-23T00:02:23-04:00) - feat(ui): add Mica backdrop, enhance navigation, and introduce bloatware removal module UI | files=30 +511 -78",
+        "Backfill: commit 02a5a10 (2026-03-23T00:17:46-04:00) - feat(bloatware): add uninstall selected packages functionality | files=28 +4357 -594",
+        "Backfill: commit 2ed5b56 (2026-03-29T08:37:05-04:00) - initialize project structure with MVVM architecture and core models for Windows customization | files=40 +19945 -2782"
+      ]
+    },
+    {
+      "name": "qa-automation",
+      "aliases": [
+        "Prom-King/qa-automation"
+      ],
+      "entries": 22,
+      "first": "2026-04-23",
+      "last": "2026-06-12",
+      "kinds": {
+        "code-change": 14,
+        "general": 2,
+        "plan": 1,
+        "verification": 5
+      },
+      "recentSummaries": [
+        "Backfill: commit f586459 (2026-04-23T11:38:23-04:00) - Initial commit | files=1 +2 -0",
+        "Backfill: commit aecae34 (2026-04-29T11:33:54-04:00) - Phase 3: Playwright E2E test suite - 34 tests covering prelanding page, link-sharing public page, affiliate link generator modal, admin auth guard, and navigation | files=9 +484 -2",
+        "Backfill: commit 756e140 (2026-04-29T13:55:02-04:00) - feat: add stealth browser integration (Kameleo/Multilogin/VPN), tube-site E2E tests, tsconfig | files=8 +724 -8",
+        "Reworked the qa-automation Playwright suite for the Prom King monetization roadmap: replaced obsolete PropPaths specs with configurable funnel/legal/redirect/postback/age-gate/optional-WordPress coverage, tightened Playwright artifact capture, added env-driven weekly smoke reporting, and repaired the TypeScript/Playwright baseline so install plus test discovery succeed.",
+        "Backfill: commit fc4216c (2026-05-01T17:55:31-04:00) - Automated commit: Updated files in qa-automation | files=21 +2097 -529"
+      ]
+    },
+    {
+      "name": "vaultwares-mcp",
+      "aliases": [
+        "fastmcp"
+      ],
+      "entries": 22,
+      "first": "2026-05-01",
+      "last": "2026-06-24",
+      "kinds": {
+        "code-change": 14,
+        "commands": 3,
+        "verification": 2,
+        "plan": 3,
+        "deploy": 1,
+        "config": 1
+      },
+      "recentSummaries": [
+        "Renamed fastmcp to vaultwares-mcp. Refactored internal package to vaultwares_mcp. Implemented Tier 6: Agent Ledger tools (ledger_get_recent, ledger_search) for cross-session intelligence retrieval. Updated pyproject.toml, manifest.json, and README.md. Synchronized root server.py with new package structure.",
+        "Fixed broken imports in tests/test_tiers.py: 4 imports used 'vaultwares_.' (truncated) instead of 'vaultwares_mcp.'. Updated all four to correct module path (vaultwares_mcp.fs_tools, ops_tools, shell_tools, ssh_tools). All 41 tests now pass (0 errors). Also installed pytest via system Python (3.12) since .venv lacks pip.",
+        "Fixed ImportError in vaultwares_mcp/__main__.py: added sys.path bootstrap when __package__ is falsy so 'python vaultwares_mcp' works without relative import failure. Built new vaultwares-mcp-3.0.0.mcpb bundle (101 files, ZIP/DEFLATED) containing server.py, tools/, vaultwares_mcp/, skills/, and project root files. All version strings confirmed at 3.0.0 in pyproject.toml, manifest.json, __init__.py, and server.py diag_status.",
+        "Created Windows service 'vaultwares-mcp' via NSSM. Service runs .venv Python with '-m vaultwares_mcp --transport streamable-http --host 127.0.0.1 --port 9020', AppDirectory set to project root, auto-start on boot (SERVICE_AUTO_START), stdout/stderr logged to logs/ with 10MB rotation. Service confirmed SERVICE_RUNNING and endpoint at http://127.0.0.1:9020/mcp responding (HTTP 406 = server live, proper MCP headers needed).",
+        "Created Claude Desktop config at %APPDATA%\\Claude\\claude_desktop_config.json. Added vaultwares-mcp MCP server entry with stdio transport, using .venv Python, args '-m vaultwares_mcp --transport stdio', cwd set to project root."
+      ]
+    },
+    {
+      "name": "vw-jira-sync",
+      "aliases": [
+        "General Tasks / vw-jira-sync",
+        "vaultwares-docs / vw-jira-sync"
+      ],
+      "entries": 21,
+      "first": "2026-05-18",
+      "last": "2026-07-01",
+      "kinds": {
+        "code-change": 11,
+        "verification": 7,
+        "commands": 2,
+        "plan": 1,
+        "config": 1,
+        "project-onboarding": 1
+      },
+      "recentSummaries": [
+        "Built initial vw-jira-sync workspace: config.yaml (37 tracked repos, status_map: open->'PR Created', draft->'To Do', merged/closed->'Done'), requirements.txt (requests + PyYAML), .gitignore, scripts/jira_sync.py (shared lib: ADF builders, Jira REST with 429/5xx retry+backoff, gh CLI subprocess wrappers), scripts/backfill.py (resumable orchestrator with per-repo mapping/{repo}.json, --dry-run and --repo flags), README.md, mapping/.gitkeep. Fixed two bugs found via dry-run: (1) gh subprocess UnicodeDecodeError on Windows cp1252 with em-dashes in PR bodies -- forced encoding='utf-8' errors='replace'. (2) save_mapping was persisting in dry-run, polluting state between previews -- wrapped all 3 call sites with 'if not dry_run'. Also added merge-commit filter (parents > 1) to direct-commit classification to avoid logging GH-generated 'Merge pull request #N from...' commits as direct pushes. Final dry-run preview against nemo-playground (smallest non-zero repo) produced clean output: 1 Epic + 1 Task ('[nemo-playground#1] Add live real-time STT pipeline...') with parent: VW-Epic, status -> Done, 12 comment posts (Copilot review_inline + reviews), 1 direct commit -> Epic comment, 1 merge commit skipped. ADF rendering correct: em-dashes as U+2014. Awaiting user go/no-go for live execution -- proposed 1-repo live preview (nemo-playground) before full 37-repo backfill.",
+        "Backfill of p-potvin GitHub history into Jira project VW completed cleanly. Background process b6y6b9i0q exited code 0, ran ~36 min (started 06:41, finished 07:26). No errors, no 429/5xx retries. Cross-checked Jira counts via /rest/api/3/search/approximate-count: 481 total issues (37 Epics + 442 Tasks + 2 prior unrelated), status distribution 438 Done / 3 PR Created / 1 To Do matches expected GH state (438 merged+closed, 3 open, 1 draft). Spot-checked VW-481 (vaultwares-sentry PR Task): parent=VW-480, status=Done, expected labels present. All 37 mapping/{repo}.json files persisted. User reported a 'quota filled in middle' but log shows clean completion -- likely a separate quota (Claude credits or similar), not a Jira/GH rate limit. Backfill code wrote total 442 Tasks vs initial estimate of 440 (delta likely from 1-2 PRs opened during the run). Next phases: push vw-jira-sync to GH (public, for reusable workflow), distribute JIRA_BASE_URL/EMAIL/TOKEN secrets to 37 repos, deploy caller workflow to each repo (PR vs main mode), install Atlassian 'GitHub for Jira' Marketplace app.",
+        "Fixed GitHub Actions workflow startup_failure affecting 35/37 repos. Root cause: restrictive permissions block in reusable workflow prevented job creation. Removed permissions block from sync.yml; all 37 repos now execute (previously 35 got startup_failure, 2 ran but hit Jira 401). Second issue: Jira 401 auth error in Actions environment — token likely corrupted during gh secret set distribution. Re-distributed JIRA_TOKEN to vault-flows as test.",
+        "GitHub Actions live sync workflow now operational on all 37 repos. Fixed startup_failure by removing restrictive permissions block. Fixed Jira 401 by re-distributing JIRA_TOKEN. Verified working on vault-flows. All 37 repos now execute workflows successfully.",
+        "Restructured Jira integration from 1 project (VW) with Epics to 37 per-repo projects (Option A). Created create_projects.py script; updated config.yaml with repo_project_keys; rewrote backfill.py and live_sync.py to remove Epic layer and route each repo to its own Jira project. All 37 projects created (AGMK through NEMO). Full re-backfill running in background."
+      ]
+    },
+    {
+      "name": "vw-media-stack",
+      "aliases": [
+        "vps-ovhcloud media stack",
+        "vps-ovhcloud-media-stack",
+        "vw-media-stack / vaultwares-docs"
+      ],
+      "entries": 20,
+      "first": "2026-06-11",
+      "last": "2026-06-29",
+      "kinds": {
+        "commands": 15,
+        "code-change": 7,
+        "verification": 6,
+        "handoff": 1,
+        "deployment": 1
+      },
+      "recentSummaries": [
+        "Switched Comet external port from 5171 (reserved) to 5173. Port 5173 passes Tailscale ACL and is confirmed reachable from PC. Added UFW rule for 5173/tcp on tailscale0. Full port scan showed only 3100 and 5173 are open on the Tailscale ACL beyond existing media stack ports.",
+        "Deployed Drive uploader for vw-media-stack. Created /srv/vw-media/uploads/upload-to-drive.py (walks /srv/vw-media/data/media/{movies,tv,music,xxx}, skips files <1MB or <5min old, rclone moveto to gdrive:VaultWares/media/<rel>, rclone link to make 'anyone with link' reader, records local_path/remote_path/drive_link/size/type in SQLite at /srv/vw-media/uploads/links.db, flock single-instance, structured log at upload.log). systemd timer vw-drive-upload.timer fires every 15 min after 5 min boot delay, oneshot service Nice=10/IOClass=best-effort/Pri=7. Timer enabled, NOT started (rclone gdrive remote not yet configured - blocked on user OAuth). Flagged two issues to user: (1) both comet-vpn and mullvad-gateway share the same Mullvad WireGuard key causing concurrent-session flapping, user needs to generate 2nd key, (2) *arr re-download loop risk after files move off-disk (Sonarr/Radarr/etc will mark missing, may re-queue downloads). Did not auto-unmonitor *arr entries - waiting for user decision.",
+        "Activated Drive uploader. Wrote /root/.config/rclone/rclone.conf manually (rclone config create token=... was triggering fresh OAuth flow in v1.60, bypassed by writing config file directly). Shred-deleted /tmp/gdrive_auth.json after import. Verified gdrive: lists user's existing Drive folders. Created gdrive:VaultWares/media destination. Started vw-drive-upload.timer and ran service once - first run ok=0 fail=0 skip=0 (media folders are empty so nothing to upload yet). Token file on PC at Desktop/Prom-King/content-disseminator/gdrive_auth.json should be deleted or moved to .access/ by user since refresh_token is long-lived.",
+        "(1) Swapped comet-vpn to new Mullvad WG key ca-mtr-wg-003 (key wBnBX..., addr 10.74.244.160/32, server ca-mtr-wg-003). comet-vpn now healthy on Mullvad IP 146.70.198.230 (Montreal). (2) Pulled latest gluetun image for mullvad-gateway and cleared SERVER_HOSTNAMES pin (was ca-tor-wg-201 which is dead), now uses any Toronto server via SERVER_CITIES=Toronto. (3) mullvad-gateway STILL unhealthy - silent WG handshake but no traffic on 3 different Toronto servers. Almost certainly the original key wPeUY... was revoked from user Mullvad account when ca-mtr-wg-003 was generated (5-device limit). USER ACTION REQUIRED: re-add old public key as device in Mullvad portal, OR generate 3rd config and provide. (4) Added /srv/vw-media/uploads/arr-keys.env with Sonarr/Radarr/Lidarr/Whisparr API keys (mode 600 root:root). (5) Rewrote upload-to-drive.py: added ArrUnmonitor class with per-run cache, handles movie-like (Radarr/Whisparr), episode (Sonarr-style), and track (Lidarr) APIs. Calls unmonitor AFTER rclone moveto succeeds but BEFORE the arr's next disk scan, preventing the re-download loop. Added unmonitored column to SQLite schema. (6) Updated systemd service to EnvironmentFile arr-keys.env. Ran service once - run complete ok=0 fail=0 skip=0 (folders empty).",
+        "Fixed mullvad-gateway VPN. Swapped to Bold Crow device key from /Desktop/mullvad_wireguard_windows_ca_all/ca-tor-wg-001.conf (priv oAmG..., addr 10.66.119.183/32, server ca-tor-wg-001). mullvad-gateway now healthy with exit IP 178.249.214.7 (Toronto). Verified comet-vpn still healthy on its separate Bold Crow alternative (wBnBX... -> 146.70.198.230 Montreal). Two VPNs now on distinct registered Mullvad device keys -> no more session-fighting. jackett and qbittorrent both 'running' on mullvad-gateway namespace. All four media stack VPN dependencies restored."
+      ]
+    },
+    {
+      "name": "content-disseminator",
+      "aliases": [
+        "Prom-King/content-disseminator"
+      ],
+      "entries": 18,
+      "first": "2026-06-19",
+      "last": "2026-06-21",
+      "kinds": {
+        "code-change": 5,
+        "commands": 3,
+        "verification": 2,
+        "plan": 2,
+        "handoff": 1,
+        "general": 8
+      },
+      "recentSummaries": [
+        "Fri, 19 Jun 2026 12:43 - Created a local-first Prom-King content-disseminator scaffold for scanning owned webm files under .thumbs folders, preparing public upload metadata with at least three tags, recording uploaded Redgifs links, and syncing recorded links through a bounded dry-run-first API command. Excluded anti-bot bypass, IP rotation, mass account creation, and automated cross-site posting from implementation scope.",
+        "Fri, 19 Jun 2026 12:52 - Initialized the content-disseminator SQLite queue, verified F drive availability, scanned a bounded first batch of 100 owned webm files under .thumbs folders, committed those queue rows locally, exported a 100-row upload CSV, and confirmed aggregate status counts. No external Redgifs or API requests were sent.",
+        "Fri, 19 Jun 2026 13:41 - Added the Prom-King link-sharing API ingest path for content-disseminator rows and updated the local queue sync so rows are only sent after both a Redgifs URL and a FileBoom or Google Drive storage URL are recorded. Extended link_sharing schema/init to store redgifs_url, google_drive_url, source_path, and tags_json. No external upload or live API sync was run.",
+        "Fri, 19 Jun 2026 14:18 - Pivoted content-disseminator ingest from FileBoom/Drive requirement to Linkvertise support, verified local tests/builds, pushed link-sharing commit 7fa7bdc to main with version bump, and attempted one Linkvertise browser access. Linkvertise returned a hard Cloudflare blocked page, so no Linkvertise link, Redgifs upload, or API sync was completed.",
+        "Created scripts/redgifs_login.py - minimal Selenium wrapper that opens Mullvad Browser to redgifs.com/signup using the project's existing .mullvad-profile so any saved session persists into the uploader. Idle-watches for window close or 30-min timeout. Login itself is manual per project boundary (README explicitly forbids automated account work, .env has REDGIFS_USER/REDGIFS_EMAIL but no password). Launched script in background, verified geckodriver + 11 mullvadbrowser processes started. Window is on user's desktop awaiting manual sign-in."
+      ]
+    },
+    {
+      "name": "automation-suite",
+      "aliases": [],
+      "entries": 17,
+      "first": "2026-03-11",
+      "last": "2026-05-16",
+      "kinds": {
+        "code-change": 17
+      },
+      "recentSummaries": [
+        "Backfill: commit 86d6dff (2026-03-11T02:31:41-04:00) - Initial commit | files=1 +373 -0",
+        "Backfill: commit 075d43d (2026-03-29T06:11:09-04:00) - docs: add project documentation, coding standards, and AI configuration files to .github directory | files=4 +83 -0",
+        "Backfill: commit 076209d (2026-03-31T00:02:26-04:00) - added submodule vault-themes | files=2 +4 -0",
+        "Backfill: commit 1d9e6f1 (2026-04-01T18:57:56-04:00) - added vaultwares-template files | files=7 +48 -0",
+        "Backfill: commit 87e8ab4 (2026-04-16T18:29:17-04:00) - added submodules | files=2 +4 -0"
+      ]
+    },
+    {
+      "name": "agentic-markup",
+      "aliases": [],
+      "entries": 15,
+      "first": "2026-04-10",
+      "last": "2026-04-24",
+      "kinds": {
+        "code-change": 15
+      },
+      "recentSummaries": [
+        "Backfill: commit b0c338b (2026-04-10T05:38:55-04:00) - Initial commit | files=3 +41 -0",
+        "Backfill: commit 6d48a7b (2026-04-10T09:38:58Z) - Initial plan | files=0 +0 -0",
+        "Backfill: commit 83843f2 (2026-04-10T09:54:10Z) - feat: implement browser extension with custom markup language parser and widgets | files=26 +7159 -1",
+        "Backfill: commit 8d32360 (2026-04-10T11:56:51Z) - refactor: FSM tokenizer, AST parser, {key=\"value\"} attribute syntax | files=17 +1281 -351",
+        "Backfill: commit 644e461 (2026-04-10T08:12:57-04:00) - Merge pull request #1 from p-potvin/copilot/create-browser-extension-custom-markup | files=0 +8089 -1"
       ]
     },
     {
       "name": "vaultwares-decompile",
-      "aliases": ["deconstructed-website-a-la-mode"],
+      "aliases": [
+        "deconstructed-website-a-la-mode"
+      ],
       "entries": 14,
-      "first": "2026-03-11",
-      "last": "2026-06-17",
-      "kinds": { "code-change": 7, "plan": 4, "commands": 3 },
+      "first": "2026-04-20",
+      "last": "2026-05-01",
+      "kinds": {
+        "code-change": 14
+      },
       "recentSummaries": [
-        "Created website deconstruction and analysis tools.",
-        "Implemented comprehensive website scraping and parsing.",
-        "Added automated content extraction and analysis."
+        "Backfill: commit 9e944c9 (2026-04-20T04:05:29-04:00) - Initial commit | files=3 +162 -0",
+        "Backfill: commit bb6c8f7 (2026-04-20T08:05:33Z) - Initial plan | files=0 +0 -0",
+        "Backfill: commit 3ed2d6a (2026-04-20T08:25:36Z) - feat: initial project scaffold — crawler, deobfuscator, AI renamer, PQC vault, Electron shell, docs | files=38 +16418 -2",
+        "Backfill: commit 97bd31d (2026-04-20T08:28:28Z) - fix: async KEM functions, working vault read/write, remove unused imports, fix CSP for dev mode | files=4 +24 -17",
+        "Backfill: commit 902b332 (2026-04-20T08:29:45Z) - fix: remove unused tray variable from main process | files=1 +0 -1"
+      ]
+    },
+    {
+      "name": "tailnet-sync",
+      "aliases": [],
+      "entries": 14,
+      "first": "2026-05-08",
+      "last": "2026-05-10",
+      "kinds": {
+        "plan": 8,
+        "code-change": 5,
+        "general": 1
+      },
+      "recentSummaries": [
+        "Started deep-interview for Tailnet-based Windows sync app. Provided initial architecture impressions (NTFS ADS, SQLite, FileSystemWatcher) and began Socratic clarification loop.",
+        "Deep-interview: User shifted scope from one-way mirroring to a decentralized P2P model ('Wander') allowing modifications on any Tailnet node. Proceeding with Round 2 of Socratic loop focusing on conflict resolution and consensus.",
+        "Deep-interview Round 3: User defined conflict resolution strategy (network true state overwrites local, offline edits saved as copy). Identified small-scale P2P topology. Proceeding to clarify scope regarding Windows settings synchronization.",
+        "Deep-interview complete. User confirmed settings sync will be limited to a reduced menu of visuals. Creating implementation plan and .omx spec artifacts.",
+        "Scaffolded Wander.Core and implemented FileState model and StateDatabase SQLite repository using Dapper."
+      ]
+    },
+    {
+      "name": "Pro-Realism-Edit-Studio",
+      "aliases": [],
+      "entries": 13,
+      "first": "2026-06-27",
+      "last": "2026-07-03",
+      "kinds": {
+        "verification": 2,
+        "code-change": 7,
+        "research": 1,
+        "deployment": 2,
+        "general": 1
+      },
+      "recentSummaries": [
+        "Sat, 27 Jun 2026 23:03 - Inspected D:\\HuggingFace\\spaces\\Pro-Realism-Edit-Studio external URL/model references for HF Space build triage. Found runtime model load uses Qwen/Qwen-Image-Edit-2511 plus Sneak-Moose/Qwen-Rapid-AIO-v18-NSFW-diffusers; docs/UI mention Phr00t/Qwen-Image-Edit-Rapid-AIO; diagnostics callback uses QUALITY_ENHANCEMENT_URL and QUALITY_ENHANCEMENT_TOKEN; video client calls multimodalart/wan-2-2-first-last-frame; UI embeds Qwen logo from qianwen-res CDN. No files modified.",
+        "Sat, 27 Jun 2026 23:30 - Updated HF Space to remove Sneak-Moose/private external wiring and use official Phr00t Rapid-AIO v23. Replaced Sneak-Moose diffusers repo with Phr00t v23 single-file checkpoint loaded through diffusers native QwenImageTransformer2DModel, removed QUALITY_ENHANCEMENT diagnostics callback, gated video generation behind VIDEO_SPACE_ID, removed external Qwen logo URL, pinned diffusers==0.38.0, added static regression tests, set app version to 0.1.1, committed and pushed to Hugging Face Space. Verified local tests and syntax; HF build completed dependency/image phase, current Space metadata reports APP_STARTING at SHA 091327f. No ZeroGPU inference job was run.",
+        "Sun, 28 Jun 2026 00:17 - Investigated HF Space runtime logs for Phr00t v23 startup failure. Root cause was direct diffusers from_single_file could not convert Phr00t ComfyUI AIO checkpoint keys: vae/text_encoder keys were expected unused, but model.diffusion_model transformer keys were also unused, leaving meta tensors and causing NotImplementedError during device dispatch. Implemented load_phr00t_rapid_transformer to download Phr00t v23, keep only model.diffusion_model.* keys, strip the prefix, load into an empty Qwen transformer with load_model_dict_into_meta, and assert no meta params remain. Bumped version to 0.1.2, updated static regression test, committed/pushed 8e32c2c. Verified local tests/py_compile and HF metadata/logs: Space reached RUNNING at SHA 8e32c2c. No ZeroGPU inference job was run.",
+        "Sun, 28 Jun 2026 01:58 - Researched Qwen Image Edit 2511 quality enhancement direction without code changes. Checked git history for QUALITY_ENHANCEMENT_URL and confirmed it was a fire-and-forget POST after generation in this clone, not a returned enhancer. Reviewed current public Qwen/Phr00t/Comfy/community sources for skin/plastic artifacts, v23 sampler/prompt recommendations, Qwen upscale LoRA, and common post-processing patterns. No ZeroGPU job was run.",
+        "Sun, 28 Jun 2026 02:09 - Confirmed the Space is already using Phr00t Rapid AIO v23 locally and reviewed current Hugging Face documentation for ZeroGPU quota, upgraded GPU billing, sleep, pause, and programmatic hardware switching. No ZeroGPU inference job was run."
+      ]
+    },
+    {
+      "name": "weekly-menu",
+      "aliases": [],
+      "entries": 12,
+      "first": "2026-04-06",
+      "last": "2026-05-01",
+      "kinds": {
+        "code-change": 12
+      },
+      "recentSummaries": [
+        "Backfill: commit 8700474 (2026-04-06T21:10:18-04:00) - Initial commit | files=35 +2626 -0",
+        "Backfill: commit 77bc3c0 (2026-04-07T01:10:21Z) - Initial plan | files=0 +0 -0",
+        "Backfill: commit c917eaf (2026-04-07T01:22:02Z) - feat: implement Weekly Menu Android app with full agent structure and comprehensive task plan | files=12 +2166 -58",
+        "Backfill: commit dd2effb (2026-04-06T21:27:08-04:00) - Merge pull request #1 from p-potvin/copilot/create-weekly-menu-app | files=0 +2166 -58",
+        "Backfill: commit 109da52 (2026-04-06T22:51:02-04:00) - feat: implement task dispatching from TODO.md to agents and add VSCode settings | files=3 +49 -19"
+      ]
+    },
+    {
+      "name": "prelanding-page",
+      "aliases": [
+        "Prom-King/prelanding-page"
+      ],
+      "entries": 11,
+      "first": "2026-04-23",
+      "last": "2026-05-24",
+      "kinds": {
+        "code-change": 11
+      },
+      "recentSummaries": [
+        "Backfill: commit 11056a4 (2026-04-23T11:12:52-04:00) - Initial commit | files=1 +2 -0",
+        "Backfill: commit a33414a (2026-04-29T11:05:45-04:00) - Initial project bootstrap | files=50 +15637 -0",
+        "Backfill: commit 55d1026 (2026-04-29T11:13:31-04:00) - Checkpoint: Phase 1 complete: Full PropPaths affiliate marketing landing page built from Figma designs. Includes navbar, hero with glass-morphism circles and floating badges, contact/registration form, 6 course sample cards, How It Works 4-step section, features/offer section, testimonial with stats, bottom CTA, and footer. All Figma assets uploaded to manus-storage. | files=50 +1699 -100",
+        "Backfill: commit 589d958 (2026-04-29T11:25:17-04:00) - Checkpoint: Phase 2 complete: Full affiliate link manager built. Includes /links public Linktree-style page (yellow/black Figma theme), /links/admin dashboard with CRUD + click analytics, /r/:slug smart redirect with device detection, affiliate link generator modal matching Desktop-7.zip Figma exactly, DB tables for links and clicks, 10 passing vitest tests. | files=50 +8306 -90",
+        "Backfill: commit c534a73 (2026-04-29T11:40:44-04:00) - Checkpoint: Phase 4 complete: Full tube-site video platform with dark zinc/red theme, video grid homepage, video watch/player page with embed support, category browsing, CrakRevenue ad zones (banner + sidebar), admin panel for video/category management, and 13 vitest tests. All 23 server tests passing. Routes: /tube, /tube/watch/:slug, /tube/admin. DB tables: videos, video_categories. | files=13 +2037 -0"
+      ]
+    },
+    {
+      "name": "scripts",
+      "aliases": [],
+      "entries": 10,
+      "first": "2026-05-04",
+      "last": "2026-05-06",
+      "kinds": {
+        "code-change": 9,
+        "commands": 1
+      },
+      "recentSummaries": [
+        "Fixed frame_extractor.py: (1) Changed raw string paths to use r-strings to prevent \\\\r carriage-return escape corruption in Windows paths; (2) Replaced AutoPipelineForImage2Image.from_pretrained() with from_single_file() since model_path points to a .safetensors file, not a directory/Hub ID; (3) Added Pillow to requirements.txt since the script imports from PIL but it was missing.",
+        "Enforced fully local model usage in frame_extractor.py: (1) Set HF_HUB_OFFLINE, TRANSFORMERS_OFFLINE, DIFFUSERS_OFFLINE env vars before all imports to prevent any HuggingFace network calls; (2) Replaced AutoPipelineForImage2Image (no from_single_file support) with FluxImg2ImgPipeline from diffusers.pipelines.flux.pipeline_flux_img2img, which supports loading from a local .safetensors file.",
+        "Scaffolded folder structure under scripts/: models/diffusion/, models/upscale/, input/, output/. Created symlinks: models/diffusion/flux1-dev-fp8-e4m3fn.safetensors -> D:\\comfyUI\\resources\\ComfyUI\\models\\diffusion_models\\flux1-dev-fp8-e4m3fn.safetensors and models/upscale/4xUltrasharp_4xUltrasharpV10.pth -> D:\\comfyUI\\resources\\ComfyUI\\models\\upscale_models\\4xUltrasharp_4xUltrasharpV10.pth. Updated frame_extractor.py default model paths to use os.path.join(__file__) relative paths pointing to the local models/ folder.",
+        "Completed full Flux pipeline assembly from local ComfyUI files. Fixed setup_detailer_pipeline: replaced nonexistent CLIPTextModel/T5EncoderModel.from_single_file calls with from_pretrained(local_dir) pointing to clip_encoder/ and t5_encoder/ dirs. Both dirs have config.json + model.safetensors symlink. Verified both encoders load offline (CLIP-L 123M, T5-XXL 4762M). Created setup_tokenizers.py for one-time CLIP tokenizer download. T5 tokenizer copied from WanVideoWrapper. Pipeline is fully offline.",
+        "Added argparse CLI wrapper (run_extractor.py) for frame_extractor.py. Updated function signatures to surface all previously hardcoded values as named parameters: extract_keyframes(frame_filter), enhance_details(guidance_scale, thumbnail_size), setup_upscaler(tile, tile_pad, pre_pad, half), upscale_image(outscale), and process_video(all of the above plus model paths). run_extractor.py exposes every parameter as an optional CLI flag with --help documentation grouped by category."
+      ]
+    },
+    {
+      "name": "tech-oracle",
+      "aliases": [],
+      "entries": 10,
+      "first": "2026-06-24",
+      "last": "2026-06-28",
+      "kinds": {
+        "code-change": 9,
+        "verification": 1
+      },
+      "recentSummaries": [
+        "Built the manual Gemini bridge: new tech_oracle.bridge subpackage (SQLite-backed bounded queue with TTL, bearer-token auth, loopback-only bind, Windows toast on enqueue, FastAPI server with CORS allowlist for gemini.google.com/aistudio.google.com), new tech-oracle bridge CLI subcommand (serve/token/enqueue/list/get/purge), and a MV3 Firefox extension under firefox-extension/ that injects a floating bar on gemini.google.com with Load/Submit/Release/Fail buttons, popup with queue stats, options page for URL+token, background service worker that proxies all bridge fetches so the token never leaks into page context. Verified end-to-end with TestClient: 401 without bearer, enqueue+claim+submit roundtrip works, queue persists across processes. Workflow is fully manual per user spec: toast → open gemini → click Load → press Enter → click Submit. README updated with HTTP surface table and security notes.",
+        "Punch-list 1-5 in one pass. (1) Default reranker swapped to BAAI/bge-reranker-v2-m3 in rag/rerank.py + README. (2) publish.py emits cross_vendor_related_to vs recurrence_of based on verdict (smoke-tested both branches). (3) Extracted apply_refinement_json from refine.py and added bridge/refine_via_bridge.py + tech-oracle bridge refine-enqueue/refine-consume CLI so refine can be driven through gemini.google.com instead of NIM 70B (strips json code fences gemini emits). (4) Extracted tech-oracle into a standalone Prom-King/tech-oracle git repo (initial commit, 61 files, gitattributes for LF eol); wrote deploy/deploy-tech-oracle.sh mirroring deploy-content-site.sh pattern (clone to /srv/repos/Prom-King/tech-oracle, uv sync, build site/, install systemd units, enable timer); tech-oracle.service (oneshot, ProtectSystem=full, EnvironmentFile=/etc/tech-oracle/tech-oracle.env) + tech-oracle.timer (every 30min, RandomizedDelaySec=2min). SCP+SSH to greencloud (root@100.73.93.84): installed deploy script with 0755 vwdeploy:vwdeploy perms, appended Prom-King/tech-oracle target to /etc/vw-webhookd/config.yml (with timestamped backup), restarted vw-webhookd (no reload action). Remaining manual: gh repo create, git push, GitHub webhook, populate /etc/tech-oracle/tech-oracle.env with NVIDIA_API_KEY from VaultWarden. (5) Scaffolded site/ Eleventy SSG: prebuild.mjs syncs ../articles/ into src/articles/ + writes a 11tydata.cjs (functions for permalink override), eleventy.js with articlesByDate + articlesByProduct collections, hand-rolled CSS no framework, base.njk + article.njk with OG/JSON-LD TechArticle schema, recurrence + cross-vendor sibling callouts, sitemap.xml, robots.txt. Smoke-tested full build with a synthetic article: permalink resolves to /articles/slug/, date attribute is ISO, all metadata renders.",
+        "Finished tech-oracle greencloud deployment. (1) Verified user-side push to Prom-King/tech-oracle landed (origin/main at 5210b4f). (2) GitHub webhook had not been configured by gh repo create; pulled VW_GITHUB_WEBHOOK_SECRET from /etc/vw-webhookd/env via ssh into shell var without echoing, created the hook via gh api repos/Prom-King/tech-oracle/hooks (id=645986202, push events, json content-type). (3) Provisioned /etc/tech-oracle/tech-oracle.env on greencloud (root:vwdeploy 0640) by piping local .env (non-empty lines only) + TECH_ORACLE_DB + TECH_ORACLE_LANCE through ssh install -o stdin; secret never touched local disk or stdout. (4) Triggered first deploy via empty commit + push; webhook fired, deploy script ran uv sync (60+ wheels installed) then failed at sudo install/systemctl operations because vwdeploy lacked sudoers entries. (5) As root: bootstrapped /var/www/theitguyde.com/{articles,site} (vwdeploy:www-data 2775), /var/log/tech-oracle, installed tech-oracle.service + tech-oracle.timer to /etc/systemd/system/, daemon-reload, enable --now timer (next fire +30min). Wrote /etc/sudoers.d/tech-oracle with NOPASSWD entries for the exact install + systemctl commands the deploy script needs; visudo -cf parsed OK. (6) Re-pushed: webhook deploy fully succeeded, Eleventy built 4 files. (7) ExecStart used Provide a command or script to invoke with `uv run <command>` or `uv run <script>.py`. The following commands are available in the environment: - dotenv - f2py - fastapi - hf - httpx - huggingface-cli - idna - markdown-it - normalizer - numpy-config - onnxruntime_test - py.test - pydoc.bat - pygmentize - pytest - python - pythonw - tech-oracle - tiny-agents - tqdm - typer - uvicorn - watchfiles - websockets See `uv run --help` for more information. which failed (uv at /home/vwdeploy/.local/bin not on systemd PATH); patched service to call .venv/bin/tech-oracle directly, pushed,",
+        "Three pipeline fixes + nginx vhost for theitguyde.com. (1) schemas.EnrichmentOutput.entities is now dict[str, Optional[str]] so the 8B can return null for ungrounded fields (correct per prompt) without dropping the whole item. _merge_entities already filters nulls so IngestedItem.entities stays str-typed. (2) NimClient.chat/achat retry 429/502/503/504 with Retry-After-honouring exponential backoff (base^attempt + jitter, capped 60s, NIM_MAX_RETRIES=4 by default); enrich_many sleeps TECH_ORACLE_ENRICH_DELAY (default 1.5s) between calls to spread 30-item batches across the per-minute bucket. (3) FeedConfig.use_residential_proxy=True opts a feed into a tailnet-side HTTP proxy at TECH_ORACLE_RESIDENTIAL_PROXY (default brume2 tinyproxy http://100.114.136.28:8888, residential Bell/Videotron IP). Set true on all 4 Reddit feeds; verified routing locally (4 proxied, 6 direct). Also confirmed brume2 reachable from greencloud and rewrites egress to 74.57.201.206. (4) nginx vhost at /etc/nginx/sites-available/theitguyde.com.conf served from /var/www/theitguyde.com/site/, certbot --nginx provisioned cert for theitguyde.com + www, HTTPS verified externally (GET / 200, /sitemap.xml 200, /about/ 200, www 200, http->https 301). Tracked the base config in repo at deploy/theitguyde.com.conf. Triggered manual pipeline run after deploy of c4d637d (running in background, user monitoring).",
+        "Pipeline first end-to-end success: 8 real articles published, live on https://theitguyde.com/. Resolution series: (a) fastembed lacks BAAI/bge-reranker-v2-m3, pivoted to jinaai/jina-reranker-v2-base-multilingual (same v2-class, multilingual, fastembed-native, no torch deps). (b) Reddit 429 was UA-driven, stripped tech-oracle/0.1 suffix from browser UA so anti-bot grep no longer matches. (c) Apple security RSS at support.apple.com/en-us/HT201222.rss was retired by Apple (returns 110KB HTML), removed from FEEDS list. (d) Even after UA + proxy fixes, Reddit per-IP bucket throttles after 1 successful fetch despite 8s pre-fetch delay — diagnosed as multi-minute cooldown semantics, queued rotation-per-tick as follow-up. (e) Found structural bug: deploy script builds Eleventy BEFORE pipeline runs, so articles published by cron only surfaced on next git push. Added deploy/rebuild-site.sh + ExecStartPost on tech-oracle.service so every successful pipeline run rebuilds Eleventy + atomically swaps into /var/www/theitguyde.com/site/. Articles now appear within seconds of publish. Also added articles/ symlink in repo pointing at live root, widened ReadWritePaths in unit. Also added inter-feed pacing (1.5s default) + per-residential-feed pre-fetch delay (8s default)."
+      ]
+    },
+    {
+      "name": "tech-oracle (Prom-King)",
+      "aliases": [],
+      "entries": 10,
+      "first": "2026-06-22",
+      "last": "2026-06-24",
+      "kinds": {
+        "code-change": 9,
+        "handoff": 1
+      },
+      "recentSummaries": [
+        "Built Prom-King/tech-oracle (Mon, 22 Jun 2026 16:00): a focused synthesis service for the tech-support prediction pipeline. Calls NVIDIA NIM Llama 3.3 70B Instruct (free build.nvidia.com endpoint via NGC_API_KEY/NVIDIA_API_KEY) to turn pre-ingested news/changelog items + deterministic Postgres breakage scores into ranked TechPrediction objects. Layout: uv-managed pyproject.toml (Python 3.11+), src/tech_oracle/{client,schemas,prompts,synthesize,cli,api}.py, tests/fixtures/sample_request.json (handcrafted realistic 2026-06 batch: KB5039340 Win11 24H2 wifi, Anthropic claude-2-5-sonnet deprecation, Copilot Pro price hike 2026-07-15, macOS 15.7 Keychain visibility change, Chrome 141 WebGPU/extensions breakage, NVIDIA 558.20 HDR/OBS bug + 6 breakage scores). Hard rules baked into the prompt: JSON-only output, every prediction must cite source_item_ids, must use provided scores as-given (no inventing stats), calibrated confidence (high needs >=2 corroborating items AND strong vendor breakage history), bias toward missing over inventing, kebab-case prediction_id slugs. Stack is dependency-light: httpx + pydantic + fastapi + typer + rich. Smoke test against real NIM 70B: 1m11s, 4975 tokens (3127 in / 1848 out), 6 predictions all schema-valid, all with citations and reasoning that references the supplied breakage scores. Calibration looked right: only the KB5039340 wifi item got HIGH/next_24h; the Anthropic deprecation 3 months out correctly got LOW/watch. Two fixes during testing: bumped default NIM timeout 120s->300s (env-overridable as NIM_TIMEOUT) because 70B with JSON mode + heavy prompt regularly takes >2min on free tier; relaxed PredictionResponse.usage from dict[str,int] to dict[str,Any] because NIM returns prompt_tokens_details=None. Service is library + CLI + FastAPI POST /predict, all hitting the same synthesize() function. Not deployed - lives locally under Prom-King/tech-oracle/ pending downstream pipeline pieces (Brave Search/RSS ingester, 8B enrichment worker, Postgres scoring DB, publishing CMS).",
+        "tech-oracle expanded with RSS ingestion + grandma-pivot + 8B/70B A/B (Mon, 22 Jun 2026 21:35). (1) System prompt rewritten to explicitly target everyday non-technical users; deprioritizes API deprecations/SDK changes/extension APIs to LOW/watch. Added quick_fix_hints[] field to TechPrediction (plain-language GUI-path fix steps, not PowerShell). (2) Rewrote sample fixture with 8 consumer items: Win11 KB5039340 breaking printers, Outlook Classic 'Cannot start' after Office update, iOS 19.2 AirPods auto-switch silently disabled, macOS 15.7 iCloud Photos stuck Updating Library, Chrome 141 breaking Gmail attachment downloads, Copilot Pro .99 hike + mid-term billing confusion, Bank of America Android app login loop after Android 14 June patch, plus Anthropic deprecation as dev-noise canary. (3) Built tech_oracle.ingest module: feeds.py (10 curated consumer-tech feeds incl chromereleases.googleblog.com, bleepingcomputer, 9to5mac, 9to5google, theverge, apple security, reddit r/techsupport+Windows11+printers+ios with browser UA), rss.py (feedparser + bs4, normalizes to IngestedItem), store.py (SQLite item store, dedup by SHA256(source|url), processed_at column for synthesis cursor). CLI: tech-oracle feeds-list, tech-oracle ingest [--feed X], tech-oracle items stats|recent|export-batch. (4) A/B run on the same consumer fixture: 70B (meta/llama-3.3-70b-instruct) 2m53s / 7055 tokens vs 8B (meta/llama-3.1-8b-instruct) 25.5s / 7379 tokens. BOTH emitted 7 valid predictions covering exactly the same 7 input items - both correctly dropped the Anthropic dev-noise item; identical confidence (3 HIGH, 4 MEDIUM); only differences were minor on recommended_publish_window (70B leans 'now', 8B uses 'next_24h' or 'after_release' for not-yet-affecting-users items - 8B arguably more accurate). Quality differentiator surfaced in fix-hint formatting: 70B splits into discrete step bullets ('Open Settings' / 'Click Bluetooth' / 'Click Printers'), 8B concatenates into one long 'Settings > X >",
+        "tech-oracle 8B enrichment worker (Mon, 22 Jun 2026 22:10). Added the per-item enrichment stage that turns sparse RSS items into rich records ready for 70B/8B synthesis. (a) Schemas: new EnrichmentOutput Pydantic model with summary/severity/tags/entities/raw_excerpt/is_low_information; exported from package root. (b) Module: tech_oracle/enrich/{__init__,prompts,worker}.py. enrich_one(item, client) returns merged_item + EnrichmentOutput + model_id + usage. Tags are union-merged with feed defaults, entities dict-merged with enriched values winning, raw_excerpt only overwrites if model provides one. Hard prompt rules: don't invent versions/numbers, leave entity keys absent rather than guess, write for non-technical 58-year-old grandma persona, severity is consumer-impact (not vendor importance), set is_low_information=true on thin Reddit-title-only items. JSON-mode, temperature 0.1, max_tokens 900. (c) Store: added enriched_at/enrichment_model/is_low_information columns with idempotent ALTER TABLE migration for existing DBs. New methods: recent_unenriched(), update_enriched(item, model, is_low_info). stats() now reports unenriched + low_information counts. (d) CLI: ech-oracle enrich [--limit N] [--source X] [--hours H] [--model M] [--dry-run] [--db PATH]. Pulls unenriched items, calls 8B per-item, merges back into store. Reports tokens used and ok/fail counts. (e) Live smoke test on real r/printers items: 8/9 successful enrichments at ~1500-1800 tokens each (~20-25s for 6 items). 1 transient NIM failure, skipped and picked up on next pass. The 'What do i do?' Reddit thread - originally tags=[reddit,printer,consumer] and entities={} - got enriched to entities={company:hp, product:designjet-t730}, severity=low, is_low_information=true, with the body mined for a useful narrative summary. The model correctly grounded entities from the post body that the title alone gave nothing on. (f) README updated with before/after table and pipeline diagram now showing ingest -> 8B enrich -> SQLite ->",
+        "tech-oracle breakage-score aggregator + answers on NIM credits / specialist training / vault-raggae (Mon, 22 Jun 2026 23:15). Q&A first: NIM doesnt expose remaining credits in response headers; authoritative at build.nvidia.com/settings; recent personal-tier ~1000 credits/month at 1 credit per chat call; our full-cadence run rate is ~1620/month (over free tier - mitigations are 1h cron, relevance gating, Ollama-on-Clopeux overflow via NIM_BASE_URL override). LoRA/specialist training - park it, premature without ground-truth (no reader CTR / article success signal yet); the A/B already showed 8B ~= 70B on this task so the upside ceiling for specialization is small until publishing pipeline closes the loop. COLMAP is photogrammetry (Structure-from-Motion), not LLM-related - noted. Vault-raggae - good plan, already scaffolded (docker-compose.milvus.yml + test_embedding/test_lance), correct architecture is embeddings + retrieval local (free), inference remote on NIM; index past predictions + enriched items in local Milvus, retrieve top-K at synthesis time, no credit burn on retrieval; but order it AFTER the scoring aggregator + the 70B fix-path split so theres signal lift to measure against. Build this turn: tech_oracle/scoring/ module with categories.py (12 curated consumer categories: windows-update, office-and-outlook, consumer-billing, copilot, ios-bluetooth, macos-icloud, ios-icloud, chrome, printer, banking-app, streaming-tv, other-consumer fallback; multi-categorization - one item can hit multiple categories) and aggregate.py (compute_scores walks items with severity>=medium, items without grounded entities.company are skipped, low-info items get half-weight, emits BreakageScore per company,category bucket). On-demand compute, no scores table - aggregation is a single Python pass over rows pulled by the store. CLI: tech-oracle scores [-o file] prints current scores; items export-batch now auto-includes computed scores (was",
+        "tech-oracle two-stage synthesis split: 8B picks predictions, 70B rewrites fix hints (Mon, 22 Jun 2026 23:50). vault-raggae composition + cuVS Q&A first. Confirmed vault-raggae stack: Milvus standalone v2.4.13 (CPU image; not GPU), etcd, MinIO, bge-small-en-v1.5 int8 embedding (~2GB VRAM), mistral 7B 4bit local LLM (~5GB VRAM) + KV cache 8192 (kv_cache_fraction 0.4 of GPU pool, ~2-3GB). Dropping local LLM + KV cache frees ~7-8GB VRAM on Clopeux for ComfyUI / other workloads. cuVS already lives in Milvus via Knowhere -> RAFT -> cuVS; activate by switching to the milvusdb/milvus:v2.4.13-gpu image and using GPU_CAGRA / GPU_IVF_FLAT / GPU_IVF_PQ index types. Not yet worth it for us - CAGRA's 10-100x speedup only matters above ~500k vectors; we'll be <100k for a year. Side observation: the vault-raggae config file actually says vector_db.type=lancedb (test_lance.py is present); lancedb is probably the better fit at our scale - embedded single-process, no etcd/MinIO sidecars, ~10x faster startup. Build this turn: two-stage synthesis split implemented. tech_oracle/refine_prompts.py with REFINE_SYSTEM_PROMPT bake-in rules (one action per bullet 3-6 steps per prediction; plain language; grounded in source items; no PowerShell/registry unless source explicitly says so; output Wait for the vendor when source has no fix + notes flag for those predictions; match prediction_id exactly). tech_oracle/refine.py: refine_fix_hints(response, items_by_id, client, max_source_items_per_prediction=3) - single 70B call on selected predictions, merges refined hints back into a model_copy'd PredictionResponse, combines usage stats, appends [refine] notes including which prediction_ids if any got no refinement returned, sets model to '<synth_model> + refine:<refine_model>'. CLI: predict has --refine flag (triggers 70B refinement after 8B synth, defaults synth"
+      ]
+    },
+    {
+      "name": "vaultwares-identity-manager",
+      "aliases": [],
+      "entries": 9,
+      "first": "2026-03-30",
+      "last": "2026-05-01",
+      "kinds": {
+        "code-change": 9
+      },
+      "recentSummaries": [
+        "Backfill: commit 1418470 (2026-03-30T02:49:22-04:00) - Initial commit | files=11 +840 -0",
+        "Backfill: commit 4196274 (2026-03-30T07:19:05-04:00) - Add VaultWares branding and vault-themes git submodule (#2) | files=5 +34 -0",
+        "Backfill: commit ec16171 (2026-03-30T07:20:29-04:00) - Implement VaultWares Auto-Signup Chrome Extension with identity vault (#1) | files=25 +6958 -1",
+        "Backfill: commit 4f84a7c (2026-04-01T18:57:28-04:00) - added vaultwares-template files | files=7 +48 -0",
+        "Backfill: commit f0994ac (2026-04-14T00:13:52-04:00) - Mapped out the whole project into 6 Epics | files=27 +2215 -0"
+      ]
+    },
+    {
+      "name": "auto-backup",
+      "aliases": [],
+      "entries": 7,
+      "first": "2026-04-01",
+      "last": "2026-04-17",
+      "kinds": {
+        "code-change": 7
+      },
+      "recentSummaries": [
+        "Backfill: commit 2396195 (2026-04-01T17:52:28-04:00) - Initial commit | files=11 +840 -0",
+        "Backfill: commit acae7ce (2026-04-01T21:52:31Z) - Initial plan | files=0 +0 -0",
+        "Backfill: commit f903bd4 (2026-04-01T22:04:25Z) - feat: Add Windows native AutoBackup app (WinUI 3 / C# .NET 8) | files=31 +2115 -0",
+        "Backfill: commit 9b3eb08 (2026-04-01T19:03:45-04:00) - added vaultwares-template files | files=7 +48 -0",
+        "Backfill: commit ce8ea8f (2026-04-01T19:06:09-04:00) - Merge pull request #1 from p-potvin/copilot/add-windows-native-app | files=0 +2115 -0"
+      ]
+    },
+    {
+      "name": "debrid-media-manager",
+      "aliases": [],
+      "entries": 6,
+      "first": "2026-04-01",
+      "last": "2026-04-18",
+      "kinds": {
+        "code-change": 6
+      },
+      "recentSummaries": [
+        "Backfill: commit bdb2306 (2026-04-01T18:25:23-04:00) - Initial commit | files=18 +888 -0",
+        "Backfill: commit ac6ac87 (2026-04-01T22:25:26Z) - Initial plan | files=0 +0 -0",
+        "Backfill: commit a1c1308 (2026-04-01T22:29:40Z) - Set up repository infrastructure for VaultWares fork | files=7 +269 -0",
+        "Backfill: commit bbdb256 (2026-04-01T18:55:13-04:00) - Merge pull request #1 from p-potvin/copilot/fix-code-issues | files=0 +269 -0",
+        "Backfill: commit 55ec199 (2026-04-17T18:11:24-04:00) - Automated commit: Updated files in debrid-media-manager | files=1 +11 -5"
+      ]
+    },
+    {
+      "name": "gallery-scraper",
+      "aliases": [],
+      "entries": 6,
+      "first": "2026-04-07",
+      "last": "2026-05-01",
+      "kinds": {
+        "code-change": 6
+      },
+      "recentSummaries": [
+        "Backfill: commit 17c79ab (2026-04-07T08:14:48-04:00) - init repo | files=6 +310 -0",
+        "Backfill: commit 68b50ef (2026-04-07T08:34:07-04:00) - Removed useless files. created zip for web extension | files=2 +0 -59",
+        "Backfill: commit 55f566a (2026-04-07T08:46:26-04:00) - Add README with project overview and installation steps | files=1 +11 -0",
+        "Backfill: commit 18801b3 (2026-04-07T13:19:16-04:00) - Added configs, icons, published add-on | files=18 +480 -74",
+        "Backfill: commit 2ff69ca (2026-04-08T15:26:04-04:00) - Add initial project setup with package.json and webpack configuration | files=8 +1542 -5"
+      ]
+    },
+    {
+      "name": "event-horizon",
+      "aliases": [],
+      "entries": 5,
+      "first": "2026-03-16",
+      "last": "2026-04-17",
+      "kinds": {
+        "code-change": 5
+      },
+      "recentSummaries": [
+        "Backfill: commit c6fd1a4 (2026-03-16T07:15:03-04:00) - Initial commit | files=2 +23 -0",
+        "Backfill: commit dfb6356 (2026-03-16T07:19:11-04:00) - initial commit for event-horizon project | files=5 +516 -0",
+        "Backfill: commit 057c516 (2026-03-16T08:48:25-04:00) - added ray tracing support | files=3 +197 -246",
+        "Backfill: commit 36d8d48 (2026-04-01T18:04:56-04:00) - Added agent skills in .copilot folder | files=11 +157 -0",
+        "Backfill: commit c580205 (2026-04-17T18:12:12-04:00) - Automated commit: Updated files in event-horizon | files=3 +15 -10"
+      ]
+    },
+    {
+      "name": "PKT Wallpapers",
+      "aliases": [],
+      "entries": 5,
+      "first": "2026-06-22",
+      "last": "2026-06-22",
+      "kinds": {
+        "code-change": 3,
+        "verification": 1,
+        "plan": 1
+      },
+      "recentSummaries": [
+        "Batch generated 5 high-quality wallpapers using the approved workflow, processed crops/thumbs via process_and_sync, wired them to GreenCloud, and implemented the logo image and complementary color suggestion widget in the React app.",
+        "Created AGENTS.md in wallpaper-foundry to mandate docs/docs-content/projects/wallpaper-foundry.md before generation. Updated ROUTER.md to flag this as required. Edited the negative prompt in ComfyUI workflow JSON to explicitly exclude text and logo elements. Batch generated 5 more wallpapers (Batch 6) using the new run_batch.py script and synced them locally and to GreenCloud.",
+        "Pushed docs changes to main branch, wallpaper-foundry changes to master branch, and content-site changes to main branch. Verified that the remote GreenCloud VPS wallpapers server is successfully up and serving all 14 wallpapers dynamically.",
+        "Injected Google Tag Manager scripts and Google AdSense publisher tag into index.html. Replaced static color codes in App.jsx with a canvas-based dynamic average color extraction algorithm for thumbnails, HSL complementary color calculation, and Euclidean RGB color distance filtering. Pushed changes to main branch.",
+        "Created implementation_plan.md outlining Google AdSense mechanics, Wallpaper Collections grouping, Desktop Background Preview widget, and PBKDF2/JSON-based User Authentication system."
       ]
     }
   ]

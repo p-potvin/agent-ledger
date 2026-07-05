@@ -1,0 +1,64 @@
+{
+  "id": "20260705-092727-324-prom-king-f16a8603",
+  "createdAt": "2026-07-05T13:27:27.3248536Z",
+  "createdAtLocal": "2026-07-05 09:27",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows + SSH OVH/greencloud + git push GitHub)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\docs  Branch: main\r\nTools used (this reply): Read, Edit, Write, Grep, Bash, git, SSH, curl\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-05 09:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows + SSH OVH/greencloud + git push GitHub",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "Bash",
+      "git",
+      "SSH",
+      "curl"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\docs",
+  "summary": "Marketing snippets finally rendering + docs refresh. TWO bugs stacked: (1) asyncpg pool had no jsonb codec, so /api/promking/settings/{site} returned affiliate_settings as a JSON STRING. Both Layout.astro line 63 and Settings.tsx line 99 do normalizeAffiliateConfig(x) with a typeof===object guard that flips false on a string — every marketing snippet silently returned an empty config for weeks. Fix in vaultwares-api 0.2.10: register json/jsonb codec on every asyncpg connection; refactored 4 jsonb writes (settings, fetcher cursor, fetch_runs.log, videos.qualities) to pass raw dicts instead of json.dumps+::jsonb. (2) After that fix the response is a real object, but snakeToCamel in promking-api.ts:52 rewrote spots.head_tags -> spots.headTags recursively, so normalizeAffiliateConfig read the wrong key. Fix in shared-tube 0.2.32: req() takes {transformKeys:false}; getSettings opts out. Verified end-to-end: sexyprn=GTM-K4JG875S, fxv=GTM-KKVHWM4N, oneporn=GTM-P6ZCKNH4 all present in live HTML. Also client-side defensive JSON.parse in normalizeAffiliateConfig (0.2.31) as belt-and-braces. Docs pass: new tech-oracle.md (bare systemd on greencloud, NOT docker; 8B+70B NVIDIA NIM; LanceDB+SQLite; Eleventy static); rewrote content-site.md (PKT pivot done, Vite/React/Express standalone on OVH); wallpaper-foundry.md (honest state — scripts live on desktop next to ComfyUI, wallpaper-foundry.service not installed on OVH, PK Wallpaper Sync task disabled); content-disseminator.md refresh (per-platform state); shared-tube.md (pkt row retired); ROUTER.md, overview.md, architecture.md, infrastructure.md all updated. Pushed to Prom-King/shared-tube 8e0abe8, p-potvin/vaultwares-api 46ccdeb, Prom-King/docs e66e97c.",
+  "commands": [
+    "ssh ovh systemctl restart vaultwares-api.service",
+    "POST /rebuild",
+    "curl live sites for GTM tags",
+    "git push origin main (3 repos)"
+  ],
+  "files": [
+    "Github Repos/vaultwares-api/app/routers/promking/db.py",
+    "Github Repos/vaultwares-api/app/routers/promking/fetcher.py",
+    "Github Repos/vaultwares-api/app/routers/promking/settings_routes.py",
+    "Prom-King/shared-tube/shared/src/api/promking-api.ts",
+    "Prom-King/shared-tube/shared/src/ads/spots.ts",
+    "Prom-King/docs/docs-content/projects/tech-oracle.md",
+    "Prom-King/docs/docs-content/projects/content-site.md",
+    "Prom-King/docs/docs-content/projects/wallpaper-foundry.md",
+    "Prom-King/docs/docs-content/projects/content-disseminator.md",
+    "Prom-King/docs/docs-content/projects/shared-tube.md",
+    "Prom-King/docs/instructions/ROUTER.md"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\in-the-marketing-tab-glowing-lantern.md",
+  "contentHash": "f16a86033aab7fbb43295a924fb0630f20ef951eb950996c9abf10bc04bb8039",
+  "git": {
+    "repo": "docs",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/docs",
+    "branch": "main",
+    "head": "e66e97c",
+    "hasChanges": false
+  }
+}
