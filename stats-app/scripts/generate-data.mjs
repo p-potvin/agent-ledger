@@ -30,7 +30,7 @@ import { resolve } from "node:path";
 
 const API_URL = process.env.STATS_API_URL || "https://api.vaultwares.ca/monitor/work-impact";
 const LEGACY_PATH = process.env.STATS_LEGACY_PATH || "/var/www/ledger.vaultwares.ca/data/work-impact-data.json";
-const LEGACY_URL  = process.env.STATS_LEGACY_URL || "https://ledger.vaultwares.ca/data/work-impact-data.json";
+const LEGACY_URL  = process.env.STATS_LEGACY_URL || "https://api.vaultwares.ca/projects/commits/stats";
 const ALIASES_PATH = resolve(process.env.STATS_ALIASES_PATH || "../project-aliases.json");
 const OUT_PATH = resolve(process.env.STATS_DATA_OUT || "src/lib/data.json");
 const CUTOFF = process.env.STATS_CUTOFF_DATE || "2026-03-11";
