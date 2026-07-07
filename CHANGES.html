@@ -48,6 +48,743 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-07-07 00:26 - vaultwares-api &amp; networking</strong> <span class="kind">code-change</span> - Added USA to gluetun-proton server countries. Fixed uptime.vaultwares.ca &#39;Server not found&#39; issue by restarting Greencloud dnsmasq. Expanded Let&#39;s Encrypt media.vaultwares.ca ce...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: code Permissions: ask (network: local) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-07 00:26 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added USA to gluetun-proton server countries. Fixed uptime.vaultwares.ca &#39;Server not found&#39; issue by restarting Greencloud dnsmasq. Expanded Let&#39;s Encrypt media.vaultwares.ca certificate to include uptime.vaultwares.ca and reloaded Nginx.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>systemctl restart dnsmasq</code></li>
+        <li><code>certbot certonly --expand</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-07 00:20 - vault-guardian</strong> <span class="kind">code-change,verification</span> - Tue, 07 Jul 2026 00:20 &#226;€” Added IPv6 TCP attribution v1.3.2 (0d0b770). WindowsProcessInspector now reads AF_INET6 MIB_TCP6ROW_OWNER_PID table via a shared ReadTcpTable helper (...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-guardian  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-07 00:20 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Tue, 07 Jul 2026 00:20 &#226;€” Added IPv6 TCP attribution v1.3.2 (0d0b770). WindowsProcessInspector now reads AF_INET6 MIB_TCP6ROW_OWNER_PID table via a shared ReadTcpTable helper (parameterized row layout), merging v6 remote addresses into the same PID-&gt;hostname/JA4 join (AAAA records already feed the map). 80/80 tests pass, pushed to main.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/VaultGuardian.Core/Processes/WindowsProcessInspector.cs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-guardian, branch=main, head=0d0b770</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 23:46 - vaultwares-api &amp; networking</strong> <span class="kind">code-change</span> - Switched OVH gluetun-proton container to use Gluetun&#39;s native ProtonVPN provider with premium credentials instead of custom .ovpn file. Also verified user&#39;s Uptime Kuma Nginx an...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: code Permissions: ask (network: local) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-06 23:46 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Switched OVH gluetun-proton container to use Gluetun&#39;s native ProtonVPN provider with premium credentials instead of custom .ovpn file. Also verified user&#39;s Uptime Kuma Nginx and dnsmasq wiring (all correct).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>docker compose up -d</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 22:33 - vault-guardian</strong> <span class="kind">code-change,verification</span> - Mon, 06 Jul 2026 22:33 &#226;€” Wired PID&lt;-&gt;hostname/JA4 fusion into process triage v1.3.1 (de7fd16). IHostnameResolver gains TryResolve(addr,out host,out ja4); WindowsProcessInspect...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-guardian  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-06 22:33 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Mon, 06 Jul 2026 22:33 &#226;€” Wired PID&lt;-&gt;hostname/JA4 fusion into process triage v1.3.1 (de7fd16). IHostnameResolver gains TryResolve(addr,out host,out ja4); WindowsProcessInspector joins the active TCP table (GetExtendedTcpTable, owning PID-&gt;remote IPv4s) against the passive hostname/JA4 map, filling ProcessFacts.Hostnames with &#39;host [ja4]&#39; labels that the classifier surfaces in verdict reasons. 80/80 tests pass, 0 build errors, pushed to main.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/VaultGuardian.Core/Processes/WindowsProcessInspector.cs</code></li>
+        <li><code>src/VaultGuardian.Core/Ingress/Hostname/IHostnameResolver.cs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-guardian, branch=main, head=de7fd16</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 05:58 - shared-tube &amp; vaultwares-api</strong> <span class="kind">code-change</span> - Fixed 500 API error due to dropped site column and updated pill button drag-n-drop capture logic in Layout.astro.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: code Permissions: ask (network: local) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-06 05:58 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed 500 API error due to dropped site column and updated pill button drag-n-drop capture logic in Layout.astro.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git push</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>app/routers/promking/videos.py</code></li>
+        <li><code>shared/src/components/Layout.astro</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 05:52 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <span class="kind">code-change</span> - Pointed STREAM_OUTBOUND_PROXY to ProtonVPN (127.0.0.1:8889) on OVH env files for all 3 sites and bumped workspace versions to 0.2.43.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: code Permissions: ask (network: local) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-06 05:52 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Pointed STREAM_OUTBOUND_PROXY to ProtonVPN (127.0.0.1:8889) on OVH env files for all 3 sites and bumped workspace versions to 0.2.43.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ssh ubuntu@100.67.25.118 sed -i ...</code></li>
+        <li><code>pnpm version 0.2.43</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>package.json</code></li>
+        <li><code>shared/package.json</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 05:19 - shared-tube</strong> <span class="kind">deploy</span> - Deployed new version to OVH servers.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> deploy</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: low Mode: code Permissions: ask (network: local) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-06 05:19 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Deployed new version to OVH servers.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>/var/www/deploy-scripts/deploy-shared-tube.sh</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 05:12 - vault-guardian</strong> <span class="kind">code-change,handoff,verification</span> - Mon, 06 Jul 2026 05:11 &#226;€” Shipped process triage console v1.3.0 (a6207a2). ProcessTriageClassifier (pure, 7 tests): disposition + kill-safety (Safe/Risky/BreaksWindows) with re...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,handoff,verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-guardian  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-06 05:12 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Mon, 06 Jul 2026 05:11 &#226;€” Shipped process triage console v1.3.0 (a6207a2). ProcessTriageClassifier (pure, 7 tests): disposition + kill-safety (Safe/Risky/BreaksWindows) with reasons. WindowsProcessInspector fuses CPU sampling, WMI (path/parent/services), cached Authenticode trust, kernel critical-process bit; svchost-&gt;service expansion; WSL2 vmmem utility-VM flagging. UI Processes pivot: cost-ranked list, disposition/kill-safety tags, reasons panel, risk-scaled guarded Terminate. 79/79 tests pass, 0 build errors, pushed to main. Session complete: v1.1 theme+DNS/SNI, v1.2 JA4, v1.3 process triage.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/VaultGuardian.Core/Processes/ProcessTriageClassifier.cs</code></li>
+        <li><code>src/VaultGuardian.Core/Processes/WindowsProcessInspector.cs</code></li>
+        <li><code>src/VaultGuardian.UI/ProcessRowVM.cs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-guardian, branch=main, head=a6207a2</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 05:03 - vault-guardian</strong> <span class="kind">code-change,verification</span> - Mon, 06 Jul 2026 05:03 &#226;€” Shipped JA4 TLS client fingerprinting v1.2.0 (f373208). Ja4Calculator + TlsClientHelloParser.TryParse (full ClientHello) + TlsClientHelloInfo; JA4 rec...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-guardian  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-06 05:03 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Mon, 06 Jul 2026 05:03 &#226;€” Shipped JA4 TLS client fingerprinting v1.2.0 (f373208). Ja4Calculator + TlsClientHelloParser.TryParse (full ClientHello) + TlsClientHelloInfo; JA4 recorded on HostnameResolution.Ja4 via the live SNI ingest. 3 tests, 72/72 pass, pushed to main. Now starting the process-triage feature (invisible resource hogs + safe-to-kill tagging), beginning with the pure Core classifier + models + tests.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/VaultGuardian.Core/Ingress/Hostname/Ja4Calculator.cs</code></li>
+        <li><code>src/VaultGuardian.Core/Ingress/Hostname/TlsClientHelloParser.cs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-guardian, branch=main, head=f373208</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 04:51 - vault-guardian</strong> <span class="kind">commands,handoff</span> - Mon, 06 Jul 2026 04:51 &#226;€” Committed and pushed v1.1.0 to main (6aaab56): theme integration + DNS/SNI hostname correlation + live SNI sniffer. Added &lt;Version&gt;1.1.0&lt;/Version&gt; as ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> commands,handoff</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-guardian  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-06 04:51 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Mon, 06 Jul 2026 04:51 &#226;€” Committed and pushed v1.1.0 to main (6aaab56): theme integration + DNS/SNI hostname correlation + live SNI sniffer. Added &lt;Version&gt;1.1.0&lt;/Version&gt; as source of truth; About dialog now reads assembly version. 22 files, 1150 insertions. 69/69 tests pass, 0 build errors. Next: advising user on feature direction (JA4/QUIC fingerprinting vs invisible-process resource triage).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git commit</code></li>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/VaultGuardian.UI/VaultGuardian.UI.csproj</code></li>
+        <li><code>README.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-guardian, branch=main, head=6aaab56</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 04:41 - Pro-Realism-FLUX2-Klein-Multi-LoRA</strong> <span class="kind">code-change</span> - Third ZeroGPU fix: root cause was mmap-backed safetensors on /models network mount. from_pretrained(&#39;/models&#39;, ...) with default low_cpu_mem_usage=True &#226;†’ safetensors are memor...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: claude-opus-4-7 Thinking: high Mode: code Permissions: allowlist (network: local Windows 11) CWD: D:\HuggingFace\spaces\Pro-Realism-FLUX2-Klein-Multi-LoRA  Branch: main Tools used (this reply): Read, Write, Edit, Bash, Grep, WebFetch MCP servers accessed (this reply): none Time: 2026-07-06 04:41 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Third ZeroGPU fix: root cause was mmap-backed safetensors on /models network mount. from_pretrained(&#39;/models&#39;, ...) with default low_cpu_mem_usage=True &#226;†’ safetensors are memory-mapped, not RAM-copied. Pipeline load &#39;finishes&#39; fast but pages fault in lazily. When ZeroGPU walks all 34.7 GB to pack tensors, every byte is a network read at 1.4 MB/s &#226;†’ hours-long packing bar. Boot log also revealed torch 2.8.0 causes &#39;Skipping import of cpp extensions due to incompatible torch version&#39; warning in spaces library &#226;€” torch&gt;=2.11.0 was correct, reverted my previous downgrade. Simplified config.py: MODEL_REPO always resolves to the HF hub name (drops /models override), so cold boot pays one-time download but subsequent mmap reads hit local NVMe. Dropped the HF_HOME/TORCH_HOME env dance since original M3st3rJ4k3l space works with container defaults. Kept LOCAL_LORA_DIR = /models/loras for on-demand LoRA loads (small files, fine over network). Committed 98ac4ce, pushed to origin/main. Sun, 06 Jul 2026.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git commit -m &#39;Load base model from HF hub&#39;</code></li>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>D:/HuggingFace/spaces/Pro-Realism-FLUX2-Klein-Multi-LoRA/config.py</code></li>
+        <li><code>D:/HuggingFace/spaces/Pro-Realism-FLUX2-Klein-Multi-LoRA/requirements.txt</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=Pro-Realism-FLUX2-Klein-Multi-LoRA, branch=main, head=98ac4ce</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 04:36 - vault-guardian</strong> <span class="kind">code-change,verification</span> - Mon, 06 Jul 2026 04:36 &#226;€” Completed the live SNI capture for the non-MITM hostname path. Added IHostnameSniffer + WinDivertSniSniffer (Windows-only): passive outbound Network-l...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-guardian  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-06 04:36 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Mon, 06 Jul 2026 04:36 &#226;€” Completed the live SNI capture for the non-MITM hostname path. Added IHostnameSniffer + WinDivertSniSniffer (Windows-only): passive outbound Network-layer WinDivert sniff on tcp DstPort 443 (Sniff|RecvOnly, never blocks), extracts TLS ClientHello SNI and feeds HostnameResolutionStore.IngestTlsClientHello. Added AppSettings.EnableHostnameCorrelation (default true) + Settings toggle; DI-registered IHostnameSniffer; App starts it after the interceptor when enabled and disposes on shutdown. Hostname resolution now has two live feeds (inbound DNS + outbound SNI) populating TrafficObservation.RemoteHost. Verified: 69/69 tests pass, solution builds 0 errors. README updated.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>dotnet build VaultGuardian.slnx -p:Platform=x64</code></li>
+        <li><code>dotnet test tests\VaultGuardian.Core.Tests\VaultGuardian.Core.Tests.csproj -p:Platform=x64</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/VaultGuardian.Core/Interception/WinDivertSniSniffer.cs</code></li>
+        <li><code>src/VaultGuardian.Core/Interception/IHostnameSniffer.cs</code></li>
+        <li><code>src/VaultGuardian.UI/App.xaml.cs</code></li>
+        <li><code>src/VaultGuardian.UI/SettingsWindow.xaml.cs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-guardian, branch=main, head=9e98f20</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 04:34 - Pro-Realism-FLUX2-Klein-Multi-LoRA</strong> <span class="kind">code-change</span> - Reverted torch pin from &gt;=2.11.0 back to ==2.8.0 in requirements.txt (undoing commit a5bdc31). Compared against the still-working original space M3st3rJ4k3l/FLUX.2-Klein-Multi-L...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: claude-opus-4-7 Thinking: high Mode: code Permissions: allowlist (network: local Windows 11) CWD: D:\HuggingFace\spaces\Pro-Realism-FLUX2-Klein-Multi-LoRA  Branch: main Tools used (this reply): Bash, Edit, Read, WebFetch MCP servers accessed (this reply): none Time: 2026-07-06 04:34 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Reverted torch pin from &gt;=2.11.0 back to ==2.8.0 in requirements.txt (undoing commit a5bdc31). Compared against the still-working original space M3st3rJ4k3l/FLUX.2-Klein-Multi-LoRA cloned to scratchpad. Only meaningful delta correlated with the regression is the torch version bump &#226;€” original works at 2.8.0, current was slow-packing at 1.4 MB/s regardless of HF_HOME redirect. Hypothesis: torch 2.11 not in ZeroGPU spaces library&#39;s tested matrix so the tensor-packer degrades to a serial write path. Committed a8d5082, pushed to origin/main. Sun, 06 Jul 2026.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git commit -m &#39;Revert torch pin to 2.8.0&#39;</code></li>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>D:/HuggingFace/spaces/Pro-Realism-FLUX2-Klein-Multi-LoRA/requirements.txt</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=Pro-Realism-FLUX2-Klein-Multi-LoRA, branch=main, head=a8d5082</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 04:31 - vault-guardian</strong> <span class="kind">code-change,verification</span> - Mon, 06 Jul 2026 04:31 &#226;€” Confirmed PR #7 codex branch already merged into main (no-op). Ran Task 10 verification: 60/60 tests + clean build. Implemented theme integration from...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-guardian  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-06 04:31 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Mon, 06 Jul 2026 04:31 &#226;€” Confirmed PR #7 codex branch already merged into main (no-op). Ran Task 10 verification: 60/60 tests + clean build. Implemented theme integration from vaultwares-revisited &#39;Terminal and Document&#39; system: added Warm Mode parchment token set alongside Console in VaultRedesign.xaml, restructured MainWindow so a warm branded header/frame (logo + wordmark + bilingual tagline) wraps the console operational core; ported bilingual brand copy to Core/Branding/BrandStrings.cs (en + fr-CA/QC) with a Settings language selector; wired vaultwares logo asset. Implemented DNS/SNI hostname correlation for the non-MITM path: new Ingress/Hostname/ with DnsResponseParser, TlsClientHelloParser, HostnameResolutionStore (TTL-expiring, bounded) + IHostnameResolver; interceptor now populates TrafficObservation.RemoteHost; ingress watcher feeds inbound DNS responses; DI registered. Added 9 hostname tests. Final: 69/69 tests pass, solution builds 0 errors. Deferred WFP-native filtering and Windows-service/IPC split as post-MVP.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>dotnet test tests\VaultGuardian.Core.Tests\VaultGuardian.Core.Tests.csproj -p:Platform=x64</code></li>
+        <li><code>dotnet build VaultGuardian.slnx -p:Platform=x64</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>src/VaultGuardian.UI/Themes/VaultRedesign.xaml</code></li>
+        <li><code>src/VaultGuardian.UI/MainWindow.xaml</code></li>
+        <li><code>src/VaultGuardian.Core/Branding/BrandStrings.cs</code></li>
+        <li><code>src/VaultGuardian.Core/Ingress/Hostname/HostnameResolutionStore.cs</code></li>
+        <li><code>src/VaultGuardian.Core/Interception/WinDivertInterceptor.cs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-guardian, branch=main, head=9e98f20</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 04:26 - Pro-Realism-FLUX2-Klein-Multi-LoRA</strong> <span class="kind">code-change</span> - Second ZeroGPU fix: &#39;ZeroGPU tensors packing&#39; progress at 1.4 MB/s = ZeroGPU snapshot writing 34.7 GB under HF_HOME/xet on the network-mounted /models bucket. Split cache roles ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: claude-opus-4-7 Thinking: high Mode: code Permissions: allowlist (network: local Windows 11) CWD: D:\HuggingFace\spaces\Pro-Realism-FLUX2-Klein-Multi-LoRA  Branch: main Tools used (this reply): Read, Edit, Bash, Grep MCP servers accessed (this reply): none Time: 2026-07-06 04:26 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Second ZeroGPU fix: &#39;ZeroGPU tensors packing&#39; progress at 1.4 MB/s = ZeroGPU snapshot writing 34.7 GB under HF_HOME/xet on the network-mounted /models bucket. Split cache roles in config.py: HF_HUB_CACHE / TRANSFORMERS_CACHE / DIFFUSERS_CACHE still point at the bucket (so FLUX weight downloads survive across boots), but HF_HOME and TORCH_HOME now point at /tmp/flux2-klein-fast (tmpfs, RAM-backed) &#226;€” that is where ZeroGPU writes its 34 GB tensor pack and the torch inductor cache, so packing runs at RAM speed instead of bucket-write speed. Switched os.environ.setdefault to hard assignment so container defaults can&#39;t silently keep HF_HOME on slow storage. Committed 63ce7fc, pushed to origin/main. Sun, 06 Jul 2026.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git commit -m &#39;Split cache: HF_HUB_CACHE stays on bucket, HF_HOME to tmpfs&#39;</code></li>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>D:/HuggingFace/spaces/Pro-Realism-FLUX2-Klein-Multi-LoRA/config.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=Pro-Realism-FLUX2-Klein-Multi-LoRA, branch=main, head=63ce7fc</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 04:14 - Pro-Realism-FLUX2-Klein-Multi-LoRA</strong> <span class="kind">code-change</span> - Fixed ZeroGPU load timeout in HF Space app.py. The previous refactor moved FLUX.2 Klein 9B loading into get_pipeline() called inside @spaces.GPU(duration=120), so each forked wo...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: claude-opus-4-7 Thinking: medium Mode: code Permissions: allowlist (network: local Windows 11) CWD: D:\HuggingFace\spaces\Pro-Realism-FLUX2-Klein-Multi-LoRA  Branch: main Tools used (this reply): Read, Edit, Bash, Grep MCP servers accessed (this reply): none Time: 2026-07-06 04:14 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed ZeroGPU load timeout in HF Space app.py. The previous refactor moved FLUX.2 Klein 9B loading into get_pipeline() called inside @spaces.GPU(duration=120), so each forked worker started with pipe=None and had to download+load+attach LoRA+infer inside a 120s slot &#226;€” root cause of the &#39;ZeroGPU loading&#39; timeout. Reverted to eager import-time load (spaces library defers the .to(&#39;cuda&#39;) until inside GPU scope, so worker forks inherit the pipeline via COW), removed the tail local_pipe.to(&#39;cpu&#39;) (worker torn down anyway), and bumped duration to 180s to leave room for first-call LoRA attach. Committed fc69fca and pushed to origin/main on huggingface.co/spaces/clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA. Sun, 06 Jul 2026.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git commit -m &#39;Restore eager pipeline load for ZeroGPU&#39;</code></li>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>D:/HuggingFace/spaces/Pro-Realism-FLUX2-Klein-Multi-LoRA/app.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=Pro-Realism-FLUX2-Klein-Multi-LoRA, branch=main, head=fc69fca</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 04:03 - shared-tube</strong> <span class="kind">code-change</span> - Implemented permanent image caching in frontend /api/thumb.ts, configured opt-in Gluetun OpenVPN Docker container on OVH, and routed upstream thumbnail fetches through the local...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: code Permissions: ask (network: local) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): multi_replace_file_content, run_command MCP servers accessed (this reply): none Time: 2026-07-06 04:03 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Implemented permanent image caching in frontend /api/thumb.ts, configured opt-in Gluetun OpenVPN Docker container on OVH, and routed upstream thumbnail fetches through the local proxy to bypass the Brume.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>docker compose up -d</code></li>
+        <li><code>curl --proxy http://127.0.0.1:8889 https://ifconfig.me</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>apps/oneporn/src/pages/api/thumb.ts</code></li>
+        <li><code>package.json</code></li>
+      </ul>
+      <p><strong>Plan:</strong> <code>C:\Users\Administrator\.gemini\antigravity-ide\brain\68e35464-6abe-4b4e-98ca-d9a20ea2d3cf\implementation_plan.md</code></p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 01:19 - vaultwares-api (formerly vaultwares-pipelines, vaultwares-api + shared-tube, vaultwares-webhooks, vaultwares-api)</strong> <span class="kind">fix</span> - Investigated and fixed 500 on /taxonomies/pornstars/count by updating the query to use video_sites. Fixed 403 on admin endpoint by promoting tester123@test.com to admin. Distrib...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> fix</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: code Permissions: ask (network: local) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main Tools used (this reply): run_command, replace_file_content MCP servers accessed (this reply): none Time: 2026-07-06 01:19 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Investigated and fixed 500 on /taxonomies/pornstars/count by updating the query to use video_sites. Fixed 403 on admin endpoint by promoting tester123@test.com to admin. Distributed orphaned videos to sites (1/3 each).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>psql ... UPDATE users SET role = &#39;admin&#39;</code></li>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>app/routers/promking/taxonomies.py</code></li>
+      </ul>
+      <p><strong>Plan:</strong> <code>brain\68e35464-6abe-4b4e-98ca-d9a20ea2d3cf\implementation_plan.md</code></p>
+      <p><strong>Git:</strong> repo=vaultwares-api, branch=main, head=5ca0cca</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 01:10 - Prom-King/shared-tube</strong> <span class="kind">fix</span> - Fixed deploy out-of-sync issue where VPS nodes were stuck on June 6 commit due to git fetch auth failure. Also fixed syntax error in AffiliateAds.astro caused by previous regex ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> fix</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: code Permissions: ask (network: local) CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main Tools used (this reply): run_command, view_file, replace_file_content MCP servers accessed (this reply): none Time: 2026-07-06 01:10 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed deploy out-of-sync issue where VPS nodes were stuck on June 6 commit due to git fetch auth failure. Also fixed syntax error in AffiliateAds.astro caused by previous regex script, and manually deployed to greencloud and OVH.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git reset --hard origin/main</code></li>
+        <li><code>deploy-shared-tube.sh</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>shared/src/components/AffiliateAds.astro</code></li>
+      </ul>
+      <p><strong>Plan:</strong> <code>brain\68e35464-6abe-4b4e-98ca-d9a20ea2d3cf\implementation_plan.md</code></p>
+      <p><strong>Git:</strong> repo=shared-tube, branch=main, head=675948b</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 00:22 - Prom-King/shared-tube</strong> <span class="kind">code-change</span> - Migrated many-to-many video_sites table on VPS production database and queued 12 fetch runs (100 pages per site x 3 sources)</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: code Permissions: ask (network: local) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main Tools used (this reply): run_command, view_file MCP servers accessed (this reply): none Time: 2026-07-06 00:22 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Migrated many-to-many video_sites table on VPS production database and queued 12 fetch runs (100 pages per site x 3 sources)</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>psql -h 127.0.0.1 -p 5433 -U postgres -d promking -f /tmp/0004_migration.sql</code></li>
+        <li><code>python -c (api queue script)</code></li>
+      </ul>
+      <p><strong>Plan:</strong> <code>brain\68e35464-6abe-4b4e-98ca-d9a20ea2d3cf\implementation_plan.md</code></p>
+      <p><strong>Git:</strong> repo=vaultwares-api, branch=main, head=0dc01f4</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 00:06 - Mai-ViBo-2ruViSum-AIO</strong> <span class="kind">general</span> - Mon, 06 Jul 2026 00:10 - Set up database-free local model harness for Mai-ViBo: added D: model/frame workspace creation, FFmpeg frame sampling, local-frame VSS provider, local v...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: GPT-5 Codex Thinking: unknown Mode: default Permissions: danger-full-access (network: enabled) CWD: C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO  Branch: main Tools used (this reply): powershell, uv, git, ffmpeg MCP servers accessed (this reply): none Time: 2026-07-06 00:06 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Mon, 06 Jul 2026 00:10 - Set up database-free local model harness for Mai-ViBo: added D: model/frame workspace creation, FFmpeg frame sampling, local-frame VSS provider, local video smoke command, tests, and docs/config updates. Verified RTX 3060 availability, initialized D:\Mai-ViBo-2ruViSum-AI\models\local-frame\local-frame-baseline, generated a synthetic local smoke video, sampled two frames, and returned local-frame observations without using the broken database, live API, VPN, or external downloads.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv,noheader</code></li>
+        <li><code>uv run pytest tests/test_model_setup.py</code></li>
+        <li><code>uv run ruff check .</code></li>
+        <li><code>uv run pytest</code></li>
+        <li><code>$env:VSS_PROVIDER=&quot;local-frame&quot;; uv run mai-vibo setup-model</code></li>
+        <li><code>ffmpeg -hide_banner -loglevel error -y -f lavfi -i testsrc=size=320x180:rate=15 -t 4 D:\Mai-ViBo-2ruViSum-AI\input\local-frame-smoke.mp4</code></li>
+        <li><code>$env:VSS_PROVIDER=&quot;local-frame&quot;; uv run mai-vibo model-smoke-local D:\Mai-ViBo-2ruViSum-AI\input\local-frame-smoke.mp4 --video-id local-frame-smoke --burst-count 2 --burst-seconds 2</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\.env.example</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\.gitignore</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\README.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\src\mai_vibo_2ruvisum_aio\model_runtime.py</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\src\mai_vibo_2ruvisum_aio\video_frames.py</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\src\mai_vibo_2ruvisum_aio\vss\local_frame.py</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\src\mai_vibo_2ruvisum_aio\workers\local_video.py</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\tests\test_model_setup.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=Mai-ViBo-2ruViSum-AIO, branch=main, head=12267dc</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-06 00:05 - Prom-King / VaultWares</strong> <span class="kind">code-change</span> - Implemented many-to-many site relationship via video_sites table. Rolled back global-only fetching so videos can belong to multiple sites. Frontend APIs now pass siteConfig.bran...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: claude-3-5-sonnet-20240620 Thinking: high Mode: code Permissions: ask (network: local PC) CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main Tools used (this reply): run_command, multi_replace_file_content, write_to_file MCP servers accessed (this reply): none Time: 2026-07-06 00:05 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Implemented many-to-many site relationship via video_sites table. Rolled back global-only fetching so videos can belong to multiple sites. Frontend APIs now pass siteConfig.brand to all endpoints again. Backend uses video_sites for filtering and insertion. Verified TS builds across all 4 apps.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>pnpm drizzle-kit generate --custom</code></li>
+        <li><code>pnpm -r exec tsc --noEmit</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>shared/drizzle/0004_many_to_many_video_sites.sql</code></li>
+        <li><code>app/routers/promking/fetcher.py</code></li>
+        <li><code>app/routers/promking/videos.py</code></li>
+        <li><code>shared/src/api/promking-api.ts</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=agent-ledger, branch=main, head=27d2108b</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 23:41 - Prom-King / VaultWares</strong> <span class="kind">code-change</span> - Fixed Admin UI grid thumbnail/title links; Completed global video taxonomy refactor across API and frontend (removed site); Updated vaultwares-api README with enrich_backlog.py ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> Antigravity</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Antigravity (role: main) Model: claude-3-5-sonnet-20240620 Thinking: high Mode: code Permissions: ask (network: local PC) CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main Tools used (this reply): run_command, multi_replace_file_content MCP servers accessed (this reply): none Time: 2026-07-05 23:41 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed Admin UI grid thumbnail/title links; Completed global video taxonomy refactor across API and frontend (removed site); Updated vaultwares-api README with enrich_backlog.py command; Bumped shared-tube to 0.2.40 and vaultwares-api to 0.1.16 and deployed to main.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git commit</code></li>
+        <li><code>git push</code></li>
+        <li><code>npm version patch</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>shared/src/admin/Catalog/VideoBatchActions.tsx</code></li>
+        <li><code>README.md</code></li>
+        <li><code>apps/sexyprn/src/middleware.ts</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=agent-ledger, branch=main, head=27d2108b</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 23:40 - Mai-ViBo-2ruViSum-AIO</strong> <span class="kind">general</span> - Sun, 05 Jul 2026 23:44 - Added one-video Prom-King API ingest and Proton OpenVPN profile discovery: copied Canada/US Proton .ovpn files into D:\Mai-ViBo-2ruViSum-AI\protonvpn\co...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: GPT-5 Codex Thinking: unknown Mode: default Permissions: danger-full-access (network: enabled) CWD: C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO  Branch: main Tools used (this reply): powershell, uv, git MCP servers accessed (this reply): none Time: 2026-07-05 23:40 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Sun, 05 Jul 2026 23:44 - Added one-video Prom-King API ingest and Proton OpenVPN profile discovery: copied Canada/US Proton .ovpn files into D:\Mai-ViBo-2ruViSum-AI\protonvpn\configs, ignored local protonvpn folder, added Prom-King video detail client, stream URL chooser, ingest-promking-video-once CLI/API path, vpn-profiles CLI, tests, and docs updates. Did not start OpenVPN or hit live API; openvpn executable is not on PATH.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>uv run pytest tests/test_promking_api.py tests/test_openvpn_profiles.py</code></li>
+        <li><code>uv run ruff check .</code></li>
+        <li><code>uv run pytest</code></li>
+        <li><code>uv run mai-vibo --help</code></li>
+        <li><code>uv run mai-vibo vpn-profiles</code></li>
+        <li><code>Copy-Item .\protonvpn\*.ovpn D:\Mai-ViBo-2ruViSum-AI\protonvpn\configs</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\.env.example</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\.gitignore</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\README.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\src\mai_vibo_2ruvisum_aio\promking.py</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\src\mai_vibo_2ruvisum_aio\workers\promking.py</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\src\mai_vibo_2ruvisum_aio\vpn\openvpn.py</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\tests\test_promking_api.py</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\tests\test_openvpn_profiles.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=Mai-ViBo-2ruViSum-AIO, branch=main, head=12267dc</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 23:30 - Mai-ViBo-2ruViSum-AIO</strong> <span class="kind">general</span> - Sun, 05 Jul 2026 23:30 - Added bounded API video streaming into the local model path: one-shot HTTP extract download to the input symlink, local extract path propagation into VS...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: GPT-5 Codex Thinking: unknown Mode: default Permissions: danger-full-access (network: enabled) CWD: C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO  Branch: main Tools used (this reply): powershell, uv, git, web MCP servers accessed (this reply): none Time: 2026-07-05 23:30 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Sun, 05 Jul 2026 23:30 - Added bounded API video streaming into the local model path: one-shot HTTP extract download to the input symlink, local extract path propagation into VSS segments, optional cleanup after model ingestion, CLI/API entrypoints, tests, and Proton VPN config notes. Created project input symlink to D:\Mai-ViBo-2ruViSum-AI\input and copied Proton notes to D:\Mai-ViBo-2ruViSum-AI\protonvpn.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>uv run pytest tests/test_api_video_stream.py</code></li>
+        <li><code>uv run ruff check .</code></li>
+        <li><code>uv run pytest</code></li>
+        <li><code>uv run mai-vibo --help</code></li>
+        <li><code>New-Item -ItemType SymbolicLink -Path input -Target D:\Mai-ViBo-2ruViSum-AI\input</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\.env.example</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\.gitignore</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\README.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\docs\protonvpn-configs.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\src\mai_vibo_2ruvisum_aio\extracts.py</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\src\mai_vibo_2ruvisum_aio\workers\api_video.py</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\tests\test_api_video_stream.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=Mai-ViBo-2ruViSum-AIO, branch=main, head=12267dc</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 23:14 - vaultwares-api</strong> <span class="kind">commands</span> - Ran enrich_backlog.py against production DB via /opt/vaultwares-api/.venv</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> commands</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: chat Permissions: allowlist (network: vps-ovhcloud) CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-05 23:14 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Ran enrich_backlog.py against production DB via /opt/vaultwares-api/.venv</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ssh ubuntu@100.67.25.118 &#39;cd /opt/vaultwares-api &amp;&amp; .venv/bin/python scripts/enrich_backlog.py --limit 1000&#39;</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=shared-tube, branch=main, head=73a912a</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 22:52 - Mai-ViBo-2ruViSum-AIO</strong> <span class="kind">scaffold</span> - Sun, 05 Jul 2026 22:52 - Scaffolded and published the private Prom-King Mai-ViBo-2ruViSum-AIO GitHub project with a Python uv/FastAPI service, VSS adapter interfaces, SQLite met...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> scaffold</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: GPT-5 Codex Thinking: unknown Mode: default Permissions: danger-full-access (network: enabled) CWD: C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO  Branch: main Tools used (this reply): powershell, uv, git, gh, web MCP servers accessed (this reply): none Time: 2026-07-05 22:52 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Sun, 05 Jul 2026 22:52 - Scaffolded and published the private Prom-King Mai-ViBo-2ruViSum-AIO GitHub project with a Python uv/FastAPI service, VSS adapter interfaces, SQLite metadata queue, JSONL vector event store, bounded ingest and rerank CLI commands, CI workflow, README, and passing local verification.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>uv sync --extra dev</code></li>
+        <li><code>uv run ruff check .</code></li>
+        <li><code>uv run pytest</code></li>
+        <li><code>uv run mai-vibo --help</code></li>
+        <li><code>uv run python -c &quot;from mai_vibo_2ruvisum_aio.api import app; print(app.title, app.version)&quot;</code></li>
+        <li><code>git init -b main</code></li>
+        <li><code>git commit -m &quot;Scaffold Mai-ViBo-2ruViSum-AIO&quot; -m &quot;Sun, 05 Jul 2026 22:51&quot;</code></li>
+        <li><code>gh repo create Prom-King/Mai-ViBo-2ruViSum-AIO --private --source . --remote origin --push</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\README.md</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\pyproject.toml</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\src\mai_vibo_2ruvisum_aio</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\tests\test_pipeline.py</code></li>
+        <li><code>C:\Users\Administrator\Desktop\Prom-King\Mai-ViBo-2ruViSum-AIO\.github\workflows\ci.yml</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=Mai-ViBo-2ruViSum-AIO, branch=main, head=12267dc</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 22:52 - shared-tube</strong> <span class="kind">code-change</span> - Fixed astro build syntax error in category/[slug].astro caused by duplicated frontmatter, fixed greencloud CI directory permissions, and pushed v0.2.39</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: code Permissions: allowlist (network: local) CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main Tools used (this reply): replace_file_content MCP servers accessed (this reply): none Time: 2026-07-05 22:52 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed astro build syntax error in category/[slug].astro caused by duplicated frontmatter, fixed greencloud CI directory permissions, and pushed v0.2.39</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>chown -R vwdeploy:vwdeploy /srv/repos/Prom-King/shared-tube/apps/*/dist</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>apps/sexyprn/src/pages/category/[slug].astro</code></li>
+        <li><code>apps/oneporn/src/pages/category/[slug].astro</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=shared-tube, branch=main, head=73a912a</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 22:34 - shared-tube</strong> <span class="kind">code-change</span> - Fixed admin panel video list so the thumbnail opens the internal modal and the title serves as an external link to the live site.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: code Permissions: allowlist (network: local) CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main Tools used (this reply): multi_replace_file_content MCP servers accessed (this reply): none Time: 2026-07-05 22:34 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed admin panel video list so the thumbnail opens the internal modal and the title serves as an external link to the live site.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>shared/src/admin/Catalog/VideoBatchActions.tsx</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=shared-tube, branch=main, head=d372642</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 22:20 - shared-tube</strong> <span class="kind">code-change</span> - Fixed category pages to show videos from a random category at the bottom instead of duplicating current category videos. Bumped versions to 0.2.38.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: code Permissions: allowlist (network: local) CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main Tools used (this reply): write_to_file, multi_replace_file_content MCP servers accessed (this reply): none Time: 2026-07-05 22:20 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed category pages to show videos from a random category at the bottom instead of duplicating current category videos. Bumped versions to 0.2.38.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git push</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>apps/sexyprn/src/pages/category/[slug].astro</code></li>
+        <li><code>apps/oneporn/src/pages/category/[slug].astro</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=shared-tube, branch=main, head=d372642</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 22:15 - vaultwares-api</strong> <span class="kind">code-change</span> - Integrated TPDB tag enrichment into fetcher.py and created enrich_backlog.py script for existing videos.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-2.5-pro Thinking: high Mode: code Permissions: allowlist (network: local) CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main Tools used (this reply): write_to_file, multi_replace_file_content MCP servers accessed (this reply): none Time: 2026-07-05 22:15 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Integrated TPDB tag enrichment into fetcher.py and created enrich_backlog.py script for existing videos.</p>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>app/routers/promking/fetcher.py</code></li>
+        <li><code>app/routers/promking/tpdb.py</code></li>
+        <li><code>scripts/enrich_backlog.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vaultwares-api, branch=main, head=8531b40</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 22:08 - Prom-King/shared-tube</strong> <span class="kind">verification</span> - Tested TPDB scraper script against latest 50 DB videos. Matched 43/50 (86% match rate).</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: claude-3-5-sonnet-20241022 Thinking: low Mode: code Permissions: autopilot (network: local) CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main Tools used (this reply): run_command MCP servers accessed (this reply): none Time: 2026-07-05 22:08 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Tested TPDB scraper script against latest 50 DB videos. Matched 43/50 (86% match rate).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python scratch.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>tpdb_results.json</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=shared-tube, branch=main, head=b0699f4</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 22:04 - Prom-King/shared-tube</strong> <span class="kind">code-change</span> - Created a Python script (scratch.py) to parse TPDB scene titles and extract performers, studios, and category tags in one pass.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: claude-3-5-sonnet-20241022 Thinking: low Mode: code Permissions: autopilot (network: local) CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main Tools used (this reply): write_to_file, run_command MCP servers accessed (this reply): none Time: 2026-07-05 22:04 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Created a Python script (scratch.py) to parse TPDB scene titles and extract performers, studios, and category tags in one pass.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>python scratch.py</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>scratch.py</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=shared-tube, branch=main, head=b0699f4</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 20:41 - Prom-King/shared-tube</strong> <span class="kind">deploy</span> - Deployed version 0.2.37 containing TPDB term thumbnails and result counts to OVH.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> deploy</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: claude-3-5-sonnet-20241022 Thinking: low Mode: deploy Permissions: autopilot (network: greencloud+ovh) CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main Tools used (this reply): run_command MCP servers accessed (this reply): none Time: 2026-07-05 20:41 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Deployed version 0.2.37 containing TPDB term thumbnails and result counts to OVH.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git add</code></li>
+        <li><code>git commit</code></li>
+        <li><code>git push</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=shared-tube, branch=main, head=b0699f4</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 20:15 - Prom-King/shared-tube</strong> <span class="kind">code-change</span> - Added result counts to public site headers (sexyprn, oneporn, fxv) and reworked the admin panel Terms grid to display TPDB images as thumbnails.</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: claude-3-5-sonnet-20241022 Thinking: medium Mode: code Permissions: autopilot (network: Clopeux-Desktop) CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main Tools used (this reply): view_file, write_to_file, multi_replace_file_content, replace_file_content, run_command MCP servers accessed (this reply): none Time: 2026-07-05 20:15 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added result counts to public site headers (sexyprn, oneporn, fxv) and reworked the admin panel Terms grid to display TPDB images as thumbnails.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>node update_headers.cjs</code></li>
+        <li><code>npm run build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>shared/src/admin/Catalog/BatchActions.tsx</code></li>
+        <li><code>shared/src/admin/Catalog/TpdbImage.tsx</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=shared-tube, branch=main, head=265ffd2</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-05 19:41 - Prom-King/shared-tube</strong> <span class="kind">verification</span> - Investigated user report of infinite loop in admin video catalog filtering by filterName. Confirmed the issue was already fixed in commit 475264743 (memoizing activeTermFilter)....</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: gemini-exp Thinking: high Mode: chat Permissions: bypass (network: local/ovh) CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main Tools used (this reply): ssh MCP servers accessed (this reply): none Time: 2026-07-05 19:41 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Investigated user report of infinite loop in admin video catalog filtering by filterName. Confirmed the issue was already fixed in commit 475264743 (memoizing activeTermFilter). The bug persisted in production because the deployment pipeline was broken (due to the previously fixed stale webhook token issue). Monitored the manual deployment to ensure the fix reaches the OVH production server.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>ssh root@100.67.25.118 tail -n 20 /var/log/vw-deploy/shared-tube.log</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=shared-tube, branch=main, head=265ffd2</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-07-05 19:13 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares &#226; Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares &#226; Project Rename Refactoring (Phase 5), VaultWares &#226; Project Rename Refactoring (Phase 5 PR Workflow), VaultWares &#226; System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <span class="kind">code-change</span> - Fixed vw-webhookd and vw-secretsd stale token mismatch by syncing /etc/vw-webhookd/secretsd_local_token. Fixed time.mktime timezone offset bug in /usr/local/bin/vw-github-app-to...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
@@ -151,7 +888,7 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-07-05 09:10 - vaultwares-api (formerly vaultwares-pipelines, vaultwares-api + shared-tube, vaultwares-webhooks, vaultwares-api)</strong> <span class="kind">fix</span> - Removed the 500 commit limit from the work-impact agent ledger API endpoint to allow returning the full 2500+ commit history to vault-monitor.</summary>
+    <summary><strong>2026-07-05 09:10 - vaultwares-api</strong> <span class="kind">fix</span> - Removed the 500 commit limit from the work-impact agent ledger API endpoint to allow returning the full 2500+ commit history to vault-monitor.</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> fix</p>
       <p><strong>Actor:</strong> AI Agent</p>
@@ -787,7 +1524,7 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-07-04 04:08 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <span class="kind">code-change</span> - Committed and pushed the bugfixes to main branch (version 0.2.27) after user approval.</summary>
+    <summary><strong>2026-07-04 04:08 - shared-tube</strong> <span class="kind">code-change</span> - Committed and pushed the bugfixes to main branch (version 0.2.27) after user approval.</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> Antigravity</p>
@@ -7737,101 +8474,6 @@
       <ul>
         <li><code>health-ledger\scripts\pg-watchdog.ps1</code></li>
       </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-06-20 15:23 - agent-ledger</strong> <span class="kind">code-change</span> - Three refinements to stats.vaultwares.ca generator: (1) project-aliases.json gains top-level forks list with OneTrainer and video-depth-anything; generator filters fork names fr...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> claude-code</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: claude-code (role: main) Model: claude-opus-4-7 Thinking: medium Mode: agent Permissions: ask (network: local-windows + greencloud (ssh)) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): Bash, SSH, Edit MCP servers accessed (this reply): none Time: 2026-06-20 15:23 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Three refinements to stats.vaultwares.ca generator: (1) project-aliases.json gains top-level forks list with OneTrainer and video-depth-anything; generator filters fork names from byProject, projects, totalProjects. Total projects 53 -&gt; 51. (2) busiestWeek now ships as human date range Apr 20-26 instead of ISO 2026-W17 by computing Monday of ISO week from Jan 4 anchor + 6-day extension. (3) Added AUTO_OUTLIER_THRESHOLD=15000 clean churn lines. Generator auto-flags commits above threshold in addition to the 4 named hardcoded outliers, lists them in commitOutliers with auto-detected note. Caught 6 more vault-flows + vaultwares-cli rewrites on 2026-04-26 and 2026-05-01 totaling another 121k churn lines that were quietly inflating mean. commitStats.mean dropped 784 -&gt; 609, samples 675 -&gt; 669. Live: index-4mXPVMJ3.js, all values verified. Commit pushed.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>ssh root@greencloud-vps</code></li>
-        <li><code>scp generate-data.mjs project-aliases.json</code></li>
-        <li><code>node scripts/generate-data.mjs</code></li>
-        <li><code>npm run build</code></li>
-        <li><code>rsync -a --delete dist/ /var/www/stats.vaultwares.ca/</code></li>
-        <li><code>git push origin main</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>agent-ledger/stats-app/scripts/generate-data.mjs</code></li>
-        <li><code>agent-ledger/project-aliases.json</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-06-20 15:15 - agent-ledger</strong> <span class="kind">code-change</span> - Restored three judgment-call fixes that yesterdays runtime-fetch overwrite had dropped from stats.vaultwares.ca: (1) cutoff 2026-03-11 VaultWares foundation date applied to ever...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> claude-code</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: claude-code (role: main) Model: claude-opus-4-7 Thinking: high Mode: agent Permissions: ask (network: local-windows + greencloud (ssh)) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): Bash, SSH, Edit, Write, Read MCP servers accessed (this reply): none Time: 2026-06-20 15:15 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Restored three judgment-call fixes that yesterdays runtime-fetch overwrite had dropped from stats.vaultwares.ca: (1) cutoff 2026-03-11 VaultWares foundation date applied to every series. (2) project consolidation via project-aliases.json brings totalProjects from 124 raw to 88 then to 53 after adding 14 compound/namespace/meta aliases. (3) four known commit outliers windows-customizer +29.7k, vaultwares-cli +83k, vault-flows +45.4k x2 are listed in commitOutliers but excluded from commitStats math, samples 679 -&gt; 675. Generator also pulls lineStats and commitSamples from greencloud /var/www/ledger.vaultwares.ca/data/work-impact-data.json so techVolume, commitBuckets, monthBoxes, filesTouched are now populated. daySeries zero-filled between cutoff and last seen day so streak math reflects real gaps. Live now: totalEvents 2485, activeDays 99, totalProjects 53, range 2026-03-11 to 2026-06-20, streakCurrent 88. Commits: agent-ledger 33d2cc49 (generator + cutoff + outliers + alias-application + zero-fill), agent-ledger HEAD (project-aliases.json expansion). 2 honest singletons remain: OpenClaw and video-depth-anything.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>ssh root@greencloud-vps</code></li>
-        <li><code>node scripts/generate-data.mjs</code></li>
-        <li><code>npm run build</code></li>
-        <li><code>rsync dist/ /var/www/stats.vaultwares.ca/</code></li>
-        <li><code>git push origin main</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>agent-ledger/stats-app/scripts/generate-data.mjs</code></li>
-        <li><code>agent-ledger/project-aliases.json</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-06-20 13:47 - agent-ledger</strong> <span class="kind">code-change</span> - Verified ledger and stats .vaultwares.ca. Findings: ledger vaultwares-api /monitor/work-impact returns valid fresh JSON (2508 events, range 2026-01-18 to 2026-06-20, today). Sha...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change</p>
-      <p><strong>Actor:</strong> claude-code</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: claude-code (role: main) Model: claude-opus-4-7 Thinking: high Mode: agent Permissions: ask (network: local-windows + greencloud + ovhcloud (ssh)) CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a Tools used (this reply): Bash, SSH, Edit, Write, Read MCP servers accessed (this reply): none Time: 2026-06-20 13:47 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Verified ledger and stats .vaultwares.ca. Findings: ledger vaultwares-api /monitor/work-impact returns valid fresh JSON (2508 events, range 2026-01-18 to 2026-06-20, today). Shape matches site/types.ts. The legacy site React app should render correctly off this; if user is seeing a literal JSON parse error in browser they should share console text - I could not reproduce server-side. Stats was indeed stale: stats-app/src/lib/data.json hand-committed 2026-06-17 with 2435 events / rangeEnd 2026-06-18. No generator existed. FIX: wrote stats-app/scripts/generate-data.mjs that fetches /monitor/work-impact at deploy time and transforms the nested {totals, series, range, agentData} API shape into the flat WorkImpactData shape stats-app types expect (totalEvents, daySeries, byMonth, byKind, byProject, byHour, byDow, busiestDay/Week derived locally). Wired into deploy/deploy.sh to run before npm run build. App.tsx casts via unknown to bypass TS strict literal-vs-Record comparison on projects[].kinds. Built + deployed on greencloud production directly (bypassed git reset since changes were not yet committed when I ran it). Live bundle index-DhfBg-cN.js confirms totalEvents:2508. Then committed agent-ledger d5651056 (deploy.sh + generate-data.mjs + App.tsx tweak) and pushed.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>ssh root@greencloud-vps</code></li>
-        <li><code>scp stats-app/scripts/generate-data.mjs root@greencloud-vps:/tmp/</code></li>
-        <li><code>node scripts/generate-data.mjs</code></li>
-        <li><code>npm run build</code></li>
-        <li><code>rsync -a --delete dist/ /var/www/stats.vaultwares.ca/</code></li>
-        <li><code>git push origin main</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>agent-ledger/stats-app/scripts/generate-data.mjs</code></li>
-        <li><code>agent-ledger/deploy/deploy.sh</code></li>
-        <li><code>agent-ledger/stats-app/src/App.tsx</code></li>
-        <li><code>/opt/sites/agent-ledger/stats-app/src/lib/data.json</code></li>
-      </ul>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-06-20 12:29 - agent-ledger</strong> <span class="kind">code-change,verification</span> - Identified and fixed local environment issue where VW_API_URL used HTTPS instead of plain HTTP for port 9001. Marked agent-ledger&#39;s deploy-async.sh as executable in the git inde...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> code-change,verification</p>
-      <p><strong>Actor:</strong> Antigravity</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: Antigravity (role: main) Model: gemini-1.5-pro Thinking: high Mode: code Permissions: ask (network: GreenCloud + OVH + Local) CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main Tools used (this reply): run_command, view_file MCP servers accessed (this reply): none Time: 2026-06-20 12:29 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Identified and fixed local environment issue where VW_API_URL used HTTPS instead of plain HTTP for port 9001. Marked agent-ledger&#39;s deploy-async.sh as executable in the git index to resolve permission denied (exit 126) on greencloud-vps webhooks. Ran manual deployments and backfilled historical ledger events (708 records) and hourly legacy input logs to the Postgres database via the API, successfully syncing stats.vaultwares.ca and ledger.vaultwares.ca.</p>
-      <p><strong>Commands:</strong></p>
-      <ul>
-        <li><code>git update-index --chmod=+x deploy/deploy-async.sh</code></li>
-        <li><code>python scripts\backfill-agent-ledger-to-api.py</code></li>
-        <li><code>python scripts\backfill-input-logs.py</code></li>
-      </ul>
-      <p><strong>Files:</strong></p>
-      <ul>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\agent-ledger\site\src\useData.ts</code></li>
-        <li><code>C:\Users\Administrator\Desktop\Github Repos\agent-ledger\deploy\deploy-async.sh</code></li>
-      </ul>
-      <p><strong>Git:</strong> repo=agent-ledger, branch=main, head=af2c89b9</p>
     </div>
   </details>
   <details>

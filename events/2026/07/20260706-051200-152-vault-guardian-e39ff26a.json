@@ -1,0 +1,44 @@
+{
+  "id": "20260706-051200-152-vault-guardian-e39ff26a",
+  "createdAt": "2026-07-06T09:12:00.1525193Z",
+  "createdAtLocal": "2026-07-06 05:12",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-guardian",
+  "kind": "code-change,handoff,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-06 05:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian",
+  "summary": "Mon, 06 Jul 2026 05:11 — Shipped process triage console v1.3.0 (a6207a2). ProcessTriageClassifier (pure, 7 tests): disposition + kill-safety (Safe/Risky/BreaksWindows) with reasons. WindowsProcessInspector fuses CPU sampling, WMI (path/parent/services), cached Authenticode trust, kernel critical-process bit; svchost->service expansion; WSL2 vmmem utility-VM flagging. UI Processes pivot: cost-ranked list, disposition/kill-safety tags, reasons panel, risk-scaled guarded Terminate. 79/79 tests pass, 0 build errors, pushed to main. Session complete: v1.1 theme+DNS/SNI, v1.2 JA4, v1.3 process triage.",
+  "commands": [
+    "git push origin main"
+  ],
+  "files": [
+    "src/VaultGuardian.Core/Processes/ProcessTriageClassifier.cs",
+    "src/VaultGuardian.Core/Processes/WindowsProcessInspector.cs",
+    "src/VaultGuardian.UI/ProcessRowVM.cs"
+  ],
+  "planPath": "",
+  "contentHash": "e39ff26acec6490a46235d2e3a19266125f112427f00b611a64cb94aae08f31e",
+  "git": {
+    "repo": "vault-guardian",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-guardian",
+    "branch": "main",
+    "head": "a6207a2",
+    "hasChanges": false
+  }
+}

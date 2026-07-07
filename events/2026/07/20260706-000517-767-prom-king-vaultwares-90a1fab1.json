@@ -1,0 +1,54 @@
+﻿{
+    "id":  "20260706-000517-767-prom-king-vaultwares-90a1fab1",
+    "createdAt":  "2026-07-06T04:05:17.7676763Z",
+    "createdAtLocal":  "2026-07-06 00:05",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King / VaultWares",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: claude-3-5-sonnet-20240620\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): run_command, multi_replace_file_content, write_to_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-06 00:05 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-3-5-sonnet-20240620",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local PC",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "multi_replace_file_content",
+                                      "write_to_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+    "summary":  "Implemented many-to-many site relationship via video_sites table. Rolled back global-only fetching so videos can belong to multiple sites. Frontend APIs now pass siteConfig.brand to all endpoints again. Backend uses video_sites for filtering and insertion. Verified TS builds across all 4 apps.",
+    "commands":  [
+                     "pnpm drizzle-kit generate --custom",
+                     "pnpm -r exec tsc --noEmit"
+                 ],
+    "files":  [
+                  "shared/drizzle/0004_many_to_many_video_sites.sql",
+                  "app/routers/promking/fetcher.py",
+                  "app/routers/promking/videos.py",
+                  "shared/src/api/promking-api.ts"
+              ],
+    "planPath":  "",
+    "contentHash":  "90a1fab16f7b4c5a6c181986daa5a16178cf7f450db8175d92b9d0ec7fa77249",
+    "git":  {
+                "repo":  "agent-ledger",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+                "branch":  "main",
+                "head":  "27d2108b",
+                "hasChanges":  true
+            }
+}

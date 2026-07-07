@@ -1,0 +1,43 @@
+{
+  "id": "20260706-223337-414-vault-guardian-9c606890",
+  "createdAt": "2026-07-07T02:33:37.4143525Z",
+  "createdAtLocal": "2026-07-06 22:33",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-guardian",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-06 22:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian",
+  "summary": "Mon, 06 Jul 2026 22:33 — Wired PID<->hostname/JA4 fusion into process triage v1.3.1 (de7fd16). IHostnameResolver gains TryResolve(addr,out host,out ja4); WindowsProcessInspector joins the active TCP table (GetExtendedTcpTable, owning PID->remote IPv4s) against the passive hostname/JA4 map, filling ProcessFacts.Hostnames with 'host [ja4]' labels that the classifier surfaces in verdict reasons. 80/80 tests pass, 0 build errors, pushed to main.",
+  "commands": [
+    "git push origin main"
+  ],
+  "files": [
+    "src/VaultGuardian.Core/Processes/WindowsProcessInspector.cs",
+    "src/VaultGuardian.Core/Ingress/Hostname/IHostnameResolver.cs"
+  ],
+  "planPath": "",
+  "contentHash": "9c606890fdb083d04ae23870ebe547892a33eefae9547680bdf8aaeaa06786c4",
+  "git": {
+    "repo": "vault-guardian",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-guardian",
+    "branch": "main",
+    "head": "de7fd16",
+    "hasChanges": false
+  }
+}

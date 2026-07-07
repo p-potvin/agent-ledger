@@ -1,0 +1,47 @@
+{
+  "id": "20260706-043120-474-vault-guardian-70e9cde7",
+  "createdAt": "2026-07-06T08:31:20.4745394Z",
+  "createdAtLocal": "2026-07-06 04:31",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-guardian",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-06 04:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian",
+  "summary": "Mon, 06 Jul 2026 04:31 — Confirmed PR #7 codex branch already merged into main (no-op). Ran Task 10 verification: 60/60 tests + clean build. Implemented theme integration from vaultwares-revisited 'Terminal and Document' system: added Warm Mode parchment token set alongside Console in VaultRedesign.xaml, restructured MainWindow so a warm branded header/frame (logo + wordmark + bilingual tagline) wraps the console operational core; ported bilingual brand copy to Core/Branding/BrandStrings.cs (en + fr-CA/QC) with a Settings language selector; wired vaultwares logo asset. Implemented DNS/SNI hostname correlation for the non-MITM path: new Ingress/Hostname/ with DnsResponseParser, TlsClientHelloParser, HostnameResolutionStore (TTL-expiring, bounded) + IHostnameResolver; interceptor now populates TrafficObservation.RemoteHost; ingress watcher feeds inbound DNS responses; DI registered. Added 9 hostname tests. Final: 69/69 tests pass, solution builds 0 errors. Deferred WFP-native filtering and Windows-service/IPC split as post-MVP.",
+  "commands": [
+    "dotnet test tests\\VaultGuardian.Core.Tests\\VaultGuardian.Core.Tests.csproj -p:Platform=x64",
+    "dotnet build VaultGuardian.slnx -p:Platform=x64"
+  ],
+  "files": [
+    "src/VaultGuardian.UI/Themes/VaultRedesign.xaml",
+    "src/VaultGuardian.UI/MainWindow.xaml",
+    "src/VaultGuardian.Core/Branding/BrandStrings.cs",
+    "src/VaultGuardian.Core/Ingress/Hostname/HostnameResolutionStore.cs",
+    "src/VaultGuardian.Core/Interception/WinDivertInterceptor.cs"
+  ],
+  "planPath": "",
+  "contentHash": "70e9cde7d37064aed263ae38b1154e12cd02cad7d5126450bc955fb1662ceadd",
+  "git": {
+    "repo": "vault-guardian",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-guardian",
+    "branch": "main",
+    "head": "9e98f20",
+    "hasChanges": true
+  }
+}

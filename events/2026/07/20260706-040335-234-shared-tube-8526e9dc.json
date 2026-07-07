@@ -1,0 +1,45 @@
+﻿{
+    "id":  "20260706-040335-234-shared-tube-8526e9dc",
+    "createdAt":  "2026-07-06T08:03:35.2345849Z",
+    "createdAtLocal":  "2026-07-06 04:03",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: gemini-2.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): multi_replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-06 04:03 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "multi_replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King",
+    "summary":  "Implemented permanent image caching in frontend /api/thumb.ts, configured opt-in Gluetun OpenVPN Docker container on OVH, and routed upstream thumbnail fetches through the local proxy to bypass the Brume.",
+    "commands":  [
+                     "docker compose up -d",
+                     "curl --proxy http://127.0.0.1:8889 https://ifconfig.me"
+                 ],
+    "files":  [
+                  "apps/oneporn/src/pages/api/thumb.ts",
+                  "package.json"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity-ide\\brain\\68e35464-6abe-4b4e-98ca-d9a20ea2d3cf\\implementation_plan.md",
+    "contentHash":  "8526e9dc17d02085c3df95ba0a80a4d71ff9ea2ba2aaf1952b1472489f08737c",
+    "git":  null
+}

@@ -1,0 +1,48 @@
+{
+  "id": "20260706-042605-418-pro-realism-flux2-klein-multi-lora-06d490f3",
+  "createdAt": "2026-07-06T08:26:05.4180719Z",
+  "createdAtLocal": "2026-07-06 04:26",
+  "timezone": "Eastern Standard Time",
+  "project": "Pro-Realism-FLUX2-Klein-Multi-LoRA",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: code\r\nPermissions: allowlist (network: local Windows 11)\r\nCWD: D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-06 04:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "allowlist",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA",
+  "summary": "Second ZeroGPU fix: 'ZeroGPU tensors packing' progress at 1.4 MB/s = ZeroGPU snapshot writing 34.7 GB under HF_HOME/xet on the network-mounted /models bucket. Split cache roles in config.py: HF_HUB_CACHE / TRANSFORMERS_CACHE / DIFFUSERS_CACHE still point at the bucket (so FLUX weight downloads survive across boots), but HF_HOME and TORCH_HOME now point at /tmp/flux2-klein-fast (tmpfs, RAM-backed) — that is where ZeroGPU writes its 34 GB tensor pack and the torch inductor cache, so packing runs at RAM speed instead of bucket-write speed. Switched os.environ.setdefault to hard assignment so container defaults can't silently keep HF_HOME on slow storage. Committed 63ce7fc, pushed to origin/main. Sun, 06 Jul 2026.",
+  "commands": [
+    "git commit -m 'Split cache: HF_HUB_CACHE stays on bucket, HF_HOME to tmpfs'",
+    "git push origin main"
+  ],
+  "files": [
+    "D:/HuggingFace/spaces/Pro-Realism-FLUX2-Klein-Multi-LoRA/config.py"
+  ],
+  "planPath": "",
+  "contentHash": "06d490f31487687b9e0bf4b627e3eec78aae2a2d9609ac270a5a511eb5128fbe",
+  "git": {
+    "repo": "Pro-Realism-FLUX2-Klein-Multi-LoRA",
+    "root": "D:/HuggingFace/spaces/Pro-Realism-FLUX2-Klein-Multi-LoRA",
+    "branch": "main",
+    "head": "63ce7fc",
+    "hasChanges": true
+  }
+}

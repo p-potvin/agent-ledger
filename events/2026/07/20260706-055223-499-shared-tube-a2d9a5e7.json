@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20260706-055223-499-shared-tube-a2d9a5e7",
+    "createdAt":  "2026-07-06T09:52:23.4992360Z",
+    "createdAtLocal":  "2026-07-06 05:52",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: gemini-2.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-06 05:52 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King",
+    "summary":  "Pointed STREAM_OUTBOUND_PROXY to ProtonVPN (127.0.0.1:8889) on OVH env files for all 3 sites and bumped workspace versions to 0.2.43.",
+    "commands":  [
+                     "ssh ubuntu@100.67.25.118 sed -i ...",
+                     "pnpm version 0.2.43"
+                 ],
+    "files":  [
+                  "package.json",
+                  "shared/package.json"
+              ],
+    "planPath":  "",
+    "contentHash":  "a2d9a5e73061a2c0e05e3fc7432e1030446f89c6e6f4e69705c2a4763709fb61",
+    "git":  null
+}

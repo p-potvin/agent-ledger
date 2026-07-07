@@ -1,0 +1,48 @@
+{
+  "id": "20260706-043417-758-pro-realism-flux2-klein-multi-lora-32c64376",
+  "createdAt": "2026-07-06T08:34:17.7588537Z",
+  "createdAtLocal": "2026-07-06 04:34",
+  "timezone": "Eastern Standard Time",
+  "project": "Pro-Realism-FLUX2-Klein-Multi-LoRA",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: code\r\nPermissions: allowlist (network: local Windows 11)\r\nCWD: D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA  Branch: main\r\nTools used (this reply): Bash, Edit, Read, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-06 04:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "allowlist",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Read",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA",
+  "summary": "Reverted torch pin from >=2.11.0 back to ==2.8.0 in requirements.txt (undoing commit a5bdc31). Compared against the still-working original space M3st3rJ4k3l/FLUX.2-Klein-Multi-LoRA cloned to scratchpad. Only meaningful delta correlated with the regression is the torch version bump — original works at 2.8.0, current was slow-packing at 1.4 MB/s regardless of HF_HOME redirect. Hypothesis: torch 2.11 not in ZeroGPU spaces library's tested matrix so the tensor-packer degrades to a serial write path. Committed a8d5082, pushed to origin/main. Sun, 06 Jul 2026.",
+  "commands": [
+    "git commit -m 'Revert torch pin to 2.8.0'",
+    "git push origin main"
+  ],
+  "files": [
+    "D:/HuggingFace/spaces/Pro-Realism-FLUX2-Klein-Multi-LoRA/requirements.txt"
+  ],
+  "planPath": "",
+  "contentHash": "32c643765d4290aaa6a45ed98043a7e31031c8ddb7465d86afa22779db361c11",
+  "git": {
+    "repo": "Pro-Realism-FLUX2-Klein-Multi-LoRA",
+    "root": "D:/HuggingFace/spaces/Pro-Realism-FLUX2-Klein-Multi-LoRA",
+    "branch": "main",
+    "head": "a8d5082",
+    "hasChanges": true
+  }
+}
