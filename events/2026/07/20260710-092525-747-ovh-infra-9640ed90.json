@@ -1,0 +1,45 @@
+{
+  "id": "20260710-092525-747-ovh-infra-9640ed90",
+  "createdAt": "2026-07-10T13:25:25.7473911Z",
+  "createdAtLocal": "2026-07-10 09:25",
+  "timezone": "Eastern Standard Time",
+  "project": "ovh-infra",
+  "kind": "diagnosis",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5-codex\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-10 09:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5-codex",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": "shell_command",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fri, 10 Jul 2026 09:46 - Investigated OVH /var/log/syslog with bounded extraction. Findings: syslog is dominated by vaultwares-api invalid HTTP request warnings, Prom-King API 500s from RunState.req bug, Tailscale DNS/open-conn timeouts, and Docker restart noise from manual stops; no failed systemd units found; root disk at 83%.",
+  "commands": [
+    "ssh ubuntu@100.67.25.118 bounded grep extraction from /var/log/syslog to /tmp/ovh-syslog-diagnosis-20260710-132037",
+    "systemctl cat vaultwares-api.service",
+    "ss -ltnp",
+    "resolvectl status/query",
+    "nginx config inspection",
+    "vaultwares-api fetcher.py inspection"
+  ],
+  "files": [
+    "/tmp/ovh-syslog-diagnosis-20260710-132037/error-lines.filtered",
+    "/tmp/ovh-syslog-diagnosis-20260710-132037/severe-lines.txt",
+    "/opt/vaultwares-api/app/routers/promking/fetcher.py",
+    "/etc/systemd/resolved.conf",
+    "/etc/nginx/sites-enabled/api.vaultwares.ca.conf"
+  ],
+  "planPath": "",
+  "contentHash": "9640ed9049cec830e89f5f84f84206dbfe3c1210a72beeecb2c25427296084a9",
+  "git": null
+}

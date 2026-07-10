@@ -1,0 +1,58 @@
+{
+  "id": "20260710-095027-113-ovh-infra-c1ae4c41",
+  "createdAt": "2026-07-10T13:50:27.1134714Z",
+  "createdAtLocal": "2026-07-10 09:50",
+  "timezone": "Eastern Standard Time",
+  "project": "ovh-infra",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5-codex\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-10 09:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5-codex",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fri, 10 Jul 2026 10:12 - Completed OVH remediation after syslog diagnosis and routed local ledger tooling through nginx. Applied fixes: vaultwares-api fetcher RunState finalization bug patched, API bound to loopback, OVH nginx local upstreams updated, systemd-resolved localhost/global vaultwares override removed, qa_runner removed, rsyslog logrotate su directive added, syslog rotated, vaultwares-docs inventory updated, agent-ledger API defaults changed to https://api.vaultwares.ca, and Windows user VW_API_URL updated to https://api.vaultwares.ca. Verification: py_compile and nginx -t passed; API health 200 through loopback and nginx; direct 100.67.25.118:9001 refused; Prom-King nginx API proxies 200; DNS resolves via tailscale0; invalid HTTP, RunState req, and DNS warning counts 0 since restart; syslog is 4.1K after rotation; docs npm generate/build passed; local https://api.vaultwares.ca/health returned 200; alias resolver works with nginx URL.",
+  "commands": [
+    "remote OVH patch/restart script",
+    "python -m py_compile",
+    "nginx -t",
+    "curl health and proxy probes",
+    "resolvectl query sabnzbd.vaultwares.ca",
+    "logrotate -f /etc/logrotate.d/rsyslog",
+    "npm run generate:page-resources",
+    "npm run build",
+    "Invoke-WebRequest https://api.vaultwares.ca/health",
+    "Resolve-ProjectAlias with VW_API_URL=https://api.vaultwares.ca"
+  ],
+  "files": [
+    "/opt/vaultwares-api/app/routers/promking/fetcher.py",
+    "/opt/vaultwares-api/.env",
+    "/etc/nginx/sites-enabled/1pornhub.vip.conf",
+    "/etc/nginx/sites-enabled/sexyprn.lol.conf",
+    "/etc/systemd/resolved.conf",
+    "/etc/logrotate.d/rsyslog",
+    "/root/ovh-fix-backups-20260710-1355",
+    "/root/rsyslog.logrotate.bak-20260710-1358",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\scripts\\record-agent-change.ps1",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\scripts\\resolve-project-alias.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "c1ae4c41724b355e0e3cc30709c36e4e6f246fdc6e265569740bb6a2eda445fe",
+  "git": null
+}

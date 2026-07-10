@@ -1,0 +1,54 @@
+{
+  "id": "20260710-102113-854-shared-tube-f932ba76",
+  "createdAt": "2026-07-10T14:21:13.8543929Z",
+  "createdAtLocal": "2026-07-10 10:21",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5-codex\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-10 10:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5-codex",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fri, 10 Jul 2026 10:55 - Fixed tube-site Catalog API unreachable after API loopback cutover. Root cause was Astro SSR bundles and service envs still using baked fallback http://100.67.25.118:9001 while direct 9001 is intentionally disabled. Live fixes: OVH oneporn/sexyprn envs set VAULTWARES_API_BASE=https://api.vaultwares.ca, Greencloud fxv env set the same, live server bundles/source patched to replace old direct API URL, OVH oneporn/sexyprn nginx templates live already loopback, Greencloud fullxxx nginx /api and /auth proxy updated to https://api.vaultwares.ca with SNI/Host api.vaultwares.ca. Source changes: shared API default and per-app config fallbacks now use https://api.vaultwares.ca; nginx templates updated for OVH loopback and Greencloud API vhost routing. Verification: Playwright/Chrome visited 1pornhub.vip, sexyprn.lol, and fullxxx.video; all had hasCatalogError=false, same-origin TPDB batch POST returned 200 on all three, visible catalog counts rendered. Local pnpm build/typecheck were blocked before execution by approved-builds policy for native packages after pnpm recreated node_modules.",
+  "commands": [
+    "Playwright Chrome visual/network reproduction before and after",
+    "remote env patch and service restarts on OVH and Greencloud",
+    "remote nginx patch/reload on Greencloud",
+    "targeted POST /api/promking/tpdb/resolve-batch probes",
+    "rg old direct API refs live targeted",
+    "pnpm -r build/typecheck attempted and blocked by approved-builds policy"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\api\\promking-api.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\oneporn\\src\\config.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\sexyprn\\src\\config.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\fxv\\src\\config.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\scripts\\nginx\\1pornhub.vip.conf",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\scripts\\nginx\\sexyprn.lol.conf",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\scripts\\nginx\\fullxxx.video.conf",
+    "/etc/shared-tube/oneporn.env",
+    "/etc/shared-tube/sexyprn.env",
+    "/etc/shared-tube/fxv.env",
+    "/etc/nginx/sites-enabled/fullxxx.video.conf"
+  ],
+  "planPath": "",
+  "contentHash": "f932ba76594c1a204a6923a5455c7e09b1ea61d7c7d78ccb4518d5aea4bae14f",
+  "git": null
+}

@@ -1,0 +1,45 @@
+{
+  "id": "20260710-102117-207-vaultwares-api-12849a2e",
+  "createdAt": "2026-07-10T14:21:17.2071575Z",
+  "createdAtLocal": "2026-07-10 10:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5-codex\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-10 10:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5-codex",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fri, 10 Jul 2026 10:55 - Fixed missing Prom-King TPDB batch route behind nginx. Root cause: tpdb.py existed with POST /tpdb/resolve-batch but promking __init__.py did not include tpdb_router, so browser POST /api/promking/tpdb/resolve-batch returned FastAPI 404. Live API patched and restarted; local vaultwares-api checkout updated with tpdb_router import/include. Verification: python py_compile passed locally and remotely; POST https://api.vaultwares.ca/api/promking/tpdb/resolve-batch with empty items returned 200; browser same-origin POST returned 200 on 1pornhub.vip, sexyprn.lol, and fullxxx.video.",
+  "commands": [
+    "remote patch /opt/vaultwares-api/app/routers/promking/__init__.py",
+    "python -m py_compile",
+    "systemctl restart vaultwares-api",
+    "curl POST https://api.vaultwares.ca/api/promking/tpdb/resolve-batch",
+    "Playwright same-origin TPDB POST probes"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\promking\\__init__.py",
+    "/opt/vaultwares-api/app/routers/promking/__init__.py",
+    "/root/tube-api-fix-backups-20260710-1433"
+  ],
+  "planPath": "",
+  "contentHash": "12849a2eeaafba209728c977325f06a800dc1a004d48e2eafa0c65e26453be6f",
+  "git": null
+}

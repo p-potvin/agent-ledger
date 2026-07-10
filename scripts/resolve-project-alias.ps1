@@ -3,7 +3,7 @@
 # Then call: Resolve-ProjectAlias -Project $name -AliasMapPath $path
 #
 # Note: -AliasMapPath is kept for backwards compatibility with existing scripts,
-# but the data is now fetched from the VaultWares API at http://100.67.25.118:9001/
+# but the data is now fetched from the VaultWares API at https://api.vaultwares.ca/
 #
 # The resolver normalizes any alias to its canonical name so old ledger
 # events (frozen audit trail) and freshly-recorded events bucket together in the
@@ -20,7 +20,10 @@ function Get-ProjectAliasMap {
         return $script:__ProjectAliasCache
     }
 
-    $apiUrl = "http://100.67.25.118:9001/projects/aliases"
+    $apiBase = $env:VW_API_URL
+    if (-not $apiBase) { $apiBase = $env:VW_PIPELINES_URL }
+    if (-not $apiBase) { $apiBase = "https://api.vaultwares.ca" }
+    $apiUrl = "$($apiBase.TrimEnd('/'))/projects/aliases"
     $raw = $null
     
     try {
