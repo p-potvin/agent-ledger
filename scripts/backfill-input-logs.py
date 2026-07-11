@@ -45,7 +45,7 @@ import urllib.request
 
 ROOT = Path(__file__).resolve().parent.parent
 LEGACY_DIR = ROOT / "input-logs"
-DEFAULT_API_URL = "http://100.67.25.118:9001"
+DEFAULT_API_URL = "https://api.vaultwares.ca"
 DEFAULT_SESSION_ID = "legacy-hourly-import"
 SOURCE = "agent-ledger-legacy"
 

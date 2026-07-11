@@ -107,7 +107,7 @@ if (-not $NoRestartExisting) {
 
 $apiUrl = [Environment]::GetEnvironmentVariable("VW_API_URL", "User")
 if (-not $apiUrl) { $apiUrl = [Environment]::GetEnvironmentVariable("VW_PIPELINES_URL", "User") }
-if (-not $apiUrl) { $apiUrl = "http://100.67.25.118:9001" }
+if (-not $apiUrl) { $apiUrl = "https://api.vaultwares.ca" }
 $env:VW_API_URL = $apiUrl
 
 $apiKey = [Environment]::GetEnvironmentVariable("VW_TELEMETRY_API_KEY", "User")

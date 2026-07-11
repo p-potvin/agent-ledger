@@ -12,7 +12,7 @@ from urllib.request import Request, urlopen
 
 ROOT_DIR = Path(__file__).parent.resolve().parent
 SPOOL_DIR = Path(os.environ.get("VW_INPUT_SPOOL_DIR") or (ROOT_DIR / "input-spool"))
-API_URL = (os.environ.get("VW_API_URL") or os.environ.get("VW_PIPELINES_URL") or "http://100.67.25.118:9001").rstrip("/")
+API_URL = (os.environ.get("VW_API_URL") or os.environ.get("VW_PIPELINES_URL") or "https://api.vaultwares.ca").rstrip("/")
 API_KEY = os.environ.get("VW_PIPELINES_API_KEY") or os.environ.get("VW_TELEMETRY_API_KEY") or ""
 
 

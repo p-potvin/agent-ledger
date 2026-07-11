@@ -23,7 +23,7 @@
 [CmdletBinding()]
 param(
     [string]$PythonExe  = "",
-    [string]$ApiUrl = "http://100.67.25.118:9001",
+    [string]$ApiUrl = "https://api.vaultwares.ca",
     [switch]$StartNow
 )
 
@@ -154,7 +154,7 @@ Write-Host "Setup complete." -ForegroundColor Cyan
 Write-Host ""
 $apiBase = $env:VW_API_URL
 if (-not $apiBase) { $apiBase = $env:VW_PIPELINES_URL }
-if (-not $apiBase) { $apiBase = "http://100.67.25.118:9001" }
+if (-not $apiBase) { $apiBase = "https://api.vaultwares.ca" }
 Write-Host "  API endpoint  →  $apiBase/api/telemetry/input/batches"
 Write-Host "  Spool fallback→  $LedgerRoot\input-spool\YYYY-MM-DD.jsonl"
 Write-Host ""
