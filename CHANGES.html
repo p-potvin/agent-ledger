@@ -48,6 +48,28 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-07-16 02:59 - wander</strong> <span class="kind">code-change,verification</span> - Corrected theming architecture per user feedback: moved Avalonia color/font tokens out of Wander.Dashboard/App.axaml (where I&#39;d wrongly hardcoded them) into vaultwares-themes/va...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> Claude</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Claude (role: main) Model: claude-fable-5 Thinking: unknown Mode: interactive Permissions: unknown (network: unknown) CWD: C:\Users\Clopeux\Desktop\Github Repos\wander  Branch: main Tools used (this reply): Read, Edit, Write, Bash, PowerShell MCP servers accessed (this reply): none Time: 2026-07-16 02:59 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Corrected theming architecture per user feedback: moved Avalonia color/font tokens out of Wander.Dashboard/App.axaml (where I&#39;d wrongly hardcoded them) into vaultwares-themes/vaultwares-revisited/ports/avalonia/VaultTokens.axaml + README - the first .NET/Avalonia port of the design system, reusable by future VaultWares Avalonia apps. Wired via a Link&#39;d AvaloniaResource (submodule file is the single source, no copy) merged into App.axaml; VaultInk stays consumer-declared per TOKENS.md&#39;s documented pattern. Pushed to both repos: vaultwares-themes 67200f1 (had to rescue the commit from a detached HEAD - submodule checkouts aren&#39;t on a branch by default), wander 603e8ca+7427e65. Confirmed first real cross-machine sync: after user fixed Tailscale ACLs, clopeux-laptop pulled &#39;test file to sync.txt&#39; from clopeux-desktop live (file count went 1-&gt;3, verified on disk). 0 warnings, build/test/visual verification all clean.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>dotnet build Wander.slnx</code></li>
+        <li><code>git push origin main (wander + vaultwares-themes)</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\vaultwares-themes\vaultwares-revisited\ports\avalonia\VaultTokens.axaml</code></li>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\App.axaml</code></li>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\Wander.Dashboard.csproj</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=wander, branch=main, head=7427e65</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-07-16 02:38 - wander</strong> <span class="kind">code-change,verification</span> - Fixed tailnet peer display names: TailscaleService was showing the device&#39;s self-reported OS HostName (unreliable — iPad reports literally &#39;localhost&#39;, greencloud-vps reports it...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change,verification</p>
