@@ -3,6 +3,36 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-07-16 02:23 - wander</strong> <code>code-change,verification</code> - Aligned all agent-ledger copies: committed desktop archival churn (1d8cd2fe), rescued this laptop&#39;s broken clone (unrelated history, stuck rebase, 218 stranded commits) by reset...</summary>
+
+- Kind: code-change,verification
+- Actor: Claude
+- Agent Header:
+  ```text
+  Agent: Claude (role: main)
+  Model: claude-fable-5
+  Thinking: unknown
+  Mode: interactive
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Clopeux\Desktop\Github Repos\wander  Branch: main
+  Tools used (this reply): Read, Edit, Write, Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-07-16 02:23 (TZ: Eastern Standard Time)
+  ```
+- Summary: Aligned all agent-ledger copies: committed desktop archival churn (1d8cd2fe), rescued this laptop's broken clone (unrelated history, stuck rebase, 218 stranded commits) by resetting main onto origin and importing 384 unique records (342 events + 42 history, mostly 2026-05 vaultwares-realtime) as 380c27e; old history on backup/pre-align-20260716. Laptop/desktop/VPS/GitHub all at parity; future entries use the local clone. Pulled DB snapshots from OVH (pg_dump -Fc of vaultwares 27MB + promking 32MB from cluster 16-apidb) to C:\Users\Clopeux\VaultWares\db-snapshots. Wander (cf1e82a pushed): re-themed dashboard to vaultwares-revisited (warm document frame wrapping console operational core per PHILOSOPHY.md), added tray icon with close-to-tray, conflict browser card, per-file SyncEngine activity feed. 31/31 tests, 0 warnings; rendering verified by window capture.
+- Commands:
+  - `git push origin main`
+  - `sudo -u postgres pg_dump -p 5433 -Fc vaultwares`
+  - `dotnet test Wander.Tests/Wander.Tests.csproj`
+- Files:
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\App.axaml`
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\MainWindow.axaml`
+  - `C:\Users\Clopeux\Desktop\Github Repos\agent-ledger`
+- Git: repo=wander, branch=main, head=cf1e82a
+
+</details>
+
+<details>
 <summary><strong>2026-07-16 01:24 - wander</strong> <code>code-change,verification</code> - Committed and pushed Phase 0 (4ea99f5) plus Phase 1 kickoff (bc1a12c) to main. Tailnet validation on clopeux-laptop: daemon binds Tailscale IP only (100.91.249.45:5555), loopbac...</summary>
 
 - Kind: code-change,verification

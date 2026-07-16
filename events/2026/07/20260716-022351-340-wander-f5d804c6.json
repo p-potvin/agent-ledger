@@ -1,0 +1,52 @@
+{
+  "id": "20260716-022351-340-wander-f5d804c6",
+  "createdAt": "2026-07-16T06:23:51.3407612Z",
+  "createdAtLocal": "2026-07-16 02:23",
+  "timezone": "Eastern Standard Time",
+  "project": "wander",
+  "kind": "code-change,verification",
+  "actor": "Claude",
+  "agentHeader": "Agent: Claude (role: main)\r\nModel: claude-fable-5\r\nThinking: unknown\r\nMode: interactive\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-16 02:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "unknown",
+    "mode": "interactive",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Clopeux\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander",
+  "summary": "Aligned all agent-ledger copies: committed desktop archival churn (1d8cd2fe), rescued this laptop's broken clone (unrelated history, stuck rebase, 218 stranded commits) by resetting main onto origin and importing 384 unique records (342 events + 42 history, mostly 2026-05 vaultwares-realtime) as 380c27e; old history on backup/pre-align-20260716. Laptop/desktop/VPS/GitHub all at parity; future entries use the local clone. Pulled DB snapshots from OVH (pg_dump -Fc of vaultwares 27MB + promking 32MB from cluster 16-apidb) to C:\\Users\\Clopeux\\VaultWares\\db-snapshots. Wander (cf1e82a pushed): re-themed dashboard to vaultwares-revisited (warm document frame wrapping console operational core per PHILOSOPHY.md), added tray icon with close-to-tray, conflict browser card, per-file SyncEngine activity feed. 31/31 tests, 0 warnings; rendering verified by window capture.",
+  "commands": [
+    "git push origin main",
+    "sudo -u postgres pg_dump -p 5433 -Fc vaultwares",
+    "dotnet test Wander.Tests/Wander.Tests.csproj"
+  ],
+  "files": [
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\Wander.Dashboard\\App.axaml",
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\Wander.Dashboard\\MainWindow.axaml",
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\agent-ledger"
+  ],
+  "planPath": "",
+  "contentHash": "f5d804c6968913120968b602992dd5e6b10206cab3558d94c19575d65a849651",
+  "git": {
+    "repo": "wander",
+    "root": "C:/Users/Clopeux/Desktop/Github Repos/wander",
+    "branch": "main",
+    "head": "cf1e82a",
+    "hasChanges": false
+  }
+}
