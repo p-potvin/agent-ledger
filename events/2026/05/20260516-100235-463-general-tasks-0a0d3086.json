@@ -1,0 +1,34 @@
+{
+  "id": "20260516-100235-463-general-tasks-0a0d3086",
+  "createdAt": "2026-05-16T14:02:35.4635198Z",
+  "createdAtLocal": "2026-05-16 10:02",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "Claude Opus 4.7",
+  "agentHeader": "Agent: Claude Opus 4.7 (role: main)\r\nModel: claude-opus-4-7\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-16 10:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Replaced footgun 'Rebuild All VaultWares' desktop shortcut (which would have triggered all 24 builds on double-click and could conflict with in-progress IDE work) with safer 'Refresh VaultWares Shortcuts' shortcut that only runs create-shortcuts.ps1 (no builds, just re-creates .lnk files). rebuild-all.ps1 is still available for batch builds via terminal with -Only filter.",
+  "commands": [
+    "Remove-Item Rebuild All VaultWares.lnk",
+    "WScript.Shell CreateShortcut Refresh VaultWares Shortcuts.lnk"
+  ],
+  "files": [
+    "Desktop\\Refresh VaultWares Shortcuts.lnk",
+    ".builds\\create-shortcuts.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "0a0d3086b82d75c2b2a15d7015f08bb7fff65896be49e73633b9015fe7171290",
+  "git": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": "20260517-201440-216-general-tasks-a3fcccc5",
+  "createdAt": "2026-05-18T00:14:40.2168232Z",
+  "createdAtLocal": "2026-05-17 20:14",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-17 20:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Pre-rename infra mapping complete. SSH-probed ci-egress-vps and greencloud-vps, inventoried Tailscale ACL/devices, CI workflows, nginx vhosts, systemd services, databases, repo clones, and deploy scripts. Cross-grepped both VPSes for old project names — zero matches outside actions-runner stale workdirs. Tailscale ACL uses tags+IPs only (no project-named refs except vaultwares-postgres-db app-connector which is out of scope). MariaDB DBs (fullxxx_wp, promking_wp) are domain-named, not project-named — no rename. Found one user-data concern: deconstructed-website-a-la-mode defaults to ~/.deconstructed/vault — migration decision needed for vaultwares-decompile. dispatch-wares uses local Prisma Postgres for dev only, no infra impact. Most heavy lifting will be in code+manifest+folder layer, not infra.",
+  "commands": [
+    "ssh root@ci-egress-vps probes",
+    "ssh root@greencloud-vps probes",
+    "tailscale status",
+    "grep workspace DB configs"
+  ],
+  "files": [
+    "business/_transfer/tailscale-policy.json",
+    "business/_transfer/tailscale-devices.json",
+    "vaultwares-website/.github/workflows/deploy.yml",
+    "business/tube-site/.github/workflows/deploy-fullxxx-video.yml",
+    "business/tube-site/.github/workflows/deploy-promking-tube.yml",
+    "dispatch-wares/backend/prisma.config.ts",
+    "deconstructed-website-a-la-mode/.env.example"
+  ],
+  "planPath": "",
+  "contentHash": "a3fcccc5fc95b5efdf25af9d1e4f82c1ce174b0ee79755fc9b75726b0e1d3c65",
+  "git": null
+}

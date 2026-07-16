@@ -1,0 +1,36 @@
+{
+  "id": "20260513-201523-955-onetrainer-dbd91ae1",
+  "createdAt": "2026-05-14T00:15:23.9557290Z",
+  "createdAtLocal": "2026-05-13 20:15",
+  "timezone": "Eastern Standard Time",
+  "project": "OneTrainer",
+  "kind": "code-change",
+  "actor": "GitHub Copilot",
+  "agentHeader": "Agent: GitHub Copilot (role: main)\r\nModel: Claude Sonnet 4.6\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: D:\\OneTrainer  Branch: master\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 20:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Sonnet 4.6",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "d:\\OneTrainer",
+  "cwd": "D:\\OneTrainer",
+  "summary": "Fixed config.json corruption in d:\\OneTrainer\\config.json. Previous two multi_replace_string_in_file passes had introduced: truncated boolean values ('tru' instead of 'true,'), truncated string values ('ON' and 'COSINE' without closing quotes/commas), over-escaped backslashes in model paths (4 instead of 2), tripled transformer path suffix, wrong learning_rate (0.000111 instead of 0.0001), tripled quantization.cache_dir value. Fixed all issues using Python scripts writing directly to file. Final state: valid JSON, all 12GB RTX 3060 optimized settings active as OneTrainer default startup config.",
+  "commands": [],
+  "files": [
+    "d:\\OneTrainer\\config.json"
+  ],
+  "planPath": "",
+  "contentHash": "dbd91ae12d92b67256ee3ac5aed573182afb8c56fcb8a8b59869d950e466a46a",
+  "git": {
+    "repo": "OneTrainer",
+    "root": "D:/OneTrainer",
+    "branch": "master",
+    "head": "423c3b3",
+    "hasChanges": true
+  }
+}

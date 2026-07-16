@@ -1,0 +1,42 @@
+{
+  "id": "20260511-194842-171-vault-central-da98ec92",
+  "createdAt": "2026-05-11T23:48:42.1719153Z",
+  "createdAtLocal": "2026-05-11 19:48",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "Copilot",
+  "agentHeader": "Agent: Copilot (role: main)\r\nModel: o3-mini\r\nThinking: false\r\nMode: chat\r\nPermissions: write (network: offline)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): replace_string_in_file, run_in_terminal\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-11 19:48 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "o3-mini",
+    "thinking": "false",
+    "mode": "chat",
+    "permissions": "write",
+    "network": "offline",
+    "toolsUsed": [
+      "replace_string_in_file",
+      "run_in_terminal"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "c:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Replaced the WebM MediaRecorder blob saving to IndexedDB with a raw image sequence format saving (JSON Blob of data URLs). VaultDashboard PreviewThumb component now consumes the parsed Array of JSON data, iterating it via setInterval when hovered instead of playing an HTML video.",
+  "commands": [
+    "npm run build"
+  ],
+  "files": [
+    "src/offscreen/processor.ts",
+    "src/components/VaultDashboard.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "da98ec929a1ac22341017393f9aa88933276c36fd03d8937b3c7ae76e64955ae",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "20b6296",
+    "hasChanges": true
+  }
+}

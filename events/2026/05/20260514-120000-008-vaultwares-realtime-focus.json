@@ -1,0 +1,36 @@
+{
+  "id": "20260514-120000-008-vaultwares-realtime-focus",
+  "createdAt": "2026-05-14T16:00:00.0000000Z",
+  "createdAtLocal": "2026-05-14 12:00",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-realtime",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Haiku\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-realtime  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-14 12:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Haiku",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-realtime",
+  "summary": "Improve Keyboard Navigation Accessibility: Added explicit :focus pseudo-state selectors to custom QSS stylesheet in gui_overlay/overlay_window.py for interactive widgets (QCheckBox, QComboBox, QFontComboBox, QSpinBox, QPushButton). Included outline: none to suppress conflicting OS-level outlines. Custom stylesheet often removes default OS-provided focus outlines, breaking WCAG compliance for keyboard users.",
+  "commands": [],
+  "files": [
+    "gui_overlay/overlay_window.py"
+  ],
+  "planPath": "",
+  "contentHash": "c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b3c5d7e9f1a3b5c7d9e1f3a5b7c9",
+  "git": {
+    "repo": "vaultwares-realtime",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-realtime",
+    "branch": "main",
+    "head": "unknown",
+    "hasChanges": false
+  }
+}

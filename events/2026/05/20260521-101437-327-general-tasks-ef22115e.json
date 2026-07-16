@@ -1,0 +1,54 @@
+{
+  "id": "20260521-101437-327-general-tasks-ef22115e",
+  "createdAt": "2026-05-21T14:14:37.3272232Z",
+  "createdAtLocal": "2026-05-21 10:14",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 10:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Changed secrets URL to warden.vaultwares.ca. On greencloud-vps: added nginx vhost warden.vaultwares.ca (tailnet-only allowlist), updated secrets.vaultwares.ca to 301 redirect to warden, and expanded the existing Let’s Encrypt cert (docs.vaultwares.ca cert-name) to include warden.vaultwares.ca so TLS is clean. Installed rclone on greencloud-vps and added vw-backup.service + vw-backup.timer (hourly) + /usr/local/bin/vw-backup.sh to back up nginx/systemd/letsencrypt/actions-runner/vw-jira-sync/vault-warden/etc to an encrypted rclone crypt remote; timer is enabled but Google Drive OAuth still needs a one-time \rclone ... config reconnect vw_gdrive: on the VPS. Updated vaultwares-docs PR #12 to use warden.vaultwares.ca and added operations/backups.mdx runbook.",
+  "commands": [
+    "ssh root@100.73.93.84 nginx -t",
+    "ssh root@100.73.93.84 certbot certonly --webroot --expand ...",
+    "curl --resolve warden.vaultwares.ca:443:100.73.93.84 https://warden.vaultwares.ca/",
+    "curl --resolve secrets.vaultwares.ca:443:100.73.93.84 https://secrets.vaultwares.ca/",
+    "ssh root@100.73.93.84 apt-get install -y rclone",
+    "ssh root@100.73.93.84 systemctl enable --now vw-backup.timer"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\secrets.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\network-map.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\jira-sync.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\project-bootstrap.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\backups.mdx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\summaries\\SECRETS_HANDLING.md",
+    "/etc/nginx/sites-enabled/warden.vaultwares.ca.conf",
+    "/etc/nginx/sites-enabled/secrets.vaultwares.ca.conf",
+    "/usr/local/bin/vw-backup.sh",
+    "/etc/systemd/system/vw-backup.service",
+    "/etc/systemd/system/vw-backup.timer",
+    "/etc/vw-backup/rclone.conf",
+    "/etc/vw-backup/env"
+  ],
+  "planPath": "",
+  "contentHash": "ef22115efccf269a8a3a7fb60650d7dc7dd57427d22b7ac99a67b73b3803e875",
+  "git": null
+}

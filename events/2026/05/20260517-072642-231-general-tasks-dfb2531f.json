@@ -1,0 +1,42 @@
+{
+  "id": "20260517-072642-231-general-tasks-dfb2531f",
+  "createdAt": "2026-05-17T11:26:42.2314438Z",
+  "createdAtLocal": "2026-05-17 07:26",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-17 07:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Scanned all repos in Github Repos workspace and ~/Desktop/business folder. Inventoried project folder names vs internal identifiers (package.json name, pyproject.toml, Cargo.toml, csproj, WP theme headers, extension manifest names). Compiled a discrepancy report grouped by severity for user triage.",
+  "commands": [
+    "ls Github Repos",
+    "ls business",
+    "grep manifest names"
+  ],
+  "files": [
+    "vaultwares-docs/package.json",
+    "vaultwares-website/package.json",
+    "glass-ui/package.json",
+    "nexus-flow/package.json",
+    "nexus-orchestrator/package.json",
+    "cultural-rhythm/package.json",
+    "dispatch-wares/package.json",
+    "deconstructed-website-a-la-mode/package.json",
+    "vaultwares-identity-manager/package.json"
+  ],
+  "planPath": "",
+  "contentHash": "dfb2531f7a5efc77319f751ae407926855d46ac694608e6d209d8b4c7840b3f2",
+  "git": null
+}

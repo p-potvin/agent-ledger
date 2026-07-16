@@ -1,0 +1,46 @@
+{
+  "id": "20260515-160835-677-general-tasks-02ae63a9",
+  "createdAt": "2026-05-15T20:08:35.6774812Z",
+  "createdAtLocal": "2026-05-15 16:08",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "Claude Sonnet 4.6",
+  "agentHeader": "Agent: Claude Sonnet 4.6 (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-15 16:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-6",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\realtime-stt",
+  "summary": "Built all workspace repos into executables/launchers with desktop shortcuts. Created 20 custom SVG+ICO icons (VaultWares gold #D4AF37 palette). Built: vault-guardian (.NET WPF exe), wander (.NET WPF exe), vaultwares-cli (Rust exe), vault-explorer/no-more-groceries/deconstructed-website-a-la-mode (Electron .exe via electron-builder). Fixed two Electron build issues: deconstructed-website index.html Vite root path, no-more-groceries missing vault-themes Brand/css2.css. Triggered PyInstaller builds for realtime-stt and vault-video-enhancer (running in background). auto-backup and windows-customizer blocked by WinUI3 XamlCompiler incompatibility with VS 2026 — created VS-open launchers. Created .bat launchers for Python CLI apps and 10 web apps (auto-build + serve on unique ports 8001-8010). Created create-shortcuts.ps1 and rebuild-all.ps1 master scripts. Placed 24 .lnk shortcuts on desktop (23 apps + rebuild-all).",
+  "commands": [
+    "dotnet publish",
+    "cargo build --release",
+    "npm run dist",
+    "npm run electron:win",
+    "pyinstaller --onefile --windowed",
+    "magick *.svg -define icon:auto-resize ICO"
+  ],
+  "files": [
+    ".builds\\create-shortcuts.ps1",
+    ".builds\\rebuild-all.ps1",
+    ".builds\\launchers\\*.bat",
+    ".builds\\icons\\*.ico"
+  ],
+  "planPath": "",
+  "contentHash": "02ae63a95edac23c22780ba6d67fe820ade410084c44bcd938f3f2d620b9483a",
+  "git": {
+    "repo": "realtime-stt",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/realtime-stt",
+    "branch": "main",
+    "head": "8e132c7",
+    "hasChanges": true
+  }
+}

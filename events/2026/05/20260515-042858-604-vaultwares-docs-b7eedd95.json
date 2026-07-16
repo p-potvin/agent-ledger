@@ -1,0 +1,39 @@
+{
+  "id": "20260515-042858-604-vaultwares-docs-b7eedd95",
+  "createdAt": "2026-05-15T08:28:58.6046601Z",
+  "createdAtLocal": "2026-05-15 04:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "code-change",
+  "actor": "gpt-5.2-codex",
+  "agentHeader": "Agent: gpt-5.2-codex (role: main)\r\nModel: gpt-5.2\r\nThinking: false\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.shell_command, functions.apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-15 04:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "false",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.shell_command",
+      "functions.apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Fixed docs runtime Page Not Found caused by browser-incompatible frontmatter parsing: removed client dependency on gray-matter and replaced with a small frontmatter parser that normalizes CRLF. Added explicit GUI verification standards to AGENTS.md (multi-tool checks beyond 200 OK) and ran the global instructions sync. Built and pushed to main.",
+  "commands": [
+    "npm run build",
+    "git commit -m Fix docs frontmatter parsing in browser",
+    "git push",
+    "sync-global-instructions.ps1"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\src\\App.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\AGENTS.md"
+  ],
+  "planPath": "",
+  "contentHash": "b7eedd9571aa13e3f417fe809f964ead1a495cbfb02bff2f4696a1bd742c8dcd",
+  "git": null
+}

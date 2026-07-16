@@ -1,0 +1,66 @@
+{
+  "id": "20260522-000746-957-prom-king-tube-sites-7a783ca1",
+  "createdAt": "2026-05-22T04:07:46.9574586Z",
+  "createdAtLocal": "2026-05-22 00:07",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King tube-sites",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: gpt-5.2\r\nThinking: medium\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): functions.shell_command, functions.apply_patch, functions.update_plan\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 00:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "medium",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "functions.shell_command",
+      "functions.apply_patch",
+      "functions.update_plan"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Revamped PromKing + FullXXX tube UI to match tube-shared UI_kit_example (branding/icons + auth modal), fixed FXV allowlist host parsing to accept pasted URLs, and disabled GitHub-hosted deploy workflows (dispatch-only + self-hosted). Merged to main (a8d2683).",
+  "commands": [
+    "php -l (multiple files)",
+    "php tests/VideoFetcherTest.php",
+    "curl freesexvideos/latest-updates (status/size checks)",
+    "git add -A",
+    "git commit -m 'revamp(ui): ...'",
+    "git checkout main",
+    "git merge --ff-only vw-codex-ui-revamp",
+    "git push origin main"
+  ],
+  "files": [
+    ".github/workflows/deploy-fullxxx-video.yml",
+    ".github/workflows/deploy-promking-tube.yml",
+    "fullxxx-video/assets/css/pkt-player.css",
+    "fullxxx-video/assets/css/tubeshell/base.css",
+    "fullxxx-video/includes/auth-bridge.php",
+    "fullxxx-video/includes/helpers.php",
+    "fullxxx-video/templates/archive-fxv_video.php",
+    "fullxxx-video/templates/single-fxv_video.php",
+    "fullxxx-video/templates/taxonomy-fxv_category.php",
+    "promking-tube/assets/css/pkt-player.css",
+    "promking-tube/assets/css/tubeshell/base.css",
+    "promking-tube/includes/auth-bridge.php",
+    "promking-tube/includes/shortcodes.php",
+    "promking-tube/templates/archive-pkt_video.php",
+    "promking-tube/templates/single-pkt_video.php",
+    "promking-tube/templates/taxonomy-pkt_category.php",
+    "tube-shared/assets/css/tube-auth.css",
+    "tube-shared/includes/icons.php",
+    "tube-shared/templates/auth-modal.php",
+    "tube-shared/tube-shared.php"
+  ],
+  "planPath": "",
+  "contentHash": "7a783ca11e07f649043e9eaede5f45e62a82deb25c89a4296992b404f512d643",
+  "git": null
+}

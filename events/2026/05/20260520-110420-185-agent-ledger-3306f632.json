@@ -1,0 +1,49 @@
+{
+  "id": "20260520-110420-185-agent-ledger-3306f632",
+  "createdAt": "2026-05-20T15:04:20.1854955Z",
+  "createdAtLocal": "2026-05-20 11:04",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "verification",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: chat\r\nPermissions: escalated (network: offline)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 11:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "chat",
+    "permissions": "escalated",
+    "network": "offline",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "resume_used": false,
+      "long_running_tasks": true
+    },
+    "metrics": {
+      "tools_used_count": 1,
+      "estimated_output_tokens": 8200,
+      "commands_run_count": 1
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Verify correct snake_case telemetry key normalization",
+  "commands": [
+    "record-agent-change.ps1"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\scripts\\record-agent-change.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "3306f63295b5d67887cbc9d2cf6859feeb63f501937e698fd7508994daa3688c",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "main",
+    "head": "37642ac",
+    "hasChanges": false
+  }
+}

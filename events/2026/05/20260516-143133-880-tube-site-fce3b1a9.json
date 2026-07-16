@@ -1,0 +1,49 @@
+{
+  "id": "20260516-143133-880-tube-site-fce3b1a9",
+  "createdAt": "2026-05-16T18:31:33.8808816Z",
+  "createdAtLocal": "2026-05-16 14:31",
+  "timezone": "Eastern Standard Time",
+  "project": "tube-site",
+  "kind": "code-change",
+  "actor": "Codex",
+  "agentHeader": "Agent: Codex (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: danger-full-access; approval never (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business\\tube-site  Branch: main\r\nTools used (this reply): shell_command, apply_patch, multi_tool_use.parallel\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-16 14:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "danger-full-access; approval never",
+    "network": "online",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch",
+      "multi_tool_use.parallel"
+    ],
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+  "summary": "Implemented and hardened the shared selector-based Tube_Video_Fetcher engine, ensured tube-shared loads it with the legacy URL constant, refactored/kept PromKing and FullXXX fetch paths on shared selector configs, added a PromKing transient execution lock, capped shared HTTP requests at 10 seconds, sanitized extracted values, removed PHP 8 union return types from touched fetcher functions, and verified PHP syntax for all touched files.",
+  "commands": [
+    "php -l tube-shared/includes/class-video-fetcher.php",
+    "php -l tube-shared/tube-shared.php",
+    "php -l promking-tube/includes/video-fetcher.php",
+    "php -l fullxxx-video/includes/video-fetcher.php",
+    "rg -n timeout/str_starts_with/union-type compatibility scan"
+  ],
+  "files": [
+    "tube-shared/includes/class-video-fetcher.php",
+    "tube-shared/tube-shared.php",
+    "promking-tube/includes/video-fetcher.php",
+    "fullxxx-video/includes/video-fetcher.php"
+  ],
+  "planPath": "",
+  "contentHash": "fce3b1a9955cd05e4c7dee969bba3018f0d0907c676e77619472394d9e62af2a",
+  "git": {
+    "repo": "tube-site",
+    "root": "C:/Users/Administrator/Desktop/business/tube-site",
+    "branch": "main",
+    "head": "e91fe17",
+    "hasChanges": true
+  }
+}

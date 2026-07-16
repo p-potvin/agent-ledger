@@ -1,0 +1,45 @@
+{
+  "id": "20260521-153738-429-vw-jira-sync-3a626103",
+  "createdAt": "2026-05-21T19:37:38.4291798Z",
+  "createdAtLocal": "2026-05-21 15:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-jira-sync",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 15:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync",
+  "summary": "Full webhook deployment pass. (1) Created scripts/deploy_webhooks.py — deploys/updates GitHub webhooks on all 41 repos to hooks.vaultwares.ca/github with 5 events (push, pull_request, pull_request_review, pull_request_review_comment, issue_comment). 41/41 OK — 40 created, vaultwares-docs updated from push-only. (2) Synced config.yaml + jira_sync.py + live_sync.py to VPS /opt/vw-jira-sync/. (3) Updated /usr/local/bin/vw-jira-sync-run.sh on VPS to export GITHUB_TOKEN from /etc/vw-webhookd/gh-token — fixes 404 on private repo commits. (4) Added FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true to sync.yml. (5) Bumped vaultwares-themes submodule in vaultwares-studio, vaultwares-website, wander. Webhook working end-to-end: VSTUD-53, VWEB-45, VDOCS-50/51, WAND-9 created in Jira.",
+  "commands": [
+    ".venv\\Scripts\\python.exe scripts\\deploy_webhooks.py",
+    "git push origin main",
+    "scp config.yaml scripts/jira_sync.py scripts/live_sync.py root@100.73.93.84:/opt/vw-jira-sync/..."
+  ],
+  "files": [
+    "vw-jira-sync/scripts/deploy_webhooks.py",
+    "vw-jira-sync/.github/workflows/sync.yml"
+  ],
+  "planPath": "",
+  "contentHash": "3a626103827ff4511ba79646441f7740284f583737b47ca53a38e0585b7a8ac8",
+  "git": {
+    "repo": "vw-jira-sync",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vw-jira-sync",
+    "branch": "main",
+    "head": "ddfaf42",
+    "hasChanges": false
+  }
+}

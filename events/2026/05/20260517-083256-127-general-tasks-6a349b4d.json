@@ -1,0 +1,51 @@
+{
+  "id": "20260517-083256-127-general-tasks-6a349b4d",
+  "createdAt": "2026-05-17T12:32:56.1279172Z",
+  "createdAtLocal": "2026-05-17 08:32",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-17 08:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Compiled exhaustive rename refactoring plan for 13 projects. Mapped every change required: folder renames, GitHub repo renames, package.json/Cargo.toml/pyproject manifest fields, Python package directories (vault_enhancer, stt_engine, studio_core), Rust crate name (agentciation), PyInstaller spec files, WinUI csproj names, browser extension manifest names, Vercel project names, .builds/icons + .builds/launchers + .builds/rebuild-all.ps1 + .builds/create-shortcuts.ps1 references, .extras deploy scripts, in-source identifier replacements, and business/ folder restructuring under promking/. Flagged 3 sub-decisions needing user input before execution.",
+  "commands": [
+    "grep filename occurrences",
+    "grep content references",
+    "read manifests",
+    "check git remotes",
+    "read vercel project.json"
+  ],
+  "files": [
+    ".builds/rebuild-all.ps1",
+    ".builds/create-shortcuts.ps1",
+    "glass-ui/package.json",
+    "dispatch-wares/package.json",
+    "deconstructed-website-a-la-mode/package.json",
+    "vault-video-enhancer/Vault-Video-Enhancer.spec",
+    "realtime-stt/Realtime-STT.spec",
+    "usd-playground/usd-playground-demo.spec",
+    "vaultwares-identity-manager/manifest.json",
+    "vaultwares-docs/package.json",
+    "vaultwares-website/package.json",
+    "cultural-rhythm/package.json",
+    "nexus-flow/package.json",
+    "nexus-orchestrator/package.json",
+    "vaultwares-cli/Cargo.toml",
+    "vaultwares-cli/crates/agentciation/Cargo.toml"
+  ],
+  "planPath": "",
+  "contentHash": "6a349b4de8f3f2685a255630faaec96bce9233d58cf2c3887c5012bc92ac9ffd",
+  "git": null
+}

@@ -1,0 +1,66 @@
+{
+  "id": "20260520-111127-080-vaultwares-protocols-ff41cd26",
+  "createdAt": "2026-05-20T15:11:27.0804255Z",
+  "createdAtLocal": "2026-05-20 11:11",
+  "timezone": "Eastern Standard Time",
+  "project": "VaultWares protocols",
+  "kind": "handoff",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: chat\r\nPermissions: escalated (network: offline)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): powershell, git, node, python\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 11:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "chat",
+    "permissions": "escalated",
+    "network": "offline",
+    "toolsUsed": [
+      "powershell",
+      "git",
+      "node",
+      "python"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "interview_started": true,
+      "credit_pipeline_used": false,
+      "long_running_tasks": true,
+      "router": true,
+      "resume_used": true
+    },
+    "metrics": {
+      "estimated_output_tokens": 8200
+    }
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Completed LONG_RUNNING_TASKS v1 rollout: CLAUDE stub now matches AGENTS stub; propagation script skips vaultwares-docs SSOT; vaultwares-mcp includes new token-first task_estimate tool; agent-ledger scripts support telemetry flags/metrics with snake_case normalization.",
+  "commands": [
+    "vaultwares-docs/scripts/apply-preinstructions-to-repos.ps1",
+    "git push origin main (vaultwares-docs, vaultwares-mcp, agent-ledger)"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\ROUTER.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\summaries\\LONG_RUNNING_TASKS.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\notes\\LONG_RUNNING_TASKS.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\templates\\AGENTS.stub.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\instructions\\templates\\CLAUDE.stub.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\scripts\\apply-preinstructions-to-repos.ps1",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp\\tools\\task_estimator.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-mcp\\vaultwares_mcp\\server.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\scripts\\record-agent-change.ps1",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\scripts\\render-agent-ledger.ps1",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\scripts\\update-work-impact-state.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "ff41cd2687336b482e77757317d60459a8821fac05258acf1a543b43765b2658",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "main",
+    "head": "f4104fe",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "20260520-140517-638-vaultwares-media-processing-0cfa9ba2",
+  "createdAt": "2026-05-20T18:05:17.6382202Z",
+  "createdAtLocal": "2026-05-20 14:05",
+  "timezone": "Eastern Standard Time",
+  "project": "VaultWares Media Processing",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-media-processing  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 14:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-media-processing",
+  "summary": "Refactored vault_gui.py init_ui to implement a dual-pane Application Shell with Left Sidebar and Main Right content area with a Titlebar, matching the React UI design system.",
+  "commands": [
+    ".\\.venv\\Scripts\\python.exe vault_gui.py"
+  ],
+  "files": [
+    "vault_gui.py"
+  ],
+  "planPath": "",
+  "contentHash": "0cfa9ba25164251f57405d5d0fb2df09c684c96209855ee986cafd6e81b2e268",
+  "git": {
+    "repo": "vaultwares-media-processing",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-media-processing",
+    "branch": "main",
+    "head": "9228e6f",
+    "hasChanges": true
+  }
+}

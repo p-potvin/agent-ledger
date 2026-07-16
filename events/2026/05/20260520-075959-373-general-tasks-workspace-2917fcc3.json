@@ -1,0 +1,45 @@
+{
+  "id": "20260520-075959-373-general-tasks-workspace-2917fcc3",
+  "createdAt": "2026-05-20T11:59:59.3734356Z",
+  "createdAtLocal": "2026-05-20 07:59",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks (workspace)",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\automation-suite  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 07:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\automation-suite",
+  "summary": "Recreated all 20 project .venv dirs using uv (Python 3.12.11 canonical; Video-Depth-Anything on 3.11.15 due to torch==2.1.1 ABI). CUDA repos (scripts, vaultwares-pipelines, vaultwares-studio, Video-Depth-Anything) installed torch from https://download.pytorch.org/whl/cu121. Fixed automation-suite requirements.txt (removed time/random/uuid stdlib packages). Uninstalled Python 3.12.10 system install (was 9.2 GB with torch in site-packages), Python 3.14.3, Miniconda3. Removed 9 stale PATH entries. Updated standalone uv to 0.11.15. Python312 dir reduced to 60 MB (uv.exe still running - delete with Desktop/cleanup-python312.ps1 in new terminal). uv cache at 33 GB provides content-addressed dedup for all venvs.",
+  "commands": [
+    "uv venv --python 3.12",
+    "uv pip install -r requirements.txt",
+    "uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121",
+    "winget uninstall --id Python.Python.3.12 --version 3.12.10 --silent",
+    "uv self update (0.10.10 -> 0.11.15)"
+  ],
+  "files": [
+    "automation-suite/requirements.txt",
+    "automation-suite/.gitignore",
+    "*/.venv/pyvenv.cfg (20 repos)",
+    "Desktop/cleanup-python312.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "2917fcc39c7014314484633e603cc98dac9caab84490e97c703dcf86c301c42d",
+  "git": {
+    "repo": "automation-suite",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/automation-suite",
+    "branch": "main",
+    "head": "9ba4282",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "20260513-212445-036-general-tasks-ba1c49b3",
+  "createdAt": "2026-05-14T01:24:45.0365419Z",
+  "createdAtLocal": "2026-05-13 21:24",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "handoff",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5.2\r\nThinking: unknown\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business  Branch: n/a\r\nTools used (this reply): functions.shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 21:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5.2",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": "functions.shell_command",
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\business",
+  "summary": "Investigated Vault Flows <-> API auth path and HTTPS warnings: vault-flows uses /api fetch wrapper with in-memory Bearer JWT from /auth/login; API enforces HTTPS via x-forwarded-proto only when peer is trusted proxy; noddit.org currently proxies to PC Vite preview HTTPS self-signed (nginx proxy_ssl_verify off).",
+  "commands": [
+    "rg -n 'Authorization|/api|VITE_API_URL' vault-flows",
+    "rg -n 'HTTPS required|426|x-forwarded-proto' vaultwares-pipelines/api_server.py"
+  ],
+  "files": [
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Github Repos\\\\vault-flows\\\\src\\\\api\\\\client.ts",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Github Repos\\\\vault-flows\\\\vite.config.ts",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Github Repos\\\\vaultwares-pipelines\\\\api_server.py"
+  ],
+  "planPath": "",
+  "contentHash": "ba1c49b3ec91f0e65608e974c1caee6dd7b662fbcc59717cc874fa0148dd57b2",
+  "git": null
+}

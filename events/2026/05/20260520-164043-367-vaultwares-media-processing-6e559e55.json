@@ -1,0 +1,40 @@
+{
+  "id": "20260520-164043-367-vaultwares-media-processing-6e559e55",
+  "createdAt": "2026-05-20T20:40:43.3677507Z",
+  "createdAtLocal": "2026-05-20 16:40",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-media-processing",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-media-processing  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-20 16:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-media-processing",
+  "summary": "Fixed TensorRT script crash resulting from incompatible diffusers/huggingface-hub versions and a missing CUDA-enabled torch binary inside the .venv. Reinstalled huggingface-hub<0.25.0 and CUDA 12.4 torch allowing StreamDiffusion TensorRT to build smoothly.",
+  "commands": [
+    ".\\.venv\\Scripts\\python.exe -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "6e559e5556aea4dba175947512d8a9935328e011715475cdb68741a0a36aff5b",
+  "git": {
+    "repo": "vaultwares-media-processing",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-media-processing",
+    "branch": "main",
+    "head": "9228e6f",
+    "hasChanges": false
+  }
+}

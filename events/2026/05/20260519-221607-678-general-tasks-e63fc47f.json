@@ -1,0 +1,41 @@
+{
+  "id": "20260519-221607-678-general-tasks-e63fc47f",
+  "createdAt": "2026-05-20T02:16:07.6786014Z",
+  "createdAtLocal": "2026-05-19 22:16",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-4-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\weekly-menu  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-19 22:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\weekly-menu",
+  "summary": "Full workspace local cleanup across all repos: (1) Deleted Vercel artifacts: vercel.json, .vercelignore, .vercel/ from vaultwares-docs, vaultwares-website, agent-ledger, vaultwares-glass, vault-flows. (2) Deleted PyInstaller .spec files from vaultwares-pipelines, vaultwares-realtime, vaultwares-media-processing. (3) Fixed .gitmodules in 18 repos: vault-themes→vaultwares-themes, vaultwares-agentciation→vaultwares-adk, vaultwares_adk path→vaultwares-adk. (4) Renamed stale submodule checkout dirs to match new names across all repos. (5) Bulk sed replacement in root .md files: vault-themes→vaultwares-themes, vaultwares-agentciation→vaultwares-adk, vault-video-enhancer→vaultwares-media-processing. Skipped CHANGES.md (historical). (6) Committed and pushed all changes directly to main (vault-* and utility repos) or to feature/phase5-sync branches (vaultwares-realtime, vaultwares-media-processing). Final check: zero old dirs, zero vercel files, zero spec files, zero old names in root .md files.",
+  "commands": [
+    "sed -i 's/vault-themes/vaultwares-themes/g; s/vaultwares-agentciation/vaultwares-adk/g' .gitmodules",
+    "git rm --cached vault-themes vaultwares-agentciation && mv vault-themes vaultwares-themes",
+    "git submodule sync",
+    "find . -maxdepth 1 -name '*.md' | xargs sed -i 's/vault-themes/vaultwares-themes/g'"
+  ],
+  "files": [
+    ".gitmodules"
+  ],
+  "planPath": "",
+  "contentHash": "e63fc47fb3043058666506aef5082ade284a101a90838305b8c9de545dafbf42",
+  "git": {
+    "repo": "weekly-menu",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/weekly-menu",
+    "branch": "main",
+    "head": "86c0849",
+    "hasChanges": false
+  }
+}

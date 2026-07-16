@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260511-235549-701-vault-themes-vaultwares-docs-52e07230",
+    "createdAt":  "2026-05-12T03:55:49.7014204Z",
+    "createdAtLocal":  "2026-05-11 23:55",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-themes + vaultwares-docs",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: Claude Sonnet 4.6 (Thinking)\r\nThinking: true\r\nMode: agent\r\nPermissions: standard (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): view_file, list_dir, write_to_file, replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-11 23:55 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude Sonnet 4.6 (Thinking)",
+                    "thinking":  "true",
+                    "mode":  "agent",
+                    "permissions":  "standard",
+                    "network":  "online",
+                    "toolsUsed":  [
+                                      "view_file",
+                                      "list_dir",
+                                      "write_to_file",
+                                      "replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "summary":  "vault-themes: Created vault-tailwind-v4.css (Tailwind v4 @theme bridge with all 19 VaultTheme token mappings, Golden Slate FOUC defaults, glass/banner/focus utilities), vault-tokens.css (CSS-only framework-free token file with OS prefers-color-scheme light fallback and vault- utility classes), and theme-manager/README.md with import instructions for TypeScript, Tailwind v4/v3, Python/Qt, C#/.NET, and WPF/XAML. vaultwares-docs: Replaced hand-drawn SVG in header with official vaultwares-minimal-gold.png (dark) and vaultwares-minimal-ink.png (light) mode-aware icons. Rewrote App.tsx with full sidebar nav matching all 10 docs.json sections and 40+ links, root / redirect to /getting-started/overview, path normalization for 404 fix, Steps/Step MDX component rendering, and responsive header collapse (\u003e= 640px full, 360-639px tagline hidden, \u003c 360px icon only). Both repos pushed to main triggering deploy.",
+    "commands":  [
+                     "git push origin main",
+                     "npm run build"
+                 ],
+    "files":  [
+                  "vault-themes/theme-manager/exports/vault-tailwind-v4.css",
+                  "vault-themes/theme-manager/exports/vault-tokens.css",
+                  "vault-themes/theme-manager/README.md",
+                  "vaultwares-docs/src/App.tsx",
+                  "vaultwares-docs/src/index.css",
+                  "vaultwares-docs/public/vaultwares-minimal-gold.png"
+              ],
+    "planPath":  "",
+    "contentHash":  "52e07230be0cf22217aac90045ab3d035ce258a5b39a042059a4fefdc8f58282",
+    "git":  null
+}

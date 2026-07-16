@@ -1,0 +1,41 @@
+{
+  "id": "20260513-202010-851-vault-flows-4e5c43c1",
+  "createdAt": "2026-05-14T00:20:10.8513532Z",
+  "createdAtLocal": "2026-05-13 20:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "claude-sonnet-4-6",
+  "agentHeader": "Agent: claude-sonnet-4-6 (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows  Branch: rewrite/spa\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-13 20:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-4-6",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-flows",
+  "summary": "Fixed ReactFlow nodes not rendering visibly after preset load. Root cause: handleNodesChange was syncing all RF change types (including internal 'dimensions' changes) back to Zustand store, triggering storeNodes useEffect which called setRfNodes — resetting nodes before RF finished measuring them. Loop kept nodes at visibility:hidden permanently. Fix: filter handleNodesChange to only sync 'position' changes; remove store→RF sync useEffects; add key={activePreset?.id} to FlowCanvas in App.tsx so it remounts correctly on preset change. Verified visually: TOPIC, EXPAND OUTLINE, WRITE FULL DRAFT, RESULT nodes all render on canvas.",
+  "commands": [
+    "npm run build",
+    "Restart-Service vault-flows-spa",
+    "git commit"
+  ],
+  "files": [
+    "src/canvas/FlowCanvas.tsx",
+    "src/App.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "4e5c43c13eee184a00cb260875c8f4a604b4d52da16827aba11bfcb508e4d0e1",
+  "git": {
+    "repo": "vault-flows",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-flows",
+    "branch": "rewrite/spa",
+    "head": "2888652",
+    "hasChanges": true
+  }
+}

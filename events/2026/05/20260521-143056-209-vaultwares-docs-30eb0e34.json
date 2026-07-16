@@ -1,0 +1,36 @@
+{
+  "id": "20260521-143056-209-vaultwares-docs-30eb0e34",
+  "createdAt": "2026-05-21T18:30:56.2090418Z",
+  "createdAtLocal": "2026-05-21 14:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-21 14:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Identified 3 issues from user feedback: (1) AGENTS.md keep for Copilot/Jules compatibility but fix absolute Windows paths to repo-relative. (2) No WORK_TRACKING protocol exists — proposed new router category + summary to enforce Jira/GitHub Issues for all planning work, forbid TODO.md/ROADMAP.md in repos. (3) Notes files are stubs (2-3 lines) not inverted summaries — summaries are correctly formatted, notes need expansion pass. New delete candidates: assets/.notes.md (Jules stale session notes), docs/consumer-update-roadmap.md (planning doc → Jira epic). Keep: docs/submodule-consumer-rules.md. Need reads: assets/README.md, assets/SKILL.md, assets/ui-kit.md, assets/philosophy.md.",
+  "commands": [],
+  "files": [
+    "vaultwares-docs/instructions/ROUTER.md",
+    "vaultwares-themes/assets/.notes.md",
+    "vaultwares-themes/docs/consumer-update-roadmap.md"
+  ],
+  "planPath": "",
+  "contentHash": "30eb0e348ea16b8f647eb8b7480ba771e2936fa93d114607e081b5f9a20dae4c",
+  "git": null
+}

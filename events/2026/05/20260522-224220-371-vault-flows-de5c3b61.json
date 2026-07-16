@@ -1,0 +1,41 @@
+{
+  "id": "20260522-224220-371-vault-flows-de5c3b61",
+  "createdAt": "2026-05-23T02:42:20.3715548Z",
+  "createdAtLocal": "2026-05-22 22:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-flows",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 22:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Wired the comfyui_workflow node to actually call ComfyUI end-to-end. (1) Replaced placeholder _job_worker in pipelines api_server.py — kind=workflow_run jobs now call _execute_workflow_run, which loads the workflow's first comfyui_graph step, applies input_paths substitutions from job payload inputs, and dispatches to _execute_comfyui_graph. (2) _execute_comfyui_graph posts the API-format graph to ComfyUI /prompt with a random client_id, polls /history/{prompt_id} every 1.5s until status.completed or status_str=='error', extracts image refs from outputs[*].images, fetches the first one via /view, base64-encodes it as a data:image/png URI (so the SPA can render via <img src> without a second authenticated request). (3) Added _apply_input_paths helper that deep-copies the graph and walks dotted paths (e.g. '5.inputs.text') to substitute values from the inputs dict before submission. (4) _handle_comfyui_workflow (flow runner) now passes node.params.inputs through to job payload. (5) New env: COMFYUI_URL=http://127.0.0.1:8188, COMFYUI_PROMPT_TIMEOUT_SECONDS=300. (6) Seeded workflow 'z-image-turbo-text2img' in pipelines DB via POST /workflows — single comfyui_graph step using ckpt z-Image-Turbo-FP8-AIO.safetensors, 6-step KSampler euler/simple CFG 1.0 at 1024x1024, input_paths for prompt/negative_prompt/seed/steps/width/height. (7) End-to-end verified: vault-flows graph with [input -> comfyui_workflow(z-image-turbo-text2img, inputs={prompt,seed}) -> display] returned in 1m 27s (incl. first-call model warmup), produced a real PNG image (2.2 MB data URI, valid PNG signature 89504e470d0a1a0a) of the requested 'glowing crystal cave with bioluminescent mushrooms', saved as vault-flows-zimage_00001_.png in ComfyUI's output dir; display node correctly forwards the upstream image payload (kind='image', imageUrl=data URI). Also restarted Postgres which had stopped between sessions.",
+  "commands": [
+    "curl POST /workflows < seed-z-image.json",
+    "curl POST /flows/run with comfyui_workflow node",
+    "Start-Service postgresql-x64-18",
+    "nssm restart vault-pipelines-api"
+  ],
+  "files": [
+    "vaultwares-pipelines/api_server.py",
+    "vaultwares-pipelines/.env",
+    "seed-z-image.json"
+  ],
+  "planPath": "",
+  "contentHash": "de5c3b61ff1fabf38bae2e7749b2f6d9c817272c144dbec76f1e390fb0dab22e",
+  "git": null
+}

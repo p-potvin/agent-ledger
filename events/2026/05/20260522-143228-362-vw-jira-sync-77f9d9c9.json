@@ -1,0 +1,43 @@
+{
+  "id": "20260522-143228-362-vw-jira-sync-77f9d9c9",
+  "createdAt": "2026-05-22T18:32:28.3626769Z",
+  "createdAtLocal": "2026-05-22 14:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-jira-sync",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-22 14:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-jira-sync",
+  "summary": "Refactored scheduled-distribute-secrets.ps1 to fetch GH_TOKEN and JIRA_TOKEN from greencloud-vps via Tailscale SSH at runtime. No tokens stored on local disk. GH_TOKEN read from /etc/vw-webhookd/gh-token on VPS; JIRA_TOKEN fetched via /usr/local/bin/vw-print-jira-token helper (reads from vw-secretsd). Created vw-print-jira-token helper on VPS. Tested: 41/41 repos updated successfully.",
+  "commands": [
+    "ssh root@100.73.93.84 vw-print-jira-token",
+    "powershell -File scripts\\scheduled-distribute-secrets.ps1"
+  ],
+  "files": [
+    "vw-jira-sync/scripts/scheduled-distribute-secrets.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "77f9d9c957fa1a008da97b2aca93656e36cbc3206e83fa5294157515d4309c7c",
+  "git": {
+    "repo": "vw-jira-sync",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vw-jira-sync",
+    "branch": "main",
+    "head": "13f81d9",
+    "hasChanges": false
+  }
+}

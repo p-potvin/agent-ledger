@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20260516-182030-533-tube-site-c4798b0c",
+    "createdAt":  "2026-05-16T22:20:30.5335118Z",
+    "createdAtLocal":  "2026-05-16 18:20",
+    "timezone":  "Eastern Standard Time",
+    "project":  "tube-site",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: Gemini 3 Flash\r\nThinking: False\r\nMode: agent\r\nPermissions: full (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\business\\tube-site  Branch: main\r\nTools used (this reply): run_command, git\r\nMCP servers accessed (this reply): none\r\nTime: 2026-05-16 18:20 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3 Flash",
+                    "thinking":  "False",
+                    "mode":  "agent",
+                    "permissions":  "full",
+                    "network":  "online",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "git"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\business\\tube-site",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
+    "summary":  "Pushed Pornhub-to-SpankBang replacement to main branch. This change removes the problematic Pornhub source (which was picking up podcasts) and replaces it with SpankBang for both manual and bulk fetch modes. Updated player profiles and allowlists for the new source.",
+    "commands":  [
+                     "git push origin main"
+                 ],
+    "files":  [
+                  "promking-tube/includes/video-fetcher.php",
+                  "promking-tube/includes/player.php"
+              ],
+    "planPath":  "",
+    "contentHash":  "c4798b0cc2077029017b1eddd1f564a4475910bf46440c8ba99a9877a959b936",
+    "git":  {
+                "repo":  "tube-site",
+                "root":  "C:/Users/Administrator/Desktop/business/tube-site",
+                "branch":  "main",
+                "head":  "f037c0f",
+                "hasChanges":  true
+            }
+}
