@@ -3,6 +3,37 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-07-16 02:38 - wander</strong> <code>code-change,verification</code> - Fixed tailnet peer display names: TailscaleService was showing the device&#39;s self-reported OS HostName (unreliable — iPad reports literally &#39;localhost&#39;, greencloud-vps reports it...</summary>
+
+- Kind: code-change,verification
+- Actor: Claude
+- Agent Header:
+  ```text
+  Agent: Claude (role: main)
+  Model: claude-fable-5
+  Thinking: unknown
+  Mode: interactive
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Clopeux\Desktop\Github Repos\wander  Branch: main
+  Tools used (this reply): Read, Edit, Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-07-16 02:38 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed tailnet peer display names: TailscaleService was showing the device's self-reported OS HostName (unreliable — iPad reports literally 'localhost', greencloud-vps reports its internal hostname 'vaultwares') instead of Tailscale's own DNSName, which matches the admin console and VaultWares naming convention. Added TailscalePeer.DisplayName parsing the first DNS label. Rebranded the dashboard with the user's new wander-gold/wander-console marks (assets/wander-{gold,console}-transparent.png): window/taskbar icon, tray icon, header logo (gold, chrome contexts), console panel accent mark. Relocated the local demo sync folder from the deep session scratchpad path to C:\Users\Clopeux\Desktop\WanderSync. Attempted SSH/SFTP into clopeux-desktop (100.71.101.21) per user's new access grant; ping succeeds but ports 22/21/990/2222 and even Wander's own 5555 are all closed/filtered from this machine, so could not connect — likely Windows Firewall or the services not actually running/listening on the tailscale interface; flagged to user, did not attempt further remote-access workarounds. Pushed b64b24c. 31/31 tests, 0 warnings; verified visually via window capture.
+- Commands:
+  - `dotnet build Wander.slnx`
+  - `dotnet test`
+  - `git push origin main`
+  - `ssh clopeux-desktop`
+- Files:
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Network\Services\TailscaleService.cs`
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\App.axaml`
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\MainWindow.axaml`
+- Git: repo=wander, branch=main, head=b64b24c
+
+</details>
+
+<details>
 <summary><strong>2026-07-16 02:23 - wander</strong> <code>code-change,verification</code> - Aligned all agent-ledger copies: committed desktop archival churn (1d8cd2fe), rescued this laptop&#39;s broken clone (unrelated history, stuck rebase, 218 stranded commits) by reset...</summary>
 
 - Kind: code-change,verification
