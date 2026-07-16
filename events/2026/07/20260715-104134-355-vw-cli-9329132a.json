@@ -1,0 +1,34 @@
+{
+  "id": "20260715-104134-355-vw-cli-9329132a",
+  "createdAt": "2026-07-15T14:41:34.3553580Z",
+  "createdAtLocal": "2026-07-15 10:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "bugfix",
+  "actor": "cascade",
+  "agentHeader": "Agent: cascade (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: pair\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-15 10:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "pair",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Fixed argument passing: replaced array splatting with Invoke-Expression so short parameter aliases like -d, -m, -v are recognized as parameter names instead of positional values",
+  "commands": [],
+  "files": [
+    "vw.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "9329132ade23746ad4da454ba802886ec9535ac98c0afc5bd11e9a719ab8c17f",
+  "git": null
+}

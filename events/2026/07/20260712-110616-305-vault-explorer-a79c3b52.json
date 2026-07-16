@@ -1,0 +1,58 @@
+{
+  "id": "20260712-110616-305-vault-explorer-a79c3b52",
+  "createdAt": "2026-07-12T15:06:16.3054269Z",
+  "createdAtLocal": "2026-07-12 11:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Write, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-12 11:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Major feature turn, all verified live via Playwright-Electron (zero console errors). VERSION 2.0.11 -> 3.0.0. FAVORITES: added the missing Favorites pill to the files sub-nav wired to the existing switchFilesSubtab('favorites'). CLIP MODAL: Trim now closes the dialog exposing the seek-bar markers; Crop preview no longer balloons the dialog (shape the video element height-capped at 240px, not the container aspect-ratio); removed the confusing duplicate AI Enhance button from Basic Editing (the AI section below is the real one, retitled 'applied to the exported file'). PHOTO EDITOR fully implemented (rewrite, flatten-on-commit + Ctrl-Z history x15): interactive drag Crop with dim overlay + Apply/Cancel, freehand Draw with color+size controls, click-to-place Text with floating input, Arrow markup, Move=pan when zoomed, rotate/flip now one-shot actions not modes; Save writes PNG next to the original via new save-edited-image IPC (never overwrites source, auto-numbered) instead of browser-download. MUSIC TAB rewritten: sortable columns (#/Title/Artist/Time/Date/Plays, click headers asc/desc), per-row favorite (window.toggleFavorite) + add-to-playlist popup, user playlists via virtual-folders type playlist (create/new-from-menu; ACCEPTS.playlist=audio confirmed), play counts in localStorage bumped on play, playlist covers auto-detected from folder images (cover/folder/front/albumart preferred) with click-the-album-art to assign a custom cover persisted in appSettings.playlistCovers; sidebar sections Playlists/Folders with cover thumbs. AI UPSCALING root-caused and FIXED - four stacked bugs in rtx_vsr_stream.py: (1) maxrate/bufsize re-appended the M suffix after expanding to bits (6M -> 7500000M = 7.5Tbps, nvenc refused to open - this caused the original DEMUXER error); (2) dec_proc.stdout.read(frame_bytes) on bufsize=0 pipe returns partial (~64KB) reads treated as EOF -> 0 frames; added _read_exact used in both stream and enhance loops;",
+  "commands": [
+    "rtx_vsr_stream.py stream test: 90 frames, valid 1280x720 fMP4",
+    "playwright final smoke (all green, 0 console errors)",
+    "node check all edited files"
+  ],
+  "files": [
+    "package.json",
+    "index.html",
+    "js/navigation/tabs.js",
+    "js/player/clip.js",
+    "js/photo-editor.js",
+    "js/audio.js",
+    "src/ipc/files.ipc.js",
+    "preload.js",
+    "python-scripts/rtx_vsr_stream.py"
+  ],
+  "planPath": "",
+  "contentHash": "a79c3b52e171a4a228e95fa7ade649c8b97556976cea0211a2dcdd688b0d3c56",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

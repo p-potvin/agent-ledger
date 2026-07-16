@@ -1,0 +1,62 @@
+{
+  "id": "20260712-094951-289-vault-explorer-0d2805b4",
+  "createdAt": "2026-07-12T13:49:51.2892771Z",
+  "createdAtLocal": "2026-07-12 09:49",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, PowerShell, Grep, Glob, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-12 09:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "PowerShell",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Full application audit pass. IPC CONTRACT AUDIT (both directions): every preload invoke now has a main handler (removed dead getEverythingSize); renderer callers of unexposed APIs are all guarded fallbacks. STREAMING/LIVESTREAM RESIDUE PURGED: removed 372 lines of dead HTML (sub-nav-streaming, library-grid, tmdb-container, livestream-container ~99 lines, settings streaming section, settings Debrid button, rd-stream-dialog + streaming-details + TV-episodes + debrid-download dialogs); deleted js/settings/debrid-downloader.js (reachable broken RD downloader in Settings — its IPC no longer existed); core.js removed unguarded el() reads of deleted stream/debrid settings (would have crashed Settings open/save); player.js removed dead moveUsenetToDrive block; directory.js removed tmdb/livestream status-bar branches; tabs.js stripped all streaming/livestream branches + switchStreamingSubtab; removed 9 dead translation keys both languages; removed streaming option from home-tab dropdown. CRITICAL BUG FOUND+FIXED: initTabListeners wired clicks using legacy IDs (photos/audio/albums/playlists) so tab-music and tab-photoalbums NEVER had click listeners — the real reason Music/Photos tabs were non-functioning. Fixed to files/music/photoalbums/misc. CLIP: Share/Publish fallbacks now honest (reveal exported file via showInFolder + _lastClipExportPath instead of fake success). PREVIEWS: idle batch now has 10-min renderer watchdog (running flag can never wedge); all ffmpeg via runLowPriorityProcess 30-min hard timeout. VIRTUAL FOLDERS: vf exports all 17 methods used by callers; script order correct. AI: all 5 python scripts compile. BOOT-TESTED LIVE: electron --enable-logging — zero renderer console errors, live-subs daemon warm-loaded to ready=true, vault scan ran, clean shutdown. All 40 renderer JS + main + preload parse. Extractions confirmed staged in vault-streaming and vaultwares-realtime.",
+  "commands": [
+    "IPC contract audit both directions",
+    "372-line HTML splice",
+    "node check all 40 js",
+    "py_compile 5 AI scripts",
+    "electron boot smoke test w/ --enable-logging"
+  ],
+  "files": [
+    "index.html",
+    "js/navigation/tabs.js",
+    "js/settings/core.js",
+    "js/player/player.js",
+    "js/player/clip.js",
+    "js/navigation/directory.js",
+    "js/navigation/idle.js",
+    "preload.js",
+    "js/translations.en.js",
+    "js/translations.qc.js"
+  ],
+  "planPath": "",
+  "contentHash": "0d2805b4f147dd9cc9b515e5186b1d481921e9b646771104c84bf605a7c70afc",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

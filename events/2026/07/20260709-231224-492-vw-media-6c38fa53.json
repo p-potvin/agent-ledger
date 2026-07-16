@@ -1,0 +1,40 @@
+{
+  "id": "20260709-231224-492-vw-media-6c38fa53",
+  "createdAt": "2026-07-10T03:12:24.4924120Z",
+  "createdAtLocal": "2026-07-09 23:12",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-media",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 23:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": "shell_command",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fri, 10 Jul 2026 01:04 - Applied SABnzbd hostname whitelist fix on OVH. Backed up sabnzbd.ini, added Docker service hostname sabnzbd to host_whitelist, restarted only sabnzbd, and verified Prowlarr can call SAB API at http://sabnzbd:8080 with HTTP 200 and version 5.0.4. No secret values recorded.",
+  "commands": [
+    "backup /srv/vw-media/config/sabnzbd/sabnzbd.ini",
+    "update host_whitelist to include sabnzbd",
+    "docker restart sabnzbd",
+    "docker exec prowlarr curl SAB version API with key kept local/redacted"
+  ],
+  "files": [
+    "/srv/vw-media/config/sabnzbd/sabnzbd.ini",
+    "/srv/vw-media/config/sabnzbd/sabnzbd.ini.bak-Fri_10_Jul_2026_0302"
+  ],
+  "planPath": "",
+  "contentHash": "6c38fa5380ea619b77522316e6cf4ba0eef19d27f296a769e2f626174e75fa3a",
+  "git": null
+}

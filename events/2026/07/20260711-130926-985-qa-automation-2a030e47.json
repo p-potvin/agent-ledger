@@ -1,0 +1,42 @@
+{
+  "id": "20260711-130926-985-qa-automation-2a030e47",
+  "createdAt": "2026-07-11T17:09:26.9851602Z",
+  "createdAtLocal": "2026-07-11 13:09",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: n/a\r\nTools used (this reply): shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-11 13:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": "shell_command",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Sat, 11 Jul 2026 13:09 - Tried natural mouse path replay with bounded no-network checks: focused Playwright regression, real Chromium inline mousemove smoke, Python unit, and Playwright test discovery.",
+  "commands": [
+    "npx.cmd playwright test tests/qa-mouse-paths.spec.ts --project=chromium",
+    "node --input-type=module inline Chromium replay smoke against setContent page",
+    "python .\\tests\\test_qa_mouse_paths_python.py",
+    "npm.cmd run test:list"
+  ],
+  "files": [
+    "test-results/natural-mouse-paths.json",
+    "lib/qa-mouse-paths.mjs",
+    "lib/qa-mouse-paths.ts",
+    "qa_automation_routine.py"
+  ],
+  "planPath": "",
+  "contentHash": "2a030e47cb123bde213ab6d8888554cff06c3cf81feb6e31f62a17f01f6a071d",
+  "git": null
+}

@@ -1,0 +1,59 @@
+{
+  "id": "20260714-211629-751-shared-tube-0fb80e46",
+  "createdAt": "2026-07-15T01:16:29.7516711Z",
+  "createdAtLocal": "2026-07-14 21:16",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local to tailnet (greencloud-vps))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell, Read, Edit, Write, Grep, TaskStop\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-07-14 21:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local to tailnet (greencloud-vps)",
+    "toolsUsed": [
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Tue, 14 Jul 2026 - Modal plan steps 3-6 done (shared-tube 67f76d9, v0.2.61, deployed). STEP 3 overlay->page: TermDetail now renders in the document flow where the terms list was, at the SAME #/catalog/terms/<kind>/<slug> route it already had - no new route, no new flow, back/forward and shared links unaffected. Removed backdrop/panel/z-index:1200/closeBtn; added a breadcrumb (page needs a visible exit that isn't a x in a corner) and kept Escape but no longer hijacked while focus is in a field. Bulk.tsx now renders BatchActions only when !route.slug, so detail REPLACES list (master->detail). STEP 5 one Save: replaced 3 stacked per-field Save buttons (each hitting a different batch endpoint) with a single header Save; only dirty fields are sent, dirty fields get an accent ring, sequential not Promise.all (same row; a partial failure must stop and say so - 'Saved name, then failed: ...'), toast names what landed. Slug rename now follows the URL via replace() not navigate() (not a place you went; old slug stops resolving). STEP 4 DEVIATION from plan, with reason: did NOT embed VideoBatchActions in the term page. It would put two lists on one route both reading ?page/?ps/?sort/?q and one param cannot mean 'which page of terms I came from' and 'which page of this term's videos' simultaneously. The page links to the EXISTING filtered Videos list instead (onViewVideos pivot) - one list, not a second copy. That is the reconciliation the user asked for. BONUS FIX: discovered VideoBatchActions had a DUPLICATE fetcher modal + toast stack, so yesterday's v0.2.60 fixes (persistent checkbox,",
+  "commands": [
+    "git push origin main",
+    "node termsave.mjs (playwright, stubbed admin API)",
+    "node termpage.mjs",
+    "npx eslint",
+    "pnpm typecheck"
+  ],
+  "files": [
+    "shared/src/admin/Catalog/TermDetail.tsx",
+    "shared/src/admin/Catalog/Bulk.tsx",
+    "shared/src/admin/Catalog/FetchToasts.tsx",
+    "shared/src/admin/Catalog/BatchActions.tsx",
+    "shared/src/admin/Catalog/VideoBatchActions.tsx",
+    "shared/src/admin/persistent-state.ts",
+    "CHANGES.md"
+  ],
+  "planPath": "",
+  "contentHash": "0fb80e46b39a06a18a2d571c3171e3fb9db428cd82b78d445ead3d9b3b7ff4f3",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "67f76d9",
+    "hasChanges": false
+  }
+}

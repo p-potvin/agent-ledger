@@ -1,0 +1,47 @@
+{
+  "id": "20260709-175212-150-prom-king-shared-tube-00b7595f",
+  "createdAt": "2026-07-09T21:52:12.1504293Z",
+  "createdAtLocal": "2026-07-09 17:52",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local PC (Clopeux-Desktop, Windows))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): PowerShell, Grep, Read, git\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 17:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local PC (Clopeux-Desktop, Windows)",
+    "toolsUsed": [
+      "PowerShell",
+      "Grep",
+      "Read",
+      "git"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Shipped the account-creation flow: bumped shared-tube monorepo 0.2.43 -> 0.2.44 across all 5 package.json (root, shared, fxv, oneporn, sexyprn), committed ONLY the AccountPage.astro rewrite + version bumps (commit e25753a), and pushed origin/main (f682c19..e25753a). Deliberately left an unrelated in-progress sexyprn favicon/logo SVG->PNG migration unstaged, and removed the apps/fxv/.cache/ dir my dev-server run created. Push to main triggers the signed GitHub webhook -> greencloud vw-webhookd dispatcher -> auto-deploy (fxv on greencloud, oneporn/sexyprn on OVH via Tailscale SSH). Rendered version comment <!-- v0.2.44 --> comes from root package.json via Layout.astro. NOT done: CHANGES.md entry (skipped to avoid a second version-churn push+deploy for a changelog line) - flagged to user.",
+  "commands": [
+    "git add <6 files>",
+    "git commit -F (v0.2.44)",
+    "git push origin main"
+  ],
+  "files": [
+    "shared-tube/shared/src/components/AccountPage.astro",
+    "shared-tube/package.json",
+    "shared-tube/apps/fxv/package.json",
+    "shared-tube/apps/oneporn/package.json",
+    "shared-tube/apps/sexyprn/package.json"
+  ],
+  "planPath": "",
+  "contentHash": "00b7595f592a3c283322dbf6f3844f52570bc9c0c559af5ea74521f309c3a80d",
+  "git": null
+}

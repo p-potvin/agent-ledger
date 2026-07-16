@@ -1,0 +1,32 @@
+{
+  "id": "20260714-051108-658-vault-tv-71543d5a",
+  "createdAt": "2026-07-14T09:11:08.6582908Z",
+  "createdAtLocal": "2026-07-14 05:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: Cascade)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-14 05:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "Cascade",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Phase 3 Product Parity: Extended TvClient with discover, fallback, heartbeat, revoke, library, following, history methods. Created PairingScreen, LibraryScreen, FollowingScreen, HistoryScreen, TvKeyboard component. Enhanced DetailsScreen with library/follow actions, rich metadata, next episode. Rewrote SearchScreen with TV keyboard, debounce, abort stale, recent searches. Enhanced PlayerScreen with progress on play/pause/seek/ended, 90% completion detection, best-effort flush on exit. Updated Shell nav and App.tsx with all new routes. Added 18 new tests (60 total, all passing). Typecheck clean.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "71543d5ae5feb7da317e98303284307c282826e070c6e024bfb942251370e438",
+  "git": null
+}

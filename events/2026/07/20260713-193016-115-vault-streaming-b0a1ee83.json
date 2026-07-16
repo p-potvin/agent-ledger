@@ -1,0 +1,50 @@
+{
+  "id": "20260713-193016-115-vault-streaming-b0a1ee83",
+  "createdAt": "2026-07-13T23:30:16.1157765Z",
+  "createdAtLocal": "2026-07-13 19:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows + github)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): PowerShell, Edit, Write, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 19:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows + github",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Committed + pushed the full session to main (v1.2.0, commit ad80903). Bumped index.html HTML comment v1.1.5->v1.2.0 and package.json 0.1.0->1.2.0. 63 files: Comet-only pipeline, 405 fix, usenet removal/torrent-only, live subtitles opt-in SRT, yt-dlp primary trailer (152/4 fix) + ghost-trailer + preview teardown + play/pause, grid dead-scroll fix, hover tuning, own-exe-only process kill, vaultwares-themes submodule, rotated RD key in config blob. Verified .env (RD key) is gitignored and NOT committed. Also recorded a memory note to replace Spanish subtitle option with French (English default + French option) - locations: index.html:209/243-244, subtitles.js:260, settings/core.js:41/154. Next: set up Zilean.",
+  "commands": [
+    "git add -A",
+    "git commit v1.2.0",
+    "git push origin main (90802e1..ad80903)"
+  ],
+  "files": [
+    "vault-streaming/index.html",
+    "vault-streaming/package.json"
+  ],
+  "planPath": "",
+  "contentHash": "b0a1ee836626053a1fc5f7a20d064806f2128a33c431ae3575030f2cc44e3c75",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

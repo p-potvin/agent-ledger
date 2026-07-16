@@ -1,0 +1,48 @@
+{
+  "id": "20260711-060947-816-prom-king-shared-tube-d1e1f452",
+  "createdAt": "2026-07-11T10:09:47.8161185Z",
+  "createdAtLocal": "2026-07-11 06:09",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local PC + ssh greencloud/OVH)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): PowerShell, ssh, Edit, Read, git, Invoke-WebRequest\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-11 06:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local PC + ssh greencloud/OVH",
+    "toolsUsed": [
+      "PowerShell",
+      "ssh",
+      "Edit",
+      "Read",
+      "git",
+      "Invoke-WebRequest"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "GUARD COMPLETE + verified. Added deploy-time self-heal ownership guard (prevents recurrence of the root-owned node_modules/.vite -> EACCES build failures): (1) /usr/local/sbin/shared-tube-fix-ownership.sh on greencloud (mirrors agent-ledger-fix-ownership.sh) + validated NOPASSWD sudoers /etc/sudoers.d/shared-tube-deploy for vwdeploy; tested working. (2) Injected the guard into greencloud's installed /var/www/deploy-scripts/deploy-shared-tube.sh (before pnpm install; backup kept; bash -n OK). (3) Generalised repo scripts/deploy-shared-tube.sh from OVH-only to any deploy user (helper-or-sudo-chown), committed eda5114 (v0.2.49) + pushed. Deploy eda5114 succeeded end-to-end: greencloud built+dispatched, OVH ok(exit=0), both checkouts at eda5114, all 3 services active, guard present in OVH's scp'd script, 0 root-owned files, sites live at v0.2.49, stars gone. Verified earlier work all landed: stars removed, sort=hot trending rail live (sites call ?sort=hot->200), /run/vw-github-app tmpfiles rule persists, API healthy (rebound to 127.0.0.1 by a concurrent commit). OPEN: root cause of root-poisoning (what runs pnpm as root) still unknown - guard mitigates symptom only; version lockstep broken by concurrent agents (root 0.2.49 vs apps 0.2.46); greencloud installed deploy script still drifted from repo.",
+  "commands": [
+    "ssh greencloud: install helper + sudoers + inject guard",
+    "git commit+push eda5114 (v0.2.49)",
+    "deploy verify via ssh + live HTML"
+  ],
+  "files": [
+    "shared-tube/scripts/deploy-shared-tube.sh",
+    "/usr/local/sbin/shared-tube-fix-ownership.sh (greencloud)",
+    "/etc/sudoers.d/shared-tube-deploy (greencloud)",
+    "/var/www/deploy-scripts/deploy-shared-tube.sh (greencloud)"
+  ],
+  "planPath": "",
+  "contentHash": "d1e1f452daa9c368700f463ca8db1d71dca2c261275ad088b7c7bf46ecb53c5d",
+  "git": null
+}

@@ -1,0 +1,47 @@
+{
+  "id": "20260711-030441-999-shared-tube-5a394d3a",
+  "createdAt": "2026-07-11T07:04:41.9998235Z",
+  "createdAtLocal": "2026-07-11 03:04",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-11 03:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Sat, 11 Jul 2026 03:04 - Raised admin taxonomy bulk-select cap to 50000, persisted admin list settings in localStorage, added public create-account nav link, and added taxonomy merge alias schema support.",
+  "commands": [
+    ".\\\\node_modules\\\\.bin\\\\vitest.CMD run shared/src/admin/persistent-state.test.ts",
+    ".\\\\node_modules\\\\.bin\\\\tsc.CMD -p shared\\\\tsconfig.json --noEmit",
+    ".\\\\node_modules\\\\.bin\\\\astro.CMD check in apps/fxv, apps/oneporn, apps/sexyprn"
+  ],
+  "files": [
+    "shared/src/admin/Catalog/BatchActions.tsx",
+    "shared/src/admin/Catalog/VideoBatchActions.tsx",
+    "shared/src/admin/persistent-state.ts",
+    "shared/src/admin/persistent-state.test.ts",
+    "shared/src/components/Header.astro",
+    "shared/src/db/schema.ts",
+    "shared/drizzle/0007_taxonomy_merge_aliases.sql"
+  ],
+  "planPath": "",
+  "contentHash": "5a394d3a568b592c918dd095c85045075b47a524c15b0973a43cb17ed6319952",
+  "git": null
+}

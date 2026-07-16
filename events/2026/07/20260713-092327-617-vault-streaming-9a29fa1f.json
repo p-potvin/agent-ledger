@@ -1,0 +1,46 @@
+{
+  "id": "20260713-092327-617-vault-streaming-9a29fa1f",
+  "createdAt": "2026-07-13T13:23:27.6175675Z",
+  "createdAtLocal": "2026-07-13 09:23",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Edit, Read, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 09:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "Edit",
+      "Read",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Hard-gated manual Debrid Downloader to tunnel-only (user decision). rd-unrestrict-url and rd-download-file now call requireTunnel(proxy) and refuse unless a valid proxy tunnel is supplied. makeProxiedRequest/downloadFileWithProxy silently fall back to DIRECT requests from the account IP when proxy is falsy - the RD ban-risk path. Closes the last direct-RD egress; all torrent/RD lookups go through Comet. node --check passed.",
+  "commands": [
+    "node --check src/realdebrid/proxy-handlers.js"
+  ],
+  "files": [
+    "vault-streaming/src/realdebrid/proxy-handlers.js"
+  ],
+  "planPath": "",
+  "contentHash": "9a29fa1f5754413251e9aaf37b54ef35bb86cbde0ea81a0a02b9ef7f2bc1cb08",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20260713-100711-785-vault-streaming-3e3950cb",
+  "createdAt": "2026-07-13T14:07:11.7850865Z",
+  "createdAtLocal": "2026-07-13 10:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Edit, Read, Grep, PowerShell, Playwright-Electron\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 10:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "Edit",
+      "Read",
+      "Grep",
+      "PowerShell",
+      "Playwright-Electron"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Fixed modal ghost-trailer + Comet grab storm. (1) GHOST TRAILER: _fetchAndInjectTrailer awaited yt-dlp then appended an autoplaying <video> without checking the modal was still open (same async-detach bug as hover cards). Added window._modalTrailerGen token: bumped at fn start and in destroyTrailer(); stillCurrent() guard before attaching aborts a late resolution. Routed all 4 modal-close paths (btn-stream, _streamEpisode, click-outside, Esc) through destroyTrailer() instead of fragile single-element stops. Playwright-verified: open modal -> Esc mid-resolution -> after yt-dlp finishes, 0 media in wrapper, 0 playing, wrapper hidden, zero errors. (2) COMET GRAB STORM ROOT CAUSE: decoded COMET_STREAM_BASE config blob = cachedOnly:false + deduplicateStreams:false. Since RD killed instantAvailability, every uncached cache-check is now a grab; with cachedOnly off Comet fanned out across ~42 results -> 42 RD grabs + dupes. Regenerated the base64url config in .env with cachedOnly:true + deduplicateStreams:true (RD key + all other fields preserved, correct padding, round-trip verified from written .env; .env.bak saved). (3) Removed last direct-RD leak: ranking.js checkRDCachedBatch neutered to no-op (was calling api.real-debrid.com/instantAvailability from account IP); rd-flow.js now derives isRDCached from Comet's cached flag. (4) Fixed misleading 'Scraping Torrentio index' UI label -> 'Querying Comet for cached streams'. All 4 JS node --check ok. REMAINING (server-side, needs user OK): Prowlarr grab-per-release + alert spam and adult indexers matching 'Moana' live in the Comet instance on ovhcloud 100.67.25.118 - not fixable from the client.",
+  "commands": [
+    "decode/re-encode COMET_STREAM_BASE base64url in .env",
+    "node vs_ghost.js (Playwright ghost verify)",
+    "node --check x4"
+  ],
+  "files": [
+    "vault-streaming/js/streaming/trailer.js",
+    "vault-streaming/js/streaming/details-modal.js",
+    "vault-streaming/js/streaming/ranking.js",
+    "vault-streaming/js/streaming/rd-flow.js",
+    "vault-streaming/.env"
+  ],
+  "planPath": "",
+  "contentHash": "3e3950cbd4b7010ae03962ace26412f9327f5df66956e7cdd8e0f89cca86a48c",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

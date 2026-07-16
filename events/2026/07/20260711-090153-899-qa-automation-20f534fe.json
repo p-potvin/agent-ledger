@@ -1,0 +1,55 @@
+{
+  "id": "20260711-090153-899-qa-automation-20f534fe",
+  "createdAt": "2026-07-11T13:01:53.8995405Z",
+  "createdAtLocal": "2026-07-11 09:01",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "code-change,verification",
+  "actor": "Cascade",
+  "agentHeader": "Agent: Cascade (role: main)\r\nModel: Cascade\r\nThinking: standard\r\nMode: code-change\r\nPermissions: workspace-write (network: disabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: n/a\r\nTools used (this reply): code_search, read_file, find_by_name, list_dir, run_command, write_to_file, replace_file_content, todo_list\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-11 09:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Cascade",
+    "thinking": "standard",
+    "mode": "code-change",
+    "permissions": "workspace-write",
+    "network": "disabled",
+    "toolsUsed": [
+      "code_search",
+      "read_file",
+      "find_by_name",
+      "list_dir",
+      "run_command",
+      "write_to_file",
+      "replace_file_content",
+      "todo_list"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Compiled 732 natural mouse-path events from agent-ledger input-spool and input-state into a privacy-reduced QA path library. Added opt-in random path replay before shared route, WordPress, weekly smoke, and fullxxx crawl navigations; replay remains disabled by default and excluded from stealth anti-bot assertions.",
+  "commands": [
+    "node scripts/compile-natural-mouse-paths.mjs",
+    "npx tsc --noEmit",
+    "npm run test:list",
+    "node --check scripts/compile-natural-mouse-paths.mjs"
+  ],
+  "files": [
+    "scripts/compile-natural-mouse-paths.mjs",
+    "lib/qa-mouse-paths.ts",
+    "tests/support/site.ts",
+    "tests/fullxxx-crawl.spec.ts",
+    "tests/age-gate-wordpress.spec.ts",
+    "tests/weekly-smoke.spec.ts",
+    "package.json",
+    ".env.example"
+  ],
+  "planPath": "",
+  "contentHash": "20f534fe39c0cae239fc0497f1966c43af8cd5dec31308d350d984699f97bc1d",
+  "git": null
+}

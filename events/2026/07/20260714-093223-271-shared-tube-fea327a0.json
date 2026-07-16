@@ -1,0 +1,55 @@
+{
+  "id": "20260714-093223-271-shared-tube-fea327a0",
+  "createdAt": "2026-07-14T13:32:23.2718436Z",
+  "createdAtLocal": "2026-07-14 09:32",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local to tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell, Read, Edit, Write, Grep\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-07-14 09:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local to tailnet",
+    "toolsUsed": [
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Tue, 14 Jul 2026 - (1) Committed+pushed everything: shared-tube c5a8b7a (v0.2.58, 4-col favourites grid), both repos clean. (2) VERIFIED admin deletes DO leak - answer to the user's question is NO, deleted things still show up. Soft-delete flags are honoured by LIST queries but NOT by DETAIL/filter queries. Evidence: video 'winter-tail' disabled in admin 2026-07-05 still serves at https://fullxxx.video/videos/winter-tail -> http 200, full title, NO noindex, player present and playable; systematic across 307 disabled videos (spot-checked missy-s-audition, stunt-hogs-part-1 - same). Cause: get_video uses 'WHERE slug = \\' with no disabled_at filter and doesn't even SELECT the column (hence disabled_at:None in responses). Sitemap DOES exclude them (1867 urls, no winter-tail), so they're unlinked but live - DMCA/takedown exposure since disabling a video does not take it down. Same shape for taxonomy: 206 pornstars + 45 studios soft-deleted, yet /pornstar/angel-youngs (deleted 2026-07-07) serves 200 with 281 video cards, because build_video_filters' actor/studio/category joins match on slug with no deleted_at check. (3) FIXED MY OWN REGRESSION from bb42271 (shipped earlier today, now dbcf4a1): neither /search/suggest nor the new q taxonomy-matching filtered deleted_at, so the typeahead offered deleted terms (verified live: suggested 'Angel Youngs') and q='angel youngs' matched 22 videos through a deleted term. Both now filter deleted_at IS NULL; verified on prod copy: Angel Youngs drops from suggest, q 22->0, live control q='angela white' unchanged at 59. Tests 174 passed. (4) MODAL ROOT CAUSES CONFIRMED for the plan: Bulk.tsx:114-115 wires onActionSuccess IDENTICALLY to onClose - both navigate() without slug, and the overlay only renders when route.slug is set, so ANY",
+  "commands": [
+    "git push origin main",
+    "psql (deleted_at/disabled_at leak analysis)",
+    "Invoke-WebRequest https://fullxxx.video/videos/winter-tail",
+    "pytest tests/ -q"
+  ],
+  "files": [
+    "vaultwares-api/app/routers/promking/search.py",
+    "vaultwares-api/app/routers/promking/videos.py",
+    "shared/src/admin/Catalog/TermDetail.tsx",
+    "shared/src/admin/Catalog/Bulk.tsx",
+    "shared/src/admin/router.ts"
+  ],
+  "planPath": "",
+  "contentHash": "fea327a08f098ac096d05db180912b010a87f12b86077e8eb16d0cf36afba2af",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "c5a8b7a",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "20260707-162205-556-vault-explorer-b439b1f3",
+  "createdAt": "2026-07-07T20:22:05.5564381Z",
+  "createdAtLocal": "2026-07-07 16:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-07 16:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Wired live streaming ASR subtitles in the Vault player using the existing Parakeet model. New python-scripts/live_subtitles.py streams file audio via ffmpeg (vocal band-pass 90-7500Hz + afftdn denoise + dynaudnorm, no demucs) into ParakeetV3Wrapper.transcribe_audio_data over 8s sliding windows w/ 0.75s context overlap; emits SUBTITLE_CUE json to stdout AND writes an .srt sidecar on a dedicated writer thread. New src/live-subtitles.js registers start/stop-live-subtitles IPC, parses cues/status, forwards live-subtitle-cue/status events. preload.js exposes startLiveSubtitles/stopLiveSubtitles/onLiveSubtitleCue/onLiveSubtitleStatus. subtitles.js: player 'Generate Subtitles' item now toggles a live session, adds an in-memory VTTCue TextTrack starting at currentTime-1s. player.js stops+clears the session on close/video-switch/app-hide. Context-menu offline SRT path left unchanged. htdemucs realtime deferred (--demucs flag reserved). Translation loops intentionally omitted per request-safety policy. Verified: py_compile + node --check all pass; ffmpeg filter chain validated to 16k mono PCM.",
+  "commands": [
+    "python -m py_compile python-scripts/live_subtitles.py",
+    "node --check src/live-subtitles.js",
+    "ffmpeg -af highpass=f=90,lowpass=f=7500,afftdn,dynaudnorm,volume -f s16le"
+  ],
+  "files": [
+    "python-scripts/live_subtitles.py",
+    "src/live-subtitles.js",
+    "preload.js",
+    "main.js",
+    "js/player/subtitles.js",
+    "js/player/player.js",
+    "index.html"
+  ],
+  "planPath": "",
+  "contentHash": "b439b1f319ae373910c4c1f28329beb96529d0695fe60723a9906a3d8d9d5fdc",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

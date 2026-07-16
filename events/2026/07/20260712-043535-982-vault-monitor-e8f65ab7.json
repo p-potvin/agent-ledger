@@ -1,0 +1,45 @@
+{
+  "id": "20260712-043535-982-vault-monitor-e8f65ab7",
+  "createdAt": "2026-07-12T08:35:35.9828920Z",
+  "createdAtLocal": "2026-07-12 04:35",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change,verification",
+  "actor": "Cascade",
+  "agentHeader": "Agent: Cascade (role: main)\r\nModel: Cascade\r\nThinking: standard\r\nMode: code-change\r\nPermissions: workspace-write (network: disabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: n/a\r\nTools used (this reply): code_search, read_file, find_by_name, run_command, edit, todo_list\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-12 04:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Cascade",
+    "thinking": "standard",
+    "mode": "code-change",
+    "permissions": "workspace-write",
+    "network": "disabled",
+    "toolsUsed": [
+      "code_search",
+      "read_file",
+      "find_by_name",
+      "run_command",
+      "edit",
+      "todo_list"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Added full-width luminous mouse-path stage and computer-screen silhouette hotspot heatmap to Personal Stats tab. Paths extracted from existing input-tracker events payload; click hotspot bars replaced with interactive 12x9 heatmap inside monitor silhouette. Uses vault-signal LED colors, fast telemetry motion, hover tooltips with narrative+raw details, click-to-preview in canvas only. Responsive stacking on mobile. No backend or data-pipeline changes.",
+  "commands": [
+    "npx tsc --noEmit",
+    "npm run build"
+  ],
+  "files": [
+    "src/pages/PersonalStatsPage.tsx",
+    "src/styles.css"
+  ],
+  "planPath": "",
+  "contentHash": "e8f65ab7d971379affd362ef37c2e526b2143151b48e43542c3229764c8c82c2",
+  "git": null
+}

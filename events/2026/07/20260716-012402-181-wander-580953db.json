@@ -1,0 +1,52 @@
+{
+  "id": "20260716-012402-181-wander-580953db",
+  "createdAt": "2026-07-16T05:24:02.1816628Z",
+  "createdAtLocal": "2026-07-16 01:24",
+  "timezone": "Eastern Standard Time",
+  "project": "wander",
+  "kind": "code-change,verification",
+  "actor": "Claude",
+  "agentHeader": "Agent: Claude (role: main)\r\nModel: claude-fable-5\r\nThinking: unknown\r\nMode: interactive\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-16 01:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "unknown",
+    "mode": "interactive",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "Microsoft.PowerShell.Core\\FileSystem::\\\\Clopeux-Desktop\\Clopeux-Desktop C drive\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\scripts",
+  "cwd": "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander",
+  "summary": "Committed and pushed Phase 0 (4ea99f5) plus Phase 1 kickoff (bc1a12c) to main. Tailnet validation on clopeux-laptop: daemon binds Tailscale IP only (100.91.249.45:5555), loopback refused, WhoIs interceptor authorized a real tailnet caller, manifest streamed live state. Staged self-contained build at clopeux-desktop Desktop\\wander-validation for the cross-machine test (user launches start-wander.cmd). Phase 1 scaffold: WanderHost factory (headless exe and GUI share one node composition), ActivityLog feed, Wander.Dashboard Avalonia app (Golden Slate theme, node card, live tailnet peers, activity feed) hosting the sync daemon in-process; verified rendering with live engine state via window capture. Moved portable FolderWatcher to Core, WindowsAPI now targets net10.0-windows, disabled SQLite pooling (fixed test flake from global pool clearing). 31/31 tests x3 runs, 0 warnings.",
+  "commands": [
+    "dotnet test Wander.Tests/Wander.Tests.csproj",
+    "git push origin main",
+    "dotnet publish Wander.Network -c Release -r win-x64 --self-contained"
+  ],
+  "files": [
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\Wander.Dashboard\\MainWindow.axaml",
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\Wander.Network\\WanderHost.cs",
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\Wander.Core\\Services\\ActivityLog.cs"
+  ],
+  "planPath": "",
+  "contentHash": "580953dbafa3c5b373fd24903c0488af4587e0470a1988bd6711bd7e58c14dc2",
+  "git": {
+    "repo": "wander",
+    "root": "C:/Users/Clopeux/Desktop/Github Repos/wander",
+    "branch": "main",
+    "head": "bc1a12c",
+    "hasChanges": false
+  }
+}

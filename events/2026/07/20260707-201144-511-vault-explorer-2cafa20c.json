@@ -1,0 +1,48 @@
+{
+  "id": "20260707-201144-511-vault-explorer-2cafa20c",
+  "createdAt": "2026-07-08T00:11:44.5115192Z",
+  "createdAtLocal": "2026-07-07 20:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Bash, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-07 20:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Fixed EOU model load failure + loaded from local .nemo. Root cause: venv is Python 3.13 (removed stdlib cgi) but httpx was pinned 0.13.3 which does 'import cgi' and lacks modern exception names datasets references (RequestError etc). Upgraded httpx 0.13.3 -> 0.28.1 in .venv via uv (also bumped httpcore 0.9.1->1.0.9, h11->0.16, anyio, certifi, idna). Verified datasets 5.0.0, huggingface_hub 0.36.2, deep_translator all still import. Removed the temporary cgi-shim + httpx-attr backfill hacks from vault_explorer/realtime_eou.py now that httpx is fixed at source. Pointed RealtimeEOUTranscriber at the bundled local model: tools/models/parakeet_realtime_eou_120m-v1.nemo (repo-relative), restore_from local before any HF fallback. CONFIRMED WORKING: model loads from local .nemo on CUDA and transcribes (emits <EOU>). Note: model hallucinates 'four<EOU>' on pure digital silence — mitigated by the RMS gate in live_subtitles.py but worth watching on ambient-noise passages. No httpx pin in requirements/pyproject so upgrade persists.",
+  "commands": [
+    "uv pip install --python .venv/Scripts/python.exe -U 'httpx>=0.27'",
+    "python -m py_compile vault_explorer/realtime_eou.py",
+    "EOU local .nemo load smoke test (CUDA)"
+  ],
+  "files": [
+    "vault_explorer/realtime_eou.py"
+  ],
+  "planPath": "",
+  "contentHash": "2cafa20c031464606d072b3f3a0aefdb8b512af60998eb0ebf0b6f109c3df3d2",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

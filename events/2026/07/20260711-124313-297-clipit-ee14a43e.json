@@ -1,0 +1,48 @@
+{
+  "id": "20260711-124313-297-clipit-ee14a43e",
+  "createdAt": "2026-07-11T16:43:13.2970592Z",
+  "createdAtLocal": "2026-07-11 12:43",
+  "timezone": "Eastern Standard Time",
+  "project": "clipit",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5 Codex\r\nThinking: unknown\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\clipit  Branch: n/a\r\nTools used (this reply): apply_patch, shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-11 12:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5 Codex",
+    "thinking": "unknown",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "apply_patch",
+      "shell_command"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\clipit",
+  "summary": "Sat, 11 Jul 2026 12:44 - Updated ClipIt Firefox/root manifests to use background.scripts with src/i18n.js and src/background.js because Firefox background.service_worker is disabled, kept Chrome on background.service_worker, adjusted background script bootstrap for both modes, added regression coverage, rebuilt dist outputs, and verified tests/syntax.",
+  "commands": [
+    "npm test",
+    "npm run build",
+    "node --check src/background.js; node --check src/content.js; node --check src/i18n.js; node --check scripts/build.js",
+    "node generated manifest sanity checks"
+  ],
+  "files": [
+    "manifest.json",
+    "manifest.firefox.json",
+    "manifest.chrome.json",
+    "src/background.js",
+    "tests/extension.test.js",
+    "dist/chrome/manifest.json",
+    "dist/firefox/manifest.json"
+  ],
+  "planPath": "",
+  "contentHash": "ee14a43e1a96b0f4fb66de25e4800d32bda499fad8711c71d2efca9a4a8758d5",
+  "git": null
+}

@@ -1,0 +1,34 @@
+{
+  "id": "20260715-092831-132-vw-cli-bf264915",
+  "createdAt": "2026-07-15T13:28:31.1320180Z",
+  "createdAtLocal": "2026-07-15 09:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "feature",
+  "actor": "cascade",
+  "agentHeader": "Agent: cascade (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: pair\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-15 09:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "pair",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Enhanced CLI: added parameter metadata, Linux-style aliases, and updated descriptions for all commands",
+  "commands": [],
+  "files": [
+    "vw-commands.ps1,vw.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "bf264915b26213c0a014d1c4e57b5eecfc4eb2fa30d020cb6d606adb9586d1e2",
+  "git": null
+}

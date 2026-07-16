@@ -1,0 +1,54 @@
+{
+  "id": "20260711-182742-023-vault-explorer-fa973261",
+  "createdAt": "2026-07-11T22:27:42.0237712Z",
+  "createdAtLocal": "2026-07-11 18:27",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Edit, PowerShell, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-11 18:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Edit",
+      "PowerShell",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "vault-explorer cleanup: fully removed livestream, renamed title and tabs, fixed Music and Photos loading. LIVESTREAM removal: deleted js livestream.js, src livestream.js, python-scripts stream_translator.py and livestream_translator.py, two powershell launchers; main.js dropped the livestream require and registration; preload.js removed the 6 livestream channels plus the leftover 25 streaming TMDB OMDb RD Usenet channels; index.html removed the livestream tab button, its script include, and the settings dropdown option; app.js removed the tab-livestream and dead tab-favorites tab-library tab-tmdb innerHTML lines and the unguarded initLivestreamListeners boot call, and dropped livestream from validTabs; tabs.js removed the two dead livestream blocks; player.js removed the guarded stopLivestream call; hover-card.js guarded the streaming-only TMDB trailer fallback. TITLE: header Explorer changed to Vault Explorer. TABS renamed: Files to Videos (translation tabVault EN Videos QC Vidateos), Music Playlists to Music, Photo Albums to Photos, Misc to Others. MUSIC/PHOTOS BUG FIX: switchTab called renderAudio/renderAlbums synchronously right after kicking off async loadDirectory, so they read stale empty window.displayedItems and never re-rendered; now renders after the loadDirectory promise resolves. Also made audio.js getAudioItems prefer window.allItems over the filtered displayedItems (matches albums.js) so the Files-tab filter cannot hide tracks. VERIFIED: node check passes on all edited files; no unguarded references to removed APIs remain. Boot test recommended. Residue left for later: inert hidden HTML containers (tmdb-container, library-grid, sub-nav-streaming, livestream-container), favorites renderLibrary, unused translation keys.",
+  "commands": [
+    "delete livestream modules",
+    "node check edited files"
+  ],
+  "files": [
+    "index.html",
+    "main.js",
+    "preload.js",
+    "js/app.js",
+    "js/navigation/tabs.js",
+    "js/audio.js",
+    "js/translations.en.js"
+  ],
+  "planPath": "",
+  "contentHash": "fa97326198a5b2b83e348a8d6becfc7d4274bdd8f687625e7f205dfca07ce0f8",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

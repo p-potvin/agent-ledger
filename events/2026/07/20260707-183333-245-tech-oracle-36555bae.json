@@ -1,0 +1,39 @@
+{
+  "id": "20260707-183333-245-tech-oracle-36555bae",
+  "createdAt": "2026-07-07T22:33:33.2453063Z",
+  "createdAtLocal": "2026-07-07 18:33",
+  "timezone": "Eastern Standard Time",
+  "project": "tech-oracle",
+  "kind": "commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-07 18:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": "shell_command",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Tue, 07 Jul 2026 18:33 - Investigated Tech Oracle DB/RAG API service reports. Confirmed current docs and live Greencloud host are bare systemd, not Docker: no tech-oracle/rag/ollama containers are present, while /srv/repos/Prom-King/tech-oracle/var contains .tech-oracle.db and lance/. tech-oracle.timer is active but tech-oracle.service is failed; journal shows pipeline reaches refine_from_request_items then NVIDIA NIM chat/completions returns HTTP 400, with earlier ReadTimeout and Reddit RSS 403. Health Ledger services-inventory/fleet still lists obsolete Docker RAG/vector/Ollama entries, so that monitor data is stale.",
+  "commands": [
+    "ssh greencloud systemctl status/journal tech-oracle.service tech-oracle.timer",
+    "ssh greencloud docker ps and repo var file inspection"
+  ],
+  "files": [
+    "/srv/repos/Prom-King/tech-oracle/var/.tech-oracle.db",
+    "/srv/repos/Prom-King/tech-oracle/var/lance",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\docs\\docs-content\\projects\\tech-oracle.md"
+  ],
+  "planPath": "",
+  "contentHash": "36555baed54342f3ddb0facc153ae40d21d2a06c8b3b2e1f3f2fb1fa5dfadb58",
+  "git": null
+}

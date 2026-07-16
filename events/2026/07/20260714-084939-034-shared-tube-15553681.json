@@ -1,0 +1,50 @@
+{
+  "id": "20260714-084939-034-shared-tube-15553681",
+  "createdAt": "2026-07-14T12:49:39.0347425Z",
+  "createdAtLocal": "2026-07-14 08:49",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: plan\r\nPermissions: ask (network: Windows 11 local to tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell, Read, Grep\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-07-14 08:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "plan",
+    "permissions": "ask",
+    "network": "Windows 11 local to tailnet",
+    "toolsUsed": [
+      "PowerShell",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Tue, 14 Jul 2026 - Assessed user's proposal to use Google Analytics for per-creative conversion attribution (investigation only, no code changed). CONCLUSION: GA cannot do this join. (1) The conversion never touches the browser - CrakRevenue reports it server-to-server to /postback; GA is client-side and never sees it. Getting it into GA needs the Measurement Protocol from our server, which needs a GA client_id that only exists in the browser, so you'd have to capture it at click time and echo it back through the postback - i.e. the same sub-id threading, plus an extra hop. (2) Consent Mode v2 gates GA: Layout.astro sets ad_storage/ad_user_data/ad_personalization/analytics_storage = denied by default, granted only when st_consent=granted AND no DNT - so GA measures only consenting visitors, a minority on an adult tube, and would undercount. (3) postbacks already carries payout/currency; GA never has the money side. GA remains right for traffic sources/behaviour/funnels and a secondary outbound-click view. THE MECHANISM THAT WORKS: creatives already hardcode aff_sub4=AT_0002 and aff_sub5=SF_006OG000004lmDN (CrakRevenue's own generator output, IDENTICAL across every creative and site, so useless as our identifier); aff_sub, aff_sub2, aff_sub3 are free, and the user's token list includes {source} which our /postback route already maps to a real column. So: carry our identifier in the click URL, CrakRevenue echoes it in the postback, join in our DB - no consent dependency, 100 pct of traffic, carries payout. PROPOSED: template tokens in snippets ({PK_SNIPPET}/{PK_SITE}/{PK_PLACEMENT}) substituted in pickSnippetCode at render; operator pastes &source={PK_SNIPPET} into the CrakRevenue URL. Key advantage over rewriting the href: plain string substitution",
+  "commands": [
+    "psql (settings/postbacks/ad_clicks introspection)"
+  ],
+  "files": [
+    "shared/src/analytics/gtm.ts",
+    "shared/src/components/Layout.astro",
+    "shared/src/ads/spots.ts",
+    "apps/fxv/src/pages/postback.ts",
+    "vaultwares-api/app/routers/promking/analytics.py"
+  ],
+  "planPath": "",
+  "contentHash": "1555368133b363c3702a7278cd2eeb45f4bb5d9e15c0565dabd44234248977ea",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "19a756e",
+    "hasChanges": true
+  }
+}

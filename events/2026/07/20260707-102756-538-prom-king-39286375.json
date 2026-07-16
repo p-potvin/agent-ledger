@@ -1,0 +1,51 @@
+{
+  "id": "20260707-102756-538-prom-king-39286375",
+  "createdAt": "2026-07-07T14:27:56.5384903Z",
+  "createdAtLocal": "2026-07-07 10:27",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows + SSH OVH + git push GitHub)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Edit, Write, Grep, Bash, git, SSH, psql, curl\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-07 10:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows + SSH OVH + git push GitHub",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "Bash",
+      "git",
+      "SSH",
+      "psql",
+      "curl"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Fetcher + Stats broke after the 2026-07-04 schema migration dropped videos.site in favour of a video_sites(video_id, site) join table. Writes had been ported (INSERT INTO videos then video_sites) but four READ paths still filtered on the removed column and started returning 'column site does not exist / HINT videos.title'. Fixed all four: fetcher.check_existing_links + get_existing_videos_meta now JOIN video_sites vs ON vs.video_id = v.id AND vs.site = site; stats.py rewritten around a new _scope_videos helper returning (join, where, params) — every FROM videos query aliases v and applies the join when scoped, videos_total and per_source now GROUP BY vs.site so a shared video counts on each brand it lives on; viewers.list_my_favourites + toggle_video_favourite same join. fetch_runs.site untouched (migration only affected videos). Live smoke on OVH after restart: /stats?site=fxv returns 20947 videos plus per_source breakdown and recent runs; /fetcher/runs?site=fxv returns the expected list. Pushed vaultwares-api 5a06d2e (v0.2.12).",
+  "commands": [
+    "psql \\d videos / \\d video_sites",
+    "git push origin main",
+    "systemctl restart vaultwares-api",
+    "curl /stats /fetcher/runs"
+  ],
+  "files": [
+    "Github Repos/vaultwares-api/app/routers/promking/fetcher.py",
+    "Github Repos/vaultwares-api/app/routers/promking/stats.py",
+    "Github Repos/vaultwares-api/app/routers/promking/viewers.py"
+  ],
+  "planPath": "",
+  "contentHash": "3928637584d4655ff10c59c4d4068de08053fc8685264ab3566edfa482834030",
+  "git": null
+}

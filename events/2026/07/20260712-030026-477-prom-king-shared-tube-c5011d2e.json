@@ -1,0 +1,50 @@
+{
+  "id": "20260712-030026-477-prom-king-shared-tube-c5011d2e",
+  "createdAt": "2026-07-12T07:00:26.4777402Z",
+  "createdAtLocal": "2026-07-12 03:00",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Clopeux-Desktop)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): git, gh, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-12 03:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Clopeux-Desktop",
+    "toolsUsed": [
+      "git",
+      "gh",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Committed+pushed analytics fix (f66175e, v0.2.53): per-site GTM containers pinned in shared/src/analytics/gtm.ts (fxv GTM-KKVHWM4N, oneporn GTM-P6ZCKNH4, sexyprn GTM-K4JG875S) injected on every page by Layout, Consent Mode v2 default + repaired consent banner, removed placeholder IDs/env mismatch/dead gtmId plumbing. DEPLOY BLOCKED: GitHub Actions deploy-ovh.yml has NO self-hosted runner registered (total_count=0) so workflow_dispatch run 29179066449 stuck queued (cancelled). Live fullxxx.video serves v0.2.50 = pipeline down well before this work; main now at v0.2.53. Also: fxv already injects GTM-KKVHWM4N via admin Marketing head_tags, so deploying code-pinned GTM would double-fire until admin GA/GTM snippets are cleared (user action, admin UI). Awaiting user decision on deploy path (manual SSH deploy of deploy-shared-tube.sh vs fix runner vs hold) and architecture (code-pinned+clear-admin vs revert to admin-SSoT + fix spn snippet). Domains: fullxxx.video, 1pornhub.vip, sexyprn.lol.",
+  "commands": [],
+  "files": [
+    "shared/src/analytics/gtm.ts",
+    "shared/src/components/Layout.astro",
+    "shared/src/components/ConsentBanner.astro",
+    "CHANGES.md",
+    "docs/analytics.md"
+  ],
+  "planPath": "",
+  "contentHash": "c5011d2e72b511d7f971870a623aadf2a139accbc2d0ff1dad73ab87581063b7",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "f66175e",
+    "hasChanges": false
+  }
+}

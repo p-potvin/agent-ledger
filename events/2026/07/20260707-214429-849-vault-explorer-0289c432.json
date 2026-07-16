@@ -1,0 +1,53 @@
+{
+  "id": "20260707-214429-849-vault-explorer-0289c432",
+  "createdAt": "2026-07-08T01:44:29.8492676Z",
+  "createdAtLocal": "2026-07-07 21:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Edit, Bash, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-07 21:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Edit",
+      "Bash",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Four live-subtitle refinements. (1) Finals-only: removed all partial emission from live_subtitles.py (no more source->translation language flip). (2) Calmer pacing: min_silence 0.6->0.8, min_segment 0.2->0.3 (fewer, longer, merged cues); renderer enforces 1.6s MIN_DISPLAY per cue + trims previous cue end to next start to avoid overlap. (3) Subtitle sync offset +/-0.25s: added Sync-delay row (buttons + value) to subtitles menu in index.html; js/player/subtitles.js adjustSubtitleOffset() retimes all active textTrack cues in place (VTTCue start/end mutable), persists appSettings.subtitleOffset, and applies offset to future live cues. Works for live + loaded SRT tracks. (4) Model extraction for faster load: extracted TDT .nemo to repo tools/models/parakeet-tdt-0.6b-v3/ (gitignored via tools/models/*.nemo + dir); parakeet_wrapper.py now uses SaveRestoreConnector.model_extracted_dir when that dir exists -> skips the ~13s tar-unpack. Load 17.6s (was 26-76s); restore 10s vs 23s untar; GPU upload 0.3s. VERIFIED: finals-only EN clip -> 2 calm cues; wrapper loads via extracted dir + transcribes; git check-ignore confirms models untracked; py_compile + node --check pass.",
+  "commands": [
+    "tarfile extract .nemo -> tools/models/parakeet-tdt-0.6b-v3",
+    "ParakeetV3Wrapper load via model_extracted_dir (17.6s)",
+    "git check-ignore tools/models/*",
+    "python live_subtitles.py sp.mp4 (finals-only)"
+  ],
+  "files": [
+    "python-scripts/live_subtitles.py",
+    "vault_explorer/parakeet_wrapper.py",
+    "js/player/subtitles.js",
+    "index.html",
+    ".gitignore"
+  ],
+  "planPath": "",
+  "contentHash": "0289c4321ab7ffd070300966d1288b981cf87dd4c8790f624fb62c05fa69a4c2",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

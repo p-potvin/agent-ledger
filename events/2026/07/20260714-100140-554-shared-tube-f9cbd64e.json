@@ -1,0 +1,58 @@
+{
+  "id": "20260714-100140-554-shared-tube-f9cbd64e",
+  "createdAt": "2026-07-14T14:01:40.5549033Z",
+  "createdAtLocal": "2026-07-14 10:01",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local to tailnet (greencloud-vps, vps-ovhcloud))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell, Read, Edit, Write, Grep\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-07-14 10:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local to tailnet (greencloud-vps, vps-ovhcloud)",
+    "toolsUsed": [
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Tue, 14 Jul 2026 - Closed the delete leak + modal steps 1-2 (API 59778d4, shared-tube 7bdfa55 v0.2.59, both deployed and verified on prod). LEAK CLOSED per user's decision (redirect to front page, not 404): get_video now filters disabled_at IS NULL; build_video_filters actor/studio/category joins now filter deleted_at IS NULL. Pages: videos/[slug] returns Astro.redirect('/',302) instead of setting a 404 status while still rendering a full shell; the 9 taxonomy pages (3 kinds x 3 apps) now resolve the term via the new endpoint and redirect when gone - they previously had NO term lookup at all, so a deleted term was indistinguishable from an empty one and just rendered. Used 302 not 301 deliberately: both deletions are soft/reversible from the admin and a permanent redirect would outlive an undelete in browser+Google caches. apiError excluded from the redirect condition so an outage cannot bounce every page to /. VERIFIED ON LIVE PROD: /videos/winter-tail (disabled 2026-07-05, previously 200+indexable+playable) -> 302 Location=/; /videos/missy-s-audition -> 302; /pornstar/angel-youngs (deleted 2026-07-07, previously 200 with 281 cards) -> 302; controls unaffected: live video 200, live pornstar 200, front page 200. API: /videos/winter-tail -> null, live video 200. NEW ENDPOINT GET /taxonomies/{kind}/by-slug/{slug} - 404 when missing/deleted (verified: angel-youngs 404, angela-white 200). Path is /by-slug/{slug} not /{slug} because /{kind}/count already exists and a bare /{kind}/{slug} would swallow it on slug collision - verified /taxonomies/pornstars/count still returns {total:9972}. MODAL STEP 1: Bulk.tsx onActionSuccess was wired IDENTICALLY to onClose (both navigate() without slug; the view only renders when route.slug is set) so ANY Save unmounted it - that",
+  "commands": [
+    "git push origin main",
+    "pytest tests/ -q",
+    "Invoke-WebRequest (prod redirect probes)",
+    "curl /api/promking/taxonomies/pornstars/by-slug/*"
+  ],
+  "files": [
+    "vaultwares-api/app/routers/promking/videos.py",
+    "vaultwares-api/app/routers/promking/taxonomies.py",
+    "shared/src/api/promking-api.ts",
+    "shared/src/admin/Catalog/Bulk.tsx",
+    "shared/src/admin/Catalog/BatchActions.tsx",
+    "shared/src/admin/Catalog/TermDetail.tsx",
+    "apps/*/src/pages/videos/[slug].astro",
+    "apps/*/src/pages/{pornstar,studio,category}/[slug].astro"
+  ],
+  "planPath": "",
+  "contentHash": "f9cbd64ead33df7c6d37663ba60d1fcddabbc8d41f285933f9c91898467d0139",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "7bdfa55",
+    "hasChanges": false
+  }
+}

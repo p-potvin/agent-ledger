@@ -1,0 +1,43 @@
+{
+  "id": "20260711-030441-998-vaultwares-api-3bf0b05a",
+  "createdAt": "2026-07-11T07:04:41.9982205Z",
+  "createdAtLocal": "2026-07-11 03:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-11 03:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+  "summary": "Sat, 11 Jul 2026 03:04 - Unified Prom-King fetch run setup for manual and scheduled runs, fixed fetch finalization metadata, validated imported stars/studios against exact DB names before TPDB fallback, and preserved merged taxonomy names as aliases.",
+  "commands": [
+    "uv run python -m pytest tests/test_promking_fetcher.py tests/test_promking_fetcher_regressions.py tests/test_promking_batch_contracts.py -q"
+  ],
+  "files": [
+    "app/routers/promking/fetcher.py",
+    "app/routers/promking/cron.py",
+    "app/routers/promking/taxonomies.py",
+    "tests/test_promking_fetcher_regressions.py",
+    "tests/test_promking_batch_contracts.py"
+  ],
+  "planPath": "",
+  "contentHash": "3bf0b05aeba2e2bb8c346e87b4cef16b6a486a16bf7cd4c36e65d295943511fa",
+  "git": null
+}

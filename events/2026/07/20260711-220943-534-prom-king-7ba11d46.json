@@ -1,0 +1,42 @@
+﻿{
+    "id":  "20260711-220943-534-prom-king-7ba11d46",
+    "createdAt":  "2026-07-12T02:09:43.5340142Z",
+    "createdAtLocal":  "2026-07-11 22:09",
+    "timezone":  "Eastern Standard Time",
+    "project":  "prom-king",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-11 22:09 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Updated implementation plan to incorporate server-to-server conversion postbacks and local ad click callbacks instead of direct redirect tracking",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity-ide\\brain\\dc37a317-e052-490f-9ca3-b5358468b7a0\\implementation_plan.md",
+    "contentHash":  "7ba11d461bd7cbcb4759fd8d0ac18b2b6a9c6db83802a98f77b893607e0e73ca",
+    "git":  null
+}

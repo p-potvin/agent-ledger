@@ -1,0 +1,51 @@
+{
+  "id": "20260711-081941-608-prom-king-shared-tube-5bed018a",
+  "createdAt": "2026-07-11T12:19:41.6084465Z",
+  "createdAtLocal": "2026-07-11 08:19",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local PC + ssh greencloud/OVH)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): PowerShell, ssh, Edit, Read, Grep, git, Invoke-WebRequest\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-11 08:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local PC + ssh greencloud/OVH",
+    "toolsUsed": [
+      "PowerShell",
+      "ssh",
+      "Edit",
+      "Read",
+      "Grep",
+      "git",
+      "Invoke-WebRequest"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "4 follow-ups done. #4 API->api.vaultwares.ca: SSR already migrated (shared client default + all 3 app configs = https://api.vaultwares.ca, no host env override); migrated oneporn/sexyprn CLIENT-side nginx (/api/promking + /auth) from 127.0.0.1:9001 to https://api.vaultwares.ca matching fxv - applied live on OVH sites-enabled (backup+nginx -t+reload; verified 1pornhub.vip & sexyprn.lol /api return 200) + updated repo templates. #2 versions: realigned all 5 package.json to 0.2.50 (were root 0.2.49 / apps 0.2.46). #3: resynced greencloud installed /var/www/deploy-scripts/deploy-shared-tube.sh to the repo version (now identical - restores write_status/status.json + CI=true + the generalized ownership guard). #1 root-poisoning: no cron/timer/service does it (fxv+pkt run as vwdeploy); confirmed source is manual root SSH sessions from 100.71.101.21 (user's PC) running pnpm/build - guard self-heals. Committed+pushed 50e2498 (nginx templates + versions, v0.2.50); sites live at v0.2.50. Gotcha hit+fixed: nginx backup files must NOT live in sites-enabled/ (duplicate upstream). OPEN/minor: stale sites-available (100.67.25.118) unused; docs/.env.example/scratch.py/bootstrap still cite tailscale IP (non-functional); prom-king.xyz.conf vestigial.",
+  "commands": [
+    "ssh OVH: nginx api.vaultwares.ca migration + reload",
+    "git commit+push 50e2498 (v0.2.50)",
+    "ssh greencloud: resync deploy script",
+    "investigate cron/timers/root-logins"
+  ],
+  "files": [
+    "shared-tube/scripts/nginx/1pornhub.vip.conf",
+    "shared-tube/scripts/nginx/sexyprn.lol.conf",
+    "shared-tube/package.json (+4 pkg)",
+    "/etc/nginx/sites-enabled/{1pornhub.vip,sexyprn.lol}.conf (OVH)",
+    "/var/www/deploy-scripts/deploy-shared-tube.sh (greencloud)"
+  ],
+  "planPath": "",
+  "contentHash": "5bed018a788d2abbe5815f7f6bbb0d3d3c52d978d62341c26ed705efe6b7d37a",
+  "git": null
+}

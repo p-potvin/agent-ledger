@@ -1,0 +1,47 @@
+{
+  "id": "20260709-190935-498-vaultwares-api-2b197919",
+  "createdAt": "2026-07-09T23:09:35.4986678Z",
+  "createdAtLocal": "2026-07-09 19:09",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "code-change,deploy,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 19:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+  "summary": "Thu, 09 Jul 2026 19:49 - Deployed API media fixes: /api/jobs source marker, Nomos-first upscaler with Pillow fallback, spandrel dependency, Google Drive to Proton rclone handoff defaults, service-user rclone config, model copied to OVH, live API deployed through 68d3c94 and preserved under later 07c00d4.",
+  "commands": [
+    ".\\.venv\\Scripts\\python.exe -m pytest tests\\test_media_pipeline_contract.py tests\\test_core.py tests\\test_api_gateway.py -q",
+    ".\\.venv\\Scripts\\python.exe -m pytest tests\\test_media_pipeline_contract.py -q",
+    ".\\.venv\\Scripts\\python.exe -m py_compile api\\routes_media.py app\\services\\upscaler.py api\\app.py",
+    "git push origin main",
+    "live /healthz and /api/upscaler/status checks",
+    "remote Nomos smoke 8x8 -> 32x32",
+    "rclone lsd gdrive: and proton_pc:"
+  ],
+  "files": [
+    "api/routes_media.py",
+    "app/services/upscaler.py",
+    "api/app.py",
+    "pyproject.toml",
+    "requirements.txt",
+    "tests/test_media_pipeline_contract.py"
+  ],
+  "planPath": "",
+  "contentHash": "2b1979196e12fd0eb9848a86e1ac2ff4e61689d715623f2a774988401ef49e52",
+  "git": null
+}

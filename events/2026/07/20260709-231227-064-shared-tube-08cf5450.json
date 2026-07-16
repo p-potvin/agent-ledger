@@ -1,0 +1,46 @@
+{
+  "id": "20260709-231227-064-shared-tube-08cf5450",
+  "createdAt": "2026-07-10T03:12:27.0640539Z",
+  "createdAtLocal": "2026-07-09 23:12",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 23:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": "shell_command",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fri, 10 Jul 2026 01:04 - Moved shared-tube fxv off Brume2 by deploying the existing Proton/Gluetun OpenVPN proxy stack on Greencloud with localhost-only bindings, then changing fxv STREAM_OUTBOUND_PROXY and THUMB_OUTBOUND_PROXY to http://127.0.0.1:8889. Confirmed Greencloud Proton healthy and exiting through Proton, fxv active with runtime env on localhost proxy, and local fxv HTTP 200. Confirmed OVH oneporn and sexyprn were already running on the OVH Proton proxy and active. API had no Brume/proxy env references.",
+  "commands": [
+    "copy /opt/vw-protonvpn from OVH to Greencloud without printing contents",
+    "bind Greencloud Proton proxy to 127.0.0.1:8889 and 127.0.0.1:8890",
+    "docker-compose up -d gluetun-proton on Greencloud",
+    "backup and update /etc/shared-tube/fxv.env",
+    "systemctl restart fxv",
+    "verify Greencloud/OVH Proton and shared-tube service states"
+  ],
+  "files": [
+    "/opt/vw-protonvpn/docker-compose.yml",
+    "/opt/vw-protonvpn/docker-compose.yml.bak-Thu_09_Jul_2026_2307",
+    "/etc/shared-tube/fxv.env",
+    "/etc/shared-tube/fxv.env.bak-Thu_09_Jul_2026_2308",
+    "/etc/shared-tube/oneporn.env",
+    "/etc/shared-tube/sexyprn.env"
+  ],
+  "planPath": "",
+  "contentHash": "08cf54502e6a99c1661e4a81101f999cf6d6aa9f59c72f79e212bcae1d23b072",
+  "git": null
+}

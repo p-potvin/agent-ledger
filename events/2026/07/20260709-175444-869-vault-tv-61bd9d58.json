@@ -1,0 +1,46 @@
+{
+  "id": "20260709-175444-869-vault-tv-61bd9d58",
+  "createdAt": "2026-07-09T21:54:44.8696561Z",
+  "createdAtLocal": "2026-07-09 17:54",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "commands",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: n/a\r\nTools used (this reply): functions.shell_command, web.run\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 17:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.shell_command",
+      "web.run"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Thu, 09 Jul 2026 17:53 - Inspected vault-streaming as the source for streaming-only logic. Found reusable logic in TMDB metadata flow, season/episode selection, stream ranking, watch progress, and Comet-first source discovery, but also confirmed vault-streaming still contains Electron IPC, direct Real-Debrid/Torrentio/YTS/EZTV/Prowlarr paths, Usenet helpers, AI upscaling, ASR, and desktop-only file/media features that must not be ported into vault-tv. Current stack recommendation is React/Vite web-first with Shaka/hls-capable playback and later wrapper packaging, pending user approval.",
+  "commands": [
+    "Get-Content vault-streaming EXTRACTION-NOTES/package/src/js files",
+    "rg Comet/stream/playback/provider paths in vault-streaming",
+    "web lookup of current Capacitor/React Native TV/Tauri/Shaka/hls.js docs"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming\\EXTRACTION-NOTES.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming\\js\\streaming\\ranking.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming\\js\\streaming\\rd-flow.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming\\src\\realdebrid\\search.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming\\src\\watch-history.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv\\src\\api\\mediaClient.ts"
+  ],
+  "planPath": "",
+  "contentHash": "61bd9d58039a4393794cf2136cfe23fb4402c9182d2cf29313f9ca3db0dad03b",
+  "git": null
+}

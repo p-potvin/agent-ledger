@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260707-191723-341-prom-king-d6c36bdd",
+    "createdAt":  "2026-07-07T23:17:23.3417107Z",
+    "createdAtLocal":  "2026-07-07 19:17",
+    "timezone":  "Eastern Standard Time",
+    "project":  "Prom-King",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: gemini-2.5-pro\r\nThinking: high\r\nMode: code\r\nPermissions: allowlist (network: local PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): replace_file_content, view_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-07 19:17 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-2.5-pro",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "allowlist",
+                    "network":  "local PC",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "view_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King",
+    "summary":  "Fixed deployment script, restored default pagination in video batch actions, made view mode persistent, integrated TaxonomyPicker in VideoDetail, and added /batch/remove-taxonomy endpoint",
+    "commands":  [
+                     "pnpm build"
+                 ],
+    "files":  [
+                  "shared-tube/scripts/deploy-shared-tube.sh",
+                  "shared-tube/shared/src/admin/Catalog/VideoBatchActions.tsx",
+                  "shared-tube/shared/src/admin/Catalog/TaxonomyPicker.tsx",
+                  "shared-tube/shared/src/admin/Catalog/VideoDetail.tsx",
+                  "vaultwares-api/app/routers/promking/videos.py",
+                  "vaultwares-api/app/routers/promking/_models.py"
+              ],
+    "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity-ide\\brain\\3b539a18-85da-4b69-9f1e-a1e7e9dfb62a\\implementation_plan.md",
+    "contentHash":  "d6c36bdd6e3374b82fc17c33daa15eacd5f2c76bd4420bdd2cb253388f42e272",
+    "git":  null
+}

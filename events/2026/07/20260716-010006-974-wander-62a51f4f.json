@@ -1,0 +1,54 @@
+{
+  "id": "20260716-010006-974-wander-62a51f4f",
+  "createdAt": "2026-07-16T05:00:06.9740196Z",
+  "createdAtLocal": "2026-07-16 01:00",
+  "timezone": "Eastern Standard Time",
+  "project": "wander",
+  "kind": "code-change,verification",
+  "actor": "Claude",
+  "agentHeader": "Agent: Claude (role: main)\r\nModel: claude-fable-5\r\nThinking: unknown\r\nMode: interactive\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-16 01:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "unknown",
+    "mode": "interactive",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "Microsoft.PowerShell.Core\\FileSystem::\\\\Clopeux-Desktop\\Clopeux-Desktop C drive\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\scripts",
+  "cwd": "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander",
+  "summary": "Phase 0 complete, committed 4ea99f5 + ecddb57 and pushed to main. Consolidated gRPC protocol into Wander.Core (single proto, client+server codegen; removed 155 duplicate-type warnings), added ListFiles manifest RPC and protocol_version. Built the real engine: FolderScanner (GUID minting, tombstones), LocalIndexer (debounced watcher reconciliation, renames keep GUID), TrashService (30-day retention), SyncEngine rewrite implementing the signed-off conflict policy (newest-wins, attributed conflict copies, hash-verified atomic downloads, rename-as-move), SyncOrchestrator pull rounds. Network: real gRPC handlers over StateDatabase, TailscaleService (status/whois CLI), TailscaleAuthInterceptor (tailnet identity = auth), SyncDaemon hosted service, config-driven Program.cs. Folded orphaned themeManager.cs into Wander.UI/Theming wired to real VaultWares palettes. Untracked dist/, pinned SQLitePCLRaw past GHSA-2m69-gcr7-jv3q. Added Wander.Tests: 31/31 passing incl. two-node loopback integration (create/update/conflict/delete lifecycle), plus GitHub Actions CI.",
+  "commands": [
+    "dotnet build Wander.slnx",
+    "dotnet test Wander.Tests/Wander.Tests.csproj",
+    "git push origin main"
+  ],
+  "files": [
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\Wander.Core\\Services\\SyncEngine.cs",
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\Wander.Core\\Protos\\sync.proto",
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\Wander.Network\\Services\\SyncDaemon.cs",
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\Wander.Tests\\TwoNodeIntegrationTests.cs",
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\.github\\workflows\\ci.yml"
+  ],
+  "planPath": "",
+  "contentHash": "62a51f4fccb4be0eef527f0901d394ad78bdef822397ff8e7a5e77bd5ba08908",
+  "git": {
+    "repo": "wander",
+    "root": "C:/Users/Clopeux/Desktop/Github Repos/wander",
+    "branch": "main",
+    "head": "ecddb57",
+    "hasChanges": false
+  }
+}

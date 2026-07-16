@@ -1,0 +1,49 @@
+{
+  "id": "20260713-113637-296-vw-comet-ovhcloud-100-67-25-118-affe61d5",
+  "createdAt": "2026-07-13T15:36:37.2966082Z",
+  "createdAtLocal": "2026-07-13 11:36",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-comet (ovhcloud 100.67.25.118)",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: ovhcloud VPS (tailnet 100.67.25.118) via ssh from local Windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): PowerShell, ssh, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 11:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "ovhcloud VPS (tailnet 100.67.25.118) via ssh from local Windows",
+    "toolsUsed": [
+      "PowerShell",
+      "ssh",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Fixed Comet server config causing Prowlarr 42x grab-storm + alert spam + adult results for mainstream titles (e.g. Moana). Root cause in /opt/vw-comet/.env.comet: SCRAPE_PROWLARR=both and SCRAPE_JACKETT=both made Comet scrape Jackett/Prowlarr, which (a) hold adult indexers and (b) require fetching .torrent/download URLs per release -> one Prowlarr grab + alert each. Changed SCRAPE_PROWLARR=False, SCRAPE_JACKETT=False, added REMOVE_ADULT_CONTENT=True. Kept infohash-native mainstream scrapers Torrentio+MediaFusion+Bitmagnet (live) - they return infohashes directly (no .torrent download, no grabs). Comet already egresses via Mullvad WireGuard (gluetun comet-vpn) so single-IP is intact; PROXY_DEBRID_STREAM=True. Timestamped backup .env.comet.bak-20260713-153500 kept. Recreated comet container (docker compose up -d --force-recreate comet); comet-vpn + comet-postgres stayed up; comet healthy in ~25s; verified running env shows the new values. NOT yet validated with a live end-to-end search (deferred to user per request-safety / ban risk).",
+  "commands": [
+    "ssh ubuntu@100.67.25.118",
+    "sed -i SCRAPE_PROWLARR/JACKETT=False; +REMOVE_ADULT_CONTENT=True",
+    "docker compose up -d --force-recreate comet"
+  ],
+  "files": [
+    "/opt/vw-comet/.env.comet",
+    "/opt/vw-comet/docker-compose.yml"
+  ],
+  "planPath": "",
+  "contentHash": "affe61d5583c96070ea878de68024190f841dca2f6982b38f7b6aa92bbedf37b",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

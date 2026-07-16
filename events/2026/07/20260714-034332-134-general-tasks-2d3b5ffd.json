@@ -1,0 +1,32 @@
+{
+  "id": "20260714-034332-134-general-tasks-2d3b5ffd",
+  "createdAt": "2026-07-14T07:43:32.1349333Z",
+  "createdAtLocal": "2026-07-14 03:43",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-14 03:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Phase 1 spec + Phase 2 client foundation: server gateway spec for API team; runtime config with 4 modes and fail-closed; typed error model with 14 codes; API DTOs matching contract v1; view model separation with normalizers; authenticated transport with abort/timeout/refresh/retry; TvApiClient with all endpoints; TvAuthManager with keystore-ready storage; mock TV API conforming to DTOs; typed navigation stack with reducer; focus system with zones and boundary behavior; i18n with en-CA and fr-CA catalogs; error boundary and state screen components; 32 new tests (42 total, all passing)",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "2d3b5ffd3206a179373ff7d622d73c6cedf29b171c874729b2910c558323a8b0",
+  "git": null
+}

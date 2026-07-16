@@ -1,0 +1,34 @@
+{
+  "id": "20260715-101140-482-vw-cli-77c30f4d",
+  "createdAt": "2026-07-15T14:11:40.4823039Z",
+  "createdAtLocal": "2026-07-15 10:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "general",
+  "actor": "cascade",
+  "agentHeader": "Agent: cascade (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: pair\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-15 10:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "pair",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Removed command-level aliases, fixed Show-CommandHelp duplication: registry Parameters/Examples are now primary source, Get-Help is fallback only when no registry Parameters exist",
+  "commands": [],
+  "files": [
+    "vw-commands.ps1,vw.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "77c30f4d947c4a3c241da0d903c5a46e2cbe132e058917a458e29b6d692a9aee",
+  "git": null
+}

@@ -1,0 +1,55 @@
+{
+  "id": "20260714-081305-793-shared-tube-8c3d844d",
+  "createdAt": "2026-07-14T12:13:05.7935251Z",
+  "createdAtLocal": "2026-07-14 08:13",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local -> tailnet (vps-ovhcloud))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Read, Grep, PowerShell\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-07-14 08:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local -> tailnet (vps-ovhcloud)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Tue, 14 Jul 2026 - Audited the ad injection + click-tracking system (read-only, no code changed). ANSWER: ad click tracking is wired but effectively DEAD - ad_clicks has 1 row ever and it is 'test_ad' from 2026-07-11 (manual test), vs video_plays=1148, search_logs=516 from the same pipe, so analytics works and ad clicks specifically are broken. FOUR causes: (1) native_ad NEVER RENDERS - VideoGrid derives site from videos[0].site but the API returns site:None on every item (field is marked 'Deprecated, ignored, catalog is now global'), so NativeVideoAd's if (site) is false, code='', and the grey 'Sponsored/Premium studio pick' placeholder renders instead; verified on live fullxxx.video/videos/: st-native-ad--filled=0, placeholders=2, configured vlmai-1.com href=0. (2) banner clicks untrackable - Layout.astro initAdClickTracking queries '.st-aff-banner' which exists NOWHERE; AffiliateAds renders '.aff-banner-sticky'. (3) tracker only binds <a> elements, but video_overlay/popover/interstitial/cam_widget/popunder snippets are all <script> injectors (crakPopIn affstitial-min.js, mnpw3.js) whose clicks happen in injected iframes/new windows - invisible to the parent page by design. (4) ad_id is captured as the href URL, not the admin snippet id/label, so a click cannot be tied back to the configured creative. ALSO: AdSlot.astro is a dead placeholder - it takes an optional code prop and NO caller anywhere passes it, and it never reads settings; 4 positions (under-nav, bottom-banner, sidebar, inplayer) render dashed 'Advertisement' boxes with no admin mapping and no AD_TYPES key. CONFIRMED the search-box click hijacker from the earlier session is the configured popunder: static.scptp9.com/mnpw3.js -> t.ajrkmx1.com, active on fxv. Config state fxv: banner/native_ad/popunder/cam_widget/head_tags/body_tags isActive=true; video_overlay/popover/interstitial isActive=false. /postback (S2S conversions -> postbacks table) is separately wired",
+  "commands": [
+    "psql (ad_clicks/postbacks/settings introspection)",
+    "curl /api/promking/videos (site field check)",
+    "Invoke-WebRequest https://fullxxx.video/videos/"
+  ],
+  "files": [
+    "shared/src/components/Layout.astro",
+    "shared/src/components/AffiliateAds.astro",
+    "shared/src/components/NativeVideoAd.astro",
+    "shared/src/components/AdSlot.astro",
+    "shared/src/components/VideoGrid.astro",
+    "shared/src/ads/spots.ts",
+    "shared/src/admin/Marketing/Settings.tsx",
+    "vaultwares-api/app/routers/promking/analytics.py"
+  ],
+  "planPath": "",
+  "contentHash": "8c3d844df8e7c71936c331d1435f1fafa44e8b4ff49e2d68d51069a4fc002368",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "befe516",
+    "hasChanges": false
+  }
+}

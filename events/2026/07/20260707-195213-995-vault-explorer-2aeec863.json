@@ -1,0 +1,51 @@
+{
+  "id": "20260707-195213-995-vault-explorer-2aeec863",
+  "createdAt": "2026-07-07T23:52:13.9958734Z",
+  "createdAtLocal": "2026-07-07 19:52",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-07 19:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Switched live subtitles from parakeet-tdt-0.6b-v3 (600M, timestamps+silence-gap/VAD) to nvidia/parakeet_realtime_eou_120m-v1 (120M, ~7-12x RT, EN-only) per user. New vault_explorer/realtime_eou.py: RealtimeEOUTranscriber loads the EOU model (local .nemo cache lookup then from_pretrained), transcribe(np_float32)->text with <EOU> token, timestamps=False (faster). Rewrote python-scripts/live_subtitles.py: dropped Silero VAD + word-timestamps + temp-WAV path; now grows a buffer since last utterance, re-transcribes every ~0.6s, segments on <EOU>. Emits partial (live, replaceable) cues + final cues on EOU; RMS gate drops between-utterance silence w/o ASR; safety nets = force-finalise at max_utt(12s) and finalise on trailing silence. Cue timing from absolute stream position (no model timestamps). SRT writer thread persists finals only. Renderer subtitles.js: partial cues kept as single replaceable _livePartialCue, finals permanent; cleared on stop. Model is English-only + no punctuation (capitalise first letter added). NOT cached -> downloads ~0.5GB first run. Verified py_compile + node --check pass; did NOT run model (would trigger download).",
+  "commands": [
+    "python -m py_compile python-scripts/live_subtitles.py vault_explorer/realtime_eou.py",
+    "node --check js/player/subtitles.js"
+  ],
+  "files": [
+    "vault_explorer/realtime_eou.py",
+    "python-scripts/live_subtitles.py",
+    "js/player/subtitles.js"
+  ],
+  "planPath": "",
+  "contentHash": "2aeec8632cc62863b7af9eda460a0e36cd97b1b258b68d647975682a3380e6fa",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

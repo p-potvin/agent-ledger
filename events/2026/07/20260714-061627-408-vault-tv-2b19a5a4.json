@@ -1,0 +1,34 @@
+{
+  "id": "20260714-061627-408-vault-tv-2b19a5a4",
+  "createdAt": "2026-07-14T10:16:27.4084204Z",
+  "createdAtLocal": "2026-07-14 06:16",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-14 06:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Phase 6: Android APK shell — Kotlin WebView + Media3 ExoPlayer + JS bridge + sideload docs",
+  "commands": [],
+  "files": [
+    "android/settings.gradle.kts,android/build.gradle.kts,android/gradle.properties,android/app/build.gradle.kts,android/app/proguard-rules.pro,android/app/src/main/AndroidManifest.xml,android/app/src/main/res/xml/network_security_config.xml,android/app/src/main/res/values/themes.xml,android/app/src/main/res/values/colors.xml,android/app/src/main/res/drawable/tv_banner.xml,android/app/src/main/java/app/vaultwares/tv/MainActivity.kt,android/app/src/main/java/app/vaultwares/tv/PlayerActivity.kt,android/app/src/main/java/app/vaultwares/tv/bridge/VaultBridge.kt,android/app/src/main/java/app/vaultwares/tv/bridge/BridgeEventBus.kt,android/gradle/wrapper/gradle-wrapper.properties,src/player/androidPlaybackAdapter.ts,src/features/player/PlayerScreen.tsx,scripts/build-android.ps1,docs/android-sideload.md"
+  ],
+  "planPath": "",
+  "contentHash": "2b19a5a424514f53091eea84293db2cb0a6e0f42399f552007a7dfc7b9b6bd10",
+  "git": null
+}

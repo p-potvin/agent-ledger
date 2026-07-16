@@ -1,0 +1,32 @@
+{
+  "id": "20260709-190135-699-vault-tv-2fa5d332",
+  "createdAt": "2026-07-09T23:01:35.6994312Z",
+  "createdAtLocal": "2026-07-09 19:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 19:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Thu, 09 Jul 2026 16:11 - Ported streaming-only client logic from vault-streaming into vault-tv: media API contract, Comet/source ranking, series episode resolve, settings preferences, playback adapter, typed progress payloads, docs continuity, and v0.1.2 main push.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "2fa5d3320222155d09b54da3d9c1a42ca681d5b4cdd3009d86a859e269a30510",
+  "git": null
+}

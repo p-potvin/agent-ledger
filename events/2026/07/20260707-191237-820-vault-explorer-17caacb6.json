@@ -1,0 +1,51 @@
+{
+  "id": "20260707-191237-820-vault-explorer-17caacb6",
+  "createdAt": "2026-07-07T23:12:37.8208148Z",
+  "createdAtLocal": "2026-07-07 19:12",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-07 19:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Added debug logging across live-subtitles + idle-preview pipelines. live_subtitles.py: new dbg() -> stderr; logs config, model load time, VAD state, ffmpeg cmd, per-window [time range/rms/vad regions/new_speech], skip reasons, ASR raw segment count + time, each emitted cue, per-window emitted/dropped, stream EOF bytes, ffmpeg stderr tail, final rc/windows/cues. src/live-subtitles.js: logs each forwarded cue, status transitions, final summary w/ cue count, stop requests. js/player/subtitles.js: logs session start params, each addCue w/ playhead + total cues, ignored-cue reasons, status objects, stop. js/navigation/idle.js: logs full per-file batch result (file/success/reason). src/previews.js idle batch: per-file console logs (generating/OK/FAILED w/ ffmpeg error msg/incomplete/already-exists/source-missing). Verified py_compile + node --check pass.",
+  "commands": [
+    "python -m py_compile python-scripts/live_subtitles.py",
+    "node --check (5 files)"
+  ],
+  "files": [
+    "python-scripts/live_subtitles.py",
+    "src/live-subtitles.js",
+    "js/player/subtitles.js",
+    "js/navigation/idle.js",
+    "src/previews.js"
+  ],
+  "planPath": "",
+  "contentHash": "17caacb6bb3fdea8dc541298b3dc94b15d9cbda16a0bcfddac492ad88dcb3dc8",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

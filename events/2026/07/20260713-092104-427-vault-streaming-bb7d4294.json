@@ -1,0 +1,54 @@
+{
+  "id": "20260713-092104-427-vault-streaming-bb7d4294",
+  "createdAt": "2026-07-13T13:21:04.4279363Z",
+  "createdAtLocal": "2026-07-13 09:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Edit, Read, PowerShell, Grep, Playwright-Electron\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 09:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Edit",
+      "Read",
+      "PowerShell",
+      "Grep",
+      "Playwright-Electron"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Restored live subtitles in vault-streaming with opt-in SRT. Copied src/live-subtitles.js, python-scripts/live_subtitles.py, vault_explorer/ from vault-explorer; getPythonExe points at vault-explorer .venv (NeMo). start-live-subtitles now allows http(s) sources (Comet/RD remote URLs) and passes writeSrt; Python SrtWriter made conditional (writeSrt AND local file only), all writer calls guarded. Added preload bridges (warm/start/stop + cue/status listeners), main.js require/register/shutdown wiring. index.html: opt-generate-subtitle menu item + chk-write-srt checkbox (default OFF). subtitles.js wires writeSrt from checkbox. package.json: added python-scripts/** and vault_explorer/** to build.files (were missing -> packaging regression), updated stale usenet description. Boot-verified via Playwright: modelPresent=true, daemon warm-loads to ready (~90s NeMo cold load), zero console errors, menu item + SRT toggle present and unchecked by default.",
+  "commands": [
+    "node vs_livesub2.js (Playwright boot verify)",
+    "node --check",
+    "py_compile live_subtitles.py"
+  ],
+  "files": [
+    "vault-streaming/src/live-subtitles.js",
+    "vault-streaming/python-scripts/live_subtitles.py",
+    "vault-streaming/index.html",
+    "vault-streaming/js/player/subtitles.js",
+    "vault-streaming/package.json"
+  ],
+  "planPath": "",
+  "contentHash": "bb7d4294e4191aa4dd6b55dc15f9c2337d08d06849fcdbfeba95cb15f86b2ca2",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

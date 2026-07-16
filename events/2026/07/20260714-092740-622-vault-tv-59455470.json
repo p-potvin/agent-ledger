@@ -1,0 +1,34 @@
+{
+  "id": "20260714-092740-622-vault-tv-59455470",
+  "createdAt": "2026-07-14T13:27:40.6222685Z",
+  "createdAtLocal": "2026-07-14 09:27",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-14 09:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Phase 5 TV polish complete: fixed focus traps in HistoryScreen confirm dialog, PlayerOverlay audio/subtitle panels, DetailsScreen back nav. Fixed broken retry in HomeScreen, SearchScreen, SettingsScreen, DetailsScreen (retry now re-fetches via retryNonce). Added 7 new tests (4 D-pad adversarial + 3 interrupted-network). 90 tests passing across 23 files.",
+  "commands": [],
+  "files": [
+    "src/features/history/HistoryScreen.tsx,src/components/PlayerOverlay.tsx,src/features/details/DetailsScreen.tsx,src/features/home/HomeScreen.tsx,src/features/search/SearchScreen.tsx,src/features/settings/SettingsScreen.tsx,tests/dpad-navigation-adversarial.test.tsx,tests/interrupted-network.test.tsx,TASKS.md"
+  ],
+  "planPath": "",
+  "contentHash": "5945547045616b3952d800c64e0db4ee16d021da2076607ef44df4a53b89c11a",
+  "git": null
+}

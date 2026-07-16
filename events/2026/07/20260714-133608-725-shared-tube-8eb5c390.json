@@ -1,0 +1,53 @@
+{
+  "id": "20260714-133608-725-shared-tube-8eb5c390",
+  "createdAt": "2026-07-14T17:36:08.7258133Z",
+  "createdAtLocal": "2026-07-14 13:36",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local to tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell, Read, Edit, Write, Grep\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-07-14 13:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local to tailnet",
+    "toolsUsed": [
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Tue, 14 Jul 2026 - Three admin fixes (API ca2b239, shared-tube 60b5bde v0.2.60). (1) PAGINATION 'stopping at 10000' was NOT a cap - the limits were already raised (list_terms le=50000, TAXONOMY_BULK_SELECT_LIMIT=50000). Real cause: count_terms honoured the site param while list_terms documents it as 'Deprecated, ignored. Taxonomies are global.' So the pager sized itself from a count that disagreed with its own list. Measured: pornstars list returns 17052 but count(site=fxv) said 9972 -> 200 pages rendered over 342 real; studios 4645 vs 3001 -> 61 over 93; categories 1861 vs 1201 -> 25 over 38. That is exactly the reported symptom (stops near 10k, but a hand-typed offset works - the rows were always there). Fixed by removing the site branch from count_terms so it matches list_terms; verified all three kinds now agree list==count and page counts equal the real ones. (2) FETCHER MODAL CHECKBOX now persistent: fetchAllPages was useState(false) AND openTermFetch reset it to false on every open; now backed by readPersistentDefault/writePersistentDefault ('vw_admin_fetch_all_pages'), the same helper the page-size/view-mode/filter defaults already use, and openTermFetch no longer resets it. (3) TOASTS + SPINNER: fetchToastBox had hardcoded tailwind-ish hexes (#065f46/#991b1b/#3730a3/#1e3a8a) that ignored the brand; now success=var(--accent) with var(--accent-text), error=var(--danger) (red kept as semantic), in-flight=var(--bg-elevated) with an rgba(var(--accent-rgb),.5) edge so running still reads differently from finished. Spinner: the admin styles inline which cannot express @keyframes, so the lucide Loader was a permanently frozen icon; declared w-spin once in App.tsx and applied animation to the Loader. VERIFIED by rendering the exact styles against fxv's real tokens in a browser and sampling",
+  "commands": [
+    "git push origin main",
+    "pytest tests/ -q",
+    "node toastshot.mjs (computed-transform sampling)",
+    "python count_parity.py"
+  ],
+  "files": [
+    "vaultwares-api/app/routers/promking/taxonomies.py",
+    "shared/src/admin/Catalog/BatchActions.tsx",
+    "shared/src/admin/App.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "8eb5c390725347772f5eae58a8a3450d6530a46af436e7c9f98a063ad8b47e57",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "60b5bde",
+    "hasChanges": false
+  }
+}

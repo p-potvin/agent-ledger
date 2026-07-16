@@ -1,0 +1,50 @@
+﻿{
+    "id":  "20260709-021006-094-shared-tube-c6cc2910",
+    "createdAt":  "2026-07-09T06:10:06.0948870Z",
+    "createdAtLocal":  "2026-07-09 02:10",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: medium\r\nMode: code\r\nPermissions: allowlist (network: local PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): multi_replace_file_content, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 02:10 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "allowlist",
+                    "network":  "local PC",
+                    "toolsUsed":  [
+                                      "multi_replace_file_content",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+    "summary":  "Fixed search bar erasure in admin panel. Root cause: useEffect syncing searchQuery (URL-derived) -\u003e searchInputValue fired during the 300ms debounce window, resetting typed chars. Fix: isTypingRef (bool) + typingTimerRef (timeout) added to both BatchActions.tsx and VideoBatchActions.tsx. The sync effect is suppressed while isTypingRef.current is true. Timer clears 400ms after last keystroke (100ms after debounce settles). Also clarified tpdb_scenes design: scenes only written during video ingestion, not from performer/studio image resolve.",
+    "commands":  [
+                     "npm run build"
+                 ],
+    "files":  [
+                  "shared/src/admin/Catalog/BatchActions.tsx",
+                  "shared/src/admin/Catalog/VideoBatchActions.tsx"
+              ],
+    "planPath":  "",
+    "contentHash":  "c6cc29105c05fea502ffe18e07f21b113b70d24e817229d3c05b36035277f381",
+    "git":  {
+                "repo":  "vaultwares-api",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+                "branch":  "main",
+                "head":  "7eaeef3",
+                "hasChanges":  true
+            }
+}

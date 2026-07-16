@@ -1,0 +1,51 @@
+{
+  "id": "20260711-215210-057-prom-king-shared-tube-a06a3cd7",
+  "createdAt": "2026-07-12T01:52:10.0571654Z",
+  "createdAtLocal": "2026-07-11 21:52",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Clopeux-Desktop)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Grep, Read, Edit, Write, PowerShell, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-11 21:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Clopeux-Desktop",
+    "toolsUsed": [
+      "Grep",
+      "Read",
+      "Edit",
+      "Write",
+      "PowerShell",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Sorted out Google/analytics tags. Root causes: (1) config-driven gtmId injection (Layout.astro) competed with admin head_tags injection -> double-count on fxv, bogus placeholder IDs G-OPH1234567/G-SPN1234567 firing, env name mismatch (GTM_ID_ONEPORN/SEXYPRN vs .env.example GTM_ID_OPH/SPN); (2) tag only passed to ~21/48 pages so category/pornstar/studio/search/legal had no analytics; (3) ConsentBanner was a dead skeleton, analytics fired without consent vs privacy policy. Fix: removed config gtmId injection + all 33 gtmId props + config fields (admin Marketing tab now single source of truth, fires on every page via headTagsCode); added Google Consent Mode v2 default (denied, honours DNT) in Layout head before any tag; rewrote ConsentBanner as functional cookie-gated banner firing gtag consent update; neutralized placeholder IDs; created docs/analytics.md. The 'spn shows 1ph' is a Google-console/admin-DB issue (spn admin snippet carries oneporn Measurement ID) documented for manual fix. typecheck 0/0/0 on all 3 sites, fxv build OK, verified consent scaffolding present in built HTML incl. previously-untagged 2257 page.",
+  "commands": [],
+  "files": [
+    "shared/src/components/Layout.astro",
+    "shared/src/components/ConsentBanner.astro",
+    "shared/src/components/SectionPage.astro",
+    "apps/*/src/config.ts",
+    "docs/analytics.md"
+  ],
+  "planPath": "",
+  "contentHash": "a06a3cd73a75a6067c7f1a07de930acffb2b395a60f063aa81c986046d1bdd54",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "81b5361",
+    "hasChanges": true
+  }
+}

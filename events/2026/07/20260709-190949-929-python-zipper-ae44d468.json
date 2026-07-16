@@ -1,0 +1,44 @@
+{
+  "id": "20260709-190949-929-python-zipper-ae44d468",
+  "createdAt": "2026-07-09T23:09:49.9295525Z",
+  "createdAtLocal": "2026-07-09 19:09",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 19:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Thu, 09 Jul 2026 19:50 - Fixed Tampermonkey persistence/fallback/dashboard wiring, added local Nomos-first upscaling with Pillow fallback, added local job tracking and rclone handoff, pushed fc52ec2, and restarted the local python-zipper fallback server on port 5171.",
+  "commands": [
+    ".\\.venv\\Scripts\\python.exe -m unittest discover -s .\\dataset_builder\\tests -v",
+    "node --check .\\tampermonkey_script.js",
+    ".\\.venv\\Scripts\\python.exe -m py_compile .\\dataset_builder\\server.py .\\dataset_builder\\upscale_image.py",
+    "Nomos smoke 8x8 -> 32x32",
+    "git push origin main"
+  ],
+  "files": [
+    "tampermonkey_script.js",
+    "dataset_builder/server.py",
+    "dataset_builder/upscale_image.py",
+    "dataset_builder/tests/test_server_pipeline.py",
+    "dataset_builder/tests/test_tampermonkey_contract.py"
+  ],
+  "planPath": "",
+  "contentHash": "ae44d46840b28b3fc865d8c8622f07ca93c8caac2c5eb79b5e4f2e16cee0078a",
+  "git": null
+}

@@ -1,0 +1,49 @@
+{
+  "id": "20260713-090651-106-vault-streaming-c0697e2b",
+  "createdAt": "2026-07-13T13:06:51.1062952Z",
+  "createdAtLocal": "2026-07-13 09:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Write, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 09:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "vault-streaming trailer/hover-preview overhaul, verified live with Playwright. ROOT CAUSE of the \"10 previews playing simultaneously with no way to stop\": hover trailer resolution is async (KinoCheck -> TMDB -> yt-dlp, multi-second) but captured the .trailer-iframe-container at call time; hovering another card replaced popup.innerHTML mid-await, detaching that container, then the slow resolution appended a PLAYING video/iframe to the now-detached node -> orphaned off-screen audio that stacked and had no handle to stop. FIX: added window._trailerGen generation token + window._activeTrailerEls registry + window.stopAllTrailerPreviews() authoritative teardown. Extracted loadHoverTrailer(): bumps gen + tears down at start, and after the key lookup aborts WITHOUT attaching if gen changed / user paused / container detached (document.contains). hidePremiumHoverCard now bumps gen + stopAllTrailerPreviews. SPEED: dropped yt-dlp (extractYouTubeURL, the multi-second spawn) from the hover path entirely — now uses the fast youtube-nocookie iframe embed directly, which is reliable post the 152/4 CORS fix (main.js session Referer/Origin overrides untouched -> no regression). PLAY/PAUSE: added a round play/pause button overlaid on the hover-card media; pausing calls stopAllTrailerPreviews (guaranteed silence), playing re-invokes loadHoverTrailer; icon toggles. VERIFIED (Playwright, rapid-hover 9 cards): DURING = 1 iframe in whole document (was ~10 orphans), 0 playing videos, play/pause present, gen=9; AFTER mouse-away = 0 iframes, 0 registered, popup hidden, 0 playing. Details-modal trailer.js (yt-dlp primary, click-triggered, cached) left unchanged to avoid regression; noted as a possible follow-up.",
+  "commands": [
+    "playwright rapid-hover verification (before/after teardown)",
+    "node check hover-card.js"
+  ],
+  "files": [
+    "js/hover-card.js"
+  ],
+  "planPath": "",
+  "contentHash": "c0697e2b6f6fddaa8384b44d1aacda5de9640ea885f4f5d6b1897d8d82e64741",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

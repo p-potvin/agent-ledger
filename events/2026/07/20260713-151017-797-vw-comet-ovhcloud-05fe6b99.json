@@ -1,0 +1,47 @@
+{
+  "id": "20260713-151017-797-vw-comet-ovhcloud-05fe6b99",
+  "createdAt": "2026-07-13T19:10:17.7970689Z",
+  "createdAtLocal": "2026-07-13 15:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-comet ovhcloud",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: ovhcloud VPS via ssh)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): PowerShell, ssh, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 15:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "ovhcloud VPS via ssh",
+    "toolsUsed": [
+      "PowerShell",
+      "ssh",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Step 1 done: switched Comet egress from Mullvad to ProtonVPN. Rewrote vw-comet docker-compose comet-vpn (gluetun) from mullvad wireguard to protonvpn openvpn (Canada USA, tier 2, firewall input 5170), reusing tube-sites Proton creds as a separate gluetun instance (creds in vw-comet .env server-side, chmod 600, never printed; backups tagged 20260713-190422). Recreated; comet-vpn + comet healthy. Egress moved from banned Mullvad 188.241.176.230 to Proton 212.104.215.151. One real Comet search (Oppenheimer): Bitmagnet found 675 torrents (great on Proton), Torrentio still 403 and MediaFusion still 502 (block any VPN IP; Proton did not revive them), StremThru read-only RD cache check 1 of 641 cached (NO grabs), returned the 1 cached stream. Bitmagnet is the effective source; cachedOnly true limits visible results to already-cached. Pending user decision on cachedOnly and Steps 2/3.",
+  "commands": [
+    "docker compose force-recreate comet on proton",
+    "comet search verify"
+  ],
+  "files": [
+    "/opt/vw-comet/docker-compose.yml"
+  ],
+  "planPath": "",
+  "contentHash": "05fe6b99c19c7aba8071e1a9129af68117458c8ed7a8f34e0fe65d6e5a65749b",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

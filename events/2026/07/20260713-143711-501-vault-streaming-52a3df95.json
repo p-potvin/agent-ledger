@@ -1,0 +1,54 @@
+{
+  "id": "20260713-143711-501-vault-streaming-52a3df95",
+  "createdAt": "2026-07-13T18:37:11.5017443Z",
+  "createdAtLocal": "2026-07-13 14:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows + ovhcloud ssh)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Edit, Read, Grep, PowerShell, ssh, Playwright\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 14:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows + ovhcloud ssh",
+    "toolsUsed": [
+      "Edit",
+      "Read",
+      "Grep",
+      "PowerShell",
+      "ssh",
+      "Playwright"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Fixed HTTP 405 + layout scroll dead-zone + hover UX. 405: resolveCometUrl (src/realdebrid/stream.js) did a HEAD on Comet playback URL; with PROXY_DEBRID_STREAM True that URL is Comet VPN proxy endpoint (GET-only, so 405), and following it to the RD CDN would hit RD from the user IP. Now returns the Comet url as-is for the player. Layout: body.tab-streaming-active .main-area padding:0 overflow:hidden was dead (class never set; body is vw-console-shell) so .main-area kept 32px padding + own scroll = non-scrollable left gutter. tabs.js now sets tab-streaming-active for Discover grid and at boot, removes for Library. Verified via Playwright geometry. Hover: attachPremiumHoverCard opens after 450ms (was 300) and only top 60pct of card arms preview (bottom safe zone) via mouseenter+mousemove; file-grid row gap 24 to 44px. Verified bottom no-open, top opens after delay, zero errors. Diagnosis for cant-find-movies: Comet logs show Torrentio + MediaFusion rate-limited from Mullvad IP (0 torrents); only Bitmagnet returns results (works, StremThru cache-check, no grabs). Indexer-coverage strategy pending user decision.",
+  "commands": [
+    "Playwright verify",
+    "node --check",
+    "docker logs comet"
+  ],
+  "files": [
+    "vault-streaming/src/realdebrid/stream.js",
+    "vault-streaming/js/navigation/tabs.js",
+    "vault-streaming/js/hover-card.js",
+    "vault-streaming/index.css"
+  ],
+  "planPath": "",
+  "contentHash": "52a3df952ec735446ecaa0b332fde7dff3e5ad75a87de89d93860d5325fdd621",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "20260714-055116-335-shared-tube-45b9b56d",
+  "createdAt": "2026-07-14T09:51:16.3352686Z",
+  "createdAtLocal": "2026-07-14 05:51",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Read, Edit, Write, Grep, Glob, PowerShell, Bash, AskUserQuestion, spawn_task\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-07-14 05:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "Glob",
+      "PowerShell",
+      "Bash",
+      "AskUserQuestion",
+      "spawn_task"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Tue, 14 Jul 2026 - Finished viewer registration/profile pipeline (v0.2.54). Root bug: VideoCard/VideoActionBar wrote favourites to localStorage while AccountPage read them from the API, so favouriting never reached the profile; pkt_auth_token was known only to AccountPage, hence header always read 'Create account'. Added shared/src/client/viewer.ts as the single browser auth/favourites client (caches slug set: 1 request per grid, not per card; AUTH/FAVOURITES events sync all hearts), now imported by Header, VideoCard, VideoActionBar, AccountPage. New API POST /viewers/me/favourites/merge adopts guest localStorage favourites on login/register - one request, additive, idempotent (not a toggle-per-slug loop: toggling would un-favourite existing, and request-safety forbids batching). AccountPage is:inline -> bundled script; added account-info panel (email/member since/favourites count) and ?tab=register deep link. Fixed latent bug: users.disabled_at referenced by admin Users panel + /viewers/admin/users since day one but created by NO migration - those endpoints threw UndefinedColumnError. Migration 0006 adds it (+ partial unique index on favourites(user_id,video_id) with dedupe first); auth.py now rejects disabled accounts at login and per-request; /auth/me returns created_at. VERIFIED: 3 sites build clean, shared typechecks, lint+vitest match pre-change baseline exactly (113 problems; 2 failed/34 passed - pre-existing in api//security/). Migration applied to LOCAL promking DB, guarantees exercised in rolled-back txn (disabled_at writable, admin_list_users query now runs, merge re-run inserts 0 rows, anon dups still allowed, raw dup errors). NOT deployed; migration 0006 still needed on prod DB. Local dev DB predates migration 0004 (no video_sites/analytics tables) so merge SQL not exercised end-to-end. drizzle.config out points at nonexistent drizzle_temp; only 0000 recorded in __drizzle_migrations. Started local Postgres (stale postmaster.pid, dead pid 24456).",
+  "commands": [
+    "pnpm -r build",
+    "pnpm typecheck",
+    "pnpm test",
+    "psql -f shared/drizzle/0006_viewer_accounts.sql",
+    "pg_ctl start"
+  ],
+  "files": [
+    "shared/src/client/viewer.ts",
+    "shared/src/components/AccountPage.astro",
+    "shared/src/components/Header.astro",
+    "shared/src/components/VideoCard.astro",
+    "shared/src/components/VideoActionBar.astro",
+    "shared/src/db/schema.ts",
+    "shared/drizzle/0006_viewer_accounts.sql",
+    "vaultwares-api/app/routers/promking/auth.py",
+    "vaultwares-api/app/routers/promking/viewers.py",
+    "CHANGES.md"
+  ],
+  "planPath": "",
+  "contentHash": "45b9b56d074fe50be5e28628328bf78ff32bbf95d8447edff697accefedf2c47",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "f66175e",
+    "hasChanges": true
+  }
+}

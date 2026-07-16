@@ -1,0 +1,52 @@
+﻿{
+    "id":  "20260709-020056-914-vaultwares-api-5f1e98e1",
+    "createdAt":  "2026-07-09T06:00:56.9143245Z",
+    "createdAtLocal":  "2026-07-09 02:00",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-api",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: medium\r\nMode: code\r\nPermissions: allowlist (network: local PC + OVH VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): multi_replace_file_content, write_to_file, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 02:00 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "allowlist",
+                    "network":  "local PC + OVH VPS",
+                    "toolsUsed":  [
+                                      "multi_replace_file_content",
+                                      "write_to_file",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+    "summary":  "Added video_id FK (nullable, ON DELETE SET NULL) to tpdb_scenes table. Updated fetcher.py to upsert the raw TPDB scene with video_id after the video INSERT. Upsert uses COALESCE so first insert wins on video_id. Migration 0006 applied on OVH. Build clean.",
+    "commands":  [
+                     "psql -f 0006_tpdb_scenes_video_id.sql"
+                 ],
+    "files":  [
+                  "shared/src/db/schema.ts",
+                  "shared/drizzle/0006_tpdb_scenes_video_id.sql",
+                  "app/routers/promking/fetcher.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "5f1e98e1afbfdbe48811b350fa8ec9a91c20f16dd0d94c0d7c9f9f9a3aa3c2fa",
+    "git":  {
+                "repo":  "vaultwares-api",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+                "branch":  "main",
+                "head":  "7eaeef3",
+                "hasChanges":  true
+            }
+}

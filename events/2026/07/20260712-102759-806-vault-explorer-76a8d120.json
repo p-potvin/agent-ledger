@@ -1,0 +1,51 @@
+{
+  "id": "20260712-102759-806-vault-explorer-76a8d120",
+  "createdAt": "2026-07-12T14:27:59.8066884Z",
+  "createdAtLocal": "2026-07-12 10:27",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Write, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-12 10:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Source-code exclusion via scanner + the existing Settings glob field, per user go-ahead. 1) REPO-TREE SKIP (the decisive fix for 21682 junk items): findVideosAsync now skips any directory containing a .git entry (dir or file, covers worktrees/submodules) — whole repositories are pruned in one check; the vault root itself is exempt so deliberately pointing a tab at a repo still works. 2) DEFAULT GLOB EXCLUSIONS seeded into the user-editable Settings pills: *.log *.tmp *.part *.crdownload *.lock *.map *.pyc *.dll *.pdb *.obj. One-time seed guarded by globExclusionsSeeded flag (users real settings had globExclusions:[] from the pills UI, so undefined-only seeding would never fire; flag prevents re-seeding if the user later clears all pills on purpose); persisted immediately on seed. 3) Removed dead settings.tmdbBearerToken injection from loadSettings (streaming residue leaking an env token into every getSettings response; zero remaining references verified). 4) Deleted stale vault-usenet-cache.json from userData. Exported globToRegex for tests. VERIFIED functionally with the real scanner on a synthetic vault: repo tree skipped (my-repo/.git present -> my-repo/src/index.ts + readme.md pruned), *.log excluded by production globToRegex, media + pdf kept; seeding logic dry-run against a copy of the real settings file seeds correctly and sets the flag. node check passes.",
+  "commands": [
+    "node scan_test.js (repo skip + glob defaults, all assertions pass)",
+    "seeding dry-run on settings copy",
+    "node check main.js scanner.js"
+  ],
+  "files": [
+    "src/scanner.js",
+    "main.js"
+  ],
+  "planPath": "",
+  "contentHash": "76a8d1202e956d3baca5a2fa16b0fb9f7f977a49742490f371f7e38a00b338eb",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

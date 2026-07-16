@@ -1,0 +1,58 @@
+{
+  "id": "20260714-075754-579-shared-tube-97176706",
+  "createdAt": "2026-07-14T11:57:54.5790334Z",
+  "createdAtLocal": "2026-07-14 07:57",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local -> tailnet (vps-ovhcloud, greencloud-vps))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell, Read, Edit, Write, Grep, AskUserQuestion\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-07-14 07:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local -> tailnet (vps-ovhcloud, greencloud-vps)",
+    "toolsUsed": [
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Tue, 14 Jul 2026 - Dynamic search shipped + underlying search relevance bug fixed. API bb42271, shared-tube befe516 (v0.2.56), both deployed. FINDING: search was not merely static, it was broken - build_video_filters ran FTS only over videos.title, ignoring taxonomy links. On prod copy: brazzers 0 -> 15 results (studio had them linked), chloe temple 30 -> 217 (title FTS found 14 pct of her catalogue), kitchen 32 -> 42. search_logs corroborated: real users searched brazzers (1 result) and bangbros (0). Fixed q to also match linked pornstar/studio/category names. PERF: first attempt used correlated EXISTS -> Postgres re-ran 17k-row ILIKE scan of pornstars per candidate video, counts took 24-33s (measured, unshippable). Rewrote as non-correlated IN (SELECT ...) -> computed once and hashed: 130-240ms, ~200x faster, provably identical rows (EXCEPT both directions = 0). Subqueries not JOINs (JOIN would multiply rows per link and inflate grid + /count). 3 new tests guard both shape properties. Also fixed 2 tests failing since the video_sites migration (asserted videos.site vs video_sites.site). Suite 174 passed. NEW GET /search/suggest?site=&q= - pornstars/studios/categories/successful-past-searches in one request, ranked prefix-first then video_count; chosen over 3x /taxonomies fan-out per keystroke. Live latency 70-80ms; 1-char floored. CLIENT shared/src/client/search-suggest.ts: debounced 150ms, 2-char floor, abortable + sequence-guarded, ARIA combobox, arrow/Enter/Escape. Enter still submits the form -> SSR /search/<slug>, so search survives JS-off or a 5xx suggest. Named entities route to /pornstar/<slug> not a title search. ANSWERED user's rebuild question: rebuild would change nothing - every content page is already prerender=false; only 6 static legal pages prerender; results are live per request",
+  "commands": [
+    "git push origin main",
+    "pytest tests/ -q",
+    "psql EXPLAIN ANALYZE",
+    "node typeahead.mjs (playwright, live site)",
+    "curl /api/promking/search/suggest"
+  ],
+  "files": [
+    "vaultwares-api/app/routers/promking/search.py",
+    "vaultwares-api/app/routers/promking/videos.py",
+    "vaultwares-api/tests/test_promking_video_filters.py",
+    "shared/src/client/search-suggest.ts",
+    "shared/src/components/Header.astro",
+    "CHANGES.md"
+  ],
+  "planPath": "",
+  "contentHash": "97176706a414e5f1fc45fe9364ac5499ff6ec3121b2269f22a5cba38947a1221",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "befe516",
+    "hasChanges": false
+  }
+}

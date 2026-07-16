@@ -1,0 +1,50 @@
+{
+  "id": "20260708-041532-344-vault-explorer-73b07334",
+  "createdAt": "2026-07-08T08:15:32.3449490Z",
+  "createdAtLocal": "2026-07-08 04:15",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Edit, Bash, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-08 04:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Edit",
+      "Bash",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "First-run model download (download-on-install pattern) for live subtitles. src/live-subtitles.js: added model manager — modelPresent() checks dev extracted dir / userData/models/*.nemo / HF cache; ensureModel() downloads nvidia/parakeet-tdt-0.6b-v3 .nemo (2.5GB) from HF resolve URL to userData/models via node-fetch + stream pipeline with a Transform byte-counter emitting live-subtitle-status {downloading,percent,MB}; single-flight downloadPromise; atomic .part->rename. warm-live-subtitles now only preloads the daemon if modelPresent (no 2.5GB auto-download every launch); start-live-subtitles awaits ensureModel first (downloads on first actual use). Daemon spawned with env VAULT_MODEL_DIR=userData/models. parakeet_wrapper.py: checks VAULT_MODEL_DIR/parakeet-tdt-0.6b-v3.nemo before HF cache. subtitles.js: handles downloading (button 'DL x%' + toast every 25%), downloaded, download-failed (stops), started/loading/ready. Also fixed packaging gap: added vault_explorer/** to build.files AND asarUnpack (daemon imports it; was absent -> would ImportError in installed app). Verified: HEAD on model URL = 200, 2509332480 bytes; node/py syntax pass; rebuild running. Note: packaged ML features still require the machine's .venv (nemo/torch) — model download only covers weights.",
+  "commands": [
+    "node-fetch HEAD nvidia/parakeet-tdt-0.6b-v3.nemo (2.5GB)",
+    "npm run dist"
+  ],
+  "files": [
+    "src/live-subtitles.js",
+    "vault_explorer/parakeet_wrapper.py",
+    "js/player/subtitles.js",
+    "package.json"
+  ],
+  "planPath": "",
+  "contentHash": "73b07334974d95d8e2f7a4fe07c7a622d74aee3d9e70666b0d234bbfd63025d4",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

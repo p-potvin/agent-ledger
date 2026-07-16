@@ -1,0 +1,44 @@
+{
+  "id": "20260709-183956-419-vault-tv-62d67cdf",
+  "createdAt": "2026-07-09T22:39:56.4196370Z",
+  "createdAtLocal": "2026-07-09 18:39",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "documentation",
+  "actor": "codex",
+  "agentHeader": "Agent: codex (role: main)\r\nModel: gpt-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: danger-full-access (network: online)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: n/a\r\nTools used (this reply): functions.shell_command, functions.apply_patch, functions.update_plan\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 18:39 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "gpt-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "danger-full-access",
+    "network": "online",
+    "toolsUsed": [
+      "functions.shell_command",
+      "functions.apply_patch",
+      "functions.update_plan"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Thu, 09 Jul 2026 18:40 - Wrote and committed the TDD implementation plan for the Vault TV streaming port. The plan breaks the work into typed media contract, source ranking, API guardrails, mock fixtures and episode resolve, preferences UI, playback adapter/progress payload, and verification/docs tasks. Implementation is ready for selected execution mode.",
+  "commands": [
+    "apply_patch add docs/superpowers/plans/2026-07-09-streaming-port.md",
+    "rg placeholder self-review",
+    "git add",
+    "git commit"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv\\docs\\superpowers\\plans\\2026-07-09-streaming-port.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv\\docs\\superpowers\\specs\\2026-07-09-streaming-port-design.md"
+  ],
+  "planPath": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv\\docs\\superpowers\\plans\\2026-07-09-streaming-port.md",
+  "contentHash": "62d67cdfc37db6364dab942fe4fdb7f751e2d99a6f46bacb6738520b5ddd25a4",
+  "git": null
+}

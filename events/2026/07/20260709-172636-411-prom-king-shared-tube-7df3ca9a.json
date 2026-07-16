@@ -1,0 +1,46 @@
+{
+  "id": "20260709-172636-411-prom-king-shared-tube-7df3ca9a",
+  "createdAt": "2026-07-09T21:26:36.4111330Z",
+  "createdAtLocal": "2026-07-09 17:26",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: local PC (Clopeux-Desktop, Windows))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Edit, Write, Grep, Glob, preview_start, preview_eval, preview_inspect\r\nMCP servers accessed (this reply): Claude_Browser\r\nTime: 2026-07-09 17:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local PC (Clopeux-Desktop, Windows)",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "Glob",
+      "preview_start",
+      "preview_eval",
+      "preview_inspect"
+    ],
+    "mcpServersAccessed": "Claude_Browser"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Finished the shared-tube account-creation flow + UI in shared/src/components/AccountPage.astro (used by fxv/oneporn/sexyprn /account pages). Replaced the placeholder prompt()-based registration with a proper inline auth card: segmented Sign in / Create account tabs, real register form (email, password w/ show-hide reveal, confirm password, 18+ confirmation checkbox), full client-side validation matching the /auth/register backend rules (email regex, min 8 chars, passwords match), friendly server-error mapping (409 email taken, 401 bad creds, 400 detail), busy/disabled submit states. Added noindex to the account Layout. Fixed a CSS gotcha where .st-auth-form display:grid (author origin) defeated the [hidden] attribute used to toggle tabs -> scoped to :not([hidden]). Verified via astro dev on fxv:4321: page 200, tab toggle, all 4 validation branches, password reveal, brand-token styling, busy states. Full API round-trip not exercisable locally (needs nginx x-vw-gateway-secret). Not yet committed/deployed; version bump + CHANGES.md entry pending on push.",
+  "commands": [
+    "pnpm -C shared-tube --filter @promking/site-fxv dev --port 4321"
+  ],
+  "files": [
+    "shared-tube/shared/src/components/AccountPage.astro",
+    ".claude/launch.json"
+  ],
+  "planPath": "",
+  "contentHash": "7df3ca9a77109a387ca69a0abfd7b9ca94d88ca0b6945a3488e5c2877f987b26",
+  "git": null
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20260707-212247-179-vault-explorer-72b655c4",
+  "createdAt": "2026-07-08T01:22:47.1797763Z",
+  "createdAtLocal": "2026-07-07 21:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Write, Edit, Bash, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-07 21:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Bash",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Warm-load daemon + translation for live subtitles. Root cause of slow first cue: every click re-spawned python (NeMo import 6s + restore_from untar of 2.5GB .nemo 23s; GPU upload only 0.3s), and it was paid per-click. Refactored python-scripts/live_subtitles.py into a persistent stdin-driven DAEMON: loads TDT model once, emits DAEMON:{ready}, then handles {cmd:start|stop|quit} JSON lines; each start runs run_session() on a thread w/ a stop Event (start replaces current session). src/live-subtitles.js rewritten to manage one daemon: ensureDaemon() spawns it, parses cues/status/DAEMON lines, forwards to lastSender; start/stop/warm IPC write commands to stdin; shutdownLiveSubtitles() on app quit. New warm-live-subtitles IPC + preload.warmLiveSubtitles; js/app.js calls it 3s after initApp so the model is warm before first click. Translation: added Translator (deep_translator GoogleTranslator source=auto, per-session cache, graceful fallback to source on error); translateTo passed from renderer (primary picked lang). Finals translated + written to SRT; partials stay source for responsiveness. VERIFIED end-to-end: EN speech mp4 -> FR finals ('Bonjour le monde.','Il fait beau aujourd'hui.','Je suis très heureux.') accents intact; daemon warm-load + stdin start -> cues -> SUCCESS -> quit rc=0. Model load is variable 26-76s (2.5GB .nemo untar, disk/AV dependent) — warm-load hides it; clicks before ready just queue. py_compile + node --check all pass.",
+  "commands": [
+    "python live_subtitles.py sp.mp4 --translate-to fr (EN->FR verified)",
+    "daemon stdin start/stop/quit test",
+    "node --check src/live-subtitles.js main.js preload.js js/app.js"
+  ],
+  "files": [
+    "python-scripts/live_subtitles.py",
+    "src/live-subtitles.js",
+    "preload.js",
+    "main.js",
+    "js/app.js",
+    "js/player/subtitles.js"
+  ],
+  "planPath": "",
+  "contentHash": "72b655c45b5996215824c63d9ac6efd91bcfe8352a05f779edfc67f7cccd229b",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

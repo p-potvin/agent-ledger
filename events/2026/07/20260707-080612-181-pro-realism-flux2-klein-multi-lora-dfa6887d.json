@@ -1,0 +1,41 @@
+{
+  "id": "20260707-080612-181-pro-realism-flux2-klein-multi-lora-dfa6887d",
+  "createdAt": "2026-07-07T12:06:12.1819925Z",
+  "createdAtLocal": "2026-07-07 08:06",
+  "timezone": "Eastern Standard Time",
+  "project": "Pro-Realism-FLUX2-Klein-Multi-LoRA",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: design\r\nPermissions: allowlist (network: local Windows 11)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Write, Artifact, Skill\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-07 08:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "design",
+    "permissions": "allowlist",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "Write",
+      "Artifact",
+      "Skill"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Delivered ComfyUI translation reference for the FLUX.2 Klein multi-LoRA HF space. (1) HTML artifact published at claude.ai/code/artifact/b80afb34 — includes SVG node graph mimicking ComfyUI canvas with slot-colored wires (MODEL purple, CLIP yellow, CONDITIONING orange, VAE pink, IMAGE blue, LATENT coral), full parameter reference table mapping app.py lines to Comfy nodes, plugin dependency cards (rgthree, KJNodes, controlnet_aux, UltimateSDUpscale), parity notes (RNG source, KV variant, face-swap, multi-ref limits, LoRA strength, bulk mode), and embedded copyable API-format JSON. Both light and dark themes tokenised via CSS custom properties. (2) Standalone flux2-klein-multi-lora.json at scratchpad — ComfyUI API format with UNETLoader → 2x LoraLoaderModelOnly (Klein-Delight 1.0, Klein-Consistency 0.3) → CLIPTextEncode → FluxGuidance 1.0 → ReferenceLatent → KSampler(euler/simple/4 steps/cfg 1.0) → VAEDecode → SaveImage. User asked for JSON-or-markdown deliverable to translate their working HF space into a local ComfyUI workflow. Sun, 06 Jul 2026.",
+  "commands": [
+    "Artifact publish flux2-klein-comfyui.html"
+  ],
+  "files": [
+    "C:/Users/ADMINI~1/AppData/Local/Temp/claude/C--Users-Administrator-Desktop-Prom-King/b8f1c583-42ed-4096-b9bb-e209c8947d18/scratchpad/flux2-klein-comfyui.html",
+    "C:/Users/ADMINI~1/AppData/Local/Temp/claude/C--Users-Administrator-Desktop-Prom-King/b8f1c583-42ed-4096-b9bb-e209c8947d18/scratchpad/flux2-klein-multi-lora.json"
+  ],
+  "planPath": "",
+  "contentHash": "dfa6887df352ea931b9e5943913aebfe2110810a033850ac256b3ab5ea81d993",
+  "git": null
+}

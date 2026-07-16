@@ -1,0 +1,54 @@
+{
+  "id": "20260707-190918-449-vault-explorer-3f00528d",
+  "createdAt": "2026-07-07T23:09:18.4498798Z",
+  "createdAtLocal": "2026-07-07 19:09",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-07 19:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Three fixes. (1) Upscale: rtx_vsr_stream.py:107 referenced undefined FFMPEG_ENC_FMT -> FFMPEG_PIX_FMT (encoder stdin is raw rgb24). (2) Idle previews: root cause = fragile 8-clip ffmpeg concat failing on live-captured mp4s, retried every 30s forever because app.js updated displayedItems but not allItems. Added robust single-clip fallback (one 8s segment @30%, silent VP8) in src/previews.js generateThumbAndPreview >100s branch. New IPC generate-idle-preview-batch awaits up to 10 targeted videos and returns per-file success. Rewrote js/navigation/idle.js: 2-min stagger (was 30s), await each batch, STOP after any fully-failed batch, remember failedPaths to skip, update allItems on success (targeted card refresh only via existing per-video events; no full refresh). preload exposes generateIdlePreviewBatch. (3) Live subtitles no-output+audio-loss: added Silero VAD gate (loaded from local torch.hub cache snakers4_silero-vad_master, no network) to skip silent windows; switched from unproven transcribe_audio_data(array) to proven transcribe_file(temp wav) per window for reliable word timestamps + per-window CUDA empty_cache/gc — reduces VRAM pressure likely behind the audio dropout. Verified: py_compile, node --check all pass; ffmpeg vocal filter validated; Silero VAD local load + get_speech_timestamps smoke-tested (silence->[], noise->0).",
+  "commands": [
+    "python -m py_compile python-scripts/live_subtitles.py",
+    "python -m py_compile python-scripts/rtx_vsr_stream.py",
+    "silero_vad local torch.hub.load smoke test"
+  ],
+  "files": [
+    "python-scripts/rtx_vsr_stream.py",
+    "src/previews.js",
+    "js/navigation/idle.js",
+    "preload.js",
+    "python-scripts/live_subtitles.py"
+  ],
+  "planPath": "",
+  "contentHash": "3f00528d624bde4948b16a78b2b963eedec1473407ab8564cc8b8cc261eedef9",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

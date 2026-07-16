@@ -1,0 +1,58 @@
+{
+  "id": "20260714-084015-136-shared-tube-f1eba2ac",
+  "createdAt": "2026-07-14T12:40:15.1366261Z",
+  "createdAtLocal": "2026-07-14 08:40",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local to tailnet (greencloud-vps, vps-ovhcloud))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell, Read, Edit, Write, Grep, TaskStop\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-07-14 08:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local to tailnet (greencloud-vps, vps-ovhcloud)",
+    "toolsUsed": [
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Tue, 14 Jul 2026 - Fixed the two ad bugs (v0.2.57, commits 43efb0d + 19a756e, deployed and verified on live prod). FIX 1, native ad never rendered anywhere: VideoGrid derived site from videos[0].site but the API stopped populating it when the catalog went global (site moved to the video_sites join; the param is documented Deprecated-ignored), so site was always undefined, NativeVideoAd's if-site guard never ran, code stayed empty and the grey placeholder rendered instead of the operator's creative. Fixed via Astro middleware setting context.locals.site = siteConfig.brand (placed BEFORE the isPrerendered bail-out) in all 3 apps, plus App.Locals typing in env.d.ts; NativeVideoAd now resolves site ?? Astro.locals.site. Chosen over threading a prop through all 11 VideoGrid call sites across 3 apps - a new page cannot forget a value it never has to pass. Deleted the dead videos[0].site derivation; VideoGrid keeps site as an explicit override. FIX 2, banner clicks untrackable: Layout initAdClickTracking queried .st-aff-banner, a class existing nowhere (AffiliateAds renders .aff-banner-sticky); fixed the selector and the placement ternary that keyed off the same phantom class. VERIFIED locally against the real API with Playwright request interception: native filled x2, placeholders 0, configured href present, and BOTH tracking calls fire with correct payload (placement=native_ad and placement=banner, the latter previously impossible). VERIFIED ON LIVE PROD after deploy: st-native-ad--filled 0->2, placeholders 2->0, vlmai-1.com href 0->2, stale st-aff-banner 2->0, version comment v0.2.57. MY MISTAKE, corrected: add-all in 43efb0d swept 29 apps/fxv/.cache/favicons build-scratch files into the repo; untracked them index-only with git update-index --force-remove (files remain on disk) and added .cache/ to",
+  "commands": [
+    "git push origin main",
+    "git update-index --force-remove",
+    "node adclick.mjs (playwright interception)",
+    "Invoke-WebRequest https://fullxxx.video/videos/"
+  ],
+  "files": [
+    "shared/src/components/NativeVideoAd.astro",
+    "shared/src/components/VideoGrid.astro",
+    "shared/src/components/Layout.astro",
+    "apps/fxv/src/middleware.ts",
+    "apps/fxv/src/env.d.ts",
+    ".gitignore",
+    "CHANGES.md"
+  ],
+  "planPath": "",
+  "contentHash": "f1eba2ac876dbb5f8c1cb02ef592b2d9b268b21335c96efac1aabe5790f021b9",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "19a756e",
+    "hasChanges": true
+  }
+}

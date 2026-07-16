@@ -1,0 +1,32 @@
+{
+  "id": "20260712-085751-919-vaultwares-studio-db9e17bf",
+  "createdAt": "2026-07-12T12:57:51.9192366Z",
+  "createdAtLocal": "2026-07-12 08:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-12 08:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Phase 1 DA3 integration: added SfmMethod enum + 3 DA3 presets (da3-draft/standard/high) to presets.py. Created docker/worker/da3_entrypoint.py with --sfm-only/--gs-only/--train-only modes. Updated reconstruction stage to route DA3 presets to da3_entrypoint. Added _run_da3_direct_gs for instant 3DGS preview. Updated worker Dockerfile with DA3 + xformers install. All 85 tests pass.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "db9e17bf5793793c32e1690c94af18cabfb1d186308434ec1ea89f8773ecf6d5",
+  "git": null
+}

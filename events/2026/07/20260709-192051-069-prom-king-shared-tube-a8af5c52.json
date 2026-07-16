@@ -1,0 +1,51 @@
+{
+  "id": "20260709-192051-069-prom-king-shared-tube-a8af5c52",
+  "createdAt": "2026-07-09T23:20:51.0697915Z",
+  "createdAtLocal": "2026-07-09 19:20",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/shared-tube",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local PC + ssh greencloud/OVH + vaultwares-api)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): PowerShell, ssh, Edit, Read, Grep, Invoke-RestMethod, git\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 19:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local PC + ssh greencloud/OVH + vaultwares-api",
+    "toolsUsed": [
+      "PowerShell",
+      "ssh",
+      "Edit",
+      "Read",
+      "Grep",
+      "Invoke-RestMethod",
+      "git"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "COMPLETE: (1) Removed global gold-star ::before on pornstar links (Layout.astro). (2) Sidebar rail now sort=hot: recency-weighted popularity SUM((views+1)*exp(-age/21d)) x deterministic per-(term,6h-bucket) md5 jitter -> rotates instead of A-Z. New sort=hot in vaultwares-api taxonomies.py (validated live; fixed a 500 where the bucket bound as int but used as \\::text -> pass str). shared-tube 0.2.44->0.2.45; vaultwares-api ->0.2.15 (concurrent agent bumped). (3) Deploy failure was THREE stacked permission errors, all fixed: (a) /run/vw-github-app missing after tmpfs reboot -> git auth fail; fixed via /etc/tmpfiles.d on greencloud(vwdeploy)+OVH(ubuntu); (b) root-owned node_modules/.pnpm blocked pnpm recreate -> lucide-react missing; (c) root-owned per-app .vite caches blocked astro build. Chowned full checkout to deploy user on both hosts, cleared .vite. FINAL: deploy 6aceb53 built cleanly, dispatched greencloud->OVH, all 3 sites active at v0.2.45, stars gone, rail hot-sorted matching API. Left a concurrent agent's uncommitted vaultwares-api work untouched; also left unrelated sexyprn favicon SVG->PNG changes unstaged.",
+  "commands": [
+    "git push (shared-tube ac233dd,aaec56c,6aceb53)",
+    "git push (vaultwares-api d53e542,07c00d4)",
+    "ssh chown -R node_modules/checkout",
+    "tmpfiles.d /run/vw-github-app"
+  ],
+  "files": [
+    "shared-tube/shared/src/components/Layout.astro",
+    "shared-tube/apps/*/src/tube.ts",
+    "shared-tube/shared/src/api/promking-api.ts",
+    "vaultwares-api/app/routers/promking/taxonomies.py",
+    "/etc/tmpfiles.d/vw-github-app.conf"
+  ],
+  "planPath": "",
+  "contentHash": "a8af5c52baaa45f47d77afd6bada75a587788265dbd37fb72f552a8ec25ee641",
+  "git": null
+}

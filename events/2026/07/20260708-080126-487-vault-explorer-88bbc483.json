@@ -1,0 +1,49 @@
+{
+  "id": "20260708-080126-487-vault-explorer-88bbc483",
+  "createdAt": "2026-07-08T12:01:26.4872693Z",
+  "createdAtLocal": "2026-07-08 08:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-08 08:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Upscale + subtitle UX fixes. UPSCALE (js/player/upscale.js): the DEMUXER_ERROR was endOfStream() called before a valid fMP4 init segment (encoder produced no frames, e.g. RTX VSR/nvidia-vfx unavailable); the persistent top-left green 'complete' badge was the misleading 'success toast'. Added endUpscaleWithError() that shows one clear error, reverts to original source, removes badge, resets toggle button; 'done' with 0 chunks now fails cleanly instead of endOfStream (no more DEMUXER error); chunk-error tears down; added <video> 'error' listener; stopUpscaleMode only endOfStream when readyState open AND chunks>0; success badge auto-dismisses after 4s. Clarified: upscale streams VIDEO-ONLY fMP4, browser MSE demuxer parses it (no audio/video demux; audio is dropped in upscale mode). SUBTITLES (js/player/subtitles.js): AI subs now EXCLUSIVE with loaded .srt — startLiveSubtitleSession removes all <track> els + disables textTracks before adding AI track (fixes the 2 overlapping streams), toast 'Replaced loaded subtitles'; selecting/uploading a sub while AI runs stops the AI session. PiP: index.css #video-modal.minimized sets --sub-font-size:11px (cue font shrinks in mini player). Syntax verified.",
+  "commands": [
+    "node --check js/player/upscale.js js/player/subtitles.js"
+  ],
+  "files": [
+    "js/player/upscale.js",
+    "js/player/subtitles.js",
+    "index.css"
+  ],
+  "planPath": "",
+  "contentHash": "88bbc483c01fc7eacf4bd2b3de20a4ad92f80a9d93698b079aaecf32b7a7f1be",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

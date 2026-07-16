@@ -1,0 +1,46 @@
+{
+  "id": "20260716-005711-564-wander-8ddd25a9",
+  "createdAt": "2026-07-16T04:57:11.5641295Z",
+  "createdAtLocal": "2026-07-16 00:57",
+  "timezone": "Eastern Standard Time",
+  "project": "wander",
+  "kind": "plan",
+  "actor": "Claude",
+  "agentHeader": "Agent: Claude (role: main)\r\nModel: claude-fable-5\r\nThinking: unknown\r\nMode: interactive\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander  Branch: main\r\nTools used (this reply): Read, Grep, Bash, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-16 00:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "unknown",
+    "mode": "interactive",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Bash",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "Microsoft.PowerShell.Core\\FileSystem::\\\\Clopeux-Desktop\\Clopeux-Desktop C drive\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger\\scripts",
+  "cwd": "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander",
+  "summary": "[backfill for 2026-07-15] Scanned the wander repo end-to-end and ran a socratic roadmap interview. Signed-off product decisions: Wander = tailnet-native shared folders for small teams (3-4 people); fully Tailscale-native (discovery + WhoIs identity as the auth layer); opportunistic relay topology; lenient newest-wins conflicts with attributed conflict copies plus soft presence hints; 30-day delete trash; Avalonia GUI mandatory in v1; repo-scale data for v1; user's A.N.S.W.E.R.S. retention algorithm powers Phase 2 version history. Wrote ROADMAP.md as source of truth. Recorded late because the ledger was unreachable from the Clopeux profile that day; now written via SMB share.",
+  "commands": [],
+  "files": [
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\ROADMAP.md",
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\ANSWERS_backup_algo.md"
+  ],
+  "planPath": "",
+  "contentHash": "8ddd25a96b1fa15b3401feb56386e94ad8046894d0a44b0866837ec815492705",
+  "git": {
+    "repo": "wander",
+    "root": "C:/Users/Clopeux/Desktop/Github Repos/wander",
+    "branch": "main",
+    "head": "ecddb57",
+    "hasChanges": false
+  }
+}

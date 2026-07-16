@@ -1,0 +1,49 @@
+{
+  "id": "20260713-093154-595-vault-streaming-870b61d1",
+  "createdAt": "2026-07-13T13:31:54.5957508Z",
+  "createdAtLocal": "2026-07-13 09:31",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Edit, Read, Grep, PowerShell, Playwright-Electron\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 09:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "Edit",
+      "Read",
+      "Grep",
+      "PowerShell",
+      "Playwright-Electron"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Fixed YouTube 152/4 regression I introduced in the trailer rewrite. Root cause: my task-5 'optimization' deleted the yt-dlp direct-stream PRIMARY path and made the youtube-nocookie iframe the ONLY path; that iframe routinely returns embed error 152/4 (owner disallows off-site playback). My prior test only counted the iframe element, not actual playback, so I falsely reported success. Restored yt-dlp primary in loadHoverTrailer (js/hover-card.js): extractYouTubeURL -> native <video> playing the real googlevideo stream, iframe kept strictly as fallback. Preserved all anti-orphan work: generation-token stillValid() re-check AFTER the yt-dlp await before attaching, video pushed to _activeTrailerEls, stopAllTrailerPreviews tears down <video>. main.js Referer/Origin header rewrite was intact (byte-identical to vault-explorer) and unchanged. Playwright-verified ACTUAL playback: hovered a card -> container holds <video> src=googlevideo.com/videoplayback readyState=4 currentTime>0 playing=true; after hide: 0 active els / 0 DOM media / 0 playing; zero console errors.",
+  "commands": [
+    "node vs_trailer.js (Playwright playback verify)",
+    "node --check js/hover-card.js"
+  ],
+  "files": [
+    "vault-streaming/js/hover-card.js"
+  ],
+  "planPath": "",
+  "contentHash": "870b61d1cf725eec512056ef0d52160e8d3d13e53abe5051dce25604a6795460",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

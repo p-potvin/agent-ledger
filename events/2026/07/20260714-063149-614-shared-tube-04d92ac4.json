@@ -1,0 +1,56 @@
+{
+  "id": "20260714-063149-614-shared-tube-04d92ac4",
+  "createdAt": "2026-07-14T10:31:49.6145361Z",
+  "createdAtLocal": "2026-07-14 06:31",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local -> tailnet (vps-ovhcloud, greencloud-vps))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell, Bash, Read, Edit, Write, Grep\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-07-14 06:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local -> tailnet (vps-ovhcloud, greencloud-vps)",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Tue, 14 Jul 2026 - Pushed + deployed viewer accounts, caught and fixed a 500 via live e2e. shared-tube f0244d3 (v0.2.54) deployed: fxv.service on greencloud, oneporn+sexyprn on OVH, all exit=0. vaultwares-api pushed as 3 commits (1b06e7e analytics API half matching shared-tube aebacdc; 16e9622 viewer accounts; 0db1c02 chore drop stale nginx example), then aba9073 fix. CORRECTION to earlier claim: users.disabled_at ALREADY EXISTED in prod (added out-of-band, in no migration/schema.ts) - so admin endpoints worked in prod and only broke on fresh/local DBs; CHANGES.md corrected. Migration 0006 applied to prod promking (OVH 127.0.0.1:5433, NOT greencloud): DELETE 0 (prod had 0 dup favourites), disabled_at skipped as present, unique index created, no data touched. BUG FOUND BY E2E: merge endpoint 500d on every call - DatatypeMismatchError, user_id integer vs text. Cause: INSERT..SELECT resolves select-list types before matching target cols, so bare \\ had no inference context and asyncpg defaulted it to text. Fixed with \\::int + comment marking the cast load-bearing. Could not have been caught locally (dev DB predates video_sites/0004 which the query joins). Live e2e after fix, all green: register OK, /auth/me created_at populated, merge merged=1, re-run merged=0 total=1 (idempotent), list correct slug, toggle off favourited=false, disabled account 403 on both /auth/me and login. Test user removed, prod residue 0. SCHEMA DRIFT flagged: prod has pornstars/video_pornstars while schema.ts says actors/video_actors; do NOT run drizzle-kit push against prod.",
+  "commands": [
+    "git push origin main",
+    "psql -f 0006_viewer_accounts.sql (prod)",
+    "bash e2e.sh (live API)",
+    "ssh ubuntu@100.67.25.118",
+    "ssh root@100.73.93.84"
+  ],
+  "files": [
+    "vaultwares-api/app/routers/promking/viewers.py",
+    "vaultwares-api/app/routers/promking/auth.py",
+    "shared-tube/CHANGES.md",
+    "shared-tube/shared/drizzle/0006_viewer_accounts.sql"
+  ],
+  "planPath": "",
+  "contentHash": "04d92ac4f5704d3c9c2a8c37a01b5522181ba088d91865814b98cbb1e0ac965c",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "f0244d3",
+    "hasChanges": false
+  }
+}

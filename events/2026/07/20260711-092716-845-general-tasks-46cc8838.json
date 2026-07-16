@@ -1,0 +1,50 @@
+{
+  "id": "20260711-092716-845-general-tasks-46cc8838",
+  "createdAt": "2026-07-11T13:27:16.8452266Z",
+  "createdAtLocal": "2026-07-11 09:27",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local PC + ssh OVH)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): PowerShell, ssh, Edit, Read, Grep, git, Invoke-WebRequest, ScheduledTask\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-11 09:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local PC + ssh OVH",
+    "toolsUsed": [
+      "PowerShell",
+      "ssh",
+      "Edit",
+      "Read",
+      "Grep",
+      "git",
+      "Invoke-WebRequest",
+      "ScheduledTask"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Fixed input-tracker + vault-monitor API-address errors (root cause: OVH API rebound to 127.0.0.1, so hardcoded tailscale http://100.67.25.118:9001 defaults were connection-refused). input-tracker: track-input.py default -> https://api.vaultwares.ca + restarted VaultWares-InputTracker task (dropped stale pid 9712, now pid 27752 posting cleanly, telemetry endpoint 200 via api.vaultwares.ca). Fixed same stale default in 7 more agent-ledger scripts (backfill x2, import x2, replay, setup/start-input-tracker); record-agent-change.ps1 already correct. vault-monitor: runtime (src/api.ts) already on api.vaultwares.ca; aligned dev-proxy (vite.config.ts, .env.example, README). shared-tube leftovers: docs/router-integration.md, dev-setup.md, scratch.py, bootstrap-greencloud.sh -> api.vaultwares.ca. Synced stale OVH sites-available (was 100.67.25.118) from sites-enabled. Pushed: agent-ledger fc397d12, vault-monitor be4cbc8, shared-tube bce606f (v0.2.51). Left (flagged): prom-king.xyz.conf vestigial (pkt->content-site), shared-tube .env.example (concurrently modified placeholder), record-agent-change.ps1 legacy https->http shim (dead, harmless). Correction from user: the root-SSH poisoning is an AGENT (not the user); self-heals, low priority.",
+  "commands": [
+    "restart VaultWares-InputTracker task",
+    "git push agent-ledger fc397d12 / vault-monitor be4cbc8 / shared-tube bce606f",
+    "ssh OVH: sync sites-available"
+  ],
+  "files": [
+    "agent-ledger/scripts/track-input.py (+7)",
+    "vault-monitor/{vite.config.ts,.env.example,README.md}",
+    "shared-tube/docs/{router-integration,dev-setup}.md",
+    "shared-tube/scripts/bootstrap-greencloud.sh"
+  ],
+  "planPath": "",
+  "contentHash": "46cc883888ce8bf5a2c229b7937b47915ca3df6b5626303355b068b4e62040ef",
+  "git": null
+}

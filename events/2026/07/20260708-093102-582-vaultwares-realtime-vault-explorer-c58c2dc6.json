@@ -1,0 +1,47 @@
+{
+  "id": "20260708-093102-582-vaultwares-realtime-vault-explorer-c58c2dc6",
+  "createdAt": "2026-07-08T13:31:02.5826825Z",
+  "createdAtLocal": "2026-07-08 09:31",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-realtime,vault-explorer",
+  "kind": "code-change,handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Bash, Write, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-08 09:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Started streaming extraction out of vault-explorer. Live-streaming translator (explicit 'just copy to another project, nothing more'): copied vault-explorer's stream_translator.py, livestream_translator.py, js/livestream.js, src/livestream.js, powershell/Start-StreamTranslator.ps1 into vaultwares-realtime/integrations/vault-explorer-livestream/ (semantic fit: realtime STT/translation engine) with a provenance README documenting deps (kokoro_onnx, deep_translator, pycaw, sounddevice, ParakeetV3Wrapper) + IPC contract (start/stop-livestream, livestream-log, livestream-visualizer). Non-destructive: vault-explorer unchanged. Mapped the bigger Streaming-tab footprint (25 IPC channels, js/streaming/* ~92KB, src/realdebrid/*, src/usenet/*, src/tmdb.js, js/tmdb.js, ~30 index.html blocks) — its purpose already exists as debrid-media-manager (Next.js). Noted vault-tv plan doc is a SEPARATE from-scratch thin client (server-API), not a code move. Awaiting target/approach decision for the streaming-tab migration before executing the risky vault-explorer removal.",
+  "commands": [
+    "cp livestream files -> vaultwares-realtime/integrations/vault-explorer-livestream/"
+  ],
+  "files": [
+    "vaultwares-realtime/integrations/vault-explorer-livestream/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "c58c2dc6ac220c25faeb96fd894c9cc4fba94a7cae701953812ffb330a94d746",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

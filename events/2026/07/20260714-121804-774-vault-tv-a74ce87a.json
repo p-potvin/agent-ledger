@@ -1,0 +1,34 @@
+{
+  "id": "20260714-121804-774-vault-tv-a74ce87a",
+  "createdAt": "2026-07-14T16:18:04.7742180Z",
+  "createdAtLocal": "2026-07-14 12:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-14 12:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Wired Comet + TMDB integration: created TmdbClient for catalog (home/search/details/episodes), CometClient for playback resolution via Stremio-style stream endpoint, CometTvClient combining both with localStorage for library/history/preferences. Updated RuntimeConfig with comet mode auto-detection from VITE_TMDB_BEARER_TOKEN and VITE_COMET_STREAM_BASE env vars. Updated createTvClient factory. Added .env.local with TMDB token and Comet stream base from vault-streaming. Updated network_security_config.xml to allow cleartext to Comet server (100.67.25.118). Fixed App.tsx to skip pairing in comet mode. All 90 tests pass. App running on emulator with real TMDB content.",
+  "commands": [],
+  "files": [
+    "src/api/tmdbClient.ts;src/api/cometClient.ts;src/api/cometTvClient.ts;src/api/tvClient.ts;src/config/runtime.ts;src/app/App.tsx;android/app/src/main/res/xml/network_security_config.xml;.env.local"
+  ],
+  "planPath": "",
+  "contentHash": "a74ce87a4513fe6c7d65e3f64ea6930f179a490e1fbb5eb829951cf4a0f28d16",
+  "git": null
+}

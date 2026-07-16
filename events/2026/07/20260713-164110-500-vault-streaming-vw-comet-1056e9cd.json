@@ -1,0 +1,52 @@
+{
+  "id": "20260713-164110-500-vault-streaming-vw-comet-1056e9cd",
+  "createdAt": "2026-07-13T20:41:10.5001744Z",
+  "createdAtLocal": "2026-07-13 16:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming + vw-comet",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local + ovhcloud ssh)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): PowerShell, ssh, Write, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 16:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local + ovhcloud ssh",
+    "toolsUsed": [
+      "PowerShell",
+      "ssh",
+      "Write",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Rotated Real-Debrid key + config cleanup. New RD key was in client REAL_DEBRID_API_TOKEN (CEAQ prefix) but client COMET_STREAM_BASE blob AND OVH decypharr still had old 4BMX key. Re-encoded client blob with new key (cachedOnly false preserved); replaced old->new in /srv/vw-media/config/decypharr/config.json and restarted decypharr (backup kept). Verified new key works: StremThru RD cache check succeeded (1 cached) on a live search. Set Comet TORRENTIO_URL to the user Torbox-authenticated URL and SCRAPE_MEDIAFUSION=False (user never used MediaFusion, was misconfigured). Recreated Comet healthy. Finding: Torbox param does NOT bypass Torrentio rate-limit (IP-based on torrentio.strem.fun; Proton IP still 403/non-JSON) - Torrentio dead behind any VPN. Coverage fine: Bitmagnet 992 + Prowlarr 100 for Interstellar. Confirmed torrent-only is enforced in code (rd-flow.js hardcodes streamingMode). Prowlarr consolidation PENDING: Comet CAN reach OVH media prowlarr http://prowlarr:9696 (172.18.0.3) but NOT greencloud prowlarr.vaultwares.ca (tunnel can't reach greencloud tailnet + gluetun DNS). Two separate prowlarrs exist (OVH container + greencloud domain, different keys, both 0 indexers, both have comet/flaresolverr tags). Need user to pick which prowlarr Comet should use before tearing down the separate prowlarr-comet stack.",
+  "commands": [
+    "re-encode client blob",
+    "decypharr key swap + restart",
+    "comet env torbox+mediafusion recreate",
+    "search verify"
+  ],
+  "files": [
+    "vault-streaming/.env",
+    "/srv/vw-media/config/decypharr/config.json",
+    "/opt/vw-comet/.env.comet"
+  ],
+  "planPath": "",
+  "contentHash": "1056e9cd720efc9de9b6d61c1849087fa5e40dee970b23a45ac5cfd539a84842",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "20260711-130445-303-vault-monitor-f9fd1aab",
+  "createdAt": "2026-07-11T17:04:45.3037369Z",
+  "createdAtLocal": "2026-07-11 13:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local PC + browser preview)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): PowerShell, Browser preview, javascript_tool, Edit, Read, Grep, git\r\nMCP servers accessed (this reply): Claude_Browser\r\nTime: 2026-07-11 13:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local PC + browser preview",
+    "toolsUsed": [
+      "PowerShell",
+      "Browser preview",
+      "javascript_tool",
+      "Edit",
+      "Read",
+      "Grep",
+      "git"
+    ],
+    "mcpServersAccessed": "Claude_Browser"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Fixed 4 Personal Stats UI issues + shipped (v1.5.11, commit a7d5a29). #3 collapsed sidebar icons: base grid gap (16px) still applied to the zero-width label in the flex-collapsed nav link, pushing icons left of centre; added gap:0 + align-items:center -> icon offset now 0 (verified in browser). #4 floating collapse-toggle: NOT a z-index bug - .warm-rail overflow-x:hidden was CLIPPING the button (right:-25px overhang, only ~11/21px visible); set rail overflow:visible + z-index:40, moved scroll to .nav-list (overflow-y:auto min-height:0), bumped toggle z-index to 60 -> button fully visible + clickable on overhang (verified). #2 'Time window' invisible: there was NO visible label, only an aria-label; added a visible muted-uppercase label (verified rgba(237,230,255,.72) visible:true). #1 time filters: verified WORKING in current code via dev server (click Today -> ?hours=24 -> 24h data); backend honours hours; CORS on api.vaultwares.ca is '*' so cross-origin fetch is fine -> the deployed build was just STALE; this push redeploys the working code. Isolated my commit from a concurrent agent's uncommitted mouse-path/hotspot work via targeted git stash push/pop (their work restored cleanly, no conflict; merged file compiles, both features render, no console errors). Ran dev server via proxy (VITE_MONITOR_API_BASE='').",
+  "commands": [
+    "npm run dev (vault-monitor via proxy)",
+    "git stash push/pop -- PersonalStatsPage.tsx",
+    "git commit+push a7d5a29 (v1.5.11)"
+  ],
+  "files": [
+    "vault-monitor/src/styles.css",
+    "vault-monitor/src/pages/PersonalStatsPage.tsx",
+    "vault-monitor/package.json"
+  ],
+  "planPath": "",
+  "contentHash": "f9fd1aabce15e4d1b85dc8199261dc163b8db97b45eda308cdfc53b48a85a017",
+  "git": null
+}

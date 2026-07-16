@@ -1,0 +1,48 @@
+{
+  "id": "20260713-154059-477-vw-comet-indexers-ovhcloud-255e664f",
+  "createdAt": "2026-07-13T19:40:59.4778739Z",
+  "createdAtLocal": "2026-07-13 15:40",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-comet-indexers ovhcloud",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: ovhcloud VPS via ssh)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): PowerShell, ssh, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 15:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "ovhcloud VPS via ssh",
+    "toolsUsed": [
+      "PowerShell",
+      "ssh",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Step 2 done + validated: separate Proton-backed indexer stack for Comet. New vw-comet-indexers compose: gluetun-comet-idx (protonvpn openvpn, same creds, separate instance, own Proton IP 146.70.198.3) with prowlarr-comet + jackett-comet + flaresolverr-comet sharing its netns so FlareSolverr solves Cloudflare from the same IP the indexers fetch from - fixes the cookie-invalid bug. UIs prowlarr 9698 jackett 9119 (avoided tube-sites port conflicts). Did NOT touch shared media-stack indexers. Wired Comet env.comet SCRAPE_PROWLARR live, PROWLARR_URL http://gluetun-comet-idx:9696 (container name; tailnet IP misroutes through tunnel), SCRAPE_JACKETT False. Added FlareSolverr proxy + comet tag + ThePirateBay via Prowlarr API. Validated Dune Part Two search: Bitmagnet 682 + Prowlarr 93 torrents, StremThru RD cache 3 of 640 no grabs, http 200 10s. Torrentio 403 MediaFusion 502 still dead on any VPN. Client cachedOnly set false. Remaining: user adds more indexers in Prowlarr UI; Zilean pending. Recommend rotating RD api key (appeared in transcript).",
+  "commands": [
+    "docker compose up indexer stack",
+    "prowlarr API config",
+    "comet search validate"
+  ],
+  "files": [
+    "/opt/vw-comet-indexers/docker-compose.yml"
+  ],
+  "planPath": "",
+  "contentHash": "255e664f786e6bdaefb1940a61efcdc32e2b19dd7dd720d53dee6ba6173b4a7e",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

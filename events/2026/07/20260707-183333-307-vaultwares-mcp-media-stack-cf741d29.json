@@ -1,0 +1,39 @@
+{
+  "id": "20260707-183333-307-vaultwares-mcp-media-stack-cf741d29",
+  "createdAt": "2026-07-07T22:33:33.3076865Z",
+  "createdAtLocal": "2026-07-07 18:33",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-mcp / media stack",
+  "kind": "commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-07 18:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": "shell_command",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Tue, 07 Jul 2026 18:33 - Investigated reported mcp.vaultwares.ca and flaresolverr availability. Found vaultwares-mcp service active and direct POST /mcp succeeding on OVH 100.67.25.118:9020, but domain path fails because OVH nginx proxies mcp.vaultwares.ca to 127.0.0.1:9020 while the service binds 100.67.25.118:9020; nginx error log shows connection refused. Flaresolverr container is up on OVH 100.67.25.118:8191 with recent successful calls, but flaresolverr.vaultwares.ca has DNS on Greencloud without a matching nginx vhost; logs also show real Cloudflare timeout failures and one bad proxy URL 127.0.0.1:8889 from inside the container.",
+  "commands": [
+    "ssh greencloud nginx/dnsmasq read-only checks for mcp/flaresolverr",
+    "ssh OVH systemctl/journal/ss/docker/nginx read-only checks for vaultwares-mcp and flaresolverr"
+  ],
+  "files": [
+    "/etc/nginx/sites-enabled/mcp.vaultwares.ca.conf",
+    "/etc/dnsmasq.d/vaultwares-tailnet.conf",
+    "/opt/vw-media-stack/docker-compose.yml"
+  ],
+  "planPath": "",
+  "contentHash": "cf741d294d15cdfff3e4cb3f7d13fbfe90791fe3a1d52490f1908f6417d968eb",
+  "git": null
+}

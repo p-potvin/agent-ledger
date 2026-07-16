@@ -1,0 +1,56 @@
+﻿{
+    "id":  "20260709-010901-364-vaultwares-api-c85af7f5",
+    "createdAt":  "2026-07-09T05:09:01.3649736Z",
+    "createdAtLocal":  "2026-07-09 01:09",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-api",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-4-6\r\nThinking: high\r\nMode: code\r\nPermissions: allowlist (network: local PC + OVH VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): multi_replace_file_content, replace_file_content, write_to_file, run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 01:09 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-sonnet-4-6",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "allowlist",
+                    "network":  "local PC + OVH VPS",
+                    "toolsUsed":  [
+                                      "multi_replace_file_content",
+                                      "replace_file_content",
+                                      "write_to_file",
+                                      "run_command"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+    "summary":  "Implemented TPDB batch resolver pattern: (1) Added POST /tpdb/resolve-batch to tpdb.py that bulk-queries the DB and returns known images immediately, firing BackgroundTasks for missing ones. (2) fetch_tpdb_tags now persists raw scene JSON to new tpdb_scenes table. (3) Added DataLoader resolveTpdbImage() batcher in api.ts that coalesces all calls within 50ms into one POST. (4) Rewrote TpdbImage.tsx to use the batcher instead of direct fetches. (5) Created and applied migration 0005_tpdb_scenes.sql on OVH.",
+    "commands":  [
+                     "ssh psql -f 0005_tpdb_scenes.sql",
+                     "npm run build"
+                 ],
+    "files":  [
+                  "app/routers/promking/tpdb.py",
+                  "shared/src/admin/api.ts",
+                  "shared/src/admin/Catalog/TpdbImage.tsx",
+                  "shared/src/db/schema.ts",
+                  "shared/drizzle/0005_tpdb_scenes.sql"
+              ],
+    "planPath":  "",
+    "contentHash":  "c85af7f570736198b0c7345ce70344f58388ba8b7d0ffb6e598e14323bcf5435",
+    "git":  {
+                "repo":  "vaultwares-api",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+                "branch":  "main",
+                "head":  "7eaeef3",
+                "hasChanges":  true
+            }
+}

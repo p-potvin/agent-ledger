@@ -1,0 +1,55 @@
+{
+  "id": "20260714-070056-474-shared-tube-6c8e0181",
+  "createdAt": "2026-07-14T11:00:56.4749640Z",
+  "createdAtLocal": "2026-07-14 07:00",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local -> tailnet (vps-ovhcloud, greencloud-vps))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell, Bash, Read, Edit, Write, TaskStop\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-07-14 07:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local -> tailnet (vps-ovhcloud, greencloud-vps)",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Tue, 14 Jul 2026 - Centred the auth card (v0.2.55, edbb6ae, deployed) + replicated prod promking DB to local workstation. CENTRING: .st-auth-card margin-inline:auto rather than a flex wrapper on #st-account-guest, which is hidden-toggled and would leak the card past the UA [hidden] rule (same trap the existing auth-form rule documents). h1 centres via :has() only while the card is on screen, since the signed-in profile is a wide left-aligned grid; degrades to left-aligned without :has(). Verified with Playwright (npx-cached module + existing chromium-1223 binary, no download): card dead-centre at 1440px and 390px (delta 0px both), ?tab=register opens Create account tab. DB REPLICATION: prod is PG 16.14 / 140MB / plpgsql only; local is PG 18.3. Dumped THROUGH an SSH tunnel (localhost:15433 -> OVH 127.0.0.1:5433) using the local pg_dump 18 so the newer client reads the older server (supported direction). 30.8MB custom-format dump, --no-owner --no-privileges. Old local DB RENAMED to promking_pre_replica_20260714 (NOT dropped - reversible; it held only 145 stale videos, 0 users); fresh promking created and restored with -j4 in 2.2s. PARITY VERIFIED against prod on all 13 tables: videos=69278, video_sites=70903, pornstars=17258, video_pornstars=96802, video_categories=115971, video_studios=75014, studios=4690, categories=1861, tpdb_scenes=4417, search_logs=516, settings=10, users=1, favourites=0 - all ok. The merge INSERT from viewers.py now runs locally (was impossible before: query joins video_sites which the stale DB lacked); idempotency confirmed (INSERT 0 1 then INSERT 0 0, count stays 1); favourites_user_video_uniq present in replica since 0006 was applied to prod pre-dump. USER CONFIRMED pornstar is the correct taxonomy -> prod wins, schema.ts (actors/video_actors) is the wrong side; saved to memory.",
+  "commands": [
+    "pg_dump -h 127.0.0.1 -p 15433 -Fc",
+    "pg_restore -j 4",
+    "ALTER DATABASE promking RENAME TO promking_pre_replica_20260714",
+    "node shot.mjs (playwright)",
+    "git push origin main"
+  ],
+  "files": [
+    "shared/src/components/AccountPage.astro",
+    "CHANGES.md",
+    "memory/promking-taxonomy-is-pornstars.md"
+  ],
+  "planPath": "",
+  "contentHash": "6c8e01818d982cc1619a304d4d445a3fb06f05e8c9fa7791611f11e53aa02d43",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "edbb6ae",
+    "hasChanges": false
+  }
+}

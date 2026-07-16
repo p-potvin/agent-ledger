@@ -1,0 +1,44 @@
+{
+  "id": "20260709-225027-494-vw-media-194637e9",
+  "createdAt": "2026-07-10T02:50:27.4948201Z",
+  "createdAtLocal": "2026-07-09 22:50",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-media",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: analyze\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): shell_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 22:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "analyze",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": "shell_command",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Fri, 10 Jul 2026 00:22 - Investigated OVH Docker connectivity between Prowlarr and SABnzbd. Confirmed both containers are in vw-media_default, Prowlarr resolves sabnzbd over Docker DNS, and direct in-container HTTP reaches SABnzbd. Root cause is SAB hostname verification rejecting Host sabnzbd because host_whitelist lacks the Docker service name; failed Prowlarr tests used localhost, 127.0.0.1, and 0.0.0.0. No secret values were recorded.",
+  "commands": [
+    "ssh OVH hostname/whoami",
+    "docker ps/network inspect for prowlarr and sabnzbd",
+    "docker exec prowlarr getent hosts sabnzbd",
+    "docker exec prowlarr curl http://sabnzbd:8080/",
+    "redacted scan of Prowlarr logs",
+    "redacted SAB API version request from prowlarr",
+    "grep SAB host_whitelist with api_key redacted"
+  ],
+  "files": [
+    "/srv/vw-media/config/prowlarr/prowlarr.db",
+    "/srv/vw-media/config/prowlarr/logs/prowlarr.debug.txt",
+    "/srv/vw-media/config/sabnzbd/sabnzbd.ini"
+  ],
+  "planPath": "",
+  "contentHash": "194637e9ae5fc078b5258ab1cbb10c003981c4dad96d642f233e8369fdfff9fb",
+  "git": null
+}

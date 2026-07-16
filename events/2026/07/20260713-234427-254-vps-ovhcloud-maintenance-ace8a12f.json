@@ -1,0 +1,44 @@
+{
+  "id": "20260713-234427-254-vps-ovhcloud-maintenance-ace8a12f",
+  "createdAt": "2026-07-14T03:44:27.2548872Z",
+  "createdAtLocal": "2026-07-13 23:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vps-ovhcloud maintenance",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: ovhcloud VPS via ssh)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): PowerShell, ssh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 23:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "ovhcloud VPS via ssh",
+    "toolsUsed": [
+      "PowerShell",
+      "ssh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "User decided NOT to move Docker to the new 50GB disk after I flagged that sdb1 (/mnt/data, the only extra disk) is already the media DOWNLOADS mount (/data/downloads in decypharr,qbittorrent,sabnzbd,radarr,sonarr,whisparr,lidarr) - co-locating Docker there risks a large download filling the disk and corrupting Docker. Also noted Docker uses containerd v2.2.1 snapshotter so both /var/lib/docker (12G) + /var/lib/containerd (16G) would need moving = ~28G + full downtime. Instead freed space on root: removed unused locally-built vw-linkvertise-downloader:latest image (nothing referenced it; needs rebuild if linkvertise used again). Combined with the earlier build-cache prune (6.8G), root went 17G->22G free (77%->70%). All 22 containers still running, none disrupted. Future headroom option: grow the root volume via OVH panel then growpart+resize2fs (offered).",
+  "commands": [
+    "docker rmi vw-linkvertise-downloader:latest",
+    "df -h / (22G free)"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "ace8a12f662d3dc0c8c0bfe91fdd1dfad28f2053e0e584cb8711f8bf90a9db90",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

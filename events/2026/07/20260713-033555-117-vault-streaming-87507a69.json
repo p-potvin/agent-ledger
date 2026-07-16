@@ -1,0 +1,61 @@
+{
+  "id": "20260713-033555-117-vault-streaming-87507a69",
+  "createdAt": "2026-07-13T07:35:55.1172805Z",
+  "createdAtLocal": "2026-07-13 03:35",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows PC)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Read, Edit, Write, PowerShell, Grep, Glob\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 03:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows PC",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "PowerShell",
+      "Grep",
+      "Glob"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Trimmed vault-streaming to a focused streaming-only app (opposite of the vault-explorer cleanup), boot-verified with Playwright. Tree had already been partially reshaped by a prior pass (no top tabs, streaming-focused includes) but was BROKEN at boot: src/ipc/files.ipc.js missing while system.ipc imports safeOpenFile from it -> main threw at load, No handler registered for get-settings. Recreated minimal files.ipc.js. REMOVED: js root dead files (navigation/player/photos/playlists.js), idle previews, upscale module + AI player button, ASR benchmark (module+button+core.js init), AI live-subtitles (src module, main registration, preload entries, player menu item), crypto + crypto.ipc, previews, normalization; deleted python-scripts/, vault_explorer/, powershell/, tools/, scripts/pwsh/, BENCHMARKS.md. GUARDS: app.js language pass el() reads (filter-type/sort-by/search-box options crash), init calls (initNavigationListeners etc), updateSortOrderButtonUI, player.js initUpscaleListeners; added streaming updateStatusBar to utils.js (TMDB card count). BOOT-ORDER BUG found via before/after runs: initial Discover render fired from initTabListeners ran BEFORE initTMDBListeners initialized TMDB state -> silently empty grid; moved the initial switchStreamingSubtab(discover) to the END of initApp - deterministic 20 cards on consecutive runs. THEME: copied vaultwares-themes/vaultwares-revisited from vault-explorer (index.css imports 404d). REBRAND: title+header Vault Streaming, appId com.vaultwares.vaultstreaming, productName, artifactName vault-streaming-setup; build.files+asarUnpack trimmed. KEPT: debrid-downloader (fits streaming app), clip export (remote-capable), watch-history, favorites/library/hover-card. All 47 js files parse; final boot zero console errors, 20 TMDB cards. Did not commit (repo has user's own uncommitted changes). EXTRACTION-NOTES.md updated.",
+  "commands": [
+    "playwright boot verification (multiple runs, before/after)",
+    "node syntax sweep 47 files",
+    "deleted 5 dirs + 13 files"
+  ],
+  "files": [
+    "main.js",
+    "preload.js",
+    "index.html",
+    "js/app.js",
+    "js/navigation/tabs.js",
+    "js/utils.js",
+    "js/settings/core.js",
+    "js/player/player.js",
+    "src/ipc/files.ipc.js",
+    "package.json",
+    "EXTRACTION-NOTES.md"
+  ],
+  "planPath": "",
+  "contentHash": "87507a6910c2af0f97101bb4ea9305552b9836c8b51a0d3ad4003ff514202795",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

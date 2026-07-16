@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260707-210855-013-prom-king-365a8b92",
+    "createdAt":  "2026-07-08T01:08:55.0135841Z",
+    "createdAtLocal":  "2026-07-07 21:08",
+    "timezone":  "Eastern Standard Time",
+    "project":  "prom-king",
+    "kind":  "code-change",
+    "actor":  "Antigravity",
+    "agentHeader":  "Agent: Antigravity (role: main)\r\nModel: claude-3-7-sonnet\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): replace_file_content, multi_replace_file_content, write_to_file\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-07 21:08 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-3-7-sonnet",
+                    "thinking":  "high",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "local",
+                    "toolsUsed":  [
+                                      "replace_file_content",
+                                      "multi_replace_file_content",
+                                      "write_to_file"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King",
+    "summary":  "Fixed api/thumb ProxyAgent fetch issue by migrating to node-fetch + https-proxy-agent. Added inline AdminEdit dots to public taxonomy listings. Added View on site links to the Admin Panel catalog. Shortened Prom-King JWT session TTL to 3600s.",
+    "commands":  [
+
+                 ],
+    "files":  [
+                  "shared-tube/apps/fxv/src/pages/api/thumb.ts",
+                  "shared-tube/shared/src/components/AdminInlineEdit.astro",
+                  "shared-tube/shared/src/admin/Catalog/BatchActions.tsx",
+                  "vaultwares-api/app/routers/promking/auth.py",
+                  "vaultwares-api/api/auth.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "365a8b92b81535d61d495eba28a65fa8d23d9c7896930db66e4364b981698b44",
+    "git":  null
+}

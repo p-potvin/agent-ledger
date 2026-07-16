@@ -1,0 +1,49 @@
+{
+  "id": "20260713-172045-436-vw-comet-ovhcloud-79ba18e8",
+  "createdAt": "2026-07-13T21:20:45.4366775Z",
+  "createdAtLocal": "2026-07-13 17:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-comet ovhcloud",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: ovhcloud VPS via ssh)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): PowerShell, ssh, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-13 17:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "ovhcloud VPS via ssh",
+    "toolsUsed": [
+      "PowerShell",
+      "ssh",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Consolidated Comet onto the user existing single Prowlarr; tore down my redundant stack. Root cause of my earlier over-engineering: mid-session I re-pointed PROWLARR_URL from the original http://prowlarr:9696 (their prowlarr, key 93bedc51) to a new gluetun-comet-idx stack I built. Reverted: PROWLARR_URL=http://prowlarr:9696, PROWLARR_API_KEY=93bedc51, SCRAPE_PROWLARR=live, SCRAPE_JACKETT=False. Their prowlarr has ~20 indexers incl adult (Whisparr) + 2 comet-tagged non-adult copies (id21 1337x-Comet, id22 kickasstorrents.ws-comet). Scoped Comet via PROWLARR_INDEXERS. IMPORTANT: this g0ldyy/comet build matches PROWLARR_INDEXERS by indexer NAME/definitionName/ID only, NOT by tag label (read /app/comet/services/indexer_manager.py) - so [\\",
+  "commands": [
+    "revert PROWLARR_URL to prowlarr:9696",
+    "PROWLARR_INDEXERS by id",
+    "docker compose down vw-comet-indexers",
+    "search verify 83 prowlarr torrents"
+  ],
+  "files": [
+    "/opt/vw-comet/.env.comet"
+  ],
+  "planPath": "comet\\] (tag) resolved 0 and names with spaces got mangled; only IDS work: PROWLARR_INDEXERS=[\\21\\,\\22\\]. Verified: Dark Knight search -> Prowlarr found 83 torrents (69 new) from the 2 comet indexers, RD cache ok, http 200. Tore down /opt/vw-comet-indexers (gluetun-comet-idx + prowlarr-comet + jackett-comet + flaresolverr-comet + volumes) freeing resources. Note: Comet still attempts a few .torrent downloads from prowlarr for infohash-less results (Failed to download... debug) - far fewer than before (2 indexers) but could fire occasional grab-alerts; can disable torrent-file download if zero-grabs required. Tag-based scoping would need a newer Comet or a source patch.",
+  "contentHash": "79ba18e87d1fcb60b52ad92945afa94659268b6d4b082e4d6dcd57b31991b330",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "ec71dd3",
+    "hasChanges": true
+  }
+}

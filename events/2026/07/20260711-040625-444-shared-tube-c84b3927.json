@@ -1,0 +1,65 @@
+{
+  "id": "20260711-040625-444-shared-tube-c84b3927",
+  "createdAt": "2026-07-11T08:06:25.4440528Z",
+  "createdAtLocal": "2026-07-11 04:06",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "release",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): shell, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-11 04:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Sat, 11 Jul 2026 04:10 - Implemented and deployed shared-tube v0.2.48: capped visible taxonomies on public/admin surfaces, randomized footer trending searches, removed the video detail admin FAB in favor of inline title edit icons, kept card fetch actions icon-only, persisted admin pagination/filter/sort settings, added taxonomy merge schema, verified local tests/builds, applied DB migration, pushed 66c19b0, and confirmed live services plus HTTP probes.",
+  "commands": [
+    "vitest footer/search/persistent-state tests",
+    "tsc shared --noEmit",
+    "astro check fxv/oneporn/sexyprn",
+    "astro build fxv/oneporn/sexyprn",
+    "psql migration 0007_taxonomy_merge_aliases on OVH",
+    "git push origin main",
+    "live HTTP probes fullxxx.video/1pornhub.vip/sexyprn.lol"
+  ],
+  "files": [
+    "CHANGES.md",
+    "shared/drizzle/0007_taxonomy_merge_aliases.sql",
+    "shared/src/admin/Catalog/BatchActions.tsx",
+    "shared/src/admin/Catalog/VideoBatchActions.tsx",
+    "shared/src/admin/persistent-state.ts",
+    "shared/src/components/AdminInlineEdit.astro",
+    "shared/src/components/Footer.astro",
+    "shared/src/components/Header.astro",
+    "shared/src/components/Layout.astro",
+    "shared/src/components/TaxonomyDirectory.astro",
+    "shared/src/components/TaxonomyRail.astro",
+    "shared/src/seo/search.ts",
+    "apps/fxv/src/pages/videos/[slug].astro",
+    "apps/oneporn/src/pages/videos/[slug].astro",
+    "apps/sexyprn/src/pages/videos/[slug].astro"
+  ],
+  "planPath": "",
+  "contentHash": "c84b3927620ff3f5e54d553328ba357137e5e8e36b11a9f9680c3e39d7408f5e",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "66c19b0",
+    "hasChanges": true
+  }
+}

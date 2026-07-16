@@ -1,0 +1,46 @@
+{
+  "id": "20260709-183710-163-python-zipper-0cbe6b90",
+  "createdAt": "2026-07-09T22:37:10.1638750Z",
+  "createdAtLocal": "2026-07-09 18:37",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change,verification",
+  "actor": "Codex",
+  "agentHeader": "Agent: Codex (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: Default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-09 18:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "Default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Thu, 09 Jul 2026 18:45 - Made 4xNomos8k_atd safetensors the first/default local upscaler with Pillow fallback, added local python-zipper job registry/dashboard fallback support, and hid the Tampermonkey FAB on FXV hosts.",
+  "commands": [
+    ".\\.venv\\Scripts\\python.exe -m unittest discover -s .\\dataset_builder\\tests -v",
+    ".\\.venv\\Scripts\\python.exe -m py_compile .\\dataset_builder\\server.py .\\dataset_builder\\upscale_image.py",
+    "node --check .\\tampermonkey_script.js",
+    "dataset_builder\\upscale_image.py Nomos smoke test produced 32x32 from 8x8"
+  ],
+  "files": [
+    "tampermonkey_script.js",
+    "dataset_builder/server.py",
+    "dataset_builder/upscale_image.py",
+    "dataset_builder/tests/test_server_pipeline.py",
+    "dataset_builder/tests/test_tampermonkey_contract.py"
+  ],
+  "planPath": "",
+  "contentHash": "0cbe6b9068405fe2b63994d451493e377a91547169c6ccd64a561044b989b785",
+  "git": null
+}

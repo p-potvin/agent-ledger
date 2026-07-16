@@ -1,0 +1,54 @@
+{
+  "id": "20260711-130306-275-qa-automation-c01bc40d",
+  "createdAt": "2026-07-11T17:03:06.2751625Z",
+  "createdAtLocal": "2026-07-11 13:03",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: n/a\r\nTools used (this reply): shell_command, apply_patch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-11 13:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "shell_command",
+      "apply_patch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Sat, 11 Jul 2026 13:04 - Wired generated natural mouse paths into qa-automation Playwright specs, Node QA crawlers, and Python stealth routine; added focused regression tests and docs for automatic opt-out replay.",
+  "commands": [
+    "npx.cmd playwright test tests/qa-mouse-paths.spec.ts --project=chromium",
+    "npx.cmd tsc --noEmit",
+    "npm.cmd run test:list",
+    "python .\\tests\\test_qa_mouse_paths_python.py",
+    "python -m py_compile .\\qa_automation_routine.py .\\run_continuous_qa.py",
+    "node --check .\\lib\\qa-mouse-paths.mjs; node --check .\\scripts\\run-own-domain-stealth.mjs; node --check .\\scripts\\run-search-visibility-report.mjs; node --check .\\scripts\\run-fullxxx-crawl-firefox-profile.mjs"
+  ],
+  "files": [
+    "lib/qa-mouse-paths.ts",
+    "lib/qa-mouse-paths.mjs",
+    "tests/support/qa-test.ts",
+    "tests/qa-mouse-paths.spec.ts",
+    "tests/test_qa_mouse_paths_python.py",
+    "qa_automation_routine.py",
+    "scripts/run-own-domain-stealth.mjs",
+    "scripts/run-search-visibility-report.mjs",
+    "scripts/run-fullxxx-crawl-firefox-profile.mjs",
+    ".env.example",
+    "README.md"
+  ],
+  "planPath": "",
+  "contentHash": "c01bc40d3d1ec462c42ca7132e795b97c231b15b89bd73e098614ac52af99446",
+  "git": null
+}
