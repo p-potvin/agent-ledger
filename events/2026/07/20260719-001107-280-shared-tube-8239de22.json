@@ -1,0 +1,51 @@
+{
+  "id": "20260719-001107-280-shared-tube-8239de22",
+  "createdAt": "2026-07-19T03:38:11.0000000Z",
+  "createdAtLocal": "2026-07-18 23:38",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-sonnet-5\r\nThinking: low\r\nMode: chat\r\nPermissions: ask (network: Windows local PC (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Bash, PowerShell, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-18 23:38 (TZ: Eastern Standard Time) [backdated to actual PR#2 merge time, github merge commit shows 2026-07-19 00:38:11 -03:00]",
+  "runtime": {
+    "role": "main",
+    "model": "claude-sonnet-5",
+    "thinking": "low",
+    "mode": "chat",
+    "permissions": "ask",
+    "network": "Windows local PC (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "PR #2 (claude/video-descriptions-mobile-perf-qjhjyf), merged Sun 19 Jul 2026 00:38 local: added video description to VideoObject JSON-LD via existing videoObjectSchema() helper (GSC flagged missing field); fixed Layout meta description to use real description instead of title; fixed font loading (Outfit+Inter+JetBrains Mono all loaded on every page regardless of brand tokens - now derived from tokens.typography, mono admin-only) for mobile perf; fixed VideoGrid LCP by marking first two VideoCard thumbnails priority/eager instead of all-lazy.",
+  "commands": [
+    "git fetch origin",
+    "git log 1d59cfc..origin/main --stat"
+  ],
+  "files": [
+    "CHANGES.md",
+    "shared/src/components/Layout.astro",
+    "shared/src/components/VideoCard.astro",
+    "shared/src/components/VideoGrid.astro",
+    "shared/src/seo/schema.ts"
+  ],
+  "planPath": "",
+  "contentHash": "8239de226a96919eb18a413e0c9a45739030e981bf9c8a1c2f6e1eea0f8ea3f3",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "1d59cfc",
+    "hasChanges": false
+  }
+}

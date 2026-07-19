@@ -1,0 +1,48 @@
+{
+  "id": "20260716-201400-719-general-tasks-6612f098",
+  "createdAt": "2026-07-17T00:14:00.7191047Z",
+  "createdAtLocal": "2026-07-16 20:14",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop + OVH VPS 100.67.25.118 via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell, ssh, ToolSearch\r\nMCP servers accessed (this reply): VaultWares_MCP\r\nTime: 2026-07-16 20:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 Enterprise / Clopeux-Desktop + OVH VPS 100.67.25.118 via tailnet",
+    "toolsUsed": [
+      "PowerShell",
+      "ssh",
+      "ToolSearch"
+    ],
+    "mcpServersAccessed": "VaultWares_MCP"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Replicated OVH (100.67.25.118) working mail config for qBittorrent on Clopeux-Desktop. KEY FINDING: there is NO Proton Mail Bridge on OVH - no protonmail process, no SMTP listener on 25/465/587/1025/1143 anywhere on host. The 's6-supervise service-proton' PIDs traced to /lidarr and /whisparr (hotio images, ProtonVPN service - unrelated to mail). 'gluetun-proton' is ProtonVPN; 'torbox-sab-bridge' is a SABnzbd bridge. User's recollection of a working Bridge on OVH was a conflation. ACTUAL working config read from /srv/vw-media/config/prowlarr/prowlarr.db Notifications table (opened read-only/immutable): Implementation=Email, server=smtp.protonmail.ch, port=587, useEncryption=1, username=alerts@vaultwares.ca, from=alerts@vaultwares.ca, to=lefondhumain@pm.me. So OVH uses Proton SMTP submission directly, not Bridge - which is the option-2 path recommended earlier. For qBittorrent: set smtp_server=smtp.protonmail.ch, req_ssl=true (qbit's SSL default is 465, which Proton supports alongside 587), req_auth=true, username AND sender both = alerts@vaultwares.ca (Proton SMTP submission binds the token to one address and requires From to match - current config has sender=support@vaultwares.ca vs username=philippe.potvin@vaultwares.ca, a mismatch, plus smtp_server=127.0.0.1 pointing at a Bridge that cannot be reached on qbit's fixed ports). Existing ini password appears to be a 22-char Bridge password, not an SMTP submission token - likely the actual auth failure. Secrets read but NOT recorded. No changes made; qbit still live.",
+  "commands": [
+    "ssh root@100.67.25.118 docker ps",
+    "sqlite3 read-only query of prowlarr.db Notifications"
+  ],
+  "files": [
+    "/srv/vw-media/config/prowlarr/prowlarr.db",
+    "C:\\Users\\Administrator\\AppData\\Roaming\\qBittorrent\\qBittorrent.ini"
+  ],
+  "planPath": "",
+  "contentHash": "6612f098e4a608736cb3df947d9c921d07ee64bfe8314b9246c24a5979a7d538",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "1d59cfc",
+    "hasChanges": false
+  }
+}

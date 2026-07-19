@@ -1,0 +1,44 @@
+{
+  "id": "20260716-195015-546-general-tasks-cf35ab7b",
+  "createdAt": "2026-07-16T23:50:15.5469017Z",
+  "createdAtLocal": "2026-07-16 19:50",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-16 19:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 Enterprise / Clopeux-Desktop (local)",
+    "toolsUsed": "PowerShell",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "qBittorrent/Mullvad on Clopeux-Desktop - confirmed egress still via tunnel (Detected external IP 146.70.198.230 = Mullvad exit at 19:47:11; 0.0.0.0/1 + 128.0.0.0/1 on ca-mtr-wg-003 metric 0; Find-NetRoute 8.8.8.8 -> ca-mtr-wg-003/10.74.244.160). User's 'torrenting via own IP' concern was unfounded. HOWEVER: Session\\Interface, Session\\InterfaceName and Session\\InterfaceAddress are now ALL EMPTY - the ca-mtr-wg-003 bind was cleared at some point after the proxy was disabled. Log shows the transition: 19:47:07 'Successfully listening on IP 10.74.244.160 UDP/19431' (bound) then 19:47:16 'Trying to listen on 0.0.0.0:19431,[::]:19431' and now listening on 100.71.101.21, 10.0.0.24 (real LAN via Ethernet 2), 127.0.0.1, 172.17.160.1 (Hyper-V), 172.24.112.1 (WSL). Consequence: routing protects egress only while tunnel is UP; with the bind empty there is no killswitch - if wg drops, the /1 routes vanish, Ethernet 2's 0.0.0.0/0 takes over and torrenting silently continues on 74.57.201.206. Recommend restoring Options > Advanced > Network Interface = ca-mtr-wg-003, Optional IP = 10.74.244.160. Also noted Session\\AnonymousModeEnabled=true (newly on) and Session\\ProxyPeerConnections=true is now a no-op leftover with Proxy\\Type=None. Prior fixes confirmed applied by user: WebUI\\RootFolder, AuthSubnetWhitelist /10, UPnP disabled, Proxy\\Type=None.",
+  "commands": [
+    "Get-NetRoute",
+    "Find-NetRoute -RemoteIPAddress 8.8.8.8",
+    "Get-NetAdapter -Name ca-mtr-wg-003"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\AppData\\Roaming\\qBittorrent\\qBittorrent.ini"
+  ],
+  "planPath": "",
+  "contentHash": "cf35ab7be65c32316d67d74daa0ce64465380e39b241bc66d2180ed9d0b87231",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "1d59cfc",
+    "hasChanges": false
+  }
+}

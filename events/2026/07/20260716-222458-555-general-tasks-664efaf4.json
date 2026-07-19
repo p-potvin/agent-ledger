@@ -1,0 +1,38 @@
+{
+  "id": "20260716-222458-555-general-tasks-664efaf4",
+  "createdAt": "2026-07-17T02:24:58.5552968Z",
+  "createdAtLocal": "2026-07-16 22:24",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-16 22:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 Enterprise / Clopeux-Desktop (local)",
+    "toolsUsed": "PowerShell",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "vault-tv direction discussion (no code). User clarified their earlier blank was 'what do I pivot to', not 'how do I evade liability' - they had already independently concluded the piracy-subscription path has no viable business around it. Offered reframe rather than idea list: 'home media streaming app' is a commoditized category (Jellyfin/Plex/Emby/Kodi/Stremio) precisely because value lives in content rights, not the player shell - which is why the piracy pivot was the tempting shortcut and why no player feature will differentiate durably. Argued their only non-commodity asset in this space is that they GENERATE content (ComfyUI wallpaper-foundry pipeline + Omniverse/USD tooling), which is the one configuration where content rights are a non-issue. Flagged prior art honestly: Bigscreen VR has done virtual co-watching since ~2016, so the 'friends on a virtual couch' framing is not novel; the potentially novel part of their USD idea is procedurally generated scenes as owned content, not the couch. Flagged the weak point to sleep on: non-interactive co-presence is a hard value prop vs a video call, and 'virtual couch' on flat-panel Android TV/Fire TV (no headset) needs clarifying. Also noted their genuinely rare asset may be the solo-operator agent-fleet operating model itself rather than any individual project. User signing off to sleep on it; no decision reached.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "664efaf45f522d191747a47f554ff0ecf07f81447838027dbebfe543696bcc29",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "1d59cfc",
+    "hasChanges": false
+  }
+}

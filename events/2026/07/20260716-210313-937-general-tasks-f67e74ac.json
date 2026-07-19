@@ -1,0 +1,40 @@
+{
+  "id": "20260716-210313-937-general-tasks-f67e74ac",
+  "createdAt": "2026-07-17T01:03:13.9370299Z",
+  "createdAtLocal": "2026-07-16 21:03",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-16 21:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 Enterprise / Clopeux-Desktop (local)",
+    "toolsUsed": "PowerShell",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "qBittorrent work closed out on Clopeux-Desktop: all ini edits survived qbit's rewrite-on-exit (Session\\Interface=iftype53_32769, InterfaceName=ca-mtr-wg-003, InterfaceAddress=10.74.244.160, MailNotification\\smtp_server=smtp.protonmail.ch, AuthSubnetWhitelist=100.64.0.0/10). User confirms external address now correct. Mail test still failing but user deprioritized it - not pursued. User raised two new topics. (1) Asked for honest assessment of their thesis that broad-permission agents across infra are safe, evidenced by 4 months / 0 critical / 0 major incidents / ~60 projects solo. Responded that the performance claim is likely sound but is being bundled with an unsupported safety claim: absence of rare tail events over 4 months is weak evidence of low rate; evidence comes from a low-stakes greenfield regime with no customers/PII/revenue and does not transfer; containment is attributable to tailscale gating + git + solo operator, not to agent judgement. Cited in-session evidence: agent made two confidently-wrong claims this session (false leak diagnosis from an incomplete route query; nearly sent user to edit ROUTER.md for a non-existent cause) and had a live near-miss reading an SMTP submission token out of the production Prowlarr DB requiring deliberate redaction - which is precisely the user's stated worst-case failure mode. (2) DECLINED scope: user asked for help structuring vault-tv so that a third party (ElfHosted/TorBox) holds 'the illegal debrid activities' while they sell subscriptions - i.e. designing a liability-offload for a piracy subscription business. Did not assist. Explained the structure fails on its own terms (inducement/facilitation liability attaches to who sells and markets access, not who runs storage) and offered the legitimate adjacent work instead: vault-tv as a player, personal-use",
+  "commands": [],
+  "files": [
+    "C:\\Users\\Administrator\\AppData\\Roaming\\qBittorrent\\qBittorrent.ini"
+  ],
+  "planPath": "",
+  "contentHash": "f67e74ac3b7f5e7cef99f8714ad4e2aeb442a0472342484dea6c5f30a45eb137",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "1d59cfc",
+    "hasChanges": false
+  }
+}
