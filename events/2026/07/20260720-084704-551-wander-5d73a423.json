@@ -1,0 +1,52 @@
+{
+  "id": "20260720-084704-551-wander-5d73a423",
+  "createdAt": "2026-07-20T12:47:04.5513990Z",
+  "createdAtLocal": "2026-07-20 08:47",
+  "timezone": "Eastern Standard Time",
+  "project": "wander",
+  "kind": "code-change,verification",
+  "actor": "Claude",
+  "agentHeader": "Agent: Claude (role: main)\r\nModel: claude-opus-4-8\r\nThinking: unknown\r\nMode: interactive\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-20 08:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "unknown",
+    "mode": "interactive",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Clopeux\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander",
+  "summary": "Phase 1 features: pause/resume + in-app notifications (pushed e6460e4). SyncController (thread-safe pause switch): paused node stops pulling AND its gRPC ListFiles stops advertising the manifest, so it goes silent both directions; local watcher keeps indexing for instant resume. Wired to a dashboard header button and a tray menu item, kept in sync via PausedChanged; status shows Paused. Notifications: conflict/trash/error activity events pop as bottom-right Avalonia WindowNotificationManager toasts. OS-level toasts when minimized deferred until installer (need registered AppUserModelID from Velopack shortcut) - noted in ROADMAP. Tests: added SyncControllerTests (3 unit) + PausedNodeAdvertisesNothing integration test; fixed the two existing integration tests that needed SyncController in their DI. 35/35 green, 0 warnings. Verified pause button renders via window capture. Remaining Phase 1: installer (Velopack), then the daily-drive exit criterion.",
+  "commands": [
+    "dotnet build Wander.slnx",
+    "dotnet test Wander.Tests",
+    "git push origin main"
+  ],
+  "files": [
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\Wander.Core\\Services\\SyncController.cs",
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\Wander.Dashboard\\MainWindow.axaml.cs",
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\Wander.Network\\Services\\SyncDaemon.cs"
+  ],
+  "planPath": "",
+  "contentHash": "5d73a423f717f90d15d239b1fd6ed8fd378fb84d01290554a4c5495db4326867",
+  "git": {
+    "repo": "wander",
+    "root": "C:/Users/Clopeux/Desktop/Github Repos/wander",
+    "branch": "main",
+    "head": "e6460e4",
+    "hasChanges": false
+  }
+}

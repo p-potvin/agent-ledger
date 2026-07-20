@@ -3,6 +3,95 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-07-20 08:47 - wander</strong> <code>code-change,verification</code> - Phase 1 features: pause/resume + in-app notifications (pushed e6460e4). SyncController (thread-safe pause switch): paused node stops pulling AND its gRPC ListFiles stops adverti...</summary>
+
+- Kind: code-change,verification
+- Actor: Claude
+- Agent Header:
+  ```text
+  Agent: Claude (role: main)
+  Model: claude-opus-4-8
+  Thinking: unknown
+  Mode: interactive
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Clopeux\Desktop\Github Repos\wander  Branch: main
+  Tools used (this reply): Read, Edit, Write, Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-07-20 08:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Phase 1 features: pause/resume + in-app notifications (pushed e6460e4). SyncController (thread-safe pause switch): paused node stops pulling AND its gRPC ListFiles stops advertising the manifest, so it goes silent both directions; local watcher keeps indexing for instant resume. Wired to a dashboard header button and a tray menu item, kept in sync via PausedChanged; status shows Paused. Notifications: conflict/trash/error activity events pop as bottom-right Avalonia WindowNotificationManager toasts. OS-level toasts when minimized deferred until installer (need registered AppUserModelID from Velopack shortcut) - noted in ROADMAP. Tests: added SyncControllerTests (3 unit) + PausedNodeAdvertisesNothing integration test; fixed the two existing integration tests that needed SyncController in their DI. 35/35 green, 0 warnings. Verified pause button renders via window capture. Remaining Phase 1: installer (Velopack), then the daily-drive exit criterion.
+- Commands:
+  - `dotnet build Wander.slnx`
+  - `dotnet test Wander.Tests`
+  - `git push origin main`
+- Files:
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Core\Services\SyncController.cs`
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\MainWindow.axaml.cs`
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Network\Services\SyncDaemon.cs`
+- Git: repo=wander, branch=main, head=e6460e4
+
+</details>
+
+<details>
+<summary><strong>2026-07-19 01:46 - vault-tv</strong> <code>code-change</code> - Added onReceivedError fallback in MainActivity (WebView recovers to bundled assets if a configured URL fails on a real device). Committed all APK/README work as 5e3a319 and push...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Clopeux\Desktop\Github Repos\vault-tv  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-19 01:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added onReceivedError fallback in MainActivity (WebView recovers to bundled assets if a configured URL fails on a real device). Committed all APK/README work as 5e3a319 and pushed to main (642c39d..5e3a319). 10 files changed. Note: APK still not compiled here (no JDK/Android SDK); user builds via assembleDebug.
+- Commands:
+  - `git commit`
+  - `git push origin main`
+- Files:
+  - `android/app/src/main/java/app/vaultwares/tv/MainActivity.kt`
+  - `README.md`
+  - `android/app/build.gradle.kts`
+- Git: repo=vault-tv, branch=main, head=5e3a319
+
+</details>
+
+<details>
+<summary><strong>2026-07-19 00:14 - vault-tv</strong> <code>code-change</code> - Fixed standalone APK: made debug build self-contained (loads bundled web assets by default; dev-server hot-reload now opt-in via -PdevServer). Refreshed bundled android web asse...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Clopeux\Desktop\Github Repos\vault-tv  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-19 00:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed standalone APK: made debug build self-contained (loads bundled web assets by default; dev-server hot-reload now opt-in via -PdevServer). Refreshed bundled android web assets from a fresh Vite build. Added .env.example. Rewrote README.md with full clone-to-install instructions (prereqs incl. JDK17+Android SDK, submodules, web build+stage, assembleDebug, and sideload steps for Android phone, Fire TV, Android TV) plus troubleshooting and signed-release section. Updated docs/android-sideload.md to match. Note: existing root vault-tv-debug.apk is a stale dev-server build that does not work standalone. Could not compile APK here (no JDK/Android SDK installed); user will build.
+- Commands:
+  - `npx vite build`
+  - `gradlew assembleDebug`
+- Files:
+  - `README.md`
+  - `android/app/build.gradle.kts`
+  - `.env.example`
+  - `docs/android-sideload.md`
+- Git: repo=vault-tv, branch=main, head=642c39d
+
+</details>
+
+<details>
 <summary><strong>2026-07-16 02:59 - wander</strong> <code>code-change,verification</code> - Corrected theming architecture per user feedback: moved Avalonia color/font tokens out of Wander.Dashboard/App.axaml (where I&#39;d wrongly hardcoded them) into vaultwares-themes/va...</summary>
 
 - Kind: code-change,verification
