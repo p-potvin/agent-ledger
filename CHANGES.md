@@ -1,93 +1,462 @@
-# Agent Ledger
+﻿# Agent Ledger
 
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-07-20 08:47 - wander</strong> <code>code-change,verification</code> - Phase 1 features: pause/resume + in-app notifications (pushed e6460e4). SyncController (thread-safe pause switch): paused node stops pulling AND its gRPC ListFiles stops adverti...</summary>
+<summary><strong>2026-07-19 01:01 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>general</code> - Committed, bumped version to 0.2.67, and pushed shared-tube fallback credentials login page changes to GitHub main.</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-19 01:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Committed, bumped version to 0.2.67, and pushed shared-tube fallback credentials login page changes to GitHub main.
+- Git: repo=agent-ledger, branch=main, head=bcc95342
+
+</details>
+
+<details>
+<summary><strong>2026-07-19 00:59 - agent-ledger</strong> <code>general</code> - Added admin credentials for clopeux / exastkill6 in promking database on remote OVH VPS, and updated shared-tube login page App.tsx with username/password fields fallback alongs...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-19 00:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added admin credentials for clopeux / exastkill6 in promking database on remote OVH VPS, and updated shared-tube login page App.tsx with username/password fields fallback alongside token auth.
+- Git: repo=agent-ledger, branch=main, head=bcc95342
+
+</details>
+
+<details>
+<summary><strong>2026-07-19 00:51 - agent-ledger</strong> <code>general</code> - Successfully added/updated user credentials clopeux / exastkill6 inside vaultwares database on remote vps-ovhcloud and verified the auth/login token generation.</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-19 00:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Successfully added/updated user credentials clopeux / exastkill6 inside vaultwares database on remote vps-ovhcloud and verified the auth/login token generation.
+- Git: repo=agent-ledger, branch=main, head=bcc95342
+
+</details>
+
+<details>
+<summary><strong>2026-07-19 00:42 - agent-ledger</strong> <code>general</code> - Committed and pushed the streaming UI refactor changes (Watch History, Advanced Filters drawer, grid adjustments) to main branch of vault-streaming.</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-19 00:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Committed and pushed the streaming UI refactor changes (Watch History, Advanced Filters drawer, grid adjustments) to main branch of vault-streaming.
+- Git: repo=agent-ledger, branch=main, head=bcc95342
+
+</details>
+
+<details>
+<summary><strong>2026-07-18 23:38 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>code-change</code> - PR #2 (claude/video-descriptions-mobile-perf-qjhjyf), merged Sun 19 Jul 2026 00:38 local: added video description to VideoObject JSON-LD via existing videoObjectSchema() helper ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-sonnet-5
+  Thinking: low
+  Mode: chat
+  Permissions: ask (network: Windows local PC (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): Bash, PowerShell, WebFetch
+  MCP servers accessed (this reply): none
+  Time: 2026-07-18 23:38 (TZ: Eastern Standard Time) [backdated to actual PR#2 merge time, github merge commit shows 2026-07-19 00:38:11 -03:00]
+  ```
+- Summary: PR #2 (claude/video-descriptions-mobile-perf-qjhjyf), merged Sun 19 Jul 2026 00:38 local: added video description to VideoObject JSON-LD via existing videoObjectSchema() helper (GSC flagged missing field); fixed Layout meta description to use real description instead of title; fixed font loading (Outfit+Inter+JetBrains Mono all loaded on every page regardless of brand tokens - now derived from tokens.typography, mono admin-only) for mobile perf; fixed VideoGrid LCP by marking first two VideoCard thumbnails priority/eager instead of all-lazy.
+- Commands:
+  - `git fetch origin`
+  - `git log 1d59cfc..origin/main --stat`
+- Files:
+  - `CHANGES.md`
+  - `shared/src/components/Layout.astro`
+  - `shared/src/components/VideoCard.astro`
+  - `shared/src/components/VideoGrid.astro`
+  - `shared/src/seo/schema.ts`
+- Git: repo=shared-tube, branch=main, head=1d59cfc
+
+</details>
+
+<details>
+<summary><strong>2026-07-18 23:00 - agent-ledger</strong> <code>general</code> - Updated vault-streaming to support Watch History tab, redesigned compact streaming toolbar, added expandable advanced filters drawer (format, genre, decade, region), optimized g...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-19 00:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated vault-streaming to support Watch History tab, redesigned compact streaming toolbar, added expandable advanced filters drawer (format, genre, decade, region), optimized grid cards layout to 7 across, and updated translations.
+- Git: repo=agent-ledger, branch=main, head=bcc95342
+
+</details>
+
+<details>
+<summary><strong>2026-07-17 01:16 - agent-ledger</strong> <code>general</code> - Updated Header Menu Layout (previous session 04c2ac71).</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-17 01:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated Header Menu Layout (previous session 04c2ac71).
+- Git: repo=agent-ledger, branch=main, head=6add8e8b
+
+</details>
+
+<details>
+<summary><strong>2026-07-17 01:15 - agent-ledger</strong> <code>general</code> - Implemented context menu entry open with vault-explorer for video files. Added initial file handling to main.js and preload.js to pass the CLI argument to the renderer. Modified...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-17 01:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented context menu entry open with vault-explorer for video files. Added initial file handling to main.js and preload.js to pass the CLI argument to the renderer. Modified app.js to handle the open-initial-file event, switch to the files tab, and autoplay the video by calling playItem(). Created and ran install_context_menu.ps1 to register the context menu in Windows registry.
+- Git: repo=agent-ledger, branch=main, head=6add8e8b
+
+</details>
+
+<details>
+<summary><strong>2026-07-16 23:52 - vaultwares-toolkit</strong> <code>plan</code> - Located the stalled vault-port/Columbo interview. NAMING NOTE for future agents: the design work is logged under &#39;vault-port&#39; in project &#39;vaultwares-adk&#39; in CHANGES.md, NOT unde...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-8
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop (local))
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): PowerShell, Read, Glob, ledger_search, search_session_transcripts
+  MCP servers accessed (this reply): VaultWares_MCP, ccd_session_mgmt
+  Time: 2026-07-16 23:52 (TZ: Eastern Standard Time)
+  ```
+- Summary: Located the stalled vault-port/Columbo interview. NAMING NOTE for future agents: the design work is logged under 'vault-port' in project 'vaultwares-adk' in CHANGES.md, NOT under 'vaultwares-toolkit' - ledger_search and session-transcript search for 'vaultwares-toolkit'/'columbo' both return zero. The repo is C:\Users\Administrator\Desktop\Github Repos\vaultwares-toolkit, branch feat/columbo-import, ahead 1 (unpushed merge bf8b709). TWO stalled interviews found. (1) Design interview (vault-port Socratic, rounds 1-2, 2026-05-15 to 2026-05-18) ended at Q7 refusal protocol / Q8 contradiction handling / Q9 vault-themes scope with agent leans stated (hard refusal, sidecar revisions.md, vertical slice). All three leans were subsequently IMPLEMENTED in code - README documents graceful refusal in Audit phase, revisions.md exists in recipe output, vaultwares-themes fixture is a vertical slice - so that interview closed by being built rather than answered. (2) Columbo's own extract interview on vaultwares-themes: 6 questions generated 2026-05-23, ALL still marked 'Client says: Awaiting response'; revisions.md line 16 states outright 'No divergences recorded (interview not yet conducted)'; port.yaml pinned at confidence 0.70, gaps 6, contradictions 4. Unanswered ~7 weeks. OBSERVATION surfaced to user re: their stated inability to close projects: every agent-shaped task shipped (code, README, LICENSE, CI, PR merge) while the single human-shaped task - answering 6 questions - did not, and Columbo's own operating constraint forbids autonomous extract, meaning the tool's critical path requires the exact resource the user is shortest on (own attention). Their stated moat ('expert interrogation system is the moat', 2026-05-16 ledger) is precisely the un-automatable part by their own design decision. Offered to conduct the interview live now; opened with Q1 (crypto-vault in a theme
+- Files:
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-toolkit\tests\fixtures\recipe-output\vaultwares-themes\interview.md`
+  - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-toolkit\tests\fixtures\recipe-output\vaultwares-themes\port.yaml`
+  - `C:\Users\Administrator\Desktop\Github Repos\CHANGES.md`
+- Git: repo=shared-tube, branch=main, head=1d59cfc
+
+</details>
+
+<details>
+<summary><strong>2026-07-16 22:24 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares &#226; Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares &#226; Project Rename Refactoring (Phase 5), VaultWares &#226; Project Rename Refactoring (Phase 5 PR Workflow), VaultWares &#226; System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>plan</code> - vault-tv direction discussion (no code). User clarified their earlier blank was &#39;what do I pivot to&#39;, not &#39;how do I evade liability&#39; - they had already independently concluded t...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-8
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop (local))
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-07-16 22:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: vault-tv direction discussion (no code). User clarified their earlier blank was 'what do I pivot to', not 'how do I evade liability' - they had already independently concluded the piracy-subscription path has no viable business around it. Offered reframe rather than idea list: 'home media streaming app' is a commoditized category (Jellyfin/Plex/Emby/Kodi/Stremio) precisely because value lives in content rights, not the player shell - which is why the piracy pivot was the tempting shortcut and why no player feature will differentiate durably. Argued their only non-commodity asset in this space is that they GENERATE content (ComfyUI wallpaper-foundry pipeline + Omniverse/USD tooling), which is the one configuration where content rights are a non-issue. Flagged prior art honestly: Bigscreen VR has done virtual co-watching since ~2016, so the 'friends on a virtual couch' framing is not novel; the potentially novel part of their USD idea is procedurally generated scenes as owned content, not the couch. Flagged the weak point to sleep on: non-interactive co-presence is a hard value prop vs a video call, and 'virtual couch' on flat-panel Android TV/Fire TV (no headset) needs clarifying. Also noted their genuinely rare asset may be the solo-operator agent-fleet operating model itself rather than any individual project. User signing off to sleep on it; no decision reached.
+- Git: repo=shared-tube, branch=main, head=1d59cfc
+
+</details>
+
+<details>
+<summary><strong>2026-07-16 21:03 - General Tasks</strong> <code>handoff</code> - qBittorrent work closed out on Clopeux-Desktop: all ini edits survived qbit&#39;s rewrite-on-exit (Session\Interface=iftype53_32769, InterfaceName=ca-mtr-wg-003, InterfaceAddress=10...</summary>
+
+- Kind: handoff
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-8
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop (local))
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-07-16 21:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: qBittorrent work closed out on Clopeux-Desktop: all ini edits survived qbit's rewrite-on-exit (Session\Interface=iftype53_32769, InterfaceName=ca-mtr-wg-003, InterfaceAddress=10.74.244.160, MailNotification\smtp_server=smtp.protonmail.ch, AuthSubnetWhitelist=100.64.0.0/10). User confirms external address now correct. Mail test still failing but user deprioritized it - not pursued. User raised two new topics. (1) Asked for honest assessment of their thesis that broad-permission agents across infra are safe, evidenced by 4 months / 0 critical / 0 major incidents / ~60 projects solo. Responded that the performance claim is likely sound but is being bundled with an unsupported safety claim: absence of rare tail events over 4 months is weak evidence of low rate; evidence comes from a low-stakes greenfield regime with no customers/PII/revenue and does not transfer; containment is attributable to tailscale gating + git + solo operator, not to agent judgement. Cited in-session evidence: agent made two confidently-wrong claims this session (false leak diagnosis from an incomplete route query; nearly sent user to edit ROUTER.md for a non-existent cause) and had a live near-miss reading an SMTP submission token out of the production Prowlarr DB requiring deliberate redaction - which is precisely the user's stated worst-case failure mode. (2) DECLINED scope: user asked for help structuring vault-tv so that a third party (ElfHosted/TorBox) holds 'the illegal debrid activities' while they sell subscriptions - i.e. designing a liability-offload for a piracy subscription business. Did not assist. Explained the structure fails on its own terms (inducement/facilitation liability attaches to who sells and markets access, not who runs storage) and offered the legitimate adjacent work instead: vault-tv as a player, personal-use
+- Files:
+  - `C:\Users\Administrator\AppData\Roaming\qBittorrent\qBittorrent.ini`
+- Git: repo=shared-tube, branch=main, head=1d59cfc
+
+</details>
+
+<details>
+<summary><strong>2026-07-16 20:28 - General Tasks</strong> <code>code-change</code> - Applied qBittorrent.ini edits on Clopeux-Desktop with qbit closed (verified process absent first). Changes: (1) MailNotification\smtp_server 127.0.0.1 -&gt; smtp.protonmail.ch, mat...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-8
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop (local))
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): PowerShell, Read, Edit, Grep
+  MCP servers accessed (this reply): none
+  Time: 2026-07-16 20:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: Applied qBittorrent.ini edits on Clopeux-Desktop with qbit closed (verified process absent first). Changes: (1) MailNotification\smtp_server 127.0.0.1 -> smtp.protonmail.ch, matching the working OVH/Prowlarr reference; user had already corrected password to a 16-char uppercase SMTP submission token and aligned sender=username=philippe.potvin@vaultwares.ca. (2) WebUI\AuthSubnetWhitelist 100.64.0.0/32 -> 100.64.0.0/10 (user believed this was already changed; ini still showed /32). (3) Restored WireGuard bind: Session\Interface=iftype53_32769, Session\InterfaceName=ca-mtr-wg-003, Session\InterfaceAddress=10.74.244.160 - values verified still valid (adapter unchanged, ifIndex 37, Up, IPv4 10.74.244.160). TECHNICAL CORRECTION to earlier advice: full-tunnel routing does NOT protect qBittorrent when 'Any interface' is selected - libtorrent enumerates and binds sockets to each local address including 10.0.0.24 (Ethernet 2), and a socket bound to 10.0.0.24 cannot egress via wg due to source-address mismatch, so Windows routes it out the ISP path. This is why the user observed their real external IP fluctuating per qbit boot. App-scoped interface bind is orthogonal to the system-wide killswitch the user declined. Confirmed already-good: WebUI\RootFolder=...\VueTorrent\vuetorrent, Proxy\Type=None, PortForwardingEnabled=false, Session\AnonymousModeEnabled=false. DOC FINDING: Prom-King docs/instructions/summaries/DEPLOYMENT.md line 4 states 'OVH as ubuntu with tube-site-vps key' but root@100.67.25.118 with id_ed25519 works - line is inaccurate/incomplete and misleads agents. ROUTER.md does NOT direct agents to MCP for SSH; the MCP ssh_run attempt was own tool-selection, not doc-caused. Secrets not recorded.
+- Commands:
+  - `Get-NetAdapter -Name ca-mtr-wg-003`
+  - `Get-Process qbittorrent`
+- Files:
+  - `C:\Users\Administrator\AppData\Roaming\qBittorrent\qBittorrent.ini`
+- Git: repo=shared-tube, branch=main, head=1d59cfc
+
+</details>
+
+<details>
+<summary><strong>2026-07-16 20:14 - General Tasks</strong> <code>verification</code> - Replicated OVH (100.67.25.118) working mail config for qBittorrent on Clopeux-Desktop. KEY FINDING: there is NO Proton Mail Bridge on OVH - no protonmail process, no SMTP listen...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-8
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop + OVH VPS 100.67.25.118 via tailnet)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): PowerShell, ssh, ToolSearch
+  MCP servers accessed (this reply): VaultWares_MCP
+  Time: 2026-07-16 20:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Replicated OVH (100.67.25.118) working mail config for qBittorrent on Clopeux-Desktop. KEY FINDING: there is NO Proton Mail Bridge on OVH - no protonmail process, no SMTP listener on 25/465/587/1025/1143 anywhere on host. The 's6-supervise service-proton' PIDs traced to /lidarr and /whisparr (hotio images, ProtonVPN service - unrelated to mail). 'gluetun-proton' is ProtonVPN; 'torbox-sab-bridge' is a SABnzbd bridge. User's recollection of a working Bridge on OVH was a conflation. ACTUAL working config read from /srv/vw-media/config/prowlarr/prowlarr.db Notifications table (opened read-only/immutable): Implementation=Email, server=smtp.protonmail.ch, port=587, useEncryption=1, username=alerts@vaultwares.ca, from=alerts@vaultwares.ca, to=lefondhumain@pm.me. So OVH uses Proton SMTP submission directly, not Bridge - which is the option-2 path recommended earlier. For qBittorrent: set smtp_server=smtp.protonmail.ch, req_ssl=true (qbit's SSL default is 465, which Proton supports alongside 587), req_auth=true, username AND sender both = alerts@vaultwares.ca (Proton SMTP submission binds the token to one address and requires From to match - current config has sender=support@vaultwares.ca vs username=philippe.potvin@vaultwares.ca, a mismatch, plus smtp_server=127.0.0.1 pointing at a Bridge that cannot be reached on qbit's fixed ports). Existing ini password appears to be a 22-char Bridge password, not an SMTP submission token - likely the actual auth failure. Secrets read but NOT recorded. No changes made; qbit still live.
+- Commands:
+  - `ssh root@100.67.25.118 docker ps`
+  - `sqlite3 read-only query of prowlarr.db Notifications`
+- Files:
+  - `/srv/vw-media/config/prowlarr/prowlarr.db`
+  - `C:\Users\Administrator\AppData\Roaming\qBittorrent\qBittorrent.ini`
+- Git: repo=shared-tube, branch=main, head=1d59cfc
+
+</details>
+
+<details>
+<summary><strong>2026-07-16 20:06 - General Tasks</strong> <code>handoff</code> - Proton Bridge + qBittorrent mail fix on Clopeux-Desktop. Verified: Bridge (PID 16812) listens ONLY on 127.0.0.1:1025 (TcpTestSucceeded true); nothing on 25/465/587; qBittorrent ...</summary>
+
+- Kind: handoff
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-8
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop (local))
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): PowerShell, Bash, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-07-16 20:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: Proton Bridge + qBittorrent mail fix on Clopeux-Desktop. Verified: Bridge (PID 16812) listens ONLY on 127.0.0.1:1025 (TcpTestSucceeded true); nothing on 25/465/587; qBittorrent 5.1 ini has no MailNotification\port key and its Smtp class defaults to 25 plain / 465 implicit-SSL, so with req_ssl=true it dials 127.0.0.1:465 into a void - port mismatch is decisive regardless of TLS mode. Additional finding: NO Proton/Bridge CA present in Cert:\LocalMachine\Root or Cert:\CurrentUser\Root, and Bridge cert is sealed in vault.enc - so Bridge's self-signed cert is untrusted by Windows, which risks failure on any Bridge-based path if qBittorrent's QSslSocket validates. Recommended ladder: (1) try smtp_server=127.0.0.1:1025 with req_ssl=false in case qbit parses host:port; (2) preferred - Proton SMTP submission token (Business plan) at smtp.protonmail.ch:465 SSL, matches qbit's default exactly with a real trusted cert, drops Bridge entirely; (3) Bridge Settings>Advanced SMTP port 465 + SSL mode, with cert-trust caveat. Loopback EHLO probe blocked 3x by harness sandbox at uv_spawn on TcpClient construction (not Defender - Test-NetConnection to same port succeeded); did not attempt shell-switch or file-drop workaround. User confirmed no-killswitch is intentional (Mullvad widely blocked); noted routing is nonetheless full-tunnel via 0.0.0.0/1+128.0.0.0/1 so split-app intent is not actually met. MailNotification\password stored plaintext in ini - value not recorded.
+- Commands:
+  - `Test-NetConnection -ComputerName 127.0.0.1 -Port 1025`
+  - `Get-ChildItem Cert:\LocalMachine\Root`
+- Files:
+  - `C:\Users\Administrator\AppData\Roaming\qBittorrent\qBittorrent.ini`
+- Git: repo=shared-tube, branch=main, head=1d59cfc
+
+</details>
+
+<details>
+<summary><strong>2026-07-16 19:50 - General Tasks</strong> <code>verification</code> - qBittorrent/Mullvad on Clopeux-Desktop - confirmed egress still via tunnel (Detected external IP 146.70.198.230 = Mullvad exit at 19:47:11; 0.0.0.0/1 + 128.0.0.0/1 on ca-mtr-wg-...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-8
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop (local))
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-07-16 19:50 (TZ: Eastern Standard Time)
+  ```
+- Summary: qBittorrent/Mullvad on Clopeux-Desktop - confirmed egress still via tunnel (Detected external IP 146.70.198.230 = Mullvad exit at 19:47:11; 0.0.0.0/1 + 128.0.0.0/1 on ca-mtr-wg-003 metric 0; Find-NetRoute 8.8.8.8 -> ca-mtr-wg-003/10.74.244.160). User's 'torrenting via own IP' concern was unfounded. HOWEVER: Session\Interface, Session\InterfaceName and Session\InterfaceAddress are now ALL EMPTY - the ca-mtr-wg-003 bind was cleared at some point after the proxy was disabled. Log shows the transition: 19:47:07 'Successfully listening on IP 10.74.244.160 UDP/19431' (bound) then 19:47:16 'Trying to listen on 0.0.0.0:19431,[::]:19431' and now listening on 100.71.101.21, 10.0.0.24 (real LAN via Ethernet 2), 127.0.0.1, 172.17.160.1 (Hyper-V), 172.24.112.1 (WSL). Consequence: routing protects egress only while tunnel is UP; with the bind empty there is no killswitch - if wg drops, the /1 routes vanish, Ethernet 2's 0.0.0.0/0 takes over and torrenting silently continues on 74.57.201.206. Recommend restoring Options > Advanced > Network Interface = ca-mtr-wg-003, Optional IP = 10.74.244.160. Also noted Session\AnonymousModeEnabled=true (newly on) and Session\ProxyPeerConnections=true is now a no-op leftover with Proxy\Type=None. Prior fixes confirmed applied by user: WebUI\RootFolder, AuthSubnetWhitelist /10, UPnP disabled, Proxy\Type=None.
+- Commands:
+  - `Get-NetRoute`
+  - `Find-NetRoute -RemoteIPAddress 8.8.8.8`
+  - `Get-NetAdapter -Name ca-mtr-wg-003`
+- Files:
+  - `C:\Users\Administrator\AppData\Roaming\qBittorrent\qBittorrent.ini`
+- Git: repo=shared-tube, branch=main, head=1d59cfc
+
+</details>
+
+<details>
+<summary><strong>2026-07-16 19:44 - General Tasks</strong> <code>verification</code> - Follow-up on qBittorrent/VueTorrent/Mullvad on Clopeux-Desktop. CORRECTION to earlier leak claim: tunnel IS full-tunnel. ca-mtr-wg-003 holds 0.0.0.0/1 + 128.0.0.0/1 at metric 0;...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-8
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop (local))
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): PowerShell, Bash, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-07-16 19:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Follow-up on qBittorrent/VueTorrent/Mullvad on Clopeux-Desktop. CORRECTION to earlier leak claim: tunnel IS full-tunnel. ca-mtr-wg-003 holds 0.0.0.0/1 + 128.0.0.0/1 at metric 0; Find-NetRoute to 1.1.1.1 and to 10.64.0.1 both resolve via ca-mtr-wg-003/10.74.244.160. Earlier dual-external-IP log lines were from 19:07 startup, BEFORE Session\Interface bind was saved at 19:15 - historical, not a live leak. Proxy\IP now reads 10.64.0.1 (user corrected it); 10.64.0.1:1080 is Mullvad's in-tunnel SOCKS5 and is reachable. DNS 10.64.0.1 on wg iface is Mullvad's fixed anycast resolver, identical across all Mullvad servers, so reuse from wg-mtr-002 config is correct and non-identifying. Real remaining DNS risk: Ethernet 2 carries Videotron DNS (24.201.245.77/24.200.243.189) and Windows smart multi-homed resolution can query it in parallel. MAIL: Proton Bridge (PID 16812) listens ONLY on 127.0.0.1:1025; nothing on 25/465/587. qBittorrent 5.1 ini has no MailNotification\port key - defaults 25 plain / 465 SSL - so with req_ssl=true it dials 127.0.0.1:465 into a void. Recommend Bridge SMTP port 465 + SSL mode. Also Proxy\Profiles\Misc=true would route loopback SMTP through Mullvad SOCKS5 and break it. WEBUI: RootFolder points at repo root (public/ has no index.html); correct value is ...\VueTorrent\vuetorrent (contains public/index.html + version.txt, VueTorrent 2.34.1). No ini edits - qbit still live. NOTE: MailNotification\password is stored plaintext in qBittorrent.ini - value NOT recorded here.
+- Commands:
+  - `Get-NetRoute -InterfaceIndex 37`
+  - `Find-NetRoute -RemoteIPAddress 10.64.0.1`
+  - `Get-DnsClientServerAddress`
+- Files:
+  - `C:\Users\Administrator\AppData\Roaming\qBittorrent\qBittorrent.ini`
+  - `C:\Program Files\qBittorrent\VueTorrent\.env`
+- Git: repo=shared-tube, branch=main, head=1d59cfc
+
+</details>
+
+<details>
+<summary><strong>2026-07-16 19:25 - General Tasks</strong> <code>code-change</code> - Diagnosed qBittorrent/VueTorrent auth failure on Clopeux-Desktop. Root cause: VueTorrent vite dev server (localhost:3000, PID 28448) had no .env, so vite.config.ts fell back to ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-4-8
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop (local))
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): PowerShell, Write, Read
+  MCP servers accessed (this reply): none
+  Time: 2026-07-16 19:25 (TZ: Eastern Standard Time)
+  ```
+- Summary: Diagnosed qBittorrent/VueTorrent auth failure on Clopeux-Desktop. Root cause: VueTorrent vite dev server (localhost:3000, PID 28448) had no .env, so vite.config.ts fell back to VITE_QBITTORRENT_TARGET='http://localhost:8080'; nothing listens on 8080 (qbit WebUI is on 100.71.101.21:8081), so all /api and /backend proxy calls incl. auth/login died. Created .env with VITE_QBITTORRENT_TARGET=http://100.71.101.21:8081. Also found: (1) WebUI\RootFolder points at repo root whose public/ has no index.html - should be ...\VueTorrent\vuetorrent; (2) Proxy\IP=10.74.244.160 SOCKS5:1080 points at the host's OWN wg interface addr, nothing listening, log spamming connection-refused - should be disabled, Session\Interface=ca-mtr-wg-003 already binds torrent traffic correctly; (3) leak evidence: two external IPs detected (146.70.198.230 VPN + 74.57.201.206 Videotron ISP) plus UPnP mapping on physical router; (4) AuthSubnetWhitelist=100.64.0.0/32 should be /10 for tailnet. No qBittorrent.ini edits made - process is live and rewrites ini on shutdown.
+- Commands:
+  - `Get-NetTCPConnection -State Listen`
+  - `Get-CimInstance Win32_Process -Filter 'ProcessId = 28448'`
+- Files:
+  - `C:\Program Files\qBittorrent\VueTorrent\.env`
+  - `C:\Users\Administrator\AppData\Roaming\qBittorrent\qBittorrent.ini`
+  - `C:\Program Files\qBittorrent\VueTorrent\vite.config.ts`
+- Git: repo=shared-tube, branch=main, head=1d59cfc
+
+</details>
+
+<details>
+<summary><strong>2026-07-16 09:40 - clipit</strong> <code>code-change,verification</code> - Thu, 16 Jul 2026 09:44 - Integrated the supplied ClipIt UI design into the WebExtension recorder overlay: replaced the old compact console panel with a tokenized dark surface, o...</summary>
 
 - Kind: code-change,verification
-- Actor: Claude
+- Actor: Codex
 - Agent Header:
   ```text
-  Agent: Claude (role: main)
-  Model: claude-opus-4-8
+  Agent: Codex (role: main)
+  Model: GPT-5
   Thinking: unknown
-  Mode: interactive
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Clopeux\Desktop\Github Repos\wander  Branch: main
-  Tools used (this reply): Read, Edit, Write, Bash, PowerShell
+  Mode: default
+  Permissions: danger-full-access (network: enabled)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\clipit  Branch: main
+  Tools used (this reply): functions.view_image, functions.apply_patch, functions.shell_command
   MCP servers accessed (this reply): none
-  Time: 2026-07-20 08:47 (TZ: Eastern Standard Time)
+  Time: 2026-07-16 09:40 (TZ: Eastern Standard Time)
   ```
-- Summary: Phase 1 features: pause/resume + in-app notifications (pushed e6460e4). SyncController (thread-safe pause switch): paused node stops pulling AND its gRPC ListFiles stops advertising the manifest, so it goes silent both directions; local watcher keeps indexing for instant resume. Wired to a dashboard header button and a tray menu item, kept in sync via PausedChanged; status shows Paused. Notifications: conflict/trash/error activity events pop as bottom-right Avalonia WindowNotificationManager toasts. OS-level toasts when minimized deferred until installer (need registered AppUserModelID from Velopack shortcut) - noted in ROADMAP. Tests: added SyncControllerTests (3 unit) + PausedNodeAdvertisesNothing integration test; fixed the two existing integration tests that needed SyncController in their DI. 35/35 green, 0 warnings. Verified pause button renders via window capture. Remaining Phase 1: installer (Velopack), then the daily-drive exit criterion.
+- Summary: Thu, 16 Jul 2026 09:44 - Integrated the supplied ClipIt UI design into the WebExtension recorder overlay: replaced the old compact console panel with a tokenized dark surface, orange recording pill, raised secondary button, warm primary action, state-specific paused/saving styling, and red alert error card. Added bilingual EN/QC error title and a static test that locks in the new design token/component contract. Verified with tests, syntax checks, build, and bundle inspection.
 - Commands:
-  - `dotnet build Wander.slnx`
-  - `dotnet test Wander.Tests`
-  - `git push origin main`
+  - `npm test (red: failed on missing --color-orange-500 before implementation)`
+  - `npm test (green: 7/7 pass)`
+  - `npm run build`
+  - `node --check src\content.js; node --check src\i18n.js`
+  - `Select-String dist\chrome\src\content.js,dist\firefox\src\content.js --color-background|clipit-recording-pill|clipit-error-card`
 - Files:
-  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Core\Services\SyncController.cs`
-  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\MainWindow.axaml.cs`
-  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Network\Services\SyncDaemon.cs`
-- Git: repo=wander, branch=main, head=e6460e4
-
-</details>
-
-<details>
-<summary><strong>2026-07-19 01:46 - vault-tv</strong> <code>code-change</code> - Added onReceivedError fallback in MainActivity (WebView recovers to bundled assets if a configured URL fails on a real device). Committed all APK/README work as 5e3a319 and push...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: unknown
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Clopeux\Desktop\Github Repos\vault-tv  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-07-19 01:46 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added onReceivedError fallback in MainActivity (WebView recovers to bundled assets if a configured URL fails on a real device). Committed all APK/README work as 5e3a319 and pushed to main (642c39d..5e3a319). 10 files changed. Note: APK still not compiled here (no JDK/Android SDK); user builds via assembleDebug.
-- Commands:
-  - `git commit`
-  - `git push origin main`
-- Files:
-  - `android/app/src/main/java/app/vaultwares/tv/MainActivity.kt`
-  - `README.md`
-  - `android/app/build.gradle.kts`
-- Git: repo=vault-tv, branch=main, head=5e3a319
-
-</details>
-
-<details>
-<summary><strong>2026-07-19 00:14 - vault-tv</strong> <code>code-change</code> - Fixed standalone APK: made debug build self-contained (loads bundled web assets by default; dev-server hot-reload now opt-in via -PdevServer). Refreshed bundled android web asse...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: unknown
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Clopeux\Desktop\Github Repos\vault-tv  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-07-19 00:14 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed standalone APK: made debug build self-contained (loads bundled web assets by default; dev-server hot-reload now opt-in via -PdevServer). Refreshed bundled android web assets from a fresh Vite build. Added .env.example. Rewrote README.md with full clone-to-install instructions (prereqs incl. JDK17+Android SDK, submodules, web build+stage, assembleDebug, and sideload steps for Android phone, Fire TV, Android TV) plus troubleshooting and signed-release section. Updated docs/android-sideload.md to match. Note: existing root vault-tv-debug.apk is a stale dev-server build that does not work standalone. Could not compile APK here (no JDK/Android SDK installed); user will build.
-- Commands:
-  - `npx vite build`
-  - `gradlew assembleDebug`
-- Files:
-  - `README.md`
-  - `android/app/build.gradle.kts`
-  - `.env.example`
-  - `docs/android-sideload.md`
-- Git: repo=vault-tv, branch=main, head=642c39d
+  - `C:\Users\Administrator\Desktop\Github Repos\clipit\src\content.js`
+  - `C:\Users\Administrator\Desktop\Github Repos\clipit\src\i18n.js`
+  - `C:\Users\Administrator\Desktop\Github Repos\clipit\tests\extension.test.js`
+  - `C:\Users\Administrator\Desktop\Github Repos\clipit\.gitignore`
+- Git: repo=clipit, branch=main, head=b18b236
 
 </details>
 
@@ -121,7 +490,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-16 02:38 - wander</strong> <code>code-change,verification</code> - Fixed tailnet peer display names: TailscaleService was showing the device&#39;s self-reported OS HostName (unreliable — iPad reports literally &#39;localhost&#39;, greencloud-vps reports it...</summary>
+<summary><strong>2026-07-16 02:38 - wander</strong> <code>code-change,verification</code> - Fixed tailnet peer display names: TailscaleService was showing the device&#39;s self-reported OS HostName (unreliable &#226;€” iPad reports literally &#39;localhost&#39;, greencloud-vps reports ...</summary>
 
 - Kind: code-change,verification
 - Actor: Claude
@@ -137,7 +506,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-16 02:38 (TZ: Eastern Standard Time)
   ```
-- Summary: Fixed tailnet peer display names: TailscaleService was showing the device's self-reported OS HostName (unreliable — iPad reports literally 'localhost', greencloud-vps reports its internal hostname 'vaultwares') instead of Tailscale's own DNSName, which matches the admin console and VaultWares naming convention. Added TailscalePeer.DisplayName parsing the first DNS label. Rebranded the dashboard with the user's new wander-gold/wander-console marks (assets/wander-{gold,console}-transparent.png): window/taskbar icon, tray icon, header logo (gold, chrome contexts), console panel accent mark. Relocated the local demo sync folder from the deep session scratchpad path to C:\Users\Clopeux\Desktop\WanderSync. Attempted SSH/SFTP into clopeux-desktop (100.71.101.21) per user's new access grant; ping succeeds but ports 22/21/990/2222 and even Wander's own 5555 are all closed/filtered from this machine, so could not connect — likely Windows Firewall or the services not actually running/listening on the tailscale interface; flagged to user, did not attempt further remote-access workarounds. Pushed b64b24c. 31/31 tests, 0 warnings; verified visually via window capture.
+- Summary: Fixed tailnet peer display names: TailscaleService was showing the device's self-reported OS HostName (unreliable â€” iPad reports literally 'localhost', greencloud-vps reports its internal hostname 'vaultwares') instead of Tailscale's own DNSName, which matches the admin console and VaultWares naming convention. Added TailscalePeer.DisplayName parsing the first DNS label. Rebranded the dashboard with the user's new wander-gold/wander-console marks (assets/wander-{gold,console}-transparent.png): window/taskbar icon, tray icon, header logo (gold, chrome contexts), console panel accent mark. Relocated the local demo sync folder from the deep session scratchpad path to C:\Users\Clopeux\Desktop\WanderSync. Attempted SSH/SFTP into clopeux-desktop (100.71.101.21) per user's new access grant; ping succeeds but ports 22/21/990/2222 and even Wander's own 5555 are all closed/filtered from this machine, so could not connect â€” likely Windows Firewall or the services not actually running/listening on the tailscale interface; flagged to user, did not attempt further remote-access workarounds. Pushed b64b24c. 31/31 tests, 0 warnings; verified visually via window capture.
 - Commands:
   - `dotnet build Wander.slnx`
   - `dotnet test`
@@ -464,7 +833,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-15 04:58 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares — Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares — Project Rename Refactoring (Phase 5), VaultWares — Project Rename Refactoring (Phase 5 PR Workflow), VaultWares — System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>general</code> - Added cloud storage fallback chain to telegram pipeline: loads keys from cloud_storage_keys.txt (Pixeldrain, 1fichier, Gofile), added upload_local_to_pixeldrain/1fichier/gofile ...</summary>
+<summary><strong>2026-07-15 04:58 - General Tasks</strong> <code>general</code> - Added cloud storage fallback chain to telegram pipeline: loads keys from cloud_storage_keys.txt (Pixeldrain, 1fichier, Gofile), added upload_local_to_pixeldrain/1fichier/gofile ...</summary>
 
 - Kind: general
 - Actor: AI Agent
@@ -597,7 +966,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-14 21:16 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>code-change</code> - Tue, 14 Jul 2026 - Modal plan steps 3-6 done (shared-tube 67f76d9, v0.2.61, deployed). STEP 3 overlay-&gt;page: TermDetail now renders in the document flow where the terms list was...</summary>
+<summary><strong>2026-07-14 21:16 - shared-tube</strong> <code>code-change</code> - Tue, 14 Jul 2026 - Modal plan steps 3-6 done (shared-tube 67f76d9, v0.2.61, deployed). STEP 3 overlay-&gt;page: TermDetail now renders in the document flow where the terms list was...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -1048,7 +1417,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-14 06:16 - vault-tv</strong> <code>general</code> - Phase 6: Android APK shell — Kotlin WebView + Media3 ExoPlayer + JS bridge + sideload docs</summary>
+<summary><strong>2026-07-14 06:16 - vault-tv</strong> <code>general</code> - Phase 6: Android APK shell &#226;€” Kotlin WebView + Media3 ExoPlayer + JS bridge + sideload docs</summary>
 
 - Kind: general
 - Actor: AI Agent
@@ -1064,7 +1433,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-14 06:16 (TZ: Eastern Standard Time)
   ```
-- Summary: Phase 6: Android APK shell — Kotlin WebView + Media3 ExoPlayer + JS bridge + sideload docs
+- Summary: Phase 6: Android APK shell â€” Kotlin WebView + Media3 ExoPlayer + JS bridge + sideload docs
 - Files:
   - `android/settings.gradle.kts,android/build.gradle.kts,android/gradle.properties,android/app/build.gradle.kts,android/app/proguard-rules.pro,android/app/src/main/AndroidManifest.xml,android/app/src/main/res/xml/network_security_config.xml,android/app/src/main/res/values/themes.xml,android/app/src/main/res/values/colors.xml,android/app/src/main/res/drawable/tv_banner.xml,android/app/src/main/java/app/vaultwares/tv/MainActivity.kt,android/app/src/main/java/app/vaultwares/tv/PlayerActivity.kt,android/app/src/main/java/app/vaultwares/tv/bridge/VaultBridge.kt,android/app/src/main/java/app/vaultwares/tv/bridge/BridgeEventBus.kt,android/gradle/wrapper/gradle-wrapper.properties,src/player/androidPlaybackAdapter.ts,src/features/player/PlayerScreen.tsx,scripts/build-android.ps1,docs/android-sideload.md`
 
@@ -1655,7 +2024,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-13 09:06 (TZ: Eastern Standard Time)
   ```
-- Summary: vault-streaming trailer/hover-preview overhaul, verified live with Playwright. ROOT CAUSE of the "10 previews playing simultaneously with no way to stop": hover trailer resolution is async (KinoCheck -> TMDB -> yt-dlp, multi-second) but captured the .trailer-iframe-container at call time; hovering another card replaced popup.innerHTML mid-await, detaching that container, then the slow resolution appended a PLAYING video/iframe to the now-detached node -> orphaned off-screen audio that stacked and had no handle to stop. FIX: added window._trailerGen generation token + window._activeTrailerEls registry + window.stopAllTrailerPreviews() authoritative teardown. Extracted loadHoverTrailer(): bumps gen + tears down at start, and after the key lookup aborts WITHOUT attaching if gen changed / user paused / container detached (document.contains). hidePremiumHoverCard now bumps gen + stopAllTrailerPreviews. SPEED: dropped yt-dlp (extractYouTubeURL, the multi-second spawn) from the hover path entirely — now uses the fast youtube-nocookie iframe embed directly, which is reliable post the 152/4 CORS fix (main.js session Referer/Origin overrides untouched -> no regression). PLAY/PAUSE: added a round play/pause button overlaid on the hover-card media; pausing calls stopAllTrailerPreviews (guaranteed silence), playing re-invokes loadHoverTrailer; icon toggles. VERIFIED (Playwright, rapid-hover 9 cards): DURING = 1 iframe in whole document (was ~10 orphans), 0 playing videos, play/pause present, gen=9; AFTER mouse-away = 0 iframes, 0 registered, popup hidden, 0 playing. Details-modal trailer.js (yt-dlp primary, click-triggered, cached) left unchanged to avoid regression; noted as a possible follow-up.
+- Summary: vault-streaming trailer/hover-preview overhaul, verified live with Playwright. ROOT CAUSE of the "10 previews playing simultaneously with no way to stop": hover trailer resolution is async (KinoCheck -> TMDB -> yt-dlp, multi-second) but captured the .trailer-iframe-container at call time; hovering another card replaced popup.innerHTML mid-await, detaching that container, then the slow resolution appended a PLAYING video/iframe to the now-detached node -> orphaned off-screen audio that stacked and had no handle to stop. FIX: added window._trailerGen generation token + window._activeTrailerEls registry + window.stopAllTrailerPreviews() authoritative teardown. Extracted loadHoverTrailer(): bumps gen + tears down at start, and after the key lookup aborts WITHOUT attaching if gen changed / user paused / container detached (document.contains). hidePremiumHoverCard now bumps gen + stopAllTrailerPreviews. SPEED: dropped yt-dlp (extractYouTubeURL, the multi-second spawn) from the hover path entirely â€” now uses the fast youtube-nocookie iframe embed directly, which is reliable post the 152/4 CORS fix (main.js session Referer/Origin overrides untouched -> no regression). PLAY/PAUSE: added a round play/pause button overlaid on the hover-card media; pausing calls stopAllTrailerPreviews (guaranteed silence), playing re-invokes loadHoverTrailer; icon toggles. VERIFIED (Playwright, rapid-hover 9 cards): DURING = 1 iframe in whole document (was ~10 orphans), 0 playing videos, play/pause present, gen=9; AFTER mouse-away = 0 iframes, 0 registered, popup hidden, 0 playing. Details-modal trailer.js (yt-dlp primary, click-triggered, cached) left unchanged to avoid regression; noted as a possible follow-up.
 - Commands:
   - `playwright rapid-hover verification (before/after teardown)`
   - `node check hover-card.js`
@@ -1682,7 +2051,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-13 09:00 (TZ: Eastern Standard Time)
   ```
-- Summary: vault-streaming: process-kill fix (both apps), themes submodule, and Comet-only single-IP pipeline (ban protection). PROCESS KILL: killAllVaultExplorerProcesses hardcoded vault-explorer.exe + killNodeProcesses nuked ALL node.exe — in dev both apps are electron.exe so launching vault-streaming killed a running vault-explorer (confirmed cause of the earlier close). Rewrote as killAllOwnProcesses: own-image-only, refuses to run when image is electron.exe (dev), dropped killNodeProcesses. Applied identically to BOTH main.js. SUBMODULE: vaultwares-themes was a plain copied folder; removed it and git submodule add'd the real repo (heads/main 21215e0); both index.css @import paths resolve; boots. COMET-ONLY PIPELINE (user warned of imminent RD ban from duplicate torrent grabs): full pipeline audit found direct account-IP egress to Torrentio, EZTV, YTS, and api.real-debrid.com. Fixed: search.js now Comet-only (deleted all Torrentio/EZTV/YTS fallbacks); client.js checkRealDebridCache neutered to no-op (was direct instantAvailability); stream.js rewritten Comet-url-only — NO direct addMagnet/selectFiles/unrestrict, resolves the Comet-provided url via HEAD redirect, resolved-URL cache (30min TTL) + in-flight Set for dedup (no duplicate grabs); rd-torrent-status disabled. USENET fully off: removed usenetHandlers require+registration in main.js (7 handlers gone), rd-flow.js streamingMode hardcoded torrent-only so usenet-only/hybrid branches (searchUsenet/verifyUsenetHealth/streamUsenetNzb) are unreachable, notCached responses skip to next cached result. REMAINING direct-RD (flagged, not auto-pipeline): the manual Debrid Downloader in Settings (proxy-handlers rd-unrestrict-url) — routes through the proxy tunnel when enabled, direct otherwise; Comet cannot proxy arbitrary hoster unrestricts. Needs user decision. VERIFIED: all edited files node-check; boot 20 TMDB cards, zero errors; final egress audit shows only Comet + TMDB metadata + Comet-url-resolve calls in the streaming path.
+- Summary: vault-streaming: process-kill fix (both apps), themes submodule, and Comet-only single-IP pipeline (ban protection). PROCESS KILL: killAllVaultExplorerProcesses hardcoded vault-explorer.exe + killNodeProcesses nuked ALL node.exe â€” in dev both apps are electron.exe so launching vault-streaming killed a running vault-explorer (confirmed cause of the earlier close). Rewrote as killAllOwnProcesses: own-image-only, refuses to run when image is electron.exe (dev), dropped killNodeProcesses. Applied identically to BOTH main.js. SUBMODULE: vaultwares-themes was a plain copied folder; removed it and git submodule add'd the real repo (heads/main 21215e0); both index.css @import paths resolve; boots. COMET-ONLY PIPELINE (user warned of imminent RD ban from duplicate torrent grabs): full pipeline audit found direct account-IP egress to Torrentio, EZTV, YTS, and api.real-debrid.com. Fixed: search.js now Comet-only (deleted all Torrentio/EZTV/YTS fallbacks); client.js checkRealDebridCache neutered to no-op (was direct instantAvailability); stream.js rewritten Comet-url-only â€” NO direct addMagnet/selectFiles/unrestrict, resolves the Comet-provided url via HEAD redirect, resolved-URL cache (30min TTL) + in-flight Set for dedup (no duplicate grabs); rd-torrent-status disabled. USENET fully off: removed usenetHandlers require+registration in main.js (7 handlers gone), rd-flow.js streamingMode hardcoded torrent-only so usenet-only/hybrid branches (searchUsenet/verifyUsenetHealth/streamUsenetNzb) are unreachable, notCached responses skip to next cached result. REMAINING direct-RD (flagged, not auto-pipeline): the manual Debrid Downloader in Settings (proxy-handlers rd-unrestrict-url) â€” routes through the proxy tunnel when enabled, direct otherwise; Comet cannot proxy arbitrary hoster unrestricts. Needs user decision. VERIFIED: all edited files node-check; boot 20 TMDB cards, zero errors; final egress audit shows only Comet + TMDB metadata + Comet-url-resolve calls in the streaming path.
 - Commands:
   - `git submodule add vaultwares-themes`
   - `node check + boot smoke`
@@ -1840,7 +2209,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-12 10:27 (TZ: Eastern Standard Time)
   ```
-- Summary: Source-code exclusion via scanner + the existing Settings glob field, per user go-ahead. 1) REPO-TREE SKIP (the decisive fix for 21682 junk items): findVideosAsync now skips any directory containing a .git entry (dir or file, covers worktrees/submodules) — whole repositories are pruned in one check; the vault root itself is exempt so deliberately pointing a tab at a repo still works. 2) DEFAULT GLOB EXCLUSIONS seeded into the user-editable Settings pills: *.log *.tmp *.part *.crdownload *.lock *.map *.pyc *.dll *.pdb *.obj. One-time seed guarded by globExclusionsSeeded flag (users real settings had globExclusions:[] from the pills UI, so undefined-only seeding would never fire; flag prevents re-seeding if the user later clears all pills on purpose); persisted immediately on seed. 3) Removed dead settings.tmdbBearerToken injection from loadSettings (streaming residue leaking an env token into every getSettings response; zero remaining references verified). 4) Deleted stale vault-usenet-cache.json from userData. Exported globToRegex for tests. VERIFIED functionally with the real scanner on a synthetic vault: repo tree skipped (my-repo/.git present -> my-repo/src/index.ts + readme.md pruned), *.log excluded by production globToRegex, media + pdf kept; seeding logic dry-run against a copy of the real settings file seeds correctly and sets the flag. node check passes.
+- Summary: Source-code exclusion via scanner + the existing Settings glob field, per user go-ahead. 1) REPO-TREE SKIP (the decisive fix for 21682 junk items): findVideosAsync now skips any directory containing a .git entry (dir or file, covers worktrees/submodules) â€” whole repositories are pruned in one check; the vault root itself is exempt so deliberately pointing a tab at a repo still works. 2) DEFAULT GLOB EXCLUSIONS seeded into the user-editable Settings pills: *.log *.tmp *.part *.crdownload *.lock *.map *.pyc *.dll *.pdb *.obj. One-time seed guarded by globExclusionsSeeded flag (users real settings had globExclusions:[] from the pills UI, so undefined-only seeding would never fire; flag prevents re-seeding if the user later clears all pills on purpose); persisted immediately on seed. 3) Removed dead settings.tmdbBearerToken injection from loadSettings (streaming residue leaking an env token into every getSettings response; zero remaining references verified). 4) Deleted stale vault-usenet-cache.json from userData. Exported globToRegex for tests. VERIFIED functionally with the real scanner on a synthetic vault: repo tree skipped (my-repo/.git present -> my-repo/src/index.ts + readme.md pruned), *.log excluded by production globToRegex, media + pdf kept; seeding logic dry-run against a copy of the real settings file seeds correctly and sets the flag. node check passes.
 - Commands:
   - `node scan_test.js (repo skip + glob defaults, all assertions pass)`
   - `seeding dry-run on settings copy`
@@ -1901,7 +2270,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-12 09:49 (TZ: Eastern Standard Time)
   ```
-- Summary: Full application audit pass. IPC CONTRACT AUDIT (both directions): every preload invoke now has a main handler (removed dead getEverythingSize); renderer callers of unexposed APIs are all guarded fallbacks. STREAMING/LIVESTREAM RESIDUE PURGED: removed 372 lines of dead HTML (sub-nav-streaming, library-grid, tmdb-container, livestream-container ~99 lines, settings streaming section, settings Debrid button, rd-stream-dialog + streaming-details + TV-episodes + debrid-download dialogs); deleted js/settings/debrid-downloader.js (reachable broken RD downloader in Settings — its IPC no longer existed); core.js removed unguarded el() reads of deleted stream/debrid settings (would have crashed Settings open/save); player.js removed dead moveUsenetToDrive block; directory.js removed tmdb/livestream status-bar branches; tabs.js stripped all streaming/livestream branches + switchStreamingSubtab; removed 9 dead translation keys both languages; removed streaming option from home-tab dropdown. CRITICAL BUG FOUND+FIXED: initTabListeners wired clicks using legacy IDs (photos/audio/albums/playlists) so tab-music and tab-photoalbums NEVER had click listeners — the real reason Music/Photos tabs were non-functioning. Fixed to files/music/photoalbums/misc. CLIP: Share/Publish fallbacks now honest (reveal exported file via showInFolder + _lastClipExportPath instead of fake success). PREVIEWS: idle batch now has 10-min renderer watchdog (running flag can never wedge); all ffmpeg via runLowPriorityProcess 30-min hard timeout. VIRTUAL FOLDERS: vf exports all 17 methods used by callers; script order correct. AI: all 5 python scripts compile. BOOT-TESTED LIVE: electron --enable-logging — zero renderer console errors, live-subs daemon warm-loaded to ready=true, vault scan ran, clean shutdown. All 40 renderer JS + main + preload parse. Extractions confirmed staged in vault-streaming and vaultwares-realtime.
+- Summary: Full application audit pass. IPC CONTRACT AUDIT (both directions): every preload invoke now has a main handler (removed dead getEverythingSize); renderer callers of unexposed APIs are all guarded fallbacks. STREAMING/LIVESTREAM RESIDUE PURGED: removed 372 lines of dead HTML (sub-nav-streaming, library-grid, tmdb-container, livestream-container ~99 lines, settings streaming section, settings Debrid button, rd-stream-dialog + streaming-details + TV-episodes + debrid-download dialogs); deleted js/settings/debrid-downloader.js (reachable broken RD downloader in Settings â€” its IPC no longer existed); core.js removed unguarded el() reads of deleted stream/debrid settings (would have crashed Settings open/save); player.js removed dead moveUsenetToDrive block; directory.js removed tmdb/livestream status-bar branches; tabs.js stripped all streaming/livestream branches + switchStreamingSubtab; removed 9 dead translation keys both languages; removed streaming option from home-tab dropdown. CRITICAL BUG FOUND+FIXED: initTabListeners wired clicks using legacy IDs (photos/audio/albums/playlists) so tab-music and tab-photoalbums NEVER had click listeners â€” the real reason Music/Photos tabs were non-functioning. Fixed to files/music/photoalbums/misc. CLIP: Share/Publish fallbacks now honest (reveal exported file via showInFolder + _lastClipExportPath instead of fake success). PREVIEWS: idle batch now has 10-min renderer watchdog (running flag can never wedge); all ffmpeg via runLowPriorityProcess 30-min hard timeout. VIRTUAL FOLDERS: vf exports all 17 methods used by callers; script order correct. AI: all 5 python scripts compile. BOOT-TESTED LIVE: electron --enable-logging â€” zero renderer console errors, live-subs daemon warm-loaded to ready=true, vault scan ran, clean shutdown. All 40 renderer JS + main + preload parse. Extractions confirmed staged in vault-streaming and vaultwares-realtime.
 - Commands:
   - `IPC contract audit both directions`
   - `372-line HTML splice`
@@ -4259,7 +4628,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-09 02:29 - shared-tube</strong> <code>code-change</code> - Installed lucide-react. Replaced all emoji/unicode in admin Catalog panel (☰▦▩⬜✓✅❌⏳←→↗⬇&#128065;️⏱️&#128197;&#128193;) with lucide-react icons across BatchActions.tsx and VideoBatchActions.tsx. Move...</summary>
+<summary><strong>2026-07-09 02:29 - shared-tube</strong> <code>code-change</code> - Installed lucide-react. Replaced all emoji/unicode in admin Catalog panel (☰▦▩⬜✓✅❌⏳←→↗⬇👁️⏱️📅📁) with lucide-react icons across BatchActions.tsx and VideoBatchActions.tsx. Move...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -4422,7 +4791,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-08 09:31 (TZ: Eastern Standard Time)
   ```
-- Summary: Started streaming extraction out of vault-explorer. Live-streaming translator (explicit 'just copy to another project, nothing more'): copied vault-explorer's stream_translator.py, livestream_translator.py, js/livestream.js, src/livestream.js, powershell/Start-StreamTranslator.ps1 into vaultwares-realtime/integrations/vault-explorer-livestream/ (semantic fit: realtime STT/translation engine) with a provenance README documenting deps (kokoro_onnx, deep_translator, pycaw, sounddevice, ParakeetV3Wrapper) + IPC contract (start/stop-livestream, livestream-log, livestream-visualizer). Non-destructive: vault-explorer unchanged. Mapped the bigger Streaming-tab footprint (25 IPC channels, js/streaming/* ~92KB, src/realdebrid/*, src/usenet/*, src/tmdb.js, js/tmdb.js, ~30 index.html blocks) — its purpose already exists as debrid-media-manager (Next.js). Noted vault-tv plan doc is a SEPARATE from-scratch thin client (server-API), not a code move. Awaiting target/approach decision for the streaming-tab migration before executing the risky vault-explorer removal.
+- Summary: Started streaming extraction out of vault-explorer. Live-streaming translator (explicit 'just copy to another project, nothing more'): copied vault-explorer's stream_translator.py, livestream_translator.py, js/livestream.js, src/livestream.js, powershell/Start-StreamTranslator.ps1 into vaultwares-realtime/integrations/vault-explorer-livestream/ (semantic fit: realtime STT/translation engine) with a provenance README documenting deps (kokoro_onnx, deep_translator, pycaw, sounddevice, ParakeetV3Wrapper) + IPC contract (start/stop-livestream, livestream-log, livestream-visualizer). Non-destructive: vault-explorer unchanged. Mapped the bigger Streaming-tab footprint (25 IPC channels, js/streaming/* ~92KB, src/realdebrid/*, src/usenet/*, src/tmdb.js, js/tmdb.js, ~30 index.html blocks) â€” its purpose already exists as debrid-media-manager (Next.js). Noted vault-tv plan doc is a SEPARATE from-scratch thin client (server-API), not a code move. Awaiting target/approach decision for the streaming-tab migration before executing the risky vault-explorer removal.
 - Commands:
   - `cp livestream files -> vaultwares-realtime/integrations/vault-explorer-livestream/`
 - Files:
@@ -4476,7 +4845,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-08 08:01 (TZ: Eastern Standard Time)
   ```
-- Summary: Upscale + subtitle UX fixes. UPSCALE (js/player/upscale.js): the DEMUXER_ERROR was endOfStream() called before a valid fMP4 init segment (encoder produced no frames, e.g. RTX VSR/nvidia-vfx unavailable); the persistent top-left green 'complete' badge was the misleading 'success toast'. Added endUpscaleWithError() that shows one clear error, reverts to original source, removes badge, resets toggle button; 'done' with 0 chunks now fails cleanly instead of endOfStream (no more DEMUXER error); chunk-error tears down; added <video> 'error' listener; stopUpscaleMode only endOfStream when readyState open AND chunks>0; success badge auto-dismisses after 4s. Clarified: upscale streams VIDEO-ONLY fMP4, browser MSE demuxer parses it (no audio/video demux; audio is dropped in upscale mode). SUBTITLES (js/player/subtitles.js): AI subs now EXCLUSIVE with loaded .srt — startLiveSubtitleSession removes all <track> els + disables textTracks before adding AI track (fixes the 2 overlapping streams), toast 'Replaced loaded subtitles'; selecting/uploading a sub while AI runs stops the AI session. PiP: index.css #video-modal.minimized sets --sub-font-size:11px (cue font shrinks in mini player). Syntax verified.
+- Summary: Upscale + subtitle UX fixes. UPSCALE (js/player/upscale.js): the DEMUXER_ERROR was endOfStream() called before a valid fMP4 init segment (encoder produced no frames, e.g. RTX VSR/nvidia-vfx unavailable); the persistent top-left green 'complete' badge was the misleading 'success toast'. Added endUpscaleWithError() that shows one clear error, reverts to original source, removes badge, resets toggle button; 'done' with 0 chunks now fails cleanly instead of endOfStream (no more DEMUXER error); chunk-error tears down; added <video> 'error' listener; stopUpscaleMode only endOfStream when readyState open AND chunks>0; success badge auto-dismisses after 4s. Clarified: upscale streams VIDEO-ONLY fMP4, browser MSE demuxer parses it (no audio/video demux; audio is dropped in upscale mode). SUBTITLES (js/player/subtitles.js): AI subs now EXCLUSIVE with loaded .srt â€” startLiveSubtitleSession removes all <track> els + disables textTracks before adding AI track (fixes the 2 overlapping streams), toast 'Replaced loaded subtitles'; selecting/uploading a sub while AI runs stops the AI session. PiP: index.css #video-modal.minimized sets --sub-font-size:11px (cue font shrinks in mini player). Syntax verified.
 - Commands:
   - `node --check js/player/upscale.js js/player/subtitles.js`
 - Files:
@@ -4572,7 +4941,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-08 04:15 - vault-explorer</strong> <code>code-change,verification</code> - First-run model download (download-on-install pattern) for live subtitles. src/live-subtitles.js: added model manager — modelPresent() checks dev extracted dir / userData/models...</summary>
+<summary><strong>2026-07-08 04:15 - vault-explorer</strong> <code>code-change,verification</code> - First-run model download (download-on-install pattern) for live subtitles. src/live-subtitles.js: added model manager &#226;€” modelPresent() checks dev extracted dir / userData/mode...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -4588,7 +4957,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-08 04:15 (TZ: Eastern Standard Time)
   ```
-- Summary: First-run model download (download-on-install pattern) for live subtitles. src/live-subtitles.js: added model manager — modelPresent() checks dev extracted dir / userData/models/*.nemo / HF cache; ensureModel() downloads nvidia/parakeet-tdt-0.6b-v3 .nemo (2.5GB) from HF resolve URL to userData/models via node-fetch + stream pipeline with a Transform byte-counter emitting live-subtitle-status {downloading,percent,MB}; single-flight downloadPromise; atomic .part->rename. warm-live-subtitles now only preloads the daemon if modelPresent (no 2.5GB auto-download every launch); start-live-subtitles awaits ensureModel first (downloads on first actual use). Daemon spawned with env VAULT_MODEL_DIR=userData/models. parakeet_wrapper.py: checks VAULT_MODEL_DIR/parakeet-tdt-0.6b-v3.nemo before HF cache. subtitles.js: handles downloading (button 'DL x%' + toast every 25%), downloaded, download-failed (stops), started/loading/ready. Also fixed packaging gap: added vault_explorer/** to build.files AND asarUnpack (daemon imports it; was absent -> would ImportError in installed app). Verified: HEAD on model URL = 200, 2509332480 bytes; node/py syntax pass; rebuild running. Note: packaged ML features still require the machine's .venv (nemo/torch) — model download only covers weights.
+- Summary: First-run model download (download-on-install pattern) for live subtitles. src/live-subtitles.js: added model manager â€” modelPresent() checks dev extracted dir / userData/models/*.nemo / HF cache; ensureModel() downloads nvidia/parakeet-tdt-0.6b-v3 .nemo (2.5GB) from HF resolve URL to userData/models via node-fetch + stream pipeline with a Transform byte-counter emitting live-subtitle-status {downloading,percent,MB}; single-flight downloadPromise; atomic .part->rename. warm-live-subtitles now only preloads the daemon if modelPresent (no 2.5GB auto-download every launch); start-live-subtitles awaits ensureModel first (downloads on first actual use). Daemon spawned with env VAULT_MODEL_DIR=userData/models. parakeet_wrapper.py: checks VAULT_MODEL_DIR/parakeet-tdt-0.6b-v3.nemo before HF cache. subtitles.js: handles downloading (button 'DL x%' + toast every 25%), downloaded, download-failed (stops), started/loading/ready. Also fixed packaging gap: added vault_explorer/** to build.files AND asarUnpack (daemon imports it; was absent -> would ImportError in installed app). Verified: HEAD on model URL = 200, 2509332480 bytes; node/py syntax pass; rebuild running. Note: packaged ML features still require the machine's .venv (nemo/torch) â€” model download only covers weights.
 - Commands:
   - `node-fetch HEAD nvidia/parakeet-tdt-0.6b-v3.nemo (2.5GB)`
   - `npm run dist`
@@ -4639,7 +5008,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-07 23:43 (TZ: Eastern Standard Time)
   ```
-- Summary: Fixed NSIS build failure 'failed creating mmap of vault-explorer-*.nsis.7z'. Root cause: package.json build.files included 'tools/**' (and asarUnpack 'tools/**'), so the ~2.4GB extracted parakeet-tdt-0.6b-v3/ dir + 439MB parakeet_realtime_eou_120m-v1.nemo we added got bundled, pushing the app 7z past what 32-bit makensis can mmap. Fix: added files exclusions '!tools/models/*.nemo' and '!tools/models/parakeet-tdt-0.6b-v3/**' — drops ~2.8GB, keeps the 45MB realesrgan .bin/.param needed by upscaling. Packaged app now falls back at runtime to HF cache .nemo restore or from_pretrained download (wrapper's extracted-dir fast path only triggers in dev where the folder exists). JSON validated; rebuild kicked off to verify.
+- Summary: Fixed NSIS build failure 'failed creating mmap of vault-explorer-*.nsis.7z'. Root cause: package.json build.files included 'tools/**' (and asarUnpack 'tools/**'), so the ~2.4GB extracted parakeet-tdt-0.6b-v3/ dir + 439MB parakeet_realtime_eou_120m-v1.nemo we added got bundled, pushing the app 7z past what 32-bit makensis can mmap. Fix: added files exclusions '!tools/models/*.nemo' and '!tools/models/parakeet-tdt-0.6b-v3/**' â€” drops ~2.8GB, keeps the 45MB realesrgan .bin/.param needed by upscaling. Packaged app now falls back at runtime to HF cache .nemo restore or from_pretrained download (wrapper's extracted-dir fast path only triggers in dev where the folder exists). JSON validated; rebuild kicked off to verify.
 - Commands:
   - `npm run dist`
 - Files:
@@ -4767,7 +5136,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-07 21:22 (TZ: Eastern Standard Time)
   ```
-- Summary: Warm-load daemon + translation for live subtitles. Root cause of slow first cue: every click re-spawned python (NeMo import 6s + restore_from untar of 2.5GB .nemo 23s; GPU upload only 0.3s), and it was paid per-click. Refactored python-scripts/live_subtitles.py into a persistent stdin-driven DAEMON: loads TDT model once, emits DAEMON:{ready}, then handles {cmd:start|stop|quit} JSON lines; each start runs run_session() on a thread w/ a stop Event (start replaces current session). src/live-subtitles.js rewritten to manage one daemon: ensureDaemon() spawns it, parses cues/status/DAEMON lines, forwards to lastSender; start/stop/warm IPC write commands to stdin; shutdownLiveSubtitles() on app quit. New warm-live-subtitles IPC + preload.warmLiveSubtitles; js/app.js calls it 3s after initApp so the model is warm before first click. Translation: added Translator (deep_translator GoogleTranslator source=auto, per-session cache, graceful fallback to source on error); translateTo passed from renderer (primary picked lang). Finals translated + written to SRT; partials stay source for responsiveness. VERIFIED end-to-end: EN speech mp4 -> FR finals ('Bonjour le monde.','Il fait beau aujourd'hui.','Je suis très heureux.') accents intact; daemon warm-load + stdin start -> cues -> SUCCESS -> quit rc=0. Model load is variable 26-76s (2.5GB .nemo untar, disk/AV dependent) — warm-load hides it; clicks before ready just queue. py_compile + node --check all pass.
+- Summary: Warm-load daemon + translation for live subtitles. Root cause of slow first cue: every click re-spawned python (NeMo import 6s + restore_from untar of 2.5GB .nemo 23s; GPU upload only 0.3s), and it was paid per-click. Refactored python-scripts/live_subtitles.py into a persistent stdin-driven DAEMON: loads TDT model once, emits DAEMON:{ready}, then handles {cmd:start|stop|quit} JSON lines; each start runs run_session() on a thread w/ a stop Event (start replaces current session). src/live-subtitles.js rewritten to manage one daemon: ensureDaemon() spawns it, parses cues/status/DAEMON lines, forwards to lastSender; start/stop/warm IPC write commands to stdin; shutdownLiveSubtitles() on app quit. New warm-live-subtitles IPC + preload.warmLiveSubtitles; js/app.js calls it 3s after initApp so the model is warm before first click. Translation: added Translator (deep_translator GoogleTranslator source=auto, per-session cache, graceful fallback to source on error); translateTo passed from renderer (primary picked lang). Finals translated + written to SRT; partials stay source for responsiveness. VERIFIED end-to-end: EN speech mp4 -> FR finals ('Bonjour le monde.','Il fait beau aujourd'hui.','Je suis trÃ¨s heureux.') accents intact; daemon warm-load + stdin start -> cues -> SUCCESS -> quit rc=0. Model load is variable 26-76s (2.5GB .nemo untar, disk/AV dependent) â€” warm-load hides it; clicks before ready just queue. py_compile + node --check all pass.
 - Commands:
   - `python live_subtitles.py sp.mp4 --translate-to fr (EN->FR verified)`
   - `daemon stdin start/stop/quit test`
@@ -4853,7 +5222,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-07 20:45 - vault-explorer</strong> <code>code-change,verification</code> - Switched live subtitles from EOU-120M back to parakeet-tdt-0.6b-v3 (multilingual, word timestamps, punctuation+casing) per user — fast enough, only ~0.2GB heavier. Verified arra...</summary>
+<summary><strong>2026-07-07 20:45 - vault-explorer</strong> <code>code-change,verification</code> - Switched live subtitles from EOU-120M back to parakeet-tdt-0.6b-v3 (multilingual, word timestamps, punctuation+casing) per user &#226;€” fast enough, only ~0.2GB heavier. Verified ar...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -4869,7 +5238,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-07 20:45 (TZ: Eastern Standard Time)
   ```
-- Summary: Switched live subtitles from EOU-120M back to parakeet-tdt-0.6b-v3 (multilingual, word timestamps, punctuation+casing) per user — fast enough, only ~0.2GB heavier. Verified array path transcribe_audio_data returns real word timestamps (kokoro-synth 'Hello world...' -> 0.0-3.28s w/ punctuation), so no temp WAV needed; earlier 'no output' was VAD over-gating, not the array path. Rewrote python-scripts/live_subtitles.py: growing-buffer + word-gap segmentation (uses wrapper's silence-gap grouper, min_silence=0.6 min_segment=0.2 configurable). Segments before the most-recent finalise (real pause after) + get trimmed from buffer/clock; most-recent emitted as live partial; trailing pause or max_utt(12s) finalises last. Absolute word timing keeps cues synced. Kept partial/final renderer plumbing. Encoding hardening (user warning): PYTHONUTF8=1 + PYTHONIOENCODING=utf-8 added to spawn env in src/live-subtitles.js; Python stdio reconfigured utf-8; SRT opened utf-8. END-TO-END VERIFIED: synth 3-sentence mp4 -> 3 correct FINAL cues [0-1.04,1.92-4.0,4.88-7.2] w/ punctuation + streaming partials + valid SRT sidecar. TDT cold load ~26s (once/session). realtime_eou.py kept but unwired (English fast-path available). Translation is future work (timestamps enable it).
+- Summary: Switched live subtitles from EOU-120M back to parakeet-tdt-0.6b-v3 (multilingual, word timestamps, punctuation+casing) per user â€” fast enough, only ~0.2GB heavier. Verified array path transcribe_audio_data returns real word timestamps (kokoro-synth 'Hello world...' -> 0.0-3.28s w/ punctuation), so no temp WAV needed; earlier 'no output' was VAD over-gating, not the array path. Rewrote python-scripts/live_subtitles.py: growing-buffer + word-gap segmentation (uses wrapper's silence-gap grouper, min_silence=0.6 min_segment=0.2 configurable). Segments before the most-recent finalise (real pause after) + get trimmed from buffer/clock; most-recent emitted as live partial; trailing pause or max_utt(12s) finalises last. Absolute word timing keeps cues synced. Kept partial/final renderer plumbing. Encoding hardening (user warning): PYTHONUTF8=1 + PYTHONIOENCODING=utf-8 added to spawn env in src/live-subtitles.js; Python stdio reconfigured utf-8; SRT opened utf-8. END-TO-END VERIFIED: synth 3-sentence mp4 -> 3 correct FINAL cues [0-1.04,1.92-4.0,4.88-7.2] w/ punctuation + streaming partials + valid SRT sidecar. TDT cold load ~26s (once/session). realtime_eou.py kept but unwired (English fast-path available). Translation is future work (timestamps enable it).
 - Commands:
   - `kokoro synth + ffmpeg mux test mp4`
   - `python live_subtitles.py speech_test.mp4 --langs en`
@@ -4898,7 +5267,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-07 20:11 (TZ: Eastern Standard Time)
   ```
-- Summary: Fixed EOU model load failure + loaded from local .nemo. Root cause: venv is Python 3.13 (removed stdlib cgi) but httpx was pinned 0.13.3 which does 'import cgi' and lacks modern exception names datasets references (RequestError etc). Upgraded httpx 0.13.3 -> 0.28.1 in .venv via uv (also bumped httpcore 0.9.1->1.0.9, h11->0.16, anyio, certifi, idna). Verified datasets 5.0.0, huggingface_hub 0.36.2, deep_translator all still import. Removed the temporary cgi-shim + httpx-attr backfill hacks from vault_explorer/realtime_eou.py now that httpx is fixed at source. Pointed RealtimeEOUTranscriber at the bundled local model: tools/models/parakeet_realtime_eou_120m-v1.nemo (repo-relative), restore_from local before any HF fallback. CONFIRMED WORKING: model loads from local .nemo on CUDA and transcribes (emits <EOU>). Note: model hallucinates 'four<EOU>' on pure digital silence — mitigated by the RMS gate in live_subtitles.py but worth watching on ambient-noise passages. No httpx pin in requirements/pyproject so upgrade persists.
+- Summary: Fixed EOU model load failure + loaded from local .nemo. Root cause: venv is Python 3.13 (removed stdlib cgi) but httpx was pinned 0.13.3 which does 'import cgi' and lacks modern exception names datasets references (RequestError etc). Upgraded httpx 0.13.3 -> 0.28.1 in .venv via uv (also bumped httpcore 0.9.1->1.0.9, h11->0.16, anyio, certifi, idna). Verified datasets 5.0.0, huggingface_hub 0.36.2, deep_translator all still import. Removed the temporary cgi-shim + httpx-attr backfill hacks from vault_explorer/realtime_eou.py now that httpx is fixed at source. Pointed RealtimeEOUTranscriber at the bundled local model: tools/models/parakeet_realtime_eou_120m-v1.nemo (repo-relative), restore_from local before any HF fallback. CONFIRMED WORKING: model loads from local .nemo on CUDA and transcribes (emits <EOU>). Note: model hallucinates 'four<EOU>' on pure digital silence â€” mitigated by the RMS gate in live_subtitles.py but worth watching on ambient-noise passages. No httpx pin in requirements/pyproject so upgrade persists.
 - Commands:
   - `uv pip install --python .venv/Scripts/python.exe -U 'httpx>=0.27'`
   - `python -m py_compile vault_explorer/realtime_eou.py`
@@ -5041,7 +5410,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-07 19:09 (TZ: Eastern Standard Time)
   ```
-- Summary: Three fixes. (1) Upscale: rtx_vsr_stream.py:107 referenced undefined FFMPEG_ENC_FMT -> FFMPEG_PIX_FMT (encoder stdin is raw rgb24). (2) Idle previews: root cause = fragile 8-clip ffmpeg concat failing on live-captured mp4s, retried every 30s forever because app.js updated displayedItems but not allItems. Added robust single-clip fallback (one 8s segment @30%, silent VP8) in src/previews.js generateThumbAndPreview >100s branch. New IPC generate-idle-preview-batch awaits up to 10 targeted videos and returns per-file success. Rewrote js/navigation/idle.js: 2-min stagger (was 30s), await each batch, STOP after any fully-failed batch, remember failedPaths to skip, update allItems on success (targeted card refresh only via existing per-video events; no full refresh). preload exposes generateIdlePreviewBatch. (3) Live subtitles no-output+audio-loss: added Silero VAD gate (loaded from local torch.hub cache snakers4_silero-vad_master, no network) to skip silent windows; switched from unproven transcribe_audio_data(array) to proven transcribe_file(temp wav) per window for reliable word timestamps + per-window CUDA empty_cache/gc — reduces VRAM pressure likely behind the audio dropout. Verified: py_compile, node --check all pass; ffmpeg vocal filter validated; Silero VAD local load + get_speech_timestamps smoke-tested (silence->[], noise->0).
+- Summary: Three fixes. (1) Upscale: rtx_vsr_stream.py:107 referenced undefined FFMPEG_ENC_FMT -> FFMPEG_PIX_FMT (encoder stdin is raw rgb24). (2) Idle previews: root cause = fragile 8-clip ffmpeg concat failing on live-captured mp4s, retried every 30s forever because app.js updated displayedItems but not allItems. Added robust single-clip fallback (one 8s segment @30%, silent VP8) in src/previews.js generateThumbAndPreview >100s branch. New IPC generate-idle-preview-batch awaits up to 10 targeted videos and returns per-file success. Rewrote js/navigation/idle.js: 2-min stagger (was 30s), await each batch, STOP after any fully-failed batch, remember failedPaths to skip, update allItems on success (targeted card refresh only via existing per-video events; no full refresh). preload exposes generateIdlePreviewBatch. (3) Live subtitles no-output+audio-loss: added Silero VAD gate (loaded from local torch.hub cache snakers4_silero-vad_master, no network) to skip silent windows; switched from unproven transcribe_audio_data(array) to proven transcribe_file(temp wav) per window for reliable word timestamps + per-window CUDA empty_cache/gc â€” reduces VRAM pressure likely behind the audio dropout. Verified: py_compile, node --check all pass; ffmpeg vocal filter validated; Silero VAD local load + get_speech_timestamps smoke-tested (silence->[], noise->0).
 - Commands:
   - `python -m py_compile python-scripts/live_subtitles.py`
   - `python -m py_compile python-scripts/rtx_vsr_stream.py`
@@ -5237,7 +5606,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-07 10:27 (TZ: Eastern Standard Time)
   ```
-- Summary: Fetcher + Stats broke after the 2026-07-04 schema migration dropped videos.site in favour of a video_sites(video_id, site) join table. Writes had been ported (INSERT INTO videos then video_sites) but four READ paths still filtered on the removed column and started returning 'column site does not exist / HINT videos.title'. Fixed all four: fetcher.check_existing_links + get_existing_videos_meta now JOIN video_sites vs ON vs.video_id = v.id AND vs.site = site; stats.py rewritten around a new _scope_videos helper returning (join, where, params) — every FROM videos query aliases v and applies the join when scoped, videos_total and per_source now GROUP BY vs.site so a shared video counts on each brand it lives on; viewers.list_my_favourites + toggle_video_favourite same join. fetch_runs.site untouched (migration only affected videos). Live smoke on OVH after restart: /stats?site=fxv returns 20947 videos plus per_source breakdown and recent runs; /fetcher/runs?site=fxv returns the expected list. Pushed vaultwares-api 5a06d2e (v0.2.12).
+- Summary: Fetcher + Stats broke after the 2026-07-04 schema migration dropped videos.site in favour of a video_sites(video_id, site) join table. Writes had been ported (INSERT INTO videos then video_sites) but four READ paths still filtered on the removed column and started returning 'column site does not exist / HINT videos.title'. Fixed all four: fetcher.check_existing_links + get_existing_videos_meta now JOIN video_sites vs ON vs.video_id = v.id AND vs.site = site; stats.py rewritten around a new _scope_videos helper returning (join, where, params) â€” every FROM videos query aliases v and applies the join when scoped, videos_total and per_source now GROUP BY vs.site so a shared video counts on each brand it lives on; viewers.list_my_favourites + toggle_video_favourite same join. fetch_runs.site untouched (migration only affected videos). Live smoke on OVH after restart: /stats?site=fxv returns 20947 videos plus per_source breakdown and recent runs; /fetcher/runs?site=fxv returns the expected list. Pushed vaultwares-api 5a06d2e (v0.2.12).
 - Commands:
   - `psql \d videos / \d video_sites`
   - `git push origin main`
@@ -5251,7 +5620,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-07 08:15 - vault-guardian</strong> <code>code-change,verification</code> - Tue, 07 Jul 2026 08:15 — Added lifecycle logging + heartbeat for the stability test v1.4.0 (ee43b3a). FileLoggerProvider (dependency-free daily-rolling file at &lt;app&gt;/logs/) pers...</summary>
+<summary><strong>2026-07-07 08:15 - vault-guardian</strong> <code>code-change,verification</code> - Tue, 07 Jul 2026 08:15 &#226;€” Added lifecycle logging + heartbeat for the stability test v1.4.0 (ee43b3a). FileLoggerProvider (dependency-free daily-rolling file at &lt;app&gt;/logs/) pe...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -5267,7 +5636,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-07 08:15 (TZ: Eastern Standard Time)
   ```
-- Summary: Tue, 07 Jul 2026 08:15 — Added lifecycle logging + heartbeat for the stability test v1.4.0 (ee43b3a). FileLoggerProvider (dependency-free daily-rolling file at <app>/logs/) persists all ILogger output; App now logs staged startup (version+settings, rules, firewall, interceptor/SNI/ingress start, window), a 60s heartbeat (own-process ws/priv MB, threads, handles, traffic totals, ingress archived/skipped, hostname count), and staged shutdown; interceptor/sniffer start-stop logs; HostnameResolutionStore.Count added. ROADMAP updated with threat-intel decisions (SSLBL+JA3, ja4db legit-telemetry angle, blocklists=local ad/malware blocker replacing upstream AdGuard). 80/80 tests pass, pushed to main.
+- Summary: Tue, 07 Jul 2026 08:15 â€” Added lifecycle logging + heartbeat for the stability test v1.4.0 (ee43b3a). FileLoggerProvider (dependency-free daily-rolling file at <app>/logs/) persists all ILogger output; App now logs staged startup (version+settings, rules, firewall, interceptor/SNI/ingress start, window), a 60s heartbeat (own-process ws/priv MB, threads, handles, traffic totals, ingress archived/skipped, hostname count), and staged shutdown; interceptor/sniffer start-stop logs; HostnameResolutionStore.Count added. ROADMAP updated with threat-intel decisions (SSLBL+JA3, ja4db legit-telemetry angle, blocklists=local ad/malware blocker replacing upstream AdGuard). 80/80 tests pass, pushed to main.
 - Commands:
   - `git push origin main`
 - Files:
@@ -5279,7 +5648,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-07 08:06 - Pro-Realism-FLUX2-Klein-Multi-LoRA</strong> <code>handoff</code> - Delivered ComfyUI translation reference for the FLUX.2 Klein multi-LoRA HF space. (1) HTML artifact published at claude.ai/code/artifact/b80afb34 — includes SVG node graph mimic...</summary>
+<summary><strong>2026-07-07 08:06 - Pro-Realism-FLUX2-Klein-Multi-LoRA</strong> <code>handoff</code> - Delivered ComfyUI translation reference for the FLUX.2 Klein multi-LoRA HF space. (1) HTML artifact published at claude.ai/code/artifact/b80afb34 &#226;€” includes SVG node graph mim...</summary>
 
 - Kind: handoff
 - Actor: AI Agent
@@ -5295,7 +5664,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-07 08:06 (TZ: Eastern Standard Time)
   ```
-- Summary: Delivered ComfyUI translation reference for the FLUX.2 Klein multi-LoRA HF space. (1) HTML artifact published at claude.ai/code/artifact/b80afb34 — includes SVG node graph mimicking ComfyUI canvas with slot-colored wires (MODEL purple, CLIP yellow, CONDITIONING orange, VAE pink, IMAGE blue, LATENT coral), full parameter reference table mapping app.py lines to Comfy nodes, plugin dependency cards (rgthree, KJNodes, controlnet_aux, UltimateSDUpscale), parity notes (RNG source, KV variant, face-swap, multi-ref limits, LoRA strength, bulk mode), and embedded copyable API-format JSON. Both light and dark themes tokenised via CSS custom properties. (2) Standalone flux2-klein-multi-lora.json at scratchpad — ComfyUI API format with UNETLoader → 2x LoraLoaderModelOnly (Klein-Delight 1.0, Klein-Consistency 0.3) → CLIPTextEncode → FluxGuidance 1.0 → ReferenceLatent → KSampler(euler/simple/4 steps/cfg 1.0) → VAEDecode → SaveImage. User asked for JSON-or-markdown deliverable to translate their working HF space into a local ComfyUI workflow. Sun, 06 Jul 2026.
+- Summary: Delivered ComfyUI translation reference for the FLUX.2 Klein multi-LoRA HF space. (1) HTML artifact published at claude.ai/code/artifact/b80afb34 â€” includes SVG node graph mimicking ComfyUI canvas with slot-colored wires (MODEL purple, CLIP yellow, CONDITIONING orange, VAE pink, IMAGE blue, LATENT coral), full parameter reference table mapping app.py lines to Comfy nodes, plugin dependency cards (rgthree, KJNodes, controlnet_aux, UltimateSDUpscale), parity notes (RNG source, KV variant, face-swap, multi-ref limits, LoRA strength, bulk mode), and embedded copyable API-format JSON. Both light and dark themes tokenised via CSS custom properties. (2) Standalone flux2-klein-multi-lora.json at scratchpad â€” ComfyUI API format with UNETLoader â†’ 2x LoraLoaderModelOnly (Klein-Delight 1.0, Klein-Consistency 0.3) â†’ CLIPTextEncode â†’ FluxGuidance 1.0 â†’ ReferenceLatent â†’ KSampler(euler/simple/4 steps/cfg 1.0) â†’ VAEDecode â†’ SaveImage. User asked for JSON-or-markdown deliverable to translate their working HF space into a local ComfyUI workflow. Sun, 06 Jul 2026.
 - Commands:
   - `Artifact publish flux2-klein-comfyui.html`
 - Files:
@@ -5364,7 +5733,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-07 01:10 - vault-guardian</strong> <code>code-change,plan,verification</code> - Tue, 07 Jul 2026 01:10 — Fixed hot-path crash v1.3.3 (cf4d351): ProcessImageResolver (OpenProcess+QueryFullProcessImageName) replaces throwing Process.GetProcessById in ingress ...</summary>
+<summary><strong>2026-07-07 01:10 - vault-guardian</strong> <code>code-change,plan,verification</code> - Tue, 07 Jul 2026 01:10 &#226;€” Fixed hot-path crash v1.3.3 (cf4d351): ProcessImageResolver (OpenProcess+QueryFullProcessImageName) replaces throwing Process.GetProcessById in ingres...</summary>
 
 - Kind: code-change,plan,verification
 - Actor: AI Agent
@@ -5380,7 +5749,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-07 01:10 (TZ: Eastern Standard Time)
   ```
-- Summary: Tue, 07 Jul 2026 01:10 — Fixed hot-path crash v1.3.3 (cf4d351): ProcessImageResolver (OpenProcess+QueryFullProcessImageName) replaces throwing Process.GetProcessById in ingress watcher + interceptor (the ArgumentException the user hit for exited PIDs; also a 24/7 perf win). Wrote ROADMAP.md (WFP-native enforcement P1, free threat-intel matching P2 incl. abuse.ch SSLBL JA3/ja4db/host blocklists with honest note that JA4 feeds are thin for one PC, 24/7 stability gate before behavioral logging, then process-behavior DB + contextual advice + model-ready scaffold). Restructured README to Current state + roadmap pointer. 80/80 tests pass, pushed to main.
+- Summary: Tue, 07 Jul 2026 01:10 â€” Fixed hot-path crash v1.3.3 (cf4d351): ProcessImageResolver (OpenProcess+QueryFullProcessImageName) replaces throwing Process.GetProcessById in ingress watcher + interceptor (the ArgumentException the user hit for exited PIDs; also a 24/7 perf win). Wrote ROADMAP.md (WFP-native enforcement P1, free threat-intel matching P2 incl. abuse.ch SSLBL JA3/ja4db/host blocklists with honest note that JA4 feeds are thin for one PC, 24/7 stability gate before behavioral logging, then process-behavior DB + contextual advice + model-ready scaffold). Restructured README to Current state + roadmap pointer. 80/80 tests pass, pushed to main.
 - Commands:
   - `git push origin main`
 - Files:
@@ -5416,7 +5785,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-07 00:20 - vault-guardian</strong> <code>code-change,verification</code> - Tue, 07 Jul 2026 00:20 — Added IPv6 TCP attribution v1.3.2 (0d0b770). WindowsProcessInspector now reads AF_INET6 MIB_TCP6ROW_OWNER_PID table via a shared ReadTcpTable helper (pa...</summary>
+<summary><strong>2026-07-07 00:20 - vault-guardian</strong> <code>code-change,verification</code> - Tue, 07 Jul 2026 00:20 &#226;€” Added IPv6 TCP attribution v1.3.2 (0d0b770). WindowsProcessInspector now reads AF_INET6 MIB_TCP6ROW_OWNER_PID table via a shared ReadTcpTable helper (...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -5432,7 +5801,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-07 00:20 (TZ: Eastern Standard Time)
   ```
-- Summary: Tue, 07 Jul 2026 00:20 — Added IPv6 TCP attribution v1.3.2 (0d0b770). WindowsProcessInspector now reads AF_INET6 MIB_TCP6ROW_OWNER_PID table via a shared ReadTcpTable helper (parameterized row layout), merging v6 remote addresses into the same PID->hostname/JA4 join (AAAA records already feed the map). 80/80 tests pass, pushed to main.
+- Summary: Tue, 07 Jul 2026 00:20 â€” Added IPv6 TCP attribution v1.3.2 (0d0b770). WindowsProcessInspector now reads AF_INET6 MIB_TCP6ROW_OWNER_PID table via a shared ReadTcpTable helper (parameterized row layout), merging v6 remote addresses into the same PID->hostname/JA4 join (AAAA records already feed the map). 80/80 tests pass, pushed to main.
 - Commands:
   - `git push origin main`
 - Files:
@@ -5465,7 +5834,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-06 22:33 - vault-guardian</strong> <code>code-change,verification</code> - Mon, 06 Jul 2026 22:33 — Wired PID&lt;-&gt;hostname/JA4 fusion into process triage v1.3.1 (de7fd16). IHostnameResolver gains TryResolve(addr,out host,out ja4); WindowsProcessInspector...</summary>
+<summary><strong>2026-07-06 22:33 - vault-guardian</strong> <code>code-change,verification</code> - Mon, 06 Jul 2026 22:33 &#226;€” Wired PID&lt;-&gt;hostname/JA4 fusion into process triage v1.3.1 (de7fd16). IHostnameResolver gains TryResolve(addr,out host,out ja4); WindowsProcessInspect...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -5481,7 +5850,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-06 22:33 (TZ: Eastern Standard Time)
   ```
-- Summary: Mon, 06 Jul 2026 22:33 — Wired PID<->hostname/JA4 fusion into process triage v1.3.1 (de7fd16). IHostnameResolver gains TryResolve(addr,out host,out ja4); WindowsProcessInspector joins the active TCP table (GetExtendedTcpTable, owning PID->remote IPv4s) against the passive hostname/JA4 map, filling ProcessFacts.Hostnames with 'host [ja4]' labels that the classifier surfaces in verdict reasons. 80/80 tests pass, 0 build errors, pushed to main.
+- Summary: Mon, 06 Jul 2026 22:33 â€” Wired PID<->hostname/JA4 fusion into process triage v1.3.1 (de7fd16). IHostnameResolver gains TryResolve(addr,out host,out ja4); WindowsProcessInspector joins the active TCP table (GetExtendedTcpTable, owning PID->remote IPv4s) against the passive hostname/JA4 map, filling ProcessFacts.Hostnames with 'host [ja4]' labels that the classifier surfaces in verdict reasons. 80/80 tests pass, 0 build errors, pushed to main.
 - Commands:
   - `git push origin main`
 - Files:
@@ -5568,7 +5937,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-06 05:12 - vault-guardian</strong> <code>code-change,handoff,verification</code> - Mon, 06 Jul 2026 05:11 — Shipped process triage console v1.3.0 (a6207a2). ProcessTriageClassifier (pure, 7 tests): disposition + kill-safety (Safe/Risky/BreaksWindows) with reas...</summary>
+<summary><strong>2026-07-06 05:12 - vault-guardian</strong> <code>code-change,handoff,verification</code> - Mon, 06 Jul 2026 05:11 &#226;€” Shipped process triage console v1.3.0 (a6207a2). ProcessTriageClassifier (pure, 7 tests): disposition + kill-safety (Safe/Risky/BreaksWindows) with re...</summary>
 
 - Kind: code-change,handoff,verification
 - Actor: AI Agent
@@ -5584,7 +5953,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-06 05:12 (TZ: Eastern Standard Time)
   ```
-- Summary: Mon, 06 Jul 2026 05:11 — Shipped process triage console v1.3.0 (a6207a2). ProcessTriageClassifier (pure, 7 tests): disposition + kill-safety (Safe/Risky/BreaksWindows) with reasons. WindowsProcessInspector fuses CPU sampling, WMI (path/parent/services), cached Authenticode trust, kernel critical-process bit; svchost->service expansion; WSL2 vmmem utility-VM flagging. UI Processes pivot: cost-ranked list, disposition/kill-safety tags, reasons panel, risk-scaled guarded Terminate. 79/79 tests pass, 0 build errors, pushed to main. Session complete: v1.1 theme+DNS/SNI, v1.2 JA4, v1.3 process triage.
+- Summary: Mon, 06 Jul 2026 05:11 â€” Shipped process triage console v1.3.0 (a6207a2). ProcessTriageClassifier (pure, 7 tests): disposition + kill-safety (Safe/Risky/BreaksWindows) with reasons. WindowsProcessInspector fuses CPU sampling, WMI (path/parent/services), cached Authenticode trust, kernel critical-process bit; svchost->service expansion; WSL2 vmmem utility-VM flagging. UI Processes pivot: cost-ranked list, disposition/kill-safety tags, reasons panel, risk-scaled guarded Terminate. 79/79 tests pass, 0 build errors, pushed to main. Session complete: v1.1 theme+DNS/SNI, v1.2 JA4, v1.3 process triage.
 - Commands:
   - `git push origin main`
 - Files:
@@ -5596,7 +5965,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-06 05:03 - vault-guardian</strong> <code>code-change,verification</code> - Mon, 06 Jul 2026 05:03 — Shipped JA4 TLS client fingerprinting v1.2.0 (f373208). Ja4Calculator + TlsClientHelloParser.TryParse (full ClientHello) + TlsClientHelloInfo; JA4 recor...</summary>
+<summary><strong>2026-07-06 05:03 - vault-guardian</strong> <code>code-change,verification</code> - Mon, 06 Jul 2026 05:03 &#226;€” Shipped JA4 TLS client fingerprinting v1.2.0 (f373208). Ja4Calculator + TlsClientHelloParser.TryParse (full ClientHello) + TlsClientHelloInfo; JA4 rec...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -5612,7 +5981,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-06 05:03 (TZ: Eastern Standard Time)
   ```
-- Summary: Mon, 06 Jul 2026 05:03 — Shipped JA4 TLS client fingerprinting v1.2.0 (f373208). Ja4Calculator + TlsClientHelloParser.TryParse (full ClientHello) + TlsClientHelloInfo; JA4 recorded on HostnameResolution.Ja4 via the live SNI ingest. 3 tests, 72/72 pass, pushed to main. Now starting the process-triage feature (invisible resource hogs + safe-to-kill tagging), beginning with the pure Core classifier + models + tests.
+- Summary: Mon, 06 Jul 2026 05:03 â€” Shipped JA4 TLS client fingerprinting v1.2.0 (f373208). Ja4Calculator + TlsClientHelloParser.TryParse (full ClientHello) + TlsClientHelloInfo; JA4 recorded on HostnameResolution.Ja4 via the live SNI ingest. 3 tests, 72/72 pass, pushed to main. Now starting the process-triage feature (invisible resource hogs + safe-to-kill tagging), beginning with the pure Core classifier + models + tests.
 - Commands:
   - `git push origin main`
 - Files:
@@ -5623,7 +5992,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-06 04:51 - vault-guardian</strong> <code>commands,handoff</code> - Mon, 06 Jul 2026 04:51 — Committed and pushed v1.1.0 to main (6aaab56): theme integration + DNS/SNI hostname correlation + live SNI sniffer. Added &lt;Version&gt;1.1.0&lt;/Version&gt; as so...</summary>
+<summary><strong>2026-07-06 04:51 - vault-guardian</strong> <code>commands,handoff</code> - Mon, 06 Jul 2026 04:51 &#226;€” Committed and pushed v1.1.0 to main (6aaab56): theme integration + DNS/SNI hostname correlation + live SNI sniffer. Added &lt;Version&gt;1.1.0&lt;/Version&gt; as ...</summary>
 
 - Kind: commands,handoff
 - Actor: AI Agent
@@ -5639,7 +6008,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-06 04:51 (TZ: Eastern Standard Time)
   ```
-- Summary: Mon, 06 Jul 2026 04:51 — Committed and pushed v1.1.0 to main (6aaab56): theme integration + DNS/SNI hostname correlation + live SNI sniffer. Added <Version>1.1.0</Version> as source of truth; About dialog now reads assembly version. 22 files, 1150 insertions. 69/69 tests pass, 0 build errors. Next: advising user on feature direction (JA4/QUIC fingerprinting vs invisible-process resource triage).
+- Summary: Mon, 06 Jul 2026 04:51 â€” Committed and pushed v1.1.0 to main (6aaab56): theme integration + DNS/SNI hostname correlation + live SNI sniffer. Added <Version>1.1.0</Version> as source of truth; About dialog now reads assembly version. 22 files, 1150 insertions. 69/69 tests pass, 0 build errors. Next: advising user on feature direction (JA4/QUIC fingerprinting vs invisible-process resource triage).
 - Commands:
   - `git commit`
   - `git push origin main`
@@ -5651,7 +6020,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-06 04:41 - Pro-Realism-FLUX2-Klein-Multi-LoRA</strong> <code>code-change</code> - Third ZeroGPU fix: root cause was mmap-backed safetensors on /models network mount. from_pretrained(&#39;/models&#39;, ...) with default low_cpu_mem_usage=True → safetensors are memory-...</summary>
+<summary><strong>2026-07-06 04:41 - Pro-Realism-FLUX2-Klein-Multi-LoRA</strong> <code>code-change</code> - Third ZeroGPU fix: root cause was mmap-backed safetensors on /models network mount. from_pretrained(&#39;/models&#39;, ...) with default low_cpu_mem_usage=True &#226;†’ safetensors are memor...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -5667,7 +6036,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-06 04:41 (TZ: Eastern Standard Time)
   ```
-- Summary: Third ZeroGPU fix: root cause was mmap-backed safetensors on /models network mount. from_pretrained('/models', ...) with default low_cpu_mem_usage=True → safetensors are memory-mapped, not RAM-copied. Pipeline load 'finishes' fast but pages fault in lazily. When ZeroGPU walks all 34.7 GB to pack tensors, every byte is a network read at 1.4 MB/s → hours-long packing bar. Boot log also revealed torch 2.8.0 causes 'Skipping import of cpp extensions due to incompatible torch version' warning in spaces library — torch>=2.11.0 was correct, reverted my previous downgrade. Simplified config.py: MODEL_REPO always resolves to the HF hub name (drops /models override), so cold boot pays one-time download but subsequent mmap reads hit local NVMe. Dropped the HF_HOME/TORCH_HOME env dance since original M3st3rJ4k3l space works with container defaults. Kept LOCAL_LORA_DIR = /models/loras for on-demand LoRA loads (small files, fine over network). Committed 98ac4ce, pushed to origin/main. Sun, 06 Jul 2026.
+- Summary: Third ZeroGPU fix: root cause was mmap-backed safetensors on /models network mount. from_pretrained('/models', ...) with default low_cpu_mem_usage=True â†’ safetensors are memory-mapped, not RAM-copied. Pipeline load 'finishes' fast but pages fault in lazily. When ZeroGPU walks all 34.7 GB to pack tensors, every byte is a network read at 1.4 MB/s â†’ hours-long packing bar. Boot log also revealed torch 2.8.0 causes 'Skipping import of cpp extensions due to incompatible torch version' warning in spaces library â€” torch>=2.11.0 was correct, reverted my previous downgrade. Simplified config.py: MODEL_REPO always resolves to the HF hub name (drops /models override), so cold boot pays one-time download but subsequent mmap reads hit local NVMe. Dropped the HF_HOME/TORCH_HOME env dance since original M3st3rJ4k3l space works with container defaults. Kept LOCAL_LORA_DIR = /models/loras for on-demand LoRA loads (small files, fine over network). Committed 98ac4ce, pushed to origin/main. Sun, 06 Jul 2026.
 - Commands:
   - `git commit -m 'Load base model from HF hub'`
   - `git push origin main`
@@ -5679,7 +6048,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-06 04:36 - vault-guardian</strong> <code>code-change,verification</code> - Mon, 06 Jul 2026 04:36 — Completed the live SNI capture for the non-MITM hostname path. Added IHostnameSniffer + WinDivertSniSniffer (Windows-only): passive outbound Network-lay...</summary>
+<summary><strong>2026-07-06 04:36 - vault-guardian</strong> <code>code-change,verification</code> - Mon, 06 Jul 2026 04:36 &#226;€” Completed the live SNI capture for the non-MITM hostname path. Added IHostnameSniffer + WinDivertSniSniffer (Windows-only): passive outbound Network-l...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -5695,7 +6064,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-06 04:36 (TZ: Eastern Standard Time)
   ```
-- Summary: Mon, 06 Jul 2026 04:36 — Completed the live SNI capture for the non-MITM hostname path. Added IHostnameSniffer + WinDivertSniSniffer (Windows-only): passive outbound Network-layer WinDivert sniff on tcp DstPort 443 (Sniff|RecvOnly, never blocks), extracts TLS ClientHello SNI and feeds HostnameResolutionStore.IngestTlsClientHello. Added AppSettings.EnableHostnameCorrelation (default true) + Settings toggle; DI-registered IHostnameSniffer; App starts it after the interceptor when enabled and disposes on shutdown. Hostname resolution now has two live feeds (inbound DNS + outbound SNI) populating TrafficObservation.RemoteHost. Verified: 69/69 tests pass, solution builds 0 errors. README updated.
+- Summary: Mon, 06 Jul 2026 04:36 â€” Completed the live SNI capture for the non-MITM hostname path. Added IHostnameSniffer + WinDivertSniSniffer (Windows-only): passive outbound Network-layer WinDivert sniff on tcp DstPort 443 (Sniff|RecvOnly, never blocks), extracts TLS ClientHello SNI and feeds HostnameResolutionStore.IngestTlsClientHello. Added AppSettings.EnableHostnameCorrelation (default true) + Settings toggle; DI-registered IHostnameSniffer; App starts it after the interceptor when enabled and disposes on shutdown. Hostname resolution now has two live feeds (inbound DNS + outbound SNI) populating TrafficObservation.RemoteHost. Verified: 69/69 tests pass, solution builds 0 errors. README updated.
 - Commands:
   - `dotnet build VaultGuardian.slnx -p:Platform=x64`
   - `dotnet test tests\VaultGuardian.Core.Tests\VaultGuardian.Core.Tests.csproj -p:Platform=x64`
@@ -5725,7 +6094,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-06 04:34 (TZ: Eastern Standard Time)
   ```
-- Summary: Reverted torch pin from >=2.11.0 back to ==2.8.0 in requirements.txt (undoing commit a5bdc31). Compared against the still-working original space M3st3rJ4k3l/FLUX.2-Klein-Multi-LoRA cloned to scratchpad. Only meaningful delta correlated with the regression is the torch version bump — original works at 2.8.0, current was slow-packing at 1.4 MB/s regardless of HF_HOME redirect. Hypothesis: torch 2.11 not in ZeroGPU spaces library's tested matrix so the tensor-packer degrades to a serial write path. Committed a8d5082, pushed to origin/main. Sun, 06 Jul 2026.
+- Summary: Reverted torch pin from >=2.11.0 back to ==2.8.0 in requirements.txt (undoing commit a5bdc31). Compared against the still-working original space M3st3rJ4k3l/FLUX.2-Klein-Multi-LoRA cloned to scratchpad. Only meaningful delta correlated with the regression is the torch version bump â€” original works at 2.8.0, current was slow-packing at 1.4 MB/s regardless of HF_HOME redirect. Hypothesis: torch 2.11 not in ZeroGPU spaces library's tested matrix so the tensor-packer degrades to a serial write path. Committed a8d5082, pushed to origin/main. Sun, 06 Jul 2026.
 - Commands:
   - `git commit -m 'Revert torch pin to 2.8.0'`
   - `git push origin main`
@@ -5736,7 +6105,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-06 04:31 - vault-guardian</strong> <code>code-change,verification</code> - Mon, 06 Jul 2026 04:31 — Confirmed PR #7 codex branch already merged into main (no-op). Ran Task 10 verification: 60/60 tests + clean build. Implemented theme integration from v...</summary>
+<summary><strong>2026-07-06 04:31 - vault-guardian</strong> <code>code-change,verification</code> - Mon, 06 Jul 2026 04:31 &#226;€” Confirmed PR #7 codex branch already merged into main (no-op). Ran Task 10 verification: 60/60 tests + clean build. Implemented theme integration from...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -5752,7 +6121,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-06 04:31 (TZ: Eastern Standard Time)
   ```
-- Summary: Mon, 06 Jul 2026 04:31 — Confirmed PR #7 codex branch already merged into main (no-op). Ran Task 10 verification: 60/60 tests + clean build. Implemented theme integration from vaultwares-revisited 'Terminal and Document' system: added Warm Mode parchment token set alongside Console in VaultRedesign.xaml, restructured MainWindow so a warm branded header/frame (logo + wordmark + bilingual tagline) wraps the console operational core; ported bilingual brand copy to Core/Branding/BrandStrings.cs (en + fr-CA/QC) with a Settings language selector; wired vaultwares logo asset. Implemented DNS/SNI hostname correlation for the non-MITM path: new Ingress/Hostname/ with DnsResponseParser, TlsClientHelloParser, HostnameResolutionStore (TTL-expiring, bounded) + IHostnameResolver; interceptor now populates TrafficObservation.RemoteHost; ingress watcher feeds inbound DNS responses; DI registered. Added 9 hostname tests. Final: 69/69 tests pass, solution builds 0 errors. Deferred WFP-native filtering and Windows-service/IPC split as post-MVP.
+- Summary: Mon, 06 Jul 2026 04:31 â€” Confirmed PR #7 codex branch already merged into main (no-op). Ran Task 10 verification: 60/60 tests + clean build. Implemented theme integration from vaultwares-revisited 'Terminal and Document' system: added Warm Mode parchment token set alongside Console in VaultRedesign.xaml, restructured MainWindow so a warm branded header/frame (logo + wordmark + bilingual tagline) wraps the console operational core; ported bilingual brand copy to Core/Branding/BrandStrings.cs (en + fr-CA/QC) with a Settings language selector; wired vaultwares logo asset. Implemented DNS/SNI hostname correlation for the non-MITM path: new Ingress/Hostname/ with DnsResponseParser, TlsClientHelloParser, HostnameResolutionStore (TTL-expiring, bounded) + IHostnameResolver; interceptor now populates TrafficObservation.RemoteHost; ingress watcher feeds inbound DNS responses; DI registered. Added 9 hostname tests. Final: 69/69 tests pass, solution builds 0 errors. Deferred WFP-native filtering and Windows-service/IPC split as post-MVP.
 - Commands:
   - `dotnet test tests\VaultGuardian.Core.Tests\VaultGuardian.Core.Tests.csproj -p:Platform=x64`
   - `dotnet build VaultGuardian.slnx -p:Platform=x64`
@@ -5783,7 +6152,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-06 04:26 (TZ: Eastern Standard Time)
   ```
-- Summary: Second ZeroGPU fix: 'ZeroGPU tensors packing' progress at 1.4 MB/s = ZeroGPU snapshot writing 34.7 GB under HF_HOME/xet on the network-mounted /models bucket. Split cache roles in config.py: HF_HUB_CACHE / TRANSFORMERS_CACHE / DIFFUSERS_CACHE still point at the bucket (so FLUX weight downloads survive across boots), but HF_HOME and TORCH_HOME now point at /tmp/flux2-klein-fast (tmpfs, RAM-backed) — that is where ZeroGPU writes its 34 GB tensor pack and the torch inductor cache, so packing runs at RAM speed instead of bucket-write speed. Switched os.environ.setdefault to hard assignment so container defaults can't silently keep HF_HOME on slow storage. Committed 63ce7fc, pushed to origin/main. Sun, 06 Jul 2026.
+- Summary: Second ZeroGPU fix: 'ZeroGPU tensors packing' progress at 1.4 MB/s = ZeroGPU snapshot writing 34.7 GB under HF_HOME/xet on the network-mounted /models bucket. Split cache roles in config.py: HF_HUB_CACHE / TRANSFORMERS_CACHE / DIFFUSERS_CACHE still point at the bucket (so FLUX weight downloads survive across boots), but HF_HOME and TORCH_HOME now point at /tmp/flux2-klein-fast (tmpfs, RAM-backed) â€” that is where ZeroGPU writes its 34 GB tensor pack and the torch inductor cache, so packing runs at RAM speed instead of bucket-write speed. Switched os.environ.setdefault to hard assignment so container defaults can't silently keep HF_HOME on slow storage. Committed 63ce7fc, pushed to origin/main. Sun, 06 Jul 2026.
 - Commands:
   - `git commit -m 'Split cache: HF_HUB_CACHE stays on bucket, HF_HOME to tmpfs'`
   - `git push origin main`
@@ -5810,7 +6179,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-06 04:14 (TZ: Eastern Standard Time)
   ```
-- Summary: Fixed ZeroGPU load timeout in HF Space app.py. The previous refactor moved FLUX.2 Klein 9B loading into get_pipeline() called inside @spaces.GPU(duration=120), so each forked worker started with pipe=None and had to download+load+attach LoRA+infer inside a 120s slot — root cause of the 'ZeroGPU loading' timeout. Reverted to eager import-time load (spaces library defers the .to('cuda') until inside GPU scope, so worker forks inherit the pipeline via COW), removed the tail local_pipe.to('cpu') (worker torn down anyway), and bumped duration to 180s to leave room for first-call LoRA attach. Committed fc69fca and pushed to origin/main on huggingface.co/spaces/clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA. Sun, 06 Jul 2026.
+- Summary: Fixed ZeroGPU load timeout in HF Space app.py. The previous refactor moved FLUX.2 Klein 9B loading into get_pipeline() called inside @spaces.GPU(duration=120), so each forked worker started with pipe=None and had to download+load+attach LoRA+infer inside a 120s slot â€” root cause of the 'ZeroGPU loading' timeout. Reverted to eager import-time load (spaces library defers the .to('cuda') until inside GPU scope, so worker forks inherit the pipeline via COW), removed the tail local_pipe.to('cpu') (worker torn down anyway), and bumped duration to 180s to leave room for first-call LoRA attach. Committed fc69fca and pushed to origin/main on huggingface.co/spaces/clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA. Sun, 06 Jul 2026.
 - Commands:
   - `git commit -m 'Restore eager pipeline load for ZeroGPU'`
   - `git push origin main`
@@ -6506,7 +6875,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-05 09:27 (TZ: Eastern Standard Time)
   ```
-- Summary: Marketing snippets finally rendering + docs refresh. TWO bugs stacked: (1) asyncpg pool had no jsonb codec, so /api/promking/settings/{site} returned affiliate_settings as a JSON STRING. Both Layout.astro line 63 and Settings.tsx line 99 do normalizeAffiliateConfig(x) with a typeof===object guard that flips false on a string — every marketing snippet silently returned an empty config for weeks. Fix in vaultwares-api 0.2.10: register json/jsonb codec on every asyncpg connection; refactored 4 jsonb writes (settings, fetcher cursor, fetch_runs.log, videos.qualities) to pass raw dicts instead of json.dumps+::jsonb. (2) After that fix the response is a real object, but snakeToCamel in promking-api.ts:52 rewrote spots.head_tags -> spots.headTags recursively, so normalizeAffiliateConfig read the wrong key. Fix in shared-tube 0.2.32: req() takes {transformKeys:false}; getSettings opts out. Verified end-to-end: sexyprn=GTM-K4JG875S, fxv=GTM-KKVHWM4N, oneporn=GTM-P6ZCKNH4 all present in live HTML. Also client-side defensive JSON.parse in normalizeAffiliateConfig (0.2.31) as belt-and-braces. Docs pass: new tech-oracle.md (bare systemd on greencloud, NOT docker; 8B+70B NVIDIA NIM; LanceDB+SQLite; Eleventy static); rewrote content-site.md (PKT pivot done, Vite/React/Express standalone on OVH); wallpaper-foundry.md (honest state — scripts live on desktop next to ComfyUI, wallpaper-foundry.service not installed on OVH, PK Wallpaper Sync task disabled); content-disseminator.md refresh (per-platform state); shared-tube.md (pkt row retired); ROUTER.md, overview.md, architecture.md, infrastructure.md all updated. Pushed to Prom-King/shared-tube 8e0abe8, p-potvin/vaultwares-api 46ccdeb, Prom-King/docs e66e97c.
+- Summary: Marketing snippets finally rendering + docs refresh. TWO bugs stacked: (1) asyncpg pool had no jsonb codec, so /api/promking/settings/{site} returned affiliate_settings as a JSON STRING. Both Layout.astro line 63 and Settings.tsx line 99 do normalizeAffiliateConfig(x) with a typeof===object guard that flips false on a string â€” every marketing snippet silently returned an empty config for weeks. Fix in vaultwares-api 0.2.10: register json/jsonb codec on every asyncpg connection; refactored 4 jsonb writes (settings, fetcher cursor, fetch_runs.log, videos.qualities) to pass raw dicts instead of json.dumps+::jsonb. (2) After that fix the response is a real object, but snakeToCamel in promking-api.ts:52 rewrote spots.head_tags -> spots.headTags recursively, so normalizeAffiliateConfig read the wrong key. Fix in shared-tube 0.2.32: req() takes {transformKeys:false}; getSettings opts out. Verified end-to-end: sexyprn=GTM-K4JG875S, fxv=GTM-KKVHWM4N, oneporn=GTM-P6ZCKNH4 all present in live HTML. Also client-side defensive JSON.parse in normalizeAffiliateConfig (0.2.31) as belt-and-braces. Docs pass: new tech-oracle.md (bare systemd on greencloud, NOT docker; 8B+70B NVIDIA NIM; LanceDB+SQLite; Eleventy static); rewrote content-site.md (PKT pivot done, Vite/React/Express standalone on OVH); wallpaper-foundry.md (honest state â€” scripts live on desktop next to ComfyUI, wallpaper-foundry.service not installed on OVH, PK Wallpaper Sync task disabled); content-disseminator.md refresh (per-platform state); shared-tube.md (pkt row retired); ROUTER.md, overview.md, architecture.md, infrastructure.md all updated. Pushed to Prom-King/shared-tube 8e0abe8, p-potvin/vaultwares-api 46ccdeb, Prom-King/docs e66e97c.
 - Commands:
   - `ssh ovh systemctl restart vaultwares-api.service`
   - `POST /rebuild`
@@ -7267,7 +7636,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-04 23:10 (TZ: Eastern Standard Time)
   ```
-- Summary: Root-cause fix for runaway Catalog term fetches. pornxp's /tags/<term> pagination silently returns unrelated content past the real archive end while the h1 and '(N videos)' text stay unchanged; live probe of pxp.cool/tags/Juniper%20Ren returned 36 items on page 91 with fake results and the same '(142 videos)' header. Fix: new SourceConfig.extractListingMeta(html); pornxp parses '(N videos)'; engine.ts emits it on page 1; cli.ts emits {event: listing_meta, totalItems, pageSize}; FastAPI _run_subprocess_for_page returns (videos, listing_meta); _drive_term_run recomputes page_budget = ceil(totalItems/pageSize) → 142/36 = 4 pages instead of walking to 500. Second guardrail: per-page DB dedup with 2-consecutive-all-known break. MAX_SAFETY_PAGES 500 → 30. Also: sticky progress toast in Catalog BatchActions (no more fire-and-forget silence), Schedule status panel in Fetcher tab with next-run + last-run per (site,source), 15s auto-refresh. Killed hung fetch_runs id 57 (pkill fetcher:run + DB UPDATE finished_at=NOW). Pushed to main on both repos to trigger deploy: Prom-King/shared-tube commit b4cf85f (v0.2.29), p-potvin/vaultwares-api commit 299d45c (v0.2.8).
+- Summary: Root-cause fix for runaway Catalog term fetches. pornxp's /tags/<term> pagination silently returns unrelated content past the real archive end while the h1 and '(N videos)' text stay unchanged; live probe of pxp.cool/tags/Juniper%20Ren returned 36 items on page 91 with fake results and the same '(142 videos)' header. Fix: new SourceConfig.extractListingMeta(html); pornxp parses '(N videos)'; engine.ts emits it on page 1; cli.ts emits {event: listing_meta, totalItems, pageSize}; FastAPI _run_subprocess_for_page returns (videos, listing_meta); _drive_term_run recomputes page_budget = ceil(totalItems/pageSize) â†’ 142/36 = 4 pages instead of walking to 500. Second guardrail: per-page DB dedup with 2-consecutive-all-known break. MAX_SAFETY_PAGES 500 â†’ 30. Also: sticky progress toast in Catalog BatchActions (no more fire-and-forget silence), Schedule status panel in Fetcher tab with next-run + last-run per (site,source), 15s auto-refresh. Killed hung fetch_runs id 57 (pkill fetcher:run + DB UPDATE finished_at=NOW). Pushed to main on both repos to trigger deploy: Prom-King/shared-tube commit b4cf85f (v0.2.29), p-potvin/vaultwares-api commit 299d45c (v0.2.8).
 - Commands:
   - `pkill -f fetcher:run.*juniper-ren`
   - `git push origin main (both repos)`
@@ -7588,1968 +7957,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-03 01:12 - Pro-Realism-FLUX2-Klein-Multi-LoRA</strong> <code>general</code> - Fri, 03 Jul 2026 00:52 - Duplicated M3st3rJ4k3l/FLUX.2-Klein-Multi-LoRA to clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA on ZeroGPU hardware zero-a10g, cloned it locally to D:\Hugg...</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: unknown
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-07-03 01:12 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fri, 03 Jul 2026 00:52 - Duplicated M3st3rJ4k3l/FLUX.2-Klein-Multi-LoRA to clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA on ZeroGPU hardware zero-a10g, cloned it locally to D:\HuggingFace\spaces\Pro-Realism-FLUX2-Klein-Multi-LoRA, set ENABLE_LOGGING=No as a Space variable, and ran py_compile on Python modules. No ZeroGPU inference job was run. Local clone is clean but LoRA files are Git LFS pointer files because git-lfs is not installed locally.
-- Commands:
-  - `HfApi.duplicate_space M3st3rJ4k3l/FLUX.2-Klein-Multi-LoRA -> clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA hardware=zero-a10g`
-  - `git clone https://huggingface.co/spaces/clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA D:\HuggingFace\spaces\Pro-Realism-FLUX2-Klein-Multi-LoRA`
-  - `python -m py_compile app.py config.py control_tools.py image_utils.py logging_utils.py lora_registry.py ui_theme.py upscale.py`
-  - `HfApi.add_space_variable ENABLE_LOGGING=No`
-- Files:
-  - `D:\HuggingFace\spaces\Pro-Realism-FLUX2-Klein-Multi-LoRA`
-
-</details>
-
-<details>
-<summary><strong>2026-07-03 00:38 - Pro-Realism-Edit-Studio</strong> <code>code-change</code> - Fri, 03 Jul 2026 00:45 - Added mounted bucket/cache support for Pro-Realism-Edit-Studio and pushed commit c8494c8. Attached clopeux/Pro-Realism-Edit-Studio-storage to /models us...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: unknown
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-07-03 00:38 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fri, 03 Jul 2026 00:45 - Added mounted bucket/cache support for Pro-Realism-Edit-Studio and pushed commit c8494c8. Attached clopeux/Pro-Realism-Edit-Studio-storage to /models using HfApi.set_space_volumes, set MODEL_BUCKET_DIR=/models as a Space variable, and updated app.py to set HF_HOME/HF_HUB_CACHE/TRANSFORMERS_CACHE/DIFFUSERS_CACHE/TORCH_HOME/ULTRALYTICS_CACHE_DIR before model imports. Main hf_hub_download/load_config/from_pretrained calls now use the bucket-backed cache when mounted. Verified py_compile, unittest discovery, and git diff --check. No ZeroGPU inference job was run. Runtime was still RUNNING_APP_STARTING when checked, and SDK runtime response had not yet surfaced volumes.
-- Commands:
-  - `python -m py_compile D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\app.py`
-  - `python -m unittest discover -s D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\tests`
-  - `git -C D:\HuggingFace\spaces\Pro-Realism-Edit-Studio diff --check`
-  - `git -C D:\HuggingFace\spaces\Pro-Realism-Edit-Studio push origin main`
-  - `HfApi.set_space_volumes clopeux/Pro-Realism-Edit-Studio bucket clopeux/Pro-Realism-Edit-Studio-storage:/models`
-  - `HfApi.add_space_variable MODEL_BUCKET_DIR=/models`
-- Files:
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\app.py`
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\README.md`
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\tests\test_enhance_stage.py`
-
-</details>
-
-<details>
-<summary><strong>2026-07-03 00:26 - Pro-Realism-Edit-Studio</strong> <code>code-change</code> - Fri, 03 Jul 2026 00:31 - Updated Pro-Realism-Edit-Studio to use YOLO-boxed SAM masks as the primary detailer substrate, with heuristic masks only as fallback. Added lazy YOLO/SA...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: unknown
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-07-03 00:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fri, 03 Jul 2026 00:31 - Updated Pro-Realism-Edit-Studio to use YOLO-boxed SAM masks as the primary detailer substrate, with heuristic masks only as fallback. Added lazy YOLO/SAM loaders, YOLO person boxes, SAM box masks, optional DA-3 preservation hook behind ENHANCE_DA3_PRESERVE_ENABLED, and updated metadata/tests to version 1.0.3. Pushed commit 7263844. Verified py_compile, unittest discovery, and git diff --check before push. No ZeroGPU generation job was run.
-- Commands:
-  - `python -m py_compile D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\app.py`
-  - `python -m unittest discover -s D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\tests`
-  - `git -C D:\HuggingFace\spaces\Pro-Realism-Edit-Studio diff --check`
-  - `git -C D:\HuggingFace\spaces\Pro-Realism-Edit-Studio push origin main`
-- Files:
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\app.py`
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\README.md`
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\requirements.txt`
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\tests\test_enhance_stage.py`
-
-</details>
-
-<details>
-<summary><strong>2026-07-03 00:17 - Pro-Realism-Edit-Studio</strong> <code>code-change</code> - Fri, 03 Jul 2026 00:17 - Added Qwen-specific tiled face/hair detailer to the HF Space and pushed commit 39f014d. Clean now includes conservative tiled face detailing before upsc...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: unknown
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-07-03 00:17 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fri, 03 Jul 2026 00:17 - Added Qwen-specific tiled face/hair detailer to the HF Space and pushed commit 39f014d. Clean now includes conservative tiled face detailing before upscale; Max Detail includes face/hair detail regions before and after Nomos upscale plus final grain. Added OpenCV headless for region/BBOX extraction, bumped Space version to 1.0.2, and updated tests/README. Verified py_compile, unittest discovery, and git diff --check before push. No ZeroGPU generation job was run.
-- Commands:
-  - `python -m py_compile D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\app.py`
-  - `python -m unittest discover -s D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\tests`
-  - `git -C D:\HuggingFace\spaces\Pro-Realism-Edit-Studio diff --check`
-  - `git -C D:\HuggingFace\spaces\Pro-Realism-Edit-Studio push origin main`
-- Files:
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\app.py`
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\README.md`
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\requirements.txt`
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\tests\test_enhance_stage.py`
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 23:40 - vaultwares-studio</strong> <code>code-change,verification</code> - MASt3R-SfM integration for lab Space. Rewrote docker/lab/Dockerfile from nerfstudio+COLMAP base to pytorch:2.4-cuda12.1-devel + naver/mast3r --recursive clone + ASMK cython + pr...</summary>
-
-- Kind: code-change,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-7
-  Thinking: high
-  Mode: code
-  Permissions: ask (network: local-windows+HF-Spaces)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: main
-  Tools used (this reply): WebSearch, WebFetch, Edit, Write, Read, Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 23:40 (TZ: Eastern Standard Time)
-  ```
-- Summary: MASt3R-SfM integration for lab Space. Rewrote docker/lab/Dockerfile from nerfstudio+COLMAP base to pytorch:2.4-cuda12.1-devel + naver/mast3r --recursive clone + ASMK cython + pre-downloaded weights (MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric + retrieval codebook). New docker/lab/mast3r_entrypoint.py: unpack frames.zip -> load_images at size=512 -> make_pairs(scene_graph=retrieval-20 for >=30 frames else swin-3) -> sparse_global_alignment(shared_intrinsics=True) -> extract cams2world+focals+pts3d+colors -> convert OpenCV cam2world to OpenGL (col1,col2 flip) -> write nerfstudio transforms.json + colored sparse_pc.ply -> pack processed_min.zip. Emits same shape as recon_entrypoint.py --sfm-only so prod worker --train-only consumes it unchanged. New preset lab-mast3r-sfm (l4x1 sfm_flavor, 45min est, 3h timeout, 3000 frame cap, image_override to lab Space). queue_lab_recon.py --sfm-engine {colmap,mast3r} swaps entrypoint. push_lab_space.py uploads new mast3r_entrypoint.py alongside shared worker files. All 4 files parse, preset cost=~\.93, 7/7 tests pass.
-- Commands:
-  - `./.venv/Scripts/python.exe -m pytest tests/test_remote_reconstruction.py -x -q`
-  - `./.venv/Scripts/python.exe tools/push_lab_space.py`
-- Files:
-  - `docker/lab/Dockerfile`
-  - `docker/lab/mast3r_entrypoint.py`
-  - `vaultwares_studio/presets.py`
-  - `tools/queue_lab_recon.py`
-  - `tools/push_lab_space.py`
-- Git: repo=vaultwares-studio, branch=main, head=51a31df
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 23:36 - Pro-Realism-Edit-Studio</strong> <code>deployment</code> - Thu, 02 Jul 2026 19:48 - Pushed Pro-Realism-Edit-Studio Space update f1d60fc to Hugging Face main. Gradio interface was checked for the active four enhancement modes, version bu...</summary>
-
-- Kind: deployment
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: unknown
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 23:36 (TZ: Eastern Standard Time)
-  ```
-- Summary: Thu, 02 Jul 2026 19:48 - Pushed Pro-Realism-Edit-Studio Space update f1d60fc to Hugging Face main. Gradio interface was checked for the active four enhancement modes, version bumped to 1.0.1 with rendered HTML version comment, and local verification passed before push. No ZeroGPU generation job was run.
-- Commands:
-  - `python -m py_compile D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\app.py`
-  - `python -m unittest discover -s D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\tests`
-  - `git -C D:\HuggingFace\spaces\Pro-Realism-Edit-Studio diff --check`
-  - `git -C D:\HuggingFace\spaces\Pro-Realism-Edit-Studio push origin main`
-- Files:
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\app.py`
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\README.md`
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\requirements.txt`
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 21:47 - Prom-King</strong> <code>code-change</code> - Added dnsmasq DNS entries for comet.vaultwares.ca and flaresolverr.vaultwares.ca on greencloud (100.73.93.84) matching the existing media service pattern (local= + host-record= ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-7
-  Thinking: high
-  Mode: agent
-  Permissions: ask (network: Windows local + SSH to greencloud (100.73.93.84) + SSH to ovhcloud (100.67.25.118))
-  CWD: C:\Users\Administrator\Desktop\Prom-King\content-disseminator  Branch: n/a
-  Tools used (this reply): run_command, view_file, ask_question
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 21:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added dnsmasq DNS entries for comet.vaultwares.ca and flaresolverr.vaultwares.ca on greencloud (100.73.93.84) matching the existing media service pattern (local= + host-record= pointing to 100.73.93.84). Added host-record entries for comet, flaresolverr, and sabnzbd on ovhcloud (100.67.25.118) dnsmasq pointing to ovhcloud itself. Verified: all three services (comet, flaresolverr, SABnzbd) have internet access, can communicate with each other over the vw-media_default Docker network, and are reachable from the tailnet. Fixed ovhcloud dnsmasq startup failure caused by backup file in /etc/dnsmasq.d/ being parsed as config. Cleaned backup files on both VPSes.
-- Commands:
-  - `ssh root@100.73.93.84 sed vaultwares-tailnet.conf`
-  - `ssh root@100.73.93.84 systemctl restart dnsmasq`
-  - `ssh root@100.67.25.118 echo host-record >> vaultwares-tailnet.conf`
-  - `ssh root@100.67.25.118 systemctl restart dnsmasq`
-- Files:
-  - `/etc/dnsmasq.d/vaultwares-tailnet.conf (greencloud)`
-  - `/etc/dnsmasq.d/vaultwares-tailnet.conf (ovhcloud)`
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 19:44 - Pro-Realism-Edit-Studio</strong> <code>code-change</code> - Thu, 02 Jul 2026 00:00 - Replaced the active Qwen enhancement stage with a Qwen-Image-Edit-2511/Rapid-AIO v23 optimized pipeline: Nomos-family tiled upscaling by default, Qwen h...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: unknown
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 19:44 (TZ: Eastern Standard Time)
-  ```
-- Summary: Thu, 02 Jul 2026 00:00 - Replaced the active Qwen enhancement stage with a Qwen-Image-Edit-2511/Rapid-AIO v23 optimized pipeline: Nomos-family tiled upscaling by default, Qwen high-res artifact preconditioning, masked skin/defect repair, micro-detail sharpening, and final photographic grain. Removed legacy enhancement modes from the active Gradio UI and updated README/requirements metadata. Verified with py_compile, unittest discovery, and git diff --check. No ZeroGPU generation job was run.
-- Commands:
-  - `python -m py_compile D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\app.py`
-  - `python -m unittest discover -s D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\tests`
-  - `git -C D:\HuggingFace\spaces\Pro-Realism-Edit-Studio diff --check`
-- Files:
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\app.py`
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\requirements.txt`
-  - `D:\HuggingFace\spaces\Pro-Realism-Edit-Studio\README.md`
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 18:09 - vaultwares-docs</strong> <code>docs</code> - Thu, 02 Jul 2026 18:12: Documented that Input Tracker recovery must preserve conhost.exe --headless pwsh.exe, explain the wrapper-kill crash mode, and verify Task Scheduler resu...</summary>
-
-- Kind: docs
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): shell_command, apply_patch
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 18:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Thu, 02 Jul 2026 18:12: Documented that Input Tracker recovery must preserve conhost.exe --headless pwsh.exe, explain the wrapper-kill crash mode, and verify Task Scheduler result 267009 plus fresh tracker health.
-- Commands:
-  - `npm version patch --no-git-tag-version`
-  - `npm run generate:page-resources`
-  - `npm run build`
-  - `git commit 8802a71`
-  - `git push origin main`
-- Files:
-  - `docs-content/operations/command-line-tool.mdx`
-  - `src/resources/pages/operations__command-line-tool.json`
-  - `package.json`
-  - `package-lock.json`
-- Git: repo=agent-ledger, branch=main, head=af048d0c
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 18:09 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>fix</code> - Thu, 02 Jul 2026 18:12: Fixed VaultWares Input Tracker scheduled task crash by keeping the task on conhost.exe --headless pwsh.exe and narrowing restart cleanup to old track-inp...</summary>
-
-- Kind: fix
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): shell_command, apply_patch
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 18:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Thu, 02 Jul 2026 18:12: Fixed VaultWares Input Tracker scheduled task crash by keeping the task on conhost.exe --headless pwsh.exe and narrowing restart cleanup to old track-input.py Python children so the launcher no longer kills its own wrapper.
-- Commands:
-  - `git commit af048d0c`
-  - `git push origin main`
-  - `Get-ScheduledTask -TaskName VaultWares-InputTracker`
-  - `Get-ScheduledTaskInfo -TaskName VaultWares-InputTracker`
-  - `Get-Content input-state\input-tracker-health.json`
-  - `uv run --with pytest python -m pytest tests/test_track_input_metrics.py -q`
-- Files:
-  - `scripts/setup-input-tracker.ps1`
-  - `scripts/start-input-tracker.ps1`
-- Git: repo=agent-ledger, branch=main, head=af048d0c
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 16:46 - vaultwares-docs</strong> <code>general</code> - Thu, 02 Jul 2026 16:46 - Documented the Input Tracker stale-process failure mode, restart policy, and health verification sequence in the vw command-line operations docs.</summary>
-
-- Kind: general
-- Actor: GPT-5 Codex
-- Agent Header:
-  ```text
-  Agent: GPT-5 Codex (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
-  Tools used (this reply): apply_patch, npm, git
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 16:46 (TZ: Eastern Standard Time)
-  ```
-- Summary: Thu, 02 Jul 2026 16:46 - Documented the Input Tracker stale-process failure mode, restart policy, and health verification sequence in the vw command-line operations docs.
-- Commands:
-  - `npm run generate:page-resources`
-  - `npm run build`
-  - `git push origin main`
-- Files:
-  - `docs-content/operations/command-line-tool.mdx`
-  - `src/resources/pages/operations__command-line-tool.json`
-  - `package.json`
-  - `package-lock.json`
-- Git: repo=vault-monitor, branch=main, head=d345008
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 16:46 - agent-ledger</strong> <code>general</code> - Thu, 02 Jul 2026 16:46 - Made Input Tracker starts replace stale resident tracker processes and stale launcher wrappers, changed task registration to allow replacement starts, v...</summary>
-
-- Kind: general
-- Actor: GPT-5 Codex
-- Agent Header:
-  ```text
-  Agent: GPT-5 Codex (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
-  Tools used (this reply): apply_patch, PowerShell, pytest, git
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 16:46 (TZ: Eastern Standard Time)
-  ```
-- Summary: Thu, 02 Jul 2026 16:46 - Made Input Tracker starts replace stale resident tracker processes and stale launcher wrappers, changed task registration to allow replacement starts, verified PID replacement and fresh telemetry post.
-- Commands:
-  - `uv run --with pytest python -m pytest tests/test_track_input_metrics.py -q`
-  - `.scriptssetup-input-tracker.ps1 -StartNow`
-  - `Start-ScheduledTask -TaskName VaultWares-InputTracker`
-- Files:
-  - `scripts/start-input-tracker.ps1`
-  - `scripts/setup-input-tracker.ps1`
-- Git: repo=vault-monitor, branch=main, head=d345008
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 16:38 - vault-guardian</strong> <code>code-change,verification</code> - PR #7 surface-review followups (commit 1c82b88). #1 sync-over-async on UI tick fixed: LiveMitmFlowProcessor now runs a background Task.Delay(1s) loop via Start()/StopAsync(); Pr...</summary>
-
-- Kind: code-change,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-7
-  Thinking: medium
-  Mode: agent
-  Permissions: bypass (network: Windows 11 Enterprise local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-guardian  Branch: vw-codex-live-mitm-flow-import
-  Tools used (this reply): Read, Edit, Write, Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 16:38 (TZ: Eastern Standard Time)
-  ```
-- Summary: PR #7 surface-review followups (commit 1c82b88). #1 sync-over-async on UI tick fixed: LiveMitmFlowProcessor now runs a background Task.Delay(1s) loop via Start()/StopAsync(); ProcessNewFlowsAsync uses proper await + SemaphoreSlim (replaces sync lock). #2 rename: LiveMonitorService.GetLatestMetrics() -> GetSnapshot() with doc comment declaring purity; MainWindow callsite updated. #3 exception filter broadened: catch(Exception) with OperationCanceledException rethrown; anything else recorded via RecordImportError instead of killing the loop. LiveMonitorService now implements IAsyncDisposable; ctor starts the processor loop, Dispose/DisposeAsync stops it. LiveMitmFlowProcessorTests renamed ProcessNewFlows -> ProcessNewFlowsAsync and awaits. 60/60 Core tests pass; UI builds clean; pushed to vw-codex-live-mitm-flow-import.
-- Commands:
-  - `dotnet build src/VaultGuardian.UI/VaultGuardian.UI.csproj -r win-x64`
-  - `dotnet test tests/VaultGuardian.Core.Tests`
-  - `git commit`
-  - `git push`
-  - `gh api issues/7/comments POST`
-- Files:
-  - `src/VaultGuardian.Core/Ingress/Mitm/LiveMitmFlowProcessor.cs`
-  - `src/VaultGuardian.Core/Observability/LiveMonitorService.cs`
-  - `src/VaultGuardian.UI/MainWindow.xaml.cs`
-  - `tests/VaultGuardian.Core.Tests/LiveMitmFlowProcessorTests.cs`
-- Git: repo=vault-guardian, branch=vw-codex-live-mitm-flow-import, head=1c82b88
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 16:34 - vaultwares-api</strong> <code>general</code> - Thu, 02 Jul 2026 16:34 - Pushed add_columns.py helper for link_sharing URL columns after removing DSN logging, bumped vaultwares-api to 0.1.15, and verified monitor/input tests ...</summary>
-
-- Kind: general
-- Actor: GPT-5 Codex
-- Agent Header:
-  ```text
-  Agent: GPT-5 Codex (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
-  Tools used (this reply): apply_patch, uv, pytest, git
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 16:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: Thu, 02 Jul 2026 16:34 - Pushed add_columns.py helper for link_sharing URL columns after removing DSN logging, bumped vaultwares-api to 0.1.15, and verified monitor/input tests plus Input Tracker online health.
-- Commands:
-  - `python -m py_compile add_columns.py`
-  - `uv lock`
-  - `uv run python -m pytest tests/test_telemetry_input_router.py tests/test_monitor_router.py -q`
-  - `git push origin main`
-- Files:
-  - `add_columns.py`
-  - `pyproject.toml`
-  - `uv.lock`
-- Git: repo=vault-monitor, branch=main, head=d345008
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 16:25 - vault-guardian</strong> <code>code-change,verification</code> - PR #7 review pass: addressed all 8 gemini-code-assist comments (3 high, 5 medium). Highs: MitmProxyService now wraps browser Start in try/catch that stops+disposes _mitmProcess ...</summary>
-
-- Kind: code-change,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-7
-  Thinking: medium
-  Mode: agent
-  Permissions: bypass (network: Windows 11 Enterprise local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-guardian  Branch: vw-codex-live-mitm-flow-import
-  Tools used (this reply): Read, Edit, Bash, PowerShell, TaskCreate, TaskUpdate
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 16:25 (TZ: Eastern Standard Time)
-  ```
-- Summary: PR #7 review pass: addressed all 8 gemini-code-assist comments (3 high, 5 medium). Highs: MitmProxyService now wraps browser Start in try/catch that stops+disposes _mitmProcess before rethrow (was leaking mitmdump on port 18080); MitmFlowImporter switched malformed-line handling from early return to continue (was pinning NextLineNumber, stalling all future polls); PrivacyTelemetryStore.Load wraps JsonException per line (singleton constructed in DI would crash app startup on corrupt jsonl). Mediums: IngressTrafficStore parses via StringReader over the already-loaded text buffer (dropped second ReadLines pass); PrivacyTelemetryStore.AppendAsync batches via StringBuilder + single AppendAllTextAsync; PrivacyWatchProfileStore null-guards stored.Selectors (empty {} was deserializing to non-null record with null list); PrivacyWatchProfile try/catches ArgumentException and RegexMatchTimeoutException around Regex.IsMatch and Regex.Replace; MainWindow only rebinds IngressSourceList.ItemsSource when a Key@LastSeen.UtcTicks signature changes (fixes flicker/scroll reset/CPU churn). Commit 6589c12 pushed to vw-codex-live-mitm-flow-import. 60/60 Core tests pass. Posted inline replies to all 8 review comments (fixed 5 that lost code snippets to bash escaping via gh PATCH). Posted top-level surface-review comment flagging 3 unfixed items: sync-over-async I/O on UI tick in LiveMitmFlowProcessor, side-effect in LiveMonitorService.GetLatestMetrics, and too-narrow exception filter.
-- Commands:
-  - `gh pr checkout 7`
-  - `dotnet build src/VaultGuardian.Core`
-  - `dotnet test tests/VaultGuardian.Core.Tests`
-  - `git commit`
-  - `git push`
-  - `gh api pulls/7/comments/{id}/replies POST`
-  - `gh api issues/7/comments POST`
-- Files:
-  - `src/VaultGuardian.Core/Ingress/IngressTrafficStore.cs`
-  - `src/VaultGuardian.Core/Ingress/Mitm/MitmFlowImporter.cs`
-  - `src/VaultGuardian.Core/Ingress/Mitm/MitmProxyService.cs`
-  - `src/VaultGuardian.Core/Ingress/Telemetry/PrivacyTelemetryStore.cs`
-  - `src/VaultGuardian.Core/Ingress/Telemetry/PrivacyWatchProfile.cs`
-  - `src/VaultGuardian.Core/Ingress/Telemetry/PrivacyWatchProfileStore.cs`
-  - `src/VaultGuardian.UI/MainWindow.xaml.cs`
-- Git: repo=vault-guardian, branch=vw-codex-live-mitm-flow-import, head=6589c12
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 13:55 - vaultwares-api</strong> <code>feature</code> - Thu, 02 Jul 2026 13:44 - Added natural_paths telemetry storage, normalized natural_path events, exposed aggregate natural path summary stats, and bumped vaultwares-api to 0.1.14.</summary>
-
-- Kind: feature
-- Actor: GPT-5 Codex
-- Agent Header:
-  ```text
-  Agent: GPT-5 Codex (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
-  Tools used (this reply): apply_patch, pytest, git
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 13:55 (TZ: Eastern Standard Time)
-  ```
-- Summary: Thu, 02 Jul 2026 13:44 - Added natural_paths telemetry storage, normalized natural_path events, exposed aggregate natural path summary stats, and bumped vaultwares-api to 0.1.14.
-- Commands:
-  - `uv run python -m pytest tests/test_telemetry_input_router.py tests/test_monitor_router.py -q`
-- Files:
-  - `app/routers/telemetry/db.py`
-  - `migrations/telemetry/001_input_telemetry.sql`
-  - `tests/test_telemetry_input_router.py`
-  - `pyproject.toml`
-  - `uv.lock`
-- Git: repo=vault-monitor, branch=main, head=d345008
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 13:55 - agent-ledger</strong> <code>feature</code> - Thu, 02 Jul 2026 13:44 - Added Input Tracker natural path capture for context switches and idle resumes, recording bounded mouse paths plus owner opt-in raw key sequences until ...</summary>
-
-- Kind: feature
-- Actor: GPT-5 Codex
-- Agent Header:
-  ```text
-  Agent: GPT-5 Codex (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
-  Tools used (this reply): apply_patch, pytest, git
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 13:55 (TZ: Eastern Standard Time)
-  ```
-- Summary: Thu, 02 Jul 2026 13:44 - Added Input Tracker natural path capture for context switches and idle resumes, recording bounded mouse paths plus owner opt-in raw key sequences until the next click.
-- Commands:
-  - `uv run --with pytest python -m pytest tests/test_track_input_metrics.py -q`
-- Files:
-  - `scripts/track-input.py`
-  - `tests/test_track_input_metrics.py`
-- Git: repo=vault-monitor, branch=main, head=d345008
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 13:55 - vaultwares-adk consumers</strong> <code>maintenance</code> - Thu, 02 Jul 2026 13:44 - Updated vaultwares-adk submodule pointers across local consumer repos, pushed eligible main branches, and published vaultwares-decompile through PR #7 b...</summary>
-
-- Kind: maintenance
-- Actor: GPT-5 Codex
-- Agent Header:
-  ```text
-  Agent: GPT-5 Codex (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
-  Tools used (this reply): git, gh, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 13:55 (TZ: Eastern Standard Time)
-  ```
-- Summary: Thu, 02 Jul 2026 13:44 - Updated vaultwares-adk submodule pointers across local consumer repos, pushed eligible main branches, and published vaultwares-decompile through PR #7 because direct main pushes are protected.
-- Commands:
-  - `git push origin main across eligible ADK consumer repos`
-  - `gh pr create --repo p-potvin/vaultwares-decompile --base main --head vw-codex/update-adk-aged-work`
-- Files:
-  - `vaultwares-adk submodule pointers`
-  - `vault-player/vaultwares-adk gitlink repair`
-- Git: repo=vault-monitor, branch=main, head=d345008
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 13:21 - shared-tube</strong> <code>code-change</code> - shared-tube v0.2.25 (583be76..d0b45b7) + vaultwares-api (72029c1..92efd68) pushed. (1) Stream proxy no longer 302&#39;s to raw CDN URL when sourceUrl empty — was root cause of sexyp...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-7
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
-  Tools used (this reply): Edit, Read, PowerShell, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 13:21 (TZ: Eastern Standard Time)
-  ```
-- Summary: shared-tube v0.2.25 (583be76..d0b45b7) + vaultwares-api (72029c1..92efd68) pushed. (1) Stream proxy no longer 302's to raw CDN URL when sourceUrl empty — was root cause of sexyprn/oneporn 403 (browser hit CDN direct, IP mismatch on signed URL). Returns 502 with re-fetch hint. (2) Default quality flipped 720p->480p to reduce residential-proxy bytes. (3) SOCKS5 STREAM_OUTBOUND_PROXY refused at init with clear error (undici ProxyAgent is HTTP-only); ops guidance: front SOCKS5 with gost -L=http://:8888 -F=socks5://.... (4) Fetcher tab gains Daily schedule card writing settings.fetcher_cron; new POST /fetcher/cron/reload hot-reloads APScheduler. Existing _drive_subprocess duplicate-zone logic already caps runs at ~4 known-row streak.
-- Commands:
-  - `pnpm --filter @promking/shared-tube typecheck`
-  - `pnpm -r build`
-  - `python -m pytest tests/test_promking_fetcher.py`
-  - `git push origin main x2`
-- Files:
-  - `apps/fxv/src/pages/api/stream/[slug].ts`
-  - `shared/src/admin/Fetcher/Console.tsx`
-  - `vaultwares-api/app/routers/promking/fetcher.py`
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 11:02 - shared-tube</strong> <code>code-change</code> - shared-tube v0.2.24 (514c4f7..583be76) + vaultwares-api (d7fe9da..72029c1) pushed to main. (1) Marketing tab replaces Affiliates; consolidated shared/src/admin/Marketing/Setting...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-7
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
-  Tools used (this reply): Edit, Write, Read, PowerShell, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 11:02 (TZ: Eastern Standard Time)
-  ```
-- Summary: shared-tube v0.2.24 (514c4f7..583be76) + vaultwares-api (d7fe9da..72029c1) pushed to main. (1) Marketing tab replaces Affiliates; consolidated shared/src/admin/Marketing/Settings.tsx with auto-save on blur + tooltips + manual Save-now footer. (2) Multi-spot ad schema in shared/src/ads/spots.ts; native_ad type added; NativeVideoAd renders operator snippets. Legacy affiliate_settings shape auto-migrates. (3) Rebuild button + POST /api/promking/rebuild spawns deploy-shared-tube.sh. (4) Links CRUD: POST/PATCH/DELETE endpoints (slug non-editable). Frontend gains +New, Edit modal, Delete, direct-link column. (5) Stats expansion: views summary, catalog_health, fetch_activity_7d, top_videos, top_studios/pornstars/categories by view_sum, favourites_total. Not-tracked banner names likes/watch-time/impressions. (6) pornxp 403 real fix: added pxp.cool to PROXIED_HOST_RE (site + CDN now share egress; signed URLs are IP-bound so mismatched exits caused the 403), added CDN->Referer map + Sec-Fetch-* headers. (7) Small: SQL panel <ul> max-height, fetch # left-aligned. Live test: fresh signed URL with Referer=pxp.cool returns 206.
-- Commands:
-  - `pnpm --filter @promking/shared-tube typecheck`
-  - `pnpm -r build`
-  - `python -m pytest tests/test_promking_*.py`
-  - `git push origin main x2`
-- Files:
-  - `shared/src/ads/spots.ts`
-  - `shared/src/admin/Marketing/Settings.tsx`
-  - `shared/src/admin/Links/Dashboard.tsx`
-  - `shared/src/admin/Stats/Dashboard.tsx`
-  - `apps/fxv/src/pages/api/stream/[slug].ts`
-  - `vaultwares-api/app/routers/promking/rebuild.py`
-  - `vaultwares-api/app/routers/promking/link_sharing.py`
-  - `vaultwares-api/app/routers/promking/stats.py`
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 05:52 - shared-tube</strong> <code>code-change</code> - Hotfix v0.2.23 (9be1079..514c4f7): SFW safe-mode picsum.photos thumbnails 403&#39;d with &#39;Host not allowed&#39; because VideoCard routed them through the /api/thumb proxy whose allowlis...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-8
-  Thinking: medium
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): Edit, Read, PowerShell, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 05:52 (TZ: Eastern Standard Time)
-  ```
-- Summary: Hotfix v0.2.23 (9be1079..514c4f7): SFW safe-mode picsum.photos thumbnails 403'd with 'Host not allowed' because VideoCard routed them through the /api/thumb proxy whose allowlist only covers ingest CDNs. Fix: bypass the proxy for https://picsum.photos/ URLs (load directly, like data:/same-origin) since picsum serves cross-origin without referer issues. Bumped package.json + shared/package.json to 0.2.23. fxv build verified. Push triggers OVH auto-deploy.
-- Commands:
-  - `pnpm --filter @promking/site-fxv build`
-  - `git push origin main`
-- Files:
-  - `shared/src/components/VideoCard.astro`
-  - `package.json`
-  - `shared/package.json`
-- Git: repo=shared-tube, branch=main, head=514c4f7
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 05:34 - vaultwares-adk (formerly vaultwares-agentciation)</strong> <code>general</code> - Thu, 02 Jul 2026 05:34 - Updated all local vaultwares-adk submodule checkouts under Github Repos root plus one level to 06d18f4, verified skills.spawn_agent_skill imports in eve...</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
-  Tools used (this reply): shell_command
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 05:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: Thu, 02 Jul 2026 05:34 - Updated all local vaultwares-adk submodule checkouts under Github Repos root plus one level to 06d18f4, verified skills.spawn_agent_skill imports in every checkout, and repaired vault-player local vaultwares-adk path from tracked files into a real gitlink checkout.
-- Commands:
-  - `git fetch origin main across nested vaultwares-adk checkouts`
-  - `git checkout --detach 06d18f4 across nested vaultwares-adk checkouts`
-  - `python -c importlib.import_module("skills.spawn_agent_skill") in each ADK root`
-  - `vault-player gitlink repair with update-index --cacheinfo`
-- Files:
-  - `C:\Users\Administrator\Desktop\Github Repos\*\vaultwares-adk`
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-player\vaultwares-adk`
-- Git: repo=vault-monitor, branch=main, head=d345008
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 05:10 - shared-tube</strong> <code>handoff</code> - Committed + pushed v0.2.22 to main on both repos. shared-tube: 3a0633a..9be1079 (60 files: term-scoped fetching, catalog Fetch button, pornxp 403 Referer fix, SFW cookie fix + S...</summary>
-
-- Kind: handoff
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-8
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
-  Tools used (this reply): PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 05:10 (TZ: Eastern Standard Time)
-  ```
-- Summary: Committed + pushed v0.2.22 to main on both repos. shared-tube: 3a0633a..9be1079 (60 files: term-scoped fetching, catalog Fetch button, pornxp 403 Referer fix, SFW cookie fix + SAFE_TITLES 70->120, /actor->/pornstar rename+redirects, source views). vaultwares-api: 302103c..d7fe9da (term-run fields + _drive_term_run). Both need OVH deploy to go live. Dependabot warnings on push are pre-existing, not from these changes.
-- Commands:
-  - `git push origin main (Prom-King/shared-tube)`
-  - `git push origin main (p-potvin/vaultwares-api)`
-- Files:
-  - `shared/src/fetcher/engine.ts`
-  - `vaultwares-api/app/routers/promking/fetcher.py`
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 05:03 - shared-tube</strong> <code>code-change</code> - shared-tube v0.2.22: (1) term-scoped fetching — SourceConfig.termUrl for pornxp /tags/{name verbatim}, 1porn /{models|sites|categories}/{slug}/, fullvideos tries /networks/+/sit...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-8
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
-  Tools used (this reply): Edit, Read, PowerShell, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 05:03 (TZ: Eastern Standard Time)
-  ```
-- Summary: shared-tube v0.2.22: (1) term-scoped fetching — SourceConfig.termUrl for pornxp /tags/{name verbatim}, 1porn /{models|sites|categories}/{slug}/, fullvideos tries /networks/+/sites/ for studios; engine candidate resolution w/ stickiness; CLI --termType/Name/Slug; FastAPI FetchRunRequest term fields + _drive_term_run (cursor-ignoring). (2) Catalog per-term Fetch button w/ source picker + pages/all + toasts. (3) pornxp 403 fix: stream proxy sends source-site Referer+Accept on CDN candidates, reads title= rendition labels, stored-embed fallback. (4) SFW toggle now honors pkt_safe_mode cookie for all users (was isDev-gated); SAFE_TITLES 70->120; FNV-1a seed. (5) /actor -> /pornstar rename across 4 apps + redirects. (6) source views: detail-page extraction for fullvideos+1porn. Verified: shared typecheck, 20/20 vitest, 4/4 app builds, 5/5 pytest.
-- Commands:
-  - `pnpm --filter @promking/shared-tube typecheck`
-  - `pnpm --filter @promking/site-fxv build`
-  - `python -m pytest tests/test_promking_fetcher.py`
-- Files:
-  - `shared/src/fetcher/engine.ts`
-  - `shared/src/fetcher/sources/pornxp.ts`
-  - `shared/src/admin/Catalog/BatchActions.tsx`
-  - `apps/fxv/src/pages/api/stream/[slug].ts`
-  - `shared/src/security/safe-mode.ts`
-  - `vaultwares-api/app/routers/promking/fetcher.py`
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 00:27 - vaultwares-api</strong> <code>implementation</code> - Thu, 02 Jul 2026 00:27 - Raised monitor input-tracker/overview query window cap so vault-monitor can request last month and all-stats ranges, with a router regression test for 7...</summary>
-
-- Kind: implementation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
-  Tools used (this reply): shell_command, apply_patch
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 00:27 (TZ: Eastern Standard Time)
-  ```
-- Summary: Thu, 02 Jul 2026 00:27 - Raised monitor input-tracker/overview query window cap so vault-monitor can request last month and all-stats ranges, with a router regression test for 720 hours.
-- Commands:
-  - `uv run python -m pytest tests/test_monitor_router.py -q`
-  - `FastAPI TestClient route smoke for hours 24,168,720,175200`
-- Files:
-  - `app/routers/monitor/__init__.py`
-  - `tests/test_monitor_router.py`
-- Git: repo=vault-monitor, branch=main, head=84c79ef
-
-</details>
-
-<details>
-<summary><strong>2026-07-02 00:27 - vault-monitor</strong> <code>implementation</code> - Thu, 02 Jul 2026 00:27 - Updated Personal Stats Input Tracker UX with explicit time ranges, clearer units/tooltips, persistent sticky sidebar, pause categories, human hotspot la...</summary>
-
-- Kind: implementation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
-  Tools used (this reply): shell_command, apply_patch, Playwright CLI
-  MCP servers accessed (this reply): none
-  Time: 2026-07-02 00:27 (TZ: Eastern Standard Time)
-  ```
-- Summary: Thu, 02 Jul 2026 00:27 - Updated Personal Stats Input Tracker UX with explicit time ranges, clearer units/tooltips, persistent sticky sidebar, pause categories, human hotspot labels, richer KPI signals, and command cadence details.
-- Commands:
-  - `npm run build`
-  - `npx vitest run src/api.test.ts src/routes.test.ts src/features/services/model.test.ts src/features/search/model.test.ts`
-  - `npm test`
-  - `Playwright browser smoke for /personal-stats`
-- Files:
-  - `src/App.tsx`
-  - `src/api.ts`
-  - `src/api.test.ts`
-  - `src/i18n.tsx`
-  - `src/pages/PersonalStatsPage.tsx`
-  - `src/styles.css`
-  - `src/useData.ts`
-- Git: repo=vault-monitor, branch=main, head=84c79ef
-
-</details>
-
-<details>
-<summary><strong>2026-07-01 09:23 - vault-explorer</strong> <code>code-change,verification</code> - Fixed subtitle ASR popup jumping to top-left corner in the video player: showAsrContextMenu was anchored to opt-generate-subtitle which had just been display:none&#39;d by the click...</summary>
-
-- Kind: code-change,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-7
-  Thinking: medium
-  Mode: agent
-  Permissions: bypass (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): Read, Edit, Bash, Grep, AskUserQuestion
-  MCP servers accessed (this reply): none
-  Time: 2026-07-01 09:23 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed subtitle ASR popup jumping to top-left corner in the video player: showAsrContextMenu was anchored to opt-generate-subtitle which had just been display:none'd by the click handler, so getBoundingClientRect returned all zeros. Rerouted the anchor to the persistent btn-subtitles CC button and changed the positioner to right-align (mirrors the subtitles-menu right:0 layout) and prefer opening upward when the anchor is in the lower 40 percent of the viewport. Also fixed the player right-click Enhance Video action which was calling upscaleVideo(itemPath) as a bare string, discarding the appSettings vsrQuality/vsrScale/vsrChroma the user had configured; now sends {path, quality, scale, chroma} same as card-events.js. Modernized ImageMagick denoise op from deprecated '-median 3' to '-statistic Median 3' (silences the deprecation warning that was printed to console on every image denoise). Diagnosed the audio-normalization pipeline (Demucs vocal isolation, ASR subtitles, translation synthesis): torchaudio 2.10 now delegates all save/load through torchcodec, which requires FFmpeg 4-7 shared .dll files on the load path. venv had no torchcodec — installed torchcodec 0.14 via pip. System has FFmpeg 6.1.1 static (Gyan.FFmpeg) on PATH and FFmpeg 8.1 shared (Gyan.FFmpeg.Shared) also present, but torchcodec supports only 4-7 and needs the shared build. All three AI voice paths remain broken until an FFmpeg-7 shared build is installed and its bin/ added to PATH before Python starts. Confirmed working: RealESRGAN image super-resolution (RTX 3060 detected, output produced), ImageMagick denoise/edge, nvvfx module for RTX VSR (imports cleanly). Timestamp: Wed, 01 Jul 2026 09:24
-- Commands:
-  - `node tests/manual_webm_update_regression_test.js`
-  - `.venv/Scripts/python.exe -m pip install torchcodec`
-  - `.venv/Scripts/python.exe -m demucs.separate ...`
-  - `realesrgan-ncnn-vulkan.exe -i test.png -o out.png`
-  - `magick in.jpg -statistic Median 3 out.jpg.tmp`
-- Files:
-  - `js/player/subtitles.js`
-  - `js/player/player.js`
-  - `src/ipc/media.ipc.js`
-- Git: repo=vault-explorer, branch=main, head=51c2079
-
-</details>
-
-<details>
-<summary><strong>2026-07-01 09:06 - vault-explorer</strong> <code>code-change,verification</code> - Fixed WebM/thumbnail preview generation silently failing since commit e838f61 (2026-06-17). Root cause: the atomic-tmp scheme renamed ffmpeg outputs to .jpg.tmp/.webm.tmp but ff...</summary>
-
-- Kind: code-change,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-7
-  Thinking: medium
-  Mode: agent
-  Permissions: bypass (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): Read, Edit, Bash, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-07-01 09:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed WebM/thumbnail preview generation silently failing since commit e838f61 (2026-06-17). Root cause: the atomic-tmp scheme renamed ffmpeg outputs to .jpg.tmp/.webm.tmp but ffmpeg cannot infer muxer format from a .tmp suffix. A prior uncommitted patch added -f webm before webmWritePath in 4 places, but the 3 thumbnail ffmpeg calls still had no -f flag, so every thumb generation failed. The atomic-commit gate (thumbTmpOk && webmTmpOk) then discarded any successfully-produced webm because the thumb was missing, raising 'FFmpeg produced incomplete output'. Additionally js/progress.js showed 'Preview generated!' on failure because it only checked percent===100 and ignored data.error/label='Preview failed'. Fix: added -f image2 before thumbWritePath in all 3 ffmpeg thumbnail commands in src/previews.js; taught js/progress.js to show 'Preview failed: <file>' when data.error is set; extended tests/manual_webm_update_regression_test.js to assert >=3 image2-forced thumb outputs. Verified with real ffmpeg 8.1 that .jpg.tmp+image2 emits valid JPEG and .webm.tmp+webm emits valid WebM. Both regression tests pass. Wed, 01 Jul 2026 09:05
-- Commands:
-  - `node tests/manual_webm_update_regression_test.js`
-  - `node tests/preview_path_regression_test.js`
-  - `ffmpeg -y ... -f image2 test.jpg.tmp`
-- Files:
-  - `src/previews.js`
-  - `js/progress.js`
-  - `tests/manual_webm_update_regression_test.js`
-- Git: repo=vault-explorer, branch=main, head=51c2079
-
-</details>
-
-<details>
-<summary><strong>2026-07-01 06:29 - vault-explorer</strong> <code>general</code> - Fixed subtitle ASR popup placement, added default 50 percent vocal boost option, and hardened WebM preview temp/path refresh behavior for root and virtual folder contexts.</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: unknown
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-07-01 06:29 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed subtitle ASR popup placement, added default 50 percent vocal boost option, and hardened WebM preview temp/path refresh behavior for root and virtual folder contexts.
-- Git: repo=vault-explorer, branch=main, head=51c2079
-
-</details>
-
-<details>
-<summary><strong>2026-07-01 05:41 - vault-explorer</strong> <code>verification</code> - Wed, 01 Jul 2026 05:42 - Verified virtual folder API, renderer context-menu actions, native context menu templates, create dialog, nested navigation/back, empty/focus states, an...</summary>
-
-- Kind: verification
-- Actor: Codex GPT-5
-- Agent Header:
-  ```text
-  Agent: Codex GPT-5 (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access/approval-never (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): shell_command, apply_patch, update_plan
-  MCP servers accessed (this reply): none
-  Time: 2026-07-01 05:41 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wed, 01 Jul 2026 05:42 - Verified virtual folder API, renderer context-menu actions, native context menu templates, create dialog, nested navigation/back, empty/focus states, and fixed Ctrl+V paste parity inside virtual folders. Created issue https://github.com/p-potvin/vault-explorer/issues/39 for the keyboard paste defect.
-- Commands:
-  - `node inline API assertions for js/navigation/virtual-folders.js`
-  - `node --check js/navigation/virtual-folders.js js/navigation/filters.js js/navigation/directory.js js/navigation/card.js js/navigation/card-events.js js/navigation/keybindings.js src/ipc/system.ipc.js`
-  - `node inline native context menu template assertions for src/ipc/system.ipc.js`
-  - `Playwright Electron renderer context-menu verification with patched show-context-menu IPC`
-  - `Playwright Electron keyboard paste regression: RED before keybindings fix, GREEN after`
-- Files:
-  - `js/navigation/keybindings.js`
-  - `js/navigation/virtual-folders.js`
-  - `js/navigation/filters.js`
-  - `js/navigation/directory.js`
-  - `js/navigation/card.js`
-  - `js/navigation/card-events.js`
-  - `src/ipc/system.ipc.js`
-- Git: repo=vault-explorer, branch=main, head=51c2079
-
-</details>
-
-<details>
-<summary><strong>2026-07-01 05:18 - vault-explorer</strong> <code>bugfix</code> - Wed, 01 Jul 2026 05:21 - Fixed WebM preview temp path mismatch for scan-specific file lists by preventing implicit first-file vault roots; verified existing WebM tmp output args...</summary>
-
-- Kind: bugfix
-- Actor: Codex GPT-5
-- Agent Header:
-  ```text
-  Agent: Codex GPT-5 (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access/approval-never (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): shell_command, apply_patch
-  MCP servers accessed (this reply): none
-  Time: 2026-07-01 05:18 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wed, 01 Jul 2026 05:21 - Fixed WebM preview temp path mismatch for scan-specific file lists by preventing implicit first-file vault roots; verified existing WebM tmp output args force -f webm for .webm.tmp files. GitHub issue: https://github.com/p-potvin/vault-explorer/issues/38
-- Commands:
-  - `node tests\preview_path_regression_test.js (RED before scanner change, GREEN after)`
-  - `node --check src\scanner.js`
-  - `node --check src\previews.js`
-  - `Select-String src\previews.js for -f webm before webmWritePath`
-- Files:
-  - `src/scanner.js`
-  - `src/previews.js`
-  - `tests/preview_path_regression_test.js`
-- Git: repo=vault-explorer, branch=main, head=51c2079
-
-</details>
-
-<details>
-<summary><strong>2026-07-01 03:44 - vw-jira-sync (formerly vaultwares-docs / vw-jira-sync, General Tasks / vw-jira-sync)</strong> <code>code-change</code> - Wed, 01 Jul 2026 03:38 - Mapped vault-tv to Jira key VTV, added the repo to tracked sync config, introduced VERSION 0.1.0, validated YAML, pushed main, and attempted single-repo...</summary>
-
-- Kind: code-change
-- Actor: codex
-- Agent Header:
-  ```text
-  Agent: codex (role: main)
-  Model: gpt-5
-  Thinking: unknown
-  Mode: agent
-  Permissions: danger-full-access (network: online)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): functions.shell_command
-  MCP servers accessed (this reply): none
-  Time: 2026-07-01 03:44 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wed, 01 Jul 2026 03:38 - Mapped vault-tv to Jira key VTV, added the repo to tracked sync config, introduced VERSION 0.1.0, validated YAML, pushed main, and attempted single-repo Jira project creation. Jira creation/backfill remain blocked because Greencloud vw-print-jira-token returns 403 from secretsd for vw_jira_token.
-- Commands:
-  - `python YAML validation for config.yaml and VERSION`
-  - `git commit`
-  - `git push origin HEAD:main`
-  - `python scripts/create_projects.py --repo vault-tv`
-  - `ssh root@100.73.93.84 /usr/local/bin/vw-print-jira-token`
-- Files:
-  - `C:\Users\Administrator\.config\superpowers\worktrees\vw-jira-sync\vw-codex-vault-tv-jira-sync\config.yaml`
-  - `C:\Users\Administrator\.config\superpowers\worktrees\vw-jira-sync\vw-codex-vault-tv-jira-sync\VERSION`
-- Git: repo=vault-explorer, branch=main, head=51c2079
-
-</details>
-
-<details>
-<summary><strong>2026-07-01 03:44 - vaultwares-docs</strong> <code>documentation</code> - Wed, 01 Jul 2026 03:38 - Added Vault TV product documentation, added the PROJECT_CREATION router category with summary/full notes, regenerated affected page resources, bumped do...</summary>
-
-- Kind: documentation
-- Actor: codex
-- Agent Header:
-  ```text
-  Agent: codex (role: main)
-  Model: gpt-5
-  Thinking: unknown
-  Mode: agent
-  Permissions: danger-full-access (network: online)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): functions.shell_command, functions.apply_patch
-  MCP servers accessed (this reply): none
-  Time: 2026-07-01 03:44 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wed, 01 Jul 2026 03:38 - Added Vault TV product documentation, added the PROJECT_CREATION router category with summary/full notes, regenerated affected page resources, bumped docs to v0.0.5, pushed main, and verified the live Vault TV docs chunk contains Vault TV and Comet content.
-- Commands:
-  - `npm ci`
-  - `npm run generate:page-resources`
-  - `npm run build`
-  - `Playwright smoke against local docs routes`
-  - `git commit`
-  - `git push origin HEAD:main`
-  - `Invoke-WebRequest https://docs.vaultwares.ca/assets/software__vault-tv-xh2EfxKM.js`
-- Files:
-  - `C:\Users\Administrator\.config\superpowers\worktrees\vaultwares-docs\vw-codex-vault-tv-docs\instructions\ROUTER.md`
-  - `C:\Users\Administrator\.config\superpowers\worktrees\vaultwares-docs\vw-codex-vault-tv-docs\instructions\summaries\PROJECT_CREATION.md`
-  - `C:\Users\Administrator\.config\superpowers\worktrees\vaultwares-docs\vw-codex-vault-tv-docs\instructions\notes\PROJECT_CREATION.md`
-  - `C:\Users\Administrator\.config\superpowers\worktrees\vaultwares-docs\vw-codex-vault-tv-docs\docs-content\software\vault-tv.mdx`
-  - `C:\Users\Administrator\.config\superpowers\worktrees\vaultwares-docs\vw-codex-vault-tv-docs\docs-content\ai-tools\assistant-protocols\project-creation.mdx`
-  - `C:\Users\Administrator\.config\superpowers\worktrees\vaultwares-docs\vw-codex-vault-tv-docs\package.json`
-  - `C:\Users\Administrator\.config\superpowers\worktrees\vaultwares-docs\vw-codex-vault-tv-docs\index.html`
-- Git: repo=vault-explorer, branch=main, head=51c2079
-
-</details>
-
-<details>
-<summary><strong>2026-07-01 03:43 - vault-tv</strong> <code>code-change</code> - Wed, 01 Jul 2026 03:38 - Created the Vault TV thin-client app repo, added vaultwares-themes as a submodule, verified tests/typecheck/build, created GitHub repo p-potvin/vault-tv...</summary>
-
-- Kind: code-change
-- Actor: codex
-- Agent Header:
-  ```text
-  Agent: codex (role: main)
-  Model: gpt-5
-  Thinking: unknown
-  Mode: agent
-  Permissions: danger-full-access (network: online)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): functions.shell_command, functions.apply_patch
-  MCP servers accessed (this reply): none
-  Time: 2026-07-01 03:43 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wed, 01 Jul 2026 03:38 - Created the Vault TV thin-client app repo, added vaultwares-themes as a submodule, verified tests/typecheck/build, created GitHub repo p-potvin/vault-tv, pushed main, and registered the hooks.vaultwares.ca GitHub webhook.
-- Commands:
-  - `pnpm test`
-  - `pnpm typecheck`
-  - `pnpm lint`
-  - `pnpm build`
-  - `git commit`
-  - `gh repo create p-potvin/vault-tv --private --source . --remote origin --push`
-  - `gh api repos/p-potvin/vault-tv/hooks --method POST`
-- Files:
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-tv\README.md`
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-tv\ROADMAP.md`
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-tv\TODO.md`
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-tv\.gitmodules`
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-tv\package.json`
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-tv\index.html`
-- Git: repo=vault-explorer, branch=main, head=51c2079
-
-</details>
-
-<details>
-<summary><strong>2026-07-01 01:50 - General Tasks</strong> <code>fix</code> - Investigated PyLoad crash loop on OVH. Found stale pyload.pid causing startup failure. Deleted stale PID file and restarted pyload-ng docker container on port 8003. Verified ser...</summary>
-
-- Kind: fix
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: unknown
-  Thinking: unknown
-  Mode: agent
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\content-disseminator  Branch: n/a
-  Tools used (this reply): ssh, docker
-  MCP servers accessed (this reply): none
-  Time: 2026-07-01 01:50 (TZ: Eastern Standard Time)
-  ```
-- Summary: Investigated PyLoad crash loop on OVH. Found stale pyload.pid causing startup failure. Deleted stale PID file and restarted pyload-ng docker container on port 8003. Verified service is up.
-
-</details>
-
-<details>
-<summary><strong>2026-07-01 01:29 - tube-sites</strong> <code>plan</code> - Creating implementation plan for Katfile downloader based on the K2S downloader structure.</summary>
-
-- Kind: plan
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-1.5-pro
-  Thinking: medium
-  Mode: plan
-  Permissions: ask (network: Windows Local)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\content-disseminator  Branch: n/a
-  Tools used (this reply): run_command
-  MCP servers accessed (this reply): none
-  Time: 2026-07-01 01:29 (TZ: Eastern Standard Time)
-  ```
-- Summary: Creating implementation plan for Katfile downloader based on the K2S downloader structure.
-- Files:
-  - `C:\Users\Administrator\.gemini\antigravity\brain\97ce2f58-1fcd-4a4c-884d-77259a5b34a9\implementation_plan.md`
-- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\97ce2f58-1fcd-4a4c-884d-77259a5b34a9\implementation_plan.md`
-
-</details>
-
-<details>
-<summary><strong>2026-07-01 00:53 - vw-jira-sync</strong> <code>config,project-onboarding,verification</code> - Wed, 01 Jul 2026 00:53 - Added the staged vault-tv to Jira sync mapping as VTV in an isolated vw-jira-sync worktree. Actual Jira project creation was not performed because this ...</summary>
-
-- Kind: config,project-onboarding,verification
-- Actor: Codex GPT-5
-- Agent Header:
-  ```text
-  Agent: Codex GPT-5 (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-tv  Branch: vw-codex-vault-tv-thin-client
-  Tools used (this reply): shell_command, apply_patch, using-git-worktrees
-  MCP servers accessed (this reply): none
-  Time: 2026-07-01 00:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wed, 01 Jul 2026 00:53 - Added the staged vault-tv to Jira sync mapping as VTV in an isolated vw-jira-sync worktree. Actual Jira project creation was not performed because this session has no Jira connector and no JIRA/ATLASSIAN environment credentials; docs and TODO now record that blocker. Verification: YAML parsed successfully and confirmed repo_project_keys.vault-tv equals VTV and repos includes vault-tv.
-- Commands:
-  - `git worktree add vw-codex-vault-tv-jira-sync origin/main`
-  - `Python YAML validation for config.yaml`
-  - `git add -A`
-- Files:
-  - `vw-jira-sync/config.yaml`
-- Git: repo=vault-tv, branch=vw-codex-vault-tv-thin-client
-
-</details>
-
-<details>
-<summary><strong>2026-07-01 00:53 - vaultwares-docs</strong> <code>docs,project-onboarding,protocol,verification</code> - Wed, 01 Jul 2026 00:53 - Added Vault TV documentation and created the PROJECT_CREATION router protocol in an isolated vaultwares-docs worktree. Added software/vault-tv docs, ass...</summary>
-
-- Kind: docs,project-onboarding,protocol,verification
-- Actor: Codex GPT-5
-- Agent Header:
-  ```text
-  Agent: Codex GPT-5 (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-tv  Branch: vw-codex-vault-tv-thin-client
-  Tools used (this reply): shell_command, apply_patch, Playwright, using-git-worktrees
-  MCP servers accessed (this reply): none
-  Time: 2026-07-01 00:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wed, 01 Jul 2026 00:53 - Added Vault TV documentation and created the PROJECT_CREATION router protocol in an isolated vaultwares-docs worktree. Added software/vault-tv docs, assistant protocol docs, ROUTER category, protocol summary/notes, product catalog entries, and targeted generated page resources. Verification: npm ci, targeted page resource generation, npm run build, and Playwright smoke over assistant protocols/project-creation and software/vault-tv passed with no console/page/request failures.
-- Commands:
-  - `git worktree add vw-codex-vault-tv-docs origin/main`
-  - `npm ci`
-  - `npm run generate:page-resources`
-  - `git submodule update --init --recursive`
-  - `npm run build`
-  - `targeted resource regeneration for changed docs pages`
-  - `Playwright docs smoke on localhost:5180`
-  - `git add -A`
-- Files:
-  - `vaultwares-docs/instructions/ROUTER.md`
-  - `vaultwares-docs/instructions/summaries/PROJECT_CREATION.md`
-  - `vaultwares-docs/instructions/notes/PROJECT_CREATION.md`
-  - `vaultwares-docs/docs-content/ai-tools/assistant-protocols/project-creation.mdx`
-  - `vaultwares-docs/docs-content/ai-tools/assistant-protocols/project-creation-QC.mdx`
-  - `vaultwares-docs/docs-content/software/vault-tv.mdx`
-  - `vaultwares-docs/docs-content/software/vault-tv-QC.mdx`
-  - `vaultwares-docs/docs-content/getting-started/products-and-services.mdx`
-  - `vaultwares-docs/docs-content/getting-started/products-and-services-QC.mdx`
-  - `vaultwares-docs/src/resources/pageResourcesManifest.ts`
-- Git: repo=vault-tv, branch=vw-codex-vault-tv-thin-client
-
-</details>
-
-<details>
-<summary><strong>2026-07-01 00:53 - vault-tv</strong> <code>code-change,docs,project-onboarding,verification</code> - Wed, 01 Jul 2026 00:53 - Added Vault TV onboarding metadata and staged the new app repo. Added vaultwares-themes as a submodule, expanded README with project/Jira/docs records, ...</summary>
-
-- Kind: code-change,docs,project-onboarding,verification
-- Actor: Codex GPT-5
-- Agent Header:
-  ```text
-  Agent: Codex GPT-5 (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-tv  Branch: vw-codex-vault-tv-thin-client
-  Tools used (this reply): shell_command, apply_patch
-  MCP servers accessed (this reply): none
-  Time: 2026-07-01 00:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wed, 01 Jul 2026 00:53 - Added Vault TV onboarding metadata and staged the new app repo. Added vaultwares-themes as a submodule, expanded README with project/Jira/docs records, added ROADMAP.md and TODO.md, and updated AGENTS.md with Jira key VTV and docs location. Verification: pnpm test, pnpm typecheck, pnpm lint, and pnpm build passed.
-- Commands:
-  - `git submodule add https://github.com/p-potvin/vaultwares-themes vaultwares-themes`
-  - `pnpm test`
-  - `pnpm typecheck`
-  - `pnpm build`
-  - `pnpm lint`
-  - `git add -A`
-- Files:
-  - `vault-tv/.gitmodules`
-  - `vault-tv/vaultwares-themes`
-  - `vault-tv/README.md`
-  - `vault-tv/ROADMAP.md`
-  - `vault-tv/TODO.md`
-  - `vault-tv/AGENTS.md`
-- Git: repo=vault-tv, branch=vw-codex-vault-tv-thin-client
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 23:50 - vault-monitor</strong> <code>code-change</code> - Fixed broken commit-related widgets by updating the WorkImpact API adapter to gracefully merge static snapshot fields for commit stats when the API returns a modern payload (day...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-3-opus-20240229
-  Thinking: low
-  Mode: plan
-  Permissions: autopilot (network: local)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): replace_file_content
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 23:50 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed broken commit-related widgets by updating the WorkImpact API adapter to gracefully merge static snapshot fields for commit stats when the API returns a modern payload (daySeries array) that lacks those computationally heavy fields.
-- Commands:
-  - `npm run build`
-- Files:
-  - `vault-monitor\src\api.ts`
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 23:42 - vault-monitor</strong> <code>code-change</code> - Updated Vault-Monitor sidebar layout and styles to match the user&#39;s provided screenshot. Fixed App.tsx HTML structure for locale toggle, rebuilt the grid/flex layouts for the ra...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-3-opus-20240229
-  Thinking: low
-  Mode: plan
-  Permissions: autopilot (network: local)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): replace_file_content
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 23:42 (TZ: Eastern Standard Time)
-  ```
-- Summary: Updated Vault-Monitor sidebar layout and styles to match the user's provided screenshot. Fixed App.tsx HTML structure for locale toggle, rebuilt the grid/flex layouts for the rail header, properly positioned the collapse-toggle, and restyled the active navigation buttons.
-- Commands:
-  - `npm run build`
-- Files:
-  - `vault-monitor\src\App.tsx`
-  - `vault-monitor\src\styles.css`
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 22:01 - vault-tv</strong> <code>code-change,verification</code> - Tue, 30 Jun 2026 22:01 - Implemented first web-first Vault TV thin client milestone in new vault-tv repo. Added React/Vite/TypeScript app, guarded media client, mock media stack...</summary>
-
-- Kind: code-change,verification
-- Actor: Codex GPT-5
-- Agent Header:
-  ```text
-  Agent: Codex GPT-5 (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-tv  Branch: vw-codex-vault-tv-thin-client
-  Tools used (this reply): shell_command, apply_patch, update_plan, Playwright
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 22:01 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue, 30 Jun 2026 22:01 - Implemented first web-first Vault TV thin client milestone in new vault-tv repo. Added React/Vite/TypeScript app, guarded media client, mock media stack data, D-pad media grid, details/player/settings screens, pairing token helpers, tests, docs, and verification. Confirmed browser smoke made no direct provider/debrid requests. Note: during setup an apply_patch root mistake briefly wrote scaffold files into vault-explorer; package.json was restored from captured content and index.html was restored from Git HEAD, so pre-existing uncommitted index.html edits may have been lost.
-- Commands:
-  - `git init -b vw-codex-vault-tv-thin-client`
-  - `pnpm install`
-  - `pnpm approve-builds --all`
-  - `pnpm test red and green`
-  - `pnpm typecheck`
-  - `pnpm lint`
-  - `pnpm build`
-  - `Start-Process pnpm exec vite --host 127.0.0.1 --port 5179`
-  - `Playwright smoke flow`
-- Files:
-  - `vault-tv/.gitignore`
-  - `vault-tv/AGENTS.md`
-  - `vault-tv/README.md`
-  - `vault-tv/index.html`
-  - `vault-tv/package.json`
-  - `vault-tv/pnpm-lock.yaml`
-  - `vault-tv/pnpm-workspace.yaml`
-  - `vault-tv/src/main.tsx`
-  - `vault-tv/src/app/App.tsx`
-  - `vault-tv/src/api/mediaClient.ts`
-  - `vault-tv/src/api/mockMediaClient.ts`
-  - `vault-tv/src/components/MediaGrid.tsx`
-  - `vault-tv/src/features/details/DetailsScreen.tsx`
-  - `vault-tv/src/features/player/PlayerScreen.tsx`
-  - `vault-tv/src/features/search/SearchScreen.tsx`
-  - `vault-tv/src/features/settings/SettingsScreen.tsx`
-  - `vault-tv/src/styles/tokens.css`
-  - `vault-tv/src/styles/tv.css`
-  - `vault-tv/tests/focus-navigation.test.tsx`
-  - `vault-tv/tests/media-client.test.ts`
-  - `vault-tv/tests/player-state.test.tsx`
-- Git: repo=vault-tv, branch=vw-codex-vault-tv-thin-client
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 20:39 - vaultwares-studio</strong> <code>code-change,commands,verification</code> - End-to-end lab run debug session. Fixed 4 cascading issues before Job A ran: (1) Windows cp1252 UnicodeEncodeError on arrow char in queue_lab_recon.py -- reconfigured stdout to ...</summary>
-
-- Kind: code-change,commands,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-7
-  Thinking: medium
-  Mode: code
-  Permissions: ask (network: local-windows+HF-Jobs+HF-Spaces)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: main
-  Tools used (this reply): Bash, PowerShell, Edit, Read, Monitor, TaskStop
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 20:39 (TZ: Eastern Standard Time)
-  ```
-- Summary: End-to-end lab run debug session. Fixed 4 cascading issues before Job A ran: (1) Windows cp1252 UnicodeEncodeError on arrow char in queue_lab_recon.py -- reconfigured stdout to UTF-8, replaced non-ASCII, added --reuse-job flag. (2) HF Jobs 500 on spaceId POST for fresh Lab Space -- misdiagnosed as timeout cap; wrote (later reverted) dockerImage bypass helper _run_job_compat in hf_jobs.py. (3) ErrImagePull NotFound on dockerImage path -- REAL root cause: lab Space was private; HF Jobs cannot pull images from private Spaces. Flipped lab Space to public via api.update_repo_settings; updated push_lab_space.py to create+enforce public visibility (with rationale comment). (4) Reverted the misguided dockerImage bypass -- SDK spaceId path now works, kept _run_job_compat + _SPACE_URL_PREFIXES as documented dead code for future defense. Also lowered lab preset sfm_timeout_seconds from 43200 (12h -- HF cap for account below that) to 21600 (6h). Ran push_lab_space.py, waited for BUILDING -> RUNNING (~6.5min), executed queue_lab_recon.py (fresh + then --reuse-job), verified hello-lab spaceId job COMPLETED, then fired real Job A which is currently RUNNING (id 6a4459407a748a878b5996f0). All 7 tests still pass throughout.
-- Commands:
-  - `./.venv/Scripts/python.exe tools/push_lab_space.py`
-  - `./.venv/Scripts/python.exe tools/queue_lab_recon.py --reuse-job local-run-20260630-193814`
-  - `./.venv/Scripts/python.exe -m pytest tests/test_remote_reconstruction.py`
-- Files:
-  - `tools/queue_lab_recon.py`
-  - `tools/push_lab_space.py`
-  - `vaultwares_studio/presets.py`
-  - `vaultwares_studio/runners/hf_jobs.py`
-- Git: repo=vaultwares-studio, branch=main, head=c406051
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 20:00 - vault-explorer</strong> <code>general,plan</code> - Tue, 30 Jun 2026 19:45 - Added a future-self implementation plan for a separate Vault TV thin client app targeting Fire TV / Android TV. The plan keeps Vault Explorer as the des...</summary>
-
-- Kind: general,plan
-- Actor: Codex GPT-5
-- Agent Header:
-  ```text
-  Agent: Codex GPT-5 (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): shell_command, apply_patch, update_plan
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 20:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue, 30 Jun 2026 19:45 - Added a future-self implementation plan for a separate Vault TV thin client app targeting Fire TV / Android TV. The plan keeps Vault Explorer as the desktop workstation, moves TV playback into a new vault-tv app, requires all torrent/debrid/provider lookup to stay server-side through VaultWares media endpoints/Comet, and defines tasks for API contract, D-pad navigation, playback, pairing auth, packaging, and verification.
-- Commands:
-  - `Get-Content brainstorming and writing-plans skills`
-  - `Get-Content VaultWares protocol summaries`
-  - `New-Item docs/superpowers/plans`
-  - `apply_patch add 2026-06-30-vault-tv-thin-client.md`
-  - `Select-String placeholder self-review`
-  - `git status --short`
-- Files:
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\docs\superpowers\plans\2026-06-30-vault-tv-thin-client.md`
-- Git: repo=vault-explorer, branch=main, head=09d3c62
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 19:38 - vault-explorer</strong> <code>general,verification</code> - Tue, 30 Jun 2026 00:05 - Assessed Vault Explorer portability to Amazon Fire Stick / Android TV class devices. Inspected Electron package target, main/preload IPC surface, filesy...</summary>
-
-- Kind: general,verification
-- Actor: Codex GPT-5
-- Agent Header:
-  ```text
-  Agent: Codex GPT-5 (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): shell_command, rg
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 19:38 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue, 30 Jun 2026 00:05 - Assessed Vault Explorer portability to Amazon Fire Stick / Android TV class devices. Inspected Electron package target, main/preload IPC surface, filesystem/FFmpeg/Python/native-tool dependencies, streaming/Real-Debrid/Usenet paths, and keyboard/hover UI assumptions. No files changed.
-- Commands:
-  - `Get-Content vaultwares-docs instructions summaries`
-  - `rg --files`
-  - `Get-Content package.json README.md main.js preload.js`
-  - `rg Electron/IPC/native/media/debrid patterns`
-  - `Get-Content src IPC/streaming files`
-- Files:
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\package.json`
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\main.js`
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\preload.js`
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\ipc\media.ipc.js`
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\realdebrid\client.js`
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\realdebrid\stream.js`
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\src\usenet\stream.js`
-  - `C:\Users\Administrator\Desktop\Github Repos\vault-explorer\js\navigation\keybindings.js`
-- Git: repo=vault-explorer, branch=main, head=09d3c62
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 19:31 - vaultwares-studio</strong> <code>code-change,verification</code> - Lab-path matcher/extractor tuning. recon_entrypoint.py: added --vocab-tree-num-images (default 50) and --sift-max-image-size (default 1280) CLI args wired into main-path feature...</summary>
-
-- Kind: code-change,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-7
-  Thinking: medium
-  Mode: code
-  Permissions: ask (network: local-windows)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: main
-  Tools used (this reply): Read, Edit, Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 19:31 (TZ: Eastern Standard Time)
-  ```
-- Summary: Lab-path matcher/extractor tuning. recon_entrypoint.py: added --vocab-tree-num-images (default 50) and --sift-max-image-size (default 1280) CLI args wired into main-path feature_extractor + vocab_tree_matcher. presets.py: added QualityPreset.steps_per_save field (default 1000); train_args() now reads it; lab-cpu-3000 preset overrides steps_per_save=1500. queue_lab_recon.py: sfm_command now passes --vocab-tree-num-images 10 + --sift-max-image-size 910 (5x fewer vocab candidates, ~2x smaller SIFT pyramid). Production presets/paths unchanged (defaults preserve historical behaviour; standard still steps_per_save=1000). 7/7 existing tests still pass.
-- Commands:
-  - `./.venv/Scripts/python.exe -m pytest tests/test_remote_reconstruction.py -x -q`
-- Files:
-  - `docker/worker/recon_entrypoint.py`
-  - `vaultwares_studio/presets.py`
-  - `tools/queue_lab_recon.py`
-- Git: repo=vaultwares-studio, branch=main, head=c406051
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 17:49 - vaultwares-studio</strong> <code>code-change,verification</code> - Added experimental cpu-upgrade lab path. New preset &#39;lab-cpu-3000&#39; (split_jobs=True, unrestricted_frames=True, frame_cap=3000, sfm_timeout_seconds=43200, sfm_image_override=&#39;hf....</summary>
-
-- Kind: code-change,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-7
-  Thinking: medium
-  Mode: code
-  Permissions: ask (network: local-windows)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: main
-  Tools used (this reply): Read, Edit, Write, Bash, PowerShell, WebSearch, WebFetch
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 17:49 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added experimental cpu-upgrade lab path. New preset 'lab-cpu-3000' (split_jobs=True, unrestricted_frames=True, frame_cap=3000, sfm_timeout_seconds=43200, sfm_image_override='hf.co/spaces/{owner}/vw-studio-recon-lab'). Added 4 fields to QualityPreset (unrestricted_frames, frame_cap, sfm_timeout_seconds, sfm_image_override). pipeline.py: _run_frame_extraction honours preset flags (skip prune, hard-cap by truncating list_frames slice); _run_split_remote_reconstruction honours sfm_timeout_seconds + sfm_image_override (with {owner} interpolation). New docker/lab/Dockerfile (mirrors worker, adds VW_LAB=1). New tools/push_lab_space.py (uploads lab Dockerfile + shared entrypoints from docker/worker/). New tools/queue_lab_recon.py (self-contained launcher: creates manifest, runs video_intake + frame_extraction locally, zips, fires HF Job A --sfm-only against lab Space; marks reconstruction stage NEEDS_USER_INPUT after so GUI knows GPU leg is pending). GPU 3DGRUT image deferred per user — they want to iterate install in HF console first. All 7 tests in test_remote_reconstruction.py still pass.
-- Commands:
-  - `./.venv/Scripts/python.exe -m pytest tests/test_remote_reconstruction.py -x -q`
-- Files:
-  - `vaultwares_studio/presets.py`
-  - `vaultwares_studio/pipeline.py`
-  - `docker/lab/Dockerfile`
-  - `tools/push_lab_space.py`
-  - `tools/queue_lab_recon.py`
-- Git: repo=vaultwares-studio, branch=main, head=c406051
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 17:27 - python-zipper</strong> <code>commands,verification</code> - Tue, 30 Jun 2026 17:19 - Ran one direct OVH no-VPN Linkvertise browser inspection from Docker bridge egress. Confirmed container public IP 51.79.55.113, initial Linkvertise page...</summary>
-
-- Kind: commands,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access approval-never (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): shell_command, view_image
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 17:27 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue, 30 Jun 2026 17:19 - Ran one direct OVH no-VPN Linkvertise browser inspection from Docker bridge egress. Confirmed container public IP 51.79.55.113, initial Linkvertise page was Cloudflare blocked, and new tab led to Cloudflare 5xx landing; no Linkvertise cooldown or payload page was reached.
-- Commands:
-  - `ssh root@100.67.25.118 docker run -i --rm -v /srv/vw-linkvertise:/srv/vw-linkvertise vw-linkvertise-downloader:latest python - <<PY`
-  - `scp /srv/vw-linkvertise/artifacts/manual-flow-direct-ovh-c33f4a7fa57c3d4e-20260630-212505/report.json and screenshots`
-  - `ssh root@100.67.25.118 docker run -i --rm vw-linkvertise-downloader:latest python api.ipify.org`
-- Files:
-  - `C:\Users\Administrator\Desktop\Github Repos\python-zipper\linkvertise\artifacts\manual-flow-direct-ovh-c33f4a7fa57c3d4e-20260630-212505\report.json`
-  - `C:\Users\Administrator\Desktop\Github Repos\python-zipper\linkvertise\artifacts\manual-flow-direct-ovh-c33f4a7fa57c3d4e-20260630-212505\00-step-0.png`
-  - `C:\Users\Administrator\Desktop\Github Repos\python-zipper\linkvertise\artifacts\manual-flow-direct-ovh-c33f4a7fa57c3d4e-20260630-212505\08-step-8.png`
-- Git: repo=python-zipper, branch=main, head=16d4dd6
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 17:25 - vaultwares-studio</strong> <code>plan</code> - Planning chat: cpu-upgrade flavor timed out for first time. User wants (1) curiosity test sending ~3-4k frames to CPU with no ffmpeg pruning, (2) second HF Space dedicated to ex...</summary>
-
-- Kind: plan
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-4-7
-  Thinking: medium
-  Mode: chat
-  Permissions: ask (network: local-windows)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: main
-  Tools used (this reply): PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 17:25 (TZ: Eastern Standard Time)
-  ```
-- Summary: Planning chat: cpu-upgrade flavor timed out for first time. User wants (1) curiosity test sending ~3-4k frames to CPU with no ffmpeg pruning, (2) second HF Space dedicated to experiments on cpu-upgrade, (3) install an NVIDIA RTX tool (exact name forgotten) - test in HF console first then bake into Dockerfile. No code changes this turn; gathering scope before acting.
-- Git: repo=vaultwares-studio, branch=main, head=c406051
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 16:47 - python-zipper</strong> <code>code-change,commands,verification</code> - Tue, 30 Jun 2026 16:58 - Manually inspected one Linkvertise flow through OVH/Mullvad browser screenshots. Direct Playwright browser lands immediately on Cloudflare blocked page ...</summary>
-
-- Kind: code-change,commands,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): shell_command, apply_patch, view_image, multi_tool_use.parallel
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 16:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue, 30 Jun 2026 16:58 - Manually inspected one Linkvertise flow through OVH/Mullvad browser screenshots. Direct Playwright browser lands immediately on Cloudflare blocked page for linkvertise.com; the first popup is Cloudflare 5xx/error marketing, not Linkvertise flow. Flaresolverr can fetch real Linkvertise HTML without block, but applying Flaresolverr cookies/user agent to the downloader Chromium still lands on Cloudflare blocked page, indicating browser fingerprint/session mismatch. HTML inspection showed repeated imagedelivery.net /hd assets, explaining false successful JPEG downloads. Added imagedelivery.net to ignored resolver candidates, verified 40 passing tests, synced and rebuilt OVH downloader. Artifacts under linkvertise/artifacts/manual-flow-c33f4a7fa57c3d4e-20260630-203922 and manual-flow-fs-browser-c33f4a7fa57c3d4e-20260630-204314.
-- Commands:
-  - `OVH Playwright manual screenshot flow for one Linkvertise URL`
-  - `Flaresolverr request.get for same URL`
-  - `uv run --with pytest --project linkvertise pytest linkvertise\tests`
-  - `ssh ubuntu@100.67.25.118 docker compose build downloader`
-- Files:
-  - `linkvertise/src/linkvertise_downloader/resolver.py`
-  - `linkvertise/tests/test_resolver.py`
-  - `linkvertise/artifacts/manual-flow-c33f4a7fa57c3d4e-20260630-203922`
-  - `linkvertise/artifacts/manual-flow-fs-browser-c33f4a7fa57c3d4e-20260630-204314`
-- Git: repo=python-zipper, branch=main, head=16d4dd6
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 16:13 - vaultwares-dns</strong> <code>code-change</code> - Fixed pyload SSL errors by reverting DNS back to Greencloud and resolving internal Docker port mapping mismatches inside OVH pyload.cfg.</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-3-opus-20240229
-  Thinking: low
-  Mode: plan
-  Permissions: autopilot (network: OVH + Greencloud VPS)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): run_command
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 16:13 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed pyload SSL errors by reverting DNS back to Greencloud and resolving internal Docker port mapping mismatches inside OVH pyload.cfg.
-- Commands:
-  - `sed -i 's/8003/8000/g' pyload.cfg`
-  - `docker restart pyload-ng`
-- Files:
-  - `/srv/vw-media/config/pyload-ng/settings/pyload.cfg`
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 16:08 - python-zipper</strong> <code>code-change,commands,verification</code> - Tue, 30 Jun 2026 16:05 - Ran full 36-link OVH Linkvertise test after adding new-tab handling. First full run exposed bugs: completed records dropped profile metadata and same fi...</summary>
-
-- Kind: code-change,commands,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): shell_command, apply_patch, multi_tool_use.parallel
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 16:08 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue, 30 Jun 2026 16:05 - Ran full 36-link OVH Linkvertise test after adding new-tab handling. First full run exposed bugs: completed records dropped profile metadata and same filename hd overwrote outputs. Added tests and fixes to preserve profile/wave on done, download into per-link directories, and ignore chargebee asset URLs. Verified 40 passing tests, deployed/rebuilt OVH, backed up previous downloads and reran full 36-link test. Final state: 36 records, 23 done, 13 failed blocked/no external URL, 0 wait states. Downloads: 23 files, 1,408,888 bytes total, stored under per-link directories; file command identifies them as JPEG 1080x607. All 23 downloaded files share the same SHA256, so remaining issue is likely resolver selecting a repeated hd preview/asset instead of distinct final payloads. Gateway healthy; env left at MAX_LINKS=36 LINKVERTISE_RATE=36/70m FLARESOLVERR_CAP=36.
-- Commands:
-  - `uv run --with pytest --project linkvertise pytest linkvertise\tests`
-  - `ssh ubuntu@100.67.25.118 /opt/vw-linkvertise/bin/linkvertise-run-once`
-  - `ssh ubuntu@100.67.25.118 state/download summary checks`
-- Files:
-  - `linkvertise/src/linkvertise_downloader/state.py`
-  - `linkvertise/src/linkvertise_downloader/runner.py`
-  - `linkvertise/src/linkvertise_downloader/resolver.py`
-  - `linkvertise/tests/test_state.py`
-  - `linkvertise/tests/test_runner.py`
-  - `linkvertise/tests/test_resolver.py`
-- Git: repo=python-zipper, branch=main, head=16d4dd6
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 15:54 - vaultwares-backups</strong> <code>code-change</code> - Updated rclone backup systemd timers and scripts on greencloud and ovh. Backups now run every 8 hours (00:00, 08:00, 16:00) instead of hourly, and custom logic retains only the ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-3-opus-20240229
-  Thinking: low
-  Mode: plan
-  Permissions: autopilot (network: Greencloud VPS + OVH VPS)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): run_command, write_to_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 15:54 (TZ: Eastern Standard Time)
-  ```
-- Summary: Updated rclone backup systemd timers and scripts on greencloud and ovh. Backups now run every 8 hours (00:00, 08:00, 16:00) instead of hourly, and custom logic retains only the 3 most recent .tgz backups per host on Google Drive.
-- Commands:
-  - `systemctl restart vw-backup.timer`
-- Files:
-  - `/etc/systemd/system/vw-backup.timer`
-  - `/usr/local/bin/vw-backup.sh`
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 15:46 - vaultwares-dns</strong> <code>code-change</code> - Updated dnsmasq config on greencloud to point pyload.vaultwares.ca to the OVH VPS IP (100.67.25.118) instead of greencloud.</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-3-opus-20240229
-  Thinking: low
-  Mode: plan
-  Permissions: autopilot (network: Greencloud VPS)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): run_command
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 15:46 (TZ: Eastern Standard Time)
-  ```
-- Summary: Updated dnsmasq config on greencloud to point pyload.vaultwares.ca to the OVH VPS IP (100.67.25.118) instead of greencloud.
-- Commands:
-  - `sed -i ... /etc/dnsmasq.d/vaultwares-tailnet.conf`
-  - `systemctl restart dnsmasq`
-- Files:
-  - `/etc/dnsmasq.d/vaultwares-tailnet.conf`
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 15:37 - shared-tube</strong> <code>code-change</code> - SFW Toggle visibility fix for SSG, removed pkt_dev cookie, and successfully deployed to production via webhook.</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-3-opus-20240229
-  Thinking: medium
-  Mode: plan
-  Permissions: autopilot (network: local + OVH + Greencloud)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): replace_file_content, run_command, write_to_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 15:37 (TZ: Eastern Standard Time)
-  ```
-- Summary: SFW Toggle visibility fix for SSG, removed pkt_dev cookie, and successfully deployed to production via webhook.
-- Commands:
-  - `git commit`
-  - `git push`
-  - `/var/www/deploy-scripts/deploy-shared-tube.sh`
-- Files:
-  - `shared-tube\shared\src\components\Header.astro`
-  - `shared-tube\shared\src\security\safe-mode.ts`
-  - `shared-tube\apps\sexyprn\src\admin\Affiliates\Settings.tsx`
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 15:32 - python-zipper</strong> <code>code-change,verification</code> - Tue, 30 Jun 2026 15:34 - Updated Linkvertise Playwright resolver to account for Linkvertise opening the useful flow in a new tab while the old tab becomes spam. Added regression...</summary>
-
-- Kind: code-change,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): shell_command, apply_patch, multi_tool_use.parallel
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 15:32 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue, 30 Jun 2026 15:34 - Updated Linkvertise Playwright resolver to account for Linkvertise opening the useful flow in a new tab while the old tab becomes spam. Added regression coverage with fake context/pages proving _click_next switches to the new tab and closes the old page. Resolver now clicks once, waits for context.expect_page, switches to the popup when present, and keeps the current page only when no popup appears. Verified 39 passing tests, synced source to OVH /opt/vw-linkvertise, rebuilt downloader image, confirmed gateway healthy, timer enabled, 26 profiles, and 36 active input links. No additional live Linkvertise request was run.
-- Commands:
-  - `uv run --with pytest --project linkvertise pytest linkvertise\tests\test_resolver.py::test_browser_resolver_switches_to_new_tab_after_click`
-  - `uv run --with pytest --project linkvertise pytest linkvertise\tests`
-  - `ssh ubuntu@100.67.25.118 docker compose build downloader`
-- Files:
-  - `linkvertise/src/linkvertise_downloader/resolver.py`
-  - `linkvertise/tests/test_resolver.py`
-- Git: repo=python-zipper, branch=main, head=16d4dd6
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 15:20 - python-zipper</strong> <code>code-change,commands,verification</code> - Tue, 30 Jun 2026 06:45 - Tested the real Linkvertise input file. Local file linkvertise\input\links.txt had 36 active lines and parsed/scheduled offline into two 18-link waves. ...</summary>
-
-- Kind: code-change,commands,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): shell_command, apply_patch, multi_tool_use.parallel
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 15:20 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue, 30 Jun 2026 06:45 - Tested the real Linkvertise input file. Local file linkvertise\input\links.txt had 36 active lines and parsed/scheduled offline into two 18-link waves. Synced it to OVH /srv/vw-linkvertise/input/links.txt with backup. Ran one authorized live item from the real file, link_id c33f4a7fa57c3d4e, through ca-mtr-wg-004 with Flaresolverr cap 1; gateway stayed healthy, downloads_count stayed 0, and state failed on a bizseasky tracker URL. Added bizseasky.com to the resolver ignored candidate host list, verified 38 passing tests, synced and rebuilt OVH downloader. Did not run an additional live request after the patch.
-- Commands:
-  - `uv run --project linkvertise python -m linkvertise_downloader.cli --input linkvertise\input\links.txt --max-links 36 --dry-run`
-  - `scp linkvertise\input\links.txt ubuntu@100.67.25.118:/tmp/vw-linkvertise-links.txt`
-  - `ssh ubuntu@100.67.25.118 docker compose run --rm downloader python -m linkvertise_downloader.cli --max-links 1 --run-due --yes-live`
-  - `uv run --with pytest --project linkvertise pytest linkvertise\tests`
-- Files:
-  - `linkvertise/input/links.txt`
-  - `linkvertise/src/linkvertise_downloader/resolver.py`
-  - `linkvertise/tests/test_resolver.py`
-- Git: repo=python-zipper, branch=main, head=16d4dd6
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 14:47 - shared-tube</strong> <code>code-change</code> - Vault-Monitor HTML version tag injection, BatchActions Map mapping fix, Affiliate Custom Tags injection in Layout.astro, and 36 Linkvertise rows inserted.</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-3-opus-20240229
-  Thinking: medium
-  Mode: plan
-  Permissions: autopilot (network: local + OVH)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): replace_file_content, run_command
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 14:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Vault-Monitor HTML version tag injection, BatchActions Map mapping fix, Affiliate Custom Tags injection in Layout.astro, and 36 Linkvertise rows inserted.
-- Commands:
-  - `psql -c 'INSERT INTO link_sharing...'`
-- Files:
-  - `vault-monitor\index.html`
-  - `shared-tube\shared\src\admin\Catalog\BatchActions.tsx`
-  - `shared-tube\shared\src\components\Layout.astro`
-  - `shared-tube\apps\*\src\admin\Affiliates\Settings.tsx`
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 10:32 - python-zipper</strong> <code>code-change,commands,verification</code> - Tue, 30 Jun 2026 06:32 - Corrected Linkvertise Mullvad profile source to C:\Users\Administrator\Desktop\Programming\mullvad_wireguard_windows_ca_all and installed the exact alph...</summary>
-
-- Kind: code-change,commands,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): shell_command, apply_patch, multi_tool_use.parallel
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 10:32 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue, 30 Jun 2026 06:32 - Corrected Linkvertise Mullvad profile source to C:\Users\Administrator\Desktop\Programming\mullvad_wireguard_windows_ca_all and installed the exact alphabetic ca-mtr-wg-004.conf through ca-yyc-wg-202.conf slice on OVH. Verified the folder currently yields 26 files, not 29; ca-mtr-wg-001.conf through ca-mtr-wg-003.conf are before the requested lower bound and remain unused. Updated deploy helper and README, ran 38 passing tests, synced source to /opt/vw-linkvertise, verified /opt/vw-linkvertise/mullvad-profiles has 26 configs, first ca-mtr-wg-004.conf, last ca-yyc-wg-202.conf, gateway healthy and timer enabled.
-- Commands:
-  - `uv run --with pytest --project linkvertise pytest linkvertise\tests`
-  - `scp vw-linkvertise-profiles.tar.gz ubuntu@100.67.25.118:/tmp/`
-  - `ssh ubuntu@100.67.25.118 install 26 profile configs into /opt/vw-linkvertise/mullvad-profiles`
-- Files:
-  - `linkvertise/scripts/deploy_to_ovh.ps1`
-  - `linkvertise/README.md`
-  - `linkvertise/tests/test_profile_policy.py`
-- Git: repo=python-zipper, branch=main, head=16d4dd6
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 05:30 - python-zipper</strong> <code>code-change,commands,verification</code> - Tue, 30 Jun 2026 06:20 - Implemented linkvertise pipeline scaffold and installed it on OVH. Added file-driven scheduling, allowed Mullvad CA profile policy, Gluetun-based dedica...</summary>
-
-- Kind: code-change,commands,verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): shell_command, apply_patch, multi_tool_use.parallel
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 05:30 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue, 30 Jun 2026 06:20 - Implemented linkvertise pipeline scaffold and installed it on OVH. Added file-driven scheduling, allowed Mullvad CA profile policy, Gluetun-based dedicated mullvad-rotation container, Flaresolverr-capable resolver path, persisted session state, one-hour wait idle/resume handling, max download byte ceiling, HTML/static/interstitial refusal guards, systemd 50-70 minute timer, and documentation. Diagnosed pytest C: drive usage as a runaway temp .part file from an endless fake response, removed the 26.55 GB temp file, and added regression coverage. Live single-link OVH test used ca-mtr-wg-004 with flaresolverr cap 1; gateway stayed healthy, no payload downloaded, and final state failed on non-payload tracker/interstitial URL with downloads_count=0.
-- Commands:
-  - `uv run --with pytest --project linkvertise pytest linkvertise\tests`
-  - `docker compose -f linkvertise\docker\docker-compose.yml --env-file linkvertise\.env.example --env-file linkvertise\.env.mullvad.example config`
-  - `ssh ubuntu@100.67.25.118 docker compose build/up/run for vw-linkvertise`
-- Files:
-  - `linkvertise/`
-  - `README.md`
-  - `.gitignore`
-- Git: repo=python-zipper, branch=main, head=16d4dd6
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 04:45 - python-zipper</strong> <code>general</code> - Tue, 30 Jun 2026 04:43 - Implemented the remaining live linkvertise pipeline code paths behind explicit gates: Playwright browser resolver, page snapshot classification for one-...</summary>
-
-- Kind: general
-- Actor: Codex
-- Agent Header:
-  ```text
-  Agent: Codex (role: main)
-  Model: GPT-5
-  Thinking: tdd
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): shell_command, apply_patch
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 04:45 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue, 30 Jun 2026 04:43 - Implemented the remaining live linkvertise pipeline code paths behind explicit gates: Playwright browser resolver, page snapshot classification for one-hour waits and external URLs, Flaresolverr fallback wrapper, atomic downloader, PipelineRunner for due scheduled/resume items, idempotent schedule persistence, live due-run CLI switches, and Docker command wiring for bounded live processing. Verified with 29 tests, CLI dry-run, compose config, compileall, diff check, and exact requested link dry-run. No live external request batch, Flaresolverr solve, OVH deployment, or WireGuard config content read was performed.
-- Commands:
-  - `uv run --with pytest pytest linkvertise/tests`
-  - `uv run --project linkvertise python -m linkvertise_downloader.cli --input linkvertise\input\links.example.txt --max-links 2 --dry-run`
-  - `docker compose -f linkvertise\docker\docker-compose.yml config`
-  - `uv run --project linkvertise python -m compileall linkvertise\src`
-  - `git diff --check`
-  - `git ls-files -- linkvertise/*.conf linkvertise/**/*.conf`
-  - `uv run --project linkvertise python -m linkvertise_downloader.cli --input <tempfile> --max-links 1 --dry-run --seed link-target-2526209`
-- Files:
-  - `C:\Users\Administrator\Desktop\Github Repos\python-zipper\linkvertise`
-  - `C:\Users\Administrator\Desktop\Github Repos\python-zipper\.gitignore`
-  - `C:\Users\Administrator\Desktop\Github Repos\python-zipper\README.md`
-- Plan: `C:\Users\Administrator\Desktop\Github Repos\python-zipper\.omx\plans\linkvertise-ovh-mullvad-plan.md`
-- Git: repo=python-zipper, branch=main, head=16d4dd6
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 04:44 - vault-monitor</strong> <code>code-change</code> - Vault Monitor UI Hotfix: Changed .app-shell from grid to flex layout to prevent overlap during zoom 0.8 scaling. Added explicit toggle button for collapsing the sidebar and impl...</summary>
-
-- Kind: code-change
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-2.5-pro
-  Thinking: high
-  Mode: code
-  Permissions: autopilot (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
-  Tools used (this reply): run_command
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 04:44 (TZ: Eastern Standard Time)
-  ```
-- Summary: Vault Monitor UI Hotfix: Changed .app-shell from grid to flex layout to prevent overlap during zoom 0.8 scaling. Added explicit toggle button for collapsing the sidebar and implemented correct hiding logic for text and labels when collapsed.
-- Commands:
-  - `pnpm build`
-- Files:
-  - `src/styles.css`
-  - `src/App.tsx`
-- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\61356df7-5bb1-448d-8185-f3747863bba1\implementation_plan.md`
-- Git: repo=vault-monitor, branch=main, head=732df9d
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 04:31 - vault-monitor</strong> <code>code-change</code> - Vault Monitor UI Polish &amp; PromKing API Hotfix: Added 80% zoom on app-shell, collapsible sidebar toggle in App.tsx, InfoTooltips for widget clarifications, humanized strings for ...</summary>
-
-- Kind: code-change
-- Actor: Antigravity
-- Agent Header:
-  ```text
-  Agent: Antigravity (role: main)
-  Model: gemini-2.5-pro
-  Thinking: high
-  Mode: code
-  Permissions: autopilot (network: local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
-  Tools used (this reply): replace_file_content, view_file, run_command, grep_search, write_to_file
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 04:31 (TZ: Eastern Standard Time)
-  ```
-- Summary: Vault Monitor UI Polish & PromKing API Hotfix: Added 80% zoom on app-shell, collapsible sidebar toggle in App.tsx, InfoTooltips for widget clarifications, humanized strings for MCP tools, and fixed the 503 error on PromKing link-sharing API by altering the production postgres database to add missing columns.
-- Commands:
-  - `pnpm build`
-  - `Invoke-RestMethod API`
-- Files:
-  - `src/styles.css`
-  - `src/App.tsx`
-  - `update-work-impact-state.ps1`
-  - `WorkImpactPage.tsx`
-- Plan: `C:\Users\Administrator\.gemini\antigravity\brain\61356df7-5bb1-448d-8185-f3747863bba1\implementation_plan.md`
-- Git: repo=vault-monitor, branch=main, head=732df9d
-
-</details>
-
-<details>
-<summary><strong>2026-06-30 04:23 - python-zipper</strong> <code>verification</code> - Tue, 30 Jun 2026 04:23 - Tested the requested link-target URL through the implemented linkvertise dry-run pipeline only. Input link https://link-target.net/2526209/geFqSuNUYbhA ...</summary>
-
-- Kind: verification
-- Actor: Codex
-- Agent Header:
-  ```text
-  Agent: Codex (role: main)
-  Model: GPT-5
-  Thinking: verification
-  Mode: Default
-  Permissions: danger-full-access (network: enabled)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): shell_command
-  MCP servers accessed (this reply): none
-  Time: 2026-06-30 04:23 (TZ: Eastern Standard Time)
-  ```
-- Summary: Tue, 30 Jun 2026 04:23 - Tested the requested link-target URL through the implemented linkvertise dry-run pipeline only. Input link https://link-target.net/2526209/geFqSuNUYbhA parsed successfully, produced link_id 6ea6f9c7ca32ab95, scheduled as Wave A on ca-mtr-wg-004, and did not persist schedule or make external HTTP requests. Full live resolver/download was not run because resolver.py is intentionally not implemented yet and live external request batches require explicit approval.
-- Commands:
-  - `uv run --project linkvertise python -m linkvertise_downloader.cli --input <tempfile> --max-links 1 --dry-run --seed link-target-2526209`
-- Files:
-  - `C:\Users\Administrator\Desktop\Github Repos\python-zipper\linkvertise\src\linkvertise_downloader\cli.py`
-  - `C:\Users\Administrator\Desktop\Github Repos\python-zipper\linkvertise\src\linkvertise_downloader\resolver.py`
-- Git: repo=python-zipper, branch=main, head=16d4dd6
-
-</details>
-
-<details>
 <summary><strong>2026-06-02 00:06 - General Tasks</strong> <code>general</code> - Midnight project file sync: processed DAILY_RECAP 2026-05-30/31, updated vault-explorer/TASKS.md (Gemini PR note), agent-ledger/TODO.md (3 dashboard tasks), verified all project...</summary>
 
 - Kind: general
@@ -9779,7 +8186,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-01 07:43 - vaultwares-docs</strong> <code>code-change,commands</code> - Added an explicit renamed-projects table to docs (agent-ledger schema page) so the old→new project name mapping is visible in vaultwares-docs. Regenerated page resources so the ...</summary>
+<summary><strong>2026-06-01 07:43 - vaultwares-docs</strong> <code>code-change,commands</code> - Added an explicit renamed-projects table to docs (agent-ledger schema page) so the old&#226;†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so th...</summary>
 
 - Kind: code-change,commands
 - Actor: AI Agent
@@ -9795,7 +8202,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-06-01 07:43 (TZ: Eastern Standard Time)
   ```
-- Summary: Added an explicit renamed-projects table to docs (agent-ledger schema page) so the old→new project name mapping is visible in vaultwares-docs. Regenerated page resources so the rendered docs include the update.
+- Summary: Added an explicit renamed-projects table to docs (agent-ledger schema page) so the oldâ†’new project name mapping is visible in vaultwares-docs. Regenerated page resources so the rendered docs include the update.
 - Commands:
   - `npm run generate:page-resources`
 - Files:
@@ -10246,7 +8653,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-31 00:56 - agent-ledger</strong> <code>code-change,plan</code> - Created VaultWares Daily Dashboard system: (1) track-input.py — silent Python background tracker using pynput that monitors keystrokes, mouse distance, Ctrl+S/C/V events, chars ...</summary>
+<summary><strong>2026-05-31 00:56 - agent-ledger</strong> <code>code-change,plan</code> - Created VaultWares Daily Dashboard system: (1) track-input.py &#226;€” silent Python background tracker using pynput that monitors keystrokes, mouse distance, Ctrl+S/C/V events, char...</summary>
 
 - Kind: code-change,plan
 - Actor: claude-sonnet-4-6
@@ -10262,7 +8669,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): Windows-MCP
   Time: 2026-05-31 00:56 (TZ: Eastern Standard Time)
   ```
-- Summary: Created VaultWares Daily Dashboard system: (1) track-input.py — silent Python background tracker using pynput that monitors keystrokes, mouse distance, Ctrl+S/C/V events, chars typed/pasted; writes hourly JSON to input-logs/YYYY-MM-DD.json. (2) setup-input-tracker.ps1 — installs deps, registers two Windows scheduled tasks. (3) render-daily-dashboard.ps1 — reads input-logs + ledger, generates DAILY_DASHBOARD.html. Dashboard: LED stat cards, hourly activity bar with range picker, heatmap, deep work score ring, focus blocks, daily trend, rhythm chart, AI model/kinds donuts, project bar, context-switch chart, fun facts. Full VaultWares console theme.
+- Summary: Created VaultWares Daily Dashboard system: (1) track-input.py â€” silent Python background tracker using pynput that monitors keystrokes, mouse distance, Ctrl+S/C/V events, chars typed/pasted; writes hourly JSON to input-logs/YYYY-MM-DD.json. (2) setup-input-tracker.ps1 â€” installs deps, registers two Windows scheduled tasks. (3) render-daily-dashboard.ps1 â€” reads input-logs + ledger, generates DAILY_DASHBOARD.html. Dashboard: LED stat cards, hourly activity bar with range picker, heatmap, deep work score ring, focus blocks, daily trend, rhythm chart, AI model/kinds donuts, project bar, context-switch chart, fun facts. Full VaultWares console theme.
 - Files:
   - `agent-ledger/scripts/track-input.py`
   - `agent-ledger/scripts/setup-input-tracker.ps1`
@@ -10797,7 +9204,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-30 10:48 - vw-jira-sync</strong> <code>commands</code> - Updated all 41 GitHub repo webhooks to subscribe to dependabot_alert (in addition to existing events) using vw-jira-sync/scripts/deploy_webhooks.py in --events-only mode (no sec...</summary>
+<summary><strong>2026-05-30 10:48 - vw-jira-sync (formerly vaultwares-docs / vw-jira-sync, General Tasks / vw-jira-sync)</strong> <code>commands</code> - Updated all 41 GitHub repo webhooks to subscribe to dependabot_alert (in addition to existing events) using vw-jira-sync/scripts/deploy_webhooks.py in --events-only mode (no sec...</summary>
 
 - Kind: commands
 - Actor: AI Agent
@@ -11149,7 +9556,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-28 23:25 (TZ: Eastern Standard Time)
   ```
-- Summary: Added 'Face Filter' preset to vault-flows: an image-domain workflow that uses gemma4 vision via Ollama to detect human faces in uploaded images and return a structured JSON verdict (has_face, face_count, confidence). Also created scripts/face-filter.py — a batch CLI tool that scans a folder of images using OpenCV Haar cascade (falls back to MediaPipe if installed), copies images containing faces to an output folder, and optionally separates no-face images. Installed opencv-python 4.13.0. Registered the new preset in presets/index.ts alongside existing presets.
+- Summary: Added 'Face Filter' preset to vault-flows: an image-domain workflow that uses gemma4 vision via Ollama to detect human faces in uploaded images and return a structured JSON verdict (has_face, face_count, confidence). Also created scripts/face-filter.py â€” a batch CLI tool that scans a folder of images using OpenCV Haar cascade (falls back to MediaPipe if installed), copies images containing faces to an output folder, and optionally separates no-face images. Installed opencv-python 4.13.0. Registered the new preset in presets/index.ts alongside existing presets.
 - Commands:
   - `pip install opencv-python`
   - `npx tsc --noEmit`
@@ -11276,7 +9683,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-28 18:31 (TZ: Eastern Standard Time)
   ```
-- Summary: 2257-page duplicate bug fixed + deploy-runner verified. (1) Pushed commit 8e1a6c2 hardening fxv_create_page_if_missing (cache-bypass get_posts query, once-per-request + once-per-hour throttle on admin_init) and adding admin-post handler fxv_cleanup_legal_dupes that trashes everything but the oldest /2257/, /contact/, /privacy-policy/ page. Button surfaced on FXV settings page. (2) Deploy-runner investigation on greencloud-vps (tailnet 100.73.93.84): vw-webhookd + vaultwares-hooks both active and listening (9033/8787/9444), hooks.vaultwares.ca/health returns 200. Deployed source /var/www/tube-sites-src was stuck at 7bd9c85 (pre-overhaul). GitHub webhook deliveries for Prom-King/tube-sites have been returning HTTP 401 (bad_signature) since at least 2026-05-28 09:08 UTC — every Prom-King repo push gets denied, while p-potvin/agent-ledger pushes succeed normally. Root cause: VW_GITHUB_WEBHOOK_SECRET mismatch between /etc/vw-webhookd/env and the secret configured on Prom-King webhooks at GitHub. Confirmed via gh api repos/Prom-King/tube-sites/hooks: last_response.code=401. Manually ran VW_AFTER=8e1a6c28bf6258c0387fde37f07f2ba790e427c8 /var/www/deploy-scripts/deploy-tube-sites.sh as root — succeeded, /var/www/tube-sites-src HEAD now at 8e1a6c2, WP plugin dirs synced (verified eporner/requireDirectSource/URL_REJECT_PATTERNS/handle_wipe_and_backfill/cleanup handler all present in deployed copies). Action required from user: rotate or sync the webhook secret per vaultwares-docs/docs-content/operations/webhook-secret-rotation.mdx. I did NOT touch the secret myself.
+- Summary: 2257-page duplicate bug fixed + deploy-runner verified. (1) Pushed commit 8e1a6c2 hardening fxv_create_page_if_missing (cache-bypass get_posts query, once-per-request + once-per-hour throttle on admin_init) and adding admin-post handler fxv_cleanup_legal_dupes that trashes everything but the oldest /2257/, /contact/, /privacy-policy/ page. Button surfaced on FXV settings page. (2) Deploy-runner investigation on greencloud-vps (tailnet 100.73.93.84): vw-webhookd + vaultwares-hooks both active and listening (9033/8787/9444), hooks.vaultwares.ca/health returns 200. Deployed source /var/www/tube-sites-src was stuck at 7bd9c85 (pre-overhaul). GitHub webhook deliveries for Prom-King/tube-sites have been returning HTTP 401 (bad_signature) since at least 2026-05-28 09:08 UTC â€” every Prom-King repo push gets denied, while p-potvin/agent-ledger pushes succeed normally. Root cause: VW_GITHUB_WEBHOOK_SECRET mismatch between /etc/vw-webhookd/env and the secret configured on Prom-King webhooks at GitHub. Confirmed via gh api repos/Prom-King/tube-sites/hooks: last_response.code=401. Manually ran VW_AFTER=8e1a6c28bf6258c0387fde37f07f2ba790e427c8 /var/www/deploy-scripts/deploy-tube-sites.sh as root â€” succeeded, /var/www/tube-sites-src HEAD now at 8e1a6c2, WP plugin dirs synced (verified eporner/requireDirectSource/URL_REJECT_PATTERNS/handle_wipe_and_backfill/cleanup handler all present in deployed copies). Action required from user: rotate or sync the webhook secret per vaultwares-docs/docs-content/operations/webhook-secret-rotation.mdx. I did NOT touch the secret myself.
 - Commands:
   - `git push origin main (8e1a6c2)`
   - `ssh root@100.73.93.84 'VW_AFTER=8e1a6c28b... bash /var/www/deploy-scripts/deploy-tube-sites.sh'`
@@ -11916,7 +10323,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-27 15:58 - vault-flows</strong> <code>code-change</code> - Round 3 feedback fixes — eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. Ad...</summary>
+<summary><strong>2026-05-27 15:58 - vault-flows</strong> <code>code-change</code> - Round 3 feedback fixes &#226;€” eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. ...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -11932,7 +10339,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-27 15:58 (TZ: Eastern Standard Time)
   ```
-- Summary: Round 3 feedback fixes — eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. Added a useEffect in FlowCanvas that propagates store data changes (params, label) to rfNodes while leaving position/measured state untouched (preserves the visibility:hidden fix from earlier sessions). Identity-checks on params and label avoid spurious re-renders. (2) Toast system: new src/ui/components/Toast.tsx with module-level event hub (pushToast/dismissToast from anywhere) and ToastHost mounted at App root; renders top-right stack with auto-dismiss (6s default, 4s for success); three tones (error/success/info) with matching tokens. App.tsx now pushes 'success' on clean run, 'error' on per-node or top-level failure + auto-opens the inspector. (3) Execution errors moved to TOP of NodeParamPanel — banner with the failure detail + a Reset button; the old bottom error block was removed. Per-node text/json outputs still render below (image results render inline ON the comfyui_workflow node). (4) Removed the auto-created Display node from loadFromComfyWorkflow; the master flow is now just the single comfyui_workflow node, with results rendering inline (gallery + thumbnails). Eliminates the disconnected 'Result' node that felt orphaned. (5) Inline image result on ComfyUIWorkflowNode: when the workflow succeeds and the result has imageUrl/imageUrls, the gallery renders inside the node card itself; click any thumb opens full-size in a new tab. (6) New InlineSeedInput in canvas/nodes/inline.tsx — number input with a dice button (Lucide Dice5) that fills a 31-bit random int. ComfyUIWorkflowNode routes any input key named 'seed' through this control. (7) Size presets dropdown — when a workflow exposes both 'width' and 'height' in input_paths, a single 'size' InlineSelect drives both (512², 768², 1024², portrait/landscape variants, Custom reveals manual w/h number inputs). Exported SIZE_PRESETS array from inline.tsx. (8) NodeId pill — small mono badge at the bottom of every node card showing 'node#<short-id>'; tooltip on hover reveals the full id. shortenNodeId helper formats numeric/short/UUID ids consistently. (9) Persisted last-used inputs: ComfyUIWorkflowNode reads localStorage['vw:lastInputs:<workflow_id>'] on mount if all inputs are empty, prefills non-image fields (upload tokens excluded — they expire); debounced 400ms save on every input change. Each user gets their own browser-local memory of last prompt/seed/size per workflow. Deployed dist (assets/index-BxACQy3N.js).
+- Summary: Round 3 feedback fixes â€” eight items. (1) CRITICAL bug fix: prompts/textareas were uneditable because FlowCanvas initialized rfNodes from storeNodes once and never re-synced. Added a useEffect in FlowCanvas that propagates store data changes (params, label) to rfNodes while leaving position/measured state untouched (preserves the visibility:hidden fix from earlier sessions). Identity-checks on params and label avoid spurious re-renders. (2) Toast system: new src/ui/components/Toast.tsx with module-level event hub (pushToast/dismissToast from anywhere) and ToastHost mounted at App root; renders top-right stack with auto-dismiss (6s default, 4s for success); three tones (error/success/info) with matching tokens. App.tsx now pushes 'success' on clean run, 'error' on per-node or top-level failure + auto-opens the inspector. (3) Execution errors moved to TOP of NodeParamPanel â€” banner with the failure detail + a Reset button; the old bottom error block was removed. Per-node text/json outputs still render below (image results render inline ON the comfyui_workflow node). (4) Removed the auto-created Display node from loadFromComfyWorkflow; the master flow is now just the single comfyui_workflow node, with results rendering inline (gallery + thumbnails). Eliminates the disconnected 'Result' node that felt orphaned. (5) Inline image result on ComfyUIWorkflowNode: when the workflow succeeds and the result has imageUrl/imageUrls, the gallery renders inside the node card itself; click any thumb opens full-size in a new tab. (6) New InlineSeedInput in canvas/nodes/inline.tsx â€” number input with a dice button (Lucide Dice5) that fills a 31-bit random int. ComfyUIWorkflowNode routes any input key named 'seed' through this control. (7) Size presets dropdown â€” when a workflow exposes both 'width' and 'height' in input_paths, a single 'size' InlineSelect drives both (512Â², 768Â², 1024Â², portrait/landscape variants, Custom reveals manual w/h number inputs). Exported SIZE_PRESETS array from inline.tsx. (8) NodeId pill â€” small mono badge at the bottom of every node card showing 'node#<short-id>'; tooltip on hover reveals the full id. shortenNodeId helper formats numeric/short/UUID ids consistently. (9) Persisted last-used inputs: ComfyUIWorkflowNode reads localStorage['vw:lastInputs:<workflow_id>'] on mount if all inputs are empty, prefills non-image fields (upload tokens excluded â€” they expire); debounced 400ms save on every input change. Each user gets their own browser-local memory of last prompt/seed/size per workflow. Deployed dist (assets/index-BxACQy3N.js).
 - Commands:
   - `npm run build`
   - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
@@ -11995,7 +10402,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-27 15:35 (TZ: Eastern Standard Time)
   ```
-- Summary: Step 2 of the feedback plan: inline editable params + per-instance rename + per-instance color override on every canvas node. (1) BaseNode redesigned with two new header affordances: double-click the label to rename (stored in params._displayName; clearing it resets to default), click the type-color swatch to open a 7-color palette popover (Default/Gold/Violet/Copper/Online/Warning/Alert) that writes to params._color. Both _displayName and _color have underscore prefixes so the runner ignores them. effectiveLabel and effectiveColor fall through to NODE_REGISTRY defaults when the override is empty. The popover closes on outside-click via a window listener. (2) New canvas-specific inline controls in canvas/nodes/inline.tsx — InlineField, InlineTextInput, InlineNumberInput, InlineTextArea, InlineSelect, InlineAdvanced (collapsible 'Advanced' chevron). All inputs add the 'nodrag' className so React Flow doesn't start a drag when typing. (3) Updated 5 node renderers to render editable forms inside the card body: InputNode (textarea for value), LLMNode (model + prompt inline; system/temp/max_tokens behind Advanced), ModelCallNode (provider select + model/url + prompt inline; system/temp behind Advanced when provider==ollama; url replaces prompt when provider==http), TransformNode (template textarea), ComfyUIWorkflowNode (workflow_id chip + per-key input controls partitioned PRIMARY=positive_prompt/negative_prompt/prompt/source_image/target_image/reference_image/seed inline, everything else under Advanced; lazy-loads workflow schema via getPipelinesWorkflow when cache misses; inline image picker with upload+thumbnail+change-button matching the side panel's ComfyUIWorkflowInputsEditor pattern). ImageInputNode polished to match the compact inline style. The side-panel NodeParamPanel now reads params._displayName for its header to stay in sync. Architectural note: comfyui_workflow nodes deliberately render only the input_paths contract — the underlying 30+ node graph stays opaque, which is the structural nudge toward composition over flat 150-node ComfyUI-style flows. Deployed dist (assets/index-d_wRPBW5.js).
+- Summary: Step 2 of the feedback plan: inline editable params + per-instance rename + per-instance color override on every canvas node. (1) BaseNode redesigned with two new header affordances: double-click the label to rename (stored in params._displayName; clearing it resets to default), click the type-color swatch to open a 7-color palette popover (Default/Gold/Violet/Copper/Online/Warning/Alert) that writes to params._color. Both _displayName and _color have underscore prefixes so the runner ignores them. effectiveLabel and effectiveColor fall through to NODE_REGISTRY defaults when the override is empty. The popover closes on outside-click via a window listener. (2) New canvas-specific inline controls in canvas/nodes/inline.tsx â€” InlineField, InlineTextInput, InlineNumberInput, InlineTextArea, InlineSelect, InlineAdvanced (collapsible 'Advanced' chevron). All inputs add the 'nodrag' className so React Flow doesn't start a drag when typing. (3) Updated 5 node renderers to render editable forms inside the card body: InputNode (textarea for value), LLMNode (model + prompt inline; system/temp/max_tokens behind Advanced), ModelCallNode (provider select + model/url + prompt inline; system/temp behind Advanced when provider==ollama; url replaces prompt when provider==http), TransformNode (template textarea), ComfyUIWorkflowNode (workflow_id chip + per-key input controls partitioned PRIMARY=positive_prompt/negative_prompt/prompt/source_image/target_image/reference_image/seed inline, everything else under Advanced; lazy-loads workflow schema via getPipelinesWorkflow when cache misses; inline image picker with upload+thumbnail+change-button matching the side panel's ComfyUIWorkflowInputsEditor pattern). ImageInputNode polished to match the compact inline style. The side-panel NodeParamPanel now reads params._displayName for its header to stay in sync. Architectural note: comfyui_workflow nodes deliberately render only the input_paths contract â€” the underlying 30+ node graph stays opaque, which is the structural nudge toward composition over flat 150-node ComfyUI-style flows. Deployed dist (assets/index-d_wRPBW5.js).
 - Commands:
   - `npm run build`
   - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
@@ -12030,7 +10437,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-27 15:11 (TZ: Eastern Standard Time)
   ```
-- Summary: Quick-win feedback fixes: (1) Added --vault-copper #C77C45 + --vault-copper-muted in src/index.css; remapped --vault-signal-relay to copper so all existing 'relay' references (Transform node, validation badges) automatically pick up the new color. New Tailwind utility vw-copper. (2) WorkflowLibrary auto-refresh on login — added key={currentUser ?? 'guest'} so the library remounts and re-fetches the catalog when auth state flips, no page reload needed. (3) Param panel hidden by default — added paramPanelOpen state (default false), floating top-right toggle button (PanelRightOpen/Close from Lucide) on the canvas, the right inspector aside only renders when toggled. (4) Per-node execution-state LED in the canvas BaseNode header: muted/grey idle, copper pending, online green succeeded, alert red failed; pulses while in pending state. Derived from the global executionStatus + the per-node executionResults entry. Deployed dist (assets/index-CDo5-Dpt.js) atomically.
+- Summary: Quick-win feedback fixes: (1) Added --vault-copper #C77C45 + --vault-copper-muted in src/index.css; remapped --vault-signal-relay to copper so all existing 'relay' references (Transform node, validation badges) automatically pick up the new color. New Tailwind utility vw-copper. (2) WorkflowLibrary auto-refresh on login â€” added key={currentUser ?? 'guest'} so the library remounts and re-fetches the catalog when auth state flips, no page reload needed. (3) Param panel hidden by default â€” added paramPanelOpen state (default false), floating top-right toggle button (PanelRightOpen/Close from Lucide) on the canvas, the right inspector aside only renders when toggled. (4) Per-node execution-state LED in the canvas BaseNode header: muted/grey idle, copper pending, online green succeeded, alert red failed; pulses while in pending state. Derived from the global executionStatus + the per-node executionResults entry. Deployed dist (assets/index-CDo5-Dpt.js) atomically.
 - Commands:
   - `npm run build`
   - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
@@ -12124,7 +10531,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 23:27 - vault-flows</strong> <code>code-change</code> - Full vaultwares-revisited redesign landed in one pass. Phase 0: Archived old design — moved src/lib/theme.ts, src/ui/ThemePicker.tsx, src/ui/PresetLibrary.tsx, src/ui/PresetCard...</summary>
+<summary><strong>2026-05-26 23:27 - vault-flows</strong> <code>code-change</code> - Full vaultwares-revisited redesign landed in one pass. Phase 0: Archived old design &#226;€” moved src/lib/theme.ts, src/ui/ThemePicker.tsx, src/ui/PresetLibrary.tsx, src/ui/PresetCa...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -12140,7 +10547,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-26 23:27 (TZ: Eastern Standard Time)
   ```
-- Summary: Full vaultwares-revisited redesign landed in one pass. Phase 0: Archived old design — moved src/lib/theme.ts, src/ui/ThemePicker.tsx, src/ui/PresetLibrary.tsx, src/ui/PresetCard.tsx, copy of src/index.css to /vaultwares-old-design/ with README explaining what was retired. Phase 1: Updated vaultwares-themes submodule (4074d54 -> a186b1a), pulled in vaultwares-revisited/ + tokens. New src/index.css imports Inter+JetBrains Mono, vaultwares-themes/assets/tokens/css-variables.css, tailwindcss, @xyflow/react/dist/style.css; @theme block exposes Tailwind colors vw-console-bg/surface/raised/elevated/gold/violet/text/muted/border, vw-warm-bg/raised/muted/ink/text/text-muted/gold/border, vw-signal-online/relay/sync/warning/alert. Shells: .vw-console-shell with violet radial-gradient, .vw-warm-shell with gold radial-gradient. Cards: .vw-card / .vw-card-flat / .vw-warm-card / .vw-warm-card-flat. LEDs with ledPulse keyframes. Terminal-style scrollbars. React Flow overrides: gold edges with drop-shadow, dot background pattern, restyled Controls/MiniMap. main.tsx no longer calls initTheme — Console + Warm coexist statically, no toggle. Phase 2: AppShell (vw-console-shell wrapper), Navbar (sticky glassmorphic with Hexagon brand, Lucide icons, mono labels, primary/secondary Buttons), Footer (status-bar with online LED). Phase 3: 5 primitive components — LED (8 colors, pulsing/static), Card (console/warm + sm/md/lg + interactive), Button (primary/secondary/ghost/danger/icon variants, sm/md/lg sizes, mono uppercase labels), Badge (8 tones, both surfaces, optional icon), Field (mono label + TextInput + TextArea, refs forwarded). Phase 4: Rewired App.tsx (drops 200 LOC of inline styles for AppShell+Navbar+Footer+EmptyState; sidebar is now a vw-warm-shell panel containing the workflow library, right inspector is vw-console-shell), LoginModal+SignupModal (Card+Field+Button, Lucide icons for inputs, AlertCircle for errors), WorkflowLibrary (Warm cards with LED + Badge per workflow + verdict-driven dimming), NodeParamPanel (Console card, LED+mono header, type-routed body, error styling via vw-signal-alert), ComfyUIWorkflowInputsEditor (Field-based structured editor with Upload/ImagePlus icons), ExecutionProgressOverlay (Card with LED + gold progress bar + danger Cancel button), ImageInputNode (Lucide dropzone). Phase 5: NODE_REGISTRY colors remapped to vault tokens (gold for inputs+comfyui, violet for llm/model_call, signal-relay for transform, signal-online for output/display); BaseNode redesigned with color-mix raised background, gold left rail, mono uppercase labels, glowing handle ports; per-node renderers (Input/LLM/ModelCall/ComfyUIWorkflow/Transform/Output/Display) all use new tokens + Lucide accents. FlowCanvas: dropped var(--background)/var(--surface)/var(--border), Controls/MiniMap auto-style via CSS, nodeColor map uses vault tokens. Added lucide-react dependency. Final sweep confirms 0 leftover var(--accent|--surface|--text|--background|--border|--error|--warning|--success|--info|--radius-md|--text-secondary|--text-inverse|--text-muted|--surface-elevated) references in src/. Build clean, dist/index-C-oTzBAp.js (539KB / 168KB gz) + index-DPJL241W.css (80KB / 13KB gz). Deployed atomically to greencloud-vps; live on flows.vaultwares.ca + noddit.org. Net file changes: 4 archived, 8 new (AppShell, Navbar, Footer, Card, Button, Badge, LED, Field, vaultwares-old-design/README.md), 12 rewritten (index.css, main.tsx, App.tsx, LoginModal, SignupModal, WorkflowLibrary, NodeParamPanel, ComfyUIWorkflowInputsEditor, ExecutionProgressOverlay, ImageInputNode, registry.ts, FlowCanvas + all 7 canvas node renderers).
+- Summary: Full vaultwares-revisited redesign landed in one pass. Phase 0: Archived old design â€” moved src/lib/theme.ts, src/ui/ThemePicker.tsx, src/ui/PresetLibrary.tsx, src/ui/PresetCard.tsx, copy of src/index.css to /vaultwares-old-design/ with README explaining what was retired. Phase 1: Updated vaultwares-themes submodule (4074d54 -> a186b1a), pulled in vaultwares-revisited/ + tokens. New src/index.css imports Inter+JetBrains Mono, vaultwares-themes/assets/tokens/css-variables.css, tailwindcss, @xyflow/react/dist/style.css; @theme block exposes Tailwind colors vw-console-bg/surface/raised/elevated/gold/violet/text/muted/border, vw-warm-bg/raised/muted/ink/text/text-muted/gold/border, vw-signal-online/relay/sync/warning/alert. Shells: .vw-console-shell with violet radial-gradient, .vw-warm-shell with gold radial-gradient. Cards: .vw-card / .vw-card-flat / .vw-warm-card / .vw-warm-card-flat. LEDs with ledPulse keyframes. Terminal-style scrollbars. React Flow overrides: gold edges with drop-shadow, dot background pattern, restyled Controls/MiniMap. main.tsx no longer calls initTheme â€” Console + Warm coexist statically, no toggle. Phase 2: AppShell (vw-console-shell wrapper), Navbar (sticky glassmorphic with Hexagon brand, Lucide icons, mono labels, primary/secondary Buttons), Footer (status-bar with online LED). Phase 3: 5 primitive components â€” LED (8 colors, pulsing/static), Card (console/warm + sm/md/lg + interactive), Button (primary/secondary/ghost/danger/icon variants, sm/md/lg sizes, mono uppercase labels), Badge (8 tones, both surfaces, optional icon), Field (mono label + TextInput + TextArea, refs forwarded). Phase 4: Rewired App.tsx (drops 200 LOC of inline styles for AppShell+Navbar+Footer+EmptyState; sidebar is now a vw-warm-shell panel containing the workflow library, right inspector is vw-console-shell), LoginModal+SignupModal (Card+Field+Button, Lucide icons for inputs, AlertCircle for errors), WorkflowLibrary (Warm cards with LED + Badge per workflow + verdict-driven dimming), NodeParamPanel (Console card, LED+mono header, type-routed body, error styling via vw-signal-alert), ComfyUIWorkflowInputsEditor (Field-based structured editor with Upload/ImagePlus icons), ExecutionProgressOverlay (Card with LED + gold progress bar + danger Cancel button), ImageInputNode (Lucide dropzone). Phase 5: NODE_REGISTRY colors remapped to vault tokens (gold for inputs+comfyui, violet for llm/model_call, signal-relay for transform, signal-online for output/display); BaseNode redesigned with color-mix raised background, gold left rail, mono uppercase labels, glowing handle ports; per-node renderers (Input/LLM/ModelCall/ComfyUIWorkflow/Transform/Output/Display) all use new tokens + Lucide accents. FlowCanvas: dropped var(--background)/var(--surface)/var(--border), Controls/MiniMap auto-style via CSS, nodeColor map uses vault tokens. Added lucide-react dependency. Final sweep confirms 0 leftover var(--accent|--surface|--text|--background|--border|--error|--warning|--success|--info|--radius-md|--text-secondary|--text-inverse|--text-muted|--surface-elevated) references in src/. Build clean, dist/index-C-oTzBAp.js (539KB / 168KB gz) + index-DPJL241W.css (80KB / 13KB gz). Deployed atomically to greencloud-vps; live on flows.vaultwares.ca + noddit.org. Net file changes: 4 archived, 8 new (AppShell, Navbar, Footer, Card, Button, Badge, LED, Field, vaultwares-old-design/README.md), 12 rewritten (index.css, main.tsx, App.tsx, LoginModal, SignupModal, WorkflowLibrary, NodeParamPanel, ComfyUIWorkflowInputsEditor, ExecutionProgressOverlay, ImageInputNode, registry.ts, FlowCanvas + all 7 canvas node renderers).
 - Commands:
   - `git submodule update --remote vaultwares-themes`
   - `npm install lucide-react`
@@ -12690,7 +11097,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 14:48 - agent-ledger</strong> <code>code-change,handoff,verification</code> - Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections — tube-sites absorbs fullxxx, vw-jira-sync split out, dropped &#39;form...</summary>
+<summary><strong>2026-05-26 14:48 - agent-ledger</strong> <code>code-change,handoff,verification</code> - Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections &#226;€” tube-sites absorbs fullxxx, vw-jira-sync split out, dropped &#39;fo...</summary>
 
 - Kind: code-change,handoff,verification
 - Actor: AI Agent
@@ -12706,7 +11113,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-26 14:48 (TZ: Eastern Standard Time)
   ```
-- Summary: Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections — tube-sites absorbs fullxxx, vw-jira-sync split out, dropped 'formerly' from UI. B: Dashboard layout — log-scale heatmap, 4 new chart widgets (ActivityPulse, TopProjectsVelocity, CommitChurnSparkline, Activity24) in 12-col grid. C: Animated LEDs — pulse keyframes, Led component in Nav and section headers. D: Categorized TSX icon library (7 categories, barrel export) in vaultwares-themes + copied into site. E: New V+coil logo (gold #D6A441 + ink #241e36), archived 7 old minimal-V PNGs. F: Multi-kind ledger entries — kind-utils.ps1 shared library, lenient comma-separated validation, split-on-read in PS + TS consumers, parseKinds/isKnownKind in types.ts, multi-kind badge rendering in ChangesPage, agent-ledger-schema.mdx doc, CLAUDE.md kind enum references, memory file. Updated README.md, branding-QC.mdx, GLYPHS_ICONS.md, assets/README.md. Added IconClock/IconFolder to ChangesPage event rows. Build passes clean (63 modules, 267kB). Pushed agent-ledger to main (webhook deploy confirmed 200). PRs created for vaultwares-themes (#17) and vaultwares-docs (#20).
+- Summary: Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections â€” tube-sites absorbs fullxxx, vw-jira-sync split out, dropped 'formerly' from UI. B: Dashboard layout â€” log-scale heatmap, 4 new chart widgets (ActivityPulse, TopProjectsVelocity, CommitChurnSparkline, Activity24) in 12-col grid. C: Animated LEDs â€” pulse keyframes, Led component in Nav and section headers. D: Categorized TSX icon library (7 categories, barrel export) in vaultwares-themes + copied into site. E: New V+coil logo (gold #D6A441 + ink #241e36), archived 7 old minimal-V PNGs. F: Multi-kind ledger entries â€” kind-utils.ps1 shared library, lenient comma-separated validation, split-on-read in PS + TS consumers, parseKinds/isKnownKind in types.ts, multi-kind badge rendering in ChangesPage, agent-ledger-schema.mdx doc, CLAUDE.md kind enum references, memory file. Updated README.md, branding-QC.mdx, GLYPHS_ICONS.md, assets/README.md. Added IconClock/IconFolder to ChangesPage event rows. Build passes clean (63 modules, 267kB). Pushed agent-ledger to main (webhook deploy confirmed 200). PRs created for vaultwares-themes (#17) and vaultwares-docs (#20).
 - Commands:
   - `npx tsc --noEmit`
   - `npm run build`
@@ -12889,7 +11296,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 10:07 - vaultwares-api</strong> <code>commands,verification</code> - Rotation compl&#232;te de VW_GITHUB_WEBHOOK_SECRET (sans GitHub Actions): nouveau secret install&#233; dans /etc/vw-webhookd/env (sans espace), webhooks GitHub mis &#224; jour pour les repos c...</summary>
+<summary><strong>2026-05-26 10:07 - vaultwares-api</strong> <code>commands,verification</code> - Rotation compl&#195;&#168;te de VW_GITHUB_WEBHOOK_SECRET (sans GitHub Actions): nouveau secret install&#195;&#169; dans /etc/vw-webhookd/env (sans espace), webhooks GitHub mis &#195;&#160; jour pour les repo...</summary>
 
 - Kind: commands,verification
 - Actor: AI Agent
@@ -12905,7 +11312,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-26 10:07 (TZ: Eastern Standard Time)
   ```
-- Summary: Rotation complète de VW_GITHUB_WEBHOOK_SECRET (sans GitHub Actions): nouveau secret installé dans /etc/vw-webhookd/env (sans espace), webhooks GitHub mis à jour pour les repos cibles (vaultwares-docs, vaultwares-website, Prom-King/link-sharing, agent-ledger), service vw-webhookd redémarré. Vérifié par pings + push réel sur agent-ledger: vw-webhookd a reçu l’événement, a exécuté /opt/sites/agent-ledger/deploy/deploy.sh, et le déploiement a terminé avec exit=0. Correctifs ops appliqués pour que le runner vwdeploy puisse déployer: git safe.directory + ownership /opt/sites/agent-ledger et /var/www/ledger.vaultwares.ca.
+- Summary: Rotation complÃ¨te de VW_GITHUB_WEBHOOK_SECRET (sans GitHub Actions): nouveau secret installÃ© dans /etc/vw-webhookd/env (sans espace), webhooks GitHub mis Ã  jour pour les repos cibles (vaultwares-docs, vaultwares-website, Prom-King/link-sharing, agent-ledger), service vw-webhookd redÃ©marrÃ©. VÃ©rifiÃ© par pings + push rÃ©el sur agent-ledger: vw-webhookd a reÃ§u lâ€™Ã©vÃ©nement, a exÃ©cutÃ© /opt/sites/agent-ledger/deploy/deploy.sh, et le dÃ©ploiement a terminÃ© avec exit=0. Correctifs ops appliquÃ©s pour que le runner vwdeploy puisse dÃ©ployer: git safe.directory + ownership /opt/sites/agent-ledger et /var/www/ledger.vaultwares.ca.
 - Commands:
   - `ssh root@100.73.93.84: update /etc/vw-webhookd/env (rotate secret)`
   - `gh api: PATCH/POST repo webhooks to hooks.vaultwares.ca/github`
@@ -13323,7 +11730,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 08:20 - vaultwares-docs</strong> <code>code-change</code> - Added browser-rendered daily workflow diagrams page to vaultwares-docs main (QC-first). New route /getting-started/daily-flows with QC content and Mermaid diagrams for Days 1–10...</summary>
+<summary><strong>2026-05-26 08:20 - vaultwares-docs</strong> <code>code-change</code> - Added browser-rendered daily workflow diagrams page to vaultwares-docs main (QC-first). New route /getting-started/daily-flows with QC content and Mermaid diagrams for Days 1&#226;€“...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -13339,7 +11746,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-26 08:20 (TZ: Eastern Standard Time)
   ```
-- Summary: Added browser-rendered daily workflow diagrams page to vaultwares-docs main (QC-first). New route /getting-started/daily-flows with QC content and Mermaid diagrams for Days 1–10 from gemini-daily-flow.md. Linked from index-QC and added a pointer in getting-started/overview-QC. Regenerated page resources (97 pages) and pushed commit cedfb68 to main to trigger webhook deployment.
+- Summary: Added browser-rendered daily workflow diagrams page to vaultwares-docs main (QC-first). New route /getting-started/daily-flows with QC content and Mermaid diagrams for Days 1â€“10 from gemini-daily-flow.md. Linked from index-QC and added a pointer in getting-started/overview-QC. Regenerated page resources (97 pages) and pushed commit cedfb68 to main to trigger webhook deployment.
 - Commands:
   - `npm run generate:page-resources`
   - `git commit`
@@ -14356,7 +12763,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-25 18:05 (TZ: Eastern Standard Time)
   ```
-- Summary: Scaffolded ledger.vaultwares.ca React/Vite/Tailwind v4 site with vaultwares-revisited theme. Created site/ directory with full SPA: WorkImpactPage (KPI cards, heatmap, bar charts, project evidence cards) and ChangesPage (collapsible event list). Both pages consume JSON data from PS1 render scripts. Modified render-work-impact.ps1 and render-agent-ledger.ps1 to output JSON alongside existing standalone HTML (hybrid output). Added .github/workflows/build.yml (PR-only build check, no deploy — matching vaultwares-website pattern). Created deploy/ directory with nginx-ledger.conf (tailnet-only ACL: allow 100.64.0.0/10, deny all) and deploy.sh for webhook-driven deployment on greencloud-vps. Created DEPLOY.md with full VPS setup instructions. Build verified: tsc + vite build succeeds, site renders correctly with all data populated.
+- Summary: Scaffolded ledger.vaultwares.ca React/Vite/Tailwind v4 site with vaultwares-revisited theme. Created site/ directory with full SPA: WorkImpactPage (KPI cards, heatmap, bar charts, project evidence cards) and ChangesPage (collapsible event list). Both pages consume JSON data from PS1 render scripts. Modified render-work-impact.ps1 and render-agent-ledger.ps1 to output JSON alongside existing standalone HTML (hybrid output). Added .github/workflows/build.yml (PR-only build check, no deploy â€” matching vaultwares-website pattern). Created deploy/ directory with nginx-ledger.conf (tailnet-only ACL: allow 100.64.0.0/10, deny all) and deploy.sh for webhook-driven deployment on greencloud-vps. Created DEPLOY.md with full VPS setup instructions. Build verified: tsc + vite build succeeds, site renders correctly with all data populated.
 - Commands:
   - `npm install (site/)`
   - `npm run build (site/)`
@@ -15061,7 +13468,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-25 10:50 (TZ: Eastern Standard Time)
   ```
-- Summary: Landed A2: full real-time progress + cancel for comfyui_workflow nodes. Backend (vaultwares-pipelines): added websockets dependency (16.0) to .venv + requirements.txt. _execute_comfyui_graph now takes optional progress_cb + cancel_event args. Spawns _comfyui_ws_listener as an asyncio.Task that subscribes to ws://127.0.0.1:8188/ws?clientId=<id>, filters events by prompt_id, calls progress_cb with executing/progress/executed/execution_error/execution_success/execution_cached events. If cancel_event is set during execution, POSTs to ComfyUI's /interrupt and raises RuntimeError('canceled'). _execute_workflow_run plumbs both through. Job worker creates: (a) a progress_cb closure that maintains a progress_state dict and writes it to job.progress with throttling (~5 Hz), (b) a watch_cancel asyncio.Task that polls the job record once per second and sets cancel_event when status==canceled. JobSummary/JobDetail gained a progress field. New GET /jobs/recent endpoint (registered before /jobs/{job_id} to avoid the same path-conflict the validation endpoint hit) returns the caller's most recently-updated job, filterable by kind and CSV status; admins see all jobs, non-admins only their own (matched via requested_by.username or special 'vault-flows' tag). Frontend (vault-flows): listed JobSummary + JobProgress types in client.ts; getRecentJob(opts) handles the 'null' body case; cancelJob(id) calls POST /jobs/{id}/cancel. New ExecutionProgressOverlay.tsx renders a fixed bottom-right card while executionStatus==='running' — polls /jobs/recent at 1 Hz, shows a pulsing accent dot, progress bar (when total>0), current message, node + step counter, elapsed time, and a Cancel button that calls cancelJob. App.tsx mounts the overlay. Verified end-to-end: started a 30-step run, observed live step progress (poll showed step 4/12, then step 2/30 etc, with current node id 3), POST /jobs/{id}/cancel mid-execution → worker tripped /interrupt → /flows/run returned with error='ComfyUI workflow was canceled', final job status=canceled. Deployed dist (assets/index-DCi4ZtfE.js) atomically.
+- Summary: Landed A2: full real-time progress + cancel for comfyui_workflow nodes. Backend (vaultwares-pipelines): added websockets dependency (16.0) to .venv + requirements.txt. _execute_comfyui_graph now takes optional progress_cb + cancel_event args. Spawns _comfyui_ws_listener as an asyncio.Task that subscribes to ws://127.0.0.1:8188/ws?clientId=<id>, filters events by prompt_id, calls progress_cb with executing/progress/executed/execution_error/execution_success/execution_cached events. If cancel_event is set during execution, POSTs to ComfyUI's /interrupt and raises RuntimeError('canceled'). _execute_workflow_run plumbs both through. Job worker creates: (a) a progress_cb closure that maintains a progress_state dict and writes it to job.progress with throttling (~5 Hz), (b) a watch_cancel asyncio.Task that polls the job record once per second and sets cancel_event when status==canceled. JobSummary/JobDetail gained a progress field. New GET /jobs/recent endpoint (registered before /jobs/{job_id} to avoid the same path-conflict the validation endpoint hit) returns the caller's most recently-updated job, filterable by kind and CSV status; admins see all jobs, non-admins only their own (matched via requested_by.username or special 'vault-flows' tag). Frontend (vault-flows): listed JobSummary + JobProgress types in client.ts; getRecentJob(opts) handles the 'null' body case; cancelJob(id) calls POST /jobs/{id}/cancel. New ExecutionProgressOverlay.tsx renders a fixed bottom-right card while executionStatus==='running' â€” polls /jobs/recent at 1 Hz, shows a pulsing accent dot, progress bar (when total>0), current message, node + step counter, elapsed time, and a Cancel button that calls cancelJob. App.tsx mounts the overlay. Verified end-to-end: started a 30-step run, observed live step progress (poll showed step 4/12, then step 2/30 etc, with current node id 3), POST /jobs/{id}/cancel mid-execution â†’ worker tripped /interrupt â†’ /flows/run returned with error='ComfyUI workflow was canceled', final job status=canceled. Deployed dist (assets/index-DCi4ZtfE.js) atomically.
 - Commands:
   - `./.venv/Scripts/python.exe -m pip install websockets`
   - `npm run build`
@@ -15095,7 +13502,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-25 10:47 (TZ: Eastern Standard Time)
   ```
-- Summary: Refreshed docs navigation/settings content to match the current React+Vite generated-manifest system (removed legacy Mintlify docs.json + old favicon.svg), updated development + AI-tool setup pages, and adjusted .prose-vw underline styling so block links (Cards) don’t underline all text.
+- Summary: Refreshed docs navigation/settings content to match the current React+Vite generated-manifest system (removed legacy Mintlify docs.json + old favicon.svg), updated development + AI-tool setup pages, and adjusted .prose-vw underline styling so block links (Cards) donâ€™t underline all text.
 - Commands:
   - `npm run generate:page-resources`
   - `npm run build`
@@ -15154,7 +13561,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-25 10:36 - vault-flows</strong> <code>code-change</code> - Landed C + D from the next-step plan. (C) Workflow validation badges: pipelines now has GET /flows/validation that ports the local validator into the API — caches /object_info f...</summary>
+<summary><strong>2026-05-25 10:36 - vault-flows</strong> <code>code-change</code> - Landed C + D from the next-step plan. (C) Workflow validation badges: pipelines now has GET /flows/validation that ports the local validator into the API &#226;€” caches /object_info...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -15170,7 +13577,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-25 10:36 (TZ: Eastern Standard Time)
   ```
-- Summary: Landed C + D from the next-step plan. (C) Workflow validation badges: pipelines now has GET /flows/validation that ports the local validator into the API — caches /object_info for 5 min (COMFYUI_OBJECT_INFO_CACHE_TTL), runs per-workflow against the cached schema, returns {workflow_id, verdict, summary, node_count, error_count}. Verdicts: pass / broken_wiring / blocked_subgraph / blocked_unknown_pack / blocked_missing_model / empty. SPA: listWorkflowValidations() typed helper; WorkflowLibrary fetches catalog + validations in parallel on mount, renders an 8px colored dot on each card (success=green, info=blue, warning=yellow, error=red), shows the verdict label in the card footer for non-passing entries, dims severity-2 (truly blocked) cards to 55% opacity. Added 'Show N broken workflows' toggle that defaults OFF so the picker only surfaces ready-to-use workflows. Endpoint route was originally /workflows/validation but conflicted with the dynamic /workflows/{id} route; moved to /flows/validation. Verdict classifier was looking for 'value not in list' (space-separated) but my error messages use 'value_not_in_list' (underscored); fixed the substring match. (D) Multi-image output: ExecutionResultOut in pipelines + ExecutionResult in vault-flows both gained an imageUrls: List[str] field alongside the existing imageUrl. _execute_comfyui_graph populates imageUrls when ComfyUI's history returned multiple outputs (previously dropped after the first). _forward_upstream_payload propagates imageUrls through display nodes. DisplayNode in vault-flows now renders a 2-column 80px grid when imageUrls.length > 1 (clickable thumbnails open full size in new tab, +N indicator for more than 6 images), single-image view unchanged. End-to-end verified: validation endpoint returns 14 workflows with correct verdict tally (3 pass / 3 broken_wiring / 4 blocked_subgraph / 3 blocked_unknown_pack / 1 blocked_missing_model); z-image-turbo run returns kind=image with imageUrls.count=1. Deployed dist (assets/index-CkaEeRg_.js) atomically to greencloud-vps; live on flows.vaultwares.ca and noddit.org.
+- Summary: Landed C + D from the next-step plan. (C) Workflow validation badges: pipelines now has GET /flows/validation that ports the local validator into the API â€” caches /object_info for 5 min (COMFYUI_OBJECT_INFO_CACHE_TTL), runs per-workflow against the cached schema, returns {workflow_id, verdict, summary, node_count, error_count}. Verdicts: pass / broken_wiring / blocked_subgraph / blocked_unknown_pack / blocked_missing_model / empty. SPA: listWorkflowValidations() typed helper; WorkflowLibrary fetches catalog + validations in parallel on mount, renders an 8px colored dot on each card (success=green, info=blue, warning=yellow, error=red), shows the verdict label in the card footer for non-passing entries, dims severity-2 (truly blocked) cards to 55% opacity. Added 'Show N broken workflows' toggle that defaults OFF so the picker only surfaces ready-to-use workflows. Endpoint route was originally /workflows/validation but conflicted with the dynamic /workflows/{id} route; moved to /flows/validation. Verdict classifier was looking for 'value not in list' (space-separated) but my error messages use 'value_not_in_list' (underscored); fixed the substring match. (D) Multi-image output: ExecutionResultOut in pipelines + ExecutionResult in vault-flows both gained an imageUrls: List[str] field alongside the existing imageUrl. _execute_comfyui_graph populates imageUrls when ComfyUI's history returned multiple outputs (previously dropped after the first). _forward_upstream_payload propagates imageUrls through display nodes. DisplayNode in vault-flows now renders a 2-column 80px grid when imageUrls.length > 1 (clickable thumbnails open full size in new tab, +N indicator for more than 6 images), single-image view unchanged. End-to-end verified: validation endpoint returns 14 workflows with correct verdict tally (3 pass / 3 broken_wiring / 4 blocked_subgraph / 3 blocked_unknown_pack / 1 blocked_missing_model); z-image-turbo run returns kind=image with imageUrls.count=1. Deployed dist (assets/index-CkaEeRg_.js) atomically to greencloud-vps; live on flows.vaultwares.ca and noddit.org.
 - Commands:
   - `npm run build`
   - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
@@ -15349,7 +13756,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-24 13:05 (TZ: Eastern Standard Time)
   ```
-- Summary: Fixed 'logged in but getting 401' UX by persisting the JWT in sessionStorage instead of in-memory-only, and bumped pipelines JWT_TTL_SECONDS from 900 (15 min) to 3600 (1 hour). Frontend (src/api/client.ts): setToken/getToken now read/write sessionStorage key 'vw_jwt' with try/catch fallback to in-memory. Added clearToken() for use on stale-token detection. In-memory mirror kept for fetch-path perf. getMe() return type corrected from {id,username,role} to MeResponse{username,is_admin} matching pipelines schema. App.tsx: useEffect on mount that, if getToken() is set, calls getMe() and either rehydrates currentUser (success) or calls clearToken()+nulls user (401). This makes page refresh in the same tab keep the user logged in, while tab close still clears the token. Pipelines (.env): JWT_TTL_SECONDS=3600 — verified via login -> JWT payload exp-iat=3600s. NSSM service restarted. Built + deployed dist (assets/index-GzA-V8ki.js) atomically to greencloud-vps; live on flows.vaultwares.ca + noddit.org. Tradeoff acknowledged: sessionStorage tokens are XSS-readable but vault-flows has no untrusted user content injection points; httpOnly cookie auth was considered but requires a bigger pipelines refactor and isn't needed yet.
+- Summary: Fixed 'logged in but getting 401' UX by persisting the JWT in sessionStorage instead of in-memory-only, and bumped pipelines JWT_TTL_SECONDS from 900 (15 min) to 3600 (1 hour). Frontend (src/api/client.ts): setToken/getToken now read/write sessionStorage key 'vw_jwt' with try/catch fallback to in-memory. Added clearToken() for use on stale-token detection. In-memory mirror kept for fetch-path perf. getMe() return type corrected from {id,username,role} to MeResponse{username,is_admin} matching pipelines schema. App.tsx: useEffect on mount that, if getToken() is set, calls getMe() and either rehydrates currentUser (success) or calls clearToken()+nulls user (401). This makes page refresh in the same tab keep the user logged in, while tab close still clears the token. Pipelines (.env): JWT_TTL_SECONDS=3600 â€” verified via login -> JWT payload exp-iat=3600s. NSSM service restarted. Built + deployed dist (assets/index-GzA-V8ki.js) atomically to greencloud-vps; live on flows.vaultwares.ca + noddit.org. Tradeoff acknowledged: sessionStorage tokens are XSS-readable but vault-flows has no untrusted user content injection points; httpOnly cookie auth was considered but requires a bigger pipelines refactor and isn't needed yet.
 - Commands:
   - `npm run build`
   - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
@@ -15677,7 +14084,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-24 09:48 (TZ: Eastern Standard Time)
   ```
-- Summary: Three workflow-toolchain improvements addressing 'workflow runs in ComfyUI but fails validation' false positives. (1) Converter (convert_proven_workflows.py): skips nodes with mode==2 (muted) and mode==4 (bypassed); for bypassed nodes, rewires consumer links from bypassed_node.output[N] to whatever feeds bypassed_node.input[N], following chains of bypasses. This is exactly what ComfyUI's editor's 'Bypass' mode does at runtime. Eliminates dangling links + 'missing model' false positives where the referenced model was in a bypassed node. (2) Fixer (fix_workflows.py): smarter _core_key() that strips quant markers (FP16/FP8/Q2_K/etc), distillation markers (DMD/DMD2/distilled), AIO/base tags, and minor-version suffixes (V1.0/V1.1/v1-1) — so different-quant or patch-version files of the same base model are treated as drop-in substitutes. Closest_match() now uses the core-key tier as high-confidence matching (returns first match, prefers top-level files over nested copies). Also added Pass 3: normalize_load_image_widgets() replaces baked-in LoadImage filenames with a placeholder ('000.jpeg' from D:\\comfyui\\resources\\comfyui\\inputs) so ComfyUI's validator passes; the worker overrides at runtime. (3) Diagnostic (dump_workflows_diagnostic.py): validate_locally() now exempts LoadImage's image input from validation for any node referenced by step.image_inputs[] — runtime-overridden inputs are never structurally broken from the worker's POV. Re-seeded: 13/13 workflows now match the fixed JSONs (muted nodes dropped, bypasses rewired). New verdict tally: PASS=3 (biglove-photo, ipadapter-faceswap, z-image-turbo-text2img), BLOCKED_SUBGRAPH=4 (custom-realistic, flux-conditioner-sampler-upscaler, qwen-image-text2img, gonzalomo-dmd-v30), BLOCKED_UNKNOWN_PACK=3 (copilot/flux2-klein-faceswap/wan22 — AI-invented), BROKEN_WIRING=2 (basic-lora-text2img orphan upscale chain, qwen-edit-multi-angle unwired CLIP), BLOCKED_MISSING_MODEL=1 (openpose-i2i), VALIDATION_OTHER=1 (qwen-image-edit-4step references muted ReferenceLatent). All remaining issues are real workflow content problems requiring editor surgery.
+- Summary: Three workflow-toolchain improvements addressing 'workflow runs in ComfyUI but fails validation' false positives. (1) Converter (convert_proven_workflows.py): skips nodes with mode==2 (muted) and mode==4 (bypassed); for bypassed nodes, rewires consumer links from bypassed_node.output[N] to whatever feeds bypassed_node.input[N], following chains of bypasses. This is exactly what ComfyUI's editor's 'Bypass' mode does at runtime. Eliminates dangling links + 'missing model' false positives where the referenced model was in a bypassed node. (2) Fixer (fix_workflows.py): smarter _core_key() that strips quant markers (FP16/FP8/Q2_K/etc), distillation markers (DMD/DMD2/distilled), AIO/base tags, and minor-version suffixes (V1.0/V1.1/v1-1) â€” so different-quant or patch-version files of the same base model are treated as drop-in substitutes. Closest_match() now uses the core-key tier as high-confidence matching (returns first match, prefers top-level files over nested copies). Also added Pass 3: normalize_load_image_widgets() replaces baked-in LoadImage filenames with a placeholder ('000.jpeg' from D:\\comfyui\\resources\\comfyui\\inputs) so ComfyUI's validator passes; the worker overrides at runtime. (3) Diagnostic (dump_workflows_diagnostic.py): validate_locally() now exempts LoadImage's image input from validation for any node referenced by step.image_inputs[] â€” runtime-overridden inputs are never structurally broken from the worker's POV. Re-seeded: 13/13 workflows now match the fixed JSONs (muted nodes dropped, bypasses rewired). New verdict tally: PASS=3 (biglove-photo, ipadapter-faceswap, z-image-turbo-text2img), BLOCKED_SUBGRAPH=4 (custom-realistic, flux-conditioner-sampler-upscaler, qwen-image-text2img, gonzalomo-dmd-v30), BLOCKED_UNKNOWN_PACK=3 (copilot/flux2-klein-faceswap/wan22 â€” AI-invented), BROKEN_WIRING=2 (basic-lora-text2img orphan upscale chain, qwen-edit-multi-angle unwired CLIP), BLOCKED_MISSING_MODEL=1 (openpose-i2i), VALIDATION_OTHER=1 (qwen-image-edit-4step references muted ReferenceLatent). All remaining issues are real workflow content problems requiring editor surgery.
 - Commands:
   - `python scripts/fix_workflows.py`
   - `python scripts/convert_proven_workflows.py`
@@ -15913,7 +14320,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-24 06:37 (TZ: Eastern Standard Time)
   ```
-- Summary: Built the Workflow Picker UI (#1) + structured comfyui_workflow inputs editor (#2). Frontend: (1) src/api/client.ts now exposes listPipelinesWorkflows() and getPipelinesWorkflow(id) with typed PipelinesWorkflow{steps[0].input_paths, image_inputs}. (2) src/store/flowStore.ts gained a workflowsById cache + two new actions: setPipelinesWorkflows (called by WorkflowLibrary on mount) and loadFromComfyWorkflow(workflow) which builds a synthetic 2-node Flow ([comfyui_workflow with workflow_id+empty inputs] -> [display]), wires the edge, embeds _input_paths/_image_inputs hints on the node for the editor, and auto-selects the workflow node so the inputs panel opens immediately. (3) src/ui/WorkflowLibrary.tsx: new sidebar component, fetches /api/workflows once on mount, renders category-tab filter + clickable cards per workflow showing name/description/input-count. Click -> loadFromComfyWorkflow + closes sidebar. (4) src/ui/ComfyUIWorkflowInputsEditor.tsx: structured editor that pulls input_paths/image_inputs (cache-first, falls back to per-node hint fields, falls back to GET /workflows/{id}) and renders one labeled field per declared input — file picker w/ upload+preview for image_inputs, number input for seed/steps/width/height/cfg/denoise/strength keys, textarea for positive_prompt/negative_prompt/prompt/system/template, plain text otherwise. Writes back into params.inputs[key]. Also exposes workflow_id (read-only) + mode (local/nim) settings. (5) src/ui/NodeParamPanel.tsx routes node.type=='comfyui_workflow' to the structured editor; filters underscore-prefixed hint keys from the generic param loop. (6) src/App.tsx swaps PresetLibrary for WorkflowLibrary in the sidebar; renames the header toggle and empty-state CTA accordingly. Backend: added GET /workflows/{id} to api_server.py (the SPA editor falls back to this when the workflow isn't in cache). Deployed dist (assets/index-DbffKEaM.js) atomically to /var/www/vault-flows/dist on greencloud-vps; both flows.vaultwares.ca and noddit.org now serve the new bundle. Verified: catalog GET returns 14 workflows with input_paths/image_inputs, singular GET works (200 / 404), bundle hash matches on both hostnames.
+- Summary: Built the Workflow Picker UI (#1) + structured comfyui_workflow inputs editor (#2). Frontend: (1) src/api/client.ts now exposes listPipelinesWorkflows() and getPipelinesWorkflow(id) with typed PipelinesWorkflow{steps[0].input_paths, image_inputs}. (2) src/store/flowStore.ts gained a workflowsById cache + two new actions: setPipelinesWorkflows (called by WorkflowLibrary on mount) and loadFromComfyWorkflow(workflow) which builds a synthetic 2-node Flow ([comfyui_workflow with workflow_id+empty inputs] -> [display]), wires the edge, embeds _input_paths/_image_inputs hints on the node for the editor, and auto-selects the workflow node so the inputs panel opens immediately. (3) src/ui/WorkflowLibrary.tsx: new sidebar component, fetches /api/workflows once on mount, renders category-tab filter + clickable cards per workflow showing name/description/input-count. Click -> loadFromComfyWorkflow + closes sidebar. (4) src/ui/ComfyUIWorkflowInputsEditor.tsx: structured editor that pulls input_paths/image_inputs (cache-first, falls back to per-node hint fields, falls back to GET /workflows/{id}) and renders one labeled field per declared input â€” file picker w/ upload+preview for image_inputs, number input for seed/steps/width/height/cfg/denoise/strength keys, textarea for positive_prompt/negative_prompt/prompt/system/template, plain text otherwise. Writes back into params.inputs[key]. Also exposes workflow_id (read-only) + mode (local/nim) settings. (5) src/ui/NodeParamPanel.tsx routes node.type=='comfyui_workflow' to the structured editor; filters underscore-prefixed hint keys from the generic param loop. (6) src/App.tsx swaps PresetLibrary for WorkflowLibrary in the sidebar; renames the header toggle and empty-state CTA accordingly. Backend: added GET /workflows/{id} to api_server.py (the SPA editor falls back to this when the workflow isn't in cache). Deployed dist (assets/index-DbffKEaM.js) atomically to /var/www/vault-flows/dist on greencloud-vps; both flows.vaultwares.ca and noddit.org now serve the new bundle. Verified: catalog GET returns 14 workflows with input_paths/image_inputs, singular GET works (200 / 404), bundle hash matches on both hostnames.
 - Commands:
   - `npm run build`
   - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
@@ -16530,7 +14937,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-23 17:56 (TZ: Eastern Standard Time)
   ```
-- Summary: Branch cleanup + HITL constraint. vaultwares-adk: switched off feat/columbo-agent to main, force-deleted feat/columbo-agent locally (was at ff19c0c). adk main is 26 commits behind origin — out of scope for now. vaultwares-toolkit: rebased local main onto origin/main cleanly (origin had jira-sync workflow deletion, zero conflict with my move commit). Now ahead 1 commit, needs push. Added explicit human-chat-only operating constraint to columbo.agent.md HITL section and README — extract mode forbidden in scheduled/autonomous/headless-CI runs until interview phase has a non-human implementation. Interview answers must come from operator in live chat. From now on all interview testing happens with user in the loop.
+- Summary: Branch cleanup + HITL constraint. vaultwares-adk: switched off feat/columbo-agent to main, force-deleted feat/columbo-agent locally (was at ff19c0c). adk main is 26 commits behind origin â€” out of scope for now. vaultwares-toolkit: rebased local main onto origin/main cleanly (origin had jira-sync workflow deletion, zero conflict with my move commit). Now ahead 1 commit, needs push. Added explicit human-chat-only operating constraint to columbo.agent.md HITL section and README â€” extract mode forbidden in scheduled/autonomous/headless-CI runs until interview phase has a non-human implementation. Interview answers must come from operator in live chat. From now on all interview testing happens with user in the loop.
 - Commands:
   - `git checkout main`
   - `git branch -D feat/columbo-agent`
@@ -17309,7 +15716,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-22 23:02 (TZ: Eastern Standard Time)
   ```
-- Summary: Big multi-piece update. (1) Signed image URLs: /comfyui-image/{token} + /uploads/image/{token} endpoints in pipelines, both signed with JWT_SECRET, both unauthenticated by design (token IS the credential). _execute_comfyui_graph now mints signed URLs via _sign_comfyui_image_token instead of base64-inflating images as data URIs. New env COMFYUI_URL_TOKEN_TTL_SECONDS=3600. (2) Image upload: POST /uploads/image accepts multipart, writes to UPLOADS_DIR with random name, returns signed upload-token. GET /uploads/image/{token} serves it back. _resolve_image_ref_to_path validates tokens, _upload_to_comfyui pushes local file into ComfyUI input folder. Env: UPLOADS_DIR=./_uploads, UPLOADS_MAX_BYTES=20MB, UPLOADS_TOKEN_TTL_SECONDS=86400. Nginx vhosts (flows.vaultwares.ca + noddit.org) bumped client_max_body_size to 25m. (3) New image_input node type in vault-flows: ImageInputNode.tsx renders file picker + thumbnail, uploads on selection, stores image_ref+preview_url+filename in params. Worker flow runner: image_input nodes emit kind=image with imageUrl=preview_url and output=ref-token so downstream comfyui_workflow nodes can pick it up via {{input}} template. (4) _handle_comfyui_workflow now template-substitutes upstream into string values in params.inputs (so {source_image: '{{input}}'} from an image_input upstream just works). (5) Workflow's comfyui_graph step gets new optional image_inputs: ['key','key',...] list — keys whose values are upload-tokens get resolved by the worker before submitting the graph (_resolve_image_inputs decodes the token, posts to ComfyUI /upload/image, substitutes the resulting ComfyUI filename into the LoadImage node). (6) Bulk converter (scripts/convert_proven_workflows.py): walks 13 ComfyUI editor-format workflows in C:/Users/Administrator/ComfyUI/user/default/workflows/Proven_Workflows. Pulls ComfyUI /object_info to drive widget-vs-link conversion (handles control_after_generate sibling widget for seed inputs). Detects API-format pass-through. For unknown custom-node types (Flux2KleinCheckpointLoader, FaceAlign, FaceDetectorInsightFace, ImagePasteFace, WAN2_2_I2V_*, VideoHelperSuite_ImagesToVideo): preserves the node + its links + widget_values as best-effort with a warning so ComfyUI's error is the source of truth. Heuristics extract primary model (CheckpointLoader/UnetLoader inputs), LoRA names, positive/negative prompts (via KSampler positive/negative links to CLIPTextEncode), seed path, and image input slots (LoadImage nodes → source_image/target_image/reference_image keys). NAME_MAP gives each workflow a clean id+display name (e.g. flux2-klein-faceswap, qwen-image-edit-4step, wan22-img2video). Idempotent via PUT-then-POST. 13/13 seeded successfully. Catalog now has 14 workflows (13 from Proven_Workflows + z-image-turbo-text2img). End-to-end verified through https://flows.vaultwares.ca: upload PNG -> image_input node -> biglove-photo comfyui_workflow node -> ComfyUI received the file via /upload/image and ran VAEEncode against it (failed only because bigLove checkpoint lacks a baked-in VAE; the wiring is correct, that's a workflow-content issue).
+- Summary: Big multi-piece update. (1) Signed image URLs: /comfyui-image/{token} + /uploads/image/{token} endpoints in pipelines, both signed with JWT_SECRET, both unauthenticated by design (token IS the credential). _execute_comfyui_graph now mints signed URLs via _sign_comfyui_image_token instead of base64-inflating images as data URIs. New env COMFYUI_URL_TOKEN_TTL_SECONDS=3600. (2) Image upload: POST /uploads/image accepts multipart, writes to UPLOADS_DIR with random name, returns signed upload-token. GET /uploads/image/{token} serves it back. _resolve_image_ref_to_path validates tokens, _upload_to_comfyui pushes local file into ComfyUI input folder. Env: UPLOADS_DIR=./_uploads, UPLOADS_MAX_BYTES=20MB, UPLOADS_TOKEN_TTL_SECONDS=86400. Nginx vhosts (flows.vaultwares.ca + noddit.org) bumped client_max_body_size to 25m. (3) New image_input node type in vault-flows: ImageInputNode.tsx renders file picker + thumbnail, uploads on selection, stores image_ref+preview_url+filename in params. Worker flow runner: image_input nodes emit kind=image with imageUrl=preview_url and output=ref-token so downstream comfyui_workflow nodes can pick it up via {{input}} template. (4) _handle_comfyui_workflow now template-substitutes upstream into string values in params.inputs (so {source_image: '{{input}}'} from an image_input upstream just works). (5) Workflow's comfyui_graph step gets new optional image_inputs: ['key','key',...] list â€” keys whose values are upload-tokens get resolved by the worker before submitting the graph (_resolve_image_inputs decodes the token, posts to ComfyUI /upload/image, substitutes the resulting ComfyUI filename into the LoadImage node). (6) Bulk converter (scripts/convert_proven_workflows.py): walks 13 ComfyUI editor-format workflows in C:/Users/Administrator/ComfyUI/user/default/workflows/Proven_Workflows. Pulls ComfyUI /object_info to drive widget-vs-link conversion (handles control_after_generate sibling widget for seed inputs). Detects API-format pass-through. For unknown custom-node types (Flux2KleinCheckpointLoader, FaceAlign, FaceDetectorInsightFace, ImagePasteFace, WAN2_2_I2V_*, VideoHelperSuite_ImagesToVideo): preserves the node + its links + widget_values as best-effort with a warning so ComfyUI's error is the source of truth. Heuristics extract primary model (CheckpointLoader/UnetLoader inputs), LoRA names, positive/negative prompts (via KSampler positive/negative links to CLIPTextEncode), seed path, and image input slots (LoadImage nodes â†’ source_image/target_image/reference_image keys). NAME_MAP gives each workflow a clean id+display name (e.g. flux2-klein-faceswap, qwen-image-edit-4step, wan22-img2video). Idempotent via PUT-then-POST. 13/13 seeded successfully. Catalog now has 14 workflows (13 from Proven_Workflows + z-image-turbo-text2img). End-to-end verified through https://flows.vaultwares.ca: upload PNG -> image_input node -> biglove-photo comfyui_workflow node -> ComfyUI received the file via /upload/image and ran VAEEncode against it (failed only because bigLove checkpoint lacks a baked-in VAE; the wiring is correct, that's a workflow-content issue).
 - Commands:
   - `python scripts/convert_proven_workflows.py`
   - `curl -F file=@... https://flows.vaultwares.ca/api/uploads/image`
@@ -17330,7 +15737,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-22 22:42 - vault-flows</strong> <code>code-change</code> - Wired the comfyui_workflow node to actually call ComfyUI end-to-end. (1) Replaced placeholder _job_worker in pipelines api_server.py — kind=workflow_run jobs now call _execute_w...</summary>
+<summary><strong>2026-05-22 22:42 - vault-flows</strong> <code>code-change</code> - Wired the comfyui_workflow node to actually call ComfyUI end-to-end. (1) Replaced placeholder _job_worker in pipelines api_server.py &#226;€” kind=workflow_run jobs now call _execute...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -17346,7 +15753,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-22 22:42 (TZ: Eastern Standard Time)
   ```
-- Summary: Wired the comfyui_workflow node to actually call ComfyUI end-to-end. (1) Replaced placeholder _job_worker in pipelines api_server.py — kind=workflow_run jobs now call _execute_workflow_run, which loads the workflow's first comfyui_graph step, applies input_paths substitutions from job payload inputs, and dispatches to _execute_comfyui_graph. (2) _execute_comfyui_graph posts the API-format graph to ComfyUI /prompt with a random client_id, polls /history/{prompt_id} every 1.5s until status.completed or status_str=='error', extracts image refs from outputs[*].images, fetches the first one via /view, base64-encodes it as a data:image/png URI (so the SPA can render via <img src> without a second authenticated request). (3) Added _apply_input_paths helper that deep-copies the graph and walks dotted paths (e.g. '5.inputs.text') to substitute values from the inputs dict before submission. (4) _handle_comfyui_workflow (flow runner) now passes node.params.inputs through to job payload. (5) New env: COMFYUI_URL=http://127.0.0.1:8188, COMFYUI_PROMPT_TIMEOUT_SECONDS=300. (6) Seeded workflow 'z-image-turbo-text2img' in pipelines DB via POST /workflows — single comfyui_graph step using ckpt z-Image-Turbo-FP8-AIO.safetensors, 6-step KSampler euler/simple CFG 1.0 at 1024x1024, input_paths for prompt/negative_prompt/seed/steps/width/height. (7) End-to-end verified: vault-flows graph with [input -> comfyui_workflow(z-image-turbo-text2img, inputs={prompt,seed}) -> display] returned in 1m 27s (incl. first-call model warmup), produced a real PNG image (2.2 MB data URI, valid PNG signature 89504e470d0a1a0a) of the requested 'glowing crystal cave with bioluminescent mushrooms', saved as vault-flows-zimage_00001_.png in ComfyUI's output dir; display node correctly forwards the upstream image payload (kind='image', imageUrl=data URI). Also restarted Postgres which had stopped between sessions.
+- Summary: Wired the comfyui_workflow node to actually call ComfyUI end-to-end. (1) Replaced placeholder _job_worker in pipelines api_server.py â€” kind=workflow_run jobs now call _execute_workflow_run, which loads the workflow's first comfyui_graph step, applies input_paths substitutions from job payload inputs, and dispatches to _execute_comfyui_graph. (2) _execute_comfyui_graph posts the API-format graph to ComfyUI /prompt with a random client_id, polls /history/{prompt_id} every 1.5s until status.completed or status_str=='error', extracts image refs from outputs[*].images, fetches the first one via /view, base64-encodes it as a data:image/png URI (so the SPA can render via <img src> without a second authenticated request). (3) Added _apply_input_paths helper that deep-copies the graph and walks dotted paths (e.g. '5.inputs.text') to substitute values from the inputs dict before submission. (4) _handle_comfyui_workflow (flow runner) now passes node.params.inputs through to job payload. (5) New env: COMFYUI_URL=http://127.0.0.1:8188, COMFYUI_PROMPT_TIMEOUT_SECONDS=300. (6) Seeded workflow 'z-image-turbo-text2img' in pipelines DB via POST /workflows â€” single comfyui_graph step using ckpt z-Image-Turbo-FP8-AIO.safetensors, 6-step KSampler euler/simple CFG 1.0 at 1024x1024, input_paths for prompt/negative_prompt/seed/steps/width/height. (7) End-to-end verified: vault-flows graph with [input -> comfyui_workflow(z-image-turbo-text2img, inputs={prompt,seed}) -> display] returned in 1m 27s (incl. first-call model warmup), produced a real PNG image (2.2 MB data URI, valid PNG signature 89504e470d0a1a0a) of the requested 'glowing crystal cave with bioluminescent mushrooms', saved as vault-flows-zimage_00001_.png in ComfyUI's output dir; display node correctly forwards the upstream image payload (kind='image', imageUrl=data URI). Also restarted Postgres which had stopped between sessions.
 - Commands:
   - `curl POST /workflows < seed-z-image.json`
   - `curl POST /flows/run with comfyui_workflow node`
@@ -17506,7 +15913,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-22 21:47 (TZ: Eastern Standard Time)
   ```
-- Summary: Moved Columbo from vaultwares-adk into vaultwares-toolkit on main. Refactor: dropped ExtrovertAgent base class + all Redis dependencies (imports, init params, CLI flags). Replaced _publish_result (Redis pub) with _write_checkpoint (writes JSON to <output>/checkpoints/). Pipeline runs end-to-end now; HITL pause-resume is v2 work. New shape: src/vault_port/columbo.py (refactored agent + CLI), agents/columbo.agent.md (verbatim persona), assets/columbo/ (3 identity SVGs), tests/fixtures/recipe-output/vaultwares-themes/ (first reference output), pyproject.toml (pip-installable, columbo entry point), README.md (full positioning + usage + philosophy). Package name: vault-port on PyPI, columbo CLI command. Smoke test passed: ran end-to-end against toolkit itself, 8 phases executed, 4 checkpoints emitted, recipe composed (55% confidence — no test suite yet). Committed on main.
+- Summary: Moved Columbo from vaultwares-adk into vaultwares-toolkit on main. Refactor: dropped ExtrovertAgent base class + all Redis dependencies (imports, init params, CLI flags). Replaced _publish_result (Redis pub) with _write_checkpoint (writes JSON to <output>/checkpoints/). Pipeline runs end-to-end now; HITL pause-resume is v2 work. New shape: src/vault_port/columbo.py (refactored agent + CLI), agents/columbo.agent.md (verbatim persona), assets/columbo/ (3 identity SVGs), tests/fixtures/recipe-output/vaultwares-themes/ (first reference output), pyproject.toml (pip-installable, columbo entry point), README.md (full positioning + usage + philosophy). Package name: vault-port on PyPI, columbo CLI command. Smoke test passed: ran end-to-end against toolkit itself, 8 phases executed, 4 checkpoints emitted, recipe composed (55% confidence â€” no test suite yet). Committed on main.
 - Commands:
   - `python -m vault_port.columbo extract . --output ./tmp-self-recipe`
   - `git commit`
@@ -17592,7 +15999,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-22 19:34 (TZ: Eastern Standard Time)
   ```
-- Summary: Quick-fix refactor: vault-flows is a general node-based workflow builder, not a chat tool. Widened the node taxonomy and runner without breaking existing chat presets. (1) Types (vault-flows/src/nodes/types.ts): NodeType union extended with 'model_call' (provider-discriminated generation) and 'comfyui_workflow' (run a saved ComfyUI workflow as one step). Added ModelCallProvider type ('ollama'|'comfyui'|'http'). ExecutionResult extended with optional kind ('text'|'image'|'json'|'file'|'job_result'), imageUrl, fileRef, data fields so non-text outputs can flow through the graph. (2) Registry (registry.ts): added model_call (defaults provider:ollama, empty model so server picks default) and comfyui_workflow (defaults mode:local). Existing llm/input/output/transform/display entries unchanged. (3) Canvas (canvas/nodes/): created ModelCallNode.tsx (shows provider + model) and ComfyUIWorkflowNode.tsx (shows workflow_id + mode). Registered in nodeTypes.ts. (4) DisplayNode rewrite: branches on result.kind — text shows <p>, image shows <img> (max 220x160), json/job_result shows <pre>, file shows '📄 path'. (5) Backend (vaultwares-pipelines/api_server.py): ExecutionResultOut extended with kind/imageUrl/fileRef/data. /flows/run refactored into dispatcher pattern with handlers: _handle_model_call_ollama (existing logic), _handle_model_call_http (httpx generic call, parses JSON content-type, returns kind=json+data), _handle_comfyui_workflow (validates workflow_id exists in DB, enqueues via _new_job+_queue_job, polls _read_job until succeeded/failed/canceled with COMFYUI_JOB_POLL_INTERVAL_SECONDS=2 and COMFYUI_JOB_MAX_WAIT_SECONDS=600), _handle_model_call dispatching on params.provider. New _forward_upstream_payload helper makes display/output nodes preserve upstream kind/imageUrl/data instead of stringifying. 'llm' type aliased to _handle_model_call_ollama for backward compat. (6) Env: added COMFYUI_JOB_POLL_INTERVAL_SECONDS, COMFYUI_JOB_MAX_WAIT_SECONDS, HTTP_NODE_TIMEOUT_SECONDS. Verified 6 paths through https://flows.vaultwares.ca: legacy llm still works, model_call+ollama equivalent, model_call+http hit httpbin.org/json and got proper kind=json+data payload (forwarded to display correctly), comfyui_workflow missing/nonexistent workflow_id gives clean error, unknown provider gives clean error. All existing chat presets continue to work via the llm path.
+- Summary: Quick-fix refactor: vault-flows is a general node-based workflow builder, not a chat tool. Widened the node taxonomy and runner without breaking existing chat presets. (1) Types (vault-flows/src/nodes/types.ts): NodeType union extended with 'model_call' (provider-discriminated generation) and 'comfyui_workflow' (run a saved ComfyUI workflow as one step). Added ModelCallProvider type ('ollama'|'comfyui'|'http'). ExecutionResult extended with optional kind ('text'|'image'|'json'|'file'|'job_result'), imageUrl, fileRef, data fields so non-text outputs can flow through the graph. (2) Registry (registry.ts): added model_call (defaults provider:ollama, empty model so server picks default) and comfyui_workflow (defaults mode:local). Existing llm/input/output/transform/display entries unchanged. (3) Canvas (canvas/nodes/): created ModelCallNode.tsx (shows provider + model) and ComfyUIWorkflowNode.tsx (shows workflow_id + mode). Registered in nodeTypes.ts. (4) DisplayNode rewrite: branches on result.kind â€” text shows <p>, image shows <img> (max 220x160), json/job_result shows <pre>, file shows 'ðŸ“„ path'. (5) Backend (vaultwares-pipelines/api_server.py): ExecutionResultOut extended with kind/imageUrl/fileRef/data. /flows/run refactored into dispatcher pattern with handlers: _handle_model_call_ollama (existing logic), _handle_model_call_http (httpx generic call, parses JSON content-type, returns kind=json+data), _handle_comfyui_workflow (validates workflow_id exists in DB, enqueues via _new_job+_queue_job, polls _read_job until succeeded/failed/canceled with COMFYUI_JOB_POLL_INTERVAL_SECONDS=2 and COMFYUI_JOB_MAX_WAIT_SECONDS=600), _handle_model_call dispatching on params.provider. New _forward_upstream_payload helper makes display/output nodes preserve upstream kind/imageUrl/data instead of stringifying. 'llm' type aliased to _handle_model_call_ollama for backward compat. (6) Env: added COMFYUI_JOB_POLL_INTERVAL_SECONDS, COMFYUI_JOB_MAX_WAIT_SECONDS, HTTP_NODE_TIMEOUT_SECONDS. Verified 6 paths through https://flows.vaultwares.ca: legacy llm still works, model_call+ollama equivalent, model_call+http hit httpbin.org/json and got proper kind=json+data payload (forwarded to display correctly), comfyui_workflow missing/nonexistent workflow_id gives clean error, unknown provider gives clean error. All existing chat presets continue to work via the llm path.
 - Commands:
   - `npm run build`
   - `scp -rq dist/* root@100.73.93.84:/var/www/vault-flows/dist.new/`
@@ -17848,7 +16255,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-22 15:33 (TZ: Eastern Standard Time)
   ```
-- Summary: Wired placeholder LLM default end-to-end and verified real LLM responses through entire stack. Set OLLAMA_DEFAULT_MODEL=nutboy02/Qwen3.6-35B-A3B-Claude-4.7-Opus-abliterated-uncenfull:Q2_K_MTX in pipelines .env. Updated all 3 LLM-bearing preset JSONs (blog-post-drafter, lesson-plan-builder, meeting-summary) from model='llama3' to the placeholder. Added _strip_reasoning_tokens() to api_server.py to remove <think>...</think> chain-of-thought blocks that reasoning models (Qwen 3, DeepSeek-R1 distillations) emit before their final answer — applied in _ollama_generate before returning. Rebuilt vault-flows and atomically redeployed to /var/www/vault-flows/dist. End-to-end test via https://flows.vaultwares.ca/api/flows/run: real LLM response in 31s for a 3-node graph (input -> llm -> display); <think> blocks correctly stripped from output. Scanned D:\\comfyui\\resources\\comfyui\\models for real-default candidates: most are diffusion-model GGUFs (Flux/Hunyuan/Wan/LTX/SeedVR), not LLMs. The only general-purpose instruction-tuned LLMs on disk in GGUF format are gemma-3-12b-it-qat-Q4_0 (8.2 GB, QAT quant, recommended) and Qwen2.5-VL-7B-Instruct-abliterated.Q4_K_S (4.2 GB, smaller and multimodal but abliterated/uncensored, may affect business/education tone). Recommending gemma-3-12b-it-qat for the real default, importable into Ollama via Modelfile without re-downloading.
+- Summary: Wired placeholder LLM default end-to-end and verified real LLM responses through entire stack. Set OLLAMA_DEFAULT_MODEL=nutboy02/Qwen3.6-35B-A3B-Claude-4.7-Opus-abliterated-uncenfull:Q2_K_MTX in pipelines .env. Updated all 3 LLM-bearing preset JSONs (blog-post-drafter, lesson-plan-builder, meeting-summary) from model='llama3' to the placeholder. Added _strip_reasoning_tokens() to api_server.py to remove <think>...</think> chain-of-thought blocks that reasoning models (Qwen 3, DeepSeek-R1 distillations) emit before their final answer â€” applied in _ollama_generate before returning. Rebuilt vault-flows and atomically redeployed to /var/www/vault-flows/dist. End-to-end test via https://flows.vaultwares.ca/api/flows/run: real LLM response in 31s for a 3-node graph (input -> llm -> display); <think> blocks correctly stripped from output. Scanned D:\\comfyui\\resources\\comfyui\\models for real-default candidates: most are diffusion-model GGUFs (Flux/Hunyuan/Wan/LTX/SeedVR), not LLMs. The only general-purpose instruction-tuned LLMs on disk in GGUF format are gemma-3-12b-it-qat-Q4_0 (8.2 GB, QAT quant, recommended) and Qwen2.5-VL-7B-Instruct-abliterated.Q4_K_S (4.2 GB, smaller and multimodal but abliterated/uncensored, may affect business/education tone). Recommending gemma-3-12b-it-qat for the real default, importable into Ollama via Modelfile without re-downloading.
 - Commands:
   - `sed -i 's|llama3|nutboy02/Qwen3.6-35B...|g' src/presets/data/*.json`
   - `npm run build && scp -rq dist root@100.73.93.84:/var/www/vault-flows/`
@@ -17880,7 +16287,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-22 15:16 (TZ: Eastern Standard Time)
   ```
-- Summary: Built the vault-flows graph execution layer. Backend (vaultwares-pipelines/api_server.py): added POST /flows/run that accepts a vault-flows Flow {nodes, edges} and walks it topologically. Per-node behavior: input emits params.value (or prompt/topic/text fallback); llm calls Ollama /api/generate with model/temperature/system/prompt, substituting {{input}}/{{value}}/{{context}} placeholders from upstream output; transform applies a template; display/output pass upstream through. Returns {results: ExecutionResult[]} in execution order; per-node errors don't abort the run, downstream still receives whatever upstream produced. Added GET /flows/models that proxies Ollama /api/tags so the SPA can discover available models + check reachability. New env vars: OLLAMA_URL (default http://127.0.0.1:11434), OLLAMA_DEFAULT_MODEL (llama3), OLLAMA_CALL_TIMEOUT_SECONDS (120). Used httpx (already in venv) for async Ollama calls. Frontend (vault-flows/src/api/client.ts): switched runFlow from POST /workflows/run {flow} (which was the ComfyUI job-queue endpoint) to POST /flows/run {flow} (the new graph runner). Rebuilt and atomically redeployed to /var/www/vault-flows/dist on greencloud-vps (staged dist.new, mv to dist, chown www-data). Verified end-to-end via https://flows.vaultwares.ca: pass-through graph (input -> display) returns correct topological output; LLM node with bogus model returns clean per-node error 'Model X not available in Ollama. Pull it with: ollama pull X'. Ollama on operator box currently has 0 models — runner will activate the moment a model is pulled; presets default to model='llama3' so they'll need an update once the user finishes pulling gemma.
+- Summary: Built the vault-flows graph execution layer. Backend (vaultwares-pipelines/api_server.py): added POST /flows/run that accepts a vault-flows Flow {nodes, edges} and walks it topologically. Per-node behavior: input emits params.value (or prompt/topic/text fallback); llm calls Ollama /api/generate with model/temperature/system/prompt, substituting {{input}}/{{value}}/{{context}} placeholders from upstream output; transform applies a template; display/output pass upstream through. Returns {results: ExecutionResult[]} in execution order; per-node errors don't abort the run, downstream still receives whatever upstream produced. Added GET /flows/models that proxies Ollama /api/tags so the SPA can discover available models + check reachability. New env vars: OLLAMA_URL (default http://127.0.0.1:11434), OLLAMA_DEFAULT_MODEL (llama3), OLLAMA_CALL_TIMEOUT_SECONDS (120). Used httpx (already in venv) for async Ollama calls. Frontend (vault-flows/src/api/client.ts): switched runFlow from POST /workflows/run {flow} (which was the ComfyUI job-queue endpoint) to POST /flows/run {flow} (the new graph runner). Rebuilt and atomically redeployed to /var/www/vault-flows/dist on greencloud-vps (staged dist.new, mv to dist, chown www-data). Verified end-to-end via https://flows.vaultwares.ca: pass-through graph (input -> display) returns correct topological output; LLM node with bogus model returns clean per-node error 'Model X not available in Ollama. Pull it with: ollama pull X'. Ollama on operator box currently has 0 models â€” runner will activate the moment a model is pulled; presets default to model='llama3' so they'll need an update once the user finishes pulling gemma.
 - Commands:
   - `scp -r dist root@100.73.93.84:/var/www/vault-flows/dist.new`
   - `curl -sk -H 'Authorization: Bearer ...' https://flows.vaultwares.ca/api/flows/models`
@@ -18037,7 +16444,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-22 14:59 - vw-jira-sync</strong> <code>code-change</code> - Removed JIRA token exposure from GitHub infrastructure. (1) Deleted JIRA_BASE_URL, JIRA_EMAIL, JIRA_TOKEN Actions secrets from all 41 repos (123 total) — tokens no longer stored...</summary>
+<summary><strong>2026-05-22 14:59 - vw-jira-sync</strong> <code>code-change</code> - Removed JIRA token exposure from GitHub infrastructure. (1) Deleted JIRA_BASE_URL, JIRA_EMAIL, JIRA_TOKEN Actions secrets from all 41 repos (123 total) &#226;€” tokens no longer stor...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -18053,7 +16460,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-22 14:59 (TZ: Eastern Standard Time)
   ```
-- Summary: Removed JIRA token exposure from GitHub infrastructure. (1) Deleted JIRA_BASE_URL, JIRA_EMAIL, JIRA_TOKEN Actions secrets from all 41 repos (123 total) — tokens no longer stored on GitHub servers. (2) Unregistered Windows scheduled task VaultWares-DistributeJiraSecrets — distribute_secrets.py no longer runs automatically. (3) Added purge_actions_secrets.py for future cleanup runs. Webhook path on VPS is now the sole active mechanism; both tokens are read from vw-secretsd/gh-token on greencloud-vps and never leave to GitHub infrastructure except as auth headers to api.github.com and vaultwares.atlassian.net (unavoidable).
+- Summary: Removed JIRA token exposure from GitHub infrastructure. (1) Deleted JIRA_BASE_URL, JIRA_EMAIL, JIRA_TOKEN Actions secrets from all 41 repos (123 total) â€” tokens no longer stored on GitHub servers. (2) Unregistered Windows scheduled task VaultWares-DistributeJiraSecrets â€” distribute_secrets.py no longer runs automatically. (3) Added purge_actions_secrets.py for future cleanup runs. Webhook path on VPS is now the sole active mechanism; both tokens are read from vw-secretsd/gh-token on greencloud-vps and never leave to GitHub infrastructure except as auth headers to api.github.com and vaultwares.atlassian.net (unavoidable).
 - Commands:
   - `.venv\Scripts\python.exe scripts\purge_actions_secrets.py`
   - `Unregister-ScheduledTask -TaskName VaultWares-DistributeJiraSecrets`
@@ -18414,7 +16821,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-21 15:37 - vw-jira-sync</strong> <code>code-change</code> - Full webhook deployment pass. (1) Created scripts/deploy_webhooks.py — deploys/updates GitHub webhooks on all 41 repos to hooks.vaultwares.ca/github with 5 events (push, pull_re...</summary>
+<summary><strong>2026-05-21 15:37 - vw-jira-sync</strong> <code>code-change</code> - Full webhook deployment pass. (1) Created scripts/deploy_webhooks.py &#226;€” deploys/updates GitHub webhooks on all 41 repos to hooks.vaultwares.ca/github with 5 events (push, pull_...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -18430,7 +16837,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-21 15:37 (TZ: Eastern Standard Time)
   ```
-- Summary: Full webhook deployment pass. (1) Created scripts/deploy_webhooks.py — deploys/updates GitHub webhooks on all 41 repos to hooks.vaultwares.ca/github with 5 events (push, pull_request, pull_request_review, pull_request_review_comment, issue_comment). 41/41 OK — 40 created, vaultwares-docs updated from push-only. (2) Synced config.yaml + jira_sync.py + live_sync.py to VPS /opt/vw-jira-sync/. (3) Updated /usr/local/bin/vw-jira-sync-run.sh on VPS to export GITHUB_TOKEN from /etc/vw-webhookd/gh-token — fixes 404 on private repo commits. (4) Added FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true to sync.yml. (5) Bumped vaultwares-themes submodule in vaultwares-studio, vaultwares-website, wander. Webhook working end-to-end: VSTUD-53, VWEB-45, VDOCS-50/51, WAND-9 created in Jira.
+- Summary: Full webhook deployment pass. (1) Created scripts/deploy_webhooks.py â€” deploys/updates GitHub webhooks on all 41 repos to hooks.vaultwares.ca/github with 5 events (push, pull_request, pull_request_review, pull_request_review_comment, issue_comment). 41/41 OK â€” 40 created, vaultwares-docs updated from push-only. (2) Synced config.yaml + jira_sync.py + live_sync.py to VPS /opt/vw-jira-sync/. (3) Updated /usr/local/bin/vw-jira-sync-run.sh on VPS to export GITHUB_TOKEN from /etc/vw-webhookd/gh-token â€” fixes 404 on private repo commits. (4) Added FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true to sync.yml. (5) Bumped vaultwares-themes submodule in vaultwares-studio, vaultwares-website, wander. Webhook working end-to-end: VSTUD-53, VWEB-45, VDOCS-50/51, WAND-9 created in Jira.
 - Commands:
   - `.venv\Scripts\python.exe scripts\deploy_webhooks.py`
   - `git push origin main`
@@ -18443,7 +16850,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-21 14:58 - vw-jira-sync</strong> <code>verification</code> - Full audit pass. Findings: (1) JIRA_TOKEN expired — jira-token.txt unchanged since 5/20 6:46 AM; (2) greencloud-vps self-hosted runner: 0 registered, all jira-sync.yml calls stu...</summary>
+<summary><strong>2026-05-21 14:58 - vw-jira-sync</strong> <code>verification</code> - Full audit pass. Findings: (1) JIRA_TOKEN expired &#226;€” jira-token.txt unchanged since 5/20 6:46 AM; (2) greencloud-vps self-hosted runner: 0 registered, all jira-sync.yml calls s...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -18459,7 +16866,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-21 14:58 (TZ: Eastern Standard Time)
   ```
-- Summary: Full audit pass. Findings: (1) JIRA_TOKEN expired — jira-token.txt unchanged since 5/20 6:46 AM; (2) greencloud-vps self-hosted runner: 0 registered, all jira-sync.yml calls stuck QUEUED; (3) hooks.vaultwares.ca is live (200 ok at 173.249.194.15) but no GitHub webhooks configured in any of 41 repos; (4) 17 repos dirty with vaultwares-themes submodule bump at 4074d542; (5) vault-central pages build fails (private vaultwares-adk submodule, pre-existing); (6) vault-flows daily-flow-generator npm ci failure (pre-existing); (7) Node.js 20 deprecation June 2 deadline. vw-jira-sync repo itself is clean, scheduled task running, jira-sync.yml deployed, gh_api auth refactor merged (GITHUB_TOKEN first).
+- Summary: Full audit pass. Findings: (1) JIRA_TOKEN expired â€” jira-token.txt unchanged since 5/20 6:46 AM; (2) greencloud-vps self-hosted runner: 0 registered, all jira-sync.yml calls stuck QUEUED; (3) hooks.vaultwares.ca is live (200 ok at 173.249.194.15) but no GitHub webhooks configured in any of 41 repos; (4) 17 repos dirty with vaultwares-themes submodule bump at 4074d542; (5) vault-central pages build fails (private vaultwares-adk submodule, pre-existing); (6) vault-flows daily-flow-generator npm ci failure (pre-existing); (7) Node.js 20 deprecation June 2 deadline. vw-jira-sync repo itself is clean, scheduled task running, jira-sync.yml deployed, gh_api auth refactor merged (GITHUB_TOKEN first).
 - Commands:
   - `Resolve-DnsName hooks.vaultwares.ca`
   - `gh run list --workflow jira-sync.yml`
@@ -18513,7 +16920,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-21 14:30 (TZ: Eastern Standard Time)
   ```
-- Summary: Identified 3 issues from user feedback: (1) AGENTS.md keep for Copilot/Jules compatibility but fix absolute Windows paths to repo-relative. (2) No WORK_TRACKING protocol exists — proposed new router category + summary to enforce Jira/GitHub Issues for all planning work, forbid TODO.md/ROADMAP.md in repos. (3) Notes files are stubs (2-3 lines) not inverted summaries — summaries are correctly formatted, notes need expansion pass. New delete candidates: assets/.notes.md (Jules stale session notes), docs/consumer-update-roadmap.md (planning doc → Jira epic). Keep: docs/submodule-consumer-rules.md. Need reads: assets/README.md, assets/SKILL.md, assets/ui-kit.md, assets/philosophy.md.
+- Summary: Identified 3 issues from user feedback: (1) AGENTS.md keep for Copilot/Jules compatibility but fix absolute Windows paths to repo-relative. (2) No WORK_TRACKING protocol exists â€” proposed new router category + summary to enforce Jira/GitHub Issues for all planning work, forbid TODO.md/ROADMAP.md in repos. (3) Notes files are stubs (2-3 lines) not inverted summaries â€” summaries are correctly formatted, notes need expansion pass. New delete candidates: assets/.notes.md (Jules stale session notes), docs/consumer-update-roadmap.md (planning doc â†’ Jira epic). Keep: docs/submodule-consumer-rules.md. Need reads: assets/README.md, assets/SKILL.md, assets/ui-kit.md, assets/philosophy.md.
 - Files:
   - `vaultwares-docs/instructions/ROUTER.md`
   - `vaultwares-themes/assets/.notes.md`
@@ -18601,7 +17008,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-21 10:14 (TZ: Eastern Standard Time)
   ```
-- Summary: Changed secrets URL to warden.vaultwares.ca. On greencloud-vps: added nginx vhost warden.vaultwares.ca (tailnet-only allowlist), updated secrets.vaultwares.ca to 301 redirect to warden, and expanded the existing Let’s Encrypt cert (docs.vaultwares.ca cert-name) to include warden.vaultwares.ca so TLS is clean. Installed rclone on greencloud-vps and added vw-backup.service + vw-backup.timer (hourly) + /usr/local/bin/vw-backup.sh to back up nginx/systemd/letsencrypt/actions-runner/vw-jira-sync/vault-warden/etc to an encrypted rclone crypt remote; timer is enabled but Google Drive OAuth still needs a one-time clone ... config reconnect vw_gdrive: on the VPS. Updated vaultwares-docs PR #12 to use warden.vaultwares.ca and added operations/backups.mdx runbook.
+- Summary: Changed secrets URL to warden.vaultwares.ca. On greencloud-vps: added nginx vhost warden.vaultwares.ca (tailnet-only allowlist), updated secrets.vaultwares.ca to 301 redirect to warden, and expanded the existing Letâ€™s Encrypt cert (docs.vaultwares.ca cert-name) to include warden.vaultwares.ca so TLS is clean. Installed rclone on greencloud-vps and added vw-backup.service + vw-backup.timer (hourly) + /usr/local/bin/vw-backup.sh to back up nginx/systemd/letsencrypt/actions-runner/vw-jira-sync/vault-warden/etc to an encrypted rclone crypt remote; timer is enabled but Google Drive OAuth still needs a one-time clone ... config reconnect vw_gdrive: on the VPS. Updated vaultwares-docs PR #12 to use warden.vaultwares.ca and added operations/backups.mdx runbook.
 - Commands:
   - `ssh root@100.73.93.84 nginx -t`
   - `ssh root@100.73.93.84 certbot certonly --webroot --expand ...`
@@ -19085,7 +17492,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 18:54 - vaultwares-adk</strong> <code>general</code> - Answered Columbo&#39;s 6 interview questions for the vaultwares-themes recipe. Q1 (crypto-vault): intentional — VaultWares treats client-side encryption as UX contract, but could gr...</summary>
+<summary><strong>2026-05-20 18:54 - vaultwares-adk (formerly vaultwares-agentciation)</strong> <code>general</code> - Answered Columbo&#39;s 6 interview questions for the vaultwares-themes recipe. Q1 (crypto-vault): intentional &#226;€” VaultWares treats client-side encryption as UX contract, but could ...</summary>
 
 - Kind: general
 - Actor: AI Agent
@@ -19101,7 +17508,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-20 18:54 (TZ: Eastern Standard Time)
   ```
-- Summary: Answered Columbo's 6 interview questions for the vaultwares-themes recipe. Q1 (crypto-vault): intentional — VaultWares treats client-side encryption as UX contract, but could graduate to its own package. Q2 (asset duplication): historical artifact — Brand/ is canonical, others should be deduplicated. Q3 (README drift): stale — needs rewrite, referenced files absorbed into Jira/agent-ledger. Q4 (PQC doc): protocol spec, not implementation — should probably relocate to vaultwares-docs SECURITY_POSTURE notes. Q5 (cross-platform exports): 6 of 8 actively consumed (TS, Python, Tailwind, CSS, C#/XAML, Qt/PySide) — 2 may be unused. Q6 (7MB HTML): Figma export, should not be in version control — move to release asset/CDN and .gitignore. Three items are actionable cleanup (Q2, Q3, Q6), one is a relocation candidate (Q4), two are architecture decisions (Q1, Q5).
+- Summary: Answered Columbo's 6 interview questions for the vaultwares-themes recipe. Q1 (crypto-vault): intentional â€” VaultWares treats client-side encryption as UX contract, but could graduate to its own package. Q2 (asset duplication): historical artifact â€” Brand/ is canonical, others should be deduplicated. Q3 (README drift): stale â€” needs rewrite, referenced files absorbed into Jira/agent-ledger. Q4 (PQC doc): protocol spec, not implementation â€” should probably relocate to vaultwares-docs SECURITY_POSTURE notes. Q5 (cross-platform exports): 6 of 8 actively consumed (TS, Python, Tailwind, CSS, C#/XAML, Qt/PySide) â€” 2 may be unused. Q6 (7MB HTML): Figma export, should not be in version control â€” move to release asset/CDN and .gitignore. Three items are actionable cleanup (Q2, Q3, Q6), one is a relocation candidate (Q4), two are architecture decisions (Q1, Q5).
 - Commands:
   - `Read recipe-output interview.md and port.yaml`
 - Files:
@@ -19141,7 +17548,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 18:47 - vw-jira-sync</strong> <code>verification</code> - Diagnosed root cause of GitHub Actions &#39;Sync to Jira&#39; 400 failures. GH token distribution is working (41/41 repos OK at 12:28). jira-token.txt last written 6:46 AM — token is ex...</summary>
+<summary><strong>2026-05-20 18:47 - vw-jira-sync</strong> <code>verification</code> - Diagnosed root cause of GitHub Actions &#39;Sync to Jira&#39; 400 failures. GH token distribution is working (41/41 repos OK at 12:28). jira-token.txt last written 6:46 AM &#226;€” token is ...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -19157,7 +17564,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-20 18:47 (TZ: Eastern Standard Time)
   ```
-- Summary: Diagnosed root cause of GitHub Actions 'Sync to Jira' 400 failures. GH token distribution is working (41/41 repos OK at 12:28). jira-token.txt last written 6:46 AM — token is expired/invalid. Jira returns 400 (not 401) for bad credentials (anonymous access, project permission fail). Fix: user generates new Atlassian API token at id.atlassian.com, overwrites jira-token.txt, triggers Start-ScheduledTask VaultWares-DistributeJiraSecrets.
+- Summary: Diagnosed root cause of GitHub Actions 'Sync to Jira' 400 failures. GH token distribution is working (41/41 repos OK at 12:28). jira-token.txt last written 6:46 AM â€” token is expired/invalid. Jira returns 400 (not 401) for bad credentials (anonymous access, project permission fail). Fix: user generates new Atlassian API token at id.atlassian.com, overwrites jira-token.txt, triggers Start-ScheduledTask VaultWares-DistributeJiraSecrets.
 - Commands:
   - `Get-Item jira-token.txt | Select LastWriteTime`
   - `Start-ScheduledTask -TaskName VaultWares-DistributeJiraSecrets`
@@ -19755,7 +18162,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-20 11:16 (TZ: Eastern Standard Time)
   ```
-- Summary: Ran Columbo's full extraction pipeline manually against vaultwares-themes as beachhead test. Walked all 9 phases: AUDIT classified 170+ files (essentials met: source code in Python/TS/TSX/CSS/C#/XAML, test suite partial, asset originals including PSD source — confidence 70%). BLIND PASS extracted intent from README + dir structure without opening code: design system + brand identity library with 8 cross-platform export formats, bilingual EN/FR, 15-section preview system, glass UI components. SIGHTED PASS walked full file manifest, found 4 contradictions: README dir tree stale, assets duplicated 3+ locations, stub files vs full files, references to non-existent root files. GAP MAP produced 6 interview questions: crypto-vault purpose in theme repo, asset duplication rationale, README drift, PQC protocol relevance, which exports actively consumed, 6.9MB HTML in version control. COMPOSE wrote 11-file recipe to recipe-output/vaultwares-themes/: intent.md (one-pager), port.yaml (manifest), domain/tokens.md (full token spec), domain/patterns.md (5 standard + 3 bespoke), ux/preview-system.md (15-section preview + flows), 3 regenerated SVGs (vw-favicon, vw-wordmark-dark, vw-wordmark-light — rebuilt from recipe tokens, not copied), tests/acceptance.md, interview.md (6 Columbo-voiced questions), revisions.md (sidecar). SVG regeneration successful: V-mark with vault-door circle motif, gold #CC9B21, Segoe UI Semilight wordmark in both paper/ink variants.
+- Summary: Ran Columbo's full extraction pipeline manually against vaultwares-themes as beachhead test. Walked all 9 phases: AUDIT classified 170+ files (essentials met: source code in Python/TS/TSX/CSS/C#/XAML, test suite partial, asset originals including PSD source â€” confidence 70%). BLIND PASS extracted intent from README + dir structure without opening code: design system + brand identity library with 8 cross-platform export formats, bilingual EN/FR, 15-section preview system, glass UI components. SIGHTED PASS walked full file manifest, found 4 contradictions: README dir tree stale, assets duplicated 3+ locations, stub files vs full files, references to non-existent root files. GAP MAP produced 6 interview questions: crypto-vault purpose in theme repo, asset duplication rationale, README drift, PQC protocol relevance, which exports actively consumed, 6.9MB HTML in version control. COMPOSE wrote 11-file recipe to recipe-output/vaultwares-themes/: intent.md (one-pager), port.yaml (manifest), domain/tokens.md (full token spec), domain/patterns.md (5 standard + 3 bespoke), ux/preview-system.md (15-section preview + flows), 3 regenerated SVGs (vw-favicon, vw-wordmark-dark, vw-wordmark-light â€” rebuilt from recipe tokens, not copied), tests/acceptance.md, interview.md (6 Columbo-voiced questions), revisions.md (sidecar). SVG regeneration successful: V-mark with vault-door circle motif, gold #CC9B21, Segoe UI Semilight wordmark in both paper/ink variants.
 - Commands:
   - `Get-ChildItem vaultwares-themes -Recurse -File`
   - `Read README.md`
@@ -20270,7 +18677,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 02:48 - vaultwares-adk</strong> <code>code-change</code> - Scaffolded Columbo agent (codebase forensics &amp; recipe extraction) in vaultwares-adk. Created columbo.agent.md (81 lines — personality definition with YAML frontmatter, 5-tier au...</summary>
+<summary><strong>2026-05-20 02:48 - vaultwares-adk</strong> <code>code-change</code> - Scaffolded Columbo agent (codebase forensics &amp; recipe extraction) in vaultwares-adk. Created columbo.agent.md (81 lines &#226;€” personality definition with YAML frontmatter, 5-tier ...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -20286,7 +18693,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-20 02:48 (TZ: Eastern Standard Time)
   ```
-- Summary: Scaffolded Columbo agent (codebase forensics & recipe extraction) in vaultwares-adk. Created columbo.agent.md (81 lines — personality definition with YAML frontmatter, 5-tier audit taxonomy, 9-phase lifecycle, HITL protocol, Columbo detective personality, relates to Cheddar Bob and WorkflowAgent). Created columbo.py (672 lines — ColumboAgent class inheriting ExtrovertAgent with full pipeline: _audit_inputs with filesystem checks and confidence scoring, _blind_pass reading README/test-names/dir-structure without opening code, _sighted_pass walking source tree and flagging contradictions, _gap_map building priority-sorted interview queue, _interview with HITL placeholders, _compose_recipe writing intent.md/port.yaml/interview.md/revisions.md and scaffolding ux/domain/assets/tests dirs, _round_trip_verify placeholder, _handoff with final report; CLI entry point via argparse). Created 3 SVG icons (magnifying-glass, recipe-book, audit-shield) in assets/columbo/. Updated docs/AGENT_MANIFEST.md with Columbo entry under new Forensics & Extraction section. Pushed to feat/columbo-agent branch, PR #9 opened at github.com/p-potvin/vaultwares-adk/pull/9. Next: test run against vaultwares-themes beachhead (task #2 pending).
+- Summary: Scaffolded Columbo agent (codebase forensics & recipe extraction) in vaultwares-adk. Created columbo.agent.md (81 lines â€” personality definition with YAML frontmatter, 5-tier audit taxonomy, 9-phase lifecycle, HITL protocol, Columbo detective personality, relates to Cheddar Bob and WorkflowAgent). Created columbo.py (672 lines â€” ColumboAgent class inheriting ExtrovertAgent with full pipeline: _audit_inputs with filesystem checks and confidence scoring, _blind_pass reading README/test-names/dir-structure without opening code, _sighted_pass walking source tree and flagging contradictions, _gap_map building priority-sorted interview queue, _interview with HITL placeholders, _compose_recipe writing intent.md/port.yaml/interview.md/revisions.md and scaffolding ux/domain/assets/tests dirs, _round_trip_verify placeholder, _handoff with final report; CLI entry point via argparse). Created 3 SVG icons (magnifying-glass, recipe-book, audit-shield) in assets/columbo/. Updated docs/AGENT_MANIFEST.md with Columbo entry under new Forensics & Extraction section. Pushed to feat/columbo-agent branch, PR #9 opened at github.com/p-potvin/vaultwares-adk/pull/9. Next: test run against vaultwares-themes beachhead (task #2 pending).
 - Commands:
   - `git checkout -b feat/columbo-agent`
   - `git add columbo.agent.md columbo.py assets/columbo/*.svg docs/AGENT_MANIFEST.md`
@@ -20321,7 +18728,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-20 02:28 (TZ: Eastern Standard Time)
   ```
-- Summary: Wired jira-sync runbook into agent routing chain. (1) KNOWLEDGE_SCOUT.md: new row warning that renaming a GitHub repo without vw-jira-sync updates creates duplicate Jira issues; links to operations/jira-sync.mdx. (2) New RENAMING protocol (summaries + notes): 6-step procedure, do/don't rules, done criteria; added to ROUTER.md table with keywords 'rename,github rename,repo rename,jira rename'. (3) vw-jira-sync/AGENTS.md: appended key agent facts section — rename procedure, adding repos, secrets, mapping file invariant. Committed 139c251 (vaultwares-docs) and 5f0025e (vw-jira-sync).
+- Summary: Wired jira-sync runbook into agent routing chain. (1) KNOWLEDGE_SCOUT.md: new row warning that renaming a GitHub repo without vw-jira-sync updates creates duplicate Jira issues; links to operations/jira-sync.mdx. (2) New RENAMING protocol (summaries + notes): 6-step procedure, do/don't rules, done criteria; added to ROUTER.md table with keywords 'rename,github rename,repo rename,jira rename'. (3) vw-jira-sync/AGENTS.md: appended key agent facts section â€” rename procedure, adding repos, secrets, mapping file invariant. Committed 139c251 (vaultwares-docs) and 5f0025e (vw-jira-sync).
 - Commands:
   - `git commit 139c251 vaultwares-docs`
   - `git commit 5f0025e vw-jira-sync`
@@ -20353,7 +18760,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-20 01:48 (TZ: Eastern Standard Time)
   ```
-- Summary: Started vault-port (working name) agent scaffolding in vaultwares-adk. Pivot: vaultwares-adk is VaultWares's own Python multi-agent framework (Redis-based, ExtrovertAgent/LonelyManager bases, formerly agentciation), NOT Botpress's TypeScript ADK — the Botpress adk skill loaded earlier is not applicable. Learned conventions from README + docs/GUIDELINES.md + cheddar_bob.agent.md + agents/image_agent.py: two-file pattern (definitions/<name>.md with YAML frontmatter + agents/<name>_agent.py inheriting ExtrovertAgent, AGENT_TYPE, SKILLS, _perform_task dispatcher, _publish_result to Redis); style is personality-over-role with creative names, must relate to existing agent, numbered lifecycle. Located vaultwares-themes (beachhead — has assets/, brand/, components/, theme-manager/, vaultwares_themes/, colors_and_type.css, qt_exporter.py, theme_manager.py, PQC_PROTOCOL_IMPLEMENTATION.md). Proposed: agent name options (Distiller/Reduction/Cartographer/Marlowe/vault-port plain) leaning Distiller; 9-step lifecycle (wake/audit/blind-pass/sighted-pass/gap-map/interview/compose/round-trip/handoff); monolithic v1 (handler-per-phase via _perform_task) vs team-from-day-one (Auditor/Surveyor/Reader/Interrogator/Composer/Verifier), leaning monolithic v1; relates to Cheddar Bob (intent vs pixel) and WorkflowAgent (higher altitude extraction). Tasks created: #1 Learn framework (completed), #2 Inventory vaultwares-themes (pending), #3 Scaffold vault-port agent (pending). Awaiting user pick on name and architecture before scaffolding.
+- Summary: Started vault-port (working name) agent scaffolding in vaultwares-adk. Pivot: vaultwares-adk is VaultWares's own Python multi-agent framework (Redis-based, ExtrovertAgent/LonelyManager bases, formerly agentciation), NOT Botpress's TypeScript ADK â€” the Botpress adk skill loaded earlier is not applicable. Learned conventions from README + docs/GUIDELINES.md + cheddar_bob.agent.md + agents/image_agent.py: two-file pattern (definitions/<name>.md with YAML frontmatter + agents/<name>_agent.py inheriting ExtrovertAgent, AGENT_TYPE, SKILLS, _perform_task dispatcher, _publish_result to Redis); style is personality-over-role with creative names, must relate to existing agent, numbered lifecycle. Located vaultwares-themes (beachhead â€” has assets/, brand/, components/, theme-manager/, vaultwares_themes/, colors_and_type.css, qt_exporter.py, theme_manager.py, PQC_PROTOCOL_IMPLEMENTATION.md). Proposed: agent name options (Distiller/Reduction/Cartographer/Marlowe/vault-port plain) leaning Distiller; 9-step lifecycle (wake/audit/blind-pass/sighted-pass/gap-map/interview/compose/round-trip/handoff); monolithic v1 (handler-per-phase via _perform_task) vs team-from-day-one (Auditor/Surveyor/Reader/Interrogator/Composer/Verifier), leaning monolithic v1; relates to Cheddar Bob (intent vs pixel) and WorkflowAgent (higher altitude extraction). Tasks created: #1 Learn framework (completed), #2 Inventory vaultwares-themes (pending), #3 Scaffold vault-port agent (pending). Awaiting user pick on name and architecture before scaffolding.
 - Commands:
   - `Get-ChildItem vault*`
   - `Read vaultwares-adk/README.md`
@@ -20369,7 +18776,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-20 01:42 - vaultwares-docs</strong> <code>code-change</code> - Created docs-content/operations/jira-sync.mdx: full runbook for GitHub→Jira sync. Covers architecture, 41-project map, issue label scheme, PR status mapping, secrets, adding rep...</summary>
+<summary><strong>2026-05-20 01:42 - vaultwares-docs</strong> <code>code-change</code> - Created docs-content/operations/jira-sync.mdx: full runbook for GitHub&#226;†’Jira sync. Covers architecture, 41-project map, issue label scheme, PR status mapping, secrets, adding r...</summary>
 
 - Kind: code-change
 - Actor: claude-sonnet-4-5
@@ -20385,10 +18792,10 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-20 01:42 (TZ: Eastern Standard Time)
   ```
-- Summary: Created docs-content/operations/jira-sync.mdx: full runbook for GitHub→Jira sync. Covers architecture, 41-project map, issue label scheme, PR status mapping, secrets, adding repos/orgs, repo rename procedure (tested i-dub-thee→vaultwares-asttro), backfill/deploy CLI reference, troubleshooting. Added operations/jira-sync to docs.json nav. Committed 39a4f14, pushed to main.
+- Summary: Created docs-content/operations/jira-sync.mdx: full runbook for GitHubâ†’Jira sync. Covers architecture, 41-project map, issue label scheme, PR status mapping, secrets, adding repos/orgs, repo rename procedure (tested i-dub-theeâ†’vaultwares-asttro), backfill/deploy CLI reference, troubleshooting. Added operations/jira-sync to docs.json nav. Committed 39a4f14, pushed to main.
 - Commands:
   - `git add docs-content/operations/jira-sync.mdx docs.json`
-  - `git commit -m 'docs(ops): add GitHub→Jira sync runbook'`
+  - `git commit -m 'docs(ops): add GitHubâ†’Jira sync runbook'`
   - `git push origin main`
 - Files:
   - `docs-content/operations/jira-sync.mdx`
@@ -20539,7 +18946,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-19 22:16 (TZ: Eastern Standard Time)
   ```
-- Summary: Full workspace local cleanup across all repos: (1) Deleted Vercel artifacts: vercel.json, .vercelignore, .vercel/ from vaultwares-docs, vaultwares-website, agent-ledger, vaultwares-glass, vault-flows. (2) Deleted PyInstaller .spec files from vaultwares-pipelines, vaultwares-realtime, vaultwares-media-processing. (3) Fixed .gitmodules in 18 repos: vault-themes→vaultwares-themes, vaultwares-agentciation→vaultwares-adk, vaultwares_adk path→vaultwares-adk. (4) Renamed stale submodule checkout dirs to match new names across all repos. (5) Bulk sed replacement in root .md files: vault-themes→vaultwares-themes, vaultwares-agentciation→vaultwares-adk, vault-video-enhancer→vaultwares-media-processing. Skipped CHANGES.md (historical). (6) Committed and pushed all changes directly to main (vault-* and utility repos) or to feature/phase5-sync branches (vaultwares-realtime, vaultwares-media-processing). Final check: zero old dirs, zero vercel files, zero spec files, zero old names in root .md files.
+- Summary: Full workspace local cleanup across all repos: (1) Deleted Vercel artifacts: vercel.json, .vercelignore, .vercel/ from vaultwares-docs, vaultwares-website, agent-ledger, vaultwares-glass, vault-flows. (2) Deleted PyInstaller .spec files from vaultwares-pipelines, vaultwares-realtime, vaultwares-media-processing. (3) Fixed .gitmodules in 18 repos: vault-themesâ†’vaultwares-themes, vaultwares-agentciationâ†’vaultwares-adk, vaultwares_adk pathâ†’vaultwares-adk. (4) Renamed stale submodule checkout dirs to match new names across all repos. (5) Bulk sed replacement in root .md files: vault-themesâ†’vaultwares-themes, vaultwares-agentciationâ†’vaultwares-adk, vault-video-enhancerâ†’vaultwares-media-processing. Skipped CHANGES.md (historical). (6) Committed and pushed all changes directly to main (vault-* and utility repos) or to feature/phase5-sync branches (vaultwares-realtime, vaultwares-media-processing). Final check: zero old dirs, zero vercel files, zero spec files, zero old names in root .md files.
 - Commands:
   - `sed -i 's/vault-themes/vaultwares-themes/g; s/vaultwares-agentciation/vaultwares-adk/g' .gitmodules`
   - `git rm --cached vault-themes vaultwares-agentciation && mv vault-themes vaultwares-themes`
@@ -20585,7 +18992,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-19 17:18 - General Tasks</strong> <code>verification</code> - Comprehensive system verification completed successfully: (1) PowerShell scripts validated - all 16 scripts in ~/desktop/pwsh/ have correct paths; (2) All 40+ repos pulled succe...</summary>
+<summary><strong>2026-05-19 17:18 - VaultWares &#226;€” System Verification &amp; Maintenance Complete</strong> <code>verification</code> - Comprehensive system verification completed successfully: (1) PowerShell scripts validated - all 16 scripts in ~/desktop/pwsh/ have correct paths; (2) All 40+ repos pulled succe...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -20723,7 +19130,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-18 20:23 - General Tasks</strong> <code>verification</code> - CLAUDE.md updated: replaced all vault-themes references with vaultwares-themes, vaultwares-agentciation with vaultwares-adk, removed misleading empty lines. Documentation audit:...</summary>
+<summary><strong>2026-05-18 20:23 - VaultWares &#226;€” Post-Refactoring Cleanup &amp; Infrastructure Verification</strong> <code>verification</code> - CLAUDE.md updated: replaced all vault-themes references with vaultwares-themes, vaultwares-agentciation with vaultwares-adk, removed misleading empty lines. Documentation audit:...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -20801,7 +19208,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-18 17:50 - General Tasks</strong> <code>verification</code> - PR workflow transition initiated. 11 of 13 repos successfully pushed to main via batch sync (weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-pl...</summary>
+<summary><strong>2026-05-18 17:50 - VaultWares &#226;€” Project Rename Refactoring (Phase 5 PR Workflow)</strong> <code>verification</code> - PR workflow transition initiated. 11 of 13 repos successfully pushed to main via batch sync (weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-pl...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -20857,7 +19264,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-18 17:09 - General Tasks</strong> <code>verification</code> - Phase 5 completion: Successfully rebased and pushed 11 of 13 directly-affected repos. Weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-player, v...</summary>
+<summary><strong>2026-05-18 17:09 - VaultWares &#226;€” Project Rename Refactoring (Phase 5)</strong> <code>verification</code> - Phase 5 completion: Successfully rebased and pushed 11 of 13 directly-affected repos. Weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-player, v...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -20908,7 +19315,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-18 17:05 (TZ: Eastern Standard Time)
   ```
-- Summary: Fixed GitHub Actions workflow startup_failure affecting 35/37 repos. Root cause: restrictive permissions block in reusable workflow prevented job creation. Removed permissions block from sync.yml; all 37 repos now execute (previously 35 got startup_failure, 2 ran but hit Jira 401). Second issue: Jira 401 auth error in Actions environment — token likely corrupted during gh secret set distribution. Re-distributed JIRA_TOKEN to vault-flows as test.
+- Summary: Fixed GitHub Actions workflow startup_failure affecting 35/37 repos. Root cause: restrictive permissions block in reusable workflow prevented job creation. Removed permissions block from sync.yml; all 37 repos now execute (previously 35 got startup_failure, 2 ran but hit Jira 401). Second issue: Jira 401 auth error in Actions environment â€” token likely corrupted during gh secret set distribution. Re-distributed JIRA_TOKEN to vault-flows as test.
 - Commands:
   - `Edit .github/workflows/sync.yml: removed restrictive permissions block`
   - `git push to vw-jira-sync main (commit ada569e)`
@@ -20937,7 +19344,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-18 16:55 (TZ: Eastern Standard Time)
   ```
-- Summary: Phase 5 per-repo sync: vaultwares-realtime (c93337d), vaultwares-studio (34a0266), vaultwares-media-processing (7b849b0 w/rebase conflicts), vaultwares-pipelines (8c0099c). All completed: submodule renames (vault-themes→vaultwares-themes, vaultwares_agentciation→vaultwares_adk), Python pkg renames where applicable, Phase 3 cross-repo updates, pull --rebase, push. Remaining: realtime 2nd push retry (HTTP 500 on first attempt), media-processing push status check, then remaining cross-repo-only repos (weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-player, vaultwares-cli, vaultwares-template, windows-customizer, i-dub-thee).
+- Summary: Phase 5 per-repo sync: vaultwares-realtime (c93337d), vaultwares-studio (34a0266), vaultwares-media-processing (7b849b0 w/rebase conflicts), vaultwares-pipelines (8c0099c). All completed: submodule renames (vault-themesâ†’vaultwares-themes, vaultwares_agentciationâ†’vaultwares_adk), Python pkg renames where applicable, Phase 3 cross-repo updates, pull --rebase, push. Remaining: realtime 2nd push retry (HTTP 500 on first attempt), media-processing push status check, then remaining cross-repo-only repos (weekly-menu, debrid-media-manager, auto-backup, vault-central, vault-flows, vault-player, vaultwares-cli, vaultwares-template, windows-customizer, i-dub-thee).
 - Commands:
   - `git pull --rebase origin main`
   - `git push origin main`
@@ -21126,7 +19533,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-18 12:17 - vaultwares-adk</strong> <code>plan</code> - Round 3 of vault-port Socratic interview answered. Q7: refusal is internal-only, client never sees it — confirms public/private dual-state design with precomputed graceful-pivot...</summary>
+<summary><strong>2026-05-18 12:17 - vaultwares-adk</strong> <code>plan</code> - Round 3 of vault-port Socratic interview answered. Q7: refusal is internal-only, client never sees it &#226;€” confirms public/private dual-state design with precomputed graceful-piv...</summary>
 
 - Kind: plan
 - Actor: AI Agent
@@ -21142,7 +19549,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-18 12:17 (TZ: Eastern Standard Time)
   ```
-- Summary: Round 3 of vault-port Socratic interview answered. Q7: refusal is internal-only, client never sees it — confirms public/private dual-state design with precomputed graceful-pivot catalog and persona discipline (no tone breaks, decisions framed as collaboration). Q8: sidecar confirmed — generalized to dual-stream output principle (public recipe + private audit trail covering contradictions, blockers, low-confidence regions, alternate hypotheses). Q9: full vault-themes scope (go big or go home) — pressure tests token structure, multi-theme handling, visual identity constraints, asset preservation, component contracts, and crucially the EN/FR bilingual + 15-20% French-length tolerance as implicit cross-cutting requirement class. Synthesized 11 locked decisions in summary table. Listed 7 open items (A recipe layout, B pattern catalog seed, C interview catalog, D graceful pivot catalog, E ADK structure, F reconstruction protocol, G validation strategy). Offered two paths: keep designing vs start scaffolding. Recommended starting scaffolding with ADK structure (E) as entry point — file structure exposes holes faster than discussion. No code written yet; awaiting user choice on design-vs-scaffold.
+- Summary: Round 3 of vault-port Socratic interview answered. Q7: refusal is internal-only, client never sees it â€” confirms public/private dual-state design with precomputed graceful-pivot catalog and persona discipline (no tone breaks, decisions framed as collaboration). Q8: sidecar confirmed â€” generalized to dual-stream output principle (public recipe + private audit trail covering contradictions, blockers, low-confidence regions, alternate hypotheses). Q9: full vault-themes scope (go big or go home) â€” pressure tests token structure, multi-theme handling, visual identity constraints, asset preservation, component contracts, and crucially the EN/FR bilingual + 15-20% French-length tolerance as implicit cross-cutting requirement class. Synthesized 11 locked decisions in summary table. Listed 7 open items (A recipe layout, B pattern catalog seed, C interview catalog, D graceful pivot catalog, E ADK structure, F reconstruction protocol, G validation strategy). Offered two paths: keep designing vs start scaffolding. Recommended starting scaffolding with ADK structure (E) as entry point â€” file structure exposes holes faster than discussion. No code written yet; awaiting user choice on design-vs-scaffold.
 
 </details>
 
@@ -21747,7 +20154,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-18 01:36 (TZ: Eastern Standard Time)
   ```
-- Summary: Phase 2b complete: Renamed Prom-King/tube-site to Prom-King/tube-sites via gh repo rename. Updated business/tube-site local remote to new URL. Corrected project-aliases.json tube-sites entry since the org rename to 'promking' was unavailable on GitHub (name already taken) — org stays as Prom-King, only the repo was renamed. The other 3 business remotes (qa-automation, link-sharing, prelanding-page) didn't need updates. Pushed correction as d57aace. Phase 3 (folder + manifest + code renames) now ready to begin once user closes processes.
+- Summary: Phase 2b complete: Renamed Prom-King/tube-site to Prom-King/tube-sites via gh repo rename. Updated business/tube-site local remote to new URL. Corrected project-aliases.json tube-sites entry since the org rename to 'promking' was unavailable on GitHub (name already taken) â€” org stays as Prom-King, only the repo was renamed. The other 3 business remotes (qa-automation, link-sharing, prelanding-page) didn't need updates. Pushed correction as d57aace. Phase 3 (folder + manifest + code renames) now ready to begin once user closes processes.
 - Commands:
   - `gh repo rename tube-site->tube-sites`
   - `git remote set-url business/tube-site`
@@ -21892,7 +20299,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-18 00:35 (TZ: Eastern Standard Time)
   ```
-- Summary: Round 2 of vault-port Socratic interview. User proposed inverted methodology: results -> UX/domain -> tech stack (assessed fresh, original stack is hint not constraint). User wants implementation-blind first pass. User proposed variable taxonomy with 5 tiers (essentials/blockers, game changers, great, useful-but-careful, useless/risky) as input audit stage that refuses outright if floor not met. KEY DECISION: client is NOT source of truth; code + behavior is truth, client is witness. Interview is targeted (built around candidate spec), not blank-slate. Forensic/anchored-contradiction style preferred over therapeutic Socratic. User picked vault-themes as beachhead (rejected agentciation/docs as text-heavy). User noted hard-sell challenge but strong buzzword potential. Proposed two modes: extract (finished, code-as-truth) and forge (unfinished, client-as-incomplete-truth). My response: confirmed inverted methodology and named implementation-blind first pass; proposed first-cut variable taxonomy table; committed vault-themes beachhead with rationale (visual fidelity is hardest test, dogfood compounds); grounded forensic interview in PEACE method + 5 Whys + cognitive interview + anchored contradiction technique with Columbo-vs-Saw tone calibration slider; offered 3 pitch framings (disaster recovery / stateless software / audit-document-replatform); committed mode names (extract default v1, forge scoped out); posed Q7 (refusal protocol — lean hard refusal v1), Q8 (contradiction handling — lean sidecar revisions.md), Q9 (vault-themes scope — lean vertical slice). No code written, design phase continuing.
+- Summary: Round 2 of vault-port Socratic interview. User proposed inverted methodology: results -> UX/domain -> tech stack (assessed fresh, original stack is hint not constraint). User wants implementation-blind first pass. User proposed variable taxonomy with 5 tiers (essentials/blockers, game changers, great, useful-but-careful, useless/risky) as input audit stage that refuses outright if floor not met. KEY DECISION: client is NOT source of truth; code + behavior is truth, client is witness. Interview is targeted (built around candidate spec), not blank-slate. Forensic/anchored-contradiction style preferred over therapeutic Socratic. User picked vault-themes as beachhead (rejected agentciation/docs as text-heavy). User noted hard-sell challenge but strong buzzword potential. Proposed two modes: extract (finished, code-as-truth) and forge (unfinished, client-as-incomplete-truth). My response: confirmed inverted methodology and named implementation-blind first pass; proposed first-cut variable taxonomy table; committed vault-themes beachhead with rationale (visual fidelity is hardest test, dogfood compounds); grounded forensic interview in PEACE method + 5 Whys + cognitive interview + anchored contradiction technique with Columbo-vs-Saw tone calibration slider; offered 3 pitch framings (disaster recovery / stateless software / audit-document-replatform); committed mode names (extract default v1, forge scoped out); posed Q7 (refusal protocol â€” lean hard refusal v1), Q8 (contradiction handling â€” lean sidecar revisions.md), Q9 (vault-themes scope â€” lean vertical slice). No code written, design phase continuing.
 
 </details>
 
@@ -21993,7 +20400,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-17 20:14 (TZ: Eastern Standard Time)
   ```
-- Summary: Pre-rename infra mapping complete. SSH-probed ci-egress-vps and greencloud-vps, inventoried Tailscale ACL/devices, CI workflows, nginx vhosts, systemd services, databases, repo clones, and deploy scripts. Cross-grepped both VPSes for old project names — zero matches outside actions-runner stale workdirs. Tailscale ACL uses tags+IPs only (no project-named refs except vaultwares-postgres-db app-connector which is out of scope). MariaDB DBs (fullxxx_wp, promking_wp) are domain-named, not project-named — no rename. Found one user-data concern: deconstructed-website-a-la-mode defaults to ~/.deconstructed/vault — migration decision needed for vaultwares-decompile. dispatch-wares uses local Prisma Postgres for dev only, no infra impact. Most heavy lifting will be in code+manifest+folder layer, not infra.
+- Summary: Pre-rename infra mapping complete. SSH-probed ci-egress-vps and greencloud-vps, inventoried Tailscale ACL/devices, CI workflows, nginx vhosts, systemd services, databases, repo clones, and deploy scripts. Cross-grepped both VPSes for old project names â€” zero matches outside actions-runner stale workdirs. Tailscale ACL uses tags+IPs only (no project-named refs except vaultwares-postgres-db app-connector which is out of scope). MariaDB DBs (fullxxx_wp, promking_wp) are domain-named, not project-named â€” no rename. Found one user-data concern: deconstructed-website-a-la-mode defaults to ~/.deconstructed/vault â€” migration decision needed for vaultwares-decompile. dispatch-wares uses local Prisma Postgres for dev only, no infra impact. Most heavy lifting will be in code+manifest+folder layer, not infra.
 - Commands:
   - `ssh root@ci-egress-vps probes`
   - `ssh root@greencloud-vps probes`
@@ -22011,7 +20418,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-17 20:01 - agent-ledger</strong> <code>commands</code> - Committed and pushed the project-aliases continuity system to agent-ledger main. Surgical commit (83953ff) — only the 7 behavioral files (project-aliases.json, resolve-project-a...</summary>
+<summary><strong>2026-05-17 20:01 - agent-ledger</strong> <code>commands</code> - Committed and pushed the project-aliases continuity system to agent-ledger main. Surgical commit (83953ff) &#226;€” only the 7 behavioral files (project-aliases.json, resolve-project...</summary>
 
 - Kind: commands
 - Actor: AI Agent
@@ -22027,7 +20434,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-17 20:01 (TZ: Eastern Standard Time)
   ```
-- Summary: Committed and pushed the project-aliases continuity system to agent-ledger main. Surgical commit (83953ff) — only the 7 behavioral files (project-aliases.json, resolve-project-alias.ps1, record-agent-change.ps1, update-work-impact-state.ps1, render-agent-ledger.ps1, README.md, AGENTS.md). Other orphaned/untracked content in the working tree (unrelated event JSONs from other sessions, archival history/ moves, regenerated dashboards) intentionally left out — they'll be picked up by the next sync-agent-ledger.ps1 run.
+- Summary: Committed and pushed the project-aliases continuity system to agent-ledger main. Surgical commit (83953ff) â€” only the 7 behavioral files (project-aliases.json, resolve-project-alias.ps1, record-agent-change.ps1, update-work-impact-state.ps1, render-agent-ledger.ps1, README.md, AGENTS.md). Other orphaned/untracked content in the working tree (unrelated event JSONs from other sessions, archival history/ moves, regenerated dashboards) intentionally left out â€” they'll be picked up by the next sync-agent-ledger.ps1 run.
 - Commands:
   - `git add <7 files>`
   - `git commit`
@@ -22498,7 +20905,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-16 15:55 (TZ: Eastern Standard Time)
   ```
-- Summary: Completed intelligent PR triage with full diff review. Reopened 3 wrongly-closed security PRs (pipelines #41/#42 turned out empty, re-closed). Closed 7 more: 2 journal-only vault-flows, 1 docs-only realtime-stt, 1 duplicate SSRF tube-site, 2 empty-diff pipelines, 1 agents.md link-sharing. Final tally this session: 33 merged, 78 closed. 21 remaining PRs with real code — all conflicting, flagged for user with assessed priority.
+- Summary: Completed intelligent PR triage with full diff review. Reopened 3 wrongly-closed security PRs (pipelines #41/#42 turned out empty, re-closed). Closed 7 more: 2 journal-only vault-flows, 1 docs-only realtime-stt, 1 duplicate SSRF tube-site, 2 empty-diff pipelines, 1 agents.md link-sharing. Final tally this session: 33 merged, 78 closed. 21 remaining PRs with real code â€” all conflicting, flagged for user with assessed priority.
 - Commands:
   - `gh pr diff`
   - `gh pr close`
@@ -22772,7 +21179,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-16 13:32 - General Tasks</strong> <code>commands</code> - Second pass PR merge sweep. 16 open PRs remain across 5 repos — all CONFLICTING, zero mergeable. vault-video-enhancer #8 is new (appeared after #7 was merged in pass 1). No acti...</summary>
+<summary><strong>2026-05-16 13:32 - General Tasks</strong> <code>commands</code> - Second pass PR merge sweep. 16 open PRs remain across 5 repos &#226;€” all CONFLICTING, zero mergeable. vault-video-enhancer #8 is new (appeared after #7 was merged in pass 1). No ac...</summary>
 
 - Kind: commands
 - Actor: AI Agent
@@ -22788,7 +21195,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-16 13:32 (TZ: Eastern Standard Time)
   ```
-- Summary: Second pass PR merge sweep. 16 open PRs remain across 5 repos — all CONFLICTING, zero mergeable. vault-video-enhancer #8 is new (appeared after #7 was merged in pass 1). No action taken.
+- Summary: Second pass PR merge sweep. 16 open PRs remain across 5 repos â€” all CONFLICTING, zero mergeable. vault-video-enhancer #8 is new (appeared after #7 was merged in pass 1). No action taken.
 - Commands:
   - `gh pr list`
   - `gh pr view`
@@ -22915,7 +21322,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-16 08:11 (TZ: Eastern Standard Time)
   ```
-- Summary: Round 1 of vault-port Socratic interview closed. User confirmed: (1) approximate-and-flag for non-portable code, embracing variance as feature for auto-adapting to dep/env drift with preventive web search at rebuild time; (2) client interviews are unavoidable — listed must-preserve items: end goal, near-exact visuals, full UX path coverage, data structure (compressible since concepts repeat), assets (copied), branding (coupled), marketing/promo excluded; (3) tacit knowledge: best=insider+history, worst=overbuild, realistic=benchmark behind scenes; (4) generative variance embraced; (5) some markets unfit (gov/finance not innovative, GPU shaders hardware-bound but intent abstractable). User reframed Q1 as customer-vs-product-owner. My response: ship Scenario B (product owner / recipe-as-deliverable) first, Scenario A (self-adapting customer product) is destination not MVP; the expert interrogation system is the moat (spec-level questions, no leading questions, standardized catalog); recipe must be compositional/pattern-based not enumerative (named patterns + bindings + overrides + bespoke islands); deliverable is a project not a file (prose + assets + tests + interview transcript); diagnostic side-effect: failure-to-port is itself a signal making vault-port a low-stakes audit tool. Posed Q4 (deliverable layout straw man with intent.md/ux/domain/assets/tests/interview.md/port.yaml), Q5 (beachhead — proposed recursive dogfood option of vault-port porting vaultwares-agentciation itself), Q6 (interview format — hybrid form+Socratic likely wins, design question is when to drop from form into Socratic). No code yet, design phase ongoing.
+- Summary: Round 1 of vault-port Socratic interview closed. User confirmed: (1) approximate-and-flag for non-portable code, embracing variance as feature for auto-adapting to dep/env drift with preventive web search at rebuild time; (2) client interviews are unavoidable â€” listed must-preserve items: end goal, near-exact visuals, full UX path coverage, data structure (compressible since concepts repeat), assets (copied), branding (coupled), marketing/promo excluded; (3) tacit knowledge: best=insider+history, worst=overbuild, realistic=benchmark behind scenes; (4) generative variance embraced; (5) some markets unfit (gov/finance not innovative, GPU shaders hardware-bound but intent abstractable). User reframed Q1 as customer-vs-product-owner. My response: ship Scenario B (product owner / recipe-as-deliverable) first, Scenario A (self-adapting customer product) is destination not MVP; the expert interrogation system is the moat (spec-level questions, no leading questions, standardized catalog); recipe must be compositional/pattern-based not enumerative (named patterns + bindings + overrides + bespoke islands); deliverable is a project not a file (prose + assets + tests + interview transcript); diagnostic side-effect: failure-to-port is itself a signal making vault-port a low-stakes audit tool. Posed Q4 (deliverable layout straw man with intent.md/ux/domain/assets/tests/interview.md/port.yaml), Q5 (beachhead â€” proposed recursive dogfood option of vault-port porting vaultwares-agentciation itself), Q6 (interview format â€” hybrid form+Socratic likely wins, design question is when to drop from form into Socratic). No code yet, design phase ongoing.
 
 </details>
 
@@ -23131,7 +21538,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-15 22:23 (TZ: Eastern Standard Time)
   ```
-- Summary: Opened Socratic design conversation for a new ADK agent 'vault-port' to live in vaultwares-agentciation/vault-port/. Goal: transform any codebase into natural-language markdown recipe that an LLM can use to reconstruct an equivalent product (decoupled business logic, language/env/dev-agnostic). Surfaced 5 design tensions: information-theoretic floor (crypto/perf code resists lossless compression), Ship of Theseus (need embedded acceptance criteria for 'same product'), tacit knowledge (mine git history vs accept loss), enumerative-vs-generative (recipe generates deps, not a manifest), decoupling limits (UX/GPU/shader code resists language-agnosticism). Posed 3 opening questions: fidelity target (user-facing behavior vs senior-engineer-recognizable code), scope filter (best-effort vs refuse-unportable), and bidirectionality (one-way extract vs round-trip with rebuild). No code written, no files created yet — design phase only.
+- Summary: Opened Socratic design conversation for a new ADK agent 'vault-port' to live in vaultwares-agentciation/vault-port/. Goal: transform any codebase into natural-language markdown recipe that an LLM can use to reconstruct an equivalent product (decoupled business logic, language/env/dev-agnostic). Surfaced 5 design tensions: information-theoretic floor (crypto/perf code resists lossless compression), Ship of Theseus (need embedded acceptance criteria for 'same product'), tacit knowledge (mine git history vs accept loss), enumerative-vs-generative (recipe generates deps, not a manifest), decoupling limits (UX/GPU/shader code resists language-agnosticism). Posed 3 opening questions: fidelity target (user-facing behavior vs senior-engineer-recognizable code), scope filter (best-effort vs refuse-unportable), and bidirectionality (one-way extract vs round-trip with rebuild). No code written, no files created yet â€” design phase only.
 
 </details>
 
@@ -23175,7 +21582,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-15 16:08 (TZ: Eastern Standard Time)
   ```
-- Summary: Built all workspace repos into executables/launchers with desktop shortcuts. Created 20 custom SVG+ICO icons (VaultWares gold #D4AF37 palette). Built: vault-guardian (.NET WPF exe), wander (.NET WPF exe), vaultwares-cli (Rust exe), vault-explorer/no-more-groceries/deconstructed-website-a-la-mode (Electron .exe via electron-builder). Fixed two Electron build issues: deconstructed-website index.html Vite root path, no-more-groceries missing vault-themes Brand/css2.css. Triggered PyInstaller builds for realtime-stt and vault-video-enhancer (running in background). auto-backup and windows-customizer blocked by WinUI3 XamlCompiler incompatibility with VS 2026 — created VS-open launchers. Created .bat launchers for Python CLI apps and 10 web apps (auto-build + serve on unique ports 8001-8010). Created create-shortcuts.ps1 and rebuild-all.ps1 master scripts. Placed 24 .lnk shortcuts on desktop (23 apps + rebuild-all).
+- Summary: Built all workspace repos into executables/launchers with desktop shortcuts. Created 20 custom SVG+ICO icons (VaultWares gold #D4AF37 palette). Built: vault-guardian (.NET WPF exe), wander (.NET WPF exe), vaultwares-cli (Rust exe), vault-explorer/no-more-groceries/deconstructed-website-a-la-mode (Electron .exe via electron-builder). Fixed two Electron build issues: deconstructed-website index.html Vite root path, no-more-groceries missing vault-themes Brand/css2.css. Triggered PyInstaller builds for realtime-stt and vault-video-enhancer (running in background). auto-backup and windows-customizer blocked by WinUI3 XamlCompiler incompatibility with VS 2026 â€” created VS-open launchers. Created .bat launchers for Python CLI apps and 10 web apps (auto-build + serve on unique ports 8001-8010). Created create-shortcuts.ps1 and rebuild-all.ps1 master scripts. Placed 24 .lnk shortcuts on desktop (23 apps + rebuild-all).
 - Commands:
   - `dotnet publish`
   - `cargo build --release`
@@ -23910,7 +22317,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-14 15:18 (TZ: Eastern Standard Time)
   ```
-- Summary: Read network-map.mdx and ran full connectivity/TLS audit across all listed services. Public: vaultwares.ca, noddit.org, prom-king.xyz, fullxxx.video all return 200. TLS: all TLS 1.3 + AES-256 + Let's Encrypt, ~88-89 days remaining, SANs valid for all domains. Tailnet: vaultwares-1 and ci-egress-vps reachable; Brume2 shows active direct WireGuard link in tailscale status (ICMP blocked by OpenWrt firewall, not a real issue). docs.vaultwares.ca and secrets.vaultwares.ca both return nginx 403 — this machine's tailnet IP (100.71.101.21) is not in the nginx allowlist on vaultwares-1. Local FastAPI API on port 9001: serving Vaultwares Pipelines dashboard + Swagger docs correctly.
+- Summary: Read network-map.mdx and ran full connectivity/TLS audit across all listed services. Public: vaultwares.ca, noddit.org, prom-king.xyz, fullxxx.video all return 200. TLS: all TLS 1.3 + AES-256 + Let's Encrypt, ~88-89 days remaining, SANs valid for all domains. Tailnet: vaultwares-1 and ci-egress-vps reachable; Brume2 shows active direct WireGuard link in tailscale status (ICMP blocked by OpenWrt firewall, not a real issue). docs.vaultwares.ca and secrets.vaultwares.ca both return nginx 403 â€” this machine's tailnet IP (100.71.101.21) is not in the nginx allowlist on vaultwares-1. Local FastAPI API on port 9001: serving Vaultwares Pipelines dashboard + Swagger docs correctly.
 - Commands:
   - `Invoke-WebRequest (HTTP checks)`
   - `SslStream (TLS cert inspection)`
@@ -24708,7 +23115,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-13 20:20 (TZ: Eastern Standard Time)
   ```
-- Summary: Fixed ReactFlow nodes not rendering visibly after preset load. Root cause: handleNodesChange was syncing all RF change types (including internal 'dimensions' changes) back to Zustand store, triggering storeNodes useEffect which called setRfNodes — resetting nodes before RF finished measuring them. Loop kept nodes at visibility:hidden permanently. Fix: filter handleNodesChange to only sync 'position' changes; remove store→RF sync useEffects; add key={activePreset?.id} to FlowCanvas in App.tsx so it remounts correctly on preset change. Verified visually: TOPIC, EXPAND OUTLINE, WRITE FULL DRAFT, RESULT nodes all render on canvas.
+- Summary: Fixed ReactFlow nodes not rendering visibly after preset load. Root cause: handleNodesChange was syncing all RF change types (including internal 'dimensions' changes) back to Zustand store, triggering storeNodes useEffect which called setRfNodes â€” resetting nodes before RF finished measuring them. Loop kept nodes at visibility:hidden permanently. Fix: filter handleNodesChange to only sync 'position' changes; remove storeâ†’RF sync useEffects; add key={activePreset?.id} to FlowCanvas in App.tsx so it remounts correctly on preset change. Verified visually: TOPIC, EXPAND OUTLINE, WRITE FULL DRAFT, RESULT nodes all render on canvas.
 - Commands:
   - `npm run build`
   - `Restart-Service vault-flows-spa`
@@ -24737,7 +23144,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-13 20:15 (TZ: Eastern Standard Time)
   ```
-- Summary: Fixed vault-flows SPA rebuild (branch: rewrite/spa, run: vw-2026-05-13-vf-001). Root causes: (1) Zustand object selectors in App.tsx and NodeParamPanel.tsx caused React 19 concurrent-mode error #185 — replaced with individual useFlowStore selectors. (2) ThemePicker imported applyTheme from @/main creating a circular dependency — extracted applyTheme/initTheme to src/lib/theme.ts. (3) Dead PresetLibraryInline export in PresetCard.tsx removed. Added ErrorBoundary for crash visibility. Build passes (254 modules, 0 TS errors). App verified: preset loads 4-node canvas, node click shows param panel, no console errors.
+- Summary: Fixed vault-flows SPA rebuild (branch: rewrite/spa, run: vw-2026-05-13-vf-001). Root causes: (1) Zustand object selectors in App.tsx and NodeParamPanel.tsx caused React 19 concurrent-mode error #185 â€” replaced with individual useFlowStore selectors. (2) ThemePicker imported applyTheme from @/main creating a circular dependency â€” extracted applyTheme/initTheme to src/lib/theme.ts. (3) Dead PresetLibraryInline export in PresetCard.tsx removed. Added ErrorBoundary for crash visibility. Build passes (254 modules, 0 TS errors). App verified: preset loads 4-node canvas, node click shows param panel, no console errors.
 - Commands:
   - `npm run build`
   - `Restart-Service vault-flows-spa`
@@ -24892,7 +23299,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-13 19:22 (TZ: Eastern Standard Time)
   ```
-- Summary: Created all 8 canvas components for the vault-flows SPA rewrite/spa branch: FlowCanvas.tsx (ReactFlow wrapper with Zustand sync, MiniMap, Controls, Background), BaseNode.tsx (shared card wrapper with left color strip and selection ring), InputNode/LLMNode/TransformNode/OutputNode/DisplayNode (typed NodeProps wrappers), and nodeTypes.ts (NodeTypes registry). Used CSS custom properties from vault-themes throughout — no hardcoded hex. Fixed @xyflow/react v12 + @types/react v19 JSX namespace incompatibility by casting ReactFlow through unknown to React.ComponentType. All 3 new-file TS errors resolved; remaining errors are pre-existing in main.tsx (missing App, index.css types, vault-themes applyTheme export).
+- Summary: Created all 8 canvas components for the vault-flows SPA rewrite/spa branch: FlowCanvas.tsx (ReactFlow wrapper with Zustand sync, MiniMap, Controls, Background), BaseNode.tsx (shared card wrapper with left color strip and selection ring), InputNode/LLMNode/TransformNode/OutputNode/DisplayNode (typed NodeProps wrappers), and nodeTypes.ts (NodeTypes registry). Used CSS custom properties from vault-themes throughout â€” no hardcoded hex. Fixed @xyflow/react v12 + @types/react v19 JSX namespace incompatibility by casting ReactFlow through unknown to React.ComponentType. All 3 new-file TS errors resolved; remaining errors are pre-existing in main.tsx (missing App, index.css types, vault-themes applyTheme export).
 - Commands:
   - `npm install`
   - `npx tsc -p tsconfig.app.json --noEmit`
@@ -25152,7 +23559,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-13 09:51 (TZ: Eastern Standard Time)
   ```
-- Summary: Fixed ModuleNotFoundError: No module named 'fastmcp' in Claude Desktop extension mechanism. Root cause: manifest.json mcp_config.command was 'python' (system Python, no fastmcp). Fix 1: Updated manifest.json mcp_config.command to full venv Python path (.venv\Scripts\python.exe) and added VAULTWARES_VENV_SITE env var pointing to venv site-packages. Fix 2: Updated root server.py to add _bootstrap_venv() function that inserts venv site-packages into sys.path before importing fastmcp — checks VAULTWARES_VENV_SITE env var first, then walks up directory tree looking for .venv\Lib\site-packages. Rebuilt vaultwares-mcp-3.0.0.mcpb (102 files) with both fixes included and verified manifest command and bootstrap presence inside bundle.
+- Summary: Fixed ModuleNotFoundError: No module named 'fastmcp' in Claude Desktop extension mechanism. Root cause: manifest.json mcp_config.command was 'python' (system Python, no fastmcp). Fix 1: Updated manifest.json mcp_config.command to full venv Python path (.venv\Scripts\python.exe) and added VAULTWARES_VENV_SITE env var pointing to venv site-packages. Fix 2: Updated root server.py to add _bootstrap_venv() function that inserts venv site-packages into sys.path before importing fastmcp â€” checks VAULTWARES_VENV_SITE env var first, then walks up directory tree looking for .venv\Lib\site-packages. Rebuilt vaultwares-mcp-3.0.0.mcpb (102 files) with both fixes included and verified manifest command and bootstrap presence inside bundle.
 - Files:
   - `manifest.json`
   - `server.py`
@@ -26186,7 +24593,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-11 19:32 (TZ: Eastern Standard Time)
   ```
-- Summary: Added lines added/removed/net KPI cards to WORK_IMPACT.html. Added .big-green and .big-red CSS classes using --v-green/--v-burgundy tokens. Added 3 new span3 cards (m-insertions, m-deletions, m-netlines) after the Commits Sampled card in the top KPI grid. Added I18N keys metricInsertions/metricDeletions/metricNetLines for en and qc locales. Added rendering logic in renderTopMetrics() using data.lineStats?.clean to compute +insertions, −deletions, and net lines via fmtInt/fmtSigned helpers.
+- Summary: Added lines added/removed/net KPI cards to WORK_IMPACT.html. Added .big-green and .big-red CSS classes using --v-green/--v-burgundy tokens. Added 3 new span3 cards (m-insertions, m-deletions, m-netlines) after the Commits Sampled card in the top KPI grid. Added I18N keys metricInsertions/metricDeletions/metricNetLines for en and qc locales. Added rendering logic in renderTopMetrics() using data.lineStats?.clean to compute +insertions, âˆ’deletions, and net lines via fmtInt/fmtSigned helpers.
 - Files:
   - `WORK_IMPACT.html`
 - Git: repo=agent-ledger, branch=main, head=77cde77
@@ -26194,7 +24601,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-11 19:01 - vaultwares-studio</strong> <code>verification</code> - Diagnosed why cloud.usda and cloud.ply only contain placeholder content. Root causes: (1) COLMAP binary not installed — the candidate path C:\Users\Administrator\Desktop\COLMAP\...</summary>
+<summary><strong>2026-05-11 19:01 - vaultwares-studio</strong> <code>verification</code> - Diagnosed why cloud.usda and cloud.ply only contain placeholder content. Root causes: (1) COLMAP binary not installed &#226;€” the candidate path C:\Users\Administrator\Desktop\COLMA...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -26210,7 +24617,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-11 19:01 (TZ: Eastern Standard Time)
   ```
-- Summary: Diagnosed why cloud.usda and cloud.ply only contain placeholder content. Root causes: (1) COLMAP binary not installed — the candidate path C:\Users\Administrator\Desktop\COLMAP\bin\colmap.exe does not exist and COLMAP is not on PATH. The _run_reconstruction method gates the entire real reconstruction path on both ns_process_data AND colmap_bin being non-None; since colmap_bin is None, it immediately falls back to _write_placeholder_reconstruction() producing 3 hardcoded Vec3f points. (2) Even if COLMAP were installed, the pipeline has NO exporter code after ns-train splatfacto completes — it checks if cloud.usda exists and if cloud.ply exists, but neither ns-process-data nor ns-train writes those files. _write_placeholder_ply() and _write_placeholder_reconstruction() always fire. Available: ffmpeg, ffprobe, ns-process-data (system Python312), ns-train (system Python312), open3d, pxr. Missing: colmap binary only. Fix requires: install COLMAP binary, then add gsplat exporter code that copies/converts the trained model PLY output into cloud.ply and writes real USD from point cloud data.
+- Summary: Diagnosed why cloud.usda and cloud.ply only contain placeholder content. Root causes: (1) COLMAP binary not installed â€” the candidate path C:\Users\Administrator\Desktop\COLMAP\bin\colmap.exe does not exist and COLMAP is not on PATH. The _run_reconstruction method gates the entire real reconstruction path on both ns_process_data AND colmap_bin being non-None; since colmap_bin is None, it immediately falls back to _write_placeholder_reconstruction() producing 3 hardcoded Vec3f points. (2) Even if COLMAP were installed, the pipeline has NO exporter code after ns-train splatfacto completes â€” it checks if cloud.usda exists and if cloud.ply exists, but neither ns-process-data nor ns-train writes those files. _write_placeholder_ply() and _write_placeholder_reconstruction() always fire. Available: ffmpeg, ffprobe, ns-process-data (system Python312), ns-train (system Python312), open3d, pxr. Missing: colmap binary only. Fix requires: install COLMAP binary, then add gsplat exporter code that copies/converts the trained model PLY output into cloud.ply and writes real USD from point cloud data.
 - Files:
   - `studio_core/pipeline.py`
   - `data/jobs/local-run-20260511-185029/reconstruction/cloud.usda`

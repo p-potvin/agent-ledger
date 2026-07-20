@@ -2,7 +2,6 @@
 param(
     [string]$Project,
     [string]$Kind = 'general',
-    [Parameter(Mandatory = $true)]
     [string]$Summary,
     [string[]]$Commands = @(),
     [string[]]$Files = @(),
@@ -26,6 +25,10 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+
+if ([string]::IsNullOrWhiteSpace($Summary)) {
+    throw "The -Summary parameter is mandatory. You must provide a brief description of the changes (e.g. -Summary `"Brief description of changes`")."
+}
 
 function Limit-Tokenish {
     param([string]$Text, [int]$Limit = 256)

@@ -1,0 +1,48 @@
+{
+  "id": "20260716-202811-463-general-tasks-7f3894c9",
+  "createdAt": "2026-07-17T00:28:11.4637099Z",
+  "createdAtLocal": "2026-07-16 20:28",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 Enterprise / Clopeux-Desktop (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): PowerShell, Read, Edit, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-16 20:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 Enterprise / Clopeux-Desktop (local)",
+    "toolsUsed": [
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Applied qBittorrent.ini edits on Clopeux-Desktop with qbit closed (verified process absent first). Changes: (1) MailNotification\\smtp_server 127.0.0.1 -> smtp.protonmail.ch, matching the working OVH/Prowlarr reference; user had already corrected password to a 16-char uppercase SMTP submission token and aligned sender=username=philippe.potvin@vaultwares.ca. (2) WebUI\\AuthSubnetWhitelist 100.64.0.0/32 -> 100.64.0.0/10 (user believed this was already changed; ini still showed /32). (3) Restored WireGuard bind: Session\\Interface=iftype53_32769, Session\\InterfaceName=ca-mtr-wg-003, Session\\InterfaceAddress=10.74.244.160 - values verified still valid (adapter unchanged, ifIndex 37, Up, IPv4 10.74.244.160). TECHNICAL CORRECTION to earlier advice: full-tunnel routing does NOT protect qBittorrent when 'Any interface' is selected - libtorrent enumerates and binds sockets to each local address including 10.0.0.24 (Ethernet 2), and a socket bound to 10.0.0.24 cannot egress via wg due to source-address mismatch, so Windows routes it out the ISP path. This is why the user observed their real external IP fluctuating per qbit boot. App-scoped interface bind is orthogonal to the system-wide killswitch the user declined. Confirmed already-good: WebUI\\RootFolder=...\\VueTorrent\\vuetorrent, Proxy\\Type=None, PortForwardingEnabled=false, Session\\AnonymousModeEnabled=false. DOC FINDING: Prom-King docs/instructions/summaries/DEPLOYMENT.md line 4 states 'OVH as ubuntu with tube-site-vps key' but root@100.67.25.118 with id_ed25519 works - line is inaccurate/incomplete and misleads agents. ROUTER.md does NOT direct agents to MCP for SSH; the MCP ssh_run attempt was own tool-selection, not doc-caused. Secrets not recorded.",
+  "commands": [
+    "Get-NetAdapter -Name ca-mtr-wg-003",
+    "Get-Process qbittorrent"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\AppData\\Roaming\\qBittorrent\\qBittorrent.ini"
+  ],
+  "planPath": "",
+  "contentHash": "7f3894c9cf345c5d6ae92ab22249c7757ab75f3008a857966a62fc07a5383be7",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "1d59cfc",
+    "hasChanges": false
+  }
+}
