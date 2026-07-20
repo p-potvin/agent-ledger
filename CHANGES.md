@@ -3,6 +3,36 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-07-20 09:06 - wander</strong> <code>code-change,verification</code> - Phase 1 installer + auto-update done (pushed e04716e). Wired Velopack 1.2.0 into Wander.Dashboard: VelopackApp.Build().Run() as first line of Main (install/update hooks); Update...</summary>
+
+- Kind: code-change,verification
+- Actor: Claude
+- Agent Header:
+  ```text
+  Agent: Claude (role: main)
+  Model: claude-opus-4-8
+  Thinking: unknown
+  Mode: interactive
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Clopeux\Desktop\Github Repos\wander  Branch: main
+  Tools used (this reply): Read, Edit, Write, Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-07-20 09:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: Phase 1 installer + auto-update done (pushed e04716e). Wired Velopack 1.2.0 into Wander.Dashboard: VelopackApp.Build().Run() as first line of Main (install/update hooks); UpdateService checks WanderOptions.UpdateUrl on startup, downloads newer releases in background, surfaces via activity feed + toast + tray 'Restart to apply update' item (never auto-restarts a running sync node). Feed source is a plain URL/UNC path OR a github.com repo (GithubSource). scripts/pack.ps1 publishes self-contained win-x64 and runs vpk pack; ran it for real, produced VaultWaresWander-win-Setup.exe (71MB) + portable zip + RELEASES/nupkg update feed - Velopack verified the VelopackApp.Run() hook. Added .github/workflows/release.yml (v* tag -> pack -> attach to GitHub Release). Generated wander.ico from the gold PNG mark for installer/shortcuts via System.Drawing PNG-in-ICO. Installed vpk global tool. Follow-ups noted: code-signing (unsigned installer triggers SmartScreen), real Action-Center toasts now unblocked by the installer's AUMID. 35/35 tests, 0 warnings. Phase 1 feature-complete; only exit criterion (daily-drive) + deferred two-machine test remain.
+- Commands:
+  - `dotnet tool install -g vpk`
+  - `./scripts/pack.ps1 -Version 0.1.0`
+  - `git push origin main`
+- Files:
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\scripts\pack.ps1`
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\UpdateService.cs`
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\.github\workflows\release.yml`
+- Git: repo=wander, branch=main, head=e04716e
+
+</details>
+
+<details>
 <summary><strong>2026-07-20 08:47 - wander</strong> <code>code-change,verification</code> - Phase 1 features: pause/resume + in-app notifications (pushed e6460e4). SyncController (thread-safe pause switch): paused node stops pulling AND its gRPC ListFiles stops adverti...</summary>
 
 - Kind: code-change,verification

@@ -1,0 +1,52 @@
+{
+  "id": "20260720-090631-182-wander-d8218d85",
+  "createdAt": "2026-07-20T13:06:31.1820011Z",
+  "createdAtLocal": "2026-07-20 09:06",
+  "timezone": "Eastern Standard Time",
+  "project": "wander",
+  "kind": "code-change,verification",
+  "actor": "Claude",
+  "agentHeader": "Agent: Claude (role: main)\r\nModel: claude-opus-4-8\r\nThinking: unknown\r\nMode: interactive\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-20 09:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "unknown",
+    "mode": "interactive",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Clopeux\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander",
+  "summary": "Phase 1 installer + auto-update done (pushed e04716e). Wired Velopack 1.2.0 into Wander.Dashboard: VelopackApp.Build().Run() as first line of Main (install/update hooks); UpdateService checks WanderOptions.UpdateUrl on startup, downloads newer releases in background, surfaces via activity feed + toast + tray 'Restart to apply update' item (never auto-restarts a running sync node). Feed source is a plain URL/UNC path OR a github.com repo (GithubSource). scripts/pack.ps1 publishes self-contained win-x64 and runs vpk pack; ran it for real, produced VaultWaresWander-win-Setup.exe (71MB) + portable zip + RELEASES/nupkg update feed - Velopack verified the VelopackApp.Run() hook. Added .github/workflows/release.yml (v* tag -> pack -> attach to GitHub Release). Generated wander.ico from the gold PNG mark for installer/shortcuts via System.Drawing PNG-in-ICO. Installed vpk global tool. Follow-ups noted: code-signing (unsigned installer triggers SmartScreen), real Action-Center toasts now unblocked by the installer's AUMID. 35/35 tests, 0 warnings. Phase 1 feature-complete; only exit criterion (daily-drive) + deferred two-machine test remain.",
+  "commands": [
+    "dotnet tool install -g vpk",
+    "./scripts/pack.ps1 -Version 0.1.0",
+    "git push origin main"
+  ],
+  "files": [
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\scripts\\pack.ps1",
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\Wander.Dashboard\\UpdateService.cs",
+    "C:\\Users\\Clopeux\\Desktop\\Github Repos\\wander\\.github\\workflows\\release.yml"
+  ],
+  "planPath": "",
+  "contentHash": "d8218d851d680150c414df20f1e59dc8d2b6e45e99320203d45541346905e180",
+  "git": {
+    "repo": "wander",
+    "root": "C:/Users/Clopeux/Desktop/Github Repos/wander",
+    "branch": "main",
+    "head": "e04716e",
+    "hasChanges": false
+  }
+}
