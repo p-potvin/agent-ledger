@@ -48,6 +48,30 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-07-21 02:37 - wander</strong> <span class="kind">code-change,verification</span> - Phase 2 flagship &#39;Wander back in time&#39; done and verified end-to-end (pushed 2eae300). Per-file version history: VersionStore (content-addressed blobs under .wander/versions, ded...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> Claude</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Claude (role: main) Model: claude-opus-4-8 Thinking: unknown Mode: interactive Permissions: unknown (network: unknown) CWD: C:\Users\Clopeux\Desktop\Github Repos\wander  Branch: main Tools used (this reply): Read, Edit, Write, Bash, PowerShell MCP servers accessed (this reply): none Time: 2026-07-21 02:37 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Phase 2 flagship &#39;Wander back in time&#39; done and verified end-to-end (pushed 2eae300). Per-file version history: VersionStore (content-addressed blobs under .wander/versions, dedup), FileVersions timeline table, VersionRecorder capturing a version on every content change (local edit, initial scan, peer pull - attributed to source node) with GC of unreferenced blobs. AnswersRetention behind IRetentionPolicy implements the owner&#39;s A.N.S.W.E.R.S. alternating non-sequential thinning (keep newest+oldest, thin interior, cap per file) - interpretation documented and FLAGGED in the class for owner sign-off since the spec is ambiguous. Wired into FolderScanner/LocalIndexer/SyncEngine. Dashboard &#39;Wander back in time&#39; window: files -&gt; version timeline (current marker, source, size) -&gt; Restore (copies blob back, re-versions and propagates). Live testing caught a real startup crash unit tests missed: FolderScanner threw on two FileStates sharing one path (GUID-keyed table; open question #1) - fixed to tolerate (live over tombstone, then newest) + regression test + UI dedupe. 48 tests (13 new), 0 warnings. Verified via UI automation: daemon survives dup-path db, 7 versions recorded, timeline renders, restore rolled a file back to old content. Also marked multi-peer mesh/opportunistic relay as already-working (daemon pulls from every discovered peer each round).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>dotnet test Wander.Tests</code></li>
+        <li><code>git push origin main</code></li>
+        <li><code>UI automation screenshot verification</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Core\Services\Retention\AnswersRetention.cs</code></li>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Core\Services\VersionRecorder.cs</code></li>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\HistoryWindow.axaml.cs</code></li>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Core\Services\FolderScanner.cs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=wander, branch=main, head=2eae300</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-07-20 09:06 - wander</strong> <span class="kind">code-change,verification</span> - Phase 1 installer + auto-update done (pushed e04716e). Wired Velopack 1.2.0 into Wander.Dashboard: VelopackApp.Build().Run() as first line of Main (install/update hooks); Update...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change,verification</p>

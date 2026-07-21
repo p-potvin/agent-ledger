@@ -3,6 +3,37 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-07-21 02:37 - wander</strong> <code>code-change,verification</code> - Phase 2 flagship &#39;Wander back in time&#39; done and verified end-to-end (pushed 2eae300). Per-file version history: VersionStore (content-addressed blobs under .wander/versions, ded...</summary>
+
+- Kind: code-change,verification
+- Actor: Claude
+- Agent Header:
+  ```text
+  Agent: Claude (role: main)
+  Model: claude-opus-4-8
+  Thinking: unknown
+  Mode: interactive
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Clopeux\Desktop\Github Repos\wander  Branch: main
+  Tools used (this reply): Read, Edit, Write, Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-07-21 02:37 (TZ: Eastern Standard Time)
+  ```
+- Summary: Phase 2 flagship 'Wander back in time' done and verified end-to-end (pushed 2eae300). Per-file version history: VersionStore (content-addressed blobs under .wander/versions, dedup), FileVersions timeline table, VersionRecorder capturing a version on every content change (local edit, initial scan, peer pull - attributed to source node) with GC of unreferenced blobs. AnswersRetention behind IRetentionPolicy implements the owner's A.N.S.W.E.R.S. alternating non-sequential thinning (keep newest+oldest, thin interior, cap per file) - interpretation documented and FLAGGED in the class for owner sign-off since the spec is ambiguous. Wired into FolderScanner/LocalIndexer/SyncEngine. Dashboard 'Wander back in time' window: files -> version timeline (current marker, source, size) -> Restore (copies blob back, re-versions and propagates). Live testing caught a real startup crash unit tests missed: FolderScanner threw on two FileStates sharing one path (GUID-keyed table; open question #1) - fixed to tolerate (live over tombstone, then newest) + regression test + UI dedupe. 48 tests (13 new), 0 warnings. Verified via UI automation: daemon survives dup-path db, 7 versions recorded, timeline renders, restore rolled a file back to old content. Also marked multi-peer mesh/opportunistic relay as already-working (daemon pulls from every discovered peer each round).
+- Commands:
+  - `dotnet test Wander.Tests`
+  - `git push origin main`
+  - `UI automation screenshot verification`
+- Files:
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Core\Services\Retention\AnswersRetention.cs`
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Core\Services\VersionRecorder.cs`
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\HistoryWindow.axaml.cs`
+  - `C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Core\Services\FolderScanner.cs`
+- Git: repo=wander, branch=main, head=2eae300
+
+</details>
+
+<details>
 <summary><strong>2026-07-20 09:06 - wander</strong> <code>code-change,verification</code> - Phase 1 installer + auto-update done (pushed e04716e). Wired Velopack 1.2.0 into Wander.Dashboard: VelopackApp.Build().Run() as first line of Main (install/update hooks); Update...</summary>
 
 - Kind: code-change,verification
