@@ -1,218 +1,220 @@
 [CmdletBinding()]
 param(
-    [string]$LedgerRoot,
-    [string]$StatePath,
-    [string]$ParentHtmlPath,
-    [int]   $DaysBack = 90
+  [string]$LedgerRoot,
+  [string]$StatePath,
+  [string]$ParentHtmlPath,
+  [int]   $DaysBack = 90
 )
 
 $ErrorActionPreference = 'Stop'
 
 if (-not $LedgerRoot) { $LedgerRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path }
-if (-not $StatePath)  { $StatePath  = Join-Path $LedgerRoot 'work-impact.state.json' }
+if (-not $StatePath) { $StatePath = Join-Path $LedgerRoot 'work-impact.state.json' }
 if (-not $ParentHtmlPath) { $ParentHtmlPath = Join-Path (Split-Path $LedgerRoot -Parent) 'WORK_IMPACT.html' }
 
 $outHtmlPath = Join-Path $LedgerRoot 'WORK_IMPACT.html'
-$LogDir      = Join-Path $LedgerRoot 'input-logs'
-$HistDir     = Join-Path $LedgerRoot 'history'
-$EventsDir   = Join-Path $LedgerRoot 'events'
+$LogDir = Join-Path $LedgerRoot 'input-logs'
+$HistDir = Join-Path $LedgerRoot 'history'
+$EventsDir = Join-Path $LedgerRoot 'events'
 
 if (-not (Test-Path -LiteralPath $StatePath)) {
-    throw "State file not found: $StatePath"
+  throw "State file not found: $StatePath"
 }
 
 # ---------------------------------------------------------------------------
 # i18n table
 # ---------------------------------------------------------------------------
 function New-I18nTable {
-    return [ordered]@{
-        en = [ordered]@{
-            title = 'Work Impact'
-            subtitle = 'A plain-language view of the work recorded in your agent ledger.'
-            generated = 'Generated'
-            range = 'Range'
-            langLabel = 'Language'
-            intro = 'This report helps non-technical readers understand effort: how often you worked, how widely you spread across projects, and how the pace evolved.'
-            metricEvents = 'Work entries'
-            metricDays = 'Active days'
-            metricProjects = 'Projects touched'
-            metricStreak = 'Current streak'
-            metricLongestStreak = 'Longest streak'
-            metricBusiestDay = 'Busiest day'
-            metricBusiestWeek = 'Busiest week'
-            calendarTitle = 'Work activity by day'
-            calendarHint = 'Hover a square to see that day.'
-            less = 'Less'
-            more = 'More'
-            monthlyTitle = 'Work recorded per month'
-            kindsTitle = 'What kind of work'
-            projectsTitle = 'Top projects by activity'
-            projectsNote = 'Raw repo names are shown.'
-            commitSizeTitle = 'Commit size (clean churn lines)'
-            commitSizeHint = 'Derived from git commits referenced by backfill events. Clean churn = additions + deletions, excluding generated/vendor paths.'
-            commitStatMean = 'Mean'
-            commitStatMedian = 'Median'
-            commitStatMode = 'Mode'
-            commitStatSamples = 'Commits sampled'
-            commitHistTitle = 'Size distribution'
-            commitBoxTitle = 'By month (quartiles)'
-            commitOutliersTitle = 'Largest commits'
-            techTitle = 'Technical volume (clean vs raw)'
-            techHint = 'Line counts are one imperfect proxy for effort. Clean excludes generated/vendor paths.'
-            statType = 'Metric'
-            statAdds = 'Additions'
-            statDels = 'Deletions'
-            statFiles = 'Files'
-            statChurn = 'Churn'
-            statNet = 'Net'
-            statExcluded = 'Excluded churn'
-            filesTouchedTitle = 'Files touched per commit'
-            concentrationTitle = 'Work concentration'
-            concentrationHint = 'Share of total activity in the top 5 projects.'
-            highlightsTitle = 'Top projects'
-            highlightsHint = 'Projects with the most recorded activity.'
-            hlMostConsistentMonth = 'Most consistent month'
-            hlWidestProjectDay = 'Widest project spread'
-            hlStrongestWeek = 'Strongest week'
-            hlMilestones = 'Milestones'
-            labelProjects = 'Projects'
-            labelKinds = 'Kinds'
-            labelClean = 'Clean'
-            labelRaw = 'Raw'
-            labelExcluded = 'Excluded'
-            evidenceTitle = 'Activity by project'
-            evidenceHint = 'Expand any project to see its recent activity entries.'
-            colProject = 'Project'
-            colEntries = 'Entries'
-            colFirst = 'First'
-            colLast = 'Last'
-            colExamples = 'Recent entries'
-            agentTitle = 'Agent activity'
-            agentHint = 'Entries recorded with an agent runtime header (available from May 2026).'
-            activityTitle = 'When work happens'
-            activityHint = 'Hour of day and day of week distributions across all entries.'
-            noCommitData = 'No commit data yet.'
-            commitLineDataUnavailable = '{n} commits referenced. Line-count statistics are populated the next time update-work-impact.ps1 runs. If counts remain at zero, run with -FullRebuild to reprocess all commits.'
-            lineStatsUnavailable = 'Line-count data requires local access to git repositories. Run update-work-impact.ps1 locally.'
-            fileDataUnavailable = '{n} commits referenced. File count data requires local git access.'
-            noMcpData = 'No MCP servers.'
-            noAgentDays = 'No agent activity days yet.'
-            noSummaries = 'No summaries.'
-            agentEventsLabel = 'Agent events'
-            distinctActors = 'Distinct actors'
-            modelsUsed = 'Models used'
-            toolsUsed = 'Tools used'
-            streakMax = 'Max: {n} days'
-            kindLabels = [ordered]@{
-                'code-change' = 'Built / changed'
-                'plan' = 'Planning'
-                'verification' = 'Verification'
-                'commands' = 'Operations'
-                'handoff' = 'Handoffs'
-                'general' = 'Other'
-            }
-            units = [ordered]@{
-                days = 'days'
-                entries = 'entries'
-                commits = 'commits'
-                lines = 'lines'
-                files = 'files'
-            }
-        }
-        qc = [ordered]@{
-            title = 'Impact du travail'
-            subtitle = "Une vue simple du travail enregistr$([char]0x00e9) dans ton agent ledger."
-            generated = "G$([char]0x00e9)n$([char]0x00e9)r$([char]0x00e9)"
-            range = "P$([char]0x00e9)riode"
-            langLabel = 'Langue'
-            intro = "Ce rapport aide des gens non-tech $([char]0x00e0) comprendre l$([char]0x2019)effort$([char]0x00a0): $([char]0x00e0) quelle fr$([char]0x00e9)quence tu as travaill$([char]0x00e9), sur combien de projets, et comment le rythme a $([char]0x00e9)volu$([char]0x00e9)."
-            metricEvents = "Entr$([char]0x00e9)es de travail"
-            metricDays = 'Jours actifs'
-            metricProjects = "Projets touch$([char]0x00e9)s"
-            metricStreak = "S$([char]0x00e9)rie en cours"
-            metricLongestStreak = "Plus longue s$([char]0x00e9)rie"
-            metricBusiestDay = 'Jour le plus actif'
-            metricBusiestWeek = 'Semaine la plus active'
-            calendarTitle = "Activit$([char]0x00e9) de travail par jour"
-            calendarHint = "Survole un carr$([char]0x00e9) pour voir la journ$([char]0x00e9)e."
-            less = 'Moins'
-            more = 'Plus'
-            monthlyTitle = "Travail enregistr$([char]0x00e9) par mois"
-            kindsTitle = "Type de travail"
-            projectsTitle = 'Projets les plus actifs'
-            projectsNote = "Les noms bruts des repos sont affich$([char]0x00e9)s."
-            commitSizeTitle = 'Taille des commits (churn propre)'
-            commitSizeHint = "D$([char]0x00e9)riv$([char]0x00e9) des commits r$([char]0x00e9)f$([char]0x00e9)renc$([char]0x00e9)s par les $([char]0x00e9)v$([char]0x00e9)nements de backfill."
-            commitStatMean = 'Moyenne'
-            commitStatMedian = "M$([char]0x00e9)diane"
-            commitStatMode = 'Mode'
-            commitStatSamples = "Commits mesur$([char]0x00e9)s"
-            commitHistTitle = 'Distribution des tailles'
-            commitBoxTitle = 'Par mois (quartiles)'
-            commitOutliersTitle = 'Plus gros commits'
-            techTitle = 'Volume technique (propre vs brut)'
-            techHint = "Le nombre de lignes est un indicateur imparfait."
-            statType = "M$([char]0x00e9)trique"
-            statAdds = 'Ajouts'
-            statDels = 'Suppressions'
-            statFiles = 'Fichiers'
-            statChurn = 'Churn'
-            statNet = 'Net'
-            statExcluded = 'Churn exclu'
-            filesTouchedTitle = "Fichiers touch$([char]0x00e9)s par commit"
-            concentrationTitle = 'Concentration du travail'
-            concentrationHint = "Part de l$([char]0x2019)activit$([char]0x00e9) totale dans les 5 premiers projets."
-            highlightsTitle = 'Meilleurs projets'
-            highlightsHint = "Projets avec le plus d$([char]0x2019)activit$([char]0x00e9) enregistr$([char]0x00e9)e."
-            hlMostConsistentMonth = 'Mois le plus constant'
-            hlWidestProjectDay = 'Jour avec le plus de projets'
-            hlStrongestWeek = 'Semaine la plus forte'
-            hlMilestones = 'Jalons'
-            labelProjects = 'Projets'
-            labelKinds = 'Types'
-            labelClean = 'Propre'
-            labelRaw = 'Brut'
-            labelExcluded = 'Exclu'
-            evidenceTitle = "Activit$([char]0x00e9) par projet"
-            evidenceHint = "D$([char]0x00e9)pliez un projet pour voir ses entr$([char]0x00e9)es r$([char]0x00e9)centes."
-            colProject = 'Projet'
-            colEntries = "Entr$([char]0x00e9)es"
-            colFirst = 'Premier'
-            colLast = 'Dernier'
-            colExamples = "Entr$([char]0x00e9)es r$([char]0x00e9)centes"
-            agentTitle = "Activit$([char]0x00e9) des agents"
-            agentHint = "Entr$([char]0x00e9)es avec un en-t$([char]0x00ea)te d$([char]0x2019)agent runtime."
-            activityTitle = 'Quand le travail se passe'
-            activityHint = 'Distribution par heure du jour et jour de la semaine.'
-            noCommitData = 'Pas encore de commits.'
-            commitLineDataUnavailable = "{n} commits r$([char]0x00e9)f$([char]0x00e9)renc$([char]0x00e9)s. Les statistiques de lignes seront peupl$([char]0x00e9)es au prochain passage."
-            lineStatsUnavailable = "Les donn$([char]0x00e9)es de lignes n$([char]0x00e9)cessitent un acc$([char]0x00e8)s local aux d$([char]0x00e9)p$([char]0x00f4)ts git."
-            fileDataUnavailable = "{n} commits r$([char]0x00e9)f$([char]0x00e9)renc$([char]0x00e9)s. Donn$([char]0x00e9)es de fichiers non disponibles sans acc$([char]0x00e8)s local."
-            noMcpData = 'Aucun serveur MCP.'
-            noAgentDays = "Aucune journ$([char]0x00e9)e avec agent."
-            noSummaries = "Aucun r$([char]0x00e9)sum$([char]0x00e9)."
-            agentEventsLabel = "$([char]0x00c9)v$([char]0x00e9)nements d$([char]0x2019)agent"
-            distinctActors = 'Acteurs distincts'
-            modelsUsed = "Mod$([char]0x00e8)les utilis$([char]0x00e9)s"
-            toolsUsed = "Outils utilis$([char]0x00e9)s"
-            streakMax = "Max$([char]0x00a0): {n} jours"
-            kindLabels = [ordered]@{
-                'code-change' = "Construit / modifi$([char]0x00e9)"
-                'plan' = 'Planification'
-                'verification' = "V$([char]0x00e9)rification"
-                'commands' = "Op$([char]0x00e9)rations"
-                'handoff' = 'Passations'
-                'general' = 'Autre'
-            }
-            units = [ordered]@{
-                days = 'jours'
-                entries = "entr$([char]0x00e9)es"
-                commits = 'commits'
-                lines = 'lignes'
-                files = 'fichiers'
-            }
-        }
+  return [ordered]@{
+    en = [ordered]@{
+      title                     = 'Work Impact'
+      subtitle                  = 'A plain-language view of the work recorded in your agent ledger.'
+      generated                 = 'Generated'
+      range                     = 'Range'
+      langLabel                 = 'Language'
+      intro                     = 'This report helps non-technical readers understand effort: how often you worked, how widely you spread across projects, and how the pace evolved.'
+      metricEvents              = 'Work entries'
+      metricDays                = 'Active days'
+      metricProjects            = 'Projects touched'
+      metricStreak              = 'Current streak'
+      metricLongestStreak       = 'Longest streak'
+      metricBusiestDay          = 'Busiest day'
+      metricBusiestWeek         = 'Busiest week'
+      calendarTitle             = 'Work activity by day'
+      calendarHint              = 'Hover a square to see that day.'
+      less                      = 'Less'
+      more                      = 'More'
+      monthlyTitle              = 'Work recorded per month'
+      kindsTitle                = 'What kind of work'
+      projectsTitle             = 'Top projects by activity'
+      projectsNote              = 'Raw repo names are shown.'
+      commitSizeTitle           = 'Commit size (clean churn lines)'
+      commitSizeHint            = 'Derived from git commits referenced by backfill events. Clean churn = additions + deletions, excluding generated/vendor paths.'
+      commitStatMean            = 'Mean'
+      commitStatMedian          = 'Median'
+      commitStatMode            = 'Mode'
+      commitStatSamples         = 'Commits sampled'
+      commitHistTitle           = 'Size distribution'
+      commitBoxTitle            = 'By month (quartiles)'
+      commitOutliersTitle       = 'Largest commits'
+      techTitle                 = 'Technical volume (clean vs raw)'
+      techHint                  = 'Line counts are one imperfect proxy for effort. Clean excludes generated/vendor paths.'
+      statType                  = 'Metric'
+      statAdds                  = 'Additions'
+      statDels                  = 'Deletions'
+      statFiles                 = 'Files'
+      statChurn                 = 'Churn'
+      statNet                   = 'Net'
+      statExcluded              = 'Excluded churn'
+      filesTouchedTitle         = 'Files touched per commit'
+      concentrationTitle        = 'Work concentration'
+      concentrationHint         = 'Share of total activity in the top 5 projects.'
+      highlightsTitle           = 'Top projects'
+      highlightsHint            = 'Projects with the most recorded activity.'
+      hlMostConsistentMonth     = 'Most consistent month'
+      hlWidestProjectDay        = 'Widest project spread'
+      hlStrongestWeek           = 'Strongest week'
+      hlMilestones              = 'Milestones'
+      labelProjects             = 'Projects'
+      labelKinds                = 'Kinds'
+      labelClean                = 'Clean'
+      labelRaw                  = 'Raw'
+      labelExcluded             = 'Excluded'
+      evidenceTitle             = 'Activity by project'
+      evidenceHint              = 'Expand any project to see its recent activity entries.'
+      colProject                = 'Project'
+      colEntries                = 'Entries'
+      colFirst                  = 'First'
+      colLast                   = 'Last'
+      colExamples               = 'Recent entries'
+      agentTitle                = 'Agent activity'
+      agentHint                 = 'Entries recorded with an agent runtime header (available from May 2026).'
+      activityTitle             = 'When work happens'
+      activityHint              = 'Hour of day and day of week distributions across all entries.'
+      noCommitData              = 'No commit data yet.'
+      commitLineDataUnavailable = '{n} commits referenced. Line-count statistics are populated the next time update-work-impact.ps1 runs. If counts remain at zero, run with -FullRebuild to reprocess all commits.'
+      lineStatsUnavailable      = 'Line-count data requires local access to git repositories. Run update-work-impact.ps1 locally.'
+      fileDataUnavailable       = '{n} commits referenced. File count data requires local git access.'
+      noMcpData                 = 'No MCP servers.'
+      noAgentDays               = 'No agent activity days yet.'
+      noSummaries               = 'No summaries.'
+      agentEventsLabel          = 'Agent events'
+      distinctActors            = 'Distinct actors'
+      modelsUsed                = 'Models used'
+      toolsUsed                 = 'Tools used'
+      streakMax                 = 'Max: {n} days'
+      kindLabels                = [ordered]@{
+        'code-change'   = 'Built / changed'
+        'plan'          = 'Planning'
+        'verification'  = 'Verification'
+        'commands'      = 'Operations'
+        'handoff'       = 'Handoffs'
+        'documentation' = 'Documentation'
+        'general'       = 'Other'
+      }
+      units                     = [ordered]@{
+        days    = 'days'
+        entries = 'entries'
+        commits = 'commits'
+        lines   = 'lines'
+        files   = 'files'
+      }
     }
+    qc = [ordered]@{
+      title                     = 'Impact du travail'
+      subtitle                  = "Une vue simple du travail enregistr$([char]0x00e9) dans ton agent ledger."
+      generated                 = "G$([char]0x00e9)n$([char]0x00e9)r$([char]0x00e9)"
+      range                     = "P$([char]0x00e9)riode"
+      langLabel                 = 'Langue'
+      intro                     = "Ce rapport aide des gens non-tech $([char]0x00e0) comprendre l$([char]0x2019)effort$([char]0x00a0): $([char]0x00e0) quelle fr$([char]0x00e9)quence tu as travaill$([char]0x00e9), sur combien de projets, et comment le rythme a $([char]0x00e9)volu$([char]0x00e9)."
+      metricEvents              = "Entr$([char]0x00e9)es de travail"
+      metricDays                = 'Jours actifs'
+      metricProjects            = "Projets touch$([char]0x00e9)s"
+      metricStreak              = "S$([char]0x00e9)rie en cours"
+      metricLongestStreak       = "Plus longue s$([char]0x00e9)rie"
+      metricBusiestDay          = 'Jour le plus actif'
+      metricBusiestWeek         = 'Semaine la plus active'
+      calendarTitle             = "Activit$([char]0x00e9) de travail par jour"
+      calendarHint              = "Survole un carr$([char]0x00e9) pour voir la journ$([char]0x00e9)e."
+      less                      = 'Moins'
+      more                      = 'Plus'
+      monthlyTitle              = "Travail enregistr$([char]0x00e9) par mois"
+      kindsTitle                = "Type de travail"
+      projectsTitle             = 'Projets les plus actifs'
+      projectsNote              = "Les noms bruts des repos sont affich$([char]0x00e9)s."
+      commitSizeTitle           = 'Taille des commits (churn propre)'
+      commitSizeHint            = "D$([char]0x00e9)riv$([char]0x00e9) des commits r$([char]0x00e9)f$([char]0x00e9)renc$([char]0x00e9)s par les $([char]0x00e9)v$([char]0x00e9)nements de backfill."
+      commitStatMean            = 'Moyenne'
+      commitStatMedian          = "M$([char]0x00e9)diane"
+      commitStatMode            = 'Mode'
+      commitStatSamples         = "Commits mesur$([char]0x00e9)s"
+      commitHistTitle           = 'Distribution des tailles'
+      commitBoxTitle            = 'Par mois (quartiles)'
+      commitOutliersTitle       = 'Plus gros commits'
+      techTitle                 = 'Volume technique (propre vs brut)'
+      techHint                  = "Le nombre de lignes est un indicateur imparfait."
+      statType                  = "M$([char]0x00e9)trique"
+      statAdds                  = 'Ajouts'
+      statDels                  = 'Suppressions'
+      statFiles                 = 'Fichiers'
+      statChurn                 = 'Churn'
+      statNet                   = 'Net'
+      statExcluded              = 'Churn exclu'
+      filesTouchedTitle         = "Fichiers touch$([char]0x00e9)s par commit"
+      concentrationTitle        = 'Concentration du travail'
+      concentrationHint         = "Part de l$([char]0x2019)activit$([char]0x00e9) totale dans les 5 premiers projets."
+      highlightsTitle           = 'Meilleurs projets'
+      highlightsHint            = "Projets avec le plus d$([char]0x2019)activit$([char]0x00e9) enregistr$([char]0x00e9)e."
+      hlMostConsistentMonth     = 'Mois le plus constant'
+      hlWidestProjectDay        = 'Jour avec le plus de projets'
+      hlStrongestWeek           = 'Semaine la plus forte'
+      hlMilestones              = 'Jalons'
+      labelProjects             = 'Projets'
+      labelKinds                = 'Types'
+      labelClean                = 'Propre'
+      labelRaw                  = 'Brut'
+      labelExcluded             = 'Exclu'
+      evidenceTitle             = "Activit$([char]0x00e9) par projet"
+      evidenceHint              = "D$([char]0x00e9)pliez un projet pour voir ses entr$([char]0x00e9)es r$([char]0x00e9)centes."
+      colProject                = 'Projet'
+      colEntries                = "Entr$([char]0x00e9)es"
+      colFirst                  = 'Premier'
+      colLast                   = 'Dernier'
+      colExamples               = "Entr$([char]0x00e9)es r$([char]0x00e9)centes"
+      agentTitle                = "Activit$([char]0x00e9) des agents"
+      agentHint                 = "Entr$([char]0x00e9)es avec un en-t$([char]0x00ea)te d$([char]0x2019)agent runtime."
+      activityTitle             = 'Quand le travail se passe'
+      activityHint              = 'Distribution par heure du jour et jour de la semaine.'
+      noCommitData              = 'Pas encore de commits.'
+      commitLineDataUnavailable = "{n} commits r$([char]0x00e9)f$([char]0x00e9)renc$([char]0x00e9)s. Les statistiques de lignes seront peupl$([char]0x00e9)es au prochain passage."
+      lineStatsUnavailable      = "Les donn$([char]0x00e9)es de lignes n$([char]0x00e9)cessitent un acc$([char]0x00e8)s local aux d$([char]0x00e9)p$([char]0x00f4)ts git."
+      fileDataUnavailable       = "{n} commits r$([char]0x00e9)f$([char]0x00e9)renc$([char]0x00e9)s. Donn$([char]0x00e9)es de fichiers non disponibles sans acc$([char]0x00e8)s local."
+      noMcpData                 = 'Aucun serveur MCP.'
+      noAgentDays               = "Aucune journ$([char]0x00e9)e avec agent."
+      noSummaries               = "Aucun r$([char]0x00e9)sum$([char]0x00e9)."
+      agentEventsLabel          = "$([char]0x00c9)v$([char]0x00e9)nements d$([char]0x2019)agent"
+      distinctActors            = 'Acteurs distincts'
+      modelsUsed                = "Mod$([char]0x00e8)les utilis$([char]0x00e9)s"
+      toolsUsed                 = "Outils utilis$([char]0x00e9)s"
+      streakMax                 = "Max$([char]0x00a0): {n} jours"
+      kindLabels                = [ordered]@{
+        'code-change'   = "Construit / modifi$([char]0x00e9)"
+        'plan'          = 'Planification'
+        'verification'  = "V$([char]0x00e9)rification"
+        'commands'      = "Op$([char]0x00e9)rations"
+        'handoff'       = 'Passations'
+        'documentation' = 'Documentation'
+        'general'       = 'Autre'
+      }
+      units                     = [ordered]@{
+        days    = 'jours'
+        entries = "entr$([char]0x00e9)es"
+        commits = 'commits'
+        lines   = 'lignes'
+        files   = 'fichiers'
+      }
+    }
+  }
 }
 
 # ---------------------------------------------------------------------------
@@ -220,24 +222,25 @@ function New-I18nTable {
 # ---------------------------------------------------------------------------
 $state = Get-Content -Raw -LiteralPath $StatePath | ConvertFrom-Json
 if (-not $state -or -not $state.data) {
-    throw "State file has no data. Run scripts/update-work-impact.ps1 first: $StatePath"
+  throw "State file has no data. Run scripts/update-work-impact.ps1 first: $StatePath"
 }
-$payload = [ordered]@{ config=$state.config; data=$state.data; lastUpdatedUtc=$state.lastUpdatedUtc }
+$payload = [ordered]@{ config = $state.config; data = $state.data; lastUpdatedUtc = $state.lastUpdatedUtc }
 $payloadJson = ($payload | ConvertTo-Json -Depth 24 -Compress)
-$i18nJson    = ((New-I18nTable) | ConvertTo-Json -Depth 24 -Compress)
+$i18nJson = ((New-I18nTable) | ConvertTo-Json -Depth 24 -Compress)
 
 $aliasesFilePath = Join-Path $PSScriptRoot "..\project-aliases.json"
 $aliasReverseMap = [ordered]@{}
 if (Test-Path -LiteralPath $aliasesFilePath) {
-    try {
-        $aliasData = Get-Content -Raw -LiteralPath $aliasesFilePath | ConvertFrom-Json
-        foreach ($entry in $aliasData.projects) {
-            if ($entry.canonical -and $entry.aliases) {
-                $validAliases = @($entry.aliases | Where-Object { $_ -and $_.Trim() -ne '' })
-                if ($validAliases.Count -gt 0) { $aliasReverseMap[$entry.canonical] = $validAliases }
-            }
-        }
-    } catch { }
+  try {
+    $aliasData = Get-Content -Raw -LiteralPath $aliasesFilePath | ConvertFrom-Json
+    foreach ($entry in $aliasData.projects) {
+      if ($entry.canonical -and $entry.aliases) {
+        $validAliases = @($entry.aliases | Where-Object { $_ -and $_.Trim() -ne '' })
+        if ($validAliases.Count -gt 0) { $aliasReverseMap[$entry.canonical] = $validAliases }
+      }
+    }
+  }
+  catch { }
 }
 $aliasMapJson = ($aliasReverseMap | ConvertTo-Json -Depth 4 -Compress)
 
@@ -246,53 +249,55 @@ $aliasMapJson = ($aliasReverseMap | ConvertTo-Json -Depth 4 -Compress)
 # ---------------------------------------------------------------------------
 $inputDays = [System.Collections.Generic.List[object]]::new()
 if (Test-Path $LogDir) {
-    $cutoff = (Get-Date).AddDays(-$DaysBack).Date
-    Get-ChildItem -Path $LogDir -Filter "*.json" -File | Sort-Object Name |
-        Where-Object { $_.BaseName -match '^\d{4}-\d{2}-\d{2}$' } |
-        ForEach-Object {
-            try {
-                $dt = [datetime]::ParseExact($_.BaseName, "yyyy-MM-dd", $null)
-                if ($dt -ge $cutoff) {
-                    $inputDays.Add((Get-Content $_.FullName -Raw -Encoding UTF8 | ConvertFrom-Json))
-                }
-            } catch { }
-        }
+  $cutoff = (Get-Date).AddDays(-$DaysBack).Date
+  Get-ChildItem -Path $LogDir -Filter "*.json" -File | Sort-Object Name |
+  Where-Object { $_.BaseName -match '^\d{4}-\d{2}-\d{2}$' } |
+  ForEach-Object {
+    try {
+      $dt = [datetime]::ParseExact($_.BaseName, "yyyy-MM-dd", $null)
+      if ($dt -ge $cutoff) {
+        $inputDays.Add((Get-Content $_.FullName -Raw -Encoding UTF8 | ConvertFrom-Json))
+      }
+    }
+    catch { }
+  }
 }
 
 # ---------------------------------------------------------------------------
 # Load ledger events (slim) from history/ and events/
 # ---------------------------------------------------------------------------
 $ledgerEvents = [System.Collections.Generic.List[object]]::new()
-$seenIds      = [System.Collections.Generic.HashSet[string]]::new()
+$seenIds = [System.Collections.Generic.HashSet[string]]::new()
 
 function Import-LedgerDir {
-    param([string]$Dir, [datetime]$Cutoff)
-    if (-not (Test-Path $Dir)) { return }
-    Get-ChildItem -Path $Dir -Filter "*.json" -Recurse -File | Sort-Object Name |
-        ForEach-Object {
-            try {
-                $raw = Get-Content $_.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
-                $dt  = [datetime]::Parse($raw.createdAt)
-                $id  = if ($raw.id) { $raw.id } else { $_.BaseName }
-                if ($dt.Date -ge $Cutoff -and $seenIds.Add($id)) {
-                    $script:ledgerEvents.Add([pscustomobject]@{
-                        date    = $dt.ToString("yyyy-MM-dd")
-                        project = if ($raw.project) { $raw.project } else { "General" }
-                        kind    = if ($raw.kind)    { $raw.kind }    else { "general" }
-                        model   = if ($raw.runtime -and $raw.runtime.model) { $raw.runtime.model } else { "unknown" }
-                        actor   = if ($raw.actor)   { $raw.actor }   else { "unknown" }
-                    })
-                }
-            } catch { }
-        }
+  param([string]$Dir, [datetime]$Cutoff)
+  if (-not (Test-Path $Dir)) { return }
+  Get-ChildItem -Path $Dir -Filter "*.json" -Recurse -File | Sort-Object Name |
+  ForEach-Object {
+    try {
+      $raw = Get-Content $_.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
+      $dt = [datetime]::Parse($raw.createdAt)
+      $id = if ($raw.id) { $raw.id } else { $_.BaseName }
+      if ($dt.Date -ge $Cutoff -and $seenIds.Add($id)) {
+        $script:ledgerEvents.Add([pscustomobject]@{
+            date    = $dt.ToString("yyyy-MM-dd")
+            project = if ($raw.project) { $raw.project } else { "General" }
+            kind    = if ($raw.kind) { $raw.kind }    else { "general" }
+            model   = if ($raw.runtime -and $raw.runtime.model) { $raw.runtime.model } else { "unknown" }
+            actor   = if ($raw.actor) { $raw.actor }   else { "unknown" }
+          })
+      }
+    }
+    catch { }
+  }
 }
 $cutoff = (Get-Date).AddDays(-$DaysBack).Date
 Import-LedgerDir -Dir $HistDir   -Cutoff $cutoff
 Import-LedgerDir -Dir $EventsDir -Cutoff $cutoff
 
-$inputDaysJson = if ($inputDays.Count -eq 0)    { "[]" } else { $inputDays    | ConvertTo-Json -Depth 6 -Compress }
-$ledgerJson    = if ($ledgerEvents.Count -eq 0)  { "[]" } else { $ledgerEvents | ConvertTo-Json -Depth 3 -Compress }
-$generatedAt   = (Get-Date -Format "yyyy-MM-ddTHH:mm:ss")
+$inputDaysJson = if ($inputDays.Count -eq 0) { "[]" } else { $inputDays    | ConvertTo-Json -Depth 6 -Compress }
+$ledgerJson = if ($ledgerEvents.Count -eq 0) { "[]" } else { $ledgerEvents | ConvertTo-Json -Depth 3 -Compress }
+$generatedAt = (Get-Date -Format "yyyy-MM-ddTHH:mm:ss")
 
 # ---------------------------------------------------------------------------
 # HTML template  (@'...'@ -- no dollar expansion, safe for large JSON inject)
@@ -598,12 +603,12 @@ window.addEventListener('load', function(){
 
 '@
 
-$content=$template.Replace('__PAYLOAD_JSON__',$payloadJson).Replace('__I18N_JSON__',$i18nJson).Replace('__ALIAS_MAP_JSON__',$aliasMapJson).Replace('__INPUT_DAYS__',$inputDaysJson).Replace('__LEDGER_EVENTS__',$ledgerJson).Replace('__GENERATED_AT__',$generatedAt)
-$utf8NoBom=New-Object System.Text.UTF8Encoding $false
-[System.IO.File]::WriteAllText($outHtmlPath,$content,$utf8NoBom)
-try{[System.IO.File]::WriteAllText($ParentHtmlPath,$content,$utf8NoBom)}catch{}
-$siteDataDir=Join-Path(Join-Path(Join-Path $LedgerRoot 'site')'public')'data'
-if(Test-Path(Join-Path $LedgerRoot 'site')){if(-not(Test-Path $siteDataDir)){New-Item -ItemType Directory -Path $siteDataDir -Force|Out-Null}Set-Content -LiteralPath(Join-Path $siteDataDir 'work-impact-data.json')-Value($payload|ConvertTo-Json -Depth 24)-Encoding utf8}
+$content = $template.Replace('__PAYLOAD_JSON__', $payloadJson).Replace('__I18N_JSON__', $i18nJson).Replace('__ALIAS_MAP_JSON__', $aliasMapJson).Replace('__INPUT_DAYS__', $inputDaysJson).Replace('__LEDGER_EVENTS__', $ledgerJson).Replace('__GENERATED_AT__', $generatedAt)
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
+[System.IO.File]::WriteAllText($outHtmlPath, $content, $utf8NoBom)
+try { [System.IO.File]::WriteAllText($ParentHtmlPath, $content, $utf8NoBom) }catch {}
+$siteDataDir = Join-Path(Join-Path(Join-Path $LedgerRoot 'site')'public')'data'
+if (Test-Path(Join-Path $LedgerRoot 'site')) { if (-not(Test-Path $siteDataDir)) { New-Item -ItemType Directory -Path $siteDataDir -Force | Out-Null }Set-Content -LiteralPath(Join-Path $siteDataDir 'work-impact-data.json')-Value($payload | ConvertTo-Json -Depth 24)-Encoding utf8 }
 Write-Output "Rendered Work Impact:"
 Write-Output "  $outHtmlPath"
 Write-Output "  $ParentHtmlPath"

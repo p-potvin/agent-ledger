@@ -70,10 +70,10 @@ function Get-GitInfo {
         $status = (& git -C $top status --short 2>$null)
 
         return [ordered]@{
-            repo = Split-Path $top -Leaf
-            root = $top
-            branch = $branch
-            head = $head
+            repo       = Split-Path $top -Leaf
+            root       = $top
+            branch     = $branch
+            head       = $head
             hasChanges = [bool]$status
         }
     }
@@ -184,6 +184,7 @@ if (-not $WorkspaceRoot) {
 }
 
 . (Join-Path $PSScriptRoot 'resolve-project-alias.ps1')
+. (Join-Path $PSScriptRoot 'kind-utils.ps1')
 $aliasMapPath = Join-Path $ledgerRoot 'project-aliases.json'
 
 $git = Get-GitInfo
@@ -200,7 +201,8 @@ $Project = Resolve-ProjectAlias -Project $Project -AliasMapPath $aliasMapPath
 
 if ($Project -eq 'health-ledger') {
     $eventsRoot = Join-Path $WorkspaceRoot 'health-ledger\events'
-} else {
+}
+else {
     $eventsRoot = Join-Path $ledgerRoot 'events'
 }
 New-Item -ItemType Directory -Path $eventsRoot -Force | Out-Null
@@ -211,8 +213,11 @@ if ($rawParts.Count -eq 0) { $rawParts = @('general') }
 $normalizedKind = ($rawParts | Sort-Object -Unique) -join ','
 $Kind = $normalizedKind
 
-$allowed = @('plan','commands','code-change','verification','handoff','general')
-$unknown = $rawParts | Where-Object { $_ -notin $allowed }
+$allowed = @('plan', 'commands', 'code-change', 'verification', 'handoff', 'documentation', 'general')
+$unknown = $rawParts | Where-Object {
+    $resolved = Resolve-KindAlias $_
+    $resolved -notin $allowed
+}
 if ($unknown.Count -gt 0) {
     Write-Warning "Unknown kind(s) accepted but will aggregate under 'general': $($unknown -join ', ')"
 }
@@ -248,20 +253,20 @@ $agentHeader = @(
 ) -join [Environment]::NewLine
 
 $fingerprintSource = [ordered]@{
-    project = $Project
-    kind = $Kind
-    summary = $limitedSummary
+    project  = $Project
+    kind     = $Kind
+    summary  = $limitedSummary
     commands = $Commands
-    files = $Files
+    files    = $Files
     planPath = $PlanPath
-    flags = $normalizedFlags
-    metrics = $normalizedMetrics
+    flags    = $normalizedFlags
+    metrics  = $normalizedMetrics
 } | ConvertTo-Json -Depth 8 -Compress
 $contentHash = Get-Sha256 $fingerprintSource
 
 $existing = Get-ChildItem -Path $eventsRoot -Recurse -File -Filter '*.json' -ErrorAction SilentlyContinue |
-    Select-String -Pattern $contentHash -SimpleMatch -List -ErrorAction SilentlyContinue |
-    Select-Object -First 1
+Select-String -Pattern $contentHash -SimpleMatch -List -ErrorAction SilentlyContinue |
+Select-Object -First 1
 
 if ($existing) {
     & (Join-Path $PSScriptRoot 'render-agent-ledger.ps1') | Out-Null
@@ -276,36 +281,36 @@ $id = "$($now.ToString('yyyyMMdd-HHmmss-fff'))-$(Get-Slug $Project)-$($contentHa
 $eventPath = Join-Path $monthRoot "$id.json"
 
 $event = [ordered]@{
-    id = $id
-    createdAt = $createdAt
+    id             = $id
+    createdAt      = $createdAt
     createdAtLocal = $createdAtLocal
-    timezone = $timezone
-    project = $Project
-    kind = $Kind
-    actor = $Actor
-    agentHeader = $agentHeader
-    runtime = [ordered]@{
-        role = $AgentRole
-        model = $Model
-        thinking = $Thinking
-        mode = $Mode
-        permissions = $Permissions
-        network = $Network
-        toolsUsed = $dedupedToolsUsed
+    timezone       = $timezone
+    project        = $Project
+    kind           = $Kind
+    actor          = $Actor
+    agentHeader    = $agentHeader
+    runtime        = [ordered]@{
+        role               = $AgentRole
+        model              = $Model
+        thinking           = $Thinking
+        mode               = $Mode
+        permissions        = $Permissions
+        network            = $Network
+        toolsUsed          = $dedupedToolsUsed
         mcpServersAccessed = $dedupedMcpServersAccessed
     }
-    telemetry = [ordered]@{
-        flags = $normalizedFlags
+    telemetry      = [ordered]@{
+        flags   = $normalizedFlags
         metrics = $normalizedMetrics
     }
-    workspaceRoot = $WorkspaceRoot
-    cwd = (Get-Location).Path
-    summary = $limitedSummary
-    commands = $Commands
-    files = $Files
-    planPath = $PlanPath
-    contentHash = $contentHash
-    git = $git
+    workspaceRoot  = $WorkspaceRoot
+    cwd            = (Get-Location).Path
+    summary        = $limitedSummary
+    commands       = $Commands
+    files          = $Files
+    planPath       = $PlanPath
+    contentHash    = $contentHash
+    git            = $git
 }
 
 $event | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $eventPath -Encoding utf8
