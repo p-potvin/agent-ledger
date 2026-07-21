@@ -1,0 +1,60 @@
+{
+  "id": "20260705-161656-858-prom-king-a41bf0a4",
+  "createdAt": "2026-07-05T20:16:56.8583237Z",
+  "createdAtLocal": "2026-07-05 16:16",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows + SSH OVH/greencloud + git push GitHub)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Read, Edit, Write, Grep, Bash, git, SSH, curl\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-05 16:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows + SSH OVH/greencloud + git push GitHub",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "Bash",
+      "git",
+      "SSH",
+      "curl"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Admin hash-based routing + per-entity detail overlays + public-site 'Edit in admin' chip. New shared/src/admin/router.ts with useAdminRoute() hook parsing #/<tab>[/<subtab>][/<kind>][/<slug>][?params]; supports #/catalog/pornstars/juniper-ren shorthand and #/catalog/videos/office-cum. 13 vitest cases including round-trip serialization. App.tsx + Catalog/Bulk.tsx now read tab/subtab/kind/slug from the URL; navigate() pushes history entries so the browser back button naturally closes overlays. BatchActions.tsx accepts activeKind/onKindChange/onOpenTerm; VideoBatchActions accepts onOpenVideo. New VideoDetail.tsx overlay: renders GET /videos/{slug}, editable title/source/status, inline TaxonomyEditor calling /videos/batch/add-taxonomy with array-of-one. New TermDetail.tsx overlay: rename/slug-update/gender-update/merge/delete via existing /taxonomies/{kind}/batch/* endpoints, plus 'View videos' and 'Open on live site'. Public-site: new OpenInAdmin.astro chip revealed by client-side localStorage check on promking_admin_token; wired into VideoActionBar for /videos/{slug} and injected via Layout.astro's new adminEntity prop on all 12 taxonomy pages (fxv/oneporn/sexyprn/pkt x pornstar/studio/category). Pushed to Prom-King/shared-tube 435f208 (v0.2.33). Verify: typecheck clean, 44/44 vitest pass, fxv production build clean.",
+  "commands": [
+    "pnpm --filter @promking/shared-tube typecheck && test",
+    "git push origin main",
+    "POST /rebuild"
+  ],
+  "files": [
+    "Prom-King/shared-tube/shared/src/admin/router.ts",
+    "Prom-King/shared-tube/shared/src/admin/Catalog/VideoDetail.tsx",
+    "Prom-King/shared-tube/shared/src/admin/Catalog/TermDetail.tsx",
+    "Prom-King/shared-tube/shared/src/admin/Catalog/Bulk.tsx",
+    "Prom-King/shared-tube/shared/src/admin/App.tsx",
+    "Prom-King/shared-tube/shared/src/components/OpenInAdmin.astro",
+    "Prom-King/shared-tube/shared/src/components/Layout.astro",
+    "Prom-King/shared-tube/shared/src/components/VideoActionBar.astro"
+  ],
+  "planPath": "",
+  "contentHash": "a41bf0a43c650777a49c921e82da7a4b9efd2858d9bd2930098961e441caac2a",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "435f208",
+    "hasChanges": false
+  }
+}

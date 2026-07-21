@@ -1,0 +1,38 @@
+{
+  "id": "20260719-212753-592-qa-automation-39daed6c",
+  "createdAt": "2026-07-20T01:27:53.5928595Z",
+  "createdAtLocal": "2026-07-19 21:27",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-19 21:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Integrate proxy_utils.py with Tor fallback: qa_automation_routine.py and stealth_patchright_qa.py now fall back to Tor proxy via proxy_utils.get_patchright_proxy() when IPoasis key is missing. stealth-browser.ts rotateVpn() supports 'command' provider via VPN_ROTATE_COMMAND. Fixed .env.example, README.md, docker-compose.yml PROXY_URLS->PROXY_URL. Added .gitignore to Portable-Tor-Proxy-Rotator.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "39daed6cdb0e5e3069d8341d9c43b8236c75cb1efd2f5a8f0785f16e747a24b2",
+  "git": {
+    "repo": "qa-automation",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+    "branch": "main",
+    "head": "15c0e4e",
+    "hasChanges": false
+  }
+}

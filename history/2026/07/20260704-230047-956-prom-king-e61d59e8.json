@@ -1,0 +1,47 @@
+{
+  "id": "20260704-230047-956-prom-king-e61d59e8",
+  "createdAt": "2026-07-05T03:00:47.9567741Z",
+  "createdAtLocal": "2026-07-04 23:00",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: medium\r\nMode: code\r\nPermissions: ask (network: Windows (Clopeux-Desktop) + SSH to OVH/greencloud)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Edit, Grep, Bash, PowerShell, SSH\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-04 23:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "medium",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows (Clopeux-Desktop) + SSH to OVH/greencloud",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "PowerShell",
+      "SSH"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Fix Catalog term-scoped fetches never finishing + add live Schedule status panel. Backend (vaultwares-api): _drive_term_run capped at 30 pages (was 500), per-page DB dedup broadcasts 'N new / M already in DB', 2 consecutive all-known pages breaks the loop early. New GET /api/promking/fetcher/cron/jobs returns per-(site,source) next_run_at from APScheduler + last-run summary from fetch_runs. Frontend (shared-tube admin): Fetcher/Console.tsx gains ScheduleStatusPanel (current site up front, other sites collapsible) with 15s auto-refresh; Catalog/BatchActions.tsx term-fetch shows a sticky 'progress' toast that parses driver log lines to display page N / candidates so far, replacing the fire-and-forget silence that made runs look dead. Typecheck clean, 5/5 fetcher pytest pass. Still to do: build + deploy shared-tube to greencloud, deploy vaultwares-api to OVH; fetch_runs id 57 is still running under the old driver and will keep going until pornxp's own 500-page cap or user kills the pnpm chain.",
+  "commands": [
+    "pnpm --filter @promking/shared-tube typecheck",
+    "pytest tests/test_promking_fetcher.py"
+  ],
+  "files": [
+    "Github Repos/vaultwares-api/app/routers/promking/fetcher.py",
+    "Github Repos/vaultwares-api/app/routers/promking/cron.py",
+    "Prom-King/shared-tube/shared/src/admin/Fetcher/Console.tsx",
+    "Prom-King/shared-tube/shared/src/admin/Catalog/BatchActions.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "e61d59e80548c12cbe5d23307dea280b153127e375de9ca0c81eb106d32d6947",
+  "git": null
+}

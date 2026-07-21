@@ -1,0 +1,51 @@
+{
+  "id": "20260704-231010-857-prom-king-85166ed3",
+  "createdAt": "2026-07-05T03:10:10.8579378Z",
+  "createdAtLocal": "2026-07-04 23:10",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-7\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows (Clopeux-Desktop) + SSH OVH + git push GitHub)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Read, Edit, Grep, Bash, SSH, git\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-04 23:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-7",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows (Clopeux-Desktop) + SSH OVH + git push GitHub",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "SSH",
+      "git"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "Root-cause fix for runaway Catalog term fetches. pornxp's /tags/<term> pagination silently returns unrelated content past the real archive end while the h1 and '(N videos)' text stay unchanged; live probe of pxp.cool/tags/Juniper%20Ren returned 36 items on page 91 with fake results and the same '(142 videos)' header. Fix: new SourceConfig.extractListingMeta(html); pornxp parses '(N videos)'; engine.ts emits it on page 1; cli.ts emits {event: listing_meta, totalItems, pageSize}; FastAPI _run_subprocess_for_page returns (videos, listing_meta); _drive_term_run recomputes page_budget = ceil(totalItems/pageSize) → 142/36 = 4 pages instead of walking to 500. Second guardrail: per-page DB dedup with 2-consecutive-all-known break. MAX_SAFETY_PAGES 500 → 30. Also: sticky progress toast in Catalog BatchActions (no more fire-and-forget silence), Schedule status panel in Fetcher tab with next-run + last-run per (site,source), 15s auto-refresh. Killed hung fetch_runs id 57 (pkill fetcher:run + DB UPDATE finished_at=NOW). Pushed to main on both repos to trigger deploy: Prom-King/shared-tube commit b4cf85f (v0.2.29), p-potvin/vaultwares-api commit 299d45c (v0.2.8).",
+  "commands": [
+    "pkill -f fetcher:run.*juniper-ren",
+    "git push origin main (both repos)",
+    "pnpm --filter @promking/shared-tube typecheck && test",
+    "pytest tests/test_promking_fetcher.py"
+  ],
+  "files": [
+    "Prom-King/shared-tube/shared/src/fetcher/sources/pornxp.ts",
+    "Prom-King/shared-tube/shared/src/fetcher/engine.ts",
+    "Prom-King/shared-tube/shared/src/fetcher/cli.ts",
+    "Prom-King/shared-tube/shared/src/fetcher/types.ts",
+    "Github Repos/vaultwares-api/app/routers/promking/fetcher.py",
+    "Github Repos/vaultwares-api/app/routers/promking/cron.py"
+  ],
+  "planPath": "",
+  "contentHash": "85166ed3eae13b86efcad9fe5f27e2613b2212c53a5170510833bd6db847d5a7",
+  "git": null
+}

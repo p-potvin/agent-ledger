@@ -1,0 +1,38 @@
+{
+  "id": "20260719-214727-775-qa-automation-d3378fcf",
+  "createdAt": "2026-07-20T01:47:27.7758894Z",
+  "createdAtLocal": "2026-07-19 21:47",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-19 21:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Add verbose console logging to run-tube-sites-direct.mjs: run header, per-site progress, proxy status, HTTP status, page titles, ad/utility classification, action phase, links count, delays, block detection, FlareSolverr warmup, navigation failures, per-site and final summaries.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "d3378fcf2a15be53ae62fb2d5d2cbb063b0854dd3ccc3f73a458a007921daef2",
+  "git": {
+    "repo": "qa-automation",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+    "branch": "main",
+    "head": "5a529be",
+    "hasChanges": false
+  }
+}

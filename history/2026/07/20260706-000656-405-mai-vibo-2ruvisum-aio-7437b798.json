@@ -1,0 +1,60 @@
+{
+  "id": "20260706-000656-405-mai-vibo-2ruvisum-aio-7437b798",
+  "createdAt": "2026-07-06T04:06:56.4051137Z",
+  "createdAtLocal": "2026-07-06 00:06",
+  "timezone": "Eastern Standard Time",
+  "project": "Mai-ViBo-2ruViSum-AIO",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5 Codex\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO  Branch: main\r\nTools used (this reply): powershell, uv, git, ffmpeg\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-06 00:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5 Codex",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "powershell",
+      "uv",
+      "git",
+      "ffmpeg"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO",
+  "summary": "Mon, 06 Jul 2026 00:10 - Set up database-free local model harness for Mai-ViBo: added D: model/frame workspace creation, FFmpeg frame sampling, local-frame VSS provider, local video smoke command, tests, and docs/config updates. Verified RTX 3060 availability, initialized D:\\Mai-ViBo-2ruViSum-AI\\models\\local-frame\\local-frame-baseline, generated a synthetic local smoke video, sampled two frames, and returned local-frame observations without using the broken database, live API, VPN, or external downloads.",
+  "commands": [
+    "nvidia-smi --query-gpu=name,memory.total,driver_version --format=csv,noheader",
+    "uv run pytest tests/test_model_setup.py",
+    "uv run ruff check .",
+    "uv run pytest",
+    "$env:VSS_PROVIDER=\"local-frame\"; uv run mai-vibo setup-model",
+    "ffmpeg -hide_banner -loglevel error -y -f lavfi -i testsrc=size=320x180:rate=15 -t 4 D:\\Mai-ViBo-2ruViSum-AI\\input\\local-frame-smoke.mp4",
+    "$env:VSS_PROVIDER=\"local-frame\"; uv run mai-vibo model-smoke-local D:\\Mai-ViBo-2ruViSum-AI\\input\\local-frame-smoke.mp4 --video-id local-frame-smoke --burst-count 2 --burst-seconds 2"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\.env.example",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\.gitignore",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\src\\mai_vibo_2ruvisum_aio\\model_runtime.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\src\\mai_vibo_2ruvisum_aio\\video_frames.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\src\\mai_vibo_2ruvisum_aio\\vss\\local_frame.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\src\\mai_vibo_2ruvisum_aio\\workers\\local_video.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\tests\\test_model_setup.py"
+  ],
+  "planPath": "",
+  "contentHash": "7437b7981db49fdcb47be2ea82d0a7ab0e36e53e2bdd7b205d02d528406d2249",
+  "git": {
+    "repo": "Mai-ViBo-2ruViSum-AIO",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/Mai-ViBo-2ruViSum-AIO",
+    "branch": "main",
+    "head": "12267dc",
+    "hasChanges": true
+  }
+}

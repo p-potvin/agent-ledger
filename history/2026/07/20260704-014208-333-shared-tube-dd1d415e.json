@@ -1,0 +1,56 @@
+﻿{
+    "id":  "20260704-014208-333-shared-tube-dd1d415e",
+    "createdAt":  "2026-07-04T05:42:08.3338012Z",
+    "createdAtLocal":  "2026-07-04 01:42",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: gemini-3.5-flash\r\nThinking: medium\r\nMode: code\r\nPermissions: allowlist (network: windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): run_command\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-04 01:42 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-3.5-flash",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "allowlist",
+                    "network":  "windows",
+                    "toolsUsed":  "run_command",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Committed and pushed the Layout.astro double head fix, deploy-shared-tube.sh ownership recovery logic, and cleaned up references designating PKT (prom-king.xyz) as a tube site in docs, Footers, and handoffs. Verified deployment of e8a0fe9 finished with exit=0 and successfully updated and restarted services on GreenCloud and OVH.",
+    "commands":  [
+                     "git add . ; git commit ... ; git push origin main"
+                 ],
+    "files":  [
+                  "shared/src/components/Layout.astro",
+                  "scripts/deploy-shared-tube.sh",
+                  "shared/src/components/Footer.astro",
+                  "design-system/SKILL.md",
+                  "design-system/README.md",
+                  "design-system/HANDOFF.md",
+                  "docs/TODO.md",
+                  "docs/ROADMAP.md",
+                  "docs/docs-content/overview.md",
+                  "docs/docs-content/monetization.md",
+                  "docs/docs-content/projects/shared-tube.md"
+              ],
+    "planPath":  "",
+    "contentHash":  "dd1d415e409965d816ab6d0a4dd27af55d1570f30841cf7a5d4430b95af323cd",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "e8a0fe9",
+                "hasChanges":  false
+            }
+}

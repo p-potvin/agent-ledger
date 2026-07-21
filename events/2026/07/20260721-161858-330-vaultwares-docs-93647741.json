@@ -1,0 +1,41 @@
+{
+  "id": "20260721-161858-330-vaultwares-docs-93647741",
+  "createdAt": "2026-07-21T20:18:58.3309469Z",
+  "createdAtLocal": "2026-07-21 16:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "documentation",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-21 16:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Updated printable network topology for B&W printing and SFW codes: replaced all color coding with border-style patterns (solid/double/dashed/dotted), replaced NSFW terms with codes (FXV/OPH/SPN), updated legends in HTML/SVG/Markdown",
+  "commands": [],
+  "files": [
+    "docs-content/operations/network-topology-printable.html",
+    "docs-content/operations/network-topology-printable.md"
+  ],
+  "planPath": "",
+  "contentHash": "93647741da3ff00a21627d6be3fb0ab504fc9343023cb460a352e5896ab60702",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "main",
+    "head": "15b9c45",
+    "hasChanges": false
+  }
+}

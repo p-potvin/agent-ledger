@@ -1,0 +1,50 @@
+﻿{
+    "id":  "20260704-013512-606-shared-tube-c5ad5d63",
+    "createdAt":  "2026-07-04T05:35:12.6066341Z",
+    "createdAtLocal":  "2026-07-04 01:35",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: gemini-3.5-flash\r\nThinking: medium\r\nMode: code\r\nPermissions: ask (network: windows)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): run_command, replace_file_content\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-04 01:35 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "gemini-3.5-flash",
+                    "thinking":  "medium",
+                    "mode":  "code",
+                    "permissions":  "ask",
+                    "network":  "windows",
+                    "toolsUsed":  [
+                                      "run_command",
+                                      "replace_file_content"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Checked deployments on OVH (oneporn, sexyprn) and GreenCloud (fxv, pkt). Discovered permissions issues (root-owned files in shared/src/admin/Links) on OVH blocking recent deploys. Fixed ownership on OVH and successfully rerun deployment script to update all sites to v0.2.25. Fixed Layout.astro which rendered HTML version comment fragment inside html tag but before head, causing double head tag parser bugs.",
+    "commands":  [
+                     "ssh -o StrictHostKeyChecking=no ubuntu@100.67.25.118 \u0027sudo chown -R ubuntu:ubuntu /srv/repos/Prom-King/shared-tube\u0027",
+                     "ssh root@100.73.93.84 \u0027sudo -u vwdeploy env VW_AFTER=d0b45b7d2f100ef40083ffdeb6ed5afd8d60111a /var/www/deploy-scripts/deploy-shared-tube.sh\u0027"
+                 ],
+    "files":  [
+                  "shared/src/components/Layout.astro"
+              ],
+    "planPath":  "",
+    "contentHash":  "c5ad5d63c71eca43dbffb6da66f6cf5fe3e6bd3e43ca68ce31df66564df413c2",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "d0b45b7",
+                "hasChanges":  true
+            }
+}

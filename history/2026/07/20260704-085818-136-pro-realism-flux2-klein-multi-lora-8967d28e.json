@@ -1,0 +1,46 @@
+{
+  "id": "20260704-085818-136-pro-realism-flux2-klein-multi-lora-8967d28e",
+  "createdAt": "2026-07-04T12:58:18.1367030Z",
+  "createdAtLocal": "2026-07-04 08:58",
+  "timezone": "Eastern Standard Time",
+  "project": "Pro-Realism-FLUX2-Klein-Multi-LoRA",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-04 08:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Sat, 04 Jul 2026 00:17 - Wired clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA to mounted bucket storage and gated HF auth. Added HF_TOKEN and HF_HUB_TOKEN Space secrets from local access file without logging token value. Set MODEL_BUCKET_DIR=/models, LOCAL_LORA_DIR=/models/loras, ENABLE_LOGGING=No. Uploaded six LoRA binaries totaling 954,356,597 bytes to clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA-storage/loras, attached that bucket at /models, updated app/config/lora/upscale paths to load base model and LoRAs from bucket/cache, deleted LoRA LFS files from current repo tree, and pushed commit 0b1369a. Verified py_compile and diff --check. No ZeroGPU inference job was run. Runtime was still RUNNING_APP_STARTING and reporting prior SHA when checked; remote repo tree showed only loras/.gitkeep remains.",
+  "commands": [
+    "HfApi.add_space_secret HF_TOKEN/HF_HUB_TOKEN",
+    "HfApi.add_space_variable MODEL_BUCKET_DIR=/models LOCAL_LORA_DIR=/models/loras ENABLE_LOGGING=No",
+    "snapshot_download allow_patterns loras/*.safetensors",
+    "HfApi.sync_bucket local loras -> hf://buckets/clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA-storage/loras",
+    "HfApi.set_space_volumes bucket:/models",
+    "python -m py_compile app.py config.py lora_registry.py upscale.py",
+    "git push origin main"
+  ],
+  "files": [
+    "D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA\\app.py",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA\\config.py",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA\\lora_registry.py",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA\\upscale.py",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA\\README.md"
+  ],
+  "planPath": "",
+  "contentHash": "8967d28e0543b9c045330f03fc151713505d6c9fffb57526779371c802e23c59",
+  "git": null
+}

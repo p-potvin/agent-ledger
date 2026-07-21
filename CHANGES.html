@@ -98,6 +98,76 @@
     </div>
   </details>
   <details>
+    <summary><strong>2026-07-21 02:37 - wander</strong> <span class="kind">code-change,verification</span> - Phase 2 flagship &#39;Wander back in time&#39; done and verified end-to-end (pushed 2eae300). Per-file version history: VersionStore (content-addressed blobs under .wander/versions, ded...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> Claude</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Claude (role: main) Model: claude-opus-4-8 Thinking: unknown Mode: interactive Permissions: unknown (network: unknown) CWD: C:\Users\Clopeux\Desktop\Github Repos\wander  Branch: main Tools used (this reply): Read, Edit, Write, Bash, PowerShell MCP servers accessed (this reply): none Time: 2026-07-21 02:37 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Phase 2 flagship &#39;Wander back in time&#39; done and verified end-to-end (pushed 2eae300). Per-file version history: VersionStore (content-addressed blobs under .wander/versions, dedup), FileVersions timeline table, VersionRecorder capturing a version on every content change (local edit, initial scan, peer pull - attributed to source node) with GC of unreferenced blobs. AnswersRetention behind IRetentionPolicy implements the owner&#39;s A.N.S.W.E.R.S. alternating non-sequential thinning (keep newest+oldest, thin interior, cap per file) - interpretation documented and FLAGGED in the class for owner sign-off since the spec is ambiguous. Wired into FolderScanner/LocalIndexer/SyncEngine. Dashboard &#39;Wander back in time&#39; window: files -&gt; version timeline (current marker, source, size) -&gt; Restore (copies blob back, re-versions and propagates). Live testing caught a real startup crash unit tests missed: FolderScanner threw on two FileStates sharing one path (GUID-keyed table; open question #1) - fixed to tolerate (live over tombstone, then newest) + regression test + UI dedupe. 48 tests (13 new), 0 warnings. Verified via UI automation: daemon survives dup-path db, 7 versions recorded, timeline renders, restore rolled a file back to old content. Also marked multi-peer mesh/opportunistic relay as already-working (daemon pulls from every discovered peer each round).</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>dotnet test Wander.Tests</code></li>
+        <li><code>git push origin main</code></li>
+        <li><code>UI automation screenshot verification</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Core\Services\Retention\AnswersRetention.cs</code></li>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Core\Services\VersionRecorder.cs</code></li>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\HistoryWindow.axaml.cs</code></li>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Core\Services\FolderScanner.cs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=wander, branch=main, head=2eae300</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-20 09:06 - wander</strong> <span class="kind">code-change,verification</span> - Phase 1 installer + auto-update done (pushed e04716e). Wired Velopack 1.2.0 into Wander.Dashboard: VelopackApp.Build().Run() as first line of Main (install/update hooks); Update...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> Claude</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Claude (role: main) Model: claude-opus-4-8 Thinking: unknown Mode: interactive Permissions: unknown (network: unknown) CWD: C:\Users\Clopeux\Desktop\Github Repos\wander  Branch: main Tools used (this reply): Read, Edit, Write, Bash, PowerShell MCP servers accessed (this reply): none Time: 2026-07-20 09:06 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Phase 1 installer + auto-update done (pushed e04716e). Wired Velopack 1.2.0 into Wander.Dashboard: VelopackApp.Build().Run() as first line of Main (install/update hooks); UpdateService checks WanderOptions.UpdateUrl on startup, downloads newer releases in background, surfaces via activity feed + toast + tray &#39;Restart to apply update&#39; item (never auto-restarts a running sync node). Feed source is a plain URL/UNC path OR a github.com repo (GithubSource). scripts/pack.ps1 publishes self-contained win-x64 and runs vpk pack; ran it for real, produced VaultWaresWander-win-Setup.exe (71MB) + portable zip + RELEASES/nupkg update feed - Velopack verified the VelopackApp.Run() hook. Added .github/workflows/release.yml (v* tag -&gt; pack -&gt; attach to GitHub Release). Generated wander.ico from the gold PNG mark for installer/shortcuts via System.Drawing PNG-in-ICO. Installed vpk global tool. Follow-ups noted: code-signing (unsigned installer triggers SmartScreen), real Action-Center toasts now unblocked by the installer&#39;s AUMID. 35/35 tests, 0 warnings. Phase 1 feature-complete; only exit criterion (daily-drive) + deferred two-machine test remain.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>dotnet tool install -g vpk</code></li>
+        <li><code>./scripts/pack.ps1 -Version 0.1.0</code></li>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\scripts\pack.ps1</code></li>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\UpdateService.cs</code></li>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\.github\workflows\release.yml</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=wander, branch=main, head=e04716e</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-20 08:47 - wander</strong> <span class="kind">code-change,verification</span> - Phase 1 features: pause/resume + in-app notifications (pushed e6460e4). SyncController (thread-safe pause switch): paused node stops pulling AND its gRPC ListFiles stops adverti...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change,verification</p>
+      <p><strong>Actor:</strong> Claude</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: Claude (role: main) Model: claude-opus-4-8 Thinking: unknown Mode: interactive Permissions: unknown (network: unknown) CWD: C:\Users\Clopeux\Desktop\Github Repos\wander  Branch: main Tools used (this reply): Read, Edit, Write, Bash, PowerShell MCP servers accessed (this reply): none Time: 2026-07-20 08:47 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Phase 1 features: pause/resume + in-app notifications (pushed e6460e4). SyncController (thread-safe pause switch): paused node stops pulling AND its gRPC ListFiles stops advertising the manifest, so it goes silent both directions; local watcher keeps indexing for instant resume. Wired to a dashboard header button and a tray menu item, kept in sync via PausedChanged; status shows Paused. Notifications: conflict/trash/error activity events pop as bottom-right Avalonia WindowNotificationManager toasts. OS-level toasts when minimized deferred until installer (need registered AppUserModelID from Velopack shortcut) - noted in ROADMAP. Tests: added SyncControllerTests (3 unit) + PausedNodeAdvertisesNothing integration test; fixed the two existing integration tests that needed SyncController in their DI. 35/35 green, 0 warnings. Verified pause button renders via window capture. Remaining Phase 1: installer (Velopack), then the daily-drive exit criterion.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>dotnet build Wander.slnx</code></li>
+        <li><code>dotnet test Wander.Tests</code></li>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Core\Services\SyncController.cs</code></li>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Dashboard\MainWindow.axaml.cs</code></li>
+        <li><code>C:\Users\Clopeux\Desktop\Github Repos\wander\Wander.Network\Services\SyncDaemon.cs</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=wander, branch=main, head=e6460e4</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-07-20 08:37 - qa-automation (formerly Prom-King/qa-automation)</strong> <span class="kind">general</span> - Refactored qa-automation codebase: created 11 shared modules (6 JS, 4 Python, 1 split), reduced all files under 500 lines. qa_automation_routine.py 774-&gt;229 lines, sim_testers.p...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> general</p>
@@ -268,6 +338,28 @@
     </div>
   </details>
   <details>
+    <summary><strong>2026-07-19 01:46 - vault-tv</strong> <span class="kind">code-change</span> - Added onReceivedError fallback in MainActivity (WebView recovers to bundled assets if a configured URL fails on a real device). Committed all APK/README work as 5e3a319 and push...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Clopeux\Desktop\Github Repos\vault-tv  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-19 01:46 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added onReceivedError fallback in MainActivity (WebView recovers to bundled assets if a configured URL fails on a real device). Committed all APK/README work as 5e3a319 and pushed to main (642c39d..5e3a319). 10 files changed. Note: APK still not compiled here (no JDK/Android SDK); user builds via assembleDebug.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>git commit</code></li>
+        <li><code>git push origin main</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>android/app/src/main/java/app/vaultwares/tv/MainActivity.kt</code></li>
+        <li><code>README.md</code></li>
+        <li><code>android/app/build.gradle.kts</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-tv, branch=main, head=5e3a319</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-07-19 01:41 - agent-ledger (formerly agent-ledger/stats-app)</strong> <span class="kind">general</span> - Verified and fixed deployments: (1) OVH + greencloud builds now succeed after fixing applyPolyfills error (astro entrypointResolution auto). (2) Diagnosed and fixed is_admin=fal...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> general</p>
@@ -331,6 +423,29 @@
       <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-19 00:42 (TZ: Eastern Standard Time)</code></pre>
       <p class="summary"><strong>Summary:</strong> Committed and pushed the streaming UI refactor changes (Watch History, Advanced Filters drawer, grid adjustments) to main branch of vault-streaming.</p>
       <p><strong>Git:</strong> repo=agent-ledger, branch=main, head=bcc95342</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-07-19 00:14 - vault-tv</strong> <span class="kind">code-change</span> - Fixed standalone APK: made debug build self-contained (loads bundled web assets by default; dev-server hot-reload now opt-in via -PdevServer). Refreshed bundled android web asse...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: unknown Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Clopeux\Desktop\Github Repos\vault-tv  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-07-19 00:14 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed standalone APK: made debug build self-contained (loads bundled web assets by default; dev-server hot-reload now opt-in via -PdevServer). Refreshed bundled android web assets from a fresh Vite build. Added .env.example. Rewrote README.md with full clone-to-install instructions (prereqs incl. JDK17+Android SDK, submodules, web build+stage, assembleDebug, and sideload steps for Android phone, Fire TV, Android TV) plus troubleshooting and signed-release section. Updated docs/android-sideload.md to match. Note: existing root vault-tv-debug.apk is a stale dev-server build that does not work standalone. Could not compile APK here (no JDK/Android SDK installed); user will build.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npx vite build</code></li>
+        <li><code>gradlew assembleDebug</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>README.md</code></li>
+        <li><code>android/app/build.gradle.kts</code></li>
+        <li><code>.env.example</code></li>
+        <li><code>docs/android-sideload.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-tv, branch=main, head=642c39d</p>
     </div>
   </details>
   <details>

@@ -1,0 +1,43 @@
+{
+  "id": "20260721-122655-315-vaultwares-docs-1db892db",
+  "createdAt": "2026-07-21T16:26:55.3156151Z",
+  "createdAtLocal": "2026-07-21 12:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "documentation",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-21 12:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Network topology audit: updated network-map.mdx, services-inventory.mdx, tailscale.mdx; created host-inventory.mdx. Corrected Prom-King/fullxxx/link-sharing routing to greencloud, added Comet/Uptime-Kuma/Decypharr/MCP-SSE/Stash/python-zipper/Tor services, added OVH+GC ops surfaces, Docker containers, timers, and Clopeux local services. 4 files changed, 514 insertions, 108 deletions.",
+  "commands": [],
+  "files": [
+    "docs-content/operations/network-map.mdx",
+    "docs-content/operations/services-inventory.mdx",
+    "docs-content/operations/tailscale.mdx",
+    "docs-content/operations/host-inventory.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "1db892db9c353d46bce2ad51301ba25ab72ffb7a71aeb00c50055a8fa6cd501f",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "main",
+    "head": "212fec1",
+    "hasChanges": false
+  }
+}

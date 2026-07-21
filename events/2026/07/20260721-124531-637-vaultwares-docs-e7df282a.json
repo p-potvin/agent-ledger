@@ -1,0 +1,41 @@
+{
+  "id": "20260721-124531-637-vaultwares-docs-e7df282a",
+  "createdAt": "2026-07-21T16:45:31.6379009Z",
+  "createdAtLocal": "2026-07-21 12:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-docs",
+  "kind": "documentation",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-21 12:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Created printable network topology documents: HTML+SVG (hand-crafted network diagram, print CSS, A4 landscape) and Markdown+Mermaid (flowchart diagram). Both contain full audit data: all machines, ports, services, Docker containers, systemd units, timers, tailnet nodes, split DNS, SSH access, ACL rules, and key notes.",
+  "commands": [],
+  "files": [
+    "docs-content/operations/network-topology-printable.html",
+    "docs-content/operations/network-topology-printable.md"
+  ],
+  "planPath": "",
+  "contentHash": "e7df282ac56b7dffef4fe2c05629a773d3db5ce536a1f9d4abd3119d090de473",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "main",
+    "head": "bbf03d6",
+    "hasChanges": false
+  }
+}
