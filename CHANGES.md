@@ -3,7 +3,229 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-07-21 16:18 - vaultwares-docs (formerly tmp-app)</strong> <code>documentation</code> - Updated printable network topology for B&amp;W printing and SFW codes: replaced all color coding with border-style patterns (solid/double/dashed/dotted), replaced NSFW terms with co...</summary>
+<summary><strong>2026-07-21 20:49 - vaultwares-mcp (formerly fastmcp)</strong> <code>code-change</code> - Installed native pwsh on OVH (removed snap), added 4 new MCP tools (vw_sync_instructions, vw_sync_skills, vw_validate_protocols, vw_test_alarm), bumped to v3.1.0, deployed to OV...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): run_command, read_file, edit, multi_edit, write_to_file
+  MCP servers accessed (this reply): none
+  Time: 2026-07-21 20:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: Installed native pwsh on OVH (removed snap), added 4 new MCP tools (vw_sync_instructions, vw_sync_skills, vw_validate_protocols, vw_test_alarm), bumped to v3.1.0, deployed to OVH. Fixed validate-assistant-protocols.ps1 (undefined  -> ,  -> ). Created pg-watchdog.ps1 + Install-PG-Watchdog-Service.ps1 + registered in vw-commands.ps1. Fixed HTML topology print pagination (wrapped SVG+title in break-inside:avoid container).
+- Commands:
+  - `ssh root@vps-ovhcloud apt install powershell`
+  - `ssh root@vps-ovhcloud snap remove powershell`
+  - `scp vw_cli_tools.py server.py to OVH`
+  - `systemctl restart vaultwares-mcp`
+- Files:
+  - `vaultwares_mcp/vw_cli_tools.py`
+  - `vaultwares_mcp/server.py`
+  - `vw-cli/validate-assistant-protocols.ps1`
+  - `vw-cli/pg-watchdog.ps1`
+  - `vw-cli/Install-PG-Watchdog-Service.ps1`
+  - `vw-cli/vw-commands.ps1`
+  - `docs-content/operations/network-topology-printable.html`
+- Git: repo=agent-ledger, branch=main, head=3cd9b1ff
+
+</details>
+
+<details>
+<summary><strong>2026-07-21 20:46 - gallery-scraper</strong> <code>code-change</code> - Applied Obsidian &amp; Cyan shadcn UI theme to popup.html, created new logo, and refactored background and content scripting for CSS selector precision gallery extraction, hidden ta...</summary>
+
+- Kind: code-change
+- Actor: icons/icon128.png
+- Agent Header:
+  ```text
+  Agent: icons/icon128.png (role: icons/icon64.png)
+  Model: icons/icon48.png
+  Thinking: icons/icon32.png
+  Mode: icons/icon16.png
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\gallery-scraper  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-21 20:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Applied Obsidian & Cyan shadcn UI theme to popup.html, created new logo, and refactored background and content scripting for CSS selector precision gallery extraction, hidden tab resolution, and ZIP bundling
+- Commands:
+  - `popup.js`
+- Files:
+  - `popup.html`
+- Plan: `background.js`
+- Git: repo=gallery-scraper, branch=main, head=d0231b9
+
+</details>
+
+<details>
+<summary><strong>2026-07-21 20:42 - clipit</strong> <code>code-change</code> - Applied new Violet &amp; Emerald shadcn/ui theme, generated matching logo, and integrated gallery scraping with hidden iframe full-res resolution and in-memory ZIP archiving</summary>
+
+- Kind: code-change
+- Actor: src/icons/icon16.png
+- Agent Header:
+  ```text
+  Agent: src/icons/icon16.png (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\clipit  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-21 20:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Applied new Violet & Emerald shadcn/ui theme, generated matching logo, and integrated gallery scraping with hidden iframe full-res resolution and in-memory ZIP archiving
+- Commands:
+  - `src/icons/icon128.png`
+- Files:
+  - `src/content.js`
+- Plan: `src/icons/icon48.png`
+- Git: repo=clipit, branch=main, head=96e8ded
+
+</details>
+
+<details>
+<summary><strong>2026-07-21 20:33 - clipit</strong> <code>code-change</code> - Fixed unpause on clip, video trimming re-encoding, save to computer &amp; gdrive options, position persistence via localStorage, drag-n-drop dot handle, and textless logo</summary>
+
+- Kind: code-change
+- Actor: manifest.firefox.json
+- Agent Header:
+  ```text
+  Agent: manifest.firefox.json (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\clipit  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-21 20:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed unpause on clip, video trimming re-encoding, save to computer & gdrive options, position persistence via localStorage, drag-n-drop dot handle, and textless logo
+- Commands:
+  - `manifest.json`
+- Files:
+  - `src/content.js`
+- Plan: `manifest.chrome.json`
+- Git: repo=clipit, branch=main, head=c272a42
+
+</details>
+
+<details>
+<summary><strong>2026-07-21 19:18 - clipit</strong> <code>code-change</code> - Added extension logo icons, removed pause behavior, created 3-step workflow (recording, editor view, export &amp; share view with tmpfiles/gdrive options)</summary>
+
+- Kind: code-change
+- Actor: src/content.js
+- Agent Header:
+  ```text
+  Agent: src/content.js (role: src/i18n.js)
+  Model: README.md
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\clipit  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-21 19:18 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added extension logo icons, removed pause behavior, created 3-step workflow (recording, editor view, export & share view with tmpfiles/gdrive options)
+- Commands:
+  - `manifest.chrome.json`
+- Files:
+  - `manifest.json`
+- Plan: `manifest.firefox.json`
+- Git: repo=clipit, branch=main, head=c272a42
+
+</details>
+
+<details>
+<summary><strong>2026-07-21 19:07 - clipit</strong> <code>code-change</code> - Bump version to 0.1.1 and push shadcn/ui floating widget revamp to remote main</summary>
+
+- Kind: code-change
+- Actor: src/content.js
+- Agent Header:
+  ```text
+  Agent: src/content.js (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\clipit  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-21 19:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Bump version to 0.1.1 and push shadcn/ui floating widget revamp to remote main
+- Commands:
+  - `git commit -m ...`
+- Files:
+  - `package.json`
+- Plan: `git push origin/main main`
+- Git: repo=clipit, branch=main, head=c272a42
+
+</details>
+
+<details>
+<summary><strong>2026-07-21 18:51 - clipit</strong> <code>general</code> - Revamped clipit floating widget styling to shadcn ui dark theme design</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\clipit  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-07-21 18:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Revamped clipit floating widget styling to shadcn ui dark theme design
+- Files:
+  - `src/content.js`
+- Git: repo=clipit, branch=main, head=b18b236
+
+</details>
+
+<details>
+<summary><strong>2026-07-21 16:49 - vaultwares-docs (formerly tmp-app)</strong> <code>documentation</code> - Restored original colors in printable HTML network topology for on-screen viewing while keeping SFW code replacements (FXV/OPH/SPN) and border-style patterns (solid/double/dashe...</summary>
+
+- Kind: documentation
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: unknown
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): run_command, read_file, edit, multi_edit
+  MCP servers accessed (this reply): none
+  Time: 2026-07-21 16:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: Restored original colors in printable HTML network topology for on-screen viewing while keeping SFW code replacements (FXV/OPH/SPN) and border-style patterns (solid/double/dashed/dotted) for B&W print distinction. Bumped version to v1.2.0. Also added 'documentation' kind with alias resolution to agent-ledger: kind-utils.ps1 (enum + VW_KIND_ALIASES map + Resolve-KindAlias), record-agent-change.ps1 (allowed kinds + alias-aware validation), render-work-impact.ps1 (EN/QC i18n labels). Synced to all assistants.
+- Files:
+  - `docs-content/operations/network-topology-printable.html`
+  - `docs-content/operations/network-topology-printable.md`
+  - `agent-ledger/scripts/kind-utils.ps1`
+  - `agent-ledger/scripts/record-agent-change.ps1`
+  - `agent-ledger/scripts/render-work-impact.ps1`
+- Git: repo=agent-ledger, branch=main, head=3cd9b1ff
+
+</details>
+
+<details>
+<summary><strong>2026-07-21 16:18 - vaultwares-docs</strong> <code>documentation</code> - Updated printable network topology for B&amp;W printing and SFW codes: replaced all color coding with border-style patterns (solid/double/dashed/dotted), replaced NSFW terms with co...</summary>
 
 - Kind: documentation
 - Actor: AI Agent
@@ -22421,7 +22643,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-13 09:51 - vaultwares-mcp (formerly fastmcp)</strong> <code>code-change</code> - Fixed ModuleNotFoundError: No module named &#39;fastmcp&#39; in Claude Desktop extension mechanism. Root cause: manifest.json mcp_config.command was &#39;python&#39; (system Python, no fastmcp)...</summary>
+<summary><strong>2026-05-13 09:51 - vaultwares-mcp</strong> <code>code-change</code> - Fixed ModuleNotFoundError: No module named &#39;fastmcp&#39; in Claude Desktop extension mechanism. Root cause: manifest.json mcp_config.command was &#39;python&#39; (system Python, no fastmcp)...</summary>
 
 - Kind: code-change
 - Actor: GitHub Copilot
