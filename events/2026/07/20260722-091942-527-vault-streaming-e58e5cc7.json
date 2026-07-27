@@ -1,0 +1,52 @@
+{
+  "id": "20260722-091942-527-vault-streaming-e58e5cc7",
+  "createdAt": "2026-07-22T13:19:42.5273516Z",
+  "createdAtLocal": "2026-07-22 09:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 09:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Poster fix + task verification + emoji/i18n audit + plan. (1) Poster: added optional meta param to triggerRDStream (js/streaming/rd-flow.js); Library direct movie-play passes movie poster/year so watch-history thumbnail is not stale (js/favorites.js). node --check OK. (2) Verified resume-state end-to-end: player setWatchProgress spreads activeStreamingMedia incl streamUrl (player.js:1406/535). Ticked Resume State + Header Refresh + logged session work in TODO.md. (3) Emoji audit: icon set FOUND at js/icons.js (40 icons); ~43 emoji in 9 files; 10 glyphs covered, MISSING icons: arrow-right, skip-back, skip-forward, play-pause, gear/settings, palette, window-restore, flags. (4) Wrote PLAN-2026-07-22.md with plans for TMDB 'Unknown error' (null IPC response, likely boot-order/provider-state), Comet 'Provider unavailable' (stale RD key in Comet config on ovhcloud - infra/user), emoji replacement, string extraction. FINDING: EXTRACTION-NOTES says live subtitles were REMOVED in 12 Jul trim but ROADMAP still marks [x] - needs reconcile.",
+  "commands": [
+    "node --check js/streaming/rd-flow.js",
+    "rg emoji audit"
+  ],
+  "files": [
+    "js/streaming/rd-flow.js",
+    "js/favorites.js",
+    "TODO.md",
+    "PLAN-2026-07-22.md"
+  ],
+  "planPath": "",
+  "contentHash": "e58e5cc718e98e6ce5a7837303c98f577d4236f5405e3fc0d9e6703e92f2f05a",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "305db0f",
+    "hasChanges": true
+  }
+}

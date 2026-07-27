@@ -1,0 +1,49 @@
+{
+  "id": "20260724-144043-937-python-zipper-73df3743",
+  "createdAt": "2026-07-24T18:40:43.9371580Z",
+  "createdAtLocal": "2026-07-24 14:40",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: main\r\nTools used (this reply): Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-24 14:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Diagnosed flirt4free non-download: sniffer dropped auth headers. Widened header capture — pickHeaders now keeps ALL request headers except hop-by-hop noise (SKIP_HEADERS), so Authorization/Proxy-Authorization (bearer for user's 10.64.0.1 proxy) + referer/origin/cookie are forwarded to yt-dlp. Added PYTHON_ZIPPER_PROXY env -> yt-dlp --proxy for probe+download (Basic only; Bearer proxy noted as unsupported). download_stream now prints yt-dlp error tail to server console on failure (no secret cmd logged) so the real reason is visible. Verified py_compile OK, tsc clean, build OK. Pending: confirm proxy topology (transparent WG vs explicit Bearer proxy) to finalize.",
+  "commands": [
+    "py_compile",
+    "npx tsc --noEmit",
+    "npm run build"
+  ],
+  "files": [
+    "extension/src/background/sniffer.ts",
+    "dataset_builder/ds_streams.py",
+    "extension/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "73df3743fdc442fa7f6a62de53dca41b925b64931718ed8da742bf0c8c406daf",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "bb50b72",
+    "hasChanges": true
+  }
+}

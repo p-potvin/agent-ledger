@@ -1,0 +1,42 @@
+{
+  "id": "20260725-180812-856-prom-king-qa-automation-5ea2a0b9",
+  "createdAt": "2026-07-25T22:08:12.8561883Z",
+  "createdAtLocal": "2026-07-25 18:08",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/qa-automation",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-25 18:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Fixed Tor proxy rotation (NEWNYM every 5 pages), probabilistic action selection, registration form return navigation, browsing continuity via random internal links, dead CSS selector cleanup, real ad domain selectors added in run-full-qa-tor.mjs",
+  "commands": [],
+  "files": [
+    "scripts/runs/run-full-qa-tor.mjs",
+    "lib/qa-run-trace.mjs",
+    "qa_automation_routine.py"
+  ],
+  "planPath": "",
+  "contentHash": "5ea2a0b9818d60138e19cc045225826215bb85bb6c5fb8ce34f7709eec2a1d42",
+  "git": {
+    "repo": "qa-automation",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+    "branch": "main",
+    "head": "abf04e8",
+    "hasChanges": false
+  }
+}

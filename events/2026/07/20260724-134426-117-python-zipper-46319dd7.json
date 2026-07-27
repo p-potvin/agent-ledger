@@ -1,0 +1,57 @@
+{
+  "id": "20260724-134426-117-python-zipper-46319dd7",
+  "createdAt": "2026-07-24T17:44:26.1178249Z",
+  "createdAtLocal": "2026-07-24 13:44",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: main\r\nTools used (this reply): Read, Write, Edit, PowerShell, Bash, visualize\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-24 13:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "PowerShell",
+      "Bash",
+      "visualize"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "v1.2: fixes + popup stream UI. FIX open-folder: server subprocess.run(explorer) blocked the request thread forever -> non-blocking _reveal_in_explorer (os.startfile/Popen). DIAGNOSED no-download: running server (PID 18960) is STALE (predates /api/stream/*, start 404s) -> user must restart server. FIX live recording: stop_stream now sends CTRL_BREAK to yt-dlp process group (CREATE_NEW_PROCESS_GROUP) so partial live file finalizes; a produced file = completed. Added is_live to job. Rebuilt popup as VDH-style card UI (popup.html+popup.ts): thumbnail+live badge, protocol badge HLS/M3U8/HTTP/DASH, title, rename, quality dropdown, Download split-button; started downloads become progress cards (%/speed/ETA, Stop/Open/Delete); bottom toolbar refresh/folder/clear/No-video. Moved streams OUT of content (removed streams-bridge) into popup; streams queried only while popup open (1s poll); yt-dlp probe now lazy (enrichIfNeeded on streams:get). Background: jobs:get/stop/delete, open:folder/path handlers; serverGet. Verified py_compile OK, tsc clean, build OK (content 450kb), web-ext lint 0 errors/0 notices/15 innerHTML warnings (esc'd).",
+  "commands": [
+    "py_compile",
+    "npx tsc --noEmit",
+    "npm run build",
+    "web-ext lint",
+    "inspect server PID"
+  ],
+  "files": [
+    "dataset_builder/server.py",
+    "dataset_builder/ds_streams.py",
+    "extension/public/popup.html",
+    "extension/src/popup/popup.ts",
+    "extension/src/background/index.ts"
+  ],
+  "planPath": "",
+  "contentHash": "46319dd722d74a0a0fb2af37d28e38f22e73d3d34e22d1b188673fdb04570f77",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "bb50b72",
+    "hasChanges": true
+  }
+}

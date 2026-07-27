@@ -1,0 +1,57 @@
+{
+  "id": "20260724-040629-140-python-zipper-b8535878",
+  "createdAt": "2026-07-24T08:06:29.1402078Z",
+  "createdAtLocal": "2026-07-24 04:06",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: main\r\nTools used (this reply): Read, Edit, Write, PowerShell, Grep, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-24 04:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "PowerShell",
+      "Grep",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "(1) Backend header forwarding: threaded stream_headers from /download through _run_downloader/_download_and_process into download_direct_file/download_via_ytdlp; new build_ytdlp_header_args maps captured Referer/Cookie/User-Agent to yt-dlp --referer/--user-agent/--add-header; added .mpd/.f4m/.ism/dash routing to yt-dlp. py_compile OK, header-arg builder verified. (2) Full panel port into extension/: copied userscript/src -> extension/src/panel (vendored, // @ts-nocheck), slimmed main.ts to export start(), centralized GM_/zip/saveAs/unsafeWindow as globals.d.ts, vendors.ts installs zip.js(no workers)+file-saver, streams-bridge.ts injects sniffer-detected streams into the Cloud tab (header-aware Grab + checkbox feeding existing Send). Installed @zip.js/zip.js+file-saver. Verified: tsc --noEmit clean, npm run build OK (content.js 448kb), web-ext lint 0 errors/0 notices/8 benign innerHTML warnings.",
+  "commands": [
+    "py_compile server.py ds_helpers.py",
+    "npm install",
+    "npx tsc --noEmit",
+    "npm run build",
+    "npx web-ext lint"
+  ],
+  "files": [
+    "dataset_builder/ds_helpers.py",
+    "dataset_builder/server.py",
+    "extension/src/content/index.ts",
+    "extension/src/content/streams-bridge.ts",
+    "extension/src/panel/main.ts"
+  ],
+  "planPath": "",
+  "contentHash": "b8535878ad3890fcb57868606626aafd80f645305f795b56e9be85750feec582",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "bb50b72",
+    "hasChanges": true
+  }
+}

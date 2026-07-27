@@ -1,0 +1,54 @@
+{
+  "id": "20260725-215811-066-vault-streaming-ba068682",
+  "createdAt": "2026-07-26T01:58:11.0667350Z",
+  "createdAtLocal": "2026-07-25 21:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-25 21:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Fixed streaming + top-bar bugs and added hover mute (uncommitted, suggest v1.7.5). STREAMING (root cause found): user console showed '[Comet] Fetch failed: This operation was aborted'; my direct GET to Comet manifest returned HTTP 200 (service up). Cause: src/realdebrid/search.js fetchCometStreams used an 8s fetchWithTimeout, but Comet's fan-out to indexers+AllDebrid/TorBox/RD takes 15-40s -> abort -> 0 streams -> 'No media sources found' for every title. Bumped to 45000ms. SETTINGS BUTTON: core.js accessed el('settings-mute-previews') unguarded on open (line 37) and save (line 138) but the element was removed from HTML -> TypeError broke the modal; guarded both. SPINNER: rd-flow.js triggerRDStream re-showed loadingStatus but never reset .spinner (prior runs set display:none) -> spinner-less on subsequent searches; now resets it. LANGUAGE: removed the top-bar lang-trigger button + its keybindings.js handler; language now lives in Settings as 'App Language' (relabeled settings-default-lang), which on save sets both appSettings.lang+defaultLang and calls setLanguage() live; open reads lang||defaultLang. SETTINGS BUTTON STYLE: reverted to gold gear SVG (stroke var(--vault-gold)), icon-only, background:none/border:none per user. HOVER TRAILER: added .btn-hover-mute next to .btn-hover-playpause in the preview, toggles the preview <video>.muted, icon reflects muteTrailers default. All 5 JS files pass node --check.",
+  "commands": [
+    "node -e comet-check (HTTP 200)",
+    "node --check *"
+  ],
+  "files": [
+    "src/realdebrid/search.js",
+    "js/settings/core.js",
+    "js/streaming/rd-flow.js",
+    "index.html",
+    "js/navigation/keybindings.js",
+    "js/hover-card.js"
+  ],
+  "planPath": "",
+  "contentHash": "ba068682ef6eab652d0afc777c9d0b1602aaefa92ae13d03e4510d7d874e2390",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "339e8bd",
+    "hasChanges": true
+  }
+}

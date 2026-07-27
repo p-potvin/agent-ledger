@@ -1,0 +1,42 @@
+﻿{
+    "id":  "20260724-153951-518-vault-cacophony-14b25940",
+    "createdAt":  "2026-07-24T19:39:51.5182516Z",
+    "createdAtLocal":  "2026-07-24 15:39",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "general",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-24 15:39 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Locked Space to CPU-only (hardware: cpu in README, device=cpu in app.py, cpu_offload=True by default). Added GGUF support: Codes4Fun/personaplex-7b-v1-q4_k-GGUF repo reference, all 18 voice options (NATF0-3, NATM0-3, VARF0-4, VARM0-4), --gguf CLI flag, GGUF voice mapping, USE_GGUF env var in setup.sh. Added moshi.cpp local testing docs with RTX 3060 benchmark reference. Saved memory about CPU-only constraint.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "14b2594038e4bc37596778873ca7ac8d5d5cf8d22c53f295cad844db5cb0712d",
+    "git":  null
+}

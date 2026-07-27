@@ -1,0 +1,40 @@
+{
+  "id": "20260722-070315-072-qa-automation-22d91ec4",
+  "createdAt": "2026-07-22T11:03:15.0723420Z",
+  "createdAtLocal": "2026-07-22 07:03",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "bugfix",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 07:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Fix block detection false positives (challenge_text on normal pages), make challenge_text blocks continue instead of break, make granular actions video-page-aware, fix register_account form handling (confirm+age fields, hidden form tab switch), add force:true to button clicks under overlays, scroll into view before clicking, add console logging for every action result, only run register_account once per session",
+  "commands": [],
+  "files": [
+    "run-full-qa-tor.mjs, lib/utils.mjs, lib/qa-run-trace.mjs"
+  ],
+  "planPath": "",
+  "contentHash": "22d91ec425d42d00dea76aa53d80944b72d5e9958314271382fcbeccff22eafc",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "5e47861",
+    "hasChanges": false
+  }
+}

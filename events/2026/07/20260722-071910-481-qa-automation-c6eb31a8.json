@@ -1,0 +1,40 @@
+{
+  "id": "20260722-071910-481-qa-automation-c6eb31a8",
+  "createdAt": "2026-07-22T11:19:10.4813046Z",
+  "createdAtLocal": "2026-07-22 07:19",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 07:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Add 70-30 mobile/desktop profile split: each session randomly picks mobile (30%) or desktop (70%) profile type, loads separate persistent browser profile with matching UA + viewport (Pixel 7 mobile vs Windows desktop), new QA_TOR_MOBILE_PROBABILITY env var (default 0.3), updated PS1 wrapper",
+  "commands": [],
+  "files": [
+    "run-full-qa-tor.mjs, run-full-qa-tor.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "c6eb31a83a36d402fca8927a7356cc92d1a906e43fc6eb7505a64e44cf6a2f3b",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "5e47861",
+    "hasChanges": false
+  }
+}

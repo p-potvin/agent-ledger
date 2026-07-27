@@ -1,0 +1,48 @@
+{
+  "id": "20260722-120024-957-vault-streaming-ddffcb1a",
+  "createdAt": "2026-07-22T16:00:24.9575086Z",
+  "createdAtLocal": "2026-07-22 12:00",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Grep, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 12:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Root-caused the Comet-vs-RD 'provider unavailable' discrepancy. Chain: search.js sets cached = double-bang s.url (a stream is 'cached' ONLY because Comet's manifest included a url field, adding the [RD+] marker). stream.js resolveCometUrl returns that url verbatim WITHOUT verifying it (intentionally no HEAD - proxy returns 405 - and no follow to RD CDN to preserve single-IP). Player GETs the Comet proxy url; Comet proxies to RD; if RD does not actually have it cached, RD serves its ~8s placeholder video ('Provider is currently unavailable'). WHY the discrepancy: Real-Debrid REMOVED the instantAvailability endpoint (documented in ranking.js comments), so Comet can no longer truly ask RD 'is this hash cached' - it returns a proxied url optimistically; presence-of-url no longer equals genuinely-cached. Plus RD cache eviction/staleness. Manual UHD worked because it was genuinely cached; auto-pick had a url but was not ready. NOT a wholesale RD-key problem (manual worked => Comet key valid). PROPOSED FIX: verify resolved stream Content-Length (GET Range to Comet proxy, policy-compliant) vs expected manifest size; if placeholder-sized, mark not-available and fall back to next ranked stream. This also makes the transcode buffering-auto-downgrade safe. No code changed this turn (diagnosis).",
+  "commands": [
+    "read search.js stream.js ranking.js"
+  ],
+  "files": [
+    "src/realdebrid/search.js",
+    "src/realdebrid/stream.js",
+    "js/streaming/ranking.js"
+  ],
+  "planPath": "",
+  "contentHash": "ddffcb1a6e0cbad574f7a753f73108a454b8990794145e8a5ceff2324cee2bbd",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "e62439c",
+    "hasChanges": false
+  }
+}

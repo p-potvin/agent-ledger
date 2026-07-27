@@ -1,0 +1,53 @@
+{
+  "id": "20260722-161735-340-vault-streaming-09ce40c8",
+  "createdAt": "2026-07-22T20:17:35.3407822Z",
+  "createdAtLocal": "2026-07-22 16:17",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local plus GitHub push)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 16:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local plus GitHub push",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Did the wins batch then settings redesign (v1.7.0 e4626bf, v1.7.1 6a82cdb, pushed). WINS: trailers play at 80% (-20%) and honor muteTrailers setting (hover-card video+iframe, trailer.js video); discover cards get top-right + that toggles Library and fills gold (reusable window.toggleLibrarySave + handleCardLibToggle); recording LED moved from settings button to next to streaming title via CSS :has; 3 main nav tabs restyled to squared underline tabs (gold underline active) in tabs.js so they read as tabs not pills. SETTINGS REDESIGN: widened modal to min(820px,94vw), split into two grouped columns (General+Subtitles | Streaming+RTX VSR) with full-width Save row so no more scroll; added Mute Trailers by Default checkbox wired in core.js load/save; unified titlebar settings gear to data-icon=settings matching modal header; all setting IDs preserved, div balance verified 26/26. Also earlier this session: transcode wiring v1.6.0, debounced search + fullscreen menu-guard + double-click-fullscreen v1.6.1. REMAINING in TODO: watch-status card cues, trailer volume/mute button next to trailer play, disk-thrashing investigation, fullscreen cursor-stuck (needs repro), AllDebrid/TorBox runtime check (provider-breakdown log added). All node check pass.",
+  "commands": [
+    "git push e4626bf + 6a82cdb",
+    "div balance 26/26",
+    "node check core/tmdb/favorites/trailer/hover/tabs"
+  ],
+  "files": [
+    "index.html",
+    "js/settings/core.js",
+    "js/tmdb.js",
+    "js/favorites.js",
+    "js/navigation/tabs.js"
+  ],
+  "planPath": "",
+  "contentHash": "09ce40c89fca658023e4a145657e92c8bdbe05270f23b77bc07eae2019f67588",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "6a82cdb",
+    "hasChanges": true
+  }
+}

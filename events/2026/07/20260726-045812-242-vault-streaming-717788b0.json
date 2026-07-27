@@ -1,0 +1,51 @@
+{
+  "id": "20260726-045812-242-vault-streaming-717788b0",
+  "createdAt": "2026-07-26T08:58:12.2426324Z",
+  "createdAtLocal": "2026-07-26 04:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Write, Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-26 04:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Audio-track selection STEP 1 complete and TESTED (uncommitted, zero behaviour change). New src/ipc/audio-tracks.ipc.js: 'probe-audio-tracks' handler runs ffprobe -select_streams a -show_entries stream=index,codec_name,channels,disposition:stream_tags=language,title -of json; remote sources get -user_agent/-reconnect*/-probesize 5M/-analyzeduration 5M (header only); proxy routed via http_proxy/https_proxy spawn env (ffmpeg honours env, not flags) when debridProxyEnable; URL redacted in logs (Comet config segment holds debrid keys); ISO 639-2->639-1 normalization map (rus->ru, eng->en, fre/fra->fr, ...); array position = audio-relative index for -map 0:a:<idx>; returns tracks/defaultAudioIndex/defaultLang/preferredLang/suggestedAudioIndex/mismatch/elapsedMs. Wired: main.js registerAudioTracksIpc, preload probeAudioTracks, and a fire-and-forget call in player.js playStream that stores window._audioTracks and logs (parallel with playback, never delays it). VALIDATED with a synthesized MKV reproducing the exact bug (a:0=rus default, a:1=eng) run through the REAL handler via mocked ipcMain: correctly returned 2 tracks, normalized ru/en, defaultLang=ru, suggestedAudioIndex=1, mismatch=true, in 498ms. FINDING: ffmpeg did not persist the -disposition default flag in that MKV, so BOTH tracks reported isDefault=false — the 'find(isDefault) || tracks[0]' fallback correctly resolved a:0, which also matches how Chromium picks (first track when no default flag). All files pass node --check. NEXT: step 2 = audio-track picker UI + remux switching via transcode path with -map 0:v:0 -map 0:a:<idx> -c:v copy, and feeding the selected index to live subs instead of the hardcoded -map 0:a:0.",
+  "commands": [
+    "node --check src/ipc/audio-tracks.ipc.js",
+    "node -e mocked-ipcMain probe test (498ms, mismatch detected)"
+  ],
+  "files": [
+    "src/ipc/audio-tracks.ipc.js",
+    "main.js",
+    "preload.js",
+    "js/player/player.js"
+  ],
+  "planPath": "",
+  "contentHash": "717788b067b249814c0e819fb81964923bd98774fe92cecc954014f7480ee64d",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "174918e",
+    "hasChanges": true
+  }
+}

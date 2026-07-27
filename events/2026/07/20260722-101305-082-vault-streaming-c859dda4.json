@@ -1,0 +1,55 @@
+{
+  "id": "20260722-101305-082-vault-streaming-c859dda4",
+  "createdAt": "2026-07-22T14:13:05.0827303Z",
+  "createdAtLocal": "2026-07-22 10:13",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 10:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Subtitle handler fix + redesign-v2 icon integration + new todos. (1) find-subtitles crash: created src/ipc/subtitles.ipc.js (local sidecar .srt/.vtt discovery, graceful [] for streams, never throws), registered in main.js, fixed preload to forward dropped langs arg. Console error 'No handler registered for find-subtitles' resolved. (2) Icons: wrote scripts/gen-icons.js which ports redesignv2/vw-icons.jsx (99 IconXxx JSX components) into js/icons.v2.js in the window.icons string format; exposes window.iconsV2 + additively backfills window.icons without overwriting the 40 hand-tuned originals. Referenced in index.html after icons.js. Copied vw-icons/vw-player/vw-brand sources to vaultwares-themes/vaultwares-revisited/icons/redesign-v2/ (SUBMODULE needs own commit). All emoji-gap icons now available (chevronRight, skipBack/Forward, fastForward, rewind, settings, stop, fullscreen, pip, zap, etc). (3) Added todos: decouple clip IPC, re-add app icon to build, RTX VSR upscale.js (main handlers exist), Parakeet live subs (main handlers already registered at main.js:463), OpenSubtitles download. node --check passes all. NOTE for user: live-subtitles + upscale main-process IPC still registered/present; only renderer UI was stripped in trim.",
+  "commands": [
+    "node scripts/gen-icons.js -> 99 icons",
+    "node --check (icons.v2, subtitles.ipc, main, preload)"
+  ],
+  "files": [
+    "src/ipc/subtitles.ipc.js",
+    "main.js",
+    "preload.js",
+    "scripts/gen-icons.js",
+    "js/icons.v2.js",
+    "index.html",
+    "TODO.md"
+  ],
+  "planPath": "",
+  "contentHash": "c859dda485d116cafeb7923ddac52b7ebf890bf5a73965dcf86cb499729b1a80",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "305db0f",
+    "hasChanges": true
+  }
+}

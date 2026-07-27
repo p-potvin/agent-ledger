@@ -1,0 +1,50 @@
+{
+  "id": "20260723-001003-401-vaultwares-api-68d0e85c",
+  "createdAt": "2026-07-23T04:10:03.4019353Z",
+  "createdAtLocal": "2026-07-23 00:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: plan\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, Read, Grep, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-23 00:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "plan",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Grep",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Started trailer-cache feature (serve cached YouTube trailers via API instead of per-view KinoCheck+yt-dlp). Recon: vaultwares-api is FastAPI + Tortoise/raw-SQL + Postgres, file-based jobs worker (app.state.job_queue, _new_job/_queue_job, claim/complete pattern), X-API-Key/JWT via require_auth; runtime DB is Tortoise (connections.get('default').execute_query), NOT Prisma. yt-dlp already proven client-side in vault-streaming media.ipc.js:421. Delivered foundation: (1) migrations/trailers/001_trailer_cache.sql — trailer_cache table keyed by youtube_id with per-host URL cols (pixeldrain/gofile/onefichier/torbox), primary_url, status, timestamps, indexes; (2) PLAN-trailer-cache-2026-07-23.md — full design: GET /media/trailer contract (ready/pending/failed, enqueue job on miss), pipeline stages (yt-dlp download once -> parallel pixeldrain/gofile/1fichier instant + TorBox slow backfill), serve preference pixeldrain>gofile>torbox>1fichier, client integration with fallback to existing flow. BLOCKED on user-provided credentials (TorBox/gofile/1fichier keys, pixeldrain optional) + app->API base URL/X-API-Key before writing/testing uploaders. Next unblocked steps: routes_trailers.py skeleton, pixeldrain uploader, client fallback wiring.",
+  "commands": [
+    "git log recon",
+    "ls vaultwares-api"
+  ],
+  "files": [
+    "vaultwares-api/migrations/trailers/001_trailer_cache.sql",
+    "vaultwares-api/PLAN-trailer-cache-2026-07-23.md"
+  ],
+  "planPath": "",
+  "contentHash": "68d0e85cb79a211d4b98c9c94b61bc061187b1a305782d842744233d1e8e002d",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "f228710",
+    "hasChanges": false
+  }
+}

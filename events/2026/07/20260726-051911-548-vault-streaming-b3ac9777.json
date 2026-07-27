@@ -1,0 +1,58 @@
+{
+  "id": "20260726-051911-548-vault-streaming-b3ac9777",
+  "createdAt": "2026-07-26T09:19:11.5481971Z",
+  "createdAtLocal": "2026-07-26 05:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Write, Grep, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-26 05:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Audio-track selection STEP 2 built (uncommitted, awaiting user test). PROBE EXTENDED: audio-tracks.ipc.js now probes ALL streams (dropped -select_streams a) returning videoInfo{codec,profile,level} alongside tracks, so a -c:v copy remux can be expressed for MediaSource; added mseCodecForCopy() exported helper (h264 -> avc1.PPCCLL from profile_idc+level, hevc -> hvc1.1.6.L<level>.B0, everything else null = re-encode fallback). UNIT-TESTED: High/4.1 -> avc1.640029 which exactly matches the app's existing hardcoded MSE_CODEC constant (independent cross-check); Main/3.1 -> avc1.4d001f; High10/5.0 -> avc1.6e0032; hevc/120 -> hvc1.1.6.L120.B0; av1/missing-level/null -> null fallback. TRANSCODE REUSE (no second pipeline): buildArgs takes audioIndex+copyVideo -> '-map 0:v:0 -map 0:a:<idx>' and '-c:v copy' (cheap remux, video untouched); handler computes copyCodec via mseCodecForCopy and returns it as the MSE codec, falling back to the known-good H.264 re-encode when unmappable; renderer startTranscodePlayback gained an opts {audioIndex, videoInfo}; existing fallbackDirect() remains the final safety net so a bad codec string degrades to direct playback, not a break. UI: #audio-dropdown-container + #btn-audio + #audio-menu in index.html (hidden unless >1 track), #audio-menu shares #quality-menu CSS; player.js refreshAudioMenu() (lang names, ch/codec detail, active highlight) and switchAudioTrack() (resumes at currentTime, reuses quality-picker pattern); added to idle-hide guard + mutual menu closing; _audioTracks/_activeAudioIndex reset per stream. AUTO-CORRECT: on probe mismatch (default track != preferred lang and a match exists) it auto-switches once per stream with a toast — this is what actually kills the foreign-dub bug. LIVE SUBS CLOSED THE LOOP: renderer sends audioIndex; src/live-subtitles.js forwards it; live_subtitles.py build_ffmpeg_cmd now uses -map 0:a:<audio_index> instead of hardcoded 0; restartLiveSubtitlesForAudio() re-runs ASR when the track changes. All 8 JS files pass node --check, python",
+  "commands": [
+    "node --check (8 files)",
+    "python -m py_compile python-scripts/live_subtitles.py",
+    "node -e mseCodecForCopy unit test"
+  ],
+  "files": [
+    "src/ipc/audio-tracks.ipc.js",
+    "src/ipc/transcode.ipc.js",
+    "js/player/player.js",
+    "js/player/transcode.js",
+    "js/player/subtitles.js",
+    "src/live-subtitles.js",
+    "python-scripts/live_subtitles.py",
+    "index.html"
+  ],
+  "planPath": "",
+  "contentHash": "b3ac9777dda7db02796c9f11bd32ca1a13947f069753ae17b39d4db780c0d4da",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "174918e",
+    "hasChanges": true
+  }
+}

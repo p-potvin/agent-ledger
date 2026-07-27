@@ -1,0 +1,51 @@
+{
+  "id": "20260723-151459-426-vault-streaming-6cbea269",
+  "createdAt": "2026-07-23T19:14:59.4269308Z",
+  "createdAtLocal": "2026-07-23 15:14",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Write, Bash, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-23 15:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Write",
+      "Bash",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Live-smoke-tested trailer-cache host contracts (direct, no proxy; user confirmed these hosts are IP-safe) via scratchpad harness, found+fixed 2 bugs, then committed+pushed v1.7.4 (f228710..339e8bd). Results: pixeldrain anonymous PUT now 401s -> FIXED to use API key via HTTP Basic auth (empty user, key as password) -> 201; uploaded file serves 206 with accept-ranges:bytes (seekable in <video>) = primary path validated end-to-end. gofile /servers + multipart uploadfile -> data.downloadPage (200, works as coded). 1fichier get_upload_server returned 400 'Content-Type not JSON' -> FIXED by adding Content-Type: application/json -> 200 {url,id}. TorBox createwebdownload -> 200 data.webdownload_id/hash (works as coded; a real BBB job was queued during test - harmless). Remaining unverified but non-blocking best-effort: 1fichier upload.cgi/end.cgi finish + TorBox mylist/requestdl poll shapes (backups/backfill, fail gracefully, never block pixeldrain primary). Keys loaded from .access at runtime, never logged/committed (verified no secret values in source). node --check passes. Committed 8 files incl version bump to 1.7.4 + <!-- v1.7.4 --> HTML comment.",
+  "commands": [
+    "node smoke-test (scratchpad)",
+    "git commit",
+    "git push origin main"
+  ],
+  "files": [
+    "src/ipc/trailer-cache.ipc.js",
+    "src/realdebrid/proxy.js",
+    "package.json"
+  ],
+  "planPath": "",
+  "contentHash": "6cbea269eb72bcb7d7f90ac36dc160a2dea511e3d3447084da2c977f1ac17da9",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "339e8bd",
+    "hasChanges": false
+  }
+}

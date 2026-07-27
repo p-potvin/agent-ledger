@@ -1,0 +1,53 @@
+{
+  "id": "20260722-222437-140-vault-streaming-761f7977",
+  "createdAt": "2026-07-23T02:24:37.1401541Z",
+  "createdAtLocal": "2026-07-22 22:24",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 22:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Fixed 6 reported UI bugs (v1.7.3 pending, not committed). (1) CC menu wouldn't open: subtitles.js:707 called el('speed-menu').style on the intentionally-removed speed menu -> null deref aborted the toggle; guarded it. (2) RTX/upscale btn shared fullscreen's corner-expand SVG -> gave btn-upscale a distinct sparkle icon (index.html). NOTE: upscale-stream-start has NO main-process handler (only in preload+TODO) so the feature is backend-dead regardless. (3) Clip export select text invisible: dialog is body-level warm-locked but selects used shell-scoped var(--vt-primary) (undefined there) with dark var(--vault-text); repaired to var(--vault-warm-raised)/var(--vault-ink). (4) Comet auto-picked a Russian 3D/half-SBS 4K: ranking.js had no 3D or foreign-dub penalty; added THREE_D_RE (-5000) and FOREIGN_DUB_RE (-60 under English, non-multi). (5) Autoplay was a 4-state slider; per user collapsed to plain Off<->On (On=5s) in player.js. (6) Settings modal off-center: stale #settings-panel dropdown rule out-specified .settings-panel modal + leftover translate; removed it and stripped double border/margin from .settings-panel-header. Also flagged app.js:138 commenting out applyTheme(). All node --check pass.",
+  "commands": [
+    "node --check js/player/player.js",
+    "node --check js/streaming/ranking.js"
+  ],
+  "files": [
+    "js/player/subtitles.js",
+    "index.html",
+    "js/player/clip.js",
+    "js/streaming/ranking.js",
+    "js/player/player.js",
+    "css/settings.css"
+  ],
+  "planPath": "",
+  "contentHash": "761f7977bdf3d18bb5f6ac62b27490df50bb06761851a11bf8c6f938116e5328",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "90dee06",
+    "hasChanges": true
+  }
+}

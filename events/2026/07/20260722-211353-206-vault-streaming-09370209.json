@@ -1,0 +1,47 @@
+{
+  "id": "20260722-211353-206-vault-streaming-09370209",
+  "createdAt": "2026-07-23T01:13:53.2063161Z",
+  "createdAtLocal": "2026-07-22 21:13",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: medium\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Edit, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 21:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "medium",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Edit",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Applied 2 fixes from code review of clip feature. (1) js/player/clip.js exportClipToDesktop: stopped renderer from decodeURIComponent-ing and stripping vp.src; now passes raw src so the clip IPC handler normalizes branch-aware (remote http/https forwarded verbatim to preserve signed debrid/presigned tokens; file:// decoded once in the handler). Fixes broken remote clipping + double-decode of local paths containing '%'. (2) src/ipc/clip.ipc.js stderr handler: parse progress from the latest chunk with a global regex (last match) instead of re-matching the ever-growing accumulated buffer (which froze progress at the first timestamp and was O(n^2)); retained stderrData bounded to a 4000-char tail for failure diagnostics. Both files pass node --check. Not committed.",
+  "commands": [
+    "node --check src/ipc/clip.ipc.js",
+    "node --check js/player/clip.js"
+  ],
+  "files": [
+    "js/player/clip.js",
+    "src/ipc/clip.ipc.js"
+  ],
+  "planPath": "",
+  "contentHash": "0937020968a24d31419aa3197de34db6494d8b3827d56e213419d62877f8fdd8",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "90dee06",
+    "hasChanges": true
+  }
+}

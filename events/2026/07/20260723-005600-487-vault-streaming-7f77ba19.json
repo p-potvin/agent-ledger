@@ -1,0 +1,53 @@
+{
+  "id": "20260723-005600-487-vault-streaming-7f77ba19",
+  "createdAt": "2026-07-23T04:56:00.4874944Z",
+  "createdAtLocal": "2026-07-23 00:56",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Write, Grep, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-23 00:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Trailer-cache Increment 1 (client-side, no API, local per-instance link cache, proxy-tunneled). Removed the obsolete vaultwares-api migration+plan (architecture pivoted to client-side per user). Added uploadBufferWithProxy() to src/realdebrid/proxy.js (CONNECT-tunnel binary upload; existing makeProxiedRequest stringifies body and corrupts binaries). New src/ipc/trailer-cache.ipc.js: JSON cache at userData/trailer-cache.json; 'trailer-cache:get' (returns ready entry or null) and 'trailer-cache:put' (deduped: yt-dlp download to temp -> pixeldrain anonymous PUT via proxy -> store primary_url -> cleanup). preload getCachedTrailer/cacheTrailer; registered registerTrailerCacheIpc in main.js. hover-card.js: cache-first serve (no external call) before extractYouTubeURL; background warm on miss GATED behind opt-in appSettings.autoCacheTrailers && debridProxyEnable (default off) to honor request-safety policy. Keys: .access/torbox.api.txt exists; pixeldrain+gofile anonymous; 1fichier key absent. All 5 files pass node --check. NEXT: gofile + TorBox uploaders, 1fichier pending key, optional settings toggle for autoCacheTrailers. Not committed.",
+  "commands": [
+    "node --check src/ipc/trailer-cache.ipc.js",
+    "node --check src/realdebrid/proxy.js"
+  ],
+  "files": [
+    "src/ipc/trailer-cache.ipc.js",
+    "src/realdebrid/proxy.js",
+    "preload.js",
+    "main.js",
+    "js/hover-card.js"
+  ],
+  "planPath": "",
+  "contentHash": "7f77ba19420cd105836b28aaca9bd34c21e138ce88a03c7988124926b106f78e",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "f228710",
+    "hasChanges": true
+  }
+}

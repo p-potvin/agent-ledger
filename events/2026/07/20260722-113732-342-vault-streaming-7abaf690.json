@@ -1,0 +1,52 @@
+{
+  "id": "20260722-113732-342-vault-streaming-7abaf690",
+  "createdAt": "2026-07-22T15:37:32.3422447Z",
+  "createdAtLocal": "2026-07-22 11:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local plus GitHub push)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 11:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local plus GitHub push",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Transcode feature ranking plus backend (v1.4.3, pushed f2376fe..d3cf6a2). (1) ranking.js removed quality-preference bias entirely per user; scoreTorrent no longer takes preferredQuality; ranks by cache/health/release/codec/HDR/language and prefers highest quality outright (tq times 25). Max Stream Quality is now purely a playback ceiling. (2) NEW src/ipc/transcode.ipc.js transcode-stream-start/stop spawns ffmpeg reading RD URL, scale to ceiling, h264_nvenc preset fast (libx264 fallback via encoders probe), AAC re-encode, fragmented MP4 to stdout via transcode-chunk/transcode-status; returns MSE codec avc1.640029 mp4a.40.2. Registered in main.js; preload transcodeStreamStart/Stop plus onTranscodeChunk/Status plus offs. (3) Answered resource question; on NVENC the UHD to 1080p vs to 720p is about equal (4K NVDEC decode is fixed bottleneck; NVENC has huge headroom); 720p only helps on CPU/libx264 fallback; transcode does not save download bandwidth, it offloads 4K decode from Chromium; so no auto 720p perf-fallback. REMAINING in TODO renderer wiring: playStream compares activeStreamingMedia.quality vs appSettings.streamQuality, MediaSource consumer, badge, ffmpeg seek resume, seek restart, error to direct fallback. node check passes all.",
+  "commands": [
+    "git push d3cf6a2",
+    "node check ranking transcode main preload"
+  ],
+  "files": [
+    "js/streaming/ranking.js",
+    "src/ipc/transcode.ipc.js",
+    "main.js",
+    "preload.js"
+  ],
+  "planPath": "",
+  "contentHash": "7abaf69024d41a64a48b3aa5e9a15f03c725173ddd24d2c32e4b67dbac318558",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "d3cf6a2",
+    "hasChanges": false
+  }
+}

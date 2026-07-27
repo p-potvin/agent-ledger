@@ -1,0 +1,49 @@
+{
+  "id": "20260726-035742-456-vault-streaming-4e5bd49c",
+  "createdAt": "2026-07-26T07:57:42.4563860Z",
+  "createdAtLocal": "2026-07-26 03:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-26 03:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Fixed video pillarbox regression + added 429 insurance (uncommitted). PILLARBOX ROOT CAUSE: css/player.css .video-wrapper.subtitles-active #video-player applied padding-bottom:40px to an element that is height:100% with DEFAULT content-box, so the padding was added on top of full height and overflowed the wrapper; object-fit:contain then scaled the video down to fit the taller box, appearing as thick black bars down each side. Fix: box-sizing:border-box on that rule. 429 INSURANCE (user judged it an outlier, approved option 3): build_ffmpeg_cmd now adds -reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 10 -user_agent Mozilla/5.0 for http(s) sources only, so the ASR's second connection retries with backoff instead of dying. RUSSIAN-DUB ROOT CAUSE IDENTIFIED from user's log: release name was The.Death.of.Robin.Hood.2026.720p.10bit.WEBRip.6CH.x265.HEVC-PSA.mkv — NO foreign-language marker, so ranking regex could never catch it. The Russian audio is a TRACK INSIDE the multi-audio file whose default/first track is Russian; switching quality picked a different release. Implication: -map 0:a:0 (live subs) correctly matches the browser default track, but that default is itself the Russian one. Real fix = audio-track selection, which Chromium does not reliably expose via HTMLMediaElement.audioTracks, so it would need the existing transcode path with -map 0:a:m:language:eng. NOT implemented; proposed to user. SECURITY NOTE surfaced to user: the Comet playback URL embeds base64-encoded AllDebrid/TorBox/RealDebrid API keys and is printed to the renderer console (keys NOT recorded here).",
+  "commands": [
+    "python -m py_compile python-scripts/live_subtitles.py"
+  ],
+  "files": [
+    "css/player.css",
+    "python-scripts/live_subtitles.py"
+  ],
+  "planPath": "",
+  "contentHash": "4e5bd49c474359055a6afe4c7e313749efe0aaaa6061e8c39abe8ab4517f3a7c",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "b2d75e8",
+    "hasChanges": true
+  }
+}

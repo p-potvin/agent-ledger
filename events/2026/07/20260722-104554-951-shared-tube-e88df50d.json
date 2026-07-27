@@ -1,0 +1,45 @@
+{
+  "id": "20260722-104554-951-shared-tube-e88df50d",
+  "createdAt": "2026-07-22T14:45:54.9518161Z",
+  "createdAtLocal": "2026-07-22 10:45",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 10:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Migrated oneporn + sexyprn from OVH to greencloud. All 3 apps now on greencloud (fxv:4321, oneporn:4323, sexyprn:4324). Obtained letsencrypt certs, installed nginx configs, fixed dnsmasq on both servers (flaresolverr/sabnzbd/uptime -> OVH), updated deploy script (removed OVH dispatch), added deploy-greencloud.yml workflow, updated health-ledger services.yaml, updated vaultwares-docs (5 files), killed old services on OVH. Committed 48adebe + pushed vaultwares-docs 32a40be.",
+  "commands": [],
+  "files": [
+    "scripts/deploy-shared-tube.sh",
+    "scripts/systemd/oneporn.service",
+    "scripts/systemd/sexyprn.service",
+    ".github/workflows/deploy-greencloud.yml",
+    "AGENTS.md",
+    "CHANGES.md"
+  ],
+  "planPath": "",
+  "contentHash": "e88df50d2bbc9dab20216840ad32a24533ba049fe6d3050edb4985589febeeb9",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "main",
+    "head": "32a40be",
+    "hasChanges": false
+  }
+}

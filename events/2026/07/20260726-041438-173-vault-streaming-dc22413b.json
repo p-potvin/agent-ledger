@@ -1,0 +1,52 @@
+{
+  "id": "20260726-041438-173-vault-streaming-dc22413b",
+  "createdAt": "2026-07-26T08:14:38.1733374Z",
+  "createdAtLocal": "2026-07-26 04:14",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: plan\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-26 04:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "plan",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Redacted debrid keys from logs, pushed v1.8.0 (b2d75e8..174918e), scoped audio-track selection. REDACTION: added redact() in live_subtitles.py (strips the /eyJ... base64 Comet config segment that embeds AllDebrid/TorBox/RealDebrid API keys) applied to the session log and the ffmpeg command log; added _redactUrl in js/player/subtitles.js session-start console.log. v1.8.0 shipped: Nemotron cache-aware streaming migration + concrete-class loader fix, autoplay series-only, pillarbox box-sizing fix, settings hover, ffmpeg reconnect flags, log redaction. SCOPED (TODO.md 'Next up'): audio-track selection to kill the foreign-dub bug. 4 parts — (1) new probe-audio-tracks IPC running ffprobe -select_streams a for index/codec/channels/disposition/language tags, with bounded probesize + user_agent + reconnect for remote, and http_proxy/https_proxy via spawn env when debridProxyEnable (note: existing transcode path does NOT set proxy env — worth aligning); (2) compare track languages to existing settings.streamLang, no-op fast path when the default already matches; (3) switch via the existing transcode stream pipeline with -map 0:v:0 -map 0:a:<idx> -c:v copy (video copied, cheap; audio->AAC only for DTS/TrueHD); (4) audio-track picker in the player bar reusing the quality picker's _resumePosAfterSwitch. Risks: probe latency (run parallel with debrid resolve, skip when single track), 429 (sequential not concurrent), fallback = today's behavior. BONUS: probe result also replaces the hardcoded -map 0:a:0 in live subs so ASR follows the selected track.",
+  "commands": [
+    "git push origin main (v1.8.0)",
+    "python -m py_compile python-scripts/live_subtitles.py"
+  ],
+  "files": [
+    "TODO.md",
+    "python-scripts/live_subtitles.py",
+    "js/player/subtitles.js",
+    "package.json"
+  ],
+  "planPath": "",
+  "contentHash": "dc22413b5fcfa1a1807722efc49c78cebfe70681596537292fb4df8d49e51c44",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "174918e",
+    "hasChanges": true
+  }
+}

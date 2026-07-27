@@ -1,0 +1,49 @@
+{
+  "id": "20260722-085742-047-vault-streaming-66de13e5",
+  "createdAt": "2026-07-22T12:57:42.0471842Z",
+  "createdAtLocal": "2026-07-22 08:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 08:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Fixed null-ref crashes from legacy Vault Explorer DOM IDs after streaming pivot. (1) js/settings/core.js: guarded el('settings-default-folder') on settings open (~L32) and save (~L134) - this dead ref threw before saveSettings ran, which is why settings could not be saved. (2) js/favorites.js renderLibrary: guarded search-box/filter-type/sort-by/btn-sort-order with optional chaining + defaults - removed toolbar IDs crashed the Library tab. Verified TMDB bearer token valid (HTTP 200) and reachable, so startup 'TMDB Request Failed' fullscreen error is not token/network; needs runtime error text. node --check passes on both files.",
+  "commands": [
+    "node --check js/settings/core.js",
+    "curl TMDB /authentication -> 200"
+  ],
+  "files": [
+    "js/settings/core.js",
+    "js/favorites.js"
+  ],
+  "planPath": "",
+  "contentHash": "66de13e5a1af5e29ae7c76648c3d8063c71eeee706c6637d1acdd0bb2622f6a0",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "305db0f",
+    "hasChanges": true
+  }
+}

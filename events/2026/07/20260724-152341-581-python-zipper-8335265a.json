@@ -1,0 +1,50 @@
+{
+  "id": "20260724-152341-581-python-zipper-8335265a",
+  "createdAt": "2026-07-24T19:23:41.5819662Z",
+  "createdAtLocal": "2026-07-24 15:23",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: main\r\nTools used (this reply): Read, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-24 15:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Root-caused flirt4free 401: player fires a placeholder manifest.m3u8?key=null before the real keyed request; our origin+path dedup kept the FRESHEST url, so key=null clobbered the good keyed URL -> probe/download 401. Fix in sniffer: isBadAuthUrl() detects auth params (key/token/sig/etc) valued null/undefined/empty; register() now only overwrites stored url when new one is no worse, and upgrading bad->good resets probed/meta to re-probe. enrichIfNeeded cooldown re-keyed by URL so an upgraded URL re-probes immediately. For live, freshest KEYED url still tracked. Popup: detected card now shows probe error (shortErr extracts 'HTTP Error 401' etc.) instead of bare 'probe failed'. Verified tsc clean, build OK, web-ext lint 0/0.",
+  "commands": [
+    "npx tsc --noEmit",
+    "npm run build",
+    "web-ext lint"
+  ],
+  "files": [
+    "extension/src/background/sniffer.ts",
+    "extension/src/background/enrich.ts",
+    "extension/src/popup/popup.ts"
+  ],
+  "planPath": "",
+  "contentHash": "8335265a5603b6808f5f431bc4fb260d7fed61256fb52cafed2609fb7f2cbb6b",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "bb50b72",
+    "hasChanges": true
+  }
+}

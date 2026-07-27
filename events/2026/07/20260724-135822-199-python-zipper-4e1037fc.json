@@ -1,0 +1,49 @@
+{
+  "id": "20260724-135822-199-python-zipper-4e1037fc",
+  "createdAt": "2026-07-24T17:58:22.1997771Z",
+  "createdAtLocal": "2026-07-24 13:58",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: main\r\nTools used (this reply): Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-24 13:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Fixed unhandled 'Receiving end does not exist' rejection: background sniffer notify() no longer messages the tab (no content-script listener since streams moved to popup) — just updates the badge. Wired all popup toolbar buttons with feedback: refresh (spin+repoll), open downloads folder (toast w/ path or offline error), clear (detections + delete finished jobs, toast), No video? (recapture toast+close), gear -> Settings popover (server online/offline dot, endpoint, version, save dir, open/clear actions), help -> How-to popover. Added toast + popover UI, serverOnline tracking from jobs:get. Noted Ably/websocket errors are Chaturbate's own site scripts, not the extension. Verified tsc clean, build OK, web-ext lint 0 errors/0 notices.",
+  "commands": [
+    "npx tsc --noEmit",
+    "npm run build",
+    "web-ext lint"
+  ],
+  "files": [
+    "extension/src/background/sniffer.ts",
+    "extension/src/popup/popup.ts",
+    "extension/public/popup.html"
+  ],
+  "planPath": "",
+  "contentHash": "4e1037fc026a9d3093d0fe553882830afc7df17601cc021892ecaa44d34b6cbb",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "bb50b72",
+    "hasChanges": true
+  }
+}

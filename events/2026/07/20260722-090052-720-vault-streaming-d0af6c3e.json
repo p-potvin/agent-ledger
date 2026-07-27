@@ -1,0 +1,49 @@
+{
+  "id": "20260722-090052-720-vault-streaming-d0af6c3e",
+  "createdAt": "2026-07-22T13:00:52.7203519Z",
+  "createdAtLocal": "2026-07-22 09:00",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 09:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Library playback behavior changes. (1) js/favorites.js library card click: movies with no saved progress now auto-play the top-ranked Comet source via triggerRDStream (which already auto-picks best + keeps Choose Manually fallback) instead of opening the details modal; series with no started episode open the season screen; started items still resume directly. Error fallback also type-aware. (2) js/streaming/details-modal.js _setupTVModal: season picker now preselects the last-watched season from getWatchProgress(tv, tmdbId) and loads its episodes, instead of always defaulting to season 1. node --check passes. Known minor follow-up: direct movie play reads stale streaming-details-poster/year for watch-history thumbnail.",
+  "commands": [
+    "node --check js/favorites.js",
+    "node --check js/streaming/details-modal.js"
+  ],
+  "files": [
+    "js/favorites.js",
+    "js/streaming/details-modal.js"
+  ],
+  "planPath": "",
+  "contentHash": "d0af6c3ef6effade0cb7dfaa1d68d2070cad158e57cf458897ecd6180096afdb",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "305db0f",
+    "hasChanges": true
+  }
+}

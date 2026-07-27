@@ -1,0 +1,51 @@
+{
+  "id": "20260725-231005-566-vault-streaming-a106d0eb",
+  "createdAt": "2026-07-26T03:10:05.5668294Z",
+  "createdAtLocal": "2026-07-25 23:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-25 23:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Subtitles modal cluster (uncommitted). OPENSUBTITLES 'no subs found' ROOT CAUSE + FIX: live probe showed the key is set but the API returned HTTP 301 (Node doesn't follow redirects -> parsed as no results). OpenSubtitles requires query params in ALPHABETICAL order and 301-redirects otherwise; searchOpenSubtitles sent query before languages. Fix: qs.sort() before request + normalize langs to ISO-639-1 (fr-CA->fr, preserving pt-br/pt-pt/zh-cn/zh-tw). Verified live: sorted -> HTTP 200, total_count 10000, 50 results (src/ipc/subtitles.ipc.js). SYNC ROW: #subtitle-sync-row now hidden unless a track is active — initial hide in initSubtitleListeners, toggled in selectSubtitleTrack, shown on live-subs start, hidden on stopLiveSubtitles (js/player/subtitles.js). PREFERRED LANGS: OpenSubtitles language search panel (#subtitles-more-panel) now expanded by default instead of buried behind 'More subtitles…'. LIVE-SUBS 2.5GB WARNING: explicit one-time warning banner in showAsrContextMenu, gated by appSettings.asrModelReady (set true once a session starts successfully). ASR MODAL RESTYLE: showAsrContextMenu is body-level so var(--vault-card-bg) resolved to the light warm value (the clashing light-purple); set an explicit dark console bg rgba(19,16,28,0.97). Both files pass node --check. Combined with earlier live_subtitles.py -map 0:a:0 fix (wrong audio track). User will test.",
+  "commands": [
+    "node -e opensubtitles-probe (200, 10000 results)",
+    "node --check src/ipc/subtitles.ipc.js",
+    "node --check js/player/subtitles.js"
+  ],
+  "files": [
+    "src/ipc/subtitles.ipc.js",
+    "js/player/subtitles.js"
+  ],
+  "planPath": "",
+  "contentHash": "a106d0ebf00b82efc4c3d4a456b56c6d9fdc4ca6a3089756ae2eb645c8b2de95",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "339e8bd",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "20260725-234749-753-vault-streaming-7273c85e",
+  "createdAt": "2026-07-26T03:47:49.7535965Z",
+  "createdAtLocal": "2026-07-25 23:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-25 23:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Committed+pushed v1.7.6 (a7cce08..b2d75e8). Active-tab fix ROOT CAUSE: js/navigation/tabs.js applies INLINE styles to the sub-nav pills, overriding the CSS class I'd changed — updated the inline styles to the underline look (accent text + rgba(176,124,255,0.12) tint + 2px accent bottom-border). Live-subs seek: debounced 700ms 'seeked' listener restarts startLiveSubtitleSession from the new position; stored _liveSubLangs/_liveSubBoost/_liveSubItemName. Model warning also clears on 'downloaded' status. Watch-history resume: confirmed the exact cached stream URL is ALREADY stored (item.streamUrl) and replayed via playStream in history.js; ADDED the missing fallback — a one-time video 'error' listener that re-searches via triggerRDStream when the cached debrid URL has expired (cleared on loadeddata). Earlier same-batch: 5-per-row grid, provider hover overflow:visible. All JS passes node --check. ANSWERS: ASR does NOT remember previous LINES as text context — live_subtitles.py re-transcribes a growing AUDIO buffer per utterance for stability then resets on finalize; model.transcribe_audio_data takes audio+language only, no prior-text prompt, so no cross-line narrative memory. Per-provider debrid scoring: skipped per user.",
+  "commands": [
+    "git push origin main (v1.7.6)",
+    "node --check js/navigation/tabs.js js/history.js"
+  ],
+  "files": [
+    "js/navigation/tabs.js",
+    "js/history.js",
+    "js/player/subtitles.js",
+    "css/header.css"
+  ],
+  "planPath": "",
+  "contentHash": "7273c85ea925bb2673def81e4b8aba39416eba6199efba9026a99454b7a3cf02",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "b2d75e8",
+    "hasChanges": false
+  }
+}

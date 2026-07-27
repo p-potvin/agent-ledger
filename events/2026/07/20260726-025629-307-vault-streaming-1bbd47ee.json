@@ -1,0 +1,54 @@
+{
+  "id": "20260726-025629-307-vault-streaming-1bbd47ee",
+  "createdAt": "2026-07-26T06:56:29.3072030Z",
+  "createdAtLocal": "2026-07-26 02:56",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Write, Edit, Grep, Bash, WebFetch, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-26 02:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Grep",
+      "Bash",
+      "WebFetch",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Full live-subs ASR migration Parakeet-TDT -> nvidia/nemotron-3.5-asr-streaming-0.6b cache-aware streaming (uncommitted, needs first live run). NEW vault_explorer/nemotron_wrapper.py: NemotronStreamingASR with reset()/feed()/chunk_samples(); loads via ASRModel.restore_from(local .nemo) or from_pretrained; sets att_context_size [70,13] = 1.12s chunk (right-context presets 0/1/3/6/13 -> 80ms/160ms/320ms/560ms/1.12s), setup_streaming_params, get_initial_cache_state, per-step conformer_stream_step with drop_extra_pre_encoded on steps>0; _extract_text handles str|Hypothesis. REWROTE live_subtitles.py run_session: feeds fixed chunk_samples() pieces, derives cue times from STREAM POSITION (model emits no timestamps) - fixes the old races-ahead behavior; feed_chunk() tracks utt_start/utt_text/silence_run, finalizes on silence>=minSilence or maxUtt, model.reset() at boundary to bound hypothesis growth, periodic reset during long idle silence; tail padded to a full chunk + flush open utterance at natural end. Removed now-unused step_s/step_samples/min_samples/keep_lookahead/min_segment. load_model() uses NemotronStreamingASR (VAULT_ASR_CHUNK_S override). src/live-subtitles.js: MODEL_REPO/TDT_URL/paths -> nemotron, HF cache dir derived from repo, and ensureModel() download failure is now NON-FATAL (falls back to NeMo from_pretrained, emits warn) since the .nemo asset name is unverified. DELIBERATELY LEFT: vault_explorer/core.py + parakeet_wrapper.py still Parakeet for OFFLINE batch transcription (needs word timestamps for SRT). All files pass node --check / py_compile. VERIFY ON FIRST RUN: NeMo streaming API surface + .nemo asset name.",
+  "commands": [
+    "python -m py_compile python-scripts/live_subtitles.py vault_explorer/nemotron_wrapper.py",
+    "node --check src/live-subtitles.js"
+  ],
+  "files": [
+    "vault_explorer/nemotron_wrapper.py",
+    "python-scripts/live_subtitles.py",
+    "src/live-subtitles.js",
+    "TODO.md"
+  ],
+  "planPath": "",
+  "contentHash": "1bbd47ee55ec3179a3b7dfc3252519737e0eb67ef0ad45266080e7a40b516628",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "b2d75e8",
+    "hasChanges": true
+  }
+}

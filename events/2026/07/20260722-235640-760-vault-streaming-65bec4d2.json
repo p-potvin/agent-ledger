@@ -1,0 +1,50 @@
+{
+  "id": "20260722-235640-760-vault-streaming-65bec4d2",
+  "createdAt": "2026-07-23T03:56:40.7606397Z",
+  "createdAtLocal": "2026-07-22 23:56",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: chat\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, Grep, Read, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 23:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "chat",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Bash",
+      "Grep",
+      "Read",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Committed + pushed v1.7.3 (90dee06..f228710 on main): clip export hardening, 6 player/UI bug fixes, settings modal centering, and full removal of theme switching (single static console shell). 15 files, +184/-365. GitHub reports 14 Dependabot vulns on the repo (unrelated). Began recon for next task: cache YouTube trailers to avoid re-querying KinoCheck. Findings: yt-dlp already wired in src/ipc/media.ipc.js:421 (extract-youtube-url, --get-url, ephemeral in-mem cache, expiring googlevideo URLs). BLOCKER surfaced: user's plan caches trailers on TorBox + uploads to gofile/1fichier/pixeldrain, but HANDOFF.md:13 + global CLAUDE.md mandate STRICT single-IP, Comet-only policy: never call TorBox/RD/AllDebrid directly. Comet only proxies torrent/debrid magnet resolution, not YouTube caching or uploads. Need user decision on execution location (ovhcloud VPS vs client), cache store (vaultwares-api/DB vs local JSON), and credentials before implementing. No external calls made.",
+  "commands": [
+    "git commit",
+    "git push origin main"
+  ],
+  "files": [
+    "index.html",
+    "js/app.js",
+    "src/ipc/media.ipc.js"
+  ],
+  "planPath": "",
+  "contentHash": "65bec4d2f368b7bd8edfb27b79253e6bf94d5ff5cf956a9ecc0d96130f68ea4c",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "f228710",
+    "hasChanges": false
+  }
+}

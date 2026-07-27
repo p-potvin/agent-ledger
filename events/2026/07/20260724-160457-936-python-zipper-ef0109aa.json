@@ -1,0 +1,48 @@
+{
+  "id": "20260724-160457-936-python-zipper-ef0109aa",
+  "createdAt": "2026-07-24T20:04:57.9364252Z",
+  "createdAtLocal": "2026-07-24 16:04",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): Write, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-24 16:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Stream downloader end-to-end WORKING per user: detects HLS/DASH streams, quality dropdown populated, downloads via yt-dlp through SOCKS5 proxy, saves locally. Final unblockers this session: (1) widened header capture (Authorization/Proxy-Authorization); (2) key=null placeholder no longer clobbers keyed URL; (3) SOCKS5 proxy configurable in popup Settings; (4) robust yt-dlp/ffmpeg discovery via glob over all user WinGet dirs; (5) server is NSSM service 'Python Server Zipper' — restart via Restart-Service not manual python; (6) THE download fix: popup streams:start now includes tabId. User set the service to log in with their account so it reaches the WireGuard SOCKS proxy. Saved memory files (stream-downloader-ops, zipper-extension-overview).",
+  "commands": [
+    "Restart-Service 'Python Server Zipper'"
+  ],
+  "files": [
+    "extension/src/popup/popup.ts",
+    "dataset_builder/ds_helpers.py",
+    "dataset_builder/ds_streams.py"
+  ],
+  "planPath": "",
+  "contentHash": "ef0109aaf3970ad550ab17a1d13dd89f644e24a11855bbf188f3dd2ddc9bfe39",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "bb50b72",
+    "hasChanges": true
+  }
+}

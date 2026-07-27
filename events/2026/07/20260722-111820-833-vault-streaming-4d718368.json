@@ -1,0 +1,50 @@
+{
+  "id": "20260722-111820-833-vault-streaming-4d718368",
+  "createdAt": "2026-07-22T15:18:20.8335487Z",
+  "createdAtLocal": "2026-07-22 11:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + GitHub push)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 11:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + GitHub push",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "LF enforcement + stream size-cap removal + pushed. (1) Added .gitattributes (text=auto eol=lf plus binary exclusions), renormalized (only themes.css held CRLF); committed f2376fe. (2) ranking.js scoreTorrent: removed upper-size penalties (over 80/25/8GB) that deprioritized large cached releases - debrid/Comet handle cache so big UHD streams fine; kept only tiny-file fake-4K quality guard. v1.4.2 committed e4d14f2, pushed 72eb52c..f2376fe. DIAGNOSIS of Moana test: 'Provider is currently unavailable' is Real-Debrid placeholder VIDEO (~8s) served when a stream Comet flagged cached is not truly available; manual UHD 14GB was genuinely cached so worked. No hard size cap in search.js. Deeper fix for provider-unavailable = fallback-to-next-stream on failure (not done). NEXT: transcode-to-1080p (h264_nvenc fast) new ffmpeg pipeline reading RD URL; ffmpeg infra exists in src/utils.js; awaiting trigger-model decision.",
+  "commands": [
+    "git renormalize",
+    "git push (e4d14f2,f2376fe)"
+  ],
+  "files": [
+    "gitattributes",
+    "js/streaming/ranking.js"
+  ],
+  "planPath": "",
+  "contentHash": "4d718368952ddad566f804defb1f450d64274a858261fd2d30661adc8a4e2f40",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "f2376fe",
+    "hasChanges": false
+  }
+}

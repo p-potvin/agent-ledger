@@ -1,0 +1,41 @@
+{
+  "id": "20260722-162400-116-vault-streaming-473f9b93",
+  "createdAt": "2026-07-22T20:24:00.1164809Z",
+  "createdAtLocal": "2026-07-22 16:24",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local plus GitHub push)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): Write, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 16:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local plus GitHub push",
+    "toolsUsed": [
+      "Write",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Wrote HANDOFF.md (v1.7.2, pushed 6a82cdb..06243a5) for the next cold-start session. Covers: environment/constraints (castlabs Electron + Widevine so AC3/EAC3/HEVC native, DTS/TrueHD need transcode; Comet-only single-IP policy; multi-debrid config is LOCAL only in .env + .access/comet_config.txt, backed up, AD->TB->RD, base64 JSON reconstructable; .gitattributes LF; versioning bumps package.json + index.html comment; ledger script chokes on asterisk or drive-colon in summary; flag-icons needs packaging bundle). Summary of v1.4.0-v1.7.1 work. NEEDS RUNTIME VERIFICATION list (transcode pipeline never tested - fMP4/MSE/seek/badge/menu, fail-safe to direct; multi-debrid needs restart to load .env, provider-breakdown log added; settings modal/card+/tabs/splash visual). Open backlog: fullscreen cursor-stuck (needs repro), disk thrashing (uninvestigated), watch-status card cues, trailer volume button, RTX VSR + Parakeet renderer re-adds, OpenSubtitles download, flag-icons packaging, clip IPC decouple, library sync. Recommended next order: get user runtime results on transcode + provider log, then watch-status cues, then disk thrashing.",
+  "commands": [
+    "git push 06243a5"
+  ],
+  "files": [
+    "HANDOFF.md",
+    "TODO.md",
+    "PLAN-2026-07-22.md"
+  ],
+  "planPath": "",
+  "contentHash": "473f9b933c0b2fa43fb132c612d7d0d076acb9ecdcfe41340225cbc2a303a580",
+  "git": null
+}

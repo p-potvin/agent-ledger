@@ -1,0 +1,60 @@
+{
+  "id": "20260722-104122-680-vault-streaming-2308ef55",
+  "createdAt": "2026-07-22T14:41:22.6803542Z",
+  "createdAtLocal": "2026-07-22 10:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 10:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Emoji->SVG replacement across frontend + flags + roadmap reconcile. index.html: 20 emoji -> data-icon spans hydrated by new js/icon-hydrate.js (close x8, settings, lightning x2, star, download, pip, skipBack/play/skipForward); 3 language flags -> flag-icons CSS (fi fi-gb/ca/fr), npm installed flag-icons + linked css. JS files use window.icons.*: clip.js (4 close, tool menu trim/crop/rotate/filters/ai-enhance/speed -> scissors/crop/refresh/palette/magic/fastForward, dropped redundant checkmark from toast), details-modal.js (2 star, lightning Play btn), player.js (pip play/pause toggle now innerHTML icons, RD stream title lightning), tmdb.js + hover-card.js star badges, upscale.js status badge refactored to innerHTML with arrowUp icon (stripped 6 up-arrow emoji). Authored 2 house-style icons in js/icons.js: palette, scissors (absent from redesign set). 13 clarified: 0x1F5D7 was the PiP button (->pip), purple-square was clip Crop tool (->crop). Reconciled ROADMAP.md sec3: Live Subtitles marked [~] (renderer UI removed in trim, main IPC still registered), added Local subtitles [x] + OpenSubtitles [ ]. All edited JS pass node --check; only code-comment emoji remain. BUILD NOTE: flag-icons referenced via node_modules path - needs bundling/asarUnpack for packaged build (added to TODO).",
+  "commands": [
+    "npm install flag-icons",
+    "node --check (all edited)",
+    "rg emoji scan -> comments only"
+  ],
+  "files": [
+    "index.html",
+    "js/icon-hydrate.js",
+    "js/icons.js",
+    "js/player/clip.js",
+    "js/streaming/details-modal.js",
+    "js/player/player.js",
+    "js/player/upscale.js",
+    "js/tmdb.js",
+    "js/hover-card.js",
+    "ROADMAP.md",
+    "TODO.md"
+  ],
+  "planPath": "",
+  "contentHash": "2308ef559bbfaded45b6a8fe4a935fcd6815b449dd798aca9a437801bf093ed5",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "305db0f",
+    "hasChanges": true
+  }
+}

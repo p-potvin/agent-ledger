@@ -1,0 +1,56 @@
+{
+  "id": "20260724-043440-219-python-zipper-b628152a",
+  "createdAt": "2026-07-24T08:34:40.2192245Z",
+  "createdAtLocal": "2026-07-24 04:34",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: main\r\nTools used (this reply): Read, Write, Edit, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-24 04:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Stream lifecycle features v1.1. Backend: new ds_streams.py (probe_stream via yt-dlp -j; download_stream with --progress-template parsing -> job progress/speed/eta; killable PROCESSES registry; stop_stream; saves to STREAMS_DIR=.downloaded/streams, no rclone-move by default, records save_path); ds_jobs.create_stream_job/delete_job; server endpoints /api/stream/probe|start|stop|delete + absolute-path open. Extension: sniffer keyed dedup by origin+path (collapses token rotation) + hits/lastSeen + HLS master variant folding; enrich.ts parses HLS master + calls probe; background start/stop/delete/remove/recapture handlers; streams-bridge Cloud-tab UI with thumbnail/metadata/quality dropdown/Start/Delete + section Clear/Re-capture; panel_jobs renders stream jobs (thumbnail, progress bar, speed/eta, Stop/Delete/Open) with html-escaping. Verified: py_compile OK, python smoke test (job type/progress/delete/stop) OK, tsc clean, build OK (content.js 457kb), web-ext lint 0 errors/0 notices.",
+  "commands": [
+    "py_compile",
+    "python smoke test",
+    "npx tsc --noEmit",
+    "npm run build"
+  ],
+  "files": [
+    "dataset_builder/ds_streams.py",
+    "dataset_builder/ds_jobs.py",
+    "dataset_builder/server.py",
+    "extension/src/background/sniffer.ts",
+    "extension/src/content/streams-bridge.ts",
+    "extension/src/panel/ui/panel_jobs.ts"
+  ],
+  "planPath": "",
+  "contentHash": "b628152ae509f78e7553b85f56ddf820328e95f47d9ec6e9c4321e8048346d82",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "bb50b72",
+    "hasChanges": true
+  }
+}

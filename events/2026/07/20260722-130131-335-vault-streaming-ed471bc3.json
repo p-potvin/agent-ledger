@@ -1,0 +1,53 @@
+{
+  "id": "20260722-130131-335-vault-streaming-ed471bc3",
+  "createdAt": "2026-07-22T17:01:31.3354661Z",
+  "createdAtLocal": "2026-07-22 13:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local plus Comet plus GitHub push)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, WebSearch, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 13:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local plus Comet plus GitHub push",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "WebSearch",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Multi-debrid Comet config + placeholder verification (v1.4.5 pushed e62439c..2d5217d). (1) Rebuilt Comet config to fan out AllDebrid then TorBox then RealDebrid. Comet config is plain base64 JSON with a debridServices array, so added alldebrid+torbox keys (from .access token files) preserving RD key and proxy password. Local-only change to .env COMET_STREAM_BASE and .access/comet_config.txt, both backed up with timestamp. TESTED: manifest now reports VaultWaresMedia AD+TB+RD+TORRENT (config accepted); stream query tt0133093 returned 1273 cached of 1565 streams, top results TorBox 2160p cached. This restores real cache detection that RD lost when it killed instantAvailability. (2) stream.js: added probeStreamBytes - one GET Range bytes=0-1 to the Comet proxy url (stays on Comet IP, policy-safe) to read total size; under 50MB returns notCached+placeholder, which the existing startRDDebridFlow notCached branch already skips to next ranked source. No rd-flow change needed. (3) search.js: de-hardcoded [RD+] label since streams now come from multiple providers. node check passes. NOTE: app must be restarted to load new .env. Renderer transcode wiring and logo placement still pending.",
+  "commands": [
+    "node build-comet + test-comet (1273 cached)",
+    "git push 2d5217d"
+  ],
+  "files": [
+    "src/realdebrid/stream.js",
+    "src/realdebrid/search.js",
+    ".env",
+    "comet_config.txt"
+  ],
+  "planPath": "",
+  "contentHash": "ed471bc36c45fc7a147f7f8e704fc9e0b4730fb5644092fc74194091b968a27e",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "2d5217d",
+    "hasChanges": true
+  }
+}

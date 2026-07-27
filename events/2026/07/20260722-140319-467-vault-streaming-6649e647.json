@@ -1,0 +1,52 @@
+{
+  "id": "20260722-140319-467-vault-streaming-6649e647",
+  "createdAt": "2026-07-22T18:03:19.4670117Z",
+  "createdAtLocal": "2026-07-22 14:03",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local plus GitHub push)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash, WebSearch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 14:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local plus GitHub push",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "WebSearch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "v1.5.0 (pushed 2d5217d..f8a01d3): logo icon + animated splash. build/ dir did not exist though main.js (window+tray) and package.json build.icon both referenced build/icon.ico - generated icon.ico (16-256 multi-res) + icon.png from public/vault-streaming-logo.png via ImageMagick 7. Now taskbar/tray/window/installer show the logo (no code change needed, file was just missing). Added frameless branded splash.html (pulsing logo, shimmer bar, rotating status messages); main window now starts show:false and reveals on ready-to-show with 1.6s min + 8s safety net; createSplash before createWindow; finishSplash guarded against double-fire. Added splash.html to build.files. node check passes. DIAGNOSED no-sound: app runs vanilla electron 41.2.1 (Chromium without proprietary codecs) - trailers are YouTube H264+AAC (play), movies are AC3/EAC3/DTS/TrueHD (silent). Fix is two-layer: castlabs electron-releases build (or ffmpeg-dll patch) covers AC3/EAC3/HEVC natively but NOT DTS/TrueHD (Chrome never had those); DTS/TrueHD need transcode-remux-to-AAC (the pending renderer wiring, -c:v copy -c:a aac). Recommending castlabs swap - needs user OK (200MB env change + rebuild). Remaining: sound fix, sub-5-min duration guard, RD transcoded links (policy-constrained), transcode renderer wiring.",
+  "commands": [
+    "magick icon.ico + icon.png",
+    "git push f8a01d3"
+  ],
+  "files": [
+    "main.js",
+    "splash.html",
+    "build/icon.ico",
+    "package.json"
+  ],
+  "planPath": "",
+  "contentHash": "6649e647eb05d20b98e8c124683c6dbd7961b9730c7b9f7e5104a8fd776b660b",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "f8a01d3",
+    "hasChanges": true
+  }
+}

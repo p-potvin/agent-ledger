@@ -1,0 +1,52 @@
+{
+  "id": "20260722-212050-116-vault-streaming-0ace7a04",
+  "createdAt": "2026-07-23T01:20:50.1164705Z",
+  "createdAtLocal": "2026-07-22 21:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: medium\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Write, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 21:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "medium",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Implemented clip-review fast-follows #4-#7 plus WebM export improvement. WebM: added -row-mt 1 -cpu-used 2 -deadline good -pix_fmt yuv420p to libvpx-vp9 (was single-threaded/glacial); added -pix_fmt yuv420p to mp4. #5 GIF: replaced default quantizer with palettegen(stats_mode=diff)/paletteuse(bayer) filtergraph incl. lanczos scale, folding quality downscale in (no double scale). #6: IPC-side validation (format+quality allowlists, numeric start>=0, duration>0). #4: register clip ffmpeg child via new utils.registerFfmpegProcess/unregisterFfmpegProcess so app-quit kills it; new clip-cancel IPC + preload cancelClip() kills in-flight proc, deletes partial output, returns {cancelled:true}; renderer treats cancel as warning not error. #7: removed misleading 'coming soon'/'applied (simulated)' edit+AI buttons and their placeholder fns from the Edit dialog. Files: src/ipc/clip.ipc.js, src/utils.js, preload.js, js/player/clip.js. All pass node --check. Not committed.",
+  "commands": [
+    "node --check src/ipc/clip.ipc.js",
+    "node --check js/player/clip.js",
+    "node --check src/utils.js"
+  ],
+  "files": [
+    "src/ipc/clip.ipc.js",
+    "src/utils.js",
+    "preload.js",
+    "js/player/clip.js"
+  ],
+  "planPath": "",
+  "contentHash": "0ace7a0445f1c0779fa4bb198882d7716e3e27614b23566bbc305499c2817aca",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "90dee06",
+    "hasChanges": true
+  }
+}

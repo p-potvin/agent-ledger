@@ -1,0 +1,51 @@
+{
+  "id": "20260724-161206-703-python-zipper-5542d187",
+  "createdAt": "2026-07-24T20:12:06.7038682Z",
+  "createdAtLocal": "2026-07-24 16:12",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: main\r\nTools used (this reply): Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-24 16:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "v1.4: three fixes. (1) Cancel not working: popup stop handler did btn.querySelector('span').textContent but the live Cancel button has no span -> crashed before sending jobs:stop; now handles both Cancel(no span) and Stop(span), disables + toasts. (2) Open folder not working: server runs as Session-0 NSSM service so explorer/os.startfile is invisible on desktop; made _reveal_in_explorer never raise + always return path, and popup now opens the location client-side via file:// in a new tab + copies path to clipboard (openLocal). (3) Graceful save on connection loss: yt-dlp download now uses --hls-use-mpegts + --retries/--fragment-retries 15 so partial live recordings stay valid TS; _salvage_part() renames a leftover .part into a playable file and download_stream completes with it on abrupt end/drop. Restarted 'Python Server Zipper' service (health OK). Verified py_compile, tsc, build, lint 0/0.",
+  "commands": [
+    "py_compile",
+    "npx tsc --noEmit",
+    "npm run build",
+    "Restart-Service 'Python Server Zipper'"
+  ],
+  "files": [
+    "dataset_builder/ds_streams.py",
+    "dataset_builder/server.py",
+    "extension/src/popup/popup.ts"
+  ],
+  "planPath": "",
+  "contentHash": "5542d1873c555b0fa1105e2c0046860936a6a030c030e2a29e54253cc4dee48a",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "bb50b72",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "20260722-101811-490-shared-tube-30002cd9",
+  "createdAt": "2026-07-22T14:18:11.4904103Z",
+  "createdAtLocal": "2026-07-22 10:18",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "deployment",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 10:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Undid incorrect fxv.service install on OVH (fxv lives on greencloud). Deployed b16f5e1 to greencloud (fxv) which auto-dispatched to OVH (oneporn+sexyprn). All 3 sites verified 200. OVH load avg 9.55 on 4 cores — media stack + 22 docker containers + postgres are saturating it.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "30002cd906b68f011c4ae8e57c6b72690d7d4a3c3c5f376a760aec2201a1c789",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "b16f5e1",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20260726-024602-437-vault-streaming-f3af69bb",
+  "createdAt": "2026-07-26T06:46:02.4376404Z",
+  "createdAtLocal": "2026-07-26 02:46",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: chat\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, Grep, WebFetch, Read, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-26 02:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "chat",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Bash",
+      "Grep",
+      "WebFetch",
+      "Read",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Assessed nvidia/nemotron-3.5-asr-streaming-0.6b as a live-subs ASR upgrade over parakeet-tdt-0.6b-v3 (user flagged it). WebFetched the HF card: same NeMo framework (ASRModel.from_pretrained, also HF transformers 5.13+), 600M params (~2.5GB), FastConformer-CacheAware-RNNT, cache-aware STREAMING (chunk 80ms-1.12s, att_context_size), 40 locales, OpenMDW-1.1 license. Current integration: vault_explorer/parakeet_wrapper.py ParakeetV3Wrapper.transcribe_audio_data driven by python-scripts/live_subtitles.py (buffered re-transcribe hack). KEY RISKS for swap: (1) word timestamps not documented — our cue start/end depend on Parakeet-TDT word timestamps; verify or rework. (2) adopting the real cache-aware streaming API (vs the buffer hack) would lower latency AND fix the races-ahead behavior, but is a transcribe-loop rewrite. Recommended: spike (load + timestamp check) then quick swap vs full streaming migration. Added to TODO.md Roadmap-deferred (uncommitted doc note). No code changed.",
+  "commands": [
+    "WebFetch huggingface nemotron-3.5-asr-streaming-0.6b"
+  ],
+  "files": [
+    "TODO.md",
+    "python-scripts/live_subtitles.py",
+    "vault_explorer/parakeet_wrapper.py"
+  ],
+  "planPath": "",
+  "contentHash": "f3af69bb1068f777b1a7fc0dccf71882001665103200634a874e6c46642c38b7",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "b2d75e8",
+    "hasChanges": true
+  }
+}

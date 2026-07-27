@@ -1,0 +1,52 @@
+{
+  "id": "20260722-110456-293-vault-streaming-0a8572a9",
+  "createdAt": "2026-07-22T15:04:56.2932773Z",
+  "createdAtLocal": "2026-07-22 11:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local + GitHub push)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, Edit, Grep, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 11:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local + GitHub push",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Grep",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Committed+pushed session work and fixed the persistent TMDB boot error. (1) Submodule vaultwares-themes: committed redesign-v2 icon sources (496f37b), pushed to p-potvin/vaultwares-themes (9b9a1b6..496f37b). (2) Parent: committed all app changes + bumped submodule gitlink 21215e0->496f37b, version 1.4.0, pushed p-potvin/vault-streaming (305db0f..aaf379e). Verified no .env/node_modules staged (gitignored); submodule status shows no + (in sync). (3) ROOT-CAUSED the TMDB boot 'Unknown error': renderTMDB in js/tmdb.js lost its else branch in commit 305db0f (advanced-search filters) - with no query (boot Discover) neither searchTMDB nor discoverTMDB ran, leaving response undefined -> 'Unknown error' fullscreen; with a query, search result was overwritten by discover. Restored if(query)search else discover (matches working 2b4012e). Committed v1.4.1, pushed aaf379e..72eb52c. NOT a token/cache issue - explains why rebuild didn't help. node --check passes.",
+  "commands": [
+    "git push (submodule + parent + v1.4.1)",
+    "git submodule status (in sync)",
+    "node --check js/tmdb.js"
+  ],
+  "files": [
+    "js/tmdb.js",
+    "index.html",
+    "package.json",
+    "vaultwares-themes"
+  ],
+  "planPath": "",
+  "contentHash": "0a8572a952c1137a0de84a9bde47d8751a4efd0b86b54c8b73b62890de38fefd",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "72eb52c",
+    "hasChanges": false
+  }
+}

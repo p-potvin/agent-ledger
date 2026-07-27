@@ -1,0 +1,49 @@
+{
+  "id": "20260722-114729-007-vault-streaming-f003133d",
+  "createdAt": "2026-07-22T15:47:29.0078636Z",
+  "createdAtLocal": "2026-07-22 11:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-4-8\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local plus GitHub push)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Bash, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-22 11:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-4-8",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local plus GitHub push",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "v1.4.4 (pushed d3cf6a2..e62439c): added 25px horizontal padding to .tmdb-grid (index.css) so edge-column cards are off the viewport edge and their position:fixed hover popups stop getting clamped/overflowing. Also discussed transcode encoder choice (user asked why not always libx264) and mid-playback quality switching - answers pending in reply; recommendation is keep auto-detect nvenc+nvdec (4K decode is the real bottleneck, libx264 implies software 4K decode which stutters on exactly the weak machines the feature targets; downscale vs upscale never contend for GPU). Renderer wiring for transcode still pending in TODO, will include an interactive player quality menu (Original/2160p/1080p/720p) since ceiling is default-only.",
+  "commands": [
+    "git push e62439c"
+  ],
+  "files": [
+    "index.css",
+    "index.html",
+    "package.json"
+  ],
+  "planPath": "",
+  "contentHash": "f003133da083ad79b71def3639ea0f7a6147cc486f63d2b39b407a20be66af34",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "e62439c",
+    "hasChanges": false
+  }
+}

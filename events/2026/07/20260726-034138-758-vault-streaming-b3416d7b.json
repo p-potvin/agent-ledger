@@ -1,0 +1,51 @@
+{
+  "id": "20260726-034138-758-vault-streaming-b3416d7b",
+  "createdAt": "2026-07-26T07:41:38.7581869Z",
+  "createdAtLocal": "2026-07-26 03:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-26 03:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Fixed Nemotron model-load crash + 2 UI items (uncommitted). MODEL LOAD FIX: user's trace showed 'Can't instantiate abstract class ASRModel without an implementation for abstract methods setup_training_data/setup_validation_data' — ASRModel is ABSTRACT so restore_from on it fails. Added to nemotron_wrapper.py: _resolve_target_class() reads the 'target:' field from model_config.yaml inside the .nemo tar and imports that concrete class; _concrete_candidates() (EncDecRNNTBPEModel, EncDecHybridRNNTCTCBPEModel, EncDecCTCModelBPE, EncDecMultiTaskModel); _restore_local() tries target-then-candidates; _from_pretrained() tries ASRModel.from_pretrained (dispatches) then concrete fallbacks. Aggregated errors raised for diagnosability. AUTOPLAY TV-ONLY: player.js ended handler returns early with 'Finished.' when activeStreamingMedia.mediaType !== 'tv'; updateAutoplayUI hides btn-autoplay for movies; updateAutoplayUI() now also called in playStream so it re-evaluates per stream. SETTINGS HOVER: root cause = global 'button:hover' rule in css/index.css:242 applying transform translateY(-1px); added #settings-trigger:hover override in header.css (transform:none !important, darker rgba(0,0,0,0.28) fill, border-radius 4px). All pass node --check / py_compile. OPEN ISSUE REPORTED BY USER (not yet fixed): starting live subs on a REMOTE stream opens a 2nd ffmpeg connection to the same debrid URL -> HTTP 429 Too Many Requests -> player MediaError (stream crash). Needs design decision (tap the video element's audio vs serialize/reconnect vs local-only live subs).",
+  "commands": [
+    "node --check js/player/player.js",
+    "python -m py_compile vault_explorer/nemotron_wrapper.py"
+  ],
+  "files": [
+    "vault_explorer/nemotron_wrapper.py",
+    "js/player/player.js",
+    "css/header.css"
+  ],
+  "planPath": "",
+  "contentHash": "b3416d7b218d2c06517a0e2f40423ea90e80d65a1806633ed9242ee2c0d1c1f9",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "b2d75e8",
+    "hasChanges": true
+  }
+}
