@@ -104,6 +104,12 @@ Unregister-ScheduledTask -TaskName $TrackerTask -Confirm:$false -ErrorAction Sil
 $taskConhost = (Get-Command "conhost.exe" -ErrorAction Stop).Source
 $taskPowerShell = (Get-Command "pwsh.exe" -ErrorAction Stop).Source
 [Environment]::SetEnvironmentVariable("VW_API_URL", $ApiUrl, "User")
+[Environment]::SetEnvironmentVariable("VW_API_URL", $ApiUrl, "Machine")
+$existingKey = $env:VW_TELEMETRY_API_KEY
+if (-not $existingKey) { $existingKey = [Environment]::GetEnvironmentVariable("VW_TELEMETRY_API_KEY", "User") }
+if ($existingKey) {
+    [Environment]::SetEnvironmentVariable("VW_TELEMETRY_API_KEY", $existingKey, "Machine")
+}
 $trackerAction = New-ScheduledTaskAction `
     -Execute    $taskConhost `
     -Argument   "--headless `"$taskPowerShell`" -NoProfile -WindowStyle Hidden -NonInteractive -ExecutionPolicy Bypass -File `"$TrackerLauncher`" -PythonExe `"$pythonResolved`"" `

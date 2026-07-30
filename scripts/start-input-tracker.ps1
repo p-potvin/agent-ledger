@@ -105,13 +105,21 @@ if (-not $NoRestartExisting) {
     Stop-ExistingTrackerProcesses
 }
 
-$apiUrl = [Environment]::GetEnvironmentVariable("VW_API_URL", "User")
+$apiUrl = $env:VW_API_URL
+if (-not $apiUrl) { $apiUrl = [Environment]::GetEnvironmentVariable("VW_API_URL", "User") }
+if (-not $apiUrl) { $apiUrl = [Environment]::GetEnvironmentVariable("VW_API_URL", "Machine") }
+if (-not $apiUrl) { $apiUrl = $env:VW_PIPELINES_URL }
 if (-not $apiUrl) { $apiUrl = [Environment]::GetEnvironmentVariable("VW_PIPELINES_URL", "User") }
+if (-not $apiUrl) { $apiUrl = [Environment]::GetEnvironmentVariable("VW_PIPELINES_URL", "Machine") }
 if (-not $apiUrl) { $apiUrl = "https://api.vaultwares.ca" }
 $env:VW_API_URL = $apiUrl
 
-$apiKey = [Environment]::GetEnvironmentVariable("VW_TELEMETRY_API_KEY", "User")
+$apiKey = $env:VW_TELEMETRY_API_KEY
+if (-not $apiKey) { $apiKey = [Environment]::GetEnvironmentVariable("VW_TELEMETRY_API_KEY", "User") }
+if (-not $apiKey) { $apiKey = [Environment]::GetEnvironmentVariable("VW_TELEMETRY_API_KEY", "Machine") }
+if (-not $apiKey) { $apiKey = $env:VW_PIPELINES_API_KEY }
 if (-not $apiKey) { $apiKey = [Environment]::GetEnvironmentVariable("VW_PIPELINES_API_KEY", "User") }
+if (-not $apiKey) { $apiKey = [Environment]::GetEnvironmentVariable("VW_PIPELINES_API_KEY", "Machine") }
 if ($apiKey) { $env:VW_TELEMETRY_API_KEY = $apiKey }
 
 $pythonResolved = $null
@@ -142,7 +150,7 @@ if ($pythonResolved -like "*\WindowsApps\*") {
 
 Set-Location $ScriptDir
 
-& $pythonResolved $TrackerScript *>> $logPath
+& $pythonResolved -u $TrackerScript *>> $logPath
 $exitCode = $LASTEXITCODE
 if ($exitCode -ne 0 -and (Test-RecentControlledRestart)) {
     Write-TrackerLog "Tracker child exited with $exitCode during a controlled replacement; reporting success to Task Scheduler"

@@ -90,6 +90,12 @@ _acc: Dict[str, Any] = {
     "context_switches": 0,
     "micro_pauses": 0,
     "rest_blocks": 0,
+    "pause_blocks": 0,
+    "pauses_5m_20m": 0,
+    "healthy_pause_blocks": 0,
+    "pauses_20m_60m": 0,
+    "time_off_blocks": 0,
+    "pauses_1h_plus": 0,
     "active_starts_after_rest": 0,
     "rest_gap_seconds_total": 0.0,
     "rest_gap_seconds_max": 0.0,
@@ -330,6 +336,15 @@ def _touch_activity() -> None:
         _start_natural_path("idle_resume", now, idle_gap_seconds=gap)
     elif gap >= 300:
         _acc["rest_blocks"] += 1
+        if 300 <= gap < 1200:
+            _acc["pause_blocks"] += 1
+            _acc["pauses_5m_20m"] += 1
+        elif 1200 <= gap < 3600:
+            _acc["healthy_pause_blocks"] += 1
+            _acc["pauses_20m_60m"] += 1
+        else:
+            _acc["time_off_blocks"] += 1
+            _acc["pauses_1h_plus"] += 1
         _acc["active_starts_after_rest"] += 1
         _acc["rest_gap_seconds_total"] += gap
         _acc["rest_gap_seconds_max"] = max(float(_acc["rest_gap_seconds_max"]), gap)
