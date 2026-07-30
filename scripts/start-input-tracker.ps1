@@ -129,8 +129,8 @@ if ($PythonExe) {
     if (-not $pythonResolved -and (Test-Path $PythonExe)) { $pythonResolved = $PythonExe }
 }
 if (-not $pythonResolved) {
-    $pythonCore = Get-ChildItem "$env:LOCALAPPDATA\Python" -Recurse -Filter python.exe -ErrorAction SilentlyContinue |
-        Sort-Object LastWriteTime -Descending |
+    $pythonCore = Get-ChildItem "$env:LOCALAPPDATA\Python\pythoncore-*\python.exe" -ErrorAction SilentlyContinue |
+        Sort-Object FullName -Descending |
         Select-Object -First 1
     if ($pythonCore) { $pythonResolved = $pythonCore.FullName }
 }

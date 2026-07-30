@@ -1,12 +1,12 @@
 ﻿{
-    "id":  "20260719-014143-367-agent-ledger-c587e79b",
-    "createdAt":  "2026-07-19T05:41:43.3677220Z",
-    "createdAtLocal":  "2026-07-19 01:41",
+    "id":  "20260729-191216-438-agent-ledger-00e9257e",
+    "createdAt":  "2026-07-29T23:12:16.4384174Z",
+    "createdAtLocal":  "2026-07-29 19:12",
     "timezone":  "Eastern Standard Time",
     "project":  "agent-ledger",
     "kind":  "general",
     "actor":  "AI Agent",
-    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-19 01:41 (TZ: Eastern Standard Time)",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-29 19:12 (TZ: Eastern Standard Time)",
     "runtime":  {
                     "role":  "main",
                     "model":  "unknown",
@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
-    "summary":  "Verified and fixed deployments: (1) OVH + greencloud builds now succeed after fixing applyPolyfills error (astro entrypointResolution auto). (2) Diagnosed and fixed is_admin=false for clopeux in vaultwares DB on OVH port 5433. Updated to is_admin=true.",
+    "summary":  "Cleaned and enhanced python-zipper browser extension: filtered chunk spam, redirected downloads through browser downloads API, added quality checking to prevent duplicates, and improved UI styling and naming",
     "commands":  [
 
                  ],
@@ -37,12 +37,12 @@
 
               ],
     "planPath":  "",
-    "contentHash":  "c587e79b915362e97a6b06e551c842083221e1859eeeb4d5b57644ecf4d05cb7",
+    "contentHash":  "00e9257e66470944122220ec746404b559d177e3ff25c24b3075a3c8d53c334c",
     "git":  {
                 "repo":  "agent-ledger",
                 "root":  "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
                 "branch":  "main",
-                "head":  "c612aa7a",
+                "head":  "4af0dc47",
                 "hasChanges":  true
             }
 }

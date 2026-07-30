@@ -1,0 +1,61 @@
+{
+  "id": "20260730-010036-492-vaultwares-studio-0ecbfd08",
+  "createdAt": "2026-07-30T05:00:36.4921359Z",
+  "createdAtLocal": "2026-07-30 01:00",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, Read, Edit, Write, Grep, WebFetch, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-30 01:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "WebFetch",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Wed 29 Jul 2026. Unblocked remote compute + fixed splat viewer + kept DA3 depth fields. (1) Recreated data/remote_compute.json (was missing -> HfJobsConfig enabled=False -> the two Jul 13 evening da3-draft runs silently wrote 4-vertex placeholder PLYs). (2) Stripped viewer debug scaffolding: removed red clearColor, green test cube, 2D-canvas overlay, 20-tick poll spam; restored progressiveLoad true; restored --enable-unsafe-swiftshader alongside --ignore-gpu-blocklist. (3) Re-embedded viewport in main window: ViewportWindow(QMainWindow) -> ViewportPanel(QFrame) hosted in a QStackedWidget, button toggles pages; thin ViewportWindow wrapper retained for tools/view_splat.py + tools/viewport_screenshot.py which now use .panel explicitly. (4) VERIFIED viewer renders: 1.84M gaussians from cloud.splat, hardware WebGL2 ANGLE/D3D11 on RTX 3060 - WebGL was never the problem, contrary to first hypothesis. Fixed viewport_screenshot job selection to skip placeholder runs. (5) DA3 depth+confidence fields now retained as depths.zip (separate from the 8MB processed_min.zip handoff), named by frame stem, NOT referenced from transforms.json. (6) CONFIRMED direct-3DGS root cause: nerfstudio base image final stage is nvidia/cuda:11.8.0-runtime (no nvcc), so the gsplat source build always hit its silent '|| echo skipped' fallback -> --gs-only NEVER RAN, never crashed. Dockerfile now installs cuda-nvcc-11-8 + cuda-cudart-dev-11-8, sets CUDA_HOME/TORCH_CUDA_ARCH_LIST=7.5;8.0;8.6;8.9, removes the silent fallback, adds an import assertion, and fixes nvidia-cuda-nvrtc-cu12 -> cu11 mismatch. NOT YET PUSHED - awaiting user go-ahead. Pre-existing unrelated failure: test_split_job_preset_cost_is_combined (stale rate assertion, 95/96 pass).",
+  "commands": [
+    ".venv/Scripts/python.exe tools/viewport_screenshot.py job/reconstruction/cloud.splat",
+    ".venv/Scripts/python.exe -m pytest tests/ -q",
+    "HfApi.list_jobs / list_repo_files / get_space_runtime"
+  ],
+  "files": [
+    "data/remote_compute.json",
+    "vaultwares_studio/webviewer/viewer.js",
+    "vaultwares_studio/webviewer/index.html",
+    "gui_app.py",
+    "gui/viewport.py",
+    "gui/main_window.py",
+    "tools/viewport_screenshot.py",
+    "tools/view_splat.py",
+    "docker/worker/da3_entrypoint.py",
+    "docker/da3/Dockerfile"
+  ],
+  "planPath": "",
+  "contentHash": "0ecbfd08cef1fdf49b27276fdb8d17fda9038c0566320f57ed9d3752f106a06c",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "51a31df",
+    "hasChanges": true
+  }
+}

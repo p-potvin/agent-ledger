@@ -1,0 +1,40 @@
+{
+  "id": "20260728-060456-481-prom-king-qa-automation-16dccda9",
+  "createdAt": "2026-07-28T10:04:56.4811216Z",
+  "createdAtLocal": "2026-07-28 06:04",
+  "timezone": "Eastern Standard Time",
+  "project": "Prom-King/qa-automation",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-28 06:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+  "summary": "Fixed Tor control port authentication: regenerated HashedControlPassword in run_tor.bat using tor.exe --hash-password mypassword. Previous hash was stale/wrong, causing 515 Authentication failed on all NEWNYM and SETCONF commands.",
+  "commands": [],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\Portable-Tor-Proxy-Rotator\\run_tor.bat"
+  ],
+  "planPath": "",
+  "contentHash": "16dccda9eaaecd2f78a0eed2ed54c78a337400bb9a652f705fb33ee1fa1d80d8",
+  "git": {
+    "repo": "qa-automation",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+    "branch": "main",
+    "head": "3e7fb74",
+    "hasChanges": false
+  }
+}

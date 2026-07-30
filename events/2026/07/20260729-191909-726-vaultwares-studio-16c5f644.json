@@ -1,0 +1,55 @@
+{
+  "id": "20260729-191909-726-vaultwares-studio-16c5f644",
+  "createdAt": "2026-07-29T23:19:09.7261496Z",
+  "createdAtLocal": "2026-07-29 19:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, Read, Grep, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-29 19:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Grep",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Situation audit of DA3 migration + splat viewer state. Confirmed: da3-standard (DA3 SfM -> splatfacto) is the only green path (job local-run-20260713-022745, 1.84M gaussians, 0.36 USD, 35 min). NOT confirmed: da3-draft/--gs-only direct 3DGS (custom gsplat commit installs with '|| echo skipped' when nvcc absent), da3-incremental (depends on gs-only), long-video support (--max-sfm-frames hard cap 80, quadratic attention OOM), depth fields (written then discarded - depth_file_path dropped and depths/ not bundled in processed_min.zip). Splat viewer is BROKEN and left mid-debug: uncommitted red clearColor + green test cube + 2D canvas overlay + poll spam in viewer.js/index.html, and gui_app.py removed --enable-unsafe-swiftshader so no software WebGL fallback. Root blocker for the two failed Jul 13 evening runs: data/remote_compute.json is missing so HfJobsConfig.load() returns enabled=False -> silent fallback to local placeholder 4-vertex PLYs, no HF job ever submitted. Latest HF job pulled: nothing new - newest jobs 6a54858c/6a548617 both COMPLETED 2026-07-13 06:30 UTC, all artifacts already downloaded locally.",
+  "commands": [
+    "git diff --stat HEAD",
+    "python -c 'HfApi.list_jobs(namespace=clopeux)'",
+    "python -c 'HfJobsConfig.load()'",
+    "python -c 'api.list_repo_files(clopeux/vw-studio-artifacts)'"
+  ],
+  "files": [
+    "docker/worker/da3_entrypoint.py",
+    "docker/da3/Dockerfile",
+    "vaultwares_studio/presets.py",
+    "vaultwares_studio/webviewer/viewer.js",
+    "gui_app.py",
+    "docs/da3-standard-benchmark-20260713.md"
+  ],
+  "planPath": "",
+  "contentHash": "16c5f644edbe0c10d0dff787a524c098a47afac1be89b263f2ada7b273ef255f",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "51a31df",
+    "hasChanges": true
+  }
+}

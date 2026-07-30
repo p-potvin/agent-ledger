@@ -40,11 +40,14 @@
       "aliases": [
         "vault-video-enhancer",
         "VaultWares Media Processing",
-        "video-transcriber-translator"
+        "video-transcriber-translator",
+        "vault-enhancer",
+        "vault_enhancer"
       ],
       "renamedAt": "2026-05-17",
       "previousRemote": "p-potvin/vault-video-enhancer",
-      "newRemote": "p-potvin/vaultwares-media-processing"
+      "newRemote": "p-potvin/vaultwares-media-processing",
+      "notes": " | Case variant from agent input."
     },
     {
       "canonical": "vaultwares-realtime",
@@ -67,12 +70,13 @@
     {
       "canonical": "vaultwares-website",
       "aliases": [
-        "vaultwares-v1"
+        "vaultwares-v1",
+        "vaultwares-website + vaultwares-themes"
       ],
       "renamedAt": "2026-05-17",
       "previousRemote": "p-potvin/vaultwares-v1",
       "newRemote": "p-potvin/vaultwares-website",
-      "notes": "Folder name unchanged; only remote + package.json identity rename."
+      "notes": "Folder name unchanged; only remote + package.json identity rename. | Compound from agent input; themes work was part of the website touch-up."
     },
     {
       "canonical": "vaultwares-docs",
@@ -80,7 +84,7 @@
         "tmp-app"
       ],
       "renamedAt": "2026-05-17",
-      "notes": "Package.json placeholder fix; folder + remote unchanged. Alias retained for audit only."
+      "notes": "Package.json placeholder fix; folder + remote unchanged. Alias retained for audit only. | Package.json placeholder from agent input. vw-jira-sync split out as its own project."
     },
     {
       "canonical": "vaultwares-identity-manager",
@@ -101,12 +105,14 @@
     {
       "canonical": "vaultwares-themes",
       "aliases": [
-        "vault-themes"
+        "vault-themes",
+        "vault-themes, vault-player",
+        "vault-themes + vaultwares-docs"
       ],
       "renamedAt": "2026-05-18",
       "previousRemote": "p-potvin/vault-themes",
       "newRemote": "p-potvin/vaultwares-themes",
-      "notes": "Folder + remote rename. CSS brand tokens (vault-gold, vault-base, vault-paper, vault-light, vault-cyan, vault-green, vault-burgundy, vault-slate, vault-muted) KEPT as-is per scope decision — they are short brand identifiers, not project names."
+      "notes": "Folder + remote rename. CSS brand tokens (vault-gold, vault-base, vault-paper, vault-light, vault-cyan, vault-green, vault-burgundy, vault-slate, vault-muted) KEPT as-is per scope decision — they are short brand identifiers, not project names. | Multi-project events centered on themes. vault-themes is already aliased to vaultwares-themes above."
     },
     {
       "canonical": "vaultwares-adk",
@@ -124,31 +130,20 @@
     {
       "canonical": "vault-explorer",
       "aliases": [
-        "Vault Explorer"
+        "Vault Explorer",
+        "vw-comet + vault-explorer",
+        "vault-explorer + vw-comet"
       ],
-      "notes": "Case variant from agent input."
-    },
-    {
-      "canonical": "vaultwares-media-processing",
-      "aliases": [
-        "VaultWares Media Processing",
-        "video-transcriber-translator",
-        "vault-enhancer",
-        "vault_enhancer"
-      ],
-      "notes": "Case variant from agent input."
+      "notes": "Case variant from agent input. | Multi-project events where vault-explorer is the dominant target. Compound names from agent input."
     },
     {
       "canonical": "qa-automation",
-      "aliases": [
-        "Prom-King/qa-automation"
-      ],
+      "aliases": [],
       "notes": "Namespace-prefixed variant from agent input. fullxxx variants moved to tube-sites."
     },
     {
       "canonical": "prelanding-page",
       "aliases": [
-        "Prom-King/prelanding-page",
         "prom-king-prelanding-page"
       ],
       "notes": "Namespace-prefixed variant from agent input."
@@ -172,8 +167,7 @@
       "aliases": [
         "vaultwares-pipelines",
         "vaultwares-api + shared-tube",
-        "vaultwares-webhooks",
-        "vaultwares-api"
+        "vaultwares-webhooks"
       ],
       "renamedAt": "2026-07-05",
       "previousRemote": "p-potvin/vaultwares-pipelines",
@@ -186,13 +180,6 @@
         "python-scripts"
       ],
       "notes": "Python web server for download management"
-    },
-    {
-      "canonical": "vaultwares-docs",
-      "aliases": [
-        "tmp-app"
-      ],
-      "notes": "Package.json placeholder from agent input. vw-jira-sync split out as its own project."
     },
     {
       "canonical": "vw-jira-sync",
@@ -216,9 +203,19 @@
         "Test",
         "VaultWares Secrets",
         "vaultwares-secrets",
-        "vaultwares-console"
+        "vaultwares-console",
+        "VaultWares SSOT",
+        "VaultWares SSOT (20 repos)",
+        "VaultWares Infrastructure",
+        "VaultWares Project File Sync",
+        "VaultWares — Post-Refactoring Cleanup & Infrastructure Verification",
+        "VaultWares — Project Rename Refactoring (Phase 5)",
+        "VaultWares — Project Rename Refactoring (Phase 5 PR Workflow)",
+        "VaultWares — System Verification & Maintenance Complete",
+        "vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing",
+        "deploy-flow-unification"
       ],
-      "notes": "Junk meta-names from agent input bucketed into General Tasks."
+      "notes": "Junk meta-names from agent input bucketed into General Tasks. | Meta-workspace labels + multi-repo refactor sessions from agent input. These describe cross-cutting work, not a single project."
     },
     {
       "canonical": "no-more-groceries",
@@ -231,29 +228,6 @@
       "_comment": "--- Compound-name + namespace normalization (stats-app generator) ---"
     },
     {
-      "canonical": "vault-explorer",
-      "aliases": [
-        "vw-comet + vault-explorer",
-        "vault-explorer + vw-comet"
-      ],
-      "notes": "Multi-project events where vault-explorer is the dominant target. Compound names from agent input."
-    },
-    {
-      "canonical": "vaultwares-themes",
-      "aliases": [
-        "vault-themes, vault-player",
-        "vault-themes + vaultwares-docs"
-      ],
-      "notes": "Multi-project events centered on themes. vault-themes is already aliased to vaultwares-themes above."
-    },
-    {
-      "canonical": "vaultwares-website",
-      "aliases": [
-        "vaultwares-website + vaultwares-themes"
-      ],
-      "notes": "Compound from agent input; themes work was part of the website touch-up."
-    },
-    {
       "canonical": "vault-monitor",
       "aliases": [
         "vault-monitor vaultwares-pipelines"
@@ -263,24 +237,20 @@
     {
       "canonical": "shared-tube",
       "aliases": [
-        "Prom-King/shared-tube",
-        "Prom-King/shared-tube + vaultwares-pipelines",
-        "Prom-King/shared-tube + vaultwares-api",
-        "Prom-King/shared-tube + vaultwares-mcp",
-        "Prom-King/shared-tube + vaultwares-docs",
-        "Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs",
+        "shared-tube + vaultwares-pipelines",
+        "shared-tube + vaultwares-api",
+        "shared-tube + vaultwares-mcp",
+        "shared-tube + vaultwares-docs",
+        "shared-tube + vaultwares-mcp + vaultwares-docs",
         "shared-tube + brume2",
         "tube-sites",
         "tube-site",
         "promking-tube",
-        "Prom-King\\tube-sites",
-        "Prom-King/tube-sites",
         "Prom-King tube-sites",
-        "Prom-King\\\\tube-sites",
         "prom-king.xyz",
         "fullxxx.video",
-        "prom-king/fullxxx-video-and-qa-automation",
-        "prom-king/fullxxx-webhook-deploy-qa",
+        "fullxxx-video-and-qa-automation",
+        "fullxxx-webhook-deploy-qa",
         "Prom-King Keep2Share & ShareVerge Pipeline",
         "Prom-King & VaultWares API",
         "Monitoring and Prom-King tube operations"
@@ -289,16 +259,12 @@
     },
     {
       "canonical": "content-disseminator",
-      "aliases": [
-        "Prom-King/content-disseminator"
-      ],
+      "aliases": [],
       "notes": "Namespace-prefixed variant."
     },
     {
       "canonical": "link-sharing",
-      "aliases": [
-        "prom-king/link-sharing"
-      ],
+      "aliases": [],
       "notes": "Namespace-prefixed lowercase variant."
     },
     {
@@ -316,22 +282,6 @@
         "vps-ovhcloud-media-stack"
       ],
       "notes": "Slash-compound + descriptive variants from agent input."
-    },
-    {
-      "canonical": "General Tasks",
-      "aliases": [
-        "VaultWares SSOT",
-        "VaultWares SSOT (20 repos)",
-        "VaultWares Infrastructure",
-        "VaultWares Project File Sync",
-        "VaultWares — Post-Refactoring Cleanup & Infrastructure Verification",
-        "VaultWares — Project Rename Refactoring (Phase 5)",
-        "VaultWares — Project Rename Refactoring (Phase 5 PR Workflow)",
-        "VaultWares — System Verification & Maintenance Complete",
-        "vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing",
-        "deploy-flow-unification"
-      ],
-      "notes": "Meta-workspace labels + multi-repo refactor sessions from agent input. These describe cross-cutting work, not a single project."
     },
     {
       "canonical": "vault-raggae",

@@ -1,0 +1,50 @@
+{
+  "id": "20260728-111709-799-vault-streaming-c59820e2",
+  "createdAt": "2026-07-28T15:17:09.7992009Z",
+  "createdAtLocal": "2026-07-28 11:17",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, Read, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-28 11:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Venv build COMPLETE and verified end-to-end (uncommitted). Installed torch 2.13.0+cu126 + torchvision 0.28.0+cu126 as a MATCHED pair from one CUDA index; verified the exact previously-failing operator now works (torchvision.ops.nms -> [0]), torch.cuda.is_available() True, device NVIDIA GeForce RTX 3060. Then installed requirements: nemo 2.5.0, lhotse 1.33.0, datasets 4.8.5, soundfile 0.13.1, deep_translator 1.9.1 (all mirroring the previous env's versions); numpy resolved to 1.26.4 (NeMo prefers <2, was 2.5.1). VERIFIED NeMo did NOT clobber the CUDA torch (only torchmetrics 1.9.0 added; no torch replacement) — this was the main risk since a NeMo torch pin would have pulled a CPU wheel from PyPI and reintroduced the bug. END-TO-END: vault_streaming.nemotron_wrapper imports cleanly (1.12s chunk -> right-context 13), and vault_streaming.utils/translation/media import (confirming the vault_enhancer fix). CRITICAL LOOSE END FOUND+FIXED: src/utils.js getRobustPythonExe() searched the EXTERNAL 'vault-explorer' repo venv FIRST and listed the local .venv last, so the app would have kept using a stale interpreter despite the new venv. Reordered so this project's own .venv wins, with the vault-explorer paths retained only as legacy fallbacks. Confirmed the app now resolves vault-streaming/.venv/Scripts/python.exe -> Python 3.12.11, torch 2.13.0+cu126, cuda True. Note: 'vault-explorer' (hyphen, a separate repo) was deliberately NOT renamed — only the vault_explorer package (underscore) was.",
+  "commands": [
+    "uv pip install -r requirements.txt",
+    "node -e getRobustPythonExe verification"
+  ],
+  "files": [
+    "src/utils.js",
+    "requirements.txt",
+    ".venv/"
+  ],
+  "planPath": "",
+  "contentHash": "c59820e20b6a5cfa437a59927db41c652336865f75ca5226618c3f44d08d3920",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "174918e",
+    "hasChanges": true
+  }
+}

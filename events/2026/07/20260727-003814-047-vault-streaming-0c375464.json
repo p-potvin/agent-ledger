@@ -1,0 +1,54 @@
+{
+  "id": "20260727-003814-047-vault-streaming-0c375464",
+  "createdAt": "2026-07-27T04:38:14.0473871Z",
+  "createdAtLocal": "2026-07-27 00:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Edit, Grep, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-27 00:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Grep",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Fixed 4 UI issues + the no-sound/wrong-language root cause (uncommitted). (1) Audio button wrapping: added white-space:nowrap + flex-shrink:0 for #btn-audio/#btn-quality (modals.css). (2) Settings tooltips behind modal: #win-tooltip z-index was 999999 vs .settings-panel 2147483647; raised tooltip to 2147483647 and lowered panel to 2147483000. (3) Subs under controls: added window.SUBTITLE_CUE_LINE=-4 applied to live VTTCues at creation and to file-loaded cues via new raiseTrackCues() (retries up to 20x/150ms since cues parse async), called from selectSubtitleTrack. (4) NO SOUND / WRONG LANGUAGE root cause + fix: direct playback let Chromium pick+decode the track, so DTS/DTS-HD/TrueHD/MLP/PCM played SILENTLY (castlabs build decodes AC3/E-AC3 but not DTS/TrueHD per repo TODO) and the displayed label could disagree with what actually played. Added BROWSER_SAFE_AUDIO set (aac/mp3/opus/vorbis/flac/ac3/eac3) + per-track browserSafe; probe now returns chosenAudioIndex/chosenLang/chosenCodec/needsRemux/remuxReason where chosen = preferred-lang match else default, and needsRemux fires for reason 'language' OR unsafe 'codec:*'. player.js auto-take-over now keys off needsRemux (not just mismatch) with distinct toasts, so undecodable audio is remuxed to AAC and the played track is always the one we explicitly -map. VALIDATED with two synthesized MKVs through the real handler: (a) a:0=spa/pcm default + a:1=eng/aac -> chosen a:1, reason 'language' (exactly the user's 'shows English but plays Spanish' case); (b) single a:0=eng/pcm_s16le -> needsRemux reason 'codec:pcm_s16le' (the no-sound case). All JS passes node --check. NOTE for user: mislabeled language tags inside scene releases cannot be auto-detected; the picker is the manual escape hatch. The '[RD] Not available via Comet' line is informational (uncached stream skipped in favour of a cached one), not an error.",
+  "commands": [
+    "node --check (3 files)",
+    "node -e probe decision test (language + codec cases)"
+  ],
+  "files": [
+    "src/ipc/audio-tracks.ipc.js",
+    "js/player/player.js",
+    "js/player/subtitles.js",
+    "css/modals.css",
+    "css/tooltips.css",
+    "css/settings.css"
+  ],
+  "planPath": "",
+  "contentHash": "0c3754640a48256774dcf3d71e89d8bce0be52bee46455fdd1a864b705003785",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "174918e",
+    "hasChanges": true
+  }
+}

@@ -81,10 +81,13 @@ function Resolve-ProjectAlias {
 
     if ([string]::IsNullOrWhiteSpace($Project)) { return $Project }
 
-    $map = Get-ProjectAliasMap
-    if (-not $map) { return $Project }
+    # Erase GitHub namespace prefixes (prom-king/, vaultwares/, p-potvin/, etc.)
+    $cleaned = $Project -replace '^(?i)(prom-king|vaultwares|p-potvin)(/|\\)+', ''
 
-    $key = $Project.ToLowerInvariant()
+    $map = Get-ProjectAliasMap
+    if (-not $map) { return $cleaned }
+
+    $key = $cleaned.ToLowerInvariant()
 
     # Already canonical — return original casing.
     if ($map.canonicalSet.ContainsKey($key)) {
@@ -95,7 +98,7 @@ function Resolve-ProjectAlias {
         return $map.aliasToCanonical[$key]
     }
 
-    return $Project
+    return $cleaned
 }
 
 function Get-ProjectAliases {

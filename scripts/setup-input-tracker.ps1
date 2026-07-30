@@ -59,8 +59,8 @@ if ($PythonExe) {
     if (-not $pythonResolved -and (Test-Path $PythonExe)) { $pythonResolved = $PythonExe }
 }
 if (-not $pythonResolved) {
-    $pythonCore = Get-ChildItem "$env:LOCALAPPDATA\Python" -Recurse -Filter python.exe -ErrorAction SilentlyContinue |
-        Sort-Object LastWriteTime -Descending |
+    $pythonCore = Get-ChildItem "$env:LOCALAPPDATA\Python\pythoncore-*\python.exe" -ErrorAction SilentlyContinue |
+        Sort-Object FullName -Descending |
         Select-Object -First 1
     if ($pythonCore) { $pythonResolved = $pythonCore.FullName }
 }
@@ -69,15 +69,14 @@ if (-not $pythonResolved) {
     if ($pythonCommand) { $pythonResolved = $pythonCommand.Source }
 }
 if ($pythonResolved -like "*\WindowsApps\*") {
-    $pythonCore = Get-ChildItem "$env:LOCALAPPDATA\Python" -Recurse -Filter python.exe -ErrorAction SilentlyContinue |
-        Sort-Object LastWriteTime -Descending |
+    $pythonCore = Get-ChildItem "$env:LOCALAPPDATA\Python\pythoncore-*\python.exe" -ErrorAction SilentlyContinue |
+        Sort-Object FullName -Descending |
         Select-Object -First 1
     if ($pythonCore) { $pythonResolved = $pythonCore.FullName }
 }
 if (-not $pythonResolved) {
     throw "Python not found. Install Python 3.8+ first."
 }
-Write-Host "Python:  $pythonResolved" -ForegroundColor Green
 
 # ---------------------------------------------------------------------------
 # 2. Install dependencies

@@ -1,0 +1,52 @@
+{
+  "id": "20260728-110851-933-vault-streaming-e204182b",
+  "createdAt": "2026-07-28T15:08:51.9338198Z",
+  "createdAtLocal": "2026-07-28 11:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: code\r\nPermissions: ask (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, Write, Grep, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-28 11:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "code",
+    "permissions": "ask",
+    "network": "Windows local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Grep",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Renamed vault_explorer -> vault_streaming and created a proper project venv (uncommitted). RENAME: git mv vault_explorer vault_streaming (history preserved), then updated every reference — python-scripts/live_subtitles.py import, package.json build files glob, TODO.md, EXTRACTION-NOTES.md, plus all logger names and internal imports across the package. Verified zero remaining 'vault_explorer' references repo-wide. LATENT BUG FIXED IN PASSING: vault_streaming/core.py, test_core_integration.py and test_utils.py imported from 'vault_enhancer' — a package that lives in the SEPARATE vaultwares-media-processing repo and was never present here, so core.py could never import cleanly. Since this package already contains utils.py/translation.py/media.py/parakeet_wrapper.py, those were clearly copy-paste leftovers; repointed them to vault_streaming so the package is self-contained. VENV: created .venv with uv + Python 3.12.11 (uv only had 3.13 managed; it fetched 3.12). DIAGNOSIS of the user's 'torchvision::nms does not exist' error — the active interpreter was Python 3.14.5 (pythoncore-3.14-64) with torch 2.9.1+CPU (a CPU-only build, so ASR would never have touched the RTX 3060) and torchvision present but broken (RuntimeError on import) = classic ABI mismatch; transformers also missing. nemo 2.5.0, numpy 2.5.1, soundfile 0.13.1, deep_translator 1.9.1, lhotse 1.33.0, datasets 4.8.5 were present and are mirrored as pins. Wrote requirements.txt documenting that torch+torchvision MUST be installed together from one CUDA index (cu126, RTX 3060 sm_86, driver 610.62) or the mismatch recurs. Started that install in background (multi-GB). NOTE: I did not delete or overwrite any existing venv (none existed at the repo root) — destructive venv commands remain user-only per the gating policy.",
+  "commands": [
+    "git mv vault_explorer vault_streaming",
+    "uv venv .venv --python 3.12",
+    "uv pip install torch torchvision --index-url .../cu126 (background)"
+  ],
+  "files": [
+    "vault_streaming/",
+    "python-scripts/live_subtitles.py",
+    "package.json",
+    "requirements.txt"
+  ],
+  "planPath": "",
+  "contentHash": "e204182b917cf6acfd562bf0fee27f6083cf9e6005670e84b77ec495e8ab47e3",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "174918e",
+    "hasChanges": true
+  }
+}
