@@ -1,0 +1,41 @@
+{
+  "id": "20260804-090831-786-vw-cli-de4f08e3",
+  "createdAt": "2026-08-04T13:08:31.7862502Z",
+  "createdAtLocal": "2026-08-04 09:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: plan\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Bash, Grep, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-04 09:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "plan",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Grep",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Tue, 04 Aug 2026 02:30 - User parked live-subs as MVP-worthy and set the next goal: an assistant inside vw-cli/vw-gui specialised for authoring vw pwsh scripts, on a light local model, with an existing RAG setup available. RECON: ollama is live on localhost:11434 with 3 models - gemma4:latest (8B, 9.6GB), Qwythos-9B-Claude-Mythos Q4_K_M (8.95B, 6.8GB), and Qwen3.6-35B-A3B Q2_K (34.7B MoE but only ~3B active, 12.9GB; Q2_K quantisation is a real quality risk for code). vault-raggae is a Milvus+docker RAG stack with a JS front end. vw-cli has 75 ps1 files, 73 registry entries in vw-commands.ps1 (52KB), 12 Start-*.ps1 exemplars; vw.ps1 dispatches from the registry via Invoke-Expression. vw-gui is Electron (main.js/preload.js/index.html). No pre-existing ollama or assistant integration in either repo - greenfield. KEY FINDING: the entire convention surface an assistant needs (registry schema + one exemplar Start script + naming/param conventions) fits comfortably in a prompt, so Milvus RAG is NOT needed for v1 - deferring it removes docker, embeddings and a vector DB from the critical path. SAFETY CONSTRAINT identified and to be enforced: an assistant generating pwsh for a CLI that executes pwsh is a code-execution surface, so generated scripts must be written to disk for human review and never auto-executed, consistent with the existing destructive-command gating policy. Also noted from user: Fun-CosyVoice 3.0 and Chatterbox are both implemented in CrispASR (vault-cacophony), CosyVoice preferred for zero-shot cloning from a short clip; mini-omni2 lives at vault-cacophony/mini-omni and could supply the voice; CrispASR reportedly supports ~100 models incl. full pipelines and its docs are thin, so it warrants",
+  "commands": [
+    "curl localhost:11434/api/tags"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\vw-commands.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\vw.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "de4f08e3d77563cc6e6fdce908c9dbe141157fa4a0a4920f3cd34165f0e70808",
+  "git": null
+}

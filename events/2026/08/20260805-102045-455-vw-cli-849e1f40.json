@@ -1,0 +1,53 @@
+{
+  "id": "20260805-102045-455-vw-cli-849e1f40",
+  "createdAt": "2026-08-05T14:20:45.4555874Z",
+  "createdAtLocal": "2026-08-05 10:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): PowerShell, Write, Edit, Read, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 10:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Read",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+  "summary": "AI history phase 2. Added --profile LABEL=PATH to collector; harvested laptop over SMB (U:\\Clopeux) -> 604 sessions total (+108). Added real Codex token extraction from rollout token_count events: 1.35B input of which 1.27B cached, only 5.09M output (user's jq .usage shape does not match Codex CLI format). Created vaultwares-api endpoints: migrations/telemetry/003_ai_sessions.sql, ai_sessions_db.py, ai_sessions.py (POST /batches idempotent via deterministic batch_id; GET summary/projects/timeline/sessions/search); registered in telemetry/__init__.py; py_compile clean. FOUND: AutoBackup scheduled task ran Desktop\\pwsh\\AutoBackup.ps1 (old 317-line copy, NO .vwignore support), not the vw-cli copy I edited - repointed it, set 12h repetition (was hourly PT1H, not 3x/day as user believed). Registered VaultWares-CollectAiHistory daily 05:30 (collect+drain). Scheduled_Backups: moved 7 non-duplicated entries (2.4GB incl Firefox profile) to D:\\AutoBackups_Backups\\_from-C-primary, verified remaining 6 byte-identical on D:, deleted -> 16.7GB freed on C:. Windsurf .pb: entropy 8.00, per-file random headers = ENCRYPTED, protoc --decode_raw will not work. Antigravity decryptor reviewed: macOS Keychain only, needs Windows DPAPI port - NOT implemented.",
+  "commands": [
+    "collect-ai-sessions.py --profile Clopeux-Laptop=U:\\Clopeux",
+    "Set-ScheduledTask AutoBackup_FromDirectoriesList",
+    "Register-ScheduledTask VaultWares-CollectAiHistory"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\collect-ai-sessions.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\telemetry\\ai_sessions.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\app\\routers\\telemetry\\ai_sessions_db.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\migrations\\telemetry\\003_ai_sessions.sql"
+  ],
+  "planPath": "",
+  "contentHash": "849e1f40709e9b5c74fe3f8f2aae0de7f1e4922642e579ca0aab1cfa52084e77",
+  "git": {
+    "repo": "vaultwares-api",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+    "branch": "main",
+    "head": "c4c6a15",
+    "hasChanges": true
+  }
+}

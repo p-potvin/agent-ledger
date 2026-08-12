@@ -1,0 +1,58 @@
+{
+  "id": "20260730-174425-796-mai-vibo-2ruvisum-aio-9c35c2ef",
+  "createdAt": "2026-07-30T21:44:25.7962937Z",
+  "createdAtLocal": "2026-07-30 17:44",
+  "timezone": "Eastern Standard Time",
+  "project": "Mai-ViBo-2ruViSum-AIO",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5 Codex\r\nThinking: unknown\r\nMode: default\r\nPermissions: danger-full-access (network: enabled)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO  Branch: main\r\nTools used (this reply): powershell, uv, git, ffmpeg\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-30 17:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5 Codex",
+    "thinking": "unknown",
+    "mode": "default",
+    "permissions": "danger-full-access",
+    "network": "enabled",
+    "toolsUsed": [
+      "powershell",
+      "uv",
+      "git",
+      "ffmpeg"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO",
+  "summary": "Thu, 30 Jul 2026 17:29 - Set up a real pretrained CLIP model path for Mai-ViBo: added clip-zero-shot provider with Hugging Face CLIP, frame sampling, model workspace caching under D:\\Mai-ViBo-2ruViSum-AI\\models, local smoke command, real-video integration tests, and env/docs updates. Verified setup-model for clip-zero-shot, ran a local smoke on D:\\Mai-ViBo-2ruViSum-AI\\input\\local-frame-smoke.mp4, and passed the full test suite.",
+  "commands": [
+    "uv sync --extra dev",
+    "uv run pytest tests/test_clip_zero_shot.py -q",
+    "uv run ruff check .",
+    "$env:VSS_PROVIDER=\"clip-zero-shot\"; uv run mai-vibo setup-model",
+    "$env:VSS_PROVIDER=\"clip-zero-shot\"; uv run mai-vibo model-smoke-local D:\\Mai-ViBo-2ruViSum-AI\\input\\local-frame-smoke.mp4 --video-id clip-smoke --burst-count 1 --burst-seconds 2",
+    "uv run pytest"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\.env.example",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\.gitignore",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\pyproject.toml",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\src\\mai_vibo_2ruvisum_aio\\config.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\src\\mai_vibo_2ruvisum_aio\\vss\\clip_zero_shot.py",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\Mai-ViBo-2ruViSum-AIO\\tests\\test_clip_zero_shot.py"
+  ],
+  "planPath": "",
+  "contentHash": "9c35c2efeb5d05f0c7cdde60c03b0e3ceccdd2412cfac7bc0199d2a761835736",
+  "git": {
+    "repo": "Mai-ViBo-2ruViSum-AIO",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/Mai-ViBo-2ruViSum-AIO",
+    "branch": "main",
+    "head": "12267dc",
+    "hasChanges": true
+  }
+}

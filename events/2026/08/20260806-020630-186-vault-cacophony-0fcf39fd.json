@@ -1,0 +1,44 @@
+{
+  "id": "20260806-020630-186-vault-cacophony-0fcf39fd",
+  "createdAt": "2026-08-06T06:06:30.1860260Z",
+  "createdAtLocal": "2026-08-06 02:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, Read, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 02:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Wed, 05 Aug 2026 - Implemented a runtime voice cache in CrispASR and fixed the ollama model thrashing; the cloned-voice loop is now comfortably real-time. (1) CACHE: src/cosyvoice3_tts.cpp, cosyvoice3_tts_synth_from_wav now memoises the baked cv3_voice instead of re-running the speech tokenizer + CAMPPlus + mel front-end on every request. Safe because cv3_voice is pure value data (std::string / std::vector<int32_t> / std::vector<float> / int) with no ggml handles, so a copy stays valid for the process lifetime. Key is context pointer + wav path + file size + mtime + ref_text, so re-recording a reference in place invalidates rather than serving a stale voice, and a different loaded model cannot collide. Bounded at 16 entries (cleared wholesale on overflow) so a long-lived server handed many references cannot grow without limit. Synthesis runs OUTSIDE the mutex - only the bake is protected - otherwise every request would serialise. Added <mutex> and <sys/stat.h>. Caught one error before building: I first wrote crispasr_env_flag(), which does not exist; the API is crispasr_env::truthy(). (2) OLLAMA: set OLLAMA_MAX_LOADED_MODELS=2 at User scope and restarted the app, since /api/ps had shown only one model resident and the loop was unloading/reloading between vw-vic and vw-marisol every turn. MEASURED CACHE EFFECT, same voice five times: first request 6.69s for 3.0s audio (RTF 2.23, includes the bake), then 0.53 / 0.55 / 0.57 / 0.45s (RTF ~0.20) - about 12x faster on hits, matching pre-baked bank voice performance. Second voice 'robin' gets its own entry and behaves identically. END-TO-END LOOP, 10 turns with two cloned voices: 68.8s wall for",
+  "commands": [
+    "cmake --build build --target crispasr-cli",
+    "python cache hit/miss timing probe",
+    "python cacophony.py --turns 10 with cloned voices",
+    "setx OLLAMA_MAX_LOADED_MODELS 2 + restart"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR\\src\\cosyvoice3_tts.cpp"
+  ],
+  "planPath": "",
+  "contentHash": "0fcf39fdfdeba0461375f7239b1dd38026408550af2305bf8633b8a8c4234d78",
+  "git": null
+}

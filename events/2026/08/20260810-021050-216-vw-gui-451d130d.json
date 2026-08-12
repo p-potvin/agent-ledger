@@ -1,0 +1,51 @@
+{
+  "id": "20260810-021050-216-vw-gui-451d130d",
+  "createdAt": "2026-08-10T06:10:50.2168216Z",
+  "createdAtLocal": "2026-08-10 02:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-gui",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Read, Write, Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-10 02:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Logo, packaged installer, and registration with the VaultWares app scripts. Commit 79687ab pushed. Logo: prompt caret '>' in iris on obsidian card underlined with the coral seam; build/tray.svg is a deliberately separate drawing (no card, no gradients, heavier strokes) because the app icon averages to a smudge at 16px. scripts/make-icon.js rewritten to render both SVGs via ImageMagick into icon.png, multi-size icon.ico (256-16) and tray PNGs, replacing the hand-rolled PNG encoder placeholder. Packaging produces dist/vw-gui-setup-1.0.0.exe (98MB NSIS) with Start Menu + Desktop shortcuts so it can be pinned. Three fixes were required: npmRebuild:false (electron-builder tried to rebuild node-pty and failed - node-gyp rejects the space in 'Github Repos' and winpty GetCommitHash.bat is unpublished; N-API prebuilds already verified under Electron 41), asarUnpack for scripts/** plus an app.asar->app.asar.unpacked rewrite in main.js (pwsh is external and has no asar support, so the packaged app could not read the registry or run commands while working fine from source), and asarUnpack for node-pty. Verified the PACKAGED build over CDP: 80 commands from the real registry, 12 categories, live terminal. ALSO FIXED A PRE-EXISTING BREAKAGE: create-shortcuts.ps1 was failing on every entry - an injected [Parameter(Position=0)]\\ sat ahead of \\ in New-Shortcut leaving one positional slot for five arguments, and \\ was unset. Rewrote the param block with explicit positions, made \\ a script param defaulting to USERPROFILE\\Desktop\\Github Repos, and ran it: 23 shortcuts now created including vw-gui. Same \\=\\C:\\Users\\Administrator\\Desktop\\vw-cli flaw fixed in rebuild-all.ps1, where a vw-gui Electron build step was also added. Note: the injected \\ param appears in 67 of ~70 vw-cli",
+  "commands": [
+    "node scripts/make-icon.js",
+    "npx electron-builder --win",
+    "pwsh -File create-shortcuts.ps1",
+    "git push"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\build\\logo.svg",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\build\\tray.svg",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\scripts\\make-icon.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\package.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\main.js",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\create-shortcuts.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\rebuild-all.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "451d130df22c128f6844246b6eaf5037482451f28076aa701c04cfd54c35f139",
+  "git": null
+}

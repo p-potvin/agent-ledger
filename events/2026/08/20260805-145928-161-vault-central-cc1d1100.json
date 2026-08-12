@@ -1,0 +1,56 @@
+{
+  "id": "20260805-145928-161-vault-central-cc1d1100",
+  "createdAt": "2026-08-05T18:59:28.1615692Z",
+  "createdAtLocal": "2026-08-05 14:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 14:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Wed, 05 Aug 2026 15:00 - v3.9.0 (commit 2cb31df, pushed). Automatic stale-link refresh per user spec: URLs only expire when signed (keys/tokens), so tag those as canExpire and only retry them, once per 30 min, on dashboard open, invisibly. New src/lib/stale-links.ts detects signing material in query params (token/st/e/exp/expires/hash/sig/policy/X-Amz-*/hdnts etc) or path (Akamai ~hash~, md5+unix-expiry segments); deliberately narrow - unparseable or merely-parameterised URLs are treated as NON-expiring since a false positive costs a background tab + page scrape every sweep. canExpire is recorded at capture time in runCapturePipeline; an explicit value always beats the heuristic so manual corrections survive. VaultDashboard sends dashboard_opened on mount; background runStaleLinkSweep() checks isSweepDue against STORAGE_KEYS.LAST_STALE_SWEEP and runs detached - UI never waits or reflects it. RATE LIMITING (per REQUEST_RATE_LIMITING protocol): strictly sequential, 4s gap between items, capped at 8 items per sweep so a large library drains over several openings; failures logged and skipped, never retried in-sweep; due-stamp written UP FRONT so a sweep dying halfway cannot retrigger next open; staleSweepRunning guard prevents overlap. refresh_stale_links_now message forces one for debugging. ALSO FIXED: vitest.setup mocked runtime.sendMessage returning undefined while the real API always returns a Promise - broke all 5 Dashboard tests once the dashboard awaited it; mock now returns Promise.resolve and the dashboard call uses try/catch (sendMessage can throw synchronously when background is down). 8 new tests. Verified tsc clean, vitest 49/49, build OK.",
+  "commands": [
+    "npm run build",
+    "npx vitest run",
+    "npx tsc --noEmit",
+    "git push origin main"
+  ],
+  "files": [
+    "src/lib/stale-links.ts",
+    "src/lib/stale-links.test.ts",
+    "background/scripts/background.ts",
+    "src/components/VaultDashboard.tsx",
+    "vitest.setup.ts"
+  ],
+  "planPath": "",
+  "contentHash": "cc1d11007f19123c4c417eab24c22420a0384ee85b740f402c35f2ce0f962bf9",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "2cb31df",
+    "hasChanges": false
+  }
+}

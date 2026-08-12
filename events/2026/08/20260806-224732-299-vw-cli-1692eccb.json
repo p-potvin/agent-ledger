@@ -1,0 +1,44 @@
+{
+  "id": "20260806-224732-299-vw-cli-1692eccb",
+  "createdAt": "2026-08-07T02:47:32.2990751Z",
+  "createdAtLocal": "2026-08-06 22:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "bugfix",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Read, Edit, Bash, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 22:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Fixed the live-subs freeze I introduced with -Partials. Root cause: LiveSubsApp was a plain Python class, not a QObject, so connecting worker.partial to its _on_partial method gave Qt no receiver affinity and the slot ran DIRECTLY on the ASR thread. It then called overlay.show_partial(), driving a full relayout (setFixedWidth/setFixedHeight/setFixedSize/move/repaint) from a non-GUI thread, which froze Qt - hence unresponsive tray, no subtitles and no output past 'model ready; listening'. Two fixes: (1) moved PartialGate into AsrWorker where it belongs, on the ASR thread, and split the signal into raw partial (feeds the cue stream, so -Partials never changes what -EmitPort publishes) and gated partial_shown (connected straight to overlay.show_partial, a QObject on the GUI thread, so Qt queues it correctly). Gate reset now happens in _emit_final alongside the emit rather than via a lambda on a foreign thread. (2) Made LiveSubsApp inherit QObject so on_status - which touches QAction.setText and the tray tooltip and had the same defect pre-existing - now queues onto the GUI thread. Verified: affinity harness shows 6/6 deliveries on the GUI thread; audited every worker/translator connection; startup smoke test with --translate-to fr --partials stable survived 25s (timeout exit 124) with model warm in 623ms and no hang.",
+  "commands": [
+    "python _affinity_test.py",
+    "timeout 25 python live_subs_overlay.py --manual-start --translate-to fr --partials stable",
+    "python -m py_compile live_subs_overlay.py"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\live_subs_overlay.py"
+  ],
+  "planPath": "",
+  "contentHash": "1692eccbe900f48908580c91616ffd6e89aba0a9ecb42a1405bd9a9d1bb9626d",
+  "git": null
+}

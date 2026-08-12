@@ -1,0 +1,48 @@
+{
+  "id": "20260801-181014-800-vault-cacophony-2e703f21",
+  "createdAt": "2026-08-01T22:10:14.8004614Z",
+  "createdAtLocal": "2026-08-01 18:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 18:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "CrispASR backend audit complete - 106 backends compiled into the built binary. RESOLVED the earlier exit-53 mystery: CUDA 13 relocated its runtime DLLs to bin\\x64\\ (cudart64_13.dll is NOT in bin\\), so crispasr.exe silently failed to load until both bin and bin\\x64 were on PATH. Not unexplained after all. KEY CAPABILITY MATRIX from --list-backends: mini-omni2 has s2s=Y tts=Y auto-dl=Y but voice-clone=NO; lfm2-audio s2s=Y tts=Y voice-clone=NO; pocket-tts voice-clone=YES; qwen3-tts voice-clone=YES AND streaming=YES; moss-tts voice-clone=YES; vibevoice-1.5b voice-clone=YES; parakeet full streaming ASR. SIZING from docs/tts.md: mini-omni2 is ~1.0GB Q4_K plus ~80MB SNAC companion = ~1.08GB per instance, so TWO instances ~2.2GB versus 5.7GB for the current PyTorch bf16 pair. MIGRATION PATH: crispasr has --server mode (persistent model, POST /inference) with --host/--port/--server-workers N and --ws-port for realtime WebSocket ASR streaming, so two crispasr --server processes drop straight into where the mini-omni servers run today; the Python bridge changes endpoint /chat -> /inference. CAVEAT: 2x mini-omni2 still shares ONE voice (SNAC decoder, voice-clone=NO) so the identical-voice problem persists; the fix within the same binary is parakeet ASR -> LLM -> qwen3-tts or pocket-tts with reference-audio voice cloning. Also confirmed --gpu-backend can force cuda|vulkan|metal|cpu, and --hf-repo OWNER/REPO:FILE fetches GGUFs directly with implied --auto-download.",
+  "commands": [
+    "crispasr.exe --list-backends",
+    "crispasr.exe --help"
+  ],
+  "files": [
+    "CrispASR/build/bin/crispasr.exe",
+    "CrispASR/docs/tts.md"
+  ],
+  "planPath": "",
+  "contentHash": "2e703f219f4f468a4e0bbc6cfb51bf6244dc00271780cfdfb7a99d3640575d6b",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

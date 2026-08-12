@@ -1,0 +1,45 @@
+{
+  "id": "20260806-223009-665-vw-cli-88b36f21",
+  "createdAt": "2026-08-07T02:30:09.6656113Z",
+  "createdAtLocal": "2026-08-06 22:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Read, Edit, Bash, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 22:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Fixed caption churn and mixed-language display in live-subs. Diagnosed the 'mix of default + translation' as NOT Bilingual (which defaults off): the overlay renders [last final] + [current partial], and partials are deliberately never translated, so a translated final sat above an untranslated partial. Same root cause as the self-correcting flicker. Added PartialGate with three policies - off (default, nothing until final; stillest and most accurate), stable (only the leading words two consecutive passes agree on, so text grows monotonically and never rewrites; comparison ignores case and trailing punctuation which churn more than the words), all (previous behaviour). Verified against a realistic revision sequence: all=6 screen updates, stable=4 and correctly withheld 'chart' until it settled as 'charts', off=0. Reworked bilingual presentation per user: TranslateWorker.done signal changed from (text,start,end) to (source,translation,start,end) so joining is no longer done with a newline in the worker; SubtitleOverlay gained a second OutlinedLabel in its own panel (translucent rounded background, distinct colour #8FE3FF, 0.88x font) shown only when bilingual is on, and _relayout now measures both labels. Bilingual off means the translation simply replaces the caption. Registered -Partials in the registry, live-subs now 21 params.",
+  "commands": [
+    "python _gate_test.py",
+    "python -m py_compile live_subs_overlay.py",
+    "pwsh -File scripts/vwg-write-registry.ps1 -Action update -Name live-subs"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\live_subs_overlay.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-LiveSubtitles.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "88b36f211d2e5461902ce228e2c9c1de665396995649321c8251cc38ca02d5fa",
+  "git": null
+}

@@ -1,0 +1,56 @@
+{
+  "id": "20260731-080728-179-vw-gui-3f257117",
+  "createdAt": "2026-07-31T12:07:28.1790589Z",
+  "createdAtLocal": "2026-07-31 08:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-gui",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Read, Write, Edit, Bash, PowerShell, Grep, Glob, AskUserQuestion, Skill\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-31 08:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Grep",
+      "Glob",
+      "AskUserQuestion",
+      "Skill"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Built vw-gui v1.0.0: Electron + vanilla JS desktop front-end for the vw PowerShell CLI, at Github Repos\\vw-gui. Ran grill-me interrogation first (14 decisions). Created a NEW palette 'vaultwares-square' (Obsidian & Iris) keeping warm/console as simultaneous regions (bone rail 15% / obsidian main 85%) so revisited's aubergine+gold is not oversaturated. Features: filterable 12-category tree over 71 commands, dynamic param forms from registry metadata (switch/ValidSet/string[]/number/path-picker), folder picker driving spawn cwd, serial foreground run with live ANSI-preserved streaming + stop, opt-in async background queue, destructive gate, full command CRUD writing surgically into vw-commands.ps1 with AST param detection, context menu, persisted run history, EN i18n-ready strings. Backend: 5 PowerShell helpers. Verified: insert/update+rename/delete round-trip leaves registry byte-identical; ran real command through GUI over CDP (exit 0, correct cwd, colours). Fixed 2 bugs found by testing: author CSS display rules defeated [hidden]; background job exits wrongly updated the foreground run bar.",
+  "commands": [
+    "npm install",
+    "npm install-scripts approve electron",
+    "electron . --vwg-shot",
+    "electron . --remote-debugging-port=9223",
+    "pwsh -File scripts/vwg-write-registry.ps1 -Action insert|update|delete"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\main.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\css\\vaultwares-square.css",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\scripts\\vwg-write-registry.ps1",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\scripts\\vwg-run.ps1",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\js\\app.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\AGENTS.md"
+  ],
+  "planPath": "",
+  "contentHash": "3f25711744251cf0beecef5adc0d9506681fd50b4fe53f82e25c6cec69ca3a1f",
+  "git": null
+}

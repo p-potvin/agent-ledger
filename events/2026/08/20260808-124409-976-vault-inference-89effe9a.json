@@ -1,0 +1,65 @@
+{
+  "id": "20260808-124409-976-vault-inference-89effe9a",
+  "createdAt": "2026-08-08T16:44:09.9762976Z",
+  "createdAtLocal": "2026-08-08 12:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-inference",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-inference  Branch: main\r\nTools used (this reply): Write, Edit, Read, PowerShell, Bash, Grep, Monitor, TaskStop, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-08 12:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Read",
+      "PowerShell",
+      "Bash",
+      "Grep",
+      "Monitor",
+      "TaskStop",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-inference",
+  "summary": "Created vault-inference: local FastAPI HuggingFace inference server to replace Ollama. Verified RTX 3060/12GB constraint drives 4-bit NF4 as mandatory default (7B bf16 needs ~15GB, does not fit). Stack: torch 2.5.1+cu121, transformers 4.49, bitsandbytes 0.50, Python 3.12 venv via uv. OpenAI-compatible endpoints: /v1/chat/completions (stream+non-stream), /v1/embeddings, /v1/models, /health. VERIFIED ON GPU: qwen2.5-coder-7b 4-bit = 6.28GB weights, 33.3 tok/s @200 tokens, peak 6.33/12GB - comparable to Ollama, so transformers engine retained over llama.cpp/vLLM. bge-m3 embeddings 1024-dim L2-normalized, EN+FR. FIXED 2 REAL BUGS: (1) deadlock where a disconnected streaming client leaked the engine lock permanently, wedging all later generation - reproduced, then restructured so a worker thread owns the lock with unconditional release plus StoppingCriteria cancellation; (2) dtype= kwarg silently ignored, transformers 4.49 requires torch_dtype. Registry estimate corrected 5.5->6.3GB after measurement. Qwen SWA warning confirmed spurious (use_sliding_window False). 10/10 pytest pass, ruff clean. Also updated GLOBAL torch 2.6.0+cpu -> 2.6.0+cu124 (cu121 caps at 2.5.1; chose cu124 to add CUDA without downgrading global), verified with real GPU matmul. Local dev only - no deploy, no tailnet, no Jira, no git commit, no consumers migrated.",
+  "commands": [
+    "uv venv --python 3.12",
+    "uv pip install -e .[dev]",
+    "python -m pip install --index-url https://download.pytorch.org/whl/cu124 torch==2.6.0+cu124",
+    "python scripts/bench.py qwen2.5-coder-7b 200",
+    "python -m pytest tests -q"
+  ],
+  "files": [
+    "vault-inference/app/engine.py",
+    "vault-inference/app/main.py",
+    "vault-inference/app/registry.py",
+    "vault-inference/pyproject.toml",
+    "vault-inference/README.md",
+    "vault-inference/AGENTS.md",
+    "vault-inference/ROADMAP.md",
+    "vault-inference/TODO.md",
+    "vault-inference/tests/test_api.py",
+    "vault-inference/scripts/bench.py"
+  ],
+  "planPath": "",
+  "contentHash": "89effe9a6291d03911da6bd6018a71dfb80db57ff3bc0d7c6c056a102318cdc5",
+  "git": {
+    "repo": "vault-inference",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-inference",
+    "branch": "main",
+    "head": null,
+    "hasChanges": true
+  }
+}

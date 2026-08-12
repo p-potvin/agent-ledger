@@ -1,0 +1,46 @@
+{
+  "id": "20260804-092622-513-vw-cli-47b4db20",
+  "createdAt": "2026-08-04T13:26:22.5133500Z",
+  "createdAtLocal": "2026-08-04 09:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, Read, Write, Edit, PowerShell, SendUserFile\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-04 09:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "PowerShell",
+      "SendUserFile"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Tue, 04 Aug 2026 03:35 - Fun-CosyVoice3 TTS working end to end and wired into vw as 'vw say'. First synthesis via -m auto pulled the model set (LLM Q4_K + flow Q8_0 + HiFT + s3tok + campplus + voices) and ran on CUDA0: llm 24L d=896, DiT flow 22L d=1024 cfm_steps=10 cfg=0.70, HiFT 24kHz, 8 baked voices (zero_shot + fleurs-en/de/zh/ja/fr/es/ko). Produced 6.40s wav. VERIFIED THREE WAYS rather than assuming: (1) signal analysis - peak 0.667, rms 0.078, 55% voiced frames, energy std 0.058, i.e. non-silent with speech-like variation not a tone; (2) ROUND TRIP through Parakeet - asked 'Hello from VaultWares. This is Fun CosyVoice three running locally.', heard back 'Hello from Vault Where's? This is Fun Cozy Boys 3, running locally.' Sentence structure and every ordinary word exact; the only errors are the invented proper nouns VaultWares and CosyVoice, expected from both TTS and ASR on coinages, so the audio is genuinely intelligible English; (3) second synthesis in French via -Voice fleurs-fr, 3.40s, through the new wrapper. NEW Start-TextToSpeech.ps1 registered as 'vw say': -Text/-File/pipeline input, -Out (wav/mp3/m4a/opus), -Backend (default cosyvoice3-tts, any of CrispASR's ~32), -Voice (baked name or reference wav), -RefText, -Steps, -ListVoices. It injects the CUDA 13 bin/x64 path itself, auto-probing v13.3/13.2/13.1/13.0 for cublas64_13.dll, and warns if none is found - without this crispasr dies with 0xC0000135 and writes nothing to either stream, so there would be no diagnostic at all; it also translates that exit code back into a readable error. CONSENT GATE: cloning from a .wav requires -IHaveRights and the",
+  "commands": [
+    "crispasr.exe --backend cosyvoice3-tts -m auto --tts ... --tts-output",
+    "Start-TextToSpeech.ps1 -Voice fleurs-fr",
+    "parakeet round-trip transcription of synthesized wav"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-TextToSpeech.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "47b4db2045c32fc97c69c126b5e312bd260d275263844e7b674e9cf74cd9efc3",
+  "git": null
+}

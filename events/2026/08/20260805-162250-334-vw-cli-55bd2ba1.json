@@ -1,0 +1,44 @@
+{
+  "id": "20260805-162250-334-vw-cli-55bd2ba1",
+  "createdAt": "2026-08-05T20:22:50.3347400Z",
+  "createdAtLocal": "2026-08-05 16:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, Read, PowerShell, SendUserFile\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 16:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "PowerShell",
+      "SendUserFile"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Wed, 05 Aug 2026 - Cloned a LibriSpeech dev-clean speaker and played reference+clone to the user's headphones. Picked speaker 1272 (male, per SPEAKERS.TXT; dev-clean is 20M/20F) to directly test the earlier 'clone sounds like a woman' complaint, utterance 1272-141231-0009 (8.6s). CLEANLINESS CONFIRMED OBJECTIVELY: loud/quiet frame ratio 43.5 dB vs the film clip's 8.5 dB, spectral centroid 2502 Hz with 35.8% of energy above 3 kHz - so despite the user's impression that LibriVox recordings don't sound clean, by the measures that drive a speaker embedding this material is vastly better. Converted flac->wav, gave the bare uppercase LibriSpeech transcript natural casing and punctuation for prosody alignment, cloned via the vw say wrapper (17.78s output), then played reference then clone to the default speaker 'Headphones (Hesh ANC)' via soundcard. IMPORTANT: my earlier octave-doubling suspicion is CONFIRMED - this clean reference measures 121.2 Hz, a normal adult-male value, whereas the band-limited film clip read 269 Hz (~2x). So the film-clip pitch figures were indeed unreliable. HONEST NEGATIVE RESULT ON THIS RUN: the clone measures 140.4 Hz, i.e. 19.1 Hz from the reference, while the generic baked fleurs-en control measures 107.4 Hz, 13.8 Hz from the reference - by pitch alone the clone is FARTHER from the reference than a voice that never saw it. All three are within plausible adult-male range so this is nothing like the earlier failure (161 Hz apart), and pitch is a weak proxy for speaker identity versus formants/timbre, but I am not claiming the clone is faithful on this evidence. The user has now",
+  "commands": [
+    "python librispeech reference prep + cleanliness metrics",
+    "Start-TextToSpeech.ps1 -Voice libri_1272_ref.wav -IHaveRights",
+    "python soundcard playback to default speaker",
+    "python f0 comparison ref/clone/control"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-TextToSpeech.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "55bd2ba1bc13cf11cb60d45a08f6e5327a33284f9a9d2839e42a839b6c11d60b",
+  "git": null
+}

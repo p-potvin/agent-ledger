@@ -1,0 +1,47 @@
+{
+  "id": "20260805-160614-673-vw-cli-376b5f4a",
+  "createdAt": "2026-08-05T20:06:14.6737493Z",
+  "createdAtLocal": "2026-08-05 16:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, Read, Write, Edit, PowerShell, SendUserFile\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 16:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "PowerShell",
+      "SendUserFile"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Wed, 05 Aug 2026 - Built the full live dubbing loop as 'vw dub', plus cloning follow-up. CORRECTION: I attributed the bad clone timbre to background music and ran demucs; user confirmed the clip has no music, so that hypothesis was wrong. The 8.5dB speech-to-gap ratio is film room-tone and band-limiting, not a beat. Demucs did drop the noise floor 0.114->0.036 but was not the fix. Also retracted my pitch numbers as unreliable: the vocals-only stem still measured 246Hz, and 246 is ~2x123Hz, so the autocorrelation estimator is octave-doubling on band-limited film audio where the fundamental is weak - the RELATIVE comparison (clone 6.6Hz from ref vs control 161Hz) still stands as proof cloning applied, but absolute values should not be trusted. Separately found the user's -RefText omits a trailing 'Not masseur, masseuse!' that Parakeet hears in the 9s clip, i.e. text/audio mismatch. User is fine using a different sample. NEW utils/dub_bridge.py + Start-LiveDubbing.ps1 registered as 'vw dub': connects to the live-subs NDJSON cue socket, optionally translates via local_translator, synthesises through a PERSISTENT crispasr --server, and plays to a chosen device. Server mode was the key architectural find - spawning crispasr per cue would reload ~1.2GB per subtitle; verified --server + POST /v1/audio/speech returns HTTP 200 audio/wav 113KB. Backpressure: bounded cue queue drops the OLDEST when full, because a dub that drifts behind the video never recovers, whereas a missed line is survivable. VERIFIED end to end against a synthetic cue emitter: all 3 cues synthesised to wav. That test also exposed a REAL BUG -",
+  "commands": [
+    "crispasr --server + POST /v1/audio/speech",
+    "python dub_bridge.py --cue-port 46999 --no-play --save-dir",
+    "python socket timeout before/after harness"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\dub_bridge.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-LiveDubbing.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "376b5f4aa8274207139b753e52d5e6c7bb4f71ab77e434599e6546a1e644bd80",
+  "git": null
+}

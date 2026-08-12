@@ -1,0 +1,50 @@
+{
+  "id": "20260731-210706-626-vw-gui-dc2252ec",
+  "createdAt": "2026-08-01T01:07:06.6267421Z",
+  "createdAtLocal": "2026-07-31 21:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-gui",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Read, Write, Edit, Bash, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-31 21:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "The Big Change landed: commit af754f8 embeds a real PowerShell 7 via node-pty + conpty + xterm.js. Output pane is now a live pwsh terminal; commands are typed into it rather than spawned with piped stdio, so Read-Host/credential prompts/Ctrl+C all work and the pane doubles as a usable terminal. Exit codes recovered via <<VWG:EXIT:job:code>> sentinel emitted by vwg-run.ps1 and stripped in main.js before display (emitted by runner, not appended to typed line, so shell echo cannot false-trigger). Sessions: persistent session-main (serial) + session-bg-N per background job retired after 45s. Stop sends Ctrl+C then escalates to killChildrenOf. node-pty term.kill() avoided - throws AttachConsole failed on Windows; use taskkill. No native rebuild needed, N-API prebuilds load under Electron 41. Verified over CDP: exit 0 captured, sentinel not leaked, signal strip ok, Read-Host answered and read back. Also: Monofett chips with no fill, wordmark vw-gui, examples normalized to lead with 'vw ', js/extensions.js file-type hints (.ts excluded from video per user), ansi.js retired.",
+  "commands": [
+    "npm install node-pty @xterm/xterm @xterm/addon-fit",
+    "npm install-scripts approve node-pty",
+    "electron . --remote-debugging-port=9227",
+    "git push"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\main.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\js\\terminal.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\js\\jobs.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\scripts\\vwg-run.ps1",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\js\\extensions.js"
+  ],
+  "planPath": "",
+  "contentHash": "dc2252ec810bd0f8d0c2732910fdc8ef25c7a08d446333e62c68e951d8a830ac",
+  "git": null
+}

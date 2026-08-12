@@ -1,0 +1,46 @@
+{
+  "id": "20260804-004235-679-vw-cli-16921d2c",
+  "createdAt": "2026-08-04T04:42:35.6795261Z",
+  "createdAtLocal": "2026-08-04 00:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, Read, Write, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-04 00:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Tue, 04 Aug 2026 00:45 - Replaced network translation with a local CTranslate2 + opus-mt engine after user reported Google returning HTTP 500 'Server Error' mostly-always post-batching (bigger payloads trip Google's abuse heuristics, so the batching that fixed speed broke reliability). New utils/local_translator.py: LocalTranslator wraps ctranslate2 + Helsinki-NLP opus-mt Marian models, resolving in order (1) michaelfeil/ct2fast-opus-mt-{pair} pre-converted, (2) local TransformersConverter conversion cached under utils/models/translate/ with the same .partial staging + rename discipline used for the ASR unpack so an interrupted convert cannot leave a usable-looking dir. Runs int8_float16 on cuda, int8 on cpu. translate_batch here is a TRUE batch unlike deep_translator. Added skip_special_tokens=True on decode - the user's reference snippet omits it, which bakes a trailing </s> into every subtitle line. make_translator() picks local/google/auto with deep_translator retained as fallback; new --translator flag on generate_subtitles.py (default auto) and a Translator line in the banner. Installed ctranslate2==4.8.1 only (sentencepiece/huggingface_hub/transformers already present); torch untouched. VERIFIED: en-fr loaded on cuda int8_float16 in 14.1s, translated 4 cues in 0.25s with no network, no special tokens leaked, order+dedupe preserved. Three fallback paths unit-tested with a stub factory: missing pair in auto -> Google; missing pair in local -> passthrough unchanged, no crash; mode=google -> never constructs a local model. Fixed misleading 'falling back to Google' wording when mode=google was chosen explicitly. Full pipeline run: Translation Time 0.2s vs 1.6s via Google for the same 3 cues, UTF-8 accents correct in the .srt. Quality note: Marian is slightly less idiomatic than Google (jumps over -> 'saute sur' vs Google 'par-dessus'); flagged to user,",
+  "commands": [
+    "uv pip install ctranslate2",
+    "python generate_subtitles.py --translate-to fr --translator local",
+    "python -c fallback stub tests"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\local_translator.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\generate_subtitles.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\requirements.txt"
+  ],
+  "planPath": "",
+  "contentHash": "16921d2cc01031519c6b5912a2414e6184fde621c019761e7beead90404b83bd",
+  "git": null
+}

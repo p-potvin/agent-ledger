@@ -1,0 +1,47 @@
+{
+  "id": "20260801-191138-342-vault-cacophony-053ad81f",
+  "createdAt": "2026-08-01T23:11:38.3426596Z",
+  "createdAtLocal": "2026-08-01 19:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 19:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "VBAN to both phones RESOLVED, and the duo conversation is clean. Two distinct faults were tangled together. FAULT 1 - routing drift: strips 3 and 4 had silently regained B1/B2 routes (strip 4 -> B1 meant A heard itself, strip 3 -> B2 meant B heard itself), and strip 0 had regained A2/A3. Signature in the logs was both instances emitting the IDENTICAL sentence at the same second (\"Chat chatbots are a great way to provide more efficient customer service.\" from A and B at 19:06:25). Reapplied vm_apply_routing.py and restarted the bridges with fresh capture buffers plus a different seed (output3.wav); the fresh conversation shows ZERO identical lines across 5 rounds each, confirming the repetition was echo and not model degeneration. This is the third time the Voicemeeter config has drifted or been lost - it is still not saved to disk. FAULT 2 - phone .222 saw no stream at all, not even silence. Config was provably correct (vban.Enable=1, out[1] Stream1 -> 10.0.0.222 sr=44100 ch=2 bus=A3, engine samplerate 44100 matching, ping 0% loss at 2-3ms) and the loopback probe showed A3 carrying abundant audio (peak 0.5368, 56.78% of packets). USER FOUND THE FIX: name the stream Stream1 AND ping the phone. Mechanism is ARP - VBAN is fire-and-forget UDP with no retransmit, so with no ARP entry the first packets are dropped during resolution and the receiver misses the stream announcement entirely. Automated this as _warm_arp() in vm_apply_routing.py, called per target right after enabling each outstream. Also corrected an earlier wrong claim of mine: hearing",
+  "commands": [
+    "python vm_apply_routing.py --vban --phone1 10.0.0.151 --phone2 10.0.0.222",
+    "ping 10.0.0.222"
+  ],
+  "files": [
+    "D:/mini-omni/vm_apply_routing.py"
+  ],
+  "planPath": "",
+  "contentHash": "053ad81f52b1d13bf71bd7497f3577223242a6dfd48f490744cdf5066ee5af1c",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

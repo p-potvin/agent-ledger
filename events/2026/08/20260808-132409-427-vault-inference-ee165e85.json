@@ -1,0 +1,63 @@
+{
+  "id": "20260808-132409-427-vault-inference-ee165e85",
+  "createdAt": "2026-08-08T17:24:09.4277865Z",
+  "createdAtLocal": "2026-08-08 13:24",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-inference",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-inference  Branch: main\r\nTools used (this reply): Write, Edit, Read, PowerShell, Bash, Skill, TaskStop\r\nMCP servers accessed (this reply): hf-cli\r\nTime: 2026-08-08 13:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Read",
+      "PowerShell",
+      "Bash",
+      "Skill",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": "hf-cli"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-inference",
+  "summary": "CORRECTED COURSE: first build was a local model runner; user clarified the goal is a gateway that SPENDS the daily HF inference allowance across HF-hosted models and fans out to VaultWares projects. Local GPU demoted to fallback. Built app/remote.py (HF Inference Providers client), app/budget.py (SQLite spend ledger + hard stop), role routing (code/general/reasoning/small/embed), per-project attribution via X-VW-Project header. VERIFIED LIVE: auth clopeux PRO prepaid canPay=true; 131 models in catalogue, 110 priced; all 5 roles live via scripts/probe_hf.py; Qwen2.5-Coder-32B produced correct decompile output; streaming verified; bge-m3 embeddings 1024-dim EN+FR; budget hard stop confirmed (503 non-streaming, refusal frame streaming). KEY DISCOVERIES: (1) HF exposes NO real-time credit figure - no quota headers, nothing in whoami-v2, dashboard lags per user - so the local guard is the only one; (2) router /v1/models DOES publish real per-provider pricing, so prices are synced not invented, using most-expensive-live-provider to avoid undercounting; (3) router /v1/embeddings 404s - embeddings must use hf-inference/models/{id}/pipeline/feature-extraction with 'inputs' plural and no usage block; (4) router substitutes model variants (R1 -> deepseek-r1-turbo, 7B -> Turbo); (5) api-inference.huggingface.co is dead. Added daily_token_cap as second guard since unpriced models would count as free. Cost math verified exact: 38in+24out on Coder-32B = 7.08e-6 USD. 15/15 pytest pass, ruff clean. NOT DONE: no consumers migrated, no response caching, no per-project sub-budgets, no git commit.",
+  "commands": [
+    "hf auth whoami",
+    "hf models list --warm",
+    "python scripts/probe_hf.py",
+    "curl /v1/budget",
+    "python -m pytest tests -q"
+  ],
+  "files": [
+    "vault-inference/app/remote.py",
+    "vault-inference/app/budget.py",
+    "vault-inference/app/main.py",
+    "vault-inference/app/config.py",
+    "vault-inference/app/registry.py",
+    "vault-inference/tests/test_api.py",
+    "vault-inference/scripts/probe_hf.py",
+    "vault-inference/README.md",
+    "vault-inference/AGENTS.md",
+    "vault-inference/examples/migrate_from_ollama.py"
+  ],
+  "planPath": "",
+  "contentHash": "ee165e85473549dc1195b33cd9bba65dacd588dedcc4d302e3c39b7974bd5c37",
+  "git": {
+    "repo": "vault-inference",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-inference",
+    "branch": "main",
+    "head": null,
+    "hasChanges": true
+  }
+}

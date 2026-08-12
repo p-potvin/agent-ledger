@@ -1,0 +1,49 @@
+{
+  "id": "20260805-061047-113-vw-cli-ce7ffe84",
+  "createdAt": "2026-08-05T10:10:47.1130822Z",
+  "createdAtLocal": "2026-08-05 06:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): PowerShell, Write, Edit, Read, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 06:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Read",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Built cross-tool AI session history harvester + fixed AutoBackup destinations. Added vw-cli\\utils\\collect-ai-sessions.py (normalizes conversations from claude-code, codex, copilot-cli, copilot-vscode, gemini-cli, antigravity, windsurf-cascade, devin into one flat record schema) and vw-cli\\Collect-AiHistory.ps1 (stage 1 curated raw mirror to D:\\AiHistory\\raw, stage 2 harvest to NDJSON spool + stats-summary.json). Added drain-ai-sessions.ps1 modeled on agent-ledger drain-spool.ps1, POSTing batches to /api/telemetry/ai-sessions/batches (endpoint NOT yet implemented in vaultwares-api). Registered collect-ai-history and drain-ai-sessions in vw-commands.ps1 (76 commands total). Result: 496 sessions, 43836 messages, 2.9 GB mirrored, 0 warnings, 36 distinct projects, span 2026-03-13 to 2026-08-05. Codex state_5.sqlite threads is richest source (tokens_used, archived, git_branch, reasoning_effort). Antigravity/windsurf .pb stores are protobuf with no public schema so those are metadata-only records (flagged via parser field). BUG FOUND AND FIXED IN OWN CODE: sqlite mode=ro still creates -wal/-shm sidecars beside WAL-mode DBs; first runs wrote 48 sidecar files into .gemini\\antigravity*\\conversations AND counted them as sessions (inflated 156->204). Replaced open_ro with copy-to-tempdir contextmanager; deleted the 48 stray files after verifying all -wal were 0 bytes and no Antigravity process running; source dirs back to 67/89 files. Also fixed by_project case-collision folding and stripped Windows \\\\?\\ extended-path prefixes from 81 codex cwd values. AutoBackup.ps1: primary base moved off C: to D:\\AutoBackups\\Scheduled_Backups, secondary to G:\\AutoBackups_Backups (user chose two-drive redundancy). .vwignore was ALREADY respected (Load-VwIgnore + robocopy /XD /XF + hash filter) - no change needed. directories.txt gained D:\\AiHistory and D:\\ClaudeCode. Old C: primary (18.66 GB, 160680 files) left in place for user to decide.",
+  "commands": [
+    "python utils\\collect-ai-sessions.py --out D:\\AiHistory",
+    "Collect-AiHistory.ps1 -Root D:\\AiHistory",
+    "vw-commands.ps1 registry load check"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\collect-ai-sessions.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Collect-AiHistory.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\drain-ai-sessions.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\AutoBackup.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\directories.txt",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "ce7ffe84aa4dc93ad1ebdeaf48a54a899e38fe8e7473140bcb412b75164df4f0",
+  "git": null
+}

@@ -1,0 +1,44 @@
+{
+  "id": "20260804-092250-589-vw-cli-f1a46b50",
+  "createdAt": "2026-08-04T13:22:50.5891048Z",
+  "createdAtLocal": "2026-08-04 09:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, Read, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-04 09:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Tue, 04 Aug 2026 03:05 - CrispASR TTS recon + fixed a blocking launch failure. User redirected: assistant is the long-term goal, do TTS first, prefers Fun-CosyVoice 3.0 over Chatterbox. FINDINGS: CrispASR docs are NOT thin - docs/tts.md is 1638 lines cataloguing ~32 TTS engines (its own header says 'fourteen', a doc bug worth reporting upstream). cosyvoice3-tts is Fun-CosyVoice3-0.5B-2512: Qwen2-0.5B AR speech-token LM + DiT-CFM 10-step Euler + HiFT at 24kHz, 9 languages + 18 Chinese dialects, ships an 8-voice baked bank (zero_shot + fleurs-{en,de,zh,ja,fr,es,ko}), and supports BOTH baked-bank names and native arbitrary-WAV zero-shot cloning via --voice ref.wav --ref-text (ports speech_tokenizer_v3 + CAMPPlus + matcha mel to ggml, speech tokens byte-exact vs ONNX). ~1.2GB via -m auto. crispasr.exe v0.8.25 is ALREADY BUILT at CrispASR/build/bin - no C++ toolchain work needed. BLOCKER FOUND AND FIXED: crispasr.exe died instantly with exit -1073741515 (0xC0000135 STATUS_DLL_NOT_FOUND) and zero output on both streams. Diagnosed by writing a PE import-table parser rather than guessing: all direct imports of crispasr.exe/crispasr.dll resolved, but ggml-cuda.dll transitively needs cublas64_13.dll, i.e. CrispASR was built against CUDA 13 while PATH exposed only v12.0. The machine HAS v13.3, but CUDA 13 relocated its DLLs from bin/ to bin/x64/ - so even adding v13.3/bin did not help. Prepending 'C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.3/bin/x64' makes crispasr.exe run (26390 chars of help). Confirmed TTS flags: --tts TEXT, --tts-output (wav/mp3/m4a/opus), --voice PATH (GGUF pack or reference WAV), --i-have-rights (consent attestation, REQUIRED for wav cloning), --ref-text, --codec-model, --tts-steps, --tts-cfg-scale, and --tts-stream which streams s16le mono PCM to stdout per sentence with logs on stderr",
+  "commands": [
+    "python PE import-table parser on crispasr.exe/ggml-cuda.dll",
+    "crispasr.exe --help",
+    "crispasr.exe --backend cosyvoice3-tts -m auto --tts ... --tts-output"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR\\docs\\tts.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR\\build\\bin\\crispasr.exe"
+  ],
+  "planPath": "",
+  "contentHash": "f1a46b500ff65136d0f3386ab81bdf8abc6d392fdcfc34a5a60675a1d14aa22a",
+  "git": null
+}

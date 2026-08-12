@@ -1,0 +1,58 @@
+{
+  "id": "20260730-164813-907-vaultwares-studio-f86e4e0d",
+  "createdAt": "2026-07-30T20:48:13.9070240Z",
+  "createdAtLocal": "2026-07-30 16:48",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, Read, Edit, Write, Grep, WebFetch, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-30 16:48 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "WebFetch",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Thu 30 Jul 2026. da3-draft direct-3DGS is GREEN - first successful --gs-only run in project history. Job 6a6bb9c3b36a6516e96a32f0 on a10g-small: 76s wall, 73.7s DA3 inference, ~0.02 USD, 4,503,479 gaussians from 40 frames, gravity-aligned 25.1deg, full artifact set (splat.ply 306MB, cloud.ply 252MB, cloud.splat 144MB, cloud_preview.ply 3MB, cloud.usda 990MB), verified rendering in the viewer. Fixed the last two of five stacked failures: (4) CUDA OOM in the Gaussian head - my earlier t4-small choice was wrong-axis reasoning (weights vs activation peak); fixed with 24GB floor [a10g-small, l4x1] plus da3_max_sfm_frames=40, and discovered --max-sfm-frames existed in the entrypoint but reconstruction.py NEVER passed it so every run silently used the 80 tuned for the non-GS path. (5) DA3's exporter writes the PLY then renders a preview video that dies on moviepy fps=None; entrypoint treated it as fatal and was discarding a completed 4.5M gaussian run - now non-fatal when a PLY exists. Also verified the flavor-fallback success path for the first time (previously unit-tested only). Recovered and validated the 'failed' run's PLY locally at zero cost before rebuilding. Documented two real data-quality issues rather than hiding them: opacity max is +inf (nan-poisons gaussian_merge quality scoring) and outlier tail (96% within radius 1.58 vs bbox +/-600, skewness 32.7 vs 1.07 trained) breaking viewer auto-framing. Quality is soft-but-correct, inherent to feed-forward prediction. Total debug cost across all five layers: ~0.09 USD over five jobs. Pushed to main: 83f0ef4 (green run) + fe27d0a (v1.1.1 bump, VERSION + index.html HTML comment). 102 tests passing. OUTSTANDING: repoint presets from vw-studio-da3-gs back to vw-studio-da3; clamp opacity; percentile-clip",
+  "commands": [
+    "tools/retry_da3_draft_recon.py local-run-20260730-105436 600",
+    "tools/push_da3_space.py --space vw-studio-da3-gs",
+    "tools/viewport_screenshot.py job/reconstruction/cloud.splat",
+    "git push origin main"
+  ],
+  "files": [
+    "docker/worker/da3_entrypoint.py",
+    "vaultwares_studio/presets.py",
+    "vaultwares_studio/stages/reconstruction.py",
+    "docs/da3-direct-3dgs-debugging-20260730.md",
+    "TODO.md",
+    "VERSION"
+  ],
+  "planPath": "",
+  "contentHash": "f86e4e0dcb4ab837886c8c27e55cffda3d66fa74022242aeba91baee9deff6e2",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "fe27d0a",
+    "hasChanges": true
+  }
+}

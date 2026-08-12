@@ -1,0 +1,48 @@
+{
+  "id": "20260801-180449-038-vault-cacophony-084e3b88",
+  "createdAt": "2026-08-01T22:04:49.0381147Z",
+  "createdAtLocal": "2026-08-01 18:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, WebFetch, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 18:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "WebFetch",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "CrispASR CUDA build COMPLETE. 843/844 targets, ZERO errors, produced build/bin/crispasr.exe (11.4MB) plus ggml-cuda.dll, ggml-cpu.dll, ggml-base.dll, whisper.dll, crispasr.dll. Configure confirmed: Found CUDAToolkit 13.3.73, CUDA compiler NVIDIA 13.3.73 with host compiler MSVC 19.51.36248.0, CMAKE_CUDA_ARCHITECTURES=86, Including CUDA backend. Fix was installing CUDA 13.3 (host_config.h allows _MSC_VER 1920-1959) replacing CUDA 12.0 (rejects >=1940) against VS 2026 MSVC 14.51 (_MSC_VER 1951). RUNTIME NOTE: crispasr.exe fails with error while loading shared libraries unless CUDA v13.3 bin is on PATH (cudart64_13.dll, cublas64_13.dll live there); --help then works. OPEN ODDITY: --version and --diagnostics both exit 53 with zero output while --help exits 0; unexplained, end-to-end GPU inference NOT yet validated (samples/jfk.wav present, models need -m auto download). PERSONAPLEX RESEARCH: Codes4Fun/personaplex-7b-v1-q4_k-GGUF requires moshi.cpp, NOT llama.cpp and NOT CrispASR - CrispASR has Mimi-codec models (kyutai-stt, csm, lfm2-audio, pocket-tts) but not Moshi full-duplex. moshi.cpp supports CUDA+Vulkan and explicitly supports PersonaPlex role prompts plus voice conditioning via a reference wav, but is CLI-only with SDL2 mic/speaker, no HTTP server; deps SentencePiece static + FFmpeg7 + SDL2. VRAM VERDICT: moshi.cpp docs state 8GB per instance for 7B q4_k, so 2 instances need ~16GB vs 11.5GB free - TWO WILL NOT FIT on the 3060. Recommended: one PersonaPlex plus one lfm2-audio-1.5b (already compiled into crispasr), or two lfm2-audio with pocket-tts voice cloning for distinct personas.",
+  "commands": [
+    "cmake --build build --target crispasr-cli",
+    "crispasr.exe --help"
+  ],
+  "files": [
+    "CrispASR/build/bin/crispasr.exe"
+  ],
+  "planPath": "",
+  "contentHash": "084e3b88c15ba66105a0098f06eb7e184f9f3df4e5a2b117e188eb2a77922603",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

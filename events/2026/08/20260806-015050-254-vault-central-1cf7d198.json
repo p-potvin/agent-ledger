@@ -1,0 +1,54 @@
+{
+  "id": "20260806-015050-254-vault-central-1cf7d198",
+  "createdAt": "2026-08-06T05:50:50.2544219Z",
+  "createdAtLocal": "2026-08-06 01:50",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 01:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Wed, 06 Aug 2026 01:50 - v3.10.0 (commit 10103b6, pushed). Made direct-media extraction invisible. A direct .mp4/.webm URL has nothing to scrape - the URL IS the source - so it only ever needed a visible scraper window because the capture code lived in scraper-player.html; that page is ours so no X-Frame-Options concern forced it out of process. New src/lib/direct-video-extract.ts holds the logic (fetch to blob -> load <video> -> captureFrames -> base64 application/json data URL) and is shared by both callers so results are identical. doTabExtraction now short-circuits BEFORE creating any window when isDirectVideo && canExtractDirectVideoInPlace(), so stale-link sweeps over direct URLs are silent on Firefox; on failure it falls through to the windowed path rather than failing the capture. scraper-player.ts reduced to a thin endpoint over the same function, still used where the background has no DOM (Chrome MV3 service worker). Site-page extraction UNCHANGED and still opens a window - those pages set X-Frame-Options/frame-ancestors and Firefox gives extensions no hidden window, so only this half is fixable. Also replaced the deprecated btoa(unescape(encodeURIComponent(...))) chain with TextEncoder + chunked fromCharCode (guards the argument limit on large payloads); added a non-ASCII title test that the old chain would have mangled. 5 new tests. NOTE on test quality: initial stub replaced the whole URL global which silently masked the hostname-derived author fallback - fixed to spyOn createObjectURL/revokeObjectURL only so the assertion is real. Verified tsc clean, vitest 54/54, build OK.",
+  "commands": [
+    "npm run build",
+    "npx vitest run",
+    "npx tsc --noEmit",
+    "git push origin main"
+  ],
+  "files": [
+    "src/lib/direct-video-extract.ts",
+    "src/lib/direct-video-extract.test.ts",
+    "background/scripts/background.ts",
+    "src/scripts/scraper-player.ts"
+  ],
+  "planPath": "",
+  "contentHash": "1cf7d1986fb43c15586e21086e5901b72e89b9cd68a4a3763eb4180fda8cfec0",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "10103b6",
+    "hasChanges": false
+  }
+}

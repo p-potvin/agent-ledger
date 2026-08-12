@@ -1,0 +1,54 @@
+{
+  "id": "20260805-150211-552-vault-monitor-928ae016",
+  "createdAt": "2026-08-05T19:02:11.5520649Z",
+  "createdAtLocal": "2026-08-05 15:02",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): PowerShell, Write, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 15:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Drained full spool (544 sessions live in DB). AutoBackup trigger changed from 12h repetition to once daily 09:00 (next run 2026-08-06). Built vault-monitor AI Stats tab: src/features/ai-sessions/{types.ts,components/ToolTimeline.tsx}, src/pages/AiStatsPage.tsx, wired route /ai-stats + nav (IconTerminal; no IconCpu exists) + EN/QC copy, api.ts getAiSessions (parallel summary/projects/timeline), useData.ts useAiSessionsData. Reused KpiCard/BarList/InfoTooltip/Section for visual parity. ToolTimeline is a stacked monthly bar chart, one band per tool, hover shows split. IMPORTANT: asyncpg returns BIGINT as JSON strings, so all numeric fields typed Num=number|string and funnelled through num(); charting them raw would concatenate. Message chart excludes METADATA_ONLY_TOOLS (antigravity, windsurf-cascade) rather than plotting zeros. tsc --noEmit clean; vite build OK; updated routes.test.ts five->six tabs. Remaining test failure in features/services/model.test.ts is PRE-EXISTING (verified failing on clean HEAD, those files untouched). Suppressed 32-64 hex digest project labels from gemini collector (~/.gemini/projects.json maps paths to names but NOT by that digest - 0/36 matched a plain sha256). NOTE: the stale hash label persists on the 8 already-ingested rows because the upsert uses COALESCE(EXCLUDED.project, ai_sessions.project), so NULL never clears an existing value - true for every nullable column. vault-monitor left UNCOMMITTED per user (commit triggers its deploy).",
+  "commands": [
+    "drain-ai-sessions.ps1",
+    "npx tsc --noEmit",
+    "npx vite build",
+    "npx vitest run"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor\\src\\pages\\AiStatsPage.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor\\src\\features\\ai-sessions\\types.ts",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor\\src\\features\\ai-sessions\\components\\ToolTimeline.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor\\src\\App.tsx",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\collect-ai-sessions.py"
+  ],
+  "planPath": "",
+  "contentHash": "928ae016c60ebce9bd854156cfa90b523eb21ad868c1b645357880ea3fc60bfb",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "1753213",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "20260808-192651-068-vault-inference-vaultwares-docs-5f3aa1eb",
+  "createdAt": "2026-08-08T23:26:51.0684743Z",
+  "createdAtLocal": "2026-08-08 19:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-inference,vaultwares-docs",
+  "kind": "code-change,documentation,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-inference  Branch: vw-codex-hf-gateway\r\nTools used (this reply): Write, Edit, Read, PowerShell, Bash, AskUserQuestion, TaskStop\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-08 19:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Read",
+      "PowerShell",
+      "Bash",
+      "AskUserQuestion",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-inference",
+  "summary": "MAJOR CORRECTION: allowance is 2 USD per MONTH not per day - corrected across all code, docs and memory (budget guard now monthly window). Made free model prism-ml/Ternary-Bonsai-27B-gguf the default for free/code/general roles; paid models moved behind explicit -paid roles; free models bypass both caps by design so consumers keep working when paid budget is gone. Recorded ZeroGPU allowance (30min/day 96GB VRAM, Gradio Spaces only, NOT reachable from gateway) and pricing page https://huggingface.co/inference/models?asc_sort=pricingInput. Noted user can override the PR rule at any time by asking clearly. Clarified vaultwares-api does NOT run AI - HTTP inference servers stay in vault-inference, only telemetry ingest goes to the API. BUGS FOUND AND FIXED: (1) reasoning models (Bonsai, R1) write to reasoning_content and return a valid 200 OK with EMPTY string if starved - Bonsai used 1290 tokens one run and 1682 the next on identical input, so 1500 floor truncated half the time; raised to 3000 and added explicit 422; (2) local fallback fired on a 422 client error and started a multi-GB weights download - now only 5xx and never downloads on demand; (3) budget cap was RACEABLE - check() reads and record() writes only after response, so concurrent paid requests all passed against a stale total; added semaphore holding paid calls to one in flight (free ungated). Bug 3 was found by sending the diff through the gateway to the free Bonsai model and posting the review as a GitHub PR comment - the requested delivery pattern, demonstrated working. OPENED PRs: vault-inference PR #1 (new public repo",
+  "commands": [
+    "gh repo create p-potvin/vault-inference --public",
+    "gh pr create",
+    "gh pr comment 1",
+    "python -m pytest tests -q"
+  ],
+  "files": [
+    "vault-inference/app/budget.py",
+    "vault-inference/app/main.py",
+    "vault-inference/app/registry.py",
+    "vault-inference/app/remote.py",
+    "vault-inference/app/config.py",
+    "vault-inference/tests/test_api.py",
+    "vault-inference/README.md",
+    "vault-inference/AGENTS.md",
+    "vaultwares-docs/instructions/summaries/GIT_BRANCH_POLICY.md",
+    "vaultwares-docs/instructions/summaries/REQUEST_RATE_LIMITING.md"
+  ],
+  "planPath": "",
+  "contentHash": "5f3aa1ebe83060098266f2bb5bea17fb52a83fedbd47a4d75cbe1003d1a1e4cb",
+  "git": {
+    "repo": "vault-inference",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-inference",
+    "branch": "vw-codex-hf-gateway",
+    "head": "7056662",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "20260731-082720-595-vw-gui-14dc9431",
+  "createdAt": "2026-07-31T12:27:20.5956996Z",
+  "createdAtLocal": "2026-07-31 08:27",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-gui",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-31 08:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Published vw-gui to GitHub: git init on main, .gitignore (excludes node_modules), initial commit dea5ae9 for v1.0.0, created public repo p-potvin/vw-gui matching sibling convention, pushed. Pre-push secret scan found no IPs, tokens or internal hosts (only Google Fonts + W3C SVG namespace). 29 files pushed, node_modules excluded, working tree clean. Docs updated: owner repointed vw.bat and related env vars at Desktop\\vw-cli on 31 Jul 2026, so the stale-shim item in TODO.md is closed and the README caveat rewritten. Added AGENTS.md disambiguation that vaultwares-cli (Rust, older) is unrelated to the vw PowerShell CLI, per user correction. Next: v1.1 registry reconciliation.",
+  "commands": [
+    "git init -b main",
+    "git commit -F -",
+    "gh repo create p-potvin/vw-gui --public --source=. --push",
+    "gh repo view p-potvin/vw-gui"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\.gitignore",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\TODO.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\README.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\AGENTS.md"
+  ],
+  "planPath": "",
+  "contentHash": "14dc9431b688638dc511396983c9d19dfc3aee40c4212c6f3a4e8261f3356ed1",
+  "git": null
+}

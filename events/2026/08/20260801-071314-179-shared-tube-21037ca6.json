@@ -1,0 +1,38 @@
+{
+  "id": "20260801-071314-179-shared-tube-21037ca6",
+  "createdAt": "2026-08-01T11:13:14.1794119Z",
+  "createdAtLocal": "2026-08-01 07:13",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 07:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Reverted stale join row deletion: restored 992 video_pornstars and 2820 video_studios rows for merged terms by copying from primary term. The deleted_at IS NULL filter on video queries is the correct fix — join rows must remain for merge reversibility. 190 pornstars + 43 studios deleted without merged_into_id are unrecoverable.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "21037ca6e1c76a84da6c40b83dde4ea116e5bd93720d64b4834cb10ef45f6286",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "c0bb177",
+    "hasChanges": true
+  }
+}

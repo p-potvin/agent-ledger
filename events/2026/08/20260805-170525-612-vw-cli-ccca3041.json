@@ -1,0 +1,45 @@
+{
+  "id": "20260805-170525-612-vw-cli-ccca3041",
+  "createdAt": "2026-08-05T21:05:25.6129203Z",
+  "createdAtLocal": "2026-08-05 17:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, Read, Write, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 17:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Wed, 05 Aug 2026 - Built and ran the half-duplex A<->B conversation loop (utils/cacophony.py). WORKS: 6 turns, 49.5s wall for 37.6s of speech, compute 0.30x per second of speech = comfortably real-time capable with ~3x headroom. Per turn: llm 0.4s, tts ~1.1s for ~6s audio, asr ~0.35s. ASR round-trip was near perfect (2 trivial diffs in 6 turns), so agents heard each other almost verbatim. ARCHITECTURE FINDINGS: (1) one crispasr process serves ONE backend - /v1/audio/speech only exists when the loaded backend declares CAP_TTS - so ASR and TTS need two servers, but BOTH agents share them since voice is per-request, so 2 servers not 4. (2) crispasr also exposes /v1/audio/speech-to-speech for lfm2-audio/mini-omni2/sidon/voxcpm2-vae, worth remembering as the monolithic alternative. (3) minicpm-v4.6:1b is a REASONING model: with thinking on it spent all 160 tokens on hidden reasoning and returned EMPTY content; think:false gives 19 useful tokens in 1.5s. This is mandatory, not an optimisation. (4) --voice-dir .wav profiles are listed by GET /v1/voices but the cosyvoice3 synth path does NOT resolve them - 'voice alex not found (have 8)', it only knows its 8 baked voices. Per user's don't-over-fix steer, used baked zero_shot + fleurs-en instead of chasing it. MEASURED MEMORY (the actual point): crispasr ASR 656 MB + crispasr TTS 632 MB = ~1.3 GB for the whole speech stack, versus NeMo Parakeet alone at 2.34 GB. But ollama reports minicpm-v4.6:1b resident at 4808 MB VRAM despite being a 1b model - the vision tower plus context dominates - so the LLM is now the memory",
+  "commands": [
+    "crispasr --server --backend parakeet --hf-repo cstr/parakeet-tdt-0.6b-v3-GGUF",
+    "crispasr --server --backend cosyvoice3-tts --voice-dir",
+    "python cacophony.py --turns 6",
+    "nvidia-smi + ollama /api/ps"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\cacophony.py"
+  ],
+  "planPath": "",
+  "contentHash": "ccca3041aca8b9f307ddb125d26dab6cbb8cf4716dccc6b55739520fb86b35ff",
+  "git": null
+}

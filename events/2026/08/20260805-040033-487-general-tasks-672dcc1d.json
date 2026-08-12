@@ -1,0 +1,44 @@
+{
+  "id": "20260805-040033-487-general-tasks-672dcc1d",
+  "createdAt": "2026-08-05T08:00:33.4873812Z",
+  "createdAtLocal": "2026-08-05 04:00",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): PowerShell, Write, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 04:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Rebuilt Claude Desktop session history index from surviving CLI transcripts. Resolved the two UUID path levels: cb823631-edad-4de3-bcbd-3eed4baa1a47 = account UUID (lastKnownAccountUuid/ownerAccountId in %APPDATA%\\Claude\\config.json + cowork-enabled-cli-ops.json), 82589444-1492-4497-8e71-bd355e0888be = org UUID (dxt:allowlist keys, plan-usage-history, bridge-state key <org>:<account>). Neither is per-cwd, so all sessions share one index dir. Wrote PowerShell rebuilder (dry-run then -Apply) that streams each .jsonl, extracts cliSessionId/cwd/first+last timestamp/last assistant model, derives title from first external non-sidechain user message with system-reminder and command tags stripped, and emits local_<guid>.json. Skips agent-*.jsonl subagent sidechains (19 of them) via -IncludeSubagents opt-in, and skips cliSessionIds already indexed. Result: 36 index entries (35 new + 1 pre-existing), all parse clean, no duplicate cliSessionIds, spanning 2026-05-19 to 2026-08-05 across 12 project folders. CORRECTION to earlier finding: transcript content dates back to 2026-05-19, not 07/07 - file mtimes were misleading, so the 30-day cleanup claim was overstated.",
+  "commands": [
+    "rebuild-session-index.ps1 (dry-run)",
+    "rebuild-session-index.ps1 -Apply"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\AppData\\Roaming\\Claude\\claude-code-sessions\\cb823631-edad-4de3-bcbd-3eed4baa1a47\\82589444-1492-4497-8e71-bd355e0888be",
+    "scratchpad\\rebuild-session-index.ps1",
+    "D:\\ClaudeCode\\backup-20260805-0250"
+  ],
+  "planPath": "",
+  "contentHash": "672dcc1d90b6af6806914dffed7f91bd65fb57ebc11d66dcc85f10de009ab067",
+  "git": null
+}

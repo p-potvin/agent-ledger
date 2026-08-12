@@ -1,0 +1,46 @@
+{
+  "id": "20260804-054457-915-vw-cli-63fc9496",
+  "createdAt": "2026-08-04T09:44:57.9153373Z",
+  "createdAtLocal": "2026-08-04 05:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Bash, Read, Edit, PowerShell, Grep, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-04 05:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "PowerShell",
+      "Grep",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Tue, 04 Aug 2026 02:10 - FLAGGED A PREMISE ERROR then built the unblocked half. User asked for a 'qwen easyvoice cloning model' producing .wav from written text and linked cstr/qwen3-asr-0.6b-GGUF Q4_K. That model is Qwen3-ASR - automatic speech RECOGNITION, audio->text, the same direction as Parakeet. It cannot synthesise speech and has no voice cloning, so it cannot be the engine for a text->wav tool. It is however a valid alternative ASR for live-subs, and vault-cacophony/CrispASR already supports it natively (qwen3_asr.h/cpp, 'Qwen3-ASR native' in COMPARISON.md). No TTS engine chosen yet; no weights downloaded. Built the engine-independent piece the user actually specified: cue streaming out of live-subs. New CueEmitter class emits every cue as newline-delimited JSON to stdout (--emit-stdout) and/or a localhost TCP port (--emit-port), with --emit-partials to include in-progress text. This is the seam a TTS/dubbing stage attaches to without importing the module, so the voice engine can be swapped or moved to another host - the 'configurable through VBAN with no code change' goal (note VBAN carries audio, so the text side is this socket and VBAN would carry the synthesised audio downstream). Writes are best-effort and non-blocking with dead-client reaping, because a stalled consumer must never back up the ASR loop - dropping a caption beats freezing recognition. VERIFIED: 2 simultaneous clients received the fanout; one client killed mid-stream was reaped and the NEXT cue still reached the surviving client; ordering preserved; partials included when enabled; UTF-8 accents intact; JSON schema {type,text,start,end,ts}. Caught and fixed a self-inflicted bug: my scripted patch of Start-LiveSubtitles.ps1 matched",
+  "commands": [
+    "python -c cue stream fanout + dead client test",
+    "Get-Command Start-LiveSubtitles.ps1 parameter check"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\live_subs_overlay.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-LiveSubtitles.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "63fc94960324806fef853a8f83d71f5dca04a7a1e838d64db3a560d552080c86",
+  "git": null
+}

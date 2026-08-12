@@ -1,0 +1,58 @@
+{
+  "id": "20260803-073346-223-vault-tv-b25651d4",
+  "createdAt": "2026-08-03T11:33:46.2239952Z",
+  "createdAtLocal": "2026-08-03 07:33",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 07:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Drove the onn box over adb (paired, keyevents + screencap) to reproduce and root-cause every reported symptom. PLAYBACK: device can ping comet host but 'nc -w 15 100.67.25.118 5173' returns Timeout - TCP to that port is blocked from the TV while the PC reaches it fine (comet returns 200 in 3.5s, 7 streams, 6 cached). Tailscale ACL issue, not app code. Also fixed the app-side symptom: CometClient had no fetch timeout so the UI sat on 'Resolving' forever with nothing logged; added a 45s AbortController ceiling with an explicit error. SECURITY: my onConsoleMessage change was writing the Real-Debrid API key to logcat in cleartext (chromium prints full URLs and the comet base embeds a base64 config); added redactSecrets() over console + load-error logging. NAV: rail treated left/right as cycling a vertical menu and routed on every focus move; reworked to up/down walk the rail, right enters content, left at grid edge returns, navigation only on select. FOCUS: MediaGrid rendered the focus ring on card 0 before focus entered (cause of 'down twice'), now gated on gridFocused; .is-current shared the gold outline with :focus so two cursors appeared, now visually distinct. TEXT: canvas retuned 1920->1280 for a uniform 1.5x scale-up. 143 tests pass (5 new), tsc clean, assets staged.",
+  "commands": [
+    "adb pair/connect",
+    "adb shell input keyevent",
+    "adb exec-out screencap",
+    "adb shell nc -w 15 100.67.25.118 5173",
+    "npx vitest run"
+  ],
+  "files": [
+    "src/api/cometClient.ts",
+    "src/components/Shell.tsx",
+    "src/components/MediaGrid.tsx",
+    "src/styles/tv.css",
+    "index.html",
+    "android/app/src/main/java/app/vaultwares/tv/MainActivity.kt",
+    "tests/shell-navigation.test.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "b25651d4f42f64fa3da9663b24f9875aa7fc1e5988c969f31a14db08a3052c03",
+  "git": {
+    "repo": "vault-tv",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-tv",
+    "branch": "main",
+    "head": "5e3a319",
+    "hasChanges": true
+  }
+}

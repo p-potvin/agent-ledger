@@ -1,0 +1,46 @@
+{
+  "id": "20260801-191317-570-vault-cacophony-d43845b3",
+  "createdAt": "2026-08-01T23:13:17.5703321Z",
+  "createdAtLocal": "2026-08-01 19:13",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 19:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "Phone 1 (10.0.0.151) was receiving no sound because bus A2 does not transmit despite being configured identically to A3. Verified: Strip[4].A2=ON unmuted, Bus[1] mute=0 gain=0 mono=0 eq=0 mode.normal=1 - byte-identical parameters to A3 which works. Loopback probe measured A2 at 2/20966 packets carrying sound (0.01%) versus A3 at 11819/20815 (56.78%), while a simultaneous PyAudio capture showed strip 4 feeding B2 at 46% active - so the SAME strip drives B2 correctly and A2 not at all. No explanation found in the parameters; not pursued further. FIX per user suggestion: moved phone 1's VBAN source from A2 to B2, which carries the identical signal (it is the bus bridge B listens on) and provably works. VBAN sourcing a bus does not interfere with an app reading it. Made permanent in vm_apply_routing.py - plan now uses BUS_INDEX[B2] for phone1 with a comment recording the measurements. Final layout: out[0] Stream1 -> 10.0.0.151 from B2 (A voice), out[1] Stream1 -> 10.0.0.222 from A3 (B voice), headphones on A1 (both voices). ARP warmed for both after every change. Conversation healthy at 25 rounds each side with zero errors and distinct lines (mild topic lock onto SEO, which is small-model drift rather than echo - the echo signature is identical sentences at the same timestamp and that is absent). Note bus A2 remains unexplained and is now unused; if a third stream is ever needed, prefer B1 or A1 over A2.",
+  "commands": [
+    "python vm_apply_routing.py --vban --phone1 10.0.0.151 --phone2 10.0.0.222"
+  ],
+  "files": [
+    "D:/mini-omni/vm_apply_routing.py"
+  ],
+  "planPath": "",
+  "contentHash": "d43845b333bdd82856904a6144cf660ecae707b5dd3b43cf08cc5b6ca5202292",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

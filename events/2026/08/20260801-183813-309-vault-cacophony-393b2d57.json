@@ -1,0 +1,50 @@
+{
+  "id": "20260801-183813-309-vault-cacophony-393b2d57",
+  "createdAt": "2026-08-01T22:38:13.3097375Z",
+  "createdAtLocal": "2026-08-01 18:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 18:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "FIXED mini-omni2 S2S runaway generation in CrispASR. Chain of three defects, each verified: (1) MO2_EOA = 4096 sat one past the sampler range - mo2_sample_token was called with MO2_AUDIO_VOCAB = 4096 and loops i < vocab, so index 4096 was unreachable and end-of-audio could never be selected; text was unaffected because MO2_EOT 151936 is inside text_vocab_size 152000, exactly explaining why text stopped at 15 tokens while audio ran to the cap. Added MO2_AUDIO_SAMPLE_VOCAB = MO2_EOA + 1. (2) Naive fix then stopped at step 1, so added a step >= 7 guard - the 7 audio streams are layershifted and stream 6 is most delayed, making early EOA spurious. (3) THE ACTUAL FIX: -n/--max-new-tokens was silently ignored on the S2S path. mo2_generate_dual was called with a hardcoded 2048 at both call sites, and separately crispasr_backend_mini_omni2.cpp declared speech_to_speech(..., const whisper_params& /*params*/) with params explicitly unused, so mini_omni2_set_max_new_tokens was only ever called from transcribe(). Wired the setter into speech_to_speech and replaced both hardcoded 2048s with ctx->max_new_tokens. RESULT: -n now bounds S2S exactly - n 40 gives 40 steps / 3.41s audio in 1.9s wall clock, n 80 gives 80 steps / 6.83s in 2.3s. That is faster than realtime, versus the original 2048 steps / 175s. Step rate is 2048 samples = 85.3ms of audio per step at 24kHz. CORRECTION to an earlier claim in this project: I called the long output degenerate babble based on 1-second RMS windows, but at 100ms resolution frame-energy CV is 0.62-0.72 for both bounded and unbounded output, which is speech-like; the coarse",
+  "commands": [
+    "cmake --build build --target crispasr-cli",
+    "crispasr.exe --backend mini-omni2 -n 40 --s2s"
+  ],
+  "files": [
+    "CrispASR/src/mini_omni2.cpp",
+    "CrispASR/examples/cli/crispasr_backend_mini_omni2.cpp"
+  ],
+  "planPath": "",
+  "contentHash": "393b2d57aae6febcd651f2f91abe7fd38b6bc900fd4543d19c6574b1377d39d8",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

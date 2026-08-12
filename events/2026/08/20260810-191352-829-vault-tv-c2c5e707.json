@@ -1,0 +1,59 @@
+{
+  "id": "20260810-191352-829-vault-tv-c2c5e707",
+  "createdAt": "2026-08-10T23:13:52.8297216Z",
+  "createdAtLocal": "2026-08-10 19:13",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: change-localisation-add-iconography\r\nTools used (this reply): Read, Edit, Write, Bash, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-10 19:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Implemented rail pagination / infinite scroll. Added DtoRailFeed + DtoRailPaging so each home rail carries its own kind/feed/nextCursor instead of falling back to a generic popular list that would not match its heading; tmdbClient gained feedPath() for trending/popular/top_rated and a TMDB_MAX_PAGE=500 clamp; discover() threads feed through TvClient, CometTvClient and mockTvApi (mock now synthesises 3 pages so the append-and-stop path is exercised offline). MediaGrid gained onNearEnd/loadingMore - on a remote-driven TV 'reached the end' is a focus position in the last row, not a scroll offset. HomeScreen holds per-rail cursors, dedupes by canonicalId (TMDB pages overlap and duplicate React keys drop cards), guards re-entry synchronously via exhaustedRef so bouncing along the last row cannot fire concurrent requests, and keeps the rail usable if a page fails. 9 new tests; mutation-tested by removing the dedup filter and the re-entry guard, which correctly failed 2 tests (the missing guard caused a request loop). 194 pass. Note: 3 pre-existing failures in the in-flight qc-CA locale rename are unrelated (accent mismatch + normalizeLocale not mapping fr-*); also fixed a build-breaking incomplete rename (const frCA referenced as qcCA). Gradle succeeded this session and the APK built, but install needs an uninstall (debug signing key mismatch) so it was left to the user. Verified comet/real-debrid healthy: 6 of 7 sources cached with [RD] flag.",
+  "commands": [
+    "npx vitest run",
+    "gradlew.bat assembleDebug",
+    "curl comet stream endpoint"
+  ],
+  "files": [
+    "src/api/dto.ts",
+    "src/api/viewModels.ts",
+    "src/api/tmdbClient.ts",
+    "src/api/tvClient.ts",
+    "src/api/cometTvClient.ts",
+    "src/api/mockTvApi.ts",
+    "src/components/MediaGrid.tsx",
+    "src/features/home/HomeScreen.tsx",
+    "tests/pagination.test.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "c2c5e7077cebfe26f8a913d6b8dc7301f9967e36ddacb7e747f4e0901a2bd804",
+  "git": {
+    "repo": "vault-tv",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-tv",
+    "branch": "change-localisation-add-iconography",
+    "head": "8fe524d",
+    "hasChanges": true
+  }
+}

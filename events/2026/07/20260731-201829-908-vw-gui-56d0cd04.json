@@ -1,0 +1,50 @@
+{
+  "id": "20260731-201829-908-vw-gui-56d0cd04",
+  "createdAt": "2026-08-01T00:18:29.9087872Z",
+  "createdAtLocal": "2026-07-31 20:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-gui",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Read, Write, Edit, Bash, PowerShell, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-31 20:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Two-part checkpoint. (1) vaultwares-themes: added vaultsqware/ safe snapshot of the vaultwares-square palette (README, TOKENS, COMPONENTS, vaultsqware.css), commit 66c6638, pushed; deliberately not referenced by vw-gui so the local copy can be experimented on freely. (2) vw-gui commit 39d8b0f: quick layout fixes (title 19->26px, working directory collapsed to 2 lines, 1px category separators + margin between groups, console min-height 140->220px, params capped 28vh). Fonts packaged locally (184K, Quicksand + Victor Mono + Monofett, CSP tightened to font-src 'self'). Seam lighting replaces top-left corner wash - light source at the warm/console joint bleeding into both regions. Four accents added: coral seam, titlebar signal strip, 12-step category spine ramp, idle console PS caret. Monofett tried on pills per user suggestion and REJECTED as illegible below ~28px; reassigned to the empty-state wordmark at 84px. Fixed path-param heuristic that required word boundaries and missed all camelCase names (InputFile/OutputFile). Next: PTY rewrite (one persistent pwsh, everything runs in it).",
+  "commands": [
+    "node fonts/_fetch.js",
+    "git commit",
+    "git push",
+    "electron . --vwg-shot"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-themes\\vaultsqware\\vaultsqware.css",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\css\\vaultwares-square.css",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\css\\app.css",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\fonts\\fonts.css",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\js\\util.js"
+  ],
+  "planPath": "",
+  "contentHash": "56d0cd04155e83e534cde779580c47d7bafa0ed71bf0108359c1f8daca57929c",
+  "git": null
+}

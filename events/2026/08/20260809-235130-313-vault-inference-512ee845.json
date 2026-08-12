@@ -1,0 +1,55 @@
+{
+  "id": "20260809-235130-313-vault-inference-512ee845",
+  "createdAt": "2026-08-10T03:51:30.3137245Z",
+  "createdAtLocal": "2026-08-09 23:51",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-inference",
+  "kind": "code-change,documentation,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-inference  Branch: vw-codex-hf-telemetry\r\nTools used (this reply): Write, Edit, Read, Grep, PowerShell, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-09 23:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Read",
+      "Grep",
+      "PowerShell",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-inference",
+  "summary": "Implemented the two HF telemetry decisions that are expensive to retrofit. (1) PRIVACY: Spaces will post their own usage and most Spaces are PUBLIC, making a telemetry emitter an exfiltration path aimed at our own API carrying data from people who never consented. Built app/telemetry.py around a fixed ALLOWLIST rather than a denylist - a denylist fails open the moment a field is added. Never emitted from any surface: prompt/completion text OR ANY HASH of it (hashes still correlate users across records and short prompts brute-force trivially), end-user identifiers (IP, session id, HF username, visitor info), Space file paths/cwd (routinely embed usernames), and anything from the request body. Public surfaces get a narrower list still - no host/project/backend, which describe our internal estate. Flagged that the API MUST re-scrub on ingest because a Space posting key can leak and sender-side filtering trusts an uncontrolled client; recommended a write-only key scoped to kind=space. (2) RETROACTIVE SETTLEMENT: embedding cost is knowable only after a period, so rows are written provisional at 0 USD and corrected by an hourly pass rather than estimated - a guess would be indistinguishable from a real figure. Added cost_state column, provisional_rows(), and settle() which splits one settled total across covered rows to preserve per-project attribution and REFUSES to rewrite an already-settled row so the at-least-once drain cannot double-count. /v1/budget now reports provisional_rows so an incomplete total says so. Also agreed and documented: hourly rollup from the start, HF folds in as a third telemetry sibling to ai_sessions and input. Remaining open question: flush",
+  "commands": [
+    "python -m pytest tests -q",
+    "python -m ruff check .",
+    "git push"
+  ],
+  "files": [
+    "vault-inference/app/telemetry.py",
+    "vault-inference/app/budget.py",
+    "vault-inference/app/main.py",
+    "vault-inference/tests/test_api.py",
+    "vault-inference/docs/hf-telemetry-design.md"
+  ],
+  "planPath": "",
+  "contentHash": "512ee84521f42009e03d9a5586a7877e21bee3157c4658b039914e6b14d47937",
+  "git": {
+    "repo": "vault-inference",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-inference",
+    "branch": "vw-codex-hf-telemetry",
+    "head": "2a52d97",
+    "hasChanges": false
+  }
+}

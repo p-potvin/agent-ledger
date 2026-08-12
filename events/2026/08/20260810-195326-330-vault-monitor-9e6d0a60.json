@@ -1,0 +1,56 @@
+{
+  "id": "20260810-195326-330-vault-monitor-9e6d0a60",
+  "createdAt": "2026-08-10T23:53:26.3309385Z",
+  "createdAtLocal": "2026-08-10 19:53",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, Grep, TaskCreate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-10 19:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "TaskCreate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Model-run telemetry pipeline, 4 repos. NEW vaultwares_adk/telemetry (async worker: ModelRun ctx mgr + @instrument, bounded queue, daemon flusher, NVML/psutil probes, NDJSON spool matching agent-ledger drain contract, POST-first spool-on-failure); 24 tests green. NEW vaultwares-api ai_runs router+db+migration 004 (79 cols, BRIN+partial indexes, percentile summary/timeline/latency-histogram/errors/runs endpoints); 15 tests green. NEW vault-monitor /model-runs page + ai-runs feature (5 widgets, EN/QC i18n); tsc+build+tests green. Wired vault-inference via budget.record() chokepoint (app/run_telemetry.py); 28/28 green. IMPORTANT: found vault-inference/docs/hf-telemetry-design.md already specs this pipeline as hf-usage and BANS prompt hashes from any surface - removed default prompt hashing, added public-surface allowlist scrub at sender AND on API ingest, separate write-only Spaces key. Open: ai-runs vs hf-usage naming, hourly rollup, page placement.",
+  "commands": [
+    "python -m unittest tests.test_telemetry_runs",
+    "pytest tests/test_telemetry_ai_runs_router.py",
+    "npm run build",
+    "pytest tests"
+  ],
+  "files": [
+    "vaultwares-adk/vaultwares_adk/telemetry/*.py",
+    "vaultwares-api/app/routers/telemetry/ai_runs.py",
+    "vaultwares-api/migrations/telemetry/004_ai_runs.sql",
+    "vault-monitor/src/pages/ModelRunsPage.tsx",
+    "vault-inference/app/run_telemetry.py"
+  ],
+  "planPath": "",
+  "contentHash": "9e6d0a6029b847d210de36027660868fd3bb36028c466f6aa8009932c9020753",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "856661a",
+    "hasChanges": true
+  }
+}

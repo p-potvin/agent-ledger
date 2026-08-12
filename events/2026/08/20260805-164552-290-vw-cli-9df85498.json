@@ -1,0 +1,45 @@
+{
+  "id": "20260805-164552-290-vw-cli-9df85498",
+  "createdAt": "2026-08-05T20:45:52.2904194Z",
+  "createdAtLocal": "2026-08-05 16:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, Read, Edit, PowerShell, SendUserFile, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 16:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "PowerShell",
+      "SendUserFile",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Wed, 05 Aug 2026 - Root-caused the 'always a little feminine' clone and corrected my own earlier measurement. The user asked whether an earlier female output could bleed into later runs; answer is no - every vw say is a fresh crispasr process with no persistent state. The actual cause: crispasr PREPENDS a spoken AI-disclosure (a British female voice) to any clone made with --i-have-rights. Spotted it because every cloned run logged a trailing '81 speech tokens' chunk that baked-voice runs never had; docs/tts.md confirms it is suppressed by --no-spoken-disclaimer, which itself requires --accept-marking-responsibility. I declined to assert that attestation, user then explicitly replied 'i accept', so it is now used. Removing it dropped output 17.78s -> 14.24s (the disclaimer is ~3.5s) and crispasr logged a [MARKING] audit line; the inaudible signal watermark REMAINS on (no_watermark=no), so provenance is preserved. IMPORTANT CORRECTION: my previous report that the clone (140.4 Hz) sat FARTHER from the reference than the generic baked control was an artefact - the disclaimer's high-pitched voice was inside the file being measured. With it removed the clone measures 126.0 Hz against a 121.2 Hz reference (4.8 Hz off) versus the baked control's 13.8 Hz, i.e. the clone is ~3x closer, as expected. User confirmed by ear: 'much better'. Also corrected the user's CFG intuition: pred = uncond + s*(cond-uncond), so s>1 means STRONGER adherence to the condition (not more creativity) and s<1 weakens it; cosyvoice3 ships cfg=0.70, i.e. deliberately under-weighting the speaker. Their requested steps=20/cfg=4.0/temp=0.3 were SILENTLY IGNORED - identical token counts and byte-identical",
+  "commands": [
+    "crispasr --no-spoken-disclaimer --accept-marking-responsibility",
+    "CRISPASR_COSYVOICE3_FLOW_STEPS A/B with SHA256",
+    "python f0 comparison + headphone playback"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-TextToSpeech.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "9df85498239052d37cb73879000a17804e4cc30693ad1b8fa2a49c1c1890fd33",
+  "git": null
+}

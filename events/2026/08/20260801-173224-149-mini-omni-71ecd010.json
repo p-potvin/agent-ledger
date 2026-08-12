@@ -1,0 +1,52 @@
+{
+  "id": "20260801-173224-149-mini-omni-71ecd010",
+  "createdAt": "2026-08-01T21:32:24.1498921Z",
+  "createdAtLocal": "2026-08-01 17:32",
+  "timezone": "Eastern Standard Time",
+  "project": "mini-omni",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Read, Grep, WebSearch, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 17:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read",
+      "Grep",
+      "WebSearch",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "Optimized mini-omni memory. Key finding: the four KV-cache levers did not apply here - KV cache is only ~336MB of a 4.3GB instance. The real cost was precision: L.Fabric(devices=1, strategy='auto') defaults to 32-true so the whole GPT ran in fp32. Set precision via new MINIOMNI_PRECISION env var (default bf16-true) and cast audio_feature to the model dtype at the whisper->GPT boundary, plus mel to whisper's dtype. MEASURED: 4.3GB -> 2.87GB per instance (33% cut, ~2.9GB saved across two instances); output verified IDENTICAL to fp32 (55 chunks, 6.49s vs 6.485s, valid audio, first chunk 0.61s). Whisper fp16 attempted and REVERTED (MINIOMNI_WHISPER_HALF default 0): whisper's custom LayerNorm upcasts activations to fp32 while weights stay fp16 -> 'expected scalar type Float but found Half'. Also noted litgpt expands k/v to all 14 heads before caching (config is GQA with n_query_groups=2), so the cache is 7x larger than the architecture needs - ~288MB/instance available if the expansion is moved after the cache with SDPA enable_gqa (torch 2.8 supports it); NOT applied. vLLM confirmed inapplicable: mini-omni is a custom litgpt multi-codebook model with 8 parallel audio heads, no vLLM implementation exists. Fixed start_duo.bat --max-tokens 500->800 (500 was below the ~504-token encoding of a 10s capture, causing 500 errors); documented that input encodes ~50 tok/s and generation ~18 tok/s of speech. NEXT: user moving to CrispASR + GGUF quantized models, has a CUDA-not-found bug to fix.",
+  "commands": [
+    "python server.py --port 60818 --device cuda:0",
+    "nvidia-smi --query-gpu=memory.used"
+  ],
+  "files": [
+    "inference.py",
+    "start_duo.bat"
+  ],
+  "planPath": "",
+  "contentHash": "71ecd010b0905b6ed144344cf927b3ad99092a92dd306d1522e509a19971a505",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

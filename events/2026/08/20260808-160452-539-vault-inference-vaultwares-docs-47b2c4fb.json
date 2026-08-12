@@ -1,0 +1,56 @@
+{
+  "id": "20260808-160452-539-vault-inference-vaultwares-docs-47b2c4fb",
+  "createdAt": "2026-08-08T20:04:52.5396877Z",
+  "createdAtLocal": "2026-08-08 16:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-inference,vaultwares-docs",
+  "kind": "code-change,documentation",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-inference  Branch: main\r\nTools used (this reply): Write, Edit, Read, PowerShell, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-08 16:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Read",
+      "PowerShell",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-inference",
+  "summary": "Workflow policy update + HF guard gap fix. DOCS: rewrote GIT_BRANCH_POLICY.md and PR_POLICY.md to make branch+PR mandatory for all repos with user as reviewer, never push/merge to main, agent-ledger the sole exception (user reverting to PR workflow). Added HF no-loop rule to REQUEST_RATE_LIMITING.md: never loop/batch/poll/fan-out any HuggingFace request (Inference Providers, Spaces, ZeroGPU, Jobs, Hub API, hf CLI, or vault-inference gateway); retries need hard attempt caps. Added to AUTOMATION_POLICY.md: HF-touching scheduled tasks require explicit user approval BEFORE creation plus time constraint and per-run request cap. Documented daily allowance: ~2 USD/day inference credits (~10M output tokens at Coder-32B rates) plus 30 min/day of 96GB VRAM ZeroGPU (Gradio Spaces only, NOT reachable from this gateway). CODE FIX: bge-m3 has no published price AND feature-extraction returns no usage block, so embedding spend was invisible to BOTH guards (zero dollars, zero tokens) - a RAG job could index a corpus unmetered. Added local token estimate (~4 chars/token) in remote.embed; verified 16 tokens now register where 0 did before. CORRECTED user misreading: 38+24 tokens was ONE call, not 19 requests; actual total was 7 calls / 293 tokens / 0.0000173 USD. MEMORY: updated feedback_git_workflow, created feedback_hf_no_loops and project_vault_inference. 15/15 pytest pass, ruff clean.",
+  "commands": [
+    "python -m pytest tests -q",
+    "curl /v1/embeddings",
+    "curl /v1/budget"
+  ],
+  "files": [
+    "vaultwares-docs/instructions/summaries/GIT_BRANCH_POLICY.md",
+    "vaultwares-docs/instructions/summaries/PR_POLICY.md",
+    "vaultwares-docs/instructions/summaries/REQUEST_RATE_LIMITING.md",
+    "vaultwares-docs/instructions/summaries/AUTOMATION_POLICY.md",
+    "vault-inference/app/remote.py",
+    "vault-inference/AGENTS.md",
+    "vault-inference/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "47b2c4fb43c608a2238ee10c51a6d366e208e84b35a13e7d36d901699663eec6",
+  "git": {
+    "repo": "vault-inference",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-inference",
+    "branch": "main",
+    "head": null,
+    "hasChanges": true
+  }
+}

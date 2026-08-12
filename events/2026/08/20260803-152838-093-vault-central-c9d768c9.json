@@ -1,0 +1,56 @@
+{
+  "id": "20260803-152838-093-vault-central-c9d768c9",
+  "createdAt": "2026-08-03T19:28:38.0935844Z",
+  "createdAtLocal": "2026-08-03 15:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 15:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Mon, 03 Aug 2026 15:30 - v3.8.0 (commit 42694a9, pushed). (1) FIREFOX PREVIEW GEN: missing browser.offscreen was treated as failure and answered with a hidden iframe hosting processor.html; Firefox lacks the API because MV3 background scripts are an event page WITH a DOM. Extracted generation to src/lib/preview-generator.ts; new requestPreviewGeneration() runs in place when the context has a DOM and only delegates to the offscreen doc on Chrome. processor.ts is now just the offscreen endpoint. (2) FRAME COUNT 10 -> 60. Measured from the user's real backup at 426x240 WebP q0.5: ~4.5KB raw/frame, ~6.7KB as base64 data URL in the payload; observed 10-frame payloads 47-92KB. So 30 frames ~200KB, 60 frames ~400KB per video. unlimitedStorage is in the manifest so ceiling is free disk. (3) PLAYER: removed title bar + frosted strip (close survives as floating button); controls no longer fade while mouse moves - the fade timer was reset via React onMouseMove on the shell but the <video> fills it and sits above, so moves over the picture did not reliably reset; now capture-phase pointermove/pointerdown/wheel native listener, idle 1500->2600ms, never hides while pointer rests on controls; volume knob misalignment was 'writing-mode: bt-lr' (not a valid value) + '-webkit-appearance: slider-vertical' (never implemented in Firefox) so the control stayed horizontal in a 6x70 box - now writing-mode vertical-lr + direction rtl. (4) CARDS: corner buttons were p-1.5 around a 12px icon but the global 'button svg {display:inline-block}' rule made them inherit line-height and render taller than wide with the glyph off-centre; pinned to 24x24 flex-centred. Title underlined. (5)",
+  "commands": [
+    "npm run build",
+    "npx vitest run",
+    "npx tsc --noEmit",
+    "git push origin main"
+  ],
+  "files": [
+    "src/lib/preview-generator.ts",
+    "background/scripts/background.ts",
+    "src/components/VideoPlayer.tsx",
+    "src/components/PlayerControls.tsx",
+    "src/components/VideoGrid.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "c9d768c911b021ada09b26a5ce6b02ce8a99549c354bcc2a35990f60299c1dd1",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "42694a9",
+    "hasChanges": false
+  }
+}

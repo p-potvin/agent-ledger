@@ -1,0 +1,46 @@
+{
+  "id": "20260801-191716-186-vault-cacophony-552089f0",
+  "createdAt": "2026-08-01T23:17:16.1864483Z",
+  "createdAtLocal": "2026-08-01 19:17",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 19:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "USER DIAGNOSED THE UNDERLYING INSTABILITY: Voicemeeter's GUI holds its own cached state that is not aligned with changes made through VoicemeeterRemote, so driving routing via the API while the GUI is open behaves like two instances fighting. CONFIRMED with evidence - strip 3 was set to A1/A3/B1 by vm_apply_routing.py and minutes later the API reported A1/A2/A3/B1, having regained A2 with nothing running that touches Voicemeeter. This retrospectively explains: the self-echo that produced the \"chat chat chatbot\" loop (strips silently regaining B1/B2), bus A2 reporting ON while transmitting near-silence, and the pattern of every fix appearing to work then quietly reverting. It also means some of my earlier probe results characterised the API's cache rather than the real audio path, which is the likely reason A2's parameters read byte-identical to A3 while behaving nothing like it. RESOLUTION: GUI is now the single source of truth. User set Voicemeeter Input (strip 3, B speaks) = A1 A3 B1 and Voicemeeter AUX Input (strip 4, A speaks) = A1 A2 B2 by hand. vm_apply_routing.py must NOT be used again; only the read-only tools vm_state.py, test_cables.py and vban_loopback_probe.py. VERIFIED: all four test_cables.py checks pass - A->B 0.3188, B->A 0.3187, and both self-echo paths at exactly 0.0000. IMPORTANT TESTING NOTE discovered here: test_cables.py is only valid with the bridges STOPPED. Running it while they are live produced false leak readings of 0.0769 and 0.1389 because the tone test reads the bridges own audio on the same devices; stopping them dropped both to 0.0000. Bridges restarted afterwards with seed output5.wav and --max-utterance",
+  "commands": [
+    "python test_cables.py"
+  ],
+  "files": [
+    "D:/mini-omni/test_cables.py",
+    "D:/mini-omni/vm_apply_routing.py"
+  ],
+  "planPath": "",
+  "contentHash": "552089f0e398224938458b8e47b2ca030a433967f2cab0c78df56c3b3971ca1d",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

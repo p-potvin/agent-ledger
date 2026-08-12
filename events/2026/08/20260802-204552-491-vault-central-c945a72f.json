@@ -1,0 +1,55 @@
+{
+  "id": "20260802-204552-491-vault-central-c945a72f",
+  "createdAt": "2026-08-03T00:45:52.4918211Z",
+  "createdAtLocal": "2026-08-02 20:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-02 20:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Sun, 02 Aug 2026 20:45 - Diagnosed and fixed the broken preview storage/playback pipeline. Root cause: commit 82e4169 (06 Jun 2026) reverted the preview transport from Array.from(bytes) back to raw Uint8Array over browser.runtime.sendMessage. Runtime messages are JSON-serialized, so a Uint8Array arrives as a numeric-key object and new Uint8Array(obj) rebuilds as 0 bytes - corrupting BOTH preview.save (stored 0-byte records) and preview.get (returned 0-byte blobs). PreviewThumb then silently bailed on blob.size<100, so no preview ever rendered. Fix: base64 transport (blobB64) in vault-client savePreview/getPreview and the background preview.save/preview.get handlers, matching the existing base64 codec used for VaultMaterial. Also: background refuses to store empty payloads; runCapturePipeline no longer clears data.thumbnail before the preview is durably persisted and now falls through to regeneration when the write fails; PreviewThumb treats undersized blobs as a cache miss so retry/regeneration runs. Added src/lib/preview-transport.test.ts (6 tests) covering the wire boundary and round trip. Verified: vitest 13/13 pass, esbuild bundles background+processor clean, vite build clean. NOTE pre-existing blocker: npm run build fails at tsc because the vaultwares-themes submodule ships crypto-vault.js only (no .ts), so vault-runtime.ts type imports do not resolve. dist/ NOT rebuilt - fix is not live in the packaged extension until that is resolved.",
+  "commands": [
+    "npx vitest run",
+    "npx tsc --noEmit",
+    "npx esbuild background/scripts/background.ts --bundle",
+    "npx vite build --outDir <scratch>"
+  ],
+  "files": [
+    "src/lib/vault-client.ts",
+    "background/scripts/background.ts",
+    "src/components/PreviewThumb.tsx",
+    "src/lib/preview-transport.test.ts"
+  ],
+  "planPath": "",
+  "contentHash": "c945a72f97b205b960280a3dc3a185551f7ed9ca87e0a9f24c5be1e094e9779e",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "f041d49",
+    "hasChanges": true
+  }
+}

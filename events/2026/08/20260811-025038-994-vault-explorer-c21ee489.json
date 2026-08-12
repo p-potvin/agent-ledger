@@ -1,0 +1,55 @@
+{
+  "id": "20260811-025038-994-vault-explorer-c21ee489",
+  "createdAt": "2026-08-11T06:50:38.9947861Z",
+  "createdAtLocal": "2026-08-11 02:50",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): PowerShell, Read, Write, Edit, Grep, Glob\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-11 02:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Read",
+      "Write",
+      "Edit",
+      "Grep",
+      "Glob"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Merged vw-codex-subtitle-language-idle-silent into main and scrubbed BENCHMARKS.md (personal data) from all 237 commits with git-filter-repo; backup bundle kept, force-push still pending user approval. Split audio_normalize.py into four single-purpose scripts (enhance_audio, generate_subtitles, translate_video, enhance_video) over a portable python-scripts/vw_media/ package, so each context-menu action runs only its own pipeline instead of always running Demucs plus a full NVENC re-encode. Added .meta.json enhancement state tracking, per-action revert, and language-aware menu labels via new src/enhancements.js with one IPC channel per action. Added --output/--skip-existing/--print-state to every script. Removed Kokoro TTS dubbing code from vault-explorer and vw-cli (vault-streaming and vaultwares-media-processing were already clean); weights left on disk. Converted the parakeet .nemo to safetensors and load it on meta-initialised modules via accelerate init_empty_weights: 45.8s/+2699MB -> 6.5s/+85MB, all 725 tensors bit-identical.",
+  "commands": [
+    "git filter-repo --invert-paths --path BENCHMARKS.md --force",
+    "python tools/convert_nemo_to_safetensors.py",
+    "node tests/ai_paths_regression_test.js"
+  ],
+  "files": [
+    "python-scripts/vw_media/state.py",
+    "python-scripts/generate_subtitles.py",
+    "src/enhancements.js",
+    "vault_explorer/parakeet_wrapper.py",
+    "tools/convert_nemo_to_safetensors.py"
+  ],
+  "planPath": "",
+  "contentHash": "c21ee4893e1eaf7aeabdf0186391225cfee9f53e0d1588085e11d98ad38d9553",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "050377a",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20260803-200737-364-vw-cli-63bc0679",
+  "createdAt": "2026-08-04T00:07:37.3648473Z",
+  "createdAtLocal": "2026-08-03 20:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Bash, Read, Write, Edit, PowerShell, Grep, Monitor, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 20:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "PowerShell",
+      "Grep",
+      "Monitor",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Mon, 03 Aug 2026 20:15 - Ported subtitle generation to Parakeet-TDT and made vw-cli's Python env self-contained. (1) Stashed vault-streaming's uncommitted Nemotron shims (stash@{0}) reverting nemotron_wrapper.py + live_subtitles.py to commit 127a89c; silence_rms back to 0.006; unrelated UI edits left untouched. (2) Fixed vw-cli/utils/.venv: torch was 2.13.0+cpu on an RTX 3060 box and torchvision was absent, so NeMo hit 'operator torchvision::nms does not exist'. Root cause of a first repair attempt failing: uv treated torch==2.13.0 as satisfied by the +cpu build, so only torchvision installed. Fixed by pinning explicit local versions torch==2.13.0+cu126 and torchvision==0.28.0+cu126 from the cu126 index with --reinstall-package. CUDA now available. (3) New utils/parakeet_asr.py: self-contained Parakeet-TDT transcriber vendored from vault_streaming/parakeet_wrapper.py, with two fixes - torch.cuda.synchronize/empty_cache now guarded by is_available (previously crashed on CPU), and 60s chunk WAVs now go to a tempfile.mkdtemp instead of beside the source video. Model resolution restricted to the snapshots/*.nemo symlink because the blobs/ file has no extension. (4) Rewrote utils/generate_subtitles.py: removed every numpy/sys.modules/strict=False shim, dropped the RMS silence loop entirely, now extracts a 16kHz mono WAV via ffmpeg and segments on word gaps. Added --min-silence/--min-segment. (5) Start-SubtitleGeneration.ps1 now uses vw-cli's own utils/.venv, no longer vault-streaming's. (6) Added utils/requirements.txt pinning nemo_toolkit[asr]==2.5.0 with a comment explaining why Nemotron must not be swapped back in. VERIFIED end-to-end: built a 24.6s SAPI-TTS clip with 3 known sentences separated by 1.5s silence; model loaded on cuda in 60.6s, transcribed at 16.6x realtime, produced exactly 3 cues with zero word errors and boundaries landing in the gaps. Both ps1 files parse clean. Caveat: TTS audio is",
+  "commands": [
+    "git stash push -- vault_streaming/nemotron_wrapper.py python-scripts/live_subtitles.py",
+    "uv pip install --reinstall-package torch torch==2.13.0+cu126 torchvision==0.28.0+cu126 --index-url https://download.pytorch.org/whl/cu126",
+    "python generate_subtitles.py --target-dir <scratch> --extensions .mp4"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\parakeet_asr.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\generate_subtitles.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\requirements.txt",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-SubtitleGeneration.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "63bc0679c0f2028f652a8141ed231814d04fb19fca30730d01120fac1be69edb",
+  "git": null
+}

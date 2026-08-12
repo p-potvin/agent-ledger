@@ -1,0 +1,55 @@
+{
+  "id": "20260805-194247-962-vault-central-4adab42f",
+  "createdAt": "2026-08-05T23:42:47.9625675Z",
+  "createdAtLocal": "2026-08-05 19:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 19:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Wed, 05 Aug 2026 19:45 - v3.9.1 (commit e3fc248, pushed). (1) PREVIEW PLAYBACK: reverted DEFAULT_FRAME_COUNT 60 -> 10 and slowed the hover cadence 150ms -> 450ms (PREVIEW_FRAME_MS in PreviewThumb), giving a ~4.5s loop. Reasoning recorded in code: storage was never the constraint (60 frames ~400KB vs multi-GB quota); sample points minutes apart are distinct scenes not motion, so more frames only sped up the slideshow - fewer frames held longer read as a deliberate scrub. (2) STALE SWEEP unthrottled per user: removed STALE_SWEEP_GAP_MS (4s) and STALE_SWEEP_MAX_ITEMS (8). Still strictly SEQUENTIAL - concurrent refreshes would open N scraper windows at once. Documented in code that extraction is not yet invisible. (3) BRAND: header logo pointed at icons/vault-central-64.png which no longer exists (24/64/256 sizes were deleted when the set was trimmed to 16/32/48/128) - now vault-central-128.png; vaultwares.com -> vaultwares.ca; toolbar icon bumped one size per slot (16->nobg-32, 32->nobg-48, 48->nobg-128, 128->nobg-128). Verified tsc clean, vitest 49/49, build OK, manifest icons resolve, and header logo + .ca + 450ms cadence confirmed present in built output. IDEA NOT YET IMPLEMENTED, offered to user: doTabExtraction's isDirectVideo branch loads our OWN scraper-player.html in a window; since that is an extension page (no X-Frame-Options concern) it could run in the background page's DOM instead, making direct-video refreshes genuinely invisible. Site-page extraction cannot be hidden the same way because sites block framing.",
+  "commands": [
+    "npm run build",
+    "npx vitest run",
+    "npx tsc --noEmit",
+    "git push origin main"
+  ],
+  "files": [
+    "src/lib/preview-generator.ts",
+    "src/components/PreviewThumb.tsx",
+    "background/scripts/background.ts",
+    "src/lib/icons.tsx",
+    "manifest.json"
+  ],
+  "planPath": "",
+  "contentHash": "4adab42fb45d3bb4b50e1a8fbced7a5c28d6360280bbce54b616cf3216dc1279",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "e3fc248",
+    "hasChanges": false
+  }
+}

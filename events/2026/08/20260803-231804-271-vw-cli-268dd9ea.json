@@ -1,0 +1,50 @@
+{
+  "id": "20260803-231804-271-vw-cli-268dd9ea",
+  "createdAt": "2026-08-04T03:18:04.2712257Z",
+  "createdAtLocal": "2026-08-03 23:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, Read, Write, Edit, PowerShell, Grep, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 23:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "PowerShell",
+      "Grep",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Mon, 03 Aug 2026 23:25 - Built 'vw live-subs': live system-audio subtitles in a draggable on-screen overlay with tray control. Found existing pieces rather than writing from scratch: vaultwares-realtime has soundcard WASAPI loopback capture and a PySide6 overlay (frameless/translucent/draggable) but NO tray icon, and it is coupled to vault_themes.VaultThemeManager which I did not want to pull into vw-cli; vault-explorer/python-scripts/live_subtitles.py has the proven Parakeet rolling-buffer segmentation. Vendored the good parts into utils/live_subs_overlay.py (self-contained, no vault_themes dep) and added the missing QSystemTrayIcon. Architecture is 3 threads: AudioThread (soundcard loopback -> bounded queue, drops oldest block when ASR falls behind rather than stalling the audio callback), AsrWorker on its own QThread (rolling buffer, re-transcribe every 0.7s, emits partial/final via Qt signals - kept off the Qt thread so dragging and the tray menu never freeze during a pass), and the Qt main thread. Segmentation reuses the >=2-segments-means-the-older-ones-are-settled rule from vault-explorer, so no VAD and no silence-RMS tuning decides cue ends. Tray menu: start/stop, show/hide, text bigger/smaller, recenter, clear, status, quit. Tray icon is drawn in code (QPainter) so the app needs no asset files. Added ParakeetTranscriber.transcribe_array() for in-memory float32 buffers (the file-based path would cost a WAV round-trip per pass). Added Start-LiveSubtitles.ps1 (launches via pythonw.exe so no console window sits on top of the overlay) and registered 'live-subs' in vw-commands.ps1. Installed soundcard==0.4.6 and PySide6==6.11.1, both dry-run first; torch untouched. VERIFIED: transcribe_array on the known TTS clip returned 3 correct segments with correct timestamps; GUI smoke test confirmed frameless+always-on-top+Tool+translucent flags, tray available and visible, all 8 menu actions present, caption",
+  "commands": [
+    "uv pip install soundcard PySide6",
+    "python live_subs_overlay.py --list-devices",
+    "python -c GUI smoke test"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\live_subs_overlay.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\parakeet_asr.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-LiveSubtitles.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\vw-commands.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\requirements.txt"
+  ],
+  "planPath": "",
+  "contentHash": "268dd9eacb9a77bcfea75f0b885489f1610f77468fdfb0388e79c4bd07ed3d87",
+  "git": null
+}

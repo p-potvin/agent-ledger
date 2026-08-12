@@ -1,0 +1,54 @@
+{
+  "id": "20260803-082209-540-vaultwares-studio-9a7075b8",
+  "createdAt": "2026-08-03T12:22:09.5400134Z",
+  "createdAtLocal": "2026-08-03 08:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Edit, Write, Grep, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 08:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Sun 03 Aug 2026. DA3-Streaming PHASE 1 GREEN on local RTX 3060 for 0.00 USD. Ran 60 frames @ 504x154 chunk30/overlap15 loop_enable:False end-to-end: 3 chunks aligned and merged, 60 valid poses, 55,897-point coloured cloud. Took 5 attempts; every failure was a real integration blocker caught for free instead of on paid GPU. Findings: (1) da3_streaming/requirements.txt missing 7 packages (matplotlib, rich, scipy, scikit-learn, tqdm, trimesh, pyyaml) plus ~11 transitive for depth_anything_3 under --no-deps (huggingface_hub, opencv-python, imageio, omegaconf, plyfile, addict, pycolmap, moviepy+proglog+imageio_ffmpeg+decorator). (2) loop_utils/salad is a GIT SUBMODULE (serizba/salad) - shallow clone leaves it empty, vendoring needs --recurse-submodules. (3) NEITHER config flag guards its import: loop_enable:False does not avoid faiss (da3_streaming.py:34 imports LoopDetector at module scope) and align_lib:'torch' does not avoid triton (sim3utils.py:23 imports alignment_triton unconditionally). This DE-RISKS the container: faiss-cpu satisfies the import so faiss-gpu defers to phase 5, and the Linux image already has triton 2.1.0 via torch - only Windows needed a 4-decorator import shim. (4) e3nn silently upgraded torch 2.1.2+cu118 to 2.13.0+cpu killing CUDA - benchmark bug #2 recurring, all DA3 deps need --no-deps. TWO PLAN CHANGES: resolution - benchmark rows are KITTI-shaped (504x154=3.27:1, 504x378=4:3) but our footage is 16:9, so 504x378 would squash it; 504x280 is 1.80 aspect at 0.74x benchmark tokens and chunk 80 @ 504x280 = 0.99x benchmarked memory with 33pct more frames per window, so starting config moved to 80/40 @ 504x280, better than both the benchmark and the sketch. Filtering - streaming cloud max/p95 radius is 1.44x vs 416x for da3-draft, so depth_threshold + conf_threshold_coef already handle it and",
+  "commands": [
+    "da3_streaming.py --image_dir frames_smoke --config config_local.yaml",
+    "git submodule update --init --recursive",
+    "git push origin main"
+  ],
+  "files": [
+    "docs/plans/plan-da3-streaming-20260801.md",
+    "D:/3D Reconstruction/da3-streaming-run/config_local.yaml",
+    "D:/3D Reconstruction/da3-streaming-run/shims/triton/__init__.py"
+  ],
+  "planPath": "docs/plans/plan-da3-streaming-20260801.md",
+  "contentHash": "9a7075b888e5170ba7f84d65785466524f4ab4dd8cea4bb1db1dc045369e5815",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "b44744d",
+    "hasChanges": true
+  }
+}

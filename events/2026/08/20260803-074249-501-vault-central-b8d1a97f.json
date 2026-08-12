@@ -1,0 +1,55 @@
+{
+  "id": "20260803-074249-501-vault-central-b8d1a97f",
+  "createdAt": "2026-08-03T11:42:49.5013083Z",
+  "createdAtLocal": "2026-08-03 07:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 07:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Mon, 03 Aug 2026 07:45 - v3.6.1 (commit d3a3040, pushed). (1) HOVER PLAYBACK: removed the native segment-hop fallback that streamed the REMOTE video and seeked across the whole file (0/409/818/1227/1636s on a 34min video) every 2s - each seek a fresh HTTP range request. Missing previews now request generation immediately (dropped the 30s post-save gate). (2) BLANK PREVIEWS: found 8 of 11 previews in the user's own backup were ten identical 419-byte solid-black WebPs. Cause: capture waited for 'seeked' then drew immediately, but seeked precedes the decoder painting the frame, so drawImage yields black. Added waitForFramePaint (requestVideoFrameCallback, double-rAF fallback, both capped) plus isUniformCanvas detection that refuses to store an all-blank preview. (3) RESTORE WAS BROKEN: downloadFullVaultBackup writes daily backups but the only importer required Array.isArray(json), so every full backup was rejected with 'Backup must be a JSON array' and was unrestorable. Added restoreFullVaultBackup/restoreMetadataArray/restoreAnyBackup; videos merge by URL with local winning; vaultMaterial only restored when device has none. VERIFIED against the user's real file G:\\FirefoxDownloads\\vault-central-full-backup_2026-08-01_02-59-59.json: 14 videos, 11 previews, 236,444 bytes, 0 skipped, no warnings. 9 new tests. (4) BUILD SAFETY: the user's manifest switch to -nobg icons silently broke the copy glob; widened it and added scripts/verify-manifest-icons.cjs which fails the build if a manifest icon is missing from dist. (5) Sidebar spacing loosened. Verified tsc clean, vitest 28/28, build OK. ENCRYPTION BENCHMARK (measured, not estimated): Argon2id t=3 m=64MiB = 1648ms and is ~99pct of all crypto cost; ML-KEM-1024 keygen 9ms / encaps 2ms / decaps 2ms; ML-KEM-512 sub-1ms; AES-GCM 92KB encrypt 0.88ms, 20 decrypts 2.42ms total;",
+  "commands": [
+    "npm run build",
+    "npx vitest run",
+    "git push origin main"
+  ],
+  "files": [
+    "src/components/PreviewThumb.tsx",
+    "src/offscreen/processor.ts",
+    "src/lib/backup-vault.ts",
+    "src/lib/backup-restore.test.ts",
+    "scripts/verify-manifest-icons.cjs"
+  ],
+  "planPath": "",
+  "contentHash": "b8d1a97f33795edbf4d10cf313300558b29c50d39c1d61cccf548314d3e07f6e",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d3a3040",
+    "hasChanges": true
+  }
+}

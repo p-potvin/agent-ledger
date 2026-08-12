@@ -1,0 +1,49 @@
+{
+  "id": "20260730-132053-232-vault-tv-62854de1",
+  "createdAt": "2026-07-30T17:20:53.2327400Z",
+  "createdAtLocal": "2026-07-30 13:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: main\r\nTools used (this reply): PowerShell, Bash, Write, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-30 13:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Write",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Rebuilt web assets with real comet config via build-android.ps1 (staged to android/app/src/main/assets/web, comet host confirmed baked into bundle). APK build still blocked: root-caused Gradle's 'Unable to establish loopback connection' to java.nio.channels.Selector.open() failing with SocketException 'Invalid argument: connect' from sun.nio.ch.UnixDomainSockets.connect0 - AF_UNIX sockets are blocked for processes spawned from this shell, and Java's selector wakeup pipe requires one. Proved it is not the machine: plain-socket loopback, cross-process loopback, and NIO SocketChannel loopback all succeed; Selector.open() fails standalone regardless of java.io.tmpdir and with the legacy WindowsSelectorProvider forced. JAVA_HOME JBR 21 is correct and gradlew --version works. User must run assembleDebug in their own terminal. Confirmed onn box now on tailnet: ping to comet host 100.67.25.118 went from 100% loss to 0% loss.",
+  "commands": [
+    "pwsh -File scripts/build-android.ps1 -Configuration debug",
+    "gradlew.bat assembleDebug --stacktrace",
+    "adb shell ping -c 3 100.67.25.118"
+  ],
+  "files": [
+    "android/app/src/main/assets/web/index.html"
+  ],
+  "planPath": "",
+  "contentHash": "62854de11f1e2704b0766c6be88558b0bd49bea5607d18ac96f4653f8a49592c",
+  "git": {
+    "repo": "vault-tv",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-tv",
+    "branch": "main",
+    "head": "5e3a319",
+    "hasChanges": true
+  }
+}

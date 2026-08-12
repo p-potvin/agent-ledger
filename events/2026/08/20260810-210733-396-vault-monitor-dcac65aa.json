@@ -1,0 +1,55 @@
+{
+  "id": "20260810-210733-396-vault-monitor-dcac65aa",
+  "createdAt": "2026-08-11T01:07:33.3960947Z",
+  "createdAtLocal": "2026-08-10 21:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailscale to vps-ovhcloud)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, PowerShell, gh, ssh, curl, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-10 21:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailscale to vps-ovhcloud",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh",
+      "ssh",
+      "curl",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Shipped ai-runs pipeline to production. Merged PRs: vaultwares-api #80 (ai_runs + ai_run_rollups + settle), vaultwares-adk #22 (recorder v1.1.0), vault-monitor #8 (Model Runs tab v2.3.0). All required --admin: ruleset has require_code_owner_review and the code owner is the user; CodeQL/CodeRabbit/Devin all SUCCESS first. POST-DEPLOY INCIDENT: every ai-runs read endpoint 500'd. Cause: (\\ || ' days')::interval makes Postgres infer the param as TEXT, asyncpg rejected the int (DataError). Router tests mock the persistence layer so no real SQL was ever prepared. Fixed with make_interval(days => \\::int) in 3 places; PR #81 merged, deployed in ~30s, verified 200 live. Added SQL-construction tests (no concat interval, filters parameterised, unknown filter keys dropped, timeline bucket whitelisted). SECOND BUG found by live e2e: record_run without started_at wrote NULL, invisible to every time-windowed raw query while rollups still counted it - the two grains disagreed. Fixed in finalize() to derive started_at from ended_at minus duration_ms; adk PR #23 merged. VERIFIED LIVE: raw + rollup ingest both post 200, summary/timeline/runs/rollups all return correct data. Migrations 004+005 self-applied via ensure_schema. NOTE: 5 synthetic test rows now in prod tagged service=pipeline-smoke-test / poller-verify; one pre-fix comfyui row has NULL started_at.",
+  "commands": [
+    "gh pr merge 80 --merge --admin",
+    "gh pr merge 81 --merge --admin",
+    "gh pr merge 22/23 --merge --admin",
+    "ssh root@100.67.25.118 journalctl -u vaultwares-api",
+    "curl api.vaultwares.ca/api/telemetry/ai-runs/summary"
+  ],
+  "files": [
+    "vaultwares-api/app/routers/telemetry/ai_runs_db.py",
+    "vaultwares-api/app/routers/telemetry/ai_rollups_db.py",
+    "vaultwares-adk/vaultwares_adk/telemetry/record.py"
+  ],
+  "planPath": "",
+  "contentHash": "dcac65aaad4b59df6b3e5fcae5b1306b9fb5006b5a1a31d55071fd73186f8e90",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "59a4ade",
+    "hasChanges": false
+  }
+}

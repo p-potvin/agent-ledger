@@ -1,0 +1,43 @@
+{
+  "id": "20260801-200115-454-vault-cacophony-cd6f4d73",
+  "createdAt": "2026-08-02T00:01:15.4549274Z",
+  "createdAtLocal": "2026-08-01 20:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 20:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "User pointed out that the entire session ran over RDP and that they will use a local login next time. This is a significant confounder that was never considered: Windows redirects audio endpoints under a remote session, which can make local capture devices return silence and change which endpoints are usable. Updated HANDOFF.md accordingly - added trap #0 flagging RDP as a session-wide caveat, and rewrote trap #3 to mark the diagnosis as UNCONFIRMED. Trap #3 had attributed silent Voicemeeter Out A1/A2/A3 captures to those endpoints belonging to the dead Potato driver family, but RDP audio redirection explains the same symptom equally well and was never ruled out. Instruction added to re-test A-bus capture from a local login before trusting either explanation; if they read fine locally then trap #3 is an RDP artefact and part of the A2 troubleshooting was chasing a ghost. Practical consequence: on the next session, re-run bus measurements locally before acting on any of the A-bus conclusions from session 1. The VB-CABLE requirement itself is NOT affected by this - that was established by a sweep of playback devices reaching the A buses via Voicemeeter's own VBAN transmitter plus the fact that Voicemeeter refuses to list its own bus outputs as hardware inputs, neither of which depends on PyAudio capture.",
+  "commands": [],
+  "files": [
+    "D:/mini-omni/HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "cd6f4d731c0173d52d4b24a9487a2a3d0a17a36727619e90ba19dc9241eef7e5",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

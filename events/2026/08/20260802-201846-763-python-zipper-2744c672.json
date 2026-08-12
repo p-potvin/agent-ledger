@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260802-201846-763-python-zipper-2744c672",
+    "createdAt":  "2026-08-03T00:18:46.7633931Z",
+    "createdAtLocal":  "2026-08-02 20:18",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-zipper",
+    "kind":  "general",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-02 20:18 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "unknown",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+    "summary":  "Fixed single file zip fallback, downloads:start Referer headers, rclone completed browser download check, and ShellExecuteW folder reveal in Explorer",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "2744c672e67898d42737fa6bb0db160c5bbc76970a2d61043d1904dec64c7278",
+    "git":  {
+                "repo":  "python-zipper",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+                "branch":  "main",
+                "head":  "30b34d0",
+                "hasChanges":  true
+            }
+}

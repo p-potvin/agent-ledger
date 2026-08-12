@@ -1,0 +1,42 @@
+{
+  "id": "20260806-015017-858-vault-cacophony-ac2c43be",
+  "createdAt": "2026-08-06T05:50:17.8589731Z",
+  "createdAtLocal": "2026-08-06 01:50",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, PowerShell, SendUserFile\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 01:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "SendUserFile"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Wed, 05 Aug 2026 - Cloned from the user's new sample_suitcase.wav through the patched voice-dir path. Sample is the cleanest reference yet: 4.9s, loud/quiet ratio 67.4 dB versus LibriSpeech 43.5 and the film clip 8.5. No transcript supplied so Parakeet produced one - 'I don't know who left that suitcase, but I found out by morning' - written beside the sample as .autotranscript.txt and used as the voice-dir .txt sidecar. FIRST ATTEMPT 500'd. Server log showed my patch working correctly (it resolved bare name 'vic' to the full wav path and called synth_from_wav) but the failure was downstream in cosyvoice3: 'failed to bake runtime voice'. Root cause was the file format, not the patch: the sample is 192000 Hz PCM_24, while every working reference in the voice dir is 16000 Hz PCM_16. Resampled to 16 kHz mono PCM_16 and normalised, after which the clone succeeded (6.6s @ 24 kHz). WORTH NOTING FOR FUTURE SAMPLES: cosyvoice3's runtime voice baking rejects unusual sample rates / bit depths silently apart from that one log line, so references should be normalised to 16 kHz mono PCM_16 before being dropped in the voice dir - a normalisation step in the vw wrapper would prevent this class of failure. Also confirmed 4.9s is short but usable; cosyvoice3's own baked voices are 87-150 speech tokens (~3.5-6s). Playback now explicitly targets the headphones by name rather than the default device, since the machine's default output is currently Voicemeeter Input - user confirmed headphones are back on.",
+  "commands": [
+    "python parakeet transcription of sample_suitcase.wav",
+    "soundfile resample 192kHz PCM_24 -> 16kHz PCM_16",
+    "POST /v1/audio/speech voice=vic"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\samples\\sample_suitcase.wav"
+  ],
+  "planPath": "",
+  "contentHash": "ac2c43be8384cdf699ae3bbeb26c034c4db46f589d82fc013333bfbb970f6e8c",
+  "git": null
+}

@@ -1,0 +1,43 @@
+{
+  "id": "20260801-195929-756-vault-cacophony-b6cff606",
+  "createdAt": "2026-08-01T23:59:29.7560878Z",
+  "createdAtLocal": "2026-08-01 19:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 19:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "HANDOFF WRITTEN before user reboots to register VB-CABLE. Wrote D:/mini-omni/HANDOFF.md covering: post-reboot verification that CABLE Input/Output registered, the target Voicemeeter Banana GUI configuration (Stereo Input 1 = CABLE Output -> A1 A2 B2; Voicemeeter Input = B speaks -> A1 A3 B1; AUX strip empty), VBAN rows (both named Stream1, sr 44100 matching engine, A2 -> 10.0.0.151, A3 -> 10.0.0.222, ping after enabling), server and bridge start commands, and the key change that bridge A's --output-device becomes \"CABLE Input\" instead of the dead \"VoiceMeeter Aux Input\" loopback. ROOT CAUSE recap: Voicemeeter refuses to list its own bus outputs as hardware inputs (loop guard), so there is NO way to get the AUX loopback back into the mixer using only Voicemeeter devices - a sweep of all 14 virtual-input devices across both driver families found none reaching the A buses. VB-CABLE is genuinely required, not a workaround; its installer was already bundled at C:/Program Files (x86)/VB/Voicemeeter/VBCABLE_Setup_x64.exe. Handoff documents 7 hard-won traps: GUI-vs-API fighting (GUI is source of truth, vm_apply_routing.py must not be used); the AUX Input->Aux Output driver loopback bypassing the engine; Voicemeeter Out A1/A2/A3 capture devices being dead Potato-family so all PyAudio A-bus measurements are meaningless and only vban_loopback_probe.py reads them correctly; VBAN needing ARP warmed via ping or the receiver sees no stream at all; test_cables.py only valid with bridges stopped; crispasr.dll LNK1104 when a server holds it open; and trust ears over metrics for audio quality. Also documents the 5 uncommitted CrispASR fixes with confidence levels (4 solid, 1 speculative), CUDA 13.3 requirements including",
+  "commands": [],
+  "files": [
+    "D:/mini-omni/HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "b6cff606e64a3604caa0cb4e6daebae8d82b4f4f66eba59fcd7496a4f04caead",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20260801-185918-726-vault-cacophony-be425e57",
+  "createdAt": "2026-08-01T22:59:18.7262166Z",
+  "createdAtLocal": "2026-08-01 18:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Read, Grep, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 18:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read",
+      "Grep",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "mini-omni2 S2S audio is GIBBERISH and I did not fix it. Ruled out, each by measurement: (1) NOT time-reversed - server PCM is byte-identical to CLI WAV (cos +1.0000 forward, -0.0138 reversed), and envelope skew is POSITIVE (+0.0069) matching real speech (jfk.wav +0.0015), whereas reversed audio flips the sign. (2) NOT quantization - f16 (1.57GB) scores spectral flatness 0.2894 vs q4_k 0.2545, i.e. no better and marginally worse; real speech is 0.1223. (3) NOT the stream-to-codebook mapping - verified CrispASR matches the reference reconstruct_tensors exactly: c0<-stream0, c1<-streams1+4, c2<-streams2,3,5,6. (4) Delay alignment FIXED but did not help: reference reconscruct_snac does \"for i in range(7): output_list[i] = output_list[i][i+1:]\" to undo the layershift lag, which CrispASR omitted entirely (it read every stream at the same index). Implemented the per-stream i+1 offset - verified active (60 steps now yields 4.52s not 5.12s, exactly 7 steps trimmed) - but spectral flatness went 0.2545 -> 0.2610, unchanged. Root cause remains unfound; audio has a speech-shaped envelope (env-CV ~1.0 vs 1.18 for real speech) but roughly 2x too-flat spectrum. FOUR CHANGES NOW IN USER TREE (all uncommitted, CrispASR/src/mini_omni2.cpp + examples/cli/crispasr_backend_mini_omni2.cpp): two are SOLID and worth upstreaming - the MO2_EOA sampling-range off-by-one, and -n/--max-new-tokens never reaching the S2S path (hardcoded 2048 plus speech_to_speech declaring params unused); two are SPECULATIVE - the step>=7 EOA guard and the delay-offset deinterleave (the latter matches the reference so is likely correct regardless). Build gotcha: crispasr.dll cannot relink while servers hold it open (LNK1104) - stop all crispasr processes before rebuilding. RECOMMENDATION: the PyTorch mini-omni v1 duo remains the",
+  "commands": [
+    "cmake --build build --target crispasr-cli",
+    "crispasr.exe --backend mini-omni2 --s2s"
+  ],
+  "files": [
+    "CrispASR/src/mini_omni2.cpp",
+    "CrispASR/examples/cli/crispasr_backend_mini_omni2.cpp"
+  ],
+  "planPath": "",
+  "contentHash": "be425e571f463abdff28e61eed2058f82905f1aea86acf0431adedd68f385882",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

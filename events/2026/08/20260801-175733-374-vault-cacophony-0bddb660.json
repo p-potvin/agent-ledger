@@ -1,0 +1,52 @@
+{
+  "id": "20260801-175733-374-vault-cacophony-0bddb660",
+  "createdAt": "2026-08-01T21:57:33.3741174Z",
+  "createdAtLocal": "2026-08-01 17:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Grep, WebSearch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 17:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Grep",
+      "WebSearch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "FIXED CrispASR CUDA build. Root cause was a 3-year toolchain gap, not a small bug: CUDA 12.0 host_config.h rejects _MSC_VER >= 1940 while VS 2026 ships MSVC 14.51 (_MSC_VER 1951, cl 19.51.36248). Installed CUDA 13.3 via winget (Nvidia.CUDA 13.3) whose host_config.h allows 1920-1959, covering 1951. VERIFIED empirically before building: compiled AND ran a trivial sm_86 kernel against VS 2026 -> 'cuda ok'. Configure now reports: Found CUDAToolkit 13.3.73, CUDA compiler NVIDIA 13.3.73 with host compiler MSVC 19.51.36248.0, CMAKE_CUDA_ARCHITECTURES=86, Including CUDA backend, Configuring done. Build progressing through 844 targets compiling .cu objects. Secondary blocker 'No CUDA toolset found' (CUDA MSBuild .props absent from VS 2026, since CUDA 12.0's installer only knew VS 2017-2022) never needed fixing because build-windows.bat configures with -G Ninja, which invokes nvcc directly. Had to move the stale build/ dir aside (43 references to CUDA v12.0 in CMakeCache would have silently reused the old toolkit) -> renamed build.old-cuda12. Also had to pin CUDA_PATH and PATH to v13.3 since nvcc on PATH still resolved to v12.0 and CUDA_PATH was empty. VS 2022 BuildTools (installed earlier at user request) turned out UNNECESSARY - its MSVC 14.44 is _MSC_VER 1944, which CUDA 12.0 also rejects (caps at 1939); left installed as harmless fallback, instance still flagged isComplete=0 so vswhere skips it. Build harness notes: PowerShell Set-Location does not carry into cmd /c, and cmd mangles quoted paths containing spaces ('Github Repos') making build-windows.bat appear 'not recognized'; worked around by importing vcvars64 env into PowerShell and calling cmake directly.",
+  "commands": [
+    "winget install --id Nvidia.CUDA --version 13.3",
+    "nvcc -arch=sm_86 t.cu",
+    "cmake -G Ninja -B build -DGGML_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=86",
+    "cmake --build build --target crispasr-cli"
+  ],
+  "files": [
+    "CrispASR/build-windows.bat",
+    "CrispASR/docs/install.md"
+  ],
+  "planPath": "",
+  "contentHash": "0bddb6607398e353a9311a7c8544f5c4cac2b171089fd1b94921fac8ae768763",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

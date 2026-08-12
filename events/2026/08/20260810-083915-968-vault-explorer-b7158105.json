@@ -1,0 +1,72 @@
+{
+  "id": "20260810-083915-968-vault-explorer-b7158105",
+  "createdAt": "2026-08-10T12:39:15.9688299Z",
+  "createdAtLocal": "2026-08-10 08:39",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5.6 Luna XHigh Thinking Fast\r\nThinking: high\r\nMode: agent\r\nPermissions: autopilot (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): read, grep, find_file_by_name, edit, write, exec, todo_write, skill, ask_user_question, run_subagent\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-10 08:39 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5.6 Luna XHigh Thinking Fast",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows local",
+    "toolsUsed": [
+      "read",
+      "grep",
+      "find_file_by_name",
+      "edit",
+      "write",
+      "exec",
+      "todo_write",
+      "skill",
+      "ask_user_question",
+      "run_subagent"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Cleaned Explorer to local-only scope: added local SRT/VTT discovery with language ordering and pills, repaired AI live subtitles and MediaSource upscaling, fixed contextual AI enhancement paths, copied the console Settings layout, moved app language into Settings, removed the Others/provider surfaces and credentials, and gated idle previews on dev mode. Targeted tests and syntax checks passed; Electron GUI and packaging verification remain blocked by launch failure and a locked packaged DLL.",
+  "commands": [
+    "node tests/local_subtitles_test.js",
+    "node tests/ai_paths_regression_test.js",
+    "node tests/subtitle_asr_options_regression_test.js",
+    "node tests/explorer_cleanup_test.js",
+    "project JavaScript and Python syntax checks",
+    "npm run dist"
+  ],
+  "files": [
+    "src/ipc/subtitles.ipc.js",
+    "js/player/subtitles.js",
+    "js/player/upscale.js",
+    "js/player/player.js",
+    "src/ipc/media.ipc.js",
+    "src/scanner.js",
+    "index.html",
+    "index.css",
+    "js/settings/core.js",
+    "js/navigation/tabs.js",
+    "js/navigation/idle.js",
+    ".env",
+    ".env.example",
+    ".codex/subtitles-ai-cleanup/goal.md",
+    ".codex/subtitles-ai-cleanup/plan.md"
+  ],
+  "planPath": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer/.codex/subtitles-ai-cleanup/plan.md",
+  "contentHash": "b7158105420557d6549f7923a9102baa0d0fb7a61da9c1588c9a18527b492258",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "32fb2e8",
+    "hasChanges": true
+  }
+}

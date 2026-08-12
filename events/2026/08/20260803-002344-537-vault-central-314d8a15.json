@@ -1,0 +1,56 @@
+{
+  "id": "20260803-002344-537-vault-central-314d8a15",
+  "createdAt": "2026-08-03T04:23:44.5374367Z",
+  "createdAtLocal": "2026-08-03 00:23",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 00:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Mon, 03 Aug 2026 00:25 - v3.6.0 (commit 2a491b3, pushed). ROOT CAUSE FOUND for 'buttons/inputs unnecessarily large': tailwind.config.js had a spacing override remapping 0.5/1/1.5/2/3/4/5/6/8 to 4/8/12/16/24/32/40/48/64px for an '8px grid', but Tailwind's default IS a 4px grid, so every padding/margin/gap in the app was doubled. It also only covered some keys - the Master PIN toggle was w-9 h-5, where w-9 fell through to default 36px while h-5 remapped to 40px, rendering the 36x40 circle the user complained about. Removed the override; density and the toggle fix globally. Sidebar: proper horizontal switch with pinned px geometry, sync button now solid accentHover fill when enabled (darker than the .vault-btn hover tint), counts on one row, width 256->224, tighter sections. Header: search + scope select share a fixed 32px row. Collapse bar 32px->7px with 3px grip. Settings dialog density pass; backup row buttons no longer wrap labels. PIN MASKING: no 'hidden' input type exists in HTML; type=password makes Firefox/Chrome render a reveal-password eye in every box, and -webkit-text-security does nothing in Firefox. Added src/lib/pin-mask.ts - plain text inputs rendering a bullet with the real digit in React state, password managers opted out - applied to PinSetupDialog, LockedBanner and pin-entry. Fixed Dashboard.test.tsx asserting literal w-64 instead of visible/collapsed state. Verified tsc clean, vitest 19/19, build succeeds. NOT YET DONE: user wanted a fuller layout revamp (goal: visualize favourite videos grouped by hostname, which already works); this pass was density + the specific defects. VideoGrid/VideoPlayer untouched. Encryption review still pending at user's request until after cosmetic testing.",
+  "commands": [
+    "npm run build",
+    "npx vitest run",
+    "npx tsc --noEmit",
+    "git push origin main"
+  ],
+  "files": [
+    "tailwind.config.js",
+    "src/components/DashboardSidebar.tsx",
+    "src/lib/pin-mask.ts",
+    "src/components/VaultDashboard.tsx",
+    "src/components/SettingsDialog.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "314d8a1592c2b0ef9b3579588b78d53c99604fabf40a3bac303c93911449f01a",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "2a491b3",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "20260801-074847-403-shared-tube-5f4921dd",
+  "createdAt": "2026-08-01T11:48:47.4037942Z",
+  "createdAtLocal": "2026-08-01 07:48",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): read_file, grep_search, edit, run_command, ssh, git\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 07:48 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "read_file",
+      "grep_search",
+      "edit",
+      "run_command",
+      "ssh",
+      "git"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Restored OVH dispatch in deploy-shared-tube.sh with --sync-only flag. After greencloud builds + restarts apps, it now SSHes to OVH (100.67.25.118) to sync the repo + run pnpm install (no build, no systemd restart). This ensures the fetcher CLI code stays in sync on OVH where vaultwares-api invokes it. Verified end-to-end: webhookd triggered deploy, greencloud built + restarted, OVH received sync-only dispatch, repo at 53cbbdd with correct pornstars field.",
+  "commands": [],
+  "files": [
+    "scripts/deploy-shared-tube.sh"
+  ],
+  "planPath": "",
+  "contentHash": "5f4921dde11874ed63a935ace8a803ba11ddd79b57d7ff60375d7f2bc4702335",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "53cbbdd",
+    "hasChanges": false
+  }
+}

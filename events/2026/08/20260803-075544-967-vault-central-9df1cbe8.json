@@ -1,0 +1,56 @@
+{
+  "id": "20260803-075544-967-vault-central-9df1cbe8",
+  "createdAt": "2026-08-03T11:55:44.9675498Z",
+  "createdAtLocal": "2026-08-03 07:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 07:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Mon, 03 Aug 2026 07:55 - v3.7.0 (commit 97ff7f4, pushed). Implemented the two crypto items flagged in the review. (1) ARGON2ID OFF-THREAD: deriveKek returned Promise.resolve(argon2id(...)) with a comment claiming it kept callers off the event loop - it does not, Promise.resolve wraps an already-computed value, so the full ~1.6s derivation stalled the background worker that also serves preview.get/capture/vault messages. crypto-vault now exposes a swappable KdfRunner via setKdfRunner (validates returned key length and passes options through untouched so a runner cannot silently weaken the KDF); src/lib/argon-worker.ts computes it in a Worker, src/lib/argon-kdf-host.ts installs it. IMPORTANT CONSTRAINT: Worker is NOT exposed in Chrome MV3 service workers (only Firefox's event page), so the host probes typeof Worker and falls back to inline derivation - fallback is exactly the previous behaviour. New esbuild step emits dist/argon-worker.js. Argon2 params UNCHANGED (t=3 m=64MiB) - that cost is the only defense for a 4-digit PIN. (2) ENCRYPT WHILE LOCKED: wrapping the per-blob DEK only ever needed the ML-KEM public key, which is already stored in cleartext in VaultMaterial. Added encryptBlobWithPublicKey; encryptBlobWithUnlocked delegates to it for KEM modes so both paths emit identical envelopes. savePreviewBlob now accepts writes while locked (stored encrypted, unreadable until next unlock) instead of throwing - this removes the locked-vault preview-loss path patched earlier in v3.4.4. aes-only vaults still require unlock (no asymmetric key). 6 new tests in src/lib/crypto-vault-locked.test.ts. Verified tsc clean, vitest 34/34, build OK. User will test.",
+  "commands": [
+    "npm run build",
+    "npx vitest run",
+    "npx tsc --noEmit",
+    "git push origin main"
+  ],
+  "files": [
+    "src/lib/crypto-vault.ts",
+    "src/lib/argon-worker.ts",
+    "src/lib/argon-kdf-host.ts",
+    "src/lib/vault-runtime.ts",
+    "src/lib/crypto-vault-locked.test.ts"
+  ],
+  "planPath": "",
+  "contentHash": "9df1cbe89f333bfa5c13821a924dc942e0250abfe8a74d1d464c14ea67edf1fd",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "97ff7f4",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "20260810-015449-383-vault-central-605f4dd8",
+  "createdAt": "2026-08-10T05:54:49.3835341Z",
+  "createdAtLocal": "2026-08-10 01:54",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-10 01:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Mon, 10 Aug 2026 01:55 - v3.11.0 (commit 68c19e6, pushed). Design pass on the main grid container (VideoGrid + main window), the last untouched surface. Diagnosis: the problem was hierarchy, not layout - the loudest elements carried the least meaning. Changes: (1) removed the '#N' chip, which numbered position on the CURRENT PAGE so it changed as you paged and meant nothing outside it, yet rendered as a filled high-contrast block atop every card; in Details view it was a literal 'V-ID' placeholder. (2) Demoted 'OPEN' from a filled accent button to a quiet text link that gains colour on hover - the thumbnail already opens the item, so the secondary route was styled as the primary CTA, giving five saturated gold blocks per row competing with the previews; also added stopPropagation so it does not bubble into the card. (3) Dropped the per-card domain line when groupBy === 'Hostname' (new groupBy prop threaded from VaultDashboard) since every card repeated what the section header states. (4) Section header now reads as a band: hostname + count + hairline rule running across to the pagination. (5) Section rhythm space-y-10 -> space-y-8. (6) Empty state rewritten - 'No encrypted items found / Try scanning a new target domain' read like a security console; now distinguishes empty vault from empty search and surfaces the Alt+X capture shortcut. NO colour changes, same tokens (user's standing rule). Verified tsc clean, vitest 54/54, build OK. Dashboard.test.tsx only asserts h3 titles so removing the domain line was safe.",
+  "commands": [
+    "npm run build",
+    "npx vitest run",
+    "npx tsc --noEmit",
+    "git push origin main"
+  ],
+  "files": [
+    "src/components/VideoGrid.tsx",
+    "src/components/VaultDashboard.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "605f4dd83c2789336917155c89bdb86726ee71bdcf20439811e739b212ccb71d",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "68c19e6",
+    "hasChanges": false
+  }
+}

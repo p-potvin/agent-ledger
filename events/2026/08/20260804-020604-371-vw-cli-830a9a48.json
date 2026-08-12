@@ -1,0 +1,43 @@
+{
+  "id": "20260804-020604-371-vw-cli-830a9a48",
+  "createdAt": "2026-08-04T06:06:04.3718169Z",
+  "createdAtLocal": "2026-08-04 02:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, Read, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-04 02:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Tue, 04 Aug 2026 01:10 - Fixed both live-subs overlay usability bugs reported after the user's first real run. Root cause of BOTH was the same: the window auto-sized to its content. (1) Clipping: QMainWindow.adjustSize() asks a word-wrapped QLabel for a sizeHint, but such a label cannot report true height without being given a width first, so tall multi-line cues were cut off. Now _relayout() sets a fixed label width and asks heightForWidth() explicitly. (2) Wandering centre: because width tracked content, every cue of a different length shifted the text's visual centre and the user had to keep repositioning. Width is now FIXED (--width, default 0.72 of screen) and the window is anchored by the centre of its BOTTOM edge, so captions grow upward instead of drifting; the anchor is re-captured on drag release so it grows from wherever it was dropped. Caught a third bug via the regression test that manual testing would likely have missed: setFixedHeight makes heightForWidth() report the pinned value on later passes, so the box could only ever GROW - a single long cue left a permanently oversized empty box. Fixed by releasing min/max height before each measurement. Added tray Box wider/narrower actions, -Width parameter on Start-LiveSubtitles.ps1 and in vw-commands.ps1. VERIFIED by automated layout test: centre x stable at 768 across short/long/short cues, bottom edge stable at 735, box grows upward (top 664->628), shrinks back (h 72->108->72), zero clipping at every step, and width nudge preserves the centre. Both ps1 parse clean. NOT FIXED (user said not representative): Parakeet-TDT v3 is",
+  "commands": [
+    "python -c overlay layout regression test"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\live_subs_overlay.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-LiveSubtitles.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "830a9a48ef45c20ea67ae8034be564282fedd53d99b0c1c8b8e39073c6048d77",
+  "git": null
+}

@@ -1,0 +1,52 @@
+{
+  "id": "20260801-185323-414-vault-cacophony-db96a849",
+  "createdAt": "2026-08-01T22:53:23.4149172Z",
+  "createdAtLocal": "2026-08-01 18:53",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 18:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "DUO RUNNING on crispasr + mini-omni2 over the Voicemeeter Banana / VBAN routing. Two crispasr --server instances (ports 60808/60809, --backend mini-omni2 -m auto --gpu-backend cuda -n 40) plus vbcable_bridge.py extended with a new --api-mode crispasr that POSTs multipart to /v1/audio/speech-to-speech and reads reply text from the X-Transcript header; response_format=pcm returns int16 LE which is already the bridge wire format so no WAV parsing. Added _send_and_play_crispasr and factored playback into _play_pcm. RESULTS: 6 replies each side, ZERO errors, ZERO silence timeouts, readable conversation transcripts for the first time. Reply audio 2.05-3.41s generated in 1.1-1.6s = faster than realtime, versus 18-22s replies taking ~30s on the PyTorch pair. VRAM 2.4GB for both model instances (4528 MiB during activity) versus 5.7GB PyTorch, GPU at 100%. Server honours the -n fix made earlier, confirming it carries through the server path not just CLI. GOTCHAS FOUND: --no-watermark refuses to start without --accept-marking-responsibility (an operator attestation about AI-content marking - did NOT accept on user's behalf, dropped the flag instead, watermark is inaudible). Voicemeeter had been closed so routing was lost (config still never saved to disk); restarted it and reapplied. Voicemeeter defaults left hardware strip 0 capturing 'VoiceMeeter Output (2-)' which IS bus B1 (B's voice) and routed it to A2/A3, which would leak B into phone 1 that should carry A only - vm_apply_routing.py TARGET now forces A2/A3 off on all three hardware strips. Fixed vm_state.py calling VBVMR_GetVoicemeeterType without a pointer (was returning 0/-2 garbage). All four test_cables.py checks pass including both anti-echo. REMAINING: conversation content is incoherent (small model",
+  "commands": [
+    "crispasr.exe --server --port 60808 --backend mini-omni2 -n 40",
+    "python vbcable_bridge.py --api-mode crispasr",
+    "python vm_apply_routing.py"
+  ],
+  "files": [
+    "D:/mini-omni/vbcable_bridge.py",
+    "D:/mini-omni/vm_apply_routing.py",
+    "D:/mini-omni/vm_state.py"
+  ],
+  "planPath": "",
+  "contentHash": "db96a84924bb1413e0f412c7fcc7dff2dc67e6ac4b5f01fe5c2cd05278af2f9f",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

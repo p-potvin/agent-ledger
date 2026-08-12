@@ -1,0 +1,53 @@
+{
+  "id": "20260806-015834-844-vaultwares-api-cab062ee",
+  "createdAt": "2026-08-06T05:58:34.8442104Z",
+  "createdAtLocal": "2026-08-06 01:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + greencloud/OVH tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): PowerShell, Bash, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 01:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + greencloud/OVH tailnet",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+  "summary": "Shipped AI Stats tab and worked dependabot across both repos. vault-monitor 2.1.17->2.2.0 (b8cb0be, tab) then 2.2.1 (d4ff39a, deps); deployed, <!-- v2.2.0 --> live at /var/www/monitor.vaultwares.ca, checkout at b8cb0be. vaultwares-api 0.1.28->0.1.29 (4c7b683) ->0.1.30 (70d0aa7). DEPENDABOT: vault-monitor 4->1 alerts. brace-expansion 2.1.1->2.1.4 via npm override (transitive 6 deep under vite-plugin-html->ejs->jake->filelist->minimatch; no parent release carries the fix). Deliberately did NOT upgrade react-router: advisory GHSA-qwww-vcr4-c8h2 is CVSS 0 and RSC-mode only; app is a client-only BrowserRouter SPA with no RSC/server/loaders/actions so the code path does not exist. Dependabot proposes 8.3.0 (major), npm audit fix --force proposes a DOWNGRADE to 7.11.0 - both real risk for an inapplicable finding. vaultwares-api 32->11 alerts: npm audit fix cleared fast-uri (->3.1.5), hono, @hono/node-server = 0 npm vulns; Pillow 12.2.0->12.3.0 cleared all 13 pillow alerts; raised vulnerable FLOORS in requirements.txt (transformers >=4.40.0->>=5.5.0 though 5.12.0 was already installed, Pillow >=10->>=12.3.0, gradio unpinned->>=6.15.1); setuptools 81->83 in venv. Rescan then revealed a SECOND manifest coordination/setup/requirements.txt with exact CUDA pins - patched transformers ==5.3.0->==5.5.0 (cvss 8.0 RCE) and gradio ==6.15.0->==6.15.1. LEFT: torch 2.12.1 (cvss 5.3 low; torchvision/torchaudio pinned +cu124 to matching build, needs GPU box to verify), setuptools in uv.lock (transitive constraint pins 81.0.0), postcss x6 (all inside vaultwares-themes submodule, not this repo). NOTE: two transient 502s seen mid-deploy are the OVH restart window, not breakage - vaultwares-api runs on OVH 100.67.25.118, greencloud only dispatches; there is no vaultwares-api.service on greencloud. Also greencloud reports 'System clock synchronized: no / NTP service: n/a'.",
+  "commands": [
+    "npm audit fix",
+    "uv pip install Pillow>=12.3.0 setuptools>=83.0.0",
+    "uv lock --upgrade-package pillow",
+    "git push origin main x4"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor\\package.json",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\requirements.txt",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\coordination\\setup\\requirements.txt",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api\\uv.lock"
+  ],
+  "planPath": "",
+  "contentHash": "cab062eec79993ca47b8ef10e8597034fca0d6895ce29dc105729afb178a9252",
+  "git": {
+    "repo": "vaultwares-api",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+    "branch": "main",
+    "head": "70d0aa7",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "20260801-200519-233-vault-cacophony-1dc589d3",
+  "createdAt": "2026-08-02T00:05:19.2331792Z",
+  "createdAtLocal": "2026-08-01 20:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Read, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 20:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "MAJOR FINDING - the audio drivers are corrupted, which explains the entire session's inconsistency. User ran VB-Audio Devices Checker (output at C:/Users/Administrator/Desktop/VB_DEVICE_CHECK.txt, 2026/08/02 00:02). It reports 6 ERRORS on VB-Audio VoiceMeeter VAIO version 02010502 - \"Bad Pin Name: VoiceMeeter Output (2- VB-Audio\", \"Bad Pin Name: VoiceMeeter Input (2- VB-Audio\", plus Bad Driver Name on both WDM input and output - and concludes \"6 error detected (You may consider re-installing audio drivers)\". THREE VB VAIO packages are installed and colliding: VBAudioVMVAIO 02010502 (Banana virtual input 1 + bus B1, BROKEN), VBAudioVMAUXVAIO 02010502 (Banana virtual input 2 + bus B2, clean), and VBVoicemeeterVAIO 03040107 (Potato - provides Voicemeeter Input, Voicemeeter In 1-5, Voicemeeter Out A1-A5/B1-B3, engine NOT running). The \"(2- \" prefix we kept working around is NOT cosmetic - the checker flags it as a bad pin name caused by a device-name collision between the Banana and Potato packages. THIS INVALIDATES most of session 1's device conclusions: bridge B was writing to \"Voicemeeter Input (VB-Audio Voicemeeter VAIO)\" which is a POTATO device, not Banana's; and Voicemeeter Out A1/A2/A3 are Potato devices, which is the real reason they read silent - neither my \"dead Potato-family\" guess nor the RDP theory was the actual mechanism, though both were plausible. My error was treating the two-driver-family observation as a naming quirk to work around empirically rather than recognising it as a broken install needing repair. HANDOFF.md updated with a new section 0 instructing: uninstall ALL VB drivers (Voicemeeter any edition + VB-CABLE), reboot, verify clean with the checker, install ONLY",
+  "commands": [],
+  "files": [
+    "D:/mini-omni/HANDOFF.md",
+    "C:/Users/Administrator/Desktop/VB_DEVICE_CHECK.txt"
+  ],
+  "planPath": "",
+  "contentHash": "1dc589d3e5e134462747ec93d416d2b6b136202af98de43f333516763b8a5a28",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

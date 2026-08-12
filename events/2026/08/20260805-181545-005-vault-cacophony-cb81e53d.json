@@ -1,0 +1,45 @@
+{
+  "id": "20260805-181545-005-vault-cacophony-cb81e53d",
+  "createdAt": "2026-08-05T22:15:45.0050629Z",
+  "createdAtLocal": "2026-08-05 18:15",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: plan\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Bash, Read, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 18:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "plan",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Wed, 05 Aug 2026 - Traced the cosyvoice3 server voice-cloning gap to source. Two failures, both now fully explained and NEITHER is a C API bug. (a) Full wav path over HTTP returns 400 because crispasr_server.cpp:2244 has a deliberate path-traversal guard rejecting '..', leading '/' or '~', NUL and BACKSLASHES - a Windows absolute path is all backslashes, so it is correctly refused. Working as designed. (b) Bare name returns 500 because the cosyvoice3 backend adapter never implements bare-name resolution against --voice-dir. Confirmed by counting voice_dir references per adapter: qwen3_tts 4, tada 3, vibevoice 3, pocket_tts 2, cosyvoice3 ZERO. The server comment at crispasr_server.cpp:2231 states rp.tts_voice_dir is carried 'for adapters that want to do bare-name resolution' - cosyvoice3 simply is not one of them. Downstream is already correct: crispasr_c_api.cpp:8286 checks is_wav on s->cosyvoice3_voice and routes to cosyvoice3_tts_synth_from_wav with s->cosyvoice3_ref_text, and cosyvoice3_tts.cpp exposes both cosyvoice3_tts_synth (bank only, via cv3_find_voice) and cosyvoice3_tts_synth_from_wav (the clone path the CLI uses). PROPOSED FIX (~15 lines, mirroring crispasr_backend_qwen3_tts.cpp): in examples/cli/crispasr_backend_cosyvoice3.cpp, when params.tts_voice is not a baked bank name and params.tts_voice_dir is set, resolve <dir>/<name>.wav and read <dir>/<name>.txt into tts_ref_text. BUILD ASSESSMENT: Ninja + MSVC 14.51 + Release + GGML_CUDA=ON, build dir configured, cmake present. BLOCKER FLAGGED TO USER, NOT ACTED ON: the CrispASR working tree has UNCOMMITTED modifications to examples/cli/crispasr_backend_mini_omni2.cpp and src/mini_omni2.cpp (plus bindings/javascript/package.json). Any rebuild would compile that in-progress mini_omni2 work too, so a failure could be misattributed to my change, and the rebuild would also replace a currently-working crispasr.exe. Awaiting user decision before editing or building their repo.",
+  "commands": [
+    "grep voice_dir per backend adapter",
+    "read crispasr_server.cpp path-traversal guard",
+    "inspect build/CMakeCache.txt"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR\\examples\\cli\\crispasr_backend_cosyvoice3.cpp",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR\\examples\\cli\\crispasr_server.cpp",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR\\src\\crispasr_c_api.cpp"
+  ],
+  "planPath": "",
+  "contentHash": "cb81e53d9ba875ed5d34e346e51b077c60313349d72dff75ec5845a7de8f5ba1",
+  "git": null
+}

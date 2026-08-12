@@ -1,0 +1,56 @@
+{
+  "id": "20260809-095903-336-vault-inference-09cef119",
+  "createdAt": "2026-08-09T13:59:03.3368895Z",
+  "createdAtLocal": "2026-08-09 09:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-inference",
+  "kind": "code-change,documentation,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-inference  Branch: vw-codex-hf-telemetry\r\nTools used (this reply): Write, Edit, Read, Grep, PowerShell, Bash, TaskStop\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-09 09:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Read",
+      "Grep",
+      "PowerShell",
+      "Bash",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-inference",
+  "summary": "Designed HF telemetry for vault-monitor AI section (user confirmed read-only via vaultwares-api, same boundary as existing views) and captured the telemetry substrate. KEY DISCOVERY: the router discloses far more than the response body suggests - header x-inference-provider names the provider that ACTUALLY served the request, so cost is now priced from that provider's real rate instead of assuming the most expensive live one; rows carry priced_exactly to distinguish exact from worst-case. Also captured: provider_ms and queue_ms from x-api-call-start/end/x-api-received, X-Request-ID (dedupe key for idempotent ingest), finish_reason (truncation rate), usage.cached_tokens (cache hit rate). Gateway overhead now derivable as latency_ms minus provider_ms - measured live at 535ms wall clock vs 169ms provider time, so two thirds was not the model. RESOLVED THE OPEN DB QUESTION WITHOUT A NEW DECISION: vaultwares-api already owns telemetry DB writes in two production routers (ai_sessions.py, input.py) with POST /api/telemetry/{domain}/batches + x-api-key ingest and unauthenticated GET reads; HF telemetry should be a third sibling. Spool contract matches agent-ledger/scripts/drain-spool.ps1 exactly - the existing *.jsonl to *.jsonl.sent rename IS the current/historical separation the user asked for, no new mechanism needed. Wrote docs/hf-telemetry-design.md with full KPI catalogue (quota row, usage, quality/waste incl. truncation and reasoning overhead, performance percentiles, local models) grounded in fields actually verified present. Documented as unmeasurable: real HF billing and embedding cost (time-billed). Open question flagged: ZeroGPU/Spaces have no local process to spool from. 22/22 pytest, ruff clean. PR #1 was merged by user; opened PR #3 for the follow-up work.",
+  "commands": [
+    "gh pr create",
+    "python -m pytest tests -q",
+    "python -m ruff check ."
+  ],
+  "files": [
+    "vault-inference/docs/hf-telemetry-design.md",
+    "vault-inference/app/remote.py",
+    "vault-inference/app/budget.py",
+    "vault-inference/app/main.py",
+    "vault-inference/tests/test_api.py"
+  ],
+  "planPath": "",
+  "contentHash": "09cef119bf8acbb01b5c6653fdd5d7c8ae4e4caf751efe59b30369ed87bb42f9",
+  "git": {
+    "repo": "vault-inference",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-inference",
+    "branch": "vw-codex-hf-telemetry",
+    "head": "ee90c8a",
+    "hasChanges": false
+  }
+}

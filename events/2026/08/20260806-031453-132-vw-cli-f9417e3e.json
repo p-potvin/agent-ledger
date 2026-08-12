@@ -1,0 +1,41 @@
+{
+  "id": "20260806-031453-132-vw-cli-f9417e3e",
+  "createdAt": "2026-08-06T07:14:53.1320731Z",
+  "createdAtLocal": "2026-08-06 03:14",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 03:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Wed, 06 Aug 2026 - Second loop run, 16 turns, to confirm the perf fixes hold at length. PERFORMANCE CONFIRMED STABLE: 120.3s wall for 84.7s of speech = 0.42x compute per second of speech, statistically the same as 0.40x over 10 turns, so it does not degrade with length. llm 9.6s across 16 turns (~0.6s/turn, unchanged from the 10-turn run) which resolves the residency doubt I flagged - whether or not both models are simultaneously resident, there is no reload penalty in practice. The voice cache held: only 2 bake events logged for 16 turns, one per voice. CONTENT DEGRADED THOUGH, and worse than on the shorter run: (a) Vic collapsed into THIRD-PERSON NARRATION OF MARISOL - 'Marisol's eyes were locked on the seafloor, her voice steady. Water flows where it needs to, she whispered.' My clean() narration stripper only catches the '<name> said/replied/muttered/growled/added' form, so this passed straight through and was spoken aloud; (b) turn 7 degenerated to the single word 'Marisol.'; (c) both agents abandoned the freight-elevator seed within two turns and converged on water/tide imagery, Marisol pulling by persona and Vic mirroring her; (d) the too_similar guard fired twice and did its job, so verbatim repetition stayed fixed - the failure now is semantic convergence rather than literal repeats. CONCLUSION: throughput is solved and no longer the bottleneck; conversational quality at 0.6B is, and it decays with conversation length. Levers not yet pulled, flagged to user rather than applied unilaterally: widen the narration stripper to catch '<other agent name> + past-tense verb' constructions,",
+  "commands": [
+    "python cacophony.py --turns 16",
+    "curl ollama /api/ps",
+    "count baked-and-cached lines in tts server log"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\cacophony.py"
+  ],
+  "planPath": "",
+  "contentHash": "f9417e3e45032fca26bc44487ad3c71d04af1c5d50ead349a114003dd0b2a8e3",
+  "git": null
+}

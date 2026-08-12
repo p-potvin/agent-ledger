@@ -1,0 +1,50 @@
+{
+  "id": "20260801-174039-806-vault-cacophony-071b2ac9",
+  "createdAt": "2026-08-01T21:40:39.8067511Z",
+  "createdAtLocal": "2026-08-01 17:40",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 17:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "Diagnosed CrispASR CUDA build failure. TWO separate blockers, not one. (1) 'No CUDA toolset found' from CMakeDetermineCompilerId - CMake's Visual Studio generator needs CUDA's MSBuild integration ('CUDA 12.0.props'/.targets) inside the VS install; CUDA 12.0's installer only knew VS 2017/2019/2022 so nothing was placed in VS 2026 (C:\\Program Files\\Microsoft Visual Studio\\18\\Community). (2) Host compiler rejection - verified by compiling a trivial .cu: 'host_config.h(153): fatal error C1189: unsupported Microsoft Visual Studio version! Only the versions between 2017 and 2022 (inclusive) are supported'. cl.exe is 19.51.36248 (_MSC_VER 1951, MSVC 14.51.36231); CUDA 12.0 host_config.h hard-rejects _MSC_VER >= 1940. Note CMake HAD found CUDA correctly (CMakeCache has cudart/cublas/nvcc all resolved at v12.0) so 'CUDA not found' was misleading. CUDA_PATH and CUDA_PATH_V12_0 are both empty. Toolkits present: v11.8, v12.0 (nvcc 12.0.76, Oct 2022). Rejected -allow-unsupported-compiler: 3-year header/STL gap makes silent miscompiles likely. Alternative noted: Vulkan backend works (vulkan-1.dll present, RTX 3060 exposed at apiVersion 1.4.341, CrispASR supports -DGGML_VULKAN=ON) and needs no CUDA toolchain. Per user decision, installing VS 2022 Build Tools via winget (Microsoft.VisualStudio.2022.BuildTools + VCTools workload + Win11 SDK) to get the v143 toolset CUDA 12.0 accepts. PLAN: build with -G Ninja (ninja.exe already bundled with VS at Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja) to bypass the MSBuild-integration blocker entirely. ALSO: user wants Parakeet TDT 0.6B for streaming ASR - CrispASR supports it natively (parakeet-tdt-0.6b.gguf) plus Kokoro TTS; flagged that Whisper CANNOT be swapped inside mini-omni since its GPT consumes whisper-small encoder features it was trained on.",
+  "commands": [
+    "cmake -B build -DGGML_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=86",
+    "nvcc -arch=sm_86 t.cu",
+    "winget install Microsoft.VisualStudio.2022.BuildTools"
+  ],
+  "files": [
+    "CrispASR/CMakeLists.txt",
+    "CrispASR/docs/install.md"
+  ],
+  "planPath": "",
+  "contentHash": "071b2ac91993ccd04eee531c77401e156441514c269ba64093a7dfad69b4bc3e",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

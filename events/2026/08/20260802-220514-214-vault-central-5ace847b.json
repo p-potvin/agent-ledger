@@ -1,0 +1,56 @@
+{
+  "id": "20260802-220514-214-vault-central-5ace847b",
+  "createdAt": "2026-08-03T02:05:14.2144131Z",
+  "createdAtLocal": "2026-08-02 22:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-02 22:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Sun, 02 Aug 2026 22:05 - Shipped v3.4.4 (commit a521d6a, pushed to main). Preview transport moved to base64 (blobB64) across preview.save/preview.get, fixing the 0-byte previews caused by sending raw Uint8Array over runtime.sendMessage. Unblocked npm run build: vendored crypto-vault from the vaultwares-themes submodule into src/lib/crypto-vault.ts (recovered from vaultwares-themes@6a54dd3^, verified byte-identical to the shipped .js via esbuild transpile+diff; vault-central is the only consumer), brought crypto-vault.test.ts along, fixed the stale vitest glob that pointed at a nonexistent vault-themes/ path so those 6 tests run for the first time, pointed the themes submodule at latest main 66c6638, and added a local type declaration for vite-plugin-static-copy@4.0.0 which advertises dist/index.d.ts but ships only dist/index.js. Version bumped manifest 3.4.3->3.4.4 and package.json 3.2.1->3.4.4 (were out of sync); added HTML version comments to dashboard-v2.html and pin-entry.html. Verified: tsc clean, vitest 19/19, npm run build succeeds, dist bundles contain blobB64 with zero blobBytes occurrences. Untracked icons/*.png left uncommitted (unrelated pre-existing). Separately committed vaultwares-docs 5f5a68a removing the 'create a GitHub issue first' requirement from instructions/summaries/HANDLING_BUGS.md per user - GitHub is no longer tracked; AGENTS.md untouched so no global-instruction sync needed. User must clear existing extension storage: previews already in IndexedDB are genuinely 0 bytes and cannot be recovered.",
+  "commands": [
+    "npm run build",
+    "npx vitest run",
+    "npx tsc --noEmit",
+    "git push origin main"
+  ],
+  "files": [
+    "src/lib/vault-client.ts",
+    "background/scripts/background.ts",
+    "src/lib/crypto-vault.ts",
+    "src/lib/preview-transport.test.ts",
+    "vaultwares-docs/instructions/summaries/HANDLING_BUGS.md"
+  ],
+  "planPath": "",
+  "contentHash": "5ace847b72c982361a944d0e70e3eb209103833d1cb5f165d8d12415dfdcaa4d",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "a521d6a",
+    "hasChanges": true
+  }
+}

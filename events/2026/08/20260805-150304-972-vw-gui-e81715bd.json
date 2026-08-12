@@ -1,0 +1,48 @@
+{
+  "id": "20260805-150304-972-vw-gui-e81715bd",
+  "createdAt": "2026-08-05T19:03:04.9728141Z",
+  "createdAtLocal": "2026-08-05 15:03",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-gui",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Read, Write, Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 15:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Validation cluster shipped, commit 76d7487. New js/validate.js infers formats from param name + declared type + registry description across all 123 unique params (76 free, 46 path, 12 number, 10 integer, 10 extension, 5 lang, 3 timestamp, 2 csv, 2 keyvalue, 1 port, 1 url, 1 dockerRepo). Numeric ranges parsed out of descriptions like '(0.1-1.0)' so no per-param hardcoding. Two severities: error blocks Run, warn is advisory. Extension checking is command-aware - InputFile on convert-video expects video, same name on manual-sync expects audio; both directions verified. Paths accept Windows+Unix forms, relative values resolved against working dir at collection time with separator normalization. Working-directory params (TargetDir/Directory/Location/D) hidden from form and injected from the Working Directory field - a change from the original 'omit and let script default' design. Path fields have embedded picker icons: click empty field opens browser, otherwise icon does. Added 'path' type to Add Command; toasts raised above modal scrim. Verified headlessly (22/22 spot checks via vm sandbox harness) and over CDP (hidden targetDir, picker present, error blocks Run, warn does not, collect() resolves relative paths and injects targetDir). Open: BgVolume format could not be inferred, left unvalidated, asked user.",
+  "commands": [
+    "node fmt-check.js",
+    "electron . --remote-debugging-port=9228",
+    "git push"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\js\\validate.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\js\\form.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\js\\extensions.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\js\\app.js",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vw-gui\\css\\app.css"
+  ],
+  "planPath": "",
+  "contentHash": "e81715bd83e731eaf0302be1a549e5f09323d5f4c0a96d17d488ee618234522c",
+  "git": null
+}

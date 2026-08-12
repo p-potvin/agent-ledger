@@ -1,0 +1,50 @@
+{
+  "id": "20260801-123625-411-mini-omni-31a0c3bf",
+  "createdAt": "2026-08-01T16:36:25.4112093Z",
+  "createdAtLocal": "2026-08-01 12:36",
+  "timezone": "Eastern Standard Time",
+  "project": "mini-omni",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 12:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "Resolved duplicate VBAN stream on phone 10.0.0.151. Cause: Voicemeeter (PID 26660) owns UDP 6980 and has VBANStreamOut 1+2 enabled (status=1), both sourced from bus=0/A1, feeding phone1 10.0.0.151 and phone2 10.0.0.222 - while bridge A's Python VBAN sender was ALSO sending MiniOmniA to .151. The Python stream only started landing once the 24->28 byte header fix made packets valid, so the duplicate surfaced as a side effect of that fix. Resolved by disabling the bridges' own VBAN sender and letting Voicemeeter own the transport; start_duo.bat updated to drop --vban-ip from both bridges and document phone2=10.0.0.222. Verified: bridge A no longer logs VBAN init, UDP 6980 held only by voicemeeter_x64, A still detects B's speech. OUTSTANDING: (1) both VBANStreamOut use bus=0 so both phones receive the SAME A1 mix, not A-on-phone1/B-on-phone2; (2) on-disk Voicemeeter XML still holds stale IPs 10.0.0.180/.178 vs live .151/.222 - config must be saved or a Voicemeeter restart reverts the phones; (3) A and B talk over each other, each capturing only 1-2.5s of the other's 8-9s replies.",
+  "commands": [
+    "netstat -ano -p UDP | grep 6980",
+    "python -u vbcable_bridge.py --instance-name A --input-gain 8"
+  ],
+  "files": [
+    "start_duo.bat",
+    "vbcable_bridge.py",
+    "C:\\Users\\Administrator\\Documents\\Voicemeeter\\VoicemeeterStandard_TodaySettings.xml"
+  ],
+  "planPath": "",
+  "contentHash": "31a0c3bf70f3bfb20c4cec1c5f492cf1efb1309310be9d52286c312bf428ad98",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "20260802-231946-113-vault-central-267c3b79",
+  "createdAt": "2026-08-03T03:19:46.1130399Z",
+  "createdAtLocal": "2026-08-02 23:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Bash, PowerShell, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-02 23:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Sun, 02 Aug 2026 23:20 - v3.4.5 (commit f4fdc80, pushed to main). Icon swap: removed the 8 vaultwares-gold-filled-*.png leftovers (nothing referenced them since the user pointed manifest.json at the vault-central mark), tracked the new icon set (solid vault-central-16/24/32/48/64/128/256 plus masters and nobg derivatives). User chose the SOLID set everywhere - the BiRefNet nobg cutout is poor quality; nobg stays in-repo but is no longer packaged. Narrowed the viteStaticCopy target from the whole icons/ dir to icons/vault-central-[0-9]*.png with dest '.', which keeps ~3.4MB of master art plus stale dist leftovers out of the AMO upload; packaged archive dropped 23.7MB -> 11.8MB. Verified all four manifest icon refs resolve inside dist and the zip carries exactly the 7 sized PNGs. FLAGGED, not changed: the FFmpeg WASM path is dead code - processor.ts defines ensureSandbox() and the vc_process protocol but never calls them (preview generation is native canvas/WebP frames), so ffmpeg-core.wasm ships 30.74MB of unreachable payload to AMO, ~74pct of the uncompressed archive. Removing it is an architectural call for the user. Also unresolved by design: dist/ is gitignored except force-added files, so dist/icons is untracked - the AMO upload comes from package/*.zip which is correct.",
+  "commands": [
+    "npm run build",
+    "git push origin main"
+  ],
+  "files": [
+    "manifest.json",
+    "vite.config.ts",
+    "icons/vault-central-128.png",
+    "package.json"
+  ],
+  "planPath": "",
+  "contentHash": "267c3b79bfe8bd8ac1019cf73c8f593c9be4e00f1e2873a4aa2dfc9aa7b6eab5",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "f4fdc80",
+    "hasChanges": false
+  }
+}

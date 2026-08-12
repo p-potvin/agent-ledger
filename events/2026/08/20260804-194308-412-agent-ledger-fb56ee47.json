@@ -1,0 +1,38 @@
+{
+  "id": "20260804-194308-412-agent-ledger-fb56ee47",
+  "createdAt": "2026-08-04T23:43:08.4126338Z",
+  "createdAtLocal": "2026-08-04 19:43",
+  "timezone": "Eastern Standard Time",
+  "project": "agent-ledger",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-04 19:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Investigated and fixed July 18 missing events on monitor.vaultwares.ca. Root cause: 10 events were manually modified locally (IDs/timestamps changed from 20260719-* to 20260718-*) but contentHash stayed the same, so backfill ON CONFLICT DO NOTHING matched on the unique content_hash index and skipped them. Fix: surgically deleted the 10 old 20260719-* rows from postgres on OVH, cleared backfill checkpoint for those files, re-ran backfill to insert corrected versions. July 18 now shows 10 events, July 19 corrected from 22 to 12. No code changes needed.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "fb56ee47ae6cc910f01e0f329925e1b253337d8bb0d0c8a988df09bdd6c9b5ce",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "f71aa0aa",
+    "hasChanges": true
+  }
+}

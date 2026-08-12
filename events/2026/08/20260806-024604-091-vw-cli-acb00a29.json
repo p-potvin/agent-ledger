@@ -1,0 +1,46 @@
+{
+  "id": "20260806-024604-091-vw-cli-acb00a29",
+  "createdAt": "2026-08-06T06:46:04.0917081Z",
+  "createdAtLocal": "2026-08-06 02:46",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "bugfix",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Read, Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 02:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Fixed crash and diagnosed the ollama failure in live-subs translation. CRASH: I introduced an init-order bug - the translator QThread was started before _build_menu() created act_status, and TranslateWorker.run() emits status on its first line, so on_status hit AttributeError. Fixed by starting the thread after the menu exists, and hardened on_status with getattr since status arrives from worker threads that can outpace or outlive the menu. OLLAMA: not a crash - VRAM contention. GPU was 11875/12288 MiB used with 239 MiB free (Parakeet held by the live-subs pythonw process plus desktop/browser), so ollama could not keep the 1.95GB model resident and evicted it; every cue then paid a ~10s reload. Fixes: (1) new -TranslateDevice defaulting to cpu - measured 1070ms/cue vs 412ms gpu but 0.00GB VRAM, verified GPU untouched after a run; ASR is the critical path so translation must never evict it. (2) keep_alive 30m so the model stays resident between quiet stretches. (3) temperature 0.2 -> 0, now deterministic, which also fixed a mistranslation seen at 0.2. (4) launcher warns when -TranslateDevice gpu is chosen with <3000 MiB free. Registry updated via vw-gui writer, live-subs now 19 params.",
+  "commands": [
+    "nvidia-smi --query-gpu=memory.free",
+    "curl localhost:11434/api/ps",
+    "node cpu-bench.js",
+    "pwsh -File scripts/vwg-write-registry.ps1 -Action update -Name live-subs"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\live_subs_overlay.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-LiveSubtitles.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "acb00a29c8f77fd4305442a67d2dd9409e0d75c827826cda473a9a5cf5d2151f",
+  "git": null
+}

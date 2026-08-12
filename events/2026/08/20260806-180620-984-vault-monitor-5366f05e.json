@@ -1,0 +1,52 @@
+{
+  "id": "20260806-180620-984-vault-monitor-5366f05e",
+  "createdAt": "2026-08-06T22:06:20.9841567Z",
+  "createdAtLocal": "2026-08-06 18:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + greencloud/OVH tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): PowerShell, Bash, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 18:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + greencloud/OVH tailnet",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Fixed empty AI Stats timeline, stopped Comet, fixed greencloud clock. TIMELINE BUG WAS MINE: ToolTimeline painted bands with var(--vault-gold) etc, but Tailwind v4 @theme defines the palette as --color-vault-*; undefined custom property = transparent background = chart looked empty. tsc does not typecheck CSS vars and the build passed, so nothing caught it. Switched to utility classes (bg-vault-gold...) matching BarList; verified all 8 emit into built AND live CSS. RULED OUT the user's hypothesis: CSS was serving correctly all along (HTTP 200, 98KB, Content-Type text/css, index.html hashes matched disk). Note var(--vault-console-*/signal-*/spacing-*) elsewhere is a separate design-system token family and is correct. vault-monitor 2.2.2 deployed, checkout 856661a, live css index-B9WraOAO.css. COMET STOPPED: vw-comet compose stack on OVH (comet + comet-postgres + comet-vpn/gluetun which publishes 5173) stopped via docker compose stop in /opt/vw-comet; all 3 Exited(0), port refused; restart policy unless-stopped so it stays down across reboots. Documented in vaultwares-docs AGENTS.md + CLAUDE.md (prepended to the torrent+debrid policy block agents actually read) and services-inventory.mdx: 6000GB of 8192GB used, resets 12 Nov 2026, explicit instruction not to route around it via direct debrid/indexer calls. docs 0.0.9->0.1.0, pushed db88784. GREENCLOUD CLOCK: root cause was NO time-sync daemon installed at all (no systemd-timesyncd, no chrony, no ntpd) so the clock free-ran 48s behind local while the RTC stayed correct. Installed systemd-timesyncd + timedatectl set-ntp true; now 'System clock synchronized: yes', NTP active, skew 0.15s. OVH already had sync active. CORRECTION: I twice misjudged local wall-clock time this session and wrongly implied a 16h skew - measured skew was only -48s.",
+  "commands": [
+    "docker compose stop (vw-comet)",
+    "apt-get install systemd-timesyncd; timedatectl set-ntp true",
+    "git push origin main (vault-monitor 856661a, docs db88784)"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor\\src\\features\\ai-sessions\\components\\ToolTimeline.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\AGENTS.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\CLAUDE.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "5366f05edb3167ef671827d07e8940e04dcf1a654ca0eddadcc178d1f9eeff34",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "main",
+    "head": "db88784",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "20260803-143156-396-vault-central-2ee8c9e9",
+  "createdAt": "2026-08-03T18:31:56.3961604Z",
+  "createdAtLocal": "2026-08-03 14:31",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 14:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Mon, 03 Aug 2026 14:31 - v3.7.1 (commit d999201, pushed). ROOT CAUSE of 'only 2 frames, rest black, tab stalled at 2min': abandoning a seek does not cancel it. Both capture loops set video.currentTime, waited for seeked OR a 1500ms timeout, then drew. When seeks exceed 1500ms (remote/HLS/large files) the loop gives up and assigns currentTime again, which SUPERSEDES the still-pending seek - so the element perpetually re-seeks, never settles, the position barely advances (hence a 34-min video stuck near 2min), and nearly every drawImage captures a stale or empty decoder. Occasionally one seek wins the race = the 1-2 good frames. Compounded by seeked firing before the decoder paints. FIX: new src/lib/frame-capture.ts is now the single implementation for BOTH capture sites - waits for each seek to genuinely settle (8s budget), confirms position + readyState, waits for a real paint (requestVideoFrameCallback with double-rAF fallback), then draws; a timed-out seek SKIPS its frame instead of recording a stale one; uniform frames dropped; runs yielding fewer than MIN_USABLE_FRAMES=4 are discarded rather than stored (a thin/black preview looks captured so nothing retried it); per-run counts logged (usable/timedOut/blank/tainted). NOTE: src/scripts/scraper-player.ts had NEVER received the frame-paint fix applied to processor.ts in v3.6.1 - I had only patched the offscreen path - and it had separately been raised to 30 segments which made the stalling worse; both now share the same 10-frame path. 7 new tests including a fake <video> that reproduces the superseded-seek stall and the all-black capture. Verified tsc clean, vitest 41/41, build OK. User will test.",
+  "commands": [
+    "npm run build",
+    "npx vitest run",
+    "npx tsc --noEmit",
+    "git push origin main"
+  ],
+  "files": [
+    "src/lib/frame-capture.ts",
+    "src/lib/frame-capture.test.ts",
+    "src/offscreen/processor.ts",
+    "src/scripts/scraper-player.ts"
+  ],
+  "planPath": "",
+  "contentHash": "2ee8c9e9849c2662acb985ace934d08992e337f8f09b8f0a082a187c21153251",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "d999201",
+    "hasChanges": false
+  }
+}

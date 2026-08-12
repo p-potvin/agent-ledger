@@ -1,0 +1,46 @@
+{
+  "id": "20260806-221011-679-vw-cli-ac9ef8fa",
+  "createdAt": "2026-08-07T02:10:11.6791885Z",
+  "createdAtLocal": "2026-08-06 22:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "bugfix",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Read, Edit, Bash, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 22:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Fixed the silent translator in live-subs - a Qt threading bug I introduced. TranslateWorker.run() is a blocking drain loop connected to tr_thread.started, so it seizes its thread and the thread's event loop never spins. worker.final.connect(translator.submit) is cross-thread, which Qt resolves to QueuedConnection, delivered via that starved event loop - so submit() was never invoked once and no cue was ever queued. Proved it in isolation with a two-thread harness: QueuedConnection submitted=0/translated=0/delivered=0, DirectConnection submitted=3/translated=3/delivered=3. Fixed with an explicit DirectConnection, which is safe because submit() only touches a queue.Queue and run() drains it on the other side. The harness also exposed a cold-load timeout pushing the FIRST caption onto the google fallback, so run() now pre-warms the model before entering the loop; measured 688ms warm then 381ms for the first real cue on GPU. Added submitted/translated counters and one-shot logs so a silent translator is visible next time. Flipped -TranslateDevice default cpu->gpu per user, now that the Parakeet buffer ceiling keeps ASR at a steady ~2GB; updated help text accordingly. Confirmed ollama /api/ps reports size_vram=1.81GB correctly - vram-watch.ps1 reads that HTTP field, not process names, so it is unaffected by ollama spawning llama-server.exe; it read 0 earlier only because the model was never loaded.",
+  "commands": [
+    "python _conn_test.py",
+    "python -m py_compile live_subs_overlay.py",
+    "curl localhost:11434/api/ps"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\live_subs_overlay.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-LiveSubtitles.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\vram-watch.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "ac9ef8fa395c444f16991be5f697ea71316f49398187286e509ae91fe1bbee59",
+  "git": null
+}

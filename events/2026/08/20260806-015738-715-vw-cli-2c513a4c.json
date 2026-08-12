@@ -1,0 +1,43 @@
+{
+  "id": "20260806-015738-715-vw-cli-2c513a4c",
+  "createdAt": "2026-08-06T05:57:38.7150863Z",
+  "createdAtLocal": "2026-08-06 01:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 01:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Wed, 05 Aug 2026 - Added utils/add_voice.py and ran the loop with two CLONED voices. add_voice.py normalises any reference recording to 16 kHz mono PCM_16 and installs it as <voice-dir>/<name>.wav + <name>.txt, auto-transcribing with Parakeet when no text is supplied (also picks up a sidecar .txt next to the source). It reports source format, duration and a loud/quiet cleanliness figure, warns under 3s and notes over 20s. Verified against the exact 192 kHz PCM_24 file that previously produced a bare HTTP 500: it now converts and installs cleanly (62.4 dB). This closes the trap where cosyvoice3's runtime voice baking rejects unusual rates/depths with one obscure log line. LOOP RUN with voice-a=vic (user's own suitcase recording, cloned) and voice-b=robin (LibriSpeech 1988, cloned): 10 turns, both cloned voices synthesised correctly, agents responded to each other. TWO REGRESSIONS MEASURED, both worth fixing before this is usable live: (1) compute per second of speech went from 0.29x with baked voices to 1.97x - SLOWER THAN REAL TIME. TTS dominates: 83.4s to produce 60.6s of speech versus 7.8s previously, i.e. roughly 10x slower, because arbitrary-wav cloning re-bakes the runtime voice (speech tokenizer + CAMPPlus + mel) on every request with no cache. (2) LLM time went from 2.5s to 32.1s across the run. Diagnosed via ollama /api/ps: only ONE model is resident, so alternating vw-vic and vw-marisol makes ollama unload and reload a model on every single turn. Fix is either OLLAMA_MAX_LOADED_MODELS=2 (keeps the Modelfile persona approach the user preferred) or one base model with per-agent system prompts (already supported via",
+  "commands": [
+    "python add_voice.py --name vic --wav sample_suitcase.wav",
+    "python cacophony.py --voice-a vic --voice-b robin --turns 10",
+    "curl ollama /api/ps"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\add_voice.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\cacophony.py"
+  ],
+  "planPath": "",
+  "contentHash": "2c513a4c628397f496bbc6a2c16eade14f5dd037778eb5f296e70dfb219e3c01",
+  "git": null
+}

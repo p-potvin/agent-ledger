@@ -1,0 +1,46 @@
+{
+  "id": "20260801-070802-813-shared-tube-fa086e0b",
+  "createdAt": "2026-08-01T11:08:02.8130761Z",
+  "createdAtLocal": "2026-08-01 07:08",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): read_file, grep_search, edit, run_command, ssh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 07:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "read_file",
+      "grep_search",
+      "edit",
+      "run_command",
+      "ssh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Fixed taxonomy merge/rename bugs and stale join rows in promking DB. (1) TermDetail.tsx merge: sent primary_term_id/merge_term_ids but API expects primary_id/merge_from — field names aligned. (2) TermDetail.tsx gender update: sent {term_ids,new_gender} but API expects {updates:[{pornstar_id,gender}]} — payload fixed. (3) Video list query: pornstars_json/studios_json subqueries did not filter deleted_at IS NULL, causing merged (soft-deleted) terms to appear on live site — added filter. (4) Video detail query: same missing deleted_at IS NULL filter on pornstars/studios/categories joins — added filter. (5) Cleaned up 1047 stale video_pornstars rows and 1159 stale video_studios rows pointing to soft-deleted terms. (6) Rename 500 was from old code state, works after API restart. Also upped all API limit params from various caps to le=10000 across 7 files (13 params).",
+  "commands": [],
+  "files": [
+    "shared/src/admin/Catalog/TermDetail.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "fa086e0bd704db4089631a460255805f04ed19db82ca78dce0871beb7485dff2",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "c0bb177",
+    "hasChanges": true
+  }
+}

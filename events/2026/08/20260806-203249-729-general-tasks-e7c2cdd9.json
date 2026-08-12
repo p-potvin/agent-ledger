@@ -1,0 +1,51 @@
+{
+  "id": "20260806-203249-729-general-tasks-e7c2cdd9",
+  "createdAt": "2026-08-07T00:32:49.7296521Z",
+  "createdAtLocal": "2026-08-06 20:32",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "code-change,commands,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: greencloud + OVH tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs  Branch: main\r\nTools used (this reply): PowerShell, Bash, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 20:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "greencloud + OVH tailnet",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
+  "summary": "Restarted Comet and traced the real bandwidth consumer. Comet restarted (docker compose start in /opt/vw-comet); all 3 containers healthy, HTTP 200 on 100.67.25.118:5173. KEY FINDING - COMET WAS NEVER THE PROBLEM: Comet runs on vps-ovhcloud but the metered quota is greencloud's. Per-container docker stats on greencloud: gluetun-proton 4.26 TB in / 3.91 TB out, every other container in the MB range (flaresolverr, qa_runner, qa_wireproxy, vw-secrets-postgres). gluetun's clients are the Prom-King shared-tube apps fxv/oneporn/sexyprn (pids 41938/41948/41960, user vwdeploy, /srv/repos/Prom-King/shared-tube/apps/*) tunnelling via its HTTP proxy on 127.0.0.1:8889 (HTTPPROXY=on, VPN_PORT_FORWARDING=off so not seeding). eth0 since boot (4w1d uptime): rx 4151.0 GB + tx 3172.5 GB = 7323.5 GB against 8192 GB/month, consistent with the ~80% the provider reports. So bandwidth remediation belongs in shared-tube. Installed + enabled vnstat on greencloud for ongoing per-interface reporting (no history before 6 Aug; use /proc/net/dev for pre-install figures, resets at boot). COMET SIZE LIMIT IS NOT SERVER-SIDE: maxSize is a per-client addon config field (comet/core/models.py:1020, float bytes, 0=unlimited), read at api/endpoints/stream.py:889 from config['maxSize'] and enforced in services/ranking.py; the configure page multiplies GB by 1073741824. No env var exists, so putting it in .env.comet does nothing - each client's manifest URL must be regenerated. Corrected my earlier docs note which was wrong twice (said quota resets 12 Nov and blamed Comet); docs 0.1.0->0.1.1, pushed db1a9e9.",
+  "commands": [
+    "docker compose start (vw-comet)",
+    "docker stats --no-stream (greencloud)",
+    "apt-get install vnstat",
+    "git push origin main (docs db1a9e9)"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\AGENTS.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\CLAUDE.md",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\services-inventory.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "e7c2cdd9fb72f8d211387866a4064f8a38d23de2649a095b3ec4060c0cadeca6",
+  "git": {
+    "repo": "vaultwares-docs",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs",
+    "branch": "main",
+    "head": "db1a9e9",
+    "hasChanges": false
+  }
+}

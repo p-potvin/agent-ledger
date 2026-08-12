@@ -1,0 +1,58 @@
+{
+  "id": "20260801-091626-671-vaultwares-studio-d6072711",
+  "createdAt": "2026-08-01T13:16:26.6716558Z",
+  "createdAtLocal": "2026-08-01 09:16",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, Read, Edit, Write, Grep, WebFetch, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 09:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "WebFetch",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Thu 30 Jul 2026. Root-caused the upside-down viewport: NOT a viewer regression and NOT a missing one-time flip fix. compute_alignment() PCAs over all points and picks up-direction via skewness = mean((proj/std)^3), a third moment hypersensitive to outliers. ~1% of DA3 gaussians sat beyond 10x core radius (max 416x), stretching bbox 1.4 -> 581. Measured: raw gives up=[0,+1,0] skew=32.75 flipped=False tilt=nan; keep-95/98/99 all give up=[~0.1,-0.99,~0.1] skew~0.35 flipped=True tilt~9deg. The up vector INVERTS once outliers are removed - that sign flip is the 180. New vaultwares_studio/splat_filter.py: clamp_opacity (DA3 returns +inf logits, 403 in this cloud, nan-poisons gaussian_merge quality scoring) + sanitize_splat (per-axis quantile envelope, axis-aligned not radial since scenes are ~4x wider than tall). Used quantiles not stddev because with 1% of mass at 400x core, sigma is huge and 2-sigma keeps everything - explained this to the user who had suggested 2SD. Wired via convert_splat_outputs keep_quantile, default 1.0 (no filter); only feed-forward presets opt in at 0.95, trained splatfacto unaffected. Verified on real green run: 4503479 -> 4042127 gaussians, extent 646.1 -> 1.6, skewness 32.75 -> 0.30 (trained run is 1.07), viewer default auto-framing now works with no manual camera, scene reads correctly (pergola/brick wall/lawn/path legible where before smeared blobs). Also fixed latent NaN: arccos(abs(dot)) when dot rounds past 1.0. 10 new tests incl. a regression guard reproducing the flip. 112 passing. Reverted vaultwares-themes submodule change per user (using official colors). Pushed d0bea71 to main with v1.1.2 bump. Also confirmed DA3-Streaming's da3_streaming/ dir is NOT pip-installed (pyproject packages=[src/depth_anything_3]) so integration requires vendoring.",
+  "commands": [
+    "git push origin main",
+    "pytest tests/ -q",
+    "convert_splat_outputs keep_quantile=0.95",
+    "align_cloud on filtered cloud"
+  ],
+  "files": [
+    "vaultwares_studio/splat_filter.py",
+    "tests/test_splat_filter.py",
+    "vaultwares_studio/gravity_align.py",
+    "vaultwares_studio/splat_io.py",
+    "vaultwares_studio/presets.py",
+    "VERSION"
+  ],
+  "planPath": "",
+  "contentHash": "d607271115acc3a8286da740b79f6575c43a6563fe5b0860814d2b5c83138db2",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "d0bea71",
+    "hasChanges": true
+  }
+}

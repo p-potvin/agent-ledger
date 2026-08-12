@@ -1,0 +1,55 @@
+{
+  "id": "20260803-130337-312-vaultwares-studio-764099c9",
+  "createdAt": "2026-08-03T17:03:37.3129296Z",
+  "createdAtLocal": "2026-08-03 13:03",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Edit, Write, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 13:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Sun 03 Aug 2026. DA3-Streaming PHASE 2 COMPLETE for 0.00 USD - pose converter written and VALIDATED. Created vaultwares_studio/streaming_convert.py converting streaming's flat output (camera_poses.txt C2W + intrinsic.txt + combined_pcd.ply) into transforms.json + sparse_pc.ply so Job B/splatfacto needs zero changes. Validation method: ran streaming on EXACTLY the 80 frames the known-good da3-standard run (local-run-20260713-022745) used, then Umeyama-aligned trajectories. Key insight enabling independent tests: the OpenCV->OpenGL flip negates Y/Z rotation columns but leaves the translation column untouched, so POSITION validates C2W-vs-W2C while ORIENTATION validates the flip. RESULTS: orientation median 9.07deg with flip vs 178.91deg without (near-perfect inversion = decisive); position RMSE 11.9pct of extent correct vs 26.0pct if wrongly inverting. Both conventions confirmed: do NOT invert (streaming already emits C2W), DO apply diag(1,-1,-1,1) on the right. 16 tests pin both failure modes; mutation-tested both (removing flip and adding inversion each break the suite). Residual analysed and is TAIL DRIFT not a converter bug: frames 16-63 agree to 5-7deg median, frames 64-79 degrade to 36deg median - accumulated SIM3 drift with loop_enable:False on frames sampled ~1.6s apart (adversarial for a sequential-video method). This raises phase 5 loop closure from optional to likely-required for long sequences. Explicitly NOT an accuracy claim - reference is another DA3 estimate not ground truth; numbers validate conventions only. 128 tests passing. Pushed 966be28 to main with v1.2.0 bump. Phases 1+2 both done at zero cost; phase 3 (full 500 frames -> processed_min.zip) is next and is the real value decision point.",
+  "commands": [
+    "da3_streaming.py --image_dir frames_ref80",
+    "pytest tests/test_streaming_convert.py",
+    "mutation test: remove flip / add inversion",
+    "git push origin main"
+  ],
+  "files": [
+    "vaultwares_studio/streaming_convert.py",
+    "tests/test_streaming_convert.py",
+    "docs/plans/plan-da3-streaming-20260801.md",
+    "VERSION"
+  ],
+  "planPath": "docs/plans/plan-da3-streaming-20260801.md",
+  "contentHash": "764099c96dfa7595294127be590bbf5015b2a72a3f264fc7ab9f692dcca622b5",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "966be28",
+    "hasChanges": true
+  }
+}

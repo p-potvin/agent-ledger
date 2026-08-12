@@ -1,0 +1,45 @@
+{
+  "id": "20260807-001038-908-vw-cli-14e350d7",
+  "createdAt": "2026-08-07T04:10:38.9085434Z",
+  "createdAtLocal": "2026-08-07 00:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Read, Edit, Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-07 00:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Added -TranslatePartials to live-subs. First investigated the reported 'creative filling' (meet me in the... -> rejoins moi sous les arbres): tested the model on truncated fragments and it does NOT complete them - 'meet me in the' -> 'rencontre-moi dans', cut off; given the full 'meet me in the shade' it renders 'dans l'ombre' correctly. So the model had seen the complete FINAL while the screen still showed a truncated PARTIAL; the mismatch was a display artifact, not invention. Also tested a stricter never-complete-never-add prompt and it was WORSE (fabricated 'et puis il n'a pas dit autre chose' for 'and then he just'), so the system prompt is unchanged. Implementation: TranslateWorker gained a single-slot pending partial guarded by a lock plus a partial_done signal. Finals always take priority - partials are only translated when the final queue is empty - and only the newest partial is ever translated since older ones are stale on arrival. A _final_serial counter is captured before translating a partial and rechecked after, so a slow partial can never land on top of a newer finalised caption; a final also clears any pending partial. Connected DirectConnection for the same starved-event-loop reason as finals. Verified: 3 rapid partials produced 1 translation, and a final produced 0 stale partial emissions with pending cleared. Registry updated, live-subs now 22 params.",
+  "commands": [
+    "node faithful.js",
+    "python _tp_test.py",
+    "pwsh -File scripts/vwg-write-registry.ps1 -Action update -Name live-subs"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\live_subs_overlay.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-LiveSubtitles.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "14e350d7961837028a41933f6453eac32a7096d02564c805e7aa6830223a7784",
+  "git": null
+}

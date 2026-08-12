@@ -1,0 +1,58 @@
+{
+  "id": "20260730-121843-948-vaultwares-studio-a627313f",
+  "createdAt": "2026-07-30T16:18:43.9480067Z",
+  "createdAtLocal": "2026-07-30 12:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: da3-direct-3dgs-and-viewer-fixes\r\nTools used (this reply): Bash, Read, Edit, Write, Grep, WebFetch, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-07-30 12:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep",
+      "WebFetch",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Thu 30 Jul 2026. Docs + tests + commit/push for the DA3 direct-3DGS work. Wrote docs/da3-direct-3dgs-debugging-20260730.md: full write-up of the three stacked failures that kept --gs-only from ever running (silent Dockerfile '|| echo' hiding the gsplat build failure; nerfstudio base image final stage is nvidia/cuda:11.8.0-runtime with no nvcc; e3nn ImportError swallowed by DA3's bare try/except in rotate_sh, resurfacing as NameError: matrix_to_angles), plus the abandoned local-Windows-build side quest (MSVC 14.51 yvals_core.h STL1002 static_assert demands CUDA 13.2+, and -allow-unsupported-compiler does not bypass it) and the finding that zerogpu is NOT a valid HF Jobs flavor (verified against huggingface_hub JobHardware enum). Added tests/test_flavor_fallback.py: 6 tests over a fully faked hub covering first-available-wins, stuck-candidate-cancelled-and-next-tried, all-exhausted error, plain-string back-compat, priciest-candidate cost quoting, and consent-gate-before-submission. Mutation-tested the cost assertion to confirm non-vacuous. Full suite 102 passing. Committed on branch da3-direct-3dgs-and-viewer-fixes (NOT main) in two commits: 17fddd4 DA3 fixes + flavor fallback + depth retention + stale rate assertion, dd849fa viewer debug-scaffolding removal + viewport re-embed. Pushed to origin. Deliberately left uncommitted: .omx/.jules deletions, cosmos-reason2, inputs/colmap-project symlinks to D:, requirements-*.txt splits, docker/lab MASt3R work, vaultwares-themes submodule pointer - all predate this session and are unrelated. data/remote_compute.json not committed (beyond a symlink, git will not traverse). OUTSTANDING: da3-draft still has zero green end-to-end runs, blocked on HF GPU capacity (l4x1/t4-small/a10g-small all refused to schedule); flavor-fallback success path is unit-tested but never exercised against a real scheduler.",
+  "commands": [
+    "git checkout -b da3-direct-3dgs-and-viewer-fixes",
+    "git commit -F <msg>",
+    "git push -u origin da3-direct-3dgs-and-viewer-fixes",
+    ".venv/Scripts/python.exe -m pytest tests/ -q"
+  ],
+  "files": [
+    "docs/da3-direct-3dgs-debugging-20260730.md",
+    "tests/test_flavor_fallback.py",
+    "TODO.md",
+    "vaultwares_studio/runners/hf_jobs.py",
+    "vaultwares_studio/presets.py",
+    "docker/da3/Dockerfile"
+  ],
+  "planPath": "",
+  "contentHash": "a627313f34e4f52948a96b35c253b56fb65aa2988fb1afdc0787cfa943b568fa",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "da3-direct-3dgs-and-viewer-fixes",
+    "head": "dd849fa",
+    "hasChanges": true
+  }
+}

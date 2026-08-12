@@ -1,0 +1,46 @@
+{
+  "id": "20260805-144253-285-vw-cli-fdae7f83",
+  "createdAt": "2026-08-05T18:42:53.2856516Z",
+  "createdAtLocal": "2026-08-05 14:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, Read, Write, Edit, PowerShell, SendUserFile\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 14:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "PowerShell",
+      "SendUserFile"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Wed, 05 Aug 2026 - Voice cloning working with cosyvoice3-tts. User supplied samples/ItJustDoesntMatter16k.wav + transcript. The clip is 30s, far longer than CosyVoice wants: its own baked voices are only T_tok 87-150 (~3.5-6s at 25Hz) and a 30s prompt (~750 tokens) risks blowing the context. Rather than truncate arbitrarily, used Parakeet word timestamps to find a sentence boundary and cut 0->11.36s ending on 'But it doesn't matter.'; that window matches the user's first transcript paragraph exactly, so used their human-verified wording as --ref-text. Clone produced 15.14s. DID NOT ASSUME CLONING TOOK EFFECT - crispasr logs the 8 baked voices and never states it used the reference, and the docs warn some backends silently ignore a voice prompt. Verified by synthesising the SAME text with baked fleurs-en as a control and measuring: median f0 reference 271.2Hz, cloned 250.0Hz (21.2Hz away), control 108.8Hz (162.3Hz away) - the clone tracks the reference's register while the baked voice sits in a completely different one, so cloning demonstrably applied. LTAS cosine was inconclusive (0.9287 cloned vs 0.9394 control) because long-term average spectrum is dominated by channel characteristics - the reference is band-limited 16k film audio while both synths are clean 24k - so it mostly measures 'old film vs clean TTS', not speaker identity; reported as inconclusive rather than spun. Caveat recorded: the autocorrelation f0 estimator may octave-double on the band-limited reference, but the relative comparison holds since all three were measured with the same estimator. Sent all three wavs to the user for the subjective call. VBAN BLOCKED: user's Voicemeeter",
+  "commands": [
+    "Start-TextToSpeech.ps1 -Voice ref_trim.wav -RefText ... -IHaveRights",
+    "Start-TextToSpeech.ps1 -Voice fleurs-en (control)",
+    "python f0/LTAS speaker comparison"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-TextToSpeech.ps1",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\samples\\ItJustDoesntMatter16k.wav"
+  ],
+  "planPath": "",
+  "contentHash": "fdae7f8320f9889f19f5ac0cd73c3b0e28277f4eb0f92f6e0c969fdcb5906013",
+  "git": null
+}

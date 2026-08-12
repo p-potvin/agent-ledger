@@ -1,0 +1,45 @@
+{
+  "id": "20260806-233228-804-vw-cli-9635e1ea",
+  "createdAt": "2026-08-07T03:32:28.8049507Z",
+  "createdAtLocal": "2026-08-06 23:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Read, Edit, Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 23:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Investigated 'translation logged but no subtitles visible' in live-subs. Could NOT reproduce: tested SubtitleOverlay directly (show_translated renders correctly bilingual on and off, show_final unaffected), the exact cross-thread wiring (TranslateWorker on its own QThread -> overlay.show_translated delivered 'Bonjour tout le monde.', label visible h=42, window 1105x78 at 216,658, on screen), and partial/final interleaving in both bilingual modes (all combinations render, window stays fully on screen, bottom 736 of 816). So delivery and rendering are both sound in isolation. Rather than keep guessing, added a one-shot diagnostic: SubtitleOverlay._log_first_render fires on the first non-empty caption and reports text, window size, position, visible flag and a computed on_screen check, warning to use tray Recenter if off-screen. This closes the gap where the translation log proved a cue existed but nothing proved one reached the screen - previously indistinguishable between delivery failure, a zero-height box and a window parked off the display edge. Verified it fires exactly once. Awaiting user's next run for the new line.",
+  "commands": [
+    "python _disp_test.py",
+    "python _wire_test.py",
+    "python _interleave_test.py",
+    "python -m py_compile live_subs_overlay.py"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\live_subs_overlay.py"
+  ],
+  "planPath": "",
+  "contentHash": "9635e1ea6e0590f3bff154c914d587f1863ab20572aed672ba52ba25e6317729",
+  "git": null
+}

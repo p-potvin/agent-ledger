@@ -1,0 +1,45 @@
+{
+  "id": "20260803-194928-416-vw-cli-703b389f",
+  "createdAt": "2026-08-03T23:49:28.4167076Z",
+  "createdAtLocal": "2026-08-03 19:49",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Bash, Read, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 19:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Mon, 03 Aug 2026 19:49 - Root-caused bad Nemotron subtitle quality in vw-cli/utils/generate_subtitles.py. The cached model nvidia/nemotron-3.5-asr-streaming-0.6b declares in its own model_config.yaml: target=nemo.collections.asr.models.rnnt_bpe_models_prompt.EncDecRNNTBPEModelWithPrompt. That module/class does NOT exist in nemo_toolkit 2.7.3 (vault-streaming venv) nor 2.5.0 (vw-cli/utils venv); 2.7.3 is the newest PyPI release. It exists ONLY on NeMo git main, where EncDecRNNTBPEModelWithPrompt inherits PromptStreamingMixin providing a prompt-aware cache_aware_stream_step. Consequence: all sys.modules shims + strict=False restore in nemotron_wrapper.py silently alias the checkpoint onto the WRONG class (EncDecHybridRNNTCTCBPEModelWithPrompt) or, in vw-cli where even that is absent, the shim try-block fails silently and the model loads with NO prompt_kernel at all, so encoder output bypasses the required prompt projection before the RNNT decoder = garbage transcripts. Compensating hacks found: numpy.__version__ spoofed to 2.4.0 for numba; silence_rms lowered 0.006->0.001 and periodic model.reset() deleted in live_subtitles.py (explains the end-of-utterance symptom); regex stripping of leaked <en-US> prompt tags. All nemotron_wrapper.py hacks are UNCOMMITTED working-tree changes; sole commit is 127a89c (Jul 28), which has no prompt handling either. Parakeet-TDT-0.6b-v3 is still HF-cached and vault_streaming/parakeet_wrapper.py still exists - that is the genuinely-working prior state. No code changed yet; awaiting user decision on model path before building vw-cli venv.",
+  "commands": [
+    "git diff -- vault_streaming/nemotron_wrapper.py",
+    "tarfile extract model_config.yaml from cached .nemo blob",
+    "curl raw.githubusercontent.com NVIDIA/NeMo main rnnt_bpe_models_prompt.py"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\generate_subtitles.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming\\vault_streaming\\nemotron_wrapper.py",
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming\\python-scripts\\live_subtitles.py"
+  ],
+  "planPath": "",
+  "contentHash": "703b389f9d231a8676ee906bcae2421105ba4283f9b7a5229cafc4f926a20f4d",
+  "git": null
+}

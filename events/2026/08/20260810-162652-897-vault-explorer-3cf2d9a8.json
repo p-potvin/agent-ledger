@@ -1,0 +1,77 @@
+{
+  "id": "20260810-162652-897-vault-explorer-3cf2d9a8",
+  "createdAt": "2026-08-10T20:26:52.8977946Z",
+  "createdAtLocal": "2026-08-10 16:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5.6 Luna XHigh Thinking Fast\r\nThinking: high\r\nMode: agent\r\nPermissions: autopilot (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-subtitle-language-idle-silent\r\nTools used (this reply): read, grep, find_file_by_name, edit, write, exec, todo_write, skill, run_subagent, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-10 16:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5.6 Luna XHigh Thinking Fast",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows local",
+    "toolsUsed": [
+      "read",
+      "grep",
+      "find_file_by_name",
+      "edit",
+      "write",
+      "exec",
+      "todo_write",
+      "skill",
+      "run_subagent",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Updated the subtitle/idle follow-up and opened PR #41. The Explorer now exposes the 26-code Parakeet picker with Québécois (QC) user-facing labels and QC-aware sidecars, documents why derived WebVTT copies are needed while preserving SRT originals, runs idle previews for all users with non-dev diagnostics/progress suppressed, and uses Patchright instead of Playwright for GUI tests. Focused regressions and syntax checks passed; Patchright Electron still cannot launch the app in this environment. Branch pushed as vw-codex-subtitle-language-idle-silent with commits 4a1f6c0 and 2f21ec1.",
+  "commands": [
+    "pnpm add -D patchright@^1.61.1",
+    "pnpm remove playwright",
+    "pnpm exec patchright install chromium",
+    "node tests/local_subtitles_test.js",
+    "node tests/ai_paths_regression_test.js",
+    "node tests/subtitle_asr_options_regression_test.js",
+    "node tests/explorer_cleanup_test.js",
+    "node tests/context_menu_test.js",
+    "npm install --package-lock-only --ignore-scripts",
+    "git push",
+    "gh pr create"
+  ],
+  "files": [
+    "src/ipc/subtitles.ipc.js",
+    "js/player/subtitles.js",
+    "js/player/upscale.js",
+    "js/player/player.js",
+    "js/navigation/idle.js",
+    "src/previews.js",
+    "js/navigation/properties.js",
+    "index.html",
+    "package.json",
+    "package-lock.json",
+    "pnpm-lock.yaml",
+    "tests/comprehensive_test.js",
+    "tests/context_menu_test.js",
+    ".codex/subtitles-ai-cleanup/goal.md",
+    ".codex/subtitles-ai-cleanup/plan.md"
+  ],
+  "planPath": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer/.codex/subtitles-ai-cleanup/plan.md",
+  "contentHash": "3cf2d9a8708e32ab9351f2bd36e19c957865f0c182a35cbfa1558ef0276efd02",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-subtitle-language-idle-silent",
+    "head": "2f21ec1",
+    "hasChanges": true
+  }
+}

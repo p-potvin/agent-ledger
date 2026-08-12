@@ -1,0 +1,46 @@
+{
+  "id": "20260806-015542-664-vw-cli-979fa309",
+  "createdAt": "2026-08-06T05:55:42.6640124Z",
+  "createdAtLocal": "2026-08-06 01:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "feature",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Read, Edit, Bash, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 01:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Added live caption translation to 'vw live-subs'. Investigation first: live-subs had no translation at all (verified via AST parse + grep, not just registry), livestream-translator does spoken TTS only, and the sole translated-text path required the -EmitPort NDJSON hop into 'vw dub' - which is what the user wanted to avoid. Implemented TranslateWorker in utils/live_subs_overlay.py: runs on its own QThread (deep_translator blocks, and the overlay is draggable so a GUI-thread freeze is immediately visible), single FIFO worker to preserve cue order, bounded queue (max 4) that drops oldest so a slow network degrades into missing lines rather than captions drifting behind audio, per-session cache capped at 2000. Finals translated, partials left in source language - matches the rule already documented in live_subtitles.py. Cue stream deliberately keeps emitting SOURCE text so 'vw dub -TranslateTo' does not double-translate. Added -TranslateTo/-To, -TranslateFrom (auto), -Bilingual to Start-LiveSubtitles.ps1; bilingual drops overlay history to 1 cue since each is 2 lines. Registry updated via vw-gui's own surgical writer (dogfood): diff shows only the live-subs block changed, backup at .vwg-backups/vw-commands.20260806-015457. Verified: python compiles, PS parses, EN->FR translation correct, cache hit free, queue bounds at 4, argparse and PS arg mapping correct, vw help live-subs shows new params.",
+  "commands": [
+    "pwsh -File scripts/vwg-write-registry.ps1 -Action update -Name live-subs",
+    "python -m py_compile live_subs_overlay.py",
+    "vw help live-subs"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\live_subs_overlay.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-LiveSubtitles.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "979fa3090523604330c806b02b17714ee076e1025c217a4d97d13dcd3660ab2e",
+  "git": null
+}

@@ -1,0 +1,55 @@
+{
+  "id": "20260810-204447-558-vault-monitor-28b0101e",
+  "createdAt": "2026-08-11T00:44:47.5583011Z",
+  "createdAtLocal": "2026-08-10 20:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-10 20:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Hourly rollups + cost reconciliation per user direction. ADK: new rollup.py (incremental per-run hourly aggregator keyed by hour x provider/runtime/model/task/project/host/status; fixed-edge duration histogram instead of percentiles because percentiles are not mergeable across hosts/sends; sums paired with counts so unreported fields stay out of denominators; cardinality cap). Worker split into two cadences: drain_interval 30s (queue -> rollup + pending, no I/O, crash safety) and send_interval 3600s hourly POST; pending buffer capped, overflow spooled straight to disk; only CLOSED hours ship, shutdown forces the partial hour. Separate spool files runs vs rollups-. API: migration 005 ai_run_rollups (idempotent OVERWRITE not increment - at-least-once drain would double-count), rollup ingest, POST /settle, GET /provisional, GET /rollups/timeline. settle_costs mirrors budget.settle: provisional rows only, total split across covered rows, never rewrite settled, FOR UPDATE lock, and recomputes affected rollup cost cells. Public key forbidden from rollups+settle (overwrite semantics). vault-inference budget.settle now pushes to API on a daemon thread. Tests: ADK 49, API 23, vault-inference 28, all green. vault-monitor tsc clean; 1 PRE-EXISTING services test failure unrelated.",
+  "commands": [
+    "python -m unittest tests.test_telemetry_rollup",
+    "pytest tests/test_telemetry_ai_runs_router.py",
+    "pytest tests",
+    "npx tsc --noEmit"
+  ],
+  "files": [
+    "vaultwares-adk/vaultwares_adk/telemetry/rollup.py",
+    "vaultwares-adk/vaultwares_adk/telemetry/worker.py",
+    "vaultwares-api/migrations/telemetry/005_ai_run_rollups.sql",
+    "vaultwares-api/app/routers/telemetry/ai_rollups_db.py",
+    "vault-inference/app/budget.py"
+  ],
+  "planPath": "",
+  "contentHash": "28b0101e7ad4ebaa1970b46e58aec610031f1645ff51c724c86ebcfcee023334",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "856661a",
+    "hasChanges": true
+  }
+}

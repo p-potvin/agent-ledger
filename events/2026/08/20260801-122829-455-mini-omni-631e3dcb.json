@@ -1,0 +1,55 @@
+{
+  "id": "20260801-122829-455-mini-omni-631e3dcb",
+  "createdAt": "2026-08-01T16:28:29.4553171Z",
+  "createdAtLocal": "2026-08-01 12:28",
+  "timezone": "Eastern Standard Time",
+  "project": "mini-omni",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Edit, Write, Monitor\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 12:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write",
+      "Monitor"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "Diagnosed mini-omni x2 duo (A<->B conversation + VBAN to 2 phones). Root causes found: (1) bridge B output was set to 'Voicemeeter In 3', a DEAD endpoint under standard Voicemeeter (voicemeeter_x64.exe has only one live virtual strip 'Voicemeeter Input' + buses A1/B1; the VB driver publishes In3/AUX/VAIO3 names anyway and silently swallows audio) - so A never heard B; (2) VBAN_IP_A and VBAN_IP_B both pointed at 10.0.0.151, so both bridges streamed to the same phone which is tuned to stream MiniOmniA - phone heard A, never B. Also fixed: VBAN header was 24 bytes vs spec 28 (missing format_nbs, 1-byte counter instead of uint32 LE) and packets were burst-sent instead of realtime-paced; replaced with VbanTransmitter thread (paced, idle silence, bounded buffer). Added --input-gain applied BEFORE VAD (Voicemeeter return leg measured ~26dB down; normalize_audio ran too late to help VAD trigger). Fixed batch escaping ^-> which redirected echo output into stray files named A and B. Added probe_return_path.py and vban_test.py diagnostics. Started both servers on 60808/60809 (RTX 3060, 11GB free).",
+  "commands": [
+    "python probe_return_path.py",
+    "python test_cables.py",
+    "python server.py --port 60808 --device cuda:0",
+    "python server.py --port 60809 --device cuda:0"
+  ],
+  "files": [
+    "vbcable_bridge.py",
+    "start_duo.bat",
+    "probe_return_path.py",
+    "vban_test.py"
+  ],
+  "planPath": "",
+  "contentHash": "631e3dcbd30be8115d220b8f0044a66f108f2088764a0ba21f599bf1ae9cc78e",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

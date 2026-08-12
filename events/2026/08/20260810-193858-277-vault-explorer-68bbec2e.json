@@ -1,0 +1,57 @@
+{
+  "id": "20260810-193858-277-vault-explorer-68bbec2e",
+  "createdAt": "2026-08-10T23:38:58.2771210Z",
+  "createdAtLocal": "2026-08-10 19:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5.6 Luna XHigh Thinking Fast\r\nThinking: high\r\nMode: agent\r\nPermissions: autopilot (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-subtitle-language-idle-silent\r\nTools used (this reply): read, grep, edit, write, exec, todo_write, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-10 19:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5.6 Luna XHigh Thinking Fast",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows local",
+    "toolsUsed": [
+      "read",
+      "grep",
+      "edit",
+      "write",
+      "exec",
+      "todo_write",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Corrected PR #41 so generated translated Quebec French subtitle sidecars use the external-compatible .fr.srt suffix and metadata records \fr; QC remains only an app-facing selection/display code. Implemented through external_subtitle_code in audio_normalize.py, added regression assertions, verified Python/Node checks, and pushed commit 6de13be from an isolated PR-tip worktree to avoid touching unrelated local edits.",
+  "commands": [
+    "git fetch origin",
+    "git worktree add temporary PR-tip worktree",
+    "node tests/ai_paths_regression_test.js",
+    "python -m py_compile python-scripts/audio_normalize.py",
+    "git diff --check",
+    "git push origin HEAD:vw-codex-subtitle-language-idle-silent",
+    "gh pr view 41"
+  ],
+  "files": [
+    "python-scripts/audio_normalize.py",
+    "tests/ai_paths_regression_test.js"
+  ],
+  "planPath": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer/.codex/subtitles-ai-cleanup/plan.md",
+  "contentHash": "68bbec2e2734ec08d9050dbc4fda14754084f66b458068b5cd585cba659355ab",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-subtitle-language-idle-silent",
+    "head": "2f21ec1",
+    "hasChanges": true
+  }
+}

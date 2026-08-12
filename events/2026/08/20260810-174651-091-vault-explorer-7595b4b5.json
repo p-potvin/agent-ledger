@@ -1,0 +1,62 @@
+{
+  "id": "20260810-174651-091-vault-explorer-7595b4b5",
+  "createdAt": "2026-08-10T21:46:51.0910742Z",
+  "createdAtLocal": "2026-08-10 17:46",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5.6 Luna XHigh Thinking Fast\r\nThinking: high\r\nMode: agent\r\nPermissions: autopilot (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-subtitle-language-idle-silent\r\nTools used (this reply): read, grep, find_file_by_name, edit, exec, todo_write, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-10 17:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5.6 Luna XHigh Thinking Fast",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows local",
+    "toolsUsed": [
+      "read",
+      "grep",
+      "find_file_by_name",
+      "edit",
+      "exec",
+      "todo_write",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Resumed and verified the existing subtitle/idle-preview PR state. Confirmed QC labels, QC sidecar matching, native SRT-to-derived-VTT handling, all 26 Parakeet language codes, and non-dev idle generation with silent diagnostics are present on PR #41 branch vw-codex-subtitle-language-idle-silent. Re-ran local subtitle, AI path, ASR language, cleanup, and JavaScript syntax checks successfully. No task changes remained uncommitted; unrelated local changes remain outside the PR.",
+  "commands": [
+    "node tests/local_subtitles_test.js",
+    "node tests/ai_paths_regression_test.js",
+    "node tests/subtitle_asr_options_regression_test.js",
+    "node tests/explorer_cleanup_test.js",
+    "project JavaScript syntax checks",
+    "git diff main...HEAD --check",
+    "gh pr view 41"
+  ],
+  "files": [
+    "src/ipc/subtitles.ipc.js",
+    "js/player/subtitles.js",
+    "js/navigation/idle.js",
+    "src/previews.js",
+    "tests/local_subtitles_test.js",
+    "tests/subtitle_asr_options_regression_test.js",
+    ".codex/subtitles-ai-cleanup/plan.md"
+  ],
+  "planPath": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer/.codex/subtitles-ai-cleanup/plan.md",
+  "contentHash": "7595b4b5eed432af4f39816fa1bf084b09037f90aecbe87bacd6a4d398ac503d",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-subtitle-language-idle-silent",
+    "head": "2f21ec1",
+    "hasChanges": true
+  }
+}

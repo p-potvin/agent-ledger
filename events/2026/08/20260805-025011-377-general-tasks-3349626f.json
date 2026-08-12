@@ -1,0 +1,43 @@
+{
+  "id": "20260805-025011-377-general-tasks-3349626f",
+  "createdAt": "2026-08-05T06:50:11.3774846Z",
+  "createdAtLocal": "2026-08-05 02:50",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos  Branch: n/a\r\nTools used (this reply): PowerShell, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 02:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "PowerShell",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "summary": "Investigated loss of Claude session history + config after migrating from MS Store (MSIX) Claude app to winget/Squirrel build. Findings: MSIX package Claude_pzs8sxrjxfjjc redirected %APPDATA%\\Claude writes into Packages\\Claude_pzs8sxrjxfjjc\\LocalCache\\Roaming\\Claude, which is now deleted (only SystemAppData\\Helium remains) - this is the lost config half (claude_desktop_config.json, Local Storage, IndexedDB, window state). All files in real %APPDATA%\\Claude created today 02:26-02:46 by new build. C:\\Users\\Administrator\\.claude survived intact: CLAUDE.md, .claude.json 50KB, skills, plugins, plans, memory, and 55 .jsonl transcripts across 12 projects (oldest 07/07/2026). App shows no history because claude-code-sessions index dir was created today and holds only the current session. Transcripts older than 07/07 removed by Claude Code 30-day cleanup that ran 01:48 UTC today. No C: shadow copies (VSS covers D:/E:/F: only), no restore points. Recovery path: transcripts resumable via CLI; desktop history index rebuildable from jsonl.",
+  "commands": [
+    "vssadmin list shadows",
+    "Get-AppxPackage -AllUsers",
+    "Get-ChildItem $env:APPDATA\\Claude -Force"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\.claude\\projects",
+    "C:\\Users\\Administrator\\AppData\\Roaming\\Claude\\claude-code-sessions",
+    "C:\\Users\\Administrator\\AppData\\Local\\Packages\\Claude_pzs8sxrjxfjjc"
+  ],
+  "planPath": "",
+  "contentHash": "3349626fcf88aea1362f6e54d889ecf898399800b5f03a789ee49a44b0c46d0b",
+  "git": null
+}

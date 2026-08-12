@@ -1,0 +1,40 @@
+{
+  "id": "20260805-161400-981-vw-cli-8b3b0f69",
+  "createdAt": "2026-08-05T20:14:00.9810787Z",
+  "createdAtLocal": "2026-08-05 16:14",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Bash, Read, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 16:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Wed, 05 Aug 2026 - Closed out the dub-loop verification properly. On re-reading the bridge's flushed log I found it was dominated by 'connection refused' retries, which made my earlier 'verified end-to-end' claim thinner than stated, so I re-verified by transcribing the 3 produced wavs with Parakeet rather than inferring from their existence. Result: 3/3 cues carried the correct text through the full chain (fake cue socket -> dub_bridge -> persistent crispasr --server -> wav). cue_0001 'It just doesn't matter.' 100%; cue_0002 'The dubbing bridge is now speaking this line.' 88% (Parakeet re-heard 'dubbing' as 'Dobbing' on the return trip - an ASR artefact on the coined phrase, not a synthesis error); cue_0003 'Third and final test cue.' 100%. Durations 1.7s/3.6s/2.4s. The refused-connection lines were the startup window before the emitter was listening; the loop did connect and function. Combined with the earlier finding, the reconnect-loop bug (create_connection timeout also setting the socket timeout, so recv raised on every quiet gap) explains the repeated 'bridge connected' entries in the emitter log and is fixed via settimeout(None). Cleaned up stray crispasr server processes. STILL NOT VERIFIED: real live audio through the overlay with real playback to a device - requires a human at the machine.",
+  "commands": [
+    "python parakeet transcription of dub_bridge output wavs"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\dub_bridge.py"
+  ],
+  "planPath": "",
+  "contentHash": "8b3b0f69aa39ba83e4b8f0c453bf8cdb1943660ec08a5cd83a7d7fb6f6402abf",
+  "git": null
+}

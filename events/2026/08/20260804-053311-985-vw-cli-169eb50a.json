@@ -1,0 +1,45 @@
+{
+  "id": "20260804-053311-985-vw-cli-169eb50a",
+  "createdAt": "2026-08-04T09:33:11.9851514Z",
+  "createdAtLocal": "2026-08-04 05:33",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Bash, Read, Edit, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-04 05:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Tue, 04 Aug 2026 01:40 - Added true stroked text outline to the live-subs overlay so captions stay legible on any background. Replaced the QGraphicsDropShadowEffect with a new OutlinedLabel(QLabel) that paints glyphs via QPainterPath: stroke pass with a round-join/round-cap pen of width 2*outline (so N px sits outside the glyph) then a fill pass. A drop shadow only offsets a blurred copy, so text still washes out against similarly-bright backgrounds; stroking every glyph edge is what burned-in subtitles do. Word wrapping is done in OutlinedLabel with QFontMetrics rather than by QLabel, because paintEvent and heightForWidth must agree on line count - if they disagreed the window would be sized for a different number of lines than it draws. Outline scales with font size (max(2, size/7)): 3px at 20pt, 6px at 40pt. Added --outline / -Outline (default 3, 0 disables) to the py script, Start-LiveSubtitles.ps1 and vw-commands.ps1. VERIFICATION NOTE: my first contrast test was invalid - it rendered the widget over a filled pixmap and got byte-identical pixel counts for white and black backgrounds, which proved the widget was painting its own background rather than compositing. Redone properly: render glyphs to a transparent pixmap, composite over each background, then count luminance extremes. Result over #FFFFFF/#000000/#7F7F7F/#F2C230/#2E6FF2 - ~1306 very-light glyph px and ~1900-2100 very-dark outline px present on every mid-tone, and counts now vary with background as they must. Re-ran the layout regression after swapping the label class: centre stable at cx=768, bottom stable at 735, grows upward 658->622, shrinks back 78->114->78, no clipping. Both ps1 parse clean.",
+  "commands": [
+    "python -c outline contrast test",
+    "python -c overlay layout regression"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\live_subs_overlay.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-LiveSubtitles.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "169eb50a243c5d758759a2cbed0060b5ebc311c3c0855af05aefc4d8c4f066b9",
+  "git": null
+}

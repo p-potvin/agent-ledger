@@ -1,0 +1,46 @@
+{
+  "id": "20260806-025034-020-vw-cli-82cb05b7",
+  "createdAt": "2026-08-06T06:50:34.0203749Z",
+  "createdAtLocal": "2026-08-06 02:50",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "bugfix",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Read, Edit, Bash, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 02:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Root-caused and fixed the live-subs VRAM growth. Not a cache problem primarily - the rolling audio buffer grows without bound. In AsrWorker.run the buffer is only trimmed when a cue is actually emittable: the single-segment branch requires (settled or too_long) AND txt.strip() AND s0 >= last_final_end - 0.05. Empty text over music/applause, or a segment overlapping the previous final, falls through to partial and leaves the buffer untouched, so too_long never forces a trim. Simulated the pathological path: buffer reaches 900s after 15 min and 1200s after 20 min of audio, matching the reported 15-20 min onset exactly; Parakeet re-transcribes the whole buffer every 0.7s and its memory scales with input length, hence multi-GB in seconds once the buffer is minutes long. Fix 1: unconditional ceiling on buf enforced right after the block append, independent of every emit guard - simulation now pins the buffer at 12.0s at all durations. Exposed as -MaxUtterance/--max-utterance (default 12s). Fix 2: transcribe_array (the live path) never synced or emptied the CUDA cache, unlike its sibling transcribe_file which does both; added throttled synchronize+empty_cache every 20 calls, since variable-length inputs fragment the caching allocator. Registry updated via vw-gui writer, live-subs now 20 params.",
+  "commands": [
+    "python buftest.py",
+    "python -m py_compile live_subs_overlay.py parakeet_asr.py",
+    "pwsh -File scripts/vwg-write-registry.ps1 -Action update -Name live-subs"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\live_subs_overlay.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\parakeet_asr.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-LiveSubtitles.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "82cb05b79922dead2deee120f3755e8bdfb6cdb812d1dfa8592e6affd56599a5",
+  "git": null
+}

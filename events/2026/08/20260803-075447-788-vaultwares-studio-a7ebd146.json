@@ -1,0 +1,52 @@
+{
+  "id": "20260803-075447-788-vaultwares-studio-a7ebd146",
+  "createdAt": "2026-08-03T11:54:47.7888400Z",
+  "createdAtLocal": "2026-08-03 07:54",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: plan\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, Read, Edit, Write, WebFetch, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 07:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "plan",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "WebFetch",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Fri 01 Aug 2026. Wrote DA3-Streaming integration spec (docs/plans/plan-da3-streaming-20260801.md), researched against upstream source not the README. Four findings that change the approach: (1) da3_streaming/ is NOT pip-installed - pyproject declares packages=[src/depth_anything_3] and the streaming tree lives at repo root with its own requirements.txt/configs/fastloop/loop_utils, so it must be vendored via COPY. (2) It replaces the SfM stage, NOT --gs-only: outputs are camera_poses.txt (flattened 4x4 C2W) + intrinsic.txt + pcd/combined_pcd.ply + loop_closures.txt, so it feeds splatfacto and upgrades da3-standard while da3-draft stays the 76s preview. (3) Three keys in the user's proposed config (input_width, input_height, precision) DO NOT EXIST in base_config.yaml - resolution is set by pre-resizing frames; real defaults are Model.chunk_size=120 / Model.overlap=60 nested under Model:, not 65/22 flat. (4) Proposed 65-chunk @ 672x378 will not fit 24GB: 60 @ 504x378 is already 21.2/24GB, and at patch-14 the proposal is 84,240 tokens vs 58,320 = 1.44x, so linear scaling alone lands ~30GB. Plan starts from benchmarked 60/30 @ 504x378 with upstream's 50pct overlap on a10g-small. Extra deps flagged: faiss-gpu (highest risk, PyPI version unmaintained; loop_enable:False is the phase-1 escape hatch), numba (JIT warmup), pypose. Weights are local file paths not HF IDs, and loop closure needs a separate DINO-SALAD checkpoint we do not fetch at all. Highest-risk piece identified: the pose converter, since streaming emits C2W where existing da3_to_transforms expects w2c and inverts - wrong convention trains cleanly while being wrong, so phase 2 validates trajectory against the known-good da3-standard run before spending on training. Five phases each ending somewhere useful, ~0.75 USD cumulative. Pushed a4e76b7 to",
+  "commands": [
+    "git push origin main",
+    "WebFetch da3_streaming.py / base_config.yaml / requirements.txt",
+    "curl pyproject.toml packages"
+  ],
+  "files": [
+    "docs/plans/plan-da3-streaming-20260801.md",
+    "TODO.md"
+  ],
+  "planPath": "docs/plans/plan-da3-streaming-20260801.md",
+  "contentHash": "a7ebd14612b70de7b4141a4f0345624d331fb2a9ec7b4463324cbf98b4d472b1",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "a4e76b7",
+    "hasChanges": true
+  }
+}

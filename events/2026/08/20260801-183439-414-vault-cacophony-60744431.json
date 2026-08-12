@@ -1,0 +1,49 @@
+{
+  "id": "20260801-183439-414-vault-cacophony-60744431",
+  "createdAt": "2026-08-01T22:34:39.4147943Z",
+  "createdAtLocal": "2026-08-01 18:34",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 18:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "mini-omni2 via CrispASR tested end-to-end on GPU. ASR WORKS WELL: correct JFK transcript, 11.0s audio in 0.89s = 12.3x realtime, kv cache only 48 MiB. Confirmed GPU is genuinely used - measured during S2S: GPU 73-100% utilisation, VRAM 2202 MiB rising to 8244 MiB peak, CPU only 9-17%. The 0.8GB the user observed was the idle state after the run, and Windows per-process CPU reporting is unreliable for GPU-offloaded work. Actual model sizes on disk: mini-omni2-q4_k.gguf 1.01GB, snac-24khz.gguf 25MB (docs claimed ~80MB), so ~1.04GB per instance and ~2.1GB for two, versus 5.7GB for the current PyTorch bf16 pair. S2S IS BROKEN. Found and fixed a real defect: MO2_EOA = 4096 sits one past the end of the sampler range (mo2_sample_token called with MO2_AUDIO_VOCAB = 4096 loops i < vocab so only reaches 4095), making end-of-audio unreachable; the text stream is unaffected because MO2_EOT 151936 is inside text_vocab_size 152000, which exactly explains why text stopped at 15 tokens while audio ran to the hardcoded 2048 cap producing 175s of audio. Added MO2_AUDIO_SAMPLE_VOCAB = MO2_EOA + 1 and a step >= 7 delay guard (7 layershifted streams, stream 6 is most delayed so early EOA is spurious). Result improved 2048 steps/175s -> 978 steps/83s with natural termination instead of hitting the cap, but STILL WRONG: a 9-token reply should be 2-3s. Audio analysis proves the surplus is degenerate, not speech - per-second RMS flat at ~0.02 across all 83s with no pauses, and self-similarity cos 0.00-0.07 so it is not looping either, just continuous babble. Conclusion: second defect",
+  "commands": [
+    "crispasr.exe --backend mini-omni2 -m auto --s2s",
+    "cmake --build build --target crispasr-cli"
+  ],
+  "files": [
+    "CrispASR/src/mini_omni2.cpp"
+  ],
+  "planPath": "",
+  "contentHash": "60744431824d2a02dba740e42b4346f6e764fc5b3fd76288c5d2597e4d65a9a2",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

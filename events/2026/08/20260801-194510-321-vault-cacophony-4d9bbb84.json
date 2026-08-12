@@ -1,0 +1,50 @@
+{
+  "id": "20260801-194510-321-vault-cacophony-4d9bbb84",
+  "createdAt": "2026-08-01T23:45:10.3210630Z",
+  "createdAtLocal": "2026-08-01 19:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: D:\\mini-omni  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-01 19:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "D:\\mini-omni",
+  "summary": "ROOT CAUSE FOUND AND FIXED - instance A was invisible to Voicemeeter's mixing engine. \"VoiceMeeter Aux Input\" -> \"VoiceMeeter Aux Output\" is a DRIVER-LEVEL LOOPBACK that bypasses the mixer entirely. Bridge A wrote there, bridge B read Aux Output directly, so the A->B conversation worked, but A's voice never touched a strip and therefore could never reach A1 (headphones) or A2 (phone 1). Proven by tone test: writing to Aux Input gave A2=0.0000 A1=0.0000 but B2=0.3264. User proved it independently by cutting the Voicemeeter Input strip - all sound stopped, confirming everything audible came from strip 3 (B) only. Swept every virtual-input playback device across both driver families (14 devices, MME + DirectSound): NOT ONE reaches A1/A2, so capturing Aux Output back in via a hardware strip was the only route. FIX (user applied in GUI): Stereo Input 1 device = VoiceMeeter Aux Output, routed A1 + A2 only, B1/B2 dark. VERIFIED: VBAN loopback probe now shows A2 at 19.77% of packets carrying sound (was 0.01%) and A3 at 9.43%; user confirms audio on headphones and both phones. CRITICAL MEASUREMENT LESSON: the \"Voicemeeter Out A1/A2/A3\" CAPTURE devices are Potato-family and DEAD under Banana - PyAudio reads them as 0.0000 even while the buses demonstrably carry audio. Every A-bus measurement I took via PyAudio was therefore meaningless, including the original \"A2 is silent\" finding that sent us chasing a non-existent bus fault. Only vban_loopback_probe.py reads A-buses correctly because it uses Voicemeeter's own transmitter. B-buses (Voicemeeter Out B1, VoiceMeeter Aux Output) DO read correctly via PyAudio. Corrected my",
+  "commands": [
+    "python find_engine_input.py",
+    "python vban_loopback_probe.py",
+    "python engine_path_check.py"
+  ],
+  "files": [
+    "D:/mini-omni/bus_check.py",
+    "D:/mini-omni/engine_path_check.py",
+    "D:/mini-omni/find_engine_input.py"
+  ],
+  "planPath": "",
+  "contentHash": "4d9bbb8417b65e37a663e7bf272e701da2300700d60de40745818a6116b14f6b",
+  "git": {
+    "repo": "mini-omni",
+    "root": "D:/mini-omni",
+    "branch": "main",
+    "head": "26c31d5",
+    "hasChanges": true
+  }
+}

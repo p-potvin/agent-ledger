@@ -1,0 +1,44 @@
+{
+  "id": "20260807-003344-526-vw-cli-24439800",
+  "createdAt": "2026-08-07T04:33:44.5266932Z",
+  "createdAtLocal": "2026-08-07 00:33",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): WebFetch, Read, Write, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-07 00:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "WebFetch",
+      "Read",
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Closed out live translation experimentation. Defaults already correct for 'revert to no partials': -Partials off and -TranslatePartials off, so 'vw live-subs -TranslateTo fr' gives translated finals only; no code change made. Read the kaelri/qwen3.5-mt model page as requested and found three deviations in our implementation: the model ships its own tuned system prompt which we override, it expects a literal 'Translate to <Language>:' user turn while we send 'Translate:' with a 'Previous line:' prefix, and it documents temperature 0.3 / top_p 0.6 while we run temperature 0. Thinking is already suppressed by an empty think block in the template so our think:false is redundant. Ran an A/B on six cues: native format is more faithful on complete sentences (ours mistranslated 'chart' as 'carte' and invented an imperative), ours is better at leaving fragments truncated rather than fabricating endings, latency a wash at 466ms vs 454ms. Neither dominates so nothing changed; documented in utils/TRANSLATION_NOTES.md along with why qwen3:0.6b was disqualified, why a stricter prompt made fabrication worse, that the apparent 'creative filling' was a partial-vs-final display artifact, that Parakeet cannot translate, and that port 8090 is crispASR/parakeet not an LLM. Saved a memory that the user is a native French speaker.",
+  "commands": [
+    "WebFetch ollama.com/kaelri/qwen3.5-mt",
+    "node prompt-ab.js"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\TRANSLATION_NOTES.md",
+    "C:\\Users\\Administrator\\.claude\\projects\\C--Users-Administrator-Desktop-vw-cli\\memory\\user-native-french.md"
+  ],
+  "planPath": "",
+  "contentHash": "2443980075285bf01b8bf978e5bc1f942d0ab64c664478b4d7ab55fd01b81a94",
+  "git": null
+}

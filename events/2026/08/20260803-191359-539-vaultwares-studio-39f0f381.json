@@ -1,0 +1,58 @@
+{
+  "id": "20260803-191359-539-vaultwares-studio-39f0f381",
+  "createdAt": "2026-08-03T23:13:59.5390506Z",
+  "createdAtLocal": "2026-08-03 19:13",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Edit, Write, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 19:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Sun 03 Aug 2026. DA3-Streaming PHASES 3+4 GREEN on HF. da3-stream preset poses ALL 500 frames (vs 80 for da3-standard) - 6.25x - then trains through the UNCHANGED Job B contract. SfM: 500/500 posed, 120.3s inference, a10g-small, ~0.04 USD. Training: l4x1, 1316.8s + 44s export, ~0.32 USD, 956,304 gaussians. Render shows visibly sharper architecture than any prior run (shed turquoise door, wall texture, window opening all resolve with real edges). Built the whole container path: Dockerfile vendors da3_streaming with --recurse-submodules (salad submodule mandatory), adds 7 undeclared deps + transitive, faiss-cpu for the module-scope import, plus TWO new build-time assertions (torch/numpy intact, and full streaming import chain) that would have caught every phase-1 blocker for free. New --stream-sfm entrypoint mode: resize, stage weights from Hub, generate config, run streaming with live output, convert, bundle. THREE bugs found by running it: (1) IRLS.tol and SIM3_Optimizer.lambda_init must be emitted as STRINGS because streaming eval()s them - works for their YAML since PyYAML/YAML-1.1 needs a dot in exponents so 1e-9 is a string, but yaml.safe_dump of a Python float writes 1.0e-09 which round-trips as a real float and eval(float) TypeErrors; local run passed only because that config was hand-written. (2) I defined run_streaming twice, shadowing the existing helper and breaking every --train-only call site 15s into a scheduled GPU job - added tests/test_entrypoint_hygiene.py catching duplicate top-level defs, mutation-tested. (3) flavor_scheduling_timeout_seconds was only honoured by the direct-GS path so the split path silently used 120s and burned a launch - now a shared _scheduling_timeout helper across all four remote StageContexts. Also",
+  "commands": [
+    "tools/queue_da3_stream.py local-run-20260730-105436 900",
+    "tools/queue_da3_train_only.py --job ... --preset da3-stream --scheduling-timeout 900",
+    "tools/push_da3_space.py --space vw-studio-da3-gs",
+    "git push origin main"
+  ],
+  "files": [
+    "docker/da3/Dockerfile",
+    "docker/worker/da3_entrypoint.py",
+    "vaultwares_studio/presets.py",
+    "vaultwares_studio/stages/reconstruction.py",
+    "tests/test_entrypoint_hygiene.py",
+    "tools/queue_da3_stream.py",
+    "docs/plans/plan-da3-streaming-20260801.md"
+  ],
+  "planPath": "docs/plans/plan-da3-streaming-20260801.md",
+  "contentHash": "39f0f381900440cb767890087a3858f880a0dd163b5e89145da4bb99b92f6a3d",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "a3784d8",
+    "hasChanges": true
+  }
+}

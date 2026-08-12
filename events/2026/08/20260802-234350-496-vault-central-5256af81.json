@@ -1,0 +1,55 @@
+{
+  "id": "20260802-234350-496-vault-central-5256af81",
+  "createdAt": "2026-08-03T03:43:50.4960238Z",
+  "createdAtLocal": "2026-08-02 23:43",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-02 23:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Sun, 02 Aug 2026 23:45 - v3.5.0 (commit 90efc15, pushed). Removed the dead FFmpeg WASM path: deleted src/offscreen/sandbox.{ts,html} and the sandbox iframe plumbing in processor.ts, dropped @ffmpeg/{core,ffmpeg,util}, the ffmpeg-core copy target, the sandbox esbuild step, the manifest sandbox block and its 3 web_accessible_resources entries, and removed 'wasm-unsafe-eval' from the extension_pages CSP (verified zero WebAssembly references remain in the bundles). Also removed stale compiled src/offscreen/{processor,sandbox}.js siblings. Preview generation unchanged (10 WebP stills via canvas). Packaged archive 11.8MB -> 1.48MB. Replaced the inline VaultWaresIcon <svg> with VaultCentralLogo, an <img> onto icons/vault-central-64.png carrying a stable vault-central-logo class. Docs (README/TODO) updated. Verified tsc clean, vitest 19/19, build succeeds. ANSWERED user question: the build already targets dist/ (vite outDir + esbuild --outfile); package/ only holds the timestamped distributable zip produced by package-extension.cjs - no change needed. PENDING and NOT started: user requested a full dashboard layout revamp (rules: keep existing colors; goal: visualize favourite videos grouped by hostname by default). Blocked on a missing screenshot - user described a sidebar with sync toggle, item counts, collapse button and master-pin button as 'screenshot 2' but the attached image 2 was the SET NEW PIN dialog, and 'screenshot 3' was never attached. Also flagged that the grill-me skill normally gates frontend work; user said 'I trust your judgement' so awaiting their call. Encryption review also requested but deferred by the user until after cosmetic testing.",
+  "commands": [
+    "npm run build",
+    "npx vitest run",
+    "npx tsc --noEmit",
+    "git push origin main"
+  ],
+  "files": [
+    "src/offscreen/processor.ts",
+    "src/lib/icons.tsx",
+    "manifest.json",
+    "vite.config.ts",
+    "package.json"
+  ],
+  "planPath": "",
+  "contentHash": "5256af81de46ed4adddbebae935f9e818a2b3cac28794f274622277bfd94b981",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "90efc15",
+    "hasChanges": false
+  }
+}

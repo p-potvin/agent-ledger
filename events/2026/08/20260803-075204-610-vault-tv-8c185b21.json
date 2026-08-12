@@ -1,0 +1,53 @@
+{
+  "id": "20260803-075204-610-vault-tv-8c185b21",
+  "createdAt": "2026-08-03T11:52:04.6104776Z",
+  "createdAtLocal": "2026-08-03 07:52",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-03 07:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Playback now reaches ExoPlayer. With tailscale up, drove the device over adb and captured the real failure: comet resolved in ~24s, PlayerActivity launched, then ERROR_CODE_IO_BAD_HTTP_STATUS. Verified the cause by requesting a comet stream URL directly - it returns 302 to https://nyk5-4.download.real-debrid.com, an http->https cross-protocol redirect that DefaultHttpDataSource refuses by default. Added setAllowCrossProtocolRedirects(true) in PlayerActivity. Also confirmed device networking is fine (tun0 100.93.218.48, route to comet via tun0 for both uid 2000 and app uid 10040, port 22 returns an SSH banner). TEXT: dropped grid to 4 columns and retuned canvas 1280->1024 for a 1.875x uniform scale-up; content width 0.90*1024-240=682px vs the 4*150+3*16=648px four columns need. PAGINATION: not a tailscale issue - no screen implements paging (nextCursor/hasMore unused across src/features) and TMDB is public https, never traversing the tailnet. Note the installed APK is from Jul 30 13:56 so it predates the 1280 and 1024 canvas work. 143 tests pass, tsc clean, assets staged.",
+  "commands": [
+    "adb shell input keyevent",
+    "adb logcat -s VaultTV-Player",
+    "adb shell ip route get 100.67.25.118 uid 10040",
+    "curl -D - <comet stream url>"
+  ],
+  "files": [
+    "android/app/src/main/java/app/vaultwares/tv/PlayerActivity.kt",
+    "index.html",
+    "src/styles/tv.css",
+    "src/components/MediaGrid.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "8c185b212e60795bbc20abac6c2b712e0da6edf4c9c3c89c7d50132e30de99a7",
+  "git": {
+    "repo": "vault-tv",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-tv",
+    "branch": "main",
+    "head": "5e3a319",
+    "hasChanges": true
+  }
+}

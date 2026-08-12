@@ -1,0 +1,47 @@
+{
+  "id": "20260806-023125-545-vw-cli-ce50541c",
+  "createdAt": "2026-08-06T06:31:25.5453673Z",
+  "createdAtLocal": "2026-08-06 02:31",
+  "timezone": "Eastern Standard Time",
+  "project": "vw-cli",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli  Branch: n/a\r\nTools used (this reply): Read, Edit, Bash, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-06 02:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli",
+  "summary": "Local translation engine for 'vw live-subs'. Benchmarked candidates before choosing: google/deep_translator ~1670ms per cue; qwen3:0.6b 233ms but unusable (rendered 'welcome back to the stream' as 'bienvenue a la riviere', 'chart' as 'chartre', and with a system prompt silently echoed one cue back in English untranslated); kaelri/qwen3.5-mt:2b 412ms with correct idiomatic output across all five test cues including a short 'yeah' and a mid-sentence fragment. Chose the 2b as default, google retained as automatic fallback after 3 consecutive local failures. Implementation adds engine/model/url to TranslateWorker with a system prompt, one line of prior-source context, think:false (qwen3 reasoning would dominate the latency budget), temperature 0.2, 8s timeout, quote stripping, LANG_NAMES code-to-name map incl. qc=Quebec French. Corrected two premises: port 8090 is crispASR serving PARAKEET ASR (health reports backend:parakeet), not Qwen; and Parakeet cannot translate - its 'language' arg is never passed to inference, only threaded to TranscriptSegment as a metadata label, so multilingual means it transcribes 25 languages, not that it translates between them. Registry updated via vw-gui's surgical writer (live-subs now 17 params). Verified: compiles, local engine 660ms cold/368ms warm, lang mapping, and dead-port fallback reaching google correctly.",
+  "commands": [
+    "node mt-bench.js",
+    "node mt-bench2.js",
+    "curl localhost:8090/health",
+    "pwsh -File scripts/vwg-write-registry.ps1 -Action update -Name live-subs"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils\\live_subs_overlay.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\Start-LiveSubtitles.ps1",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli\\vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "ce50541c742ada068a6a6509de3ae7d76a93e0bdaa717373bd49c49c786e8658",
+  "git": null
+}

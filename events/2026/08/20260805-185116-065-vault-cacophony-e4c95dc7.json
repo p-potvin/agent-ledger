@@ -1,0 +1,46 @@
+{
+  "id": "20260805-185116-065-vault-cacophony-e4c95dc7",
+  "createdAt": "2026-08-05T22:51:16.0651973Z",
+  "createdAtLocal": "2026-08-05 18:51",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: allowlist (network: local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\vw-cli\\utils  Branch: n/a\r\nTools used (this reply): Bash, Read, Edit, PowerShell, SendUserFile, Monitor\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 18:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "allowlist",
+    "network": "local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Edit",
+      "PowerShell",
+      "SendUserFile",
+      "Monitor"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\vw-cli\\utils",
+  "summary": "Wed, 05 Aug 2026 18:49 - PATCHED AND REBUILT CrispASR: cosyvoice3 now resolves bare voice names against --voice-dir, so server-side voice cloning works. Change is in examples/cli/crispasr_backend_cosyvoice3.cpp, ~30 lines mirroring crispasr_backend_qwen3_tts.cpp: if tts_voice is a bare name (no separators, not .wav/.gguf, no .. or NUL) and tts_voice_dir is set, resolve <dir>/<name>.wav and read <dir>/<name>.txt into ref_text when the request did not supply one; a name absent from voice-dir still falls through to the baked bank so bank voices keep working. Also added <fstream>/<sstream> includes and switched the synth block to the resolved values, with a clearer error naming the voice and all three ways to supply ref text. BACKUPS TAKEN FIRST per user instruction to back up source not binaries: git diff of the whole working tree saved as uncommitted-before-my-change.patch (137 lines, re-appliable with git apply) plus file copies of the user's three modified files and a .orig of the file I edited. User confirmed their mini_omni2 edits were ~3 real bug fixes and asked to build WITH them - done, they compiled clean. TWO BUILD FAILURES, NEITHER FROM MY CODE: (1) 'fatal error C1083: cannot open include file cstdint' - the MSVC environment was not initialised in my shell; fixed by chaining vcvars64.bat into the same cmd invocation as the build. (2) 'LNK1104: cannot open file bin/crispasr.exe' - the exe was locked by the two crispasr servers I had left running for iteration; my own doing, fixed by stopping them. My source object compiled successfully on the first attempt that reached the compiler. VERIFIED: rebuilt",
+  "commands": [
+    "git diff > backup patch",
+    "cmd /c vcvars64.bat && cmake --build build --target crispasr-cli",
+    "POST /v1/audio/speech voice=alex|robin|fleurs-en",
+    "python f0 clone-vs-reference comparison"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR\\examples\\cli\\crispasr_backend_cosyvoice3.cpp"
+  ],
+  "planPath": "",
+  "contentHash": "e4c95dc71665ca2dab49d3b6037cb6f9b2a40db492b21995559880bf87b7a2ba",
+  "git": null
+}

@@ -1,0 +1,38 @@
+{
+  "id": "20260805-020415-650-qa-automation-b47bd4d1",
+  "createdAt": "2026-08-05T06:04:15.6500950Z",
+  "createdAtLocal": "2026-08-05 02:04",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: unknown\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-05 02:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "unknown",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+  "summary": "Fixed Tor circuit death issue: added CircuitBuildTimeout, CircuitStreamTimeout, MaxCircuitDirtiness, KeepalivePeriod, and NewCircuitPeriod to torrc_rotator and run_tor.bat. Updated PS1 launcher to wait for Tor bootstrap 100% (not just SOCKS port open), verify Tor is passing traffic before starting QA, and auto-restart Tor if circuits are dead.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "b47bd4d1b24abe82745c202e8e38c4ca8b9a26f8fb3d00452d03dd39c05684e1",
+  "git": {
+    "repo": "agent-ledger",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+    "branch": "main",
+    "head": "f71aa0aa",
+    "hasChanges": true
+  }
+}
