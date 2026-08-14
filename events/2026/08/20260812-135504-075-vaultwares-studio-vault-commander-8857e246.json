@@ -1,0 +1,53 @@
+{
+  "id": "20260812-135504-075-vaultwares-studio-vault-commander-8857e246",
+  "createdAt": "2026-08-12T17:55:04.0753843Z",
+  "createdAtLocal": "2026-08-12 13:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio / vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): PowerShell, Read, Write, Edit, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-12 13:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Read",
+      "Write",
+      "Edit",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Recovered vaultwares-studio: quarantined the corrupt pack (overwritten by a size-based dedupe), swapped in objects from a fresh clone while preserving config, remotes and .git/modules submodules, then verified fsck clean with the worktree byte-identical to before. Rescued commit fe6d5ca (v1.1.0) - its commit object survived as a loose object and its tree resolved once combined with origin's pack. Lost: refs/stash (all 3 entries) and branch ssot/standardize-agents-md, both deleted on origin and unrecoverable. Reclaimed 16.1 GB of stale NeMo temp extractions; C: free went 52.7 -> 64.4 GB. Created private repo p-potvin/vault-commander merging vw-gui (history preserved under gui/ via filter-repo subdirectory filter) and vw-cli (cli/), with main.js resolving the CLI via VW_CLI_ROOT then ../cli then the legacy Desktop path. SECURITY: removed a live Google App Password plus two personal emails from github_automation_script.ps1 and a Postgres password, JWT secret and Prisma API key from deploy_vaultwares_dispatch.ps1 before the first commit; both must be rotated. Full-history blob scan confirms no credentials in any commit. BENCHMARKS.md gitignored.",
+  "commands": [
+    "git filter-repo --to-subdirectory-filter gui",
+    "gh repo create vault-commander --private",
+    "git fsck"
+  ],
+  "files": [
+    "vault-commander/.gitignore",
+    "vault-commander/gui/main.js",
+    "vault-commander/cli/github_automation_script.ps1",
+    "vault-commander/cli/deploy_vaultwares_dispatch.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "8857e246a51b839b3c8fcde2c5d24fcc7df372060cf6665c3d5b577987804c78",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "b5acb3f",
+    "hasChanges": true
+  }
+}
