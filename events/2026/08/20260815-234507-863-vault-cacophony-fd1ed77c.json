@@ -1,0 +1,45 @@
+{
+  "id": "20260815-234507-863-vault-cacophony-fd1ed77c",
+  "createdAt": "2026-08-16T03:45:07.8633271Z",
+  "createdAtLocal": "2026-08-15 23:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): Bash, PowerShell, WebSearch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-15 23:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "WebSearch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "BLOCKER FOUND for the whole two-GPU plan: the RTX 2060 is invisible to CUDA. Raw driver API probe via ctypes on nvcuda.dll (bypassing torch): cuInit returns 0, cuDeviceGetCount returns count=1, only the RTX 3060 sm_86 is enumerated, driver CUDA version 13030 (13.3). Confirmed not a torch artifact and not CUDA_VISIBLE_DEVICES: tested with the var genuinely absent at process creation (device_count still 1), with '0,1' (count 1), and with '1' (count 0 - proving CUDA enumerates exactly one physical device). nvidia-smi -L lists both cards; both report Compute Mode Default and WDDM, neither prohibited. Ruled out the architecture theory by search: CUDA 13 dropped Maxwell/Pascal/Volta but Turing sm_75 is the MINIMUM supported arch, so the 2060 should work. torch arch_list includes sm_75. Remaining hypotheses: card added without a reboot so the driver never initialised it for compute, or the PCIe Gen3 x1 link (confirmed 'Current: 1x' on bus 0C:00.0). SEPARATE REAL TRAP: CUDA_VISIBLE_DEVICES=0 is set at MACHINE level system-wide, and CrispASR's cli.cpp:364 only sets the var if it is not already present - so --device/-dev N is SILENTLY IGNORED on this box, which would have pinned every instance to GPU 0 while appearing to work. Must be removed (needs elevation). CORRECTED an error in my prior message: moving the display to the 2060 frees ~0.8GB on the 3060 (11.4->12.0), not ~12GB; the 15.59GB bf16 model does not fit on the 3060 either way, so the user's scepticism was correct. System RAM is only 31.1GB total / 12.4GB free, so CPU-float32 reference (33GB) is out and full CPU",
+  "commands": [
+    "nvidia-smi -q -i 1",
+    "ctypes nvcuda.dll cuDeviceGetCount"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "fd1ed77ca3ac7e826f1d836648e3c71ffe64f4ce7b23a30766905dbe036a3637",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "bc3eb34",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20260817-115626-803-vault-streaming-4bb75347",
+  "createdAt": "2026-08-17T15:56:26.8037617Z",
+  "createdAtLocal": "2026-08-17 11:56",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, PowerShell, WebFetch, WebSearch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-17 11:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailnet",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "WebFetch",
+      "WebSearch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Added web-only source limits (web/source-limits.js) filtering search-torrents results: VW_WEB_MAX_SOURCE_GB default 5 and VW_WEB_MAX_HEIGHT default 1080. Both limits are needed because size alone is a poor proxy for encoder load - measured 98 of 1512 cached 2160p sources are already under 5GB. Desktop path unaffected (filter applied to the result in web/server.js, not inside src/). Verified live: Dune 208 sources to 29 offered, max 4.90GB, max 1080p, zero violations. When every source is filtered the result returns an explicit error instead of an empty list so it does not read as a debrid fault. Measured cached-source size distribution across 8 titles n=9267: median 4.0GB, mean 10.9GB, p75 11.3GB, p90 30.8GB; a 5GB cap keeps 57 percent. By resolution medians: 2160p 27.4GB, 1080p 5.2GB, 720p 2.7GB. DEPLOYMENT BLOCKER FOUND, NOT ACTED ON: greencloud (100.73.93.84) has NO GPU, 4 vCPU EPYC-Milan, 7.7GB RAM with only ~3.5GB available, 18GB disk free, and no ffmpeg installed; vps-ovhcloud also has no GPU. greencloud is additionally the webhook dispatcher for all VaultWares deploys, so saturating it would break fleet-wide CI. Deploy to streaming.vaultwares.ca is paused pending a topology decision from the user (front on greencloud with the app on the GPU box Clopeux-Desktop, vs CPU-only remux-first on greencloud). Codec mix within the capped set: of identifiable releases H.264 outnumbers HEVC roughly 2.5 to 1 (1209 vs 475 of 3774 sampled, 54 percent unlabelled), so a remux-first strategy using the existing copyVideo path is plausible for a CPU host.",
+  "commands": [
+    "ssh root@100.73.93.84 nvidia-smi",
+    "node web/server.js",
+    "curl /api/invoke search-torrents"
+  ],
+  "files": [
+    "web/source-limits.js",
+    "web/server.js",
+    "web/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "4bb75347bfd7a08bb30244b371ffd29f528164281770c24196211a40f86e822c",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "9d7f5e8",
+    "hasChanges": true
+  }
+}

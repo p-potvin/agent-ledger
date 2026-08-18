@@ -1,0 +1,48 @@
+{
+  "id": "20260815-092556-910-vault-cacophony-a55c241e",
+  "createdAt": "2026-08-15T13:25:56.9103667Z",
+  "createdAtLocal": "2026-08-15 09:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: plan\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): Bash, Read, Grep, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-15 09:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "plan",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Grep",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Scoped the CrispASR GGUF PersonaPlex port. Key discovery: both halves already exist in-tree. kyutai_stt.cpp has the full Mimi ENCODER (seanet ratios 4/5/6/8, dim 512, n_filters 64, 8L encoder transformer with layer_scale, stride-2 downsample for 25->12.5Hz, split RVQ 1 semantic + 31 acoustic, bins 2048 dim 256) AND a Moshi-shaped LM layer (RMSNorm alpha, combined QKV, SwiGLU gating_in [dim,2*ffn]/gating_out, audio_emb n_q tables [card+1,dim], text_emb, text_linear head, KV cache, cached graphs) - because Kyutai STT IS Moshi-architecture. csm_tts.cpp + core/seanet_decoder.h + core/rvq.cpp have the Mimi DECODER (RVQ dequant -> upsample -> 8L transformer -> SEANet -> 24kHz) plus a backbone+depth-decoder-over-RVQ with position-specific heads, the analogue of the depformer. PersonaPlex geometry from loaders.py _lm_kwargs: temporal dim 4096, 32L, 32H, hidden_scale 4.125, ctx 3000, RoPE 10000, rms_norm_f32, silu gating; depformer dim 1024, 6L, 16H, ctx 8, weights_per_step + multi_linear, pos_emb none; n_q 16, dep_q overridden 8->16, card 2048, text_card 32000; delays [0, 0x1 then 1x7, 0, 1x7] = 1 text + 8 own audio + 8 other audio (the dual full-duplex stream). Mimi config is bit-identical to the standard Kyutai Mimi already implemented. Gaps: depformer weights-per-step, dual-stream delay pattern, 4096/32L scale, voice-prompt conditioning, and audio-OUT over websocket (realtime_server.cpp only does input transcription). VRAM math: Q4_K ~4.7GB + Mimi ~0.5 + KV 0.4 at 750-frame ctx + activations = ~5.9GB, right at the 2060 limit, so 2060 wants Q4_K_S or Q3_K_M with a 60s context cap; 3060 can take Q5_K/Q6_K. Repo HARD RULES governing the work: 1 read Python line-by-line before C++, 2 cosine parity vs reference dumps, 3/3b acceptance gate",
+  "commands": [],
+  "files": [
+    "CrispASR\\src\\kyutai_stt.cpp",
+    "CrispASR\\src\\csm_tts.cpp",
+    "CrispASR\\src\\core\\seanet_decoder.h",
+    "D:\\moshi-docker\\personaplex\\moshi\\moshi\\models\\loaders.py"
+  ],
+  "planPath": "",
+  "contentHash": "a55c241ecb949818bcfe1b6ce7511750325332efad5f05640e9be2f6a6a981b7",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "9e2193c",
+    "hasChanges": true
+  }
+}

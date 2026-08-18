@@ -1,0 +1,51 @@
+{
+  "id": "20260815-061935-258-vault-cacophony-a6c8c918",
+  "createdAt": "2026-08-15T10:19:35.2581895Z",
+  "createdAtLocal": "2026-08-15 06:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: chat\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR  Branch: main\r\nTools used (this reply): Bash, Read, Grep, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-15 06:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "chat",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Grep",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR",
+  "summary": "Researched user's proposed PersonaPlex quant split and CrispASR-as-host-server option. Findings: (1) The 2bit/nf4 GPU assignment is inverted and neither fits as shipped - turbo2bit native-2bit path peaks ~10GB VRAM (its own card lists RTX 3060 12GB as the consumer target, not a 6GB card); nf4 as shipped auto-dequantizes to bf16 at startup = ~16GB, and the repo ships no native int4 module (linear2bit.py is 2-bit only, included 'for reference'). (2) Local moshi fork's server.py has NO --native-2bit, --cpu-mimi or NO_CUDA_GRAPH support - those come from the author's personaplex-setup fork; stock arg list is host/port/static/gradio-tunnel/tokenizer/moshi-weight/mimi-weight/hf-repo/device/cpu-offload/voice-prompt-dir/ssl. (3) Issue 55 cause: server.py:443 only honours --moshi-weight when non-None, else downloads MOSHI_NAME=model.safetensors from DEFAULT_REPO=nvidia/personaplex-7b-v1 (the 16GB bf16). (4) Issue 105 fix is 6 lines in modules/transformer.py resolving meta-device KV cache to the accelerate hook execution_device; only matters for --cpu-offload. (5) BIG: CrispASR already has the Mimi codec both directions in-tree - seanet_encoder in kyutai_stt.cpp (streaming, GGUF kv kyutai.mimi.encoder_*), core/seanet_decoder.h + core/rvq.cpp used by csm_tts.cpp, and csm_tts is a backbone+depth-decoder-over-RVQ architecture which is the same family as PersonaPlex's temporal transformer + depformer. Gap for a native backend is the Helium-7B backbone, dual text/audio stream + delay pattern, and audio-OUT over websocket: examples/server/ws_stream.cpp (412 lines) and realtime_server.cpp implement only input-audio-transcription, no response.audio.delta. Answered where sidon/voxcpm2-vae came from (CrispASR docs/architecture.md L1513 and L1296, both declare CAP_S2S but are restoration/upscaler not conversational). No code changed.",
+  "commands": [
+    "curl huggingface.co/api/models/cudabenchmarktest/personaplex-7b-turbo2bit"
+  ],
+  "files": [
+    "D:\\moshi-docker\\personaplex\\moshi\\moshi\\server.py",
+    "D:\\moshi-docker\\personaplex\\moshi\\moshi\\models\\loaders.py",
+    "CrispASR\\src\\csm_tts.cpp",
+    "CrispASR\\src\\kyutai_stt.cpp",
+    "CrispASR\\examples\\server\\realtime_server.cpp"
+  ],
+  "planPath": "",
+  "contentHash": "a6c8c9183798e0f04d06b06eebd236a9365cb8ca302b7e72e1ef05f79b682ef6",
+  "git": {
+    "repo": "CrispASR",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/CrispASR",
+    "branch": "main",
+    "head": "66ac7843",
+    "hasChanges": true
+  }
+}

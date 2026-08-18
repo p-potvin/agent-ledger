@@ -1,0 +1,55 @@
+{
+  "id": "20260814-064258-477-vault-central-fd78d9bc",
+  "createdAt": "2026-08-14T10:42:58.4779330Z",
+  "createdAtLocal": "2026-08-14 06:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 06:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Fri, 14 Aug 2026 06:42 - v3.12.0 (commit 0695f85, pushed). (1) ICON SIZE root cause: 41pct of the nobg icon canvas was transparent padding, mark filled only 59pct of width - so declaring larger manifest sizes could never help. Retrimmed with PIL to opaque bbox + 2pct margin: now spans 98pct = 1.66x larger at the same slot (honest ceiling without redrawing art; user asked 2x). The SOLID set was already 99pct edge-to-edge so trimming gained nothing - my first attempt rebuilt it at 80pct and made it SMALLER, reverted via git checkout; its smallness in the dashboard header was purely rendered size, bumped 26px -> 40px. (2) FAVICON was never set on either page - added rel=icon to dashboard-v2.html and pin-entry.html (watch out: pin-entry uses 4-space indent, my first patch matched both indent patterns and produced a duplicate, fixed). (3) COLLAPSIBLE SECTIONS: the hairline rule is now the toggle, deliberately separate from the hostname button so neither action can be mis-hit; gold dot -> gold minus (clip-path plus when collapsed); state persists in localStorage vault-collapsed-groups; isolated groups cannot collapse. (4) CARDS: whole card opens the item (was thumbnail-only, hence the misleading text cursor on the lower half) with role=button + Enter/Space; hover effects moved from group/thumb to card-level group INCLUDING the preview animation - that listener lives inside PreviewThumb attached to its .vault-card ancestor, deliberately NOT lifted into VideoGrid where a per-card hover flag would re-render the whole grid on pointer moves; removed the type chip which sat at bottom-2 left-2 exactly where PreviewThumb puts",
+  "commands": [
+    "npm run build",
+    "npx vitest run",
+    "npx tsc --noEmit",
+    "git push origin main"
+  ],
+  "files": [
+    "icons/vault-central-nobg-128.png",
+    "src/components/VideoGrid.tsx",
+    "src/components/PreviewThumb.tsx",
+    "src/components/VideoPlayer.tsx",
+    "dashboard-v2.html"
+  ],
+  "planPath": "",
+  "contentHash": "fd78d9bc55c4e2c81e71d698dd94389db3e0c83dc109c2a0de7586dc3e7a50b2",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "0695f85",
+    "hasChanges": true
+  }
+}

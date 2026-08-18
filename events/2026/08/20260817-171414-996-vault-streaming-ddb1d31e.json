@@ -1,0 +1,60 @@
+{
+  "id": "20260817-171414-996-vault-streaming-ddb1d31e",
+  "createdAt": "2026-08-17T21:14:14.9960028Z",
+  "createdAtLocal": "2026-08-17 17:14",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-codex-web-client\r\nTools used (this reply): Read, Write, Edit, Bash, PowerShell, Grep, Playwright\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-17 17:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailnet",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Grep",
+      "Playwright"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Pushed the web client to GitHub as PR #6 on branch vw-codex-web-client (branch+PR per policy, version 1.8.0 to 1.9.0). Scoped the commit to this work only, leaving the user in-flight python-scripts and parakeet_wrapper changes untracked. Caught a real hazard first: tools/models/parakeet-tdt-0.6b-v3 was ignored but tools/models/nemotron-3.5-asr-streaming-0.6b was not, so git add tools/ would have committed a 2.5GB model.safetensors; .gitignore now ignores tools/models wholesale. Secret scan on staged content clean, vhost template keeps __VW_TOKEN__ placeholder. Then fixed two follow-ups. i18n: setLanguage wired strings to element ids by hand and every id belonged to the old local-vault UI, so the streaming UI (100+ strings, mostly no ids) never translated; added a declarative data-i18n/data-i18n-placeholder/data-i18n-title resolver (applyI18n in js/app.js) that replaces only text nodes so nav-tab inline SVGs survive and falls back to authored text on missing keys, injected 19 attributes into index.html via a script that aborts unless each anchor matches exactly once, added 19 keys to translations.en.js and translations.qc.js. Verified in Chromium: all 12 sampled chrome+settings strings switch en to fr, zero page errors. Settings: values were persisting fine all along (vault-settings.json shared with desktop, round-trips across reload), the bug was the panel deciding isOpening from panel.style.display === none while the panel is hidden by stylesheet, so inline display is empty string on first click, evaluating false, setting display none and skipping the hydration block - panel opened only on second click showing markup defaults; now reads getComputedStyle. Verified with lang=fr subFontSize=24px on disk: panel opens first click reading fr and 24px. User settings backed up and restored after",
+  "commands": [
+    "git push -u origin vw-codex-web-client",
+    "gh pr create",
+    "node inject_i18n.js",
+    "playwright i18n + settings verification"
+  ],
+  "files": [
+    "index.html",
+    "js/app.js",
+    "js/settings/core.js",
+    "js/translations.en.js",
+    "js/translations.qc.js",
+    "web/service/start-web.ps1",
+    ".gitignore",
+    "package.json"
+  ],
+  "planPath": "",
+  "contentHash": "ddb1d31ee437647ed81e81b58035d4887ce87d2bf332ac96c0f526de8fbf960a",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "vw-codex-web-client",
+    "head": "1120a04",
+    "hasChanges": true
+  }
+}

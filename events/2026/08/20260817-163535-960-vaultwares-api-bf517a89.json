@@ -1,0 +1,53 @@
+{
+  "id": "20260817-163535-960-vaultwares-api-bf517a89",
+  "createdAt": "2026-08-17T20:35:35.9603123Z",
+  "createdAtLocal": "2026-08-17 16:35",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "deployment",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-17 16:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Shipped the Vault TV metadata gateway end to end. Pushed vaultwares-api main twice (v0.2.17 adds api/routes_tv.py with allow-listed /tv/tmdb and /tv/trailer; v0.2.18 fixes a real bug the deploy exposed - TMDB_TOKEN_PATH was pinned to the Windows workstation checkout so the Linux VPS had no credentials and answered 503 for every read; it now prefers TMDB_BEARER_TOKEN from env and otherwise searches candidate paths). Push triggered the deploy automatically (service went deactivating->active and /tv/tmdb went 404->403). Minted the TV API key on the box via the app's own venv against db.ApiKey + api.auth._hash_api_key, because a bare random string cannot authenticate - the key must exist in the DB with a peppered sha256 hash. Two provisioning faults found and fixed by testing rather than assuming: the token file first went to the workstation .access (not the VPS), then landed root:root 600 while the service runs as ubuntu, so it still could not be read; chowned to ubuntu and restarted. VERIFIED LIVE: /tv/tmdb/trending/movie/week returns 200 with 20 results, /tv/trailer/movies returns 200, and a disallowed path (/tv/tmdb/account/1/favorites) correctly returns 404 - the open-relay guard holds. vault-tv .env.local now points at the gateway with the key, and VITE_TMDB_BEARER_TOKEN is commented out so it is no longer compiled in; confirmed the built bundle contains api.vaultwares.ca once and zero TMDB bearers. Uninstalled/reinstalled on the onn box: home loads Trending Movies and Trending Series with posters and no errors in logcat. 280 tests pass, tsc clean. Next: genre/language browse (gateway allow-list already covers discover/* and genre/*/list).",
+  "commands": [
+    "git push origin main",
+    "ssh root@100.67.25.118 mint key",
+    "curl /tv/tmdb + /tv/trailer",
+    "adb install -r"
+  ],
+  "files": [
+    "api/routes_tv.py",
+    "api/app.py",
+    "vault-tv/.env.local"
+  ],
+  "planPath": "",
+  "contentHash": "bf517a896398b12fee045133942ff4c16ec33509cc5ca67b52e6d358b09a2346",
+  "git": {
+    "repo": "vault-tv",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-tv",
+    "branch": "main",
+    "head": "fa9c3ab",
+    "hasChanges": true
+  }
+}

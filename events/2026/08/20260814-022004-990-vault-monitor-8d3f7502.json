@@ -1,0 +1,55 @@
+{
+  "id": "20260814-022004-990-vault-monitor-8d3f7502",
+  "createdAt": "2026-08-14T06:20:04.9902756Z",
+  "createdAtLocal": "2026-08-14 02:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, PowerShell, gh, curl, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 02:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailscale",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh",
+      "curl",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "CI routing + ComfyUI/Ollama collection. CI AUDIT: vaultwares-api/vault-monitor/vaultwares-adk all have hooks.vaultwares.ca/github webhooks, but only vaultwares-api had a project_routes entry - vault-monitor and vaultwares-adk were 'unrouted' per ci-joker.mjs:92 (deployed but no alert profile). health-ledger PR #4 merged: added project_routes for vault-monitor (runner greencloud-vps) and vaultwares-adk (runner ALL THREE hosts since it is a library imported by every recorder, probe_targets empty), plus monitor-model-runs probe on /model-runs. POLLERS (adk PR #24 merged): Ollama has no history API so runs are recorded at call site via OllamaClient/record_response from the response body; throughput derived from eval_duration NOT total_duration - verified live 227 tok in 1.9s decode = 119 tok/s vs ~16 if the 9.8s cold load were charged against it. /api/ps sampled for residency+VRAM as task=residency, never as chat runs. ComfyUI polled from /history (sees all submitters); duration from execution_start/success timestamps, model/sampler/steps/cfg/dims/lora read off workflow graph, wired inputs ['node_id',slot] filtered out; run_id derived deterministically from prompt_id so resend is a no-op at the API. Down runtime = skipped cycle not error. VERIFIED: real Ollama inference recorded and confirmed in Postgres. ComfyUI NOT running during dev so its path is fixture-tested only. 74 adk tests pass.",
+  "commands": [
+    "gh api repos/p-potvin/*/hooks",
+    "gh pr merge 4 --admin",
+    "gh pr merge 24 --admin",
+    "curl api.vaultwares.ca/api/telemetry/ai-runs/runs?provider=ollama"
+  ],
+  "files": [
+    "health-ledger/services.yaml",
+    "vaultwares-adk/vaultwares_adk/telemetry/pollers/ollama.py",
+    "vaultwares-adk/vaultwares_adk/telemetry/pollers/comfyui.py",
+    "vaultwares-adk/vaultwares_adk/telemetry/pollers/runner.py"
+  ],
+  "planPath": "",
+  "contentHash": "8d3f75020f274ee27e0ef4f7b7d147ba88c93d9fa64213aea14971a161ba9622",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "59a4ade",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "20260816-205646-679-vault-cacophony-d8b98811",
+  "createdAt": "2026-08-17T00:56:46.6798591Z",
+  "createdAtLocal": "2026-08-16 20:56",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp\\build-cuda\\bin  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-16 20:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp\\build-cuda\\bin",
+  "summary": "NeMo-Speech.cpp 'build.ps1 -Backend cuda -Grpc -Flashlight' NOW SUCCEEDS - the user's original request is complete. Final features: asr backend_cuda diarization flashlight grpc integrated_vad punctuation tts; binaries nemo-speech.exe, riva_server.exe 6.5MB, nemo_speech_asr.dll 4.5MB, nemo_speech_tts.dll 1.7MB, ggml-cuda.dll 30.9MB, kenlm.dll. THREE distinct defects were in the way. (1) sentencepiece missing from the x64-windows-static-md triplet that build.ps1:118 auto-selects for -Flashlight regardless of -Grpc. (2) find_library resolved SENTENCEPIECE_LIB to a stray user build at C:/Program Files/sentencepiece instead of vcpkg's, mixing vcpkg headers with a foreign lib and producing 79 unresolved absl symbols; root cause is that src/asr/CMakeLists.txt:99 prefers find_package(unofficial-sentencepiece CONFIG) but the current vcpkg port ships NO CMake config at all, so everything falls to an unguarded find_library that searches system paths. (3) THE COMPOUND BUG: NEMO_SPEECH_BUILD_TTS defaults ON at CMakeLists.txt:89 but was OFF in the cache from an earlier -AsrOnly run, because build.ps1:263-271 only ever WRITES the disable flags and never sets them back ON - CMake caches persist, so a build tree that has once seen -AsrOnly stays crippled forever and dropping the flag later silently changes nothing. That stale OFF then hit src/services/CMakeLists.txt:10 which builds nemo_speech_grpc_tts UNCONDITIONALLY when gRPC is on (grpc_nmt right below IS properly guarded by if(NEMO_SPEECH_BUILD_NMT)), giving fatal error C1083 on tts/synthesizer.h. Fixed by setting BUILD_TTS=ON in the cache. Both (2) and (3) are legitimate upstream issues worth filing. vcpkg grpc installed in 25 min with transient roots redirected to D per user choice: D:\\\\vcpkg buildtrees 19GB + packages 9.6GB + downloads 37MB = 28.6GB, C: untouched at 54GB free - more than the user's ~25GB",
+  "commands": [
+    "cmake -B build-cuda -DNEMO_SPEECH_BUILD_TTS=ON",
+    "build.ps1 -Backend cuda -Grpc -Flashlight",
+    "nemo-speech.exe doctor"
+  ],
+  "files": [
+    "NeMo-Speech.cpp\\src\\services\\CMakeLists.txt",
+    "NeMo-Speech.cpp\\scripts\\windows\\build.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "d8b98811797238b02fca30751f175a63b4fb02f829e9b92eef0a43aa1cc98a9b",
+  "git": {
+    "repo": "NeMo-Speech.cpp",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/NeMo-Speech.cpp",
+    "branch": "main",
+    "head": "9bc8766",
+    "hasChanges": true
+  }
+}

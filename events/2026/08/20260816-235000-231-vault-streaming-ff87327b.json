@@ -1,0 +1,60 @@
+{
+  "id": "20260816-235000-231-vault-streaming-ff87327b",
+  "createdAt": "2026-08-17T03:50:00.2319055Z",
+  "createdAtLocal": "2026-08-16 23:50",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, Grep, Glob, Playwright\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-16 23:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep",
+      "Glob",
+      "Playwright"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Built an internal web client under web/ that serves the existing Electron renderer to a browser with zero changes to index.html, js/, css/ or src/. Approach: a require-electron interception shim lets src/ load headlessly; a fake ipcMain captures .handle() registrations and dispatches them from POST /api/invoke; event.sender.send pushes fan out over SSE; index.html is read from the repo at request time with two shim script tags spliced in, so desktop and web cannot drift. Added /api/media with full byte-range support for the local library, and /api/transcode which reuses buildArgs from src/ipc/transcode.ipc.js to pipe fragmented MP4 down HTTP. Verified in Playwright: Discover grid renders identically with zero page errors, Comet search returns 181 cached sources, and a 4K UHD REMUX (DoVi/HDR10+/HEVC/TrueHD Atmos MKV) plays in Chrome at 1920x1080 via h264_nvenc at ~1.4x realtime. Key finding: only 3 of 181 cached sources are natively browser-playable, so transcoding is the default path not a fallback. Remaining gap: client-side seek shim (server already accepts the t= param).",
+  "commands": [
+    "npm run web",
+    "node web/server.js",
+    "ffprobe -show_entries stream=codec_name"
+  ],
+  "files": [
+    "web/server.js",
+    "web/electron-shim.js",
+    "web/ipc-bridge.js",
+    "web/transcode-route.js",
+    "web/public/electron-api-shim.js",
+    "web/public/web-overrides.js",
+    "web/README.md",
+    "package.json",
+    "src/ipc/transcode.ipc.js"
+  ],
+  "planPath": "",
+  "contentHash": "ff87327bcedfcc2397034f31276d5dda59664f1d39bfa2ad9562d860c081adc4",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "449a229",
+    "hasChanges": true
+  }
+}

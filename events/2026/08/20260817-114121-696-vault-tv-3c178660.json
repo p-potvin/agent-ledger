@@ -1,0 +1,53 @@
+{
+  "id": "20260817-114121-696-vault-tv-3c178660",
+  "createdAt": "2026-08-17T15:41:21.6962242Z",
+  "createdAtLocal": "2026-08-17 11:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: main\r\nTools used (this reply): Bash, PowerShell, Grep, Read, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-17 11:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Grep",
+      "Read",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Merged debrid telemetry + details/player overflow fix into vault-tv main and pushed (bc6c7b4..fa9c3ab). Committed the vault-streaming telemetry separately (9d7f5e8), staging only my five touched files plus the new module and deliberately leaving the user's in-flight python-scripts/transcode/package.json work uncommitted. Answered the architecture question: vault-tv calls api.themoviedb.org AND api.kinocheck.com directly from the WebView with VITE_TMDB_BEARER_TOKEN baked into the JS bundle; vault-streaming also calls TMDB directly but from the Electron main process (src/tmdb.js, realdebrid/search.js, usenet/search.js, js/streaming/trailer.js), so its token never ships in a web bundle; vaultwares-api has no TMDB proxy today. vault-tv's own AGENTS.md requires secrets stay server-side, and .env.example already anticipates VITE_VAULT_MEDIA_API_BASE - comet mode simply bypasses it. Routing TMDB+KinoCheck through vaultwares-api on the tailnet would fix the DNS failure (no public hostnames to resolve), remove the bundled token, and restore the stated boundary. Corrected my earlier claim: user notes tailscale is what enables comet at all and every other app on the box resolves fine, so the likely cause is tailnet MagicDNS being applied to apps without upstream public resolvers while adb shell bypasses the VPN; that is an admin-console DNS setting, not a TV-app setting.",
+  "commands": [
+    "git merge --no-ff",
+    "git push origin main",
+    "npx vitest run"
+  ],
+  "files": [
+    "src/telemetry/debridStats.ts",
+    "src/styles/tv.css",
+    "AGENTS.md",
+    "vault-streaming/src/telemetry/debrid-stats.js"
+  ],
+  "planPath": "",
+  "contentHash": "3c1786608934447279e2f0f1e1ed428d73c84567c7825fd4db6e76d5a4937d1b",
+  "git": {
+    "repo": "vault-tv",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-tv",
+    "branch": "main",
+    "head": "fa9c3ab",
+    "hasChanges": false
+  }
+}

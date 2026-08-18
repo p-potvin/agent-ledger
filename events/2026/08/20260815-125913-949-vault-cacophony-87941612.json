@@ -1,0 +1,46 @@
+{
+  "id": "20260815-125913-949-vault-cacophony-87941612",
+  "createdAt": "2026-08-15T16:59:13.9494689Z",
+  "createdAtLocal": "2026-08-15 12:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR  Branch: feat/personaplex\r\nTools used (this reply): Bash, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-15 12:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR",
+  "summary": "Verified the Mimi-reuse assumption instead of asserting it, and it caught a real bug. Dumped PersonaPlex's tokenizer-e351c8d8-checkpoint125.safetensors: 318 tensors, standard released Kyutai Mimi - 8L encoder AND decoder transformers at 512-dim with layer_scale, rvq_first 1 codebook + rvq_rest 31 codebooks at [2048,256], downsample conv [512,512,4], upsample convtr [512,1,4]. Confirms the codec-reuse plan. BUG FOUND: the Mimi decoder is built from TRANSPOSED convolutions named convtr.convtr. (and convtr.convtr.convtr. for upsample), but the SEANet decoder loader reads them under the same conv2/conv3 names as the encoder's ordinary convs (csm_tts.cpp:624-640). shorten_name() only had conv.conv. rules, so five tensors would have been written under names nothing reads: mimi.decoder.model.{2,5,8,11}.conv2 and mimi.upsample.conv3. This would NOT have failed at conversion - it would have surfaced in phase 3 as a decoder producing silence or noise from correct codes, with every other stage looking fine. Fixed by adding two convtr rules ordered longest-first and before the plain conv rules. Turned the check into a permanent unconditional gate: loader_expected_names() enumerates all 226 Mimi tensor names the C++ reads, derived from kyutai_stt.cpp:444-515 and csm_tts.cpp:590-640, and conversion is refused on any missing name; it reads only the safetensors header so it is cheap. Verified both directions - with the fix all 226 produced, with the previous rules the gate reports exactly the 5 missing names. Committed as 0535c485. Branch feat/personaplex now has 5 commits. Full 16GB conversion still not run - awaiting user choice of GGUF output dir.",
+  "commands": [
+    "convert-personaplex-to-gguf.py --dry-run",
+    "git commit"
+  ],
+  "files": [
+    "CrispASR\\models\\convert-personaplex-to-gguf.py"
+  ],
+  "planPath": "",
+  "contentHash": "87941612d10ee481440c0d4147dc336a71a307eb1de381aa838247bd30759246",
+  "git": {
+    "repo": "CrispASR",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/CrispASR",
+    "branch": "feat/personaplex",
+    "head": "0535c485",
+    "hasChanges": false
+  }
+}

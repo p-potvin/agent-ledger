@@ -1,0 +1,55 @@
+{
+  "id": "20260814-064553-997-vault-monitor-7251b11a",
+  "createdAt": "2026-08-14T10:45:53.9978513Z",
+  "createdAtLocal": "2026-08-14 06:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, PowerShell, gh, ssh, curl, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 06:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailscale",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh",
+      "ssh",
+      "curl",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "ComfyUI verified live, prod test data purged, poller dedupe bug fixed, vault-inference routed. COMFYUI: submitted a 256x256 4-step render; poller extracted model/duration 15581ms/steps 4/cfg 6.0/euler+normal/256x256/1 image/GPU name all correct from real /history; run_id stable across polls; posted twice and DB kept 1 row proving dedupe. Closes the fixture-only caveat. CLEANUP: audited prod first - 59 rows, \\.0021 total. 8 rows at \\-5000 from vault-inference budget-cap tests (they drive \\/Mtok to trip the cap), 44 more vault-inference fixture rows (models m/paid-m/free-m, proj=p, all same second), 5 of my smoke rows. Deleted 58 runs + 19 rollups + 7 receipts in a transaction after a dry run; kept the 1 genuine ComfyUI render. Prod now 1 row \\.00. NEW BUG FOUND VIA LIVE DATA: raw showed 1 run, rollups showed 2 - deterministic run_id only protects the RAW grain (ON CONFLICT DO NOTHING); rollups aggregate on the host before the API sees a run_id, so a re-observed prompt double-counts. My docstring wrongly claimed the cursor was 'an optimisation, not the correctness mechanism'. Fixed with persisted atomic SeenCursor flushed per cycle, oldest-first eviction, corrupt-file tolerant; adk PR #25 merged, regression test replays history 3x and asserts rollup counts 1. ROUTING: health-ledger PR #5 added vault-inference route (runner clopeux-desktop where the 3060 is, probes from other two). STILL NEEDED: vault-inference has no GitHub webhook - requires VW_GITHUB_WEBHOOK_SECRET from VaultWarden.",
+  "commands": [
+    "curl 127.0.0.1:8188/prompt",
+    "gh pr merge 25 --admin",
+    "gh pr merge 5 --admin",
+    "ssh root@100.67.25.118 vwclean.py --apply"
+  ],
+  "files": [
+    "vaultwares-adk/vaultwares_adk/telemetry/pollers/cursor.py",
+    "vaultwares-adk/vaultwares_adk/telemetry/pollers/runner.py",
+    "health-ledger/services.yaml"
+  ],
+  "planPath": "",
+  "contentHash": "7251b11af27c7e675631c6c981e2eb2be32d9fc1cb316a019d09a509ab5b89d6",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "59a4ade",
+    "hasChanges": false
+  }
+}

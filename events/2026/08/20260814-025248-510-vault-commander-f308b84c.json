@@ -1,0 +1,53 @@
+{
+  "id": "20260814-025248-510-vault-commander-f308b84c",
+  "createdAt": "2026-08-14T06:52:48.5109787Z",
+  "createdAtLocal": "2026-08-14 02:52",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): PowerShell, Read, Write, Edit, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 02:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Read",
+      "Write",
+      "Edit",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Fixed the GUI crash 'A parameter cannot be found that matches parameter name Location'. Root cause was registry/script drift: vwg-run.ps1 splats whatever vw-commands.ps1 declares into the target script, and compress-videos declared -Location while Reduce-VideoSizes.ps1 takes -Target. An audit of all 82 commands found 8 such mismatches (compress-videos, Start-TorboxWebdav's unbindable -Needs-Proxy, upscale-test -PythonScript, auto-backup-two's two invented params, list-programs' three). list-programs' params were real on the Get-InstalledSoftware function but unreachable because the script called it with no args, so the script now declares and forwards them via PSBoundParameters. Separately -Location had been copy-pasted into 66 scripts; 24 use it and were kept, 42 unused ones removed via AST with re-parse verification, plus a stray copy inside Get-InstalledSoftware. Also fixed Install-PG-Watchdog-Service.ps1 which built \\\\\\vw-cli\\\\pg-watchdog.ps1 assuming the old standalone checkout. vwg-run.ps1 now filters the splat to parameters and aliases the target actually declares so future drift warns instead of aborting. Verified: mismatch audit clean, guard tested for drop-with-warning and alias binding, all 82 commands pass, vw subtitles still correct end-to-end, packaged app rebuilt and the guard confirmed present in app.asar.unpacked.",
+  "commands": [
+    "audit_param_mismatch.ps1",
+    "strip_location.ps1 -Apply",
+    "npx electron-builder --dir"
+  ],
+  "files": [
+    "vault-commander/cli/vw-commands.ps1",
+    "vault-commander/gui/scripts/vwg-run.ps1",
+    "vault-commander/cli/pwsh_all_programs_listing_script.ps1",
+    "vault-commander/cli/Install-PG-Watchdog-Service.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "f308b84ca4c970ff0801faab73d434f99b3a472d4e7950fd90f5a46409ec768f",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "b5acb3f",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "20260814-122516-121-vault-monitor-0fceb844",
+  "createdAt": "2026-08-14T16:25:16.1216493Z",
+  "createdAtLocal": "2026-08-14 12:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, PowerShell, gh, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 12:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Instrumented 3 projects. VAULT-EXPLORER (PR #43): hooked vw_media.asr.transcribe (NVIDIA NeMo parakeet-tdt-0.6b-v3); records audio_seconds via stdlib wave for the real-time factor, charges model load to the run that paid for it then clears it (tagged cold-start), keeps zero-segments as a successful empty result per asr.transcribe's documented contract. Portable vw_media/telemetry.py bridge, submodule bumped. 11 tests. Kept a pre-existing package.json whitespace reformat OUT via reset --soft + restore --staged. VAULT-STREAMING (PR #5): asr.py byte-identical so same instrumentation; live_subtitles.py records ONE RUN PER SESSION not per chunk (1.1s chunks would be ~7000 rows for a 2h stream, and RTF only exists at session grain); recorded in the existing finally so stopped/ffmpeg-fault sessions are still measured; user stop = cancelled not error. NEMOTRON_DEFAULT_MODEL duplicated to keep torch/NeMo out of import; test asserts sys.modules stays clean. Found vw_media/ was UNTRACKED and vaultwares-adk was a stale .gitmodules entry with no gitlink - both fixed. 15 tests. PYTHON-ZIPPER (PR #4): face_detector DETR batch-grain run (image_count/matched/failed/load_ms; per-image failure counts on the run rather than flipping status; load failure recorded before sys.exit); upscale_image records spandrel as a run but NOT the Lanczos fallback as one - a resize is not a model - instead recording it as rejected/UpscalerModelMissing so silent degradation is visible. Named vw_telemetry because dataset_builder is not a package. Found tests/ is gitignored (**/tests/**) which silently dropped the test file - moved to dataset_builder/tests/ and force-added per existing convention. 8 tests. All merged.",
+  "commands": [
+    "gh pr merge 43/5/4 --admin",
+    "python -m unittest vw_media.test_telemetry",
+    "git submodule add vaultwares-adk"
+  ],
+  "files": [
+    "vault-explorer/python-scripts/vw_media/telemetry.py",
+    "vault-explorer/python-scripts/vw_media/asr.py",
+    "vault-streaming/python-scripts/live_subtitles.py",
+    "python-zipper/dataset_builder/vw_telemetry.py",
+    "python-zipper/dataset_builder/upscale_image.py",
+    "python-zipper/dataset_builder/face_detector.py"
+  ],
+  "planPath": "",
+  "contentHash": "0fceb844906fc0d0790ec1d921be0d3f925a4e209c93b7f450b6225881d5602a",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "59a4ade",
+    "hasChanges": false
+  }
+}

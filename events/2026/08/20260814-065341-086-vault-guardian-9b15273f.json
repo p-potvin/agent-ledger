@@ -1,0 +1,68 @@
+{
+  "id": "20260814-065341-086-vault-guardian-9b15273f",
+  "createdAt": "2026-08-14T10:53:41.0864803Z",
+  "createdAtLocal": "2026-08-14 06:53",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-guardian",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 Enterprise local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian  Branch: vw-wfp-native-filtering\r\nTools used (this reply): Read, Write, Edit, Bash, PowerShell, TaskCreate, TaskUpdate, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 06:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 Enterprise local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "TaskCreate",
+      "TaskUpdate",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian",
+  "summary": "Built native WFP egress filtering backend (PR #8, branch vw-wfp-native-filtering). Scope decision: user-mode WFP management API via fwpuclnt.dll at ALE auth layers (permit/block connections) - kernel callout driver for per-packet inspect is out of scope (needs WHQL/EV signing); WinDivert unchanged for capture. New files: Firewall/Wfp/WfpInterop.cs (P/Invoke, FWPM_* structs relying on natural Sequential alignment for x86/x64 correctness, well-known layer/condition GUIDs, VaultGuardian provider+sublayer GUIDs), WfpFilterPlan.cs + WfpFilterPlanner.cs (pure testable EgressRule->filter translation), IWfpEngine.cs + WfpEngine.cs (dual engine handles: dynamic session for auto-cleaning session filters, persistent session for reboot-surviving ones; transaction-wrapped provider/sublayer bootstrap; NativeScope allocation tracker; enumeration-based stale cleanup by provider GUID), WfpFirewallRuleApplier.cs, FirewallApplierFactory.cs (Auto/Wfp/Netsh selection with eager engine probe + fallback). Key wins over netsh: session rules destroyed by OS even on crash (no firewall-state.json dependency), cleanup by provider GUID not name list, rule list order honoured via descending filter weight so allow-rules work as real exceptions, no process-per-rule spawn, add-before-delete so no unprotected window on swap. Behaviour deltas documented: Protocol=Any+port now matches TCP+UDP (netsh coerced to TCP); hostname-only rules skipped with explicit reason. Also added JsonStringEnumConverter to AppSettingsLoader - without it the new enum persisted as bare int and a hand-edited string would silently reset all settings. Corrected a wrong assumption during work: IPNetwork.TryParse normalises host bits (203.0.113.10/24 -> 203.0.113.0/24) rather than rejecting; verified via throwaway probe test, planner was already correct, fixed the test and added a planner/RuleDecisionEngine agreement test. Tests 116 pass; UI builds clean. Proved the 1 remaining failure (WinUiStartupConfigurationTests) is pre-existing from uncommitted local WindowsAppSDK 1.7->2.2.0 drift by stashing csproj and getting 115/115 -",
+  "commands": [
+    "git checkout -b vw-wfp-native-filtering",
+    "dotnet build src/VaultGuardian.Core",
+    "dotnet build src/VaultGuardian.UI -r win-x64",
+    "dotnet test tests/VaultGuardian.Core.Tests",
+    "git stash push -- src/VaultGuardian.UI/VaultGuardian.UI.csproj",
+    "gh pr create --reviewer p-potvin"
+  ],
+  "files": [
+    "src/VaultGuardian.Core/Firewall/Wfp/WfpInterop.cs",
+    "src/VaultGuardian.Core/Firewall/Wfp/WfpFilterPlan.cs",
+    "src/VaultGuardian.Core/Firewall/Wfp/WfpFilterPlanner.cs",
+    "src/VaultGuardian.Core/Firewall/Wfp/IWfpEngine.cs",
+    "src/VaultGuardian.Core/Firewall/Wfp/WfpEngine.cs",
+    "src/VaultGuardian.Core/Firewall/WfpFirewallRuleApplier.cs",
+    "src/VaultGuardian.Core/Firewall/FirewallApplierFactory.cs",
+    "src/VaultGuardian.Core/AppSettings.cs",
+    "src/VaultGuardian.Core/AppSettingsLoader.cs",
+    "src/VaultGuardian.UI/App.xaml.cs",
+    "tests/VaultGuardian.Core.Tests/WfpFilterPlannerTests.cs",
+    "tests/VaultGuardian.Core.Tests/WfpFirewallRuleApplierTests.cs",
+    "tests/VaultGuardian.Core.Tests/FirewallApplierFactoryTests.cs"
+  ],
+  "planPath": "",
+  "contentHash": "9b15273f12ebabfb46dbfcf736ecfc6891dc7f5aa248d8b8f5a33e895772270e",
+  "git": {
+    "repo": "vault-guardian",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-guardian",
+    "branch": "vw-wfp-native-filtering",
+    "head": "3d06593",
+    "hasChanges": true
+  }
+}

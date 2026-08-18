@@ -1,0 +1,61 @@
+{
+  "id": "20260814-011222-731-linformaticien-eb2275a8",
+  "createdAt": "2026-08-14T05:12:22.7318570Z",
+  "createdAtLocal": "2026-08-14 01:12",
+  "timezone": "Eastern Standard Time",
+  "project": "linformaticien",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien  Branch: feat/site-hardening\r\nTools used (this reply): Read, Edit, Write, Bash, PowerShell, ToolSearch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 01:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Edit",
+      "Write",
+      "Bash",
+      "PowerShell",
+      "ToolSearch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien",
+  "summary": "PR #4 feat/site-hardening (v0.2.0): polices Bitter/Source Sans 3 auto-hebergees (4 fichiers woff2 variables, 155ko, preload latin, cache 1 an dans les vhosts), sitemap.xml, JSON-LD LocalBusiness calcule depuis site.ts plus champ heuresMachine, passe accessibilite axe-core sur DOM rendu (0 violation) avec 3 correctifs: tabindex -1 sur main pour le lien d'evitement, aria-label sur les 4 liens tel:, marqueur summary Safari. Contraste recalcule sur blanc ET creme: ratios documentes inexacts corriges, orange b8500f vers b04c0e (etait a 4.49:1 sur creme, sous le plancher du projet). Corrige aussi la perte d'en-tetes HTTP nginx (add_header non herite par bloc location): index.html partait sans en-tetes de securite en prod et sans noindex sur dev. TODO/ROADMAP/CHANGES/README mis a jour: supplement de deplacement retire, split-DNS limite a dev consigne.",
+  "commands": [
+    "npm ci",
+    "npm run build",
+    "node audit.mjs jsdom+axe-core",
+    "node contraste.mjs",
+    "gh pr create"
+  ],
+  "files": [
+    "src/styles/fonts.css",
+    "public/fonts",
+    "public/sitemap.xml",
+    "src/components/DonneesStructurees.tsx",
+    "src/styles/theme.css",
+    "design-system/tokens.css",
+    "deploy/nginx/linformaticien.ca.conf",
+    "TODO.md",
+    "CHANGES.md"
+  ],
+  "planPath": "",
+  "contentHash": "eb2275a8d39a743e487c526efab99c61199ed70355783594ed6f609c455b80cc",
+  "git": {
+    "repo": "linformaticien",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/linformaticien",
+    "branch": "feat/site-hardening",
+    "head": "6d5b230",
+    "hasChanges": false
+  }
+}

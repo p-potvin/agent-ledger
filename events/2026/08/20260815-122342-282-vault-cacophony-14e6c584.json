@@ -1,0 +1,47 @@
+{
+  "id": "20260815-122342-282-vault-cacophony-14e6c584",
+  "createdAt": "2026-08-15T16:23:42.2828165Z",
+  "createdAtLocal": "2026-08-15 12:23",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: plan\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR  Branch: main\r\nTools used (this reply): Bash, WebFetch, WebSearch, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-15 12:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "plan",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "WebFetch",
+      "WebSearch",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR",
+  "summary": "Resolved four open questions on the PersonaPlex GGUF port. (1) Delay pattern is NOT baked into weights - _delay_sequence/_undelay_sequence are plain Python at moshi/models/lm.py:70-97, and LMGen keeps max_delay + delays_cuda at lm.py:690-693, so it ports directly. (2) Voice conditioning is liftable: offline.py:236-240 branches .pt to lm_gen.load_voice_prompt_embeddings (precomputed tensor, trivial) vs .wav to load_voice_prompt (needs Mimi encode, which we will have). (3) Targeting offline.py instead of server.py removes the entire websocket phase from the critical path AND doubles as the HARD RULE 3 decoded-output acceptance harness (streams input wav to output wav + json). (4) Licensing clean: CrispASR LICENSE is MIT (ggml authors), moshi LICENSE.moshi is MIT (Copyright Kyutai), personaplex repo code MIT under NVIDIA header; only the WEIGHTS carry NVIDIA Open Model License, which constrains redistributing a converted GGUF, not local use. Strategic check on NVIDIA/NeMo-Speech.cpp: real, official NVIDIA org, Apache-2.0, ggml-based, created 2026-07-15, initial OSS release 2026-07-21, only 6 commits, 57 stars, 12 forks. Does ASR/TDT, Sortformer diarization, TTS, NMT, HTTP server + realtime WS transcription + Riva gRPC. BUT it has no Mimi codec, no Moshi-family LM layer, no RVQ - the exact three things CrispASR already ships - so for this port CrispASR remains the far better base; NeMo-Speech.cpp is the right vehicle for the separate nemotron-streaming-0.6b ASR slot replacing parakeet. RTF risk identified: the 8B backbone is bandwidth-fine (Q4_K 4.7GB x 12.5fps = 59 GB/s vs 2060 336 GB/s) but the depformer runs 16 sequential 1024-dim 6-layer micro-steps per 80ms frame, which is launch-latency-bound - the pattern LEARNINGS flags for AR decoders.",
+  "commands": [],
+  "files": [
+    "D:\\moshi-docker\\personaplex\\moshi\\moshi\\models\\lm.py",
+    "D:\\moshi-docker\\personaplex\\moshi\\moshi\\offline.py",
+    "CrispASR\\src\\kyutai_stt.cpp"
+  ],
+  "planPath": "",
+  "contentHash": "14e6c584818c2ea4067da791e851ff388ec219d8d23dbfa3d711aa114abfc84a",
+  "git": {
+    "repo": "CrispASR",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/CrispASR",
+    "branch": "main",
+    "head": "66ac7843",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "20260817-110717-715-vault-tv-113c0c2e",
+  "createdAt": "2026-08-17T15:07:17.7156636Z",
+  "createdAtLocal": "2026-08-17 11:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: change-localisation-add-iconography\r\nTools used (this reply): Bash, PowerShell, Read, Edit, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-17 11:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Lifted vault-streaming's 3-service comet config into vault-tv/.env.local (alldebrid+torbox+realdebrid, manifest.json suffix stripped, old value backed up to .env.local.bak which is already gitignored via .env.*); same host 100.67.25.118:5173 so no network-security or PlaybackUrlValidator changes needed - the debrid telemetry added earlier is now comparative on the TV too. Fixed the details-screen overflow: root cause was padding declared twice for both .tv-shell and .tv-main (later shorthand silently won), while .details-screen hardcoded min-height calc(100vh - 64px) matching a 32px pane padding that no longer existed, and .details-content stacked another min-height:68vh on top; also its grid used rigid 300px/760px tracks that exceed the content width at the 1024 canvas and overflow rather than shrink. Now sized against the container (min-height:100%) with minmax(0,..) tracks, and the overscan inset declared in exactly one place. Investigated the reported player symptom (black screen + play button) from source: playerView.player IS bound and playWhenReady is set, so it is not the obvious unbound-view case - cannot diagnose further without the device. Install blocked: installed APK cert SHA-256 e48d8c37.. vs local debug keystore b5ce7efa.., and only one keystore exists on this machine, so signing to match is impossible and an uninstall (losing library/history/prefs) is required. Also confirmed vault-tv has NO trailer implementation at all - DetailsScreen only sets a static TMDB backdrop image; the described trailer-behind-poster behaviour must be vault-streaming, which does have trailer-cache. 235 tests pass, tsc clean.",
+  "commands": [
+    "npx vitest run",
+    "gradlew.bat assembleDebug",
+    "apksigner verify --print-certs",
+    "adb install -r"
+  ],
+  "files": [
+    ".env.local",
+    "src/styles/tv.css"
+  ],
+  "planPath": "",
+  "contentHash": "113c0c2e530d3f46205f6a21357ca6865ecd88f692fa9c3d831d0f24bff122fa",
+  "git": {
+    "repo": "vault-tv",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-tv",
+    "branch": "change-localisation-add-iconography",
+    "head": "81bcc38",
+    "hasChanges": true
+  }
+}

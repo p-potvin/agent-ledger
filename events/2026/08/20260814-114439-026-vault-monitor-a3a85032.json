@@ -1,0 +1,55 @@
+{
+  "id": "20260814-114439-026-vault-monitor-a3a85032",
+  "createdAt": "2026-08-14T15:44:39.0260685Z",
+  "createdAtLocal": "2026-08-14 11:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, PowerShell, gh, ssh, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 11:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailscale",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh",
+      "ssh",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Webhook, scheduled task, multi-GPU fix. WEBHOOK: read VW_GITHUB_WEBHOOK_SECRET from /etc/vw-webhookd/env on greencloud (100.73.93.84, root), created vault-inference hook 665778965 matching the other repos (6 events, json, ssl on); ping delivered status=OK code=200 so the signature validates. Secret never printed. SCHEDULED TASK: registered 'VaultWares Model Pollers' on Clopeux-Desktop mirroring setup-input-tracker.ps1 (conhost --headless + hidden pwsh, AtLogOn, ExecutionTimeLimit 0, RestartCount 99); state=Running, already collected 3 real Flux jobs incl one error. Runs continuously because ComfyUI history is in-memory and wiped on restart. MULTI-GPU: box now has RTX 3060 12GB idx0 + RTX 2060 6GB idx1; probe hardcoded NVML index 0 so any 2060 run would report the 3060's 12GB ceiling. resolve_device_index() now returns index AND provenance (torch > CUDA_VISIBLE_DEVICES > sole device > inferred_busiest, labelled). WORSE: nvidia-ml-py and psutil were NOT installed so every VRAM/GPU/memory column had been silently null all along - indistinguishable from a GPU-less host. Added as telemetry extra + stats()['probes'] surfaces it. ComfyUI poller gains static vram_total/gpu_index but NOT used/peak (sampled minutes after the job; would be fabricated). Added pollers/__main__.py to stop runpy double-import. adk PRs #25 #26 merged. Verified both cards enumerate 12288/6144MB. 82 tests pass.",
+  "commands": [
+    "ssh root@100.73.93.84 grep VW_GITHUB_WEBHOOK_SECRET",
+    "gh api repos/p-potvin/vault-inference/hooks --method POST",
+    "setup-model-pollers.ps1 -StartNow",
+    "gh pr merge 26 --admin"
+  ],
+  "files": [
+    "vaultwares-adk/vaultwares_adk/telemetry/gpu.py",
+    "vaultwares-adk/scripts/setup-model-pollers.ps1",
+    "vaultwares-adk/scripts/run-model-pollers.ps1",
+    "vaultwares-adk/vaultwares_adk/telemetry/pollers/comfyui.py"
+  ],
+  "planPath": "",
+  "contentHash": "a3a850320b84a33420a5792dc3e07df138e3d27b4d031e73984cdbaa4fc37418",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "59a4ade",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "20260815-122429-852-vault-cacophony-f6a0f15d",
+  "createdAt": "2026-08-15T16:24:29.8527815Z",
+  "createdAtLocal": "2026-08-15 12:24",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: chat\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp  Branch: main\r\nTools used (this reply): Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-15 12:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "chat",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": "Bash",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp",
+  "summary": "Inspected the NeMo-Speech.cpp checkout the user is building at vault-cacophony/NeMo-Speech.cpp. Layout: src/{asr,tts,nmt,speech,server,services,core,common,runtime}, ggml AND llama.cpp both vendored as submodules, plus flashlight-text, kenlm, riva-common proto, cpp-httplib. TTS is MagpieTTS 357m token generator (encoder/decoder + magpietts_cuda_sampling.cu) feeding a NeMo NanoCodec decoder - so the AR-LM-plus-neural-codec SHAPE exists, but there is no Mimi, no Moshi-family LM, no split RVQ, and src/speech is only speech_translator.cpp (cascaded ASR->NMT->TTS, not duplex S2S). Confirms the earlier verdict: NeMo-Speech.cpp is the right home for the nemotron-streaming-0.6b ASR slot replacing parakeet, but CrispASR stays the base for the PersonaPlex port because it already ships the exact Mimi encoder, Mimi decoder, split RVQ and Moshi-shaped LM layer. Vendored llama.cpp is worth remembering as a long-term asset if the port ever migrates.",
+  "commands": [],
+  "files": [
+    "NeMo-Speech.cpp\\.gitmodules",
+    "NeMo-Speech.cpp\\src\\tts\\magpietts",
+    "NeMo-Speech.cpp\\src\\tts\\nanocodec"
+  ],
+  "planPath": "",
+  "contentHash": "f6a0f15daefb4d93f379035cddb6639819e2104b513fd0fc6de6784736c7477a",
+  "git": {
+    "repo": "NeMo-Speech.cpp",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/NeMo-Speech.cpp",
+    "branch": "main",
+    "head": "9bc8766",
+    "hasChanges": false
+  }
+}

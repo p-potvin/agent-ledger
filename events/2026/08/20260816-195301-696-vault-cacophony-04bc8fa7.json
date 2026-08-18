@@ -1,0 +1,48 @@
+{
+  "id": "20260816-195301-696-vault-cacophony-04bc8fa7",
+  "createdAt": "2026-08-16T23:53:01.6968690Z",
+  "createdAtLocal": "2026-08-16 19:53",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-16 19:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp",
+  "summary": "TWO-GPU BLOCKER RESOLVED. After the user fixed NVIDIA Control Panel Manage 3D Settings -> CUDA - GPUs, cuDeviceGetCount now returns 2: RTX 3060 sm_86 12.88GB and RTX 2060 sm_75 6.44GB, 19.32GB combined. That setting was the sole cause; it restricts which cards the driver exposes to CUDA and while it excluded the 2060 the symptom was indistinguishable from the card being absent (device 1 returned zero devices) despite NVML and Vulkan both seeing it. Consequence: the 15.59GB bf16 reference now FITS across the pair, so phase 2 needs no CPU offload and the #105 patch drops from prerequisite back to insurance; phase 5 needs no Vulkan detour. Superseded and rewrote BLUEPRINT.md section 6 accordingly (commit 52af2af3, pushed, branch now 10 commits). SECOND TASK - NeMo-Speech.cpp build 'build.ps1 -Backend cuda -Grpc -Flashlight' fails at CMAKE CONFIGURE (not compile): 'Could not find SENTENCEPIECE_INCLUDE_DIR using sentencepiece_processor.h' at src/asr/CMakeLists.txt:102. Root cause: build.ps1:118-119 auto-selects the x64-windows-static-md triplet whenever -Flashlight is passed, but vcpkg has only the SHARED x64-windows triplet installed (abseil, grpc, protobuf, portaudio, openssl, re2, zlib) and no sentencepiece in any triplet. docs/development/windows-build.md:227 confirms the combined flashlight+gRPC path needs ALL deps under one static-md triplet for a consistent protobuf/abseil. Launched 'vcpkg install grpc protobuf sentencepiece portaudio --triplet x64-windows-static-md' in background. All git submodules including flashlight-text and kenlm are already initialised so the 'Could NOT find kenlm' line is a soft probe, not the failure. THIRD FINDING worth flagging to the user: the build resolved CMAKE_CUDA_ARCHITECTURES=native to 86-real ONLY, i.e. the 3060; a native build will not run on the sm_75",
+  "commands": [
+    "vcpkg install --triplet x64-windows-static-md",
+    "build.ps1 -Backend cuda -Grpc -Flashlight"
+  ],
+  "files": [
+    "CrispASR\\docs\\personaplex\\BLUEPRINT.md",
+    "NeMo-Speech.cpp\\scripts\\windows\\build.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "04bc8fa707eda403f4d8da47fcf79013968019efb7827acbf4b9fdfadc99fe59",
+  "git": {
+    "repo": "NeMo-Speech.cpp",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/NeMo-Speech.cpp",
+    "branch": "main",
+    "head": "9bc8766",
+    "hasChanges": true
+  }
+}

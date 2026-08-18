@@ -1,0 +1,54 @@
+{
+  "id": "20260817-112636-577-vault-tv-9322c9d2",
+  "createdAt": "2026-08-17T15:26:36.5771505Z",
+  "createdAtLocal": "2026-08-17 11:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv\\android  Branch: feat/debrid-telemetry-and-browse\r\nTools used (this reply): Bash, PowerShell, Read, Edit, Write, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-17 11:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Edit",
+      "Write",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv\\android",
+  "summary": "PR #12 landed; fast-forwarded main +47 and moved the debrid telemetry onto a new branch feat/debrid-telemetry-and-browse. Only tv.css conflicted; resolving it silently truncated .episode-card__progress span's closing brace (vite only warned, did not fail) - caught via a brace-depth check and repaired. Root-caused the details overflow: main's newer nav-rework section reintroduces min-height calc(100vh - 64px) on .details-screen (and .player-screen), which subtracts only the pane's 32px padding and ignores the shell's own 2vh/3vw overscan inset, leaving the panel ~4vh taller than its box - hence a small overflow on all four sides at once. Both now min-height:100%. Swapped vault-tv onto vault-streaming's 3-service comet config (alldebrid+torbox+realdebrid, same host so no network-security changes). Recorded the pre-authorised uninstall-to-test policy in AGENTS.md plus a memory file. ON-DEVICE: uninstalled/installed and drove the app. Home fails with 'Failed to fetch' and Retry does not recover; logcat shows ERR_NAME_NOT_RESOLVED for every api.themoviedb.org call, yet the same names resolve fine from adb shell (uid 2000) - so DNS differs per-uid and apps are being handed a resolver that cannot answer public names, almost certainly the tailnet DNS now that Tailscale is up on the box. That also explains the reported player symptom (black screen + play button): ExoPlayer follows comet's 302 to a public debrid CDN hostname, which the app cannot resolve. Device config, not app code. CORRECTION: was wrong that vault-tv has no trailer code - KinoCheck trailer support (trailerClient.ts, TrailerPreview.tsx) exists on origin/main, just not on the old branch. Genre/language browse NOT started. 280 tests pass, tsc clean.",
+  "commands": [
+    "git merge --ff-only origin/main",
+    "adb uninstall/install",
+    "adb logcat -s VaultTV-Web",
+    "adb shell ping api.themoviedb.org"
+  ],
+  "files": [
+    "src/styles/tv.css",
+    "AGENTS.md",
+    ".env.local"
+  ],
+  "planPath": "",
+  "contentHash": "9322c9d2f8dfc0cbc737c909975e9602fafcc0a9859a6ec516e579ba30730e88",
+  "git": {
+    "repo": "vault-tv",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-tv",
+    "branch": "feat/debrid-telemetry-and-browse",
+    "head": "bc6c7b4",
+    "hasChanges": true
+  }
+}

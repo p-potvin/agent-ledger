@@ -1,0 +1,58 @@
+{
+  "id": "20260814-121933-019-vault-tv-bd85b471",
+  "createdAt": "2026-08-14T16:19:33.0197965Z",
+  "createdAtLocal": "2026-08-14 12:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-tv",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: unknown\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: change-localisation-add-iconography\r\nTools used (this reply): Read, Write, Edit, Bash, PowerShell, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 12:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+  "summary": "Added per-debrid-service telemetry to both clients so the cut decision is evidence-based. Metrics per provider: offered (contribution to the candidate list), cached (share it claims is ready), selected (how often it wins ranking), and played/failed/placeholder. The placeholder counter is the decisive one - a service can report cached, return a URL, then serve a few-MB stub, which shows up as high cache rate next to high stub count. vault-tv: src/telemetry/debridStats.ts (localStorage aggregates) wired into cometClient resolve/selection/placeholder-probe and PlayerScreen play/fail outcomes, surfaced in a Settings scoreboard ordered worst-first; carries debridProviderName on the session so a failure attributes to the supplying service. vault-streaming: src/telemetry/debrid-stats.js persisting to userData, replacing the throwaway console counts in search.js, plus selection/placeholder/failed recording in stream.js and IPC (debrid-stats-get/report/reset) exposed via preload. Detection anchors on Comet's bracketed prefix rather than substrings - the old inline check used bare AD/RD which match NORDiC, ADDiCT and HDR and misattributed results. Validated against live multi-service Comet: 14 streams parsed as alldebrid 6/6 cached, torbox 4/4, realdebrid 2/2, torrent 2 uncached; live prefixes AD/TB/RD with both cached and download markers plus TORRENT, so plain torrents are now classed separately from unattributable. KEY FINDING: vault-tv's comet config lists only realdebrid while vault-streaming's lists alldebrid+torbox+realdebrid, so comparative data can only come from vault-streaming until that config is swapped. 235 tests pass (13 new), tsc clean, node --check clean.",
+  "commands": [
+    "npx vitest run",
+    "node --check",
+    "curl comet multi-service config"
+  ],
+  "files": [
+    "src/telemetry/debridStats.ts",
+    "src/components/DebridStatsPanel.tsx",
+    "src/api/cometClient.ts",
+    "src/features/player/PlayerScreen.tsx",
+    "tests/debrid-stats.test.ts",
+    "vault-streaming/src/telemetry/debrid-stats.js",
+    "vault-streaming/src/realdebrid/search.js",
+    "vault-streaming/src/realdebrid/stream.js"
+  ],
+  "planPath": "",
+  "contentHash": "bd85b471a315f60598917ddfbe79dcdfebeef150af0a7b86faa2bdb1816a3d69",
+  "git": {
+    "repo": "vault-tv",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-tv",
+    "branch": "change-localisation-add-iconography",
+    "head": "81bcc38",
+    "hasChanges": true
+  }
+}

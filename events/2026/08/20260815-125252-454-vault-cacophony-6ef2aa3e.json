@@ -1,0 +1,48 @@
+{
+  "id": "20260815-125252-454-vault-cacophony-6ef2aa3e",
+  "createdAt": "2026-08-15T16:52:52.4544591Z",
+  "createdAtLocal": "2026-08-15 12:52",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR  Branch: feat/personaplex\r\nTools used (this reply): Bash, Read, Write, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-15 12:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Write",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR",
+  "summary": "Phase 1 blueprint landed on feat/personaplex as commit 8104c680 (docs/personaplex/BLUEPRINT.md + tensors.json, 475-tensor dump). HARD RULE 1 pass complete. Dumped the full tensor map from the safetensors header: temporal 32L with self_attn.in_proj_weight [12288,4096] combined QKV, out_proj [4096,4096], gating.linear_in [22528,4096], gating.linear_out [4096,11264], norm1/norm2.alpha [1,1,4096]; depformer 6L with in_proj [49152,1024] and out_proj [16384,1024] (per-step PACKED into one tensor, 3*1024*16), gating as 96 separate per-step modules [5632,1024]/[1024,2816], but norm alphas only x6 = SHARED across steps; emb x16 [2049,4096], depformer_in x16 [1024,4096], depformer_emb x15 [2049,1024], linears x16 [2048,1024], text_emb [32001,4096], text_linear [32000,4096], out_norm.alpha. No biases anywhere. Four traps documented: (1) SwiGLU hidden is (2*dim_feedforward)//3 not dim_feedforward, per modules/gating.py:56-66, with a separate (21*dim)//8 branch when dim_feedforward==4*dim - 16896->11264 and 4224->2816, a naive 4x port mis-sizes every FFN; (2) the depformer per-step asymmetry above; (3) loaders.py copy_missing_weights patch 1 and 2 are NO-OPS for this checkpoint since it already ships all 16 depformer sets and in_proj is already [49152,1024] - do not port them; (4) <system> is three ordinary SPM pieces not a special token and the tag is symmetric in both server.py and offline.py, so reproduce byte-for-byte. Confirmed frame_size 1920, pad_id 3 == existing_text_padding_id, vocab 32000 == text_card, text_linear extra_text=0. Delay layout recorded as 1 text + 8 own + 8 other, offline.py decodes tokens[:,1:9]. Also documented what kyutai_stt/csm_tts already provide and the hardcoded backends[2] arrays that need widening for a second CUDA device. Next: convert-personaplex-to-gguf.py and the reference dump harness.",
+  "commands": [
+    "git commit"
+  ],
+  "files": [
+    "CrispASR\\docs\\personaplex\\BLUEPRINT.md",
+    "CrispASR\\docs\\personaplex\\tensors.json"
+  ],
+  "planPath": "",
+  "contentHash": "6ef2aa3e79ce8ac2d11a9e3c17a54928b503cb0c5ebecb57bbcaf8e26b6ede61",
+  "git": {
+    "repo": "CrispASR",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/CrispASR",
+    "branch": "feat/personaplex",
+    "head": "8104c680",
+    "hasChanges": false
+  }
+}

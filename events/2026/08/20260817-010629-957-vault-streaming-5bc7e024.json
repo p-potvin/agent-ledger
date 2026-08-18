@@ -1,0 +1,57 @@
+{
+  "id": "20260817-010629-957-vault-streaming-5bc7e024",
+  "createdAt": "2026-08-17T05:06:29.9578191Z",
+  "createdAtLocal": "2026-08-17 01:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Read, Write, Edit, Bash, PowerShell, Grep, Playwright\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-17 01:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Grep",
+      "Playwright"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Live subtitles (transcription only) working in the web client. Replaced the dead Nemotron streaming path in python-scripts/live_subtitles.py with nvidia/parakeet_realtime_eou_120m-v1 via a new EOUStreamingAdapter that presents the same feed/reset interface, so run_session is unchanged and both engines stay selectable (VAULT_ASR_ENGINE). Downloaded the 460MB model to the HF cache. Cues reach the browser over the existing SSE bridge into an in-memory TextTrack with no renderer changes. Three fixes found by measuring against a Dune remux, not by reasoning: (1) the afftdn+dynaudnorm conditioning tuned for Nemotron makes the EOU model fire 8x vs 4x on the same clip and shreds sentences, so the EOU path applies gain only; (2) EOU on a short buffer is untrustworthy on film audio, so a boundary now needs 2.5s of context, else the model only ever sees 1s fragments; (3) filler-only and consecutive-duplicate cues are dropped to kill \"yeah\" hallucination over score. Also: skip the translator when translateTo equals the transcription language (renderer always sends it, so en->en was round-tripping every cue through Google Translate); cap the ASR source pull with -readrate 4.0 after measuring ~9x realtime, which would drag a whole 70GB remux from a rate-sensitive account; shim unwraps /api/transcode URLs back to the real source so the server-side daemon does not nest a second ffmpeg. Verified: app audio picker correctly chooses the English track (chosenAudioIndex 3, French default, mismatch true) - my first test passed 0 which caused the initial garbage. Model holds ~550MB VRAM, 35s load, ~40ms per 1s chunk. Confirmed -output_ts_offset does not preserve timebase for fragmented MP4 (start_time",
+  "commands": [
+    "hf download nvidia/parakeet_realtime_eou_120m-v1",
+    "node web/server.js",
+    "python-scripts/live_subtitles.py --daemon",
+    "ffprobe -show_entries format=start_time"
+  ],
+  "files": [
+    "python-scripts/live_subtitles.py",
+    "web/transcode-route.js",
+    "web/public/electron-api-shim.js",
+    "web/public/web-overrides.js",
+    "web/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "5bc7e0247af6214a10533c25fee8a4d91b7b52417f115c01b8836f123e992801",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "449a229",
+    "hasChanges": true
+  }
+}

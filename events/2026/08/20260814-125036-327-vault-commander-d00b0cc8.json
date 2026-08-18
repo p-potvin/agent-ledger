@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260814-125036-327-vault-commander-d00b0cc8",
+    "createdAt":  "2026-08-14T16:50:36.3270474Z",
+    "createdAtLocal":  "2026-08-14 12:50",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-commander",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 3.7 Flash\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 12:50 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.7 Flash",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+    "summary":  "Fixed vw live-subs crash: resolved WinError 232 / 0x800700e8 in pythonw stdio by adding SafeStream, and fixed Start-Process ArgumentList quoting with spaces",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "d00b0cc850b9a728681c99595496a26b5a128072e6be330a65d536920d35e375",
+    "git":  {
+                "repo":  "vault-commander",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+                "branch":  "main",
+                "head":  "7446389",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20260816-204348-257-vault-cacophony-59405dd4",
+  "createdAt": "2026-08-17T00:43:48.2573802Z",
+  "createdAtLocal": "2026-08-16 20:43",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR  Branch: feat/personaplex\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-16 20:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR",
+  "summary": "PHASE 2 first increment landed: src/personaplex.{h,cpp} model loader, commit fc3550e6 on feat/personaplex (11 commits, pushed). Implements hparams from GGUF KV, full LM tensor mapping, shape assertions, teardown; no graph yet. Deliberate choices: ffn_hidden is READ from the GGUF never recomputed (kyutai_stt.cpp:396 tries to derive it, gives up mid-comment and hardcodes 5632 for dim==2048; our converter writes ffn_hidden and depformer_ffn_hidden explicitly to avoid inheriting that); the pplx_dep_layer struct encodes the per-step asymmetry structurally with packed attn tensors, dep_q separate gating tensors, and SHARED norm alphas; depformer_emb sized dep_q-1. Added CMake target personaplex mirroring kyutai-stt. Tests: tests/test-personaplex-params.cpp with unit coverage (defaults, null/empty/missing path guards - init_from_file had NO null guard until the house convention's test pattern exposed it) plus a live case behind CRISPASR_PERSONAPLEX_MODEL, registered as ctest 'personaplex-load-live' with LABELS live;personaplex. MEASURED RESULTS: 11 unit assertions pass in 6 cases; live case passes 34 assertions against D:\\vault-cacophony\\gguf\\personaplex-7b-f16.gguf, reporting '4096d/32L/32H temporal + 1024d/6L/16H depformer, n_q=16 dep_q=16 card=2048, 475 tensors'. The 475 count matches the checkpoint's LM tensor count exactly (32*6+1 temporal, 18 embedding/head, 6*(2+2+32) depformer, 48 projections). Two build errors of my own along the way: called crispasr_init_gpu_backend with 4 args when it takes none and returns the backend (fixed against the kyutai_stt pattern), and hit 0xC0000135 at Catch2 test-discovery because CUDA 13 runtime DLLs live in bin\\\\x64 not bin - the trap already documented in the mini-omni HANDOFF; any Catch2 test linking a CUDA-enabled lib needs that on PATH when building on this box. Scope correction earlier this session, prompted by the user: the reference PyTorch model is",
+  "commands": [
+    "cmake --build build --target test-personaplex-params",
+    "test-personaplex-params.exe [live]",
+    "git push fork"
+  ],
+  "files": [
+    "CrispASR\\src\\personaplex.cpp",
+    "CrispASR\\src\\personaplex.h",
+    "CrispASR\\tests\\test-personaplex-params.cpp"
+  ],
+  "planPath": "",
+  "contentHash": "59405dd4ab25ccb38e96a4e5aa88ccb644d371110dda42573822136ed9a9e321",
+  "git": {
+    "repo": "CrispASR",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/CrispASR",
+    "branch": "feat/personaplex",
+    "head": "fc3550e6",
+    "hasChanges": true
+  }
+}

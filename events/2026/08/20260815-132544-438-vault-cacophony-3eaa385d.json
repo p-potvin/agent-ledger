@@ -1,0 +1,53 @@
+{
+  "id": "20260815-132544-438-vault-cacophony-3eaa385d",
+  "createdAt": "2026-08-15T17:25:44.4385903Z",
+  "createdAtLocal": "2026-08-15 13:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): Bash, Edit, Read, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-15 13:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Read",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Published the PersonaPlex work and restructured vault-cacophony. Forked CrispStrobe/CrispASR to p-potvin/CrispASR via gh, added it as remote 'fork' (left origin pointing at upstream so pulls keep working), pushed feat/personaplex - 6 commits: 1a9e7b0c mini-omni2 fixes, 8e05f60e cosyvoice3 voice-dir, 8104c680 blueprint, 1859dad6 converter, 0535c485 convtr fix + 226-name loader gate, 4dc3b751 system-tag decision. Per user: the SECOND wrap_with_system_tags defect is the real one - the startswith/endswith guard double-wraps a prompt that opens with the tag but does not close with one, and the bare string <system> passes through unwrapped; the symmetric <system>...<system> form is INTENTIONAL and must be reproduced byte-for-byte since the tags are ordinary SPM text and both server.py and offline.py agree. Recorded in BLUEPRINT.md trap 4. vault-cacophony/main: added CrispASR as a submodule pinned at 4dc3b751 pointing at the p-potvin fork, and NeMo-Speech.cpp as a submodule tracking NVIDIA upstream; committed cacophony-ui's 7 source files directly. Chose submodule over vendoring so CrispASR's 90MB history stays in its own repo and upstream syncs keep working. CRITICAL safety catch: vault-cacophony is a PUBLIC repo and samples/ is 364MB including a commercial Mac Miller mp3 - added samples/, .venv/, node_modules/, dist/ and the machine-local mini-omni symlink to .gitignore, confirmed via git check-ignore and verified the pushed tree contains no samples. Remote main had diverged (a README Zread badge commit pushed today at 10:27); fetched, inspected, and REBASED rather than force-pushing. main is now 66e97dd, pushed, working tree clean.",
+  "commands": [
+    "gh repo fork CrispStrobe/CrispASR",
+    "git push -u fork feat/personaplex",
+    "git submodule add",
+    "git rebase origin/main",
+    "git push origin main"
+  ],
+  "files": [
+    "vault-cacophony\\.gitmodules",
+    "vault-cacophony\\.gitignore",
+    "CrispASR\\docs\\personaplex\\BLUEPRINT.md"
+  ],
+  "planPath": "",
+  "contentHash": "3eaa385dcc18923230047b53901d076d35da2623d8d31acae951ac1f8169beb6",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "66e97dd",
+    "hasChanges": false
+  }
+}

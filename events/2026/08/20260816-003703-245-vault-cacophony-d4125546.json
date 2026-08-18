@@ -1,0 +1,48 @@
+{
+  "id": "20260816-003703-245-vault-cacophony-d4125546",
+  "createdAt": "2026-08-16T04:37:03.2452332Z",
+  "createdAtLocal": "2026-08-16 00:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR  Branch: feat/personaplex\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-16 00:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR",
+  "summary": "Resolved the 2060 question definitively: it is VULKAN-ONLY, not CUDA. User reported loading a model on it via ollama/llama-server; ollama's own server.log settles the mechanism - 'library=CUDA name=CUDA0 RTX 3060 libdirs=ollama,cuda_v13 driver=13.3 12.0 GiB' vs 'library=Vulkan name=Vulkan2 RTX 2060 libdirs=ollama,vulkan driver=0.0 6.0 GiB'. So ollama bound the 3060 through CUDA and the 2060 through Vulkan (OLLAMA_VULKAN:true is set). Re-probed CUDA with a genuinely clean environment after the user removed the machine-level var: still cuDeviceGetCount=1, only the 3060. vulkaninfo --summary lists three devices: RTX 3060, AMD Radeon iGPU, RTX 2060. Confirmed the user's env fixes took: machine and user CUDA_VISIBLE_DEVICES now empty, PATH registry kind is now ExpandString. IMPORTANT nuance discovered - my earlier probes were partly compromised because the Bash/PowerShell tool processes persist from session start and still carried the stale CUDA_VISIBLE_DEVICES=0 in their PROCESS environment; had to Remove-Item Env: explicitly. Plan survives: cli.cpp:362-368 sets BOTH CUDA_VISIBLE_DEVICES and GGML_VK_VISIBLE_DEVICES from --device N, and --gpu-backend accepts cuda|vulkan|metal|cpu, so the 2060 instance runs Vulkan at index 2 (iGPU is index 1). Consequences recorded in BLUEPRINT.md new section 6: phase 2 reference dumps must run 3060 + CPU offload because PyTorch has no Vulkan path and the bf16 reference is 15.59GB vs ~11GB free, which promotes the #105 meta-device fix from insurance to PREREQUISITE; phase 5's second instance runs Vulkan whose paths are less travelled in this tree and needs an early smoke test. CORRECTED my earlier RAM claim per user: 31GB total with a single process measured to ~26GB and ~28GB theoretical, so RAM is not the constraint",
+  "commands": [
+    "vulkaninfo --summary",
+    "ctypes nvcuda cuDeviceGetCount",
+    "git push fork"
+  ],
+  "files": [
+    "CrispASR\\docs\\personaplex\\BLUEPRINT.md"
+  ],
+  "planPath": "",
+  "contentHash": "d4125546eb1b082c39f4ef941754900d031fd512b1614f8a9ea95aa2caddf92a",
+  "git": {
+    "repo": "CrispASR",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/CrispASR",
+    "branch": "feat/personaplex",
+    "head": "75abaa48",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20260814-104233-241-vault-central-28e575ee",
+  "createdAt": "2026-08-14T14:42:33.2418064Z",
+  "createdAtLocal": "2026-08-14 10:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-central",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: local Windows 11 (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central  Branch: main\r\nTools used (this reply): Read, Grep, Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 10:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "local Windows 11 (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Read",
+      "Grep",
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-central",
+  "summary": "Fri, 14 Aug 2026 10:42 - v3.13.0 (commit fc3627f, pushed). Partial delivery of a large request list. FIXED: (1) Collapse hid nothing - the section body used the hidden ATTRIBUTE which only sets display:none at UA priority, and the Tailwind grid class overrode it; now conditionally not rendered. (2) Refresh recaptured the preview - added ctx.linkOnly to doTabExtraction, used by both extract_fresh_m3u8 and runStaleLinkSweep; a direct media URL in linkOnly mode returns immediately since the URL IS the source. (3) Refresh stole focus - the popup demotion only ran when ctx.originWindowId was supplied and a dashboard refresh supplies none; new restoreFocusAfterScraper() minimises the popup and returns focus to the origin or any other normal window. (4) PiP restore also paused - the <video> onClick ran togglePlay AND bubbled to the surface handler that restores; in PiP the click now only restores. (5) Page size was a flat 2 rows for every view, so Details (60px rows) showed 2 items/page; new ROWS_BY_VIEW_SIZE + computeItemsPerPage gives 18/6/3/2/2/2. NOT DONE - carried forward and reported honestly to the user: (a) the DATA-LOSS bug (user: refresh 'overwrites the full video the preview it just captured') - could not locate a preview write on the refresh path; extract_fresh_m3u8 discards metadata and only returns src, so I did not ship a speculative fix for a data-loss report; needs the user's reproduction. (b) autoplay after refresh. (c) view-mode tweaks: Details one line/thinner, view 2 edit+delete icons clipping, view 4 author->date, views 5+6 hover/click parity. (d) preview length x2 with 00:00 to ~5s-from-end coverage.",
+  "commands": [
+    "npm run build",
+    "npx vitest run",
+    "npx tsc --noEmit",
+    "git push origin main"
+  ],
+  "files": [
+    "src/components/VideoGrid.tsx",
+    "background/scripts/background.ts",
+    "src/components/VideoPlayer.tsx",
+    "src/lib/dashboard-utils.js"
+  ],
+  "planPath": "",
+  "contentHash": "28e575ee9c7aed4d5ac887ea4b89db78f7c2f1758b82883095e42c5bbf9bc9d0",
+  "git": {
+    "repo": "vault-central",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-central",
+    "branch": "main",
+    "head": "fc3627f",
+    "hasChanges": true
+  }
+}

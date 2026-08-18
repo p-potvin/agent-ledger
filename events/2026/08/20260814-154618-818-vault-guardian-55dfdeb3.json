@@ -1,0 +1,66 @@
+{
+  "id": "20260814-154618-818-vault-guardian-55dfdeb3",
+  "createdAt": "2026-08-14T19:46:18.8181125Z",
+  "createdAtLocal": "2026-08-14 15:46",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-guardian",
+  "kind": "code-change,verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 Enterprise local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian  Branch: vw-wfp-native-filtering\r\nTools used (this reply): Read, Write, Edit, Bash, PowerShell, Grep, AskUserQuestion, TaskCreate, TaskUpdate\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 15:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 Enterprise local",
+    "toolsUsed": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Grep",
+      "AskUserQuestion",
+      "TaskCreate",
+      "TaskUpdate"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-guardian",
+  "summary": "Applied vaultsqware theme + layout/overlay/GPU fixes (commit f7f43b0 on vw-wfp-native-filtering, PR #8). THEME: new Themes/Vaultsqware.xaml replacing VaultRedesign.xaml, from vaultwares-themes/vaultsqware/TOKENS.md - obsidian console #0A0C11, bone warm #EDECE8, iris #6E7BF2 primary, coral #FF8A6B secondary, cooler signals, 4px control radius (the 'square' identity), coral focus ring, console scrollbar tokens. Renamed accent keys ConsoleGoldBrush->IrisBrush, ConsoleVioletBrush->CoralBrush across all views via sed. FONTS: bundled Space Grotesk (UI) + Azeret Mono (mono) from Google Fonts under Assets/Fonts, referenced via ms-appx; only variable builds exist upstream (static 404'd); verified actual family names by loading TTFs through System.Drawing PrivateFontCollection rather than assuming (wrong name fails silently to fallback). LAYOUT: wrapped all 4 pivot bodies in ScrollViewer; gave list-bearing tabs bounded MinHeight/MaxHeight because '*' rows measure to zero against a scroller's infinite height. OVERLAY DRAG: root cause was my earlier WM_NCLBUTTONDOWN/HTCAPTION handoff to Windows' modal move loop - WinUI had already consumed the press so the loop started with no button held, producing click-pickup/move/click-drop. Replaced with pointer capture + AppWindow.Move tracking GetCursorPos screen coords (event coords are relative to the window being moved = feedback loop). MULTI-GPU: ResourceMonitor hardcoded nvmlDeviceGetHandleByIndex(0) so the user's new RTX 2060 was invisible; now enumerates nvmlDeviceGetCount_v2 + nvmlDeviceGetName per device; SystemResourceMetrics gains GpuMetrics list with flat Gpu* fields still mirroring device 0 for compatibility; new GpuPanel UserControl stacked per device in Performance tab; overlay stacks a row per GPU and grows window height instead of scrolling (per user request). IMPORTANT FINDING: the 'black bar with ~8-9 buttons at center top of main window AND in the overlay, with an action to",
+  "commands": [
+    "curl google/fonts variable TTFs",
+    "PowerShell PrivateFontCollection family name check",
+    "python wrap PivotItem bodies in ScrollViewer",
+    "dotnet build src/VaultGuardian.UI -r win-x64",
+    "dotnet test tests/VaultGuardian.Core.Tests",
+    "git commit",
+    "git push"
+  ],
+  "files": [
+    "src/VaultGuardian.UI/Themes/Vaultsqware.xaml",
+    "src/VaultGuardian.UI/Assets/Fonts/SpaceGrotesk.ttf",
+    "src/VaultGuardian.UI/Assets/Fonts/AzeretMono.ttf",
+    "src/VaultGuardian.UI/GpuPanel.xaml",
+    "src/VaultGuardian.UI/GpuPanel.xaml.cs",
+    "src/VaultGuardian.UI/OverlayWindow.xaml.cs",
+    "src/VaultGuardian.UI/MainWindow.xaml",
+    "src/VaultGuardian.Core/Observability/ResourceMonitor.cs",
+    "src/VaultGuardian.Core/Observability/SystemMetrics.cs"
+  ],
+  "planPath": "vault-guardian/Implementation_plan.md",
+  "contentHash": "55dfdeb3502665093f5ecd49ea79e1d738e6d43311583f21fc83de550b722c7c",
+  "git": {
+    "repo": "vault-guardian",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-guardian",
+    "branch": "vw-wfp-native-filtering",
+    "head": "f7f43b0",
+    "hasChanges": true
+  }
+}

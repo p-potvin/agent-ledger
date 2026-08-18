@@ -1,0 +1,52 @@
+{
+  "id": "20260814-023011-928-vault-commander-52760280",
+  "createdAt": "2026-08-14T06:30:11.9284865Z",
+  "createdAtLocal": "2026-08-14 02:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): PowerShell, Read, Write, Edit, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 02:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Read",
+      "Write",
+      "Edit",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Wired every consumer to the in-repo CLI: PATH (User+Machine, also removed a duplicate vw-cli entry), both scheduled tasks (AutoBackup, CollectAiHistory - re-registered with -TaskPath since they live in subfolders, triggers and principal preserved), the Desktop shortcut, vaultwares-mcp _get_vw_cli_root, and VW_CLI_ROOT set as a User env var. Moved the 5.7GB uv venv from vw-cli/utils into cli/utils and hardlinked parakeet models in. Fixed three hardcoded Desktop paths in the CLI and untracked AutoBackup runtime state. Fixed a real packaging bug: resolveVwRoot's '../cli' is meaningless inside app.asar so the packaged GUI silently fell back to the legacy Desktop path; added a walk-up step and verified by executing the shipped resolver under both source and packaged layouts. Testing: all 82 commands pass existence/AST-parse/help (initial harness wrongly reported all help empty because vw.ps1 uses Write-Host and needed *>&1); vw subtitles runs end-to-end on CUDA at ~9x realtime producing correct English and French SRTs; vw preview-generator produces a vp9/opus webm that decodes cleanly; packaged app launches and responds. Renamed vw-gui to vw-gui.RETIRED and re-verified everything still passes. vw-cli could NOT be renamed - locked by an open shell - so it remains in place.",
+  "commands": [
+    "vw subtitles -TargetDir ... -TranslateTo fr",
+    "npx electron-builder --dir",
+    "test_vw_commands.ps1"
+  ],
+  "files": [
+    "vault-commander/gui/main.js",
+    "vault-commander/cli/utils/analyze-deps.ps1",
+    "vaultwares-mcp/vaultwares_mcp/vw_cli_tools.py"
+  ],
+  "planPath": "",
+  "contentHash": "52760280cb49c7638f1ad25648b9b75a5baf0042783af7ca5251a13b49bc1453",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "b5acb3f",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "20260814-195436-226-vault-cacophony-ac1cb3b0",
+  "createdAt": "2026-08-14T23:54:36.2265561Z",
+  "createdAtLocal": "2026-08-14 19:54",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: chat\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR  Branch: main\r\nTools used (this reply): Bash, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-14 19:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "chat",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR",
+  "summary": "Reviewed all three past vault-cacophony setups after RTX 2060 6GB was added alongside RTX 3060 12GB. Findings: (1) PersonaPlex 7b-v1 weights already on disk at D:\\moshi-docker\\personaplex - model.safetensors 16GB, 8.37B params all BF16 = 16.7GB, no weight-quant support in the fork, only accelerate cpu-offload with max_memory=None; (2) session-1 twin mini-omni2 S2S over Voicemeeter/VBAN, blocked on VB driver collision and shared-voice problem; (3) session-2 cacophony.py + React SSE dashboard (ollama vw-vic/vw-marisol qwen3:0.6b to cosyvoice3-tts:8088 to parakeet ASR:8090), works but half-duplex and same base model both sides. Key new enabler verified: crispasr --device/-dev N sets CUDA_VISIBLE_DEVICES (cli.cpp:357-368) so servers can be pinned per card. Recommended staged plan: patch infer_auto_device_map max_memory to span both GPUs as a zero-risk PersonaPlex feasibility test, then bitsandbytes int8 PersonaPlex on 3060 + lfm2-audio 1.5B on 2060, fallback to lfm2-audio vs mini-omni2 one per card. No code changed.",
+  "commands": [
+    "nvidia-smi",
+    "curl http://localhost:11434/api/tags"
+  ],
+  "files": [
+    "D:\\moshi-docker\\personaplex\\moshi\\moshi\\models\\loaders.py",
+    "C:\\Users\\Administrator\\Desktop\\vw-cli.RETIRED\\utils\\cacophony.py",
+    "D:\\mini-omni\\HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "ac1cb3b00bcade2e03f533f8c14bf0108e9a1311bb31c8e5a618b83c7c4fb1f1",
+  "git": {
+    "repo": "CrispASR",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/CrispASR",
+    "branch": "main",
+    "head": "66ac7843",
+    "hasChanges": true
+  }
+}
