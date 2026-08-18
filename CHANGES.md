@@ -3,6 +3,28 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-08-17 20:54 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>commands</code> - Published multi-repository draft PR sweep, pushed vaultwares-mcp main, refreshed clean shared submodule pointers, and diagnosed vault-central nested checkout</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-08-17 20:54 (TZ: Eastern Standard Time)
+  ```
+- Summary: Published multi-repository draft PR sweep, pushed vaultwares-mcp main, refreshed clean shared submodule pointers, and diagnosed vault-central nested checkout
+- Git: repo=agent-ledger, branch=main, head=ffbba846
+
+</details>
+
+<details>
 <summary><strong>2026-08-17 20:42 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares — Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares — Project Rename Refactoring (Phase 5), VaultWares — Project Rename Refactoring (Phase 5 PR Workflow), VaultWares — System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>general</code> - VW_STATE: prepared multi-repository PR and submodule release sweep; awaiting scope confirmation for irreversible submodule history conversion</summary>
 
 - Kind: general
@@ -1734,7 +1756,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-08-15 09:31 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Reverted subtitle gap/timing pacing modifications per user request, verified clean ASR pipeline, and committed/pushed all remaining consolidated model loading and python-zipper ...</summary>
+<summary><strong>2026-08-15 09:31 - agent-ledger</strong> <code>code-change</code> - Reverted subtitle gap/timing pacing modifications per user request, verified clean ASR pipeline, and committed/pushed all remaining consolidated model loading and python-zipper ...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
