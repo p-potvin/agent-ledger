@@ -1,0 +1,46 @@
+{
+  "id": "20260820-222208-216-vault-cacophony-1b35b42e",
+  "createdAt": "2026-08-21T02:22:08.2166830Z",
+  "createdAtLocal": "2026-08-20 22:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/cacophony-vendor-dependencies\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-20 22:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Answered the user's parakeet question and found a shipping-blocker in my own pipeline. (1) HOW PARAKEET WAS USED: whole context. I never passed offline_mode, and audio.cpp defaults to full_context. (2) THAT DEFAULT IS FATAL ON REAL VIDEO: an 18-minute (1071s) file made it request a 21 GB CUDA buffer - 'ggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 21052385792 / Failed to allocate Parakeet TDT encoder graph tensors'. Commit 1626e8e as shipped would have failed on every video in a real library; my 179s validation clip was short enough to hide it. Fixed in 59958f3: pass offline_mode=auto plus audio_chunk_threshold_sec, exposed as -LongFormThreshold default 300s. Threshold matters BOTH ways - attention memory is O(T^2) so extrapolating 21GB puts 300s at ~1.7GB, while long_form measurably loses context on short audio: on the 179s clip long_form gave 'on a 6 mois de difference' where full_context got the correct '17 mois', and long_form was also 2x SLOWER there (6.4s vs 3.1s). Verified after fix: 1071s transcribes in 29.2s (36x realtime, 2760 words) and the full pipeline processes an 18-minute file in 194.7s producing 233 cues plus translation. (3) Also removed a dead --out argument from the ASR call - it never wrote a file even in the first successful run; --out is for audio outputs, ASR text goes to stdout and timings to --words-out, which is the only thing the pipeline reads. (4) BIG FINDING for the PersonaPlex port: audio.cpp already supports PersonaPlex with status 'supported' (not community), tasks ['s2s'], modes ['offline','streaming'], packages personaplex_7b_v1_q4_k (default) and q8_0. That makes my",
+  "commands": [
+    "audiocpp_cli --session-option parakeet_tdt.offline_mode=auto",
+    "Start-SubtitlesAudioCpp.ps1 on an 18-min file"
+  ],
+  "files": [
+    "vault-cacophony\\scripts\\Start-SubtitlesAudioCpp.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "1b35b42e18ba9bdfec8e31955c46988a273c1e395f566b772e59a35d916071a4",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/cacophony-vendor-dependencies",
+    "head": "59958f3",
+    "hasChanges": true
+  }
+}

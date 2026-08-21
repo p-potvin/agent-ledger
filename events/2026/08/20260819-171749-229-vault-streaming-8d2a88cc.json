@@ -1,0 +1,58 @@
+{
+  "id": "20260819-171749-229-vault-streaming-8d2a88cc",
+  "createdAt": "2026-08-19T21:17:49.2299182Z",
+  "createdAtLocal": "2026-08-19 17:17",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, PowerShell, Playwright, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-19 17:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Playwright",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Batch of UI/behaviour fixes, all verified in Chromium. (1) SAVE BUTTON: handler read el(debrid-proxy-enable).checked and el(debrid-proxy-address-input).value on controls no longer present in markup, throwing a TypeError before reaching saveSettings - no save, no toast, panel stayed open. The panel OPEN handler had the identical unguarded pair, aborting hydration part-way (which is why streaming-mode and focus never ran). Guarded both plus pillTagAdd which threw on input.parentNode for any saved glob exclusion. Verified: panel opens, select changes, save persists 720p across reload, toast fires, zero page errors. (2) BUTTON HOVER: global rule swapped background but never color, so buttons with their own light background lost contrast - measured purple Search button 6.78:1 normal to 1.06:1 on hover (near-black on near-black). Replaced with inset box-shadow overlay which paints above background but below text, palette-agnostic and cannot invert contrast; re-measured 6.78:1 on hover. (3) CARDS: trimmed exactly 40px via --card-trim with justify-self centre, keeping 5 columns - changing column count moved width 60-100px by viewport. Verified 296->256, 360->320, 488->448. Hover popup untouched per request. (4) PRIME: button sent TMDB provider 9 (Amazon Prime Video US) while watch_region is hardcoded CA where the id is 119; confirmed against TMDB CA provider list, now returns 20 results. Also stopped rendering raw upstream TMDB status text into the grid (now a translated user-facing message, raw detail to console). (5) NATIONALITY LIST: answered - hardcoded 6 countries in index.html mirroring the hardcoded with_original_language=en|fr|ja|ko whitelist in src/tmdb.js, which is the real constraint. (6) DATE SORT: date window now built once (decade filter and cutoff both",
+  "commands": [
+    "git commit/push vw-codex-web-client",
+    "playwright save/hover/card/i18n verification",
+    "TMDB watch/providers CA lookup"
+  ],
+  "files": [
+    "js/settings/core.js",
+    "js/settings/pill-tags.js",
+    "css/index.css",
+    "css/header.css",
+    "index.html",
+    "src/tmdb.js",
+    "js/tmdb.js",
+    "js/utils.js",
+    "js/translations.en.js",
+    "js/translations.qc.js"
+  ],
+  "planPath": "",
+  "contentHash": "8d2a88cca86ead7221b2392507cb0cb3737f841748eba334a541faf31fdc8fc4",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "6d8fda0",
+    "hasChanges": false
+  }
+}

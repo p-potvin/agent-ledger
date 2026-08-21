@@ -1,0 +1,52 @@
+{
+  "id": "20260818-143909-922-vault-streaming-cc57f71f",
+  "createdAt": "2026-08-18T18:39:09.9222305Z",
+  "createdAtLocal": "2026-08-18 14:39",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, PowerShell, Playwright, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-18 14:39 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Playwright",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Investigated the reported \"web version looks branched from an old vault-streaming\" regression. CONCLUSION: it is not old code. Evidence: (1) compared every tracked js/, css/ and index.html blob in main against the newest version of that file across ALL refs plus reflog - zero differences, main holds the newest version of every UI file; (2) md5 of every served asset matches disk exactly (app.js, ranking.js, hover-card.js, tabs.js, tmdb.js, rd-flow.js, player.js, index.css); (3) working tree clean, HEAD = origin/main = c0be742, 0 ahead 0 behind; (4) no second vault-streaming checkout on disk (only vault-explorer, which no longer contains the streaming UI files at all post-split) and no installed NSIS build; (5) cache headers sound - ETag on index.html, Cache-Control public max-age=0 plus Last-Modified on static, so no stale browser cache; (6) runtime capture in Chromium showed 13 IPC calls, 0 failures, 0 page errors; hover-card trailers play even under --autoplay-policy=document-user-activation-required. WHAT ACTUALLY DIFFERS, largely self-inflicted by the web layer: (a) my source-limits cap (VW_WEB_MAX_SOURCE_GB=5 / VW_WEB_MAX_HEIGHT=1080) hides 181 of 209 sources for Dune, leaving 28 with zero 2160p and only 6 multi-audio releases - the ranking code is intact but ranking a pool with 87 percent removed, and the alternate-language tracks live in the big remuxes that got filtered, which explains both the \"stream ranking\" and \"languages\" complaints; (b) Google Fonts (JetBrains Mono, Inter) are CORS-blocked from http origin so typography falls back to system fonts, changing the whole look; (c) Electron window chrome (titleBarStyle hidden + titleBarOverlay) does not exist in a browser tab so header",
+  "commands": [
+    "git log --all -- <uifiles>",
+    "md5sum disk vs served",
+    "playwright runtime IPC capture",
+    "curl -D - cache headers"
+  ],
+  "files": [
+    "web/source-limits.js",
+    "web/server.js",
+    "css/index.css"
+  ],
+  "planPath": "",
+  "contentHash": "cc57f71fd68a6a21d00baada8eb3c031cb62ed84b10146662187ad3d3de0663b",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "c0be742",
+    "hasChanges": false
+  }
+}

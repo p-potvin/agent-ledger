@@ -1,0 +1,42 @@
+﻿{
+    "id":  "20260819-105303-136-general-tasks-92291878",
+    "createdAt":  "2026-08-19T14:53:03.1363527Z",
+    "createdAtLocal":  "2026-08-19 10:53",
+    "timezone":  "Eastern Standard Time",
+    "project":  "General Tasks",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5 Codex\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-epg  Branch: n/a\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-19 10:53 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5 Codex",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-epg",
+    "summary":  "Created standalone vaultwares-epg service root, restored the EPG server and ONN/m3u4u automation there, copied the French XMLTV backup into data, repointed VaultExplorerEPG NSSM and the midnight sync task, added SYSTEM boot and user-logon service recovery, and verified private Greencloud routes return 200.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "9229187823ab9401079f7935e684b1a2abe7fa4162ef9422ffcc11dc12a7adc6",
+    "git":  null
+}

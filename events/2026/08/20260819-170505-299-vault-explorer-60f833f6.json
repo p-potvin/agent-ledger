@@ -1,0 +1,38 @@
+{
+  "id": "20260819-170505-299-vault-explorer-60f833f6",
+  "createdAt": "2026-08-19T21:05:05.2992080Z",
+  "createdAtLocal": "2026-08-19 17:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-single-instance-file-forwarding\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-19 17:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5.6",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Added persistent playback-folder ordering in Vault Explorer commit ce48c9f: default Date Modified newest first, configurable Date Modified/Created ascending/descending or name order. Scanner now emits creation time; E2E smoke isolation avoids active single-instance interference. Regression and Electron smoke tests passed; pushed to PR #48.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "60f833f607385c96290552fc38adba9f0d47364b82c58c59f623978478f29f44",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-single-instance-file-forwarding",
+    "head": "ce48c9f",
+    "hasChanges": false
+  }
+}

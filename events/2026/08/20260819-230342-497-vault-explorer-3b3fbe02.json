@@ -1,0 +1,38 @@
+{
+  "id": "20260819-230342-497-vault-explorer-3b3fbe02",
+  "createdAt": "2026-08-20T03:03:42.4973012Z",
+  "createdAtLocal": "2026-08-19 23:03",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-single-instance-file-forwarding\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-19 23:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5.6",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Updated the verified HKCU Vault Explorer open-command registry value to include --prioritize-player and read it back. Diagnosed installed single-instance testing/build blocker: active dist\\win-unpacked process locks dxil.dll, so electron-builder cannot refresh the executable; no user process was stopped.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "3b3fbe02a910d00de94f63cee79390d138a867a53effd55a62c26f6065710020",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-single-instance-file-forwarding",
+    "head": "2a5c76b",
+    "hasChanges": true
+  }
+}

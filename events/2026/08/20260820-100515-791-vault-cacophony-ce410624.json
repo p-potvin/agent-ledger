@@ -1,0 +1,47 @@
+{
+  "id": "20260820-100515-791-vault-cacophony-ce410624",
+  "createdAt": "2026-08-20T14:05:15.7911534Z",
+  "createdAtLocal": "2026-08-20 10:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/cacophony-vendor-dependencies\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-20 10:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Delivered the pure-ggml subtitle pipeline, commit 1bc2305 pushed to p-potvin/vault-cacophony main: scripts/Start-SubtitlesGgml.ps1 (135 lines) + scripts/translate_srt.py (124 lines). Stages: ffmpeg 16kHz mono extract, optional crispasr --separate --stems vocals (htdemucs), crispasr --backend parakeet -osrt, then deep_translator. NO PyTorch anywhere. MEASURED end to end: 2 files in one run at 2.5s and 6.1s each producing .srt + .fr.srt + .es.srt, transcripts matching the reference autotranscript exactly; the -Separate branch tested separately at 43.3s for the same 4.7s clip, also correct. Installed deep-translator 1.11.4 (pure python, pulls only beautifulsoup4/soupsieve). Translation quality comparison now concrete: Google 'qui a laisse cette valise' vs m2m100-418M 'qui a quitte ce sac' - wrong verb sense AND wrong noun - so deep_translator stays, and since it is an HTTP call it does not block deleting PyTorch. HTDEMUCS GPU ATTEMPT FAILED AND WAS REVERTED. Corrected two of the user's suggestions with evidence: cuBLAS in torch/lib is a GPU BLAS and irrelevant to the 'no BLAS found' message, which is about a HOST blas (cblas_sgemm) for the CPU path; and rebuilding with -DGGML_CUDA=ON changes nothing because CUDA is already enabled (binary prints '[backends: cpu,cuda]', finds both GPUs, selects 'backend = CUDA0' before aborting). Localised the crash to encoder.3 via CRISPASR_HTDEMUCS_DEBUG=1, hypothesised mixed F32/F16 operands reaching CUDA binbcast (htdemucs stores dconv.layers.N.4.weight as F16 while the matching .4.bias is F32), patched five call sites in the three affine helpers plus apply_dconv with a ggml_cast to F32, rebuilt - STILL CRASHED at the same assert. Hypothesis wrong, so per HARD RULE 4 (no change without measured benefit) I reverted",
+  "commands": [
+    "Start-SubtitlesGgml.ps1 -Langs fr,es -Device 0",
+    "git push origin main"
+  ],
+  "files": [
+    "vault-cacophony\\scripts\\Start-SubtitlesGgml.ps1",
+    "vault-cacophony\\scripts\\translate_srt.py"
+  ],
+  "planPath": "",
+  "contentHash": "ce410624570ef1ce485a123bf98bfb047aee07979cd8c4276bbe2191a0022009",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/cacophony-vendor-dependencies",
+    "head": "1bc2305",
+    "hasChanges": true
+  }
+}

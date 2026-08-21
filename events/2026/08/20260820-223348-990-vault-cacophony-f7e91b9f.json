@@ -1,0 +1,48 @@
+{
+  "id": "20260820-223348-990-vault-cacophony-f7e91b9f",
+  "createdAt": "2026-08-21T02:33:48.9908000Z",
+  "createdAtLocal": "2026-08-20 22:33",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/cacophony-vendor-dependencies\r\nTools used (this reply): Bash, PowerShell, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-20 22:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Implemented sentence-level translation, commit bc5af74 pushed. Cues are stitched into sentences by punctuation, sentences are translated, then each result is redistributed across the cues it spanned in proportion to the source characters each cue contributed, splitting on word boundaries (split_proportional + build_sentences, unit-tested: 3 cues to 1 sentence with weights 41/26/7). Demonstrated fix on the real clip: per-cue produced 'in the street, really' / 'public.' where sentence mode gives 'in the street, to a' / 'real audience.' - 35 of 40 cues change. --per-cue flag restores old behaviour. FOUND A SILENT CORRUPTION BUG while comparing the two modes: the translate endpoint can answer HTTP 200 with an HTML error page which deep_translator returns as if it were a translation, so nothing raises and it landed verbatim in cue 3 as 'Error 500 (Server Error)!!1500.That is an error.There was an error. Please try again later.' Added looks_like_error() screening by marker list and by length ratio (a translation stays within an order of magnitude of its source), applied at single, batch and per-part levels, keeping source text on failure. Unit-tested 5 cases including the observed page, a normal translation, empty, runaway, and a legitimately long reply - all pass. Measured after: full pipeline 21.3s for the 179s video producing 40 cues in EN and ES. ALSO ANSWERED the user's flag corrections: --text-out DOES work (2599-byte transcript) so my earlier claim that ASR text only reaches stdout was wrong; --segments-out and --turns-out produce nothing for parakeet and likely need diarization; --out remains audio-only. HTDEMUCS CHUNKING investigated per the user's",
+  "commands": [
+    "translate_srt.py --per-cue vs sentence",
+    "Start-SubtitlesAudioCpp.ps1 -Langs en,es"
+  ],
+  "files": [
+    "vault-cacophony\\scripts\\translate_srt.py"
+  ],
+  "planPath": "",
+  "contentHash": "f7e91b9f1be91b8e720ba10bb80e530ea012b88c0967571832e96b40f5a5a6d5",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/cacophony-vendor-dependencies",
+    "head": "bc5af74",
+    "hasChanges": true
+  }
+}

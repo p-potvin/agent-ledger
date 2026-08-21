@@ -1,0 +1,44 @@
+{
+  "id": "20260820-023800-334-vault-cacophony-761060d1",
+  "createdAt": "2026-08-20T06:38:00.3345894Z",
+  "createdAtLocal": "2026-08-20 02:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: chat\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR  Branch: feat/personaplex\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-20 02:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "chat",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR",
+  "summary": "Investigated the user's demucs/PyTorch VRAM OOM and the request to make the RTX 2060 the primary display GPU. MEASURED: GPU0 3060 has 1363 MiB used and 10751 MiB FREE at 18% util with Display Active Enabled and every desktop process on it (dwm, firefox, claude.exe, WindowsTerminal, Antigravity IDE, Taskmgr, LogonUI); GPU1 2060 has 0 MiB used, 5955 free, Display Active Disabled. REPRODUCTION ATTEMPT FAILED TO REPRODUCE: with a clean CUDA_VISIBLE_DEVICES, torch 2.8.0+cu129 reports 11800 MB free on cuda:0 and 5361 MB on cuda:1, and a 100 MB float32 allocation SUCCEEDS on both devices. So the reported failure is not a current-state capacity problem and needs the actual error text plus the exact demucs command to diagnose. Working hypothesis to put to the user: a PyTorch OOM message's 'Tried to allocate ~100 MiB' is the allocation that failed, not the total footprint - demucs/htdemucs memory scales with segment length and can hold many GB before the straw that breaks it, so the message is consistent with genuine pressure rather than PyTorch 'refusing to yield'. Also the user conflated two unrelated knobs: PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True (allocator fragmentation mitigation) versus demucs's own --segment N (chunk length), and only the latter actually reduces demucs peak memory. DISPLAY REQUEST: cannot be done in software. nvidia-smi reports Display Active Enabled on the 3060 and Disabled on the 2060, meaning the monitor cable is physically in the 3060; Windows binds a display to whichever GPU its cable is attached to, so moving the desktop to the 2060 requires physically moving the cable, then setting it",
+  "commands": [
+    "nvidia-smi --query-compute-apps",
+    "torch alloc probe on cuda:0 and cuda:1"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "761060d11d16dcfe5e09fca0d7c5b9c081f0678723a4de59abd64de09c5a2ec8",
+  "git": {
+    "repo": "CrispASR",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/CrispASR",
+    "branch": "feat/personaplex",
+    "head": "fc3550e6",
+    "hasChanges": true
+  }
+}

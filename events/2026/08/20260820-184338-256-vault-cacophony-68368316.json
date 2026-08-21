@@ -1,0 +1,46 @@
+{
+  "id": "20260820-184338-256-vault-cacophony-68368316",
+  "createdAt": "2026-08-20T22:43:38.2568335Z",
+  "createdAtLocal": "2026-08-20 18:43",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/cacophony-vendor-dependencies\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-20 18:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Nemotron vs parakeet comparison done - the question that motivated building NeMo-Speech.cpp. Downloaded nvidia/nemotron-3.5-asr-streaming-0.6b.q8_0.gguf (741 MB) to D:\\vault-cacophony\\gguf\\nemo. Tested both on the identical 179s French clip on cuda:0. RESULT: parakeet-tdt-0.6b-v3 (via crispasr) WINS decisively for offline subtitles - 2.33s vs 6.1s, and materially more accurate: 'des freres Jumeaux' vs 'des phrases jumeaux qui sont flots'; 'Sauf la, on a 17 mois de difference' vs 'on ne cesse moins de difference'; 'On a pas la meme mere' vs 'on a pas meme mai'; 'The Golden Stick' vs 'The Golden State'; and nemotron dropped the clause 'Compete pour competition' entirely. First nemotron run without -l scored worse still (8.1s), so I re-ran with -l fr-FR for fairness. IMPORTANT VINDICATION for the user: the ggml runtime DOES implement the prompt_kernel language fusion, logging 'prompt fusion enabled: num_prompts=128 languages=121'. That is precisely what released PyTorch NeMo silently dropped via its substitute loader class (EncDecRNNTBPEModelWithPrompt on git main only), which is why the user disabled Nemotron 3.5 in Start-SubtitleGeneration.ps1 back in August. So their original loader complaint is genuinely fixed in the C++ implementation - the remaining quality gap is architectural, not a bug. FRAMING that settles it: nemotron-3.5-asr-streaming is a STREAMING model (runtime logs 'streaming cfg: chunk=0.16s left=1.92s right=1.92s'), trading accuracy for low latency with limited right context, whereas parakeet TDT is offline full-utterance with unlimited context - and per NeMo-Speech.cpp's own docs parakeet 'is not cache-aware trained: inference is full-utterance only. Streaming requests are rejected'. So they are built for different jobs: parakeet stays for subtitle generation, and nemotron",
+  "commands": [
+    "hf download nvidia/nemotron-3.5-asr-streaming-0.6b",
+    "nemo-speech transcribe -l fr-FR --device cuda:0"
+  ],
+  "files": [
+    "D:\\vault-cacophony\\vidtest\\out3\\nemotron_fr.srt"
+  ],
+  "planPath": "",
+  "contentHash": "68368316bf761ac5d11066692d3acff9870302b215f9672cf080e856e64bbb11",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/cacophony-vendor-dependencies",
+    "head": "c5710f5",
+    "hasChanges": true
+  }
+}

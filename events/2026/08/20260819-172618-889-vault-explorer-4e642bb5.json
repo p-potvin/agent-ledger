@@ -1,0 +1,38 @@
+{
+  "id": "20260819-172618-889-vault-explorer-4e642bb5",
+  "createdAt": "2026-08-19T21:26:18.8890882Z",
+  "createdAtLocal": "2026-08-19 17:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-single-instance-file-forwarding\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-19 17:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5.6",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Implemented cached video-only preview validation in 8e130a1: isValid now comes from one FFmpeg video-only sample and is paired with isValidCheckedAt, so silent videos can preview and checked files are not decoded again. Manual, queued, and idle preview paths share the guard; test and Electron smoke suites passed. Pushed to PR #48.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "4e642bb544474ac9f51817c979baaba72ca259b702dd409693a6dc1ea71a000b",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-single-instance-file-forwarding",
+    "head": "8e130a1",
+    "hasChanges": false
+  }
+}

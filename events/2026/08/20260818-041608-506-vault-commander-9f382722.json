@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260818-041608-506-vault-commander-9f382722",
+    "createdAt":  "2026-08-18T08:16:08.5064445Z",
+    "createdAtLocal":  "2026-08-18 04:16",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-commander",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: agent/commander-rtx-vsr-mosaic\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-18 04:16 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+    "summary":  "Restored vw subtitles Demucs progress reporting using per-native-segment callbacks while retaining bounded RAM windows and CUDA-resident ASR.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "9f382722eab9aae462de877ff664b3d87aa1c954b26a7b915d53982bf172d2b0",
+    "git":  {
+                "repo":  "vault-commander",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+                "branch":  "agent/commander-rtx-vsr-mosaic",
+                "head":  "a688409",
+                "hasChanges":  true
+            }
+}

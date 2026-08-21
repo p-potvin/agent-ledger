@@ -1,0 +1,47 @@
+{
+  "id": "20260820-064745-330-vault-cacophony-1d6b2991",
+  "createdAt": "2026-08-20T10:47:45.3302520Z",
+  "createdAtLocal": "2026-08-20 06:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR  Branch: feat/personaplex\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-20 06:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR",
+  "summary": "Demoed the full 'vw subtitles' pipeline under ggml with ZERO PyTorch, using the already-built crispasr.exe 0.8.25. Stage results on this box: (1) SEPARATION - htdemucs-q4_k.gguf is only 38 MB and auto-downloads; 'crispasr --separate --stems vocals --backend htdemucs' is the direct equivalent of the existing 'demucs.separate -n htdemucs --two-stems=vocals'. It WORKS on CPU, taking 81.9s for a 9s clip because Windows has no BLAS (configure logs 'no BLAS found - linear() uses the scalar fallback') and the CrossTransformer is ~86% of the forward pass. (2) The GPU route CRASHES - CRISPASR_HTDEMUCS_GGML=1 + CRISPASR_HTDEMUCS_GPU=1 selects 'backend = CUDA0' then aborts at ggml/src/ggml-cuda/binbcast.cu:293 GGML_ASSERT(nb10 % sizeof(src1_t) == 0), a non-contiguous operand reaching a CUDA broadcast op. docs/environment-variables.md states _GGML is 'Verified correct on CPU and Metal (45/45 stages)' - CUDA was never verified, so this is a genuine unfixed bug, same family as the dia issue in HISTORY that needed a ggml_cont before get_rows. I initially misreported the 10.2s as an 8x speedup; it was time-to-crash, corrected immediately. (3) ASR - parakeet-tdt-0.6b-v3-q4_k on CUDA0, 2.8s for the 4.7s suitcase sample, -osrt produced an SRT whose text matches the reference autotranscript EXACTLY: 'I don't know who left that suitcase, but I found out by morning.' (4) TRANSLATION - m2m100-418m-q8_0.gguf (502 MB) on CUDA0, 31.8s including first download, EN->FR via --backend m2m100 --text --tr-sl/--tr-tl. Output 'Je ne sais pas qui a quitte ce sac, mais je l'ai decouvert le matin.' QUALITY CAVEAT worth flagging to the user: 'suitcase' became 'sac' (bag, not valise) and 'left' became 'quitte' (departed from, wrong sense),",
+  "commands": [
+    "crispasr --separate --stems vocals --backend htdemucs",
+    "crispasr --backend parakeet -osrt",
+    "crispasr --backend m2m100 --text --tr-tl fr"
+  ],
+  "files": [
+    "D:\\vault-cacophony\\subs-demo\\suitcase.srt"
+  ],
+  "planPath": "",
+  "contentHash": "1d6b299188ca92b6dd7d154156a56072254f30c7f58edc29e9f7c86f7c226eeb",
+  "git": {
+    "repo": "CrispASR",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/CrispASR",
+    "branch": "feat/personaplex",
+    "head": "fc3550e6",
+    "hasChanges": true
+  }
+}

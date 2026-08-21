@@ -1,0 +1,50 @@
+{
+  "id": "20260820-232550-826-vault-cacophony-78dff8da",
+  "createdAt": "2026-08-21T03:25:50.8269008Z",
+  "createdAtLocal": "2026-08-20 23:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/cacophony-vendor-dependencies\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-20 23:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (RTX 3060 + RTX 2060)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Grep"
+    ],
+    "mcpServersAccessed": "none"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Chunked htdemucs separation in Start-SubtitlesAudioCpp.ps1 (-SepChunkMinutes 6, -SepOverlap 10s, ffmpeg acrossfade stitch straight into the 16 kHz ASR wav). Measured the real constraint: VRAM is flat ~0.8 GB for htdemucs regardless of length; host RAM grew 0.28 GB/min (6846 MiB peak on 22.6 min), now 2121 MiB and 187s->166s wall. Measuring also exposed parakeet long-form running with audio_chunk_duration_sec=2 (streaming default), losing 40 pct of words: 42.3 and 44.3 pct WER on two LibriSpeech sets. New -AsrWindow 45 (best of 8 values on both sets) gives 3.4 and 6.8 pct WER and 3x faster ASR; end-to-end pipeline WER 41.88 -> 3.41 pct. Added Invoke-Native so audiocpp's CUDA stderr banner no longer aborts runs under Windows PowerShell 5.1. Commit f5dbd9b.",
+  "commands": [
+    "audiocpp_cli.exe --family htdemucs --task sep --backend cuda",
+    "audiocpp_cli.exe --task asr --family parakeet_tdt --session-option parakeet_tdt.audio_chunk_duration_sec=45",
+    "git commit -m 'scripts(subtitles): chunk separation, and stop losing 40% of the words'"
+  ],
+  "files": [
+    "scripts/Start-SubtitlesAudioCpp.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "78dff8da9562eaded4b62a3f1a4cbf2b2f694a9fe1188f5fc6e0090e1c50ea96",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/cacophony-vendor-dependencies",
+    "head": "f5dbd9b",
+    "hasChanges": true
+  }
+}

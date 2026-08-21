@@ -1,0 +1,46 @@
+{
+  "id": "20260820-175224-578-vault-cacophony-a987ffda",
+  "createdAt": "2026-08-20T21:52:24.5786008Z",
+  "createdAtLocal": "2026-08-20 17:52",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/cacophony-vendor-dependencies\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-20 17:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Found and fixed the user's reported crash. Commit c5710f5 pushed to vault-cacophony main. THREE real-media defects, none visible on my ASCII test samples: (1) PowerShell treats [ and ] as wildcard character classes, so for 'Movie [HD].mp4' Test-Path returns False on a file that exists - proven directly: [System.IO.File]::Exists=True, Test-Path -Path=False, Test-Path -LiteralPath=True. The pipeline therefore threw 'ffmpeg failed' and 'ASR produced no .srt' on its own correct output. All path cmdlets now use -LiteralPath and the wildcard Remove-Item became an explicit enumeration. (2) crispasr CANNOT open non-ASCII paths on Windows - given 'frères [HD].wav' it exits 2 and prints usage despite the file existing (narrow argv + ANSI-codepage fopen); this is a CrispASR limitation worth reporting upstream. Worked around by handing crispasr only ASCII-safe 'job_<md5prefix>' stems in the temp dir and moving the .srt back to the real name; ffmpeg reads the original UTF-8 path directly since it handles it correctly. (3) Without -ml the ASR emitted ONE cue for the entire file - a 179s video produced a single 163s subtitle, unusable in a player. Added -MaxLen (default 42) and -sow, with -NoSplitOnWord to disable. MEASURED after fixes on 'Julien Lacroix - Les frères magie ! [HD].mp4' (179s French, accents AND brackets): 4.2s end to end, 66 cues, LID auto-detected fr at p=0.972, ASR alone 76.7x realtime (178.5s transcribed in 2.33s). The 66-cue file exercised translate_srt.py's grouping and delimiter-mismatch fallback for the first time. KNOWN LIMITATION recorded in the commit: per-cue translation loses context, so 'ses tours dans la rue' split across a boundary",
+  "commands": [
+    "Start-SubtitlesGgml.ps1 -Langs en -Device 0",
+    "git push origin main"
+  ],
+  "files": [
+    "vault-cacophony\\scripts\\Start-SubtitlesGgml.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "a987ffdae5de3cb605cca9a3372795af8e09a2370760008f2f233d48e62b76c6",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/cacophony-vendor-dependencies",
+    "head": "c5710f5",
+    "hasChanges": true
+  }
+}

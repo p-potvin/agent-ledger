@@ -1,0 +1,60 @@
+{
+  "id": "20260819-192557-218-vault-streaming-ad66274b",
+  "createdAt": "2026-08-19T23:25:57.2186423Z",
+  "createdAtLocal": "2026-08-19 19:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, PowerShell, Playwright, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-19 19:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Playwright",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Second batch. CARDS: --card-trim 40px to 20px plus 5px top/bottom padding (measured 276px at 1600 viewport). WATCH REGION: answered definitively that it cannot be omitted - TMDB silently ignores with_watch_providers without watch_region, verified provider 8 with no region returns 1,170,829 results (whole catalogue, same as no provider) vs 4,708 with watch_region=CA. Now a user setting defaulting to US, populated from TMDB /watch/providers/regions (139 regions loaded live), passed through preload/web-shim/discover, with an explicit TODO for IP geolocation seeding. WITH_ORIGINAL_LANGUAGE: replaced hardcoded en|fr|ja|ko with /configuration/primary_translations (144 locales, 72 base languages), fetched once and cached 24h, old constant kept as offline fallback. CARD BUTTONS: root cause was that hover sets card visibility:hidden and swaps in the popup, so the card's own buttons are unreachable - and the popup already carries play/library/details. Converted to informational labels: media-type badge always, library badge only when saved; handleCardLibToggle in favorites.js is now unreferenced. YOUTUBE ERRORS: onError listener already existed (codes 2/5/100/101/150) but collapsed the panel to nothing; now renders the trailer's own img.youtube.com/vi/<key>/hqdefault.jpg behind a translated overlay message. JS STRINGS: added window.tr(key, fallback) in utils.js resolving at call time, converted 42 showToast literals across 12 files into 36 keys with Quebecois French. SETTINGS MODAL: added a full-page scrim via a 100vmax-spread box-shadow, because the #settings-backdrop the JS references does not exist in markup. KINOCHECK: both call sites already pass language after the previous fix, so the language=en line the user saw predates it (Electron reads js/ at window load). GPU error in their console (command_buffer_proxy_impl WaitForGetOffsetInRange) is Chromium GPU-process noise, not app code.",
+  "commands": [
+    "TMDB /configuration/primary_translations",
+    "TMDB /watch/providers/regions",
+    "TMDB /3/account",
+    "git push vw-codex-web-client"
+  ],
+  "files": [
+    "css/header.css",
+    "css/settings.css",
+    "src/tmdb.js",
+    "js/tmdb.js",
+    "js/utils.js",
+    "js/settings/core.js",
+    "js/streaming/trailer.js",
+    "preload.js",
+    "web/public/electron-api-shim.js",
+    "js/translations.en.js",
+    "js/translations.qc.js"
+  ],
+  "planPath": "",
+  "contentHash": "ad66274b71a5fb0c77763fb80d9ae3c3b5572707db33bb066e852f40e5fe8e7c",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "9c9a3e4",
+    "hasChanges": false
+  }
+}

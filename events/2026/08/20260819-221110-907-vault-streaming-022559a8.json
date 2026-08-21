@@ -1,0 +1,56 @@
+{
+  "id": "20260819-221110-907-vault-streaming-022559a8",
+  "createdAt": "2026-08-20T02:11:10.9070178Z",
+  "createdAtLocal": "2026-08-19 22:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, PowerShell, Playwright, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-19 22:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Playwright",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Fourth batch, pushed 577135b. MODAL TO PLAYER HAND-OFF (the pre-alpha blocker): rd-flow hid rd-stream-dialog the instant a source resolved, but playStream still ran findSubtitles and the audio probe before revealing video-modal, so the grid flashed between the two. Added beginPlayerHandoff/endPlayerHandoff: the player shell is raised first with a .preparing class and a #player-preparing spinner overlay, the dialog fades out over it (.handing-off), and the overlay clears on loadeddata, on error, or after a 15s timeout. Removed both eager hides from rd-flow. VIDEO LETTERBOXING: root cause was .video-wrapper.subtitles-active #video-player { padding-bottom: 40px }. Reserving space with padding cannot work here - content-box overflows the wrapper, border-box shrinks the content box, and object-fit:contain rescales to fit either way, producing gaps on bottom AND both sides. Padding removed; added liftCues/attachCueLifting which sets cue.line = -3 on tracks (hooked via textTracks addtrack + cuechange) so subtitles clear the controls without resizing the picture. OPENSUBTITLES: download-subtitle-track resolves { success, path } but the renderer passed the object into sanitizePath, producing \"p.replace is not a function\"; now unwrapped with a success:false check. Separately the preferred-language selection fell back to subs[0] when no match existed, which is why defaultSubLang=fr loaded English - an explicit language choice is now respected and nothing is auto-loaded rather than the wrong language ('original' still falls back). PRIME REGRESSION: self-inflicted - js/tmdb.js passed (appSettings.watchRegion || 'US'), which pre-empted the geo lookup; now sends undefined when unset. Also found the user's stored settings contained watchRegion:\"US\" written by the earlier rate-limited-geo bug (fallback presented as detection); backed up settings and",
+  "commands": [
+    "git push vw-codex-web-client",
+    "playwright handoff/flag/video verification"
+  ],
+  "files": [
+    "js/player/player.js",
+    "js/player/subtitles.js",
+    "js/streaming/rd-flow.js",
+    "js/tmdb.js",
+    "css/player.css",
+    "css/header.css",
+    "index.html",
+    "main.js",
+    "public/flags/qc.svg"
+  ],
+  "planPath": "",
+  "contentHash": "022559a85663d70e0171b8545243e9d11799e152b19c26cc4c56160f329896cf",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "577135b",
+    "hasChanges": true
+  }
+}

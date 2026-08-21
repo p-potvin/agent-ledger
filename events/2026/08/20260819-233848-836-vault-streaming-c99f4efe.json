@@ -1,0 +1,53 @@
+{
+  "id": "20260819-233848-836-vault-streaming-c99f4efe",
+  "createdAt": "2026-08-20T03:38:48.8369547Z",
+  "createdAtLocal": "2026-08-19 23:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, PowerShell, Playwright, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-19 23:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Playwright",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Fifth batch, pushed 7d2a7b9. SPINNER OUTLIVING PLAYBACK: the hand-off teardown was armed at the END of playStream, but src is assigned near the top and the function still runs findSubtitles and the audio probe in between, so loadeddata (or an early error) fired before anything listened and only the 15s timeout cleared it. Now armed immediately after vp.src = url, with a readyState>=2 || vp.error check for events already missed plus a `playing` listener. Measured 15000ms to 103ms in a browser probe. OPENSUBTITLES ENOENT: handler did path.dirname(videoPath) where videoPath is an http(s) stream URL, yielding a relative nonsense path that path.join hung off the cwd - exactly the reported \"<repo>\\http:\\100.67.25.118:5173\\...srt\". Remote sources now write to a subtitles cache under app.getPath(userData), keyed by fileId to avoid collisions; genuinely local absolute paths still get a sidecar beside the video. Added the missing electron `app` import to subtitles.ipc.js. CUE POSITION: discovered subtitles.js ALREADY had raiseTrackCues() and window.SUBTITLE_CUE_LINE = -4, and that my previous commit had introduced a competing liftCues/CUE_LINE_FROM_BOTTOM = -3. Removed the duplicate and rewired attachCueLifting to drive the original helper - the genuinely missing piece was that nothing invoked it for tracks added after load, so file-loaded cues stayed at line:auto behind the control bar. LOG NOISE: with_original_language now carries 72 codes since it became TMDB-driven; elided to <all> in the logged URL only (the request is unchanged). PACKAGING INVESTIGATION: compared against vault-explorer, which has no productName/setName/icon at all and simply inherits its exe name from package name. Inspected the actual artifact: dist/win-unpacked/Vault Streaming.exe has FileDescription and",
+  "commands": [
+    "git push vw-codex-web-client",
+    "Get-Item dist/win-unpacked/Vault Streaming.exe VersionInfo",
+    "playwright handoff timing probe"
+  ],
+  "files": [
+    "js/player/player.js",
+    "js/player/subtitles.js",
+    "src/ipc/subtitles.ipc.js",
+    "src/tmdb.js",
+    "package.json"
+  ],
+  "planPath": "",
+  "contentHash": "c99f4efe1f221adad3c6eecec22f29cf2af4f262f8e0040cb32232920248cd96",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "7d2a7b9",
+    "hasChanges": true
+  }
+}

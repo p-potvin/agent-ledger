@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260818-044329-030-vault-commander-86c7917b",
+    "createdAt":  "2026-08-18T08:43:29.0302222Z",
+    "createdAtLocal":  "2026-08-18 04:43",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-commander",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: agent/commander-rtx-vsr-mosaic\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-18 04:43 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+    "summary":  "Verified vw subtitles processes Demucs and ASR sequentially per video; diagnosed fast later failures as per-video Demucs failure falling through to standard extraction, not batch pre-processing.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "86c7917b203ed16392f66002d17f8a620b12f5553c19220397bf48820a3a0363",
+    "git":  {
+                "repo":  "vault-commander",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+                "branch":  "agent/commander-rtx-vsr-mosaic",
+                "head":  "a688409",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "20260820-220751-231-vault-cacophony-d69fd846",
+  "createdAt": "2026-08-21T02:07:51.2315386Z",
+  "createdAtLocal": "2026-08-20 22:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/cacophony-vendor-dependencies\r\nTools used (this reply): Bash, PowerShell, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-20 22:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Rebuilt the subtitle pipeline on audio.cpp (0xShug0/audio.cpp). Commit 1626e8e pushed to vault-cacophony main; audio.cpp added as a submodule at 9601291. THE DECIDING MEASUREMENT - separation on the same 179s clip and GPU: CrispASR htdemucs CPU 9.3x SLOWER than realtime (~2.5h for a 16-min video), user's PyTorch demucs shifts=1 on CUDA 2.2x slower (~35 min measured by them), audio.cpp htdemucs CUDA 10.6x FASTER than realtime, RTF 0.0941 reported by --metrics, 19.1s for 179s (~90s for 16 min). So separation is ON by default in the new driver where the CrispASR version had to leave it opt-in, and it demonstrably helps: with the vocal stem the ASR produced 'sauf la on a 17 mois de difference' where mixed audio gave 'on a 16eme mois'. ASR parity confirmed: audio.cpp parakeet q8_0 warm runs 2.7s and 2.8s vs CrispASR q4_k 2.33s - the first run's 20.6s was one-off CUDA graph warmup, not a regression. Transcript quality comparable or slightly better ('competition de magie a Valley Field', 'Mon magistien parfait' vs CrispASR's 'Mon machine parfait'). NEW: cues now come from word gaps, not character counts. audio.cpp --words-out emits sample-accurate word boundaries at 16kHz (465 words on this clip), and scripts/words_to_srt.py splits on silence - what the original vw-cli pipeline did. Tuned --max-chars to 76 by measurement: 84 leaves 8 of 69 lines overflowing to 43-47 chars after wrapping, 76 leaves zero; also fixed the split test to project length INCLUDING the next word, since splitting after the cap is exceeded overflows the last wrapped line. Note awk counts BYTES not chars",
+  "commands": [
+    "audiocpp_cli --family htdemucs --task sep --backend cuda --metrics",
+    "audiocpp_cli --task asr --family parakeet_tdt --words-out",
+    "git submodule add audio.cpp"
+  ],
+  "files": [
+    "vault-cacophony\\scripts\\Start-SubtitlesAudioCpp.ps1",
+    "vault-cacophony\\scripts\\words_to_srt.py"
+  ],
+  "planPath": "",
+  "contentHash": "d69fd84628d15117ad71ec0f38b0f7d125b16cd78f47c082fc149340cd0309f4",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/cacophony-vendor-dependencies",
+    "head": "1626e8e",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20260821-001925-215-vault-commander-fe314040",
+  "createdAt": "2026-08-21T04:19:25.2159986Z",
+  "createdAtLocal": "2026-08-21 00:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/cacophony-vendor-dependencies\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-21 00:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (RTX 3060 + RTX 2060)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Grep"
+    ],
+    "mcpServersAccessed": "none"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Packaged the audio.cpp subtitle pipeline as 'vw fast-subs': new cli/Start-FastSubtitles.ps1 (chunked CUDA htdemucs separation, crossfade stitch, parakeet-tdt ASR at AsrWindow 45, cues from word gaps, optional translation), registered in cli/vw-commands.ps1 under Media Pipeline, with words_to_srt.py and translate_srt.py copied into cli/utils and marked as synced from vault-cacophony. Takes one file or a whole tree; .srt now lands beside each source unless -OutputDir is given (same fix applied back in vault-cacophony). Models hard-linked per repo convention: htdemucs-f16.gguf and parakeet-tdt-0.6b-v3-q8_0.gguf now exist in %LOCALAPPDATA%/VaultWares/models and cli/utils/models, sharing blocks with audio.cpp's copies (zero extra disk). Verified single file, recursion, SkipExisting, and fr translation through vw. Found and reported a pre-existing vw.ps1 bug: its own -RemainingArgs/-CommandName prefix-match and swallow -r and -c from child commands. Nothing committed in either repo.",
+  "commands": [
+    "vw fast-subs -Target <file> -TranslateTo fr",
+    "vw fast-subs -Target <dir> -Recurse -SkipExisting",
+    "vault-explorer/tools/link-models.ps1 -Model htdemucs-gguf -Targets vault-commander/cli/utils/models/htdemucs-gguf"
+  ],
+  "files": [
+    "vault-commander/cli/Start-FastSubtitles.ps1",
+    "vault-commander/cli/vw-commands.ps1",
+    "vault-commander/cli/utils/words_to_srt.py",
+    "vault-commander/cli/utils/translate_srt.py",
+    "vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "fe3140400882cde7bf0e051c568cbe5e3f26f6cd518ccfd070031ec099d3467d",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/cacophony-vendor-dependencies",
+    "head": "f5dbd9b",
+    "hasChanges": true
+  }
+}

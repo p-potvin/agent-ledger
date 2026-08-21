@@ -1,0 +1,38 @@
+{
+  "id": "20260819-184242-357-vault-explorer-5bcb3365",
+  "createdAt": "2026-08-19T22:42:42.3579819Z",
+  "createdAtLocal": "2026-08-19 18:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-single-instance-file-forwarding\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-19 18:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5.6",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Addressed valid PR #48 review feedback in b742065: Ctrl+wheel uses before-mouse-event, Settings backdrop has fallback, settings translation and hover preview guards added, subtitle tracks are replaced cleanly, and BOMs are stripped. All targeted regression tests and Electron smoke passed; no GitHub threads were replied to or resolved.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "5bcb3365eb640286534ce09456dce9fe42c1e4891b64414202515bf5ba2701f8",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-single-instance-file-forwarding",
+    "head": "b742065",
+    "hasChanges": false
+  }
+}

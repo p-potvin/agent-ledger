@@ -1,0 +1,60 @@
+{
+  "id": "20260819-205113-615-vault-streaming-7694b1f9",
+  "createdAt": "2026-08-20T00:51:13.6156759Z",
+  "createdAtLocal": "2026-08-19 20:51",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, PowerShell, Playwright, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-19 20:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Playwright",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Third batch, pushed as ca18e26. TMDB CREDENTIALS: answered - nothing to switch. .access/tmdb_api.txt (32 chars) is the v3 key and .access/tmdb_bearer.txt is the v4 JWT whose aud claim IS that api key, so they are the same TMDB app/account; both match .env; TMDB_API_TOKEN is loaded but never used (all calls are Bearer). /3/account returns username clopeux id 22602010 region CA, which proves the token belongs to that account - the dashboard showing no queries is a TMDB reporting matter, not a wrong account. LIVE SUBS: found two live_subtitles.py daemons idle with nothing playing (one parented to electron.exe, one holding 866MB); killed both. Cause: warmLiveSubtitles ran unconditionally at boot and the daemon was only reaped on app quit. Boot warm is now opt-in (appSettings.warmLiveSubtitlesOnStart) and an idle timer releases the model after VAULT_ASR_IDLE_MS (default 10 min), armed on warm and on stop, cancelled on start. GEO IP: implemented with a provider chain after discovering ipapi.co returns RateLimited - a failed lookup was silently becoming US, i.e. a wrong answer presented as detection. Now ipwho.is then api.country.is then ipapi.co, and get-watch-regions returns detected:null plus fallbackRegion instead of conflating them; verified detects CA and Prime now resolves without an explicit region. PLAYER BUGS from user console: seekArea click computed ratio * vp.duration with duration NaN, throwing non-finite currentTime (3x in their trace); now guarded on finite duration and rect width. Separately a failed source left the previous title's last decoded frame painted, which is why seeking appeared to show the previous movie at 00:00; the error handler now pauses,",
+  "commands": [
+    "TMDB /3/account",
+    "ipwho.is / api.country.is / ip-api.com",
+    "Stop-Process live_subtitles daemons",
+    "git push vw-codex-web-client"
+  ],
+  "files": [
+    "src/live-subtitles.js",
+    "src/tmdb.js",
+    "js/app.js",
+    "js/player/player.js",
+    "js/player/subtitles.js",
+    "js/tmdb.js",
+    "js/settings/core.js",
+    "css/modals.css",
+    "css/header.css",
+    "main.js",
+    "package.json"
+  ],
+  "planPath": "",
+  "contentHash": "7694b1f991cf4104b60ac120920010eb6168d5700def5080ad924d841e640c65",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "ca18e26",
+    "hasChanges": false
+  }
+}

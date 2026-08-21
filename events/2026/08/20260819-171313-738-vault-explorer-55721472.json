@@ -1,0 +1,38 @@
+{
+  "id": "20260819-171313-738-vault-explorer-55721472",
+  "createdAt": "2026-08-19T21:13:13.7385483Z",
+  "createdAtLocal": "2026-08-19 17:13",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-single-instance-file-forwarding\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-19 17:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5.6",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Added bilingual Size and Length playback-folder sort options in be67665 and pushed to PR #48; regression and Electron smoke tests passed. Researched ffprobe/ffmpeg corruption detection: current preview is incorrectly audio-dependent; no preview behavior changed pending user decision on the proposed video-only decode validation strategy.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "557214723273ad58e8908e7c683717a089bca513dc8812a624f16a6dc2c96997",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-single-instance-file-forwarding",
+    "head": "be67665",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "20260818-145414-404-vault-streaming-0bbb1b6e",
+  "createdAt": "2026-08-18T18:54:14.4040375Z",
+  "createdAtLocal": "2026-08-18 14:54",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-streaming",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: main\r\nTools used (this reply): Bash, PowerShell, Playwright, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-18 14:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Playwright",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+  "summary": "Relaxed the web source cap for testing (VW_WEB_MAX_SOURCE_GB=60, VW_WEB_MAX_HEIGHT=2160 in .env): Dune now offers 159 sources instead of 28, hidden drops 181 to 50, 2160p is back (48 results) and multi-audio releases go 6 to 21. Found and fixed a genuine service bug while doing it: Stop-ScheduledTask kills the PowerShell wrapper but NOT the node child, so the old server kept holding port 8722, the new instance died on EADDRINUSE, and the supervisor crash-loop guard correctly gave up - the service looked restarted while still serving the previous configuration for 40 minutes. start-web.ps1 now reclaims the port (kills any listener on 8722) before starting node. Note this means earlier restarts during the i18n session may likewise not have taken effect. Also answered the user hover-card question with measurements: their memory is correct in substance but the mechanism is inverted - the hover popup is a FIXED 320px (expWidth, unchanged since first commit) centred on the card, so spill per side = (320 - cardWidth)/2 and NARROWER cards spill more. The v1.7.6 5-per-row grid commit b2d75e8 (auto-fill minmax(255px) to repeat(5, minmax(0,1fr))) is present in css/header.css line 23 and made cards wider, which is what stopped the spill. Measured card width by viewport: 1280=232px (44px spill), 1440=264 (28), 1600=296 (12), 1728=321 (none), 1920=360 (none), 2560=488 (none). So the fix only ever worked above ~1728px viewport; their maximised Electron window clears that, a narrower browser window does not. Recommended fix offered but not applied: grid-template-columns repeat(auto-fill, minmax(320px, 1fr)) so card width can never fall below the popup width at",
+  "commands": [
+    "Stop-Process stale 8722 listener",
+    "Start-ScheduledTask VaultStreamingWeb",
+    "playwright card-width measurement"
+  ],
+  "files": [
+    ".env",
+    "web/service/start-web.ps1",
+    "css/header.css",
+    "js/hover-card.js"
+  ],
+  "planPath": "",
+  "contentHash": "0bbb1b6ef4cfb144081d14cbfc87256f01f4139d8a41360b6836c04ad7236214",
+  "git": {
+    "repo": "vault-streaming",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+    "branch": "main",
+    "head": "c0be742",
+    "hasChanges": true
+  }
+}
