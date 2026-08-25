@@ -1,0 +1,53 @@
+{
+  "id": "20260823-113259-990-vault-cacophony-15a47d81",
+  "createdAt": "2026-08-23T15:32:59.9906197Z",
+  "createdAtLocal": "2026-08-23 11:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/nemotron-engine\r\nTools used (this reply): Bash, PowerShell, Edit, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-23 11:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (RTX 3060 + RTX 2060)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": "none"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Nemotron 3.5 is now the default ASR in both the cacophony pipeline and vw better-subtitles (-Engine parakeet keeps the old one), running in streaming mode because its offline encoder asked for 51 GB on 22 minutes. Added --merge-tokens to words_to_srt.py (nemotron times sub-word pieces; the merge must run before blank pieces are filtered or words glue together) and language-tag alignment: --language auto emits <en-US> tags in the transcript but strips them from the token stream, so tags are placed by word count and refused if the counts drift over 5 pct. Writes <base>.tags.json beside the .srt - per-cue language, the first entry of the tag store. Also added a UTF-8 BOM to vw-commands.ps1 (it held em dashes and only parsed under pwsh 7; PS 5.1 read it as ANSI). Measured: htdemucs 120 s clip = 9.75 s session of which 8.99 s is graph compute, plus 2.0 s load+writing 81 MB of stems - 4 stems cost IO, not compute, since the model emits all four in one pass. Sortformer memory by window: 10 s 1.34 GB, 20 s 2.29, 30 s 3.41, 40 s 4.71, 60 s 7.87 - the model itself is 176 MB. PRs vault-cacophony#3 and vault-commander#8.",
+  "commands": [
+    "audiocpp_cli --family nemotron_asr --mode streaming --language auto --request-option keep_language_tags=true",
+    "vw better-subtitles -Target clip.wav -NoSeparate",
+    "gh pr create (cacophony#3, commander#8)"
+  ],
+  "files": [
+    "vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1",
+    "vault-cacophony/scripts/words_to_srt.py",
+    "vault-commander/cli/Start-BetterSubtitles.ps1",
+    "vault-commander/cli/vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "15a47d81ecd638b4db132275c5d89ce400ed71d22cd48701445a88da3062cbc1",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/nemotron-engine",
+    "head": "328760b",
+    "hasChanges": true
+  }
+}

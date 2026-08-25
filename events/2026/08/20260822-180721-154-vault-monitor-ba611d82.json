@@ -1,0 +1,53 @@
+{
+  "id": "20260822-180721-154-vault-monitor-ba611d82",
+  "createdAt": "2026-08-22T22:07:21.1545406Z",
+  "createdAtLocal": "2026-08-22 18:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, PowerShell, gh, ssh, curl\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-22 18:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailscale",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh",
+      "ssh",
+      "curl"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "HF Jobs + HF Spaces telemetry. SECURITY: found a live HF write token embedded in a git remote URL at D:\\HuggingFace\\spaces\\clopeux-Pro-Realism-Edit-Studio\\.git\\config (hf_aqYL...) - needs rotating, not reused. STUDIO (PR #13): wrapped HfJobsStageRunner.run (renamed body to _run) so all exits are covered; StageCancelledError maps to cancelled via class-name heuristic, CostDeniedError set to rejected explicitly, everything else error. Cost recorded with priced_exactly=False because FLAVOR_RATES_USD_PER_HOUR is documented as approximate and the HF invoice is never read; cost_state settled since nothing reconciles it; is_free=False (real rented L4/A10G money). remote_seconds kept apart from recorder wall clock. 143 tests pass. ADK BUG FOUND (PR #27 merged): ModelRun.__exit__ called fail(exc) unconditionally, overwriting an explicitly declared status - a declined price became 'error' instead of 'rejected', putting spending decisions in the failure rate. ok()/reject()/set(status=) now mark the verdict explicit; exception detail still captured; default path unchanged. SPACES: surveyed D:\\HuggingFace\\spaces - only 2 are ours (clopeux/Pro-Realism-Edit-Studio PUBLIC and in RUNTIME_ERROR; clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA private/401). pdf-translator-for-human is davideuler's and personaplex is NVIDIA's GitHub repo - NOT instrumented. Wrote a self-contained stdlib-only vw_telemetry.py for FLUX2 (a Space installs from requirements.txt and cannot vendor the submodule), wired at _infer_gpu_core; strict FIELDS allowlist, no prompt/hash/session/host/project, error class name only (a message can echo a filename), disabled unless both Space secrets set, drops rather than retries. Allowlisted gpu_seconds (ZeroGPU daily cap KPI) + lora_count in BOTH adk (#28) and api (#82). Verified end-to-end through real auth: space key 200, gpu_seconds survives, host rewritten to public:<source>, rollups and settle both 403. NOT PUSHED to HF and VW_TELEMETRY_PUBLIC_API_KEY not provisioned on the VPS -",
+  "commands": [
+    "gh pr merge 13/27/28/82 --admin",
+    "curl huggingface.co/api/spaces",
+    "pytest tests"
+  ],
+  "files": [
+    "vaultwares-studio/vaultwares_studio/runners/hf_jobs.py",
+    "vaultwares-studio/vaultwares_studio/telemetry.py",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA\\vw_telemetry.py",
+    "vaultwares-adk/vaultwares_adk/telemetry/runs.py"
+  ],
+  "planPath": "",
+  "contentHash": "ba611d8268d8a87f79f260c960408c4c310a95fbefaec895d803b48ea91077ea",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "59a4ade",
+    "hasChanges": false
+  }
+}

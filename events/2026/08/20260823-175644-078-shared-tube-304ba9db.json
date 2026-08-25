@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260823-175644-078-shared-tube-304ba9db",
+    "createdAt":  "2026-08-23T21:56:44.0784342Z",
+    "createdAtLocal":  "2026-08-23 17:56",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: subagent)\r\nModel: gpt-5.4\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-23 17:56 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "subagent",
+                    "model":  "gpt-5.4",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Reviewed shared-tube Astro leakage root causes in Layout and TaxonomyDirectory; verified build failure and marketing snippet validation gaps",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "304ba9dbecaf7fd5482163bf8aa4cf3f2edb345b6a68ce53c2c29e44e69e2d65",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "main",
+                "head":  "b45a7cd",
+                "hasChanges":  true
+            }
+}

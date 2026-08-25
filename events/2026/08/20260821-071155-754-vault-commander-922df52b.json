@@ -1,0 +1,56 @@
+{
+  "id": "20260821-071155-754-vault-commander-922df52b",
+  "createdAt": "2026-08-21T11:11:55.7542911Z",
+  "createdAtLocal": "2026-08-21 07:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/cacophony-vendor-dependencies\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Grep, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-21 07:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (RTX 3060 + RTX 2060)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Grep",
+      "Read"
+    ],
+    "mcpServersAccessed": "none"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Read the nsys trace at vault-explorer/report2.sqlite (21 GB, export already finished): CPU-sampling only, no CUDA tracing (WINDOWS_HOOK=false, no CUPTI tables), so no torch module ever appears and cudaMalloc cannot be seen. All 28472 GPU context-switch events are on the RTX 3060; zero on the 2060. ffmpeg dominated CPU (~6900 thread-seconds across 10 processes) vs audiocpp 569. Then in vault-commander: renamed fast-subs to better-subtitles (Start-BetterSubtitles.ps1), retired subtitles/subtitle/translate-spoken/livestream-translator/stream-translator/benchmark-asr plus their workers and the never-imported vw_media package to meth/ with a README explaining each, removed all parameter aliases (47 registry + 48 script attributes + the help rendering in vw.ps1), updated README. Two commits on agent/better-subtitles, PR #5. vault-cacophony: srt beside each source + CrispASR bump to fc3550e, PR #1.",
+  "commands": [
+    "git mv cli/Start-SubtitleGeneration.ps1 meth/cli/",
+    "gh pr create (vault-commander#5)",
+    "gh pr create (vault-cacophony#1)"
+  ],
+  "files": [
+    "vault-commander/cli/Start-BetterSubtitles.ps1",
+    "vault-commander/cli/vw-commands.ps1",
+    "vault-commander/cli/vw.ps1",
+    "vault-commander/meth/README.md",
+    "vault-commander/README.md",
+    "vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "922df52b8f95091633a4e46860537caadeba10cc9eb51182c7922eca563943b1",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/cacophony-vendor-dependencies",
+    "head": "56c1f59",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "20260823-102104-543-vault-cacophony-7b3af3e1",
+  "createdAt": "2026-08-23T14:21:04.5433752Z",
+  "createdAtLocal": "2026-08-23 10:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\audio.cpp  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-23 10:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (RTX 3060 + RTX 2060)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": "none"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\audio.cpp",
+  "summary": "Benchmarked Nemotron 3.5 ASR streaming vs Parakeet-TDT. First finding: the local nemotron q8_0 GGUF was a bad conversion - identical file size to the official release but a different sha256, and it emitted 'ffffff' for every input. Downloaded the official file from audio-cpp/audio.cpp-gguf (sha 7026c80d...) and kept the bad one as .bad-conversion; it works. Results on two LibriSpeech sets (22.6 and 25.8 min): parakeet 3.41 and 6.77 pct WER, nemotron streaming 3.71 and 2.61 pct. Nemotron recovered 4207 of 4212 words on set B vs parakeet's 3998 - no duration skips, which is the defect that forced the gap-recovery pass in vault-explorer. Long-file RTF 31x (nemotron streaming) vs 110x (parakeet); warm 20 s window through the resident server 119 ms vs 90 ms; peak VRAM 5.5 vs 6.9 GB. Nemotron offline OOMs on long files (asked 51 GB for 22 min). Confirmed --language auto with keep_language_tags=true emits inline <en-US> tags per segment, which is the LangID/code-switching feature we want. Both models fit resident simultaneously at ~3.8 GB.",
+  "commands": [
+    "hf download audio-cpp/audio.cpp-gguf Nemotron-3.5-ASR-Streaming-0.6B-GGUF/...q8_0.gguf",
+    "audiocpp_cli --task asr --family nemotron_asr --mode streaming --language auto --request-option keep_language_tags=true",
+    "audiocpp_server with parakeet + nemotron both resident"
+  ],
+  "files": [
+    "vault-cacophony/audio.cpp/models/Nemotron-3.5-ASR-Streaming-0.6B-GGUF/"
+  ],
+  "planPath": "",
+  "contentHash": "7b3af3e10293b6a94e0832492729b9bd819d17bc6bdff9e4dd88221210bd6486",
+  "git": {
+    "repo": "audio.cpp",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/audio.cpp",
+    "branch": "main",
+    "head": "9601291",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260823-055319-327-vault-explorer-23816905",
+    "createdAt":  "2026-08-23T09:53:19.3275000Z",
+    "createdAtLocal":  "2026-08-23 05:53",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 2.5 Pro\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: agent/live-subtitles-cacophony\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-23 05:53 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 2.5 Pro",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Benchmarked audio.cpp GGUF models: Parakeet-TDT 0.6B v3 vs Nemotron 3.5 ASR Streaming 0.6B GGUF with real video metrics and engine test suite comparison",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "2381690554e13bcde0c18551126f696a58940c2a2c9c76c8cc5cbb7a912018ea",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "agent/live-subtitles-cacophony",
+                "head":  "121cc61",
+                "hasChanges":  true
+            }
+}

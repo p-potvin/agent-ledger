@@ -1,0 +1,44 @@
+{
+  "id": "20260823-134734-042-vault-commander-0e680b2a",
+  "createdAt": "2026-08-23T17:47:34.0421865Z",
+  "createdAtLocal": "2026-08-23 13:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: local Windows 11)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: agent/nemotron-engine\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-23 13:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local Windows 11",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+  "summary": "Fixed AttributeError in tagstore.load(): a tags.json whose top level is valid JSON but not an object (null, [], a bare string) parsed fine, so the except clause never fired and data.get(schema) raised. Added an isinstance(data, dict) guard so those files fall through to the fresh-empty-store path like any other corrupt store. Applied the same one-line fix to the upstream copy at vault-cacophony/scripts/tagstore.py, which the docstring names as the source of truth; the two files are now identical apart from the copy note. Verified load() against null/list/string/malformed/valid/missing files.",
+  "commands": [],
+  "files": [
+    "cli/utils/tagstore.py",
+    "vault-cacophony/scripts/tagstore.py"
+  ],
+  "planPath": "",
+  "contentHash": "0e680b2a000025a9b2d1c5cfd6172bb208b7217627c3fa08049c4f90cd588c3f",
+  "git": {
+    "repo": "vault-commander",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+    "branch": "agent/nemotron-engine",
+    "head": "1c6cce2",
+    "hasChanges": true
+  }
+}

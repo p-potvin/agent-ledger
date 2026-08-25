@@ -1,0 +1,56 @@
+{
+  "id": "20260824-143903-337-vault-cacophony-8904bfa3",
+  "createdAt": "2026-08-24T18:39:03.3376749Z",
+  "createdAtLocal": "2026-08-24 14:39",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/nemotron-engine\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-24 14:39 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "README rewritten (stack, install, commands, measured numbers, kaldi rationale). Replaced JSON voice store with permanent SQLite store at %LOCALAPPDATA%\\VaultWares\\voices.db: voice table (derived centroids) + observation table (evidence - embedding, every 2s window at float16, cohesion, separation, match score, prosody/text metrics, full provenance). Added attribute/rebuild repair path, one-time voices.json migration, prosody.py (F0/RMS/crest via numpy autocorrelation), voiceprint.embed_windows(). speakers.py now records one observation per cluster. Added Measure-Passes.ps1: per-stage timings + targeted nsys traces (bounded clip, --sample=none, --trace=cuda; 0.3-4.3MB traces). Verified on LibriSpeech: 97.9% speaker accuracy, enrolled speakers matched 0.76-0.94, strangers stayed unknown. Traces show ASR spends 1.6% of wall in GPU kernels (28629 launches, 107ms) - launch-bound, not compute-bound.",
+  "commands": [
+    ".\\scripts\\Start-SubtitlesAudioCpp.ps1 -TargetDir dialogue.wav -NoSeparate -Speakers -Voices final.db",
+    ".\\scripts\\Measure-Passes.ps1 -Audio dialogue.wav -Seconds 0 -Repeat 2",
+    "python scripts/voices.py attribute --id 1 --name Narrator"
+  ],
+  "files": [
+    "README.md",
+    "scripts/voices.py",
+    "scripts/prosody.py",
+    "scripts/speakers.py",
+    "scripts/voiceprint.py",
+    "scripts/Measure-Passes.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "8904bfa384522cd0a29304b6a84a6c244bda68cff0a89883db088fce7733950a",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/nemotron-engine",
+    "head": "99c5702",
+    "hasChanges": true
+  }
+}

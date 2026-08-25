@@ -1,0 +1,56 @@
+{
+  "id": "20260823-012250-402-vault-explorer-02a772c1",
+  "createdAt": "2026-08-23T05:22:50.4023215Z",
+  "createdAtLocal": "2026-08-23 01:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\audio.cpp  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Grep, Read, WebSearch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-23 01:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (RTX 3060 + RTX 2060)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Grep",
+      "Read",
+      "WebSearch"
+    ],
+    "mcpServersAccessed": "none"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\audio.cpp",
+  "summary": "Rewrote vault-explorer live subtitles to actually stream: the prior implementation ran the batch pipeline over the whole video and never used the onLiveSubtitleCue channel the renderer was built around. Now decodes a window at a time from the play position against a resident audiocpp server; first cue ~0.3 s, 113 s of video done in 1.6 s, 24 cues / 279 words / 5.38 pct WER vs ground truth. Named vault-cacophony as the AI dependency: deleted the drifted local copy of the batch pipeline plus its wrapper and an orphaned daemon launcher; added Start-AudioCppServer.ps1 (idempotent shared server) and Start-Subtitles.ps1 (delegates to cacophony). Discovered Parakeet-TDT duration skips - same 10 s lost from 31/20/12 s windows but transcribed fine in a 9 s window - so any 2 s+ stretch with no cue is retranscribed in pieces (12 s window: 46.2 -> 24.4 pct WER; 45 s: 25.8 -> 15.1). PRs: vault-explorer#51, vault-cacophony#2 (single-file -TargetDir), vault-commander#7 (mosaic+reduce as found).",
+  "commands": [
+    "node src/live-subtitles.js <media>",
+    "gh pr create (vault-explorer#51)",
+    "gh pr create (vault-cacophony#2)",
+    "gh pr create (vault-commander#7)"
+  ],
+  "files": [
+    "vault-explorer/src/live-subtitles.js",
+    "vault-explorer/scripts/pwsh/Start-AudioCppServer.ps1",
+    "vault-explorer/scripts/pwsh/Start-Subtitles.ps1",
+    "vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "02a772c19491bf6513041e09b33a0b30e05bba01a8037e31ab22efe38adaf044",
+  "git": {
+    "repo": "audio.cpp",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/audio.cpp",
+    "branch": "main",
+    "head": "9601291",
+    "hasChanges": true
+  }
+}

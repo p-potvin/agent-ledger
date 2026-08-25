@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260824-180212-641-vault-explorer-9fa89617",
+    "createdAt":  "2026-08-24T22:02:12.6414617Z",
+    "createdAtLocal":  "2026-08-24 18:02",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: agent/live-subtitles-cacophony\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-24 18:02 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5.6",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Corrected Vault Explorer context-menu registry commands to invoke node.exe with node_modules/electron/cli.js and the checkout path, matching npm run start; reapplied and verified all three registry entries.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "9fa896177e51e2c078eeada302863b1fa627b29327ec2bbe50aec0164e10e322",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "agent/live-subtitles-cacophony",
+                "head":  "121cc61",
+                "hasChanges":  true
+            }
+}

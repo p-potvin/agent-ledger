@@ -1,0 +1,52 @@
+{
+  "id": "20260823-121853-998-vault-cacophony-ce640159",
+  "createdAt": "2026-08-23T16:18:53.9986451Z",
+  "createdAtLocal": "2026-08-23 12:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/nemotron-engine\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-23 12:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (RTX 3060 + RTX 2060)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Read"
+    ],
+    "mcpServersAccessed": "none"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Fixed nemotron cue timings and added the tag store. The 80 ms floor is the model's frame grid - every token is exactly 0.08 s wide, so a cue ending on a one-token word ends 80 ms after that word started. Cue ends now get that back (--fill 0.25) then are held for --min-dur 0.9 or len(text)/--cps 17, whichever is longer, clamped to the next cue's start; runs after cue boundaries are set so segmentation is unchanged. Music test: shortest cue 0.08 -> 0.90 s, 13 cues under 0.9 s -> 4. The 19-second cue was a separate fault: a sub-word piece stranded on a late frame was glued to the previous word; pieces more than 0.5 s apart now start a new word, except punctuation which stays attached. Longest word span 1.92 -> 0.96 s with WER unchanged at 3.71 pct. New scripts/tagstore.py defines the schema: one media.tags.json, one track per pass (language now, speaker later), each with its own source/model, tracks as independent spans rather than fields on a cue so passes never inherit each other's segmentation; plus cues and a CLI inspector. Pushed to PRs cacophony#3 and commander#8.",
+  "commands": [
+    "python words_to_srt.py --merge-tokens --tags-out clip.tags.json --media clip.wav",
+    "python tagstore.py clip.tags.json --at 12.0"
+  ],
+  "files": [
+    "vault-cacophony/scripts/words_to_srt.py",
+    "vault-cacophony/scripts/tagstore.py",
+    "vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1",
+    "vault-commander/cli/utils/tagstore.py"
+  ],
+  "planPath": "",
+  "contentHash": "ce640159e4f35bc5ce2b907ebae98e5bf17730a61d1a890bde73565f133888cd",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/nemotron-engine",
+    "head": "0664a81",
+    "hasChanges": true
+  }
+}

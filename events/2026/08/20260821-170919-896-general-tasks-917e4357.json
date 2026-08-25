@@ -1,0 +1,52 @@
+{
+  "id": "20260821-170919-896-general-tasks-917e4357",
+  "createdAt": "2026-08-21T21:09:19.8964926Z",
+  "createdAtLocal": "2026-08-21 17:09",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/cacophony-vendor-dependencies\r\nTools used (this reply): Bash, PowerShell, Write, Grep, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-21 17:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (RTX 3060 + RTX 2060)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Grep",
+      "Read"
+    ],
+    "mcpServersAccessed": "none"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Built NVIDIA Video Codec SDK 13.1.15 at E:\\Nvidia: 23 sample binaries via Ninja + MSVC 14.44 + CUDA 13.3 (the VS generator fails with 'No CUDA toolset found' because CUDA's MSBuild integration was never copied into the 2022 Build Tools). FFMPEG_DIR pointed at the winget Gyan.FFmpeg.Shared tree so all decode/transcode apps built. Verified NVDEC 1396 fps and transcode 796 fps at 720p, and NVENC on BOTH cards including the RTX 2060. Wrote BUILD_NOTES.md and set NVCODEC_SDK user env var. Then scouted diarization: audio.cpp already ships Sortformer (--task diar, sortformer_diar) and --task spk speaker embeddings; downloaded sortformer-diar-4spk-v1-q8_0 (176 MB) and measured on a synthetic 2-speaker LibriSpeech file: 0% speaker confusion, but attention is O(T^2) -- 60 s window costs 8 GB VRAM and 80 s OOMs a 12 GB card, so diarization must be windowed with cross-window label linking. Also proved streaming ASR works from stdin PCM (--mode streaming --audio -), which is the substrate for realtime subs.",
+  "commands": [
+    "cmake -S Samples -B build -G Ninja -DFFMPEG_DIR=... -DSKIP_GL_DEPENDENCY=TRUE",
+    "AppEncCuda.exe -i out.yuv -s 1280x720 -gpu 1",
+    "audiocpp_cli --task diar --family sortformer_diar --turns-out turns.json",
+    "ffmpeg -f s16le - | audiocpp_cli --mode streaming --audio -"
+  ],
+  "files": [
+    "E:/Nvidia/Video_Codec_SDK_13.1.15/BUILD_NOTES.md",
+    "E:/Nvidia/Video_Codec_SDK_13.1.15/build-samples.bat"
+  ],
+  "planPath": "",
+  "contentHash": "917e4357bca631e679856e0a7a86c20a98eb12c3b37789f14192720a6b550141",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/cacophony-vendor-dependencies",
+    "head": "56c1f59",
+    "hasChanges": true
+  }
+}

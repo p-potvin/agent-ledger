@@ -1,0 +1,54 @@
+{
+  "id": "20260823-151533-375-vault-cacophony-0d1df320",
+  "createdAt": "2026-08-23T19:15:33.3752705Z",
+  "createdAtLocal": "2026-08-23 15:15",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/nemotron-engine\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-23 15:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (RTX 3060 + RTX 2060)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": "none"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Decepticon phase 1: CAM++ speaker embeddings, a voice store, and a speaker track in the tag store. WeSpeaker CAM++ VoxCeleb-LM ONNX (29 MB, CPU) reaches 0.808 mean cosine within a speaker vs 0.124 between over 24 clips / 6 speakers, separable at 0.52 with 1 error in 276 pairs. Two non-obvious contracts: the export needs 200-frame (2 s) windows - handed a whole utterance it scores 0.458 vs 0.403, useless - and the window function must be Hamming not Kaldi's default Povey (features differ by 7.4 otherwise). speakers.py slides 2 s windows, clusters by average linkage, drops boundary-straddling windows (they created 3 phantom speakers), and writes one span per cue: 98.1 pct of speech attributed correctly on a two-speaker test. voices.py enrols names; unseen clip from an enrolled speaker matched 0.891, never-enrolled came back unknown at 0.540; match needs 0.60 and a 0.05 margin. Wired as -Speakers on both pipelines plus a new 'vw voices' command (enroll/list/identify/forget, any media format, -Span). Deps: onnxruntime + kaldi-native-fbank, no torch. Pushed to PRs cacophony#3 and commander#8.",
+  "commands": [
+    "vw voices enroll -Name Vic -Audio clip.mkv -Span 12:38",
+    "vw better-subtitles -Target file.wav -Speakers",
+    "python speakers.py --audio x.wav --tags x.tags.json"
+  ],
+  "files": [
+    "vault-cacophony/scripts/voiceprint.py",
+    "vault-cacophony/scripts/voices.py",
+    "vault-cacophony/scripts/speakers.py",
+    "vault-commander/cli/Start-Voices.ps1",
+    "vault-commander/cli/vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "0d1df320054afb4664432fb3ed7980ac42460971872f4be415cd2f2317739bf3",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/nemotron-engine",
+    "head": "99c5702",
+    "hasChanges": true
+  }
+}

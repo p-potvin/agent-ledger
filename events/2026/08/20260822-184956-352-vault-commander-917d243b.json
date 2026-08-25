@@ -1,0 +1,55 @@
+{
+  "id": "20260822-184956-352-vault-commander-917d243b",
+  "createdAt": "2026-08-22T22:49:56.3520200Z",
+  "createdAtLocal": "2026-08-22 18:49",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/cacophony-vendor-dependencies\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Grep, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-22 18:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (RTX 3060 + RTX 2060)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Grep",
+      "Read"
+    ],
+    "mcpServersAccessed": "none"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Realtime ggml subtitles: swapped vw live-subs off PyTorch/NeMo onto a resident audiocpp server. Measured audiocpp's own streaming mode first and rejected it - it recovers 82 of 146 words at the default 2 s centre and never beats 103, because only each window's centre is kept. Instead re-transcribe the rolling buffer offline via POST /v1/tasks/run (the OpenAI-shaped transcriptions endpoint drops word timestamps): 53 ms per 10 s window, 64 ms per live pass, 9.2 pct of realtime, median cue finalise 1.16 s after speech ends. New cli/utils/audiocpp_asr.py is a drop-in for ParakeetTranscriber (same transcribe_array contract and TranscriptSegment), so the overlay swap was two lines; also fixed cue-boundary word stutter. PR #6 on agent/live-subs-ggml (PR #5 was merged by the user before this landed). Left two unrelated in-flight edits (Create-Mosaic.ps1, Reduce-VideoSizes.ps1) uncommitted.",
+  "commands": [
+    "audiocpp_server.exe --config server.json",
+    "curl POST /v1/tasks/run with options.return_timestamps",
+    "gh pr create (vault-commander#6)"
+  ],
+  "files": [
+    "vault-commander/cli/utils/audiocpp_asr.py",
+    "vault-commander/cli/utils/live_subs_overlay.py",
+    "vault-commander/cli/Start-LiveSubtitles.ps1",
+    "vault-commander/cli/vw-commands.ps1",
+    "vault-commander/meth/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "917d243b6949ab36aef73181c13f12ac9570b792614723fe0ab935cf1e8a54d6",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/cacophony-vendor-dependencies",
+    "head": "56c1f59",
+    "hasChanges": true
+  }
+}
