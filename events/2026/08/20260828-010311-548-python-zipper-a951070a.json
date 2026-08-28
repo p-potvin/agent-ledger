@@ -1,0 +1,53 @@
+{
+  "id": "20260828-010311-548-python-zipper-a951070a",
+  "createdAt": "2026-08-28T05:03:11.5486763Z",
+  "createdAtLocal": "2026-08-28 01:03",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: feat/sidebar-rebuild\r\nTools used (this reply): Bash, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-28 01:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Zip speed, smooth scrolling, and Scroll button demotion, on feat/sidebar-rebuild. (1) ZIP WAS VERY SLOW - download_and_zip_images in ds_helpers.py fetched images one at a time in a blocking loop, so a 200-image gallery paid 200 sequential round trips; fetching was the entire cost. Now uses a ThreadPoolExecutor (default 6 workers, override via PYTHON_ZIPPER_FETCH_WORKERS, clamped 1-16) while keeping zip writes on the calling thread because zipfile is not thread-safe and filenames are numbered in order. Fetches a window of workers*2 at a time rather than everything up front, so a large gallery of multi-megabyte images cannot balloon memory before a byte is written. Worker count kept modest on purpose: every image in a gallery is usually one host, so the worker count IS the per-host request rate, and tripping a scraper heuristic is worse than a slower download. Also threaded job_id/progress_fn through so the job now reports processed_links during the fetch - previously it sat at 'running' with no movement for the whole download, which reads as a hang. (2) SMOOTH SCROLLING - deep_scan now steps by ~0.85 viewport with behavior:'smooth' instead of teleporting to pageHeight; this is partly cosmetic but mostly correctness, since most lazy loaders hang off IntersectionObserver and a jump never intersects the content it skips, so the middle of a long feed silently never loaded. Restructured the stop logic accordingly: while descending, progress is measured by height growth OR scroll movement with a stuck-detector (4 idle passes breaks out, catching scroll locks and modals); only once at the bottom does no-growth start the",
+  "commands": [
+    "npm run typecheck",
+    "npm run build:verify",
+    "npm run lint",
+    "Restart-Service 'Python Server Zipper'"
+  ],
+  "files": [
+    "dataset_builder/ds_helpers.py",
+    "dataset_builder/server.py",
+    "extension/src/content/deep_scan.ts",
+    "extension/src/sidebar/capture.tsx",
+    "extension/src/sidebar/capture.css"
+  ],
+  "planPath": "",
+  "contentHash": "a951070abc0c56ba6666599ab86c3c3f74eb5ca4ad5f0c818f3a41a2afe4d056",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}

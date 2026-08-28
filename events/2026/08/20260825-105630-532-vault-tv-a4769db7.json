@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260825-105630-532-vault-tv-a4769db7",
+    "createdAt":  "2026-08-25T14:56:30.5329988Z",
+    "createdAtLocal":  "2026-08-25 10:56",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-tv",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 2.5 Pro\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv  Branch: agent/tv-metadata-gateway\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-25 10:56 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 2.5 Pro",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-tv",
+    "summary":  "Implement TMDB faceted discovery filters (genre, decade, country, sort), overhaul TV navigation, fix focus outlines, add on-screen keyboard live search, and verify all TV screens with ADB on-device testing",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "a4769db77e6002b607a8a1919bc1cb2e6fa6936c5ba6a2321aebdfb18f6dec50",
+    "git":  {
+                "repo":  "vault-tv",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-tv",
+                "branch":  "agent/tv-metadata-gateway",
+                "head":  "b30f57e",
+                "hasChanges":  true
+            }
+}

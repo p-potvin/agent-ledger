@@ -1,0 +1,48 @@
+{
+  "id": "20260825-091945-433-vault-cacophony-990dbe32",
+  "createdAt": "2026-08-25T13:19:45.4332683Z",
+  "createdAtLocal": "2026-08-25 09:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + HuggingFace)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/nemotron-engine\r\nTools used (this reply): Bash, PowerShell, Edit, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-25 09:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + HuggingFace",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "PersonaPlex Space is live: clopeux/personaplex-baseline, stage RUNNING on zero-a10g, private. First build failed with ResolutionImpossible - moshi-personaplex pins huggingface-hub >=0.24,<0.25 while gradio 6.3.0 requires >=0.33.5, no overlap; its other pins are equally stale (torch >=2.2,<2.5, einops ==0.7, numpy <2.2, sentencepiece ==0.2). Fixed by removing the git+ moshi line from requirements.txt and installing it at app startup with pip --no-deps, guarded by a try-import, letting requirements.txt supply modern numpy/torch/hf-hub/sentencepiece/sphn/safetensors/einops/aiohttp. Rebuild reached RUNNING in ~180s, which is itself the evidence the --no-deps bet held: an import failure against newer huggingface_hub or torch would have surfaced as RUNTIME_ERROR rather than RUNNING. Note the runtime log endpoint is a live SSE stream that never terminates - do not poll it with a blocking read. Space is turn-based (Gradio hands over a finished recording) so it gives a clean A/B on voice and prosody but does not demonstrate PersonaPlex duplex behaviour; real duplex in a browser needs WebRTC streaming.",
+  "commands": [
+    "upload_file app.py requirements.txt -> clopeux/personaplex-baseline"
+  ],
+  "files": [
+    "scratchpad/space/app.py",
+    "scratchpad/space/requirements.txt"
+  ],
+  "planPath": "",
+  "contentHash": "990dbe329a775f2e674dc90c32003027a3781c0013a20e5a8a84d656b42995bb",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/nemotron-engine",
+    "head": "99c5702",
+    "hasChanges": true
+  }
+}

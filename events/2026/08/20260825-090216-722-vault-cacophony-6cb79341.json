@@ -1,0 +1,47 @@
+{
+  "id": "20260825-090216-722-vault-cacophony-6cb79341",
+  "createdAt": "2026-08-25T13:02:16.7229755Z",
+  "createdAtLocal": "2026-08-25 09:02",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/nemotron-engine\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-25 09:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Minted both PersonaPlex voice references and ran the cascade with them. VARM2 first attempt was skipped correctly by the 3s minimum guard (only 1.5s of speech) because the mint prompt asked for one short sentence; retried with a prompt eliciting three or four sentences and got 8.00s / 26 words / 3.2 w-per-s. VARF1 is 3.44s / 12 words / 3.5 w-per-s. Ran cascade_conversation.py with both as Qwen3-TTS clone references: 6 turns, 69.9s, no runaways, coherent in-character conversation (Desmond pitches a 'Case File' mystery box subscription then an AI detective tool called 'Decipher', Margot calls mystery box done to death and objects that an AI would spoon-feed the solution). Pipeline now end to end: PersonaPlex voice -> SenseVoice transcript (reference text matches by construction) -> Qwen3-TTS clone -> SenseVoice ASR -> llama3.2:3b -> Qwen3-TTS. Noted for the user: cloning transfers timbre but not PersonaPlex prosody, and turn length is drifting long (19.12s on turn 6) despite the two-sentence instruction in the persona prompt.",
+  "commands": [
+    "python scripts/mint_voice_refs.py --voice VARM2 --prompt '<longer eliciting prompt>'",
+    "python scripts/cascade_conversation.py --a-voice VARF1.wav --b-voice VARM2.wav"
+  ],
+  "files": [
+    "scripts/mint_voice_refs.py",
+    "scripts/cascade_conversation.py"
+  ],
+  "planPath": "",
+  "contentHash": "6cb793419b8843efabf009478882844f3dfbd3490a1ac9579cc6d1d8f28eea2e",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/nemotron-engine",
+    "head": "99c5702",
+    "hasChanges": true
+  }
+}

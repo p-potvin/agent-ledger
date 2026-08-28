@@ -1,0 +1,45 @@
+{
+  "id": "20260825-090909-533-vault-cacophony-b3e6c246",
+  "createdAt": "2026-08-25T13:09:09.5330231Z",
+  "createdAtLocal": "2026-08-25 09:09",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "general",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + HuggingFace)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/nemotron-engine\r\nTools used (this reply): Bash, PowerShell, WebSearch, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-25 09:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + HuggingFace",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "WebSearch",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Set up a PersonaPlex HuggingFace Space for baseline comparison. Rather than writing one from scratch, found and duplicated MohamedRashad/PersonaPlex (47 likes, gradio 6.3.0, python 3.12) which already implements ZeroGPU correctly: @spaces.GPU(duration=120), lazy global model cache loaded inside the GPU function, voices.tgz extracted from the model repo, gradio Blocks audio in/out. Duplicated to clopeux/personaplex-baseline as PRIVATE with hardware zero-a10g and an HF_TOKEN secret (needed because it pulls the gated nvidia/personaplex-7b-v1; the user's account already has license access - verified 16 files listable). Token was read from the local HF login and passed straight into the Space secret, never printed or logged. Space domain clopeux-personaplex-baseline.hf.space, requested_hardware confirmed zero-a10g, build in progress. Requirements chain: git+https://github.com/NVIDIA/personaplex.git#subdirectory=moshi, torch, sphn, sentencepiece, spaces. Upstream inference API for reference: loaders.get_mimi / loaders.get_moshi_lm / LMGen, voice prompts via lm_gen.load_voice_prompt_embeddings(.pt), prompts via lm_gen.step_system_prompts(), then lm_gen.step() per frame and mimi.decode().",
+  "commands": [
+    "duplicate_space MohamedRashad/PersonaPlex -> clopeux/personaplex-baseline hardware=zero-a10g private=True"
+  ],
+  "files": [],
+  "planPath": "",
+  "contentHash": "b3e6c246e1ea10e3c66a37f0f2d9162734ac25d384f681ff435fa6b6e92bc0b0",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/nemotron-engine",
+    "head": "99c5702",
+    "hasChanges": true
+  }
+}

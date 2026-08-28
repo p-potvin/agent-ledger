@@ -1,0 +1,49 @@
+{
+  "id": "20260825-060645-377-vault-cacophony-d56e7d65",
+  "createdAt": "2026-08-25T10:06:45.3777583Z",
+  "createdAtLocal": "2026-08-25 06:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/nemotron-engine\r\nTools used (this reply): Bash, PowerShell, Write, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-25 06:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Built the resident-server path and tested one agent playing both sides. Built audiocpp_server from source with personaplex; confirmed via ensure_model_loaded_locked that the server creates ONE session per model and reuses it, so resident_state_ persists across HTTP requests. /v1/tasks/run returns base64 WAV + sample_rate + timing, and takes the same JSON as the request-sequence format. Continuation verified over HTTP: 21.5s -> 16.3s -> 15.2s per turn as the preamble is skipped. Wrote scripts/duplex_conversation.py driving a real conversation through the resident session (base64 decode, skip-trim, loop, stitch, tag store). NEGATIVE RESULT: the conversation degenerates. Turns shrank 1.22/1.48/1.92/0.76/6.36s and turn 6 was silent; transcription shows a repetition loop ('Hi, my name is Amy. Hi, my name is Amy. Sami. Hi my name is Sami'). Root causes: the model is trained to answer a human user and its own generated speech in the user stream is out of distribution, and continuation fills the cache with its own voice on both streams. ADDITIONAL CONSTRAINT FOUND: voice prompt and system prompt are consumed inside start_conversation, which continuation skips, so a continued session keeps turn 1's voice and persona - shared audio context and alternating personas are mutually exclusive on one instance. Options now: two separate models/machines, transcript-in-system-prompt with fresh sessions, or a smaller model so two fit.",
+  "commands": [
+    "audiocpp_server --config pp-server.json --model-spec-override model_specs/personaplex.json --no-ui",
+    "python scripts/duplex_conversation.py --seed seed.wav --turns 6"
+  ],
+  "files": [
+    "scripts/duplex_conversation.py"
+  ],
+  "planPath": "",
+  "contentHash": "d56e7d6582890c92b393e0bb0366d979f7db80b5247862646b945dc881a21040",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/nemotron-engine",
+    "head": "99c5702",
+    "hasChanges": true
+  }
+}

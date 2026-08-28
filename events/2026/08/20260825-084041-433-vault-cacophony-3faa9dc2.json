@@ -1,0 +1,48 @@
+{
+  "id": "20260825-084041-433-vault-cacophony-3faa9dc2",
+  "createdAt": "2026-08-25T12:40:41.4337936Z",
+  "createdAtLocal": "2026-08-25 08:40",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/nemotron-engine\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-25 08:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Built scripts/cascade_conversation.py - a working two-agent conversation demo. Pipeline per turn: SenseVoice ASR with keep_tags (emotion/event tags carried into the listening agent's message) -> Ollama llama3.2:3b with per-agent persona and full conversation history -> Qwen3-TTS 0.6B voice cloning from a 3s reference -> next agent's input. Stitches to conversation.wav and writes a tag store with a speaker track. RESULT: 8 coherent in-character turns; Margot stays dry and sceptical, Desmond invents Suitcase Studios and calls back to his grandmother by turn 8 - the first setup all session where the agents genuinely answer each other. Two fixes during the build: Ollama defaults to a large context and held 8GB of the 12GB card, starving the TTS of a 35MB buffer, so requests now pass num_ctx 4096 and keep_alive 0 to unload the LLM after each answer (the cascade is sequential anyway); and Qwen3-TTS can fail to stop - a 26-word sentence produced 655 seconds of audio that the silence trim kept because it was not silent - so speak() now budgets words/2.5*3 seconds, retries once with a different seed, then truncates. Kept the LLM local via Ollama rather than using the NVIDIA NIM key, preserving the repo's no-network property; the token file was not read.",
+  "commands": [
+    "ollama pull llama3.2:3b",
+    "python scripts/cascade_conversation.py --seed opener.wav --turns 8 --a-voice ... --b-voice ..."
+  ],
+  "files": [
+    "scripts/cascade_conversation.py"
+  ],
+  "planPath": "",
+  "contentHash": "3faa9dc22ba0595794fcb49aca818d692dcd4b27d889db09b281a5f062242c64",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/nemotron-engine",
+    "head": "99c5702",
+    "hasChanges": true
+  }
+}

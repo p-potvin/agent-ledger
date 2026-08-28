@@ -1,0 +1,59 @@
+{
+  "id": "20260826-222005-169-linformaticien-605c46de",
+  "createdAt": "2026-08-27T02:20:05.1696202Z",
+  "createdAtLocal": "2026-08-26 22:20",
+  "timezone": "Eastern Standard Time",
+  "project": "linformaticien",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien  Branch: feat/identite-visuelle\r\nTools used (this reply): Read, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-26 22:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien",
+  "summary": "v0.4.0 sur PR #5: assouplit l'accessibilite selon l'ordre de priorites du proprietaire (allure > accessibilite > score automatique), inscrit dans AGENTS.md et README. Liens reprennent le bleu exact du logo #1a75b2 (4.0:1 sur teinte, assume); bleu-fonce ne sert plus qu'au survol. Teinte des bandes alternees #f2f7fb -> #dbe9f5 (ecart au blanc double). Section Pour qui devient une bande pleinement bleue texte blanc. Nouveau jeton --color-contour #141414 (cerne noir du mot-symbole) applique aux boutons, cartes, questions, etiquettes, pastilles. Bouton courriel lucide Mail dans l'en-tete (cache sous 640px, 6px de marge seulement) + second bouton dans le tarif: 3 mailto au lieu d'un. Menu: retrait de Comment ca marche, ajout de Contactez-moi vers #contact. Heures: ajout fin de semaine 10h-16h, heuresMachine devient un tableau de deux plages. Verifier assoupli: bloque sous 3:1, signale entre 3 et 4.5, cible 4.5 pour le corps de texte seul; concordance des jetons reste bloquante. Corrige la feuille d'impression qui forcait le fond blanc sans le texte (bande bleue serait sortie vide). Build OK, axe 0 violation.",
+  "commands": [
+    "npm run build",
+    "npm run verifier",
+    "node audit.mjs jsdom+axe-core",
+    "git push",
+    "gh pr comment"
+  ],
+  "files": [
+    "src/styles/theme.css",
+    "design-system/tokens.css",
+    "design-system/couleurs.html",
+    "src/components/Header.tsx",
+    "src/components/Clientele.tsx",
+    "src/components/ui/Button.tsx",
+    "src/content/site.ts",
+    "outils/verifier-jetons.mjs",
+    "AGENTS.md",
+    "README.md"
+  ],
+  "planPath": "",
+  "contentHash": "605c46de14d55dbf390ecfeab6eb2226a701a60951f082c1a409e92bd709c091",
+  "git": {
+    "repo": "linformaticien",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/linformaticien",
+    "branch": "feat/identite-visuelle",
+    "head": "b6eb5b3",
+    "hasChanges": false
+  }
+}

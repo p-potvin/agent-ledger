@@ -1,0 +1,49 @@
+{
+  "id": "20260827-215524-887-python-zipper-ff3ffd46",
+  "createdAt": "2026-08-28T01:55:24.8872717Z",
+  "createdAtLocal": "2026-08-27 21:55",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\dataset_builder  Branch: feat/sidebar-rebuild\r\nTools used (this reply): Bash, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-27 21:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\dataset_builder",
+  "summary": "Fixed the local server crash loop that had blocked all testing this session. Root cause: commit 9e2c0c8 (Thu 27 Aug 2026 15:26, 'cache upscaler capabilities probe and guard upscale concurrency with semaphore') added _CAPABILITIES_LOCK = threading.Lock() and _UPSCALE_SEMAPHORE = threading.Semaphore(1) at ds_helpers.py:226-227 but never added 'import threading' - ds_helpers imported only os/re/sys/random/shutil/subprocess/requests/urlparse. server.py imports ds_helpers at line 43, so the module-level NameError killed the process at import, and the NSSM service 'Python Server Zipper' crash-looped (13 recorded tracebacks, 2.6MB stderr) from 15:26 until now. Added the missing import. Verified ds_helpers and server both import cleanly, then swept every dataset_builder module for the same class of missing-stdlib-import bug - only false positive was the literal 'time.' inside a print string in scraper.py. Started the service: health 200 online, /api/jobs 200, and /api/upscaler/status (the exact code path the lock guards) returns 200 with available=True cuda=True and 11 models. Confirmed the loop is over: NameError count static at 13 across a 6s window and service PID 35340 stable, health still 200. Note the thing occupying port 5171 earlier was a stale Firefox socket, not a server. service_stderr.log and service_stdout.log are untracked, so the 4.5MB of crash-loop output is not in git.",
+  "commands": [
+    "Start-Service 'Python Server Zipper'",
+    "Invoke-WebRequest http://127.0.0.1:5171/health",
+    "Invoke-WebRequest http://127.0.0.1:5171/api/upscaler/status",
+    "python -c 'import server'"
+  ],
+  "files": [
+    "dataset_builder/ds_helpers.py"
+  ],
+  "planPath": "",
+  "contentHash": "ff3ffd462c9ba791c66fd3b16ce3740440f82c60c096f0a8047ebf89169c4895",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}

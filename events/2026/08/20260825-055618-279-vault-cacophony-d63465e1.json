@@ -1,0 +1,53 @@
+{
+  "id": "20260825-055618-279-vault-cacophony-d63465e1",
+  "createdAt": "2026-08-25T09:56:18.2791972Z",
+  "createdAtLocal": "2026-08-25 05:56",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\audio.cpp  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-25 05:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\audio.cpp",
+  "summary": "Implemented and verified PersonaPlex conversation-state preservation in audio.cpp (submodule, local changes). Added continue_conversation request option: PersonaPlexGenerationOptions field, parsing in request.cpp, resident_state_ member on PersonaPlexSession, and offline run reuses the resident ConversationState instead of calling start_conversation (which unconditionally does main_step_graph_->reset() then replays voice prompt + 0.5s silence + system prompt). Added trace scalars personaplex.continued and personaplex.cache_steps_used. VERIFIED across a 3-request sequence: cache_steps_used 79 -> 278 -> 477 (+199/turn), prompt_ms 3456 -> 0.01 -> 0.007, wall 19.1 -> 15.2 -> 15.4s, so context accumulates and the preamble is paid once. Gotcha found: the model spec is EMBEDDED IN THE GGUF (@gguf takes precedence over model_specs/ on disk), so editing model_specs/personaplex.json is ignored in a real run and --model-spec-override model_specs/personaplex.json is required to pick up the new option; --list-loaders needs cwd=audio.cpp only because no model is open so no embedded spec exists. Also fixed a likely cause of agents shadowing each other: Start-Conversation.ps1 passed one fixed sampling seed for every turn, now varies per turn.",
+  "commands": [
+    "audiocpp_cli --task s2s --family personaplex --model-spec-override model_specs/personaplex.json --request-sequence cont.json --metrics --log"
+  ],
+  "files": [
+    "audio.cpp/include/engine/models/personaplex/request.h",
+    "audio.cpp/src/models/personaplex/request.cpp",
+    "audio.cpp/include/engine/models/personaplex/session.h",
+    "audio.cpp/src/models/personaplex/session.cpp",
+    "audio.cpp/model_specs/personaplex.json",
+    "scripts/Start-Conversation.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "d63465e1fd10499e127122cc7e922b18d387330335eb7d78fd2db3f6e51217ac",
+  "git": {
+    "repo": "audio.cpp",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/audio.cpp",
+    "branch": "main",
+    "head": "9601291",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "20260825-191112-777-vault-cacophony-ece7284d",
+  "createdAt": "2026-08-25T23:11:12.7771934Z",
+  "createdAtLocal": "2026-08-25 19:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/bs-roformer\r\nTools used (this reply): Bash, PowerShell, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-25 19:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (RTX 3060 + RTX 2060)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": "none"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Replaced htdemucs with BS-RoFormer (audio.cpp, CUDA) in both Start-SubtitlesAudioCpp.ps1 and vw better-subtitles, at num_overlap=1. Measured on speech mixed under music: at 0 dB htdemucs 26.4 pct WER vs BS-RoFormer 27.1; at -5 dB htdemucs 57.6 vs BS-RoFormer 54.3, recovering 226 of 269 words against 202. Speed was the risk and it is the pass count: packaged num_overlap 4 runs 1.8x realtime, 2 runs 3.8x, 1 runs 8.0x - against htdemucs 8.6x - while quality moves 53.9 to 54.3 pct. Shipped at one pass with -SepPasses to raise it and -Separator htdemucs to revert. Memory measured for chunk sizing: BS-RoFormer 0.37 GB/min host (0.76 GB at 2 min, 2.95 at 8) with VRAM 2.8->4.3 GB; htdemucs 0.47 GB/min and 2.0->3.8 GB, so the old comment claiming htdemucs had flat VRAM was wrong. Six-minute chunks stay correct. Weights hard-linked into the store and commander. Note: someone had already swapped two lines in the cacophony script without the overlap option, which is exactly the slow path; built on top of that. PRs cacophony#4 and commander#9.",
+  "commands": [
+    "audiocpp_cli --task sep --family bs_roformer --backend cuda --session-option bs_roformer.num_overlap=1",
+    "vw better-subtitles -Target file.wav -SepPasses 1"
+  ],
+  "files": [
+    "vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1",
+    "vault-commander/cli/Start-BetterSubtitles.ps1",
+    "vault-commander/cli/vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "ece7284da47f21b5492bd5853bfbfd0e22c20484305a4dd96a8f7caceb078a24",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/bs-roformer",
+    "head": "3fd0e97",
+    "hasChanges": true
+  }
+}

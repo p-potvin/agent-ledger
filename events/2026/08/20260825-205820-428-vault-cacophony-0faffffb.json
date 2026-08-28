@@ -1,0 +1,54 @@
+{
+  "id": "20260825-205820-428-vault-cacophony-0faffffb",
+  "createdAt": "2026-08-26T00:58:20.4289791Z",
+  "createdAtLocal": "2026-08-25 20:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/bs-roformer\r\nTools used (this reply): Bash, PowerShell, Write, Edit, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-25 20:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Audio Flamingo 3 quantized to Q4_K_M GGUF and validated. llama.cpp already supported AF3 (conversion/qwen.py:53 + conversion/ultravox.py:199 + PROJECTOR_TYPE_MUSIC_FLAMINGO), so no ggml work was needed - but no AF3 GGUF exists on the Hub, so this conversion appears to be the first. Artifacts on D:/HuggingFace/gguf: af3-Q4_K_M.gguf 4.68GB, mmproj-af3-f16.gguf 1.32GB, af3-f16.gguf 15.2GB. Measured: 6.4GB resident at -c 8192, 1239 tok/s prompt, 61 tok/s gen, 210ms per 30s audio window, 173s quantize. Validated word-perfect ASR on sample_suitcase.wav. KEY LIMITATION FOUND: AF3 transcribes reliably only within one 30s window; 29.9s works, 29.99s returns 'the', 60s returns a repetition loop. Proved NOT a quantization artifact - unquantized f16 hallucinates on the same 60s clip. Captioning across windows is fine (90s/4 windows correct). Wrote scripts/audio_flamingo.py which chunks ASR at 29.0s on quiet frames, turning the failing 30s clip into a correct full transcript, and docs/audio-flamingo.md. Gotchas: hf download --exclude with multiple patterns downloads the excluded dirs instead (exits 0); chat_template.jinja is a separate file missed by *.json patterns and llama.cpp hard-errors without it; llama-mtmd-cli logs to stderr and answers on stdout.",
+  "commands": [
+    "python convert_hf_to_gguf.py --mmproj --outtype f16",
+    "llama-quantize af3-f16.gguf af3-Q4_K_M.gguf Q4_K_M 8",
+    "gguf_new_metadata.py --chat-template-file chat_template.jinja",
+    "python scripts/audio_flamingo.py --audio samples/ItJustDoesntMatter16k.wav --task asr --timestamps"
+  ],
+  "files": [
+    "scripts/audio_flamingo.py",
+    "docs/audio-flamingo.md",
+    "D:/HuggingFace/gguf/af3-Q4_K_M.gguf",
+    "D:/HuggingFace/gguf/mmproj-af3-f16.gguf"
+  ],
+  "planPath": "",
+  "contentHash": "0faffffb6249002db3118f890e062bbdab594b9017d353105b755aa2ccd2d145",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/bs-roformer",
+    "head": "3fd0e97",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20260827-000906-416-linformaticien-2898b55f",
+  "createdAt": "2026-08-27T04:09:06.4162994Z",
+  "createdAtLocal": "2026-08-27 00:09",
+  "timezone": "Eastern Standard Time",
+  "project": "linformaticien",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + SSH greencloud)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien  Branch: main\r\nTools used (this reply): Read, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-27 00:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + SSH greencloud",
+    "toolsUsed": [
+      "Read",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien",
+  "summary": "v0.4.1 finalise et PR #5 fusionnee dans main (merge 17d6a0c). Deux dernieres retouches: numero de telephone de la section Contact revenu au bleu (rouge retire), transition de 0.1s sur les liens du menu. Le trait sous les titres (bleu long + rouge court) etait ce que l'utilisateur appelait le pointille - conserve tel quel. Webhook declenche, dev.linformaticien.ca sert maintenant v0.4.1 (17d6a0c), verifier passe sur le serveur. IMPORTANT: la production n'a JAMAIS ete promue (prod -> not promoted), c'est un premier lancement et non une mise a jour. Promotion NON executee: laissee a l'utilisateur car personne n'a encore vu le design dans un navigateur, et la sonde health-ledger accepte toujours 404 (un site casse passerait pour sain). Commande fournie: /var/www/deploy-scripts/promote-linformaticien.sh",
+  "commands": [
+    "npm run build",
+    "gh pr merge 5 --merge",
+    "ssh root@100.73.93.84 tail /var/log/vw-webhookd.log",
+    "ssh promote-linformaticien.sh --status"
+  ],
+  "files": [
+    "src/components/Contact.tsx",
+    "src/components/Header.tsx",
+    "CHANGES.md"
+  ],
+  "planPath": "",
+  "contentHash": "2898b55f0c66794d4e45d712e17b009b940a3659787560ea8941bdaa9e1ea384",
+  "git": {
+    "repo": "linformaticien",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/linformaticien",
+    "branch": "main",
+    "head": "17d6a0c",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20260827-200722-203-python-zipper-d5a7a743",
+  "createdAt": "2026-08-28T00:07:22.2034890Z",
+  "createdAtLocal": "2026-08-27 20:07",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: plan\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): Bash, WebFetch, Write, Artifact, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-27 20:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "plan",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "WebFetch",
+      "Write",
+      "Artifact",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Revision 2 of the Zipper sidebar rebuild plan after user decisions. Locked: retire Tampermonkey userscript entirely (vite+vite-plugin-monkey v8.5.0, plus root tampermonkey_script.js and test_tampermonkey_contract.py); Preact+Signals; no FAB/in-page panel; popup retained as sidebar launcher + status; Firefox only; debrid RD/AllDebrid/TorBox (Premiumize dropped). New scope added: Usenet via SABnzbd + TorBox with grabs/day and GB/day quota guardrails; torrents via TorBox + qBittorrent x2 (local + OVH); per-domain SQLite site-profile memory store that learns accepted URL patterns/route/naming from completed downloads to skip costly scans (subsumes the Insights section); average-colour palette kept as accent-only toggle; smart naming rules engine. Reversed position to recommend FastAPI (route count tripled, SSE replaces 2s poll, OpenAPI contract). Verified aria2c now on PATH; no existing qbit/sabnzbd code. Re-phased from 7 phases/19 days into user's 3-session budget. One open question left: VaultWares API integration - proposed control-plane/data-plane split with a storage interface so the decision is not load-bearing.",
+  "commands": [
+    "curl raw.githubusercontent.com/.../docs/motrix-migration-plan.md",
+    "where aria2c",
+    "grep -rniE qbittorrent|sabnzbd|nzb"
+  ],
+  "files": [
+    "extension/src/panel/utils/scraper.ts",
+    "extension/src/background/sniffer.ts",
+    "userscript/package.json",
+    "dataset_builder/ds_jobs.py",
+    "dataset_builder/tests/test_tampermonkey_contract.py"
+  ],
+  "planPath": "",
+  "contentHash": "d5a7a74352bc901120b92754626eecfdcdbb235fce22291f10d098728e626a05",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "main",
+    "head": "9e2c0c8",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "20260827-212544-981-python-zipper-829e7635",
+  "createdAt": "2026-08-28T01:25:44.9816423Z",
+  "createdAtLocal": "2026-08-27 21:25",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: feat/sidebar-rebuild\r\nTools used (this reply): Bash, Edit, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-27 21:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Harvest engine built on feat/sidebar-rebuild. Bundled Inter + JetBrains Mono variable woff2 (latin, 79KB total) into public/fonts with esbuild external '*.woff2'; confirmed Bitter is not in vaultwares-themes at all - it belongs to the linformaticien project, so vaultsqware is Inter + JetBrains Mono as specified. New modules: common/harvest.ts (MediaCandidate typed record carrying kind/width/height/bytes/mime/origin/frameId/pageDomain/assetHost/score/upgradedFrom, srcset largest-descriptor parsing, MIME and extension classification, dedupKey that strips cache-busters but preserves auth params, contentKey for CDN-mirror folding, field-wise mergeCandidate); common/scoring.ts (named additive rules replacing the inline magic-number cascade, SCORE.FLOOR 40 / INTERESTING 200); common/upgrade_rules.ts (declarative thumbnail-to-original table plus deriveRule for learning from verified pairs); content/harvest.ts (all-frames chunked DOM pass via requestIdleCallback, srcset/picture/lazy-attrs/CSS backgrounds/og-tags/JSON-LD); background/media_log.ts (webRequest response log supplying Content-Length, attributed to the top-level page domain not the asset host, with a navigation race guard); background/harvest_store.ts (push-model frame collection avoiding a webNavigation permission, two-pass dedup, snapshot per tab); sidebar/capture.tsx + styles. Wired harvest message kinds into BgMessage and the background router. Wrote 30 assertions over the pure logic - all pass. Found and removed a real bug: the Imgur rule stripped a trailing size letter from 7-char ids, but Imgur ids are 7 OR 8 chars, so an 8-char id ending in b/m/t/l/h/s was being rewritten into a 404. Documented why it cannot be a builtin rule. Build clean, tsc clean, web-ext lint 0 errors.",
+  "commands": [
+    "npm run typecheck",
+    "npm run build:verify",
+    "npm run lint",
+    "node _check.cjs"
+  ],
+  "files": [
+    "extension/src/common/harvest.ts",
+    "extension/src/common/scoring.ts",
+    "extension/src/common/upgrade_rules.ts",
+    "extension/src/content/harvest.ts",
+    "extension/src/background/media_log.ts",
+    "extension/src/background/harvest_store.ts",
+    "extension/src/sidebar/capture.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "829e76350827b7dcdf24da9b55b3ab586a0ba4131f434e9cb6fdb4086726a398",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}

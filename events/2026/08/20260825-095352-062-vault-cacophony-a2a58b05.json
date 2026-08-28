@@ -1,0 +1,51 @@
+{
+  "id": "20260825-095352-062-vault-cacophony-a2a58b05",
+  "createdAt": "2026-08-25T13:53:52.0623163Z",
+  "createdAtLocal": "2026-08-25 09:53",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + HuggingFace)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/nemotron-engine\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-25 09:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + HuggingFace",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Wrote HANDOFF.md for the next session (context nearly exhausted) and finished the Space conversation UI. Space changes pushed and RUNNING: turns is now a typed gr.Number (1-60, was a 2-12 slider) with GPU-budget info text, duration was already 600, and a zip output was added - conversation.py gained package_turns() writing one wav per turn plus manifest.json (file, speaker, voice, persona, text, seconds, sample_rate, words_per_second) and transcript.txt; converse() now also returns per-turn segments. Zip packaging verified locally with stubbed torch. HANDOFF.md covers: current state, the four architectures tried and why three failed (two PersonaPlex will not fit 12GB, one playing both sides collapses into repetition, continuation and alternating personas are mutually exclusive, LFM2-Audio segfaults on CUDA and loops on CPU), 13 gotchas that each cost real time, the measured numbers table including the finding that PersonaPlex is sync-bound not compute-bound, file map, submodule changes at risk of being lost, and open threads led by prosody. Also copied the Space files into the repo at space/ (they existed only on HF) and added a HANDOFF pointer to README.md. Nothing is committed; branch agent/nemotron-engine, 8 new scripts plus local modifications inside the audio.cpp and CrispASR submodules.",
+  "commands": [
+    "upload_file app.py conversation.py -> clopeux/personaplex-baseline"
+  ],
+  "files": [
+    "HANDOFF.md",
+    "README.md",
+    "space/app.py",
+    "space/conversation.py",
+    "space/requirements.txt"
+  ],
+  "planPath": "",
+  "contentHash": "a2a58b051369f518eda6c0bbada9dddb412dace24b85c53d397e7b5fca7308e5",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/nemotron-engine",
+    "head": "99c5702",
+    "hasChanges": true
+  }
+}

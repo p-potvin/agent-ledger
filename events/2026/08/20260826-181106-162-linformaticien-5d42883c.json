@@ -1,0 +1,61 @@
+{
+  "id": "20260826-181106-162-linformaticien-5d42883c",
+  "createdAt": "2026-08-26T22:11:06.1628665Z",
+  "createdAtLocal": "2026-08-26 18:11",
+  "timezone": "Eastern Standard Time",
+  "project": "linformaticien",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien  Branch: feat/identite-visuelle\r\nTools used (this reply): Read, Bash, PowerShell, AskUserQuestion, ToolSearch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-26 18:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Bash",
+      "PowerShell",
+      "AskUserQuestion",
+      "ToolSearch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien",
+  "summary": "PR #5 feat/identite-visuelle (v0.2.1): accorde le site au logo livre par l'utilisateur et verifie les coordonnees. Coordonnees confirmees coherentes (telephoneLien vs telephone affiche, heuresMachine Mo-Fr vs phrase francaise). Bleu du logo (204 deg) deja accorde a l'interface (203 deg), aucun changement. Accent orange #b04c0e remplace par le rouge de marque #c03a37 (teinte 1 deg comme le logo, 5.4:1 blanc / 4.8:1 creme, identique a l'ancien); jetons renommes rouge/rouge-pale partout. Corrige un debordement horizontal de l'en-tete sur toutes les largeurs de telephone (mot-symbole 9:1 + bouton whitespace-nowrap, aucun ne pouvant retrecir): marque carree dans l'en-tete, mot-symbole au pied de page. Le logo texte d'origine debordait deja de 44px a 1024px. Assets: favicon.ico 262ko->15ko avec 3 tailles, apple-touch-icon 180px, og-image 1200x630 avec telephone grave, sources deplacees vers design-system/marque/. Ajout outils/verifier-jetons.mjs branche dans npm run build (4 verifications, toutes testees en cassant volontairement). Nouvelle fiche design-system/logo.html. Corrige une note erronee de deploy/README sur les valeurs d'exemple en dev.",
+  "commands": [
+    "magick (favicon multi-taille, og-image, detourage)",
+    "npm run build",
+    "npm run verifier",
+    "node audit.mjs jsdom+axe-core",
+    "gh pr create"
+  ],
+  "files": [
+    "src/styles/theme.css",
+    "design-system/tokens.css",
+    "design-system/logo.html",
+    "src/components/Header.tsx",
+    "src/components/Footer.tsx",
+    "outils/verifier-jetons.mjs",
+    "public/og-image.png",
+    "public/favicon.ico",
+    "index.html",
+    "TODO.md"
+  ],
+  "planPath": "",
+  "contentHash": "5d42883c0dd219eebeb15495af7c955792d5cd8936a55347a6562fa1871f54ab",
+  "git": {
+    "repo": "linformaticien",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/linformaticien",
+    "branch": "feat/identite-visuelle",
+    "head": "8cee9e7",
+    "hasChanges": false
+  }
+}

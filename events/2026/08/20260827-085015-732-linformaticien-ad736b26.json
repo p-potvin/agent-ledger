@@ -1,0 +1,54 @@
+{
+  "id": "20260827-085015-732-linformaticien-ad736b26",
+  "createdAt": "2026-08-27T12:50:15.7324866Z",
+  "createdAtLocal": "2026-08-27 08:50",
+  "timezone": "Eastern Standard Time",
+  "project": "linformaticien",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + SSH greencloud/OVH)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien  Branch: main\r\nTools used (this reply): Read, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-27 08:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + SSH greencloud/OVH",
+    "toolsUsed": [
+      "Read",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien",
+  "summary": "v0.6.0 en production. VAULT-WARDEN: confirme que p-potvin/vault-warden est leur propre service FastAPI (Tailnet-first secret storage, vw-secretsd port 9444), PAS un Bitwarden/Vaultwarden auto-heberge - aucun conteneur ni service bitwarden sur greencloud ni OVH; le README titre 'vault-warden (VaultWarden)' explique la confusion. Service actif et sain, seulement 3 commits de retard (themes/logo). Les deux scripts root-assumants converges sur vwdeploy: 12 commandes prefixees par sudo dans deploy-vault-warden.sh, warden.vaultwares.ca et vault-warden.rollback chownes a vwdeploy, plus deux bugs trouves en cours de route - verrous dans /var/lock bloques par fs.protected_regular=2 (deplaces vers /var/lib/vw-deploy, meme correctif que linformaticien) et une redirection shell vers .deployed-sha convertie en sudo tee. Les deux deploiements verifies exit=0, vw-secretsd sain (200). Verificateur traduit en anglais: check-deploy-permissions.py, 26 chemins 0 casse. SITE: 17 corrections de texte (ton condescendant, conseil gratuit, ménage), indicatif entre parentheses, nouveau mot-symbole a apostrophe rouge, mot-symbole desormais sur mobile grace au bouton d'appel reduit a son pictogramme sous 640px (180px de logo, 36px de marge a 320px), logo-mark.png retire de public/. GTM retire: Google n'impose rien au Canada mais la Loi 25 exige le consentement des qu'une balise depose des temoins de profilage.",
+  "commands": [
+    "ssh deploy-vault-warden.sh",
+    "ssh deploy-vaultwares-pwa.sh",
+    "npm run build",
+    "git push origin prod"
+  ],
+  "files": [
+    "src/content/site.ts",
+    "src/components/Header.tsx",
+    "index.html",
+    "public/logo-wordmark.png",
+    "/var/www/deploy-scripts/check-deploy-permissions.py",
+    "/var/www/deploy-scripts/deploy-vault-warden.sh"
+  ],
+  "planPath": "",
+  "contentHash": "ad736b26421b4e87f793f0ab1f711e7744dcc8c01d49cae971cfd6be94be709f",
+  "git": {
+    "repo": "linformaticien",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/linformaticien",
+    "branch": "main",
+    "head": "ca5df5f",
+    "hasChanges": false
+  }
+}

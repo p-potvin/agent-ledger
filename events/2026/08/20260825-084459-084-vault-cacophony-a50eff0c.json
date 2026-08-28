@@ -1,0 +1,46 @@
+{
+  "id": "20260825-084459-084-vault-cacophony-a50eff0c",
+  "createdAt": "2026-08-25T12:44:59.0849052Z",
+  "createdAtLocal": "2026-08-25 08:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/nemotron-engine\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-25 08:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Fixed the gibberish Margot turns in cascade_conversation.py. Root cause was mine, not the model: her voice reference 1462_0.wav is 14.55s of audio but I passed reference text for only its first clause (13 words = 0.9 words/s), while Desmond's 1272_0.wav text matched his 5.855s exactly - which is why only she was unintelligible. Qwen3-TTS cloning conditions on text-audio alignment and fails silently with confident gibberish rather than erroring. Switched Margot to 1462_1.wav (3.985s) with its exact transcript, and added a startup guard that computes words-per-second on each reference and warns when outside 1.2-4.5, so this class of error is caught instead of silently degrading. Also set explicit UTF-8 on subprocess capture (default Windows code page mangled an accented word from the LLM into mojibake). Verified re-run: 6 turns, 62.9s, durations 5.76-11.84s, no runaways, both voices clean.",
+  "commands": [
+    "python scripts/cascade_conversation.py --seed opener.wav --turns 6 --a-voice ls/1462_1.wav --b-voice ls/1272_0.wav"
+  ],
+  "files": [
+    "scripts/cascade_conversation.py"
+  ],
+  "planPath": "",
+  "contentHash": "a50eff0c6e3cb79c0fe0d8275ba4eaf3c90db533b7abe8adae9465e3f6954517",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/nemotron-engine",
+    "head": "99c5702",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20260825-050502-671-vault-cacophony-24f6d694",
+  "createdAt": "2026-08-25T09:05:02.6718061Z",
+  "createdAtLocal": "2026-08-25 05:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: agent/nemotron-engine\r\nTools used (this reply): Bash, PowerShell, Edit, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-25 05:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Diagnosed and fixed both cue defects in words_to_srt.py: 7 of 16 cues were split purely by the 76-char cap (mid-sentence cuts) and orphan one-word cues were created by a char-split then terminated by a real gap - same root cause. Rewrote build() to cut runs at real pauses first, then pack within a run preferring strong/weak punctuation boundaries (_break_at), merge orphans back (_merge_orphans) or rebalance the pair when merging would overflow (_rebalance), and clamp cue ends so overlapping sub-word timestamps cannot put two subtitles on screen at once. Result on the agent conversation: 19 cues, 0 overlaps, 0 orphans; LibriSpeech regression clean. PROFILED PERSONAPLEX with nsys via a new s2s stage in Measure-Passes.ps1: 10967 MB VRAM (89% of a 12GB card, no room for a second instance), 0.9x realtime (34.4s wall for 30.9s of stream), and the bottleneck is 253672 cudaStreamSynchronize calls (79.8% of wall) plus 248440 cudaMemcpyAsync - about 657 syncs and 644 memcpys per 80ms frame - against only 1.2s of actual cudaGraphLaunch compute. Source facts: LM context is a fixed preallocated 3000-frame KV cache (4 min at 12.5Hz, kFrameSamples=1920) that THROWS on overflow with no eviction, only full reset(); 17 delayed streams = 1 text + 8 assistant + 8 user codebooks, so both sides of a conversation share one frame within a session.",
+  "commands": [
+    ".\\scripts\\Measure-Passes.ps1 -Audio seed.wav -Seconds 0 -Stages s2s",
+    "nsys stats --report cuda_api_sum --force-export=true s2s.nsys-rep",
+    "python scripts/words_to_srt.py --words words.json --out new.srt --merge-tokens"
+  ],
+  "files": [
+    "scripts/words_to_srt.py",
+    "scripts/Measure-Passes.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "24f6d6940d511add01f1e7d92a73339115bdb4a3c3038e67a1591108685ba24b",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "agent/nemotron-engine",
+    "head": "99c5702",
+    "hasChanges": true
+  }
+}

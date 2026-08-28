@@ -1,0 +1,62 @@
+{
+  "id": "20260826-202753-503-linformaticien-a79fc392",
+  "createdAt": "2026-08-27T00:27:53.5030229Z",
+  "createdAtLocal": "2026-08-26 20:27",
+  "timezone": "Eastern Standard Time",
+  "project": "linformaticien",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien  Branch: feat/identite-visuelle\r\nTools used (this reply): Read, Bash, PowerShell, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-26 20:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Read",
+      "Bash",
+      "PowerShell",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien",
+  "summary": "v0.3.0 sur PR #5: accorde le reste du site au logo. Conteneur 1024 -> 1216px (jeton --container-site) pour loger le mot-symbole 9:1 dans l'en-tete: 288px des 640px, 396px des 1280px, marque carree sous 640px via <picture>; pire cas 1024px = 72px de marge. Bleu du logo #1a75b2 adopte pour les aplats (boutons, pictogrammes, pastilles); fond des sections alternees passe du creme #f6f2ea a une teinte froide #f2f7fb pour que le bleu du logo y tienne 4.60:1; texte lu garde #12557f (8:1). Bitter retire: une seule famille Source Sans 3 variable, titres en graisse 800 + tracking -0.02em, -66ko. Bouton de l'en-tete 299 -> 162px (libelle remplace par pictogramme). lucide-react ajoute pour 8 icones remplacant les caracteres Unicode. Section Contact refaite (premier jet cassait la semantique <dl>, attrape par axe). Verifier etendu aux textes sur aplat. Site 62ko plus leger. Build OK, axe 0 violation.",
+  "commands": [
+    "npm i lucide-react",
+    "npm run build",
+    "npm run verifier",
+    "node audit.mjs jsdom+axe-core",
+    "magick (og-image, quantification)",
+    "git push",
+    "gh pr comment"
+  ],
+  "files": [
+    "src/styles/theme.css",
+    "design-system/tokens.css",
+    "src/components/Header.tsx",
+    "src/components/ui/Button.tsx",
+    "src/components/Contact.tsx",
+    "src/styles/fonts.css",
+    "src/styles/index.css",
+    "design-system/couleurs.html",
+    "design-system/typographie.html",
+    "AGENTS.md"
+  ],
+  "planPath": "",
+  "contentHash": "a79fc3923d272c41fcac0994a214013a1932b9a8dd4f59606cdbf9b77a63338f",
+  "git": {
+    "repo": "linformaticien",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/linformaticien",
+    "branch": "feat/identite-visuelle",
+    "head": "dad52e0",
+    "hasChanges": false
+  }
+}

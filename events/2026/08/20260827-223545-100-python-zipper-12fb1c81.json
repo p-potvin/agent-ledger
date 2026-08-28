@@ -1,0 +1,55 @@
+{
+  "id": "20260827-223545-100-python-zipper-12fb1c81",
+  "createdAt": "2026-08-28T02:35:45.1008627Z",
+  "createdAtLocal": "2026-08-27 22:35",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: feat/sidebar-rebuild\r\nTools used (this reply): Bash, Edit, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-27 22:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Round of fixes from live testing feedback, on feat/sidebar-rebuild. (1) HEADER/BANNER now top-ranked after avatars were demoted - added BANNER_RE (header, header_img, banner, cover, hero, backdrop, masthead; -650) plus a graduated aspect-ratio penalty (>=5:1 -550, >=3.5:1 -400, >=2.8:1 -150) so a banner is caught on shape even when innocently named. Verified a 2.39:1 cinematic still and a 16:9 photo are NOT caught. (2) SIDEBAR COULD NOT SEE THE SERVER - the header LED was hardcoded to a never-populated signal. Built the real Downloads tab (src/sidebar/downloads.tsx): server jobs from /api/jobs with progress, speed, ETA, link counts, stop/clear, and clickable archives that reveal in Explorer via the native host; plus browser downloads listed separately and explicitly labelled 'one entry per file, never zipped' so the difference between the two routes is visible. Header LED now shows checking/server/server down/N running. Polling is adaptive - 2s when the tab is visible or jobs are active, 12s otherwise, since a sidebar can sit open all day. (3) DOWNLOAD HISTORY FLOOD - reordered the actions so 'Zip N on server' is primary and 'Direct' is secondary, added a warning band above 8 items and a confirm dialog on the direct path spelling out the cost, and disabled the server button when the server is down. (4) CAROUSEL DETECTOR WAS DEAD CODE - I dropped it when retiring the panel despite the plan saying to keep it; nothing outside src/panel referenced extractCarouselMediaUrls. Ported it to src/content/carousel.ts as a self-contained module with normalizeUrl and extractUrlFromBg inlined (importing the panel helpers would have dragged the",
+  "commands": [
+    "npm run typecheck",
+    "npm run build:verify",
+    "npm run lint",
+    "node _check.cjs"
+  ],
+  "files": [
+    "extension/src/sidebar/downloads.tsx",
+    "extension/src/content/carousel.ts",
+    "extension/src/content/harvest.ts",
+    "extension/src/common/scoring.ts",
+    "extension/src/sidebar/capture.tsx",
+    "extension/src/sidebar/index.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "12fb1c819e330b3e084faabee901353d1b4436eb2fd6414460eea903ae595151",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}

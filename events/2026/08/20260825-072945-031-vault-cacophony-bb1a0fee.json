@@ -1,0 +1,48 @@
+{
+  "id": "20260825-072945-031-vault-cacophony-bb1a0fee",
+  "createdAt": "2026-08-25T11:29:45.0317513Z",
+  "createdAtLocal": "2026-08-25 07:29",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR\\build\\bin  Branch: feat/personaplex\r\nTools used (this reply): Bash, PowerShell, Edit, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-25 07:29 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\CrispASR\\build\\bin",
+  "summary": "Compared S2S options across audio.cpp, CrispASR, NeMo-Speech.cpp and mini-omni; picked LFM2-Audio 1.5B and tested it. Two real fixes made. FIX 1: CrispASR appeared totally broken (every run exited 0xC0000135) because its ggml-cuda.dll imports cublas64_13/cudart64_13 which on CUDA 13 live in bin\\\\x64, and only bin is on PATH - adding CUDA v13.3\\\\bin\\\\x64 fixes it with no rebuild. FIX 2: patched a hardcoded 512MB ggml pool in CrispASR/src/lfm2_audio.cpp line ~2307 that aborted the LFM2 detokenizer after generation had already succeeded (179 frames needed 537,641,568 bytes vs 536,870,912 available); replaced with a pool scaling as Tu*h*1400 with 512MB floor, verified up to 943 frames / 4GB. Rebuilt via ninja target bin/crispasr.exe after sourcing VS18 vcvars (full build fails on a pre-existing test needing unistd.h). VERDICT: LFM2-Audio is NOT usable in this build. CUDA path segfaults (0xC0000005) during S2S generation, separate from the pool bug. CPU path completes but output is degenerate: on two different inputs it echoed/continued the input instead of answering, and looped ('matching the season of the year' six times), generating 75.4s of audio from a short clip at 93s wall. Falling back to the verified audio.cpp cascade: SenseVoice-Small 254MB with emotion tags + Ollama qwen3/vw-* personas + Qwen3-TTS 0.6B voice cloning at 2.5x realtime, about 3.3GB for two agents.",
+  "commands": [
+    "crispasr.exe --backend lfm2-audio -m auto --s2s",
+    "cmake --build build -j 16 --target bin/crispasr.exe"
+  ],
+  "files": [
+    "CrispASR/src/lfm2_audio.cpp"
+  ],
+  "planPath": "",
+  "contentHash": "bb1a0feee5ef8621e28df3d955371a8aa170b19309a14ab19a8d378c37479adf",
+  "git": {
+    "repo": "CrispASR",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony/CrispASR",
+    "branch": "feat/personaplex",
+    "head": "fc3550e6",
+    "hasChanges": true
+  }
+}

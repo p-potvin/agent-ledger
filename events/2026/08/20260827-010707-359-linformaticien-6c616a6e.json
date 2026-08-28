@@ -1,0 +1,55 @@
+{
+  "id": "20260827-010707-359-linformaticien-6c616a6e",
+  "createdAt": "2026-08-27T05:07:07.3590010Z",
+  "createdAtLocal": "2026-08-27 01:07",
+  "timezone": "Eastern Standard Time",
+  "project": "linformaticien",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + SSH greencloud)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien  Branch: main\r\nTools used (this reply): Read, Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-27 01:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + SSH greencloud",
+    "toolsUsed": [
+      "Read",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien",
+  "summary": "LANCEMENT: linformaticien.ca est en production (v0.4.1, code 200). CI production refaite: poussee sur la branche prod au lieu d'une commande manuelle. A necessite un correctif retrocompatible de /opt/vaultwares-adk/webhookd/vw_webhookd.py (branch accepte desormais une chaine OU une liste; les 13 autres cibles inchangees) et un script deploy-linformaticien.sh branche-conscient via VW_REF: main construit et bascule dev, prod bascule sans reconstruire. Corrige au passage une course reelle: flock -n faisait echouer le deploiement prod quand main construisait encore (constate sur la premiere poussee) - le verrou attend maintenant 900s. DECOUVERTE: les vhosts nginx en service dataient du 12 aout, donc les en-tetes de securite corriges en PR #4 n'etaient jamais envoyes et /fonts/ n'etait pas mis en cache; installes et verifies. health-ledger PR #6 fusionnee (sonde exige 200 + texte au lieu d'accepter 404) mais son deploiement etait casse depuis le 12 aout: /opt/health-ledger appartenait a root alors que le deploiement tourne en vwdeploy (dubious ownership, puis FETCH_HEAD permission denied); corrige par safe.directory + chown vwdeploy (data/ laisse a healthledger) et le script patche. Decisions consignees: pas de temps minimum facturé, redirections .top en attente.",
+  "commands": [
+    "gh pr merge 5",
+    "ssh patch vw_webhookd.py",
+    "git push origin prod",
+    "install vhosts + nginx reload",
+    "gh pr merge health-ledger#6",
+    "chown -R vwdeploy /opt/health-ledger"
+  ],
+  "files": [
+    "deploy/deploy-linformaticien.sh",
+    "deploy/webhookd-target.yml",
+    "deploy/README.md",
+    "TODO.md",
+    "health-ledger/services.yaml"
+  ],
+  "planPath": "",
+  "contentHash": "6c616a6eb52cfbf2b31e4cb10df2685ff1d1cfd7da841ef714a605951f2604df",
+  "git": {
+    "repo": "linformaticien",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/linformaticien",
+    "branch": "main",
+    "head": "1a0d483",
+    "hasChanges": false
+  }
+}
