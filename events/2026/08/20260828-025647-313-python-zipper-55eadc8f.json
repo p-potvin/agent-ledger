@@ -1,0 +1,52 @@
+{
+  "id": "20260828-025647-313-python-zipper-55eadc8f",
+  "createdAt": "2026-08-28T06:56:47.3139881Z",
+  "createdAtLocal": "2026-08-28 02:56",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: feat/sidebar-rebuild\r\nTools used (this reply): Bash, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-28 02:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Four fixes on feat/sidebar-rebuild. (1) RESCAN WIPED THE SELECTION - runScan unconditionally replaced selected with a fresh score-based pre-selection, so one click destroyed a careful manual selection. Now pre-selects only on the first scan of a page; a re-scan keeps the existing selection narrowed to URLs still present in the new results. (2) EXTENSIONLESS FILES - added extForCandidate/suggestedName in common/harvest.ts. Trust order: a real extension in the URL, then Content-Type via a MIME map, then the classified kind, then a size heuristic where a >=3MB unlabelled blob defaults to mp4 rather than jpg. Files were previously landing on disk with no extension at all, unopenable without a rename. Also sanitises Windows-illegal characters including backslash. Wired into the browser download filename and both grid and list labels. 13 assertions. (3) MISSING CAROUSEL MEDIA - two real bugs in media_log. It called \u0007wait ext.tabs.get() on EVERY media response, one async round trip per image on pages firing hundreds, and dropped the candidate entirely whenever that raced a navigation or failed; replaced with a tabUrls cache seeded from the main_frame navigation hook, falling back to documentUrl rather than discarding. More seriously it applied SCORE.FLOOR at ingest, which is permanent loss - a network sighting has no dimensions and no repeat count so its score is the least informed it will ever be, and any carousel image whose URL contained e.g. 'cover' or '/users/' was being discarded before the DOM pass could ever contribute dimensions. Ingest now stores unconditionally; the floor moved to read time, and getMediaLogForPage passes includeWeak so",
+  "commands": [
+    "npm run typecheck",
+    "npm run build:verify",
+    "npm run lint",
+    "node _check.cjs"
+  ],
+  "files": [
+    "extension/src/background/media_log.ts",
+    "extension/src/common/harvest.ts",
+    "extension/src/sidebar/capture.tsx",
+    "extension/src/background/index.ts"
+  ],
+  "planPath": "",
+  "contentHash": "55eadc8fd7c24d54b7252426e7c37c3c03a8abc2b6a3e44daed0cf6d149cbc1e",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}

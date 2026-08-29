@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260828-184024-400-colonel-kfc-7ddb1c08",
+    "createdAt":  "2026-08-28T22:40:24.4001944Z",
+    "createdAtLocal":  "2026-08-28 18:40",
+    "timezone":  "Eastern Standard Time",
+    "project":  "ColONEL-KFC",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 2.5 Pro\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-28 18:40 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 2.5 Pro",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC",
+    "summary":  "Validated live real-conditions proof for smart candidate picker and false positive resolution on zoemitchell gallery",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "7ddb1c08e851e9cbc07b601ec8712499ee68550eecca9efd44565dc85b858abe",
+    "git":  {
+                "repo":  "ColONEL-KFC",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/ColONEL-KFC",
+                "branch":  "main",
+                "head":  "0a5efa4",
+                "hasChanges":  true
+            }
+}

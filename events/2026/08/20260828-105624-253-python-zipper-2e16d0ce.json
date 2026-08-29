@@ -1,0 +1,50 @@
+{
+  "id": "20260828-105624-253-python-zipper-2e16d0ce",
+  "createdAt": "2026-08-28T14:56:24.2539604Z",
+  "createdAtLocal": "2026-08-28 10:56",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: feat/sidebar-rebuild\r\nTools used (this reply): Bash, Write, Artifact, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-28 10:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Artifact",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Wrote a harvester tuning handoff artifact for a future browser-testing session. Documents the complete current scoring rule set with exact weights read from src/common/scoring.ts (kind bases, area and byte tiers, quality/derivative/furniture/avatar/banner regexes, aspect-ratio and repetition penalties, DOM-context and origin bonuses, FLOOR 40 / INTERESTING 200). Key structural point made up front: three distinct failure modes exist and only two are scoring problems - a good file ranked low or junk ranked high are weight issues, but a good file MISSING ENTIRELY is a harvest problem needing different files, and it is the one most often misdiagnosed as bad ranking. FLAGGED A LIVE BUG to fix before any tuning: content/harvest.ts still drops below-FLOOR candidates at lines 276 and 287 before the background merges DOM with the network log - the same premature-discard bug already fixed in media_log.ts. A DOM candidate has no bytes yet so it is judged at its least-informed moment and lost permanently; the floor should apply once, after the merge, in harvest_store.mergeAll. Catalogued good-candidate signals in three tiers: currently used, available on MediaCandidate but unused (mime beyond classification, first-party vs third-party host, frameId, alt-text presence, common photo aspect ratios), and needing new plumbing (sibling/path-prefix clustering as the highest-value missing signal, size-cluster outliers, viewport geometry, and the already-deployed but unwired site_profile learning). Argued the single highest-leverage change is percentile-based scoring relative to the page rather than absolute thresholds, since fixed byte tiers discriminate nothing on a page where everything is the same magnitude. Listed six specific predicted defects for confirmation, notably that '/users/' inside AVATAR_RE",
+  "commands": [
+    "read src/common/scoring.ts",
+    "grep SCORE.FLOOR src/content/harvest.ts"
+  ],
+  "files": [
+    "extension/src/common/scoring.ts",
+    "extension/src/content/harvest.ts",
+    "extension/src/common/harvest.ts"
+  ],
+  "planPath": "",
+  "contentHash": "2e16d0cee022860aeccae2408f8fc982958dbe324c515bd83338ea32f367767b",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}

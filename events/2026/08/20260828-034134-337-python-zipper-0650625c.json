@@ -1,0 +1,52 @@
+{
+  "id": "20260828-034134-337-python-zipper-0650625c",
+  "createdAt": "2026-08-28T07:41:34.3377246Z",
+  "createdAtLocal": "2026-08-28 03:41",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: feat/sidebar-rebuild\r\nTools used (this reply): Bash, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-28 03:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Panel fully retired and container picker ported, on feat/sidebar-rebuild. New src/content/picker.ts: sidebar-initiated crosshair mode with a live overlay showing the derived selector and its current match count, Escape or right-click to cancel, all listeners in capture phase so page handlers cannot swallow the click. optimalSelector ported from the panel largely intact (stable id, then meaningful classes narrowed to a container-sized match, then test or semantic attributes, then a parent chain) since that ordering reflects real wear on real sites; overlay rewritten in vaultsqware colours with CSS.escape applied throughout. harvestDom now takes a scopeSelector and every pass (direct elements, CSS backgrounds, carousel) runs against that root, falling back to the whole document on an invalid or unmatched selector rather than silently returning nothing. Scope threaded through both harvest run modes. Sidebar gained a scope row: Pick button, the selector as a chip with match count, and Clear. THEN DELETED src/panel (20 files, 209K), src/shim, and src/content/vendors.ts, after confirming nothing outside src/panel imported any of it. Dropped the now-dead zip.js, file-saver and types-file-saver dependencies; the extension runtime deps are now just preact and preact-signals. Build clean, tsc clean, web-ext 0 errors. Also surveyed vaultwares-api for the upcoming API and DB work: FastAPI at api/app.py with 16 routers, auth via require_auth in api/auth, Postgres reached with asyncpg (pool pattern in app/routers/promking/db.py), Prisma schema is prisma-client-js only so not used from Python. Critically, api/routes_jobs.py ALREADY implements the worker pattern proposed earlier - a jobs claim endpoint, a job fetch endpoint, and a job completion endpoint - though it persists jobs",
+  "commands": [
+    "npm run typecheck",
+    "npm run build:verify",
+    "npm run lint",
+    "git rm -r extension/src/panel extension/src/shim"
+  ],
+  "files": [
+    "extension/src/content/picker.ts",
+    "extension/src/content/harvest.ts",
+    "extension/src/sidebar/capture.tsx",
+    "extension/package.json"
+  ],
+  "planPath": "",
+  "contentHash": "0650625cc77c6a513872a118ae4a2e7ccad432c90e8ea0e1fbbafdc6e354451d",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}

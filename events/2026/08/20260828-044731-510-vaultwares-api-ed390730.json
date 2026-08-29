@@ -1,0 +1,52 @@
+{
+  "id": "20260828-044731-510-vaultwares-api-ed390730",
+  "createdAt": "2026-08-28T08:47:31.5105378Z",
+  "createdAtLocal": "2026-08-28 04:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\dataset_builder  Branch: feat/sidebar-rebuild\r\nTools used (this reply): Bash, Write, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-28 04:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\dataset_builder",
+  "summary": "Added the zipper router and Postgres schema to vaultwares-api (uncommitted, local checkout). Single source of truth in Postgres per the user's call - everything goes through the API, no split between filesystem and DB for new state; the existing faceswap routes_jobs.py filesystem-JSON is deliberately left alone. New migrations/zipper/001_zipper.sql creates a zipper schema with six tables: jobs (claim-based queue with claimed_by/claimed_at/heartbeat_at so a dead worker's job can be reaped rather than stranded), history (one row per file taken, unique on domain+url_key so a re-grab updates instead of duplicating, which makes 'already downloaded' a single indexed lookup and doubles as the accepted/rejected training signal for profiles), site_profile (learned patterns, upgrades, defaults, plus confidence/last_full_scan/last_full_count staleness fields because a learned fast path fails silently when a site changes markup), quota and quota_limit (checked before dispatch), and rule (folder/name templates replacing the hardcoded prefix). Trigger-maintained updated_at. New app/routers/zipper/db.py follows the telemetry convention exactly - asyncpg pool, jsonb codecs registered so JSONB decodes to native dict/list, schema applied idempotently on first pool use so there is no separate migration step in the deploy path. New app/routers/zipper/routes.py exposes 16 endpoints under /api/zipper covering jobs CRUD, worker claim, progress, history record/lookup, insights aggregates, profile get/patch/delete, and quota get/check/spend. The claim endpoint uses UPDATE ... WHERE id IN (SELECT ... FOR UPDATE SKIP LOCKED) so concurrent workers take different rows, and reclaims stale claims in the same statement. Registered in api/app.py behind the same try/except warn pattern as the other optional routers. Fixed three schema-qualified column references that are invalid in ON CONFLICT DO UPDATE",
+  "commands": [
+    "python -c ast.parse checks",
+    "python _zipper_smoke.py"
+  ],
+  "files": [
+    "vaultwares-api/migrations/zipper/001_zipper.sql",
+    "vaultwares-api/app/routers/zipper/db.py",
+    "vaultwares-api/app/routers/zipper/routes.py",
+    "vaultwares-api/api/app.py",
+    "python-zipper/dataset_builder/server.py"
+  ],
+  "planPath": "",
+  "contentHash": "ed390730b275c92d406207afb01c199e3c0f552cb99db5ddcb7f5cff8229fb3c",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}

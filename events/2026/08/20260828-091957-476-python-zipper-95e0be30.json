@@ -1,0 +1,52 @@
+{
+  "id": "20260828-091957-476-python-zipper-95e0be30",
+  "createdAt": "2026-08-28T13:19:57.4765556Z",
+  "createdAtLocal": "2026-08-28 09:19",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: feat/sidebar-rebuild\r\nTools used (this reply): Bash, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-28 09:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Worker is live and has replaced the local server; full end-to-end proven. Removed PROXY_URL from python-zipper .env - it pointed at the prom-king Tor rotator on 127.0.0.1:20000, which is a separate entity from VaultWares and was not running, so every media fetch would have failed; replaced the file with a documented no-proxy default noting Mullvad/Proton as the option if one is ever wanted, plus a warning that OnlyFans signs URLs with an AWS IpAddress condition tied to the browser's public IP, so proxying or running from another machine invalidates those signatures. Fixed two real service-context bugs: the key path used expanduser('~'), which under LocalSystem resolves to C:/WINDOWS/system32/config/systemprofile so the key could never be found - now derived from the module's own location so it works under any account; and stdout was block-buffered under NSSM leaving the log empty and the service looking dead, fixed with the same line_buffering reconfigure server.py uses. VERIFIED END TO END: the worker claimed both real jobs the user had queued from the browser, fetched 9 and 11 OnlyFans images at 6 parallel fetches, produced two zips (1.9MB/9 files and 2.1MB/11 files, contents inspected), and both jobs are recorded completed in Postgres with correct processed/total counts, archive names and claimed_by. Graceful shutdown also confirmed working. Pointed the extension's jobs:get, jobs:stop and jobs:delete at the API with the local server only as fallback, normalising the API's job array into the id-keyed map the UI renders - without this, retiring the old service would have blanked the Downloads tab. Added abortJob/updateJob to the API",
+  "commands": [
+    "Stop-Service 'Python Server Zipper'",
+    "Start-Service 'Python Zipper Worker'",
+    "python worker.py foreground run",
+    "npm run build:verify"
+  ],
+  "files": [
+    "python-zipper/.env",
+    "dataset_builder/worker.py",
+    "extension/src/background/index.ts",
+    "extension/src/common/vwapi.ts"
+  ],
+  "planPath": "",
+  "contentHash": "95e0be3095527997c4153af04af74ce79b274438b9eb7418ed315b6ccb8e0e3b",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}

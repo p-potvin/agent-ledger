@@ -1,0 +1,50 @@
+{
+  "id": "20260828-091005-585-python-zipper-baf86506",
+  "createdAt": "2026-08-28T13:10:05.5852279Z",
+  "createdAtLocal": "2026-08-28 09:10",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: feat/sidebar-rebuild\r\nTools used (this reply): Bash, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-28 09:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Verified the deployed zipper API end to end and found three issues. FIRST, a real worker bug: importing ds_pipeline pulls in scraper, which monkey-patches requests.Session.request to force every non-localhost call through the Tor SOCKS proxy - so the worker's own API calls were being routed through it. With the proxy down that is a connection error; far worse, with the proxy UP the request would reach the API from a Tor exit node and fail the trusted-IP check, giving a permanent 403 whose cause looks nothing like the symptom. Fixed by giving the worker a dedicated Session with trust_env=False and passing an explicit empty proxies mapping, which is the documented escape hatch from that patch. SECOND, verification results: 11 of 12 checks pass against the live API - health 200 (confirming the schema applied on first authenticated call, the thing that could not be tested locally), job create, claim via FOR UPDATE SKIP LOCKED, jsonb decoding to native dicts, dynamic-SET progress update and persistence, quota read, profile upsert with scan_count increment, and cleanup. The single failure was the test's own assumption, not a defect: claim correctly returned the OLDEST queued job, which turned out to be a real 9-link OnlyFans batch the user had submitted from the browser - proving the extension does reach the API, contrary to the user's report that they could not confirm it. My script left that job in 'claimed' state under claimed_by=verify-script; released it back to queued immediately (it would also have self-healed after the 900s stale window). Two real user",
+  "commands": [
+    "python end-to-end verification against api.vaultwares.ca",
+    "npm run typecheck",
+    "npm run build:verify"
+  ],
+  "files": [
+    "dataset_builder/worker.py",
+    "extension/src/sidebar/capture.tsx",
+    "extension/src/common/types.ts"
+  ],
+  "planPath": "",
+  "contentHash": "baf86506b906a6b5b1991aa0aceda3cc82886ef91b80d61e7a526b1fbef9b5d8",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}

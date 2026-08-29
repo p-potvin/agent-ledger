@@ -3,7 +3,563 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-08-28 01:03 - python-zipper (formerly python-scripts)</strong> <code>code-change</code> - Zip speed, smooth scrolling, and Scroll button demotion, on feat/sidebar-rebuild. (1) ZIP WAS VERY SLOW - download_and_zip_images in ds_helpers.py fetched images one at a time i...</summary>
+<summary><strong>2026-08-28 19:12 - python-zipper (formerly python-scripts)</strong> <code>code-change</code> - Migrated the extension off the local python server onto vaultwares-api, and made storage multi-host. API: added zipper.worker table plus ALTER for zipper.jobs.rclone_remotes in ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper\extension  Branch: feat/sidebar-rebuild
+  Tools used (this reply): Bash, Write, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 19:12 (TZ: Eastern Standard Time)
+  ```
+- Summary: Migrated the extension off the local python server onto vaultwares-api, and made storage multi-host. API: added zipper.worker table plus ALTER for zipper.jobs.rclone_remotes in migrations/zipper/001_zipper.sql (applied idempotently by db.py on pool init); new routes POST /api/zipper/workers/heartbeat, GET /api/zipper/storage, PATCH /api/zipper/workers/{name}/rclone. Workers report storage inward on heartbeat (they may be asleep or behind NAT) and pick up desired rclone remote priority from the heartbeat response, so nothing dials into a worker. Worker: heartbeat every 60s via ds_storage.storage_report(), applies API-supplied rclone config only on real change, and now reports rclone_remotes on job completion. Extension: jobs list/stop/delete now go through VwApi.listJobs/abortJob/deleteJob; storage and rclone config through VwApi.storage/setWorkerRclone; removed the local /download fallback in harvest:send-server entirely (a job silently taking the old path landed outside the queue and looked like success). Downloads tab now renders one card per worker with age/stale labelling. Verified live API at https://api.vaultwares.ca is healthy (200, 3 jobs) and that /api/zipper/storage currently 404s, confirming the running process predates the change. REMAINING: live-stream probe/start/stop/delete still call localhost:5171 - that is the only reason the local server must keep running. API and worker both need a restart to pick this up.
+- Commands:
+  - `curl https://api.vaultwares.ca/api/zipper/health`
+  - `npm run typecheck`
+  - `npm run check`
+  - `npm run build:verify`
+  - `npm run lint`
+- Files:
+  - `vaultwares-api/migrations/zipper/001_zipper.sql`
+  - `vaultwares-api/app/routers/zipper/routes.py`
+  - `dataset_builder/worker.py`
+  - `extension/src/common/vwapi.ts`
+  - `extension/src/background/index.ts`
+  - `extension/src/sidebar/downloads.tsx`
+- Git: repo=python-zipper, branch=feat/sidebar-rebuild, head=9e2c0c8
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 18:40 - ColONEL-KFC</strong> <code>verification</code> - Validated live real-conditions proof for smart candidate picker and false positive resolution on zoemitchell gallery</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 18:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Validated live real-conditions proof for smart candidate picker and false positive resolution on zoemitchell gallery
+- Git: repo=ColONEL-KFC, branch=main, head=0a5efa4
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 18:39 - ColONEL-KFC</strong> <code>code-change</code> - Implemented smart candidate exemplar selection (smart_picker.py) with density/medoid consensus ranking, updated default ArcFace threshold to 0.50, and fixed false positives in c...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 18:39 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented smart candidate exemplar selection (smart_picker.py) with density/medoid consensus ranking, updated default ArcFace threshold to 0.50, and fixed false positives in clean-face-folder
+- Git: repo=ColONEL-KFC, branch=main, head=0a5efa4
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 18:35 - python-zipper</strong> <code>code-change</code> - Seven-part extension/server feature build. PhotoSwipe: new MAIN-world pagehook (manifest world:MAIN content script) reads pswp.options.dataSource since page globals are invisibl...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: feat/sidebar-rebuild
+  Tools used (this reply): Bash, Write, Edit, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 18:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Seven-part extension/server feature build. PhotoSwipe: new MAIN-world pagehook (manifest world:MAIN content script) reads pswp.options.dataSource since page globals are invisible to isolated content scripts; detection banner in sidebar, click-to-open only on deep runs, gallery thumbnails dropped as declared derivatives. Deep scan settle raised 3x500ms to 6x800ms, maxMs 90s to 180s, DEEP_TIMEOUT 150s to 240s. Highlighting restyled to 2px dashes inset with dark contrast ring, moved from per-scan toggle to global setting; new common/settings.ts backed by storage.local with onChanged live sync. Restored injected hover download button (single repositioned button) with shared eligible.ts rules and hard <22px rejection. Client-side ZIP writer (STORE+CRC32) so every download path archives when >1 file, no server needed. Live scanning via MutationObserver armed only by isTrusted events. Server: new ds_storage.py with /api/storage and /api/rclone/config (GET+POST), disk/staged/per-remote rclone about with 60s cache, persisted remote priority; handoff_to_rclone now returns which remote took the file; downloads tab shows destination instead of non-functional reveal-in-explorer. Fixed pre-existing bug: harvest_store finish() deleted the collector before resolve, so every snapshot reported frames:0. Added checks/zip.check.ts (16 checks). 37/37 checks pass, typecheck clean, web-ext lint 0 errors.
+- Commands:
+  - `npm run typecheck`
+  - `npm run check`
+  - `npm run build:verify`
+  - `npm run lint`
+- Files:
+  - `extension/src/pagehook/index.ts`
+  - `extension/src/content/pswp.ts`
+  - `extension/src/content/eligible.ts`
+  - `extension/src/content/inject_button.ts`
+  - `extension/src/content/live_scan.ts`
+  - `extension/src/common/settings.ts`
+  - `extension/src/background/zip.ts`
+  - `extension/src/background/zip_download.ts`
+  - `dataset_builder/ds_storage.py`
+  - `extension/checks/zip.check.ts`
+- Git: repo=python-zipper, branch=feat/sidebar-rebuild, head=9e2c0c8
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 15:45 - ColONEL-KFC</strong> <code>verification</code> - Proved real-condition state persistence and multi-vector discrimination for ArcFace SQLite database</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 15:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Proved real-condition state persistence and multi-vector discrimination for ArcFace SQLite database
+- Git: repo=ColONEL-KFC, branch=main, head=0a5efa4
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 15:44 - ColONEL-KFC</strong> <code>code-change</code> - Dropped all centroid/JSON vectors in favor of pure ArcFace multi-vector embeddings in SQLite (gallery.db) for first-pass inference and future tasks</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 15:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Dropped all centroid/JSON vectors in favor of pure ArcFace multi-vector embeddings in SQLite (gallery.db) for first-pass inference and future tasks
+- Git: repo=ColONEL-KFC, branch=main, head=0a5efa4
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 15:30 - ColONEL-KFC</strong> <code>code-change</code> - Added offline multi-vector re-indexing pipeline (reindex-gallery) and verified full end-to-end V2 recognition architecture</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 15:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added offline multi-vector re-indexing pipeline (reindex-gallery) and verified full end-to-end V2 recognition architecture
+- Git: repo=ColONEL-KFC, branch=main, head=0a5efa4
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 15:29 - ColONEL-KFC</strong> <code>verification</code> - Validated real-condition proof for SQLite multi-vector persistence and Max-Sim matching on actual gallery assets</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 15:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Validated real-condition proof for SQLite multi-vector persistence and Max-Sim matching on actual gallery assets
+- Git: repo=ColONEL-KFC, branch=main, head=0a5efa4
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 15:28 - ColONEL-KFC</strong> <code>code-change</code> - Migrated ColONEL-KFC &amp; vault-commander to V2 Architecture: 5-point ArcFace landmark alignment, SQLite multi-vector database (gallery.db), safe -Sweep gating, manual confirmation...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 15:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: Migrated ColONEL-KFC & vault-commander to V2 Architecture: 5-point ArcFace landmark alignment, SQLite multi-vector database (gallery.db), safe -Sweep gating, manual confirmation for hard-assign, orphan process cleanup, and unsupervised new-model auto-clustering (#6)
+- Git: repo=ColONEL-KFC, branch=main, head=0a5efa4
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 12:28 - python-zipper</strong> <code>code-change</code> - Harvester tuning per operator answers: moved the score FLOOR out of the DOM pass and media log into harvest_store.mergeAll (candidates were being dropped at their least-informed...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper\extension  Branch: feat/sidebar-rebuild
+  Tools used (this reply): Bash, Write, Edit, Artifact, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 12:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: Harvester tuning per operator answers: moved the score FLOOR out of the DOM pass and media log into harvest_store.mergeAll (candidates were being dropped at their least-informed moment, before the network merge could supply bytes). Added src/common/page_rank.ts: page-relative percentile scoring with tie-midpoint ranks, largest-on-page and largest-video awards, path+container grid clustering, and defaultSelection() which separates pre-selection from ranking (now only the largest element and detected ensembles are pre-ticked). Removed /users/ from AVATAR_RE and bare 'cover' from BANNER_RE (confirmed content paths); avatar penalty kept blunt (avatars are never content). scoreCandidate now has explainCandidate returning a per-rule breakdown carried on MediaCandidate.reasons and shown per-row in the sidebar. Fixed pre-existing bug: final DOM rescore passed empty hints, erasing all DOM-context contributions. Added checks/ranking.check.ts fixture corpus, 21/21 passing, wired as npm run check.
+- Commands:
+  - `npm run typecheck`
+  - `npm run check`
+  - `npm run build:verify`
+- Files:
+  - `extension/src/common/page_rank.ts`
+  - `extension/src/common/scoring.ts`
+  - `extension/src/common/harvest.ts`
+  - `extension/src/content/harvest.ts`
+  - `extension/src/background/harvest_store.ts`
+  - `extension/src/background/media_log.ts`
+  - `extension/src/sidebar/capture.tsx`
+  - `extension/checks/ranking.check.ts`
+- Git: repo=python-zipper, branch=feat/sidebar-rebuild, head=9e2c0c8
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 10:56 - python-zipper</strong> <code>handoff</code> - Wrote a harvester tuning handoff artifact for a future browser-testing session. Documents the complete current scoring rule set with exact weights read from src/common/scoring.t...</summary>
+
+- Kind: handoff
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: ask (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper\extension  Branch: feat/sidebar-rebuild
+  Tools used (this reply): Bash, Write, Artifact, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 10:56 (TZ: Eastern Standard Time)
+  ```
+- Summary: Wrote a harvester tuning handoff artifact for a future browser-testing session. Documents the complete current scoring rule set with exact weights read from src/common/scoring.ts (kind bases, area and byte tiers, quality/derivative/furniture/avatar/banner regexes, aspect-ratio and repetition penalties, DOM-context and origin bonuses, FLOOR 40 / INTERESTING 200). Key structural point made up front: three distinct failure modes exist and only two are scoring problems - a good file ranked low or junk ranked high are weight issues, but a good file MISSING ENTIRELY is a harvest problem needing different files, and it is the one most often misdiagnosed as bad ranking. FLAGGED A LIVE BUG to fix before any tuning: content/harvest.ts still drops below-FLOOR candidates at lines 276 and 287 before the background merges DOM with the network log - the same premature-discard bug already fixed in media_log.ts. A DOM candidate has no bytes yet so it is judged at its least-informed moment and lost permanently; the floor should apply once, after the merge, in harvest_store.mergeAll. Catalogued good-candidate signals in three tiers: currently used, available on MediaCandidate but unused (mime beyond classification, first-party vs third-party host, frameId, alt-text presence, common photo aspect ratios), and needing new plumbing (sibling/path-prefix clustering as the highest-value missing signal, size-cluster outliers, viewport geometry, and the already-deployed but unwired site_profile learning). Argued the single highest-leverage change is percentile-based scoring relative to the page rather than absolute thresholds, since fixed byte tiers discriminate nothing on a page where everything is the same magnitude. Listed six specific predicted defects for confirmation, notably that '/users/' inside AVATAR_RE
+- Commands:
+  - `read src/common/scoring.ts`
+  - `grep SCORE.FLOOR src/content/harvest.ts`
+- Files:
+  - `extension/src/common/scoring.ts`
+  - `extension/src/content/harvest.ts`
+  - `extension/src/common/harvest.ts`
+- Git: repo=python-zipper, branch=feat/sidebar-rebuild, head=9e2c0c8
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 10:31 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>verification</code> - Validated 100% live state persistence and neural network inference across all 7 operations (#1-#6 + restore) on real GPU</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.7 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 10:31 (TZ: Eastern Standard Time)
+  ```
+- Summary: Validated 100% live state persistence and neural network inference across all 7 operations (#1-#6 + restore) on real GPU
+- Git: repo=agent-ledger, branch=main, head=42a9764b
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 10:27 - agent-ledger</strong> <code>code-change</code> - Implemented ColONEL-KFC Face Identity Pinning, Validation Lifecycle, and Operations Suite (#1 to #6) with vw CLI integration and E2E verification</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.7 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 10:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented ColONEL-KFC Face Identity Pinning, Validation Lifecycle, and Operations Suite (#1 to #6) with vw CLI integration and E2E verification
+- Git: repo=agent-ledger, branch=main, head=42a9764b
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 09:19 - python-zipper</strong> <code>verification</code> - Worker is live and has replaced the local server; full end-to-end proven. Removed PROXY_URL from python-zipper .env - it pointed at the prom-king Tor rotator on 127.0.0.1:20000,...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: ask (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper\extension  Branch: feat/sidebar-rebuild
+  Tools used (this reply): Bash, Edit, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 09:19 (TZ: Eastern Standard Time)
+  ```
+- Summary: Worker is live and has replaced the local server; full end-to-end proven. Removed PROXY_URL from python-zipper .env - it pointed at the prom-king Tor rotator on 127.0.0.1:20000, which is a separate entity from VaultWares and was not running, so every media fetch would have failed; replaced the file with a documented no-proxy default noting Mullvad/Proton as the option if one is ever wanted, plus a warning that OnlyFans signs URLs with an AWS IpAddress condition tied to the browser's public IP, so proxying or running from another machine invalidates those signatures. Fixed two real service-context bugs: the key path used expanduser('~'), which under LocalSystem resolves to C:/WINDOWS/system32/config/systemprofile so the key could never be found - now derived from the module's own location so it works under any account; and stdout was block-buffered under NSSM leaving the log empty and the service looking dead, fixed with the same line_buffering reconfigure server.py uses. VERIFIED END TO END: the worker claimed both real jobs the user had queued from the browser, fetched 9 and 11 OnlyFans images at 6 parallel fetches, produced two zips (1.9MB/9 files and 2.1MB/11 files, contents inspected), and both jobs are recorded completed in Postgres with correct processed/total counts, archive names and claimed_by. Graceful shutdown also confirmed working. Pointed the extension's jobs:get, jobs:stop and jobs:delete at the API with the local server only as fallback, normalising the API's job array into the id-keyed map the UI renders - without this, retiring the old service would have blanked the Downloads tab. Added abortJob/updateJob to the API
+- Commands:
+  - `Stop-Service 'Python Server Zipper'`
+  - `Start-Service 'Python Zipper Worker'`
+  - `python worker.py foreground run`
+  - `npm run build:verify`
+- Files:
+  - `python-zipper/.env`
+  - `dataset_builder/worker.py`
+  - `extension/src/background/index.ts`
+  - `extension/src/common/vwapi.ts`
+- Git: repo=python-zipper, branch=feat/sidebar-rebuild, head=9e2c0c8
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 09:10 - python-zipper</strong> <code>verification</code> - Verified the deployed zipper API end to end and found three issues. FIRST, a real worker bug: importing ds_pipeline pulls in scraper, which monkey-patches requests.Session.reque...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: ask (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper\extension  Branch: feat/sidebar-rebuild
+  Tools used (this reply): Bash, Edit, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 09:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified the deployed zipper API end to end and found three issues. FIRST, a real worker bug: importing ds_pipeline pulls in scraper, which monkey-patches requests.Session.request to force every non-localhost call through the Tor SOCKS proxy - so the worker's own API calls were being routed through it. With the proxy down that is a connection error; far worse, with the proxy UP the request would reach the API from a Tor exit node and fail the trusted-IP check, giving a permanent 403 whose cause looks nothing like the symptom. Fixed by giving the worker a dedicated Session with trust_env=False and passing an explicit empty proxies mapping, which is the documented escape hatch from that patch. SECOND, verification results: 11 of 12 checks pass against the live API - health 200 (confirming the schema applied on first authenticated call, the thing that could not be tested locally), job create, claim via FOR UPDATE SKIP LOCKED, jsonb decoding to native dicts, dynamic-SET progress update and persistence, quota read, profile upsert with scan_count increment, and cleanup. The single failure was the test's own assumption, not a defect: claim correctly returned the OLDEST queued job, which turned out to be a real 9-link OnlyFans batch the user had submitted from the browser - proving the extension does reach the API, contrary to the user's report that they could not confirm it. My script left that job in 'claimed' state under claimed_by=verify-script; released it back to queued immediately (it would also have self-healed after the 900s stale window). Two real user
+- Commands:
+  - `python end-to-end verification against api.vaultwares.ca`
+  - `npm run typecheck`
+  - `npm run build:verify`
+- Files:
+  - `dataset_builder/worker.py`
+  - `extension/src/sidebar/capture.tsx`
+  - `extension/src/common/types.ts`
+- Git: repo=python-zipper, branch=feat/sidebar-rebuild, head=9e2c0c8
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 05:40 - vaultwares-api (formerly vaultwares-pipelines, vaultwares-api + shared-tube, vaultwares-webhooks, vaultwares-api)</strong> <code>code-change</code> - DEPLOYED the zipper router live. Committed 31b9705 on main in vaultwares-api (785 insertions across api/app.py, app/routers/zipper/*, migrations/zipper/001_zipper.sql) and pushe...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: ask (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper\extension  Branch: feat/sidebar-rebuild
+  Tools used (this reply): Bash, Edit, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 05:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: DEPLOYED the zipper router live. Committed 31b9705 on main in vaultwares-api (785 insertions across api/app.py, app/routers/zipper/*, migrations/zipper/001_zipper.sql) and pushed to origin/main, which fires the signed webhook to greencloud where the runner deploys. VERIFIED the deploy landed by a single request to the health route: it returns 403, not 404 - the route exists and is auth-gated, which is exactly the expected state without a key. Could NOT validate the SQL against a live Postgres first: the local .env DB_URL points at localhost:5432 with nothing listening, and the Docker daemon is not running, so no throwaway instance was available. Residual risk is contained by design - the schema is additive, idempotent and confined to a new 'zipper' namespace, ensure_schema runs at request time, and the router is registered inside try/except, so a bad statement would produce 500s on zipper routes only rather than affecting the rest of the API. On the workstation, installed 'Python Zipper Worker' as an NSSM service (Manual, AppDirectory at the repo root, logs to worker_stdout/stderr.log) but deliberately did NOT start it and did NOT retire 'Python Server Zipper', despite the user authorising the replacement. Reason: no vwk_ API key exists yet - checked the .access folder and neither api-gateway-header.txt nor api_get_auth_bearer_token.txt is one - and the extension falls back to the local server on :5171 when the API call fails, so killing that server now would leave nothing working for the browser test the user is about to run. Worker now reads its key from VAULTWARES_API_KEY or, failing that, .access/vaultwares_api_key.txt, matching the RD_TOKEN_PATH
+- Commands:
+  - `git commit + git push origin main`
+  - `Invoke-WebRequest api.vaultwares.ca zipper health`
+  - `nssm install 'Python Zipper Worker'`
+- Files:
+  - `vaultwares-api/app/routers/zipper/routes.py`
+  - `vaultwares-api/migrations/zipper/001_zipper.sql`
+  - `python-zipper/dataset_builder/worker.py`
+- Git: repo=python-zipper, branch=feat/sidebar-rebuild, head=9e2c0c8
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 04:59 - python-zipper</strong> <code>code-change</code> - Worker flip and extension API client, on feat/sidebar-rebuild. Extracted the batch pipeline out of the HTTP handler into ds_pipeline.download_and_process - it was a method on Sc...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: ask (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: feat/sidebar-rebuild
+  Tools used (this reply): Bash, Write, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 04:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: Worker flip and extension API client, on feat/sidebar-rebuild. Extracted the batch pipeline out of the HTTP handler into ds_pipeline.download_and_process - it was a method on ScraperHandler only because that is where it grew, and the body never touched self. server.py now delegates to it so the legacy local route and the new worker run ONE pipeline rather than two that drift. Centralised DEST_DIR into a new ds_config.py (both the pipeline and the worker need it and neither should import the HTTP server for a path) along with a free_bytes helper. Caught and repaired my own extraction bug: the naive dedent swallowed ThreadedHTTPServer into ds_pipeline and stripped its indentation, removing it from server.py - restored and verified run_server still resolves it, and the live server on 5171 still answers health. New dataset_builder/worker.py: outbound claim loop against the API, nothing listens locally. Claims rather than being pushed to so the workstation can be off and jobs queue instead of failing; reports progress which doubles as the heartbeat that stops a long healthy job being reclaimed; refuses work below a configurable free-space floor (default 5GB) BEFORE dispatch, naming the actual number, since a full disk is what froze the VPS; exponential backoff to 5 min on 403 so a misconfigured worker does not hammer the API all night; SIGINT/SIGTERM finish the current job first. New extension src/common/vwapi.ts: typed client for all 16 zipper endpoints, key and base URL in extension storage, 403 explicitly explained as possibly 'not on the tailnet' rather than just a bad key. Background now submits
+- Commands:
+  - `npm run typecheck`
+  - `npm run build:verify`
+  - `npm run lint`
+  - `python -c import worker`
+- Files:
+  - `dataset_builder/ds_pipeline.py`
+  - `dataset_builder/ds_config.py`
+  - `dataset_builder/worker.py`
+  - `extension/src/common/vwapi.ts`
+  - `extension/src/sidebar/settings.tsx`
+  - `extension/src/background/index.ts`
+- Git: repo=python-zipper, branch=feat/sidebar-rebuild, head=9e2c0c8
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 04:47 - vaultwares-api</strong> <code>code-change</code> - Added the zipper router and Postgres schema to vaultwares-api (uncommitted, local checkout). Single source of truth in Postgres per the user&#39;s call - everything goes through the...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: ask (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper\dataset_builder  Branch: feat/sidebar-rebuild
+  Tools used (this reply): Bash, Write, Edit, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 04:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added the zipper router and Postgres schema to vaultwares-api (uncommitted, local checkout). Single source of truth in Postgres per the user's call - everything goes through the API, no split between filesystem and DB for new state; the existing faceswap routes_jobs.py filesystem-JSON is deliberately left alone. New migrations/zipper/001_zipper.sql creates a zipper schema with six tables: jobs (claim-based queue with claimed_by/claimed_at/heartbeat_at so a dead worker's job can be reaped rather than stranded), history (one row per file taken, unique on domain+url_key so a re-grab updates instead of duplicating, which makes 'already downloaded' a single indexed lookup and doubles as the accepted/rejected training signal for profiles), site_profile (learned patterns, upgrades, defaults, plus confidence/last_full_scan/last_full_count staleness fields because a learned fast path fails silently when a site changes markup), quota and quota_limit (checked before dispatch), and rule (folder/name templates replacing the hardcoded prefix). Trigger-maintained updated_at. New app/routers/zipper/db.py follows the telemetry convention exactly - asyncpg pool, jsonb codecs registered so JSONB decodes to native dict/list, schema applied idempotently on first pool use so there is no separate migration step in the deploy path. New app/routers/zipper/routes.py exposes 16 endpoints under /api/zipper covering jobs CRUD, worker claim, progress, history record/lookup, insights aggregates, profile get/patch/delete, and quota get/check/spend. The claim endpoint uses UPDATE ... WHERE id IN (SELECT ... FOR UPDATE SKIP LOCKED) so concurrent workers take different rows, and reclaims stale claims in the same statement. Registered in api/app.py behind the same try/except warn pattern as the other optional routers. Fixed three schema-qualified column references that are invalid in ON CONFLICT DO UPDATE
+- Commands:
+  - `python -c ast.parse checks`
+  - `python _zipper_smoke.py`
+- Files:
+  - `vaultwares-api/migrations/zipper/001_zipper.sql`
+  - `vaultwares-api/app/routers/zipper/db.py`
+  - `vaultwares-api/app/routers/zipper/routes.py`
+  - `vaultwares-api/api/app.py`
+  - `python-zipper/dataset_builder/server.py`
+- Git: repo=python-zipper, branch=feat/sidebar-rebuild, head=9e2c0c8
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 03:41 - python-zipper</strong> <code>code-change</code> - Panel fully retired and container picker ported, on feat/sidebar-rebuild. New src/content/picker.ts: sidebar-initiated crosshair mode with a live overlay showing the derived sel...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: ask (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: feat/sidebar-rebuild
+  Tools used (this reply): Bash, Write, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 03:41 (TZ: Eastern Standard Time)
+  ```
+- Summary: Panel fully retired and container picker ported, on feat/sidebar-rebuild. New src/content/picker.ts: sidebar-initiated crosshair mode with a live overlay showing the derived selector and its current match count, Escape or right-click to cancel, all listeners in capture phase so page handlers cannot swallow the click. optimalSelector ported from the panel largely intact (stable id, then meaningful classes narrowed to a container-sized match, then test or semantic attributes, then a parent chain) since that ordering reflects real wear on real sites; overlay rewritten in vaultsqware colours with CSS.escape applied throughout. harvestDom now takes a scopeSelector and every pass (direct elements, CSS backgrounds, carousel) runs against that root, falling back to the whole document on an invalid or unmatched selector rather than silently returning nothing. Scope threaded through both harvest run modes. Sidebar gained a scope row: Pick button, the selector as a chip with match count, and Clear. THEN DELETED src/panel (20 files, 209K), src/shim, and src/content/vendors.ts, after confirming nothing outside src/panel imported any of it. Dropped the now-dead zip.js, file-saver and types-file-saver dependencies; the extension runtime deps are now just preact and preact-signals. Build clean, tsc clean, web-ext 0 errors. Also surveyed vaultwares-api for the upcoming API and DB work: FastAPI at api/app.py with 16 routers, auth via require_auth in api/auth, Postgres reached with asyncpg (pool pattern in app/routers/promking/db.py), Prisma schema is prisma-client-js only so not used from Python. Critically, api/routes_jobs.py ALREADY implements the worker pattern proposed earlier - a jobs claim endpoint, a job fetch endpoint, and a job completion endpoint - though it persists jobs
+- Commands:
+  - `npm run typecheck`
+  - `npm run build:verify`
+  - `npm run lint`
+  - `git rm -r extension/src/panel extension/src/shim`
+- Files:
+  - `extension/src/content/picker.ts`
+  - `extension/src/content/harvest.ts`
+  - `extension/src/sidebar/capture.tsx`
+  - `extension/package.json`
+- Git: repo=python-zipper, branch=feat/sidebar-rebuild, head=9e2c0c8
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 02:56 - python-zipper</strong> <code>code-change</code> - Four fixes on feat/sidebar-rebuild. (1) RESCAN WIPED THE SELECTION - runScan unconditionally replaced selected with a fresh score-based pre-selection, so one click destroyed a c...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: ask (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper\extension  Branch: feat/sidebar-rebuild
+  Tools used (this reply): Bash, Edit, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-08-28 02:56 (TZ: Eastern Standard Time)
+  ```
+- Summary: Four fixes on feat/sidebar-rebuild. (1) RESCAN WIPED THE SELECTION - runScan unconditionally replaced selected with a fresh score-based pre-selection, so one click destroyed a careful manual selection. Now pre-selects only on the first scan of a page; a re-scan keeps the existing selection narrowed to URLs still present in the new results. (2) EXTENSIONLESS FILES - added extForCandidate/suggestedName in common/harvest.ts. Trust order: a real extension in the URL, then Content-Type via a MIME map, then the classified kind, then a size heuristic where a >=3MB unlabelled blob defaults to mp4 rather than jpg. Files were previously landing on disk with no extension at all, unopenable without a rename. Also sanitises Windows-illegal characters including backslash. Wired into the browser download filename and both grid and list labels. 13 assertions. (3) MISSING CAROUSEL MEDIA - two real bugs in media_log. It called wait ext.tabs.get() on EVERY media response, one async round trip per image on pages firing hundreds, and dropped the candidate entirely whenever that raced a navigation or failed; replaced with a tabUrls cache seeded from the main_frame navigation hook, falling back to documentUrl rather than discarding. More seriously it applied SCORE.FLOOR at ingest, which is permanent loss - a network sighting has no dimensions and no repeat count so its score is the least informed it will ever be, and any carousel image whose URL contained e.g. 'cover' or '/users/' was being discarded before the DOM pass could ever contribute dimensions. Ingest now stores unconditionally; the floor moved to read time, and getMediaLogForPage passes includeWeak so
+- Commands:
+  - `npm run typecheck`
+  - `npm run build:verify`
+  - `npm run lint`
+  - `node _check.cjs`
+- Files:
+  - `extension/src/background/media_log.ts`
+  - `extension/src/common/harvest.ts`
+  - `extension/src/sidebar/capture.tsx`
+  - `extension/src/background/index.ts`
+- Git: repo=python-zipper, branch=feat/sidebar-rebuild, head=9e2c0c8
+
+</details>
+
+<details>
+<summary><strong>2026-08-28 01:03 - python-zipper</strong> <code>code-change</code> - Zip speed, smooth scrolling, and Scroll button demotion, on feat/sidebar-rebuild. (1) ZIP WAS VERY SLOW - download_and_zip_images in ds_helpers.py fetched images one at a time i...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -36,7 +592,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-08-28 00:15 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>verification</code> - Validated E2E real-condition proofs: on-demand Nemotron streaming live subtitles, state and health verification, disk sidecar generation, and port shutdown</summary>
+<summary><strong>2026-08-28 00:15 - agent-ledger</strong> <code>verification</code> - Validated E2E real-condition proofs: on-demand Nemotron streaming live subtitles, state and health verification, disk sidecar generation, and port shutdown</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -6238,7 +6794,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-08-17 16:35 - vaultwares-api (formerly vaultwares-pipelines, vaultwares-api + shared-tube, vaultwares-webhooks, vaultwares-api)</strong> <code>deployment</code> - Shipped the Vault TV metadata gateway end to end. Pushed vaultwares-api main twice (v0.2.17 adds api/routes_tv.py with allow-listed /tv/tmdb and /tv/trailer; v0.2.18 fixes a rea...</summary>
+<summary><strong>2026-08-17 16:35 - vaultwares-api</strong> <code>deployment</code> - Shipped the Vault TV metadata gateway end to end. Pushed vaultwares-api main twice (v0.2.17 adds api/routes_tv.py with allow-listed /tv/tmdb and /tv/trailer; v0.2.18 fixes a rea...</summary>
 
 - Kind: deployment
 - Actor: AI Agent
@@ -9062,196 +9618,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Summary: Fixed Prom-King Full QA Tor Run scheduled task crash & console popup. Updated run-full-qa-tor.ps1 with non-destructive SOCKS port checking and re-registered task with conhost.exe --headless. Verified test run completed with exit code 0.
 - Git: repo=qa-automation, branch=main, head=3e7fb74
-
-</details>
-
-<details>
-<summary><strong>2026-08-13 03:06 - vaultwares-api</strong> <code>code-change</code> - Committed and pushed all recent changes to main across vaultwares-api (2744b22), health-ledger (6f9c3ca), and vault-commander (2354dc8).</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.6 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-13 03:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Committed and pushed all recent changes to main across vaultwares-api (2744b22), health-ledger (6f9c3ca), and vault-commander (2354dc8).
-- Git: repo=vaultwares-api, branch=main, head=2744b22
-
-</details>
-
-<details>
-<summary><strong>2026-08-13 03:02 - vaultwares-api</strong> <code>code-change</code> - Added root GET / and /healthz 200 OK ping endpoints to api/app.py in vaultwares-api; deployed to vps-ovhcloud and verified https://api.vaultwares.ca/ returns HTTP 200 OK to reso...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.6 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-13 03:02 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added root GET / and /healthz 200 OK ping endpoints to api/app.py in vaultwares-api; deployed to vps-ovhcloud and verified https://api.vaultwares.ca/ returns HTTP 200 OK to resolve Uptime Kuma monitoring alert.
-- Git: repo=vaultwares-api, branch=main, head=2df3df2
-
-</details>
-
-<details>
-<summary><strong>2026-08-12 21:52 - vault-explorer</strong> <code>general</code> - Analyzed alarm-state.json alert for token:gateway-shared-secret:validity and documented root cause, delivery failures, and rotation runbook steps</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.6 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-12 21:52 (TZ: Eastern Standard Time)
-  ```
-- Summary: Analyzed alarm-state.json alert for token:gateway-shared-secret:validity and documented root cause, delivery failures, and rotation runbook steps
-- Git: repo=vault-explorer, branch=main, head=b5acb3f
-
-</details>
-
-<details>
-<summary><strong>2026-08-12 13:59 - linformaticien</strong> <code>general</code> - Lecture complete du depot linformaticien (README, AGENTS, ROADMAP, TODO, CHANGES, deploy/README, src/content/site.ts, App.tsx, index.html, robots.txt) et recommandation sur la p...</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: medium
-  Mode: agent
-  Permissions: ask (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\linformaticien  Branch: main
-  Tools used (this reply): Read, Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-08-12 13:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Lecture complete du depot linformaticien (README, AGENTS, ROADMAP, TODO, CHANGES, deploy/README, src/content/site.ts, App.tsx, index.html, robots.txt) et recommandation sur la prochaine etape: auto-heberger les polices, sitemap.xml, JSON-LD LocalBusiness alimente par site.ts, puis passage accessibilite. Aucune modification de fichier.
-- Files:
-  - `TODO.md`
-  - `README.md`
-  - `deploy/README.md`
-  - `src/content/site.ts`
-- Git: repo=linformaticien, branch=main, head=ded1b3c
-
-</details>
-
-<details>
-<summary><strong>2026-08-12 13:55 - vaultwares-studio / vault-commander</strong> <code>code-change</code> - Recovered vaultwares-studio: quarantined the corrupt pack (overwritten by a size-based dedupe), swapped in objects from a fresh clone while preserving config, remotes and .git/m...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): PowerShell, Read, Write, Edit, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-12 13:55 (TZ: Eastern Standard Time)
-  ```
-- Summary: Recovered vaultwares-studio: quarantined the corrupt pack (overwritten by a size-based dedupe), swapped in objects from a fresh clone while preserving config, remotes and .git/modules submodules, then verified fsck clean with the worktree byte-identical to before. Rescued commit fe6d5ca (v1.1.0) - its commit object survived as a loose object and its tree resolved once combined with origin's pack. Lost: refs/stash (all 3 entries) and branch ssot/standardize-agents-md, both deleted on origin and unrecoverable. Reclaimed 16.1 GB of stale NeMo temp extractions; C: free went 52.7 -> 64.4 GB. Created private repo p-potvin/vault-commander merging vw-gui (history preserved under gui/ via filter-repo subdirectory filter) and vw-cli (cli/), with main.js resolving the CLI via VW_CLI_ROOT then ../cli then the legacy Desktop path. SECURITY: removed a live Google App Password plus two personal emails from github_automation_script.ps1 and a Postgres password, JWT secret and Prisma API key from deploy_vaultwares_dispatch.ps1 before the first commit; both must be rotated. Full-history blob scan confirms no credentials in any commit. BENCHMARKS.md gitignored.
-- Commands:
-  - `git filter-repo --to-subdirectory-filter gui`
-  - `gh repo create vault-commander --private`
-  - `git fsck`
-- Files:
-  - `vault-commander/.gitignore`
-  - `vault-commander/gui/main.js`
-  - `vault-commander/cli/github_automation_script.ps1`
-  - `vault-commander/cli/deploy_vaultwares_dispatch.ps1`
-- Git: repo=vault-explorer, branch=main, head=b5acb3f
-
-</details>
-
-<details>
-<summary><strong>2026-08-12 05:08 - vault-explorer</strong> <code>general</code> - Completely removed Tailscale Funnel configuration from vps-ovhcloud. Tailscale serve/funnel configs reset and verified empty. api.vaultwares.ca confirmed healthy.</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.6 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-12 05:08 (TZ: Eastern Standard Time)
-  ```
-- Summary: Completely removed Tailscale Funnel configuration from vps-ovhcloud. Tailscale serve/funnel configs reset and verified empty. api.vaultwares.ca confirmed healthy.
-- Git: repo=vault-explorer, branch=main, head=b5acb3f
-
-</details>
-
-<details>
-<summary><strong>2026-08-12 05:07 - vault-explorer</strong> <code>verification</code> - Investigated and fixed API unreachability issue: turned off Tailscale Funnel on vps-ovhcloud port 443 which was intercepting tailnet HTTPS requests to api.vaultwares.ca. API is ...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.6 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-12 05:07 (TZ: Eastern Standard Time)
-  ```
-- Summary: Investigated and fixed API unreachability issue: turned off Tailscale Funnel on vps-ovhcloud port 443 which was intercepting tailnet HTTPS requests to api.vaultwares.ca. API is now 100% online and responding 200 OK.
-- Git: repo=vault-explorer, branch=main, head=b5acb3f
-
-</details>
-
-<details>
-<summary><strong>2026-08-12 04:24 - vault-explorer</strong> <code>code-change</code> - Started Tailscale Funnel for MCP server on port 9021 (vps-ovhcloud.tail1764b8.ts.net), and updated health-ledger email alert template formatting in alarm-joker.mjs with standard...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.6 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-12 04:24 (TZ: Eastern Standard Time)
-  ```
-- Summary: Started Tailscale Funnel for MCP server on port 9021 (vps-ovhcloud.tail1764b8.ts.net), and updated health-ledger email alert template formatting in alarm-joker.mjs with standard Location (OVH Cloud VPS, Greencloud VPS, Clopeux-Desktop), human-readable event Time, machine Paths, Verification commands, and Actionable restart commands.
-- Git: repo=vault-explorer, branch=main, head=b5acb3f
 
 </details>
 

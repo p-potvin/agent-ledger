@@ -1,0 +1,57 @@
+{
+  "id": "20260828-122858-049-python-zipper-73525205",
+  "createdAt": "2026-08-28T16:28:58.0494364Z",
+  "createdAtLocal": "2026-08-28 12:28",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: feat/sidebar-rebuild\r\nTools used (this reply): Bash, Write, Edit, Artifact, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-28 12:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "Artifact",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Harvester tuning per operator answers: moved the score FLOOR out of the DOM pass and media log into harvest_store.mergeAll (candidates were being dropped at their least-informed moment, before the network merge could supply bytes). Added src/common/page_rank.ts: page-relative percentile scoring with tie-midpoint ranks, largest-on-page and largest-video awards, path+container grid clustering, and defaultSelection() which separates pre-selection from ranking (now only the largest element and detected ensembles are pre-ticked). Removed /users/ from AVATAR_RE and bare 'cover' from BANNER_RE (confirmed content paths); avatar penalty kept blunt (avatars are never content). scoreCandidate now has explainCandidate returning a per-rule breakdown carried on MediaCandidate.reasons and shown per-row in the sidebar. Fixed pre-existing bug: final DOM rescore passed empty hints, erasing all DOM-context contributions. Added checks/ranking.check.ts fixture corpus, 21/21 passing, wired as npm run check.",
+  "commands": [
+    "npm run typecheck",
+    "npm run check",
+    "npm run build:verify"
+  ],
+  "files": [
+    "extension/src/common/page_rank.ts",
+    "extension/src/common/scoring.ts",
+    "extension/src/common/harvest.ts",
+    "extension/src/content/harvest.ts",
+    "extension/src/background/harvest_store.ts",
+    "extension/src/background/media_log.ts",
+    "extension/src/sidebar/capture.tsx",
+    "extension/checks/ranking.check.ts"
+  ],
+  "planPath": "",
+  "contentHash": "735252058953bd8adfa5a048c9873af93f58856e040eca77438d85d2b31e660b",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}

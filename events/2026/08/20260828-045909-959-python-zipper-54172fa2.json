@@ -1,0 +1,54 @@
+{
+  "id": "20260828-045909-959-python-zipper-54172fa2",
+  "createdAt": "2026-08-28T08:59:09.9598061Z",
+  "createdAtLocal": "2026-08-28 04:59",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: feat/sidebar-rebuild\r\nTools used (this reply): Bash, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-28 04:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Worker flip and extension API client, on feat/sidebar-rebuild. Extracted the batch pipeline out of the HTTP handler into ds_pipeline.download_and_process - it was a method on ScraperHandler only because that is where it grew, and the body never touched self. server.py now delegates to it so the legacy local route and the new worker run ONE pipeline rather than two that drift. Centralised DEST_DIR into a new ds_config.py (both the pipeline and the worker need it and neither should import the HTTP server for a path) along with a free_bytes helper. Caught and repaired my own extraction bug: the naive dedent swallowed ThreadedHTTPServer into ds_pipeline and stripped its indentation, removing it from server.py - restored and verified run_server still resolves it, and the live server on 5171 still answers health. New dataset_builder/worker.py: outbound claim loop against the API, nothing listens locally. Claims rather than being pushed to so the workstation can be off and jobs queue instead of failing; reports progress which doubles as the heartbeat that stops a long healthy job being reclaimed; refuses work below a configurable free-space floor (default 5GB) BEFORE dispatch, naming the actual number, since a full disk is what froze the VPS; exponential backoff to 5 min on 403 so a misconfigured worker does not hammer the API all night; SIGINT/SIGTERM finish the current job first. New extension src/common/vwapi.ts: typed client for all 16 zipper endpoints, key and base URL in extension storage, 403 explicitly explained as possibly 'not on the tailnet' rather than just a bad key. Background now submits",
+  "commands": [
+    "npm run typecheck",
+    "npm run build:verify",
+    "npm run lint",
+    "python -c import worker"
+  ],
+  "files": [
+    "dataset_builder/ds_pipeline.py",
+    "dataset_builder/ds_config.py",
+    "dataset_builder/worker.py",
+    "extension/src/common/vwapi.ts",
+    "extension/src/sidebar/settings.tsx",
+    "extension/src/background/index.ts"
+  ],
+  "planPath": "",
+  "contentHash": "54172fa2005bbd9dca5a989b7f9ab3909a8f32c0abb6c947a582273ba6fd889c",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}
