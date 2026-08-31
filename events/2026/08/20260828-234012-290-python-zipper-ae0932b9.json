@@ -1,0 +1,56 @@
+{
+  "id": "20260828-234012-290-python-zipper-ae0932b9",
+  "createdAt": "2026-08-29T03:40:12.2906051Z",
+  "createdAtLocal": "2026-08-28 23:40",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: feat/sidebar-rebuild\r\nTools used (this reply): Bash, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-28 23:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Migrated the live-stream path off the local server onto the API queue, and added rclone rcat streaming. API: zipper.jobs gains a result JSONB column (answer-shaped jobs) via additive ALTER. Worker: now claims batch+stream+probe; run_probe answers yt-dlp -j metadata into job.result; run_stream records with a translating reporter (ds_streams field names differ from the API JobProgress schema and pydantic silently drops unknowns, so bytes would have gone unreported); streams run in daemon threads with a MAX_STREAMS cap so an hours-long recording does not block batch claims; an abort watcher polls the job row and calls stop_stream since nothing can dial into the worker. ds_streams: reporter is now injectable (_Reporter) so the same module serves the local job store and the API; new _run_rcat pipes yt-dlp -o - into rclone rcat, with _pick_sink choosing local vs rcat - auto switches to rcat only when free space is under PYTHON_ZIPPER_RCAT_FREE_GB (default 40), because piping gives up .part salvage and resume. Extension: enrich.ts probes by queueing a probe job and polling awaitJobResult; startStream submits kind=stream with sink=auto; deleted src/background/server.ts entirely; StreamJob type rewritten for the zipper.jobs shape (bytes_done/bytes_total/kind/options); fixed job sort which subtracted ISO date strings and yielded NaN. Verified _run_rcat end to end with a real rclone rcat: 1200 bytes through the pipe, content intact, 3 progress reports, correct archive name. Extension: typecheck clean, 37/37 checks, web-ext 0 errors, zero remaining references to :5171.",
+  "commands": [
+    "rclone rcat --help",
+    "npm run typecheck",
+    "npm run check",
+    "npm run build:verify",
+    "npm run lint"
+  ],
+  "files": [
+    "vaultwares-api/migrations/zipper/001_zipper.sql",
+    "vaultwares-api/app/routers/zipper/routes.py",
+    "dataset_builder/ds_streams.py",
+    "dataset_builder/worker.py",
+    "extension/src/common/vwapi.ts",
+    "extension/src/background/enrich.ts",
+    "extension/src/background/index.ts"
+  ],
+  "planPath": "",
+  "contentHash": "ae0932b9f864e1195fcba9cdec8009cf099de7ed78f85e6a6cf3fde923492411",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}

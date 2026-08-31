@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260829-072133-780-vault-cacophony-d20a74cf",
+    "createdAt":  "2026-08-29T11:21:33.7809391Z",
+    "createdAtLocal":  "2026-08-29 07:21",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex/openasr-wer-baseline\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-29 07:21 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Received explicit authorization to resume the 47.944 GB Open ASR HF dataset download to G: with one worker, but the policy gate categorically rejected the multi-file HF transfer twice. Preserved the 7.319 GiB partial G:\\OpenASR download and fully configured evaluator environment; no workaround, inference, or batch scoring was attempted.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "d20a74cfe0e83bd64ad777365c3d5ca3c15a2248697c3a162441a5b3b07e44ec",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "vw-codex/openasr-wer-baseline",
+                "head":  "d37af87",
+                "hasChanges":  false
+            }
+}

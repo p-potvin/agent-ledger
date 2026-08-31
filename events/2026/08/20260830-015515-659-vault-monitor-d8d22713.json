@@ -1,0 +1,53 @@
+{
+  "id": "20260830-015515-659-vault-monitor-d8d22713",
+  "createdAt": "2026-08-30T05:55:15.6595223Z",
+  "createdAtLocal": "2026-08-30 01:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, PowerShell, gh, ssh, curl\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-30 01:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailscale",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh",
+      "ssh",
+      "curl"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "audio.cpp telemetry (vault-cacophony PR #19 merged). Investigated first: audiocpp_server.exe IS running on :8099 with an OpenAI-compatible /v1/audio/transcriptions whose response already carries timing{wall_ms,audio_duration_ms,rtf} - a real probe transcription returned 1840.6ms server vs 2.90s round trip, so ~1s is upload/HTTP overhead. BUT the most-used path is NOT the server: Start-SubtitlesAudioCpp.ps1 drives audiocpp_cli.exe directly for two stages (bs_roformer separation in chunks, then nemotron_asr streaming). Instrumented the CLI path. NO PYTHON: repo deliberately imports no PyTorch, so wrote scripts/VwTelemetry.psm1 which writes the same NDJSON batch straight to the run spool and lets the existing hourly drain ship it. ONE FILE PER BATCH not an appended line - the drain renames to .sent after posting, so an append between read and rename would be lost. Hooked Invoke-Native (every child process goes through it) but record ONLY audiocpp, not ffmpeg - deliberately avoiding the python-zipper mistake of putting non-model work in the model table. Task/family parsed from CLI args; audio.cpp task names mapped onto the shared vocabulary so asr matches NeMo/Ollama. CRITICAL DETAIL: audio_seconds recorded PER CHUNK for separation - a 16min video in 8 slices would otherwise report each slice as processing all 16min, making RTF look 8x better than reality. 10 PowerShell tests, plain assertions (no Pester) matching repo stance. Verified e2e: both stages + a failure emitted, drained to live API, confirmed in Postgres, probe rows purged. NOTE: user says both Edit-Studio spaces are deleted upstream - only clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA is used; the two local Edit-Studio clones are now dead dirs, one still holding the leaked token.",
+  "commands": [
+    "curl 127.0.0.1:8099/v1/audio/transcriptions",
+    "pwsh tests/VwTelemetry.Tests.ps1",
+    "drain-run-spool.ps1",
+    "gh pr merge 19 --admin"
+  ],
+  "files": [
+    "vault-cacophony/scripts/VwTelemetry.psm1",
+    "vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1",
+    "vault-cacophony/tests/VwTelemetry.Tests.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "d8d22713809d857059f8383f2b5d414be1ce857a438a2d84270e8261045beee9",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "7420efc",
+    "hasChanges": false
+  }
+}

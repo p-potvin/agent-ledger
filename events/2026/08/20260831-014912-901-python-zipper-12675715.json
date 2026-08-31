@@ -1,0 +1,38 @@
+{
+  "id": "20260831-014912-901-python-zipper-12675715",
+  "createdAt": "2026-08-31T05:49:12.9015650Z",
+  "createdAtLocal": "2026-08-31 01:49",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: fix/dont-record-plain-resizes\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-31 01:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Smart livestream naming. Added stream_basename / next_stream_index / stream_filename to ds_streams: cut the tab title at the first room|live|cam (plurals included), strip a trailing possessive including the curly U+2019 apostrophe, sanitize, then append 'Stream #dd' zero-padded. The index is scanned from disk rather than counted in memory so recordings survive restarts and multiple workers without overwriting session one. A title that yields nothing usable returns empty so the caller falls back instead of naming a file after nobody. Wired into _finalize_stream_name and _rcat_target. Added dataset_builder/tests/test_stream_naming.py, 18 unittest cases (repo uses unittest not pytest), all passing. Also diagnosed the two reported failures: verified the sniffer's isSegmentOrChunkUrl DOES reject the mmcdn chunklist_..._llhls URL, so we never offered it - that URL is what yt-dlp resolved to internally from the master we handed it; and verified build_ytdlp_header_args does pass Cookie/Origin/Referer, so the livemediahost 403 on an extensionless signed index.ll URL is most likely a dead token rather than missing headers. Both are the class the new ffmpeg preview catches before clicking.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "126757152b595d6a8379080ab57c1de91ef0875b8e88a06a875bdefe10d43666",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "fix/dont-record-plain-resizes",
+    "head": "632e556",
+    "hasChanges": true
+  }
+}

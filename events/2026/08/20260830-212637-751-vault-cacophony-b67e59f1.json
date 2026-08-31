@@ -1,0 +1,48 @@
+{
+  "id": "20260830-212637-751-vault-cacophony-b67e59f1",
+  "createdAt": "2026-08-31T01:26:37.7510604Z",
+  "createdAtLocal": "2026-08-30 21:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning  Branch: vw-codex/af3-timing\r\nTools used (this reply): Bash, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-30 21:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning",
+  "summary": "Stage 0 smoke run COMPLETE and pipeline validated end-to-end. Qwen3-0.6B full SFT, 2000 samples, 1 epoch: peak 11.8/12.3GB VRAM, 21min train + 4min eval, 1.16 samples/s, train loss 0.796->0.492, eval loss 0.583 on OOD-decontaminated fonts. Greedy decode gave 9/13 valid <path> elements; generated SVG is syntactically perfect (well-formed absolute M/L/Q, coords in correct 0-1000 range) but geometry is wrong (blobs not letterforms) - expected, 2000 samples is ~1.4pct of one epoch over the 142170-sample split. 4 failures were runaway generations hitting the 1600-token cap. Confirmed: LLaMA-Factory trains on this box without OOM at known VRAM ceiling, dataset wires up with zero conversion, model learns output grammar fast, tools/svg_glyph.py renders real model output, generate->parse->render closed. Measured cost of real run: full split ~34h/epoch (impractical), 300 fonts ~4.6h/epoch (matches upstream a-z-300_fonts config), so Stage 0b is an overnight job needing user sign-off on GPU time. Recorded results in font-cloning/README.md section 7.",
+  "commands": [
+    "llamafactory-cli train configs/stage0-qwen3_0_6b-smoke.yaml",
+    "python tools/generate.py --model saves/stage0-qwen3_0_6b-smoke --greedy"
+  ],
+  "files": [
+    "font-cloning/README.md",
+    "font-cloning/saves/stage0-qwen3_0_6b-smoke/trainer_log.jsonl",
+    "font-cloning/out/stage0_greedy.png"
+  ],
+  "planPath": "",
+  "contentHash": "b67e59f1f073fcc18e203a03bd413738f2342707ec3e088962a536384ac2883c",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-codex/af3-timing",
+    "head": "b9f0cee",
+    "hasChanges": true
+  }
+}

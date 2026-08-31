@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260829-054044-596-vault-cacophony-b8aa4807",
+    "createdAt":  "2026-08-29T09:40:44.5965087Z",
+    "createdAtLocal":  "2026-08-29 05:40",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex/openasr-wer-baseline\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-29 05:40 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Added Open ASR-compatible English normalized WER baseline in PR #14: offline JSONL scorer using Whisper EnglishTextNormalizer and evaluate WER, dependency manifest, documentation, and two passing unit tests. Rebased onto merged vendoring PR #9; no model, dataset, or HF request was executed.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "b8aa48072cd13a091a1f7c343710beafc95ce415518d7502352363586d71ba69",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "vw-codex/openasr-wer-baseline",
+                "head":  "4ab1d58",
+                "hasChanges":  false
+            }
+}

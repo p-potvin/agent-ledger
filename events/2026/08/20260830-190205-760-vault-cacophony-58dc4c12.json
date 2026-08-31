@@ -1,0 +1,49 @@
+{
+  "id": "20260830-190205-760-vault-cacophony-58dc4c12",
+  "createdAt": "2026-08-30T23:02:05.7608538Z",
+  "createdAtLocal": "2026-08-30 19:02",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: plan\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning  Branch: main\r\nTools used (this reply): Bash, WebSearch, WebFetch, gh, datasets\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-30 19:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "plan",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "WebSearch",
+      "WebFetch",
+      "gh",
+      "datasets"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning",
+  "summary": "Locked font-cloning track: Latin only, glyph images now / font files later, train our own 4B VecGlypher-style model instead of quantizing the 27B. Measured real dataset stats by streaming VecGlypher/Google-Fonts-Dataset (800 records, Qwen3 tokenizer): one record = one glyph, 64 content chars (A-Z a-z 0-9 apostrophe hyphen), output mean 612 tok / p90 1013 / max 1300, prompt mean 102 tok. So 26 glyphs ~16k tokens; 27B Q4_K_M on 12GB 3060 needs ~35pct CPU offload = 1-2h per 26-glyph set vs ~5min for a 4B on-GPU. Confirmed method is plain LLaMA-Factory SFT (cross-entropy next-token on prompt->SVG path), NOT vectorization+reranking - vectorization is offline in dataset construction via fontTools. Confirmed LLaMA-Factory ships a gemma3 template with mm_plugin. Found google/gemma-3-4b-it is gated=manual (needs one-time license accept on clopeux HF account); Qwen3-VL-4B-Instruct is ungated fallback. Wrote 3-stage plan into font-cloning/README.md (Stage 0 Qwen3-0.6B text-ref to validate loop, Stage 1 gemma-3-4b-it QLoRA image-ref, Stage 2 fontTools assembly).",
+  "commands": [
+    "python tok_stats.py",
+    "gh api repos/xk-huang/VecGlypher/contents/src/sft/configs/train/qwen3_0_6b-full_sft.yaml"
+  ],
+  "files": [
+    "font-cloning/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "58dc4c127f0cddce6f91bc4b72331918916208c21f36333813b9967db7c33770",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "8fc9acf",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260829-075441-059-vault-cacophony-28b50685",
+    "createdAt":  "2026-08-29T11:54:41.0596490Z",
+    "createdAtLocal":  "2026-08-29 07:54",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex/openasr-wer-baseline\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-29 07:54 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Verified the manual G:\\OpenASR Open ASR dataset checkout is complete: 98 parquet shards, 101 data files, 24.627 GiB, with split counts matching the official dataset manifest. No further download was required.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "28b5068536d0ce4b41270978fe768912ff5357d6cc3ea9992973ee74be51d148",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "vw-codex/openasr-wer-baseline",
+                "head":  "d37af87",
+                "hasChanges":  false
+            }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260829-012716-679-vault-cacophony-7ae4b5d0",
+    "createdAt":  "2026-08-29T05:27:16.6795865Z",
+    "createdAtLocal":  "2026-08-29 01:27",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex/vendor-speech-engines\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-29 01:27 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Vendored CrispASR, NeMo-Speech.cpp, and audio.cpp into vault-cacophony PR #9 after severing their nested Git metadata and removing .gitmodules. Preserved source changes; excluded Git metadata, models, media, credentials, caches, builds, logs, and local downloader experiments. Rebases PR #9 onto merged PRs #5-#8; it is mergeable with CodeRabbit pending. VW_STATE resume continued.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "7ae4b5d08f67154813c51549901d91daa8385d503735679f7dc2732a7ae587b8",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "vw-codex/vendor-speech-engines",
+                "head":  "aa9d85d",
+                "hasChanges":  false
+            }
+}

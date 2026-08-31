@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260829-195515-853-vault-cacophony-0e2826e9",
+    "createdAt":  "2026-08-29T23:55:15.8532838Z",
+    "createdAtLocal":  "2026-08-29 19:55",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex/af3-openasr-smoke\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-29 19:55 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Started the resumable serial AF3 LibriSpeech test-clean full-split attempt from 20 seeded predictions; verified live progress to 27/2620 rows with one active AF3 process. Fixed unlimited --limit omission handling and opened follow-up PR #18 while the run continues.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "0e2826e929372439597bda0db6d0fb5c02119812ce8ae0c8ceb0e7868e3e62d8",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "vw-codex/af3-openasr-smoke",
+                "head":  "49cf832",
+                "hasChanges":  false
+            }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "20260831-021545-794-python-zipper-a7063fd7",
+  "createdAt": "2026-08-31T06:15:45.7948951Z",
+  "createdAtLocal": "2026-08-31 02:15",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: fix/dont-record-plain-resizes\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-31 02:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Acted on real livestream failure reports. 1) Chunklists are now offered: isSegmentOrChunkUrl no longer rejects chunklist/llhls/rendition when the URL is a manifest, because live sites like mmcdn publish no master at all and rejecting on filename meant those streams could never be recorded; subtitles and audio-track renditions are still rejected, and masters still collapse their variants via foldVariants. Verified against all 7 URL shapes. 2) Added record_with_ffmpeg as a fallback in download_stream when yt-dlp produces nothing - evidence-led, since ffmpeg decodes preview frames from the exact livemediahost URL that yt-dlp's generic extractor 403s on with identical captured headers, so the failure is how yt-dlp asks rather than auth or an expired token. Uses -c copy to mpegts so a cut-short capture stays playable, reports bytes via -progress, registers in PROCESSES so Stop reaches it. Verified end to end: 50KB valid 6s TS recorded, progress reported, dead URL reports its reason. Fixed a bug found while testing: -headers/-user_agent/-rw_timeout/-http_proxy are HTTP-only and made ffmpeg exit 'Option not found' on non-http inputs; now gated behind _is_http in both preview_stream and record_with_ffmpeg. 3) Probe and preview jobs no longer appear in the Downloads list or popup - opening a stream page was showing two failed 'downloads' nobody asked for. 18 naming tests, 57 extension checks, typecheck clean, web-ext 0 errors.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "a7063fd789cf9f7b65b3da6ca47013542400584056975ff17cfcb25f635591b1",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "fix/dont-record-plain-resizes",
+    "head": "632e556",
+    "hasChanges": true
+  }
+}

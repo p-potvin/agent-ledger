@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260830-200308-456-vault-cacophony-6f64a1d5",
+    "createdAt":  "2026-08-31T00:03:08.4569848Z",
+    "createdAtLocal":  "2026-08-30 20:03",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex/openasr-metrics\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-30 20:03 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Calculated local AF3 LibriSpeech test-clean partial-split metrics for 1723/2620 rows: 1.54% normalized WER, 4.07% raw WER, 0.98% raw CER, 76.84% normalized exact match, and 0 duplicate IDs over 4.62 hours of audio. Added corrected reusable metrics reporter in PR #20.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "6f64a1d50bcd5a276e92f22f10cdebc0cae1fac2cbed5c71f2ed3f0c2537125e",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "vw-codex/openasr-metrics",
+                "head":  "6cdda0e",
+                "hasChanges":  true
+            }
+}

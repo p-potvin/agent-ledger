@@ -1,0 +1,54 @@
+{
+  "id": "20260830-011045-456-vault-monitor-f8aa9aa9",
+  "createdAt": "2026-08-30T05:10:45.4561600Z",
+  "createdAtLocal": "2026-08-30 01:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, PowerShell, gh, ssh, curl\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-30 01:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + tailscale",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh",
+      "ssh",
+      "curl"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Finalized telemetry deployments; pipeline is live e2e. FOUND+FIXED THE REAL GAP: nothing ever drained the run spool - 5 batches sat undelivered since 2026-08-10. They turned out to be the vault-inference test fixtures (project=p, the 1e9/Mtok runs) I had already purged from Postgres, so draining them would have re-injected the fake spend; quarantined as .discarded-test-data rather than deleted. Wrote drain-run-spool.ps1 (routes by filename prefix: rollups- goes to the rollup endpoint, else raw runs; stops at first failure in a file; prunes .sent after 14d) + setup-run-spool-drain.ps1 registered at logon+hourly. adk PR #29 merged. Verified by forcing a real spool of both kinds then draining to the live API - both delivered, renamed .sent, confirmed in DB. PROVISIONED VW_TELEMETRY_PUBLIC_API_KEY on vps-ovhcloud (.env backed up first, key never printed) and restarted vaultwares-api; verified healthy after (health/ai-sessions/ai-runs/monitor/services all 200, monitor.vaultwares.ca 200). Verified public key scoping live: Space POST 200, rollups 403, settle 403, bad key 401, and the DB row confirmed host rewritten to public:<source> with project and session_id stripped. NEW BUG FOUND LIVE: the Space batch returned stored:1 but was invisible in every listing - the self-contained Space sender sends no started_at and the API did not backfill. Fixed server-side in store_run_batch so the guarantee holds for ANY sender, not just the ADK (api PR #83 merged, deployed, verified); also updated the Space sender to send real timestamps so rows land in the right hourly bucket. Purged 3 synthetic probe rows. LIVE NOW: 62 runs, 9 models - 54 real ComfyUI Flux jobs (19 ComfyExecutionError), 6 python-zipper pillow",
+  "commands": [
+    "drain-run-spool.ps1",
+    "setup-run-spool-drain.ps1 -StartNow",
+    "ssh root@100.67.25.118 systemctl restart vaultwares-api",
+    "gh pr merge 29/83 --admin"
+  ],
+  "files": [
+    "vaultwares-adk/scripts/drain-run-spool.ps1",
+    "vaultwares-adk/scripts/setup-run-spool-drain.ps1",
+    "vaultwares-api/app/routers/telemetry/ai_runs_db.py",
+    "D:\\HuggingFace\\spaces\\Pro-Realism-FLUX2-Klein-Multi-LoRA\\vw_telemetry.py"
+  ],
+  "planPath": "",
+  "contentHash": "f8aa9aa95efd977fc1d4cc3aafcd196d9009519f4050d6e9de26fd24cbfac045",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "7420efc",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "20260829-204446-840-python-zipper-0f18d31a",
+  "createdAt": "2026-08-30T00:44:46.8401882Z",
+  "createdAtLocal": "2026-08-29 20:44",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: feat/sidebar-rebuild\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-29 20:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Three fixes. 1) View prefs (sort key, direction, kind filter, min width, min KB, grid/list) now persist to storage.local via a guarded signals effect and restore on sidebar load; the search box is deliberately not persisted since restoring it onto a new page would silently hide results. 2) Already-downloaded files are excluded from automatic pre-selection - refreshGrabbed is now awaited before defaultSelection so the two do not race - and All now selects everything not already grabbed; individual re-ticking still works. 3) Wired Insights, which was a hardcoded Placeholder. Root cause of the empty tab was not the API: Api.recordGrabs had no caller, so zipper.history was never written. Added a coalesced fire-and-forget history writer in background/grabbed.ts, threaded candidate facts (kind, mime, bytes, dimensions, origin, score, asset host) from the sidebar through downloads:zip and harvest:send-server, and built src/sidebar/insights.tsx with 7/30/90d range, totals, a per-day column chart and ranked lists by site and kind. Verified the payload against the API's real GrabRecord pydantic model offline so no test rows were written to history. typecheck clean, 37/37 checks, web-ext 0 errors.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "0f18d31a3a541be8673f7763de4f32aa7a454af5dcaf144c8596ea8f34a34e11",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "feat/sidebar-rebuild",
+    "head": "9e2c0c8",
+    "hasChanges": true
+  }
+}

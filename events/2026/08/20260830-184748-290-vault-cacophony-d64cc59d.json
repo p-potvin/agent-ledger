@@ -1,0 +1,53 @@
+{
+  "id": "20260830-184748-290-vault-cacophony-d64cc59d",
+  "createdAt": "2026-08-30T22:47:48.2900857Z",
+  "createdAtLocal": "2026-08-30 18:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): Bash, WebSearch, WebFetch, Write, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-30 18:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "WebSearch",
+      "WebFetch",
+      "Write",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Bootstrapped font-cloning pipeline. Made vendored FontDiffuser HF Space run on the shared .venv (torch 2.8.0+cu129, py3.12) instead of upstream torch 1.13.1/CPU: patched app.py for CUDA auto-detect + configurable host/port; added gradio5/diffusers/pygame/fonttools to existing venv (no second torch env, C: only 45GB free). Verified e2e: pipeline load on cuda:0, Chinese style transfer ~3s on RTX 3060, character-input pygame.freetype path, Gradio HTTP 200. Empirically probed Latin: FontDiffuser transfers style but destroys Latin content (Chinese-trained content encoder) - added probe_latin.py harness + probe_latin.png. Researched SOTA: VecGlypher (CVPR26, Gemma-3-27B-IT emitting SVG path tokens, Latin, GGUF-convertible via llama.cpp mtmd), HFH-Font (SIGGRAPH Asia 24, CJK 1024px), DRG-Font (Apr 26, Latin+CJK raster), DeepVecFont-v2/DualVector/VecFusion. Wrote font-cloning/README.md with landscape + GGML analysis + open decision (script choice, TTF vs raster).",
+  "commands": [
+    "uv pip install gradio>=5,<6 diffusers>=0.31 pygame fonttools",
+    "python app.py",
+    "python probe_latin.py"
+  ],
+  "files": [
+    "font-cloning/README.md",
+    "font-cloning/run_fontdiffuser.ps1",
+    "font-cloning/probe_latin.py",
+    "font-cloning/FontDiffuser-Gradio/app.py"
+  ],
+  "planPath": "",
+  "contentHash": "d64cc59d23998db22d5ac74fdd8183c9f62b5078b1e5e56c4dc1b70f20d9b968",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "8fc9acf",
+    "hasChanges": true
+  }
+}

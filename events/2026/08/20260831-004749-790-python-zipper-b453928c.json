@@ -1,0 +1,38 @@
+{
+  "id": "20260831-004749-790-python-zipper-b453928c",
+  "createdAt": "2026-08-31T04:47:49.7903430Z",
+  "createdAtLocal": "2026-08-31 00:47",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: fix/dont-record-plain-resizes\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-31 00:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+  "summary": "Stream previews, barber-pole bars, button repositioning. Preview: new preview_stream in ds_streams runs ffmpeg with the captured headers to decode ONE frame to a 320px JPEG data URL (single frame not a clip - a clip costs an encode pass and adds recognisability, not diagnostic power, since every failure mode is upstream of the first decoded frame). New preview job kind claimed by the worker; a failed preview completes with the reason as payload rather than failing the job. Extension: Api.previewStream plus a stream:preview background route that queues and waits (90s, since ffmpeg alone gets 25s). Sidebar renders the frame, or the ffmpeg error with a Retry, in the same slot at the same size - failures are shown, never used to hide streams. Requested once per stream on render via queueMicrotask, not on hover: the job queue's latency makes hover worse than useless, and a page has a handful of streams not hundreds of rows. Verified end to end against a real generated HLS playlist (5.3KB JPEG) and a dead URL (clear I/O error). Barber pole: job-fill-live / bar-fill-live with a 45deg repeating gradient, applied whenever bytes_total is absent, honouring prefers-reduced-motion. Injected button moved from top-right to bottom-right; removed the 10px/5% rule; only video elements get a lift, 40px for the control bar, capped at a third of the height.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "b453928cc281704d37bb214b667d68367a97f9b0d951fc9df2a29aec52a066db",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "fix/dont-record-plain-resizes",
+    "head": "632e556",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20260830-205902-682-vault-cacophony-ebfdd3b7",
+  "createdAt": "2026-08-31T00:59:02.6824376Z",
+  "createdAtLocal": "2026-08-30 20:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning  Branch: vw-codex/af3-timing\r\nTools used (this reply): Bash, WebSearch, WebFetch, Write, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-30 20:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "WebSearch",
+      "WebFetch",
+      "Write",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning",
+  "summary": "Stage 0 training pipeline built and running. Created isolated font-cloning/.venv-train (torch 2.8.0+cu129, LLaMA-Factory 0.9.6.dev0 from main, transformers 5.8) separate from repo .venv which has transformers 5.14 and drives ASR - installing LF in place would have downgraded it. Pinned torchaudio to 2.8.0 (LF pulls 2.11.0, ABI-incompatible with torch 2.8, WinError 127 on import); torchvision 0.24.0+cu129 has no Windows wheel so pinned the 2.8.0/0.23.0 pair. Downloaded VecGlypher Google-Fonts 250910-alphanumeric-abs_coord (527MB, 142170 train / 15751 ood_decon) - already ships in LLaMA-Factory alpaca format, zero conversion. Scanned 3000 records: path grammar is only M/L/Q absolute, no Z; wrote dependency-free tools/svg_glyph.py parser + even-odd XOR rasteriser (no cairo needed on Windows), validated against ground truth. Wrote tools/generate.py harness. Stage 0 smoke run training now: Qwen3-0.6B full SFT, 2000 samples, cutoff_len 2048, bs1 x accum8, adamw_bnb_8bit + grad checkpointing, 11.8/12.3GB VRAM, loss 0.80 -> 0.46 by step 110/250. Switched Stage 1 base from gemma-3-4b-it to gemma-4-E4B-it (Apache 2.0 ungated, 8B raw / 4.5B effective PLE, 331 GGUF quants exist, LF has gemma4/gemma4n templates with vision plugins). Added font-cloning/.gitignore.",
+  "commands": [
+    "uv venv --python 3.11 .venv-train",
+    "uv pip install llamafactory@git+https://github.com/hiyouga/LLaMA-Factory.git",
+    "llamafactory-cli train configs/stage0-qwen3_0_6b-smoke.yaml"
+  ],
+  "files": [
+    "font-cloning/configs/stage0-qwen3_0_6b-smoke.yaml",
+    "font-cloning/tools/svg_glyph.py",
+    "font-cloning/tools/generate.py",
+    "font-cloning/.gitignore",
+    "font-cloning/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "ebfdd3b74a0ff0c0b069de2164df54ba9cc91d97c146863a16d477d9af3353bd",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-codex/af3-timing",
+    "head": "b9f0cee",
+    "hasChanges": true
+  }
+}

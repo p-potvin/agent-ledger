@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260829-202742-857-vault-cacophony-dfddddad",
+    "createdAt":  "2026-08-30T00:27:42.8570520Z",
+    "createdAtLocal":  "2026-08-29 20:27",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex/af3-openasr-smoke\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-29 20:27 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Verified the active AF3 full-run result manifest is only 268,143 bytes for 420 rows (about 638 bytes/row), so it cannot explain Explorer RAM use. Explorer is at 2.82 GiB working set / 2.52 GiB private; likely dataset-folder enumeration or preview, while AF3 process is 320 MiB working set.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "dfddddad368a44929ffca6cc9eef67c0a28fb5e9d02d667588d32d768039912b",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "vw-codex/af3-openasr-smoke",
+                "head":  "49cf832",
+                "hasChanges":  false
+            }
+}

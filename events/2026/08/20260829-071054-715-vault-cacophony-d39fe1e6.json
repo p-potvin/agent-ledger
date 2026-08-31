@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260829-071054-715-vault-cacophony-d39fe1e6",
+    "createdAt":  "2026-08-29T11:10:54.7152457Z",
+    "createdAtLocal":  "2026-08-29 07:10",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex/openasr-wer-baseline\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-29 07:10 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Configured G:\\OpenASR evaluator environment, installed datasets/evaluate/jiwer/whisper-normalizer, verified a 0.00% one-record normalized-WER smoke test, and updated PR #14 with the official Open ASR dataset setup. Official dataset metadata is 47.944 GB; 7.319 GiB was downloaded to G: before the HF multi-file resume was policy-blocked. No inference or benchmark batch ran.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "d39fe1e68ef79dccf2f5f6cf7531f3f92fe31037675ca4adcc0e8aefd1d7b908",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "vw-codex/openasr-wer-baseline",
+                "head":  "d37af87",
+                "hasChanges":  false
+            }
+}
