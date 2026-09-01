@@ -48,6 +48,410 @@
   <h1>Agent Ledger</h1>
   <p class="meta">Generated from <code>agent-ledger/events</code>. Open a row to see commands, files, and details.</p>
   <details>
+    <summary><strong>2026-08-31 21:53 - ColONEL-KFC</strong> <span class="kind">verification</span> - Execute live end-to-end proofs and SQLite state verification on real gallery datasets and commit verified state</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 21:53 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Execute live end-to-end proofs and SQLite state verification on real gallery datasets and commit verified state</p>
+      <p><strong>Git:</strong> repo=ColONEL-KFC, branch=main, head=7ed12b9</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 21:51 - ColONEL-KFC</strong> <span class="kind">code-change</span> - Sync ColONEL-KFC commands and face_organizer package to vault-commander vw CLI registry and commit working trees</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 21:51 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Sync ColONEL-KFC commands and face_organizer package to vault-commander vw CLI registry and commit working trees</p>
+      <p><strong>Git:</strong> repo=ColONEL-KFC, branch=main, head=7ed12b9</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 21:40 - ColONEL-KFC</strong> <span class="kind">verification</span> - Validated live end-to-end smart exemplar picker, SQLite crop state persistence, and folder clean execution</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 2.5 Pro Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 21:40 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Validated live end-to-end smart exemplar picker, SQLite crop state persistence, and folder clean execution</p>
+      <p><strong>Git:</strong> repo=ColONEL-KFC, branch=main, head=044b77d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 21:21 - vault-automatron</strong> <span class="kind">code-change</span> - Built vault-automatron: a zero-runtime-dependency Node/TS generator that creates a VaultWares tailnet app (React/Vite+Tailwind v4 or FastAPI) and registers it across every contr...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: claude-opus-5 Thinking: high Mode: agent Permissions: bypass (network: Windows 11 local (Clopeux-Desktop)) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-automatron  Branch: main Tools used (this reply): Bash, PowerShell, Write, Edit, AskUserQuestion MCP servers accessed (this reply): none Time: 2026-08-31 21:21 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Built vault-automatron: a zero-runtime-dependency Node/TS generator that creates a VaultWares tailnet app (React/Vite+Tailwind v4 or FastAPI) and registers it across every control-plane surface from one interview. Architecture: AppSpec (validated, serialisable) -&gt; Steps that DECLARE Mutations -&gt; shared executor drives both &#39;plan&#39; (writes nothing) and &#39;apply&#39; (local files only). Ten steps: scaffold, github, jira-sync, health-ledger, api-crud, network, webhookd, docs, commander, telemetry. Every server-mutating action is kind:&#39;manual&#39; - printed with a reason, never executed; no secret value ever leaves VaultWarden. Templates encode the deploy invariants from deployment-flow (no git fetch by SHA, rsync -rltD not -a, lock under /var/lib/vw-deploy, vwdeploy ownership) and the docs page ships EN+QC. Verified: 32 tests pass; generated React app installs, typechecks and builds clean with the v0.1.0 HTML comment in head; FastAPI variant generates unit+vhost; all four sibling-repo patchers confirmed to land correctly against the LIVE config.yaml, services.yaml and services-inventory.mdx via a read-only probe. Four real bugs found and fixed during verification: YAML section at byte 0 was never matched; entries landed below the comment block introducing the next section; nginx vhost hardcoded greencloud IP for every runner; FastAPI deploy restarted a systemd unit nothing created. No commits made and no sibling repo modified - user did not ask for commits.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>npx vitest run</code></li>
+        <li><code>npx tsc -b --pretty false</code></li>
+        <li><code>npx tsx src/cli.ts plan --spec scratch/vault-recipes.spec.json</code></li>
+        <li><code>npx vite build</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vault-automatron/src/spec.ts</code></li>
+        <li><code>vault-automatron/src/render.ts</code></li>
+        <li><code>vault-automatron/src/lib/patch.ts</code></li>
+        <li><code>vault-automatron/src/plan/executor.ts</code></li>
+        <li><code>vault-automatron/src/steps/webhookd.ts</code></li>
+        <li><code>vault-automatron/templates/infra/deploy.sh.tmpl</code></li>
+        <li><code>vault-automatron/README.md</code></li>
+      </ul>
+      <p><strong>Git:</strong> repo=vault-automatron, branch=main</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 21:16 - vault-cacophony</strong> <span class="kind">verification</span> - Validated Riva V2 live inference, chat template formatting, and model auto-discovery</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 21:16 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Validated Riva V2 live inference, chat template formatting, and model auto-discovery</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 21:15 - vault-cacophony</strong> <span class="kind">code-change</span> - Upgraded riva_engine.py and Start-RivaTranslate.ps1 to Riva-Translate-4B-Instruct-v2 using official language-pair system prompt schema</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 21:15 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Upgraded riva_engine.py and Start-RivaTranslate.ps1 to Riva-Translate-4B-Instruct-v2 using official language-pair system prompt schema</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 21:13 - ColONEL-KFC</strong> <span class="kind">code-change</span> - Upgraded smart candidate exemplar picker with dominant cluster discovery and multi-shoot diversity, enabled auto_rotate by default, and calibrated recognition threshold to 0.45</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 2.5 Pro Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 21:13 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Upgraded smart candidate exemplar picker with dominant cluster discovery and multi-shoot diversity, enabled auto_rotate by default, and calibrated recognition threshold to 0.45</p>
+      <p><strong>Git:</strong> repo=ColONEL-KFC, branch=main, head=044b77d</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 20:53 - vault-cacophony</strong> <span class="kind">verification</span> - Fetched upstream NeMo-Speech.cpp, patched Windows vcvars/PATH buffer logic in build.ps1, rebuilt full CUDA stack with NMT/Riva/ASR/TTS capabilities, and verified GPU translation...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 20:53 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fetched upstream NeMo-Speech.cpp, patched Windows vcvars/PATH buffer logic in build.ps1, rebuilt full CUDA stack with NMT/Riva/ASR/TTS capabilities, and verified GPU translation execution</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 16:57 - vault-cacophony</strong> <span class="kind">documentation</span> - Documented exact invocation options for Nemotron ASR, Riva-Translate-4B, and Silero TE</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> documentation</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 16:57 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Documented exact invocation options for Nemotron ASR, Riva-Translate-4B, and Silero TE</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 16:34 - vault-cacophony</strong> <span class="kind">verification</span> - Validated comprehensive pipeline tests for CUDA GPU offload, mojibake sanitization, Silero TE punctuation, and 3-minute chunked separation</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 16:34 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Validated comprehensive pipeline tests for CUDA GPU offload, mojibake sanitization, Silero TE punctuation, and 3-minute chunked separation</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 16:34 - vault-cacophony</strong> <span class="kind">code-change</span> - Fixed CUDA execution, CP437 console mojibake, subtitle 1-word-per-cue distribution with Silero TE, and 3-minute RoFormer chunked separation</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 16:34 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Fixed CUDA execution, CP437 console mojibake, subtitle 1-word-per-cue distribution with Silero TE, and 3-minute RoFormer chunked separation</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 16:26 - vault-automatron</strong> <span class="kind">plan</span> - ROUTER routine run for a new request: automate end-to-end creation of tailnet React/Vite (and FastAPI) VaultWares apps from a scaffolder repo (vault-automatron, currently empty)...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> plan</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: claude-opus-5 Thinking: high Mode: plan Permissions: bypass (network: Windows 11 local (Clopeux-Desktop)) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-automatron  Branch: n/a Tools used (this reply): Bash, PowerShell, AskUserQuestion MCP servers accessed (this reply): none Time: 2026-08-31 16:26 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> ROUTER routine run for a new request: automate end-to-end creation of tailnet React/Vite (and FastAPI) VaultWares apps from a scaffolder repo (vault-automatron, currently empty). Selected categories: SOURCE_OF_TRUTH, SUBMODULE_BOUNDARIES, SECURITY_POSTURE, SECRETS_HANDLING, NETWORK_INFRASTRUCTURE, PROJECT_CREATION, FILE_CHANGES, BRAND_TOKENS_UI, DOCS_STANDARDS, GIT_BRANCH_POLICY, AUTOMATION_POLICY, DEPLOYMENT_POLICY, VERIFICATION, LONG_RUNNING_TASKS (overlay). Read summaries plus operations/project-bootstrap, deployment-flow, services-inventory, health-ledger. Surveyed reference apps vault-tv/vault-music/vault-streaming, health-ledger services.yaml, vw-jira-sync config.yaml, vault-commander, vaultwares-themes/vaultsqware. Estimate ~40000 output tokens so LONG_RUNNING_TASKS applies; hitting the interview gate with one question about the deliverable shape (PowerShell vw command vs Node generator vs API-driven service vs agent skill) before writing code.</p>
+      <p><strong>Commands:</strong></p>
+      <ul>
+        <li><code>cat vaultwares-docs/instructions/ROUTER.md</code></li>
+        <li><code>cat docs-content/operations/project-bootstrap.mdx</code></li>
+        <li><code>sed -n 1,80p health-ledger/services.yaml</code></li>
+      </ul>
+      <p><strong>Files:</strong></p>
+      <ul>
+        <li><code>vaultwares-docs/instructions/ROUTER.md</code></li>
+        <li><code>vaultwares-docs/docs-content/operations/project-bootstrap.mdx</code></li>
+        <li><code>vaultwares-docs/docs-content/operations/deployment-flow.mdx</code></li>
+        <li><code>health-ledger/services.yaml</code></li>
+        <li><code>vw-jira-sync/config.yaml</code></li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 16:04 - vault-cacophony</strong> <span class="kind">verification</span> - Verified llama-cpp-python CUDA runtime loading in vault-cacophony virtual environment</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 16:04 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Verified llama-cpp-python CUDA runtime loading in vault-cacophony virtual environment</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 16:04 - vault-cacophony</strong> <span class="kind">documentation</span> - Created implementation plan for CUDA execution, mojibake sanitization, subtitle 1-word-per-cue fix, and RoFormer chunked separation</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> documentation</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 16:04 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Created implementation plan for CUDA execution, mojibake sanitization, subtitle 1-word-per-cue fix, and RoFormer chunked separation</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 15:28 - vault-cacophony</strong> <span class="kind">verification</span> - Validated state.vscdb protobuf deserialization and persistence across 52 live conversation records</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 15:28 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Validated state.vscdb protobuf deserialization and persistence across 52 live conversation records</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 15:27 - vault-cacophony</strong> <span class="kind">verification</span> - Repaired Antigravity IDE state.vscdb trajectorySummaries protobuf structure and explained conversation history recall</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 15:27 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Repaired Antigravity IDE state.vscdb trajectorySummaries protobuf structure and explained conversation history recall</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 15:22 - vault-cacophony</strong> <span class="kind">verification</span> - Verified state.vscdb trajectorySummaries protobuf payload integrity</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 15:22 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Verified state.vscdb trajectorySummaries protobuf payload integrity</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 15:22 - vault-cacophony</strong> <span class="kind">code-change</span> - Created reindex_antigravity_history.py and updated state.vscdb index and trajectorySummaries protobuf with 117 conversations</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 15:22 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Created reindex_antigravity_history.py and updated state.vscdb index and trajectorySummaries protobuf with 117 conversations</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 14:33 - vault-cacophony</strong> <span class="kind">general</span> - Provided IDE window reload and workspace guidance for conversation history refresh</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> general</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 14:33 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Provided IDE window reload and workspace guidance for conversation history refresh</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 14:29 - vault-cacophony</strong> <span class="kind">verification</span> - Validated Antigravity-Storage-Sync scheduled task and NTFS junction traversal</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 14:29 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Validated Antigravity-Storage-Sync scheduled task and NTFS junction traversal</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 14:29 - vault-cacophony</strong> <span class="kind">commands</span> - Created NTFS junctions between ~/.gemini/antigravity and ~/.gemini/antigravity-ide and registered Antigravity-Storage-Sync scheduled task</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> commands</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 14:29 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Created NTFS junctions between ~/.gemini/antigravity and ~/.gemini/antigravity-ide and registered Antigravity-Storage-Sync scheduled task</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 14:22 - vault-cacophony</strong> <span class="kind">verification</span> - Verified recall-chat tool, JSON serialization, and generated walkthrough artifact</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 14:22 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Verified recall-chat tool, JSON serialization, and generated walkthrough artifact</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 14:22 - vault-cacophony</strong> <span class="kind">code-change</span> - Created permanent recall-chat skill, recall_chat.py script, conversation recall rule, and vw chat-history CLI command</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 14:22 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Created permanent recall-chat skill, recall_chat.py script, conversation recall rule, and vw chat-history CLI command</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 14:15 - vault-cacophony</strong> <span class="kind">verification</span> - Recovered and summarized past conversations in vault-cacophony including the latest Riva translation session</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 14:15 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Recovered and summarized past conversations in vault-cacophony including the latest Riva translation session</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 13:31 - vault-cacophony</strong> <span class="kind">code-change</span> - Added -Overwrite and -SkipCompleted flags across translation CLI commands, fixed Nemotron subword and SentencePiece token boundaries in words_to_srt.py, branched cleanly from ma...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 2.5 Pro Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 13:31 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added -Overwrite and -SkipCompleted flags across translation CLI commands, fixed Nemotron subword and SentencePiece token boundaries in words_to_srt.py, branched cleanly from main excluding font-cloning, and opened PR #22 (vault-cacophony) and PR #10 (vault-commander)</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 12:20 - vault-cacophony</strong> <span class="kind">code-change</span> - Added AI Vocal Separation (BS-RoFormer) user toggles in the main settings modals of both vault-explorer and vault-streaming with full UI hydration, persistence, and live subtitl...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 2.5 Pro Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 12:20 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added AI Vocal Separation (BS-RoFormer) user toggles in the main settings modals of both vault-explorer and vault-streaming with full UI hydration, persistence, and live subtitle wiring</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 12:09 - vault-cacophony</strong> <span class="kind">code-change</span> - Enabled BS-RoFormer vocal separation by default on riva commands (-NoSeparate to bypass); updated vault-explorer (live and batch subtitle/translation paths) and vault-streaming ...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 2.5 Pro Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 12:09 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Enabled BS-RoFormer vocal separation by default on riva commands (-NoSeparate to bypass); updated vault-explorer (live and batch subtitle/translation paths) and vault-streaming (live subtitles) to use local NVIDIA Riva-Translate-4B GGUF on CUDA</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 11:44 - vault-cacophony</strong> <span class="kind">verification</span> - Ran 20-minute E2E benchmark (YouTube FrR4SBvL0Ck) comparing baseline ASR, sequential batch BS-RoFormer, and pipelined chunked separation on RTX 3060 (RTFX, TTFC latency, word re...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> verification</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 2.5 Pro Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 11:44 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Ran 20-minute E2E benchmark (YouTube FrR4SBvL0Ck) comparing baseline ASR, sequential batch BS-RoFormer, and pipelined chunked separation on RTX 3060 (RTFX, TTFC latency, word recognition, VRAM)</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 11:18 - vault-cacophony</strong> <span class="kind">code-change</span> - Added optional BS-RoFormer and HTDemucs vocal stem separation flags (-Separate, -Separator, -SepPasses) to speech_to_translated_srt.py, Start-TranslationPipeline.ps1, and vw riv...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 2.5 Pro Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 11:18 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added optional BS-RoFormer and HTDemucs vocal stem separation flags (-Separate, -Separator, -SepPasses) to speech_to_translated_srt.py, Start-TranslationPipeline.ps1, and vw riva-translate</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 10:50 - vault-cacophony</strong> <span class="kind">code-change</span> - Added vw riva-live-subtitles command in vault-commander modeled after live-subs with native Riva-Translate-4B engine; verified explicit source language parameter support and bil...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 2.5 Pro Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 10:50 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added vw riva-live-subtitles command in vault-commander modeled after live-subs with native Riva-Translate-4B engine; verified explicit source language parameter support and bilingual overlay routing</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 08:06 - vault-cacophony</strong> <span class="kind">code-change</span> - Added vw riva-translate command to vault-commander supporting SRT, text, and media translation; benchmarked Nemotron-3.5 ASR vs Audio Flamingo 3 on 250 LibriSpeech clean rows wi...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 2.5 Pro Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 08:06 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Added vw riva-translate command to vault-commander supporting SRT, text, and media translation; benchmarked Nemotron-3.5 ASR vs Audio Flamingo 3 on 250 LibriSpeech clean rows with OpenASR normalized WER</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 06:32 - vault-cacophony</strong> <span class="kind">code-change</span> - Built decoupled Riva-Translate-4B translation engine, translate_srt_riva.py, end-to-end speech_to_translated_srt.py, Start-TranslationPipeline.ps1, and unit tests</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> code-change</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 06:32 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Built decoupled Riva-Translate-4B translation engine, translate_srt_riva.py, end-to-end speech_to_translated_srt.py, Start-TranslationPipeline.ps1, and unit tests</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 06:13 - vault-cacophony</strong> <span class="kind">documentation</span> - Explored NeMo-Speech.cpp and Riva-Translate-4B GGUF; created implementation plan for standalone Speech-to-Text Translation pipeline with .srt creation</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> documentation</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 06:13 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Explored NeMo-Speech.cpp and Riva-Translate-4B GGUF; created implementation plan for standalone Speech-to-Text Translation pipeline with .srt creation</p>
+      <p><strong>Git:</strong> repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee</p>
+    </div>
+  </details>
+  <details>
+    <summary><strong>2026-08-31 03:23 - python-zipper (formerly python-scripts)</strong> <span class="kind">handoff</span> - Wrote a session handoff artifact and saved it to project memory. Investigated the three reported problems rather than restating them. Smart naming: _finalize_stream_name reads d...</summary>
+    <div class="entry-body">
+      <p><strong>Kind:</strong> handoff</p>
+      <p><strong>Actor:</strong> AI Agent</p>
+      <p><strong>Agent Header:</strong></p>
+      <pre><code>Agent: AI Agent (role: main) Model: claude-opus-5 Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: fix/dont-record-plain-resizes Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-31 03:23 (TZ: Eastern Standard Time)</code></pre>
+      <p class="summary"><strong>Summary:</strong> Wrote a session handoff artifact and saved it to project memory. Investigated the three reported problems rather than restating them. Smart naming: _finalize_stream_name reads ds_jobs.get_job, the in-process store from the retired local server that the worker never populates, so the title is always empty and naming can never fire - fix is to thread the title parameter that download_stream already receives. Barber pole: both progress bars are 3px tall so a 45deg stripe cannot render; secondary suspect is total_bytes_estimate making a live capture take the determinate branch. Insights: queried the live API - 28 files across 4 domains, but by_kind returns 18 unknown and only chaturbate has byte totals, because the in-page hover button records grabs with an empty facts object; the background can fill kind/bytes from the tab&#39;s media log. Also flagged 10 files typed video totalling 11KB as unexplained. To build: hide streams whose preview fails (toggle with a count, never hide while loading), and clear stale streams on main_frame navigation - sniffer.ts is the only store missing the listener media_log and harvest_store both have. Artifact: https://claude.ai/code/artifact/9cdf37db-352e-4227-a873-810e1c1d59ba</p>
+      <p><strong>Git:</strong> repo=python-zipper, branch=fix/dont-record-plain-resizes, head=632e556</p>
+    </div>
+  </details>
+  <details>
     <summary><strong>2026-08-31 02:37 - agent-ledger (formerly agent-ledger/stats-app)</strong> <span class="kind">verification</span> - Verified the live Vault Monitor Work Impact page directly: it renders 4,004 Events and 3,840 Commits. Events apply the 2026-03-11 cutoff (70 of 4,074 DB rows excluded); all comm...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> verification</p>
@@ -70,7 +474,7 @@
     </div>
   </details>
   <details>
-    <summary><strong>2026-08-31 02:15 - python-zipper (formerly python-scripts)</strong> <span class="kind">code-change</span> - Acted on real livestream failure reports. 1) Chunklists are now offered: isSegmentOrChunkUrl no longer rejects chunklist/llhls/rendition when the URL is a manifest, because live...</summary>
+    <summary><strong>2026-08-31 02:15 - python-zipper</strong> <span class="kind">code-change</span> - Acted on real livestream failure reports. 1) Chunklists are now offered: isSegmentOrChunkUrl no longer rejects chunklist/llhls/rendition when the URL is a manifest, because live...</summary>
     <div class="entry-body">
       <p><strong>Kind:</strong> code-change</p>
       <p><strong>Actor:</strong> AI Agent</p>
@@ -5557,16 +5961,6 @@
       <pre><code>Agent: AI Agent (role: main) Model: Gemini 3.7 Flash Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos\thoughts  Branch: main Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-16 04:29 (TZ: Eastern Standard Time)</code></pre>
       <p class="summary"><strong>Summary:</strong> Expanded thoughts indexer to scan 2880+ historical ledger events, added resident-only GPU model safety in Ollama client, and pushed initial codebase to main</p>
       <p><strong>Git:</strong> repo=thoughts, branch=main, head=d1f6693</p>
-    </div>
-  </details>
-  <details>
-    <summary><strong>2026-08-16 03:33 - General Tasks</strong> <span class="kind">verification</span> - Prom-King qa-automation read-only investigation: analyzed the supplied 1pornhub.vip trace, identified age-gate click interception and natural mouse path endpoint/origin issues; ...</summary>
-    <div class="entry-body">
-      <p><strong>Kind:</strong> verification</p>
-      <p><strong>Actor:</strong> AI Agent</p>
-      <p><strong>Agent Header:</strong></p>
-      <pre><code>Agent: AI Agent (role: main) Model: GPT-5 Thinking: unknown Mode: unknown Permissions: unknown (network: unknown) CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a Tools used (this reply): none MCP servers accessed (this reply): none Time: 2026-08-16 03:33 (TZ: Eastern Standard Time)</code></pre>
-      <p class="summary"><strong>Summary:</strong> Prom-King qa-automation read-only investigation: analyzed the supplied 1pornhub.vip trace, identified age-gate click interception and natural mouse path endpoint/origin issues; no files changed.</p>
     </div>
   </details>
   <details>

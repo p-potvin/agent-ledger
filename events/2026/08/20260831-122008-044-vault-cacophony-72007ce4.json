@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260831-122008-044-vault-cacophony-72007ce4",
+    "createdAt":  "2026-08-31T16:20:08.0440805Z",
+    "createdAtLocal":  "2026-08-31 12:20",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 2.5 Pro\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-codex/af3-timing\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-31 12:20 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 2.5 Pro",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Added AI Vocal Separation (BS-RoFormer) user toggles in the main settings modals of both vault-explorer and vault-streaming with full UI hydration, persistence, and live subtitle wiring",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "72007ce449d8a7340fe68f3d586ac9814bbc49033dfd337eb15e82b45dfa1d34",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "vw-codex/af3-timing",
+                "head":  "b9f0cee",
+                "hasChanges":  true
+            }
+}

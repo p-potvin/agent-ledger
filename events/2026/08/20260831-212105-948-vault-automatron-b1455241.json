@@ -1,0 +1,57 @@
+{
+  "id": "20260831-212105-948-vault-automatron-b1455241",
+  "createdAt": "2026-09-01T01:21:05.9485803Z",
+  "createdAtLocal": "2026-08-31 21:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-automatron",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-automatron  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-08-31 21:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-automatron",
+  "summary": "Built vault-automatron: a zero-runtime-dependency Node/TS generator that creates a VaultWares tailnet app (React/Vite+Tailwind v4 or FastAPI) and registers it across every control-plane surface from one interview. Architecture: AppSpec (validated, serialisable) -> Steps that DECLARE Mutations -> shared executor drives both 'plan' (writes nothing) and 'apply' (local files only). Ten steps: scaffold, github, jira-sync, health-ledger, api-crud, network, webhookd, docs, commander, telemetry. Every server-mutating action is kind:'manual' - printed with a reason, never executed; no secret value ever leaves VaultWarden. Templates encode the deploy invariants from deployment-flow (no git fetch by SHA, rsync -rltD not -a, lock under /var/lib/vw-deploy, vwdeploy ownership) and the docs page ships EN+QC. Verified: 32 tests pass; generated React app installs, typechecks and builds clean with the v0.1.0 HTML comment in head; FastAPI variant generates unit+vhost; all four sibling-repo patchers confirmed to land correctly against the LIVE config.yaml, services.yaml and services-inventory.mdx via a read-only probe. Four real bugs found and fixed during verification: YAML section at byte 0 was never matched; entries landed below the comment block introducing the next section; nginx vhost hardcoded greencloud IP for every runner; FastAPI deploy restarted a systemd unit nothing created. No commits made and no sibling repo modified - user did not ask for commits.",
+  "commands": [
+    "npx vitest run",
+    "npx tsc -b --pretty false",
+    "npx tsx src/cli.ts plan --spec scratch/vault-recipes.spec.json",
+    "npx vite build"
+  ],
+  "files": [
+    "vault-automatron/src/spec.ts",
+    "vault-automatron/src/render.ts",
+    "vault-automatron/src/lib/patch.ts",
+    "vault-automatron/src/plan/executor.ts",
+    "vault-automatron/src/steps/webhookd.ts",
+    "vault-automatron/templates/infra/deploy.sh.tmpl",
+    "vault-automatron/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "b1455241e5271d8e475daa62c5f2851796ba01ff0b1ef489659bf3a1b85c237b",
+  "git": {
+    "repo": "vault-automatron",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-automatron",
+    "branch": "main",
+    "head": null,
+    "hasChanges": true
+  }
+}
