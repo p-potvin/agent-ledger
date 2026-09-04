@@ -1,0 +1,48 @@
+{
+  "id": "20260903-043214-597-vault-cacophony-3045175b",
+  "createdAt": "2026-09-03T08:32:14.5977498Z",
+  "createdAtLocal": "2026-09-03 04:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): PowerShell, Bash, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-03 04:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Acted on three user suggestions. (1) SHAPE-GATED KERNEL 0001 instead of turning it OFF: src/asr/encoder/rel_pos_attention.cpp already had BOTH branches and a runtime gate (use_fused = session->params.use_gpu), so this is a one-line shape condition, not a kernel rewrite. Added q_len <= fused_max_q with NEMO_SPEECH_RELPOS_MAX_Q env override (default 512, 0 disables) so the threshold is sweepable without rebuilding. Verified rel_pos_attention.cpp is the OFFLINE/full-context path (reached via fastconformer.h) while fastconformer.cpp:909 and cache_aware_encoder.cpp:268 are the streaming call sites, so gating offline leaves streaming untouched - this should give ONE build fast on both paths instead of the two-build split. Not yet measured; needs a build. (2) FIXED PER-FILE RIVA RELOAD that the streaming question exposed: Convert-SrtLanguage spawned nemo-speech translate per file, reloading the 2.7GB Riva-4B for every episode. Replaced with Convert-SrtLanguageBatch - every cue from every file through ONE translate call, one model load. Verified on 2 files: correct Spanish, timings preserved. (3) n_ctx FACT CHECK: scripts/riva_engine.py already defaults to n_ctx=4096, so the user's suggestion is already in place there; the 8192 figure lives in instructionsriva.txt. nemo-speech's own nmt.model.n_ctx defaults to 1024 (~136 MiB at 0.13 MiB/token, max 8192), so 4096 would be an INCREASE there (~546 MiB), not a saving. (4) RoFormer is NOT currently wired into the new better-subtitles - separation was removed entirely - so nothing is blocking; the old script used SepChunkMinutes=6 (six-MINUTE chunks) which is exactly the blocking behaviour described.",
+  "commands": [
+    "edit rel_pos_attention.cpp shape gate",
+    "Start-BetterSubtitles.ps1 -Input dir -TranslateTo es"
+  ],
+  "files": [
+    "NeMo-Speech.cpp/src/asr/encoder/rel_pos_attention.cpp",
+    "vault-commander/cli/Start-BetterSubtitles.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "3045175bbb4c50aad2750b80b1578d237c41d2d911b003535096d1d27645a2b3",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

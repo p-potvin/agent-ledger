@@ -1,0 +1,50 @@
+{
+  "id": "20260902-181428-264-vault-cacophony-35c3fc5f",
+  "createdAt": "2026-09-02T22:14:28.2647042Z",
+  "createdAtLocal": "2026-09-02 18:14",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-02 18:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "OpenASR LibriSpeech benchmark setup + corrections. MAJOR CORRECTION: existing G:/OpenASR/results show AF3 is MORE accurate than nemotron-3.5, not less - same 250 utterances, same Whisper EnglishTextNormalizer: AF3 normalized WER 1.489% / CER 0.713% / exact-match 66.0% vs nemotron-3.5 3.180% / CER 3.235% / exact-match 39.6%. AF3 full-run partial (1723/2620) holds at 1.542%. My earlier claim that AF3 loses on every transcription axis was wrong on accuracy; it loses on speed only. Language facts verified from HF: parakeet-ctc-1.1b is ENGLISH-ONLY (tags ['en']), parakeet-tdt-0.6b-v3 is exactly 25 languages, nemotron-3.5 is 40+ locales. Word boosting works on flashlight-CTC and cache-aware RNNT but parakeet-tdt IGNORES it - relevant to code-switching plans. CTC default ctc_left/right_padding is 1.92s = 192 frames at 10ms hop, confirming user recollection. Flashlight IS compiled in (doctor lists it, kenlm.dll present in build-cuda/bin); needs KenLM + lexicon TSV. Downloaded OpenSLR 3-gram.pruned.1e-7 (34MB), librispeech-lexicon.txt, librispeech-vocab.txt (200k words) to D:/HuggingFace/lm - CAVEAT: OpenSLR lexicon is phonetic ARPAbet, unusable for SentencePiece CTC, must regenerate word->subword lexicon. Wrote scripts/run_openasr_nemo.py using directory-mode transcription (one model load for all 2620 utterances instead of per-utterance spawn). Smoke test parakeet-tdt 8 utts RTFx 45.6 WER 2.44%. Full 2620-utterance run across all 4 NeMo models in flight.",
+  "commands": [
+    "python scripts/run_openasr_nemo.py --models parakeet-tdt,nemotron-en,parakeet-ctc --tag librispeech-clean",
+    "python scripts/evaluate_openasr.py --input parakeet-tdt-smoke-8.jsonl",
+    "curl openslr.org/resources/11/3-gram.pruned.1e-7.arpa.gz"
+  ],
+  "files": [
+    "scripts/run_openasr_nemo.py",
+    "G:/OpenASR/results/af3-librispeech-clean-250-match.metrics.json",
+    "D:/HuggingFace/lm/librispeech-vocab.txt"
+  ],
+  "planPath": "",
+  "contentHash": "35c3fc5f8f83414605c33db8a8a6345f272467d734bf9870d1f68ca0462c4f5d",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

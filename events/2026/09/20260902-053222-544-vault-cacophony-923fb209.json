@@ -1,0 +1,51 @@
+{
+  "id": "20260902-053222-544-vault-cacophony-923fb209",
+  "createdAt": "2026-09-02T09:32:22.5442908Z",
+  "createdAtLocal": "2026-09-02 05:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-02 05:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp",
+  "summary": "Benchmarked all NeMo-Speech.cpp ASR models + AF3 on 45min English podcast (2700s, RTX 3060). Results (RTF wall/audio): parakeet-tdt 50.9s/0.0189/53x/4436MiB; nemotron-en stream 74.6s/36.2x/1078MiB; nemotron-en 76.8s/35.1x; nemotron-3.5 stream 81.3s/33.2x/1080MiB; nemotron-3.5 83.5s/32.4x; parakeet-ctc-1.1b 297.9s/9.1x; audio-flamingo-3 691.7s/0.2562/3.9x/5747MiB. Streaming mode is faster AND less than half the VRAM vs offline on both Nemotrons. parakeet-ctc-1.1b is 3.9x slower than 0.6B models for no gain. nemotron vs AF3 word agreement 78.5%; NeMo models punctuate/capitalize, AF3 does not. Pipeline 1 (ASR+Sortformer diarization): 157.5s = 17.1x realtime, tagged 7950 words, 3 speakers, 172 turns, TTS stack co-resident, peak 8250MiB of 12288. Pipeline 2 (ASR->Riva-Translate-4B->Magpie TTS): ASR 83.5s + translate 133.8s + TTS 39.7s on 1200-char sample = 257s/10.5x, BUT full TTS extrapolates to 1403s (Magpie RTF 0.4134) so honest full-pipeline = 1620s = RTF 0.600 = 1.67x realtime with TTS at 87% of wall clock. Found+fixed bug: sentence-punctuation splitting produced 1 segment from 179 words (conversational ASR lacks full stops), which would exceed Riva n_ctx 1024 and fail; 40-word cap fixed it and made translation 3x faster. Wrote scripts/bench_asr_nemo.py, scripts/nemo_pipeline.py, docs/nemo-speech-benchmark.md. Recommendation: move ASR/subtitles/translation to NeMo-Speech.cpp; keep AF3 for audio understanding only (not ASR); keep audio.cpp for source separation and voice cloning (Magpie has baked speakers only, no reference cloning). Gotcha: nemo-speech.exe exits 53 silently without CUDA 13 bin/x64 on PATH.",
+  "commands": [
+    "python scripts/bench_asr_nemo.py --audio gillis45.wav --with-af3",
+    "python scripts/nemo_pipeline.py --mode stack",
+    "python scripts/nemo_pipeline.py --mode translate --target-lang es"
+  ],
+  "files": [
+    "scripts/bench_asr_nemo.py",
+    "scripts/nemo_pipeline.py",
+    "docs/nemo-speech-benchmark.md"
+  ],
+  "planPath": "",
+  "contentHash": "923fb209c2b39a70939786b4d9fc24a8c83de3e0343202551897dba590ab2e25",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

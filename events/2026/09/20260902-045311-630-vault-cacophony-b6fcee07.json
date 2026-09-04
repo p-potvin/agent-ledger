@@ -1,0 +1,51 @@
+{
+  "id": "20260902-045311-630-vault-cacophony-b6fcee07",
+  "createdAt": "2026-09-02T08:53:11.6302800Z",
+  "createdAtLocal": "2026-09-02 04:53",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-02 04:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp",
+  "summary": "NeMo-Speech.cpp ASR benchmarking setup. Read docs/asr/{models,configuration}.md, docs/cli.md, docs/nmt/*, docs/tts/*. Confirmed build-cuda/bin/nemo-speech.exe works but hits the SAME CUDA 13 bin/x64 PATH gotcha as CrispASR - without it every invocation exits 53 with zero output. doctor reports features: asr backend_cuda diarization flashlight grpc http integrated_vad model_pull punctuation realtime_websocket speech_translation translation tts. All user-requested models are indexed: nemotron-3.5, nemotron-en, parakeet-ctc, parakeet-tdt, sortformer (diar_streaming_sortformer_4spk-v2), magpie (magpie_tts_multilingual_357m) + nano-codec. Cut 45min 16kHz mono WAV from the Shane Gillis podcast (offset 600s, exactly 2700.0s) to D:/HuggingFace/bench/gillis45.wav. Wrote scripts/bench_asr_nemo.py measuring wall time, RTF both conventions, peak VRAM via nvidia-smi sampling thread, and word counts. Smoke test: nemotron-3.5 did 60s audio in 1.59s = 37.7x realtime, 2325 MiB VRAM, 179 words, coherent transcript. Model pulls and the AF3 45min run are in flight.",
+  "commands": [
+    "nemo-speech.exe doctor",
+    "nemo-speech.exe model list",
+    "ffmpeg -ss 600 -t 2700 -ac 1 -ar 16000",
+    "python scripts/bench_asr_nemo.py --audio gillis60s.wav --models nemotron-3.5"
+  ],
+  "files": [
+    "scripts/bench_asr_nemo.py",
+    "NeMo-Speech.cpp/docs/asr/configuration.md",
+    "D:/HuggingFace/bench/gillis45.wav"
+  ],
+  "planPath": "",
+  "contentHash": "b6fcee0794bf0ac18c91ace528f5fcc46d2ea7c7413e209158cb051768206a8a",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

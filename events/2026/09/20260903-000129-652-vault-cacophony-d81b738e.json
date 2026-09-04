@@ -1,0 +1,50 @@
+{
+  "id": "20260903-000129-652-vault-cacophony-d81b738e",
+  "createdAt": "2026-09-03T04:01:29.6520782Z",
+  "createdAtLocal": "2026-09-03 00:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-03 00:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Patched vs stock ggml build comparison - the patches are NOT universally better. Built a genuine stock build at D:/HuggingFace/nemo-stock/build-stock (pristine ggml, all 16 patches reverted, NEMO_SPEECH_GGML_PATCHED=OFF, FUSED_RELPOS_ATTN/DIRECT_DW_CONV/FASTCONFORMER_CUDA_FUSIONS all OFF) versus the existing fully-patched build-cuda (all ON). Same 45min podcast, same models, best of 2 runs each: parakeet-tdt OFFLINE - patched 49.0s RTFx 55.2 vs stock 26.1s RTFx 103.3, so STOCK IS 1.9x FASTER. nemotron-en --stream - patched 75.9s RTFx 35.6 vs stock 127.9s RTFx 21.1, so PATCHED IS 1.7x FASTER. Word counts match within 0.1% (8272/8275 and 8187/8197) so output is equivalent; this is pure speed. Ruled out as cause of the offline regression: GGML_SKINNY_Q8=0 (49.1->47.4s, 3%), GGML_CUDA_DISABLE_GRAPHS=1 (52.8s, worse), GGML_CUDA_DISABLE_FUSION=1 (48.6s, no change). Hypothesis under test: patch 0001 fused relative-position attention is tuned for the streaming shape (d_k=128, q=2, kv=72) and falls back to a generic kernel for large offline full-context shapes, which fits the data exactly - patched wins on streaming, loses on offline. Third build in flight at build-norelpos: patched sources and patched ggml but -DNEMO_SPEECH_FUSED_RELPOS_ATTN=OFF, to isolate that one option. Practical implication if confirmed: vw better-subtitles (offline TDT) should run the stock build and live-subs (streaming) the patched one.",
+  "commands": [
+    "build.ps1 -Backend cuda -Profile asr -BuildDir build-stock",
+    "git apply -R ggml-patches/*.patch from inside ggml/",
+    "build.ps1 -BuildDir build-norelpos with FUSED_RELPOS_ATTN=OFF"
+  ],
+  "files": [
+    "D:/HuggingFace/nemo-stock/build-stock/CMakeCache.txt",
+    "D:/HuggingFace/nemo-stock/scripts/windows/build.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "d81b738edeba2a57e09769eb4bc719b4222bbce2cd8271d0a03e93152c234b94",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "20260902-190239-929-vault-cacophony-4e93c113",
+  "createdAt": "2026-09-02T23:02:39.9299959Z",
+  "createdAtLocal": "2026-09-02 19:02",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "documentation",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-02 19:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Completed LibriSpeech test-clean WER benchmark for all 5 ASR models and documented it in docs/nemo-speech-benchmark.md as a dated addendum that explicitly corrects two wrong claims from the earlier section. Final WER (full 2620 utts, Whisper EnglishTextNormalizer + evaluate WER): audio-flamingo-3 1.489% (250-utt subset, 1.542% over 1723), parakeet-ctc-1.1b 1.852% RTFx 163.5 offline, parakeet-tdt-0.6b-v3 1.931% RTFx 195.8 offline, nemotron-speech-streaming-en-0.6b 2.649% RTFx 33.6 streaming, nemotron-3.5 3.511% RTFx 30.6 streaming with en-US. Q8_0 GGUF validated lossless: parakeet-tdt measured 1.9310% vs NVIDIA published 1.93%. CAVEAT documented: nemotron numbers are streaming-mode only because offline aborts on host RAM, and cache-aware streaming costs WER vs offline, so those two rows are not apples-to-apples. Correction 1: parakeet-ctc is the MOST accurate NeMo model, not the one to skip; its podcast slowness is 25x redundant compute from chunk 0.16s + 1.92s left + 1.92s right padding = 4.0s processed per 0.16s emitted, a tunable not a model property. Correction 2: the GGML_ASSERT crash is host RAM exhaustion in the offline RNNT path (succeeds above ~8.4 GiB available, fails below ~8.0 GiB), NOT a 128-file threshold; ruled out GPU memory, file count, concurrency, hardlink vs copy, CUDA PATH order, and pyarrow pool by direct experiment. Workaround --stream. Outstanding and flagged as not done: tuned flashlight CTC (needs subword lexicon regenerated from model tokenizer, OpenSLR lexicon is phonetic), chunk_size sweep, test-other, offline nemotron WER.",
+  "commands": [
+    "python scripts/run_openasr_nemo.py --models nemotron-3.5 --extra=--stream --language en-US",
+    "python scripts/evaluate_openasr.py --input nemotron-3.5-librispeech-clean-enus-2620.jsonl"
+  ],
+  "files": [
+    "docs/nemo-speech-benchmark.md",
+    "scripts/run_openasr_nemo.py",
+    "G:/OpenASR/results/nemotron-3.5-librispeech-clean-enus-2620.metrics.json"
+  ],
+  "planPath": "",
+  "contentHash": "4e93c113014d68d950a429591a8be2aa30eccb054b7842c43f720f568dc7c3b1",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

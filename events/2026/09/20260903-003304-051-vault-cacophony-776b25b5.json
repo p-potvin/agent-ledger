@@ -1,0 +1,49 @@
+{
+  "id": "20260903-003304-051-vault-cacophony-776b25b5",
+  "createdAt": "2026-09-03T04:33:04.0518251Z",
+  "createdAtLocal": "2026-09-03 00:33",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-03 00:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Isolated the patched-vs-stock difference to ONE CMake option. Three builds, 45min podcast, best of 2 runs. parakeet-tdt offline: patched-all-ON 48.9s RTFx 55.2, patched-minus-relpos 22.7s RTFx 118.9, stock 26.0s RTFx 103.9. nemotron-en --stream: patched-all-ON 75.5s RTFx 35.7, patched-minus-relpos 108.8s RTFx 24.8, stock 125.2s RTFx 21.6. Word counts agree within 0.1% across all three so it is speed only. NEMO_SPEECH_FUSED_RELPOS_ATTN (patch 0001, default ON) is the entire effect: worth 2.15x on offline when turned OFF, costs 44% on streaming when turned OFF. Matches what the patch documents about itself - it is tuned for the cache-aware streaming shape d_k=128 q=2 kv=72 and other shapes fall back to a generic fused kernel that loses to stock batched cuBLAS on large offline contexts. Ruled out by measurement: GGML_SKINNY_Q8=0 (3%), GGML_CUDA_DISABLE_GRAPHS=1 (worse), GGML_CUDA_DISABLE_FUSION=1 (unchanged). CORRECTION to my earlier claim that offline should use the stock build: patched-minus-relpos beats stock on offline too, so fully stock never wins anything and is a bisection tool, not a deployment artifact. Wired the commands to the right builds: Start-BetterSubtitles.ps1 searches build-norelpos before build-cuda, utils/nemo_asr.py searches build-cuda first, both fall back so a missing build degrades in speed not failure. Verified resolution: better-subtitles -> D:/HuggingFace/nemo-stock/build-norelpos, live-subs -> vault-cacophony/NeMo-Speech.cpp/build-cuda. Documented as Addendum 2 in docs/nemo-speech-benchmark.md including the gotcha that ggml patches must be applied from INSIDE ggml/ (they are relative to that dir; from the repo root they fail with src/ggml.c No such file) and that build.ps1 -Backend cuda always applies patches and never passes either flag.",
+  "commands": [
+    "build.ps1 -Backend cuda -Profile asr -BuildDir build-norelpos",
+    "three-way transcribe benchmark across build-cuda/build-norelpos/build-stock"
+  ],
+  "files": [
+    "docs/nemo-speech-benchmark.md",
+    "vault-commander/cli/Start-BetterSubtitles.ps1",
+    "vault-commander/cli/utils/nemo_asr.py"
+  ],
+  "planPath": "",
+  "contentHash": "776b25b5403a2e36eb2747229c7b3800184121d955bf27dee8fa1ab996c3572b",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

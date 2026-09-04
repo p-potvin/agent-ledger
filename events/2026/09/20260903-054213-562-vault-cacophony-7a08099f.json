@@ -1,0 +1,50 @@
+{
+  "id": "20260903-054213-562-vault-cacophony-7a08099f",
+  "createdAt": "2026-09-03T09:42:13.5628666Z",
+  "createdAtLocal": "2026-09-03 05:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander\\cli  Branch: vw-codex-face-embedding-fix\r\nTools used (this reply): PowerShell, Bash, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-03 05:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander\\cli",
+  "summary": "SHAPE GATE WORKS - the two-build split is gone, one build is now best on both paths. The fused relpos op is emitted from THREE call sites behind one #ifdef: rel_pos_attention.cpp (offline/full-context), fastconformer.cpp:909 and cache_aware_encoder.cpp:268 (both cache-aware streaming). The compile-time option killed all three, which is why FUSED_RELPOS_ATTN=OFF fixed offline and broke streaming. Gating only the offline site on query length fixes offline and leaves streaming untouched. Offline sweep on the shaped build (parakeet-tdt, 45min, best of 2): MAX_Q=0 21.8s RTFx 123.9, MAX_Q=128 21.7s RTFx 124.1, MAX_Q=512 21.8s RTFx 123.9, MAX_Q=999999 49.0s RTFx 55.1 - the last reproduces the ungated patched build to within 0.1s, proving the gate is the only variable and that this call site is the offline hot path. Streaming on the same build: MAX_Q=512 79.3s RTFx 34.0, MAX_Q=0 80.4s RTFx 33.6, ungated build-cuda 81.0s RTFx 33.3 - all within noise, gate does not reach streaming. Final: patched+gate ~118-124 offline and ~34 streaming, best or tied against patched-ungated (55.1/33.3), FUSED_OFF (118.9/24.8) and stock (103.9/21.6). It also beats the FUSED_OFF build offline because the compile switch removed the fused op from shapes where it wins. Rebuilt the main build-cuda incrementally (one TU + relink, ASR code lives in nemo_speech_asr.dll) and verified the gate live there: 22.9s RTFx 117.9 default vs 51.0s disabled. Repointed both vw commands at build-cuda. NOTED as caveat: streaming numbers drift ~7% between sessions (75.5s vs 81.0s for the same binary), so treat sub-10% streaming deltas as noise; the offline effect is 2.2x and far outside that. Documented as Addendum 3.",
+  "commands": [
+    "cmake --build build-cuda --config Release",
+    "NEMO_SPEECH_RELPOS_MAX_Q sweep on offline and streaming"
+  ],
+  "files": [
+    "NeMo-Speech.cpp/src/asr/encoder/rel_pos_attention.cpp",
+    "docs/nemo-speech-benchmark.md",
+    "vault-commander/cli/Start-BetterSubtitles.ps1",
+    "vault-commander/cli/utils/nemo_asr.py"
+  ],
+  "planPath": "",
+  "contentHash": "7a08099f820b627ad0da48025c7fd9eeda6b27c859acb2d82f738d0fcc67d1fa",
+  "git": {
+    "repo": "vault-commander",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+    "branch": "vw-codex-face-embedding-fix",
+    "head": "87c31d7",
+    "hasChanges": true
+  }
+}

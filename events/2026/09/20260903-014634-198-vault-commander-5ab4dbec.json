@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260903-014634-198-vault-commander-5ab4dbec",
+    "createdAt":  "2026-09-03T05:46:34.1987811Z",
+    "createdAtLocal":  "2026-09-03 01:46",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-commander",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: vw-codex-face-embedding-fix\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-03 01:46 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+    "summary":  "Quarantined 395 embedding outliers into per-model .outliers folders with zero failures, preserving source images and sidecars. Reran offline benchmark excluding moved paths: 1,460 held-out samples, 100% true identity over impostor, 100% at similarity \u003e=0.65, mean true 0.8523, mean impostor 0.2703, mean margin 0.5819. Committed/pushed quarantine utility as 87c31d7; preserved unrelated working-tree changes.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "5ab4dbec5979a40c27cfa5ba1575126f6db21ba7386c4be81c797fcd91f534a6",
+    "git":  {
+                "repo":  "vault-commander",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+                "branch":  "vw-codex-face-embedding-fix",
+                "head":  "87c31d7",
+                "hasChanges":  true
+            }
+}

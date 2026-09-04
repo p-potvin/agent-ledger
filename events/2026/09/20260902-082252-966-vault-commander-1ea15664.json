@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260902-082252-966-vault-commander-1ea15664",
+    "createdAt":  "2026-09-02T12:22:52.9665937Z",
+    "createdAtLocal":  "2026-09-02 08:22",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-commander",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: vw-codex-organize-mp4-sidecars\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-02 08:22 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+    "summary":  "Added and published vw organize-mp4-sidecars in PR #13. The destructive command recursively moves matching JSON beside normal and .enhanced MP4s, JPG/WebM artifacts into per-video .thumbs directories, skips collisions, supports WhatIf, and has fixture coverage. 94/94 command contracts and 8/8 mocked smoke tests passed. Preserved the unrelated uncommitted Reduce-VideoSizes ratio edit.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "1ea156641a2e5f456004f9426a6250adbc74762675d09d052e145607a77f3227",
+    "git":  {
+                "repo":  "vault-commander",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+                "branch":  "vw-codex-organize-mp4-sidecars",
+                "head":  "6966124",
+                "hasChanges":  true
+            }
+}

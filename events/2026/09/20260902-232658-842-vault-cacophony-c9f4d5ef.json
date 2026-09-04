@@ -1,0 +1,52 @@
+{
+  "id": "20260902-232658-842-vault-cacophony-c9f4d5ef",
+  "createdAt": "2026-09-03T03:26:58.8423737Z",
+  "createdAtLocal": "2026-09-02 23:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-02 23:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Rewired vw better-subtitles and vw live-subs onto NeMo-Speech.cpp + Parakeet TDT, replacing the audio.cpp path. NEW scripts/utils/nemo_asr.py in vault-commander/cli/utils: NemoSpeechTranscriber, a drop-in replacement for AudioCppTranscriber (same ctor shape, transcribe_array/transcribe_file/close), backed by a resident 'nemo-speech serve' HTTP server on port 8123 posting multipart to /v1/audio/transcriptions with response_format=verbose_json; imports TranscriptSegment and group_into_segments from audiocpp_asr so both paths cut cues identically. Rewired live_subs_overlay.py:235 import. REWROTE vault-commander/cli/Start-BetterSubtitles.ps1: ffmpeg decode to a staging dir then ONE 'nemo-speech transcribe DIR --format srt' call (one model load for a whole tree), optional --diarize and --translate-to. Dropped BS-RoFormer separation (no equivalent in NeMo-Speech.cpp) and the cue-shaping knobs Gap/MaxChars/MaxDur/Width (nemo-speech groups cues itself) - both documented as deliberate omissions. Param renamed InputPath with [Alias('Input')] because  is a PowerShell automatic variable. Updated vw-commands.ps1 registry for both commands; backed up to D:/HuggingFace/bench/vw-commands.pre-nemo.bak.ps1; verified it parses. TESTED: 45s clip -> SRT in 1.0s with correct two-line punctuated cues; -Speakers path runs (3.9s). NOT tested: the live overlay end to end (needs playing audio + GUI). Started a second STOCK build for patched-vs-stock comparison: copied the tree to D:/HuggingFace/nemo-stock, reverted all 16 ggml patches in reverse order from inside ggml/ (they are relative to ggml/, not repo root), and adapted its build.ps1 to skip patch application and pass -DNEMO_SPEECH_GGML_PATCHED=OFF. Confirmed the EXISTING build-cuda is already fully patched (GGML_PATCHED=ON, FUSED_RELPOS_ATTN=ON, DIRECT_DW_CONV=ON, FASTCONFORMER_CUDA_FUSIONS=ON), so every benchmark so far was the patched path and the second build is the stock one, inverting the original plan.",
+  "commands": [
+    "robocopy NeMo-Speech.cpp D:\\HuggingFace\\nemo-stock /E /XD build-cuda",
+    "git apply -R ggml-patches/*.patch (from inside ggml/)",
+    "build.ps1 -Backend cuda -Profile asr -BuildDir build-stock"
+  ],
+  "files": [
+    "vault-commander/cli/utils/nemo_asr.py",
+    "vault-commander/cli/Start-BetterSubtitles.ps1",
+    "vault-commander/cli/vw-commands.ps1",
+    "vault-commander/cli/utils/live_subs_overlay.py"
+  ],
+  "planPath": "",
+  "contentHash": "c9f4d5eff87233fb5f5d14f9e9d447e4c9b4512c9e5067f37c55bc03640473de",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

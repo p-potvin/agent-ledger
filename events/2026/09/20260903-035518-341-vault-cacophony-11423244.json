@@ -1,0 +1,48 @@
+{
+  "id": "20260903-035518-341-vault-cacophony-11423244",
+  "createdAt": "2026-09-03T07:55:18.3418610Z",
+  "createdAtLocal": "2026-09-03 03:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander\\cli  Branch: vw-codex-face-embedding-fix\r\nTools used (this reply): PowerShell, Bash, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-03 03:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander\\cli",
+  "summary": "Fixed two real bugs in the new vw better-subtitles reported by the user. BUG 1: I built build-norelpos with -Profile asr, which excludes the NMT component, so --translate-to did not exist in that binary and the run died at exit 2. BUG 2 found while fixing 1: nemo-speech rejects --translate-to together with --format srt ('--translate-to currently supports text and json output'), which is why the old pipeline had a separate translate_srt.py. Fixes: (a) added a capability probe that checks 'help transcribe' for --translate-to and falls back to a build that has it, warning about the speed cost, or degrades to no translation rather than failing; (b) moved the CUDA bin/x64 PATH setup to the TOP of the script - the probe originally ran before it, so every build exited 53 with empty output and looked NMT-less, my own documented gotcha biting the guard; (c) translation is now a second pass over the finished SRT: cues are parsed, one cue per line through 'nemo-speech translate --input/--output', then rewritten with original timings preserved. Cues are short by construction so none approaches Riva's n_ctx limit. Added -TranslateFrom (default en) and registered it. VERIFIED: translated Spanish SRT with correct timings. Rebuilding build-norelpos with -Profile full -Nmt so the fast offline build gains NMT, TTS, HTTP, gRPC and Flashlight (the last also unblocks the pending tuned-CTC work); configure line confirms -DNEMO_SPEECH_GGML_PATCHED=ON -DNEMO_SPEECH_FUSED_RELPOS_ATTN=OFF.",
+  "commands": [
+    "build.ps1 -Backend cuda -Profile full -Nmt -BuildDir build-norelpos",
+    "Start-BetterSubtitles.ps1 -TranslateTo es"
+  ],
+  "files": [
+    "vault-commander/cli/Start-BetterSubtitles.ps1",
+    "vault-commander/cli/vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "1142324400d0ec22812fec2ebeefa510acf3c2d2a551fe021158807f7ccaf753",
+  "git": {
+    "repo": "vault-commander",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+    "branch": "vw-codex-face-embedding-fix",
+    "head": "87c31d7",
+    "hasChanges": true
+  }
+}

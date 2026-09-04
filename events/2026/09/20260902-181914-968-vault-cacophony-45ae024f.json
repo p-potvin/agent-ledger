@@ -1,0 +1,48 @@
+{
+  "id": "20260902-181914-968-vault-cacophony-45ae024f",
+  "createdAt": "2026-09-02T22:19:14.9684919Z",
+  "createdAtLocal": "2026-09-02 18:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-02 18:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "OpenASR LibriSpeech test-clean results + ggml crash found. HEADLINE: parakeet-tdt-0.6b-v3 Q8_0 GGUF scored normalized WER 1.9310% on all 2620 test-clean utterances at RTFx 195.8 (99.3s for 5.4h of audio). NVIDIA's published figure for the original PyTorch checkpoint is 1.93% - an essentially exact match, so the Q8_0 GGUF quantization costs nothing measurable AND the harness reproduces the leaderboard methodology correctly. Ranking so far on librispeech clean: parakeet-tdt 1.931% > AF3 1.489%? NO - AF3 1.489% is BETTER, parakeet-tdt 1.931% second, nemotron-3.5 3.180% third (AF3 and nemotron on 250-utt subset). BUG FOUND: nemo-speech.exe transcribe in directory mode crashes with GGML_ASSERT(ctx->mem_buffer != NULL) failed at ggml/src/ggml.c:1610, exit 3221226505 (0xC0000409), for nemotron-en, nemotron-3.5 and parakeet-ctc but NOT parakeet-tdt. Not triggered by utterance length (longest 34.95s utterances are in the working 20-file subset) and not by concurrency alone (concurrency 4 succeeds on 20 files). Appears scale-dependent - nemotron-en crashed ~10s into the 2620-file run. Rerunning the three at concurrency 1. Also downloaded OpenSLR LM assets for planned flashlight CTC tuning.",
+  "commands": [
+    "python scripts/run_openasr_nemo.py --models parakeet-tdt --tag librispeech-clean",
+    "python scripts/evaluate_openasr.py --input parakeet-tdt-librispeech-clean-2620.jsonl",
+    "python scripts/run_openasr_nemo.py --models nemotron-en,parakeet-ctc --concurrency 1"
+  ],
+  "files": [
+    "G:/OpenASR/results/parakeet-tdt-librispeech-clean-2620.metrics.json",
+    "scripts/run_openasr_nemo.py"
+  ],
+  "planPath": "",
+  "contentHash": "45ae024fb2494991cb78deda0585a1c8d274ad88b10c0981fbb527f81c5a39c9",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

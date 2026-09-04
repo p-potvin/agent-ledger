@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260902-084102-581-vault-explorer-b659293f",
+    "createdAt":  "2026-09-02T12:41:02.5815099Z",
+    "createdAtLocal":  "2026-09-02 08:41",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-explorer",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 3.6 Flash\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: feat/debrids-tab\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-02 08:41 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.6 Flash",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+    "summary":  "Validated real AllDebrid HTTP stream playback (11.8s) and on-disk thumbnail/WebM preview generation",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "b659293fe23af1ad92ac5869b3bb83f43ef458963a8e210e06bc5711817b7fe0",
+    "git":  {
+                "repo":  "vault-explorer",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+                "branch":  "feat/debrids-tab",
+                "head":  "b84596e",
+                "hasChanges":  true
+            }
+}
