@@ -3,7 +3,115 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-09-03 23:27 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares &#226; Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares &#226; Project Rename Refactoring (Phase 5), VaultWares &#226; Project Rename Refactoring (Phase 5 PR Workflow), VaultWares &#226; System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>verification</code> - Investigated requested OVH/Greencloud remediation: confirmed OVH Docker/containerd storage and 50GB mount constraints, inventoried Docker images, identified CUDA-heavy API venv,...</summary>
+<summary><strong>2026-09-04 04:35 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares &#226; Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares &#226; Project Rename Refactoring (Phase 5), VaultWares &#226; Project Rename Refactoring (Phase 5 PR Workflow), VaultWares &#226; System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>commands</code> - Executed branch cleanups: deleted 57 merged local &amp; 26 remote branches, deleted vault-central bot branches, deleted ssot branches across 11 repos, deleted windows-customizer mas...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 04:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Executed branch cleanups: deleted 57 merged local & 26 remote branches, deleted vault-central bot branches, deleted ssot branches across 11 repos, deleted windows-customizer master, merged 22 Dependabot PRs, created 3 recent PRs, and audited 42 missing backfill events in agent-ledger
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 04:10 - ColONEL-KFC</strong> <code>code-change</code> - Created and published ColONEL-KFC PR #1: project-owned CUDA venv bootstrap, antelopev2 SCRFD-10G/GlintR100/2D-106/GenderAge face engine, strict CUDA-provider guard, migrated fac...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: vw-codex-colonel-kfc-canonical
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 04:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created and published ColONEL-KFC PR #1: project-owned CUDA venv bootstrap, antelopev2 SCRFD-10G/GlintR100/2D-106/GenderAge face engine, strict CUDA-provider guard, migrated face pipeline, and validated GPU extraction plus 19 focused tests.
+- Git: repo=ColONEL-KFC, branch=vw-codex-colonel-kfc-canonical, head=3900903
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 03:59 - General Tasks</strong> <code>verification</code> - Analyzed all 379 branches across 52 repositories from all_branches.txt, classified merged vs unmerged, generated report and safe cleanup utility</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 03:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: Analyzed all 379 branches across 52 repositories from all_branches.txt, classified merged vs unmerged, generated report and safe cleanup utility
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 03:44 - ColONEL-KFC</strong> <code>code-change</code> - Made ColONEL-KFC the canonical ArcFace face project by migrating the current implementation, strict tag eligibility contract, sidecar/outlier tooling, root-level script ownershi...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: vw-codex-colonel-kfc-canonical
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 03:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Made ColONEL-KFC the canonical ArcFace face project by migrating the current implementation, strict tag eligibility contract, sidecar/outlier tooling, root-level script ownership, and regression tests; 17 focused tests passed.
+- Git: repo=ColONEL-KFC, branch=vw-codex-colonel-kfc-canonical, head=7ed12b9
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 03:44 - vault-commander</strong> <code>code-change</code> - Moved the ColONEL-KFC face implementation out of vault-commander, replaced all eight face-related vw scripts with adapters to the canonical ColONEL-KFC checkout, and preserved c...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-face-embedding-fix
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 03:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Moved the ColONEL-KFC face implementation out of vault-commander, replaced all eight face-related vw scripts with adapters to the canonical ColONEL-KFC checkout, and preserved command contracts (94/94).
+- Git: repo=vault-commander, branch=vw-codex-face-embedding-fix, head=87c31d7
+
+</details>
+
+<details>
+<summary><strong>2026-09-03 23:27 - General Tasks</strong> <code>verification</code> - Investigated requested OVH/Greencloud remediation: confirmed OVH Docker/containerd storage and 50GB mount constraints, inventoried Docker images, identified CUDA-heavy API venv,...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -9062,760 +9170,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Summary: Reorganized F:\amd\gallery\.duplicates by matching 11,668 files (media + sidecars) to 75 human model directories using fuzzy/token matching while keeping numeric/hash non-human files in .duplicates
 - Git: repo=vault-commander, branch=agent/commander-rtx-vsr-mosaic, head=a688409
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 03:39 - vault-commander</strong> <code>code-change</code> - Added &#39;looking over shoulder&#39; detection to eliminate false positive frontal classifications when the body/back is facing away from camera, with multi-modal pose and dorsal cue f...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: agent/commander-rtx-vsr-mosaic
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 03:39 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added 'looking over shoulder' detection to eliminate false positive frontal classifications when the body/back is facing away from camera, with multi-modal pose and dorsal cue fusion
-- Git: repo=vault-commander, branch=agent/commander-rtx-vsr-mosaic, head=a688409
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 03:00 - vault-commander</strong> <code>code-change</code> - Fixed vw help command drift with dynamic comment-based extraction, updated tab completion in PowerShell profile, and updated model convention paths to cli/utils/models</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: agent/commander-rtx-vsr-mosaic
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 03:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed vw help command drift with dynamic comment-based extraction, updated tab completion in PowerShell profile, and updated model convention paths to cli/utils/models
-- Git: repo=vault-commander, branch=agent/commander-rtx-vsr-mosaic, head=a688409
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 02:38 - vault-cacophony</strong> <code>verification</code> - Investigated the user&#39;s demucs/PyTorch VRAM OOM and the request to make the RTX 2060 the primary display GPU. MEASURED: GPU0 3060 has 1363 MiB used and 10751 MiB FREE at 18% uti...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: chat
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\CrispASR  Branch: feat/personaplex
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 02:38 (TZ: Eastern Standard Time)
-  ```
-- Summary: Investigated the user's demucs/PyTorch VRAM OOM and the request to make the RTX 2060 the primary display GPU. MEASURED: GPU0 3060 has 1363 MiB used and 10751 MiB FREE at 18% util with Display Active Enabled and every desktop process on it (dwm, firefox, claude.exe, WindowsTerminal, Antigravity IDE, Taskmgr, LogonUI); GPU1 2060 has 0 MiB used, 5955 free, Display Active Disabled. REPRODUCTION ATTEMPT FAILED TO REPRODUCE: with a clean CUDA_VISIBLE_DEVICES, torch 2.8.0+cu129 reports 11800 MB free on cuda:0 and 5361 MB on cuda:1, and a 100 MB float32 allocation SUCCEEDS on both devices. So the reported failure is not a current-state capacity problem and needs the actual error text plus the exact demucs command to diagnose. Working hypothesis to put to the user: a PyTorch OOM message's 'Tried to allocate ~100 MiB' is the allocation that failed, not the total footprint - demucs/htdemucs memory scales with segment length and can hold many GB before the straw that breaks it, so the message is consistent with genuine pressure rather than PyTorch 'refusing to yield'. Also the user conflated two unrelated knobs: PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True (allocator fragmentation mitigation) versus demucs's own --segment N (chunk length), and only the latter actually reduces demucs peak memory. DISPLAY REQUEST: cannot be done in software. nvidia-smi reports Display Active Enabled on the 3060 and Disabled on the 2060, meaning the monitor cable is physically in the 3060; Windows binds a display to whichever GPU its cable is attached to, so moving the desktop to the 2060 requires physically moving the cable, then setting it
-- Commands:
-  - `nvidia-smi --query-compute-apps`
-  - `torch alloc probe on cuda:0 and cuda:1`
-- Git: repo=CrispASR, branch=feat/personaplex, head=fc3550e6
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 01:30 - vault-commander</strong> <code>code-change</code> - Implemented tag-images and search-images commands in vault-commander with YOLO11-pose, NudeNet uncensored body parts detection, czkawka deduplication, and JSON sidecars</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: agent/commander-rtx-vsr-mosaic
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 01:30 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implemented tag-images and search-images commands in vault-commander with YOLO11-pose, NudeNet uncensored body parts detection, czkawka deduplication, and JSON sidecars
-- Git: repo=vault-commander, branch=agent/commander-rtx-vsr-mosaic, head=a688409
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 01:08 - vault-commander</strong> <code>planning</code> - Created implementation plan for person/body part tagging, czkawka deduplication, and search commands in vault-commander</summary>
-
-- Kind: planning
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: agent/commander-rtx-vsr-mosaic
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 01:08 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created implementation plan for person/body part tagging, czkawka deduplication, and search commands in vault-commander
-- Git: repo=vault-commander, branch=agent/commander-rtx-vsr-mosaic, head=a688409
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 23:38 - vault-streaming</strong> <code>code-change</code> - Fifth batch, pushed 7d2a7b9. SPINNER OUTLIVING PLAYBACK: the hand-off teardown was armed at the END of playStream, but src is assigned near the top and the function still runs f...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local + tailnet)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: main
-  Tools used (this reply): Bash, PowerShell, Playwright, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 23:38 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fifth batch, pushed 7d2a7b9. SPINNER OUTLIVING PLAYBACK: the hand-off teardown was armed at the END of playStream, but src is assigned near the top and the function still runs findSubtitles and the audio probe in between, so loadeddata (or an early error) fired before anything listened and only the 15s timeout cleared it. Now armed immediately after vp.src = url, with a readyState>=2 || vp.error check for events already missed plus a `playing` listener. Measured 15000ms to 103ms in a browser probe. OPENSUBTITLES ENOENT: handler did path.dirname(videoPath) where videoPath is an http(s) stream URL, yielding a relative nonsense path that path.join hung off the cwd - exactly the reported "<repo>\http:\100.67.25.118:5173\...srt". Remote sources now write to a subtitles cache under app.getPath(userData), keyed by fileId to avoid collisions; genuinely local absolute paths still get a sidecar beside the video. Added the missing electron `app` import to subtitles.ipc.js. CUE POSITION: discovered subtitles.js ALREADY had raiseTrackCues() and window.SUBTITLE_CUE_LINE = -4, and that my previous commit had introduced a competing liftCues/CUE_LINE_FROM_BOTTOM = -3. Removed the duplicate and rewired attachCueLifting to drive the original helper - the genuinely missing piece was that nothing invoked it for tracks added after load, so file-loaded cues stayed at line:auto behind the control bar. LOG NOISE: with_original_language now carries 72 codes since it became TMDB-driven; elided to <all> in the logged URL only (the request is unchanged). PACKAGING INVESTIGATION: compared against vault-explorer, which has no productName/setName/icon at all and simply inherits its exe name from package name. Inspected the actual artifact: dist/win-unpacked/Vault Streaming.exe has FileDescription and
-- Commands:
-  - `git push vw-codex-web-client`
-  - `Get-Item dist/win-unpacked/Vault Streaming.exe VersionInfo`
-  - `playwright handoff timing probe`
-- Files:
-  - `js/player/player.js`
-  - `js/player/subtitles.js`
-  - `src/ipc/subtitles.ipc.js`
-  - `src/tmdb.js`
-  - `package.json`
-- Git: repo=vault-streaming, branch=main, head=7d2a7b9
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 23:29 - vault-explorer</strong> <code>verification</code> - Completed direct-file playback priority goal: rebuilt dist executable, updated the verified HKCU Explorer command with --prioritize-player, and proved installed two-launch singl...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 23:29 (TZ: Eastern Standard Time)
-  ```
-- Summary: Completed direct-file playback priority goal: rebuilt dist executable, updated the verified HKCU Explorer command with --prioritize-player, and proved installed two-launch single-instance behavior with one root process. Commit e07d026 pushed to PR #48; all syntax, regression, Electron, priority, forwarding, installed, and registry-readback checks passed.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=e07d026
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 23:03 - vault-explorer</strong> <code>commands</code> - Updated the verified HKCU Vault Explorer open-command registry value to include --prioritize-player and read it back. Diagnosed installed single-instance testing/build blocker: ...</summary>
-
-- Kind: commands
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 23:03 (TZ: Eastern Standard Time)
-  ```
-- Summary: Updated the verified HKCU Vault Explorer open-command registry value to include --prioritize-player and read it back. Diagnosed installed single-instance testing/build blocker: active dist\win-unpacked process locks dxil.dll, so electron-builder cannot refresh the executable; no user process was stopped.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=2a5c76b
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 22:57 - vault-explorer</strong> <code>code-change</code> - Implemented and published direct-file playback priority in 0ac6a0e (with durable user-test handoff 2a5c76b): --prioritize-player starts video before folder scan, defers folder c...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 22:57 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implemented and published direct-file playback priority in 0ac6a0e (with durable user-test handoff 2a5c76b): --prioritize-player starts video before folder scan, defers folder context and ASR warmup until playing, and preserves single-instance forwarding. Focused direct and forwarded Electron verifiers passed; final installed Explorer association validation is user-owned.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=2a5c76b
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 22:11 - vault-streaming</strong> <code>code-change</code> - Fourth batch, pushed 577135b. MODAL TO PLAYER HAND-OFF (the pre-alpha blocker): rd-flow hid rd-stream-dialog the instant a source resolved, but playStream still ran findSubtitle...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local + tailnet)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: main
-  Tools used (this reply): Bash, PowerShell, Playwright, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 22:11 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fourth batch, pushed 577135b. MODAL TO PLAYER HAND-OFF (the pre-alpha blocker): rd-flow hid rd-stream-dialog the instant a source resolved, but playStream still ran findSubtitles and the audio probe before revealing video-modal, so the grid flashed between the two. Added beginPlayerHandoff/endPlayerHandoff: the player shell is raised first with a .preparing class and a #player-preparing spinner overlay, the dialog fades out over it (.handing-off), and the overlay clears on loadeddata, on error, or after a 15s timeout. Removed both eager hides from rd-flow. VIDEO LETTERBOXING: root cause was .video-wrapper.subtitles-active #video-player { padding-bottom: 40px }. Reserving space with padding cannot work here - content-box overflows the wrapper, border-box shrinks the content box, and object-fit:contain rescales to fit either way, producing gaps on bottom AND both sides. Padding removed; added liftCues/attachCueLifting which sets cue.line = -3 on tracks (hooked via textTracks addtrack + cuechange) so subtitles clear the controls without resizing the picture. OPENSUBTITLES: download-subtitle-track resolves { success, path } but the renderer passed the object into sanitizePath, producing "p.replace is not a function"; now unwrapped with a success:false check. Separately the preferred-language selection fell back to subs[0] when no match existed, which is why defaultSubLang=fr loaded English - an explicit language choice is now respected and nothing is auto-loaded rather than the wrong language ('original' still falls back). PRIME REGRESSION: self-inflicted - js/tmdb.js passed (appSettings.watchRegion || 'US'), which pre-empted the geo lookup; now sends undefined when unset. Also found the user's stored settings contained watchRegion:"US" written by the earlier rate-limited-geo bug (fallback presented as detection); backed up settings and
-- Commands:
-  - `git push vw-codex-web-client`
-  - `playwright handoff/flag/video verification`
-- Files:
-  - `js/player/player.js`
-  - `js/player/subtitles.js`
-  - `js/streaming/rd-flow.js`
-  - `js/tmdb.js`
-  - `css/player.css`
-  - `css/header.css`
-  - `index.html`
-  - `main.js`
-  - `public/flags/qc.svg`
-- Git: repo=vault-streaming, branch=main, head=577135b
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 21:59 - General Tasks</strong> <code>code-change</code> - Updated and deployed clopeux FLUX2 Klein Space: created private generation-log dataset, configured logging secret/variables, persisted Generate config/images in its existing buc...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: D:\HuggingFace\spaces  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 21:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Updated and deployed clopeux FLUX2 Klein Space: created private generation-log dataset, configured logging secret/variables, persisted Generate config/images in its existing bucket, and added resumable bounded bulk retries. VW_STATE resumeId=hf-flux2-persistence-20260820; categories=SOURCE_OF_TRUTH,SECRETS_HANDLING,REQUEST_RATE_LIMITING,BILINGUAL_STRINGS,FILE_CHANGES,VERIFICATION,GUI_VERIFICATION,LONG_RUNNING_TASKS,HANDLING_BUGS; estimate=12000; interview=complete.
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 21:18 - General Tasks</strong> <code>verification</code> - Inspected clopeux Pro-Realism FLUX2 Klein Space logging and persistence paths; identified fork dataset default and logged-in HF namespace.</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: D:\HuggingFace\spaces  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 21:18 (TZ: Eastern Standard Time)
-  ```
-- Summary: Inspected clopeux Pro-Realism FLUX2 Klein Space logging and persistence paths; identified fork dataset default and logged-in HF namespace.
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 20:51 - vault-streaming</strong> <code>code-change</code> - Third batch, pushed as ca18e26. TMDB CREDENTIALS: answered - nothing to switch. .access/tmdb_api.txt (32 chars) is the v3 key and .access/tmdb_bearer.txt is the v4 JWT whose aud...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local + tailnet)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: main
-  Tools used (this reply): Bash, PowerShell, Playwright, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 20:51 (TZ: Eastern Standard Time)
-  ```
-- Summary: Third batch, pushed as ca18e26. TMDB CREDENTIALS: answered - nothing to switch. .access/tmdb_api.txt (32 chars) is the v3 key and .access/tmdb_bearer.txt is the v4 JWT whose aud claim IS that api key, so they are the same TMDB app/account; both match .env; TMDB_API_TOKEN is loaded but never used (all calls are Bearer). /3/account returns username clopeux id 22602010 region CA, which proves the token belongs to that account - the dashboard showing no queries is a TMDB reporting matter, not a wrong account. LIVE SUBS: found two live_subtitles.py daemons idle with nothing playing (one parented to electron.exe, one holding 866MB); killed both. Cause: warmLiveSubtitles ran unconditionally at boot and the daemon was only reaped on app quit. Boot warm is now opt-in (appSettings.warmLiveSubtitlesOnStart) and an idle timer releases the model after VAULT_ASR_IDLE_MS (default 10 min), armed on warm and on stop, cancelled on start. GEO IP: implemented with a provider chain after discovering ipapi.co returns RateLimited - a failed lookup was silently becoming US, i.e. a wrong answer presented as detection. Now ipwho.is then api.country.is then ipapi.co, and get-watch-regions returns detected:null plus fallbackRegion instead of conflating them; verified detects CA and Prime now resolves without an explicit region. PLAYER BUGS from user console: seekArea click computed ratio * vp.duration with duration NaN, throwing non-finite currentTime (3x in their trace); now guarded on finite duration and rect width. Separately a failed source left the previous title's last decoded frame painted, which is why seeking appeared to show the previous movie at 00:00; the error handler now pauses,
-- Commands:
-  - `TMDB /3/account`
-  - `ipwho.is / api.country.is / ip-api.com`
-  - `Stop-Process live_subtitles daemons`
-  - `git push vw-codex-web-client`
-- Files:
-  - `src/live-subtitles.js`
-  - `src/tmdb.js`
-  - `js/app.js`
-  - `js/player/player.js`
-  - `js/player/subtitles.js`
-  - `js/tmdb.js`
-  - `js/settings/core.js`
-  - `css/modals.css`
-  - `css/header.css`
-  - `main.js`
-  - `package.json`
-- Git: repo=vault-streaming, branch=main, head=ca18e26
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 19:25 - vault-streaming</strong> <code>code-change</code> - Second batch. CARDS: --card-trim 40px to 20px plus 5px top/bottom padding (measured 276px at 1600 viewport). WATCH REGION: answered definitively that it cannot be omitted - TMDB...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local + tailnet)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: main
-  Tools used (this reply): Bash, PowerShell, Playwright, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 19:25 (TZ: Eastern Standard Time)
-  ```
-- Summary: Second batch. CARDS: --card-trim 40px to 20px plus 5px top/bottom padding (measured 276px at 1600 viewport). WATCH REGION: answered definitively that it cannot be omitted - TMDB silently ignores with_watch_providers without watch_region, verified provider 8 with no region returns 1,170,829 results (whole catalogue, same as no provider) vs 4,708 with watch_region=CA. Now a user setting defaulting to US, populated from TMDB /watch/providers/regions (139 regions loaded live), passed through preload/web-shim/discover, with an explicit TODO for IP geolocation seeding. WITH_ORIGINAL_LANGUAGE: replaced hardcoded en|fr|ja|ko with /configuration/primary_translations (144 locales, 72 base languages), fetched once and cached 24h, old constant kept as offline fallback. CARD BUTTONS: root cause was that hover sets card visibility:hidden and swaps in the popup, so the card's own buttons are unreachable - and the popup already carries play/library/details. Converted to informational labels: media-type badge always, library badge only when saved; handleCardLibToggle in favorites.js is now unreferenced. YOUTUBE ERRORS: onError listener already existed (codes 2/5/100/101/150) but collapsed the panel to nothing; now renders the trailer's own img.youtube.com/vi/<key>/hqdefault.jpg behind a translated overlay message. JS STRINGS: added window.tr(key, fallback) in utils.js resolving at call time, converted 42 showToast literals across 12 files into 36 keys with Quebecois French. SETTINGS MODAL: added a full-page scrim via a 100vmax-spread box-shadow, because the #settings-backdrop the JS references does not exist in markup. KINOCHECK: both call sites already pass language after the previous fix, so the language=en line the user saw predates it (Electron reads js/ at window load). GPU error in their console (command_buffer_proxy_impl WaitForGetOffsetInRange) is Chromium GPU-process noise, not app code.
-- Commands:
-  - `TMDB /configuration/primary_translations`
-  - `TMDB /watch/providers/regions`
-  - `TMDB /3/account`
-  - `git push vw-codex-web-client`
-- Files:
-  - `css/header.css`
-  - `css/settings.css`
-  - `src/tmdb.js`
-  - `js/tmdb.js`
-  - `js/utils.js`
-  - `js/settings/core.js`
-  - `js/streaming/trailer.js`
-  - `preload.js`
-  - `web/public/electron-api-shim.js`
-  - `js/translations.en.js`
-  - `js/translations.qc.js`
-- Git: repo=vault-streaming, branch=main, head=9c9a3e4
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 18:42 - vault-explorer</strong> <code>code-change</code> - Addressed valid PR #48 review feedback in b742065: Ctrl+wheel uses before-mouse-event, Settings backdrop has fallback, settings translation and hover preview guards added, subti...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 18:42 (TZ: Eastern Standard Time)
-  ```
-- Summary: Addressed valid PR #48 review feedback in b742065: Ctrl+wheel uses before-mouse-event, Settings backdrop has fallback, settings translation and hover preview guards added, subtitle tracks are replaced cleanly, and BOMs are stripped. All targeted regression tests and Electron smoke passed; no GitHub threads were replied to or resolved.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=b742065
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 18:34 - vault-explorer</strong> <code>code-change</code> - Published Vault Explorer preview GPU fallback commit 037a45b to PR #48: validation, thumbnail, and WebM preview commands request CUDA/NVDEC per input and retry CPU on any unsupp...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 18:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: Published Vault Explorer preview GPU fallback commit 037a45b to PR #48: validation, thumbnail, and WebM preview commands request CUDA/NVDEC per input and retry CPU on any unsupported GPU path. Confirmed Offline attribute semantics keep only locally available cloud files visible; preview, cloud, media-context, and Electron smoke tests passed.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=037a45b
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 18:14 - vault-explorer</strong> <code>code-change</code> - Published Vault Explorer commit 6ac15d2 to PR #48: fixed Settings modal overlay/grouping/header/titlebar clipping, hid ASR benchmark, moved homepage selection to Library, and ad...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 18:14 (TZ: Eastern Standard Time)
-  ```
-- Summary: Published Vault Explorer commit 6ac15d2 to PR #48: fixed Settings modal overlay/grouping/header/titlebar clipping, hid ASR benchmark, moved homepage selection to Library, and added metadata-only Windows Offline cloud-placeholder exclusion before scans, caches, and previews. Cloud, preview, media-context, and Electron smoke tests passed.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=6ac15d2
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 17:53 - vault-explorer</strong> <code>code-change</code> - Updated Vault Explorer preview validation in ad89ef7 to sequentially sample start/middle/end-minus-2 seconds with cached isValid and isValidCheckedAt, and added a shared two-wor...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 17:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Updated Vault Explorer preview validation in ad89ef7 to sequentially sample start/middle/end-minus-2 seconds with cached isValid and isValidCheckedAt, and added a shared two-worker preview queue without 80-item truncation. Confirmed cloud preview behavior remains unchanged; preview regression and Electron smoke tests passed. Pushed to PR #48.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=ad89ef7
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 17:26 - vault-explorer</strong> <code>code-change</code> - Implemented cached video-only preview validation in 8e130a1: isValid now comes from one FFmpeg video-only sample and is paired with isValidCheckedAt, so silent videos can previe...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 17:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implemented cached video-only preview validation in 8e130a1: isValid now comes from one FFmpeg video-only sample and is paired with isValidCheckedAt, so silent videos can preview and checked files are not decoded again. Manual, queued, and idle preview paths share the guard; test and Electron smoke suites passed. Pushed to PR #48.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=8e130a1
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 17:25 - vault-explorer</strong> <code>verification</code> - PR #48 CI heartbeat found CodeQL failure from an existing js/utils.js DOM-XSS alert outside the PR diff; CodeQL analysis and CodeRabbit passed. Per scope, no code fix or checkou...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 17:25 (TZ: Eastern Standard Time)
-  ```
-- Summary: PR #48 CI heartbeat found CodeQL failure from an existing js/utils.js DOM-XSS alert outside the PR diff; CodeQL analysis and CodeRabbit passed. Per scope, no code fix or checkout mutation was made; heartbeat paused awaiting direction.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=be67665
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 17:17 - vault-streaming</strong> <code>code-change</code> - Batch of UI/behaviour fixes, all verified in Chromium. (1) SAVE BUTTON: handler read el(debrid-proxy-enable).checked and el(debrid-proxy-address-input).value on controls no long...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local + tailnet)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: main
-  Tools used (this reply): Bash, PowerShell, Playwright, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 17:17 (TZ: Eastern Standard Time)
-  ```
-- Summary: Batch of UI/behaviour fixes, all verified in Chromium. (1) SAVE BUTTON: handler read el(debrid-proxy-enable).checked and el(debrid-proxy-address-input).value on controls no longer present in markup, throwing a TypeError before reaching saveSettings - no save, no toast, panel stayed open. The panel OPEN handler had the identical unguarded pair, aborting hydration part-way (which is why streaming-mode and focus never ran). Guarded both plus pillTagAdd which threw on input.parentNode for any saved glob exclusion. Verified: panel opens, select changes, save persists 720p across reload, toast fires, zero page errors. (2) BUTTON HOVER: global rule swapped background but never color, so buttons with their own light background lost contrast - measured purple Search button 6.78:1 normal to 1.06:1 on hover (near-black on near-black). Replaced with inset box-shadow overlay which paints above background but below text, palette-agnostic and cannot invert contrast; re-measured 6.78:1 on hover. (3) CARDS: trimmed exactly 40px via --card-trim with justify-self centre, keeping 5 columns - changing column count moved width 60-100px by viewport. Verified 296->256, 360->320, 488->448. Hover popup untouched per request. (4) PRIME: button sent TMDB provider 9 (Amazon Prime Video US) while watch_region is hardcoded CA where the id is 119; confirmed against TMDB CA provider list, now returns 20 results. Also stopped rendering raw upstream TMDB status text into the grid (now a translated user-facing message, raw detail to console). (5) NATIONALITY LIST: answered - hardcoded 6 countries in index.html mirroring the hardcoded with_original_language=en|fr|ja|ko whitelist in src/tmdb.js, which is the real constraint. (6) DATE SORT: date window now built once (decade filter and cutoff both
-- Commands:
-  - `git commit/push vw-codex-web-client`
-  - `playwright save/hover/card/i18n verification`
-  - `TMDB watch/providers CA lookup`
-- Files:
-  - `js/settings/core.js`
-  - `js/settings/pill-tags.js`
-  - `css/index.css`
-  - `css/header.css`
-  - `index.html`
-  - `src/tmdb.js`
-  - `js/tmdb.js`
-  - `js/utils.js`
-  - `js/translations.en.js`
-  - `js/translations.qc.js`
-- Git: repo=vault-streaming, branch=main, head=6d8fda0
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 17:14 - vault-explorer</strong> <code>verification</code> - Inspected live PR #48 CI state: merge blocked only by pending CodeQL and CodeRabbit; no required failures or merge conflicts identified. No checkout or code mutations made under...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 17:14 (TZ: Eastern Standard Time)
-  ```
-- Summary: Inspected live PR #48 CI state: merge blocked only by pending CodeQL and CodeRabbit; no required failures or merge conflicts identified. No checkout or code mutations made under isolated-PR-check instructions.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=be67665
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 17:13 - vault-explorer</strong> <code>code-change</code> - Added bilingual Size and Length playback-folder sort options in be67665 and pushed to PR #48; regression and Electron smoke tests passed. Researched ffprobe/ffmpeg corruption de...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 17:13 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added bilingual Size and Length playback-folder sort options in be67665 and pushed to PR #48; regression and Electron smoke tests passed. Researched ffprobe/ffmpeg corruption detection: current preview is incorrectly audio-dependent; no preview behavior changed pending user decision on the proposed video-only decode validation strategy.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=be67665
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 17:05 - vault-explorer</strong> <code>code-change</code> - Added persistent playback-folder ordering in Vault Explorer commit ce48c9f: default Date Modified newest first, configurable Date Modified/Created ascending/descending or name o...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 17:05 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added persistent playback-folder ordering in Vault Explorer commit ce48c9f: default Date Modified newest first, configurable Date Modified/Created ascending/descending or name order. Scanner now emits creation time; E2E smoke isolation avoids active single-instance interference. Regression and Electron smoke tests passed; pushed to PR #48.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=ce48c9f
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 16:49 - vault-explorer</strong> <code>code-change</code> - Fixed Vault Explorer Settings modal section navigation, reversible Ctrl/scroll zoom, WebVTT subtitle conversion and uploads, and folder-scoped player navigation/actions in 43088...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 16:49 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed Vault Explorer Settings modal section navigation, reversible Ctrl/scroll zoom, WebVTT subtitle conversion and uploads, and folder-scoped player navigation/actions in 4308868. PR #47 had merged during work, so follow-up PR #48 was opened; syntax, media context, single-instance, and Electron smoke tests passed.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=4308868
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 16:40 - vault-explorer</strong> <code>general</code> - Diagnosed Vault Explorer regressions before implementation: Settings remains a flat grid; SRT-to-VTT conversion writes literal backslash-n sequences; player navigation and actio...</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 16:40 (TZ: Eastern Standard Time)
-  ```
-- Summary: Diagnosed Vault Explorer regressions before implementation: Settings remains a flat grid; SRT-to-VTT conversion writes literal backslash-n sequences; player navigation and action roots rely on the displayed folder rather than the playing file. Awaiting required UI theme choice before visible modal changes.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=50cc551
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 16:15 - vault-explorer</strong> <code>code-change</code> - Addressed Gemini PR #47 feedback in commit 50cc551: skip secondary argv executable, resolve relative file paths from the launcher working directory, exit rejected second instanc...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 16:15 (TZ: Eastern Standard Time)
-  ```
-- Summary: Addressed Gemini PR #47 feedback in commit 50cc551: skip secondary argv executable, resolve relative file paths from the launcher working directory, exit rejected second instances before cleanup, and strengthen regression coverage. Regression and Electron smoke tests passed; no GitHub comments were replied to or resolved.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=50cc551
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 16:08 - vault-explorer</strong> <code>code-change</code> - Published Vault Explorer single-instance file-forwarding on vw-codex-single-instance-file-forwarding as 37f1bb8; updated vaultwares-themes gitlink to 66c66381; draft PR #47 open...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: vw-codex-single-instance-file-forwarding
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 16:08 (TZ: Eastern Standard Time)
-  ```
-- Summary: Published Vault Explorer single-instance file-forwarding on vw-codex-single-instance-file-forwarding as 37f1bb8; updated vaultwares-themes gitlink to 66c66381; draft PR #47 opened after regression and Electron smoke tests.
-- Git: repo=vault-explorer, branch=vw-codex-single-instance-file-forwarding, head=37f1bb8
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 16:02 - vault-explorer</strong> <code>code-change</code> - Added restart-applied single-instance mode that forwards Windows Explorer file opens to the active Vault Explorer window, with bilingual Settings control and regression coverage.</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 16:02 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added restart-applied single-instance mode that forwards Windows Explorer file opens to the active Vault Explorer window, with bilingual Settings control and regression coverage.
-- Git: repo=vault-explorer, branch=main, head=d1abe75
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 10:53 - General Tasks</strong> <code>code-change</code> - Created standalone vaultwares-epg service root, restored the EPG server and ONN/m3u4u automation there, copied the French XMLTV backup into data, repointed VaultExplorerEPG NSSM...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-epg  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 10:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created standalone vaultwares-epg service root, restored the EPG server and ONN/m3u4u automation there, copied the French XMLTV backup into data, repointed VaultExplorerEPG NSSM and the midnight sync task, added SYSTEM boot and user-logon service recovery, and verified private Greencloud routes return 200.
-
-</details>
-
-<details>
-<summary><strong>2026-08-19 10:43 - vault-explorer</strong> <code>verification</code> - Diagnosed epg.vaultwares.ca 504: Greencloud nginx is reachable, but VaultExplorerEPG is paused because NSSM repeatedly fails to launch the now-missing untracked scripts\\epg_ser...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/explorer-rtx-vsr
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-19 10:43 (TZ: Eastern Standard Time)
-  ```
-- Summary: Diagnosed epg.vaultwares.ca 504: Greencloud nginx is reachable, but VaultExplorerEPG is paused because NSSM repeatedly fails to launch the now-missing untracked scripts\\epg_server.py. No DNS, TLS, nginx, or Tailscale fault found; no changes made.
-- Git: repo=vault-explorer, branch=agent/explorer-rtx-vsr, head=46ab16a
 
 </details>
 

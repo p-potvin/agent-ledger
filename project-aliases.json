@@ -2,8 +2,7 @@
   "schemaVersion": 1,
   "description": "Canonical project name + historical aliases. The work-impact aggregator and the record-agent-change intake both call scripts/resolve-project-alias.ps1 to normalize any alias to its canonical name before bucketing. Append a new entry every time a project is renamed and run update-work-impact.ps1 -FullRebuild once so the dashboard rebuckets historical events.",
   "forks": [
-    "OneTrainer",
-    "video-depth-anything"
+    "OneTrainer"
   ],
   "forksDescription": "External-fork repos that show up in agent-input but aren't owned projects. stats-app/scripts/generate-data.mjs drops these from byProject, projects, and totalProjects so they don't pad the count.",
   "projects": [
@@ -112,7 +111,7 @@
       "renamedAt": "2026-05-18",
       "previousRemote": "p-potvin/vault-themes",
       "newRemote": "p-potvin/vaultwares-themes",
-      "notes": "Folder + remote rename. CSS brand tokens (vault-gold, vault-base, vault-paper, vault-light, vault-cyan, vault-green, vault-burgundy, vault-slate, vault-muted) KEPT as-is per scope decision — they are short brand identifiers, not project names. | Multi-project events centered on themes. vault-themes is already aliased to vaultwares-themes above."
+      "notes": "Folder + remote rename. CSS brand tokens (vault-gold, vault-base, vault-paper, vault-light, vault-cyan, vault-green, vault-burgundy, vault-slate, vault-muted) KEPT as-is per scope decision \u2014 they are short brand identifiers, not project names. | Multi-project events centered on themes. vault-themes is already aliased to vaultwares-themes above."
     },
     {
       "canonical": "vaultwares-adk",
@@ -187,7 +186,7 @@
         "vaultwares-docs / vw-jira-sync",
         "General Tasks / vw-jira-sync"
       ],
-      "notes": "Split out from vaultwares-docs and General Tasks — vw-jira-sync is its own canonical project."
+      "notes": "Split out from vaultwares-docs and General Tasks \u2014 vw-jira-sync is its own canonical project."
     },
     {
       "canonical": "General Tasks",
@@ -208,10 +207,10 @@
         "VaultWares SSOT (20 repos)",
         "VaultWares Infrastructure",
         "VaultWares Project File Sync",
-        "VaultWares — Post-Refactoring Cleanup & Infrastructure Verification",
-        "VaultWares — Project Rename Refactoring (Phase 5)",
-        "VaultWares — Project Rename Refactoring (Phase 5 PR Workflow)",
-        "VaultWares — System Verification & Maintenance Complete",
+        "VaultWares \u2014 Post-Refactoring Cleanup & Infrastructure Verification",
+        "VaultWares \u2014 Project Rename Refactoring (Phase 5)",
+        "VaultWares \u2014 Project Rename Refactoring (Phase 5 PR Workflow)",
+        "VaultWares \u2014 System Verification & Maintenance Complete",
         "vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing",
         "deploy-flow-unification"
       ],

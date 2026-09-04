@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260904-034433-074-colonel-kfc-b2b648e9",
+    "createdAt":  "2026-09-04T07:44:33.0741756Z",
+    "createdAtLocal":  "2026-09-04 03:44",
+    "timezone":  "Eastern Standard Time",
+    "project":  "ColONEL-KFC",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC  Branch: vw-codex-colonel-kfc-canonical\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-04 03:44 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC",
+    "summary":  "Made ColONEL-KFC the canonical ArcFace face project by migrating the current implementation, strict tag eligibility contract, sidecar/outlier tooling, root-level script ownership, and regression tests; 17 focused tests passed.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "b2b648e9e82cd286c5b6f22ad2b162595fd1a2158c46d859d554e5c394b62f12",
+    "git":  {
+                "repo":  "ColONEL-KFC",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/ColONEL-KFC",
+                "branch":  "vw-codex-colonel-kfc-canonical",
+                "head":  "7ed12b9",
+                "hasChanges":  true
+            }
+}

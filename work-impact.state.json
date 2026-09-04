@@ -1609,7 +1609,6 @@
       "20260424-081033-001-vaultwares-pipelines-0af988c5",
       "20260424-081033-002-vaultwares-template-85d2d2b5",
       "20260424-081033-003-vaultwares-website-97d71d2b",
-      "20260424-081033-004-video-depth-anything-3d8f1493",
       "20260424-081034-000-weekly-menu-9f07d173",
       "20260424-081034-001-windows-customizer-ff9d1646",
       "20260424-103048-000-vault-themes-8e7cb54e",
@@ -3753,7 +3752,24 @@
         {
           "entries": 1,
           "day": "2026-03-11",
-          "projects": "automation-suite",
+          "projects": [
+            "a",
+            "u",
+            "t",
+            "o",
+            "m",
+            "a",
+            "t",
+            "i",
+            "o",
+            "n",
+            "-",
+            "s",
+            "u",
+            "i",
+            "t",
+            "e"
+          ],
           "kinds": {
             "code-change": 1
           }
@@ -3822,7 +3838,28 @@
         {
           "entries": 6,
           "day": "2026-03-18",
-          "projects": "vault-video-enhancer",
+          "projects": [
+            "v",
+            "a",
+            "u",
+            "l",
+            "t",
+            "-",
+            "v",
+            "i",
+            "d",
+            "e",
+            "o",
+            "-",
+            "e",
+            "n",
+            "h",
+            "a",
+            "n",
+            "c",
+            "e",
+            "r"
+          ],
           "kinds": {
             "code-change": 6
           }
@@ -3830,7 +3867,28 @@
         {
           "entries": 1,
           "day": "2026-03-19",
-          "projects": "vault-video-enhancer",
+          "projects": [
+            "v",
+            "a",
+            "u",
+            "l",
+            "t",
+            "-",
+            "v",
+            "i",
+            "d",
+            "e",
+            "o",
+            "-",
+            "e",
+            "n",
+            "h",
+            "a",
+            "n",
+            "c",
+            "e",
+            "r"
+          ],
           "kinds": {
             "code-change": 1
           }
@@ -3850,7 +3908,21 @@
         {
           "entries": 3,
           "day": "2026-03-21",
-          "projects": "vault-central",
+          "projects": [
+            "v",
+            "a",
+            "u",
+            "l",
+            "t",
+            "-",
+            "c",
+            "e",
+            "n",
+            "t",
+            "r",
+            "a",
+            "l"
+          ],
           "kinds": {
             "code-change": 3
           }
@@ -3858,7 +3930,26 @@
         {
           "entries": 1,
           "day": "2026-03-22",
-          "projects": "windows-customizer",
+          "projects": [
+            "w",
+            "i",
+            "n",
+            "d",
+            "o",
+            "w",
+            "s",
+            "-",
+            "c",
+            "u",
+            "s",
+            "t",
+            "o",
+            "m",
+            "i",
+            "z",
+            "e",
+            "r"
+          ],
           "kinds": {
             "code-change": 1
           }
@@ -3913,7 +4004,21 @@
         {
           "entries": 1,
           "day": "2026-03-28",
-          "projects": "vault-central",
+          "projects": [
+            "v",
+            "a",
+            "u",
+            "l",
+            "t",
+            "-",
+            "c",
+            "e",
+            "n",
+            "t",
+            "r",
+            "a",
+            "l"
+          ],
           "kinds": {
             "code-change": 1
           }
@@ -3982,7 +4087,28 @@
         {
           "entries": 1,
           "day": "2026-04-02",
-          "projects": "vault-video-enhancer",
+          "projects": [
+            "v",
+            "a",
+            "u",
+            "l",
+            "t",
+            "-",
+            "v",
+            "i",
+            "d",
+            "e",
+            "o",
+            "-",
+            "e",
+            "n",
+            "h",
+            "a",
+            "n",
+            "c",
+            "e",
+            "r"
+          ],
           "kinds": {
             "code-change": 1
           }
@@ -3990,7 +4116,27 @@
         {
           "entries": 1,
           "day": "2026-04-03",
-          "projects": "vaultwares-realtime",
+          "projects": [
+            "v",
+            "a",
+            "u",
+            "l",
+            "t",
+            "w",
+            "a",
+            "r",
+            "e",
+            "s",
+            "-",
+            "r",
+            "e",
+            "a",
+            "l",
+            "t",
+            "i",
+            "m",
+            "e"
+          ],
           "kinds": {
             "code-change": 1
           }
@@ -4345,7 +4491,6 @@
             "vaultwares-studio",
             "vaultwares-template",
             "vaultwares-website",
-            "video-depth-anything",
             "weekly-menu",
             "windows-customizer"
           ],
@@ -5941,7 +6086,20 @@
         {
           "entries": 2,
           "day": "2026-07-17",
-          "projects": "agent-ledger",
+          "projects": [
+            "a",
+            "g",
+            "e",
+            "n",
+            "t",
+            "-",
+            "l",
+            "e",
+            "d",
+            "g",
+            "e",
+            "r"
+          ],
           "kinds": {
             "general": 2
           }
@@ -6103,7 +6261,7 @@
       "projects": [
         {
           "recent": [
-            "First-run model download (download-on-install pattern) for live subtitles. src/live-subtitles.js: added model manager — modelPresent() checks dev extracted dir / userData/models...",
+            "First-run model download (download-on-install pattern) for live subtitles. src/live-subtitles.js: added model manager \u2014 modelPresent() checks dev extracted dir / userData/models...",
             "Upscale + subtitle UX fixes. UPSCALE (js/player/upscale.js): the DEMUXER_ERROR was endOfStream() called before a valid fMP4 init segment (encoder produced no frames, e.g. RTX VS...",
             "Extracted Streaming tab from vault-explorer into new vault-streaming project (lift-and-shift) and removed it from vault-explorer in the same pass. NEW: copied vault-explorer sou..."
           ],
@@ -6991,9 +7149,9 @@
         },
         {
           "recent": [
-            "Tue, 07 Jul 2026 00:20 — Added IPv6 TCP attribution v1.3.2 (0d0b770). WindowsProcessInspector now reads AF_INET6 MIB_TCP6ROW_OWNER_PID table via a shared ReadTcpTable helper (pa...",
-            "Tue, 07 Jul 2026 01:10 — Fixed hot-path crash v1.3.3 (cf4d351): ProcessImageResolver (OpenProcess+QueryFullProcessImageName) replaces throwing Process.GetProcessById in ingress ...",
-            "Tue, 07 Jul 2026 08:15 — Added lifecycle logging + heartbeat for the stability test v1.4.0 (ee43b3a). FileLoggerProvider (dependency-free daily-rolling file at <app>/logs/) pers..."
+            "Tue, 07 Jul 2026 00:20 \u2014 Added IPv6 TCP attribution v1.3.2 (0d0b770). WindowsProcessInspector now reads AF_INET6 MIB_TCP6ROW_OWNER_PID table via a shared ReadTcpTable helper (pa...",
+            "Tue, 07 Jul 2026 01:10 \u2014 Fixed hot-path crash v1.3.3 (cf4d351): ProcessImageResolver (OpenProcess+QueryFullProcessImageName) replaces throwing Process.GetProcessById in ingress ...",
+            "Tue, 07 Jul 2026 08:15 \u2014 Added lifecycle logging + heartbeat for the stability test v1.4.0 (ee43b3a). FileLoggerProvider (dependency-free daily-rolling file at <app>/logs/) pers..."
           ],
           "flagCounts": {},
           "lastDay": "2026-07-07",
@@ -7091,7 +7249,7 @@
         {
           "recent": [
             "Backfill: commit 51287a0 (2026-04-24T07:24:42-04:00) - chore: remove tailwindcss plugin from vite preview configuration | files=1 +1 -2",
-            "Backfill: commit 84c902f (2026-04-30T00:29:22Z) - 🎨 Palette: Enhance form accessibility and button focus states | files=2 +20 -11",
+            "Backfill: commit 84c902f (2026-04-30T00:29:22Z) - \ud83c\udfa8 Palette: Enhance form accessibility and button focus states | files=2 +20 -11",
             "Backfill: commit b2f2866 (2026-04-30T19:17:46-04:00) - Merge pull request #4 from p-potvin/palette-ux-improvements-4342842582149570691 | files=0 +20 -11"
           ],
           "flagCounts": {},
@@ -7889,7 +8047,7 @@
           "recent": [
             "Fixed offline-mode crash for FluxTransformer2DModel. flux1-dev-fp8-e4m3fn.safetensors is not in diffusers' built-in filename map so it fell back to fetching black-forest-labs/FL...",
             "Fixed RAM destruction from enable_model_cpu_offload(). Added _get_device() auto-detection (CUDA vs CPU). Switched default offload to enable_sequential_cpu_offload() which stream...",
-            "Added 4 features to frame_extractor.py/run_extractor.py: (1) max_frames=5 param in extract_keyframes() — passes -vframes N to ffmpeg; (2) max_frames=5 added to process_video() a..."
+            "Added 4 features to frame_extractor.py/run_extractor.py: (1) max_frames=5 param in extract_keyframes() \u2014 passes -vframes N to ffmpeg; (2) max_frames=5 added to process_video() a..."
           ],
           "flagCounts": {},
           "lastDay": "2026-05-06",
@@ -8073,8 +8231,8 @@
         {
           "recent": [
             "Reverted torch pin from >=2.11.0 back to ==2.8.0 in requirements.txt (undoing commit a5bdc31). Compared against the still-working original space M3st3rJ4k3l/FLUX.2-Klein-Multi-L...",
-            "Third ZeroGPU fix: root cause was mmap-backed safetensors on /models network mount. from_pretrained('/models', ...) with default low_cpu_mem_usage=True → safetensors are memory-...",
-            "Delivered ComfyUI translation reference for the FLUX.2 Klein multi-LoRA HF space. (1) HTML artifact published at claude.ai/code/artifact/b80afb34 — includes SVG node graph mimic..."
+            "Third ZeroGPU fix: root cause was mmap-backed safetensors on /models network mount. from_pretrained('/models', ...) with default low_cpu_mem_usage=True \u2192 safetensors are memory-...",
+            "Delivered ComfyUI translation reference for the FLUX.2 Klein multi-LoRA HF space. (1) HTML artifact published at claude.ai/code/artifact/b80afb34 \u2014 includes SVG node graph mimic..."
           ],
           "flagCounts": {},
           "lastDay": "2026-07-07",
@@ -9443,34 +9601,6 @@
         },
         {
           "recent": [
-            "Backfill: commit aa85ca7 (2026-04-24T08:10:33-04:00) - chore: sync workspace changes and resolve PR templates | files=1 +1 -2"
-          ],
-          "flagCounts": {},
-          "lastDay": "2026-04-24",
-          "lineRaw": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "lineClean": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "kinds": {
-            "code-change": 1
-          },
-          "project": "video-depth-anything",
-          "entries": 1,
-          "lineExcluded": {
-            "insertions": 0,
-            "deletions": 0,
-            "files": 0
-          },
-          "firstDay": "2026-04-24"
-        },
-        {
-          "recent": [
             "Wired wallpaper bridge end-to-end. OVH: added 'wallpapers' to TYPES in upload-to-drive.py + guarded ArrUnmonitor.unmonitor to return False for types not in ARR (wallpapers has n..."
           ],
           "flagCounts": {},
@@ -9529,7 +9659,7 @@
         },
         {
           "recent": [
-            "Cron: ran openclaw doctor --non-interactive per gateway restart update error from June 3. Doctor completed successfully — no gateway errors. Memory search needs embedding provid..."
+            "Cron: ran openclaw doctor --non-interactive per gateway restart update error from June 3. Doctor completed successfully \u2014 no gateway errors. Memory search needs embedding provid..."
           ],
           "flagCounts": {},
           "lastDay": "2026-06-04",
