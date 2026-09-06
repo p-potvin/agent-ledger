@@ -95,7 +95,9 @@
     },
     {
       "canonical": "vaultwares-cli",
-      "aliases": [],
+      "aliases": [
+        "vw-cli"
+      ],
       "renamedAt": "2026-05-17",
       "previousRemote": "p-potvin/vault-themes",
       "newRemote": "p-potvin/vaultwares-cli",
@@ -131,7 +133,9 @@
       "aliases": [
         "Vault Explorer",
         "vw-comet + vault-explorer",
-        "vault-explorer + vw-comet"
+        "vault-explorer + vw-comet",
+        "vault-explorer,vault-streaming",
+        "vault-streaming,vault-explorer"
       ],
       "notes": "Case variant from agent input. | Multi-project events where vault-explorer is the dominant target. Compound names from agent input."
     },
@@ -269,7 +273,8 @@
     {
       "canonical": "vault-central",
       "aliases": [
-        "Vault Central"
+        "Vault Central",
+        "vaultwares-console"
       ],
       "notes": "Display-cased variant from agent input."
     },
@@ -278,9 +283,158 @@
       "aliases": [
         "vw-media-stack / vaultwares-docs",
         "vps-ovhcloud media stack",
-        "vps-ovhcloud-media-stack"
+        "vps-ovhcloud-media-stack",
+        "vw-media",
+        "vw-media (ovhcloud)",
+        "vault-media-stack (OVH)",
+        "wallpaper-foundry / vw-media-stack",
+        "VaultWares DNS / media stack",
+        "vw-media + agent-ledger + vault-monitor"
       ],
       "notes": "Slash-compound + descriptive variants from agent input."
+    },
+    {
+      "canonical": "vault-streaming",
+      "aliases": [
+        "vault-streaming + vw-comet",
+        "vw-comet ovhcloud",
+        "vw-comet (ovhcloud 100.67.25.118)",
+        "vw-comet-indexers ovhcloud"
+      ],
+      "notes": "Comet sub-service and compound variants."
+    },
+    {
+      "canonical": "vaultwares-api",
+      "aliases": [
+        "vaultwares-api, agent-ledger",
+        "vaultwares-api & networking",
+        "shared-tube & vaultwares-api"
+      ],
+      "notes": "Multi-repo touches centered on vaultwares-api."
+    },
+    {
+      "canonical": "vault-inference",
+      "aliases": [
+        "vault-inference,vaultwares-docs"
+      ],
+      "notes": "Compound touch."
+    },
+    {
+      "canonical": "vaultwares-mcp",
+      "aliases": [
+        "vaultwares-mcp / media stack"
+      ],
+      "notes": "Descriptive touch."
+    },
+    {
+      "canonical": "prom-king",
+      "aliases": [
+        "Prom-King",
+        "Prom-King docs",
+        "Prom-King/docs",
+        "Prom-King docs release",
+        "Prom-King shared-tube",
+        "Prom-King / VaultWares",
+        "Prom King monetization projects"
+      ],
+      "notes": "Prom-King repository and document variations."
+    },
+    {
+      "canonical": "tech-oracle",
+      "aliases": [
+        "tech-oracle (Prom-King)"
+      ],
+      "notes": "Prom-King tech-oracle tool."
+    },
+    {
+      "canonical": "General Tasks",
+      "aliases": [
+        "General Tasks (workspace)",
+        "Workspace Git Sync",
+        "Test",
+        "VaultWares Infra",
+        "multi-repo-infra",
+        "ovh-infra",
+        "vps-ovhcloud maintenance",
+        "tailnet-sync",
+        "openclaw",
+        "OpenClaw",
+        "memories"
+      ],
+      "notes": "General maintenance, sync, and infrastructure tasks."
+    },
+    {
+      "canonical": "huggingface-spaces",
+      "aliases": [
+        "pro-realism",
+        "pro-realism-v3",
+        "Pro-Realism-Edit-Studio",
+        "Pro-Realism-FLUX2-Klein-Multi-LoRA",
+        "huggingface spaces"
+      ],
+      "notes": "Hugging Face spaces (pro-realism and other spaces)."
+    },
+    {
+      "canonical": "vault-cacophony",
+      "aliases": [
+        "mini-omni"
+      ],
+      "notes": "Vault-cacophony audio/model tasks."
+    },
+    {
+      "canonical": "colonel-kfc",
+      "aliases": [
+        "ColONEL-KFC",
+        "Colonel-KFC"
+      ],
+      "notes": "Real project with joke name."
+    },
+    {
+      "canonical": "mai-vibo",
+      "aliases": [
+        "Mai-ViBo-2ruViSum-AIO"
+      ],
+      "notes": "Real project, might become active."
+    },
+    {
+      "canonical": "thoughts",
+      "aliases": [
+        "Thoughts",
+        "thoughts/memories"
+      ],
+      "notes": "Personal thoughts/memory project not tied to github."
+    },
+    {
+      "canonical": "prelanding-page",
+      "aliases": [
+        "Prelanding-Page",
+        "pre-landing-page"
+      ],
+      "notes": "Real project on github."
+    },
+    {
+      "canonical": "tube-sites",
+      "aliases": [
+        "business",
+        "business workspace",
+        "business tube sites",
+        "business WordPress tube sites"
+      ],
+      "notes": "Business and tube sites workspace."
+    },
+    {
+      "canonical": "health-ledger",
+      "aliases": [
+        "Health Ledger Release"
+      ],
+      "notes": "Health ledger release events."
+    },
+    {
+      "canonical": "auto-backup",
+      "aliases": [
+        "vaultwares-backups"
+      ],
+      "notes": "Backup service variant."
     },
     {
       "canonical": "vault-raggae",
