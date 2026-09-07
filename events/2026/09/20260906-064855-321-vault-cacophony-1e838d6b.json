@@ -1,0 +1,48 @@
+{
+  "id": "20260906-064855-321-vault-cacophony-1e838d6b",
+  "createdAt": "2026-09-06T10:48:55.3210744Z",
+  "createdAtLocal": "2026-09-06 06:48",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-06 06:48 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "Fixed the black-rectangle regression and completed the A-Z alphabet probe. BUG: pipeline.run() line 195 did Image.open(style_path).convert('RGB'), stripping the alpha before paste_fit ever saw it, so the RGBA letter reference reverted to its rectangular dark-background form and the edit model kept it as a panel. I had validated the alpha paste by calling paste_fit directly, bypassing run() - wrong layer. Fixed by preserving alpha through run() and adding flatten_ref() so the uploaded image2 reference still gets an opaque ground to be read against. Verified end-to-end on letter A before relaunching. ALPHABET RESULTS (26 letters, composite + Qwen-2511 Q4_0 + Lightning-4 cfg1.0, isolated procedurally-rendered D as style reference, all else constant, 3066s): style consistency is excellent - gold gradient, dark-brown extrusion down-right, specular top edge, dark contour and cast shadow reproduced on every letter. TWO DEFECTS: (1) 'O' rendered as a 'D' - reference-glyph bleed at LETTER level, the same failure as the BONJOUR->SUMJOUR word bleed, occurring on the letter most visually similar to the reference; note also that D itself cannot be scored since it IS the reference, so a re-run with a different reference letter is needed to disambiguate. (2) cap height is not preserved: measured glyph width spread 1.32x (330-434px), height spread 1.43x (307-440px), inked area spread ~4x (22.7k-96.7k px); smallest D/R/K/H, largest Y/I/J/M. Also discarded TWO bad metrics before getting a usable one (a gold-colour test that matched the warm feather background, and a diff-region test that measured the mask pad rather than the glyph) - noted because the earlier gradient metric failed the",
+  "commands": [
+    "python alphabet_probe.py --chars ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/pipeline.py",
+    "font-cloning/text-style-transfer/out/_alphabet_compact.png"
+  ],
+  "planPath": "",
+  "contentHash": "1e838d6bf0ac7814c2f77250dff486df76d52a5024a9181025599ff0c3c9500b",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

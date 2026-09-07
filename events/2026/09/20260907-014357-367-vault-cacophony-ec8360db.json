@@ -1,0 +1,51 @@
+{
+  "id": "20260907-014357-367-vault-cacophony-ec8360db",
+  "createdAt": "2026-09-07T05:43:57.3672808Z",
+  "createdAtLocal": "2026-09-07 01:43",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander\\cli  Branch: vw-codex-face-embedding-fix\r\nTools used (this reply): PowerShell, Bash, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-07 01:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander\\cli",
+  "summary": "Revamped better-subtitles and live-subs. FIVE BUGS FIXED, four of them silent. (1) The resident server NEVER started: subtitles_server.py passed --access-logs but the flag is --access-log, and the child's output went to DEVNULL, so every run timed out after 60s and fell back to reloading every model per file. Fixed the flag and redirected server output to a temp log, with the exit code and log tail surfaced on failure. (2) Server was reused even when its capabilities did not match the request: an instance started without a diarizer is 'ready' but answers HTTP 400 to a diarized transcription, which is exactly what -Speakers hit. start_server now compares required capabilities (asr, diarization, translation) and the loaded ASR model against the running instance and restarts when short. (3) TranslateFrom defaulted to empty string, so both the HTTP path (400) and the CLI path ('Invalid source or target language!') rejected every translation and silently fell through to Google. Defaults to en and never forwards an empty value. (4) Translation now goes through the resident server's /v1/translations with array input rather than spawning nemo-speech translate per file, so the 2.7GB Riva checkpoint loads once per run instead of once per episode; CLI and Google remain as ordered fallbacks. Verified 12 cues in 2.41s. (5) Long paths: added win_long_path() applying the \\\\?\\ prefix past 240 chars for ffmpeg, ffprobe and audiocpp_cli, since Windows only lifts MAX_PATH when the registry value AND the binary manifest both opt in - this box has LongPathsEnabled=1 which hides the failure locally. ALSO: CTC buffered-streaming geometry",
+  "commands": [
+    "Start-BetterSubtitles.ps1 -Speakers -TranslateTo es",
+    "subtitles_server.py start --model parakeet-ctc --chunk-sec 1.5"
+  ],
+  "files": [
+    "vault-commander/cli/Start-BetterSubtitles.ps1",
+    "vault-commander/cli/utils/subtitles_server.py",
+    "vault-commander/cli/utils/subtitles_translator.py",
+    "vault-commander/cli/utils/subtitles_separator.py",
+    "vault-commander/cli/utils/nemo_asr.py"
+  ],
+  "planPath": "",
+  "contentHash": "ec8360dbd0a6a8e671e3c1bf36fa027e5c80189be9360167e58c793218384f6d",
+  "git": {
+    "repo": "vault-commander",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+    "branch": "vw-codex-face-embedding-fix",
+    "head": "229d3bc",
+    "hasChanges": true
+  }
+}

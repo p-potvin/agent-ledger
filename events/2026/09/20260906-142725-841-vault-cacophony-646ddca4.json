@@ -1,0 +1,52 @@
+{
+  "id": "20260906-142725-841-vault-cacophony-646ddca4",
+  "createdAt": "2026-09-06T18:27:25.8418508Z",
+  "createdAtLocal": "2026-09-06 14:27",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: main\r\nTools used (this reply): Bash, Write, Edit, Read, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-06 14:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "Read",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "font-cloning run 4: reverted to the plain edit instruction (--features now OPT-IN, default off) and supplied a 4x Real-ESRGAN upscale of the reference M via --ref-image. Result vs run 1 (same prompt, 87px ref): letterforms FIXED - run 1 gave a bevelled A, malformed E and broken crescent O; run 4 gives three correct legible letters, connected components per glyph 4/4/2 -> 3/1/1. Unchanged: ratio 0.059 -> 0.052 (target 0.102), modulation 0.99 -> 1.10 (target 0.12), saturation 0.75 both. So letterform coherence was a reference-QUALITY problem, now largely solved; weight/modulation/colour-amplification are the model's display-lettering prior. CORRECTION: my earlier 'wireframe E / outlined letters' claim was wrong - I read normalised silhouettes as outlines; in colour they are the same thin ragged stroke as A and O. The negation-summons-outline theory built on that is withdrawn (negations still avoided, but on the cfg-1 argument only). User's diagnosis accepted: prompts had drifted into captions of the desired result, where Qwen-Image-Edit is instruction-tuned and wants a direct edit operation; and 'a tenth as thick' is unlikely to survive BPE as an actionable quantity. Added handwriting.neutralise() (paper-anchored white balance; paper measures 208,199,220 so the pen is genuinely blue-black ~0.20 saturation and the model amplifies it ~4x). README section 8 rewritten with the corrected account.",
+  "commands": [
+    "vw realesrgan-enhance -Input M_balanced.png -Slow",
+    "python clone_font.py --ref-image M_balanced_upscaled.png --chars AEO --gate none --outdir clone_carmen_v4"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/features.py",
+    "font-cloning/text-style-transfer/handwriting.py",
+    "font-cloning/text-style-transfer/clone_font.py",
+    "font-cloning/text-style-transfer/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "646ddca4654701f47e8ea21601ae9c3a93a759efa236d1075cee0dd9397985bd",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

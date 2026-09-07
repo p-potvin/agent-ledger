@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260905-075303-876-browser-browser-4128d75b",
+    "createdAt":  "2026-09-05T11:53:03.8761173Z",
+    "createdAtLocal":  "2026-09-05 07:53",
+    "timezone":  "Eastern Standard Time",
+    "project":  "browser-browser",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Antigravity (Gemini 2.5 Pro)\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\browser-browser  Branch: feature/native-host-video-fix-settings\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-05 07:53 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Antigravity (Gemini 2.5 Pro)",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\browser-browser",
+    "summary":  "Passed 100% comprehensive real-condition verification test suite covering persistent native host, HTTP Range streaming, .thumbs previews, sidecars, and glob exclusions",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "4128d75bc21ebe8520d08b2b4b1074668c9ddf02c8f7fb24e0a7da99e141b6e1",
+    "git":  {
+                "repo":  "browser-browser",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/browser-browser",
+                "branch":  "feature/native-host-video-fix-settings",
+                "head":  "b2408de",
+                "hasChanges":  true
+            }
+}

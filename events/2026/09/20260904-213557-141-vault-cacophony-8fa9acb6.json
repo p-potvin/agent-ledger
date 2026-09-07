@@ -1,0 +1,51 @@
+{
+  "id": "20260904-213557-141-vault-cacophony-8fa9acb6",
+  "createdAt": "2026-09-05T01:35:57.1411413Z",
+  "createdAtLocal": "2026-09-04 21:35",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Write, TaskStop\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-04 21:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Write",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "text-style-transfer verification round. CONFIRMED WORKING: Qwen-Image-Edit-2511 Q4_0 GGUF + 4-step Lightning LoRA, multiref strategy, tight style crop - 'HELLO' rendered on the target in the reference's letterforms/orange fill/dark-purple outline/drop shadow, background untouched (284s cold, ~128s warm). OPEN BUG (runs 10-13): reference-word bleed - 'BONJOUR' renders as SUMJOUR (seed 123), SUMMUR (seed 4242) and SUMJOUR (composite) against a style crop reading SUMMER; a prompt rewrite spelling the target letter-by-letter and forbidding copying from image 2 changed nothing at fixed seed. Ruled out seed, strategy and prompt wording; style transfer itself is excellent in every failing run, only glyph identity is wrong. Leading untested hypothesis: Qwen-Image-Edit is an EN/CN text renderer and BONJOUR is neither, so it falls back on the visually primed reference word; decisive test is an English same-length control (WELCOME) at the same seed - queued but not completed. FIXED a real client bug: WebSocket died with 'keepalive ping timeout' because ComfyUI's event loop is blocked during GPU sampling; comfy_client.run now uses ping_interval=None and falls back to /history if the socket drops. NOTE: after ~10 back-to-back 20B jobs the user's Comfy Desktop on :8188 wedged (accepted prompt, staged text encoder, stopped logging, GPU idle 8pct, HTTP unresponsive) - needs a restart; no work lost, all completed outputs are in D:/comfyUI/resources/ComfyUI/outputs/tst. Stopped two orphaned Gradio test apps I had left on :7861 and :7871.",
+  "commands": [
+    "python pipeline.py --backend qwen --strategy multiref --text BONJOUR --seed 4242",
+    "python pipeline.py --backend qwen --strategy composite --text BONJOUR"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/README.md",
+    "font-cloning/text-style-transfer/comfy_client.py",
+    "font-cloning/text-style-transfer/pipeline.py"
+  ],
+  "planPath": "",
+  "contentHash": "8fa9acb6ba873756924621b09d711a9a7baa38a3879bd0e0916d6c5d79dcaff7",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

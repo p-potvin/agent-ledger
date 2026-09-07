@@ -1,0 +1,47 @@
+{
+  "id": "20260906-170405-491-vault-cacophony-d5dbc047",
+  "createdAt": "2026-09-06T21:04:05.4916646Z",
+  "createdAtLocal": "2026-09-06 17:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: main\r\nTools used (this reply): Bash, Write, Read, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-06 17:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Read",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "font-cloning prompt sweep (A,E,O; 4x reference; seed 77; only the style clause varied). pipeline.PROMPT_STYLES holds the clause alone, head and tail shared, and default is asserted byte-identical to the previous prompt so it is a valid control. Results as ratio, modulation, saturation, components: default (control) 0.052, 1.10, 0.75, [3,1,1] minimal 0.064, 0.65, 0.54, [1,1,1] pen 0.044, 0.89, 0.50, [1,1,1] flat 0.050, 0.80, 0.60, [1,3,1] her hand 0.102, 0.12, 0.16, 1 Deleting the effects list (minimal) wins on weight, modulation and coherence. Both clauses that ADD words score worse, confirming the user's instruction-vs-description point. flat removed at user request; data agrees. Weight still only reaches 0.064 vs 0.102, so wording cannot fully fix weight, but it was doing real harm. Two artefacts found. (1) Cast shadow behind every glyph, measured offsets +12+40, +43+2, +75-23 px. diff_mask kept it; clone_font now composites through glyphs.body_mask, which keeps 0 percent of it. The font was always clean, only the preview PNGs carried it. --shadow restores the old behaviour. (2) Reference bleed root cause: the composite pastes the reference M into the box and the model ADDS the new letter rather than replacing it. Raw output of job 3c2fd6f0 shows the M at full strength, amplitude 147 against the O's 96. Blur detection tested and REJECTED: crispness 0.094 on the leftover M vs 0.085 on the new O, indistinguishable. The reliable handle is that we paste the reference ourselves so its mask is already known. Added --no-paste (empty box) and --prompt erase; both under test. Also added multi-reference support (--ref-image takes",
+  "commands": [],
+  "files": [
+    "font-cloning/text-style-transfer/pipeline.py",
+    "font-cloning/text-style-transfer/clone_font.py",
+    "font-cloning/text-style-transfer/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "d5dbc04783f98b155d2bba3f8d46b0dd89356cded0cef66dcccd5cc3755ff195",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

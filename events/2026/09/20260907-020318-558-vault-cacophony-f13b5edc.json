@@ -1,0 +1,45 @@
+{
+  "id": "20260907-020318-558-vault-cacophony-f13b5edc",
+  "createdAt": "2026-09-07T06:03:18.5589420Z",
+  "createdAtLocal": "2026-09-07 02:03",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander\\cli  Branch: vw-codex-face-embedding-fix\r\nTools used (this reply): PowerShell, Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-07 02:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander\\cli",
+  "summary": "Started live-subs with Spanish source and fixed two wrapper bugs found doing it. Launched: vw live-subs -TranslateFrom es -TranslateTo en -TranslateEngine riva -Bilingual -FontSize 24. Verified from the running process command line that the overlay actually received --translate-engine riva --translate-from es --translate-to en --bilingual. BUG 1: the wrapper's ValidateSet on -TranslateEngine only allowed local and google, while live_subs_overlay.py accepts choices riva, local and google - so the best local translator (Riva-Translate-4B, a real NMT model rather than a small general LLM asked to translate) was unreachable from the vw command. Added riva to the ValidateSet. BUG 2: the startup status block only branched on local vs google, so selecting riva fell through to the else and printed 'Engine: google (deep_translator)' while genuinely running Riva - a misleading status line, not a wrong engine. Added an explicit riva branch. ASR side needs no change for Spanish: live-subs uses parakeet-tdt-0.6b-v3 which is natively multilingual across 25 languages including Spanish and takes no language prompt (only the nemotron models are prompt-conditioned). Target language English was inferred, not specified by the user.",
+  "commands": [
+    "Start-LiveSubtitles.ps1 -TranslateFrom es -TranslateTo en -TranslateEngine riva -Bilingual"
+  ],
+  "files": [
+    "vault-commander/cli/Start-LiveSubtitles.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "f13b5edc87097a472583511ec498117249565a488af7c08fc3cd62817cb38fa8",
+  "git": {
+    "repo": "vault-commander",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+    "branch": "vw-codex-face-embedding-fix",
+    "head": "229d3bc",
+    "hasChanges": true
+  }
+}

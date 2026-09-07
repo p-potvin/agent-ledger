@@ -3,7 +3,1280 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-09-04 04:35 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares &#226; Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares &#226; Project Rename Refactoring (Phase 5), VaultWares &#226; Project Rename Refactoring (Phase 5 PR Workflow), VaultWares &#226; System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>commands</code> - Executed branch cleanups: deleted 57 merged local &amp; 26 remote branches, deleted vault-central bot branches, deleted ssot branches across 11 repos, deleted windows-customizer mas...</summary>
+<summary><strong>2026-09-07 03:54 - vaultwares-studio (formerly usd-playground)</strong> <code>verification</code> - Codex GPT-6 reviewed markerless cellphone-video reconstruction direction, DA3-Streaming artifacts and MASt3R lab code. Verified 39 focused tests and installed OpenUSD native spl...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-6
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-07 03:54 (TZ: Eastern Standard Time)
+  ```
+- Summary: Codex GPT-6 reviewed markerless cellphone-video reconstruction direction, DA3-Streaming artifacts and MASt3R lab code. Verified 39 focused tests and installed OpenUSD native splat availability; identified unwired native export and stale job state. Recommended artifact recovery, bounded loop-closure comparison, native USD composition, and later proxy geometry. No project source changes or inference jobs.
+- Git: repo=vaultwares-studio, branch=main, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-07 02:03 - vault-cacophony</strong> <code>code-change</code> - Started live-subs with Spanish source and fixed two wrapper bugs found doing it. Launched: vw live-subs -TranslateFrom es -TranslateTo en -TranslateEngine riva -Bilingual -FontS...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander\cli  Branch: vw-codex-face-embedding-fix
+  Tools used (this reply): PowerShell, Bash
+  MCP servers accessed (this reply): none
+  Time: 2026-09-07 02:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: Started live-subs with Spanish source and fixed two wrapper bugs found doing it. Launched: vw live-subs -TranslateFrom es -TranslateTo en -TranslateEngine riva -Bilingual -FontSize 24. Verified from the running process command line that the overlay actually received --translate-engine riva --translate-from es --translate-to en --bilingual. BUG 1: the wrapper's ValidateSet on -TranslateEngine only allowed local and google, while live_subs_overlay.py accepts choices riva, local and google - so the best local translator (Riva-Translate-4B, a real NMT model rather than a small general LLM asked to translate) was unreachable from the vw command. Added riva to the ValidateSet. BUG 2: the startup status block only branched on local vs google, so selecting riva fell through to the else and printed 'Engine: google (deep_translator)' while genuinely running Riva - a misleading status line, not a wrong engine. Added an explicit riva branch. ASR side needs no change for Spanish: live-subs uses parakeet-tdt-0.6b-v3 which is natively multilingual across 25 languages including Spanish and takes no language prompt (only the nemotron models are prompt-conditioned). Target language English was inferred, not specified by the user.
+- Commands:
+  - `Start-LiveSubtitles.ps1 -TranslateFrom es -TranslateTo en -TranslateEngine riva -Bilingual`
+- Files:
+  - `vault-commander/cli/Start-LiveSubtitles.ps1`
+- Git: repo=vault-commander, branch=vw-codex-face-embedding-fix, head=229d3bc
+
+</details>
+
+<details>
+<summary><strong>2026-09-07 01:43 - vault-cacophony</strong> <code>code-change</code> - Revamped better-subtitles and live-subs. FIVE BUGS FIXED, four of them silent. (1) The resident server NEVER started: subtitles_server.py passed --access-logs but the flag is --...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander\cli  Branch: vw-codex-face-embedding-fix
+  Tools used (this reply): PowerShell, Bash, Edit
+  MCP servers accessed (this reply): none
+  Time: 2026-09-07 01:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Revamped better-subtitles and live-subs. FIVE BUGS FIXED, four of them silent. (1) The resident server NEVER started: subtitles_server.py passed --access-logs but the flag is --access-log, and the child's output went to DEVNULL, so every run timed out after 60s and fell back to reloading every model per file. Fixed the flag and redirected server output to a temp log, with the exit code and log tail surfaced on failure. (2) Server was reused even when its capabilities did not match the request: an instance started without a diarizer is 'ready' but answers HTTP 400 to a diarized transcription, which is exactly what -Speakers hit. start_server now compares required capabilities (asr, diarization, translation) and the loaded ASR model against the running instance and restarts when short. (3) TranslateFrom defaulted to empty string, so both the HTTP path (400) and the CLI path ('Invalid source or target language!') rejected every translation and silently fell through to Google. Defaults to en and never forwards an empty value. (4) Translation now goes through the resident server's /v1/translations with array input rather than spawning nemo-speech translate per file, so the 2.7GB Riva checkpoint loads once per run instead of once per episode; CLI and Google remain as ordered fallbacks. Verified 12 cues in 2.41s. (5) Long paths: added win_long_path() applying the \\?\ prefix past 240 chars for ffmpeg, ffprobe and audiocpp_cli, since Windows only lifts MAX_PATH when the registry value AND the binary manifest both opt in - this box has LongPathsEnabled=1 which hides the failure locally. ALSO: CTC buffered-streaming geometry
+- Commands:
+  - `Start-BetterSubtitles.ps1 -Speakers -TranslateTo es`
+  - `subtitles_server.py start --model parakeet-ctc --chunk-sec 1.5`
+- Files:
+  - `vault-commander/cli/Start-BetterSubtitles.ps1`
+  - `vault-commander/cli/utils/subtitles_server.py`
+  - `vault-commander/cli/utils/subtitles_translator.py`
+  - `vault-commander/cli/utils/subtitles_separator.py`
+  - `vault-commander/cli/utils/nemo_asr.py`
+- Git: repo=vault-commander, branch=vw-codex-face-embedding-fix, head=229d3bc
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 18:20 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>verification</code> - Analyze duplicate commits af2514e and 235fd87 in vaultwares-dispatch and document root cause and deduplication plan</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 3.7 Sonnet
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 18:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: Analyze duplicate commits af2514e and 235fd87 in vaultwares-dispatch and document root cause and deduplication plan
+- Git: repo=vault-monitor, branch=main, head=e3a3b9f
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 17:23 - vault-cacophony</strong> <code>plan</code> - font-cloning SCOPE DECISION (user&#39;s call, recorded as README section 9): deriving a person&#39;s own handwriting from a single letter is not a real use case and is not achievable in...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, Write, Read, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 17:23 (TZ: Eastern Standard Time)
+  ```
+- Summary: font-cloning SCOPE DECISION (user's call, recorded as README section 9): deriving a person's own handwriting from a single letter is not a real use case and is not achievable in principle - letter shapes are not recoverable from one letter, so the model can only supply plausible letterforms in a compatible texture. The day's measurements agree: from Carmen's M we reached stroke ratio 0.056 vs her 0.102 and modulation 0.94 vs her 0.12, and no prompt, reference resolution or feature description closed it. What DID transfer reliably was texture, colour and medium - what a single sample genuinely carries. It also needs no solving: for genuine personal handwriting the user writes 52 glyphs and we process them. handwriting.py already does paper detection, rectification, illumination flattening, ink thresholding and letter segmentation including splitting touching letters; glyphs.py already does normalisation, vectorisation and TTF assembly. No diffusion involved. The supported use case is photograph-lettering-in-the-wild (poster, sign, packaging): a single reference is legitimate there because the goal IS the style and invented letterforms are acceptable. User reports this path already beats three paid services they tried. Architectural consequence for both paths: extract every letter actually present and generate only the missing ones. Carmen's card yields 10 of 26 (C A R M E N B O I V); a poster title typically yields 8-15 unique letters. Also this turn: last bleed experiments. erase clause cut M retention on E from 71 to 16 percent but not on A (72 to 61) and cost quality on every other axis. ref-place none
+- Files:
+  - `font-cloning/text-style-transfer/README.md`
+  - `font-cloning/text-style-transfer/handwriting.py`
+  - `font-cloning/text-style-transfer/glyphs.py`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 17:04 - vault-cacophony</strong> <code>verification</code> - font-cloning prompt sweep (A,E,O; 4x reference; seed 77; only the style clause varied). pipeline.PROMPT_STYLES holds the clause alone, head and tail shared, and default is asser...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, Write, Read, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 17:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: font-cloning prompt sweep (A,E,O; 4x reference; seed 77; only the style clause varied). pipeline.PROMPT_STYLES holds the clause alone, head and tail shared, and default is asserted byte-identical to the previous prompt so it is a valid control. Results as ratio, modulation, saturation, components: default (control) 0.052, 1.10, 0.75, [3,1,1] minimal 0.064, 0.65, 0.54, [1,1,1] pen 0.044, 0.89, 0.50, [1,1,1] flat 0.050, 0.80, 0.60, [1,3,1] her hand 0.102, 0.12, 0.16, 1 Deleting the effects list (minimal) wins on weight, modulation and coherence. Both clauses that ADD words score worse, confirming the user's instruction-vs-description point. flat removed at user request; data agrees. Weight still only reaches 0.064 vs 0.102, so wording cannot fully fix weight, but it was doing real harm. Two artefacts found. (1) Cast shadow behind every glyph, measured offsets +12+40, +43+2, +75-23 px. diff_mask kept it; clone_font now composites through glyphs.body_mask, which keeps 0 percent of it. The font was always clean, only the preview PNGs carried it. --shadow restores the old behaviour. (2) Reference bleed root cause: the composite pastes the reference M into the box and the model ADDS the new letter rather than replacing it. Raw output of job 3c2fd6f0 shows the M at full strength, amplitude 147 against the O's 96. Blur detection tested and REJECTED: crispness 0.094 on the leftover M vs 0.085 on the new O, indistinguishable. The reliable handle is that we paste the reference ourselves so its mask is already known. Added --no-paste (empty box) and --prompt erase; both under test. Also added multi-reference support (--ref-image takes
+- Files:
+  - `font-cloning/text-style-transfer/pipeline.py`
+  - `font-cloning/text-style-transfer/clone_font.py`
+  - `font-cloning/text-style-transfer/README.md`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 14:27 - vault-cacophony</strong> <code>verification</code> - font-cloning run 4: reverted to the plain edit instruction (--features now OPT-IN, default off) and supplied a 4x Real-ESRGAN upscale of the reference M via --ref-image. Result ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, Write, Edit, Read, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 14:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: font-cloning run 4: reverted to the plain edit instruction (--features now OPT-IN, default off) and supplied a 4x Real-ESRGAN upscale of the reference M via --ref-image. Result vs run 1 (same prompt, 87px ref): letterforms FIXED - run 1 gave a bevelled A, malformed E and broken crescent O; run 4 gives three correct legible letters, connected components per glyph 4/4/2 -> 3/1/1. Unchanged: ratio 0.059 -> 0.052 (target 0.102), modulation 0.99 -> 1.10 (target 0.12), saturation 0.75 both. So letterform coherence was a reference-QUALITY problem, now largely solved; weight/modulation/colour-amplification are the model's display-lettering prior. CORRECTION: my earlier 'wireframe E / outlined letters' claim was wrong - I read normalised silhouettes as outlines; in colour they are the same thin ragged stroke as A and O. The negation-summons-outline theory built on that is withdrawn (negations still avoided, but on the cfg-1 argument only). User's diagnosis accepted: prompts had drifted into captions of the desired result, where Qwen-Image-Edit is instruction-tuned and wants a direct edit operation; and 'a tenth as thick' is unlikely to survive BPE as an actionable quantity. Added handwriting.neutralise() (paper-anchored white balance; paper measures 208,199,220 so the pen is genuinely blue-black ~0.20 saturation and the model amplifies it ~4x). README section 8 rewritten with the corrected account.
+- Commands:
+  - `vw realesrgan-enhance -Input M_balanced.png -Slow`
+  - `python clone_font.py --ref-image M_balanced_upscaled.png --chars AEO --gate none --outdir clone_carmen_v4`
+- Files:
+  - `font-cloning/text-style-transfer/features.py`
+  - `font-cloning/text-style-transfer/handwriting.py`
+  - `font-cloning/text-style-transfer/clone_font.py`
+  - `font-cloning/text-style-transfer/README.md`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 13:20 - vault-cacophony</strong> <code>verification</code> - font-cloning A/B/C on Carmen&#39;s page (A/E/O, same seed/box/reference). Generic prompt: ratio 0.059, modulation 0.99, saturation 0.75. Measured features v1 (band word + 6 negation...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, Write, Read, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 13:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: font-cloning A/B/C on Carmen's page (A/E/O, same seed/box/reference). Generic prompt: ratio 0.059, modulation 0.99, saturation 0.75. Measured features v1 (band word + 6 negations): 0.023 / 0.60 / 0.03. Measured features v2 (explicit fraction, positive wording): 0.025 / 0.95 / 0.04. Target (her hand): 0.102 / 0.12 / 0.16. CONCLUSION: ink colour is solved by the prompt and stable across wordings (saturation 0.75 -> 0.03, violet gone); stroke weight is NOT prompt-steerable - two wordings landed on the same ratio, a quarter of target, moving AWAY from the reference; modulation is noise (0.60 vs 0.95 for near-identical prompts). User pointed out Qwen takes no negative conditioning - confirmed in workflows.py: cfg 1.0 + Lightning LoRA + negative='', so no negative branch exists and 'no outline' was literally the token outline in the positive prompt; both negation-carrying runs returned outlined letters. All negations removed from features.constraints(). Structural read: at cfg 1 the text has no guidance leverage against the composite, so remaining levers are cfg 3.0 @ 40 steps (~20x compute) or a LoRA. Also fixed _binary polarity assumption (gold-on-dark and dark-on-light now measure identically) and added pipeline.py --features for the scene-text path.
+- Commands:
+  - `python clone_font.py --chars AEO --gate none --outdir clone_carmen_v2`
+  - `python clone_font.py --chars AEO --gate none --outdir clone_carmen_v3`
+  - `python features.py --selftest`
+- Files:
+  - `font-cloning/text-style-transfer/features.py`
+  - `font-cloning/text-style-transfer/pipeline.py`
+  - `font-cloning/text-style-transfer/clone_font.py`
+  - `font-cloning/text-style-transfer/README.md`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 13:06 - vault-cacophony</strong> <code>code-change</code> - font-cloning: added features.py - measures stroke weight from a reference by distance transform (w = 4*mean(DT), no skeletonisation; validated on synthetic bars 20-&gt;21.5, 40-&gt;39...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, Write, Read, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 13:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: font-cloning: added features.py - measures stroke weight from a reference by distance transform (w = 4*mean(DT), no skeletonisation; validated on synthetic bars 20->21.5, 40->39.8, ring 20->22.2 and calibrated so Arial 0.126=regular / Bold 0.193=bold / Black 0.245=very bold / Times modulation 0.43=modulated). Also measures modulation (monoline vs brush) and ink colour after a per-channel white balance - without it the blue-shaded sample photo reported violet ink for a grey pen. Wired into pipeline.prompt_composite/prompt_multiref via a new style+constraints clause, and into clone_font.py (measures the whole page, --style-desc override, --no-features for A/B). Added --ref-image so a Real-ESRGAN upscale of the cut-out can be supplied. Corrected an earlier wrong diagnosis: the stroke/height ratio is invariant under resize, so the run-1 glyphs were relatively THINNER (0.056 vs her 0.102), not thicker; the real divergence is modulation 0.12 -> 0.94 and saturation ~0.16 -> 0.80. Dropped a broken area/skeleton-length cross-check (even widths leave a 2px ridge plateau, halving it). README section 8 documents all of it. A/B run of A/E/O in progress.
+- Commands:
+  - `python features.py --selftest`
+  - `python clone_font.py --photo carmenboivin(1).jpg --ref-index 3 --ref-image _reference_up_upscaled.png --chars AEO --gate none`
+- Files:
+  - `font-cloning/text-style-transfer/features.py`
+  - `font-cloning/text-style-transfer/pipeline.py`
+  - `font-cloning/text-style-transfer/clone_font.py`
+  - `font-cloning/text-style-transfer/README.md`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 10:28 - vault-cacophony</strong> <code>verification</code> - E2E photo-to-font COMPLETE on the user&#39;s real handwriting: CarmenHand-Regular.ttf built from a phone photo. 26/26 glyphs generated in 3011s (120s each), both outline and OT-SVG ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, PowerShell, Read, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 10:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: E2E photo-to-font COMPLETE on the user's real handwriting: CarmenHand-Regular.ttf built from a phone photo. 26/26 glyphs generated in 3011s (120s each), both outline and OT-SVG colour fonts emitted, font verified to load and render a specimen. Sizing is now excellent - extracted glyph heights 590-608px (vs 307-440 on the gold set), because a single-letter reference pasted at a fixed box size supervises scale far better than a word reference. QUALITY VERDICT, honest: mechanically the path works, but it does NOT reproduce her hand. 25/26 letterforms are correct (U failed - rendered as a bare crescent rather than a U; C is thin/partial). The real problem is medium: her thin light pencil comes back as a thick brush/marker stroke with an outline, consistently across all 26 - so it reads as a coherent handwriting-ish display face, not as her writing. ROOT CAUSE QUANTIFIED: the reference M is only 82x62px because load_photo caps the photo at 2000px max side, throwing away 2x available detail (the 2268x4032 original would give ~165x124). Worse, that 62px-tall letter with a ~3.2px pencil stroke is pasted into a 361px box - a 5.8x upscale that turns the stroke into ~19px, which the model then reasonably renders as a brush. So stroke weight is being destroyed by scale, not by the model misunderstanding. Proposed fixes in priority order: (1) raise load_photo's cap so the reference keeps its detail, (2) paste at a scale that preserves the stroke-to-height ratio rather than filling the box, (3) name the medium in the prompt ('thin pencil line, single
+- Commands:
+  - `python clone_font.py --photo carmenboivin.jpg --ref-index 3 --chars upper --colour`
+- Files:
+  - `font-cloning/text-style-transfer/out/clone_carmen/font/CarmenHand-Regular.ttf`
+  - `font-cloning/text-style-transfer/handwriting.py`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 09:47 - vault-cacophony</strong> <code>code-change</code> - Built handwriting page preprocessing and ran the e2e photo-to-font path on the user&#39;s real sample. NEW handwriting.py: find_paper (largest bright quad via Otsu + morphology), re...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, PowerShell, Read, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 09:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Built handwriting page preprocessing and ran the e2e photo-to-font path on the user's real sample. NEW handwriting.py: find_paper (largest bright quad via Otsu + morphology), rectify (perspective warp), flatten (divide by heavily-blurred copy to remove the lighting gradient - a phone photo of a card cannot be thresholded directly, the card edge wins), ink_mask (adaptive threshold, since pencil density varies along a stroke and a global cut drops the lightest parts), letter_boxes, split_touching (vertical ink-profile valley detection) and segment_page. Verified on the real sample: paper found and rectified, ink extracted cleanly with zero shadow contamination, 14 letter boxes from 'CARMEN BOIVIN'. Connected components alone were useless here because the print handwriting joins letters - projection-profile splitting was required. GENERALISED face_mask beyond gold: added palette auto/warm/dark/light, since a pencil photo has no bright saturated face and the gold-tuned test returned an empty mask; auto decides by comparing changed-region luminance against the plate. Verified gold case unchanged at 48351px and pencil case detected. TWO BUGS FOUND BY THE GATE ITSELF, which fired and stopped the run before the 25-glyph batch: (1) flatten_ref matted the reference onto a DARK ground (30,28,44), which for dark pencil told the model the style was light-ink-on-dark-paper - it returned an inverted glyph on a dark panel; now matted onto the plate's own mean colour. (2) the reference crop's 18pct padding reached into neighbouring letters, since joined print has gaps narrower than the padding - now clamped against adjacent boxes. After both fixes the gate passed and the batch is running. IMPORTANT NEGATIVE RESULT:
+- Commands:
+  - `python handwriting.py samples/carmenboivin.jpg`
+  - `python clone_font.py --photo carmenboivin.jpg --ref-index 3 --chars upper --colour`
+- Files:
+  - `font-cloning/text-style-transfer/handwriting.py`
+  - `font-cloning/text-style-transfer/clone_font.py`
+  - `font-cloning/text-style-transfer/glyphs.py`
+  - `font-cloning/text-style-transfer/pipeline.py`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 09:20 - vault-cacophony</strong> <code>code-change</code> - Fixed the colour font&#39;s background bleed and holes-in-letters, fixed glyph spacing, and added CBDT colour bitmaps. BLEED ROOT CAUSE: effect_layer took alpha from everything that...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, PowerShell, Read, Write, Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 09:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed the colour font's background bleed and holes-in-letters, fixed glyph spacing, and added CBDT colour bitmaps. BLEED ROOT CAUSE: effect_layer took alpha from everything that changed, which includes the soft glow the model paints around lettering, so each glyph carried a background fringe. Replaced with body_mask(): strongly-changed pixels CONNECTED to the gold face. HOLES ROOT CAUSE (user spotted 'the inside of the letters is touched'): first attempt used warm = r >= b+8 with threshold 70, which punched holes in letter faces. Measured the actual notch pixels: they are gold (198,173,116) sitting over light-pink feather (211,166,192) where max-channel diff is only ~76, right at the cutoff - and pink PASSES a naive r>b test. Fixed by discriminating on the BLUE channel instead (b < 0.80*r + 10, which gold/brown-extrusion/near-black-contour all pass and pastel background fails) plus a separate specular clause (mx>200 & sat<50), and lowering the diff threshold 70->45 since colour now does the discriminating. Verified: zero holes, faces solid. SHADOW: was measured from luminance difference which picked up background texture as a grey halo; now synthesised from the silhouette (offset+blur) and OFF by default since the extrusion already carries depth and a wide shadow collides with neighbours in running text. SPACING ('separation is not clean'): advance width was measured on the face-only mask while artwork carries the extrusion; now measured from the artwork's alpha extent. CBDT/CBLC ADDED per request: two API corrections needed - Strike/BitmapSizeTable/SbitLineMetrics live in E_B_L_C_ not C_B_L_C_, and SbitLineMetrics fields are signed bytes so ppem 160 overflowed (0.8*160=128); clamped to int8 and
+- Commands:
+  - `python build_font.py --colour`
+- Files:
+  - `font-cloning/text-style-transfer/glyphs.py`
+  - `font-cloning/text-style-transfer/build_font.py`
+  - `font-cloning/text-style-transfer/out/font/CacophonyCloned-Regular-Bitmap.ttf`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 08:34 - vault-cacophony</strong> <code>code-change</code> - Delivered colour font, fixed Q normalisation, and built the e2e photo-to-font pipeline plus the LoRA dataset generator. Q FIX: normalise() scaled by full bounding box which for ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, PowerShell, Read, Write, Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 08:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: Delivered colour font, fixed Q normalisation, and built the e2e photo-to-font pipeline plus the LoRA dataset generator. Q FIX: normalise() scaled by full bounding box which for Q includes the descending tail; row-ink profiling separates them cleanly (Q tail 25px of 485px bbox, O/I/J ~0) so it now scales the letter BODY to a fixed cap height with descenders below the baseline - verified all bodies land at exactly 700px while Q's full extent is 741 vs O's 708. COLOUR FONT: added effect_layer() (alpha from the full changed region at softer blur/lower threshold so the low-amplitude cast shadow survives), normalise_pair() so colour art and outline share one transform, and add_colour_layer() emitting an OT-SVG table; monochrome glyf outlines retained as fallback. Built 12.7MB colour font, SVG table verified structurally (26 docs, gids 2-27, well-formed XML, embedded RGBA PNG with full alpha range, correct glyph mapping). IMPORTANT LIMITATION FOUND BY TESTING IN-BROWSER: Chrome does NOT render OT-SVG and falls back to outlines - confirmed visually; Firefox/Photoshop/Illustrator do. CBDT/CBLC would be needed for Chrome/Android. E2E: clone_font.py does photo -> segment letter candidates (Otsu + connected components, verified on synthetic handwriting: 7 clean boxes for 'Bonjour') -> RGBA matte cutout -> gate on first glyph -> batch-queue the rest -> normalise -> TTF. Gate checks ink present, ink fraction sane, single connected component, and IoU vs the reference silhouette >0.80 which catches the reference-bleed failure that produced D for O/Q and was previously invisible. Added ComfyClient.submit/collect for batch queueing so ComfyUI keeps the model resident and the ~60s dequantisation is
+- Commands:
+  - `python build_font.py --colour`
+  - `python lora_dataset.py --n 8 --out out/_lora_sample`
+- Files:
+  - `font-cloning/text-style-transfer/clone_font.py`
+  - `font-cloning/text-style-transfer/lora_dataset.py`
+  - `font-cloning/text-style-transfer/glyphs.py`
+  - `font-cloning/text-style-transfer/comfy_client.py`
+  - `font-cloning/text-style-transfer/README.md`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 07:55 - vault-cacophony</strong> <code>code-change</code> - Built the generated alphabet into a working TTF. Confirmed the O/Q defect was reference-similarity bleed: with the D reference both O and Q rendered as D-shapes; regenerating wi...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, PowerShell, Read, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 07:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: Built the generated alphabet into a working TTF. Confirmed the O/Q defect was reference-similarity bleed: with the D reference both O and Q rendered as D-shapes; regenerating with an N reference produced correct O and Q. So the reference glyph biases output toward its own shape and a dissimilar reference avoids it. Added glyphs.py (face_mask / normalise / contours / glyph_from_mask / build_font) and build_font.py. Chose NOT to use SAM3 despite it being available (SAM3_Detect node + sam3.1_multiplex_fp16 on disk): every alphabet output was drawn onto the same untouched target, so that plate is a perfect clean background and differencing against it says exactly which pixels the model drew - SAM3 could only add error where a clean plate exists. Extraction differences vs plate, then a warm/bright colour test separates the glyph FACE from its extrusion, dark contour and cast shadow, since the extrusion is a lighting effect not part of the letterform; largest-component filtering removes feather speckle. Normalisation was required because measured cap height varied 1.43x and inked area ~4x across A-Z; each silhouette is rescaled to a common 700-unit cap height on a shared baseline. Vectorised with cv2.findContours(RETR_CCOMP) for outer contours plus holes, approxPolyDP simplification, winding corrected for TrueType non-zero fill so counters punch through. Emitted via fontTools FontBuilder + TTGlyphPen at 1000 upem. RESULT: 26/26 glyphs extracted, font verified to load with 28 glyphs and cmap covering all 26 requested chars, specimen 'HAMBURGEFONS' rendered with the actual TTF via PIL. Counters correct on A/B/D/O/P/Q/R, Q retains its tail. No new dependencies - cv2
+- Commands:
+  - `python alphabet_probe.py --chars OQ --ref-char N --outdir out/alphabet_fix`
+  - `python build_font.py`
+- Files:
+  - `font-cloning/text-style-transfer/glyphs.py`
+  - `font-cloning/text-style-transfer/build_font.py`
+  - `font-cloning/text-style-transfer/out/font/CacophonyCloned-Regular.ttf`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 06:48 - vault-cacophony</strong> <code>verification</code> - Fixed the black-rectangle regression and completed the A-Z alphabet probe. BUG: pipeline.run() line 195 did Image.open(style_path).convert(&#39;RGB&#39;), stripping the alpha before pas...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, PowerShell, Read, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 06:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed the black-rectangle regression and completed the A-Z alphabet probe. BUG: pipeline.run() line 195 did Image.open(style_path).convert('RGB'), stripping the alpha before paste_fit ever saw it, so the RGBA letter reference reverted to its rectangular dark-background form and the edit model kept it as a panel. I had validated the alpha paste by calling paste_fit directly, bypassing run() - wrong layer. Fixed by preserving alpha through run() and adding flatten_ref() so the uploaded image2 reference still gets an opaque ground to be read against. Verified end-to-end on letter A before relaunching. ALPHABET RESULTS (26 letters, composite + Qwen-2511 Q4_0 + Lightning-4 cfg1.0, isolated procedurally-rendered D as style reference, all else constant, 3066s): style consistency is excellent - gold gradient, dark-brown extrusion down-right, specular top edge, dark contour and cast shadow reproduced on every letter. TWO DEFECTS: (1) 'O' rendered as a 'D' - reference-glyph bleed at LETTER level, the same failure as the BONJOUR->SUMJOUR word bleed, occurring on the letter most visually similar to the reference; note also that D itself cannot be scored since it IS the reference, so a re-run with a different reference letter is needed to disambiguate. (2) cap height is not preserved: measured glyph width spread 1.32x (330-434px), height spread 1.43x (307-440px), inked area spread ~4x (22.7k-96.7k px); smallest D/R/K/H, largest Y/I/J/M. Also discarded TWO bad metrics before getting a usable one (a gold-colour test that matched the warm feather background, and a diff-region test that measured the mask pad rather than the glyph) - noted because the earlier gradient metric failed the
+- Commands:
+  - `python alphabet_probe.py --chars ABCDEFGHIJKLMNOPQRSTUVWXYZ`
+- Files:
+  - `font-cloning/text-style-transfer/pipeline.py`
+  - `font-cloning/text-style-transfer/out/_alphabet_compact.png`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 05:29 - vault-cacophony</strong> <code>code-change</code> - Found the cause of composite&#39;s shrinking: paste_fit scaled by min(box_w/crop_w, box_h/crop_h); with a 4-letter reference crop (aspect 1.78) in a wide text box (aspect 4.54) that...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, PowerShell, Read, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 05:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Found the cause of composite's shrinking: paste_fit scaled by min(box_w/crop_w, box_h/crop_h); with a 4-letter reference crop (aspect 1.78) in a wide text box (aspect 4.54) that is height-limited, so the pasted lettering filled only 39pct of box width and the model faithfully replaced it at that size. Not a model behaviour - our geometry. Added --paste-fit height|width|box and --paste-zoom to make it explicit. Also fixed a latent bug: run()'s own defaults still had diff_threshold=8/grow=10 from the first mask attempt, so app.py (which does not pass them) would have used the wrong threshold on the blurred diff; corrected to 45/12. ACKNOWLEDGED user correction: Klein is always distilled and cfg1/4steps is native to it, so Ref2Font's 35-step/cfg-5 config is anomalous and my original build_graph_klein settings were right - reframed accordingly. Also acknowledged my gradient metric was unreliable: the glyph mask was a percentile threshold, so D's smaller text let the threshold land on background and contaminate the measurement; user's visual judgement (D almost perfect) beats it. Second composite defect found and fixed: a rectangular paste drags the reference's own dark background into the scene and the edit model keeps it (visible as a dark panel behind A/B/C). Added styles.py with the procedural extruded-lettering renderer (promoted from the 3D test scratch), glyph_alpha() computing face+extrusion+shadow coverage, and letter_reference(rgba=True); paste_fit is now alpha-aware so only the lettering lands on the target. Verified: isolated D pastes onto feathers with its own shadow and no panel. Added alphabet_probe.py which holds style reference, target, box, seed and sampler constant and varies only the requested
+- Commands:
+  - `python alphabet_probe.py --chars ABCDEFGHIJKLMNOPQRSTUVWXYZ`
+  - `python -c 'from styles import letter_reference'`
+- Files:
+  - `font-cloning/text-style-transfer/styles.py`
+  - `font-cloning/text-style-transfer/alphabet_probe.py`
+  - `font-cloning/text-style-transfer/pipeline.py`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 04:44 - vault-cacophony</strong> <code>code-change</code> - Fixed the composite mask and measured what controls gradient fidelity. MASK: measured that the model overruns the requested bbox by 53px vertically (SHINE) and 52px horizontally...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, PowerShell, Read, Write, WebSearch, gh
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 04:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed the composite mask and measured what controls gradient fidelity. MASK: measured that the model overruns the requested bbox by 53px vertically (SHINE) and 52px horizontally (DREAM) - the old grow24/feather16 rectangle was clipping the glyphs' extrusion, shadow and glow, which is what looked like haze and missing height/width. Replaced with diff_mask(): blur the |generated-original| difference (sigma 6) BEFORE thresholding, bounded to the box padded 70px. Plain pixel-diff does not work because the model returns a full VAE round-trip that moves detailed backgrounds by p99=127/max=204, indistinguishable from lettering by magnitude; the lettering is separable by structure (one large connected region vs scattered speckle). Measured far-field leak 0.00pct. Feather 16px -> 2px. Added --mask-mode diff|bbox|none, --no-lora, --diff-threshold/-grow/-feather, and UI controls. GRADIENT SWEEP (4 configs, same seed/reference, quantified against reference glyph bodies by normalised vertical luminance profile + RGB spread): NO config reproduces the reference gradient - all >=1.27 L2 on profile and all lose 26-38pct saturation. Lightning-4 cfg1.0 keeps colour richest (sat 96 vs ref 131) but runs too bright (216 vs 189); dropping the LoRA and raising to 20-40 steps/cfg 2.5-3.0 nails luminance (188.3) and profile (1.270) but goes matte (sat 81). 40 steps costs 9x the wall clock of 4 and is worse than 20. composite strategy gave the WORST profile match and shrank the text. Root cause: the model re-renders the material from its own prior rather than sampling reference pixels - the same behaviour that makes textured cases excellent. Conclusion recorded: complex/photographic styles keep the generative path; simple parametric styles (gradient+outline+extrusion+shadow) should be
+- Commands:
+  - `python pipeline.py --mask-mode diff --no-lora --steps 40 --cfg 3.0`
+  - `python pipeline.py --strategy composite`
+- Files:
+  - `font-cloning/text-style-transfer/pipeline.py`
+  - `font-cloning/text-style-transfer/workflows.py`
+  - `font-cloning/text-style-transfer/app.py`
+  - `font-cloning/text-style-transfer/README.md`
+  - `font-cloning/text-style-transfer/REF2FONT-NOTES.md`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 03:34 - vault-cacophony</strong> <code>verification</code> - 3D/texture retention test PASSED - this is a strength of the pipeline, not a risk. Synthesised two style references with genuine depth cues (extrusion from offset copies, bevell...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, PowerShell, WebSearch, WebFetch, Read, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 03:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: 3D/texture retention test PASSED - this is a strength of the pipeline, not a risk. Synthesised two style references with genuine depth cues (extrusion from offset copies, bevelled face gradient, specular band, dark contour, cast shadow): extruded metallic GOLD in Impact, and NEON in Cooper Black with a photographic fluid-art texture on the letter faces. Wrote SHINE and DREAM respectively onto a busy feather photograph containing no text and no comparable relief, via Qwen-Image-Edit-2511 Q4_0 GGUF multiref, seed 77, ~127s each. Results: extrusion depth and direction, bevel, metallic gradient, specular highlight and dark contour all retained; the model additionally inferred and rendered a NEW cast shadow onto the feathers that exists in neither input, i.e. it relights rather than pasting a style patch. The photographic fill was re-synthesised as per-letter texture rather than copied pixels - the correct behaviour when the target word has different letters. Also researched model alternatives for the French/multilingual limitation: Qwen-Image-Edit-2511 is still the NEWEST Qwen edit model (Qwen-Image-2512 and Qwen-Image-2.0 are generation-only, so their broader multilingual claims do not transfer); FLUX.2-dev (32B, multi-reference editing) makes NO text-rendering or multilingual claim on its model card, so switching for French is a gamble not a known win. Recorded all of this plus the resolved lexical diagnosis in README sections 5a/5b.
+- Commands:
+  - `python pipeline.py --style examples/style3d_gold.jpg --text SHINE --seed 77`
+  - `python pipeline.py --style examples/style3d_texture.jpg --text DREAM --seed 77`
+- Files:
+  - `font-cloning/text-style-transfer/README.md`
+  - `font-cloning/text-style-transfer/examples/style3d_gold.jpg`
+  - `font-cloning/text-style-transfer/examples/style3d_texture.jpg`
+  - `font-cloning/text-style-transfer/out/d1_SHINE_gold3d.png`
+  - `font-cloning/text-style-transfer/out/d2_DREAM_texture3d.png`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 01:53 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Replace blue with rust in bar charts, format context switches axis and badge, raise outlier threshold to 40k lines, analyze duplicate commits</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 01:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: Replace blue with rust in bar charts, format context switches axis and badge, raise outlier threshold to 40k lines, analyze duplicate commits
+- Git: repo=agent-ledger, branch=main, head=d39bab1b
+
+</details>
+
+<details>
+<summary><strong>2026-09-06 01:30 - vault-cacophony</strong> <code>verification</code> - Reference-word-bleed root cause identified as LEXICAL. Control run: &#39;WELCOME&#39; (English, 7 letters) rendered CLEANLY using the identical SUMMER word-reference crop, identical mul...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, PowerShell, Read, TaskStop
+  MCP servers accessed (this reply): none
+  Time: 2026-09-06 01:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Reference-word-bleed root cause identified as LEXICAL. Control run: 'WELCOME' (English, 7 letters) rendered CLEANLY using the identical SUMMER word-reference crop, identical multiref strategy and identical seed 123 that had produced 'SUMJOUR' for 'BONJOUR'. Combined with the earlier clean 'HELLO' and the failing BONJOUR at seeds 123/4242 and both strategies, this isolates the variable: the model renders English strings correctly and falls back on the visually primed reference word when asked for a non-English string. Qwen-Image-Edit-2511 is documented EN/CN only, so this is a model-capability limit, not a pipeline bug. Second control (BONJOUR with a NON-WORD 'MM' style crop) was queued but never ran: the Comfy Desktop instance wedged again mid-job - 11GB VRAM held at 0-2pct GPU, comfy-aimdo spamming 'budget_deficit: Deficit ~2000MB', HTTP unresponsive to both /interrupt and /free. Cause is host memory exhaustion: commit 68/71GB with nemo-speech.exe (pid 27180, idle since Sep 4) reserving 10.0GB commit. Also fixed a blocker: the 11GB qwen-image-edit-2511-Q4_0.gguf had been moved from models/diffusion_models to models/checkpoints where UnetLoaderGGUF cannot see it (and where no loader can use a bare UNet GGUF); moved it back. ComfyUI Desktop self-updated 0.33.3 -> 0.34.5 on restart. Cleaned up orphaned pipeline.py clients.
+- Commands:
+  - `mv models/checkpoints/qwen-image-edit-2511-Q4_0.gguf models/diffusion_models/`
+  - `python pipeline.py --strategy multiref --text WELCOME --seed 123`
+- Files:
+  - `font-cloning/text-style-transfer/out/t1_WELCOME_wordref.png`
+  - `font-cloning/text-style-transfer/README.md`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 23:10 - agent-ledger</strong> <code>code-change</code> - Work Impact UI refinement: remove duplicate milestone items, align titles, alternate bar chart colors with gold accents, fix outliers header and expandability, remove activity p...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 23:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Work Impact UI refinement: remove duplicate milestone items, align titles, alternate bar chart colors with gold accents, fix outliers header and expandability, remove activity pulse, and restore work concentration
+- Git: repo=agent-ledger, branch=main, head=d39bab1b
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 22:34 - agent-ledger</strong> <code>verification</code> - Normalise advised project aliases across agent-ledger and vault-monitor, verify and push to main</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 22:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: Normalise advised project aliases across agent-ledger and vault-monitor, verify and push to main
+- Git: repo=agent-ledger, branch=main, head=d39bab1b
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 22:32 - vault-monitor</strong> <code>code-change</code> - Map advised project aliases (colonel-kfc, tailnet-sync, huggingface-spaces, mini-omni, mai-vibo, openclaw, thoughts, prelanding-page), bump vault-monitor version to 2.4.1, and p...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 22:32 (TZ: Eastern Standard Time)
+  ```
+- Summary: Map advised project aliases (colonel-kfc, tailnet-sync, huggingface-spaces, mini-omni, mai-vibo, openclaw, thoughts, prelanding-page), bump vault-monitor version to 2.4.1, and push both repos to main
+- Git: repo=vault-monitor, branch=main, head=87b1891
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 22:29 - vault-monitor</strong> <code>code-change</code> - Post-date 6 March entries to March 11 in DB, separate bug/feature/devops/brainstorm kinds, add 24h circular hour chart to When Work Happens, filter agent-ledger spool commits fr...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 22:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Post-date 6 March entries to March 11 in DB, separate bug/feature/devops/brainstorm kinds, add 24h circular hour chart to When Work Happens, filter agent-ledger spool commits from outliers, and enhance AI agent activity with card separators, clamped tools, and expandable See More
+- Git: repo=vault-monitor, branch=main, head=08c1462
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 21:40 - vault-monitor</strong> <code>code-change</code> - Fix Work Impact drift, normalize kinds, clamp project aliases, restore WORK_IMPACT widgets (donut chart, context switches, when work happens, milestones, top projects) and clean...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 21:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fix Work Impact drift, normalize kinds, clamp project aliases, restore WORK_IMPACT widgets (donut chart, context switches, when work happens, milestones, top projects) and clean outliers display
+- Git: repo=vault-monitor, branch=main, head=08c1462
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 21:26 - vault-monitor</strong> <code>verification</code> - Investigate vault-monitor drift and prepare implementation plan for widget restoration, kind regrouping, and alias clamping</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 21:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Investigate vault-monitor drift and prepare implementation plan for widget restoration, kind regrouping, and alias clamping
+- Git: repo=vault-monitor, branch=main, head=08c1462
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 11:17 - apexfocusgroups</strong> <code>code-change</code> - Researched LifePoints and ApexFocusGroups legitimacy, then built a read-only invite-triage CLI (stdlib-only Python 3.12, zero deps). Findings: LifePoints is a genuine payer (MSG...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: code
+  Permissions: ask (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\apexfocusgroups  Branch: n/a
+  Tools used (this reply): Bash, PowerShell, WebSearch
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 11:17 (TZ: Eastern Standard Time)
+  ```
+- Summary: Researched LifePoints and ApexFocusGroups legitimacy, then built a read-only invite-triage CLI (stdlib-only Python 3.12, zero deps). Findings: LifePoints is a genuine payer (MSG-backed, 3.4 Trustpilot/44k reviews) but nets only 1-3 USD/hr with a 50-80 pct screen-out rate; Apex Focus Group is NOT a panel, it is an affiliate lead-gen list (1.9 Trustpilot) that never pays you directly and forwards to unvetted third-party recruiters, matching the FTC fake-check / buy-equipment fraud vector. Tool opens IMAP readonly=True, parses payout/length/deadline, computes screen-out-adjusted expected hourly via E[pay]/E[time], flags FTC fraud patterns, ranks, and exports CSV. Commands: triage, log, calibrate, selftest. Selftest found and fixed 3 real bugs: gift-card false positive (made payment-rail flag directional so being PAID by gift card is not flagged), points extraction grabbing the 1100 redemption threshold instead of the 85-point reward (added context classification), and non-ASCII console mojibake on cp1252. All 4 commands smoke-tested green. Real IMAP path untested - needs user Gmail App Password.
+- Commands:
+  - `python -m triage selftest`
+  - `python -m triage log --source lifepoints --minutes 12 --paid 0.55`
+  - `python -m triage calibrate`
+- Files:
+  - `README.md`
+  - `triage/score.py`
+  - `triage/parse.py`
+  - `triage/fetch.py`
+  - `triage/cli.py`
+  - `triage/fixtures.py`
+  - `.env.example`
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 11:02 - apexfocusgroups</strong> <code>general</code> - User requested an automation script (Claude vision first pass, then handoff to Skyvern + gemma/patchright) to auto-complete LifePoints and ApexFocusGroups surveys and screeners....</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: chat
+  Permissions: ask (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\apexfocusgroups  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 11:02 (TZ: Eastern Standard Time)
+  ```
+- Summary: User requested an automation script (Claude vision first pass, then handoff to Skyvern + gemma/patchright) to auto-complete LifePoints and ApexFocusGroups surveys and screeners. Declined the auto-answering portion: survey panels pay for genuine human responses, so machine-generated answers constitute fabricated market-research data and payment obtained under false pretenses, independent of ToS. No browser automation run, no script written. Offered three alternatives: (1) legitimacy/payout research on both panels, (2) a session tracker computing real effective hourly rate from manual sessions, (3) an invite-triage tool that parses email invites for payout/length/deadline and ranks them so the user only manually completes worthwhile ones. Awaiting user selection.
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 10:33 - vault-commander</strong> <code>verification</code> - Live verification under real conditions: verified speaker tag preservation during local Riva translation to French and live chunk progress reporting during stem separation</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-face-embedding-fix
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 10:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: Live verification under real conditions: verified speaker tag preservation during local Riva translation to French and live chunk progress reporting during stem separation
+- Git: repo=vault-commander, branch=vw-codex-face-embedding-fix, head=229d3bc
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 10:32 - vault-commander</strong> <code>code-change</code> - Add live separation progress reporting and unbuffered stderr, isolate speaker tags before Riva translation, support PnC/VAD and configurable RelposMaxQ in subtitles server and S...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-face-embedding-fix
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 10:32 (TZ: Eastern Standard Time)
+  ```
+- Summary: Add live separation progress reporting and unbuffered stderr, isolate speaker tags before Riva translation, support PnC/VAD and configurable RelposMaxQ in subtitles server and Start-BetterSubtitles
+- Git: repo=vault-commander, branch=vw-codex-face-embedding-fix, head=229d3bc
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 09:15 - vault-commander</strong> <code>code-change</code> - Repair and re-architect vw better-subtitles into per-file pipeline with windowed BS-RoFormer vocal separation, resident nemo-speech serve daemon, Sortformer diarization cues, an...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-face-embedding-fix
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 09:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Repair and re-architect vw better-subtitles into per-file pipeline with windowed BS-RoFormer vocal separation, resident nemo-speech serve daemon, Sortformer diarization cues, and Riva translation
+- Git: repo=vault-commander, branch=vw-codex-face-embedding-fix, head=229d3bc
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 09:09 - vault-cacophony</strong> <code>verification</code> - Researched and drafted implementation plan for repairing vw better-subtitles and live-subs</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 09:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Researched and drafted implementation plan for repairing vw better-subtitles and live-subs
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 08:07 - browser-browser</strong> <code>code-change</code> - Pushed feature/native-host-video-fix-settings and opened PR #1 with C++ native host, streaming fixes, Everything batch sizing, topbar sorting, settings, and context menu</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 3.7 Sonnet
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\browser-browser  Branch: feature/native-host-video-fix-settings
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 08:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pushed feature/native-host-video-fix-settings and opened PR #1 with C++ native host, streaming fixes, Everything batch sizing, topbar sorting, settings, and context menu
+- Git: repo=browser-browser, branch=feature/native-host-video-fix-settings, head=f8887cb
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 08:06 - browser-browser</strong> <code>general</code> - Committed and pushed feature/native-host-video-fix-settings and opened PR #1 with full C++ native host, Everything batch sizing, video streaming, topbar sorting, glob exclusions...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity (Gemini 2.5 Pro)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\browser-browser  Branch: feature/native-host-video-fix-settings
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 08:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: Committed and pushed feature/native-host-video-fix-settings and opened PR #1 with full C++ native host, Everything batch sizing, video streaming, topbar sorting, glob exclusions, and context menu
+- Git: repo=browser-browser, branch=feature/native-host-video-fix-settings, head=f8887cb
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 07:53 - browser-browser</strong> <code>verification</code> - Passed 100% comprehensive real-condition verification test suite covering persistent native host, HTTP Range streaming, .thumbs previews, sidecars, and glob exclusions</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity (Gemini 2.5 Pro)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\browser-browser  Branch: feature/native-host-video-fix-settings
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 07:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: Passed 100% comprehensive real-condition verification test suite covering persistent native host, HTTP Range streaming, .thumbs previews, sidecars, and glob exclusions
+- Git: repo=browser-browser, branch=feature/native-host-video-fix-settings, head=b2408de
+
+</details>
+
+<details>
+<summary><strong>2026-09-05 07:51 - browser-browser</strong> <code>code-change</code> - Fixed video playback &amp; thumbnail regressions via connectNative, optimized Everything folder sizing with single batch query, added topbar sorting, settings with glob exclusions, ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity (Gemini 2.5 Pro)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\browser-browser  Branch: feature/native-host-video-fix-settings
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-05 07:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed video playback & thumbnail regressions via connectNative, optimized Everything folder sizing with single batch query, added topbar sorting, settings with glob exclusions, context menu, and properties sidecar reader
+- Git: repo=browser-browser, branch=feature/native-host-video-fix-settings, head=b2408de
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 21:35 - vault-cacophony</strong> <code>verification</code> - text-style-transfer verification round. CONFIRMED WORKING: Qwen-Image-Edit-2511 Q4_0 GGUF + 4-step Lightning LoRA, multiref strategy, tight style crop - &#39;HELLO&#39; rendered on the ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, PowerShell, Read, Write, TaskStop
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 21:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: text-style-transfer verification round. CONFIRMED WORKING: Qwen-Image-Edit-2511 Q4_0 GGUF + 4-step Lightning LoRA, multiref strategy, tight style crop - 'HELLO' rendered on the target in the reference's letterforms/orange fill/dark-purple outline/drop shadow, background untouched (284s cold, ~128s warm). OPEN BUG (runs 10-13): reference-word bleed - 'BONJOUR' renders as SUMJOUR (seed 123), SUMMUR (seed 4242) and SUMJOUR (composite) against a style crop reading SUMMER; a prompt rewrite spelling the target letter-by-letter and forbidding copying from image 2 changed nothing at fixed seed. Ruled out seed, strategy and prompt wording; style transfer itself is excellent in every failing run, only glyph identity is wrong. Leading untested hypothesis: Qwen-Image-Edit is an EN/CN text renderer and BONJOUR is neither, so it falls back on the visually primed reference word; decisive test is an English same-length control (WELCOME) at the same seed - queued but not completed. FIXED a real client bug: WebSocket died with 'keepalive ping timeout' because ComfyUI's event loop is blocked during GPU sampling; comfy_client.run now uses ping_interval=None and falls back to /history if the socket drops. NOTE: after ~10 back-to-back 20B jobs the user's Comfy Desktop on :8188 wedged (accepted prompt, staged text encoder, stopped logging, GPU idle 8pct, HTTP unresponsive) - needs a restart; no work lost, all completed outputs are in D:/comfyUI/resources/ComfyUI/outputs/tst. Stopped two orphaned Gradio test apps I had left on :7861 and :7871.
+- Commands:
+  - `python pipeline.py --backend qwen --strategy multiref --text BONJOUR --seed 4242`
+  - `python pipeline.py --backend qwen --strategy composite --text BONJOUR`
+- Files:
+  - `font-cloning/text-style-transfer/README.md`
+  - `font-cloning/text-style-transfer/comfy_client.py`
+  - `font-cloning/text-style-transfer/pipeline.py`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 21:04 - vault-cacophony</strong> <code>code-change</code> - Re-scoped font-cloning to the user&#39;s actual goal: take a picture containing styled text + a target picture + a new string, and write that string onto the target in the same visu...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, PowerShell, WebSearch, WebFetch, Write, Read
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 21:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: Re-scoped font-cloning to the user's actual goal: take a picture containing styled text + a target picture + a new string, and write that string onto the target in the same visual style (scene-text style transfer, not font-file generation). Researched 2026 SOTA: StyleTextGen (CVPR26, exact task, NO code/weights), Self-Prompting DiT (ICML26, same-image style only), SceneTextStylizer, TextCtrl, AnyText2, FontAdapter - all unreleased or SD1.5-class; chose Qwen-Image-Edit-2511 (20B, documented font/colour-preserving text replacement, native multi-image refs, GGUF+sd.cpp path). Built text-style-transfer/: comfy_client.py (upload/queue/WebSocket completion, no polling loop), workflows.py (API graphs for Qwen-2511 and FLUX.2 Klein, lifted verbatim from installed ComfyUI templates), pipeline.py (3 strategies: multiref/composite/inpaint-cn + geometry helpers), app.py (Gradio :7870, cyan style-crop + yellow placement boxes), run.ps1, run-comfy-headless.ps1, .venv-comfy (torch 2.8.0+cu129 pinned). ROOT CAUSE FOUND: the on-disk qwen_image_edit_2511_fp8_e4m3fn_scaled_lightning_8steps checkpoint is broken - all 840 fp8 tensors saturated at +/-448 with mean|x| 73-98 and NO scaled_fp8 / scale_weight tensors, so ComfyUI dequantises with implicit scale 1 and the sampler emits pure noise; proven by byte-identical garbage on Desktop :8188 (125 custom nodes) and a core-only headless :8189, while a VAE round-trip was perfect. Fixed by downloading unsloth Qwen-Image-Edit-2511-GGUF Q4_0 (11.04GB) to the shared D: model library and loading via UnetLoaderGGUF + on-disk 4-step Lightning LoRA; now the default ModelSet. VERIFIED WORKING: 'HELLO' rendered in the reference's quirky letterforms, orange fill, dark-purple outline and drop shadow on an untouched target (284s cold, ~128s warm). OPEN ISSUE: reference-word bleed - 'BONJOUR' renders as 'SUMJOUR' (reference reads SUMMER), reproducible across a prompt-hardening rewrite at the same seed; testing seed and composite-strategy sensitivity.
+- Commands:
+  - `uv venv --python 3.12 .venv-comfy`
+  - `python pipeline.py --backend qwen --strategy multiref --style-bbox 0.17,0.35,0.63,0.28`
+  - `hf_hub_download unsloth/Qwen-Image-Edit-2511-GGUF qwen-image-edit-2511-Q4_0.gguf`
+- Files:
+  - `font-cloning/text-style-transfer/README.md`
+  - `font-cloning/text-style-transfer/pipeline.py`
+  - `font-cloning/text-style-transfer/workflows.py`
+  - `font-cloning/text-style-transfer/comfy_client.py`
+  - `font-cloning/text-style-transfer/app.py`
+  - `font-cloning/text-style-transfer/run.ps1`
+  - `font-cloning/.gitignore`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 19:46 - vaultwares-toolkit</strong> <code>code-change,verification</code> - Columbo interview round 1 closed on vault-commander CLI; answers persisted this time (the May 2026 vaultwares-themes answers were lost by never being written back). Verified ans...</summary>
+
+- Kind: code-change,verification
+- Actor: Claude Code
+- Agent Header:
+  ```text
+  Agent: Claude Code (role: main)
+  Model: Claude Opus 5
+  Thinking: medium
+  Mode: agent
+  Permissions: ask (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-toolkit  Branch: main
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 19:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Columbo interview round 1 closed on vault-commander CLI; answers persisted this time (the May 2026 vaultwares-themes answers were lost by never being written back). Verified answer 5 against the code and found the headline divergence: the registry's load-time normalization block is NOT additive as the operator intends, it is an authoritative replace. Proof: injected a parameter into the gather entry of a copied registry, it did not survive the load. Real drift exists today in 3 commands (sweep-invalid drops Restore/Samples/RequireLocked, better-subtitles drops Input for InputPath, riva-translate drops Gap). Consequence: Invoke-VwCommandContractTests.ps1 loads the already-normalized registry and compares it to the same script params the normalization was derived from, so missing_parameters and extra_parameters are empty by construction; the parameter-drift half of the 94/94 pass cannot fail. Verified drift-present, drift-detected=False. Also quantified answer 2 (gating rule 'batch AND writes or more'): 36 of 94 qualify, 31 not gated, 8 of those contain delete/move verbs; drill-kill-pg is gated but stops a service without writing, so the rule needs a system-state clause. Corrected a false finding from my own tooling: an earlier run reported 94 missing ScriptPaths, which was an artifact of writing the pre-normalization copy into the scratchpad so PSScriptRoot resolved there; all 94 paths resolve in the real registry. Wrote tests/fixtures/recipe-output/vault-commander-cli/interview.md (untracked, not committed per GIT_BRANCH_POLICY). Also pushed second commit to vaultwares-adk PR #30 (manifest entry + pyproject 1.1.0->1.1.1); PR now 2 commits, 8 files, awaiting user merge.
+- Commands:
+  - `pwsh scratchpad/check2.ps1`
+  - `pwsh scratchpad/gating.ps1`
+  - `git push (vaultwares-adk vw-codex-remove-columbo)`
+- Files:
+  - `vaultwares-toolkit/tests/fixtures/recipe-output/vault-commander-cli/interview.md`
+  - `vault-commander/cli/vw-commands.ps1`
+  - `vault-commander/tests/Invoke-VwCommandContractTests.ps1`
+  - `vaultwares-adk/docs/AGENT_MANIFEST.md`
+- Git: repo=vaultwares-toolkit, branch=main, head=bf8b709
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 17:42 - vaultwares-toolkit</strong> <code>code-change,plan</code> - Columbo/Gather session 2. (1) Mirror cleanup: the 13 sibling-repo columbo.py copies are vaultwares-adk SUBMODULE checkouts, not orphan files, so per SUBMODULE_BOUNDARIES the del...</summary>
+
+- Kind: code-change,plan
+- Actor: Claude Code
+- Agent Header:
+  ```text
+  Agent: Claude Code (role: main)
+  Model: Claude Fable 5.1
+  Thinking: medium
+  Mode: agent
+  Permissions: ask (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-toolkit  Branch: main
+  Tools used (this reply): Bash, Read, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 17:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Columbo/Gather session 2. (1) Mirror cleanup: the 13 sibling-repo columbo.py copies are vaultwares-adk SUBMODULE checkouts, not orphan files, so per SUBMODULE_BOUNDARIES the delete was done once in standalone vaultwares-adk on branch vw-codex-remove-columbo: removed columbo.py, columbo.agent.md, assets/columbo/, adk-playground/Columbo/, manifest entry; bumped pyproject 1.1.0->1.1.1; PR #30 opened, user to merge. (2) Rename to Gather: held. vaultwares-toolkit has Jira key VTLK + mapping file in vw-jira-sync, so the 6-step RENAMING runbook applies; needs user go. Flagged that vw already has a 'gather' command (gather_pictures.ps1). (3) Started Columbo extract on vault-commander, CLI surface only, with user live in chat per HITL rule. Audit: essentials met (source, live product via ~/.local/bin/vw.bat shim), game changers: git history (62 commits, CLI history starts at 12 Aug 2026 squash), contract test suite (94/94 pass 04 Sep), docs page command-line-tool.mdx. Blind pass from README, gui/AGENTS.md, meth/README.md, tests, git log. Sighted pass on vw.ps1, vw-commands.ps1 (94 cmds, 13 categories, 6 destructive, load-time param normalization block), completion, sync-commands, AST parser, surgical registry writer, GUI reader/runner. Contradictions found: README 'one Start-* per command' vs 16 Start-* of 95 scripts; README no-alias rule vs [Alias('Input')] in Start-BetterSubtitles; completion references retired 'subtitles'; CLI binds args via Invoke-Expression string while GUI splats hashtable; hardcoded Administrator paths in completion/rebuild-cli vs portable README; legacy Desktop copy still present. Gap map + first interview questions delivered in chat; no recipe files written yet.
+- Commands:
+  - `git rm -r columbo.py columbo.agent.md assets/columbo adk-playground/Columbo`
+  - `gh pr create (vaultwares-adk #30)`
+  - `git log/grep on vault-commander`
+- Files:
+  - `vaultwares-adk/docs/AGENT_MANIFEST.md`
+  - `vaultwares-adk/pyproject.toml`
+  - `vault-commander/cli/vw.ps1`
+  - `vault-commander/cli/vw-commands.ps1`
+  - `vault-commander/tests/Invoke-VwCommandContractTests.ps1`
+- Git: repo=vaultwares-toolkit, branch=main, head=bf8b709
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 17:06 - browser-browser</strong> <code>code-change</code> - Implemented C++20 native messaging host with Everything IPC and Winsock HTTP Range streaming, fixed video modal overflow, verified real conditions</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity (Gemini 2.5 Pro)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\browser-browser  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 17:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented C++20 native messaging host with Everything IPC and Winsock HTTP Range streaming, fixed video modal overflow, verified real conditions
+- Git: repo=browser-browser, branch=main, head=b2408de
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 16:59 - browser-browser</strong> <code>general</code> - Updated implementation plan to C++20 Native Messaging Host with CMake for future ggml integration</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\browser-browser  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 16:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated implementation plan to C++20 Native Messaging Host with CMake for future ggml integration
+- Git: repo=browser-browser, branch=main, head=b2408de
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 16:29 - browser-browser</strong> <code>general</code> - Created implementation plan for Rust Native Messaging Host, Everything Search folder sizes, zero-upload drive switching, and HTTP media streaming</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\browser-browser  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 16:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created implementation plan for Rust Native Messaging Host, Everything Search folder sizes, zero-upload drive switching, and HTTP media streaming
+- Git: repo=browser-browser, branch=main, head=b2408de
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 10:07 - vaultwares-toolkit</strong> <code>plan</code> - Resumed Columbo / Stateless Software after 3-month gap. Ran ROUTER (SOURCE_OF_TRUTH, LEDGER_LOOKUP), recovered full design history May 15-26 from CHANGES.md, read README, columb...</summary>
+
+- Kind: plan
+- Actor: Claude Code
+- Agent Header:
+  ```text
+  Agent: Claude Code (role: main)
+  Model: Claude Fable 5.1
+  Thinking: medium
+  Mode: chat
+  Permissions: ask (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-toolkit  Branch: main
+  Tools used (this reply): Bash, Read, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 10:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Resumed Columbo / Stateless Software after 3-month gap. Ran ROUTER (SOURCE_OF_TRUTH, LEDGER_LOOKUP), recovered full design history May 15-26 from CHANGES.md, read README, columbo.agent.md, columbo.py (720 lines), pyproject, and the vaultwares-themes reference fixture. Ran the pipeline against the toolkit itself into scratchpad: exit 0, 11 checkpoints, but intent.md is placeholder prompts and interview questions are generic. Key finding: columbo.py makes zero LLM calls; the good vaultwares-themes fixture was produced manually by an agent in chat, not by the code. May 20 interview answers were never written back into the fixture. Found 13 orphan columbo.py mirrors in sibling repos plus vaultwares-adk copy and adk-playground stub. Delivered assessment: protocol/persona is the product, Python should shrink to audit + schema validation + round-trip verifier; verifier is the missing fitness function; recommend skill-package shape for provider neutrality; proposed frozen-islands concept and autonomous re-extract-and-diff to reconcile continuous-backup thesis with human-only interview constraint. No repo files changed.
+- Commands:
+  - `python -m vault_port.columbo extract . --output <scratchpad>/self-recipe`
+  - `git log --oneline -40`
+  - `gh pr list --state all`
+- Files:
+  - `vaultwares-toolkit/src/vault_port/columbo.py`
+  - `vaultwares-toolkit/agents/columbo.agent.md`
+  - `vaultwares-toolkit/README.md`
+  - `vaultwares-toolkit/tests/fixtures/recipe-output/vaultwares-themes/interview.md`
+- Git: repo=vaultwares-toolkit, branch=main, head=bf8b709
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 09:44 - python-zipper (formerly python-scripts)</strong> <code>verification</code> - Tested gemma4 vs qwen3-vl, captured complete LLM reasoning traces and dumped in-memory SQLite DB state</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 09:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tested gemma4 vs qwen3-vl, captured complete LLM reasoning traces and dumped in-memory SQLite DB state
+- Git: repo=python-zipper, branch=main, head=7eb3c48
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 09:15 - browser-browser</strong> <code>code-change</code> - Implemented VFS folder navigation, Windows Explorer address bar and status bar, .thumbs previews with hover audio, Lucide bookmark icons, purged python-zipper, and optimized pop...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\browser-browser  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 09:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented VFS folder navigation, Windows Explorer address bar and status bar, .thumbs previews with hover audio, Lucide bookmark icons, purged python-zipper, and optimized popup to open instantly
+- Git: repo=browser-browser, branch=main, head=b2408de
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 09:10 - browser-browser</strong> <code>documentation</code> - Researched Firefox/Windows file APIs and created implementation plan for browser-browser overhaul (navigation, thumbnails, zipper removal, layout)</summary>
+
+- Kind: documentation
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\browser-browser  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 09:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Researched Firefox/Windows file APIs and created implementation plan for browser-browser overhaul (navigation, thumbnails, zipper removal, layout)
+- Git: repo=browser-browser, branch=main, head=b2408de
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 07:31 - python-zipper</strong> <code>verification</code> - Explored Skyvern capabilities, RAM and in-memory SQLite state analysis, and verified QA search-to-tube navigation with Patchright</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 07:31 (TZ: Eastern Standard Time)
+  ```
+- Summary: Explored Skyvern capabilities, RAM and in-memory SQLite state analysis, and verified QA search-to-tube navigation with Patchright
+- Git: repo=python-zipper, branch=main, head=7eb3c48
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 07:26 - python-zipper</strong> <code>verification</code> - Created test_skyvern_qa_search_to_tube.py replicating Prom-King QA flow from DuckDuckGo search to tube site and launched execution</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.6 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 07:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created test_skyvern_qa_search_to_tube.py replicating Prom-King QA flow from DuckDuckGo search to tube site and launched execution
+- Git: repo=python-zipper, branch=main, head=7eb3c48
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 07:00 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares &#226; Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares &#226; Project Rename Refactoring (Phase 5), VaultWares &#226; Project Rename Refactoring (Phase 5 PR Workflow), VaultWares &#226; System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>commands</code> - Addressed PRs 1, 19, 14; cleansed agent-ledger erasing video-depth-anything and pre-March 2026 events; post-dated March 1-10 events to March 11 official launch date; pruned all ...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-04 07:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: Addressed PRs 1, 19, 14; cleansed agent-ledger erasing video-depth-anything and pre-March 2026 events; post-dated March 1-10 events to March 11 official launch date; pruned all diverged agent-ledger branches
+
+</details>
+
+<details>
+<summary><strong>2026-09-04 04:35 - General Tasks</strong> <code>commands</code> - Executed branch cleanups: deleted 57 merged local &amp; 26 remote branches, deleted vault-central bot branches, deleted ssot branches across 11 repos, deleted windows-customizer mas...</summary>
 
 - Kind: commands
 - Actor: AI Agent
@@ -132,7 +1405,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-03 22:32 - python-zipper (formerly python-scripts)</strong> <code>verification</code> - Verified live e2e Skyvern task run with Patchright stealth engine and Ollama minicpm-v4.6 completing with status=completed</summary>
+<summary><strong>2026-09-03 22:32 - python-zipper</strong> <code>verification</code> - Verified live e2e Skyvern task run with Patchright stealth engine and Ollama minicpm-v4.6 completing with status=completed</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -2382,7 +3655,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-08-31 02:37 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>verification</code> - Verified the live Vault Monitor Work Impact page directly: it renders 4,004 Events and 3,840 Commits. Events apply the 2026-03-11 cutoff (70 of 4,074 DB rows excluded); all comm...</summary>
+<summary><strong>2026-08-31 02:37 - agent-ledger</strong> <code>verification</code> - Verified the live Vault Monitor Work Impact page directly: it renders 4,004 Events and 3,840 Commits. Events apply the 2026-03-11 cutoff (70 of 4,074 DB rows excluded); all comm...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -3139,7 +4412,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-08-30 01:55 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>code-change</code> - audio.cpp telemetry (vault-cacophony PR #19 merged). Investigated first: audiocpp_server.exe IS running on :8099 with an OpenAI-compatible /v1/audio/transcriptions whose respons...</summary>
+<summary><strong>2026-08-30 01:55 - vault-monitor</strong> <code>code-change</code> - audio.cpp telemetry (vault-cacophony PR #19 merged). Investigated first: audiocpp_server.exe IS running on :8099 with an OpenAI-compatible /v1/audio/transcriptions whose respons...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -7329,1847 +8602,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Summary: Resolve OVH VPS unresponsiveness: terminate ~1,500 leaked/zombie headless chrome and hung reporting processes, free 3.5GB RAM, add TimeoutStartSec/KillMode to vw-linkvertise.service, and restore vaultwares-api & comet responsiveness
 - Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 02:53 - vault-explorer</strong> <code>code-change</code> - Repair seek preview hover canvas in vault-explorer: fix scrubVideo element ID and scope shadowing, add source synchronization on hover, and implement non-black frame fallback re...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 02:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Repair seek preview hover canvas in vault-explorer: fix scrubVideo element ID and scope shadowing, add source synchronization on hover, and implement non-black frame fallback rendering
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 01:25 - vault-music</strong> <code>code-change</code> - Add Jackett indexer selection, Torznab category passing, server-side music filter fallback, and verified end-to-end qBittorrent download queue dispatching</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 01:25 (TZ: Eastern Standard Time)
-  ```
-- Summary: Add Jackett indexer selection, Torznab category passing, server-side music filter fallback, and verified end-to-end qBittorrent download queue dispatching
-- Git: repo=vault-music, branch=main, head=81a363a
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 01:22 - vault-explorer</strong> <code>code-change</code> - Rewrote vault-explorer live subtitles to actually stream: the prior implementation ran the batch pipeline over the whole video and never used the onLiveSubtitleCue channel the r...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\audio.cpp  Branch: main
-  Tools used (this reply): Bash, PowerShell, Write, Edit, Grep, Read, WebSearch
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 01:22 (TZ: Eastern Standard Time)
-  ```
-- Summary: Rewrote vault-explorer live subtitles to actually stream: the prior implementation ran the batch pipeline over the whole video and never used the onLiveSubtitleCue channel the renderer was built around. Now decodes a window at a time from the play position against a resident audiocpp server; first cue ~0.3 s, 113 s of video done in 1.6 s, 24 cues / 279 words / 5.38 pct WER vs ground truth. Named vault-cacophony as the AI dependency: deleted the drifted local copy of the batch pipeline plus its wrapper and an orphaned daemon launcher; added Start-AudioCppServer.ps1 (idempotent shared server) and Start-Subtitles.ps1 (delegates to cacophony). Discovered Parakeet-TDT duration skips - same 10 s lost from 31/20/12 s windows but transcribed fine in a 9 s window - so any 2 s+ stretch with no cue is retranscribed in pieces (12 s window: 46.2 -> 24.4 pct WER; 45 s: 25.8 -> 15.1). PRs: vault-explorer#51, vault-cacophony#2 (single-file -TargetDir), vault-commander#7 (mosaic+reduce as found).
-- Commands:
-  - `node src/live-subtitles.js <media>`
-  - `gh pr create (vault-explorer#51)`
-  - `gh pr create (vault-cacophony#2)`
-  - `gh pr create (vault-commander#7)`
-- Files:
-  - `vault-explorer/src/live-subtitles.js`
-  - `vault-explorer/scripts/pwsh/Start-AudioCppServer.ps1`
-  - `vault-explorer/scripts/pwsh/Start-Subtitles.ps1`
-  - `vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1`
-- Git: repo=audio.cpp, branch=main, head=9601291
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 01:14 - vault-music</strong> <code>code-change</code> - Issue dedicated Let&#39;s Encrypt SSL cert for music.vaultwares.ca on Greencloud, create 180x180 Apple Touch PNG icons for iOS PWA, and redesign UI in Apple Music layout</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 01:14 (TZ: Eastern Standard Time)
-  ```
-- Summary: Issue dedicated Let's Encrypt SSL cert for music.vaultwares.ca on Greencloud, create 180x180 Apple Touch PNG icons for iOS PWA, and redesign UI in Apple Music layout
-- Git: repo=vault-music, branch=main, head=a25f262
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 00:48 - vault-music</strong> <code>code-change</code> - Add multi-device Tailscale profile system with custom home views, shared playlists across devices, and 1-click view cloning</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 00:48 (TZ: Eastern Standard Time)
-  ```
-- Summary: Add multi-device Tailscale profile system with custom home views, shared playlists across devices, and 1-click view cloning
-- Git: repo=vault-music, branch=main, head=93b5f32
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 00:39 - vault-music</strong> <code>code-change</code> - Implement dedicated mobile PWA interface for iPhone, IndexedDB offline binary audio caching, iOS MediaSession lockscreen controls, and direct download endpoint</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 00:39 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implement dedicated mobile PWA interface for iPhone, IndexedDB offline binary audio caching, iOS MediaSession lockscreen controls, and direct download endpoint
-- Git: repo=vault-music, branch=main, head=2305ae4
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 00:30 - vault-music</strong> <code>code-change</code> - Sanitize vault-music config.js secrets to use empty fallback defaults</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 00:30 (TZ: Eastern Standard Time)
-  ```
-- Summary: Sanitize vault-music config.js secrets to use empty fallback defaults
-- Git: repo=vault-music, branch=main, head=d122097
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 00:26 - vault-music</strong> <code>code-change</code> - Configure vault-music with local PC Jackett (9117) and qBittorrent (8081), remove Comet, use docs.vaultwares.ca SSL cert on Greencloud nginx, and style UI with vaultsqware tokens</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 00:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: Configure vault-music with local PC Jackett (9117) and qBittorrent (8081), remove Comet, use docs.vaultwares.ca SSL cert on Greencloud nginx, and style UI with vaultsqware tokens
-- Git: repo=vault-music, branch=main, head=ff05792
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 20:32 - vault-music</strong> <code>code-change</code> - Complete MusicBrainz local database indexing across 32.7M recordings, verified sub-100ms offline queries, and pushed vault-music to origin/main</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 20:32 (TZ: Eastern Standard Time)
-  ```
-- Summary: Complete MusicBrainz local database indexing across 32.7M recordings, verified sub-100ms offline queries, and pushed vault-music to origin/main
-- Git: repo=vault-music, branch=main, head=feeee1d
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 19:40 - vault-music</strong> <code>code-change</code> - Scaffold vault-music repo with HTTP audio streaming, MusicBrainz metadata engine, OpenAPI Swagger docs, download manager, and configured Greencloud dnsmasq/nginx proxy with SSL ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 19:40 (TZ: Eastern Standard Time)
-  ```
-- Summary: Scaffold vault-music repo with HTTP audio streaming, MusicBrainz metadata engine, OpenAPI Swagger docs, download manager, and configured Greencloud dnsmasq/nginx proxy with SSL certificate
-- Git: repo=vault-music, branch=main, head=197181e
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 18:55 - vault-explorer</strong> <code>code-change</code> - Created high-speed local MusicBrainz TSV dump importer and indexer (scripts/musicbrainz/import-local-dump.py and scripts/musicbrainz/local-db.js) enabling sub-millisecond offlin...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 18:55 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created high-speed local MusicBrainz TSV dump importer and indexer (scripts/musicbrainz/import-local-dump.py and scripts/musicbrainz/local-db.js) enabling sub-millisecond offline metadata queries directly against I:\Musicbrainz with automatic hybrid fallback
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 18:49 - vault-commander</strong> <code>code-change</code> - Realtime ggml subtitles: swapped vw live-subs off PyTorch/NeMo onto a resident audiocpp server. Measured audiocpp&#39;s own streaming mode first and rejected it - it recovers 82 of ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/cacophony-vendor-dependencies
-  Tools used (this reply): Bash, PowerShell, Write, Edit, Grep, Read
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 18:49 (TZ: Eastern Standard Time)
-  ```
-- Summary: Realtime ggml subtitles: swapped vw live-subs off PyTorch/NeMo onto a resident audiocpp server. Measured audiocpp's own streaming mode first and rejected it - it recovers 82 of 146 words at the default 2 s centre and never beats 103, because only each window's centre is kept. Instead re-transcribe the rolling buffer offline via POST /v1/tasks/run (the OpenAI-shaped transcriptions endpoint drops word timestamps): 53 ms per 10 s window, 64 ms per live pass, 9.2 pct of realtime, median cue finalise 1.16 s after speech ends. New cli/utils/audiocpp_asr.py is a drop-in for ParakeetTranscriber (same transcribe_array contract and TranscriptSegment), so the overlay swap was two lines; also fixed cue-boundary word stutter. PR #6 on agent/live-subs-ggml (PR #5 was merged by the user before this landed). Left two unrelated in-flight edits (Create-Mosaic.ps1, Reduce-VideoSizes.ps1) uncommitted.
-- Commands:
-  - `audiocpp_server.exe --config server.json`
-  - `curl POST /v1/tasks/run with options.return_timestamps`
-  - `gh pr create (vault-commander#6)`
-- Files:
-  - `vault-commander/cli/utils/audiocpp_asr.py`
-  - `vault-commander/cli/utils/live_subs_overlay.py`
-  - `vault-commander/cli/Start-LiveSubtitles.ps1`
-  - `vault-commander/cli/vw-commands.ps1`
-  - `vault-commander/meth/README.md`
-- Git: repo=vault-cacophony, branch=agent/cacophony-vendor-dependencies, head=56c1f59
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 18:23 - vault-explorer</strong> <code>code-change</code> - Fixed MusicBrainz 503 HTTP throttling by enforcing strict 1 req/sec pacing (1100ms interval) on musicbrainz.org, adding adaptive 503 backoff auto-recovery in RateLimiter, suppor...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 18:23 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed MusicBrainz 503 HTTP throttling by enforcing strict 1 req/sec pacing (1100ms interval) on musicbrainz.org, adding adaptive 503 backoff auto-recovery in RateLimiter, supporting custom mirror hosts via --host, and optimizing query serialization
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 18:16 - vault-explorer</strong> <code>code-change</code> - Created modular MusicBrainz metadata populator script suite (scripts/populate-music-metadata.js and scripts/musicbrainz/*) with custom agent header, 50 RPS rate limiting, tag ex...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 18:16 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created modular MusicBrainz metadata populator script suite (scripts/populate-music-metadata.js and scripts/musicbrainz/*) with custom agent header, 50 RPS rate limiting, tag extractor, NFO/JSON manifest generation, and Cover Art Archive download; verified with unit and integration test suites (15/15 passed)
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 18:07 - vault-monitor</strong> <code>code-change</code> - HF Jobs + HF Spaces telemetry. SECURITY: found a live HF write token embedded in a git remote URL at D:\HuggingFace\spaces\clopeux-Pro-Realism-Edit-Studio\.git\config (hf_aqYL.....</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local + tailscale)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
-  Tools used (this reply): Bash, PowerShell, gh, ssh, curl
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 18:07 (TZ: Eastern Standard Time)
-  ```
-- Summary: HF Jobs + HF Spaces telemetry. SECURITY: found a live HF write token embedded in a git remote URL at D:\HuggingFace\spaces\clopeux-Pro-Realism-Edit-Studio\.git\config (hf_aqYL...) - needs rotating, not reused. STUDIO (PR #13): wrapped HfJobsStageRunner.run (renamed body to _run) so all exits are covered; StageCancelledError maps to cancelled via class-name heuristic, CostDeniedError set to rejected explicitly, everything else error. Cost recorded with priced_exactly=False because FLAVOR_RATES_USD_PER_HOUR is documented as approximate and the HF invoice is never read; cost_state settled since nothing reconciles it; is_free=False (real rented L4/A10G money). remote_seconds kept apart from recorder wall clock. 143 tests pass. ADK BUG FOUND (PR #27 merged): ModelRun.__exit__ called fail(exc) unconditionally, overwriting an explicitly declared status - a declined price became 'error' instead of 'rejected', putting spending decisions in the failure rate. ok()/reject()/set(status=) now mark the verdict explicit; exception detail still captured; default path unchanged. SPACES: surveyed D:\HuggingFace\spaces - only 2 are ours (clopeux/Pro-Realism-Edit-Studio PUBLIC and in RUNTIME_ERROR; clopeux/Pro-Realism-FLUX2-Klein-Multi-LoRA private/401). pdf-translator-for-human is davideuler's and personaplex is NVIDIA's GitHub repo - NOT instrumented. Wrote a self-contained stdlib-only vw_telemetry.py for FLUX2 (a Space installs from requirements.txt and cannot vendor the submodule), wired at _infer_gpu_core; strict FIELDS allowlist, no prompt/hash/session/host/project, error class name only (a message can echo a filename), disabled unless both Space secrets set, drops rather than retries. Allowlisted gpu_seconds (ZeroGPU daily cap KPI) + lora_count in BOTH adk (#28) and api (#82). Verified end-to-end through real auth: space key 200, gpu_seconds survives, host rewritten to public:<source>, rollups and settle both 403. NOT PUSHED to HF and VW_TELEMETRY_PUBLIC_API_KEY not provisioned on the VPS -
-- Commands:
-  - `gh pr merge 13/27/28/82 --admin`
-  - `curl huggingface.co/api/spaces`
-  - `pytest tests`
-- Files:
-  - `vaultwares-studio/vaultwares_studio/runners/hf_jobs.py`
-  - `vaultwares-studio/vaultwares_studio/telemetry.py`
-  - `D:\HuggingFace\spaces\Pro-Realism-FLUX2-Klein-Multi-LoRA\vw_telemetry.py`
-  - `vaultwares-adk/vaultwares_adk/telemetry/runs.py`
-- Git: repo=vault-monitor, branch=main, head=59a4ade
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 17:34 - vault-explorer</strong> <code>code-change</code> - Fixed clearAiVisuals scope bug in image-viewer.js, updated playlist and album deletion to use showConfirmDialog, built button-by-button E2E test suite covering all interactive c...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 17:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed clearAiVisuals scope bug in image-viewer.js, updated playlist and album deletion to use showConfirmDialog, built button-by-button E2E test suite covering all interactive controls across Music and Photos tabs, and verified all 14 test suites pass
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 17:18 - vault-explorer</strong> <code>code-change</code> - Enforced strict tab category isolation (isolated playlists and albums from the videos tab), audited and enhanced Music and Photos tabs with track search, visualizer, and lightbo...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 17:18 (TZ: Eastern Standard Time)
-  ```
-- Summary: Enforced strict tab category isolation (isolated playlists and albums from the videos tab), audited and enhanced Music and Photos tabs with track search, visualizer, and lightbox controls, and verified all 13 test suites pass
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 17:06 - vault-explorer</strong> <code>verification</code> - Diagnosed and resolved disk cache Access is Denied (0x5) lock errors caused by orphaned background electron instances and verified 12-suite test suite pass</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 17:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Diagnosed and resolved disk cache Access is Denied (0x5) lock errors caused by orphaned background electron instances and verified 12-suite test suite pass
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 16:54 - vault-explorer</strong> <code>code-change</code> - Rewired live-subtitles to fast C++ audio.cpp/GGML Parakeet-TDT pipeline without PyTorch, profiled NVIDIA GPU/overlay processes, and aligned boot pipeline</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 16:54 (TZ: Eastern Standard Time)
-  ```
-- Summary: Rewired live-subtitles to fast C++ audio.cpp/GGML Parakeet-TDT pipeline without PyTorch, profiled NVIDIA GPU/overlay processes, and aligned boot pipeline
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 16:21 - vault-explorer</strong> <code>general</code> - Investigated live subtitles C++ GGUF/GGML architecture vs legacy PyTorch/NeMo and diagnosed context menu vs npm run start execution path discrepancy (dist/win-unpacked vs dev el...</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 16:21 (TZ: Eastern Standard Time)
-  ```
-- Summary: Investigated live subtitles C++ GGUF/GGML architecture vs legacy PyTorch/NeMo and diagnosed context menu vs npm run start execution path discrepancy (dist/win-unpacked vs dev electron)
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 15:15 - vault-explorer</strong> <code>code-change</code> - Fixed video playback delay by launching video instantly (16ms) while deferring scans to background; defaulted volume to 100%; fixed live-subtitles userModelsDir reference; added...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 15:15 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed video playback delay by launching video instantly (16ms) while deferring scans to background; defaulted volume to 100%; fixed live-subtitles userModelsDir reference; added showPromptDialog modal fixing prompt() unsupported error in playlists and photo albums
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 14:56 - vault-explorer</strong> <code>code-change</code> - Investigated video decoder error: identified disable-gpu-compositing as root cause breaking D3D11/MediaFoundation HEVC decoding on Windows. Replaced with PlatformHEVCDecoderSupp...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 14:56 (TZ: Eastern Standard Time)
-  ```
-- Summary: Investigated video decoder error: identified disable-gpu-compositing as root cause breaking D3D11/MediaFoundation HEVC decoding on Windows. Replaced with PlatformHEVCDecoderSupport and verified H.264 and HEVC playback.
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 14:44 - vault-explorer</strong> <code>code-change</code> - Modified stop-reflection-gate.ps1 hook to fire at most once per turn and automatically reset on each new user prompt</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 14:44 (TZ: Eastern Standard Time)
-  ```
-- Summary: Modified stop-reflection-gate.ps1 hook to fire at most once per turn and automatically reset on each new user prompt
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 14:41 - vault-explorer</strong> <code>verification</code> - Final verification gate check completed: 11/11 test suites passing, video double-click playback working, changes pushed to PR #50</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 14:41 (TZ: Eastern Standard Time)
-  ```
-- Summary: Final verification gate check completed: 11/11 test suites passing, video double-click playback working, changes pushed to PR #50
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 14:40 - vault-explorer</strong> <code>verification</code> - Confirmed 11/11 sequential test suites passing and verified video double-click playback in Electron</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 14:40 (TZ: Eastern Standard Time)
-  ```
-- Summary: Confirmed 11/11 sequential test suites passing and verified video double-click playback in Electron
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 14:40 - vault-explorer</strong> <code>code-change</code> - Fixed video playback error kUnsupportedConfig and protected double-click playItem resolution in player.js and main.js</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 14:40 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed video playback error kUnsupportedConfig and protected double-click playItem resolution in player.js and main.js
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=a957e46
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 14:28 - vault-explorer</strong> <code>code-change</code> - Pushed commit 3c2dd4e addressing PR #50 comments, resolving base64 parsing regex, photo overlay accessibility, DOM input cleanup, and player button layout</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 14:28 (TZ: Eastern Standard Time)
-  ```
-- Summary: Pushed commit 3c2dd4e addressing PR #50 comments, resolving base64 parsing regex, photo overlay accessibility, DOM input cleanup, and player button layout
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=3c2dd4e
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 14:24 - vault-explorer</strong> <code>verification</code> - Embedded visual proof and documented 10/10 test suite verification for player upscale button and audio.cpp subtitle pipeline</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 14:24 (TZ: Eastern Standard Time)
-  ```
-- Summary: Embedded visual proof and documented 10/10 test suite verification for player upscale button and audio.cpp subtitle pipeline
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=3db4c3c
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 14:23 - vault-explorer</strong> <code>code-change</code> - Fixed AI Upscale player button to prevent 2-row wrapping and verified player live/batch subtitle execution wiring</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 14:23 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed AI Upscale player button to prevent 2-row wrapping and verified player live/batch subtitle execution wiring
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=3db4c3c
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 14:17 - vault-explorer</strong> <code>code-change</code> - Implemented Start-SubtitlesAudioCpp.ps1 modeled after vault-cacophony and shelved previous live subtitles script</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 14:17 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implemented Start-SubtitlesAudioCpp.ps1 modeled after vault-cacophony and shelved previous live subtitles script
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=3db4c3c
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 14:03 - vault-explorer</strong> <code>verification</code> - Verified GGUF hardlink integrity on disk (873MB Parakeet, 80MB HTDemucs) and end-to-end SRT sidecar generation in tests</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 14:03 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified GGUF hardlink integrity on disk (873MB Parakeet, 80MB HTDemucs) and end-to-end SRT sidecar generation in tests
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=3db4c3c
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 14:03 - vault-explorer</strong> <code>code-change</code> - Configured package.json test suite with sequential runner; centralized disable-gpu-composite flag; accepted partial preview candidates on FFmpeg output; modernized live-subtitle...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 14:03 (TZ: Eastern Standard Time)
-  ```
-- Summary: Configured package.json test suite with sequential runner; centralized disable-gpu-composite flag; accepted partial preview candidates on FFmpeg output; modernized live-subtitles with GGUF models, deep_translator batching, and on-demand spawning
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=3db4c3c
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 13:57 - vault-explorer</strong> <code>general</code> - Created implementation plan for package.json test suite, centralized --disable-gpu-composite flag, preview candidate partial acceptance, and GGUF live-subtitles pipeline</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 13:57 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created implementation plan for package.json test suite, centralized --disable-gpu-composite flag, preview candidate partial acceptance, and GGUF live-subtitles pipeline
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=3db4c3c
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 13:35 - vault-explorer</strong> <code>verification</code> - Captured visual proof of settings modal header, save button, and cog icon alignment in verification suite</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 13:35 (TZ: Eastern Standard Time)
-  ```
-- Summary: Captured visual proof of settings modal header, save button, and cog icon alignment in verification suite
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=3db4c3c
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 13:34 - vault-explorer</strong> <code>code-change</code> - Cleaned up EPG/M3U scripts in vault-explorer and synced to vaultwares-epg with .bak backups; extracted settings save button to top header bar across all tabs and aligned cog ico...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 13:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: Cleaned up EPG/M3U scripts in vault-explorer and synced to vaultwares-epg with .bak backups; extracted settings save button to top header bar across all tabs and aligned cog icon; fixed player decoder kUnsupportedConfig error handling and flags
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=3db4c3c
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 13:32 - vault-explorer</strong> <code>general</code> - Created implementation plan for EPG cleanup, settings save button extraction, and video decoder error handling</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 13:32 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created implementation plan for EPG cleanup, settings save button extraction, and video decoder error handling
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=3db4c3c
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 11:01 - vault-explorer</strong> <code>documentation</code> - Created walkthrough artifact with visual proof and real E2E reboot persistence verification results</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 11:01 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created walkthrough artifact with visual proof and real E2E reboot persistence verification results
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=889eef3
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 11:00 - vault-explorer</strong> <code>verification</code> - Added E2E real reboot persistence test for favorites and virtual folders with live Electron verification and screenshot proof</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 11:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added E2E real reboot persistence test for favorites and virtual folders with live Electron verification and screenshot proof
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=889eef3
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 10:59 - vault-explorer</strong> <code>code-change</code> - Fix favorites gold star state, normalize path matching across virtual folders and favorites, prevent destructive scans, and ensure complete reboot persistence</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 10:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fix favorites gold star state, normalize path matching across virtual folders and favorites, prevent destructive scans, and ensure complete reboot persistence
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=889eef3
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 10:19 - General Tasks</strong> <code>code-change</code> - Fixed m3u4u automation targeting and completion behavior: target Canal Potvin by stable playlist ID 744895 after table hydration, wait for the DOM confirmation selector instead ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-epg  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 10:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed m3u4u automation targeting and completion behavior: target Canal Potvin by stable playlist ID 744895 after table hydration, wait for the DOM confirmation selector instead of an inaccessible role name, log each stage, keep the page open for configurable 45-second post-sync work, and restore the midnight task five-minute cap.
-
-</details>
-
-<details>
-<summary><strong>2026-08-22 10:06 - General Tasks</strong> <code>code-change</code> - Created vaultwares-epg .env configuration, moved EPG and M3U source settings out of NSSM environment overrides, retained a validated gzip/XMLTV snapshot of the prior served guid...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5 Codex
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-epg  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-22 10:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created vaultwares-epg .env configuration, moved EPG and M3U source settings out of NSSM environment overrides, retained a validated gzip/XMLTV snapshot of the prior served guide under data/backups, restarted VaultExplorerEPG, and verified private EPG and playlist routes return 200.
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 18:06 - General Tasks</strong> <code>code-change</code> - Fixed FLUX2 Klein Space first-load BrowserState null/string handling, added independently named configuration saves, and deployed a paginated permanent logged-image History tab ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: D:\HuggingFace\spaces  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 18:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed FLUX2 Klein Space first-load BrowserState null/string handling, added independently named configuration saves, and deployed a paginated permanent logged-image History tab backed by the private HF dataset. Verified 7 tests, live Generate controls, and 126 logged history records. VW_STATE resumeId=hf-flux2-persistence-20260820; continuation=initial-load-multisave-history.
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 17:20 - vault-explorer</strong> <code>general</code> - Investigated vault-explorer contextual menu add-to-folder flow and identified root cause of 3GB RAM spike (HTMLVideoElement metadata demuxer bursts during applyFilters)</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 17:20 (TZ: Eastern Standard Time)
-  ```
-- Summary: Investigated vault-explorer contextual menu add-to-folder flow and identified root cause of 3GB RAM spike (HTMLVideoElement metadata demuxer bursts during applyFilters)
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=889eef3
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 17:09 - General Tasks</strong> <code>verification</code> - Built NVIDIA Video Codec SDK 13.1.15 at E:\Nvidia: 23 sample binaries via Ninja + MSVC 14.44 + CUDA 13.3 (the VS generator fails with &#39;No CUDA toolset found&#39; because CUDA&#39;s MSBu...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/cacophony-vendor-dependencies
-  Tools used (this reply): Bash, PowerShell, Write, Grep, Read
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 17:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Built NVIDIA Video Codec SDK 13.1.15 at E:\Nvidia: 23 sample binaries via Ninja + MSVC 14.44 + CUDA 13.3 (the VS generator fails with 'No CUDA toolset found' because CUDA's MSBuild integration was never copied into the 2022 Build Tools). FFMPEG_DIR pointed at the winget Gyan.FFmpeg.Shared tree so all decode/transcode apps built. Verified NVDEC 1396 fps and transcode 796 fps at 720p, and NVENC on BOTH cards including the RTX 2060. Wrote BUILD_NOTES.md and set NVCODEC_SDK user env var. Then scouted diarization: audio.cpp already ships Sortformer (--task diar, sortformer_diar) and --task spk speaker embeddings; downloaded sortformer-diar-4spk-v1-q8_0 (176 MB) and measured on a synthetic 2-speaker LibriSpeech file: 0% speaker confusion, but attention is O(T^2) -- 60 s window costs 8 GB VRAM and 80 s OOMs a 12 GB card, so diarization must be windowed with cross-window label linking. Also proved streaming ASR works from stdin PCM (--mode streaming --audio -), which is the substrate for realtime subs.
-- Commands:
-  - `cmake -S Samples -B build -G Ninja -DFFMPEG_DIR=... -DSKIP_GL_DEPENDENCY=TRUE`
-  - `AppEncCuda.exe -i out.yuv -s 1280x720 -gpu 1`
-  - `audiocpp_cli --task diar --family sortformer_diar --turns-out turns.json`
-  - `ffmpeg -f s16le - | audiocpp_cli --mode streaming --audio -`
-- Files:
-  - `E:/Nvidia/Video_Codec_SDK_13.1.15/BUILD_NOTES.md`
-  - `E:/Nvidia/Video_Codec_SDK_13.1.15/build-samples.bat`
-- Git: repo=vault-cacophony, branch=agent/cacophony-vendor-dependencies, head=56c1f59
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 12:24 - shared-tube</strong> <code>verification</code> - Validated Windows Services tube-fxv, tube-oneporn, tube-sexyprn real conditions verification probe</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 12:24 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated Windows Services tube-fxv, tube-oneporn, tube-sexyprn real conditions verification probe
-- Git: repo=shared-tube, branch=main, head=b45a7cd
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 12:24 - shared-tube</strong> <code>code-change</code> - Registered tube-fxv, tube-oneporn, and tube-sexyprn Windows Services with NSSM (Manual start), bumped project version to 0.3.42 / 0.2.64, and pushed commit b45a7cd to main</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 12:24 (TZ: Eastern Standard Time)
-  ```
-- Summary: Registered tube-fxv, tube-oneporn, and tube-sexyprn Windows Services with NSSM (Manual start), bumped project version to 0.3.42 / 0.2.64, and pushed commit b45a7cd to main
-- Git: repo=shared-tube, branch=main, head=b45a7cd
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 11:58 - shared-tube</strong> <code>verification</code> - Completed full verification suite: verified search suggest across all 3 live servers, verified reaction state persistence (POST + GET state check), and verified byte-range strea...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 11:58 (TZ: Eastern Standard Time)
-  ```
-- Summary: Completed full verification suite: verified search suggest across all 3 live servers, verified reaction state persistence (POST + GET state check), and verified byte-range streaming (HTTP 206 Partial Content)
-- Git: repo=shared-tube, branch=main, head=4ea03d5
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 11:57 - shared-tube</strong> <code>code-change</code> - Fixed /api/promking/* 404s for search suggest and video reactions by adding shared Astro API proxy route, resolved video streaming timeouts, and enhanced mobile PlayerModal with...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 11:57 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed /api/promking/* 404s for search suggest and video reactions by adding shared Astro API proxy route, resolved video streaming timeouts, and enhanced mobile PlayerModal with touch play controls
-- Git: repo=shared-tube, branch=main, head=4ea03d5
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 11:47 - shared-tube</strong> <code>code-change</code> - Prom-King shared-tube mobile and tablet responsive redesign across fxv, oneporn, and sexyprn with 2-column video grid, touch/swipe navigation, reordered sidebar rail, and servic...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 11:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Prom-King shared-tube mobile and tablet responsive redesign across fxv, oneporn, and sexyprn with 2-column video grid, touch/swipe navigation, reordered sidebar rail, and service management script
-- Git: repo=shared-tube, branch=main, head=4ea03d5
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 10:15 - python-zipper</strong> <code>code-change</code> - Configured global Stop hook in .gemini/config with reflection &amp; real condition verification gate</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 10:15 (TZ: Eastern Standard Time)
-  ```
-- Summary: Configured global Stop hook in .gemini/config with reflection & real condition verification gate
-- Files:
-  - `C:\Users\Administrator\.gemini\config\hooks.json`
-  - `C:\Users\Administrator\.gemini\config\scripts\stop-reflection-gate.ps1`
-- Git: repo=python-zipper, branch=main, head=db797d4
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 10:09 - python-zipper</strong> <code>documentation</code> - Updated learning proposal for Global Stop Hook (Reflection &amp; Real Condition Verification Gate)</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 10:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Updated learning proposal for Global Stop Hook (Reflection & Real Condition Verification Gate)
-- Git: repo=python-zipper, branch=main, head=db797d4
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 09:57 - python-zipper</strong> <code>documentation</code> - Created learning proposal for setting up Antigravity lifecycle hooks</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 09:57 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created learning proposal for setting up Antigravity lifecycle hooks
-- Git: repo=python-zipper, branch=main, head=db797d4
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 09:36 - python-zipper</strong> <code>general</code> - Consulted agy-customizations skill and initialized learn session</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 09:36 (TZ: Eastern Standard Time)
-  ```
-- Summary: Consulted agy-customizations skill and initialized learn session
-- Git: repo=python-zipper, branch=main, head=db797d4
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 07:11 - vault-commander</strong> <code>code-change</code> - Read the nsys trace at vault-explorer/report2.sqlite (21 GB, export already finished): CPU-sampling only, no CUDA tracing (WINDOWS_HOOK=false, no CUPTI tables), so no torch modu...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/cacophony-vendor-dependencies
-  Tools used (this reply): Bash, PowerShell, Edit, Write, Grep, Read
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 07:11 (TZ: Eastern Standard Time)
-  ```
-- Summary: Read the nsys trace at vault-explorer/report2.sqlite (21 GB, export already finished): CPU-sampling only, no CUDA tracing (WINDOWS_HOOK=false, no CUPTI tables), so no torch module ever appears and cudaMalloc cannot be seen. All 28472 GPU context-switch events are on the RTX 3060; zero on the 2060. ffmpeg dominated CPU (~6900 thread-seconds across 10 processes) vs audiocpp 569. Then in vault-commander: renamed fast-subs to better-subtitles (Start-BetterSubtitles.ps1), retired subtitles/subtitle/translate-spoken/livestream-translator/stream-translator/benchmark-asr plus their workers and the never-imported vw_media package to meth/ with a README explaining each, removed all parameter aliases (47 registry + 48 script attributes + the help rendering in vw.ps1), updated README. Two commits on agent/better-subtitles, PR #5. vault-cacophony: srt beside each source + CrispASR bump to fc3550e, PR #1.
-- Commands:
-  - `git mv cli/Start-SubtitleGeneration.ps1 meth/cli/`
-  - `gh pr create (vault-commander#5)`
-  - `gh pr create (vault-cacophony#1)`
-- Files:
-  - `vault-commander/cli/Start-BetterSubtitles.ps1`
-  - `vault-commander/cli/vw-commands.ps1`
-  - `vault-commander/cli/vw.ps1`
-  - `vault-commander/meth/README.md`
-  - `vault-commander/README.md`
-  - `vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1`
-- Git: repo=vault-cacophony, branch=agent/cacophony-vendor-dependencies, head=56c1f59
-
-</details>
-
-<details>
-<summary><strong>2026-08-21 00:19 - vault-commander</strong> <code>code-change</code> - Packaged the audio.cpp subtitle pipeline as &#39;vw fast-subs&#39;: new cli/Start-FastSubtitles.ps1 (chunked CUDA htdemucs separation, crossfade stitch, parakeet-tdt ASR at AsrWindow 45...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/cacophony-vendor-dependencies
-  Tools used (this reply): Bash, PowerShell, Edit, Write, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-21 00:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: Packaged the audio.cpp subtitle pipeline as 'vw fast-subs': new cli/Start-FastSubtitles.ps1 (chunked CUDA htdemucs separation, crossfade stitch, parakeet-tdt ASR at AsrWindow 45, cues from word gaps, optional translation), registered in cli/vw-commands.ps1 under Media Pipeline, with words_to_srt.py and translate_srt.py copied into cli/utils and marked as synced from vault-cacophony. Takes one file or a whole tree; .srt now lands beside each source unless -OutputDir is given (same fix applied back in vault-cacophony). Models hard-linked per repo convention: htdemucs-f16.gguf and parakeet-tdt-0.6b-v3-q8_0.gguf now exist in %LOCALAPPDATA%/VaultWares/models and cli/utils/models, sharing blocks with audio.cpp's copies (zero extra disk). Verified single file, recursion, SkipExisting, and fr translation through vw. Found and reported a pre-existing vw.ps1 bug: its own -RemainingArgs/-CommandName prefix-match and swallow -r and -c from child commands. Nothing committed in either repo.
-- Commands:
-  - `vw fast-subs -Target <file> -TranslateTo fr`
-  - `vw fast-subs -Target <dir> -Recurse -SkipExisting`
-  - `vault-explorer/tools/link-models.ps1 -Model htdemucs-gguf -Targets vault-commander/cli/utils/models/htdemucs-gguf`
-- Files:
-  - `vault-commander/cli/Start-FastSubtitles.ps1`
-  - `vault-commander/cli/vw-commands.ps1`
-  - `vault-commander/cli/utils/words_to_srt.py`
-  - `vault-commander/cli/utils/translate_srt.py`
-  - `vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1`
-- Git: repo=vault-cacophony, branch=agent/cacophony-vendor-dependencies, head=f5dbd9b
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 23:25 - vault-cacophony</strong> <code>code-change</code> - Chunked htdemucs separation in Start-SubtitlesAudioCpp.ps1 (-SepChunkMinutes 6, -SepOverlap 10s, ffmpeg acrossfade stitch straight into the 16 kHz ASR wav). Measured the real co...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/cacophony-vendor-dependencies
-  Tools used (this reply): Bash, PowerShell, Edit, Write, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 23:25 (TZ: Eastern Standard Time)
-  ```
-- Summary: Chunked htdemucs separation in Start-SubtitlesAudioCpp.ps1 (-SepChunkMinutes 6, -SepOverlap 10s, ffmpeg acrossfade stitch straight into the 16 kHz ASR wav). Measured the real constraint: VRAM is flat ~0.8 GB for htdemucs regardless of length; host RAM grew 0.28 GB/min (6846 MiB peak on 22.6 min), now 2121 MiB and 187s->166s wall. Measuring also exposed parakeet long-form running with audio_chunk_duration_sec=2 (streaming default), losing 40 pct of words: 42.3 and 44.3 pct WER on two LibriSpeech sets. New -AsrWindow 45 (best of 8 values on both sets) gives 3.4 and 6.8 pct WER and 3x faster ASR; end-to-end pipeline WER 41.88 -> 3.41 pct. Added Invoke-Native so audiocpp's CUDA stderr banner no longer aborts runs under Windows PowerShell 5.1. Commit f5dbd9b.
-- Commands:
-  - `audiocpp_cli.exe --family htdemucs --task sep --backend cuda`
-  - `audiocpp_cli.exe --task asr --family parakeet_tdt --session-option parakeet_tdt.audio_chunk_duration_sec=45`
-  - `git commit -m 'scripts(subtitles): chunk separation, and stop losing 40% of the words'`
-- Files:
-  - `scripts/Start-SubtitlesAudioCpp.ps1`
-- Git: repo=vault-cacophony, branch=agent/cacophony-vendor-dependencies, head=f5dbd9b
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 22:33 - vault-cacophony</strong> <code>code-change</code> - Implemented sentence-level translation, commit bc5af74 pushed. Cues are stitched into sentences by punctuation, sentences are translated, then each result is redistributed acros...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/cacophony-vendor-dependencies
-  Tools used (this reply): Bash, PowerShell, Edit, Read
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 22:33 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implemented sentence-level translation, commit bc5af74 pushed. Cues are stitched into sentences by punctuation, sentences are translated, then each result is redistributed across the cues it spanned in proportion to the source characters each cue contributed, splitting on word boundaries (split_proportional + build_sentences, unit-tested: 3 cues to 1 sentence with weights 41/26/7). Demonstrated fix on the real clip: per-cue produced 'in the street, really' / 'public.' where sentence mode gives 'in the street, to a' / 'real audience.' - 35 of 40 cues change. --per-cue flag restores old behaviour. FOUND A SILENT CORRUPTION BUG while comparing the two modes: the translate endpoint can answer HTTP 200 with an HTML error page which deep_translator returns as if it were a translation, so nothing raises and it landed verbatim in cue 3 as 'Error 500 (Server Error)!!1500.That is an error.There was an error. Please try again later.' Added looks_like_error() screening by marker list and by length ratio (a translation stays within an order of magnitude of its source), applied at single, batch and per-part levels, keeping source text on failure. Unit-tested 5 cases including the observed page, a normal translation, empty, runaway, and a legitimately long reply - all pass. Measured after: full pipeline 21.3s for the 179s video producing 40 cues in EN and ES. ALSO ANSWERED the user's flag corrections: --text-out DOES work (2599-byte transcript) so my earlier claim that ASR text only reaches stdout was wrong; --segments-out and --turns-out produce nothing for parakeet and likely need diarization; --out remains audio-only. HTDEMUCS CHUNKING investigated per the user's
-- Commands:
-  - `translate_srt.py --per-cue vs sentence`
-  - `Start-SubtitlesAudioCpp.ps1 -Langs en,es`
-- Files:
-  - `vault-cacophony\scripts\translate_srt.py`
-- Git: repo=vault-cacophony, branch=agent/cacophony-vendor-dependencies, head=bc5af74
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 22:22 - vault-cacophony</strong> <code>verification</code> - Answered the user&#39;s parakeet question and found a shipping-blocker in my own pipeline. (1) HOW PARAKEET WAS USED: whole context. I never passed offline_mode, and audio.cpp defau...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/cacophony-vendor-dependencies
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 22:22 (TZ: Eastern Standard Time)
-  ```
-- Summary: Answered the user's parakeet question and found a shipping-blocker in my own pipeline. (1) HOW PARAKEET WAS USED: whole context. I never passed offline_mode, and audio.cpp defaults to full_context. (2) THAT DEFAULT IS FATAL ON REAL VIDEO: an 18-minute (1071s) file made it request a 21 GB CUDA buffer - 'ggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 21052385792 / Failed to allocate Parakeet TDT encoder graph tensors'. Commit 1626e8e as shipped would have failed on every video in a real library; my 179s validation clip was short enough to hide it. Fixed in 59958f3: pass offline_mode=auto plus audio_chunk_threshold_sec, exposed as -LongFormThreshold default 300s. Threshold matters BOTH ways - attention memory is O(T^2) so extrapolating 21GB puts 300s at ~1.7GB, while long_form measurably loses context on short audio: on the 179s clip long_form gave 'on a 6 mois de difference' where full_context got the correct '17 mois', and long_form was also 2x SLOWER there (6.4s vs 3.1s). Verified after fix: 1071s transcribes in 29.2s (36x realtime, 2760 words) and the full pipeline processes an 18-minute file in 194.7s producing 233 cues plus translation. (3) Also removed a dead --out argument from the ASR call - it never wrote a file even in the first successful run; --out is for audio outputs, ASR text goes to stdout and timings to --words-out, which is the only thing the pipeline reads. (4) BIG FINDING for the PersonaPlex port: audio.cpp already supports PersonaPlex with status 'supported' (not community), tasks ['s2s'], modes ['offline','streaming'], packages personaplex_7b_v1_q4_k (default) and q8_0. That makes my
-- Commands:
-  - `audiocpp_cli --session-option parakeet_tdt.offline_mode=auto`
-  - `Start-SubtitlesAudioCpp.ps1 on an 18-min file`
-- Files:
-  - `vault-cacophony\scripts\Start-SubtitlesAudioCpp.ps1`
-- Git: repo=vault-cacophony, branch=agent/cacophony-vendor-dependencies, head=59958f3
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 22:07 - vault-cacophony</strong> <code>code-change</code> - Rebuilt the subtitle pipeline on audio.cpp (0xShug0/audio.cpp). Commit 1626e8e pushed to vault-cacophony main; audio.cpp added as a submodule at 9601291. THE DECIDING MEASUREMEN...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/cacophony-vendor-dependencies
-  Tools used (this reply): Bash, PowerShell, WebFetch
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 22:07 (TZ: Eastern Standard Time)
-  ```
-- Summary: Rebuilt the subtitle pipeline on audio.cpp (0xShug0/audio.cpp). Commit 1626e8e pushed to vault-cacophony main; audio.cpp added as a submodule at 9601291. THE DECIDING MEASUREMENT - separation on the same 179s clip and GPU: CrispASR htdemucs CPU 9.3x SLOWER than realtime (~2.5h for a 16-min video), user's PyTorch demucs shifts=1 on CUDA 2.2x slower (~35 min measured by them), audio.cpp htdemucs CUDA 10.6x FASTER than realtime, RTF 0.0941 reported by --metrics, 19.1s for 179s (~90s for 16 min). So separation is ON by default in the new driver where the CrispASR version had to leave it opt-in, and it demonstrably helps: with the vocal stem the ASR produced 'sauf la on a 17 mois de difference' where mixed audio gave 'on a 16eme mois'. ASR parity confirmed: audio.cpp parakeet q8_0 warm runs 2.7s and 2.8s vs CrispASR q4_k 2.33s - the first run's 20.6s was one-off CUDA graph warmup, not a regression. Transcript quality comparable or slightly better ('competition de magie a Valley Field', 'Mon magistien parfait' vs CrispASR's 'Mon machine parfait'). NEW: cues now come from word gaps, not character counts. audio.cpp --words-out emits sample-accurate word boundaries at 16kHz (465 words on this clip), and scripts/words_to_srt.py splits on silence - what the original vw-cli pipeline did. Tuned --max-chars to 76 by measurement: 84 leaves 8 of 69 lines overflowing to 43-47 chars after wrapping, 76 leaves zero; also fixed the split test to project length INCLUDING the next word, since splitting after the cap is exceeded overflows the last wrapped line. Note awk counts BYTES not chars
-- Commands:
-  - `audiocpp_cli --family htdemucs --task sep --backend cuda --metrics`
-  - `audiocpp_cli --task asr --family parakeet_tdt --words-out`
-  - `git submodule add audio.cpp`
-- Files:
-  - `vault-cacophony\scripts\Start-SubtitlesAudioCpp.ps1`
-  - `vault-cacophony\scripts\words_to_srt.py`
-- Git: repo=vault-cacophony, branch=agent/cacophony-vendor-dependencies, head=1626e8e
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 21:37 - vault-cacophony</strong> <code>general</code> - Audited vault-cacophony/audio.cpp model catalog and designed Speech-to-Speech pipeline plan for dual-GPU PC</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/cacophony-vendor-dependencies
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 21:37 (TZ: Eastern Standard Time)
-  ```
-- Summary: Audited vault-cacophony/audio.cpp model catalog and designed Speech-to-Speech pipeline plan for dual-GPU PC
-- Git: repo=vault-cacophony, branch=agent/cacophony-vendor-dependencies, head=c5710f5
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 20:20 - vault-commander</strong> <code>code-change</code> - Created sync-commands and register-command in vault-commander CLI to parse ps1 scripts and auto-register commands</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 20:20 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created sync-commands and register-command in vault-commander CLI to parse ps1 scripts and auto-register commands
-- Git: repo=vault-commander, branch=main, head=526ba65
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 20:13 - vault-commander</strong> <code>general</code> - Investigated vault-commander CLI script registry and created implementation plan for sync-commands parser</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 20:13 (TZ: Eastern Standard Time)
-  ```
-- Summary: Investigated vault-commander CLI script registry and created implementation plan for sync-commands parser
-- Git: repo=vault-commander, branch=main, head=526ba65
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 18:43 - vault-cacophony</strong> <code>verification</code> - Nemotron vs parakeet comparison done - the question that motivated building NeMo-Speech.cpp. Downloaded nvidia/nemotron-3.5-asr-streaming-0.6b.q8_0.gguf (741 MB) to D:\vault-cac...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/cacophony-vendor-dependencies
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 18:43 (TZ: Eastern Standard Time)
-  ```
-- Summary: Nemotron vs parakeet comparison done - the question that motivated building NeMo-Speech.cpp. Downloaded nvidia/nemotron-3.5-asr-streaming-0.6b.q8_0.gguf (741 MB) to D:\vault-cacophony\gguf\nemo. Tested both on the identical 179s French clip on cuda:0. RESULT: parakeet-tdt-0.6b-v3 (via crispasr) WINS decisively for offline subtitles - 2.33s vs 6.1s, and materially more accurate: 'des freres Jumeaux' vs 'des phrases jumeaux qui sont flots'; 'Sauf la, on a 17 mois de difference' vs 'on ne cesse moins de difference'; 'On a pas la meme mere' vs 'on a pas meme mai'; 'The Golden Stick' vs 'The Golden State'; and nemotron dropped the clause 'Compete pour competition' entirely. First nemotron run without -l scored worse still (8.1s), so I re-ran with -l fr-FR for fairness. IMPORTANT VINDICATION for the user: the ggml runtime DOES implement the prompt_kernel language fusion, logging 'prompt fusion enabled: num_prompts=128 languages=121'. That is precisely what released PyTorch NeMo silently dropped via its substitute loader class (EncDecRNNTBPEModelWithPrompt on git main only), which is why the user disabled Nemotron 3.5 in Start-SubtitleGeneration.ps1 back in August. So their original loader complaint is genuinely fixed in the C++ implementation - the remaining quality gap is architectural, not a bug. FRAMING that settles it: nemotron-3.5-asr-streaming is a STREAMING model (runtime logs 'streaming cfg: chunk=0.16s left=1.92s right=1.92s'), trading accuracy for low latency with limited right context, whereas parakeet TDT is offline full-utterance with unlimited context - and per NeMo-Speech.cpp's own docs parakeet 'is not cache-aware trained: inference is full-utterance only. Streaming requests are rejected'. So they are built for different jobs: parakeet stays for subtitle generation, and nemotron
-- Commands:
-  - `hf download nvidia/nemotron-3.5-asr-streaming-0.6b`
-  - `nemo-speech transcribe -l fr-FR --device cuda:0`
-- Files:
-  - `D:\vault-cacophony\vidtest\out3\nemotron_fr.srt`
-- Git: repo=vault-cacophony, branch=agent/cacophony-vendor-dependencies, head=c5710f5
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 18:39 - vault-explorer</strong> <code>code-change</code> - Bumped to v4.0.0, added photo editor sliding window, default screen fit, AI toggle revert on re-press, real visual cues, and persistence recovery</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 18:39 (TZ: Eastern Standard Time)
-  ```
-- Summary: Bumped to v4.0.0, added photo editor sliding window, default screen fit, AI toggle revert on re-press, real visual cues, and persistence recovery
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=889eef3
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 17:52 - vault-cacophony</strong> <code>code-change</code> - Found and fixed the user&#39;s reported crash. Commit c5710f5 pushed to vault-cacophony main. THREE real-media defects, none visible on my ASCII test samples: (1) PowerShell treats ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/cacophony-vendor-dependencies
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 17:52 (TZ: Eastern Standard Time)
-  ```
-- Summary: Found and fixed the user's reported crash. Commit c5710f5 pushed to vault-cacophony main. THREE real-media defects, none visible on my ASCII test samples: (1) PowerShell treats [ and ] as wildcard character classes, so for 'Movie [HD].mp4' Test-Path returns False on a file that exists - proven directly: [System.IO.File]::Exists=True, Test-Path -Path=False, Test-Path -LiteralPath=True. The pipeline therefore threw 'ffmpeg failed' and 'ASR produced no .srt' on its own correct output. All path cmdlets now use -LiteralPath and the wildcard Remove-Item became an explicit enumeration. (2) crispasr CANNOT open non-ASCII paths on Windows - given 'frÃ¨res [HD].wav' it exits 2 and prints usage despite the file existing (narrow argv + ANSI-codepage fopen); this is a CrispASR limitation worth reporting upstream. Worked around by handing crispasr only ASCII-safe 'job_<md5prefix>' stems in the temp dir and moving the .srt back to the real name; ffmpeg reads the original UTF-8 path directly since it handles it correctly. (3) Without -ml the ASR emitted ONE cue for the entire file - a 179s video produced a single 163s subtitle, unusable in a player. Added -MaxLen (default 42) and -sow, with -NoSplitOnWord to disable. MEASURED after fixes on 'Julien Lacroix - Les frÃ¨res magie ! [HD].mp4' (179s French, accents AND brackets): 4.2s end to end, 66 cues, LID auto-detected fr at p=0.972, ASR alone 76.7x realtime (178.5s transcribed in 2.33s). The 66-cue file exercised translate_srt.py's grouping and delimiter-mismatch fallback for the first time. KNOWN LIMITATION recorded in the commit: per-cue translation loses context, so 'ses tours dans la rue' split across a boundary
-- Commands:
-  - `Start-SubtitlesGgml.ps1 -Langs en -Device 0`
-  - `git push origin main`
-- Files:
-  - `vault-cacophony\scripts\Start-SubtitlesGgml.ps1`
-- Git: repo=vault-cacophony, branch=agent/cacophony-vendor-dependencies, head=c5710f5
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 16:17 - vault-explorer</strong> <code>general</code> - Created Pull Request #50 in vault-explorer for Music Playlists, Photo Albums, Lightbox, Photo Editor, and Context Menus</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: feat/music-playlists-photo-albums-and-context-actions
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 16:17 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created Pull Request #50 in vault-explorer for Music Playlists, Photo Albums, Lightbox, Photo Editor, and Context Menus
-- Git: repo=vault-explorer, branch=feat/music-playlists-photo-albums-and-context-actions, head=2ea29bb
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 15:57 - vault-explorer</strong> <code>code-change</code> - Complete Music Playlists and Photo Albums tabs with CRUD, audio playback suite, maximized lightbox viewer, canvas photo editor, and virtual chunked rendering</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 15:57 (TZ: Eastern Standard Time)
-  ```
-- Summary: Complete Music Playlists and Photo Albums tabs with CRUD, audio playback suite, maximized lightbox viewer, canvas photo editor, and virtual chunked rendering
-- Git: repo=vault-explorer, branch=main, head=e91f589
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 13:47 - vault-explorer</strong> <code>code-change</code> - Added folder background and directory context menu registry integration and folder launch intent handling for vault-explorer</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 13:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added folder background and directory context menu registry integration and folder launch intent handling for vault-explorer
-- Git: repo=vault-explorer, branch=main, head=e91f589
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 10:05 - vault-cacophony</strong> <code>code-change</code> - Delivered the pure-ggml subtitle pipeline, commit 1bc2305 pushed to p-potvin/vault-cacophony main: scripts/Start-SubtitlesGgml.ps1 (135 lines) + scripts/translate_srt.py (124 li...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/cacophony-vendor-dependencies
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 10:05 (TZ: Eastern Standard Time)
-  ```
-- Summary: Delivered the pure-ggml subtitle pipeline, commit 1bc2305 pushed to p-potvin/vault-cacophony main: scripts/Start-SubtitlesGgml.ps1 (135 lines) + scripts/translate_srt.py (124 lines). Stages: ffmpeg 16kHz mono extract, optional crispasr --separate --stems vocals (htdemucs), crispasr --backend parakeet -osrt, then deep_translator. NO PyTorch anywhere. MEASURED end to end: 2 files in one run at 2.5s and 6.1s each producing .srt + .fr.srt + .es.srt, transcripts matching the reference autotranscript exactly; the -Separate branch tested separately at 43.3s for the same 4.7s clip, also correct. Installed deep-translator 1.11.4 (pure python, pulls only beautifulsoup4/soupsieve). Translation quality comparison now concrete: Google 'qui a laisse cette valise' vs m2m100-418M 'qui a quitte ce sac' - wrong verb sense AND wrong noun - so deep_translator stays, and since it is an HTTP call it does not block deleting PyTorch. HTDEMUCS GPU ATTEMPT FAILED AND WAS REVERTED. Corrected two of the user's suggestions with evidence: cuBLAS in torch/lib is a GPU BLAS and irrelevant to the 'no BLAS found' message, which is about a HOST blas (cblas_sgemm) for the CPU path; and rebuilding with -DGGML_CUDA=ON changes nothing because CUDA is already enabled (binary prints '[backends: cpu,cuda]', finds both GPUs, selects 'backend = CUDA0' before aborting). Localised the crash to encoder.3 via CRISPASR_HTDEMUCS_DEBUG=1, hypothesised mixed F32/F16 operands reaching CUDA binbcast (htdemucs stores dconv.layers.N.4.weight as F16 while the matching .4.bias is F32), patched five call sites in the three affine helpers plus apply_dconv with a ggml_cast to F32, rebuilt - STILL CRASHED at the same assert. Hypothesis wrong, so per HARD RULE 4 (no change without measured benefit) I reverted
-- Commands:
-  - `Start-SubtitlesGgml.ps1 -Langs fr,es -Device 0`
-  - `git push origin main`
-- Files:
-  - `vault-cacophony\scripts\Start-SubtitlesGgml.ps1`
-  - `vault-cacophony\scripts\translate_srt.py`
-- Git: repo=vault-cacophony, branch=agent/cacophony-vendor-dependencies, head=1bc2305
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 07:36 - vault-streaming</strong> <code>code-change</code> - Added utils tool resolution and directory creation to trailer cache in vault-streaming</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 07:36 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added utils tool resolution and directory creation to trailer cache in vault-streaming
-- Git: repo=vault-streaming, branch=main, head=7d2a7b9
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 07:33 - vault-streaming</strong> <code>code-change</code> - Fixed missing registerTrailerCacheIpc import in vault-streaming main.js</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 07:33 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed missing registerTrailerCacheIpc import in vault-streaming main.js
-- Git: repo=vault-streaming, branch=main, head=7d2a7b9
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 06:51 - vault-streaming</strong> <code>code-change</code> - Repaired AI enhancement actions, packaged ASAR/unpacked resolution, dynamic context menu badges, and web interface parity for vault-streaming</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 06:51 (TZ: Eastern Standard Time)
-  ```
-- Summary: Repaired AI enhancement actions, packaged ASAR/unpacked resolution, dynamic context menu badges, and web interface parity for vault-streaming
-- Git: repo=vault-streaming, branch=main, head=7d2a7b9
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 06:47 - vault-cacophony</strong> <code>verification</code> - Demoed the full &#39;vw subtitles&#39; pipeline under ggml with ZERO PyTorch, using the already-built crispasr.exe 0.8.25. Stage results on this box: (1) SEPARATION - htdemucs-q4_k.gguf...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\CrispASR  Branch: feat/personaplex
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 06:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Demoed the full 'vw subtitles' pipeline under ggml with ZERO PyTorch, using the already-built crispasr.exe 0.8.25. Stage results on this box: (1) SEPARATION - htdemucs-q4_k.gguf is only 38 MB and auto-downloads; 'crispasr --separate --stems vocals --backend htdemucs' is the direct equivalent of the existing 'demucs.separate -n htdemucs --two-stems=vocals'. It WORKS on CPU, taking 81.9s for a 9s clip because Windows has no BLAS (configure logs 'no BLAS found - linear() uses the scalar fallback') and the CrossTransformer is ~86% of the forward pass. (2) The GPU route CRASHES - CRISPASR_HTDEMUCS_GGML=1 + CRISPASR_HTDEMUCS_GPU=1 selects 'backend = CUDA0' then aborts at ggml/src/ggml-cuda/binbcast.cu:293 GGML_ASSERT(nb10 % sizeof(src1_t) == 0), a non-contiguous operand reaching a CUDA broadcast op. docs/environment-variables.md states _GGML is 'Verified correct on CPU and Metal (45/45 stages)' - CUDA was never verified, so this is a genuine unfixed bug, same family as the dia issue in HISTORY that needed a ggml_cont before get_rows. I initially misreported the 10.2s as an 8x speedup; it was time-to-crash, corrected immediately. (3) ASR - parakeet-tdt-0.6b-v3-q4_k on CUDA0, 2.8s for the 4.7s suitcase sample, -osrt produced an SRT whose text matches the reference autotranscript EXACTLY: 'I don't know who left that suitcase, but I found out by morning.' (4) TRANSLATION - m2m100-418m-q8_0.gguf (502 MB) on CUDA0, 31.8s including first download, EN->FR via --backend m2m100 --text --tr-sl/--tr-tl. Output 'Je ne sais pas qui a quitte ce sac, mais je l'ai decouvert le matin.' QUALITY CAVEAT worth flagging to the user: 'suitcase' became 'sac' (bag, not valise) and 'left' became 'quitte' (departed from, wrong sense),
-- Commands:
-  - `crispasr --separate --stems vocals --backend htdemucs`
-  - `crispasr --backend parakeet -osrt`
-  - `crispasr --backend m2m100 --text --tr-tl fr`
-- Files:
-  - `D:\vault-cacophony\subs-demo\suitcase.srt`
-- Git: repo=CrispASR, branch=feat/personaplex, head=fc3550e6
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 06:26 - vault-explorer</strong> <code>code-change</code> - Repaired packaged app (dist folder) execution for all AI enhancement actions, adding unpacked ASAR script path resolution, robust python environment with PYTHONPATH and PATH exp...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Antigravity (DeepMind)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 06:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: Repaired packaged app (dist folder) execution for all AI enhancement actions, adding unpacked ASAR script path resolution, robust python environment with PYTHONPATH and PATH exports, and tool discovery
-- Git: repo=vault-explorer, branch=main, head=e91f589
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 06:18 - vault-explorer</strong> <code>code-change</code> - Audited and repaired Vault Explorer context menu actions across file cards, video player, and backgrounds, wiring dynamic enhancement state, Revert submenus, Real-ESRGAN image u...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Antigravity (DeepMind)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 06:18 (TZ: Eastern Standard Time)
-  ```
-- Summary: Audited and repaired Vault Explorer context menu actions across file cards, video player, and backgrounds, wiring dynamic enhancement state, Revert submenus, Real-ESRGAN image upscaling, and live subtitle track refreshes
-- Git: repo=vault-explorer, branch=main, head=e91f589
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 05:21 - vault-commander</strong> <code>verification</code> - Validated Face Recognition Organizer dry-run: indexed 135 models into .face_index.json and identified 115 matched images across 45 models from .duplicates</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: agent/commander-rtx-vsr-mosaic
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 05:21 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated Face Recognition Organizer dry-run: indexed 135 models into .face_index.json and identified 115 matched images across 45 models from .duplicates
-- Git: repo=vault-commander, branch=agent/commander-rtx-vsr-mosaic, head=a688409
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 05:19 - vault-commander</strong> <code>code-change</code> - Implemented Face Recognition &amp; Gallery Organizer pipeline using MTCNN + InceptionResnetV1 (VGGFace2), created Organize-Faces.ps1, and registered vw organize-faces with tab compl...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: agent/commander-rtx-vsr-mosaic
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 05:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implemented Face Recognition & Gallery Organizer pipeline using MTCNN + InceptionResnetV1 (VGGFace2), created Organize-Faces.ps1, and registered vw organize-faces with tab completion
-- Git: repo=vault-commander, branch=agent/commander-rtx-vsr-mosaic, head=a688409
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 04:35 - vault-commander</strong> <code>plan</code> - Created implementation plan for MTCNN + InceptionResnetV1 / ResNet-50 face recognition and gallery organization pipeline</summary>
-
-- Kind: plan
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: agent/commander-rtx-vsr-mosaic
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 04:35 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created implementation plan for MTCNN + InceptionResnetV1 / ResNet-50 face recognition and gallery organization pipeline
-- Git: repo=vault-commander, branch=agent/commander-rtx-vsr-mosaic, head=a688409
-
-</details>
-
-<details>
-<summary><strong>2026-08-20 04:30 - vault-commander</strong> <code>commands</code> - Reorganized F:\amd\gallery\.duplicates by matching 11,668 files (media + sidecars) to 75 human model directories using fuzzy/token matching while keeping numeric/hash non-human ...</summary>
-
-- Kind: commands
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: agent/commander-rtx-vsr-mosaic
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-20 04:30 (TZ: Eastern Standard Time)
-  ```
-- Summary: Reorganized F:\amd\gallery\.duplicates by matching 11,668 files (media + sidecars) to 75 human model directories using fuzzy/token matching while keeping numeric/hash non-human files in .duplicates
-- Git: repo=vault-commander, branch=agent/commander-rtx-vsr-mosaic, head=a688409
 
 </details>
 
@@ -25347,7 +24779,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-12 07:21 - vaultwares-studio (formerly usd-playground)</strong> <code>code-change</code> - Reverted COLMAP to v3.9.1 with CUDA support and modified pipeline.py to prioritize COLMAP.bat so SiftExtraction.use_gpu runs correctly again.</summary>
+<summary><strong>2026-05-12 07:21 - vaultwares-studio</strong> <code>code-change</code> - Reverted COLMAP to v3.9.1 with CUDA support and modified pipeline.py to prioritize COLMAP.bat so SiftExtraction.use_gpu runs correctly again.</summary>
 
 - Kind: code-change
 - Actor: GitHub Copilot

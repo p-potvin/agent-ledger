@@ -1,0 +1,57 @@
+{
+  "id": "20260904-210407-356-vault-cacophony-eecc05bb",
+  "createdAt": "2026-09-05T01:04:07.3569952Z",
+  "createdAtLocal": "2026-09-04 21:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: main\r\nTools used (this reply): Bash, PowerShell, WebSearch, WebFetch, Write, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-04 21:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "WebSearch",
+      "WebFetch",
+      "Write",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "Re-scoped font-cloning to the user's actual goal: take a picture containing styled text + a target picture + a new string, and write that string onto the target in the same visual style (scene-text style transfer, not font-file generation). Researched 2026 SOTA: StyleTextGen (CVPR26, exact task, NO code/weights), Self-Prompting DiT (ICML26, same-image style only), SceneTextStylizer, TextCtrl, AnyText2, FontAdapter - all unreleased or SD1.5-class; chose Qwen-Image-Edit-2511 (20B, documented font/colour-preserving text replacement, native multi-image refs, GGUF+sd.cpp path). Built text-style-transfer/: comfy_client.py (upload/queue/WebSocket completion, no polling loop), workflows.py (API graphs for Qwen-2511 and FLUX.2 Klein, lifted verbatim from installed ComfyUI templates), pipeline.py (3 strategies: multiref/composite/inpaint-cn + geometry helpers), app.py (Gradio :7870, cyan style-crop + yellow placement boxes), run.ps1, run-comfy-headless.ps1, .venv-comfy (torch 2.8.0+cu129 pinned). ROOT CAUSE FOUND: the on-disk qwen_image_edit_2511_fp8_e4m3fn_scaled_lightning_8steps checkpoint is broken - all 840 fp8 tensors saturated at +/-448 with mean|x| 73-98 and NO scaled_fp8 / scale_weight tensors, so ComfyUI dequantises with implicit scale 1 and the sampler emits pure noise; proven by byte-identical garbage on Desktop :8188 (125 custom nodes) and a core-only headless :8189, while a VAE round-trip was perfect. Fixed by downloading unsloth Qwen-Image-Edit-2511-GGUF Q4_0 (11.04GB) to the shared D: model library and loading via UnetLoaderGGUF + on-disk 4-step Lightning LoRA; now the default ModelSet. VERIFIED WORKING: 'HELLO' rendered in the reference's quirky letterforms, orange fill, dark-purple outline and drop shadow on an untouched target (284s cold, ~128s warm). OPEN ISSUE: reference-word bleed - 'BONJOUR' renders as 'SUMJOUR' (reference reads SUMMER), reproducible across a prompt-hardening rewrite at the same seed; testing seed and composite-strategy sensitivity.",
+  "commands": [
+    "uv venv --python 3.12 .venv-comfy",
+    "python pipeline.py --backend qwen --strategy multiref --style-bbox 0.17,0.35,0.63,0.28",
+    "hf_hub_download unsloth/Qwen-Image-Edit-2511-GGUF qwen-image-edit-2511-Q4_0.gguf"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/README.md",
+    "font-cloning/text-style-transfer/pipeline.py",
+    "font-cloning/text-style-transfer/workflows.py",
+    "font-cloning/text-style-transfer/comfy_client.py",
+    "font-cloning/text-style-transfer/app.py",
+    "font-cloning/text-style-transfer/run.ps1",
+    "font-cloning/.gitignore"
+  ],
+  "planPath": "",
+  "contentHash": "eecc05bb540a569ffea49a2599d764c4c888ae37f3031ea5d57f51c416807d44",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

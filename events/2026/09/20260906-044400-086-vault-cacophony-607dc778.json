@@ -1,0 +1,54 @@
+{
+  "id": "20260906-044400-086-vault-cacophony-607dc778",
+  "createdAt": "2026-09-06T08:44:00.0869101Z",
+  "createdAtLocal": "2026-09-06 04:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Write, WebSearch, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-06 04:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Write",
+      "WebSearch",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "Fixed the composite mask and measured what controls gradient fidelity. MASK: measured that the model overruns the requested bbox by 53px vertically (SHINE) and 52px horizontally (DREAM) - the old grow24/feather16 rectangle was clipping the glyphs' extrusion, shadow and glow, which is what looked like haze and missing height/width. Replaced with diff_mask(): blur the |generated-original| difference (sigma 6) BEFORE thresholding, bounded to the box padded 70px. Plain pixel-diff does not work because the model returns a full VAE round-trip that moves detailed backgrounds by p99=127/max=204, indistinguishable from lettering by magnitude; the lettering is separable by structure (one large connected region vs scattered speckle). Measured far-field leak 0.00pct. Feather 16px -> 2px. Added --mask-mode diff|bbox|none, --no-lora, --diff-threshold/-grow/-feather, and UI controls. GRADIENT SWEEP (4 configs, same seed/reference, quantified against reference glyph bodies by normalised vertical luminance profile + RGB spread): NO config reproduces the reference gradient - all >=1.27 L2 on profile and all lose 26-38pct saturation. Lightning-4 cfg1.0 keeps colour richest (sat 96 vs ref 131) but runs too bright (216 vs 189); dropping the LoRA and raising to 20-40 steps/cfg 2.5-3.0 nails luminance (188.3) and profile (1.270) but goes matte (sat 81). 40 steps costs 9x the wall clock of 4 and is worse than 20. composite strategy gave the WORST profile match and shrank the text. Root cause: the model re-renders the material from its own prior rather than sampling reference pixels - the same behaviour that makes textured cases excellent. Conclusion recorded: complex/photographic styles keep the generative path; simple parametric styles (gradient+outline+extrusion+shadow) should be",
+  "commands": [
+    "python pipeline.py --mask-mode diff --no-lora --steps 40 --cfg 3.0",
+    "python pipeline.py --strategy composite"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/pipeline.py",
+    "font-cloning/text-style-transfer/workflows.py",
+    "font-cloning/text-style-transfer/app.py",
+    "font-cloning/text-style-transfer/README.md",
+    "font-cloning/text-style-transfer/REF2FONT-NOTES.md"
+  ],
+  "planPath": "",
+  "contentHash": "607dc778aa8d6b394b5953a3ae5ed0ae303d071e2d3d1f216f5812f3fe4aa1f2",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

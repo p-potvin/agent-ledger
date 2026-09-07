@@ -1,0 +1,52 @@
+{
+  "id": "20260906-132006-044-vault-cacophony-c7e21760",
+  "createdAt": "2026-09-06T17:20:06.0448594Z",
+  "createdAtLocal": "2026-09-06 13:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: main\r\nTools used (this reply): Bash, Write, Read, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-06 13:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Read",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "font-cloning A/B/C on Carmen's page (A/E/O, same seed/box/reference). Generic prompt: ratio 0.059, modulation 0.99, saturation 0.75. Measured features v1 (band word + 6 negations): 0.023 / 0.60 / 0.03. Measured features v2 (explicit fraction, positive wording): 0.025 / 0.95 / 0.04. Target (her hand): 0.102 / 0.12 / 0.16. CONCLUSION: ink colour is solved by the prompt and stable across wordings (saturation 0.75 -> 0.03, violet gone); stroke weight is NOT prompt-steerable - two wordings landed on the same ratio, a quarter of target, moving AWAY from the reference; modulation is noise (0.60 vs 0.95 for near-identical prompts). User pointed out Qwen takes no negative conditioning - confirmed in workflows.py: cfg 1.0 + Lightning LoRA + negative='', so no negative branch exists and 'no outline' was literally the token outline in the positive prompt; both negation-carrying runs returned outlined letters. All negations removed from features.constraints(). Structural read: at cfg 1 the text has no guidance leverage against the composite, so remaining levers are cfg 3.0 @ 40 steps (~20x compute) or a LoRA. Also fixed _binary polarity assumption (gold-on-dark and dark-on-light now measure identically) and added pipeline.py --features for the scene-text path.",
+  "commands": [
+    "python clone_font.py --chars AEO --gate none --outdir clone_carmen_v2",
+    "python clone_font.py --chars AEO --gate none --outdir clone_carmen_v3",
+    "python features.py --selftest"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/features.py",
+    "font-cloning/text-style-transfer/pipeline.py",
+    "font-cloning/text-style-transfer/clone_font.py",
+    "font-cloning/text-style-transfer/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "c7e21760f26b95f24fe7ac710791e4e2910c060c9b2ebf31b3a852fdfe2649cd",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

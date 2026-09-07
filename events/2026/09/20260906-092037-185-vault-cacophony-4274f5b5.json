@@ -1,0 +1,50 @@
+{
+  "id": "20260906-092037-185-vault-cacophony-4274f5b5",
+  "createdAt": "2026-09-06T13:20:37.1853024Z",
+  "createdAtLocal": "2026-09-06 09:20",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Write, Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-06 09:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Write",
+      "Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "Fixed the colour font's background bleed and holes-in-letters, fixed glyph spacing, and added CBDT colour bitmaps. BLEED ROOT CAUSE: effect_layer took alpha from everything that changed, which includes the soft glow the model paints around lettering, so each glyph carried a background fringe. Replaced with body_mask(): strongly-changed pixels CONNECTED to the gold face. HOLES ROOT CAUSE (user spotted 'the inside of the letters is touched'): first attempt used warm = r >= b+8 with threshold 70, which punched holes in letter faces. Measured the actual notch pixels: they are gold (198,173,116) sitting over light-pink feather (211,166,192) where max-channel diff is only ~76, right at the cutoff - and pink PASSES a naive r>b test. Fixed by discriminating on the BLUE channel instead (b < 0.80*r + 10, which gold/brown-extrusion/near-black-contour all pass and pastel background fails) plus a separate specular clause (mx>200 & sat<50), and lowering the diff threshold 70->45 since colour now does the discriminating. Verified: zero holes, faces solid. SHADOW: was measured from luminance difference which picked up background texture as a grey halo; now synthesised from the silhouette (offset+blur) and OFF by default since the extrusion already carries depth and a wide shadow collides with neighbours in running text. SPACING ('separation is not clean'): advance width was measured on the face-only mask while artwork carries the extrusion; now measured from the artwork's alpha extent. CBDT/CBLC ADDED per request: two API corrections needed - Strike/BitmapSizeTable/SbitLineMetrics live in E_B_L_C_ not C_B_L_C_, and SbitLineMetrics fields are signed bytes so ppem 160 overflowed (0.8*160=128); clamped to int8 and",
+  "commands": [
+    "python build_font.py --colour"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/glyphs.py",
+    "font-cloning/text-style-transfer/build_font.py",
+    "font-cloning/text-style-transfer/out/font/CacophonyCloned-Regular-Bitmap.ttf"
+  ],
+  "planPath": "",
+  "contentHash": "4274f5b5174e2c6eb00d1b72613003b026ad1aacacc4cddf0b71782c8f788876",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

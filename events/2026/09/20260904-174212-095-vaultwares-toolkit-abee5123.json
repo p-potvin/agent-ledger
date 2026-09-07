@@ -1,0 +1,52 @@
+{
+  "id": "20260904-174212-095-vaultwares-toolkit-abee5123",
+  "createdAt": "2026-09-04T21:42:12.0956944Z",
+  "createdAtLocal": "2026-09-04 17:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-toolkit",
+  "kind": "code-change,plan",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: Claude Fable 5.1\r\nThinking: medium\r\nMode: agent\r\nPermissions: ask (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-toolkit  Branch: main\r\nTools used (this reply): Bash, Read, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-04 17:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Fable 5.1",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "ask",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-toolkit",
+  "summary": "Columbo/Gather session 2. (1) Mirror cleanup: the 13 sibling-repo columbo.py copies are vaultwares-adk SUBMODULE checkouts, not orphan files, so per SUBMODULE_BOUNDARIES the delete was done once in standalone vaultwares-adk on branch vw-codex-remove-columbo: removed columbo.py, columbo.agent.md, assets/columbo/, adk-playground/Columbo/, manifest entry; bumped pyproject 1.1.0->1.1.1; PR #30 opened, user to merge. (2) Rename to Gather: held. vaultwares-toolkit has Jira key VTLK + mapping file in vw-jira-sync, so the 6-step RENAMING runbook applies; needs user go. Flagged that vw already has a 'gather' command (gather_pictures.ps1). (3) Started Columbo extract on vault-commander, CLI surface only, with user live in chat per HITL rule. Audit: essentials met (source, live product via ~/.local/bin/vw.bat shim), game changers: git history (62 commits, CLI history starts at 12 Aug 2026 squash), contract test suite (94/94 pass 04 Sep), docs page command-line-tool.mdx. Blind pass from README, gui/AGENTS.md, meth/README.md, tests, git log. Sighted pass on vw.ps1, vw-commands.ps1 (94 cmds, 13 categories, 6 destructive, load-time param normalization block), completion, sync-commands, AST parser, surgical registry writer, GUI reader/runner. Contradictions found: README 'one Start-* per command' vs 16 Start-* of 95 scripts; README no-alias rule vs [Alias('Input')] in Start-BetterSubtitles; completion references retired 'subtitles'; CLI binds args via Invoke-Expression string while GUI splats hashtable; hardcoded Administrator paths in completion/rebuild-cli vs portable README; legacy Desktop copy still present. Gap map + first interview questions delivered in chat; no recipe files written yet.",
+  "commands": [
+    "git rm -r columbo.py columbo.agent.md assets/columbo adk-playground/Columbo",
+    "gh pr create (vaultwares-adk #30)",
+    "git log/grep on vault-commander"
+  ],
+  "files": [
+    "vaultwares-adk/docs/AGENT_MANIFEST.md",
+    "vaultwares-adk/pyproject.toml",
+    "vault-commander/cli/vw.ps1",
+    "vault-commander/cli/vw-commands.ps1",
+    "vault-commander/tests/Invoke-VwCommandContractTests.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "abee5123e5b9b37ba3b7f04fc7feb9117f203cbede4aea50b7a92d6e721569ac",
+  "git": {
+    "repo": "vaultwares-toolkit",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-toolkit",
+    "branch": "main",
+    "head": "bf8b709",
+    "hasChanges": false
+  }
+}

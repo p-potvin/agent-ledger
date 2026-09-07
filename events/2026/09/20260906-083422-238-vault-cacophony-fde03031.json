@@ -1,0 +1,53 @@
+{
+  "id": "20260906-083422-238-vault-cacophony-fde03031",
+  "createdAt": "2026-09-06T12:34:22.2380070Z",
+  "createdAtLocal": "2026-09-06 08:34",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Write, Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-06 08:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Write",
+      "Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "Delivered colour font, fixed Q normalisation, and built the e2e photo-to-font pipeline plus the LoRA dataset generator. Q FIX: normalise() scaled by full bounding box which for Q includes the descending tail; row-ink profiling separates them cleanly (Q tail 25px of 485px bbox, O/I/J ~0) so it now scales the letter BODY to a fixed cap height with descenders below the baseline - verified all bodies land at exactly 700px while Q's full extent is 741 vs O's 708. COLOUR FONT: added effect_layer() (alpha from the full changed region at softer blur/lower threshold so the low-amplitude cast shadow survives), normalise_pair() so colour art and outline share one transform, and add_colour_layer() emitting an OT-SVG table; monochrome glyf outlines retained as fallback. Built 12.7MB colour font, SVG table verified structurally (26 docs, gids 2-27, well-formed XML, embedded RGBA PNG with full alpha range, correct glyph mapping). IMPORTANT LIMITATION FOUND BY TESTING IN-BROWSER: Chrome does NOT render OT-SVG and falls back to outlines - confirmed visually; Firefox/Photoshop/Illustrator do. CBDT/CBLC would be needed for Chrome/Android. E2E: clone_font.py does photo -> segment letter candidates (Otsu + connected components, verified on synthetic handwriting: 7 clean boxes for 'Bonjour') -> RGBA matte cutout -> gate on first glyph -> batch-queue the rest -> normalise -> TTF. Gate checks ink present, ink fraction sane, single connected component, and IoU vs the reference silhouette >0.80 which catches the reference-bleed failure that produced D for O/Q and was previously invisible. Added ComfyClient.submit/collect for batch queueing so ComfyUI keeps the model resident and the ~60s dequantisation is",
+  "commands": [
+    "python build_font.py --colour",
+    "python lora_dataset.py --n 8 --out out/_lora_sample"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/clone_font.py",
+    "font-cloning/text-style-transfer/lora_dataset.py",
+    "font-cloning/text-style-transfer/glyphs.py",
+    "font-cloning/text-style-transfer/comfy_client.py",
+    "font-cloning/text-style-transfer/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "fde030314f331cf573f29ea5743c9a19611bd0b0b2d58ec3760d4d0151e6ea72",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

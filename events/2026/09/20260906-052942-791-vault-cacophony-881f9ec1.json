@@ -1,0 +1,50 @@
+{
+  "id": "20260906-052942-791-vault-cacophony-881f9ec1",
+  "createdAt": "2026-09-06T09:29:42.7918617Z",
+  "createdAtLocal": "2026-09-06 05:29",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-06 05:29 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "Found the cause of composite's shrinking: paste_fit scaled by min(box_w/crop_w, box_h/crop_h); with a 4-letter reference crop (aspect 1.78) in a wide text box (aspect 4.54) that is height-limited, so the pasted lettering filled only 39pct of box width and the model faithfully replaced it at that size. Not a model behaviour - our geometry. Added --paste-fit height|width|box and --paste-zoom to make it explicit. Also fixed a latent bug: run()'s own defaults still had diff_threshold=8/grow=10 from the first mask attempt, so app.py (which does not pass them) would have used the wrong threshold on the blurred diff; corrected to 45/12. ACKNOWLEDGED user correction: Klein is always distilled and cfg1/4steps is native to it, so Ref2Font's 35-step/cfg-5 config is anomalous and my original build_graph_klein settings were right - reframed accordingly. Also acknowledged my gradient metric was unreliable: the glyph mask was a percentile threshold, so D's smaller text let the threshold land on background and contaminate the measurement; user's visual judgement (D almost perfect) beats it. Second composite defect found and fixed: a rectangular paste drags the reference's own dark background into the scene and the edit model keeps it (visible as a dark panel behind A/B/C). Added styles.py with the procedural extruded-lettering renderer (promoted from the 3D test scratch), glyph_alpha() computing face+extrusion+shadow coverage, and letter_reference(rgba=True); paste_fit is now alpha-aware so only the lettering lands on the target. Verified: isolated D pastes onto feathers with its own shadow and no panel. Added alphabet_probe.py which holds style reference, target, box, seed and sampler constant and varies only the requested",
+  "commands": [
+    "python alphabet_probe.py --chars ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    "python -c 'from styles import letter_reference'"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/styles.py",
+    "font-cloning/text-style-transfer/alphabet_probe.py",
+    "font-cloning/text-style-transfer/pipeline.py"
+  ],
+  "planPath": "",
+  "contentHash": "881f9ec13a2f21f6b94c45e524c3316e99694cda7748f840c515c70eb8ca1724",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

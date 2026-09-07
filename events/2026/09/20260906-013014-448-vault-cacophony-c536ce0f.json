@@ -1,0 +1,49 @@
+{
+  "id": "20260906-013014-448-vault-cacophony-c536ce0f",
+  "createdAt": "2026-09-06T05:30:14.4483695Z",
+  "createdAtLocal": "2026-09-06 01:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, TaskStop\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-06 01:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "Reference-word-bleed root cause identified as LEXICAL. Control run: 'WELCOME' (English, 7 letters) rendered CLEANLY using the identical SUMMER word-reference crop, identical multiref strategy and identical seed 123 that had produced 'SUMJOUR' for 'BONJOUR'. Combined with the earlier clean 'HELLO' and the failing BONJOUR at seeds 123/4242 and both strategies, this isolates the variable: the model renders English strings correctly and falls back on the visually primed reference word when asked for a non-English string. Qwen-Image-Edit-2511 is documented EN/CN only, so this is a model-capability limit, not a pipeline bug. Second control (BONJOUR with a NON-WORD 'MM' style crop) was queued but never ran: the Comfy Desktop instance wedged again mid-job - 11GB VRAM held at 0-2pct GPU, comfy-aimdo spamming 'budget_deficit: Deficit ~2000MB', HTTP unresponsive to both /interrupt and /free. Cause is host memory exhaustion: commit 68/71GB with nemo-speech.exe (pid 27180, idle since Sep 4) reserving 10.0GB commit. Also fixed a blocker: the 11GB qwen-image-edit-2511-Q4_0.gguf had been moved from models/diffusion_models to models/checkpoints where UnetLoaderGGUF cannot see it (and where no loader can use a bare UNet GGUF); moved it back. ComfyUI Desktop self-updated 0.33.3 -> 0.34.5 on restart. Cleaned up orphaned pipeline.py clients.",
+  "commands": [
+    "mv models/checkpoints/qwen-image-edit-2511-Q4_0.gguf models/diffusion_models/",
+    "python pipeline.py --strategy multiref --text WELCOME --seed 123"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/out/t1_WELCOME_wordref.png",
+    "font-cloning/text-style-transfer/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "c536ce0f70ae7df06070206bd14e73d6ce09d1b7dfad88984f203b256d77f519",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

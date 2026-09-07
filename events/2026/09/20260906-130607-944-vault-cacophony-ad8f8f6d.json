@@ -1,0 +1,51 @@
+{
+  "id": "20260906-130607-944-vault-cacophony-ad8f8f6d",
+  "createdAt": "2026-09-06T17:06:07.9449716Z",
+  "createdAtLocal": "2026-09-06 13:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: main\r\nTools used (this reply): Bash, Write, Read, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-06 13:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Read",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "font-cloning: added features.py - measures stroke weight from a reference by distance transform (w = 4*mean(DT), no skeletonisation; validated on synthetic bars 20->21.5, 40->39.8, ring 20->22.2 and calibrated so Arial 0.126=regular / Bold 0.193=bold / Black 0.245=very bold / Times modulation 0.43=modulated). Also measures modulation (monoline vs brush) and ink colour after a per-channel white balance - without it the blue-shaded sample photo reported violet ink for a grey pen. Wired into pipeline.prompt_composite/prompt_multiref via a new style+constraints clause, and into clone_font.py (measures the whole page, --style-desc override, --no-features for A/B). Added --ref-image so a Real-ESRGAN upscale of the cut-out can be supplied. Corrected an earlier wrong diagnosis: the stroke/height ratio is invariant under resize, so the run-1 glyphs were relatively THINNER (0.056 vs her 0.102), not thicker; the real divergence is modulation 0.12 -> 0.94 and saturation ~0.16 -> 0.80. Dropped a broken area/skeleton-length cross-check (even widths leave a 2px ridge plateau, halving it). README section 8 documents all of it. A/B run of A/E/O in progress.",
+  "commands": [
+    "python features.py --selftest",
+    "python clone_font.py --photo carmenboivin(1).jpg --ref-index 3 --ref-image _reference_up_upscaled.png --chars AEO --gate none"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/features.py",
+    "font-cloning/text-style-transfer/pipeline.py",
+    "font-cloning/text-style-transfer/clone_font.py",
+    "font-cloning/text-style-transfer/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "ad8f8f6deda06791165ecf4db085c5d7eb2a564f0f2d781f99c4a1e717e4b2ee",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}
