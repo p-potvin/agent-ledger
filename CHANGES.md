@@ -3,7 +3,183 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-09-07 03:54 - vaultwares-studio (formerly usd-playground)</strong> <code>verification</code> - Codex GPT-6 reviewed markerless cellphone-video reconstruction direction, DA3-Streaming artifacts and MASt3R lab code. Verified 39 focused tests and installed OpenUSD native spl...</summary>
+<summary><strong>2026-09-08 00:42 - vault-cacophony</strong> <code>verification</code> - Pipeline reconciliation research + configs. KEY FINDINGS, all measured. (1) LANGUAGE DETECTION EXISTS: nemotron-3.5 --language auto returns a &#39;languages&#39; field; parakeet-tdt ret...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): PowerShell, Bash, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 00:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pipeline reconciliation research + configs. KEY FINDINGS, all measured. (1) LANGUAGE DETECTION EXISTS: nemotron-3.5 --language auto returns a 'languages' field; parakeet-tdt returns none, so only nemotron can drive routing. Whole-file on synthesized clips: fr->fr-FR, es->es-US, de->de-DE, en->en-US, four for four. BUT on a mixed fr/en/es/de clip it returned only ['en-US','de-DE'] with NO mapping from language to text span, so it is unusable whole-file. Per 5s segment it got 6 of 8 correct and both misses were the FIRST segment after a language change (warm-up), so sticky carry-forward fixes it. Dynamic routing is therefore feasible on segments. (2) RIVA IS ENGLISH-CENTRIC: fr->en and en->fr work; fr->es, es->de, de->fr all rejected with 'nmt: unsupported language pair'. Fails cleanly, no silent degradation. (3) GOOGLE IS THE WRONG ANSWER FOR NON-ENGLISH PAIRS: deep_translator 1.9.1 translate_batch is NOT a batch (base.py:149 loops translate() per item = N sequential HTTP requests) and fails every time on 30 cues; single calls are intermittent (same input failed then succeeded); and auto->es returned Google's HTML 'Error 500 (Server Error)' page AS the translation, which would be burned into an srt. RECOMMENDATION: pivot through English via Riva instead - fr->en->es measured 3 cues in 1.09s (0.362s/cue for BOTH legs), local, deterministic, no rate limit, vs Google 0.35-1.8s per cue for ONE leg with failures. Keep Google last-resort only with a 5000-char cap, backoff, and a guard rejecting HTML/Error 500 responses. No evidence Google ever worked for live audio; the overlay defaults to Ollama and Google is its fallback. (4) FIVE AUDIO TYPES COLLAPSE TO TWO SERVER
+- Commands:
+  - `nemo-speech transcribe --model nemotron-3.5 --language auto --json`
+  - `POST /v1/translations fr->es (rejected)`
+  - `deep_translator translate_batch (failed)`
+- Files:
+  - `config/pipelines/english-only.yaml`
+  - `config/pipelines/multilingual.yaml`
+  - `docs/pipeline-reconciliation.md`
+- Git: repo=vault-cacophony, branch=main, head=a154428
+
+</details>
+
+<details>
+<summary><strong>2026-09-07 09:40 - vault-cacophony</strong> <code>code-change</code> - font-cloning: built both paths the scope decision called for, each tested. sheet.py - your own handwriting to .ttf with no model. make renders a printable 68-cell template; read...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning\text-style-transfer  Branch: main
+  Tools used (this reply): Bash, Write, Read, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-07 09:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: font-cloning: built both paths the scope decision called for, each tested. sheet.py - your own handwriting to .ttf with no model. make renders a printable 68-cell template; read rectifies a photo of the filled sheet and builds the font. Registration marks rather than grid lines (one homography, cells located arithmetically). Mark detection uses Otsu on an illumination-flattened copy, NOT adaptive threshold: a solid 50px square exceeds any sensible adaptive window so its middle reads as background, which silently lost one of four marks in testing. Cyan guides read through the blue channel so the printed grid and labels vanish exactly (pen must not be blue). Added glyphs.place_on_baseline and glyphs.shared_scale: one scale for the whole alphabet taken from the capitals, each glyph on a common baseline, because normalise() scales each glyph individually and turned every lowercase x-height into a cap height (b and d matched their source letterforms at only 0.37 and 0.29 IoU). Baseline is measured from non-descender ink with the printed line as anchor for descenders. End-to-end synthetic test (real font into cells, then perspective, lighting falloff, blur, noise): 68 of 68 cells, cap 1.00x, x-height 0.67x vs source 0.68x, ascender 1.00x vs 1.03x, descender 0.19x vs 0.36x. Measured limitation: a writer who centres glyphs instead of sitting on the line loses descenders entirely (0.02x); the sheet says so explicitly. capture.py - read the letters a photo contains, generate only the rest. Two ink finders, neither a fallback for the other: --source colour finds lettering as the colour furthest from the background median in CIELAB
+- Commands:
+  - `python sheet.py make`
+  - `python sheet.py read --photo ...`
+  - `python capture.py --photo carmenboivin(1).jpg --text CARMENBOIVIN --source paper --drop 6`
+- Files:
+  - `font-cloning/text-style-transfer/sheet.py`
+  - `font-cloning/text-style-transfer/capture.py`
+  - `font-cloning/text-style-transfer/glyphs.py`
+  - `font-cloning/text-style-transfer/README.md`
+- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
+
+</details>
+
+<details>
+<summary><strong>2026-09-07 05:10 - vaultwares-studio (formerly usd-playground)</strong> <code>code-change</code> - Continued native USD and camera-path implementation. Added native ParticleField3DGaussianSplat export, persistent custom/retrace/orbit camera paths with USD and ns-render parity...</summary>
+
+- Kind: code-change
+- Actor: python tools/export_native_scene.py --job data/jobs/local-run-20260803-182305 --output data/review/sep07/native-stream
+- Agent Header:
+  ```text
+  Agent: python tools/export_native_scene.py --job data/jobs/local-run-20260803-182305 --output data/review/sep07/native-stream (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): "functions.exec","functions.apply_patch","view_image"
+  MCP servers accessed (this reply): none
+  Time: 2026-09-07 05:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Continued native USD and camera-path implementation. Added native ParticleField3DGaussianSplat export, persistent custom/retrace/orbit camera paths with USD and ns-render parity, archived DA3 pose/depth/debug artifact retention, nested artifact download preservation, Windows USD-before-Qt import fix, native scene export tool, clip assessment, and regression tests. Verified live viewport controls and full suite: 154 tests passed.
+- Commands:
+  - `python -m pytest tests -q`
+- Files:
+  - `"vaultwares_studio/splat_io.py","vaultwares_studio/camera_paths.py","vaultwares_studio/camera_scene.py","vaultwares_studio/stages/camera_staging.py","gui/viewport.py","docker/worker/da3_entrypoint.py","vaultwares_studio/runners/hf_jobs.py","tools/export_native_scene.py","README.md","tests/test_camera_scene.py","tests/test_artifact_retention.py","tests/test_gui_usd_import.py"`
+- Plan: `python data/review/sep07/verify_viewport.py`
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-07 04:57 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>verification</code> - Confirmed push verification gate: commit 4141e98 persisted on origin/main, live API and browser verified</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-07 04:57 (TZ: Eastern Standard Time)
+  ```
+- Summary: Confirmed push verification gate: commit 4141e98 persisted on origin/main, live API and browser verified
+- Git: repo=vault-monitor, branch=main, head=4141e98
+
+</details>
+
+<details>
+<summary><strong>2026-09-07 04:57 - vault-monitor</strong> <code>commands</code> - Bumped vault-monitor to v2.4.4, committed and pushed pauses &amp; click hotspots widgets overhaul to main</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-07 04:57 (TZ: Eastern Standard Time)
+  ```
+- Summary: Bumped vault-monitor to v2.4.4, committed and pushed pauses & click hotspots widgets overhaul to main
+- Git: repo=vault-monitor, branch=main, head=4141e98
+
+</details>
+
+<details>
+<summary><strong>2026-09-07 04:33 - vault-monitor</strong> <code>code-change</code> - Overhauled Personal Stats Pauses widget and Click Hotspots widget with dual Screen Map/Top Zones view, ghosted empty cells, and clear tier naming</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-07 04:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: Overhauled Personal Stats Pauses widget and Click Hotspots widget with dual Screen Map/Top Zones view, ghosted empty cells, and clear tier naming
+- Git: repo=vault-monitor, branch=main, head=e3a3b9f
+
+</details>
+
+<details>
+<summary><strong>2026-09-07 04:27 - vault-monitor</strong> <code>verification</code> - Investigated Personal Stats Pauses widget and Click Hotspots widget; diagnosed rolling window and naming conflicts; created implementation plan</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-07 04:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: Investigated Personal Stats Pauses widget and Click Hotspots widget; diagnosed rolling window and naming conflicts; created implementation plan
+- Git: repo=vault-monitor, branch=main, head=e3a3b9f
+
+</details>
+
+<details>
+<summary><strong>2026-09-07 03:54 - vaultwares-studio</strong> <code>verification</code> - Codex GPT-6 reviewed markerless cellphone-video reconstruction direction, DA3-Streaming artifacts and MASt3R lab code. Verified 39 focused tests and installed OpenUSD native spl...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -82,7 +258,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-06 18:20 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>verification</code> - Analyze duplicate commits af2514e and 235fd87 in vaultwares-dispatch and document root cause and deduplication plan</summary>
+<summary><strong>2026-09-06 18:20 - vault-monitor</strong> <code>verification</code> - Analyze duplicate commits af2514e and 235fd87 in vaultwares-dispatch and document root cause and deduplication plan</summary>
 
 - Kind: verification
 - Actor: AI Agent

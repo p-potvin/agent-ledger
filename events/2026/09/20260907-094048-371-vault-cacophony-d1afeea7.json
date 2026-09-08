@@ -1,0 +1,52 @@
+{
+  "id": "20260907-094048-371-vault-cacophony-d1afeea7",
+  "createdAt": "2026-09-07T13:40:48.3710266Z",
+  "createdAtLocal": "2026-09-07 09:40",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: main\r\nTools used (this reply): Bash, Write, Read, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-07 09:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Read",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "font-cloning: built both paths the scope decision called for, each tested. sheet.py - your own handwriting to .ttf with no model. make renders a printable 68-cell template; read rectifies a photo of the filled sheet and builds the font. Registration marks rather than grid lines (one homography, cells located arithmetically). Mark detection uses Otsu on an illumination-flattened copy, NOT adaptive threshold: a solid 50px square exceeds any sensible adaptive window so its middle reads as background, which silently lost one of four marks in testing. Cyan guides read through the blue channel so the printed grid and labels vanish exactly (pen must not be blue). Added glyphs.place_on_baseline and glyphs.shared_scale: one scale for the whole alphabet taken from the capitals, each glyph on a common baseline, because normalise() scales each glyph individually and turned every lowercase x-height into a cap height (b and d matched their source letterforms at only 0.37 and 0.29 IoU). Baseline is measured from non-descender ink with the printed line as anchor for descenders. End-to-end synthetic test (real font into cells, then perspective, lighting falloff, blur, noise): 68 of 68 cells, cap 1.00x, x-height 0.67x vs source 0.68x, ascender 1.00x vs 1.03x, descender 0.19x vs 0.36x. Measured limitation: a writer who centres glyphs instead of sitting on the line loses descenders entirely (0.02x); the sheet says so explicitly. capture.py - read the letters a photo contains, generate only the rest. Two ink finders, neither a fallback for the other: --source colour finds lettering as the colour furthest from the background median in CIELAB",
+  "commands": [
+    "python sheet.py make",
+    "python sheet.py read --photo ...",
+    "python capture.py --photo carmenboivin(1).jpg --text CARMENBOIVIN --source paper --drop 6"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/sheet.py",
+    "font-cloning/text-style-transfer/capture.py",
+    "font-cloning/text-style-transfer/glyphs.py",
+    "font-cloning/text-style-transfer/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "d1afeea7cdc8463576c8d4b9b59c0a65dad151707af5f87bb07ad769b6d7b6d9",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "2c3c2eb",
+    "hasChanges": true
+  }
+}

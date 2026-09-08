@@ -1,0 +1,50 @@
+{
+  "id": "20260908-004252-603-vault-cacophony-38d9c1c6",
+  "createdAt": "2026-09-08T04:42:52.6031459Z",
+  "createdAtLocal": "2026-09-08 00:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): PowerShell, Bash, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 00:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Pipeline reconciliation research + configs. KEY FINDINGS, all measured. (1) LANGUAGE DETECTION EXISTS: nemotron-3.5 --language auto returns a 'languages' field; parakeet-tdt returns none, so only nemotron can drive routing. Whole-file on synthesized clips: fr->fr-FR, es->es-US, de->de-DE, en->en-US, four for four. BUT on a mixed fr/en/es/de clip it returned only ['en-US','de-DE'] with NO mapping from language to text span, so it is unusable whole-file. Per 5s segment it got 6 of 8 correct and both misses were the FIRST segment after a language change (warm-up), so sticky carry-forward fixes it. Dynamic routing is therefore feasible on segments. (2) RIVA IS ENGLISH-CENTRIC: fr->en and en->fr work; fr->es, es->de, de->fr all rejected with 'nmt: unsupported language pair'. Fails cleanly, no silent degradation. (3) GOOGLE IS THE WRONG ANSWER FOR NON-ENGLISH PAIRS: deep_translator 1.9.1 translate_batch is NOT a batch (base.py:149 loops translate() per item = N sequential HTTP requests) and fails every time on 30 cues; single calls are intermittent (same input failed then succeeded); and auto->es returned Google's HTML 'Error 500 (Server Error)' page AS the translation, which would be burned into an srt. RECOMMENDATION: pivot through English via Riva instead - fr->en->es measured 3 cues in 1.09s (0.362s/cue for BOTH legs), local, deterministic, no rate limit, vs Google 0.35-1.8s per cue for ONE leg with failures. Keep Google last-resort only with a 5000-char cap, backoff, and a guard rejecting HTML/Error 500 responses. No evidence Google ever worked for live audio; the overlay defaults to Ollama and Google is its fallback. (4) FIVE AUDIO TYPES COLLAPSE TO TWO SERVER",
+  "commands": [
+    "nemo-speech transcribe --model nemotron-3.5 --language auto --json",
+    "POST /v1/translations fr->es (rejected)",
+    "deep_translator translate_batch (failed)"
+  ],
+  "files": [
+    "config/pipelines/english-only.yaml",
+    "config/pipelines/multilingual.yaml",
+    "docs/pipeline-reconciliation.md"
+  ],
+  "planPath": "",
+  "contentHash": "38d9c1c6228ea98ec854b65b44e37ba5466640ebf0f12203f37b7e87f3bbf3f3",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "a154428",
+    "hasChanges": true
+  }
+}

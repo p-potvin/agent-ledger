@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260907-051024-651-vaultwares-studio-d8e77d6b",
+    "createdAt":  "2026-09-07T09:10:24.6514024Z",
+    "createdAtLocal":  "2026-09-07 05:10",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change",
+    "actor":  "python tools/export_native_scene.py --job data/jobs/local-run-20260803-182305 --output data/review/sep07/native-stream",
+    "agentHeader":  "Agent: python tools/export_native_scene.py --job data/jobs/local-run-20260803-182305 --output data/review/sep07/native-stream (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): \"functions.exec\",\"functions.apply_patch\",\"view_image\"\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-07 05:10 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  "\"functions.exec\",\"functions.apply_patch\",\"view_image\"",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Continued native USD and camera-path implementation. Added native ParticleField3DGaussianSplat export, persistent custom/retrace/orbit camera paths with USD and ns-render parity, archived DA3 pose/depth/debug artifact retention, nested artifact download preservation, Windows USD-before-Qt import fix, native scene export tool, clip assessment, and regression tests. Verified live viewport controls and full suite: 154 tests passed.",
+    "commands":  [
+                     "python -m pytest tests -q"
+                 ],
+    "files":  [
+                  "\"vaultwares_studio/splat_io.py\",\"vaultwares_studio/camera_paths.py\",\"vaultwares_studio/camera_scene.py\",\"vaultwares_studio/stages/camera_staging.py\",\"gui/viewport.py\",\"docker/worker/da3_entrypoint.py\",\"vaultwares_studio/runners/hf_jobs.py\",\"tools/export_native_scene.py\",\"README.md\",\"tests/test_camera_scene.py\",\"tests/test_artifact_retention.py\",\"tests/test_gui_usd_import.py\""
+              ],
+    "planPath":  "python data/review/sep07/verify_viewport.py",
+    "contentHash":  "d8e77d6b93ff4dbe8764c8125ffc7379b739583900c4582c3e0f4712a1a756b3",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "vw-codex/native-splats-camera-paths",
+                "head":  "19f0249",
+                "hasChanges":  true
+            }
+}
