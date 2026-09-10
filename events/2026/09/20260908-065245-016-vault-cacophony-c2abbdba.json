@@ -1,0 +1,49 @@
+{
+  "id": "20260908-065245-016-vault-cacophony-c2abbdba",
+  "createdAt": "2026-09-08T10:52:45.0162899Z",
+  "createdAtLocal": "2026-09-08 06:52",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 06:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Segmentation audit. Key correction: the step-2 WER table never used segmentation - it transcribed the 155 clips whole - so boundary damage cannot explain 24 percent. ffmpeg exonerated: 70 French segments reassemble bit-identical to source, 0 frames lost. Real segmentation cost: 70 head gaps averaging 0.83s vs one 0.64s gap whole-file, ~58s dead head, words 2332->2309; no merging/overlap logic exists, so a word straddling a hard cut is decoded twice or not at all, producing repeats and omissions together (2/69 boundaries repeat outright). Multi-second drops (6:52, ~5s) are present in the WHOLE-FILE run on non-silent audio (RMS 3400) so they are model-side, not segmentation. Found a confound I introduced: NEMO_SPEECH_RELPOS_MAX_Q=512 routes q_len<=512 to fused attention, so 10s segments took fused while the 696s file took cuBLAS; disabling changes 10/70 segments with cuBLAS better every time - the gate is NOT accuracy-neutral offline, contrary to the handoff. Corrected step 2 with fused disabled: auto 23.87, es-US 27.19, tdt 26.19, en-US 46.23, parakeet-ctc 55.58 (100 percent on spa, not a candidate). Head-to-head auto 71 wins vs es-US 26, 58 ties - WER disagrees with the qualitative read that es is better. Number formatting confirmed ASR-side not scorer, but only 5 digit tokens in 4999 words. Step 1 survives: identical segmentation gave 58.3 vs 12.9 percent empty on enspa vs French. Wrote docs/plurilingual-segmentation-audit.md, pushed to vw-claude/plurilingual-eval.",
+  "commands": [
+    "md5 compare of resegmented PCM",
+    "NEMO_SPEECH_RELPOS_MAX_Q=0 nemo-speech transcribe",
+    "evaluate_openasr.py --normalizer basic"
+  ],
+  "files": [
+    "docs/plurilingual-segmentation-audit.md",
+    "docs/plurilingual-step1-results.md"
+  ],
+  "planPath": "",
+  "contentHash": "c2abbdbaf81608bc4416b1ad0584ca60dd61531453e9be17d398893babfe8fbb",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "b5171ef",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "20260908-023250-048-vault-cacophony-b7589b0e",
+  "createdAt": "2026-09-08T06:32:50.0484538Z",
+  "createdAtLocal": "2026-09-08 02:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 02:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Built the normalizer selection the handoff's step 2 needs. scripts/evaluate_openasr.py now takes --normalizer english|basic (default english, so existing English runs are byte-identical); load_openasr_components returns the resolved path and score_records takes a keyword-only normalizer_path so methodology.normalizer reports what actually ran. Motivation measured on real data: 137 of 155 enspa_dev references normalize differently between the two, and EnglishTextNormalizer rewrites the English half of a code-switched sentence while leaving Spanish raw (twelve->12 but cuatro and ciento cincuenta untouched; English filler uh dropped, Spanish fillers kept), biasing the en-pinned vs es-pinned comparison. Added 2 regression tests (4 total pass). Verified end-to-end on all 155 real rows under both normalizers, identity manifest scores 0.0 WER both ways. Documented in docs/openasr-evaluation.md new 'Normalizer selection' section. Also corrected docs/HANDOFF-plurilingual.md: convo_id is constant (=1) so it is NOT a splicing key -- one conversation, TSV row order is the ordering key (owner confirmed by ear); step 2 now says pass --normalizer basic. Working tree only, nothing committed.",
+  "commands": [
+    "python -m unittest tests.test_openasr_evaluation",
+    "evaluate_openasr.py --input enspa_identity.jsonl --normalizer basic"
+  ],
+  "files": [
+    "scripts/evaluate_openasr.py",
+    "tests/test_openasr_evaluation.py",
+    "docs/openasr-evaluation.md",
+    "docs/HANDOFF-plurilingual.md"
+  ],
+  "planPath": "",
+  "contentHash": "b7589b0edef903e9d46cf57f19c30ff92e62e7dc0dbe2b8518f07ce6733930c9",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "a154428",
+    "hasChanges": true
+  }
+}

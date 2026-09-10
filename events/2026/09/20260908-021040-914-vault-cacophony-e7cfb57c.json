@@ -1,0 +1,47 @@
+{
+  "id": "20260908-021040-914-vault-cacophony-e7cfb57c",
+  "createdAt": "2026-09-08T06:10:40.9141118Z",
+  "createdAtLocal": "2026-09-08 02:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): PowerShell, Bash, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 02:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Wrote docs/HANDOFF-plurilingual.md for a fresh session. Records owner corrections that override earlier repo docs: Ollama is not viable for translation (1B models cannot translate, 7-8B do not fit beside ASR on 12GB, leaving only the 3-4B band which is Riva) and the live overlay's default -TranslateEngine local should become riva; deep-translator was always offline-only so the earlier live-viability question was malformed, though its HTML-Error-500-as-translation behaviour still needs a guard; the English pivot through Riva is a fallback not the plan because it compounds errors - one bad ASR word becomes a wrong English word becomes a wrong target sentence, so it should not be assumed on dirty audio; non-English live translation may be out of reach on this hardware by any considered route and the real answer would be an OpenNMT-class stack which is out of scope; config/server.example.yaml and the asymmetric CTC geometry 3.84/0.16 it carries were written quickly without tests and are NOT a baseline, and config/pipelines/*.yaml inherited that caveat; nemotron-3.5 is the default for everything. Verified the test material: enspa_dev has 155 clips totalling 35.9 min WITH metadata.tsv giving reference transcripts, speaker labels and convo_id, so WER on genuinely intra-sentence code-switched audio is measurable and diarization is scoreable - the sample transcript switches mid-sentence with no pause, which my earlier synthesized hard-cut test does not represent, so the 6/8 detection result must be re-measured before it is trusted. Also present: French Girl Reacts mp3 (11.6 min, en+fr), quebecois vs francais mp3 (25.5 min, fr with two accents), and an fr-CA Common Voice-style set. Next",
+  "commands": [],
+  "files": [
+    "docs/HANDOFF-plurilingual.md",
+    "docs/pipeline-reconciliation.md",
+    "config/pipelines/english-only.yaml",
+    "config/pipelines/multilingual.yaml"
+  ],
+  "planPath": "",
+  "contentHash": "e7cfb57c154ed00c190486bcfaf18451b18e36cb98ea43ffa43c6706d59c8319",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "main",
+    "head": "a154428",
+    "hasChanges": true
+  }
+}

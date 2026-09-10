@@ -1,0 +1,52 @@
+{
+  "id": "20260908-083051-704-vault-cacophony-3426cef7",
+  "createdAt": "2026-09-08T12:30:51.7041567Z",
+  "createdAtLocal": "2026-09-08 08:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 08:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Silero VAD converted and integrated; KenLM and ITN ruled out. The models/silero-vad-v6.2.1.gguf is a genuine silero export but written by vokra-core: vokra.* metadata namespace and sr16k.encoder.0.reparam_conv.* tensor names, while silero_vad.cpp:285 requires general.architecture=vad and the loader wants encoder.0.conv.weight plus vad.* hparams - so a metadata-only fix is insufficient. Regenerated via repo convert_model.py with silero-vad==6.2.0 installed --no-deps (existing torch 2.8.0+cu129 untouched) as silero-v6.2.0-nemo.gguf, 16kHz head, 1.24MB, verified vad=on. Wired into both config/pipelines yaml with mask_enable false, documenting that masking flips RNNT from mode=offline to mode=streaming. KEY NEGATIVE: VAD masking does NOT fix long-form dropouts - gap positions/durations identical to the centisecond (4.96s at 6:52 etc), words 2332->2336. Cutting 6:51-6:58 out and transcribing alone returns a full French sentence, proving the model can read the span but does not in situ = long-form decoding defect. KenLM blocked: recognizer.cpp:112 gates flashlight on CtcModel cast, only CTC model in index.json is parakeet-ctc-1.1b (English, measured 55.58 percent). es.arpa.trie.bin IS a KenLM binary (kheafield mmap magic); flashlight builds its trie in memory from lexicon at load - the extra 21GB arpa.bin is NOT needed. ITN blocked on Windows: CMakeLists.txt:136 refuses NEMO_SPEECH_WITH_NORM, cache OFF. fr.arpa.bin still downloading (0 bytes, .part at 6.2G). Wrote docs/plurilingual-vad-and-decoder-notes.md, pushed 347dff4.",
+  "commands": [
+    "convert_model.py silero --outfile silero-v6.2.0-nemo.gguf",
+    "uv pip install --no-deps silero-vad==6.2.0",
+    "nemo-speech transcribe --vad-model --vad-masking"
+  ],
+  "files": [
+    "docs/plurilingual-vad-and-decoder-notes.md",
+    "config/pipelines/multilingual.yaml",
+    "config/pipelines/english-only.yaml",
+    "NeMo-Speech.cpp/models/silero-v6.2.0-nemo.gguf"
+  ],
+  "planPath": "",
+  "contentHash": "3426cef797917191f4197ed5bbef18b875e1821418a89fafb4077d55ef5a7466",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "347dff4",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260908-022413-000-vaultwares-studio-ee3e91a9",
+    "createdAt":  "2026-09-08T06:24:13.0006267Z",
+    "createdAtLocal":  "2026-09-08 02:24",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 02:24 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-6",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Prepared offline DA3-Streaming loop-off/on comparison for supplied 149-second clip: 500 identical selected frames, 210MB archive, hashed worker overlay, SALAD checkpoint staging fix, retained partial artifacts and process-group timeout tests. Verified current L4 price USD0.80/hour and existing Space source SHA with one read-only lookup. Expected total USD0.30-0.60, maximum compute USD0.80 for two sequential 30-minute jobs, no retries or training. Thirteen focused tests passed. Plan awaits explicit user greenlight; no uploads, inference, jobs or deployment launched.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "ee3e91a9ac976faf65ec6f6d49304462a7a7851ccdddb77ff0343816cde3518d",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "vw-codex/native-splats-camera-paths",
+                "head":  "19f0249",
+                "hasChanges":  true
+            }
+}

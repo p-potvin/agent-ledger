@@ -1,0 +1,47 @@
+{
+  "id": "20260909-011135-962-vault-cacophony-b705e6c9",
+  "createdAt": "2026-09-09T05:11:35.9623843Z",
+  "createdAtLocal": "2026-09-09 01:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-09 01:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Quick Magpie TTS test (nvidia/magpie_tts_multilingual_357m + nemo-nano-codec, both already in the local cache, no download). It works and is fast: 2.0-2.8x realtime at 22050 Hz on cuda:0. Evaluated by TTS->ASR round-trip through nemotron-3.5 --language auto. Results: en and de exact matches; fr 'ravie'->'ravi' only; es punctuation only; code-switched line lost one Spanish word ('entonces'->'entrances'), consistent with the ASR's known English bias rather than necessarily a TTS fault. Language detection correct on all. KEY OPERATIONAL FINDING: passing non-ASCII text as a command-line argument corrupts it - 'El nino pequeno comio una pina...' came back as 'Niekiomia Pin, el Hare, su abuela' and the French accented line was equally mangled. Re-running the identical text via --input with a UTF-8 file fixed both ('El nino pequeno comio una pina en el jardin de su abuel', 'Comme hiver, je prefere les crepes a la chataigne, n'est-ce pas?'). So ALWAYS use --input for accented text; it was console encoding, not the model. Minor: fr3 lost a leading 'Ete' and es3 a trailing 'a', plausibly the ASR head-gap rather than TTS. fr-CA Quebecois line came through well. Caveat recorded that the round-trip conflates TTS and ASR errors; audio delivered to the owner for listening. No code changed. Separately confirmed the three vault-commander subtitle edits survived and were swept into Gemini's commit 158f071 (feat(maxine)) - working tree clean for those files.",
+  "commands": [
+    "nemo-speech synthesize --language en-US/fr-FR/es-US/de-DE/fr-CA",
+    "nemo-speech synthesize --input <utf8 file>",
+    "nemo-speech transcribe round-trip"
+  ],
+  "files": [
+    "scratchpad/tts/*.wav"
+  ],
+  "planPath": "",
+  "contentHash": "b705e6c90712225c8f3835fe14a2af303c04e3e3e2d3cab64039d656ba099bd8",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "17b637f",
+    "hasChanges": true
+  }
+}

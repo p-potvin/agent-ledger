@@ -1,0 +1,48 @@
+{
+  "id": "20260909-024446-847-vault-commander-b5b4079c",
+  "createdAt": "2026-09-09T06:44:46.8475207Z",
+  "createdAtLocal": "2026-09-09 02:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: main\r\nTools used (this reply): Bash, Grep, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-09 02:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Grep",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+  "summary": "Rewired cli/utils/live_subtitles.py off the in-process Parakeet/NeMo model onto the shared resident nemo-speech HTTP server (nemo_asr.NemoSpeechTranscriber), matching better-subtitles and the live-subs overlay. Replaced load_model() with connect_engine(); transcribe() now calls transcribe_array() with float32 audio; added --server-host/--server-port/--asr-model/--no-autostart plus VW_NEMO_HOST/PORT/MODEL env overrides; port defaults to subtitles_server.DEFAULT_PORT (8123, not 8199 as guessed - 8199 appears nowhere in the repo); dropped the protobuf shim; daemon closes the engine handle on quit. Verified one-shot and daemon modes end-to-end against the live server: attach 0.0s, real cues, valid SRT; --no-autostart fails cleanly on a dead port.",
+  "commands": [
+    "python -m py_compile cli/utils/live_subtitles.py",
+    "python live_subtitles.py clip.wav --no-autostart",
+    "python live_subtitles.py --daemon"
+  ],
+  "files": [
+    "cli/utils/live_subtitles.py"
+  ],
+  "planPath": "",
+  "contentHash": "b5b4079cdc2f16332f39eb6b8e8c7a8d9f3fc62f7a1364fad57cc89a200180fb",
+  "git": {
+    "repo": "vault-commander",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+    "branch": "main",
+    "head": "158f071",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "20260908-165942-606-vault-cacophony-b8576939",
+  "createdAt": "2026-09-08T20:59:42.6067261Z",
+  "createdAtLocal": "2026-09-08 16:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 16:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "ROOT CAUSE FOUND. recognizer.cpp:566 silently swaps the offline full-context runner for the buffered cache-aware streaming runner once input exceeds the encoder positional-embedding budget (exceeds_offline_position_limit). For nemotron-3.5 (hop 160, subsampling 8, causal conv, pos_emb_max_len 5000) the boundary is 399.9s = 6min40s. Only the stderr mode= line reveals which ran. Confirmed empirically: 395s prefix logs mode=offline, 405s logs mode=streaming. Cost measured on the SHARED 0-395s region (identical audio, only 10s appended past threshold): offline 1074 words / 6 gaps / 18.3s dropped vs streaming 1060 words / 7 gaps / 25.0s dropped, similarity 0.924. Ten seconds appended deletes words six minutes earlier. Explains everything: prefix-ladder saturation at 10min (5min offline, all longer prefixes streaming - NOT converging statistics); right-context inert below threshold (RC1/2/3 byte-identical on 5min file and all VAD segments); VAD segmentation helps because segments sit under the limit and decode offline (never was about normalization); isolated cut-outs read fine because seconds long; enspa WER table unaffected (clips 5.8-14.7s). CORRECTION: the 11.6min bilingual runs were mislabelled an offline baseline - at 696s they were streaming, so my earlier 'offline == streaming rc=1 byte-identical' compared streaming with streaming. Also found OfflineRunner::offline_segments_ already splits at the position limit and snaps cuts to the quietest 100ms window (same design as vad_segment.py) but use_streaming diverts long input before OfflineRunner is constructed and is gated on supports_cache_streaming(), so offline-only models like parakeet-tdt get it free while cache-aware nemotron never does. RECOMMENDATION: keep every nemotron ASR call under 399.9s; vad_segment.py --target-s 150 already complies. Pushed dde4b74.",
+  "commands": [
+    "straddle test 395s vs 405s prefixes",
+    "computed threshold from pos_emb_max_len/subsampling/hop"
+  ],
+  "files": [
+    "NeMo-Speech.cpp/src/asr/recognizer.cpp",
+    "NeMo-Speech.cpp/src/asr/runner.cpp",
+    "docs/plurilingual-vad-and-decoder-notes.md"
+  ],
+  "planPath": "",
+  "contentHash": "b85769390e6f7e279b27aa53f90feaf87719f5a8693d60e3f1471b9a51d88c9a",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "dde4b74",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "20260908-141734-746-vaultwares-studio-75675d84",
+  "createdAt": "2026-09-08T18:17:34.7462721Z",
+  "createdAtLocal": "2026-09-08 14:17",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 14:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Built and published private ZeroGPU Gradio Space clopeux/vw-studio-da3-zerogpu. Implemented focused experimental console with default Gradio theme, JetBrains Mono, top tabs, stacked operations workflow, high-quality DA3 preset 672x378/chunk90/overlap45/1800s GPU reservation, CPU video intake/artifact packaging, pinned DA3 Streaming source, loop closure option, and stable-output-only archive policy. Fixed startup dependencies pycolmap/evo and Gradio Video compatibility. HF runtime confirms RUNNING on zero-a10g; authenticated page and /config returned 200 with 19 components and 2 callbacks. No GPU run invoked and no ZeroGPU quota consumed. 23 focused tests passed.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "75675d8490b8285833e8133c88bda7513cdf6b72f7199217fffe044c5c944c1d",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "19f0249",
+    "hasChanges": true
+  }
+}

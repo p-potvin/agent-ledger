@@ -3,6 +3,1653 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-09-09 23:44 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares &#226; Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares &#226; Project Rename Refactoring (Phase 5), VaultWares &#226; Project Rename Refactoring (Phase 5 PR Workflow), VaultWares &#226; System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>verification</code> - Continued Clopeux resource-monitoring handoff: verified Work Impact DNS proxy remains HTTP 200 and confirmed Health Ledger PR #10, VaultWares API PR #89, and Vault Monitor PR #1...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 23:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Continued Clopeux resource-monitoring handoff: verified Work Impact DNS proxy remains HTTP 200 and confirmed Health Ledger PR #10, VaultWares API PR #89, and Vault Monitor PR #10 are open and ready to merge in dependency order.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 23:42 - General Tasks</strong> <code>code-change</code> - Created VaultWares API PR #89 and Vault Monitor PR #10 to include Clopeux in normalized resource telemetry and display its third fleet card while removing the redundant Resource...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 23:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created VaultWares API PR #89 and Vault Monitor PR #10 to include Clopeux in normalized resource telemetry and display its third fleet card while removing the redundant Resources page title.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 23:42 - General Tasks</strong> <code>code-change</code> - Created Health Ledger PR #10 for Clopeux native Windows resource sampling, using CIM, CPU performance data, volumes, network adapter counters and Event Log metadata.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 23:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created Health Ledger PR #10 for Clopeux native Windows resource sampling, using CIM, CPU performance data, volumes, network adapter counters and Event Log metadata.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 23:42 - General Tasks</strong> <code>commands</code> - Fixed live Work Impact 502 with an exact Greencloud nginx location that proxies only /monitor/work-impact through Tailnet DNS https://api.vaultwares.ca; nginx test passed and li...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 23:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed live Work Impact 502 with an exact Greencloud nginx location that proxies only /monitor/work-impact through Tailnet DNS https://api.vaultwares.ca; nginx test passed and live proxy returned HTTP 200.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 23:27 - General Tasks</strong> <code>verification</code> - Reconfirmed live Work Impact proxy state after reported recovery: Greencloud monitor proxy still returns HTTP 502 for /monitor/work-impact with connection refused to 100.67.25.1...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 23:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: Reconfirmed live Work Impact proxy state after reported recovery: Greencloud monitor proxy still returns HTTP 502 for /monitor/work-impact with connection refused to 100.67.25.118:9001, while OVH loopback API returns HTTP 200. No changes made.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 23:22 - General Tasks</strong> <code>verification</code> - Diagnosed Vault Monitor Work Impact 502: Greencloud nginx proxies /monitor/* to 100.67.25.118:9001, but OVH FastAPI binds that port to 127.0.0.1 only. Reproduced 502 at the moni...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 23:22 (TZ: Eastern Standard Time)
+  ```
+- Summary: Diagnosed Vault Monitor Work Impact 502: Greencloud nginx proxies /monitor/* to 100.67.25.118:9001, but OVH FastAPI binds that port to 127.0.0.1 only. Reproduced 502 at the monitor proxy and 200 from OVH loopback /monitor/work-impact; no configuration changes made.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 23:21 - General Tasks</strong> <code>verification</code> - Verified merged resource-monitoring backend deployments from runtime evidence: Greencloud Health Ledger Probe Joker is active and emits fresh OVH/Greencloud host_resource_sample...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 23:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified merged resource-monitoring backend deployments from runtime evidence: Greencloud Health Ledger Probe Joker is active and emits fresh OVH/Greencloud host_resource_sample events; OVH VaultWares API is active and GET /monitor/resources returned both normalized host payloads with HTTP 200.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 23:07 - vault-cacophony</strong> <code>verification</code> - Magpie TTS pass 2: English conversation with diarization and pretrained voices, establishing the best-case ceiling. FROM GGUF METADATA: nano_codec.sample_rate=22050 so 22kHz is ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 23:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Magpie TTS pass 2: English conversation with diarization and pretrained voices, establishing the best-case ceiling. FROM GGUF METADATA: nano_codec.sample_rate=22050 so 22kHz is the codec NATIVE rate not a choice (--sample-rate only downsamples); magpietts.baked_speakers=5 named John, Sofia, Aria, Jason, Leo; synthesis 2.0-2.8x realtime on cuda:0. RESOLVED the owner's accent question: fr2.wav and fr3.wav used IDENTICAL --language fr-FR; fr2 sounds like an English speaker reading French purely because its input text was corrupted by command-line encoding. Language control itself works - fr-CA gives a genuinely Quebecois delivery. Confirmed the owner is right that Ete and Abuela ARE audible in the TTS output; the ASR dropped them on the round-trip pass, consistent with its measured head/tail gap. CONVERSATION TEST: 8 turns, two baked voices (John/Sofia), synthesised per turn and spliced with 350ms gaps into 50.6s, transcribed with --diarize --language auto. Results: WER 1.54 percent English normalizer (1.53 basic), 131 reference and 131 hypothesis words, diarizer emitted exactly 2 labels, word-level speaker accuracy 130/131 = 99.2 percent, 8/8 turns correct majority speaker. Both speaker errors are single words at turn boundaries; remaining ASR errors trivial (Sofia->Sophia, support costs->support cost). Recorded explicitly as a CEILING not an expectation - TTS audio is clean, no overlap/noise/room, and made by a model in the same family as the recogniser. Artifact noted: sentence boundaries merge across turns while diarization stays correct, so sentence-consuming code must cut on speaker change not punctuation. CORRECTION recorded: ASR word boosting (--speech-context) does NOT transfer to TTS - there is no synthesis-side boost; the TTS levers for the mispronounced
+- Commands:
+  - `nemo-speech synthesize --voice John/Sofia --input <utf8>`
+  - `nemo-speech transcribe --diarize --language auto`
+  - `evaluate_openasr.py --normalizer english`
+- Files:
+  - `docs/magpie-tts-notes.md`
+  - `scratchpad/conv/conversation.wav`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=42c0374
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 22:49 - General Tasks</strong> <code>code-change</code> - Created Vault Monitor PR #9: VaultWares Redesign fleet-first Resources route with compact host cards, inline details, trends, bounded storage breakdown and automatic refresh.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 22:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created Vault Monitor PR #9: VaultWares Redesign fleet-first Resources route with compact host cards, inline details, trends, bounded storage breakdown and automatic refresh.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 22:48 - General Tasks</strong> <code>code-change</code> - Created VaultWares API PR #88: normalized GET /monitor/resources endpoint over signed Health Ledger location rollups without exposing raw host data.</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 22:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created VaultWares API PR #88: normalized GET /monitor/resources endpoint over signed Health Ledger location rollups without exposing raw host data.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 22:48 - General Tasks</strong> <code>code-change</code> - Created Health Ledger PR #9: bounded per-minute OVH/Greencloud host resource samples with signed rollup history for disk, RAM, CPU load, bandwidth, journal, Docker, media storag...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 22:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created Health Ledger PR #9: bounded per-minute OVH/Greencloud host resource samples with signed rollup history for disk, RAM, CPU load, bandwidth, journal, Docker, media storage and failed systemd units.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 22:29 - General Tasks</strong> <code>commands</code> - Raised Greencloud shared-tube /api/stream per-IP concurrent connection allowance from 3 to 6 across FullXXX, 1PornHub, and SexyPRN; nginx configuration test passed and reload co...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 22:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Raised Greencloud shared-tube /api/stream per-IP concurrent connection allowance from 3 to 6 across FullXXX, 1PornHub, and SexyPRN; nginx configuration test passed and reload completed. Began required design interrogation for the Vault Monitor resource screen before frontend implementation.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 03:25 - vault-commander</strong> <code>verification</code> - Closed out the overlapping-subtitles investigation at user&#39;s request - they suspect the overlap came from my own test harnesses, which is consistent: render_window.py, render_bi...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: main
+  Tools used (this reply): PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 03:25 (TZ: Eastern Standard Time)
+  ```
+- Summary: Closed out the overlapping-subtitles investigation at user's request - they suspect the overlap came from my own test harnesses, which is consistent: render_window.py, render_bi.py and render_trans.py each showed a real SubtitleOverlay at the same default bottom-centre anchor, and one ran while the pythonw instance from the earlier launch test was still up, so two overlays coincided. Confirmed no stray overlay or harness processes remain; shared nemo-speech server still listening on 8123 (pid 33548) as intended. Kept the contentsMargins/padding fix in live_subs_overlay.py since it is an independently verified defect on the bilingual path with no regression to the normal path. No commits made; working tree has 4 modified files plus the live_subtitles.py -> meth/utils/ rename.
+- Commands:
+  - `Get-CimInstance Win32_Process (stray check)`
+  - `git status --short`
+- Files:
+  - `cli/utils/live_subs_overlay.py`
+  - `cli/Start-LiveSubtitles.ps1`
+  - `cli/vw-commands.ps1`
+  - `meth/README.md`
+  - `meth/utils/live_subtitles.py`
+- Git: repo=vault-commander, branch=main, head=158f071
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 03:24 - vault-commander</strong> <code>code-change</code> - Investigated reported intermittent overlapping subtitle lines in live_subs_overlay.py. Ruled out by rendering to PNG and screen-grabbing the real window: OutlinedLabel stacks mu...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: main
+  Tools used (this reply): Bash, Grep, Read, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 03:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Investigated reported intermittent overlapping subtitle lines in live_subs_overlay.py. Ruled out by rendering to PNG and screen-grabbing the real window: OutlinedLabel stacks multi-line text correctly (y advances by lineSpacing), window sizing math is right (2 lines = 2*36+2*3=78), and grow/shrink transitions leave no ghost. Found and fixed a real defect: OutlinedLabel ignored contentsMargins in all three places, while label_tr carries CSS 'padding: 4px 10px' for its rounded panel. _wrap wrapped against the full width (20px too late), heightForWidth omitted the 8px vertical padding, and paintEvent started at y=outline+ascent ignoring the 4px top inset - with layout spacing of only 2px that is enough for the translation panel to overlap the caption above it. All three now honour contentsMargins; x-centring is inside the padded content box and is algebraically identical for zero-margin labels. Verified: translation heightForWidth 35 -> 43, source unchanged at 35, bilingual render clean, non-bilingual geometry unchanged at 78/114. NOTE: this defect is only on the bilingual path (source label has zero margins), so it may not be the user's case - asked them to confirm whether they run -Bilingual and for a screenshot if it recurs.
+- Commands:
+  - `python render_window.py`
+  - `python render_bi.py`
+  - `python pad.py`
+- Files:
+  - `cli/utils/live_subs_overlay.py`
+- Git: repo=vault-commander, branch=main, head=158f071
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 03:19 - vault-commander</strong> <code>code-change</code> - Set translation defaults to riva/gpu everywhere: vw-commands.ps1 live-subs registry now says Default riva (was local) and gpu (was cpu) with matching descriptions, and Start-Liv...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: main
+  Tools used (this reply): Bash, Grep, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 03:19 (TZ: Eastern Standard Time)
+  ```
+- Summary: Set translation defaults to riva/gpu everywhere: vw-commands.ps1 live-subs registry now says Default riva (was local) and gpu (was cpu) with matching descriptions, and Start-LiveSubtitles.ps1 comment-based help documents riva as default (it previously listed only local/google and called local the default). The ps1 param defaults were already riva/gpu. Silenced the soundcard 'data discontinuity in recording' spam in live_subs_overlay.py: it is WASAPI's DATA_DISCONTINUITY flag, routine on loopback whenever the render endpoint idles, and soundcard/mediafoundation.py sets simplefilter('always') at import so it printed two lines per occurrence. Added a filterwarnings('once') plus a showwarning shim installed after the soundcard import, routing it to one ASCII line in the app's own [live-subs] log format and delegating all other warnings to the previous handler. Verified live: zero raw warning lines, one clean log line, overlay attached to nemo-speech 8123 and drew real captions from system audio. Both ps1 files parse clean. Killed the stale test overlay pid 26720.
+- Commands:
+  - `python live_subs_overlay.py --partials off --asr-language auto`
+  - `Parser::ParseFile on both ps1 files`
+  - `Stop-Process -Id 26720`
+- Files:
+  - `cli/utils/live_subs_overlay.py`
+  - `cli/vw-commands.ps1`
+  - `cli/Start-LiveSubtitles.ps1`
+- Git: repo=vault-commander, branch=main, head=158f071
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 03:05 - vault-commander</strong> <code>code-change</code> - Retired cli/utils/live_subtitles.py to meth/utils/ per user (Electron consumer will hit the nemo-speech server directly), with a meth/README.md Workers row; also corrected two f...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: main
+  Tools used (this reply): Bash, Grep, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 03:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Retired cli/utils/live_subtitles.py to meth/utils/ per user (Electron consumer will hit the nemo-speech server directly), with a meth/README.md Workers row; also corrected two false claims in that README (it said live_subs_overlay.py imports live_subtitles.py - it never did - and that live-subs runs on audiocpp, when it is nemo_asr on 8123). Then diagnosed the reported 'vw live-subs exits 1, no overlay': Start-LiveSubtitles.ps1 passed --asr-language, which live_subs_overlay.py never defined, so argparse exited 2; detached Start-Process pythonw.exe has no console so the error vanished and the ps1 still printed 'Overlay launched'. Fixed by implementing --asr-language in live_subs_overlay.py and threading it through AsrWorker into transcribe_array(language=). Hardened the launcher with -PassThru + HasExited check that re-runs on console python to surface the real error. Added the missing -Language entry and riva to TranslateEngine ValidSet in the vw-commands.ps1 live-subs registry (help/completion only, not enforcement). Verified: overlay launches via the ps1 and stays alive attached to nemo-speech 8123; guard detects an instant exit (HasExited=True ExitCode=2); both ps1 files parse clean.
+- Commands:
+  - `git mv cli/utils/live_subtitles.py meth/utils/live_subtitles.py`
+  - `python live_subs_overlay.py --asr-language auto`
+  - `Start-LiveSubtitles.ps1`
+- Files:
+  - `meth/utils/live_subtitles.py`
+  - `meth/README.md`
+  - `cli/utils/live_subs_overlay.py`
+  - `cli/Start-LiveSubtitles.ps1`
+  - `cli/vw-commands.ps1`
+- Git: repo=vault-commander, branch=main, head=158f071
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 02:51 - vault-commander</strong> <code>verification</code> - Checked whether cli/utils/live_subtitles.py has a vw command. It does not. &#39;vw live-subs&#39; (cli/vw-commands.ps1:468) maps to Start-LiveSubtitles.ps1 -&gt; live_subs_overlay.py, the ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: main
+  Tools used (this reply): Bash, Grep, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 02:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Checked whether cli/utils/live_subtitles.py has a vw command. It does not. 'vw live-subs' (cli/vw-commands.ps1:468) maps to Start-LiveSubtitles.ps1 -> live_subs_overlay.py, the WASAPI loopback overlay, which already used nemo_asr.NemoSpeechTranscriber before this session. live_subtitles.py (the video-file/stdin daemon I migrated) has no caller anywhere in the repo: its only wrapper meth/cli/Start-LivestreamTranslator.ps1 points at meth/cli/utils/live_subtitles.py which does not exist, and passes --voice/--lang/--threshold/--volume, none of which live_subtitles.py accepts. So it is currently orphaned. Asked user whether to register a new command, fold it into live-subs, or leave it uncalled.
+- Commands:
+  - `grep -n live-subs cli/vw-commands.ps1`
+  - `diff -q cli/utils/live_subtitles.py meth/cli/utils/live_subtitles.py`
+- Files:
+  - `cli/vw-commands.ps1`
+  - `cli/utils/live_subtitles.py`
+  - `meth/cli/Start-LivestreamTranslator.ps1`
+- Git: repo=vault-commander, branch=main, head=158f071
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 02:44 - vault-commander</strong> <code>code-change</code> - Rewired cli/utils/live_subtitles.py off the in-process Parakeet/NeMo model onto the shared resident nemo-speech HTTP server (nemo_asr.NemoSpeechTranscriber), matching better-sub...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: main
+  Tools used (this reply): Bash, Grep, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 02:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Rewired cli/utils/live_subtitles.py off the in-process Parakeet/NeMo model onto the shared resident nemo-speech HTTP server (nemo_asr.NemoSpeechTranscriber), matching better-subtitles and the live-subs overlay. Replaced load_model() with connect_engine(); transcribe() now calls transcribe_array() with float32 audio; added --server-host/--server-port/--asr-model/--no-autostart plus VW_NEMO_HOST/PORT/MODEL env overrides; port defaults to subtitles_server.DEFAULT_PORT (8123, not 8199 as guessed - 8199 appears nowhere in the repo); dropped the protobuf shim; daemon closes the engine handle on quit. Verified one-shot and daemon modes end-to-end against the live server: attach 0.0s, real cues, valid SRT; --no-autostart fails cleanly on a dead port.
+- Commands:
+  - `python -m py_compile cli/utils/live_subtitles.py`
+  - `python live_subtitles.py clip.wav --no-autostart`
+  - `python live_subtitles.py --daemon`
+- Files:
+  - `cli/utils/live_subtitles.py`
+- Git: repo=vault-commander, branch=main, head=158f071
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 01:20 - vaultwares-studio (formerly usd-playground)</strong> <code>verification</code> - Inspected failed L4 Splatfacto job 6aa0e41c900620b5c77e527d: only frames.zip and error.json uploaded; ns-train failed because the older worker did not populate processed/images ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 01:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: Inspected failed L4 Splatfacto job 6aa0e41c900620b5c77e527d: only frames.zip and error.json uploaded; ns-train failed because the older worker did not populate processed/images from the separate input archive. Prepared and validated a corrected self-contained processed_min bundle with transforms.json, cloud.ply as sparse_pc.ply, and all 500 full-resolution images for one explicit L4 retry.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 01:17 - General Tasks</strong> <code>commands</code> - Migrated OVH Docker and containerd roots to /mnt/data, validated 21 containers, Tailnet, VPN containers and API health, removed retired Linkvertise and unused Docker/cache data,...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 01:17 (TZ: Eastern Standard Time)
+  ```
+- Summary: Migrated OVH Docker and containerd roots to /mnt/data, validated 21 containers, Tailnet, VPN containers and API health, removed retired Linkvertise and unused Docker/cache data, bounded journals on both VPSes, and enabled OVH vnstat plus sysstat timers.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 01:17 - General Tasks</strong> <code>code-change</code> - Created and pushed Tech Oracle PR #5 for daily Clopeux Ollama routing; hardened Greencloud shared-tube /api/stream with stream-only known-crawler blocks and conservative per-IP ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 01:17 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created and pushed Tech Oracle PR #5 for daily Clopeux Ollama routing; hardened Greencloud shared-tube /api/stream with stream-only known-crawler blocks and conservative per-IP concurrency/rate controls, verified bot drop and normal request passthrough.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 01:17 - General Tasks</strong> <code>code-change</code> - Created and pushed CPU-only API cleanup PR #87: disabled the unused GPU upscaler path, removed Torch/CUDA/Transformers/Spandrel dependencies from manifests and lockfile, and rem...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Documents\Codex\2026-09-03\c  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 01:17 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created and pushed CPU-only API cleanup PR #87: disabled the unused GPU upscaler path, removed Torch/CUDA/Transformers/Spandrel dependencies from manifests and lockfile, and removed the corresponding CUDA/Torch packages from OVH's running API venv after a successful API health check.
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 01:11 - vault-cacophony</strong> <code>verification</code> - Quick Magpie TTS test (nvidia/magpie_tts_multilingual_357m + nemo-nano-codec, both already in the local cache, no download). It works and is fast: 2.0-2.8x realtime at 22050 Hz ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 01:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Quick Magpie TTS test (nvidia/magpie_tts_multilingual_357m + nemo-nano-codec, both already in the local cache, no download). It works and is fast: 2.0-2.8x realtime at 22050 Hz on cuda:0. Evaluated by TTS->ASR round-trip through nemotron-3.5 --language auto. Results: en and de exact matches; fr 'ravie'->'ravi' only; es punctuation only; code-switched line lost one Spanish word ('entonces'->'entrances'), consistent with the ASR's known English bias rather than necessarily a TTS fault. Language detection correct on all. KEY OPERATIONAL FINDING: passing non-ASCII text as a command-line argument corrupts it - 'El nino pequeno comio una pina...' came back as 'Niekiomia Pin, el Hare, su abuela' and the French accented line was equally mangled. Re-running the identical text via --input with a UTF-8 file fixed both ('El nino pequeno comio una pina en el jardin de su abuel', 'Comme hiver, je prefere les crepes a la chataigne, n'est-ce pas?'). So ALWAYS use --input for accented text; it was console encoding, not the model. Minor: fr3 lost a leading 'Ete' and es3 a trailing 'a', plausibly the ASR head-gap rather than TTS. fr-CA Quebecois line came through well. Caveat recorded that the round-trip conflates TTS and ASR errors; audio delivered to the owner for listening. No code changed. Separately confirmed the three vault-commander subtitle edits survived and were swept into Gemini's commit 158f071 (feat(maxine)) - working tree clean for those files.
+- Commands:
+  - `nemo-speech synthesize --language en-US/fr-FR/es-US/de-DE/fr-CA`
+  - `nemo-speech synthesize --input <utf8 file>`
+  - `nemo-speech transcribe round-trip`
+- Files:
+  - `scratchpad/tts/*.wav`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=17b637f
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 01:03 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>verification</code> - Verified live remote GitHub persistence of commit 158f071 on origin/main via git ls-remote, clean working tree synchronization, and registration of all 9 Maxine commands on main.</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 3.7 Sonnet
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 01:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified live remote GitHub persistence of commit 158f071 on origin/main via git ls-remote, clean working tree synchronization, and registration of all 9 Maxine commands on main.
+- Git: repo=agent-ledger, branch=main, head=0e6a531e
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 01:02 - agent-ledger</strong> <code>commands</code> - Committed and pushed all changes to origin/main on vault-commander (commit 158f071): Maxine SDK command suite, parameter normalization, audio remuxing, directory batching, and v...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 3.7 Sonnet
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 01:02 (TZ: Eastern Standard Time)
+  ```
+- Summary: Committed and pushed all changes to origin/main on vault-commander (commit 158f071): Maxine SDK command suite, parameter normalization, audio remuxing, directory batching, and v1.0.1 bump.
+- Git: repo=agent-ledger, branch=main, head=0e6a531e
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 00:44 - vaultwares-studio</strong> <code>commands</code> - Prepared and submitted one HF Jobs L4 Splatfacto training run from the Sep 8 ZeroGPU DA3 reconstruction: packaged 500 frames plus transforms and cloud.ply seeded as sparse_pc.pl...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 00:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Prepared and submitted one HF Jobs L4 Splatfacto training run from the Sep 8 ZeroGPU DA3 reconstruction: packaged 500 frames plus transforms and cloud.ply seeded as sparse_pc.ply, retained frames.zip in result output, and recorded job 6aa0e41c900620b5c77e527d as SCHEDULING. No retries or polling loop were used.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-09 00:02 - vault-commander</strong> <code>code-change</code> - Wired the ASR findings into the subtitle commands with language auto. FIRST verified the fix reaches the production path: started a test server on spare port 8199 (not the user&#39;...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-09 00:02 (TZ: Eastern Standard Time)
+  ```
+- Summary: Wired the ASR findings into the subtitle commands with language auto. FIRST verified the fix reaches the production path: started a test server on spare port 8199 (not the user's 8123), POSTed the 25.5min file to /v1/audio/transcriptions, got 4111 words / 30 gaps / 75.3s dropped vs the CLI offline 4114/32/81.1s and the OLD streaming 4048/44/119.2s - so the resident-server path uses the fixed Recognizer::recognize. Test server stopped; user's 8123 left untouched. CHANGES: (1) cli/utils/live_subtitles.py - added asr_language, separate from primary_lang, because primary_lang names the .srt and rides on every emitted cue so it must stay a real code; new --asr-language arg defaults to auto and is the only thing passed to the ASR call. (2) cli/Start-LiveSubtitles.ps1 - new -Language param defaulting to auto, passed as --asr-language. (3) cli/Start-BetterSubtitles.ps1 - default model parakeet-tdt -> nemotron-3.5 (23.87 vs 26.19 percent WER and the only model reporting a detected language), default -Language auto, guard so nemotron-en (English-only) does not receive an auto prompt, docstring and param help updated. All three parse clean. END-TO-END VERIFIED: Start-BetterSubtitles -LowMemory on a 45s bilingual clip produced a correct code-switched SRT (English narration -> French clip -> English), 139 words / 13 cues, ASR Model line shows nemotron-3.5. NOT COMMITTED - vault-commander is on branch vw-codex-face-embedding-fix with 58 modified/deleted files of unrelated face-embedding WIP, and both subtitle scripts already carried the prior session's uncommitted changes (the 713-line diff on Start-BetterSubtitles is theirs, not mine). Awaiting the owner's direction on how to branch/commit there.
+- Commands:
+  - `test server on port 8199 + POST /v1/audio/transcriptions`
+  - `Start-BetterSubtitles.ps1 -LowMemory -Separator none`
+  - `python live_subtitles.py --help`
+- Files:
+  - `cli/Start-BetterSubtitles.ps1`
+  - `cli/Start-LiveSubtitles.ps1`
+  - `cli/utils/live_subtitles.py`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=17b637f
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 22:47 - agent-ledger</strong> <code>verification</code> - Validated audio remux positive and negative controls (-NoAudio) on Maxine VideoSuperRes and 4K maxine-upscale using ffprobe media stream probing under real TensorRT GPU conditions.</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 3.7 Sonnet
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 22:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Validated audio remux positive and negative controls (-NoAudio) on Maxine VideoSuperRes and 4K maxine-upscale using ffprobe media stream probing under real TensorRT GPU conditions.
+- Git: repo=agent-ledger, branch=main, head=0e6a531e
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 22:46 - agent-ledger</strong> <code>code-change</code> - Added automatic ffmpeg audio remuxing step to Maxine VideoSuperRes and upscaling pipeline (with -NoAudio override) and registered maxine-videosuperres command; verified both vid...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 3.7 Sonnet
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 22:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added automatic ffmpeg audio remuxing step to Maxine VideoSuperRes and upscaling pipeline (with -NoAudio override) and registered maxine-videosuperres command; verified both video and audio streams preserved.
+- Git: repo=agent-ledger, branch=main, head=0e6a531e
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 22:06 - agent-ledger</strong> <code>verification</code> - Validated all Maxine batch applications with directory input/output, Count limits, LastModified DESC sorting, and ffprobe deep media stream verification under real GPU execution.</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 3.7 Sonnet
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 22:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: Validated all Maxine batch applications with directory input/output, Count limits, LastModified DESC sorting, and ffprobe deep media stream verification under real GPU execution.
+- Git: repo=agent-ledger, branch=main, head=0e6a531e
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 22:05 - agent-ledger</strong> <code>code-change</code> - Updated Maxine batch commands in vw: replaced multi-file input with directory -Input and -Output params, added -Count param to limit processed files, and implemented LastModifie...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 3.7 Sonnet
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 22:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated Maxine batch commands in vw: replaced multi-file input with directory -Input and -Output params, added -Count param to limit processed files, and implemented LastModified DESC sorting.
+- Git: repo=agent-ledger, branch=main, head=0e6a531e
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 21:11 - agent-ledger</strong> <code>code-change</code> - Refactored Maxine SDK commands in vw CLI: removed DLL inspection commands, normalized input/output parameters to -Input and -Output with legacy aliases, documented parameter typ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 3.7 Sonnet
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 21:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Refactored Maxine SDK commands in vw CLI: removed DLL inspection commands, normalized input/output parameters to -Input and -Output with legacy aliases, documented parameter types/lists/requirements, and validated real GPU inference for apps.
+- Git: repo=agent-ledger, branch=main, head=0e6a531e
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 21:10 - vault-commander</strong> <code>code-change</code> - Refactored Maxine SDK in vault-commander: removed 11 DLL inspection commands, normalized input/output parameters to -Input and -Output across all 8 apps, added detailed paramete...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-face-embedding-fix
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 21:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Refactored Maxine SDK in vault-commander: removed 11 DLL inspection commands, normalized input/output parameters to -Input and -Output across all 8 apps, added detailed parameter schemas with type constraints, and verified live GPU inference
+- Git: repo=vault-commander, branch=vw-codex-face-embedding-fix, head=229d3bc
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 20:59 - vault-cacophony</strong> <code>verification</code> - Full suite re-run on the fixed build (all long files now decode offline). DETERMINISM: 155 enspa clips transcribed twice at --concurrency 1 are 155/155 byte-identical, confirmin...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 20:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: Full suite re-run on the fixed build (all long files now decode offline). DETERMINISM: 155 enspa clips transcribed twice at --concurrency 1 are 155/155 byte-identical, confirming --concurrency 4 as the sole variation source; aggregates barely moved so earlier numbers were sound. enspa WER at concurrency 1: auto 23.87, es-US 27.17, parakeet-tdt 26.19, en-US 46.17 (10 empty, 100 percent on spa), parakeet-ctc 55.58. Conclusions unchanged. LONG FILES: VAD segmentation is NOT redundant after the fix - Quebecois whole-file fr-FR 4114 words/81.1s real loss vs VAD 150s 4147 words/64.1s real loss (17.8s warmup); bilingual whole-file auto 2348 words/23.3s vs VAD-segmented 2363 words/12.2s (5.7s warmup). target-s 150 optimum holds. VAD-segmented output byte-identical to pre-fix run, expected since segments were always under the 399.9s threshold. FR-CA: on coverage metrics fr-FR wins the monolingual file (4114/81.1s vs 4089/97.0s, similarity 0.949); on the bilingual file fr-CA beats fr-FR (1621 vs 1484 words) but both trail auto badly. This CONTRADICTS the owner's reading that fr-CA is better on Quebecois - flagged honestly that the metrics measure coverage not correctness and no reference transcript exists for that file so no WER is possible; produced side-by-side transcripts for judgement by reading. Model reports languages=[fr-FR] for both codes. Added docs/transcripts/v2-*.md (3 files). Recommended pipeline documented: vad_segment --target-s 150 --min-silence-ms 100 --threshold 0.7, transcribe at concurrency 1, auto for mixed audio, explicit code when known and single, right context at default. Pushed 17b637f.
+- Commands:
+  - `enspa 5 conditions at --concurrency 1`
+  - `fr-FR/fr-CA/auto on both long files`
+  - `VAD segments at 60/150/240s`
+- Files:
+  - `docs/plurilingual-vad-and-decoder-notes.md`
+  - `docs/transcripts/v2-quebecois-frFR-vs-frCA-vs-vad.md`
+  - `docs/transcripts/v2-bilingual-whole-vs-vad.md`
+  - `docs/transcripts/v2-enspa-ref-auto-es-tdt.md`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=17b637f
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 20:51 - vault-commander</strong> <code>code-change</code> - Implemented 19 Maxine SDK commands under category Maxine SDK in vault-commander (vw CLI) for 8 sample apps and 11 feature/core DLLs with modular scripts, model resolution, inspe...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-face-embedding-fix
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 20:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented 19 Maxine SDK commands under category Maxine SDK in vault-commander (vw CLI) for 8 sample apps and 11 feature/core DLLs with modular scripts, model resolution, inspection, and GPU self-testing
+- Git: repo=vault-commander, branch=vw-codex-face-embedding-fix, head=229d3bc
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 20:46 - vault-commander</strong> <code>plan</code> - Designed implementation plan to add 19 Maxine SDK commands (8 sample apps and 11 feature/core DLLs) under category Maxine SDK in vault-commander</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-face-embedding-fix
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 20:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Designed implementation plan to add 19 Maxine SDK commands (8 sample apps and 11 feature/core DLLs) under category Maxine SDK in vault-commander
+- Git: repo=vault-commander, branch=vw-codex-face-embedding-fix, head=229d3bc
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 20:37 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>verification</code> - Verified Maxine Video Effects SDK v1.2 with real GPU inference test: AigsEffectApp processed sample image using TensorRT models to generate segmented matte artifact</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 20:37 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified Maxine Video Effects SDK v1.2 with real GPU inference test: AigsEffectApp processed sample image using TensorRT models to generate segmented matte artifact
+- Git: repo=vault-monitor, branch=main, head=4141e98
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 20:36 - vault-monitor</strong> <code>commands</code> - Configured NVIDIA Maxine VFX SDK v1.2 globally: linked feature DLLs and 8 sample app exes into VideoFX\bin, set system environment variables (NV_VIDEO_EFFECTS_PATH, VFXSDK_ROOT,...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 20:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Configured NVIDIA Maxine VFX SDK v1.2 globally: linked feature DLLs and 8 sample app exes into VideoFX\bin, set system environment variables (NV_VIDEO_EFFECTS_PATH, VFXSDK_ROOT, VFX_SDK_ROOT, MAXINE_VFX_ROOT, MAXINE_VFX_MODELS), and updated Machine PATH safely
+- Git: repo=vault-monitor, branch=main, head=4141e98
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 18:15 - vaultwares-studio</strong> <code>verification</code> - Verified DA3 ZeroGPU output versus July Splatfacto stages: ZeroGPU produced combined_pcd.ply point-cloud artifacts; July full/split train pipeline produces Gaussian splat.ply on...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 18:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified DA3 ZeroGPU output versus July Splatfacto stages: ZeroGPU produced combined_pcd.ply point-cloud artifacts; July full/split train pipeline produces Gaussian splat.ply only after ns-train and ns-export. Confirmed current ZeroGPU training blocker is CUDA toolchain mismatch, and evaluated in-function build feasibility.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 17:18 - vault-cacophony</strong> <code>code-change</code> - Built and shipped the offline/streaming dispatch fix. Recognizer::recognize (complete-buffer/file path) no longer selects the streaming runner on length alone; over-limit input ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 17:18 (TZ: Eastern Standard Time)
+  ```
+- Summary: Built and shipped the offline/streaming dispatch fix. Recognizer::recognize (complete-buffer/file path) no longer selects the streaming runner on length alone; over-limit input falls through to OfflineRunner which already splits at max_offline_samples_ and snaps cuts to the quietest 100ms window. Streaming deliberately preserved three ways: streaming_recognize (live capture/server streams) untouched and verified via transcribe --stream still logging mode=streaming; Vulkan RNNT route preserved; NEMO_SPEECH_LONGFORM_STREAMING=1 restores old behaviour and reproduces the previous default EXACTLY (4048 words/44 gaps/119.2s). Measured vs previous default: Quebecois 25.5min 4048->4114 words and 119.2s->81.1s dropped; bilingual 11.6min 2332->2348 words and 24.1s->23.3s. Honest caveat: hand-tuned streaming RC3 still edges it on dropped seconds for Quebecois (77.7s vs 81.1s) while recovering fewer words; VAD segmentation now largely redundant. REGRESSION CHECK: 154/155 enspa clips byte-identical; the 1 difference is NOT from this change - running the same new binary twice gives 3 differing clips of 155 and run 2 matches the old build, so --concurrency 4 batch composition varies between runs. IMPORTANT NEW CAVEAT: per-clip results carry ~2 percent run-to-run noise whenever concurrency>1; single-file transcription stays deterministic; the auto-vs-es head-to-head (71 vs 26, 58 ties) is far outside that band and stands. Reverted rnnt_right_context from -1 to default 1 in both pipeline configs since asr.streaming.* is now inert on the file path and -1 only costs live latency (160->320ms step). Archived 58 previous result dirs into scratchpad/marked/ for comparison. Pushed b778515.
+- Commands:
+  - `build.ps1 -Profile server -Flashlight`
+  - `transcribe --stream verification`
+  - `NEMO_SPEECH_LONGFORM_STREAMING=1 escape hatch test`
+  - `155-clip regression + repeat-run noise test`
+- Files:
+  - `NeMo-Speech.cpp/src/asr/recognizer.cpp`
+  - `config/pipelines/multilingual.yaml`
+  - `config/pipelines/english-only.yaml`
+  - `docs/plurilingual-vad-and-decoder-notes.md`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=b778515
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 16:59 - vault-cacophony</strong> <code>verification</code> - ROOT CAUSE FOUND. recognizer.cpp:566 silently swaps the offline full-context runner for the buffered cache-aware streaming runner once input exceeds the encoder positional-embed...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 16:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: ROOT CAUSE FOUND. recognizer.cpp:566 silently swaps the offline full-context runner for the buffered cache-aware streaming runner once input exceeds the encoder positional-embedding budget (exceeds_offline_position_limit). For nemotron-3.5 (hop 160, subsampling 8, causal conv, pos_emb_max_len 5000) the boundary is 399.9s = 6min40s. Only the stderr mode= line reveals which ran. Confirmed empirically: 395s prefix logs mode=offline, 405s logs mode=streaming. Cost measured on the SHARED 0-395s region (identical audio, only 10s appended past threshold): offline 1074 words / 6 gaps / 18.3s dropped vs streaming 1060 words / 7 gaps / 25.0s dropped, similarity 0.924. Ten seconds appended deletes words six minutes earlier. Explains everything: prefix-ladder saturation at 10min (5min offline, all longer prefixes streaming - NOT converging statistics); right-context inert below threshold (RC1/2/3 byte-identical on 5min file and all VAD segments); VAD segmentation helps because segments sit under the limit and decode offline (never was about normalization); isolated cut-outs read fine because seconds long; enspa WER table unaffected (clips 5.8-14.7s). CORRECTION: the 11.6min bilingual runs were mislabelled an offline baseline - at 696s they were streaming, so my earlier 'offline == streaming rc=1 byte-identical' compared streaming with streaming. Also found OfflineRunner::offline_segments_ already splits at the position limit and snaps cuts to the quietest 100ms window (same design as vad_segment.py) but use_streaming diverts long input before OfflineRunner is constructed and is gated on supports_cache_streaming(), so offline-only models like parakeet-tdt get it free while cache-aware nemotron never does. RECOMMENDATION: keep every nemotron ASR call under 399.9s; vad_segment.py --target-s 150 already complies. Pushed dde4b74.
+- Commands:
+  - `straddle test 395s vs 405s prefixes`
+  - `computed threshold from pos_emb_max_len/subsampling/hop`
+- Files:
+  - `NeMo-Speech.cpp/src/asr/recognizer.cpp`
+  - `NeMo-Speech.cpp/src/asr/runner.cpp`
+  - `docs/plurilingual-vad-and-decoder-notes.md`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=dde4b74
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 16:51 - vaultwares-studio</strong> <code>verification</code> - Adapted the July Splatfacto training pipeline into the DA3 ZeroGPU Space, added CPU artifact preparation and GPU training/package callbacks, ran bounded training attempts, and v...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 16:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Adapted the July Splatfacto training pipeline into the DA3 ZeroGPU Space, added CPU artifact preparation and GPU training/package callbacks, ran bounded training attempts, and verified the remaining blocker is CUDA 13 nvcc plus gsplat runtime mismatch; no training artifact was produced.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 16:02 - vaultwares-studio</strong> <code>code-change</code> - Diagnosed GUI black-screen jobs: DA3-Streaming cloud.ply is valid plain XYZ/RGB point cloud, while GaussianSplats3D PLY path expects Gaussian attributes and misreads plain float...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-6
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 16:02 (TZ: Eastern Standard Time)
+  ```
+- Summary: Diagnosed GUI black-screen jobs: DA3-Streaming cloud.ply is valid plain XYZ/RGB point cloud, while GaussianSplats3D PLY path expects Gaussian attributes and misreads plain float positions. Added read_point_cloud_as_splat synthesis (opaque isotropic identity-rotation splats), automatic cached cloud.splat generation in ViewportPanel.reload_scene, UI string, vendor fallback defaults and regression coverage. Exact gui set_job verification rendered imported job to D:/vaultwares-studio-jobs/data/review/sep08/plain-ply-gui-set-job.png. Full test suite: 171 passed. Raw explicit cloud.ply screenshot helper remains unsupported by design; normal GUI path works.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 15:54 - vaultwares-studio</strong> <code>code-change</code> - Imported completed ZeroGPU loop-on high artifact into D:\vaultwares-studio-jobs\data\jobs\zerogpu-img1274-loop-on-v2 with point cloud, pose files, loop report, config, regenerat...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 15:54 (TZ: Eastern Standard Time)
+  ```
+- Summary: Imported completed ZeroGPU loop-on high artifact into D:\vaultwares-studio-jobs\data\jobs\zerogpu-img1274-loop-on-v2 with point cloud, pose files, loop report, config, regenerated transforms.json, and manifest. Updated pipeline job discovery to include and deduplicate external D: jobs; documented importer in README. Fixed importer tests and verified desktop job contract. Full suite now 169 tests passed. Artifact is selectable from gui_app.py job dropdown; no new inference run.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 15:37 - vaultwares-studio</strong> <code>verification</code> - Completed the requested loop-closure-enabled DA3 run through private ZeroGPU Space. Corrected Space CPU resize to honor 672x378 and used durable Gradio event client; uploaded on...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 15:37 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed the requested loop-closure-enabled DA3 run through private ZeroGPU Space. Corrected Space CPU resize to honor 672x378 and used durable Gradio event client; uploaded only IMG_1274.MOV and received artifacts on D. Run completed in 104.859 GPU seconds on 48GB NVIDIA RTX PRO 6000 Blackwell MIG, 500 frames, 90-frame chunks/45 overlap. SALAD loop detector found zero loop pairs, so no loop optimization was applied. Artifact bundle 644,973,065 bytes; full test suite 167 passed. Earlier erroneous 504x280 event run was not used as the result.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 15:19 - vault-cacophony</strong> <code>code-change</code> - RETRACTION: my whole-file feature normalization root cause was WRONG. fe.cpp:477 is gated on normalize_per_feature which comes from the model, and nemotron-3.5 sets asr.preproce...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write, AskUserQuestion
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 15:19 (TZ: Eastern Standard Time)
+  ```
+- Summary: RETRACTION: my whole-file feature normalization root cause was WRONG. fe.cpp:477 is gated on normalize_per_feature which comes from the model, and nemotron-3.5 sets asr.preprocessor.normalize=NA - so that normalization never ran in any of the long-form tests. nemotron-en is also NA; only parakeet-ctc and parakeet-tdt use per_feature. Proved by implementing NEMO_SPEECH_NORM_WINDOW_S (centered-window normalization via prefix sums) and sweeping 10/30/60/150s: all byte-identical to whole-call on the 25.5min file (4131 words/31 gaps/77.7s) because the code is unreachable for that model. What STILL stands: length dependence is real AND deterministic - same file transcribed twice is byte-identical (md5 342A796A), so appending audio genuinely changes earlier transcription; mechanism now unknown again. Monolingual control, right-context sweep, VAD A/B and VAD-segmentation results are direct measurements and unaffected. Kept the knob since it is correct for parakeet models: verified bit-identical when unset across a full rebuild, changes parakeet-tdt output (implementation works) but does not improve it (off 1922 words/644.5s, 30s 1831/676.2s, 60s 1886/648.2s). fr-CA tested: accepted, changes output (0.951 similarity), but WORSE - Quebecois 4102 words/90.4s vs fr-FR 4131/77.7s; catastrophic on the half-English file (1570 words/201.3s); model still reports fr-FR back. BUILD: rebuilt build-cuda with -Profile server -Flashlight after an earlier build.ps1 default run had reconfigured NMT/HTTP/flashlight OFF; user stopped their resident server (PID 29940) to release the ggml-base.dll lock and needs to restart it. Also corrected: D:\vcpkg is NOT a vcpkg checkout (only buildtrees/downloads/packages caches); the real root with installed packages is C:\vcpkg. Pushed b9769fe.
+- Commands:
+  - `build.ps1 -Profile server -Flashlight`
+  - `NEMO_SPEECH_NORM_WINDOW_S sweep`
+  - `determinism double-run check`
+- Files:
+  - `NeMo-Speech.cpp/src/asr/features/fe.cpp`
+  - `docs/plurilingual-vad-and-decoder-notes.md`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=b9769fe
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 14:17 - vaultwares-studio</strong> <code>code-change</code> - Built and published private ZeroGPU Gradio Space clopeux/vw-studio-da3-zerogpu. Implemented focused experimental console with default Gradio theme, JetBrains Mono, top tabs, sta...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 14:17 (TZ: Eastern Standard Time)
+  ```
+- Summary: Built and published private ZeroGPU Gradio Space clopeux/vw-studio-da3-zerogpu. Implemented focused experimental console with default Gradio theme, JetBrains Mono, top tabs, stacked operations workflow, high-quality DA3 preset 672x378/chunk90/overlap45/1800s GPU reservation, CPU video intake/artifact packaging, pinned DA3 Streaming source, loop closure option, and stable-output-only archive policy. Fixed startup dependencies pycolmap/evo and Gradio Video compatibility. HF runtime confirms RUNNING on zero-a10g; authenticated page and /config returned 200 with 19 components and 2 callbacks. No GPU run invoked and no ZeroGPU quota consumed. 23 focused tests passed.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 10:22 - vault-cacophony</strong> <code>code-change</code> - Added scripts/vad_segment.py (Silero-bounded segmentation, cuts at silence midpoints to a target length) and measured it against whole-file at all three right-context settings. ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 10:22 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added scripts/vad_segment.py (Silero-bounded segmentation, cuts at silence midpoints to a target length) and measured it against whole-file at all three right-context settings. KEY: rnnt_right_context stops mattering once input is short - RC1/RC2/RC3 are byte-identical on the 5min bilingual prefix (same md5, 1010 words) and identical at every VAD segment length on both files; they only diverge on long whole-file input (0.90-0.92 pairwise agreement at 11.6min). So RC is a long-input mitigation, not a quality knob, and is redundant after segmentation. French 11.6min: VAD-segmented 2363 words / 4 gaps / 12.2s beats whole-file RC3 2324 / 7 / 15.1s on every metric. Quebecois 25.5min shows a segment-length OPTIMUM once gap time is split into per-segment warmup vs real loss: whole-file RC3 4131 words 77.7s real loss; VAD 60s 25seg 4069 words 63.9s real (32.2s warmup); VAD 150s 11seg 4147 words 64.1s real (17.8s warmup) BEST; VAD 240s 7seg 4099 words 76.1s real (5.9s warmup) - real loss climbs back at 240s toward whole-file, matching the normalization account. Recommended: --target-s 150 --min-silence-ms 100 --threshold 0.7 (bilingual file is 98.8 percent speech and needs the sensitive settings to find silences at all). Also generated docs/transcripts/ with 6 time-aligned comparison files for reading alongside audio, delivered to user. Pushed 13c7e15.
+- Commands:
+  - `scripts/vad_segment.py --target-s 150 --min-silence-ms 100 --threshold 0.7`
+  - `nemo-speech transcribe --asr.streaming.rnnt_right_context 1|2|3`
+- Files:
+  - `scripts/vad_segment.py`
+  - `requirements-vad-segment.txt`
+  - `docs/plurilingual-vad-and-decoder-notes.md`
+  - `docs/transcripts/`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=13c7e15
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 09:13 - vault-cacophony</strong> <code>verification</code> - Root-caused the long-form ASR dropouts. (1) Language-switch hypothesis FALSIFIED: monolingual Quebecois 25.5min drops 44 spans / 119.2s / 7.80 percent of audio / 1.73 per min vs...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write, WebFetch
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 09:13 (TZ: Eastern Standard Time)
+  ```
+- Summary: Root-caused the long-form ASR dropouts. (1) Language-switch hypothesis FALSIFIED: monolingual Quebecois 25.5min drops 44 spans / 119.2s / 7.80 percent of audio / 1.73 per min vs bilingual 11 spans / 3.46 percent / 0.95 per min - nearly 2x worse with no switching. Gaps measure 68-134 percent of file mean RMS and 4 of 5 largest return ordinary French when transcribed in isolation. (2) ROOT CAUSE: fe.cpp:477-501 offline per-feature normalization computes per-mel-bin mean and unbiased variance over EVERY valid frame of the whole call, applied to all frames - so normalization at 3:35 depends on audio at 20:00. Proved behaviourally: words in the first 3 minutes go 513 (5min prefix) to 507 (10/15/20/26min prefixes), similarity 0.937, differences are losses. Saturates at ~10min as statistics converge; matches bisection where the 3:35 span drops 2.96s at 5min prefix and 8.32s at every prefix >=10min. (3) rnnt_right_context=-1 (model max 3) is the best mitigation: French 11->7 gaps 24.1->15.1s, Quebecois 44->31 gaps 119.2->77.7s +83 words; NOT monotonic (right=2 worse than right=1); costs encoder step 160->320ms. Set -1 in both pipeline configs. (4) VAD masking WAS correctly enabled earlier - proved by md5 A/B: VAD-loaded-masking-off is byte-identical to no-VAD, masking-on differs; but masking moves 2 words and ZERO gaps. VAD endpointing byte-identical (streaming-server feature). (5) offline == streaming right=1 byte-identical. Fix direction: segment on silence (VAD) not fixed grid, so each segment gets its own statistics. Pushed 8fb4a2a and 65990af.
+- Commands:
+  - `nemo-speech transcribe --asr.streaming.rnnt_right_context -1`
+  - `prefix bisection 5/10/15/20/26 min`
+  - `md5 A/B of VAD masking`
+- Files:
+  - `docs/plurilingual-vad-and-decoder-notes.md`
+  - `config/pipelines/multilingual.yaml`
+  - `config/pipelines/english-only.yaml`
+  - `NeMo-Speech.cpp/src/asr/features/fe.cpp`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=65990af
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 08:30 - vault-cacophony</strong> <code>code-change</code> - Silero VAD converted and integrated; KenLM and ITN ruled out. The models/silero-vad-v6.2.1.gguf is a genuine silero export but written by vokra-core: vokra.* metadata namespace ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write, WebFetch
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 08:30 (TZ: Eastern Standard Time)
+  ```
+- Summary: Silero VAD converted and integrated; KenLM and ITN ruled out. The models/silero-vad-v6.2.1.gguf is a genuine silero export but written by vokra-core: vokra.* metadata namespace and sr16k.encoder.0.reparam_conv.* tensor names, while silero_vad.cpp:285 requires general.architecture=vad and the loader wants encoder.0.conv.weight plus vad.* hparams - so a metadata-only fix is insufficient. Regenerated via repo convert_model.py with silero-vad==6.2.0 installed --no-deps (existing torch 2.8.0+cu129 untouched) as silero-v6.2.0-nemo.gguf, 16kHz head, 1.24MB, verified vad=on. Wired into both config/pipelines yaml with mask_enable false, documenting that masking flips RNNT from mode=offline to mode=streaming. KEY NEGATIVE: VAD masking does NOT fix long-form dropouts - gap positions/durations identical to the centisecond (4.96s at 6:52 etc), words 2332->2336. Cutting 6:51-6:58 out and transcribing alone returns a full French sentence, proving the model can read the span but does not in situ = long-form decoding defect. KenLM blocked: recognizer.cpp:112 gates flashlight on CtcModel cast, only CTC model in index.json is parakeet-ctc-1.1b (English, measured 55.58 percent). es.arpa.trie.bin IS a KenLM binary (kheafield mmap magic); flashlight builds its trie in memory from lexicon at load - the extra 21GB arpa.bin is NOT needed. ITN blocked on Windows: CMakeLists.txt:136 refuses NEMO_SPEECH_WITH_NORM, cache OFF. fr.arpa.bin still downloading (0 bytes, .part at 6.2G). Wrote docs/plurilingual-vad-and-decoder-notes.md, pushed 347dff4.
+- Commands:
+  - `convert_model.py silero --outfile silero-v6.2.0-nemo.gguf`
+  - `uv pip install --no-deps silero-vad==6.2.0`
+  - `nemo-speech transcribe --vad-model --vad-masking`
+- Files:
+  - `docs/plurilingual-vad-and-decoder-notes.md`
+  - `config/pipelines/multilingual.yaml`
+  - `config/pipelines/english-only.yaml`
+  - `NeMo-Speech.cpp/models/silero-v6.2.0-nemo.gguf`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=347dff4
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 06:52 - vault-cacophony</strong> <code>verification</code> - Segmentation audit. Key correction: the step-2 WER table never used segmentation - it transcribed the 155 clips whole - so boundary damage cannot explain 24 percent. ffmpeg exon...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 06:52 (TZ: Eastern Standard Time)
+  ```
+- Summary: Segmentation audit. Key correction: the step-2 WER table never used segmentation - it transcribed the 155 clips whole - so boundary damage cannot explain 24 percent. ffmpeg exonerated: 70 French segments reassemble bit-identical to source, 0 frames lost. Real segmentation cost: 70 head gaps averaging 0.83s vs one 0.64s gap whole-file, ~58s dead head, words 2332->2309; no merging/overlap logic exists, so a word straddling a hard cut is decoded twice or not at all, producing repeats and omissions together (2/69 boundaries repeat outright). Multi-second drops (6:52, ~5s) are present in the WHOLE-FILE run on non-silent audio (RMS 3400) so they are model-side, not segmentation. Found a confound I introduced: NEMO_SPEECH_RELPOS_MAX_Q=512 routes q_len<=512 to fused attention, so 10s segments took fused while the 696s file took cuBLAS; disabling changes 10/70 segments with cuBLAS better every time - the gate is NOT accuracy-neutral offline, contrary to the handoff. Corrected step 2 with fused disabled: auto 23.87, es-US 27.19, tdt 26.19, en-US 46.23, parakeet-ctc 55.58 (100 percent on spa, not a candidate). Head-to-head auto 71 wins vs es-US 26, 58 ties - WER disagrees with the qualitative read that es is better. Number formatting confirmed ASR-side not scorer, but only 5 digit tokens in 4999 words. Step 1 survives: identical segmentation gave 58.3 vs 12.9 percent empty on enspa vs French. Wrote docs/plurilingual-segmentation-audit.md, pushed to vw-claude/plurilingual-eval.
+- Commands:
+  - `md5 compare of resegmented PCM`
+  - `NEMO_SPEECH_RELPOS_MAX_Q=0 nemo-speech transcribe`
+  - `evaluate_openasr.py --normalizer basic`
+- Files:
+  - `docs/plurilingual-segmentation-audit.md`
+  - `docs/plurilingual-step1-results.md`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=b5171ef
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 04:01 - vaultwares-studio</strong> <code>verification</code> - Downloaded completed corrected A10G loop-off artifact to D and inspected it without extraction. Job ran 444 seconds total (422 worker including archive), produced 500 finite pos...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 04:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Downloaded completed corrected A10G loop-off artifact to D and inspected it without extraction. Job ran 444 seconds total (422 worker including archive), produced 500 finite poses, 500 per-frame depth/confidence results, 15.7MB combined PCD and valid rotations. Archive diagnosis confirmed: 3.8GB archive contains 4.6GB, including 1.47GB raw unaligned and 2.48GB raw aligned DA3 scratch; corrected future retention removes only that scratch. ZeroGPU high-quality candidate token calculation: 672x378, chunk90 = 116640 tokens/window, twice the 24GB benchmark. No ZeroGPU Space created or invoked.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 03:37 - vaultwares-studio</strong> <code>verification</code> - Mapped planned ZeroGPU Gradio DA3 Space boundary without creating or changing a Space: CPU handles intake, rotation, ffmpeg extraction, sharpness selection, resize, packaging an...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 03:37 (TZ: Eastern Standard Time)
+  ```
+- Summary: Mapped planned ZeroGPU Gradio DA3 Space boundary without creating or changing a Space: CPU handles intake, rotation, ffmpeg extraction, sharpness selection, resize, packaging and artifact export; GPU call handles DA3 inference, chunk alignment, SALAD loop detection, SIM3 optimization, depth/confidence and PCD. Confirmed official ZeroGPU large has 48GB, custom GPU durations and module-level CUDA placement; Space build can preload public Hub weights. Initial candidate: 672x378, chunk 60, overlap 30. No model inference or Space API write occurred.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 03:21 - vaultwares-studio</strong> <code>verification</code> - Researched ZeroGPU/Gradio viability for requested dedicated DA3 Space. Official current docs: ZeroGPU is Gradio-only; real GPU is allocated only inside @spaces.GPU and released ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 03:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Researched ZeroGPU/Gradio viability for requested dedicated DA3 Space. Official current docs: ZeroGPU is Gradio-only; real GPU is allocated only inside @spaces.GPU and released after the decorated call; module-level CUDA placement uses emulation and does not create an always-on GPU. Current account tiers show 40 minutes daily for PRO, not a persistent 30-minute GPU. CPU archive after a bounded GPU pass is viable; full multi-minute DA3 streaming remains an uncertain ZeroGPU fit and Splatfacto training remains a Jobs workload. No Space was created, configured, uploaded or invoked.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 03:18 - vaultwares-studio</strong> <code>code-change</code> - Diagnosed slow post-inference archive in active A10G DA3 comparison: old worker retained upstream raw aligned/unaligned chunk scratch (upstream documents ~5GB at 300 frames) and...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 03:18 (TZ: Eastern Standard Time)
+  ```
+- Summary: Diagnosed slow post-inference archive in active A10G DA3 comparison: old worker retained upstream raw aligned/unaligned chunk scratch (upstream documents ~5GB at 300 frames) and recompressed already-compressed NPZ outputs. Updated future worker configuration to delete raw scratch after stable outputs and archive retained products with ZIP_STORED. Stable retained artifacts remain poses, intrinsics, PCD, loop report, per-frame depth/confidence/debug, config, input ordering, logs and partial failure output. Five focused tests passed. Active job still runs old overlay; user decision required to let it finish or cancel/relaunch.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 03:14 - vaultwares-studio</strong> <code>code-change</code> - Compared current A10G comparison job against successful July/August HF jobs. All successes and corrected current job use spaceId with dockerImage null, same 1406-byte bootstrap ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 03:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Compared current A10G comparison job against successful July/August HF jobs. All successes and corrected current job use spaceId with dockerImage null, same 1406-byte bootstrap command contract, and the appropriate DA3 Docker Space. Failed A10G used dockerImage URL and failed before execution. Removed unused obsolete Space-to-dockerImage helper from main HF runner; its actual execution path already delegates Space URLs to HfApi.run_job. Added regression coverage for Space URL delegation. 12 focused tests passed. Corrected A10G job 6a9fb487e686246ca69aa2c7 is RUNNING.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 03:12 - vaultwares-studio</strong> <code>code-change</code> - Compared current A10G comparison job against successful July/August HF jobs. All successes and corrected current job use spaceId with dockerImage null, same 1406-byte bootstrap ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 03:12 (TZ: Eastern Standard Time)
+  ```
+- Summary: Compared current A10G comparison job against successful July/August HF jobs. All successes and corrected current job use spaceId with dockerImage null, same 1406-byte bootstrap command contract, and the appropriate DA3 Docker Space. Failed A10G used dockerImage URL and failed before execution. Removed unused obsolete Space-to-dockerImage helper from main HF runner; actual execution delegates Space URLs to HfApi.run_job. Added regression coverage for Space URL delegation. 12 focused tests passed.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 03:09 - vaultwares-studio</strong> <code>commands</code> - At explicit user request, cancelled queued L4 job 6a9fae95e686246ca69aa23c after verifying it remained SCHEDULING. HF confirmed final CANCELED state. No GPU runtime began. Corre...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 03:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: At explicit user request, cancelled queued L4 job 6a9fae95e686246ca69aa23c after verifying it remained SCHEDULING. HF confirmed final CANCELED state. No GPU runtime began. Corrected A10G replacement job remains active.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 03:09 - vaultwares-studio</strong> <code>commands</code> - Diagnosed A10G job 6a9fb3a5e686246ca69aa2b1 image pull failure before compute: custom adapter sent Docker Space URL as dockerImage, causing OCI latest NotFound. Repaired adapter...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 03:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Diagnosed A10G job 6a9fb3a5e686246ca69aa2b1 image pull failure before compute: custom adapter sent Docker Space URL as dockerImage, causing OCI latest NotFound. Repaired adapter to submit Docker Spaces as HF Jobs spaceId. Verified payload locally with five tests, then submitted image-fix replacement A10G loop-off job 6a9fb487e686246ca69aa2c7 at user-authorized 90-minute limit. Live API confirms spaceId clopeux/vw-studio-da3-gs, dockerImage null, SCHEDULING/Pulling container image. Original L4 job remains queued untouched; no loop-on job submitted.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 03:06 - vaultwares-studio</strong> <code>commands</code> - At explicit user instruction, submitted a separate loop-off DA3 comparison on a10g-small without cancelling queued L4 job. A10G job 6a9fb3a5e686246ca69aa2b1 has passed scheduler...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 03:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: At explicit user instruction, submitted a separate loop-off DA3 comparison on a10g-small without cancelling queued L4 job. A10G job 6a9fb3a5e686246ca69aa2b1 has passed scheduler allocation and is pulling the image; L4 job remains queued. Fixed alternate-run status selection so it reads its own record; no submission behavior changed. Maximum A10G compute cost is USD1.50 for the approved 90-minute backend timeout. Three focused tests passed.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 03:05 - vaultwares-studio</strong> <code>commands</code> - At explicit user direction, left queued L4 loop-off job 6a9fae95e686246ca69aa23c untouched and submitted a separate identical loop-off DA3 comparison on a10g-small: 6a9fb3a5e686...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 03:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: At explicit user direction, left queued L4 loop-off job 6a9fae95e686246ca69aa23c untouched and submitted a separate identical loop-off DA3 comparison on a10g-small: 6a9fb3a5e686246ca69aa2b1. Both use 90-minute backend timeouts and no worker deadline; a10g maximum is USD1.50 at published USD1/hour. No loop-on job submitted. Local HF cache, Xet, temp, staging, logs and downloads remain constrained to D. Four focused tests passed.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 03:03 - vaultwares-studio</strong> <code>verification</code> - Inspected queued first DA3 job after user asked about scheduler wait. HF reports only SCHEDULING / waiting for L4 hardware; it provides no ETA or queue position. Confirmed VW_BO...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-6
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 03:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: Inspected queued first DA3 job after user asked about scheduler wait. HF reports only SCHEDULING / waiting for L4 hardware; it provides no ETA or queue position. Confirmed VW_BOOTSTRAP is 1,406 bytes and only stages inputs/outputs; DA3 code is in worker.zip. Prepared runtime client uses D drive for HF hub/Xet/assets/temp/downloads and now supports explicit 90-minute job timeout. No cancellation or alternate submission made; replacement hardware choice awaits user direction.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 03:02 - vault-cacophony</strong> <code>verification</code> - Ran plurilingual steps 1 and 2 on branch vw-claude/plurilingual-eval (pushed to origin, 3 commits). Added --strip-apostrophes to evaluate_openasr.py alongside --normalizer. Step...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 03:02 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ran plurilingual steps 1 and 2 on branch vw-claude/plurilingual-eval (pushed to origin, 3 commits). Added --strip-apostrophes to evaluate_openasr.py alongside --normalizer. Step 1: spliced 155 enspa_dev clips in TSV order into one 35.9min file, segmented at 5/10/20/30s, nemotron-3.5 --language auto. languages empty on 58.3 percent of 10s segments and FLAT 49.7-58.3 percent across all window sizes - no sweet spot. Empty runs up to 9 segments (90s at 10s, 180s at 20s). Mistags pt-PT, vi-VN, sl-SI, unk; Spanish tag splits 36 es-ES vs 13 es-US so a router keyed on es-US misses most Spanish. Step 2 WER (basic normalizer, as-is/no-apostrophe): auto 23.99/24.10, es-US 27.40/27.38, en-US 45.61/46.36 (9 empty preds, 100 percent WER on the 4 spa clips), parakeet-tdt 26.15/26.14. auto is BEST, inverting the routing premise. Apostrophe stripping changes everything by <=0.75pp - does not matter here. Conclusion: do not build step 3 per-segment routing; use --language auto. Also transcribed French Girl Reacts mp3 (11.6min, no reference so no WER): only 12.9 percent empty, whole-file [en-US,fr-FR], 10s timeline tracks narration vs clips correctly - so failure is specific to intra-sentential switching, not detection generally. Wrote docs/plurilingual-step1-results.md and docs/french-reacts-transcript.md.
+- Commands:
+  - `ffmpeg concat + segment`
+  - `nemo-speech.exe transcribe --language auto --format json`
+  - `evaluate_openasr.py --normalizer basic --strip-apostrophes`
+  - `git push origin vw-claude/plurilingual-eval`
+- Files:
+  - `docs/plurilingual-step1-results.md`
+  - `docs/french-reacts-transcript.md`
+  - `docs/HANDOFF-plurilingual.md`
+  - `scripts/evaluate_openasr.py`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=ec36e64
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 02:44 - vaultwares-studio</strong> <code>commands</code> - Submitted only approved DA3 loop-off job 6a9fae95e686246ca69aa23c on L4, confirmed backend timeout 5400 seconds per latest user instruction. Removed worker cutoff, disabled auto...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-6
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 02:44 (TZ: Eastern Standard Time)
+  ```
+- Telemetry:
+  - Flags: vw_state=@{variant=loop-off; overlaysApplied=System.Object[]; submissionRecord=D:/vaultwares-studio-jobs/data/review/sep08/da3-loop-comparison/loop-off/submission.json; resume=; routerCategories=System.Object[]; estimate=; protocolsSelected=System.Object[]; interview=; state=SCHEDULING; approval=First job only, 90-minute backend timeout, no worker deadline, D drive local HF storage; jobId=6a9fae95e686246ca69aa23c}
+- Summary: Submitted only approved DA3 loop-off job 6a9fae95e686246ca69aa23c on L4, confirmed backend timeout 5400 seconds per latest user instruction. Removed worker cutoff, disabled automatic second-job submission and retries, verified all local HF/Xet/cache/temp/artifact paths resolve to D. Input/code uploaded to private dataset; latest status SCHEDULING waiting for hardware. USD1.20 maximum compute for first job at USD0.80/hour. Four targeted tests passed. Second job requires user instruction.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 02:32 - vault-cacophony</strong> <code>code-change</code> - Built the normalizer selection the handoff&#39;s step 2 needs. scripts/evaluate_openasr.py now takes --normalizer english|basic (default english, so existing English runs are byte-i...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 02:32 (TZ: Eastern Standard Time)
+  ```
+- Summary: Built the normalizer selection the handoff's step 2 needs. scripts/evaluate_openasr.py now takes --normalizer english|basic (default english, so existing English runs are byte-identical); load_openasr_components returns the resolved path and score_records takes a keyword-only normalizer_path so methodology.normalizer reports what actually ran. Motivation measured on real data: 137 of 155 enspa_dev references normalize differently between the two, and EnglishTextNormalizer rewrites the English half of a code-switched sentence while leaving Spanish raw (twelve->12 but cuatro and ciento cincuenta untouched; English filler uh dropped, Spanish fillers kept), biasing the en-pinned vs es-pinned comparison. Added 2 regression tests (4 total pass). Verified end-to-end on all 155 real rows under both normalizers, identity manifest scores 0.0 WER both ways. Documented in docs/openasr-evaluation.md new 'Normalizer selection' section. Also corrected docs/HANDOFF-plurilingual.md: convo_id is constant (=1) so it is NOT a splicing key -- one conversation, TSV row order is the ordering key (owner confirmed by ear); step 2 now says pass --normalizer basic. Working tree only, nothing committed.
+- Commands:
+  - `python -m unittest tests.test_openasr_evaluation`
+  - `evaluate_openasr.py --input enspa_identity.jsonl --normalizer basic`
+- Files:
+  - `scripts/evaluate_openasr.py`
+  - `tests/test_openasr_evaluation.py`
+  - `docs/openasr-evaluation.md`
+  - `docs/HANDOFF-plurilingual.md`
+- Git: repo=vault-cacophony, branch=main, head=a154428
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 02:24 - vaultwares-studio</strong> <code>code-change</code> - Prepared offline DA3-Streaming loop-off/on comparison for supplied 149-second clip: 500 identical selected frames, 210MB archive, hashed worker overlay, SALAD checkpoint staging...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-6
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 02:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Prepared offline DA3-Streaming loop-off/on comparison for supplied 149-second clip: 500 identical selected frames, 210MB archive, hashed worker overlay, SALAD checkpoint staging fix, retained partial artifacts and process-group timeout tests. Verified current L4 price USD0.80/hour and existing Space source SHA with one read-only lookup. Expected total USD0.30-0.60, maximum compute USD0.80 for two sequential 30-minute jobs, no retries or training. Thirteen focused tests passed. Plan awaits explicit user greenlight; no uploads, inference, jobs or deployment launched.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 02:15 - vault-cacophony</strong> <code>verification</code> - Picked up docs/HANDOFF-plurilingual.md. Verified test material and tooling before starting step 1. Two material corrections to the handoff: (1) convo_id in enspa_dev/metadata.ts...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 02:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Picked up docs/HANDOFF-plurilingual.md. Verified test material and tooling before starting step 1. Two material corrections to the handoff: (1) convo_id in enspa_dev/metadata.tsv is constant (=1) for all 155 rows, so it is NOT a splicing key -- splicing yields exactly one 35.9-min file, ordered only by TSV row order; (2) scripts/evaluate_openasr.py hardcodes Whisper EnglishTextNormalizer with no CLI override (only --input/--output), so step 2's plan to score es-pinned and code-switched output with the existing scorer would push Spanish text through English spelling/contraction/number rules -- needs a BasicTextNormalizer option before step 2 is meaningful. Confirmed: 155 clips match metadata 1:1, 2 speakers (77/78), 151 rows enspa + 4 spa, config/pipelines holds english-only.yaml and multilingual.yaml. No code changed.
+- Commands:
+  - `awk over metadata.tsv`
+  - `grep -n Normalizer scripts/evaluate_openasr.py`
+- Files:
+  - `docs/HANDOFF-plurilingual.md`
+  - `scripts/evaluate_openasr.py`
+  - `G:/OpenASR/Multilingual/enspa_dev/metadata.tsv`
+- Git: repo=vault-cacophony, branch=main, head=a154428
+
+</details>
+
+<details>
+<summary><strong>2026-09-08 02:10 - vault-cacophony</strong> <code>handoff</code> - Wrote docs/HANDOFF-plurilingual.md for a fresh session. Records owner corrections that override earlier repo docs: Ollama is not viable for translation (1B models cannot transla...</summary>
+
+- Kind: handoff
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): PowerShell, Bash, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-08 02:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Wrote docs/HANDOFF-plurilingual.md for a fresh session. Records owner corrections that override earlier repo docs: Ollama is not viable for translation (1B models cannot translate, 7-8B do not fit beside ASR on 12GB, leaving only the 3-4B band which is Riva) and the live overlay's default -TranslateEngine local should become riva; deep-translator was always offline-only so the earlier live-viability question was malformed, though its HTML-Error-500-as-translation behaviour still needs a guard; the English pivot through Riva is a fallback not the plan because it compounds errors - one bad ASR word becomes a wrong English word becomes a wrong target sentence, so it should not be assumed on dirty audio; non-English live translation may be out of reach on this hardware by any considered route and the real answer would be an OpenNMT-class stack which is out of scope; config/server.example.yaml and the asymmetric CTC geometry 3.84/0.16 it carries were written quickly without tests and are NOT a baseline, and config/pipelines/*.yaml inherited that caveat; nemotron-3.5 is the default for everything. Verified the test material: enspa_dev has 155 clips totalling 35.9 min WITH metadata.tsv giving reference transcripts, speaker labels and convo_id, so WER on genuinely intra-sentence code-switched audio is measurable and diarization is scoreable - the sample transcript switches mid-sentence with no pause, which my earlier synthesized hard-cut test does not represent, so the 6/8 detection result must be re-measured before it is trusted. Also present: French Girl Reacts mp3 (11.6 min, en+fr), quebecois vs francais mp3 (25.5 min, fr with two accents), and an fr-CA Common Voice-style set. Next
+- Files:
+  - `docs/HANDOFF-plurilingual.md`
+  - `docs/pipeline-reconciliation.md`
+  - `config/pipelines/english-only.yaml`
+  - `config/pipelines/multilingual.yaml`
+- Git: repo=vault-cacophony, branch=main, head=a154428
+
+</details>
+
+<details>
 <summary><strong>2026-09-08 00:42 - vault-cacophony</strong> <code>verification</code> - Pipeline reconciliation research + configs. KEY FINDINGS, all measured. (1) LANGUAGE DETECTION EXISTS: nemotron-3.5 --language auto returns a &#39;languages&#39; field; parakeet-tdt ret...</summary>
 
 - Kind: verification
@@ -64,7 +1711,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-07 05:10 - vaultwares-studio (formerly usd-playground)</strong> <code>code-change</code> - Continued native USD and camera-path implementation. Added native ParticleField3DGaussianSplat export, persistent custom/retrace/orbit camera paths with USD and ns-render parity...</summary>
+<summary><strong>2026-09-07 05:10 - vaultwares-studio</strong> <code>code-change</code> - Continued native USD and camera-path implementation. Added native ParticleField3DGaussianSplat export, persistent custom/retrace/orbit camera paths with USD and ns-render parity...</summary>
 
 - Kind: code-change
 - Actor: python tools/export_native_scene.py --job data/jobs/local-run-20260803-182305 --output data/review/sep07/native-stream
@@ -91,7 +1738,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-07 04:57 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>verification</code> - Confirmed push verification gate: commit 4141e98 persisted on origin/main, live API and browser verified</summary>
+<summary><strong>2026-09-07 04:57 - vault-monitor</strong> <code>verification</code> - Confirmed push verification gate: commit 4141e98 persisted on origin/main, live API and browser verified</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -686,7 +2333,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-06 01:53 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Replace blue with rust in bar charts, format context switches axis and badge, raise outlier threshold to 40k lines, analyze duplicate commits</summary>
+<summary><strong>2026-09-06 01:53 - agent-ledger</strong> <code>code-change</code> - Replace blue with rust in bar charts, format context switches axis and badge, raise outlier threshold to 40k lines, analyze duplicate commits</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -1431,7 +3078,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-04 07:00 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares &#226; Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares &#226; Project Rename Refactoring (Phase 5), VaultWares &#226; Project Rename Refactoring (Phase 5 PR Workflow), VaultWares &#226; System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>commands</code> - Addressed PRs 1, 19, 14; cleansed agent-ledger erasing video-depth-anything and pre-March 2026 events; post-dated March 1-10 events to March 11 official launch date; pruned all ...</summary>
+<summary><strong>2026-09-04 07:00 - General Tasks</strong> <code>commands</code> - Addressed PRs 1, 19, 14; cleansed agent-ledger erasing video-depth-anything and pre-March 2026 events; post-dated March 1-10 events to March 11 official launch date; pruned all ...</summary>
 
 - Kind: commands
 - Actor: AI Agent
@@ -7959,825 +9606,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Summary: Recorded that the localhost Python-server reveal fallback is to be removed after the Firefox native-host route is proven working.
 - Git: repo=python-zipper, branch=main, head=db797d4
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 03:59 - vault-cacophony</strong> <code>code-change</code> - Full-duplex turn loop working end to end. Built audiocpp_cli from source with personaplex (7 loaders incl both VADs); spec resolves only via cwd=audio.cpp, --model-spec-override...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Write, Edit
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 03:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Full-duplex turn loop working end to end. Built audiocpp_cli from source with personaplex (7 loaders incl both VADs); spec resolves only via cwd=audio.cpp, --model-spec-override does not substitute. Discovered PersonaPlex is Moshi-style lockstep: output length == input length, it talks OVER its input and self-endpoints. So inputs are padded with -ReplyWindow silence and outputs trimmed with --skip = input duration to discard the overlapped region; without skip, turns grew unbounded (10.5/22.3/33.0/43.5s). Fixed over-aggressive trimming per user feedback: threshold -50 to -58 dB, margin 0.15 to 0.40s, added truncated flag when tail<=2 frames, ReplyWindow default 12 to 25s. Verified: 6 turns, no truncation, mean latency 0.38s. Personas confirmed working (agent introduced itself as Desmond, stayed in character); brevity instruction eliminates truncation. Transcribed the agents' conversation with our own nemotron ASR (16 cues) to verify. KEY LIMITATION FOUND: no memory between turns since each turn is a fresh CLI invocation - argues for resident server session. Added scripts/trim_speech.py.
-- Commands:
-  - `.\scripts\Start-Conversation.ps1 -Seed seed.wav -Turns 6 -AName MARGOT -BName DESMOND`
-  - `.\scripts\Start-SubtitlesAudioCpp.ps1 -TargetDir conversation.wav -NoSeparate`
-  - `python scripts/trim_speech.py --in raw.wav --out turn.wav --skip 6.0 --json`
-- Files:
-  - `scripts/Start-Conversation.ps1`
-  - `scripts/trim_speech.py`
-  - `scripts/conversation_tags.py`
-  - `ROADMAP.md`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 03:32 - vault-cacophony</strong> <code>code-change</code> - Full-duplex step 1. Identified PersonaPlex (--family personaplex, --task s2s, Moshi-style full-duplex S2S with Mimi tokenization, 18 packaged voice prompts) as the model the rep...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Write, Edit, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 03:32 (TZ: Eastern Standard Time)
-  ```
-- Summary: Full-duplex step 1. Identified PersonaPlex (--family personaplex, --task s2s, Moshi-style full-duplex S2S with Mimi tokenization, 18 packaged voice prompts) as the model the repo was named around. Downloaded personaplex-7b-v1-q4_k.gguf (7.86GB) to audio.cpp/models/PersonaPlex-GGUF. BLOCKER FOUND: vendored audiocpp_cli.exe (Aug 18) registers 50 loaders and lacks personaplex; source (Aug 20, src/models/personaplex/) has it. Building audio.cpp from source: CUDA release, custom model set personaplex,nemotron_asr,parakeet_tdt,demucs,sortformer_diar, sm_86. First attempt failed configure because silero_vad is not a selectable model target (plain add_library, always built); htdemucs is an alias of demucs. Configure now succeeds. Wrote scripts/Start-Conversation.ps1 (turn-alternating two-agent driver, file-based routing, per-turn wav+text, stitched conversation.wav, -Play monitor via System.Media.SoundPlayer) and scripts/conversation_tags.py (turns -> tag store with speaker+voice tracks as diarization ground truth). Updated ROADMAP.md with the model facts and 6-step order (build, turn loop, monitor, endpointing, turn-taking, overlap last). Key constraint: Q4_K is 7.86GB so two resident instances do NOT fit 12GB.
-- Commands:
-  - `hf download audio-cpp/audio.cpp-gguf --include PersonaPlex-GGUF/personaplex-7b-v1-q4_k.gguf`
-  - `audiocpp_cli.exe --list-loaders`
-  - `.\scripts\build_windows.ps1 -Preset windows-cuda-release -Target audiocpp_cli -ModelSet custom -Models personaplex,nemotron_asr,parakeet_tdt,demucs,sortformer_diar -CudaArchitectures 86`
-- Files:
-  - `ROADMAP.md`
-  - `scripts/Start-Conversation.ps1`
-  - `scripts/conversation_tags.py`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 03:30 - python-zipper</strong> <code>general</code> - Recorded Firefox-only scope for the downloaded-file reveal repair; Chromium compatibility is out of scope.</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 03:30 (TZ: Eastern Standard Time)
-  ```
-- Summary: Recorded Firefox-only scope for the downloaded-file reveal repair; Chromium compatibility is out of scope.
-- Git: repo=python-zipper, branch=main, head=db797d4
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 03:29 - python-zipper</strong> <code>general</code> - Recorded native-host scope: reveal any absolute Windows path supplied by the authorized extension.</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 03:29 (TZ: Eastern Standard Time)
-  ```
-- Summary: Recorded native-host scope: reveal any absolute Windows path supplied by the authorized extension.
-- Git: repo=python-zipper, branch=main, head=db797d4
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 03:19 - python-zipper</strong> <code>general</code> - Recorded that downloaded-file action must reveal and select the file in Windows File Explorer, not launch its associated application.</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 03:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: Recorded that downloaded-file action must reveal and select the file in Windows File Explorer, not launch its associated application.
-- Git: repo=python-zipper, branch=main, head=db797d4
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 03:10 - memories</strong> <code>documentation</code> - Consolidated new shared-tube production-repair and vault-explorer registry-launch rollouts into durable agent memory; rebuilt compact v1 summary and preserved ad-hoc ledger guid...</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\.codex\memories  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 03:10 (TZ: Eastern Standard Time)
-  ```
-- Summary: Consolidated new shared-tube production-repair and vault-explorer registry-launch rollouts into durable agent memory; rebuilt compact v1 summary and preserved ad-hoc ledger guidance.
-- Git: repo=memories, branch=main, head=f68633d
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 03:06 - python-zipper</strong> <code>verification</code> - Triaged the Firefox downloaded-file launch defect, recorded native-host/server evidence, and began required requirements interview.</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 03:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Triaged the Firefox downloaded-file launch defect, recorded native-host/server evidence, and began required requirements interview.
-- Git: repo=python-zipper, branch=main, head=db797d4
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 02:51 - vault-cacophony</strong> <code>documentation</code> - Wrote ROADMAP.md from user&#39;s brain dump: full-duplex pipeline as current focus (two audiocpp servers over HTTP PCM, avoiding the VB-CABLE/Voicemeeter routing failure documented ...</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Write, Edit, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 02:51 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wrote ROADMAP.md from user's brain dump: full-duplex pipeline as current focus (two audiocpp servers over HTTP PCM, avoiding the VB-CABLE/Voicemeeter routing failure documented in D:\mini-omni\HANDOFF.md), three ASR pipelines (#1 multilingual code-switching long-form, #2 real-time with srt/langdetect/diarization priorities, #3 experimental SSM+MHA linear-scaling architecture), features have/to-develop, per-word confidence section, foundations. Named the terminology the user asked about: ASR error correction / generative error correction (GER), n-best-LM rescoring, punctuation+capitalization restoration (PnC), inverse text normalization (ITN); far/near-field via DRR and C50. Connected the nsys launch-bound finding (18507 cudaStreamSynchronize calls, median 4.5us, 1.6% of wall in kernels) to the single-GPU full-duplex constraint. Corrected stale dual-GPU claims in README.md and Start-SubtitlesGgml.ps1 after user removed the RTX 2060.
-- Commands:
-  - `audiocpp_server.exe --help`
-  - `nvidia-smi --query-gpu=index,name,memory.total --format=csv`
-- Files:
-  - `ROADMAP.md`
-  - `README.md`
-  - `scripts/Start-SubtitlesGgml.ps1`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-24 18:57 - vault-explorer</strong> <code>code-change</code> - Restored --prioritize-player in the Vault Explorer video context-menu command after Node plus Electron CLI routing omitted it; reapplied and verified the exact registry value an...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-24 18:57 (TZ: Eastern Standard Time)
-  ```
-- Summary: Restored --prioritize-player in the Vault Explorer video context-menu command after Node plus Electron CLI routing omitted it; reapplied and verified the exact registry value and parser/regression checks.
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-24 18:02 - vault-explorer</strong> <code>code-change</code> - Corrected Vault Explorer context-menu registry commands to invoke node.exe with node_modules/electron/cli.js and the checkout path, matching npm run start; reapplied and verifie...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-24 18:02 (TZ: Eastern Standard Time)
-  ```
-- Summary: Corrected Vault Explorer context-menu registry commands to invoke node.exe with node_modules/electron/cli.js and the checkout path, matching npm run start; reapplied and verified all three registry entries.
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-24 17:47 - vault-explorer</strong> <code>code-change</code> - Updated Vault Explorer context-menu registry entries to launch the local Electron source command used by npm run start; applied and verified all three registry values.</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5.6
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-24 17:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Updated Vault Explorer context-menu registry entries to launch the local Electron source command used by npm run start; applied and verified all three registry values.
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-24 16:18 - shared-tube</strong> <code>code-change</code> - Committed and pushed shared-tube rebuild/admin fixes and vaultwares-api GreenCloud rebuild dispatch; verified live deployment status and services.</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-24 16:18 (TZ: Eastern Standard Time)
-  ```
-- Summary: Committed and pushed shared-tube rebuild/admin fixes and vaultwares-api GreenCloud rebuild dispatch; verified live deployment status and services.
-- Git: repo=shared-tube, branch=main, head=e3edf80
-
-</details>
-
-<details>
-<summary><strong>2026-08-24 14:39 - vault-cacophony</strong> <code>code-change</code> - README rewritten (stack, install, commands, measured numbers, kaldi rationale). Replaced JSON voice store with permanent SQLite store at %LOCALAPPDATA%\VaultWares\voices.db: voi...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Write, Edit, Read, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-24 14:39 (TZ: Eastern Standard Time)
-  ```
-- Summary: README rewritten (stack, install, commands, measured numbers, kaldi rationale). Replaced JSON voice store with permanent SQLite store at %LOCALAPPDATA%\VaultWares\voices.db: voice table (derived centroids) + observation table (evidence - embedding, every 2s window at float16, cohesion, separation, match score, prosody/text metrics, full provenance). Added attribute/rebuild repair path, one-time voices.json migration, prosody.py (F0/RMS/crest via numpy autocorrelation), voiceprint.embed_windows(). speakers.py now records one observation per cluster. Added Measure-Passes.ps1: per-stage timings + targeted nsys traces (bounded clip, --sample=none, --trace=cuda; 0.3-4.3MB traces). Verified on LibriSpeech: 97.9% speaker accuracy, enrolled speakers matched 0.76-0.94, strangers stayed unknown. Traces show ASR spends 1.6% of wall in GPU kernels (28629 launches, 107ms) - launch-bound, not compute-bound.
-- Commands:
-  - `.\scripts\Start-SubtitlesAudioCpp.ps1 -TargetDir dialogue.wav -NoSeparate -Speakers -Voices final.db`
-  - `.\scripts\Measure-Passes.ps1 -Audio dialogue.wav -Seconds 0 -Repeat 2`
-  - `python scripts/voices.py attribute --id 1 --name Narrator`
-- Files:
-  - `README.md`
-  - `scripts/voices.py`
-  - `scripts/prosody.py`
-  - `scripts/speakers.py`
-  - `scripts/voiceprint.py`
-  - `scripts/Measure-Passes.ps1`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 19:56 - shared-tube</strong> <code>verification</code> - Diagnosed shared-tube rebuild/admin regressions; live nginx monitor proxy fixed, paired shared-tube and vaultwares-api source repairs prepared but not committed.</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 19:56 (TZ: Eastern Standard Time)
-  ```
-- Summary: Diagnosed shared-tube rebuild/admin regressions; live nginx monitor proxy fixed, paired shared-tube and vaultwares-api source repairs prepared but not committed.
-- Git: repo=shared-tube, branch=main, head=8d1156f
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 18:19 - shared-tube</strong> <code>verification</code> - Diagnosed live shared-tube rendering: HTML structure is clean after deployment; configured popunder hijacks the age-confirmation click.</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 18:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: Diagnosed live shared-tube rendering: HTML structure is clean after deployment; configured popunder hijacks the age-confirmation click.
-- Git: repo=shared-tube, branch=main, head=8d1156f
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 18:14 - shared-tube</strong> <code>verification</code> - Verified GreenCloud webhook deployment of shared-tube commit 8d1156f: build, all service restarts, and live taxonomy pages succeeded.</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 18:14 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified GreenCloud webhook deployment of shared-tube commit 8d1156f: build, all service restarts, and live taxonomy pages succeeded.
-- Git: repo=shared-tube, branch=main, head=8d1156f
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 18:03 - shared-tube</strong> <code>code-change</code> - Committed and pushed Astro HTML leakage, GTM duplication, and body-style fixes to shared-tube main (8d1156f).</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 18:03 (TZ: Eastern Standard Time)
-  ```
-- Summary: Committed and pushed Astro HTML leakage, GTM duplication, and body-style fixes to shared-tube main (8d1156f).
-- Git: repo=shared-tube, branch=main, head=8d1156f
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 17:59 - shared-tube</strong> <code>code-change</code> - Fixed shared Astro taxonomy source leakage, unified Google tag handling, and moved legacy body styles into head.</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 17:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed shared Astro taxonomy source leakage, unified Google tag handling, and moved legacy body styles into head.
-- Git: repo=shared-tube, branch=main, head=b45a7cd
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 17:56 - shared-tube</strong> <code>verification</code> - Reviewed shared-tube Astro leakage root causes in Layout and TaxonomyDirectory; verified build failure and marketing snippet validation gaps</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: subagent)
-  Model: gpt-5.4
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 17:56 (TZ: Eastern Standard Time)
-  ```
-- Summary: Reviewed shared-tube Astro leakage root causes in Layout and TaxonomyDirectory; verified build failure and marketing snippet validation gaps
-- Git: repo=shared-tube, branch=main, head=b45a7cd
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 15:15 - vault-cacophony</strong> <code>code-change</code> - Decepticon phase 1: CAM++ speaker embeddings, a voice store, and a speaker track in the tag store. WeSpeaker CAM++ VoxCeleb-LM ONNX (29 MB, CPU) reaches 0.808 mean cosine within...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Write, Edit, Read
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 15:15 (TZ: Eastern Standard Time)
-  ```
-- Summary: Decepticon phase 1: CAM++ speaker embeddings, a voice store, and a speaker track in the tag store. WeSpeaker CAM++ VoxCeleb-LM ONNX (29 MB, CPU) reaches 0.808 mean cosine within a speaker vs 0.124 between over 24 clips / 6 speakers, separable at 0.52 with 1 error in 276 pairs. Two non-obvious contracts: the export needs 200-frame (2 s) windows - handed a whole utterance it scores 0.458 vs 0.403, useless - and the window function must be Hamming not Kaldi's default Povey (features differ by 7.4 otherwise). speakers.py slides 2 s windows, clusters by average linkage, drops boundary-straddling windows (they created 3 phantom speakers), and writes one span per cue: 98.1 pct of speech attributed correctly on a two-speaker test. voices.py enrols names; unseen clip from an enrolled speaker matched 0.891, never-enrolled came back unknown at 0.540; match needs 0.60 and a 0.05 margin. Wired as -Speakers on both pipelines plus a new 'vw voices' command (enroll/list/identify/forget, any media format, -Span). Deps: onnxruntime + kaldi-native-fbank, no torch. Pushed to PRs cacophony#3 and commander#8.
-- Commands:
-  - `vw voices enroll -Name Vic -Audio clip.mkv -Span 12:38`
-  - `vw better-subtitles -Target file.wav -Speakers`
-  - `python speakers.py --audio x.wav --tags x.tags.json`
-- Files:
-  - `vault-cacophony/scripts/voiceprint.py`
-  - `vault-cacophony/scripts/voices.py`
-  - `vault-cacophony/scripts/speakers.py`
-  - `vault-commander/cli/Start-Voices.ps1`
-  - `vault-commander/cli/vw-commands.ps1`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 13:47 - vault-commander</strong> <code>code-change</code> - Fixed AttributeError in tagstore.load(): a tags.json whose top level is valid JSON but not an object (null, [], a bare string) parsed fine, so the except clause never fired and ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: low
-  Mode: agent
-  Permissions: bypass (network: local Windows 11)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 13:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed AttributeError in tagstore.load(): a tags.json whose top level is valid JSON but not an object (null, [], a bare string) parsed fine, so the except clause never fired and data.get(schema) raised. Added an isinstance(data, dict) guard so those files fall through to the fresh-empty-store path like any other corrupt store. Applied the same one-line fix to the upstream copy at vault-cacophony/scripts/tagstore.py, which the docstring names as the source of truth; the two files are now identical apart from the copy note. Verified load() against null/list/string/malformed/valid/missing files.
-- Files:
-  - `cli/utils/tagstore.py`
-  - `vault-cacophony/scripts/tagstore.py`
-- Git: repo=vault-commander, branch=agent/nemotron-engine, head=1c6cce2
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 12:18 - vault-cacophony</strong> <code>code-change</code> - Fixed nemotron cue timings and added the tag store. The 80 ms floor is the model&#39;s frame grid - every token is exactly 0.08 s wide, so a cue ending on a one-token word ends 80 m...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Edit, Write, Read
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 12:18 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed nemotron cue timings and added the tag store. The 80 ms floor is the model's frame grid - every token is exactly 0.08 s wide, so a cue ending on a one-token word ends 80 ms after that word started. Cue ends now get that back (--fill 0.25) then are held for --min-dur 0.9 or len(text)/--cps 17, whichever is longer, clamped to the next cue's start; runs after cue boundaries are set so segmentation is unchanged. Music test: shortest cue 0.08 -> 0.90 s, 13 cues under 0.9 s -> 4. The 19-second cue was a separate fault: a sub-word piece stranded on a late frame was glued to the previous word; pieces more than 0.5 s apart now start a new word, except punctuation which stays attached. Longest word span 1.92 -> 0.96 s with WER unchanged at 3.71 pct. New scripts/tagstore.py defines the schema: one media.tags.json, one track per pass (language now, speaker later), each with its own source/model, tracks as independent spans rather than fields on a cue so passes never inherit each other's segmentation; plus cues and a CLI inspector. Pushed to PRs cacophony#3 and commander#8.
-- Commands:
-  - `python words_to_srt.py --merge-tokens --tags-out clip.tags.json --media clip.wav`
-  - `python tagstore.py clip.tags.json --at 12.0`
-- Files:
-  - `vault-cacophony/scripts/words_to_srt.py`
-  - `vault-cacophony/scripts/tagstore.py`
-  - `vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1`
-  - `vault-commander/cli/utils/tagstore.py`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=0664a81
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 11:32 - vault-cacophony</strong> <code>code-change</code> - Nemotron 3.5 is now the default ASR in both the cacophony pipeline and vw better-subtitles (-Engine parakeet keeps the old one), running in streaming mode because its offline en...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Edit, Read, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 11:32 (TZ: Eastern Standard Time)
-  ```
-- Summary: Nemotron 3.5 is now the default ASR in both the cacophony pipeline and vw better-subtitles (-Engine parakeet keeps the old one), running in streaming mode because its offline encoder asked for 51 GB on 22 minutes. Added --merge-tokens to words_to_srt.py (nemotron times sub-word pieces; the merge must run before blank pieces are filtered or words glue together) and language-tag alignment: --language auto emits <en-US> tags in the transcript but strips them from the token stream, so tags are placed by word count and refused if the counts drift over 5 pct. Writes <base>.tags.json beside the .srt - per-cue language, the first entry of the tag store. Also added a UTF-8 BOM to vw-commands.ps1 (it held em dashes and only parsed under pwsh 7; PS 5.1 read it as ANSI). Measured: htdemucs 120 s clip = 9.75 s session of which 8.99 s is graph compute, plus 2.0 s load+writing 81 MB of stems - 4 stems cost IO, not compute, since the model emits all four in one pass. Sortformer memory by window: 10 s 1.34 GB, 20 s 2.29, 30 s 3.41, 40 s 4.71, 60 s 7.87 - the model itself is 176 MB. PRs vault-cacophony#3 and vault-commander#8.
-- Commands:
-  - `audiocpp_cli --family nemotron_asr --mode streaming --language auto --request-option keep_language_tags=true`
-  - `vw better-subtitles -Target clip.wav -NoSeparate`
-  - `gh pr create (cacophony#3, commander#8)`
-- Files:
-  - `vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1`
-  - `vault-cacophony/scripts/words_to_srt.py`
-  - `vault-commander/cli/Start-BetterSubtitles.ps1`
-  - `vault-commander/cli/vw-commands.ps1`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=328760b
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 10:21 - vault-cacophony</strong> <code>verification</code> - Benchmarked Nemotron 3.5 ASR streaming vs Parakeet-TDT. First finding: the local nemotron q8_0 GGUF was a bad conversion - identical file size to the official release but a diff...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\audio.cpp  Branch: main
-  Tools used (this reply): Bash, PowerShell, Write, Read, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 10:21 (TZ: Eastern Standard Time)
-  ```
-- Summary: Benchmarked Nemotron 3.5 ASR streaming vs Parakeet-TDT. First finding: the local nemotron q8_0 GGUF was a bad conversion - identical file size to the official release but a different sha256, and it emitted 'ffffff' for every input. Downloaded the official file from audio-cpp/audio.cpp-gguf (sha 7026c80d...) and kept the bad one as .bad-conversion; it works. Results on two LibriSpeech sets (22.6 and 25.8 min): parakeet 3.41 and 6.77 pct WER, nemotron streaming 3.71 and 2.61 pct. Nemotron recovered 4207 of 4212 words on set B vs parakeet's 3998 - no duration skips, which is the defect that forced the gap-recovery pass in vault-explorer. Long-file RTF 31x (nemotron streaming) vs 110x (parakeet); warm 20 s window through the resident server 119 ms vs 90 ms; peak VRAM 5.5 vs 6.9 GB. Nemotron offline OOMs on long files (asked 51 GB for 22 min). Confirmed --language auto with keep_language_tags=true emits inline <en-US> tags per segment, which is the LangID/code-switching feature we want. Both models fit resident simultaneously at ~3.8 GB.
-- Commands:
-  - `hf download audio-cpp/audio.cpp-gguf Nemotron-3.5-ASR-Streaming-0.6B-GGUF/...q8_0.gguf`
-  - `audiocpp_cli --task asr --family nemotron_asr --mode streaming --language auto --request-option keep_language_tags=true`
-  - `audiocpp_server with parakeet + nemotron both resident`
-- Files:
-  - `vault-cacophony/audio.cpp/models/Nemotron-3.5-ASR-Streaming-0.6B-GGUF/`
-- Git: repo=audio.cpp, branch=main, head=9601291
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 10:07 - vault-explorer</strong> <code>verification</code> - Validated live Electron tests and benchmark results rejecting degenerate Nemotron output</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 10:07 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated live Electron tests and benchmark results rejecting degenerate Nemotron output
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 10:07 - vault-explorer</strong> <code>verification</code> - Added transcript validation to benchmark runner; accurately marked Nemotron 3.5 ASR GGUF as FAILED due to audio.cpp RNN-T joint decoder degenerate token loop</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 10:07 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added transcript validation to benchmark runner; accurately marked Nemotron 3.5 ASR GGUF as FAILED due to audio.cpp RNN-T joint decoder degenerate token loop
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 10:00 - vault-explorer</strong> <code>verification</code> - Fixed missing GGUF tail bytes and executed live CUDA benchmark runs for Nemotron 3.5 ASR GGUF and Parakeet-TDT 0.6B</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 10:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed missing GGUF tail bytes and executed live CUDA benchmark runs for Nemotron 3.5 ASR GGUF and Parakeet-TDT 0.6B
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 05:55 - vault-explorer</strong> <code>verification</code> - Verified live persistence, backup rotation, loading viewport geometry, AI Studio layering, and Parakeet vs Nemotron comparative benchmarks</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 05:55 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified live persistence, backup rotation, loading viewport geometry, AI Studio layering, and Parakeet vs Nemotron comparative benchmarks
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 05:53 - vault-explorer</strong> <code>verification</code> - Benchmarked audio.cpp GGUF models: Parakeet-TDT 0.6B v3 vs Nemotron 3.5 ASR Streaming 0.6B GGUF with real video metrics and engine test suite comparison</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 05:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Benchmarked audio.cpp GGUF models: Parakeet-TDT 0.6B v3 vs Nemotron 3.5 ASR Streaming 0.6B GGUF with real video metrics and engine test suite comparison
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 05:20 - vault-explorer</strong> <code>verification</code> - Completed live environment verification of state persistence, loading fixed viewport, AI Studio modal layering, and Parakeet benchmark</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 05:20 (TZ: Eastern Standard Time)
-  ```
-- Summary: Completed live environment verification of state persistence, loading fixed viewport, AI Studio modal layering, and Parakeet benchmark
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 05:19 - vault-explorer</strong> <code>code-change</code> - Fixed fixed-viewport loading overlay, elevated AI Video Studio z-index over player, secured settings backup rotation and test isolation, benchmarked Parakeet-TDT vs NeMo 3.5 on ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 05:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed fixed-viewport loading overlay, elevated AI Video Studio z-index over player, secured settings backup rotation and test isolation, benchmarked Parakeet-TDT vs NeMo 3.5 on Julien Lacroix sample video
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 04:24 - vault-explorer</strong> <code>verification</code> - E2E visual verification and proof capture for NVEnc AI Video Studio modal and categorized AI settings</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 04:24 (TZ: Eastern Standard Time)
-  ```
-- Summary: E2E visual verification and proof capture for NVEnc AI Video Studio modal and categorized AI settings
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 04:23 - vault-explorer</strong> <code>code-change</code> - Add -Separate switch to live subtitles &amp; Start-Subtitles.ps1, implement NVEncC64 GPU video enhancement engine with NGX-VSR/TrueHDR/Sharpen/Deband/FRUC, build NVEnc AI Video Stud...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 04:23 (TZ: Eastern Standard Time)
-  ```
-- Summary: Add -Separate switch to live subtitles & Start-Subtitles.ps1, implement NVEncC64 GPU video enhancement engine with NGX-VSR/TrueHDR/Sharpen/Deband/FRUC, build NVEnc AI Video Studio experimental modal with granular sidecar recording and reversibility, categorize AI upscaler settings
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
-
-</details>
-
-<details>
-<summary><strong>2026-08-23 04:00 - vault-explorer</strong> <code>verification</code> - Resolve OVH VPS unresponsiveness: terminate ~1,500 leaked/zombie headless chrome and hung reporting processes, free 3.5GB RAM, add TimeoutStartSec/KillMode to vw-linkvertise.ser...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-explorer  Branch: agent/live-subtitles-cacophony
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-23 04:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Resolve OVH VPS unresponsiveness: terminate ~1,500 leaked/zombie headless chrome and hung reporting processes, free 3.5GB RAM, add TimeoutStartSec/KillMode to vw-linkvertise.service, and restore vaultwares-api & comet responsiveness
-- Git: repo=vault-explorer, branch=agent/live-subtitles-cacophony, head=121cc61
 
 </details>
 

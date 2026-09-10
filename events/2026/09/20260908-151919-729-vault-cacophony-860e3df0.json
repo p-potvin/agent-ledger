@@ -1,0 +1,50 @@
+{
+  "id": "20260908-151919-729-vault-cacophony-860e3df0",
+  "createdAt": "2026-09-08T19:19:19.7293492Z",
+  "createdAtLocal": "2026-09-08 15:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 15:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "RETRACTION: my whole-file feature normalization root cause was WRONG. fe.cpp:477 is gated on normalize_per_feature which comes from the model, and nemotron-3.5 sets asr.preprocessor.normalize=NA - so that normalization never ran in any of the long-form tests. nemotron-en is also NA; only parakeet-ctc and parakeet-tdt use per_feature. Proved by implementing NEMO_SPEECH_NORM_WINDOW_S (centered-window normalization via prefix sums) and sweeping 10/30/60/150s: all byte-identical to whole-call on the 25.5min file (4131 words/31 gaps/77.7s) because the code is unreachable for that model. What STILL stands: length dependence is real AND deterministic - same file transcribed twice is byte-identical (md5 342A796A), so appending audio genuinely changes earlier transcription; mechanism now unknown again. Monolingual control, right-context sweep, VAD A/B and VAD-segmentation results are direct measurements and unaffected. Kept the knob since it is correct for parakeet models: verified bit-identical when unset across a full rebuild, changes parakeet-tdt output (implementation works) but does not improve it (off 1922 words/644.5s, 30s 1831/676.2s, 60s 1886/648.2s). fr-CA tested: accepted, changes output (0.951 similarity), but WORSE - Quebecois 4102 words/90.4s vs fr-FR 4131/77.7s; catastrophic on the half-English file (1570 words/201.3s); model still reports fr-FR back. BUILD: rebuilt build-cuda with -Profile server -Flashlight after an earlier build.ps1 default run had reconfigured NMT/HTTP/flashlight OFF; user stopped their resident server (PID 29940) to release the ggml-base.dll lock and needs to restart it. Also corrected: D:\\vcpkg is NOT a vcpkg checkout (only buildtrees/downloads/packages caches); the real root with installed packages is C:\\vcpkg. Pushed b9769fe.",
+  "commands": [
+    "build.ps1 -Profile server -Flashlight",
+    "NEMO_SPEECH_NORM_WINDOW_S sweep",
+    "determinism double-run check"
+  ],
+  "files": [
+    "NeMo-Speech.cpp/src/asr/features/fe.cpp",
+    "docs/plurilingual-vad-and-decoder-notes.md"
+  ],
+  "planPath": "",
+  "contentHash": "860e3df06682f66c44b776059981465e5693662892e429ce1ea9fa7a01492b73",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "b9769fe",
+    "hasChanges": true
+  }
+}

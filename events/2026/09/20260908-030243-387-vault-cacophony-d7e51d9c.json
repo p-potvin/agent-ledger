@@ -1,0 +1,51 @@
+{
+  "id": "20260908-030243-387-vault-cacophony-d7e51d9c",
+  "createdAt": "2026-09-08T07:02:43.3870590Z",
+  "createdAtLocal": "2026-09-08 03:02",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 03:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Ran plurilingual steps 1 and 2 on branch vw-claude/plurilingual-eval (pushed to origin, 3 commits). Added --strip-apostrophes to evaluate_openasr.py alongside --normalizer. Step 1: spliced 155 enspa_dev clips in TSV order into one 35.9min file, segmented at 5/10/20/30s, nemotron-3.5 --language auto. languages empty on 58.3 percent of 10s segments and FLAT 49.7-58.3 percent across all window sizes - no sweet spot. Empty runs up to 9 segments (90s at 10s, 180s at 20s). Mistags pt-PT, vi-VN, sl-SI, unk; Spanish tag splits 36 es-ES vs 13 es-US so a router keyed on es-US misses most Spanish. Step 2 WER (basic normalizer, as-is/no-apostrophe): auto 23.99/24.10, es-US 27.40/27.38, en-US 45.61/46.36 (9 empty preds, 100 percent WER on the 4 spa clips), parakeet-tdt 26.15/26.14. auto is BEST, inverting the routing premise. Apostrophe stripping changes everything by <=0.75pp - does not matter here. Conclusion: do not build step 3 per-segment routing; use --language auto. Also transcribed French Girl Reacts mp3 (11.6min, no reference so no WER): only 12.9 percent empty, whole-file [en-US,fr-FR], 10s timeline tracks narration vs clips correctly - so failure is specific to intra-sentential switching, not detection generally. Wrote docs/plurilingual-step1-results.md and docs/french-reacts-transcript.md.",
+  "commands": [
+    "ffmpeg concat + segment",
+    "nemo-speech.exe transcribe --language auto --format json",
+    "evaluate_openasr.py --normalizer basic --strip-apostrophes",
+    "git push origin vw-claude/plurilingual-eval"
+  ],
+  "files": [
+    "docs/plurilingual-step1-results.md",
+    "docs/french-reacts-transcript.md",
+    "docs/HANDOFF-plurilingual.md",
+    "scripts/evaluate_openasr.py"
+  ],
+  "planPath": "",
+  "contentHash": "d7e51d9c6aa038702612416c57ad203931e3b04e580b3c77ecdfcd57fb145e0c",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "ec36e64",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "20260908-024452-977-vaultwares-studio-06522e12",
+  "createdAt": "2026-09-08T06:44:52.9771808Z",
+  "createdAtLocal": "2026-09-08 02:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 02:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-6",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {
+      "vw_state": {
+        "variant": "loop-off",
+        "overlaysApplied": [
+          "LONG_RUNNING_TASKS"
+        ],
+        "submissionRecord": "D:/vaultwares-studio-jobs/data/review/sep08/da3-loop-comparison/loop-off/submission.json",
+        "resume": {
+          "resumeId": "studio-native-usd-cameras-20260907",
+          "resumeMode": true
+        },
+        "routerCategories": [
+          "SOURCE_OF_TRUTH",
+          "FILE_CHANGES",
+          "REQUEST_RATE_LIMITING",
+          "SECRETS_HANDLING",
+          "VERIFICATION"
+        ],
+        "estimate": {
+          "rationale": "Resumed reconstruction implementation and bounded first remote job launch",
+          "estimatedOutputTokens": 18000
+        },
+        "protocolsSelected": [
+          "SOURCE_OF_TRUTH",
+          "FILE_CHANGES",
+          "REQUEST_RATE_LIMITING",
+          "SECRETS_HANDLING",
+          "VERIFICATION"
+        ],
+        "interview": {
+          "askedQuestion": true,
+          "completed": true
+        },
+        "state": "SCHEDULING",
+        "approval": "First job only, 90-minute backend timeout, no worker deadline, D drive local HF storage",
+        "jobId": "6a9fae95e686246ca69aa23c"
+      }
+    },
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Submitted only approved DA3 loop-off job 6a9fae95e686246ca69aa23c on L4, confirmed backend timeout 5400 seconds per latest user instruction. Removed worker cutoff, disabled automatic second-job submission and retries, verified all local HF/Xet/cache/temp/artifact paths resolve to D. Input/code uploaded to private dataset; latest status SCHEDULING waiting for hardware. USD1.20 maximum compute for first job at USD0.80/hour. Four targeted tests passed. Second job requires user instruction.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "06522e127fa17a894f692b898d4f80de15507c3a7b3eb0c97ddaf91778a10e50",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "19f0249",
+    "hasChanges": true
+  }
+}

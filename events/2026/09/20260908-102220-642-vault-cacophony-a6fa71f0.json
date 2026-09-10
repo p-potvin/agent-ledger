@@ -1,0 +1,50 @@
+{
+  "id": "20260908-102220-642-vault-cacophony-a6fa71f0",
+  "createdAt": "2026-09-08T14:22:20.6425971Z",
+  "createdAtLocal": "2026-09-08 10:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 10:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Added scripts/vad_segment.py (Silero-bounded segmentation, cuts at silence midpoints to a target length) and measured it against whole-file at all three right-context settings. KEY: rnnt_right_context stops mattering once input is short - RC1/RC2/RC3 are byte-identical on the 5min bilingual prefix (same md5, 1010 words) and identical at every VAD segment length on both files; they only diverge on long whole-file input (0.90-0.92 pairwise agreement at 11.6min). So RC is a long-input mitigation, not a quality knob, and is redundant after segmentation. French 11.6min: VAD-segmented 2363 words / 4 gaps / 12.2s beats whole-file RC3 2324 / 7 / 15.1s on every metric. Quebecois 25.5min shows a segment-length OPTIMUM once gap time is split into per-segment warmup vs real loss: whole-file RC3 4131 words 77.7s real loss; VAD 60s 25seg 4069 words 63.9s real (32.2s warmup); VAD 150s 11seg 4147 words 64.1s real (17.8s warmup) BEST; VAD 240s 7seg 4099 words 76.1s real (5.9s warmup) - real loss climbs back at 240s toward whole-file, matching the normalization account. Recommended: --target-s 150 --min-silence-ms 100 --threshold 0.7 (bilingual file is 98.8 percent speech and needs the sensitive settings to find silences at all). Also generated docs/transcripts/ with 6 time-aligned comparison files for reading alongside audio, delivered to user. Pushed 13c7e15.",
+  "commands": [
+    "scripts/vad_segment.py --target-s 150 --min-silence-ms 100 --threshold 0.7",
+    "nemo-speech transcribe --asr.streaming.rnnt_right_context 1|2|3"
+  ],
+  "files": [
+    "scripts/vad_segment.py",
+    "requirements-vad-segment.txt",
+    "docs/plurilingual-vad-and-decoder-notes.md",
+    "docs/transcripts/"
+  ],
+  "planPath": "",
+  "contentHash": "a6fa71f0f8603bd6b23d6738a10359afbafded8be7548271cdac52c3040f7c75",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "13c7e15",
+    "hasChanges": true
+  }
+}

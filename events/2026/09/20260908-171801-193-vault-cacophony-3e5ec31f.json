@@ -1,0 +1,51 @@
+{
+  "id": "20260908-171801-193-vault-cacophony-3e5ec31f",
+  "createdAt": "2026-09-08T21:18:01.1932914Z",
+  "createdAtLocal": "2026-09-08 17:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 17:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Built and shipped the offline/streaming dispatch fix. Recognizer::recognize (complete-buffer/file path) no longer selects the streaming runner on length alone; over-limit input falls through to OfflineRunner which already splits at max_offline_samples_ and snaps cuts to the quietest 100ms window. Streaming deliberately preserved three ways: streaming_recognize (live capture/server streams) untouched and verified via transcribe --stream still logging mode=streaming; Vulkan RNNT route preserved; NEMO_SPEECH_LONGFORM_STREAMING=1 restores old behaviour and reproduces the previous default EXACTLY (4048 words/44 gaps/119.2s). Measured vs previous default: Quebecois 25.5min 4048->4114 words and 119.2s->81.1s dropped; bilingual 11.6min 2332->2348 words and 24.1s->23.3s. Honest caveat: hand-tuned streaming RC3 still edges it on dropped seconds for Quebecois (77.7s vs 81.1s) while recovering fewer words; VAD segmentation now largely redundant. REGRESSION CHECK: 154/155 enspa clips byte-identical; the 1 difference is NOT from this change - running the same new binary twice gives 3 differing clips of 155 and run 2 matches the old build, so --concurrency 4 batch composition varies between runs. IMPORTANT NEW CAVEAT: per-clip results carry ~2 percent run-to-run noise whenever concurrency>1; single-file transcription stays deterministic; the auto-vs-es head-to-head (71 vs 26, 58 ties) is far outside that band and stands. Reverted rnnt_right_context from -1 to default 1 in both pipeline configs since asr.streaming.* is now inert on the file path and -1 only costs live latency (160->320ms step). Archived 58 previous result dirs into scratchpad/marked/ for comparison. Pushed b778515.",
+  "commands": [
+    "build.ps1 -Profile server -Flashlight",
+    "transcribe --stream verification",
+    "NEMO_SPEECH_LONGFORM_STREAMING=1 escape hatch test",
+    "155-clip regression + repeat-run noise test"
+  ],
+  "files": [
+    "NeMo-Speech.cpp/src/asr/recognizer.cpp",
+    "config/pipelines/multilingual.yaml",
+    "config/pipelines/english-only.yaml",
+    "docs/plurilingual-vad-and-decoder-notes.md"
+  ],
+  "planPath": "",
+  "contentHash": "3e5ec31f30517e764bf99ce6daa4a824326261d4450a21796ff06df39dab48b6",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "b778515",
+    "hasChanges": true
+  }
+}

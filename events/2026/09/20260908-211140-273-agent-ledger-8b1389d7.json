@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260908-211140-273-agent-ledger-8b1389d7",
+    "createdAt":  "2026-09-09T01:11:40.2738583Z",
+    "createdAtLocal":  "2026-09-08 21:11",
+    "timezone":  "Eastern Standard Time",
+    "project":  "agent-ledger",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Claude 3.7 Sonnet\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 21:11 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude 3.7 Sonnet",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\agent-ledger",
+    "summary":  "Refactored Maxine SDK commands in vw CLI: removed DLL inspection commands, normalized input/output parameters to -Input and -Output with legacy aliases, documented parameter types/lists/requirements, and validated real GPU inference for apps.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "8b1389d7d6d6b5dd0bf6eac842541f0d20e5f9865112924b08d5cbbad87f82e5",
+    "git":  {
+                "repo":  "agent-ledger",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/agent-ledger",
+                "branch":  "main",
+                "head":  "0e6a531e",
+                "hasChanges":  true
+            }
+}

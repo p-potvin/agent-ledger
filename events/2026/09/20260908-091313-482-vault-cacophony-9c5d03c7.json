@@ -1,0 +1,52 @@
+{
+  "id": "20260908-091313-482-vault-cacophony-9c5d03c7",
+  "createdAt": "2026-09-08T13:13:13.4828428Z",
+  "createdAtLocal": "2026-09-08 09:13",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write, WebFetch\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 09:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Root-caused the long-form ASR dropouts. (1) Language-switch hypothesis FALSIFIED: monolingual Quebecois 25.5min drops 44 spans / 119.2s / 7.80 percent of audio / 1.73 per min vs bilingual 11 spans / 3.46 percent / 0.95 per min - nearly 2x worse with no switching. Gaps measure 68-134 percent of file mean RMS and 4 of 5 largest return ordinary French when transcribed in isolation. (2) ROOT CAUSE: fe.cpp:477-501 offline per-feature normalization computes per-mel-bin mean and unbiased variance over EVERY valid frame of the whole call, applied to all frames - so normalization at 3:35 depends on audio at 20:00. Proved behaviourally: words in the first 3 minutes go 513 (5min prefix) to 507 (10/15/20/26min prefixes), similarity 0.937, differences are losses. Saturates at ~10min as statistics converge; matches bisection where the 3:35 span drops 2.96s at 5min prefix and 8.32s at every prefix >=10min. (3) rnnt_right_context=-1 (model max 3) is the best mitigation: French 11->7 gaps 24.1->15.1s, Quebecois 44->31 gaps 119.2->77.7s +83 words; NOT monotonic (right=2 worse than right=1); costs encoder step 160->320ms. Set -1 in both pipeline configs. (4) VAD masking WAS correctly enabled earlier - proved by md5 A/B: VAD-loaded-masking-off is byte-identical to no-VAD, masking-on differs; but masking moves 2 words and ZERO gaps. VAD endpointing byte-identical (streaming-server feature). (5) offline == streaming right=1 byte-identical. Fix direction: segment on silence (VAD) not fixed grid, so each segment gets its own statistics. Pushed 8fb4a2a and 65990af.",
+  "commands": [
+    "nemo-speech transcribe --asr.streaming.rnnt_right_context -1",
+    "prefix bisection 5/10/15/20/26 min",
+    "md5 A/B of VAD masking"
+  ],
+  "files": [
+    "docs/plurilingual-vad-and-decoder-notes.md",
+    "config/pipelines/multilingual.yaml",
+    "config/pipelines/english-only.yaml",
+    "NeMo-Speech.cpp/src/asr/features/fe.cpp"
+  ],
+  "planPath": "",
+  "contentHash": "9c5d03c70f51f066239bb4a8a93569910aa83094a1fc71a2b70e5499195a49ca",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "65990af",
+    "hasChanges": true
+  }
+}

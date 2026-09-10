@@ -1,0 +1,49 @@
+{
+  "id": "20260909-032402-989-vault-commander-0678fb1c",
+  "createdAt": "2026-09-09T07:24:02.9893494Z",
+  "createdAtLocal": "2026-09-09 03:24",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: main\r\nTools used (this reply): Bash, Grep, Read, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-09 03:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Grep",
+      "Read",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+  "summary": "Investigated reported intermittent overlapping subtitle lines in live_subs_overlay.py. Ruled out by rendering to PNG and screen-grabbing the real window: OutlinedLabel stacks multi-line text correctly (y advances by lineSpacing), window sizing math is right (2 lines = 2*36+2*3=78), and grow/shrink transitions leave no ghost. Found and fixed a real defect: OutlinedLabel ignored contentsMargins in all three places, while label_tr carries CSS 'padding: 4px 10px' for its rounded panel. _wrap wrapped against the full width (20px too late), heightForWidth omitted the 8px vertical padding, and paintEvent started at y=outline+ascent ignoring the 4px top inset - with layout spacing of only 2px that is enough for the translation panel to overlap the caption above it. All three now honour contentsMargins; x-centring is inside the padded content box and is algebraically identical for zero-margin labels. Verified: translation heightForWidth 35 -> 43, source unchanged at 35, bilingual render clean, non-bilingual geometry unchanged at 78/114. NOTE: this defect is only on the bilingual path (source label has zero margins), so it may not be the user's case - asked them to confirm whether they run -Bilingual and for a screenshot if it recurs.",
+  "commands": [
+    "python render_window.py",
+    "python render_bi.py",
+    "python pad.py"
+  ],
+  "files": [
+    "cli/utils/live_subs_overlay.py"
+  ],
+  "planPath": "",
+  "contentHash": "0678fb1ce5e43b78a5bee2bfef7f82ee98b915902db9fcafe96297cd9661c6ca",
+  "git": {
+    "repo": "vault-commander",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+    "branch": "main",
+    "head": "158f071",
+    "hasChanges": true
+  }
+}

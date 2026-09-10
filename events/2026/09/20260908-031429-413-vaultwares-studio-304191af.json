@@ -1,0 +1,38 @@
+{
+  "id": "20260908-031429-413-vaultwares-studio-304191af",
+  "createdAt": "2026-09-08T07:14:29.4138088Z",
+  "createdAtLocal": "2026-09-08 03:14",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 03:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Compared current A10G comparison job against successful July/August HF jobs. All successes and corrected current job use spaceId with dockerImage null, same 1406-byte bootstrap command contract, and the appropriate DA3 Docker Space. Failed A10G used dockerImage URL and failed before execution. Removed unused obsolete Space-to-dockerImage helper from main HF runner; its actual execution path already delegates Space URLs to HfApi.run_job. Added regression coverage for Space URL delegation. 12 focused tests passed. Corrected A10G job 6a9fb487e686246ca69aa2c7 is RUNNING.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "304191af226ae8012a0f647301bd92f38b0cb87b859f3b1b2d212b5369b18971",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "19f0249",
+    "hasChanges": true
+  }
+}

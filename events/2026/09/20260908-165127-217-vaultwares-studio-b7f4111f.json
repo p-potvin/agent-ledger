@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260908-165127-217-vaultwares-studio-b7f4111f",
+    "createdAt":  "2026-09-08T20:51:27.2170649Z",
+    "createdAtLocal":  "2026-09-08 16:51",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 16:51 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Adapted the July Splatfacto training pipeline into the DA3 ZeroGPU Space, added CPU artifact preparation and GPU training/package callbacks, ran bounded training attempts, and verified the remaining blocker is CUDA 13 nvcc plus gsplat runtime mismatch; no training artifact was produced.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "b7f4111f0fb9efcef156918e1d17543b0a678480c2e8d93d18f87015b7a33b0e",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "vw-codex/native-splats-camera-paths",
+                "head":  "19f0249",
+                "hasChanges":  true
+            }
+}

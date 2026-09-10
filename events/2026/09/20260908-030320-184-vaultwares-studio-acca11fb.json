@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260908-030320-184-vaultwares-studio-acca11fb",
+    "createdAt":  "2026-09-08T07:03:20.1846107Z",
+    "createdAtLocal":  "2026-09-08 03:03",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-studio",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 03:03 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-6",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+    "summary":  "Inspected queued first DA3 job after user asked about scheduler wait. HF reports only SCHEDULING / waiting for L4 hardware; it provides no ETA or queue position. Confirmed VW_BOOTSTRAP is 1,406 bytes and only stages inputs/outputs; DA3 code is in worker.zip. Prepared runtime client uses D drive for HF hub/Xet/assets/temp/downloads and now supports explicit 90-minute job timeout. No cancellation or alternate submission made; replacement hardware choice awaits user direction.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "acca11fb3886253a265f381b72daf34ee480ff8e0b95907c08b0fd374daf51d6",
+    "git":  {
+                "repo":  "vaultwares-studio",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+                "branch":  "vw-codex/native-splats-camera-paths",
+                "head":  "19f0249",
+                "hasChanges":  true
+            }
+}

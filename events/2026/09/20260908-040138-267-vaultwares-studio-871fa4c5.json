@@ -1,0 +1,38 @@
+{
+  "id": "20260908-040138-267-vaultwares-studio-871fa4c5",
+  "createdAt": "2026-09-08T08:01:38.2672408Z",
+  "createdAtLocal": "2026-09-08 04:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 04:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Downloaded completed corrected A10G loop-off artifact to D and inspected it without extraction. Job ran 444 seconds total (422 worker including archive), produced 500 finite poses, 500 per-frame depth/confidence results, 15.7MB combined PCD and valid rotations. Archive diagnosis confirmed: 3.8GB archive contains 4.6GB, including 1.47GB raw unaligned and 2.48GB raw aligned DA3 scratch; corrected future retention removes only that scratch. ZeroGPU high-quality candidate token calculation: 672x378, chunk90 = 116640 tokens/window, twice the 24GB benchmark. No ZeroGPU Space created or invoked.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "871fa4c58c91c250670c40783f2bbdf38c69a39f6c5a18b33ee4dd38460436cf",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "19f0249",
+    "hasChanges": true
+  }
+}

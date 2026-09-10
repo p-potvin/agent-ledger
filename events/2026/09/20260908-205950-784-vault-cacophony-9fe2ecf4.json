@@ -1,0 +1,50 @@
+{
+  "id": "20260908-205950-784-vault-cacophony-9fe2ecf4",
+  "createdAt": "2026-09-09T00:59:50.7841319Z",
+  "createdAtLocal": "2026-09-08 20:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 20:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Full suite re-run on the fixed build (all long files now decode offline). DETERMINISM: 155 enspa clips transcribed twice at --concurrency 1 are 155/155 byte-identical, confirming --concurrency 4 as the sole variation source; aggregates barely moved so earlier numbers were sound. enspa WER at concurrency 1: auto 23.87, es-US 27.17, parakeet-tdt 26.19, en-US 46.17 (10 empty, 100 percent on spa), parakeet-ctc 55.58. Conclusions unchanged. LONG FILES: VAD segmentation is NOT redundant after the fix - Quebecois whole-file fr-FR 4114 words/81.1s real loss vs VAD 150s 4147 words/64.1s real loss (17.8s warmup); bilingual whole-file auto 2348 words/23.3s vs VAD-segmented 2363 words/12.2s (5.7s warmup). target-s 150 optimum holds. VAD-segmented output byte-identical to pre-fix run, expected since segments were always under the 399.9s threshold. FR-CA: on coverage metrics fr-FR wins the monolingual file (4114/81.1s vs 4089/97.0s, similarity 0.949); on the bilingual file fr-CA beats fr-FR (1621 vs 1484 words) but both trail auto badly. This CONTRADICTS the owner's reading that fr-CA is better on Quebecois - flagged honestly that the metrics measure coverage not correctness and no reference transcript exists for that file so no WER is possible; produced side-by-side transcripts for judgement by reading. Model reports languages=[fr-FR] for both codes. Added docs/transcripts/v2-*.md (3 files). Recommended pipeline documented: vad_segment --target-s 150 --min-silence-ms 100 --threshold 0.7, transcribe at concurrency 1, auto for mixed audio, explicit code when known and single, right context at default. Pushed 17b637f.",
+  "commands": [
+    "enspa 5 conditions at --concurrency 1",
+    "fr-FR/fr-CA/auto on both long files",
+    "VAD segments at 60/150/240s"
+  ],
+  "files": [
+    "docs/plurilingual-vad-and-decoder-notes.md",
+    "docs/transcripts/v2-quebecois-frFR-vs-frCA-vs-vad.md",
+    "docs/transcripts/v2-bilingual-whole-vs-vad.md",
+    "docs/transcripts/v2-enspa-ref-auto-es-tdt.md"
+  ],
+  "planPath": "",
+  "contentHash": "9fe2ecf499ed6f38e4d86138de0b1aae3c1cfc2fa061ec6385b69fd6ea19ed59",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "17b637f",
+    "hasChanges": true
+  }
+}

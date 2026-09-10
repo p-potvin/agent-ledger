@@ -1,0 +1,52 @@
+{
+  "id": "20260909-030500-973-vault-commander-28e6ea16",
+  "createdAt": "2026-09-09T07:05:00.9731679Z",
+  "createdAtLocal": "2026-09-09 03:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: main\r\nTools used (this reply): Bash, Grep, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-09 03:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Grep",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+  "summary": "Retired cli/utils/live_subtitles.py to meth/utils/ per user (Electron consumer will hit the nemo-speech server directly), with a meth/README.md Workers row; also corrected two false claims in that README (it said live_subs_overlay.py imports live_subtitles.py - it never did - and that live-subs runs on audiocpp, when it is nemo_asr on 8123). Then diagnosed the reported 'vw live-subs exits 1, no overlay': Start-LiveSubtitles.ps1 passed --asr-language, which live_subs_overlay.py never defined, so argparse exited 2; detached Start-Process pythonw.exe has no console so the error vanished and the ps1 still printed 'Overlay launched'. Fixed by implementing --asr-language in live_subs_overlay.py and threading it through AsrWorker into transcribe_array(language=). Hardened the launcher with -PassThru + HasExited check that re-runs on console python to surface the real error. Added the missing -Language entry and riva to TranslateEngine ValidSet in the vw-commands.ps1 live-subs registry (help/completion only, not enforcement). Verified: overlay launches via the ps1 and stays alive attached to nemo-speech 8123; guard detects an instant exit (HasExited=True ExitCode=2); both ps1 files parse clean.",
+  "commands": [
+    "git mv cli/utils/live_subtitles.py meth/utils/live_subtitles.py",
+    "python live_subs_overlay.py --asr-language auto",
+    "Start-LiveSubtitles.ps1"
+  ],
+  "files": [
+    "meth/utils/live_subtitles.py",
+    "meth/README.md",
+    "cli/utils/live_subs_overlay.py",
+    "cli/Start-LiveSubtitles.ps1",
+    "cli/vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "28e6ea161470289cfb489c540c4a52c9ebd0c077b584f9d0f5b03e9e9a490672",
+  "git": {
+    "repo": "vault-commander",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+    "branch": "main",
+    "head": "158f071",
+    "hasChanges": true
+  }
+}

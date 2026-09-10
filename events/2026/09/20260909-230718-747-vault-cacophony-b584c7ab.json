@@ -1,0 +1,49 @@
+{
+  "id": "20260909-230718-747-vault-cacophony-b584c7ab",
+  "createdAt": "2026-09-10T03:07:18.7470576Z",
+  "createdAtLocal": "2026-09-09 23:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-09 23:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Magpie TTS pass 2: English conversation with diarization and pretrained voices, establishing the best-case ceiling. FROM GGUF METADATA: nano_codec.sample_rate=22050 so 22kHz is the codec NATIVE rate not a choice (--sample-rate only downsamples); magpietts.baked_speakers=5 named John, Sofia, Aria, Jason, Leo; synthesis 2.0-2.8x realtime on cuda:0. RESOLVED the owner's accent question: fr2.wav and fr3.wav used IDENTICAL --language fr-FR; fr2 sounds like an English speaker reading French purely because its input text was corrupted by command-line encoding. Language control itself works - fr-CA gives a genuinely Quebecois delivery. Confirmed the owner is right that Ete and Abuela ARE audible in the TTS output; the ASR dropped them on the round-trip pass, consistent with its measured head/tail gap. CONVERSATION TEST: 8 turns, two baked voices (John/Sofia), synthesised per turn and spliced with 350ms gaps into 50.6s, transcribed with --diarize --language auto. Results: WER 1.54 percent English normalizer (1.53 basic), 131 reference and 131 hypothesis words, diarizer emitted exactly 2 labels, word-level speaker accuracy 130/131 = 99.2 percent, 8/8 turns correct majority speaker. Both speaker errors are single words at turn boundaries; remaining ASR errors trivial (Sofia->Sophia, support costs->support cost). Recorded explicitly as a CEILING not an expectation - TTS audio is clean, no overlap/noise/room, and made by a model in the same family as the recogniser. Artifact noted: sentence boundaries merge across turns while diarization stays correct, so sentence-consuming code must cut on speaker change not punctuation. CORRECTION recorded: ASR word boosting (--speech-context) does NOT transfer to TTS - there is no synthesis-side boost; the TTS levers for the mispronounced",
+  "commands": [
+    "nemo-speech synthesize --voice John/Sofia --input <utf8>",
+    "nemo-speech transcribe --diarize --language auto",
+    "evaluate_openasr.py --normalizer english"
+  ],
+  "files": [
+    "docs/magpie-tts-notes.md",
+    "scratchpad/conv/conversation.wav"
+  ],
+  "planPath": "",
+  "contentHash": "b584c7ab739d1f37d69545a585f844f9ca9d927bf6be71b6dc41c1226dbfa6b4",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "42c0374",
+    "hasChanges": true
+  }
+}

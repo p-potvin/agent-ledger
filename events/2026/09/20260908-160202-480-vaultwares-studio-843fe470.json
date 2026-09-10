@@ -1,0 +1,38 @@
+{
+  "id": "20260908-160202-480-vaultwares-studio-843fe470",
+  "createdAt": "2026-09-08T20:02:02.4803954Z",
+  "createdAtLocal": "2026-09-08 16:02",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 16:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-6",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Diagnosed GUI black-screen jobs: DA3-Streaming cloud.ply is valid plain XYZ/RGB point cloud, while GaussianSplats3D PLY path expects Gaussian attributes and misreads plain float positions. Added read_point_cloud_as_splat synthesis (opaque isotropic identity-rotation splats), automatic cached cloud.splat generation in ViewportPanel.reload_scene, UI string, vendor fallback defaults and regression coverage. Exact gui set_job verification rendered imported job to D:/vaultwares-studio-jobs/data/review/sep08/plain-ply-gui-set-job.png. Full test suite: 171 passed. Raw explicit cloud.ply screenshot helper remains unsupported by design; normal GUI path works.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "843fe47044ee12c47753143cec924144423cee0b912d6cc95a5a6be146260da5",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "19f0249",
+    "hasChanges": true
+  }
+}

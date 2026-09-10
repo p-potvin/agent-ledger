@@ -1,0 +1,38 @@
+{
+  "id": "20260908-031833-966-vaultwares-studio-d7969da9",
+  "createdAt": "2026-09-08T07:18:33.9667716Z",
+  "createdAtLocal": "2026-09-08 03:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 03:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Diagnosed slow post-inference archive in active A10G DA3 comparison: old worker retained upstream raw aligned/unaligned chunk scratch (upstream documents ~5GB at 300 frames) and recompressed already-compressed NPZ outputs. Updated future worker configuration to delete raw scratch after stable outputs and archive retained products with ZIP_STORED. Stable retained artifacts remain poses, intrinsics, PCD, loop report, per-frame depth/confidence/debug, config, input ordering, logs and partial failure output. Five focused tests passed. Active job still runs old overlay; user decision required to let it finish or cancel/relaunch.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "d7969da90721b0a61ffb67e2eb88f9185f676f3201e972a17e3ae0649aa52f13",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "19f0249",
+    "hasChanges": true
+  }
+}

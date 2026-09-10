@@ -1,0 +1,49 @@
+{
+  "id": "20260909-000212-509-vault-commander-91ba7a14",
+  "createdAt": "2026-09-09T04:02:12.5094773Z",
+  "createdAtLocal": "2026-09-09 00:02",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-09 00:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Wired the ASR findings into the subtitle commands with language auto. FIRST verified the fix reaches the production path: started a test server on spare port 8199 (not the user's 8123), POSTed the 25.5min file to /v1/audio/transcriptions, got 4111 words / 30 gaps / 75.3s dropped vs the CLI offline 4114/32/81.1s and the OLD streaming 4048/44/119.2s - so the resident-server path uses the fixed Recognizer::recognize. Test server stopped; user's 8123 left untouched. CHANGES: (1) cli/utils/live_subtitles.py - added asr_language, separate from primary_lang, because primary_lang names the .srt and rides on every emitted cue so it must stay a real code; new --asr-language arg defaults to auto and is the only thing passed to the ASR call. (2) cli/Start-LiveSubtitles.ps1 - new -Language param defaulting to auto, passed as --asr-language. (3) cli/Start-BetterSubtitles.ps1 - default model parakeet-tdt -> nemotron-3.5 (23.87 vs 26.19 percent WER and the only model reporting a detected language), default -Language auto, guard so nemotron-en (English-only) does not receive an auto prompt, docstring and param help updated. All three parse clean. END-TO-END VERIFIED: Start-BetterSubtitles -LowMemory on a 45s bilingual clip produced a correct code-switched SRT (English narration -> French clip -> English), 139 words / 13 cues, ASR Model line shows nemotron-3.5. NOT COMMITTED - vault-commander is on branch vw-codex-face-embedding-fix with 58 modified/deleted files of unrelated face-embedding WIP, and both subtitle scripts already carried the prior session's uncommitted changes (the 713-line diff on Start-BetterSubtitles is theirs, not mine). Awaiting the owner's direction on how to branch/commit there.",
+  "commands": [
+    "test server on port 8199 + POST /v1/audio/transcriptions",
+    "Start-BetterSubtitles.ps1 -LowMemory -Separator none",
+    "python live_subtitles.py --help"
+  ],
+  "files": [
+    "cli/Start-BetterSubtitles.ps1",
+    "cli/Start-LiveSubtitles.ps1",
+    "cli/utils/live_subtitles.py"
+  ],
+  "planPath": "",
+  "contentHash": "91ba7a148b92285c4ca9189273706caecc44c99e4eefabeed2312efc3637d6b3",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "17b637f",
+    "hasChanges": true
+  }
+}

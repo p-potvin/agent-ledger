@@ -1,0 +1,38 @@
+{
+  "id": "20260908-153738-649-vaultwares-studio-d3cf7fe5",
+  "createdAt": "2026-09-08T19:37:38.6494649Z",
+  "createdAtLocal": "2026-09-08 15:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-08 15:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "GPT-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Completed the requested loop-closure-enabled DA3 run through private ZeroGPU Space. Corrected Space CPU resize to honor 672x378 and used durable Gradio event client; uploaded only IMG_1274.MOV and received artifacts on D. Run completed in 104.859 GPU seconds on 48GB NVIDIA RTX PRO 6000 Blackwell MIG, 500 frames, 90-frame chunks/45 overlap. SALAD loop detector found zero loop pairs, so no loop optimization was applied. Artifact bundle 644,973,065 bytes; full test suite 167 passed. Earlier erroneous 504x280 event run was not used as the result.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "d3cf7fe5a68bc1f1deda302a55a5a333faaea119271a29facc5488c859e7bfab",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "19f0249",
+    "hasChanges": true
+  }
+}
