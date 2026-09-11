@@ -1,0 +1,48 @@
+{
+  "id": "20260910-165648-100-vault-cacophony-e932d30f",
+  "createdAt": "2026-09-10T20:56:48.1000537Z",
+  "createdAtLocal": "2026-09-10 16:56",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + WSL Ubuntu)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 16:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + WSL Ubuntu",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Three results. (1) WORD BOOSTING IS A NO-OP on every cached model - this corrects the owner's impression that it was working for RNNT. Boosting the exact swallowed phrases at rc=3 gives BYTE-IDENTICAL output (2324 words, same md5 8cfae76e09c9), so it is not failing to rescue the span, it is not running. model.h:120 and model.cpp:1307: boosting needs the SentencePiece proto embedded under asr.tokenizer.spm_model and the code notes it is absent in older GGUFs, in which case boosting no-ops. Verified all four cached ASR models (nemotron-3.5, nemotron-en, parakeet-ctc, parakeet-tdt): NONE carry it. nemotron-3.5 has asr.tokenizer.type=sentencepiece_bpe and .vocab but not the proto, so every boost phrase is dropped before reaching the boosting tree. Fix is a re-conversion not a code change: conversion/asr.py:229 already defines KEY_TOK_MODEL, so converting nemotron-3.5 from HF with this repo's convert_model.py embeds it - a 0.6B model, far more tractable than the 44GB VoiceChat. (2) max_symbols_per_step IS SAFE TO CHANGE - the owner's ONNX/TensorRT concern does not apply. That constraint is about the ENCODER attention mask matching left+current+right (cache_left_ctx, cache_chunk_frames, cache_right_ctx) and is real. max_symbols_per_step is only the bound of a while loop at rnnt_greedy_decoder.cpp:404 issuing repeated SINGLE-symbol calls (joint_tdt_argmax with count 1), each a fixed-shape graph, so the loop count never changes a tensor shape. Still GGUF-only so testing needs a rebuild. (3) REBUILD COST MEASURED: no-op incremental 0.3s; one host-side file rebuilt and relinked via build.ps1 54.4s, most of it the vcpkg check and cmake reconfigure. Under a minute per iteration, which removes the main argument for deploying the ONNX build to avoid",
+  "commands": [
+    "transcribe --speech-context with boost 0 vs 3 at rc=3",
+    "GGUF spm_model presence check across 4 models",
+    "timed incremental rebuild via build.ps1"
+  ],
+  "files": [
+    "docs/plurilingual-vad-and-decoder-notes.md"
+  ],
+  "planPath": "",
+  "contentHash": "e932d30f5ba9035be9cfd3baea8dce658ae82473ca0daa9b9de7a48d916fe4b3",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "b4ebd2b",
+    "hasChanges": true
+  }
+}

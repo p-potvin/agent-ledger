@@ -1,0 +1,46 @@
+{
+  "id": "20260910-214033-674-vault-cacophony-bccdd04e",
+  "createdAt": "2026-09-11T01:40:33.6744697Z",
+  "createdAtLocal": "2026-09-10 21:40",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 21:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp",
+  "summary": "Followed up on 'the text is wrong before it gets to nemo'. Verified the ground-truth alignment holds: the official .en track has a 10.2s gap (52.95-63.20s) where the Quebecois insert plays, so clip a_60-72.wav is French tail + English from 63.2s, matching what NeMo produced under unlimited context. Then found the one text input that conditions the encoder BEFORE decoding: a language tag resolved by prompt_index_for_lang() and one-hot fused into the encoder (model.cpp:2250-2254). Swept it on the failing clip: --language en-US drops the French entirely (89-frame blank run) but recovers 'Like there's over eight million...'; --language fr-FR/fr-CA keep the French and mangle the English; auto/default gives French plus late English. So the language prompt, not the attention window, is what decides which language survives - and no prompt value recovers both. Awaiting user clarification on which upstream text they meant.",
+  "commands": [
+    "nemo-speech transcribe --language {auto,en-US,fr-FR,fr-CA}"
+  ],
+  "files": [
+    "NeMo-Speech.cpp/src/asr/model.cpp",
+    "NeMo-Speech.cpp/src/asr/recognizer.cpp"
+  ],
+  "planPath": "",
+  "contentHash": "bccdd04e3b1fcde6566ffde3b0e5d8e1655578bb2adc0d72146f81a8af2d7198",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "b2354ad",
+    "hasChanges": true
+  }
+}

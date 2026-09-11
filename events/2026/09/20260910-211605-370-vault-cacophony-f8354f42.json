@@ -1,0 +1,49 @@
+{
+  "id": "20260910-211605-370-vault-cacophony-f8354f42",
+  "createdAt": "2026-09-11T01:16:05.3703330Z",
+  "createdAtLocal": "2026-09-10 21:16",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 21:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "ASR black-hole investigation: added heavy RNNT/TDT decode tracing (NEMO_SPEECH_DEBUG_RNNT) in build-s2s, captured traces at rnnt_right_context=3 vs 1. Trace refutes the symbol-cap hypothesis: max_symbols_per_step guard fires zero times at both settings. At the failing setting the joint emits blank_run=50 consecutive frames (50 x 80ms = 4.0s, matching the 3.76s missing span) then emits an inline <fr-FR> language-tag vocab token before resuming. Model self-silences across the language switch; nothing downstream discards output. Also converted nemotron-3.5-asr-streaming-0.6b to q8_0 GGUF (742MB) with asr.tokenizer.spm_model embedded, so word boosting should now be live (untested).",
+  "commands": [
+    "cmake --build build-s2s",
+    "NEMO_SPEECH_DEBUG_RNNT=1 transcribe"
+  ],
+  "files": [
+    "src/rnnt_greedy_decoder.cpp",
+    "src/tdt_greedy_decoder.cpp",
+    "G:/OpenASR/converted/nemotron-3.5-asr-streaming-0.6b.q8_0.gguf"
+  ],
+  "planPath": "",
+  "contentHash": "f8354f42b5da1db355694f2cfa0dbefd588d314cd9fc777a93a514b96e20ed6e",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "8dcbae4",
+    "hasChanges": true
+  }
+}

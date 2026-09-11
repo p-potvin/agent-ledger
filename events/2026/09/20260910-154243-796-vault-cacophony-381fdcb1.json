@@ -1,0 +1,50 @@
+{
+  "id": "20260910-154243-796-vault-cacophony-381fdcb1",
+  "createdAt": "2026-09-10T19:42:43.7966224Z",
+  "createdAtLocal": "2026-09-10 15:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + WSL Ubuntu)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 15:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + WSL Ubuntu",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Three things. (1) RULE SYNCED: added a rule to vaultwares-docs/AGENTS.md (source of truth) against mixing a file-deletion cmdlet with a Program-Files path in one PowerShell command - the permission guard scans the whole command string and refuses even when the deletion targets a scratch dir and the system path text is only part of a PATH assignment for CUDA. Documented three workarounds (delete via Bash rm -rf, use fresh unique dirs, split into two calls) and that the guard must not be defeated. Ran sync-global-instructions.ps1; verified present in .claude/CLAUDE.md, .codex/AGENTS.md and .gemini/GEMINI.md; committed vaultwares-docs c49285c. Amusing confirmation: writing this very ledger entry tripped the same guard on the first attempt because the summary text itself contained both strings. (2) BLACK HOLE TRACED. Using the owner's reference VTT the missing span is 63.20-66.96s: 'First of all, I want to say that I understand everyone very well. Like,' - 3.76s of English swallowed at a French-to-English switch with the timeline correct on both sides, hence no desync. NOT the positional/length threshold: a 45s clip reproduces it and the span transcribes perfectly in isolation. Swept ONLY the preceding French context, all clips ending at the same point: 0.0s KEPT (en-US), 0.5s KEPT, 1.0s DROPPED, 1.5s DROPPED, 2.0s DROPPED (fr-FR), 2.5s DROPPED, 3.0s DROPPED, 4.0s KEPT (fr-FR+en-US), 6.0s KEPT. It is a failure BAND of roughly 1-3s of preceding French, not a slope - the model commits to fr-FR and swallows English until it re-locks. PARTIALLY REVERSES my earlier 'not language switches' conclusion (that came from the monolingual file having",
+  "commands": [
+    "sync-global-instructions.ps1",
+    "preceding-French-context sweep 0.0-6.0s",
+    "wsl build_itn_deps.sh"
+  ],
+  "files": [
+    "vaultwares-docs/AGENTS.md",
+    "docs/plurilingual-vad-and-decoder-notes.md",
+    "docs/transcripts/french-reacts-reference.en.vtt"
+  ],
+  "planPath": "",
+  "contentHash": "381fdcb1c05a2d79fc25e1b4269cc290dd83ed359c7e162993bdecd9091a8b4f",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2cdd156",
+    "hasChanges": true
+  }
+}

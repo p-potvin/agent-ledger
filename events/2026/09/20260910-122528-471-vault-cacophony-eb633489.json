@@ -1,0 +1,48 @@
+{
+  "id": "20260910-122528-471-vault-cacophony-eb633489",
+  "createdAt": "2026-09-10T16:25:28.4713866Z",
+  "createdAtLocal": "2026-09-10 12:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 12:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Tested all five Magpie baked voices across multi-speaker and multilingual conversations with diarization. Results: 4 speakers without Aria (control) 4 labels / 96.2 percent word accuracy / 10-of-10 turns / 1.48 percent WER; 4 speakers including Aria 3 labels / 66.9 percent / 7-of-10 / 2.96 percent; 5 speakers 4 labels / 67.0 percent / 7-of-10 / 0.00 percent WER; 3 speakers en-es-fr 2 labels / 71.3 percent / 6-of-9 / 12.75 percent. KEY FINDING: the diarizer is NOT the problem and neither is speaker count. Every failing run collapsed exactly one pair and it was always Sofia+Aria, the two female baked voices - Aria's turns to Sofia in the 4-speaker case, Sofia's to Aria in the 5-speaker case, all three of Aria's French turns to Sofia in the multilingual one. Proved with a control: same script with Aria swapped for another voice gets all 4 labels and 10-of-10 turns at 96.2 percent, so sortformer_4spk handles four DISTINCT voices well. Practical rule recorded: never put Sofia and Aria in the same conversation; John/Sofia/Jason/Leo is a clean four-way set. Also recorded that speaker accuracy and WER fail INDEPENDENTLY - the 5-speaker run transcribed perfectly at 0.00 percent WER while still merging two speakers, so a clean transcript is no evidence the labels are right. Multilingual: all three languages correctly detected in one file (en-US, es-US, fr-FR) and voice identity holds across languages. Spanish and French within a turn are near-perfect; the 12.75 percent WER is concentrated at language-switch seams (Si -> See, Spanish 'sera' bleeding into the",
+  "commands": [
+    "nemo-speech synthesize --voice John/Sofia/Aria/Jason/Leo",
+    "nemo-speech transcribe --diarize --language auto",
+    "evaluate_openasr.py english + basic normalizers"
+  ],
+  "files": [
+    "docs/magpie-tts-notes.md",
+    "docs/transcripts/multispeaker-diarization.md"
+  ],
+  "planPath": "",
+  "contentHash": "eb633489fb0b5114d3e930212d1d4094bc1df55fd531f07fa3f1269c335cd88c",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "ac5e60a",
+    "hasChanges": true
+  }
+}

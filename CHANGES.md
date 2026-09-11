@@ -3,6 +3,850 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-09-11 00:03 - clipit</strong> <code>verification</code> - Completed live e2e verification of HTTP harvesting, bit-perfect zip generation, and storage persistence for gallery-scraper</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\clipit  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-11 00:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed live e2e verification of HTTP harvesting, bit-perfect zip generation, and storage persistence for gallery-scraper
+- Git: repo=clipit, branch=main, head=b4f911b
+
+</details>
+
+<details>
+<summary><strong>2026-09-11 00:02 - clipit</strong> <code>code-change</code> - Added profile persistence across popup closures and tab switches in gallery-scraper, fixed zipping root causes and verified in browser</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\clipit  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-11 00:02 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added profile persistence across popup closures and tab switches in gallery-scraper, fixed zipping root causes and verified in browser
+- Git: repo=clipit, branch=main, head=b4f911b
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 23:49 - vault-cacophony</strong> <code>verification</code> - Benchmarked VAD segmentation on 25 min of the Shane Gillis / Theo Von podcast (monolingual EN) vs the French code-switched file. RESULT: segmentation is NOT a universal win. Mon...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 23:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: Benchmarked VAD segmentation on 25 min of the Shane Gillis / Theo Von podcast (monolingual EN) vs the French code-switched file. RESULT: segmentation is NOT a universal win. Monolingual podcast WER 19.75% (base) vs 21.15% (segmented) - 1.4 points WORSE, because every cut removes context the model was using. On the code-switched French file it halved loss (11.0s -> 5.2s) and was 3x faster. Documented on VadSegmenterCfg (commit 2b64c66) so the trade-off is visible at the flag. Two false alarms ruled out: the largest gap in both configs (~30s at 81-110s) is the show's THEME SONG ([Music] + sung lyrics), correctly skipped; and a gap-based loss metric is invalid against that SRT because its cues are rolling (each repeats the previous line) and cover the timeline continuously - WER against a de-rolled reference is the only metric that survives. Podcast has plenty of silence (longest run 26.2s, 265 candidate cuts, 62 segments, 59 resets) so segmentation worked mechanically. --concurrency 1 made zero difference on single-file transcription (identical output and timing); it is a server-path knob and each file already gets its own decoder. VAD min_silence_ms is already 300 by default. Confirmed reset_context() is built and firing (59 resets).
+- Commands:
+  - `ffmpeg -t 1500 -ac 1 -ar 16000`
+  - `nemo-speech transcribe --vad-segmentation / --concurrency 1`
+  - `WER scoring vs de-rolled SRT`
+  - `git commit 2b64c66`
+- Files:
+  - `NeMo-Speech.cpp/src/asr/vad/vad_segmenter.h`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=2b64c66
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 23:48 - clipit</strong> <code>commands</code> - Committed and pushed all changes for clipit and gallery-scraper to main on GitHub</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\clipit  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 23:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Committed and pushed all changes for clipit and gallery-scraper to main on GitHub
+- Git: repo=clipit, branch=main, head=b4f911b
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 23:38 - clipit</strong> <code>verification</code> - Added zip and unpacked verification tests in gallery-scraper, updated walkthrough with proof reflection</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\clipit  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 23:38 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added zip and unpacked verification tests in gallery-scraper, updated walkthrough with proof reflection
+- Git: repo=clipit, branch=main, head=c272a42
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 23:38 - clipit</strong> <code>code-change</code> - Added Firefox data_collection_permissions required none to clipit, and configured npm run build with unpacked and zip packaging in gallery-scraper</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\clipit  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 23:38 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added Firefox data_collection_permissions required none to clipit, and configured npm run build with unpacked and zip packaging in gallery-scraper
+- Git: repo=clipit, branch=main, head=c272a42
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 23:29 - clipit</strong> <code>code-change</code> - Repaired ClipIt for Firefox: implemented vaultsqware design, video trimming, smartnaming, SVG icon, and modular architecture</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\clipit  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 23:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Repaired ClipIt for Firefox: implemented vaultsqware design, video trimming, smartnaming, SVG icon, and modular architecture
+- Git: repo=clipit, branch=main, head=c272a42
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 23:21 - clipit</strong> <code>general</code> - Created implementation plan for ClipIt Firefox revamp with vaultsqware design, trimming, smartnaming, and modularization</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\clipit  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 23:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created implementation plan for ClipIt Firefox revamp with vaultsqware design, trimming, smartnaming, and modularization
+- Git: repo=clipit, branch=main, head=c272a42
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 23:16 - vault-cacophony</strong> <code>code-change</code> - Built VAD-driven offline segmentation into the ASR flow (commit 86719a7, off by default, inert without --vad-model). Key finding: the missing piece was never the split - Offline...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write, Edit
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 23:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: Built VAD-driven offline segmentation into the ASR flow (commit 86719a7, off by default, inert without --vad-model). Key finding: the missing piece was never the split - OfflineRunner already cut long audio at the positional limit, but all segments shared ONE decoder so prev_token_ crossed every boundary. Added Decoder::reset_context() (drop language state, keep word timings/stats) with overrides on both greedy transducer decoders; reset() discards timings and reset_utterance() preserves exactly the predictor context that must go. Segments partition audio exactly (contiguous, cuts at midpoint of silent runs). Measured on the 11.6 min source vs official .en subs: base 2253 words / 11.0s English lost / 42s wall; seg30 2269 words / 5.2s lost / 13s wall - loss more than halved, 3x faster. --vad-seg-reset-forced measured WORSE (22.8s) so stays off. TWO CORRECTIONS: (1) the 186s loss figure I reported earlier came from a stale Sept 8 JSON, not current behaviour; (2) the black hole does NOT reproduce on the full file - baseline transcribes the 63s switch correctly - it only appears on the 12s excerpt starting 3s before the switch. On that excerpt VAD cannot help: 371/375 windows are speech, longest silence 64ms. Also fixed: need_vad in recognizer.cpp did not include the segmenter, so --vad-segmentation silently loaded no VAD model. Note silero-vad-v6.2.1.gguf has empty general.architecture; use silero-v6.2.0-nemo.gguf.
+- Commands:
+  - `cmake --build build-s2s`
+  - `nemo-speech transcribe --vad-segmentation on 696s file`
+  - `git commit 86719a7`
+- Files:
+  - `NeMo-Speech.cpp/src/asr/vad/vad_segmenter.h`
+  - `NeMo-Speech.cpp/src/asr/runner.cpp`
+  - `NeMo-Speech.cpp/src/asr/decoders/decoder.h`
+  - `NeMo-Speech.cpp/src/asr/recognizer.cpp`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=86719a7
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 23:00 - vault-cacophony</strong> <code>verification</code> - CASE CLOSED: the ASR black hole is model behaviour, not our pipeline. Control 2 (decisive): ran the HF reference implementation - PyTorch 2.14 CPU, stock transformers 5.17.0, of...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 23:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: CASE CLOSED: the ASR black hole is model behaviour, not our pipeline. Control 2 (decisive): ran the HF reference implementation - PyTorch 2.14 CPU, stock transformers 5.17.0, official model.safetensors from nvidia/nemotron-3.5-asr-streaming-0.6b, fresh uv venv, no GGUF, no CUDA, no patched kernels, no shared code with our C++ path. It reproduces the SAME hole on a_60-72.wav: skips 'First of all, I want to say that I understand everyone very well. Like,' and emits <fr-FR> at the same place. On segmented c_63-68.wav both agree. Combined with Control 1 (clean upstream cuda-asr build reproducing character-for-character), this exonerates the GGUF conversion, the build stack, the patched CUDA kernels, Windows and CUDA. All three of the user's hypotheses are negative. ONE genuine divergence found and flagged separately: HF transcribes 'Meme dans ma tete' at clip start, ours drops it - a smaller first-chunk-handling bug worth its own investigation. Practical answer stands: segment before the ASR call. Committed d22523f with docs/traces/hf-reference-check.py to reproduce. Used CPU torch deliberately per the CUDA-libraries rule; existing torch 2.13.0+cu126 left untouched. Note the repo .venv is damaged (numpy dist-info missing, breaks transformers import).
+- Commands:
+  - `uv venv --python 3.12`
+  - `uv pip install torch --index-url https://download.pytorch.org/whl/cpu`
+  - `python hf_ref.py`
+  - `git commit d22523f`
+- Files:
+  - `NeMo-Speech.cpp/docs/traces/hf-reference-check.py`
+  - `NeMo-Speech.cpp/docs/black-hole-investigation-changes.md`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=d22523f
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 22:53 - vault-cacophony</strong> <code>verification</code> - CLEAN-BUILD RESULT: the build stack is exonerated. Built NVIDIA/NeMo-Speech.cpp from a fresh clone at a5b6953 with the cuda-asr preset, its own correctly-patched ggml (fused-att...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 22:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: CLEAN-BUILD RESULT: the build stack is exonerated. Built NVIDIA/NeMo-Speech.cpp from a fresh clone at a5b6953 with the cuda-asr preset, its own correctly-patched ggml (fused-attention.cu, series incl. 0017/0018), reusing only vcpkg+sentencepiece. It reproduces the hole CHARACTER-FOR-CHARACTER identical to our build on a_60-72.wav, and matches on c_63-68.wav too. So the three divergences found (broken cuda-asr preset JSON, stale vendored ggml with fused-relpos-attn.cu, older ggml-patches series missing 0017/0018) are real and worth fixing but are NOT the cause. Note cuda-server preset fails on this machine in TTS (magpietts_cuda_sampling.cu, CCCL wants /Zc:preprocessor) - unrelated to ASR. Remaining untested variable is the GGUF conversion; downloading HF reference weights (nvidia/nemotron-3.5-asr-streaming-0.6b) which are a prerequisite both for reconversion and for running the HF reference implementation directly - the latter being the more decisive test since it separates 'our pipeline' from 'the model'. Practical answer already established and committed: segment before the ASR call; c_63-68 cut at the switch returns an exact ground-truth match.
+- Commands:
+  - `cmake --preset cuda-asr`
+  - `cmake --build build/cuda-asr`
+  - `nemo-speech transcribe (clean build)`
+  - `hf download nvidia/nemotron-3.5-asr-streaming-0.6b`
+- Files:
+  - `nemo-speech-clean/build/cuda-asr/bin/nemo-speech.exe`
+  - `NeMo-Speech.cpp/docs/black-hole-investigation-changes.md`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=10634fd
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 22:42 - vault-cacophony</strong> <code>verification</code> - Added NEMO_SPEECH_DEBUG_BLANK_SHADOW (read-only, output verified byte-identical): logs what the joint would emit with blank excluded, frame by frame, through a blank run. Throug...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 22:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added NEMO_SPEECH_DEBUG_BLANK_SHADOW (read-only, output verified byte-identical): logs what the joint would emit with blank excluded, frame by frame, through a blank run. Through the 48-frame hole the model ranks '_first _of ... _that ... _under ... _very _well' at exactly the right frames while the predictor stays FROZEN on token 1022 'ais'. Definitive: the correct words were always second behind blank. Committed 60737b2. Then tested the build-stack-divergence hypothesis: cloned NVIDIA/NeMo-Speech.cpp clean to Github Repos/nemo-speech-clean. Found (1) CMakePresets.json in our vendored tree has a committed JSON syntax error in cuda-asr (missing comma, tab indent) making that preset unusable - upstream's is valid; (2) our vendored ggml has fused-relpos-attn.cu while the correctly-patched reference produces fused-attention.cu - different patch generations; (3) our ggml-patches series differs from upstream a5b6953: 0014 is cuda-relpos-extensions vs cuda-fused-attention-extensions, we are MISSING 0017-cuda-stream-interop and 0018-metal-tensor-api-dynamic-k, and 0007/0015 differ in content. So the vendor import brought C++ at a5b6953 but an older ggml patch series. Clean cuda-server build configured (reusing vcpkg + sentencepiece) and building now. Caveat: encoder features are healthy and the shadow ranking is coherent, which is not the fingerprint of a broken CUDA kernel - so this divergence is real and worth fixing but may not be the cause.
+- Commands:
+  - `git clone NVIDIA/NeMo-Speech.cpp`
+  - `scripts/apply-ggml-patches.sh`
+  - `cmake --preset cuda-server`
+  - `git commit 60737b2`
+- Files:
+  - `NeMo-Speech.cpp/src/asr/decoders/rnnt_greedy_decoder.cpp`
+  - `NeMo-Speech.cpp/ggml-patches/`
+  - `NeMo-Speech.cpp/CMakePresets.json`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=60737b2
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 22:08 - vault-cacophony</strong> <code>code-change</code> - Root-caused the ASR black hole. The lever is the predictor cache, not max_symbols_per_step: in RNN-T the predictor is conditioned on the last EMITTED token and a blank is not an...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write, Edit
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 22:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Root-caused the ASR black hole. The lever is the predictor cache, not max_symbols_per_step: in RNN-T the predictor is conditioned on the last EMITTED token and a blank is not an emission, so across a blank run the joint is scored against one frozen predictor state (the code comment already said 'Blank paths never reach this block and retain the cache'). Added NEMO_SPEECH_RNNT_MAX_BLANK (default off): after N consecutive blanks, run a blank-excluded argmax and force the best non-blank to unfreeze the predictor. At N=5 a single forced '.' at t=45 recovers the entire missing sentence verbatim vs ground truth. Sweep: unset=48-frame hole, 24 recovers 'Like there's over', 16 recovers 'everyone very well', 10 recovers 'That I understand', 5 recovers all but damages the French opening. Trade-off is false positives in genuine silence, so not production-ready and off by default. Also wrote docs/black-hole-investigation-changes.md cataloguing every modification, all env vars, which one can alter output, verification that default output is unchanged, and how to revert. Committed b26235a.
+- Commands:
+  - `cmake --build build-s2s`
+  - `NEMO_SPEECH_RNNT_MAX_BLANK sweep 0/5/10/16/24`
+  - `git commit b26235a`
+- Files:
+  - `NeMo-Speech.cpp/src/asr/decoders/rnnt_greedy_decoder.cpp`
+  - `NeMo-Speech.cpp/docs/black-hole-investigation-changes.md`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=b26235a
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 21:52 - vault-cacophony</strong> <code>handoff</code> - Session resumed after app quit. No work in flight; all instrumentation and findings are committed at b2354ad (offline mask matches HF, encoder features healthy through the hole,...</summary>
+
+- Kind: handoff
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 21:52 (TZ: Eastern Standard Time)
+  ```
+- Summary: Session resumed after app quit. No work in flight; all instrumentation and findings are committed at b2354ad (offline mask matches HF, encoder features healthy through the hole, hole is real speech, boosting confirmed live on the reconverted GGUF). Language-prompt sweep results recorded in the prior ledger entry but not yet committed to the repo. Blocked on clarifying which upstream text the user means by 'the text is wrong before it gets to nemo' - a multiple-choice question was declined, so asking in plain prose instead.
+- Files:
+  - `NeMo-Speech.cpp/docs/traces/`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=b2354ad
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 21:40 - vault-cacophony</strong> <code>verification</code> - Followed up on &#39;the text is wrong before it gets to nemo&#39;. Verified the ground-truth alignment holds: the official .en track has a 10.2s gap (52.95-63.20s) where the Quebecois i...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 21:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Followed up on 'the text is wrong before it gets to nemo'. Verified the ground-truth alignment holds: the official .en track has a 10.2s gap (52.95-63.20s) where the Quebecois insert plays, so clip a_60-72.wav is French tail + English from 63.2s, matching what NeMo produced under unlimited context. Then found the one text input that conditions the encoder BEFORE decoding: a language tag resolved by prompt_index_for_lang() and one-hot fused into the encoder (model.cpp:2250-2254). Swept it on the failing clip: --language en-US drops the French entirely (89-frame blank run) but recovers 'Like there's over eight million...'; --language fr-FR/fr-CA keep the French and mangle the English; auto/default gives French plus late English. So the language prompt, not the attention window, is what decides which language survives - and no prompt value recovers both. Awaiting user clarification on which upstream text they meant.
+- Commands:
+  - `nemo-speech transcribe --language {auto,en-US,fr-FR,fr-CA}`
+- Files:
+  - `NeMo-Speech.cpp/src/asr/model.cpp`
+  - `NeMo-Speech.cpp/src/asr/recognizer.cpp`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=b2354ad
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 21:37 - vault-cacophony</strong> <code>verification</code> - Tested the attention_mask/static-cache padding hypothesis for the ASR black hole. Added NEMO_SPEECH_DEBUG_ENC (offline mask geometry + host recomputation of visible key spans + ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Read, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 21:37 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tested the attention_mask/static-cache padding hypothesis for the ASR black hole. Added NEMO_SPEECH_DEBUG_ENC (offline mask geometry + host recomputation of visible key spans + per-frame encoder output l2/mean/min/max/cos_prev) and NEMO_SPEECH_OFFLINE_LEFT_CTX/_RIGHT_CTX overrides. Result: our offline mask matches HF transformers nemotron_asr_streaming exactly (chunked_limited, chunk=R+1=4, left_chunks=56/4=14, reach 60 keys, left=sliding_window-1=56); no query fully masked; encoder features through the hole are healthy (l2 3.45 vs 3.70, cos_prev 0.82 vs 0.74, zero near-duplicates). Masking ruled out. But the hole IS real speech: ground truth at 63s is 'First of all, I want to say that I understand everyone very well. Like,'. Window sweep shows no single setting recovers both languages (unlimited recovers the English, loses the French; R=13 best compromise). Also corrected 8dcbae4: its rc1/rc3 traces were byte-identical because the offline encoder ignores rnnt_right_context, and its traces were never committed (*.log gitignored). Word boosting confirmed LIVE on the reconverted GGUF (boosting=on, output changes) but structurally cannot fill a blank run.
+- Commands:
+  - `cmake --build build-s2s (via vcvars64)`
+  - `nemo-speech transcribe with NEMO_SPEECH_DEBUG_ENC=1`
+  - `git commit 15323dc`
+- Files:
+  - `NeMo-Speech.cpp/src/asr/model.cpp`
+  - `NeMo-Speech.cpp/src/asr/encoder/fastconformer.cpp`
+  - `NeMo-Speech.cpp/docs/traces/`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=15323dc
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 21:16 - vault-cacophony</strong> <code>verification</code> - ASR black-hole investigation: added heavy RNNT/TDT decode tracing (NEMO_SPEECH_DEBUG_RNNT) in build-s2s, captured traces at rnnt_right_context=3 vs 1. Trace refutes the symbol-c...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Read
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 21:16 (TZ: Eastern Standard Time)
+  ```
+- Summary: ASR black-hole investigation: added heavy RNNT/TDT decode tracing (NEMO_SPEECH_DEBUG_RNNT) in build-s2s, captured traces at rnnt_right_context=3 vs 1. Trace refutes the symbol-cap hypothesis: max_symbols_per_step guard fires zero times at both settings. At the failing setting the joint emits blank_run=50 consecutive frames (50 x 80ms = 4.0s, matching the 3.76s missing span) then emits an inline <fr-FR> language-tag vocab token before resuming. Model self-silences across the language switch; nothing downstream discards output. Also converted nemotron-3.5-asr-streaming-0.6b to q8_0 GGUF (742MB) with asr.tokenizer.spm_model embedded, so word boosting should now be live (untested).
+- Commands:
+  - `cmake --build build-s2s`
+  - `NEMO_SPEECH_DEBUG_RNNT=1 transcribe`
+- Files:
+  - `src/rnnt_greedy_decoder.cpp`
+  - `src/tdt_greedy_decoder.cpp`
+  - `G:/OpenASR/converted/nemotron-3.5-asr-streaming-0.6b.q8_0.gguf`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=8dcbae4
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 18:34 - vault-cacophony</strong> <code>code-change</code> - Added NEMO_SPEECH_DEBUG_RNNT stderr tracing to both greedy decoders and the cache-aware runner (built into build-s2s as the owner asked, leaving build-cuda untouched). Traces en...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local + WSL Ubuntu)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 18:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added NEMO_SPEECH_DEBUG_RNNT stderr tracing to both greedy decoders and the cache-aware runner (built into build-s2s as the owner asked, leaving build-cuda untouched). Traces encoder chunk geometry, chunk entry/exit, every emitted token with its preceding blank run and symbol count, the blank-with-duration-zero forcing, the TDT pending_skip overshoot, and the max_symbols_per_step guard, with inline comments explaining both loops. Discovered two decoder classes exist: nemotron-3.5 uses RnntGreedyDecoder, TdtGreedyDecoder is the parakeet-tdt path - I instrumented the TDT one first and got no output, then instrumented both. THE TRACE REFUTES MY SYMBOL-CAP HYPOTHESIS: the guard fires ZERO times at both rc=1 and rc=3, so nothing is discarded by it. What the log actually shows at the failing right context: t=38 emits l/ais (anglais), then blank_run=50 before the next emission at t=88, which is a period followed by a <fr-FR> LANGUAGE-TAG token, then 'the' at t=92. Fifty consecutive blank frames at 80ms is 4.0s, matching the 3.76s hole. The audio does reach the joint and the joint predicts blank - the model itself emits nothing and then emits a language tag. So this is MODEL behaviour at a language switch, not a decoder guard, which also explains why boosting could not rescue it and why it is perfectly reproducible. Counts: rc=1 28 chunks/122 emits, rc=3 15 chunks/109 emits, 0 cap hits either way. Traces committed under docs/traces/. ALSO: the nemotron-3.5 re-conversion COMPLETED - G:/OpenASR/converted/nemotron-3.5-asr-streaming-0.6b.q8_0.gguf, 742.0 MB, and asr.tokenizer.spm_model IS embedded, so word boosting should now actually work with this GGUF (untested so far). Rebuild timing confirmed again at 66.8s for a
+- Commands:
+  - `instrument RnntGreedyDecoder + runner, build-s2s`
+  - `NEMO_SPEECH_DEBUG_RNNT=1 transcribe at rc=1 and rc=3`
+  - `convert_model.py nvidia/nemotron-3.5-asr-streaming-0.6b`
+- Files:
+  - `NeMo-Speech.cpp/src/asr/decoders/rnnt_greedy_decoder.cpp`
+  - `NeMo-Speech.cpp/src/asr/runner.cpp`
+  - `docs/traces/rnnt-trace-rc1.log`
+  - `docs/traces/rnnt-trace-rc3.log`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=8dcbae4
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 16:56 - vault-cacophony</strong> <code>verification</code> - Three results. (1) WORD BOOSTING IS A NO-OP on every cached model - this corrects the owner&#39;s impression that it was working for RNNT. Boosting the exact swallowed phrases at rc...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local + WSL Ubuntu)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 16:56 (TZ: Eastern Standard Time)
+  ```
+- Summary: Three results. (1) WORD BOOSTING IS A NO-OP on every cached model - this corrects the owner's impression that it was working for RNNT. Boosting the exact swallowed phrases at rc=3 gives BYTE-IDENTICAL output (2324 words, same md5 8cfae76e09c9), so it is not failing to rescue the span, it is not running. model.h:120 and model.cpp:1307: boosting needs the SentencePiece proto embedded under asr.tokenizer.spm_model and the code notes it is absent in older GGUFs, in which case boosting no-ops. Verified all four cached ASR models (nemotron-3.5, nemotron-en, parakeet-ctc, parakeet-tdt): NONE carry it. nemotron-3.5 has asr.tokenizer.type=sentencepiece_bpe and .vocab but not the proto, so every boost phrase is dropped before reaching the boosting tree. Fix is a re-conversion not a code change: conversion/asr.py:229 already defines KEY_TOK_MODEL, so converting nemotron-3.5 from HF with this repo's convert_model.py embeds it - a 0.6B model, far more tractable than the 44GB VoiceChat. (2) max_symbols_per_step IS SAFE TO CHANGE - the owner's ONNX/TensorRT concern does not apply. That constraint is about the ENCODER attention mask matching left+current+right (cache_left_ctx, cache_chunk_frames, cache_right_ctx) and is real. max_symbols_per_step is only the bound of a while loop at rnnt_greedy_decoder.cpp:404 issuing repeated SINGLE-symbol calls (joint_tdt_argmax with count 1), each a fixed-shape graph, so the loop count never changes a tensor shape. Still GGUF-only so testing needs a rebuild. (3) REBUILD COST MEASURED: no-op incremental 0.3s; one host-side file rebuilt and relinked via build.ps1 54.4s, most of it the vcpkg check and cmake reconfigure. Under a minute per iteration, which removes the main argument for deploying the ONNX build to avoid
+- Commands:
+  - `transcribe --speech-context with boost 0 vs 3 at rc=3`
+  - `GGUF spm_model presence check across 4 models`
+  - `timed incremental rebuild via build.ps1`
+- Files:
+  - `docs/plurilingual-vad-and-decoder-notes.md`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=b4ebd2b
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 16:10 - vault-cacophony</strong> <code>verification</code> - (1) Replaced the global agent rule with the correct one: quote every path because commands run in Windows PowerShell not bash - unquoted paths with spaces split into multiple ar...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local + WSL Ubuntu)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 16:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: (1) Replaced the global agent rule with the correct one: quote every path because commands run in Windows PowerShell not bash - unquoted paths with spaces split into multiple args, backslash sequences get eaten, use & to invoke an exe whose path has a space, use raw strings for Windows paths in Python/heredocs since backslash-U and backslash-b silently corrupt them, and --% to stop PowerShell parsing native-exe args. Kept the permission-guard note as a sub-case rather than the headline. Synced to all 7 agent files, committed vaultwares-docs 4a56536. My own first attempt at the fix was broken by backslash-U in a non-raw Python string, which is the exact bug class the rule covers. (2) BLACK HOLE DISCRIMINATOR FOUND, thanks to the owner spotting two archived runs that kept the sentence. Checked every archived run: fr-out, fr-rc1, fr-vad KEPT it (all rnnt_right_context=1); fr-rc2, fr-rc3, fr-vadoff, fr-vadon, fr-eou dropped it (all rc 2 or 3); post-fix offline runs also drop it. Confirmed causally with everything else held constant: rc=1 KEPT 2332 words, rc=2 dropped 2262, rc=3 dropped 2324. Perfectly reproducible, matching the owner's read that the hole is too clean to be model noise. WHY: fastconformer.h:107 sets cache_chunk_frames = 1 + cache_right_ctx, so right context IS the decode chunk size (rc=1 = 160ms step, rc=3 = 320ms). CANDIDATE MECHANISM recorded explicitly as hypothesis NOT result: rnnt_greedy_decoder.cpp:462 is NeMo's infinite-loop guard which force-advances the frame once max_symbols_per_step (default 10) is hit, discarding what the model still wanted to emit - a path that actively deletes output, matching the owner's
+- Commands:
+  - `sync-global-instructions.ps1`
+  - `rc=1/2/3 controlled re-run on the same file`
+  - `grep max_symbols_per_step / cache_chunk_frames`
+- Files:
+  - `vaultwares-docs/AGENTS.md`
+  - `docs/plurilingual-vad-and-decoder-notes.md`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=ab24680
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 15:42 - vault-cacophony</strong> <code>verification</code> - Three things. (1) RULE SYNCED: added a rule to vaultwares-docs/AGENTS.md (source of truth) against mixing a file-deletion cmdlet with a Program-Files path in one PowerShell comm...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local + WSL Ubuntu)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 15:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Three things. (1) RULE SYNCED: added a rule to vaultwares-docs/AGENTS.md (source of truth) against mixing a file-deletion cmdlet with a Program-Files path in one PowerShell command - the permission guard scans the whole command string and refuses even when the deletion targets a scratch dir and the system path text is only part of a PATH assignment for CUDA. Documented three workarounds (delete via Bash rm -rf, use fresh unique dirs, split into two calls) and that the guard must not be defeated. Ran sync-global-instructions.ps1; verified present in .claude/CLAUDE.md, .codex/AGENTS.md and .gemini/GEMINI.md; committed vaultwares-docs c49285c. Amusing confirmation: writing this very ledger entry tripped the same guard on the first attempt because the summary text itself contained both strings. (2) BLACK HOLE TRACED. Using the owner's reference VTT the missing span is 63.20-66.96s: 'First of all, I want to say that I understand everyone very well. Like,' - 3.76s of English swallowed at a French-to-English switch with the timeline correct on both sides, hence no desync. NOT the positional/length threshold: a 45s clip reproduces it and the span transcribes perfectly in isolation. Swept ONLY the preceding French context, all clips ending at the same point: 0.0s KEPT (en-US), 0.5s KEPT, 1.0s DROPPED, 1.5s DROPPED, 2.0s DROPPED (fr-FR), 2.5s DROPPED, 3.0s DROPPED, 4.0s KEPT (fr-FR+en-US), 6.0s KEPT. It is a failure BAND of roughly 1-3s of preceding French, not a slope - the model commits to fr-FR and swallows English until it re-locks. PARTIALLY REVERSES my earlier 'not language switches' conclusion (that came from the monolingual file having
+- Commands:
+  - `sync-global-instructions.ps1`
+  - `preceding-French-context sweep 0.0-6.0s`
+  - `wsl build_itn_deps.sh`
+- Files:
+  - `vaultwares-docs/AGENTS.md`
+  - `docs/plurilingual-vad-and-decoder-notes.md`
+  - `docs/transcripts/french-reacts-reference.en.vtt`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=2cdd156
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 14:58 - vault-cacophony</strong> <code>code-change</code> - Corrections plus post-processing survey plus subtitle lead. MAJOR CORRECTION: my earlier claim that voice identity holds across languages was WRONG and the owner&#39;s ear was right...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 14:58 (TZ: Eastern Standard Time)
+  ```
+- Summary: Corrections plus post-processing survey plus subtitle lead. MAJOR CORRECTION: my earlier claim that voice identity holds across languages was WRONG and the owner's ear was right. CAM++ cosine on the same sentence per speaker: Aria en-vs-fr 0.428, and Aria-vs-Sofia WITHIN French also 0.428 - changing the language moves the voice as much as changing the speaker. Sofia/Aria similarity is itself language-dependent (0.289 en, 0.441 es, 0.428 fr), which explains the multilingual merge. Consequence for dubbing: a speaker cannot be kept consistent across a language switch by reusing --voice. Second correction: in the E2E run the flip TO Speaker 3 is correct (different person in the clip); the flip BACK to Speaker 2 is the error - I had it backwards. TTS RTFx answered: 2.0-2.9x realtime on cuda:0, typically ~2.6x. SUBTITLE LEAD IMPLEMENTED (vault-commander 86cff06): words_to_cues gains lead_s default 0.15s, exposed as --lead on subtitles_asr.py; start and end shift together so duration is unchanged, clamped at zero; applied to the cue not the word timings so word data and diarization stay true to the audio. Verified end to end - first cue moved 00:00:01,200 to 00:00:01,050 with its 2.4s duration intact. SORTFORMER SURVEY: exposed knobs are model_path, preset, chunk, right/left context, fifo, spkcache, update_period. There is NO 'do not re-assign' flag and NO 'pin to speaker N at limit' - the scoring constants (pred_score_threshold 0.25, scores_boost_latest, sil_threshold, boost rates) are model-tied in sortformer.scoring.* and never registered as CLI keys; num_speakers=4 is a model constant. --diar-preset offline is the closest lever and NOT a clean win: conv4 66.9->76.7
+- Commands:
+  - `voiceprint.py cross-language CAM++ comparison`
+  - `transcribe --diar-preset offline sweep`
+  - `Start-BetterSubtitles.ps1 lead verification`
+  - `wsl -d Ubuntu toolchain probe`
+- Files:
+  - `docs/magpie-tts-notes.md`
+  - `vault-commander/cli/utils/subtitles_cues.py`
+  - `vault-commander/cli/utils/subtitles_asr.py`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=c929941
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 12:45 - vault-cacophony</strong> <code>verification</code> - Gap sweep, objective voice-similarity check, and a full end-to-end run from a real audio file. GAP SWEEP (0/100/350/1000ms): optimum is 100-350ms. conv4 English WER 3.70/2.22/2....</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 12:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Gap sweep, objective voice-similarity check, and a full end-to-end run from a real audio file. GAP SWEEP (0/100/350/1000ms): optimum is 100-350ms. conv4 English WER 3.70/2.22/2.96/3.70; convml en-es-fr WER 17.65/14.71/14.71/26.47. Two findings: the gap does NOT affect the speaker merge (3 labels for 4 speakers at every gap, so Sofia/Aria collapse is not a boundary artifact), and a LONG pause is actively harmful on multilingual audio - at 1000ms the en/es/fr file lost language detection entirely (returned en-US only instead of all three) and WER nearly doubled. Keep inter-turn silence 100-350ms. VOICE EMBEDDINGS: the owner said Sofia and Aria sound nothing alike, which is true perceptually, but CAM++ (WeSpeaker VoxCeleb, via scripts/voiceprint.py) on the same sentence in all five voices shows Sofia/Aria is the TOP similarity pair at 0.422, with Jason/Leo second at 0.345 - exactly where the single remaining speaker error landed in conv5. Merges track embedding distance, not perceived similarity. Gives a cheap pre-flight check: embed a candidate voice set and reject pairs above ~0.4. END TO END: Start-BetterSubtitles.ps1 -Speakers -LowMemory on the real 11.6min French/English recording with the new defaults (nemotron-3.5, --language auto) and BS-RoFormer separation. 696.1s audio in 217.3s wall, about 3.2x realtime overall, separation RTFx 4.35 and ASR RTFx 12.24. 2365 words and 223 cues vs 2348 from the raw file, so separation is worth ~17 words. Diarization found 4 speakers - narrator at 169 cues plus three clip voices - and the narrator/clip handoff lands exactly on the cut, with one brief mid-sentence flip that recovers immediately. Pushed 92b9b1a.
+- Commands:
+  - `gap variants 0/100/350/1000ms + transcribe --diarize`
+  - `voiceprint.py CAM++ cosine across five voices`
+  - `Start-BetterSubtitles.ps1 -Speakers -LowMemory on real mp3`
+- Files:
+  - `docs/magpie-tts-notes.md`
+  - `scratchpad/e2e/french-reacts.srt`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=92b9b1a
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 12:25 - vault-cacophony</strong> <code>verification</code> - Tested all five Magpie baked voices across multi-speaker and multilingual conversations with diarization. Results: 4 speakers without Aria (control) 4 labels / 96.2 percent word...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 12:25 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tested all five Magpie baked voices across multi-speaker and multilingual conversations with diarization. Results: 4 speakers without Aria (control) 4 labels / 96.2 percent word accuracy / 10-of-10 turns / 1.48 percent WER; 4 speakers including Aria 3 labels / 66.9 percent / 7-of-10 / 2.96 percent; 5 speakers 4 labels / 67.0 percent / 7-of-10 / 0.00 percent WER; 3 speakers en-es-fr 2 labels / 71.3 percent / 6-of-9 / 12.75 percent. KEY FINDING: the diarizer is NOT the problem and neither is speaker count. Every failing run collapsed exactly one pair and it was always Sofia+Aria, the two female baked voices - Aria's turns to Sofia in the 4-speaker case, Sofia's to Aria in the 5-speaker case, all three of Aria's French turns to Sofia in the multilingual one. Proved with a control: same script with Aria swapped for another voice gets all 4 labels and 10-of-10 turns at 96.2 percent, so sortformer_4spk handles four DISTINCT voices well. Practical rule recorded: never put Sofia and Aria in the same conversation; John/Sofia/Jason/Leo is a clean four-way set. Also recorded that speaker accuracy and WER fail INDEPENDENTLY - the 5-speaker run transcribed perfectly at 0.00 percent WER while still merging two speakers, so a clean transcript is no evidence the labels are right. Multilingual: all three languages correctly detected in one file (en-US, es-US, fr-FR) and voice identity holds across languages. Spanish and French within a turn are near-perfect; the 12.75 percent WER is concentrated at language-switch seams (Si -> See, Spanish 'sera' bleeding into the
+- Commands:
+  - `nemo-speech synthesize --voice John/Sofia/Aria/Jason/Leo`
+  - `nemo-speech transcribe --diarize --language auto`
+  - `evaluate_openasr.py english + basic normalizers`
+- Files:
+  - `docs/magpie-tts-notes.md`
+  - `docs/transcripts/multispeaker-diarization.md`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=ac5e60a
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 12:17 - vault-cacophony</strong> <code>code-change</code> - Aligned vault-cacophony and vault-inference onto torch 2.13.0+cu126, leaving vaultwares-api alone as instructed. vault-inference was a LATENT BUG not a preference: pyproject pin...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 12:17 (TZ: Eastern Standard Time)
+  ```
+- Summary: Aligned vault-cacophony and vault-inference onto torch 2.13.0+cu126, leaving vaultwares-api alone as instructed. vault-inference was a LATENT BUG not a preference: pyproject pinned torch==2.13.0 but sourced it from the cu121 index which has no 2.13.0 build, so the venv sat on 2.5.1+cu121 while claiming 2.13.0; repointing the index to cu126 satisfies the already-declared pin (committed 047b4bd on vault-inference main, staged only pyproject.toml since .env.example and README.md carried pre-existing WIP). vault-cacophony moved 2.8.0+cu129 to 2.13.0+cu126, which BROKE torchaudio - libtorchaudio.pyd is compiled against a specific torch ABI and refused to load, and silero_vad/utils_vad.py imports torchaudio at module level so vad_segment.py went down with it. Key gotcha recorded: torchaudio does NOT track torch's version number - there is no torchaudio 2.13.0, and 2.11.0 is the build that pairs with torch 2.13.0. requirements-vad-segment.txt now pins torch==2.13.0, torchaudio==2.11.0, silero-vad==6.2.0 plus the index invocation. RESULT: unique on-disk bytes across the eight venvs fell 21.16 GiB to 13.00 GiB (8.16 GiB eliminated); C: free space 52.9GB to 71.7GB, the larger figure because dropping the two odd torch builds also released their uv cache entries. vault-inference alone went 4.51GiB to 0.29GiB unique. VERIFIED: all five CUDA venvs import torch with cuda=True; vault-inference transformers/accelerate/bitsandbytes 0.50.0/safetensors/sentencepiece/fastapi/uvicorn/pydantic all import; vad_segment.py reproduces its previous output exactly (36 speech spans, 98.8 percent speech). Rollback pip freezes for both venvs saved to scratchpad/venv-rollback/. VoiceChat S2S abandoned per owner - even at Q4 it needs two ~5GB models resident plus KV cache; the 44.4GB fp32 download was never started. Pushed d74d6fb.
+- Commands:
+  - `uv pip install torch==2.13.0 --index pytorch-cu126`
+  - `uv pip install torchaudio (resolved to 2.11.0+cu126)`
+  - `inode-based unique-usage measurement`
+- Files:
+  - `requirements-vad-segment.txt`
+  - `docs/s2s-and-disk-notes.md`
+  - `vault-inference/pyproject.toml`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=d74d6fb
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 11:10 - vault-cacophony</strong> <code>code-change</code> - Imported upstream NeMo-Speech.cpp a5b6953 (NemotronLabs VoiceChat S2S) and audited disk duplication. S2S: applied with git apply --directory=NeMo-Speech.cpp --3way since upstrea...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, PowerShell, Write, ToolSearch, hf_fs
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 11:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Imported upstream NeMo-Speech.cpp a5b6953 (NemotronLabs VoiceChat S2S) and audited disk duplication. S2S: applied with git apply --directory=NeMo-Speech.cpp --3way since upstream paths are root-relative; fe.cpp merged cleanly so the local NEMO_SPEECH_NORM_WINDOW_S knob survives; 3 conflicts all upstream-vs-upstream drift in files with no local changes, resolved to upstream. NEMO_SPEECH_BUILD_S2S defaults OFF and upstream only wired it into configure.sh/CMakePresets, so added a -S2S switch to scripts/windows/build.ps1 mirroring -Flashlight and forcing NMT on (CMakeLists gates llama backend on WITH_NMT OR BUILD_S2S). Built to build-s2s, 482 targets, exit 0. No separate subcommand - S2S rides on serve via --s2s-model-dir/--s2s-max-streams/--s2s.*, endpoints /v1/realtime and /realtime. Q4_K_M is conversion/s2s.py DEFAULT_PROFILE with per-component quantization (perception and eartts_side stay q8_0). Custom tools are plain Python functions in clients/voicechat client; engine has max_tool_tokens, extracting_tool, tool_ack_messages from system prompt, function_text output. BLOCKER: nvidia/NVIDIA-NemotronLabs-VoiceChat-11B ships a single 44.4GB fp32 model.safetensors; C: has only 52.9GB free so it must go to D: (127GB) or G: (200GB) - did NOT start that download, needs the owner's call. DISK: corrected my own naive arithmetic - uv already hardlinks from its global cache so most duplicate CUDA DLLs already shared storage. Measured by unique (device,inode): 8 venvs are 32.09GB apparent vs 21.16GB unique, 10.93GiB already shared. Linked 71 files, 0 failures, ~2GB actually reclaimed (NOT the 13.98GiB first computed). All five CUDA venvs verified importing torch with cuda=True. Models nemotron-3.5/parakeet-tdt/bs-roformer were ALREADY hardlinked (nlink 2-3, single inode); only htdemucs-f16 genuinely duplicated and it failed on MAX_PATH in the HF cache - all failures rolled back, no orphaned .dedupe-bak, all copies verified intact. Real
+- Commands:
+  - `git apply --directory=NeMo-Speech.cpp --3way`
+  - `build.ps1 -Profile server -Flashlight -S2S`
+  - `inode-based dedup analysis + hardlink pass`
+- Files:
+  - `NeMo-Speech.cpp/scripts/windows/build.ps1`
+  - `docs/s2s-and-disk-notes.md`
+  - `NeMo-Speech.cpp/src/s2s/`
+  - `NeMo-Speech.cpp/conversion/s2s.py`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=c43ba7b
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 06:25 - vaultwares-studio (formerly usd-playground)</strong> <code>code-change</code> - Added Splatfacto artifact import support and normalized the completed L4 result into Studio job splatfacto-img1274-l4-20260910 under D:. The loader now sees a manifest-backed re...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 06:25 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added Splatfacto artifact import support and normalized the completed L4 result into Studio job splatfacto-img1274-l4-20260910 under D:. The loader now sees a manifest-backed reconstruction/cloud.ply Gaussian splat with retained remote artifacts; Gaussian PLY classification no longer depends on plyfile, avoiding accidental point-cloud fallback in the desktop viewer.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 05:49 - gallery-scraper</strong> <code>code-change</code> - Repaired Gallery Scraper extension: removed Webpack, resolved MV3 service worker JSZip &amp; download crashes, fixed profile saving, and verified popup in browser</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\gallery-scraper  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 05:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: Repaired Gallery Scraper extension: removed Webpack, resolved MV3 service worker JSZip & download crashes, fixed profile saving, and verified popup in browser
+- Git: repo=gallery-scraper, branch=main, head=b3cf8cb
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 05:31 - vaultwares-studio</strong> <code>verification</code> - Verified completed L4 Splatfacto retry job 6aa272b321047bf1b0372055 and downloaded all eight durable artifacts to D:. Local verification confirmed return code 0, 1,219.5s traini...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 05:31 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified completed L4 Splatfacto retry job 6aa272b321047bf1b0372055 and downloaded all eight durable artifacts to D:. Local verification confirmed return code 0, 1,219.5s training plus 34.0s export, binary Gaussian PLY with 616,709 vertices and required f_dc/opacity/scale/rotation fields, plus a 947MB checkpoint archive.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 05:15 - gallery-scraper</strong> <code>general</code> - Diagnosed Gallery Scraper issues, created implementation plan for repair and Webpack removal</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\gallery-scraper  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 05:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Diagnosed Gallery Scraper issues, created implementation plan for repair and Webpack removal
+- Git: repo=gallery-scraper, branch=main, head=b3cf8cb
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 05:09 - vaultwares-studio</strong> <code>verification</code> - Checked L4 retry job 6aa272b321047bf1b0372055: it is RUNNING and successfully invoked ns-train splatfacto after downloading validated inputs. Confirmed missing live progress is ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 05:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Checked L4 retry job 6aa272b321047bf1b0372055: it is RUNNING and successfully invoked ns-train splatfacto after downloading validated inputs. Confirmed missing live progress is stdout buffering through the retention wrapper, left the job running, and updated future wrapper launches to set PYTHONUNBUFFERED=1 while preserving stage logs.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
+<summary><strong>2026-09-10 05:05 - vaultwares-studio</strong> <code>code-change</code> - Audited and corrected all discovered DA3-to-Splatfacto handoff paths before relaunch: embedded 500 images in processed_min, renamed them deterministically to match the 500 trans...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-10 05:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Audited and corrected all discovered DA3-to-Splatfacto handoff paths before relaunch: embedded 500 images in processed_min, renamed them deterministically to match the 500 transforms, preserved frame-name mapping, added a retention wrapper for frames.zip, full training input, stage.log and run_result.json, and submitted validated L4 retry job 6aa272b321047bf1b0372055 (SCHEDULING). No duplicate job was submitted.
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=19f0249
+
+</details>
+
+<details>
 <summary><strong>2026-09-09 23:44 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares &#226; Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares &#226; Project Rename Refactoring (Phase 5), VaultWares &#226; Project Rename Refactoring (Phase 5 PR Workflow), VaultWares &#226; System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>verification</code> - Continued Clopeux resource-monitoring handoff: verified Work Impact DNS proxy remains HTTP 200 and confirmed Health Ledger PR #10, VaultWares API PR #89, and Vault Monitor PR #1...</summary>
 
 - Kind: verification
@@ -441,7 +1285,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-09 01:20 - vaultwares-studio (formerly usd-playground)</strong> <code>verification</code> - Inspected failed L4 Splatfacto job 6aa0e41c900620b5c77e527d: only frames.zip and error.json uploaded; ns-train failed because the older worker did not populate processed/images ...</summary>
+<summary><strong>2026-09-09 01:20 - vaultwares-studio</strong> <code>verification</code> - Inspected failed L4 Splatfacto job 6aa0e41c900620b5c77e527d: only frames.zip and error.json uploaded; ns-train failed because the older worker did not populate processed/images ...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -8928,684 +9772,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Summary: Vendored Portable Tor Proxy Rotator, removed upstream git link, sanitized personal user paths, and committed changes
 - Git: repo=qa-automation, branch=main, head=b0586c4
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 23:28 - qa-automation</strong> <code>verification</code> - Validated Prom-King full QA Tor run under real multi-site execution with live SOCKS IP rotation verification and Windows Task Scheduler execution</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\qa-automation  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 23:28 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated Prom-King full QA Tor run under real multi-site execution with live SOCKS IP rotation verification and Windows Task Scheduler execution
-- Git: repo=qa-automation, branch=main, head=e250c53
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 23:26 - qa-automation</strong> <code>code-change</code> - Repaired Prom-King full QA Tor run Scheduled Task, PowerShell script, and Node runner (resolved merge conflicts, password hashes, timezone error, bootstrap polling, and working ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\qa-automation  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 23:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: Repaired Prom-King full QA Tor run Scheduled Task, PowerShell script, and Node runner (resolved merge conflicts, password hashes, timezone error, bootstrap polling, and working directory)
-- Git: repo=qa-automation, branch=main, head=e250c53
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 20:58 - vault-cacophony</strong> <code>code-change</code> - Audio Flamingo 3 quantized to Q4_K_M GGUF and validated. llama.cpp already supported AF3 (conversion/qwen.py:53 + conversion/ultravox.py:199 + PROJECTOR_TYPE_MUSIC_FLAMINGO), so...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/bs-roformer
-  Tools used (this reply): Bash, PowerShell, Write, Edit, AskUserQuestion
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 20:58 (TZ: Eastern Standard Time)
-  ```
-- Summary: Audio Flamingo 3 quantized to Q4_K_M GGUF and validated. llama.cpp already supported AF3 (conversion/qwen.py:53 + conversion/ultravox.py:199 + PROJECTOR_TYPE_MUSIC_FLAMINGO), so no ggml work was needed - but no AF3 GGUF exists on the Hub, so this conversion appears to be the first. Artifacts on D:/HuggingFace/gguf: af3-Q4_K_M.gguf 4.68GB, mmproj-af3-f16.gguf 1.32GB, af3-f16.gguf 15.2GB. Measured: 6.4GB resident at -c 8192, 1239 tok/s prompt, 61 tok/s gen, 210ms per 30s audio window, 173s quantize. Validated word-perfect ASR on sample_suitcase.wav. KEY LIMITATION FOUND: AF3 transcribes reliably only within one 30s window; 29.9s works, 29.99s returns 'the', 60s returns a repetition loop. Proved NOT a quantization artifact - unquantized f16 hallucinates on the same 60s clip. Captioning across windows is fine (90s/4 windows correct). Wrote scripts/audio_flamingo.py which chunks ASR at 29.0s on quiet frames, turning the failing 30s clip into a correct full transcript, and docs/audio-flamingo.md. Gotchas: hf download --exclude with multiple patterns downloads the excluded dirs instead (exits 0); chat_template.jinja is a separate file missed by *.json patterns and llama.cpp hard-errors without it; llama-mtmd-cli logs to stderr and answers on stdout.
-- Commands:
-  - `python convert_hf_to_gguf.py --mmproj --outtype f16`
-  - `llama-quantize af3-f16.gguf af3-Q4_K_M.gguf Q4_K_M 8`
-  - `gguf_new_metadata.py --chat-template-file chat_template.jinja`
-  - `python scripts/audio_flamingo.py --audio samples/ItJustDoesntMatter16k.wav --task asr --timestamps`
-- Files:
-  - `scripts/audio_flamingo.py`
-  - `docs/audio-flamingo.md`
-  - `D:/HuggingFace/gguf/af3-Q4_K_M.gguf`
-  - `D:/HuggingFace/gguf/mmproj-af3-f16.gguf`
-- Git: repo=vault-cacophony, branch=agent/bs-roformer, head=3fd0e97
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 20:36 - vault-cacophony</strong> <code>code-change</code> - Audio Flamingo 3 quantization. Key finding: llama.cpp ALREADY supports AF3 in GGML - conversion/qwen.py:53 registers AudioFlamingo3ForConditionalGeneration as Qwen2 text model, ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/bs-roformer
-  Tools used (this reply): Bash, PowerShell, AskUserQuestion, ToolSearch
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 20:36 (TZ: Eastern Standard Time)
-  ```
-- Summary: Audio Flamingo 3 quantization. Key finding: llama.cpp ALREADY supports AF3 in GGML - conversion/qwen.py:53 registers AudioFlamingo3ForConditionalGeneration as Qwen2 text model, conversion/ultravox.py:199 registers the audio tower with nvidia/audio-flamingo-3-hf as the cited example, PROJECTOR_TYPE_MUSIC_FLAMINGO implemented in tools/mtmd/clip.cpp. So we would NOT be first to make it work, though no AF3 GGUF is published yet. Corrected 4 errors in the Gemini guide: nvidia/audio-flamingo is AF1 (wrong repo), class is AudioFlamingo3ForConditionalGeneration not AutoModelForCausalLM, trust_remote_code unnecessary, and bitsandbytes does NOT auto-spare the audio encoder (needs explicit llm_int8_skip_modules). Downloaded AF3-hf 16.5GB sharded to D:, cloned llama.cpp d222767, extracted CUDA 13.3 prebuilt binaries, converted mmproj (491 tensors, 1.32GB, verified metadata), f16 text conversion in progress. Gotchas found: hf download --exclude with multiple patterns silently downloads the excluded dirs instead (argparse positional capture, exits 0); AF3-hf ships no chat_template at all.
-- Commands:
-  - `hf/snapshot_download nvidia/audio-flamingo-3-hf --local-dir D:/HuggingFace/models/audio-flamingo-3-hf`
-  - `python convert_hf_to_gguf.py D:/HuggingFace/models/audio-flamingo-3-hf --mmproj --outtype f16`
-  - `python convert_hf_to_gguf.py D:/HuggingFace/models/audio-flamingo-3-hf --outtype f16`
-- Files:
-  - `D:/HuggingFace/gguf/mmproj-af3-f16.gguf`
-  - `D:/HuggingFace/gguf/af3-f16.gguf`
-  - `D:/HuggingFace/llama.cpp/conversion/ultravox.py`
-- Git: repo=vault-cacophony, branch=agent/bs-roformer, head=3fd0e97
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 19:11 - vault-cacophony</strong> <code>code-change</code> - Replaced htdemucs with BS-RoFormer (audio.cpp, CUDA) in both Start-SubtitlesAudioCpp.ps1 and vw better-subtitles, at num_overlap=1. Measured on speech mixed under music: at 0 dB...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (RTX 3060 + RTX 2060))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/bs-roformer
-  Tools used (this reply): Bash, PowerShell, Edit, Read
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 19:11 (TZ: Eastern Standard Time)
-  ```
-- Summary: Replaced htdemucs with BS-RoFormer (audio.cpp, CUDA) in both Start-SubtitlesAudioCpp.ps1 and vw better-subtitles, at num_overlap=1. Measured on speech mixed under music: at 0 dB htdemucs 26.4 pct WER vs BS-RoFormer 27.1; at -5 dB htdemucs 57.6 vs BS-RoFormer 54.3, recovering 226 of 269 words against 202. Speed was the risk and it is the pass count: packaged num_overlap 4 runs 1.8x realtime, 2 runs 3.8x, 1 runs 8.0x - against htdemucs 8.6x - while quality moves 53.9 to 54.3 pct. Shipped at one pass with -SepPasses to raise it and -Separator htdemucs to revert. Memory measured for chunk sizing: BS-RoFormer 0.37 GB/min host (0.76 GB at 2 min, 2.95 at 8) with VRAM 2.8->4.3 GB; htdemucs 0.47 GB/min and 2.0->3.8 GB, so the old comment claiming htdemucs had flat VRAM was wrong. Six-minute chunks stay correct. Weights hard-linked into the store and commander. Note: someone had already swapped two lines in the cacophony script without the overlap option, which is exactly the slow path; built on top of that. PRs cacophony#4 and commander#9.
-- Commands:
-  - `audiocpp_cli --task sep --family bs_roformer --backend cuda --session-option bs_roformer.num_overlap=1`
-  - `vw better-subtitles -Target file.wav -SepPasses 1`
-- Files:
-  - `vault-cacophony/scripts/Start-SubtitlesAudioCpp.ps1`
-  - `vault-commander/cli/Start-BetterSubtitles.ps1`
-  - `vault-commander/cli/vw-commands.ps1`
-- Git: repo=vault-cacophony, branch=agent/bs-roformer, head=3fd0e97
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 11:06 - vault-tv</strong> <code>verification</code> - Execute live TMDB API verification against production endpoints, pass all 43 vitest test suites (280 tests), and verify Android TV debug deployment on device</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-tv  Branch: agent/tv-metadata-gateway
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 11:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Execute live TMDB API verification against production endpoints, pass all 43 vitest test suites (280 tests), and verify Android TV debug deployment on device
-- Git: repo=vault-tv, branch=agent/tv-metadata-gateway, head=b30f57e
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 11:00 - vault-tv</strong> <code>code-change</code> - Add support for TMDB v3 API key authentication alongside v4 bearer tokens in tmdbClient</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-tv  Branch: agent/tv-metadata-gateway
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 11:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Add support for TMDB v3 API key authentication alongside v4 bearer tokens in tmdbClient
-- Git: repo=vault-tv, branch=agent/tv-metadata-gateway, head=b30f57e
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 10:56 - vault-tv</strong> <code>code-change</code> - Implement TMDB faceted discovery filters (genre, decade, country, sort), overhaul TV navigation, fix focus outlines, add on-screen keyboard live search, and verify all TV screen...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-tv  Branch: agent/tv-metadata-gateway
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 10:56 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implement TMDB faceted discovery filters (genre, decade, country, sort), overhaul TV navigation, fix focus outlines, add on-screen keyboard live search, and verify all TV screens with ADB on-device testing
-- Git: repo=vault-tv, branch=agent/tv-metadata-gateway, head=b30f57e
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 09:53 - vault-cacophony</strong> <code>handoff</code> - Wrote HANDOFF.md for the next session (context nearly exhausted) and finished the Space conversation UI. Space changes pushed and RUNNING: turns is now a typed gr.Number (1-60, ...</summary>
-
-- Kind: handoff
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local + HuggingFace)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Write, Edit
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 09:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wrote HANDOFF.md for the next session (context nearly exhausted) and finished the Space conversation UI. Space changes pushed and RUNNING: turns is now a typed gr.Number (1-60, was a 2-12 slider) with GPU-budget info text, duration was already 600, and a zip output was added - conversation.py gained package_turns() writing one wav per turn plus manifest.json (file, speaker, voice, persona, text, seconds, sample_rate, words_per_second) and transcript.txt; converse() now also returns per-turn segments. Zip packaging verified locally with stubbed torch. HANDOFF.md covers: current state, the four architectures tried and why three failed (two PersonaPlex will not fit 12GB, one playing both sides collapses into repetition, continuation and alternating personas are mutually exclusive, LFM2-Audio segfaults on CUDA and loops on CPU), 13 gotchas that each cost real time, the measured numbers table including the finding that PersonaPlex is sync-bound not compute-bound, file map, submodule changes at risk of being lost, and open threads led by prosody. Also copied the Space files into the repo at space/ (they existed only on HF) and added a HANDOFF pointer to README.md. Nothing is committed; branch agent/nemotron-engine, 8 new scripts plus local modifications inside the audio.cpp and CrispASR submodules.
-- Commands:
-  - `upload_file app.py conversation.py -> clopeux/personaplex-baseline`
-- Files:
-  - `HANDOFF.md`
-  - `README.md`
-  - `space/app.py`
-  - `space/conversation.py`
-  - `space/requirements.txt`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 09:40 - vault-cacophony</strong> <code>code-change</code> - Added a two-agent conversation mode to clopeux/personaplex-baseline (RUNNING on zero-a10g). Upload one opening utterance, pick two personas and two voices, and the agents altern...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local + HuggingFace)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Write, Edit
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 09:40 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added a two-agent conversation mode to clopeux/personaplex-baseline (RUNNING on zero-a10g). Upload one opening utterance, pick two personas and two voices, and the agents alternate for N turns, returning a stitched wav plus a per-turn transcript table - intended as both a demo and a source of natural emotional conversational speech for the voice store. New file conversation.py with trim_to_speech (silence gate at -55dB with 0.25s margin; without it every turn is as long as its input and the conversation grows without bound), run_turn (2s lead-in discarded because the model greets before hearing anything, 14s reply window because PersonaPlex emits one output frame per input frame so a reply is only as long as the silence given it), and converse (alternates, each agent hearing only the other's trimmed last utterance). Wired into app.py as run_conversation under @spaces.GPU(duration=600) with a gradio Accordion, Dataframe transcript and progress callback. DESIGN NOTE: uses ONE resident 16.74GB model re-primed per turn rather than two loaded models - voice and persona are set on lm_gen before step_system_prompts so one model serves both agents, and re-priming is cheap on an A100; two copies would be 33.5GB and risk OOM depending on the ZeroGPU tier. Continuing a session instead of re-priming was rejected because it skips the voice and system prompts and collapses both agents into one voice and persona (measured locally earlier this session).
-- Commands:
-  - `upload_file app.py conversation.py -> clopeux/personaplex-baseline`
-- Files:
-  - `scratchpad/space/app.py`
-  - `scratchpad/space/conversation.py`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 09:19 - vault-cacophony</strong> <code>verification</code> - PersonaPlex Space is live: clopeux/personaplex-baseline, stage RUNNING on zero-a10g, private. First build failed with ResolutionImpossible - moshi-personaplex pins huggingface-h...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local + HuggingFace)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Edit, WebFetch
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 09:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: PersonaPlex Space is live: clopeux/personaplex-baseline, stage RUNNING on zero-a10g, private. First build failed with ResolutionImpossible - moshi-personaplex pins huggingface-hub >=0.24,<0.25 while gradio 6.3.0 requires >=0.33.5, no overlap; its other pins are equally stale (torch >=2.2,<2.5, einops ==0.7, numpy <2.2, sentencepiece ==0.2). Fixed by removing the git+ moshi line from requirements.txt and installing it at app startup with pip --no-deps, guarded by a try-import, letting requirements.txt supply modern numpy/torch/hf-hub/sentencepiece/sphn/safetensors/einops/aiohttp. Rebuild reached RUNNING in ~180s, which is itself the evidence the --no-deps bet held: an import failure against newer huggingface_hub or torch would have surfaced as RUNTIME_ERROR rather than RUNNING. Note the runtime log endpoint is a live SSE stream that never terminates - do not poll it with a blocking read. Space is turn-based (Gradio hands over a finished recording) so it gives a clean A/B on voice and prosody but does not demonstrate PersonaPlex duplex behaviour; real duplex in a browser needs WebRTC streaming.
-- Commands:
-  - `upload_file app.py requirements.txt -> clopeux/personaplex-baseline`
-- Files:
-  - `scratchpad/space/app.py`
-  - `scratchpad/space/requirements.txt`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 09:09 - vault-cacophony</strong> <code>general</code> - Set up a PersonaPlex HuggingFace Space for baseline comparison. Rather than writing one from scratch, found and duplicated MohamedRashad/PersonaPlex (47 likes, gradio 6.3.0, pyt...</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local + HuggingFace)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, WebSearch, WebFetch
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 09:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Set up a PersonaPlex HuggingFace Space for baseline comparison. Rather than writing one from scratch, found and duplicated MohamedRashad/PersonaPlex (47 likes, gradio 6.3.0, python 3.12) which already implements ZeroGPU correctly: @spaces.GPU(duration=120), lazy global model cache loaded inside the GPU function, voices.tgz extracted from the model repo, gradio Blocks audio in/out. Duplicated to clopeux/personaplex-baseline as PRIVATE with hardware zero-a10g and an HF_TOKEN secret (needed because it pulls the gated nvidia/personaplex-7b-v1; the user's account already has license access - verified 16 files listable). Token was read from the local HF login and passed straight into the Space secret, never printed or logged. Space domain clopeux-personaplex-baseline.hf.space, requested_hardware confirmed zero-a10g, build in progress. Requirements chain: git+https://github.com/NVIDIA/personaplex.git#subdirectory=moshi, torch, sphn, sentencepiece, spaces. Upstream inference API for reference: loaders.get_mimi / loaders.get_moshi_lm / LMGen, voice prompts via lm_gen.load_voice_prompt_embeddings(.pt), prompts via lm_gen.step_system_prompts(), then lm_gen.step() per frame and mimi.decode().
-- Commands:
-  - `duplicate_space MohamedRashad/PersonaPlex -> clopeux/personaplex-baseline hardware=zero-a10g private=True`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 09:02 - vault-cacophony</strong> <code>verification</code> - Minted both PersonaPlex voice references and ran the cascade with them. VARM2 first attempt was skipped correctly by the 3s minimum guard (only 1.5s of speech) because the mint ...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 09:02 (TZ: Eastern Standard Time)
-  ```
-- Summary: Minted both PersonaPlex voice references and ran the cascade with them. VARM2 first attempt was skipped correctly by the 3s minimum guard (only 1.5s of speech) because the mint prompt asked for one short sentence; retried with a prompt eliciting three or four sentences and got 8.00s / 26 words / 3.2 w-per-s. VARF1 is 3.44s / 12 words / 3.5 w-per-s. Ran cascade_conversation.py with both as Qwen3-TTS clone references: 6 turns, 69.9s, no runaways, coherent in-character conversation (Desmond pitches a 'Case File' mystery box subscription then an AI detective tool called 'Decipher', Margot calls mystery box done to death and objects that an AI would spoon-feed the solution). Pipeline now end to end: PersonaPlex voice -> SenseVoice transcript (reference text matches by construction) -> Qwen3-TTS clone -> SenseVoice ASR -> llama3.2:3b -> Qwen3-TTS. Noted for the user: cloning transfers timbre but not PersonaPlex prosody, and turn length is drifting long (19.12s on turn 6) despite the two-sentence instruction in the persona prompt.
-- Commands:
-  - `python scripts/mint_voice_refs.py --voice VARM2 --prompt '<longer eliciting prompt>'`
-  - `python scripts/cascade_conversation.py --a-voice VARF1.wav --b-voice VARM2.wav`
-- Files:
-  - `scripts/mint_voice_refs.py`
-  - `scripts/cascade_conversation.py`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 08:57 - vault-cacophony</strong> <code>code-change</code> - Wrote scripts/mint_voice_refs.py to carry PersonaPlex voice quality into the cascade. PersonaPlex cannot be the cascade synthesizer (s2s only, no text input), but a few seconds ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Write
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 08:57 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wrote scripts/mint_voice_refs.py to carry PersonaPlex voice quality into the cascade. PersonaPlex cannot be the cascade synthesizer (s2s only, no text input), but a few seconds of it speaking is exactly what Qwen3-TTS needs to clone. Per voice: run PersonaPlex with voice_id=X into a padded seed, skip the overlapped input region (it is full duplex and speaks over its input), trim to 3-8s of speech, then transcribe that clip with SenseVoice so the reference text matches the audio BY CONSTRUCTION - nobody types it, so the mismatch class that produced Margot's gibberish cannot recur. VARF1 minted: 3.44s, 12 words, 3.5 w/s, inside the guard band. Minting needs PersonaPlex resident (10.9GB of 12GB) so it runs alone and once; afterwards the cascade only touches the wav+txt pairs. MEMORY INCIDENT: measured 7210 MiB in use right before starting because Ollama's keep_alive:0 unload is asynchronous and I sampled mid-release; PersonaPlex loaded only because the drain finished first, and half a second earlier it would have failed like the TTS did. Also a 10-minute tool timeout killed the wrapper shell but orphaned an audiocpp_cli holding 4.39GB until manually killed. Serialization between stages is currently implicit and should be made explicit.
-- Commands:
-  - `python scripts/mint_voice_refs.py --seed opener.wav --voice VARF1 --voice VARM2`
-- Files:
-  - `scripts/mint_voice_refs.py`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 08:44 - vault-cacophony</strong> <code>code-change</code> - Fixed the gibberish Margot turns in cascade_conversation.py. Root cause was mine, not the model: her voice reference 1462_0.wav is 14.55s of audio but I passed reference text fo...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Edit
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 08:44 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed the gibberish Margot turns in cascade_conversation.py. Root cause was mine, not the model: her voice reference 1462_0.wav is 14.55s of audio but I passed reference text for only its first clause (13 words = 0.9 words/s), while Desmond's 1272_0.wav text matched his 5.855s exactly - which is why only she was unintelligible. Qwen3-TTS cloning conditions on text-audio alignment and fails silently with confident gibberish rather than erroring. Switched Margot to 1462_1.wav (3.985s) with its exact transcript, and added a startup guard that computes words-per-second on each reference and warns when outside 1.2-4.5, so this class of error is caught instead of silently degrading. Also set explicit UTF-8 on subprocess capture (default Windows code page mangled an accented word from the LLM into mojibake). Verified re-run: 6 turns, 62.9s, durations 5.76-11.84s, no runaways, both voices clean.
-- Commands:
-  - `python scripts/cascade_conversation.py --seed opener.wav --turns 6 --a-voice ls/1462_1.wav --b-voice ls/1272_0.wav`
-- Files:
-  - `scripts/cascade_conversation.py`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 08:40 - vault-cacophony</strong> <code>code-change</code> - Built scripts/cascade_conversation.py - a working two-agent conversation demo. Pipeline per turn: SenseVoice ASR with keep_tags (emotion/event tags carried into the listening ag...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Write, Edit
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 08:40 (TZ: Eastern Standard Time)
-  ```
-- Summary: Built scripts/cascade_conversation.py - a working two-agent conversation demo. Pipeline per turn: SenseVoice ASR with keep_tags (emotion/event tags carried into the listening agent's message) -> Ollama llama3.2:3b with per-agent persona and full conversation history -> Qwen3-TTS 0.6B voice cloning from a 3s reference -> next agent's input. Stitches to conversation.wav and writes a tag store with a speaker track. RESULT: 8 coherent in-character turns; Margot stays dry and sceptical, Desmond invents Suitcase Studios and calls back to his grandmother by turn 8 - the first setup all session where the agents genuinely answer each other. Two fixes during the build: Ollama defaults to a large context and held 8GB of the 12GB card, starving the TTS of a 35MB buffer, so requests now pass num_ctx 4096 and keep_alive 0 to unload the LLM after each answer (the cascade is sequential anyway); and Qwen3-TTS can fail to stop - a 26-word sentence produced 655 seconds of audio that the silence trim kept because it was not silent - so speak() now budgets words/2.5*3 seconds, retries once with a different seed, then truncates. Kept the LLM local via Ollama rather than using the NVIDIA NIM key, preserving the repo's no-network property; the token file was not read.
-- Commands:
-  - `ollama pull llama3.2:3b`
-  - `python scripts/cascade_conversation.py --seed opener.wav --turns 8 --a-voice ... --b-voice ...`
-- Files:
-  - `scripts/cascade_conversation.py`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 07:29 - vault-cacophony</strong> <code>verification</code> - Compared S2S options across audio.cpp, CrispASR, NeMo-Speech.cpp and mini-omni; picked LFM2-Audio 1.5B and tested it. Two real fixes made. FIX 1: CrispASR appeared totally broke...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\CrispASR\build\bin  Branch: feat/personaplex
-  Tools used (this reply): Bash, PowerShell, Edit, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 07:29 (TZ: Eastern Standard Time)
-  ```
-- Summary: Compared S2S options across audio.cpp, CrispASR, NeMo-Speech.cpp and mini-omni; picked LFM2-Audio 1.5B and tested it. Two real fixes made. FIX 1: CrispASR appeared totally broken (every run exited 0xC0000135) because its ggml-cuda.dll imports cublas64_13/cudart64_13 which on CUDA 13 live in bin\\x64, and only bin is on PATH - adding CUDA v13.3\\bin\\x64 fixes it with no rebuild. FIX 2: patched a hardcoded 512MB ggml pool in CrispASR/src/lfm2_audio.cpp line ~2307 that aborted the LFM2 detokenizer after generation had already succeeded (179 frames needed 537,641,568 bytes vs 536,870,912 available); replaced with a pool scaling as Tu*h*1400 with 512MB floor, verified up to 943 frames / 4GB. Rebuilt via ninja target bin/crispasr.exe after sourcing VS18 vcvars (full build fails on a pre-existing test needing unistd.h). VERDICT: LFM2-Audio is NOT usable in this build. CUDA path segfaults (0xC0000005) during S2S generation, separate from the pool bug. CPU path completes but output is degenerate: on two different inputs it echoed/continued the input instead of answering, and looped ('matching the season of the year' six times), generating 75.4s of audio from a short clip at 93s wall. Falling back to the verified audio.cpp cascade: SenseVoice-Small 254MB with emotion tags + Ollama qwen3/vw-* personas + Qwen3-TTS 0.6B voice cloning at 2.5x realtime, about 3.3GB for two agents.
-- Commands:
-  - `crispasr.exe --backend lfm2-audio -m auto --s2s`
-  - `cmake --build build -j 16 --target bin/crispasr.exe`
-- Files:
-  - `CrispASR/src/lfm2_audio.cpp`
-- Git: repo=CrispASR, branch=feat/personaplex, head=fc3550e6
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 07:02 - vault-cacophony</strong> <code>verification</code> - Surveyed all 53 audio.cpp model specs for a second conversational agent. FINDING: PersonaPlex is the ONLY conversational s2s model; vevo2 and miocodec list s2s but are voice/sin...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\audio.cpp  Branch: main
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 07:02 (TZ: Eastern Standard Time)
-  ```
-- Summary: Surveyed all 53 audio.cpp model specs for a second conversational agent. FINDING: PersonaPlex is the ONLY conversational s2s model; vevo2 and miocodec list s2s but are voice/singing CONVERSION models, not dialogue. So two dialogue models on audio.cpp alone is impossible (2x PersonaPlex = 15.7GB on a 12GB card). Verified a cascade alternative instead, all components downloaded and tested: SenseVoice-Small (sense_asr, 254MB, offline+streaming, 23 langs) which emits <|event|>/<|emotion|>/<|language|> tags inline via keep_tags=true - tested on the Margot/Desmond conversation, emitted <|en|><|HAPPY|><|Speech|><|withitn|> - this is the emotion carry-over the user wanted, free from the ASR; Qwen3-TTS-12Hz-0.6B-Base (1.99GB) which does 3-second voice cloning via --task tts --voice-ref --reference-text (NOT --task clon, which it rejects) at 2.5x realtime; and Ollama already local with qwen3:0.6b plus three existing personas vw-dot, vw-marisol, vw-vic at 522MB each. Two full agents fit in about 3.3GB versus 10.9GB for one PersonaPlex. Trade-off: a cascade is turn-based so it loses PersonaPlex's full-duplex overlap and its TTFT. Both loaders already present in the vendored binary, no rebuild needed.
-- Commands:
-  - `hf download FunAudioLLM/SenseVoiceSmall-GGUF-audiocpp`
-  - `audiocpp_cli --task asr --family sense_asr --request-option keep_tags=true`
-  - `audiocpp_cli --task tts --family qwen3_tts --voice-ref ref.wav --reference-text '...'`
-- Files:
-  - `audio.cpp/models/SenseVoice-Small-GGUF`
-  - `audio.cpp/models/Qwen3-TTS-12Hz-0.6B-Base-GGUF`
-- Git: repo=audio.cpp, branch=main, head=9601291
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 06:28 - vault-cacophony</strong> <code>code-change</code> - Implemented transcript-carried context in Start-Conversation.ps1 and got a working two-persona conversation. Each turn: fresh PersonaPlex session (keeps per-agent voice and pers...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Edit
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 06:28 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implemented transcript-carried context in Start-Conversation.ps1 and got a working two-persona conversation. Each turn: fresh PersonaPlex session (keeps per-agent voice and persona), turn audio transcribed with nemotron via the vendored CLI (sequential, since PersonaPlex alone takes 10.9GB of a 12GB card so ASR cannot be resident alongside it), transcript folded into the next agent's system prompt. Two format findings, both measured: (1) a multi-line chat-log prompt is out of distribution for the persona slot - the agent drifted completely off persona ('Thanks for calling Desert Dreams, how can I help you today'), so history is folded into one flowing paragraph that still reads as a persona instruction; (2) including the LAST utterance in the text put audio and text behind the same words and the agents converged on one repeated sentence for four turns, so the text now carries only utterances BEFORE the last one - the last arrives as audio. Result at temperature 0.95: 6 turns, 86s, distinct on-persona exchange (Margot: 'the whole theory of relativity is basically just a story'; Desmond: 'universe is big, right, it hints at the speed of light and black holes'). Remaining defects: turn 1 emitted Devanagari gibberish, and two turns ran to the 30s reply window and were cut off mid-ramble.
-- Commands:
-  - `.\scripts\Start-Conversation.ps1 -Seed opener.wav -Turns 6 -ReplyWindow 30 -Temperature 0.95 -AName MARGOT -BName DESMOND`
-- Files:
-  - `scripts/Start-Conversation.ps1`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 06:06 - vault-cacophony</strong> <code>verification</code> - Built the resident-server path and tested one agent playing both sides. Built audiocpp_server from source with personaplex; confirmed via ensure_model_loaded_locked that the ser...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Write, Read, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 06:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Built the resident-server path and tested one agent playing both sides. Built audiocpp_server from source with personaplex; confirmed via ensure_model_loaded_locked that the server creates ONE session per model and reuses it, so resident_state_ persists across HTTP requests. /v1/tasks/run returns base64 WAV + sample_rate + timing, and takes the same JSON as the request-sequence format. Continuation verified over HTTP: 21.5s -> 16.3s -> 15.2s per turn as the preamble is skipped. Wrote scripts/duplex_conversation.py driving a real conversation through the resident session (base64 decode, skip-trim, loop, stitch, tag store). NEGATIVE RESULT: the conversation degenerates. Turns shrank 1.22/1.48/1.92/0.76/6.36s and turn 6 was silent; transcription shows a repetition loop ('Hi, my name is Amy. Hi, my name is Amy. Sami. Hi my name is Sami'). Root causes: the model is trained to answer a human user and its own generated speech in the user stream is out of distribution, and continuation fills the cache with its own voice on both streams. ADDITIONAL CONSTRAINT FOUND: voice prompt and system prompt are consumed inside start_conversation, which continuation skips, so a continued session keeps turn 1's voice and persona - shared audio context and alternating personas are mutually exclusive on one instance. Options now: two separate models/machines, transcript-in-system-prompt with fresh sessions, or a smaller model so two fit.
-- Commands:
-  - `audiocpp_server --config pp-server.json --model-spec-override model_specs/personaplex.json --no-ui`
-  - `python scripts/duplex_conversation.py --seed seed.wav --turns 6`
-- Files:
-  - `scripts/duplex_conversation.py`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 05:56 - vault-cacophony</strong> <code>code-change</code> - Implemented and verified PersonaPlex conversation-state preservation in audio.cpp (submodule, local changes). Added continue_conversation request option: PersonaPlexGenerationOp...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\audio.cpp  Branch: main
-  Tools used (this reply): Bash, PowerShell, Edit, Read, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 05:56 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implemented and verified PersonaPlex conversation-state preservation in audio.cpp (submodule, local changes). Added continue_conversation request option: PersonaPlexGenerationOptions field, parsing in request.cpp, resident_state_ member on PersonaPlexSession, and offline run reuses the resident ConversationState instead of calling start_conversation (which unconditionally does main_step_graph_->reset() then replays voice prompt + 0.5s silence + system prompt). Added trace scalars personaplex.continued and personaplex.cache_steps_used. VERIFIED across a 3-request sequence: cache_steps_used 79 -> 278 -> 477 (+199/turn), prompt_ms 3456 -> 0.01 -> 0.007, wall 19.1 -> 15.2 -> 15.4s, so context accumulates and the preamble is paid once. Gotcha found: the model spec is EMBEDDED IN THE GGUF (@gguf takes precedence over model_specs/ on disk), so editing model_specs/personaplex.json is ignored in a real run and --model-spec-override model_specs/personaplex.json is required to pick up the new option; --list-loaders needs cwd=audio.cpp only because no model is open so no embedded spec exists. Also fixed a likely cause of agents shadowing each other: Start-Conversation.ps1 passed one fixed sampling seed for every turn, now varies per turn.
-- Commands:
-  - `audiocpp_cli --task s2s --family personaplex --model-spec-override model_specs/personaplex.json --request-sequence cont.json --metrics --log`
-- Files:
-  - `audio.cpp/include/engine/models/personaplex/request.h`
-  - `audio.cpp/src/models/personaplex/request.cpp`
-  - `audio.cpp/include/engine/models/personaplex/session.h`
-  - `audio.cpp/src/models/personaplex/session.cpp`
-  - `audio.cpp/model_specs/personaplex.json`
-  - `scripts/Start-Conversation.ps1`
-- Git: repo=audio.cpp, branch=main, head=9601291
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 05:49 - python-zipper</strong> <code>general</code> - Recorded visual failure behavior: a retryable native-host failure gets a brief red border on the reveal-folder control, with no substitute Explorer action.</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 05:49 (TZ: Eastern Standard Time)
-  ```
-- Summary: Recorded visual failure behavior: a retryable native-host failure gets a brief red border on the reveal-folder control, with no substitute Explorer action.
-- Git: repo=python-zipper, branch=main, head=db797d4
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 05:30 - vault-cacophony</strong> <code>verification</code> - Answered whether PersonaPlex reset() can be removed, with measurements. Per-turn cost breakdown via --log on a 15.9s turn: graph_prepare 305ms, prompt preamble 3479ms (51 voice-...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\audio.cpp  Branch: main
-  Tools used (this reply): Bash, PowerShell, Edit, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 05:30 (TZ: Eastern Standard Time)
-  ```
-- Summary: Answered whether PersonaPlex reset() can be removed, with measurements. Per-turn cost breakdown via --log on a 15.9s turn: graph_prepare 305ms, prompt preamble 3479ms (51 voice-prompt replay steps + 0.5s silence + 16 system-prompt tokens), user_encode 2282ms, ar.generate 9684ms for 199 frames = 1.64x REALTIME, mimi.decode 1468ms, total 17218ms = 0.92x realtime. Key conclusion: the autoregressive core is already faster than realtime; 0.92x is an artifact of the serialized offline shape (encode-all, replay preamble, generate, decode-all). Model load measured separately via --request-sequence at only ~4.8s once per process, correcting an earlier overestimate of ~40s. --request-sequence runs one long-lived session but cannot drive a conversation (all input paths must pre-exist) and start_conversation() calls main_step_graph_->reset() unconditionally so context never carries. Deleting that line alone does not work: ConversationState is rebuilt per call and carries delay_state (desync with a kept cache), the voice-prompt/silence/system-prompt preamble runs after the reset and would be re-injected mid-conversation, and valid_steps_ would climb to the fixed 3000-frame cache and throw with no eviction. Tractable fix is a continuation mode keeping ConversationState and skipping both reset and preamble. Updated ROADMAP.md.
-- Commands:
-  - `audiocpp_cli --task s2s --family personaplex --log`
-  - `audiocpp_cli --request-sequence requests.json --metrics`
-- Files:
-  - `ROADMAP.md`
-- Git: repo=audio.cpp, branch=main, head=9601291
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 05:05 - vault-cacophony</strong> <code>code-change</code> - Diagnosed and fixed both cue defects in words_to_srt.py: 7 of 16 cues were split purely by the 76-char cap (mid-sentence cuts) and orphan one-word cues were created by a char-sp...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: agent/nemotron-engine
-  Tools used (this reply): Bash, PowerShell, Edit, Read, Grep
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 05:05 (TZ: Eastern Standard Time)
-  ```
-- Summary: Diagnosed and fixed both cue defects in words_to_srt.py: 7 of 16 cues were split purely by the 76-char cap (mid-sentence cuts) and orphan one-word cues were created by a char-split then terminated by a real gap - same root cause. Rewrote build() to cut runs at real pauses first, then pack within a run preferring strong/weak punctuation boundaries (_break_at), merge orphans back (_merge_orphans) or rebalance the pair when merging would overflow (_rebalance), and clamp cue ends so overlapping sub-word timestamps cannot put two subtitles on screen at once. Result on the agent conversation: 19 cues, 0 overlaps, 0 orphans; LibriSpeech regression clean. PROFILED PERSONAPLEX with nsys via a new s2s stage in Measure-Passes.ps1: 10967 MB VRAM (89% of a 12GB card, no room for a second instance), 0.9x realtime (34.4s wall for 30.9s of stream), and the bottleneck is 253672 cudaStreamSynchronize calls (79.8% of wall) plus 248440 cudaMemcpyAsync - about 657 syncs and 644 memcpys per 80ms frame - against only 1.2s of actual cudaGraphLaunch compute. Source facts: LM context is a fixed preallocated 3000-frame KV cache (4 min at 12.5Hz, kFrameSamples=1920) that THROWS on overflow with no eviction, only full reset(); 17 delayed streams = 1 text + 8 assistant + 8 user codebooks, so both sides of a conversation share one frame within a session.
-- Commands:
-  - `.\scripts\Measure-Passes.ps1 -Audio seed.wav -Seconds 0 -Stages s2s`
-  - `nsys stats --report cuda_api_sum --force-export=true s2s.nsys-rep`
-  - `python scripts/words_to_srt.py --words words.json --out new.srt --merge-tokens`
-- Files:
-  - `scripts/words_to_srt.py`
-  - `scripts/Measure-Passes.ps1`
-- Git: repo=vault-cacophony, branch=agent/nemotron-engine, head=99c5702
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 05:00 - python-zipper</strong> <code>general</code> - Recorded native-host authorization boundary: local Firefox-ID gating is sufficient; no per-request token or confirmation is required.</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 05:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Recorded native-host authorization boundary: local Firefox-ID gating is sufficient; no per-request token or confirmation is required.
-- Git: repo=python-zipper, branch=main, head=db797d4
-
-</details>
-
-<details>
-<summary><strong>2026-08-25 04:59 - python-zipper</strong> <code>general</code> - Recorded that the localhost Python-server reveal fallback is to be removed after the Firefox native-host route is proven working.</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-25 04:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Recorded that the localhost Python-server reveal fallback is to be removed after the Firefox native-host route is proven working.
-- Git: repo=python-zipper, branch=main, head=db797d4
 
 </details>
 

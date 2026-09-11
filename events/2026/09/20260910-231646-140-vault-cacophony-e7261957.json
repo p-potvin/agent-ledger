@@ -1,0 +1,52 @@
+{
+  "id": "20260910-231646-140-vault-cacophony-e7261957",
+  "createdAt": "2026-09-11T03:16:46.1405636Z",
+  "createdAtLocal": "2026-09-10 23:16",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 23:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp",
+  "summary": "Built VAD-driven offline segmentation into the ASR flow (commit 86719a7, off by default, inert without --vad-model). Key finding: the missing piece was never the split - OfflineRunner already cut long audio at the positional limit, but all segments shared ONE decoder so prev_token_ crossed every boundary. Added Decoder::reset_context() (drop language state, keep word timings/stats) with overrides on both greedy transducer decoders; reset() discards timings and reset_utterance() preserves exactly the predictor context that must go. Segments partition audio exactly (contiguous, cuts at midpoint of silent runs). Measured on the 11.6 min source vs official .en subs: base 2253 words / 11.0s English lost / 42s wall; seg30 2269 words / 5.2s lost / 13s wall - loss more than halved, 3x faster. --vad-seg-reset-forced measured WORSE (22.8s) so stays off. TWO CORRECTIONS: (1) the 186s loss figure I reported earlier came from a stale Sept 8 JSON, not current behaviour; (2) the black hole does NOT reproduce on the full file - baseline transcribes the 63s switch correctly - it only appears on the 12s excerpt starting 3s before the switch. On that excerpt VAD cannot help: 371/375 windows are speech, longest silence 64ms. Also fixed: need_vad in recognizer.cpp did not include the segmenter, so --vad-segmentation silently loaded no VAD model. Note silero-vad-v6.2.1.gguf has empty general.architecture; use silero-v6.2.0-nemo.gguf.",
+  "commands": [
+    "cmake --build build-s2s",
+    "nemo-speech transcribe --vad-segmentation on 696s file",
+    "git commit 86719a7"
+  ],
+  "files": [
+    "NeMo-Speech.cpp/src/asr/vad/vad_segmenter.h",
+    "NeMo-Speech.cpp/src/asr/runner.cpp",
+    "NeMo-Speech.cpp/src/asr/decoders/decoder.h",
+    "NeMo-Speech.cpp/src/asr/recognizer.cpp"
+  ],
+  "planPath": "",
+  "contentHash": "e726195725e0e813f5624393a8f9466dbf3ad7e1b4a37f9f3dc4a153cd93c539",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "86719a7",
+    "hasChanges": true
+  }
+}

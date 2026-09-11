@@ -1,0 +1,48 @@
+{
+  "id": "20260910-124550-820-vault-cacophony-442bb8d1",
+  "createdAt": "2026-09-10T16:45:50.8209595Z",
+  "createdAtLocal": "2026-09-10 12:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 12:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Gap sweep, objective voice-similarity check, and a full end-to-end run from a real audio file. GAP SWEEP (0/100/350/1000ms): optimum is 100-350ms. conv4 English WER 3.70/2.22/2.96/3.70; convml en-es-fr WER 17.65/14.71/14.71/26.47. Two findings: the gap does NOT affect the speaker merge (3 labels for 4 speakers at every gap, so Sofia/Aria collapse is not a boundary artifact), and a LONG pause is actively harmful on multilingual audio - at 1000ms the en/es/fr file lost language detection entirely (returned en-US only instead of all three) and WER nearly doubled. Keep inter-turn silence 100-350ms. VOICE EMBEDDINGS: the owner said Sofia and Aria sound nothing alike, which is true perceptually, but CAM++ (WeSpeaker VoxCeleb, via scripts/voiceprint.py) on the same sentence in all five voices shows Sofia/Aria is the TOP similarity pair at 0.422, with Jason/Leo second at 0.345 - exactly where the single remaining speaker error landed in conv5. Merges track embedding distance, not perceived similarity. Gives a cheap pre-flight check: embed a candidate voice set and reject pairs above ~0.4. END TO END: Start-BetterSubtitles.ps1 -Speakers -LowMemory on the real 11.6min French/English recording with the new defaults (nemotron-3.5, --language auto) and BS-RoFormer separation. 696.1s audio in 217.3s wall, about 3.2x realtime overall, separation RTFx 4.35 and ASR RTFx 12.24. 2365 words and 223 cues vs 2348 from the raw file, so separation is worth ~17 words. Diarization found 4 speakers - narrator at 169 cues plus three clip voices - and the narrator/clip handoff lands exactly on the cut, with one brief mid-sentence flip that recovers immediately. Pushed 92b9b1a.",
+  "commands": [
+    "gap variants 0/100/350/1000ms + transcribe --diarize",
+    "voiceprint.py CAM++ cosine across five voices",
+    "Start-BetterSubtitles.ps1 -Speakers -LowMemory on real mp3"
+  ],
+  "files": [
+    "docs/magpie-tts-notes.md",
+    "scratchpad/e2e/french-reacts.srt"
+  ],
+  "planPath": "",
+  "contentHash": "442bb8d1f1d3a19ab325b3cbf75e501e42b5f94dcb3313d895afc20fa6e7abb6",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "92b9b1a",
+    "hasChanges": true
+  }
+}

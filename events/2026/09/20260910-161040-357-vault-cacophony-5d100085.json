@@ -1,0 +1,49 @@
+{
+  "id": "20260910-161040-357-vault-cacophony-5d100085",
+  "createdAt": "2026-09-10T20:10:40.3572525Z",
+  "createdAtLocal": "2026-09-10 16:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + WSL Ubuntu)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 16:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + WSL Ubuntu",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "(1) Replaced the global agent rule with the correct one: quote every path because commands run in Windows PowerShell not bash - unquoted paths with spaces split into multiple args, backslash sequences get eaten, use & to invoke an exe whose path has a space, use raw strings for Windows paths in Python/heredocs since backslash-U and backslash-b silently corrupt them, and --% to stop PowerShell parsing native-exe args. Kept the permission-guard note as a sub-case rather than the headline. Synced to all 7 agent files, committed vaultwares-docs 4a56536. My own first attempt at the fix was broken by backslash-U in a non-raw Python string, which is the exact bug class the rule covers. (2) BLACK HOLE DISCRIMINATOR FOUND, thanks to the owner spotting two archived runs that kept the sentence. Checked every archived run: fr-out, fr-rc1, fr-vad KEPT it (all rnnt_right_context=1); fr-rc2, fr-rc3, fr-vadoff, fr-vadon, fr-eou dropped it (all rc 2 or 3); post-fix offline runs also drop it. Confirmed causally with everything else held constant: rc=1 KEPT 2332 words, rc=2 dropped 2262, rc=3 dropped 2324. Perfectly reproducible, matching the owner's read that the hole is too clean to be model noise. WHY: fastconformer.h:107 sets cache_chunk_frames = 1 + cache_right_ctx, so right context IS the decode chunk size (rc=1 = 160ms step, rc=3 = 320ms). CANDIDATE MECHANISM recorded explicitly as hypothesis NOT result: rnnt_greedy_decoder.cpp:462 is NeMo's infinite-loop guard which force-advances the frame once max_symbols_per_step (default 10) is hit, discarding what the model still wanted to emit - a path that actively deletes output, matching the owner's",
+  "commands": [
+    "sync-global-instructions.ps1",
+    "rc=1/2/3 controlled re-run on the same file",
+    "grep max_symbols_per_step / cache_chunk_frames"
+  ],
+  "files": [
+    "vaultwares-docs/AGENTS.md",
+    "docs/plurilingual-vad-and-decoder-notes.md"
+  ],
+  "planPath": "",
+  "contentHash": "5d100085dbd1bb078670b3821f2760b5af2215916b067a313c80da13917e13bd",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "ab24680",
+    "hasChanges": true
+  }
+}

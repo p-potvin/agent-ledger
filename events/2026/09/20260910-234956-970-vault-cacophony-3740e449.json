@@ -1,0 +1,48 @@
+{
+  "id": "20260910-234956-970-vault-cacophony-3740e449",
+  "createdAt": "2026-09-11T03:49:56.9701892Z",
+  "createdAtLocal": "2026-09-10 23:49",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 23:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp",
+  "summary": "Benchmarked VAD segmentation on 25 min of the Shane Gillis / Theo Von podcast (monolingual EN) vs the French code-switched file. RESULT: segmentation is NOT a universal win. Monolingual podcast WER 19.75% (base) vs 21.15% (segmented) - 1.4 points WORSE, because every cut removes context the model was using. On the code-switched French file it halved loss (11.0s -> 5.2s) and was 3x faster. Documented on VadSegmenterCfg (commit 2b64c66) so the trade-off is visible at the flag. Two false alarms ruled out: the largest gap in both configs (~30s at 81-110s) is the show's THEME SONG ([Music] + sung lyrics), correctly skipped; and a gap-based loss metric is invalid against that SRT because its cues are rolling (each repeats the previous line) and cover the timeline continuously - WER against a de-rolled reference is the only metric that survives. Podcast has plenty of silence (longest run 26.2s, 265 candidate cuts, 62 segments, 59 resets) so segmentation worked mechanically. --concurrency 1 made zero difference on single-file transcription (identical output and timing); it is a server-path knob and each file already gets its own decoder. VAD min_silence_ms is already 300 by default. Confirmed reset_context() is built and firing (59 resets).",
+  "commands": [
+    "ffmpeg -t 1500 -ac 1 -ar 16000",
+    "nemo-speech transcribe --vad-segmentation / --concurrency 1",
+    "WER scoring vs de-rolled SRT",
+    "git commit 2b64c66"
+  ],
+  "files": [
+    "NeMo-Speech.cpp/src/asr/vad/vad_segmenter.h"
+  ],
+  "planPath": "",
+  "contentHash": "3740e44977dd413bc4b8400aa4f0190e3133bcb140808ff3e26663d9db1efec1",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "20260910-225313-508-vault-cacophony-78d1e0aa",
+  "createdAt": "2026-09-11T02:53:13.5087569Z",
+  "createdAtLocal": "2026-09-10 22:53",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 22:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "CLEAN-BUILD RESULT: the build stack is exonerated. Built NVIDIA/NeMo-Speech.cpp from a fresh clone at a5b6953 with the cuda-asr preset, its own correctly-patched ggml (fused-attention.cu, series incl. 0017/0018), reusing only vcpkg+sentencepiece. It reproduces the hole CHARACTER-FOR-CHARACTER identical to our build on a_60-72.wav, and matches on c_63-68.wav too. So the three divergences found (broken cuda-asr preset JSON, stale vendored ggml with fused-relpos-attn.cu, older ggml-patches series missing 0017/0018) are real and worth fixing but are NOT the cause. Note cuda-server preset fails on this machine in TTS (magpietts_cuda_sampling.cu, CCCL wants /Zc:preprocessor) - unrelated to ASR. Remaining untested variable is the GGUF conversion; downloading HF reference weights (nvidia/nemotron-3.5-asr-streaming-0.6b) which are a prerequisite both for reconversion and for running the HF reference implementation directly - the latter being the more decisive test since it separates 'our pipeline' from 'the model'. Practical answer already established and committed: segment before the ASR call; c_63-68 cut at the switch returns an exact ground-truth match.",
+  "commands": [
+    "cmake --preset cuda-asr",
+    "cmake --build build/cuda-asr",
+    "nemo-speech transcribe (clean build)",
+    "hf download nvidia/nemotron-3.5-asr-streaming-0.6b"
+  ],
+  "files": [
+    "nemo-speech-clean/build/cuda-asr/bin/nemo-speech.exe",
+    "NeMo-Speech.cpp/docs/black-hole-investigation-changes.md"
+  ],
+  "planPath": "",
+  "contentHash": "78d1e0aab91f36d9ec0ff5018f8fab762df2c6f08c7fd67a70b72762304d0356",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "10634fd",
+    "hasChanges": true
+  }
+}

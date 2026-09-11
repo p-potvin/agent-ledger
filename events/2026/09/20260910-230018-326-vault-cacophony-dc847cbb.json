@@ -1,0 +1,50 @@
+{
+  "id": "20260910-230018-326-vault-cacophony-dc847cbb",
+  "createdAt": "2026-09-11T03:00:18.3269169Z",
+  "createdAtLocal": "2026-09-10 23:00",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 23:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp",
+  "summary": "CASE CLOSED: the ASR black hole is model behaviour, not our pipeline. Control 2 (decisive): ran the HF reference implementation - PyTorch 2.14 CPU, stock transformers 5.17.0, official model.safetensors from nvidia/nemotron-3.5-asr-streaming-0.6b, fresh uv venv, no GGUF, no CUDA, no patched kernels, no shared code with our C++ path. It reproduces the SAME hole on a_60-72.wav: skips 'First of all, I want to say that I understand everyone very well. Like,' and emits <fr-FR> at the same place. On segmented c_63-68.wav both agree. Combined with Control 1 (clean upstream cuda-asr build reproducing character-for-character), this exonerates the GGUF conversion, the build stack, the patched CUDA kernels, Windows and CUDA. All three of the user's hypotheses are negative. ONE genuine divergence found and flagged separately: HF transcribes 'Meme dans ma tete' at clip start, ours drops it - a smaller first-chunk-handling bug worth its own investigation. Practical answer stands: segment before the ASR call. Committed d22523f with docs/traces/hf-reference-check.py to reproduce. Used CPU torch deliberately per the CUDA-libraries rule; existing torch 2.13.0+cu126 left untouched. Note the repo .venv is damaged (numpy dist-info missing, breaks transformers import).",
+  "commands": [
+    "uv venv --python 3.12",
+    "uv pip install torch --index-url https://download.pytorch.org/whl/cpu",
+    "python hf_ref.py",
+    "git commit d22523f"
+  ],
+  "files": [
+    "NeMo-Speech.cpp/docs/traces/hf-reference-check.py",
+    "NeMo-Speech.cpp/docs/black-hole-investigation-changes.md"
+  ],
+  "planPath": "",
+  "contentHash": "dc847cbb49d3331301d9bba140f203e27d516ab00828a2734e29b5892026b18b",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "d22523f",
+    "hasChanges": true
+  }
+}

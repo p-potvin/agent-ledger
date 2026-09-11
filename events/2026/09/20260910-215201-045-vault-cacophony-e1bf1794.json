@@ -1,0 +1,40 @@
+{
+  "id": "20260910-215201-045-vault-cacophony-e1bf1794",
+  "createdAt": "2026-09-11T01:52:01.0457530Z",
+  "createdAtLocal": "2026-09-10 21:52",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 21:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": "PowerShell",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Session resumed after app quit. No work in flight; all instrumentation and findings are committed at b2354ad (offline mask matches HF, encoder features healthy through the hole, hole is real speech, boosting confirmed live on the reconverted GGUF). Language-prompt sweep results recorded in the prior ledger entry but not yet committed to the repo. Blocked on clarifying which upstream text the user means by 'the text is wrong before it gets to nemo' - a multiple-choice question was declined, so asking in plain prose instead.",
+  "commands": [],
+  "files": [
+    "NeMo-Speech.cpp/docs/traces/"
+  ],
+  "planPath": "",
+  "contentHash": "e1bf1794fe73fc49f6328e8a34f034f9b08ba2a9710df381ed5b8aff23d2677d",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "b2354ad",
+    "hasChanges": true
+  }
+}

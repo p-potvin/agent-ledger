@@ -1,0 +1,51 @@
+{
+  "id": "20260910-145806-521-vault-cacophony-97b1b83a",
+  "createdAt": "2026-09-10T18:58:06.5213972Z",
+  "createdAtLocal": "2026-09-10 14:58",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 14:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Corrections plus post-processing survey plus subtitle lead. MAJOR CORRECTION: my earlier claim that voice identity holds across languages was WRONG and the owner's ear was right. CAM++ cosine on the same sentence per speaker: Aria en-vs-fr 0.428, and Aria-vs-Sofia WITHIN French also 0.428 - changing the language moves the voice as much as changing the speaker. Sofia/Aria similarity is itself language-dependent (0.289 en, 0.441 es, 0.428 fr), which explains the multilingual merge. Consequence for dubbing: a speaker cannot be kept consistent across a language switch by reusing --voice. Second correction: in the E2E run the flip TO Speaker 3 is correct (different person in the clip); the flip BACK to Speaker 2 is the error - I had it backwards. TTS RTFx answered: 2.0-2.9x realtime on cuda:0, typically ~2.6x. SUBTITLE LEAD IMPLEMENTED (vault-commander 86cff06): words_to_cues gains lead_s default 0.15s, exposed as --lead on subtitles_asr.py; start and end shift together so duration is unchanged, clamped at zero; applied to the cue not the word timings so word data and diarization stay true to the audio. Verified end to end - first cue moved 00:00:01,200 to 00:00:01,050 with its 2.4s duration intact. SORTFORMER SURVEY: exposed knobs are model_path, preset, chunk, right/left context, fifo, spkcache, update_period. There is NO 'do not re-assign' flag and NO 'pin to speaker N at limit' - the scoring constants (pred_score_threshold 0.25, scores_boost_latest, sil_threshold, boost rates) are model-tied in sortformer.scoring.* and never registered as CLI keys; num_speakers=4 is a model constant. --diar-preset offline is the closest lever and NOT a clean win: conv4 66.9->76.7",
+  "commands": [
+    "voiceprint.py cross-language CAM++ comparison",
+    "transcribe --diar-preset offline sweep",
+    "Start-BetterSubtitles.ps1 lead verification",
+    "wsl -d Ubuntu toolchain probe"
+  ],
+  "files": [
+    "docs/magpie-tts-notes.md",
+    "vault-commander/cli/utils/subtitles_cues.py",
+    "vault-commander/cli/utils/subtitles_asr.py"
+  ],
+  "planPath": "",
+  "contentHash": "97b1b83a6d38442d813cc8038f6a844a62e5c541a94e457d7a61c1259ad6650c",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "c929941",
+    "hasChanges": true
+  }
+}

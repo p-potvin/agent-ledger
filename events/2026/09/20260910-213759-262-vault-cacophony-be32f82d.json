@@ -1,0 +1,51 @@
+{
+  "id": "20260910-213759-262-vault-cacophony-be32f82d",
+  "createdAt": "2026-09-11T01:37:59.2622893Z",
+  "createdAtLocal": "2026-09-10 21:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Read, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 21:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp",
+  "summary": "Tested the attention_mask/static-cache padding hypothesis for the ASR black hole. Added NEMO_SPEECH_DEBUG_ENC (offline mask geometry + host recomputation of visible key spans + per-frame encoder output l2/mean/min/max/cos_prev) and NEMO_SPEECH_OFFLINE_LEFT_CTX/_RIGHT_CTX overrides. Result: our offline mask matches HF transformers nemotron_asr_streaming exactly (chunked_limited, chunk=R+1=4, left_chunks=56/4=14, reach 60 keys, left=sliding_window-1=56); no query fully masked; encoder features through the hole are healthy (l2 3.45 vs 3.70, cos_prev 0.82 vs 0.74, zero near-duplicates). Masking ruled out. But the hole IS real speech: ground truth at 63s is 'First of all, I want to say that I understand everyone very well. Like,'. Window sweep shows no single setting recovers both languages (unlimited recovers the English, loses the French; R=13 best compromise). Also corrected 8dcbae4: its rc1/rc3 traces were byte-identical because the offline encoder ignores rnnt_right_context, and its traces were never committed (*.log gitignored). Word boosting confirmed LIVE on the reconverted GGUF (boosting=on, output changes) but structurally cannot fill a blank run.",
+  "commands": [
+    "cmake --build build-s2s (via vcvars64)",
+    "nemo-speech transcribe with NEMO_SPEECH_DEBUG_ENC=1",
+    "git commit 15323dc"
+  ],
+  "files": [
+    "NeMo-Speech.cpp/src/asr/model.cpp",
+    "NeMo-Speech.cpp/src/asr/encoder/fastconformer.cpp",
+    "NeMo-Speech.cpp/docs/traces/"
+  ],
+  "planPath": "",
+  "contentHash": "be32f82d6532b3c5ce60efcd95f97e76e1379fce327fc8bde856979fc67db3c4",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "15323dc",
+    "hasChanges": true
+  }
+}

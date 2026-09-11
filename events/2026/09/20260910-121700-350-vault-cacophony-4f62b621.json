@@ -1,0 +1,50 @@
+{
+  "id": "20260910-121700-350-vault-cacophony-4f62b621",
+  "createdAt": "2026-09-10T16:17:00.3509363Z",
+  "createdAtLocal": "2026-09-10 12:17",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 12:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Aligned vault-cacophony and vault-inference onto torch 2.13.0+cu126, leaving vaultwares-api alone as instructed. vault-inference was a LATENT BUG not a preference: pyproject pinned torch==2.13.0 but sourced it from the cu121 index which has no 2.13.0 build, so the venv sat on 2.5.1+cu121 while claiming 2.13.0; repointing the index to cu126 satisfies the already-declared pin (committed 047b4bd on vault-inference main, staged only pyproject.toml since .env.example and README.md carried pre-existing WIP). vault-cacophony moved 2.8.0+cu129 to 2.13.0+cu126, which BROKE torchaudio - libtorchaudio.pyd is compiled against a specific torch ABI and refused to load, and silero_vad/utils_vad.py imports torchaudio at module level so vad_segment.py went down with it. Key gotcha recorded: torchaudio does NOT track torch's version number - there is no torchaudio 2.13.0, and 2.11.0 is the build that pairs with torch 2.13.0. requirements-vad-segment.txt now pins torch==2.13.0, torchaudio==2.11.0, silero-vad==6.2.0 plus the index invocation. RESULT: unique on-disk bytes across the eight venvs fell 21.16 GiB to 13.00 GiB (8.16 GiB eliminated); C: free space 52.9GB to 71.7GB, the larger figure because dropping the two odd torch builds also released their uv cache entries. vault-inference alone went 4.51GiB to 0.29GiB unique. VERIFIED: all five CUDA venvs import torch with cuda=True; vault-inference transformers/accelerate/bitsandbytes 0.50.0/safetensors/sentencepiece/fastapi/uvicorn/pydantic all import; vad_segment.py reproduces its previous output exactly (36 speech spans, 98.8 percent speech). Rollback pip freezes for both venvs saved to scratchpad/venv-rollback/. VoiceChat S2S abandoned per owner - even at Q4 it needs two ~5GB models resident plus KV cache; the 44.4GB fp32 download was never started. Pushed d74d6fb.",
+  "commands": [
+    "uv pip install torch==2.13.0 --index pytorch-cu126",
+    "uv pip install torchaudio (resolved to 2.11.0+cu126)",
+    "inode-based unique-usage measurement"
+  ],
+  "files": [
+    "requirements-vad-segment.txt",
+    "docs/s2s-and-disk-notes.md",
+    "vault-inference/pyproject.toml"
+  ],
+  "planPath": "",
+  "contentHash": "4f62b621fed0d5644d3318ccfb248de94755c52238f4c683af880c2b73d74675",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "d74d6fb",
+    "hasChanges": true
+  }
+}

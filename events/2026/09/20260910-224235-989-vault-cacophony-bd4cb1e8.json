@@ -1,0 +1,51 @@
+{
+  "id": "20260910-224235-989-vault-cacophony-bd4cb1e8",
+  "createdAt": "2026-09-11T02:42:35.9899865Z",
+  "createdAtLocal": "2026-09-10 22:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 22:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp",
+  "summary": "Added NEMO_SPEECH_DEBUG_BLANK_SHADOW (read-only, output verified byte-identical): logs what the joint would emit with blank excluded, frame by frame, through a blank run. Through the 48-frame hole the model ranks '_first _of ... _that ... _under ... _very _well' at exactly the right frames while the predictor stays FROZEN on token 1022 'ais'. Definitive: the correct words were always second behind blank. Committed 60737b2. Then tested the build-stack-divergence hypothesis: cloned NVIDIA/NeMo-Speech.cpp clean to Github Repos/nemo-speech-clean. Found (1) CMakePresets.json in our vendored tree has a committed JSON syntax error in cuda-asr (missing comma, tab indent) making that preset unusable - upstream's is valid; (2) our vendored ggml has fused-relpos-attn.cu while the correctly-patched reference produces fused-attention.cu - different patch generations; (3) our ggml-patches series differs from upstream a5b6953: 0014 is cuda-relpos-extensions vs cuda-fused-attention-extensions, we are MISSING 0017-cuda-stream-interop and 0018-metal-tensor-api-dynamic-k, and 0007/0015 differ in content. So the vendor import brought C++ at a5b6953 but an older ggml patch series. Clean cuda-server build configured (reusing vcpkg + sentencepiece) and building now. Caveat: encoder features are healthy and the shadow ranking is coherent, which is not the fingerprint of a broken CUDA kernel - so this divergence is real and worth fixing but may not be the cause.",
+  "commands": [
+    "git clone NVIDIA/NeMo-Speech.cpp",
+    "scripts/apply-ggml-patches.sh",
+    "cmake --preset cuda-server",
+    "git commit 60737b2"
+  ],
+  "files": [
+    "NeMo-Speech.cpp/src/asr/decoders/rnnt_greedy_decoder.cpp",
+    "NeMo-Speech.cpp/ggml-patches/",
+    "NeMo-Speech.cpp/CMakePresets.json"
+  ],
+  "planPath": "",
+  "contentHash": "bd4cb1e824db3ab853268c913b6b8590625cef293ef8511a03f28bde80bb9214",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "60737b2",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "20260910-220842-368-vault-cacophony-8a493843",
+  "createdAt": "2026-09-11T02:08:42.3682876Z",
+  "createdAtLocal": "2026-09-10 22:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-10 22:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\NeMo-Speech.cpp",
+  "summary": "Root-caused the ASR black hole. The lever is the predictor cache, not max_symbols_per_step: in RNN-T the predictor is conditioned on the last EMITTED token and a blank is not an emission, so across a blank run the joint is scored against one frozen predictor state (the code comment already said 'Blank paths never reach this block and retain the cache'). Added NEMO_SPEECH_RNNT_MAX_BLANK (default off): after N consecutive blanks, run a blank-excluded argmax and force the best non-blank to unfreeze the predictor. At N=5 a single forced '.' at t=45 recovers the entire missing sentence verbatim vs ground truth. Sweep: unset=48-frame hole, 24 recovers 'Like there's over', 16 recovers 'everyone very well', 10 recovers 'That I understand', 5 recovers all but damages the French opening. Trade-off is false positives in genuine silence, so not production-ready and off by default. Also wrote docs/black-hole-investigation-changes.md cataloguing every modification, all env vars, which one can alter output, verification that default output is unchanged, and how to revert. Committed b26235a.",
+  "commands": [
+    "cmake --build build-s2s",
+    "NEMO_SPEECH_RNNT_MAX_BLANK sweep 0/5/10/16/24",
+    "git commit b26235a"
+  ],
+  "files": [
+    "NeMo-Speech.cpp/src/asr/decoders/rnnt_greedy_decoder.cpp",
+    "NeMo-Speech.cpp/docs/black-hole-investigation-changes.md"
+  ],
+  "planPath": "",
+  "contentHash": "8a4938432ab31d383d9035c0b41666f233ff52888199030b6d1b55d45dc4d5ea",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "b26235a",
+    "hasChanges": true
+  }
+}
