@@ -1,0 +1,48 @@
+{
+  "id": "20260911-060619-762-vault-commander-77d8398d",
+  "createdAt": "2026-09-11T10:06:19.7629569Z",
+  "createdAtLocal": "2026-09-11 06:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-11 06:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Fixed WinError 206 in better-subtitles separation (commit c4f8173). stitch_vocal_stems built ONE ffmpeg command carrying every chunk (an -i pair per stem plus a chained acrossfade filter), so command-line length grew linearly with duration and blew the Windows 32767-char CreateProcess cap at ~220 chunks = ~35 min of audio at the default 10s chunk. The 111-min file produced a 91,977-char command line. Worst part: it failed at the END, after all 645 chunks were separated on the GPU, discarding 6447s of work (run reported 0 processed / 1 failed in 1666.3s). Fix folds stems in batches sized from the longest actual path, then folds the partials, recursing until a command fits. Reproduces rather than approximates the old result: acrossfade is a strict left fold so grouping contiguous chunks and joining partials in order gives the identical fade sequence; intermediates keep native rate/channels and no gain so resampling and volume happen once on the final fold. VERIFIED on synthetic stems: 60 stems forced to batch size 13 across multiple rounds produced a BYTE-IDENTICAL file to the single-command path (sha 9e8cf43693293e4e both ways, 45.250s expected); 700 stems (184,762-char command, 5.6x over cap, more than the failing run) stitched in 10.7s to the expected 525.25s at 16kHz mono with intermediates cleaned up. Stem paths now also use win_long_path, which existed but this function did not call. FOLLOW-UP worth considering: separation has no resume/cache, so any late failure still discards the whole GPU pass.",
+  "commands": [
+    "git commit c4f8173",
+    "synthetic 700-stem stitch test",
+    "byte-equivalence test vs direct path"
+  ],
+  "files": [
+    "cli/utils/subtitles_separator.py"
+  ],
+  "planPath": "",
+  "contentHash": "77d8398d5fed6926089154de862c6d39fdd3abcdfc626e4ad70a7359aff66199",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

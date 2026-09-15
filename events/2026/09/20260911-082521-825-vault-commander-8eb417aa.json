@@ -1,0 +1,51 @@
+{
+  "id": "20260911-082521-825-vault-commander-8eb417aa",
+  "createdAt": "2026-09-11T12:25:21.8256931Z",
+  "createdAtLocal": "2026-09-11 08:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-11 08:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Added -AsrModel to the live overlay path (commit f936175). Plumbing runs end to end: --asr-model on live_subs_overlay.py (argparse with ValidateSet-equivalent choices) -> ASR worker __init__(asr_model=) -> NemoSpeechTranscriber(model_id=). parakeet-tdt stays the default and the flag is only forwarded when it differs, so existing callers get an identical command line. Registered on both live-subs and riva-live-subtitles in vw-commands.ps1. WHY IT MATTERS: parakeet-tdt transcribes 25 languages (so nothing looked broken) but cannot tag which language a cue is in and has no word-boosting support - both are nemotron-only. NON-OBVIOUS BUG HIT AND FIXED: inserting a parameter between an existing [Parameter()] attribute and the variable it decorates gives the new param TWO [Parameter()] attributes and strips the old one of its own. The AST parses that cleanly and the file looks normal, but the binder rejects the whole param block - Start-LiveSubtitles.ps1 reported ZERO bindable parameters. Only Get-Command caught it; I verified against the committed version (35 params) vs my edit (0) to isolate it. Both wrappers now declare the param above the attribute block; they bind 36 and 35 params with ValidateSets intact and both reject a bogus model. Also deduplicated: two patch scripts each added the param, producing doubled declarations in both files, removed surgically rather than by revert because Start-LiveSubtitles.ps1 carries the user's uncommitted work. That file is deliberately NOT committed - staging my hunks swept in the user's Mandatory=\\False cleanup and TranslateEngine local->riva change, so it is left in the working tree for them to commit together.",
+  "commands": [
+    "git apply --cached (rejected, swept user work)",
+    "git restore --staged",
+    "git commit f936175"
+  ],
+  "files": [
+    "cli/Start-RivaLiveSubtitles.ps1",
+    "cli/utils/live_subs_overlay.py",
+    "cli/vw-commands.ps1",
+    "cli/Start-LiveSubtitles.ps1 (uncommitted)"
+  ],
+  "planPath": "",
+  "contentHash": "8eb417aaafeed3cce71d1fce4e70b417e40c16d16570245ea621451702022a19",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

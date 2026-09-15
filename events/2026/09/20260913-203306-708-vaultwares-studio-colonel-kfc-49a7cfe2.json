@@ -1,0 +1,50 @@
+{
+  "id": "20260913-203306-708-vaultwares-studio-colonel-kfc-49a7cfe2",
+  "createdAt": "2026-09-14T00:33:06.7082948Z",
+  "createdAtLocal": "2026-09-13 20:33",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio + colonel-kfc",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + HF Jobs)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 20:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + HF Jobs",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Found and fixed the second hybrid-seed blocker. Both processed_min bundlers in recon_entrypoint.py selected the COLMAP sparse directory by MODIFICATION TIME; the mapper writes sparse/0, sparse/1 and a dir per retry, and the newest is routinely a small disconnected fragment. That is how the 14 June bundle shipped a 10-image 2,325-point model alongside 491 posed frames, making its visibility unusable (COLMAP's gauge is arbitrary per model). New _largest_sparse_model picks by registered image count - the same criterion best_model already used - reading the uint64 at the head of images.bin, and skipping COLMAP's dense/ copy so the path does not depend on whether dense ran. Verified against the real June 14 project: picks sparse/0 (487 images) over sparse/1 (10). Both call sites fixed; the --sfm-only one produced the bad bundle. New tools/queue_colmap_sfm.py runs COLMAP over an existing frames.zip on cpu-upgrade with the corrected entrypoint overlaid, ~4h ~0.16 USD, submitted for backyard_134s_sunny.mp4 (commit 8e6f515). Also colonel-kfc 5d05379: recorded that the face swap is NOT quite there - 0.82 ArcFace similarity against a 0.84 same-person baseline, but the subject says the features are clearly his (especially facial hair) while nobody would believe it is him. Logged as an open shortfall not a success; candidates are inswapper_128 upsampled into a 512 output, GFPGAN restoration pulling toward a generic face, and the surrounding head/lighting/skin still belonging to somebody else. Not worth chasing on SD1.5. User redirected fVDB -> OpenVDB/NanoVDB: fVDB untested on Windows and overkill for an RTX 3060; NanoVDB is a branch of OpenVDB, Windows-buildable via vcpkg, and Omniverse uses NanoVDB",
+  "commands": [
+    "python tools/queue_colmap_sfm.py --frames <june14 frames.zip> --job data/jobs/colmap-backyard-20260913 --yes",
+    "pytest tests/ -q"
+  ],
+  "files": [
+    "docker/worker/recon_entrypoint.py",
+    "tools/queue_colmap_sfm.py",
+    "colonel-kfc/docs/comfyui-conditioning.md"
+  ],
+  "planPath": "",
+  "contentHash": "49a7cfe2e26b35c9c907b4407a4f42f7da740bdb39575a6f35ca03f38bce2a57",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

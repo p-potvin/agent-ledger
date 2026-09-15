@@ -1,0 +1,53 @@
+{
+  "id": "20260911-080047-018-vault-commander-3f852622",
+  "createdAt": "2026-09-11T12:00:47.0184280Z",
+  "createdAtLocal": "2026-09-11 08:00",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-11 08:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Two changes. (1) vault-commander b7dd550: better-subtitles now defaults to parakeet-tdt instead of nemotron-3.5, based on the 111-min podcast measurement (parakeet 20,565 words / 3.6 min gaps / 59s vs nemotron 18,984 / 14.2 min / 339s) plus LibriSpeech 1.931% vs 3.511%; the old default was picked on enspa_dev clips a few seconds long. Switching exposed an interaction I blocked: word boosting is RNN-T only - TdtGreedyDecoder (both parakeet models) has ZERO bias members and no set_request_options, so --boosted-words reaches it and silently does nothing. better-subtitles now refuses -BoostWords on non-nemotron models, and biased-subs pins -Model nemotron-3.5 unless the caller names one. Verified: refusal fires on parakeet, biased-subs does not trip it. (2) vault-explorer b44516d and vault-streaming 9e56ce8: vw_media/asr.py (byte-identical in both repos) now shells out to nemo-speech.exe by default instead of the PyTorch/NeMo ParakeetV3Wrapper, using the same engine/models/defaults as the vw commands. transcribe() keeps its exact contract because the engine writes SRT and subtitles.read_srt reads it back, so cue grouping is the engine's - no second implementation. Covers generate_subtitles.py AND translate_video.py in both repos with one change. PyTorch wrapper retained as fallback; VW_ASR_ENGINE=torch pins it, VW_ASR_MODEL overrides the model. Binary search mirrors subtitles_server.py (VW_NEMO_SPEECH, then build-cuda/build-s2s/build-norelpos) and puts CUDA bin/x64 on the child PATH. Measured: 25 min of audio in 15.1s, 626 cues, torch NEVER imported; all 11 existing telemetry tests pass unchanged since they pass an explicit stub engine and the native path only runs when model is None.",
+  "commands": [
+    "git commit b7dd550",
+    "git commit b44516d",
+    "git commit 9e56ce8",
+    "python -m unittest vw_media.test_telemetry"
+  ],
+  "files": [
+    "cli/Start-BetterSubtitles.ps1",
+    "cli/Start-SubtitlesBiased.ps1",
+    "cli/vw-commands.ps1",
+    "vault-explorer/python-scripts/vw_media/asr.py",
+    "vault-streaming/python-scripts/vw_media/asr.py"
+  ],
+  "planPath": "",
+  "contentHash": "3f852622eb876b2804717e74155f4e5071e77dafc9cee503cc3789ce8e8938ef",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "20260913-194107-207-colonel-kfc-d558ae6c",
+  "createdAt": "2026-09-13T23:41:07.2070963Z",
+  "createdAtLocal": "2026-09-13 19:41",
+  "timezone": "Eastern Standard Time",
+  "project": "colonel-kfc",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, PowerShell, SendUserFile\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 19:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "PowerShell",
+      "SendUserFile"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Did #2 then #1. #2: rendered both identities (68-landmark fit and MICA) to depth maps at front and three-quarter, pushed all four through ComfyUI SD1.5 + control_v11f1p_sd15_depth at identical seed 7 / prompt / strength 0.85, delivered to user. User reports slight resemblance and flawless quality but has not yet scored which of the two looks more like them - that A/B is the actual open question. #1 (commit 70d39e2): new face_organizer/identity_benchmark.py measuring within vs between cosine distance. Result over 7 identities, 86 observations: MICA FLAME shape (300) within 0.119 between 0.369 gap 3.09x worst-within 0.337 best-between 0.099; ArcFace embedding (512) within 0.348 between 0.848 gap 2.44x. MICA's shape separates identities BETTER than the ArcFace embedding it derives from, so the 512->300 FLAME projection concentrates identity rather than losing it. Both have overlapping tails, so no threshold identifies a person from a single photo and fusing across photos is doing the real work. CRITICAL confound found and fixed: 20 of 106 gallery photos were not the folder's subject (scraped galleries contain group shots; max detection score is not the subject). Unfiltered, worst within-identity ArcFace distance was 1.061 i.e. NEGATIVE cosine similarity, and the gap read 2.04x instead of 3.09x. Filter is medoid-based, not mean, because the average of two different people resembles neither. NOT a controlled comparison against the landmark path: the handoff's 4x figure is from a different smaller experiment, and comparing properly needs per-photo landmark fits over this same 86-observation set. Suite 53 passing.",
+  "commands": [
+    "python -m face_organizer.identity_benchmark --gallery G:/Gallery --also <own photos>",
+    "pytest tests/ -q"
+  ],
+  "files": [
+    "face_organizer/identity_benchmark.py",
+    "tests/test_identity_benchmark.py"
+  ],
+  "planPath": "",
+  "contentHash": "d558ae6c492df75630cb58e46b11bb354487bc340b5d1aba7e7b23b7a3133f86",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

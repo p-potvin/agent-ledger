@@ -1,0 +1,46 @@
+{
+  "id": "20260913-050032-635-vault-cacophony-2ce2f04c",
+  "createdAt": "2026-09-13T09:00:32.6358307Z",
+  "createdAtLocal": "2026-09-13 05:00",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "documentation",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5-1\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: local Windows 11 (CLOPEUX-DESKTOP))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, WebSearch, WebFetch, Write\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-13 05:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5-1",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local Windows 11 (CLOPEUX-DESKTOP)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "WebSearch",
+      "WebFetch",
+      "Write"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Research pass: inventoried local assets (colonel-kfc antelopev2 stack, trellis.cpp sm86 build, vaultwares-studio 3DGS/USD, MASt3R local run, no FLAME/MICA/Bonsai weights on disk), verified HF PRO router and NVIDIA catalog key both work (tested Qwen3.5-9B and nemotron-3-ultra-550b), researched Bonsai 27B ternary (7 GB, fits 3060, upstream llama.cpp/Ollama), face reconstruction routes (MICA/FLAME, flame-head-tracker, GAGAvatar, LAM), fVDB (linux-only wheels, remote worker only). Wrote docs/video-identity-avatar-research.md with a ranked plan. No code changes.",
+  "commands": [],
+  "files": [
+    "docs/video-identity-avatar-research.md"
+  ],
+  "planPath": "",
+  "contentHash": "2ce2f04c3fa7e01ed036e0ef8d61ae8317dffa784cc8497da6cb41ce3b23af1f",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

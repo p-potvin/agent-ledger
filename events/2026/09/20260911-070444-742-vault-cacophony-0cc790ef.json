@@ -1,0 +1,48 @@
+{
+  "id": "20260911-070444-742-vault-cacophony-0cc790ef",
+  "createdAt": "2026-09-11T11:04:44.7429363Z",
+  "createdAtLocal": "2026-09-11 07:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-11 07:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Benchmarked the 111-min Shane Gillis podcast, no separation, to chase the user's report of nemotron-3.5 producing 82 words / 32-min gap vs parakeet-tdt's complete transcript. KEY RESULT: NOT REPRODUCIBLE on the direct nemo-speech CLI. nemotron-3.5 gives 18,984 words over 111.5 min with largest gap 0.5 min - a complete transcript. So the 82-word failure is in the vault-commander better-subtitles PIPELINE, not the engine. Ruled out as causes (all byte-identical output size 1,484,696): --language auto (the pipeline default), and NEMO_SPEECH_RELPOS_MAX_Q=512 (which the resident server sets but the CLI does not). Remaining suspect is the resident HTTP server path itself; running subtitles_asr.py directly against it now. Full comparison: nem_base 18,984 words / 248 gaps / 14.2 min total gap; nem --vad-segmentation 19,000 words / 225 gaps / 13.1 min (mild improvement, 500s vs 339s); parakeet-tdt 20,565 words / 57 gaps / 3.6 min total gap in 59s. So on this long-form English content parakeet-tdt is clearly better than nemotron-3.5 (8% more words, a quarter the dropped time, 6x faster), consistent with the LibriSpeech numbers and contrary to better-subtitles defaulting to nemotron-3.5. Note the short name 'nemotron-3.5' resolves via the engine registry to nvidia/nemotron-3.5-asr-streaming-0.6b, same model.",
+  "commands": [
+    "nemo-speech transcribe on 6690s wav x4 variants",
+    "NEMO_SPEECH_RELPOS_MAX_Q=512 control",
+    "subtitles_asr.py server-path test"
+  ],
+  "files": [
+    "cli/utils/subtitles_server.py",
+    "cli/utils/subtitles_asr.py"
+  ],
+  "planPath": "",
+  "contentHash": "0cc790ef5fd4c8af7d6f270fd9232cf2a851120a9718a1f76591eb021e27126b",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

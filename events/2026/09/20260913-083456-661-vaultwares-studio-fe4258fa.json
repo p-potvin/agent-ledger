@@ -1,0 +1,61 @@
+{
+  "id": "20260913-083456-661-vaultwares-studio-fe4258fa",
+  "createdAt": "2026-09-13T12:34:56.6612857Z",
+  "createdAtLocal": "2026-09-13 08:34",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5-1\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: local Windows 11 + HF Jobs l4x1 + HF ZeroGPU Space)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write, Edit, WebFetch\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-13 08:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5-1",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local Windows 11 + HF Jobs l4x1 + HF ZeroGPU Space",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Backyard splat pipeline run + fixes. Found and fixed the September regression: ZeroGPU import scaled DA3 intrinsics from the fed 672x378 instead of DA3's working 504x280 (focal 25% short, principal point off-centre); streaming_convert.infer_stream_size + principal-point guard, importer rewritten. Finished camera staging: new capture_cameras.py authors all registered frames with per-frame intrinsics as USD cameras (/World/Capture animated camera, trajectory curve, keyframes) + usd/capture_cameras.json Cosmos hand-off; retrace of real trajectory as default render path; presets scaled to scene bounds; cosmos_output points at hand-off. New depth_fusion.py + tools/fuse_streaming_mesh.py: TSDF mesh from DA3 depth/conf fields (10 s CPU), referenced in USD. New tools/prepare_zerogpu_training.py replays the console frame selection and submits Job B with current entrypoint overlaid. Test run backyard_134s_sunny: ZeroGPU SfM 102 GPU s (free), L4 splatfacto 20k iters 1824 s, 1,036,140 gaussians, ~\\.43, 36 min wall. 13 new tests, suite 189 passing. Docs: docs/da3-intrinsics-cameras-mesh-20260913.md, TODO entry. Nothing committed (tree has prior uncommitted Codex work).",
+  "commands": [
+    "tools/run_zerogpu_da3.py --preset high --loop-closure",
+    "tools/import_zerogpu_artifact.py",
+    "tools/prepare_zerogpu_training.py --iterations 20000 --submit",
+    "tools/fuse_streaming_mesh.py",
+    "pytest tests"
+  ],
+  "files": [
+    "vaultwares_studio/streaming_convert.py",
+    "vaultwares_studio/capture_cameras.py",
+    "vaultwares_studio/depth_fusion.py",
+    "vaultwares_studio/camera_scene.py",
+    "vaultwares_studio/stages/camera_staging.py",
+    "vaultwares_studio/stages/cosmos_output.py",
+    "tools/import_zerogpu_artifact.py",
+    "tools/prepare_zerogpu_training.py",
+    "tools/fuse_streaming_mesh.py",
+    "docs/da3-intrinsics-cameras-mesh-20260913.md"
+  ],
+  "planPath": "",
+  "contentHash": "fe4258fa8a22e3cb37437011a7be35fea0a7eca1a06e65164edff44fcf89b556",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

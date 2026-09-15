@@ -1,0 +1,52 @@
+{
+  "id": "20260913-120252-044-vaultwares-studio-b972bbbe",
+  "createdAt": "2026-09-13T16:02:52.0440513Z",
+  "createdAtLocal": "2026-09-13 12:02",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 12:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Commit 51dda46: one shared camera per capture with lens distortion. New vaultwares_studio/camera_calibration.py (CameraCalibration dataclass + consensus_intrinsics). streaming_convert.streaming_to_transforms and docker/worker/da3_entrypoint.da3_to_transforms now emit ONE top-level camera instead of per-frame intrinsics, collapsing DA3's per-frame focal jitter (measured 4.3pct spread, std 9.15px, on a fixed phone lens) to the median. New --calibration flag carries k1/k2/p1/p2, which DA3 never estimates and which gates nerfstudio's full_images_datamanager undistortion path entirely. Lens solved from the June 14 COLMAP run checked in at config/calibrations/iphone-1920x1080.json. camera_calibration.py added to all four worker packers; both import sites degrade from package to flat import for the container. 10 new tests in tests/test_camera_calibration.py, two existing streaming tests updated to the shared-camera layout. Suite 226 passing; tests/test_prepared_da3.py VW_IN failure confirmed pre-existing via git stash. No job launched - user asked to step back and evaluate splatfacto alternatives first.",
+  "commands": [
+    "pytest tests/ -q",
+    "git commit -m 'fix(recon): one camera per capture, with the lens'"
+  ],
+  "files": [
+    "vaultwares_studio/camera_calibration.py",
+    "vaultwares_studio/streaming_convert.py",
+    "docker/worker/da3_entrypoint.py",
+    "config/calibrations/iphone-1920x1080.json",
+    "tests/test_camera_calibration.py"
+  ],
+  "planPath": "",
+  "contentHash": "b972bbbe229b1b77b033ee150588e6ad9a4d135587540977b77bbaaef0b45c77",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260913-232024-769-colonel-kfc-qt-demo-35ea2296",
+    "createdAt":  "2026-09-14T03:20:24.7694429Z",
+    "createdAtLocal":  "2026-09-13 23:20",
+    "timezone":  "Eastern Standard Time",
+    "project":  "ColONEL-KFC-qt-demo",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 23:20 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC-qt-demo",
+    "summary":  "Refined Qt demo photo fit and loading, date and tooltip timing, recreation layout, and frameless controls",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "35ea2296fad3ed5497e5fe72239573d9a606d13faa9d378b3282f5f8406e3fd8",
+    "git":  {
+                "repo":  "ColONEL-KFC-qt-demo",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/ColONEL-KFC-qt-demo",
+                "branch":  "vw-codex-colonel-qt-demo",
+                "head":  "d57ae7a",
+                "hasChanges":  true
+            }
+}

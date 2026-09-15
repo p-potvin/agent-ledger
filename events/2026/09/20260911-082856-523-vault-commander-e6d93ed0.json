@@ -1,0 +1,51 @@
+{
+  "id": "20260911-082856-523-vault-commander-e6d93ed0",
+  "createdAt": "2026-09-11T12:28:56.5237121Z",
+  "createdAtLocal": "2026-09-11 08:28",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-11 08:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Committed all outstanding work in two themed commits after reviewing every diff. 8fdace2 (live subs): meth/utils/live_subtitles.py migrated off in-process PyTorch/NeMo onto the resident nemo-speech serve via nemo_asr.NemoSpeechTranscriber - model loaded once per machine not per app session, no torch/NeMo/VRAM in that process, ~29s launch cost removed; Start-LiveSubtitles.ps1 defaults -TranslateEngine to riva instead of local, drops redundant Mandatory=\\False, and carries my -AsrModel addition. ca585ef (video tooling): reduce-video-sizes interactive Space-to-skip with keystroke draining and UserInteractive guards; convert-non-mp4 -Input renamed to -Path with pipeline input, ShouldProcess/-WhatIf dropped, extensions narrowed; new-face-model -Input now optional defaulting to CWD. FOUND AND FIXED A RUNTIME BUG in the user's uncommitted work before committing: Convert-NonMp4Videos.ps1 line 34 still read 'Resolve-Path -LiteralPath \\' after the parameter was renamed to \\. Because \\ is the automatic pipeline enumerator rather than an undefined variable, it parsed fine and threw at runtime on EVERY invocation ('Cannot bind argument to parameter LiteralPath because it is an empty array'), right after the path validation passed - same bug class as Start-SubtitlesBiased. Proved it with a standalone probe, completed the rename, verified a real directory now reaches the scan and a missing one still raises DirectoryNotFoundException. Also ran an AST scan across all four changed .ps1 for undeclared and automatic-variable use; the other flags (\\, \\, \\, env:USERPROFILE) were false positives - function params and foreach variables. Confirmed my destructive test on TEMP left no damage: ffmpeg failed before the source-deletion step and the temp-file cleanup ran.",
+  "commands": [
+    "AST undeclared-variable scan",
+    "git commit 8fdace2",
+    "git commit ca585ef"
+  ],
+  "files": [
+    "cli/Start-LiveSubtitles.ps1",
+    "cli/Convert-NonMp4Videos.ps1",
+    "cli/Reduce-VideoSizes.ps1",
+    "cli/New-FaceModel.ps1",
+    "meth/utils/live_subtitles.py"
+  ],
+  "planPath": "",
+  "contentHash": "e6d93ed072448a8e371011c0b48ec46fb548345d0dbb7e1e6e3e8cde0e43b48b",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

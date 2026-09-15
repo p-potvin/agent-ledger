@@ -1,0 +1,52 @@
+{
+  "id": "20260913-164733-303-vaultwares-studio-6e2825b2",
+  "createdAt": "2026-09-13T20:47:33.3031897Z",
+  "createdAtLocal": "2026-09-13 16:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + HF Jobs)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 16:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + HF Jobs",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "DA3 depth job SUCCEEDED (depths.zip, 80 maps at 504x280, ~0.13 USD, banked and reusable) after overlaying the current entrypoint. Fusion BLOCKED by two bugs of mine, both found by running it. Bug 1: projected all 185,355 sparse points into every frame and relied on Huber to reject occluded ones - median frame has 45,966 projecting in vs 577 COLMAP actually verified, ~98.7 pct occluded, so the fit described the occluders. Tell was correlation between DA3 depth and true depth running +0.60 to -0.10 across frames. Fixed with new colmap_model.py reading tracks from points3D.bin. Bug 2: fixing that made it worse (3/42 frames, 1504 pct spread) because the only full sparse model on disk is from a DIFFERENT COLMAP run than the bundle whose poses are used - raw headers confirm the bundle's own sparse/ is a 10-image 2,325-point fragment against its 491 posed frames, while colmap-project/sparse/0 has 487 images/49,107 points and a bbox disagreeing with sparse_pc.ply even after applied_transform. COLMAP's gauge is arbitrary per run. CONCLUSION: the 630 pct and 1504 pct scale spreads say NOTHING about DA3 and must not be cited. The hybrid needs one self-consistent COLMAP bundle (transforms + points + tracks from one run); nothing on disk is that. Next step requires re-running COLMAP on backyard_134s_sunny.mp4 locally, free, ~2442s - awaiting user go-ahead. Commits d14d6a8, a2b28be. Suite 253 passing.",
+  "commands": [
+    "python tools/build_hybrid_seed.py --colmap ... --sparse-model ... --depths ...",
+    "pytest tests/ -q"
+  ],
+  "files": [
+    "vaultwares_studio/colmap_model.py",
+    "vaultwares_studio/hybrid_seed.py",
+    "tools/build_hybrid_seed.py",
+    "tests/test_colmap_model.py",
+    "docs/hybrid-colmap-da3-20260913.md"
+  ],
+  "planPath": "",
+  "contentHash": "6e2825b2c14b1440b957858b477f9a776afa33cfe25ab7b9f5aa046f2eb66960",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

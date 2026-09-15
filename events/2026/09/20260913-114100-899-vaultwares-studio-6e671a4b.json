@@ -1,0 +1,49 @@
+{
+  "id": "20260913-114100-899-vaultwares-studio-6e671a4b",
+  "createdAt": "2026-09-13T15:41:00.8996168Z",
+  "createdAtLocal": "2026-09-13 11:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Grep, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 11:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Grep",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Audited training vs SfM resolution across every splat job on C: and D:. Training images were 1920x1080 in every run (JPEG SOF headers read straight out of frames.zip for Jun14, Jul13, Sep13; --downscale 1 on all non-debug presets) - the low-res is only in the SfM/pose+depth stage. Found the June 14 COLMAP run (local-run-20260614-234541) on D:\\3D Reconstruction, same source video backyard_134s_sunny.mp4 as Jul13 and Sep13, giving a controlled three-way comparison. COLMAP: full-res 1920x1080 sequential matching, 491/500 registered, OPENCV distortion solved (k1 .0141 k2 -.0147 p1 p2), 185,355 triangulated seed points. DA3 non-streaming: full-res in, DA3 internal resize, 500k seed capped at max_points, NO distortion. DA3-Streaming: frames pre-resized to 504x280 (14.7x fewer pixels), 1.06M seed, NO distortion. Radial profile about camera-path centroid: Jun14 p50 0.16 p90 0.41 p99 1.75; Jul13 p50 0.86; Sep13 p50 0.83 p99 1.17. COLMAP concentrated mass where the walk was; both DA3 runs put the median gaussian in a shell at 0.85x. Camera-free p99/p50: 11.04 / 9.47 / 2.06. Jun30 run has a broken principal point (cy 304 vs 540). No Mast3r/Dust3r reconstruction outputs exist - inputs only.",
+  "commands": [
+    "find /d/3D Reconstruction -name processed_min.zip",
+    "python - (jpeg SOF + ply vertex count audit across 6 processed_min.zip)"
+  ],
+  "files": [
+    "docker/worker/da3_entrypoint.py",
+    "spaces/da3-zerogpu/core.py",
+    "D:/3D Reconstruction/vaultwares-studio-jobs/data/jobs/local-run-20260614-234541/reconstruction/remote_out/processed_min.zip"
+  ],
+  "planPath": "",
+  "contentHash": "6e671a4b5ac46e5ec32684c1819e79a438d0350536652c245ce6cfce35d460f7",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

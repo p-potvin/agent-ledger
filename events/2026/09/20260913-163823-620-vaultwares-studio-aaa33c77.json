@@ -1,0 +1,48 @@
+{
+  "id": "20260913-163823-620-vaultwares-studio-aaa33c77",
+  "createdAt": "2026-09-13T20:38:23.6200272Z",
+  "createdAtLocal": "2026-09-13 16:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + HF Jobs)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 16:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + HF Jobs",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "DA3 depth job for the hybrid: three submissions, two root causes found and fixed. (1) Runner's 120s flavor scheduling timeout is too short for current GPU spot capacity - both a10g-small and l4x1 timed out in SCHEDULING twice, never billed. Added --scheduling-timeout default 900s (commit f32e866). (2) With 15 min patience the job RAN and COMPLETED on a10g-small in 20.6s of DA3 inference, but returned only processed_min.zip and a summary lacking frames_sfm and depth_maps - both unconditional in the current --sfm-only branch. The deployed hf.co/spaces/clopeux/vw-studio-da3 image is an older build whose SfM path predates make_depth_bundle. Cost ~0.17 USD to discover. Fixed by overlaying today's entrypoint via worker.zip (20 KB: da3_entrypoint.py, streaming_convert.py, camera_calibration.py) unpacked over /opt/vw and exec'd, the same mechanism prepare_zerogpu_training.py uses; also corrected expected_outputs to reconstruction_sfm/remote_out/depths.zip, which is where the entrypoint actually writes (commit 52558eb). Resubmitted. DECA/EMOCA research: no assets on disk, no pytorch3d anywhere, no HF mirrors exist - all downloads are licence-gated at the MPI project pages and require the user to register. Awaiting user decision on whether to build the PyTorch3D-free DECA loader before the weights arrive.",
+  "commands": [
+    "python tools/queue_da3_depth.py --frames <june14> --job data/jobs/hybrid-backyard-20260913 --flavor a10g-small --flavor l4x1 --scheduling-timeout 900 --yes"
+  ],
+  "files": [
+    "tools/queue_da3_depth.py",
+    "data/jobs/hybrid-backyard-20260913/reconstruction_sfm/remote_out/summary.json"
+  ],
+  "planPath": "",
+  "contentHash": "aaa33c7773d3c2cedbb10f48e7779f700fd798a97c7cc0c978e366063772efc4",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

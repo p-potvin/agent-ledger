@@ -1,0 +1,49 @@
+{
+  "id": "20260913-112119-673-vaultwares-studio-9ab782e8",
+  "createdAt": "2026-09-13T15:21:19.6739681Z",
+  "createdAtLocal": "2026-09-13 11:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 11:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Tested the user's recollection that outlier trimming preceded splat training. splat_filter.py's 95pct per-axis quantile trim exists and matches their memory (docstring: ~1pct beyond 10x core, furthest 416x) but is wired only to da3-draft and da3-incremental (direct-GS, no training); da3-standard and da3-stream leave splat_keep_quantile at 1.0 and neither run's summary.json carries a filter block, so no trim ran on the five runs in the handoff table. Measured the full radial quantile profile of both clouds on disk against their camera paths: July p50 0.86 p95 2.47 p100 18.79; Sept p50 0.83 p90 1.10 p99 1.17 p100 1.61. Cores are the same size; the whole difference lives in the far tail. Applying the same 95pct trim to both narrows the headline gap from 3.84-vs-0.51 to 3.32-vs-1.26. Both transforms carry corrected intrinsics (898/882 px, cx 960). GPU now free: 11.3 of 12 GB on the RTX 3060, nemo gone.",
+  "commands": [
+    "nvidia-smi --query-gpu=memory.free --format=csv",
+    "python extent_profile.py cloud.ply transforms.json"
+  ],
+  "files": [
+    "vaultwares_studio/splat_filter.py",
+    "vaultwares_studio/presets.py",
+    "data/jobs/local-run-20260713-022745/reconstruction/summary.json"
+  ],
+  "planPath": "",
+  "contentHash": "9ab782e89ab0a2f17689f02b43979325c85edde81cc5a2c5fe6e9d1e8696138b",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

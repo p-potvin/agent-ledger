@@ -1,0 +1,47 @@
+{
+  "id": "20260914-033517-237-vaultwares-studio-f71b0378",
+  "createdAt": "2026-09-14T07:35:17.2373621Z",
+  "createdAtLocal": "2026-09-14 03:35",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + HF Jobs)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-14 03:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + HF Jobs",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "COLMAP CPU job SUCCEEDED after the multiple_models fix: 491/500 registered, and for the first time the bundle is self-consistent - transforms.json has 491 posed frames and sparse/images.bin has 491, with 201,050 points and tracks from the same reconstruction. fl_x 886.91 independently reproduces June 14's 886.85, and k1 0.01356 vs 0.01411, so the camera solution is sound. That unblocks the COLMAP half of the hybrid permanently. Hybrid fusion on that bundle is still NOT working: 79/80 depth maps now join (up from 42), median RMSE improved 0.62 -> 0.20, visibility is real at 2,341 points/frame, but only 33/79 frames align and scale_spread is 12.3. Ruled out: ray-distance vs z-depth interpretation (median correlation 0.112 vs 0.154, noise) despite a wide 94.5 degree FOV. CORRECTION TO RECORD: I reported it as conclusive that DA3's depth maps are excellent but written under the wrong filenames, based on individual depth maps correlating 0.94-0.98 with a DIFFERENT frame's pose than their own. That is NOT established. Building the full 80x79 correlation matrix shows 71 maps with r>=0.80 but only 12 DISTINCT targets, with frame_00659 claiming six of the first twelve - not a bijection, so not a permutation. The flaw is the metric: correlation is scale- and offset-invariant, so in a scene with a receding ground plane almost any depth map correlates highly with any pose whose visible points span a wide depth range. The hybrid remains unexplained and needs a discriminative metric (post-fit residual in scene units, not correlation) before any further conclusion. Stopping the investigation here rather than opening another",
+  "commands": [
+    "python tools/build_hybrid_seed.py --colmap <new bundle> --sparse-model <sparse> --depths <da3 depths>",
+    "80x79 depth-to-pose correlation matrix"
+  ],
+  "files": [
+    "data/jobs/colmap-backyard-20260914/reconstruction_sfm/remote_out/processed_min.zip",
+    "docker/worker/recon_entrypoint.py"
+  ],
+  "planPath": "",
+  "contentHash": "f71b03780d4aa2d23ff2cfc6bd123180259bb71f76f9210f6384bc7056c67151",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

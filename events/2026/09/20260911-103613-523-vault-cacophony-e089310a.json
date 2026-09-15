@@ -1,0 +1,54 @@
+{
+  "id": "20260911-103613-523-vault-cacophony-e089310a",
+  "createdAt": "2026-09-11T14:36:13.5230215Z",
+  "createdAtLocal": "2026-09-11 10:36",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, Read, WebSearch, WebFetch, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-11 10:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Read",
+      "WebSearch",
+      "WebFetch",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "font-cloning sd.cpp three-way benchmark, one Canada Dry E edit, identical inputs and seed 77, 1328x752, 4 steps, cfg 1.0, --offload-to-cpu --diffusion-fa. klein 4B fp8 + qwen_3_4b: WALL 127 s (load TE 31.2, encode 35.9, load diffusion 38.2, sampling 73.9, VAE 3.3). No slab serifs. Ink RGB (142,28,37), sat 0.77, drawn 339x347. Qwen 2511 Q4_0 + Qwen2.5-VL Q4_K_S + mmproj + Lightning: WALL 309 s, sampling 256.2 s. CORRECT slab serifs. Ink (103,18,29), sat 0.80, drawn 568x686. ComfyUI Qwen 2511, same weights and seed: 163 s, correct serifs but a fuzzy 3D object with a cast shadow. Real label reference A: ink (133,38,44), sat 0.71; target box 319x361. Three findings. (1) sd.cpp's Qwen BEATS ComfyUI's Qwen on identical weights, LoRA, steps and seed - flat printed ink with clean edges versus a fuzzy 3D object. Difference is how 2511 mode is applied (--model-args qwen_image_zero_cond_t=true vs the node graph). (2) klein 4B is closest on colour to the real label; Qwen renders markedly darker. (3) klein respects the target box (339x347 vs box 319x361) while Qwen overflows it at nearly 2x (568x686) - the composite sizing problem from README 5c survives the runtime change, so it is model behaviour, not ComfyUI. klein 9B blocker isolated, and it is NOT klein 9B: flux-2-klein-9b-Q8_0.gguf loads fine. GGML_ASSERT(scale_nelements == 1 || scale_nelements == out_features) comes from qwen_3_8b_fp8mixed.safetensors, which carries 311 weight_scale tensors of shape [] (0-dimensional scalars) satisfying neither branch. Proved by swapping: klein 4B, which works, fails identically with that encoder. Feeding klein 9B the 4B encoder fails differently and",
+  "commands": [
+    "sd-cli --diffusion-model flux-2-klein-4b-fp8 --llm qwen_3_4b -r comp_A.png -r ref_N.png --steps 4",
+    "sd-cli --diffusion-model qwen-image-edit-2511-Q4_0.gguf --llm Qwen2.5-VL-Q4_K_S --llm_vision mmproj --model-args qwen_image_zero_cond_t=true --flow-shift 3",
+    "sd-cli --diffusion-model flux-2-klein-4b-fp8 --llm qwen_3_8b_fp8mixed  # isolation test, asserts",
+    "curl unsloth/Qwen3-8B-GGUF Qwen3-8B-Q5_K_M.gguf"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/README.md",
+    "D:/AI/sdcpp/work/klein4b_E.png",
+    "D:/AI/sdcpp/work/qwen2511_E.png"
+  ],
+  "planPath": "",
+  "contentHash": "e089310a62d60bad0e6e497bd26a12367212b6c737e18f53e3f8a69f8c7ffefc",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

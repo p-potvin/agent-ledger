@@ -1,0 +1,51 @@
+{
+  "id": "20260911-050751-429-vault-commander-7acd9947",
+  "createdAt": "2026-09-11T09:07:51.4292881Z",
+  "createdAtLocal": "2026-09-11 05:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-11 05:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Merged biased-subs into better-subtitles (commit 23089d3). The fork Start-SubtitlesBiased.ps1 was a 370-line copy with 79 differing lines AND WAS BROKEN: it removed -SepChunkSec, -LowMemory and -ServerPort from its param block while still reading all three; separation is unconditional there (its guard is commented out) so every run hit \\.ToString(culture) with \\ unbound - \\.ToString() throws and ErrorActionPreference is Stop, so it failed on the first file every time. It was also never tracked by git (untracked on disk, not ignored), which is why it drifted unnoticed. Word boosting moved into Start-BetterSubtitles.ps1 as -BoostWords/-Dictionary/-BoostScore and is now applied PER REQUEST instead of at server start, so it reaches the -LowMemory CLI path too and does not require restarting a loaded server. Dictionary default is repo-relative instead of an absolute path under one user profile; missing/empty list is a hard error. Start-SubtitlesBiased.ps1 is now a 90-line forwarder. Two PowerShell traps documented at the call site: array splatting passes elements POSITIONALLY (vw.ps1 already hits this and solves it the same way, rebuilding a command line), and -Switch:\\False arrives split as the string '-Switch:' plus a separate Boolean needing the \\$ restored. Also fixed registry drift in vw-commands.ps1: advertised Model default was parakeet-tdt and Concurrency 4 where the script uses nemotron-3.5 and 1; Model description now carries BOTH benchmarks since which model wins depends on material (parakeet-tdt leads LibriSpeech 1.931% vs 3.511%, nemotron-3.5 leads code-switched enspa_dev 23.87% vs 26.19%). Removed 24 dead registry params from biased-subs (the registry reflects real script params and drops non-matching entries) and gave -Forward a",
+  "commands": [
+    "git commit 23089d3",
+    "vw biased-subs --help",
+    "parser validation"
+  ],
+  "files": [
+    "cli/Start-BetterSubtitles.ps1",
+    "cli/Start-SubtitlesBiased.ps1",
+    "cli/vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "7acd9947315361114212b1ef17237f54ba081b3a67dad3179f749a14cabb0e55",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

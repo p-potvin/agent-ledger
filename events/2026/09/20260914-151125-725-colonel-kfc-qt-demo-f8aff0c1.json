@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260914-151125-725-colonel-kfc-qt-demo-f8aff0c1",
+    "createdAt":  "2026-09-14T19:11:25.7257112Z",
+    "createdAtLocal":  "2026-09-14 15:11",
+    "timezone":  "Eastern Standard Time",
+    "project":  "ColONEL-KFC-qt-demo",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-14 15:11 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC-qt-demo",
+    "summary":  "Refined gallery layout and control styling, documented IMDb fallback, and migrated the celebrity source adapter toward TMDB-to-Wikidata-to-Commons with conservative Wikimedia throttling",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "f8aff0c17a0e0f8fb20478ccc1877e8489470d39f0d96f02a8972ff8960254e5",
+    "git":  {
+                "repo":  "ColONEL-KFC-qt-demo",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/ColONEL-KFC-qt-demo",
+                "branch":  "vw-codex-colonel-qt-demo",
+                "head":  "d57ae7a",
+                "hasChanges":  true
+            }
+}

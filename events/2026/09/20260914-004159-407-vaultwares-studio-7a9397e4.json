@@ -1,0 +1,48 @@
+{
+  "id": "20260914-004159-407-vaultwares-studio-7a9397e4",
+  "createdAt": "2026-09-14T04:41:59.4075704Z",
+  "createdAtLocal": "2026-09-14 00:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + HF Jobs)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-14 00:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + HF Jobs",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "First CPU COLMAP job FAILED with 2/500 registered and the error 'the scene is feature-poor for SfM' - which was false. Diagnosed from the archived colmap_database.db rather than the message: 500 images, 1 OPENCV camera at 1920x1080, median 11,486 keypoints per image, 40,244 verified pairs of which 9,429 had >=15 inliers. Compared against the June 14 database that registered 491/500: that one had only 4,113 good pairs. The failing run had a BETTER match graph, so extraction and matching were never the problem. Root cause: --Mapper.multiple_models 0, set 'to keep it simple', removes the mapper's only recovery path - a dead initialisation pair stalls the model at 2-3 images and COLMAP stops instead of seeding again elsewhere. Proof it is the flag not the footage: June 14 ran through ns-process-data which leaves COLMAP's default ON, and that project still contains sparse/0 (487 images) AND sparse/1 (10) - it hit the same dead init and started over. Fixed in commit b7a3b43: multiple_models left at default, and the regen step no longer hard-codes --colmap-model-path colmap/sparse/0 (with several models the biggest is often not 0, so transforms.json would be rebuilt from a fragment). Resubmitted as colmap-backyard-20260914. Cost of the failed run ~0.16 USD. Also noted: two-view config distribution is comparable between runs (82 pct UNCALIBRATED vs 88 pct), so no panoramic/planar degeneracy.",
+  "commands": [
+    "sqlite3 analysis of colmap_database.db keypoints/matches/two_view_geometries",
+    "python tools/queue_colmap_sfm.py --job data/jobs/colmap-backyard-20260914 --yes"
+  ],
+  "files": [
+    "docker/worker/recon_entrypoint.py",
+    "data/jobs/colmap-backyard-20260913/reconstruction_sfm/remote_out/colmap_database.db"
+  ],
+  "planPath": "",
+  "contentHash": "7a9397e4d6b3ad67f3cc991768dd19a7886fc914f5fc07520d2a222ec3a0f3df",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

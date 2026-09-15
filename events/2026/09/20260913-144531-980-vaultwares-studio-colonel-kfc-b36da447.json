@@ -1,0 +1,55 @@
+{
+  "id": "20260913-144531-980-vaultwares-studio-colonel-kfc-b36da447",
+  "createdAt": "2026-09-13T18:45:31.9801620Z",
+  "createdAtLocal": "2026-09-13 14:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio + colonel-kfc",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, Edit, PowerShell, TaskStop\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 14:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "PowerShell",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Two commits. vaultwares-studio b8f5b6f: hybrid seed (option E) - hybrid_seed.py reconciles DA3 per-frame depth against COLMAP sparse geometry by robust IRLS/Huber fit of true=a*predicted+b, drops unalignable frames rather than guessing, reports scale_spread as the cheapest available test of the streaming path's global-scale drift. Verified end to end on the real June 14 COLMAP bundle with depth manufactured at a known scale of 3.7: recovered 3.71111, 40/40 frames aligned, 282709 points. Added tools/build_hybrid_seed.py, read_point_ply/write_point_ply in splat_io, docs/hybrid-colmap-da3-20260913.md documenting the 4-step flow and deferring options A (camera_optimizer off at splatfacto.py:213) and B (MCMCStrategy unused in gsplat 1.4.0). Suite 244 passing. colonel-kfc abb3bdb: face_organizer/comfy.py (API-format graph builder + stdlib HTTP client) and render_conditioned.py (control set in, image + pose-provenance sidecar out), guarding inverted depth, workflow-vs-API format, and positive-only ControlNet conditioning. 12 tests - first suite in that repo. BLOCKED on live run: ComfyUI install broken independently - comfyui-frontend-package missing (hard exit) and its venv has torch 2.14.0+cpu. Not repaired; CUDA torch install is gated by CLAUDE.md. CUDA 12.6 proven working via colonel-kfc venv on the now-free RTX 3060.",
+  "commands": [
+    "pytest tests/ -q",
+    "python tools/build_hybrid_seed.py --colmap ... --depths ... --out ...",
+    "git commit b8f5b6f / abb3bdb"
+  ],
+  "files": [
+    "vaultwares_studio/hybrid_seed.py",
+    "tools/build_hybrid_seed.py",
+    "docs/hybrid-colmap-da3-20260913.md",
+    "face_organizer/comfy.py",
+    "face_organizer/render_conditioned.py",
+    "docs/comfyui-conditioning.md"
+  ],
+  "planPath": "",
+  "contentHash": "b36da44726877489111c14a0b274a522c4cc9ed04b3f85557270c11faab74d1f",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

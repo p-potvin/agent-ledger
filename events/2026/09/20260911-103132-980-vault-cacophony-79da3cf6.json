@@ -1,0 +1,50 @@
+{
+  "id": "20260911-103132-980-vault-cacophony-79da3cf6",
+  "createdAt": "2026-09-11T14:31:32.9805530Z",
+  "createdAtLocal": "2026-09-11 10:31",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, Read, TaskStop, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-11 10:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Read",
+      "TaskStop",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "font-cloning: first stable-diffusion.cpp benchmark result. klein 4B fp8 + qwen_3_4b, one Canada Dry E edit at 1328x752, 4 steps, cfg 1.0, seed 77, --offload-to-cpu --diffusion-fa: WALL 127 s, rc=0. Phase breakdown from the verbose log: load text encoder 31.2 s, encode prompt 35.9 s, load diffusion model 38.2 s, sampling 73.9 s, VAE decode 3.3 s. So 69 s is weight reading and 36 s is text encoding, both paid again on every sd-cli invocation - the same per-glyph reload cost that ComfyUI has. VRAM with weights held in RAM: diffusion compute buffer 2.78 GB, VAE compute 6.34 GB peak, text encoder compute 65 MB; params in host RAM 6.68 GB encoder + 3.88 GB diffusion. Quality: klein 4B produced a flat clean E in the correct red - closer to real print than ComfyUI Qwen's version of the same edit, which came back a fuzzy 3D object with a cast shadow - but klein dropped the Canada Dry slab serifs that Qwen kept. Qwen gets the letterform, klein gets the surface. Binding constraint identified: 32 GB RAM, not 12 GB VRAM. With ComfyUI's server resident (~7 GB idle) plus my clone_font job (7.4 GB), free RAM hit 0.0 GB and both jobs stalled; I stopped my own clone_font EOS batch (it had been stuck 20+ min after producing E) which restored 4.7 GB. Qwen 2511 Q4_0 via sd.cpp wants ~17 GB of offload and is still loading its 11.85 GB gguf at 86-151 MB/s; klein 9B Q8_0 queued behind it. Found sd-server exposes /sdapi/v1/txt2img, /sdapi/v1/img2img,",
+  "commands": [
+    "sd-cli --diffusion-model flux-2-klein-4b-fp8.safetensors --vae flux2-vae --llm qwen_3_4b -r comp_A.png -r ref_N.png --steps 4 --cfg-scale 1.0 --offload-to-cpu --diffusion-fa -W 1328 -H 752",
+    "sd-server.exe --help"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/README.md",
+    "D:/AI/sdcpp/work/klein4b_E.png"
+  ],
+  "planPath": "",
+  "contentHash": "79da3cf636d60a57190eb223c06cfc42508db4ff234c19370a66439b35ead358",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

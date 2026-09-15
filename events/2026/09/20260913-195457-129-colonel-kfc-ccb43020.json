@@ -1,0 +1,52 @@
+{
+  "id": "20260913-195457-129-colonel-kfc-ccb43020",
+  "createdAt": "2026-09-13T23:54:57.1298128Z",
+  "createdAtLocal": "2026-09-13 19:54",
+  "timezone": "Eastern Standard Time",
+  "project": "colonel-kfc",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, Edit, PowerShell, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 19:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "PowerShell",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Commit c3a1f38: closed out the ComfyUI path. Added optional GenerationRequest.face_reference which inserts a ReActorFaceSwap stage and repoints SaveImage at it (wiring SaveImage to the sampler instead still yields a good picture of the wrong person, pinned by a test). Verified by ArcFace similarity to a reference photo of the subject: genuine other photos of them 0.839; depth-conditioned output with no swap 0.000 (literally zero identity); depth + swap front 0.817; depth + swap three-quarter 0.823. Confirms the seed-grid finding quantitatively - a depth map has no skin, eyes or hair and cannot carry identity. Final decomposition: depth ControlNet from FLAME carries WHERE (pose, proportion, age cues), face swap carries WHO. Documented that this is where the path STOPS: SD1.5 was only ever chosen because control_v11f1p_sd15_depth is the sole depth ControlNet installed, and for producing photographs Flux-Klein-9b-V2-BFS (Best Face Swap, installed as a UNET) or Qwen Image Edit 2511 beat it outright with no geometry stage. The geometry's real value is 3D - USD, splat scene, fVDB - where MICA stays the identity source. Suite 55 passing. Next: pivot to the digital twins / fVDB path in vaultwares-studio.",
+  "commands": [
+    "pytest tests/ -q",
+    "git commit c3a1f38",
+    "ArcFace similarity verification of swapped vs unswapped outputs"
+  ],
+  "files": [
+    "face_organizer/comfy.py",
+    "tests/test_comfy.py",
+    "docs/comfyui-conditioning.md"
+  ],
+  "planPath": "",
+  "contentHash": "ccb43020e15f06b90840dc12c6b19e914d6746e2c5c23957c9a55ef11d712549",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

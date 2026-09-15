@@ -1,0 +1,48 @@
+{
+  "id": "20260913-163253-724-vaultwares-studio-332b5652",
+  "createdAt": "2026-09-13T20:32:53.7249379Z",
+  "createdAtLocal": "2026-09-13 16:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + HF Jobs)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, Edit, PowerShell\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-13 16:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + HF Jobs",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Queued the DA3 depth-only job for the hybrid (option E). New tools/queue_da3_depth.py submits an existing frames.zip unchanged rather than re-extracting from video, because the depth-to-pose join is by frame stem and re-extraction silently misaligns it. Target: June 14's COLMAP frames.zip for backyard_134s_sunny.mp4 (500 frames, stems frame_00001..frame_00940, 491 registered by COLMAP), DA3-LARGE-1.1, --sfm-only, 80 frames, est 10 min ~0.13 USD. First submission cancelled itself: l4x1 had no spot capacity within 120s (no charge, never ran) - da3-standard preset lists only one sfm_flavor. Resubmitted with --flavor a10g-small --flavor l4x1. Commit 20fe879. Also researched DECA/EMOCA prerequisites: no pytorch3d installed anywhere on the box, no DECA/EMOCA assets present, no HF mirrors exist (searched models and spaces - the MPI project pages are the only source and all are licence-gated requiring user registration). insightface IS installed in colonel-kfc/.venv. FLAME2020 generic_model.pkl, FLAME_texture.npz, FLAME_masks.pkl and landmark_embedding.npy are all already on disk.",
+  "commands": [
+    "python tools/queue_da3_depth.py --frames <june14 frames.zip> --job data/jobs/hybrid-backyard-20260913 --flavor a10g-small --flavor l4x1 --yes"
+  ],
+  "files": [
+    "tools/queue_da3_depth.py",
+    "docker/worker/da3_entrypoint.py"
+  ],
+  "planPath": "",
+  "contentHash": "332b5652daab2212109ae13d2c4c05012fa553e788de5ead128931946c3fe7d3",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

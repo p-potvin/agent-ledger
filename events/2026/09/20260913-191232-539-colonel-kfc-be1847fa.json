@@ -1,0 +1,48 @@
+{
+  "id": "20260913-191232-539-colonel-kfc-be1847fa",
+  "createdAt": "2026-09-13T23:12:32.5392283Z",
+  "createdAtLocal": "2026-09-13 19:12",
+  "timezone": "Eastern Standard Time",
+  "project": "colonel-kfc",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 19:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Inventoried MICA + DECA assets and assessed the PyTorch3D build. DECA's full data/ tree IS present (head_template.obj, fixed_displacement_256.npy, texture_data_256.npy, uv_face_eye_mask.png, uv_face_mask.png, mean_texture.jpg). Two files are mislabeled: mica.safetensors is actually a torch zip checkpoint (PK header) and deca_model.safetensors is a raw protocol-2 pickle i.e. deca_model.tar under the wrong extension - neither is safetensors format. MICA structure confirmed by inert-unpickler structural read: arcface (926 tensors, IResNet, fc 512x25088 -> 512-d identity embedding) + flameModel.regressor.output (300,300) -> 300 FLAME shape coefficients, epoch 647. That makes MICA the right identity model structurally: it regresses shape from a face-RECOGNITION embedding, which is exactly the signal 68 landmarks lack, and insightface/ArcFace is already installed in colonel-kfc/.venv. RECOMMENDATION on the PyTorch3D build at C:\\Users\\Administrator\\miniforge3\\envs\\pytorch_3d: do not finish it. (1) PyTorch3D compiles against a specific torch ABI - that env is torch 2.2.1/cu118 while colonel-kfc runs torch 2.13.0+cu126, so a build there could never be imported by our code. (2) Neither MICA nor DECA/EMOCA identity inference needs a renderer; both are pure forward passes. (3) That env is already broken: numpy 2.2.6 against torch 2.2.1 gives 'Failed to initialize NumPy: _ARRAY_API not found' and needs numpy<2 regardless. Keeping the numpy/hand-rolled rasteriser shim. Next: build the MICA identity loader.",
+  "commands": [
+    "python - (structural read of mica/deca checkpoints via zipfile + inert Unpickler)",
+    "miniforge3/envs/pytorch_3d/python.exe -c 'import torch,numpy'"
+  ],
+  "files": [
+    "D:/comfyUI/resources/ComfyUI/models/face_parsing/mica.safetensors",
+    "D:/comfyUI/resources/ComfyUI/models/face_parsing/deca_model.safetensors",
+    "D:/comfyUI/resources/ComfyUI/models/face_parsing/DECA/data"
+  ],
+  "planPath": "",
+  "contentHash": "be1847fa28297e744fd655a159cd95b35b3c11e8dadb10b5fa5e1edee01e5e3c",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

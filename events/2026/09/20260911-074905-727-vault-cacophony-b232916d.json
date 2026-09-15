@@ -1,0 +1,48 @@
+{
+  "id": "20260911-074905-727-vault-cacophony-b232916d",
+  "createdAt": "2026-09-11T11:49:05.7272892Z",
+  "createdAtLocal": "2026-09-11 07:49",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-11 07:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "RETRACTION: the '4x resident-server penalty' I reported does not exist. Clean measurement on a quiet GPU, 25-min file: CLI concurrency 1 = 70.3s (incl. model load), CLI concurrency 2 = 72.6s, resident server warm = 70.3 / 73.3 / 74.2s. Server is the same speed and actually yields slightly MORE words (4,403 vs 4,310, +2%). The original RTFx 5.01 figure was an artifact: it included cold model load AND ran while ComfyUI held 2.3GB and the machine was unstable. A follow-up 209s vs 73.6s comparison was also confounded - the 2-hour POST was still hogging the GPU during the first arm. Two further hypotheses also disproven: (1) serve.cpp:137 hard-coding batching.enabled=true (with no flag to disable, unlike transcribe.cpp:600 which gates on concurrency>1) is HARMLESS - batching on vs off is 70.3 vs 72.6s on a single stream, despite BatchingConfig's comment warning about queueing single-stream inference; (2) there is NO VRAM leak across requests - 1776 MiB after model load, plateaus at ~7.8GB after request 1 and stays flat over three requests with stable timing. The earlier server 'crash' (ConnectionResetError) was the PC crashing, per the user, not a server fault. NEMO_SPEECH_RELPOS_MAX_Q=512 set by subtitles_server.py is also a no-op since 512 is the built-in default. Net: no server-path optimization to make; the user's 82-word failure remains unexplained and the 300s-timeout fix (e11d83c) is still the leading candidate.",
+  "commands": [
+    "nemo-speech transcribe --concurrency 1/2 on quiet GPU",
+    "three sequential server POSTs with VRAM sampling"
+  ],
+  "files": [
+    "NeMo-Speech.cpp/app/serve.cpp",
+    "NeMo-Speech.cpp/app/transcribe.cpp",
+    "NeMo-Speech.cpp/src/asr/batching.h"
+  ],
+  "planPath": "",
+  "contentHash": "b232916d5b9e1536ed4457a06aa260da31f04e8b5a4cce5e09b786b364db85cf",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

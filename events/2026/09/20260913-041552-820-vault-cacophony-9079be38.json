@@ -1,0 +1,54 @@
+{
+  "id": "20260913-041552-820-vault-cacophony-9079be38",
+  "createdAt": "2026-09-13T08:15:52.8208843Z",
+  "createdAtLocal": "2026-09-13 04:15",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5-1\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: local Windows 11 (CLOPEUX-DESKTOP))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-13 04:15 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5-1",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "local Windows 11 (CLOPEUX-DESKTOP)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Built a local VSS-shaped video pipeline (stock NVIDIA VSS blueprint cannot run: NIMs need 48-80 GB, NGC entitlement, Linux docker). New scripts/vss_pipeline.py (probe/caption/summarize/search/ask; ffmpeg chunking, Ollama GGUF VLM qwen3-vl:2b, llama3.2:3b aggregation with VSS CA-RAG prompts, LVS response envelope, caption/event tracks in tag store, BM25 search, VLM Q&A), scripts/Start-VideoSummary.ps1 wrapper with telemetry, config/vss/lvs-local.yaml prompts, tests/test_vss_pipeline.py (29 tests pass), docs/vss-local-pipeline.md with measurements (166 s clip: 17 chunks captioned in 124 s, 221 s end to end), README section. Fixed on the way: num_ctx 8192 too small (8952 tokens/8 frames), Ollama think=false+schema puts JSON in thinking field, 2B VLM loops without num_predict, free-text calls ramble so every call is schema-constrained. Nothing committed.",
+  "commands": [
+    "python scripts/vss_pipeline.py summarize samples/screen-recording-166s.mp4 ...",
+    "python -m unittest tests.test_vss_pipeline",
+    ".\\scripts\\Start-VideoSummary.ps1 -TargetDir samples\\screen-recording-166s.mp4 -LlmModel llama3.2:3b"
+  ],
+  "files": [
+    "scripts/vss_pipeline.py",
+    "scripts/Start-VideoSummary.ps1",
+    "config/vss/lvs-local.yaml",
+    "tests/test_vss_pipeline.py",
+    "docs/vss-local-pipeline.md",
+    "README.md"
+  ],
+  "planPath": "",
+  "contentHash": "9079be380018b1291648363fbf30b94f6c04079377946c1083ce2d27fbca5615",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

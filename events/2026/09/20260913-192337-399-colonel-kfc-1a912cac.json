@@ -1,0 +1,50 @@
+{
+  "id": "20260913-192337-399-colonel-kfc-1a912cac",
+  "createdAt": "2026-09-13T23:23:37.3997824Z",
+  "createdAtLocal": "2026-09-13 19:23",
+  "timezone": "Eastern Standard Time",
+  "project": "colonel-kfc",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, Edit, WebFetch, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 19:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "WebFetch",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Commit 86a555d: face_organizer/mica_identity.py - MICA identity loader, IResNet-100 ArcFace backbone + MappingNetwork regressor, loads strict=True against the real checkpoint (65,156,160 backbone params, matching published ArcFace R100). Architecture derived from the checkpoint (block counts 3/13/30/3, fc 512x25088 pinning 112x112 crop, regressor 512->300 + 3x300 + output 300). Two silent-failure details taken from MICA's published source via WebFetch: F.normalize on the embedding before the regressor, and functional LeakyReLU(0.2) after each network layer (absent from the state dict). torch.load given a file handle not a path because it dispatches on extension and mica.safetensors is actually a torch zip. DECISION on PyTorch3D: keeping the numpy shim - a build in the pytorch_3d env (torch 2.2.1/cu118) could never be imported by colonel-kfc (torch 2.13.0+cu126), and neither MICA nor DECA identity inference needs a renderer; that env also has numpy 2.2.6 against torch 2.2.1 which already fails with _ARRAY_API not found. MEASUREMENT on 11 consented photos vs the existing 68-landmark fit, in mm from the FLAME mean: landmark mean 2.17 p95 4.44 max 6.53; MICA mean 2.48 p95 3.66 max 4.94; the two differ from each other by mean 2.95 max 8.92. CORRECTION: initially reported MICA as 1.84x more committed based on coefficient norm (5.39 vs 2.94) - that comparison is invalid across a 100- vs 300-coefficient PCA-ordered basis; in mm the gap is small and MICA is actually smoother in the tail. Which is closer to the real face remains unmeasured. Suite 44 passing.",
+  "commands": [
+    "pytest tests/ -q",
+    "git commit 86a555d"
+  ],
+  "files": [
+    "face_organizer/mica_identity.py",
+    "tests/test_mica_identity.py"
+  ],
+  "planPath": "",
+  "contentHash": "1a912cacc24a5a730ba0ed756026cf84bfbb4c5d0b10c74c596fea328ed75f1c",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

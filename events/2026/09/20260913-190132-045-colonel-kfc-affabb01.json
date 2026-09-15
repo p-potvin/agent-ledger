@@ -1,0 +1,45 @@
+{
+  "id": "20260913-190132-045-colonel-kfc-affabb01",
+  "createdAt": "2026-09-13T23:01:32.0459856Z",
+  "createdAtLocal": "2026-09-13 19:01",
+  "timezone": "Eastern Standard Time",
+  "project": "colonel-kfc",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 19:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Inventoried the EMOCA drop at D:\\comfyUI\\resources\\ComfyUI\\models\\face_parsing\\EMOCA (1.7 GB, 5 ckpt + 5 cfg). The download arrived FLATTENED: EMOCA's checkpoint names contain '=' (deca-epoch=00-val_loss_total=...) which became directory separators, leaving empty dirs and unpaired files. Identified each checkpoint by reading key strings and pickle structure with an inert unpickler (did not execute third-party pickles): 349MB=SWIN-B emotion recognition (cfg_4), 165MB=ResNet50 emotion recognition (cfg_3), and three ExpDECA/EMOCA variants at 466/386/414 MB (cfg, cfg_1, cfg_2). Read encoder head dims from the pickle's rebuild_tensor args: deca.E_flame is ResNet50 2048->1024->236 (DECA's standard vector: shape 100 + tex 50 + exp 50 + pose 6 + cam 3 + light 27), deca.E_expression 2048->1024->50, deca.E_detail 2048->1024->128. KEY FINDING: the coarse identity path (image -> E_flame -> shape[0:100] -> existing FLAME model) needs torch only - no PyTorch3D, no renderer, and no inferno loader, so the flattened folder layout does not block it. Also: EMOCA's own contribution is E_expression; identity comes from the DECA-inherited E_flame, so for identity specifically EMOCA adds nothing over DECA and MICA/EMICA is the better target (weights not present). User is mid-build on PyTorch3D via miniforge. User granted consent to use their photos with the constraint that they must not leave the tailnet - rules out HF Jobs for anything involving them.",
+  "commands": [
+    "python - (zipfile + inert pickle.Unpickler structural read of 5 ckpts)"
+  ],
+  "files": [
+    "D:/comfyUI/resources/ComfyUI/models/face_parsing/EMOCA"
+  ],
+  "planPath": "",
+  "contentHash": "affabb01735971a3c5b84992edcdddc1b9b03bd0a44dd9af2f1f5123ce3adbe0",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20260911-095233-227-vault-cacophony-2552dd8f",
+  "createdAt": "2026-09-11T13:52:33.2271018Z",
+  "createdAtLocal": "2026-09-11 09:52",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5-1\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, Read, WebSearch, WebFetch, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-11 09:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5-1",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Read",
+      "WebSearch",
+      "WebFetch",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony\\font-cloning\\text-style-transfer",
+  "summary": "font-cloning: Canada Dry capture works end to end after three fixes. (1) ink_by_colour no longer assumes the background is the median colour - on a tight crop the red letters and the lilac shield are near-equal in area so the median fell between them and only deep-red edges survived; it now k-means clusters (k=4, CIELAB with L flattened) and keeps the cluster whose mask segments into the number of letters the --text says, chroma as tiebreak; --ink-colour R,G,B overrides. (2) split_to_count: when there are fewer boxes than letters, split the widest box at the deepest column-ink valley within its middle 25-75 percent and repeat - the D and final A of CANADA touch at a serif and the 1.4x-height rule never triggered on a wide serif pair. (3) clipped is judged against the photo edge, not the crop edge (a --bbox puts letters at the crop edge by design), and the ink colour label is read off the raw crop because measure_page's per-channel white balance turned a red-dominated crop \"pale grey\". Result: CANADA -> 6 boxes, DRY -> 3, union A C D N R Y, best A scores 0.73; lettering measured very bold monoline red. Six RGBA cut-outs exported to Desktop/font/cd_refs. ComfyUI style-copy run launched in background: clone_font --ref-image A.png N.png --chars EOS --prompt minimal --colour. Research for the long-term runtime: stable-diffusion.cpp (pure C/C++, ggml) supports Qwen-Image-Edit 2511 (needs --model-args qwen_image_zero_cond_t=true, --flow-shift 3, -r for the reference) and FLUX.2 klein 4B/9B (--llm qwen_3_4b / qwen_3_8b, --steps 4 --cfg-scale 1.0, -r), with --offload-to-cpu and --diffusion-fa. Latest",
+  "commands": [
+    "python capture.py --photo IMG_1369.jpg --text CANADA --source colour --bbox 0.03,0.36,0.94,0.18",
+    "python capture.py --photo IMG_1369.jpg --text DRY --source colour --bbox 0.22,0.535,0.55,0.16",
+    "python clone_font.py --ref-image cd_refs/A.png cd_refs/N.png --chars EOS --prompt minimal --colour"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/capture.py"
+  ],
+  "planPath": "",
+  "contentHash": "2552dd8f58ac9a7a7049a9d626ab24a2735f04871be7896cc4aea105a7590a08",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

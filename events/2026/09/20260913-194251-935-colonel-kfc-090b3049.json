@@ -1,0 +1,48 @@
+{
+  "id": "20260913-194251-935-colonel-kfc-090b3049",
+  "createdAt": "2026-09-13T23:42:51.9355352Z",
+  "createdAtLocal": "2026-09-13 19:42",
+  "timezone": "Eastern Standard Time",
+  "project": "colonel-kfc",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell, SendUserFile, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-13 19:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "SendUserFile",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Quantified the user's read that both conditioned faces look like each other and not them. Generated a 2x3 grid: two identities (68-landmark fit, MICA) x three seeds (7/101/2024), identical prompt and strength 0.85. Result is decisive - columns (seeds) differ enormously in apparent ethnicity, age, beard, lighting, background and clothing, while rows (landmark vs MICA) at a fixed seed are nearly identical apart from small proportion differences. The SEED determines who the person is; the depth map determines only fine proportion. Depth-ControlNet conditioning conveys WHERE, not WHO, and cannot deliver likeness on its own - this is a structural ceiling, not a tuning problem. Consistent with the user's observation that MICA reads closer to their real age (age lives in jaw/cheek volume, which is the part geometry does carry). FIX identified and available: ComfyUI has 4544 node types installed including PuLID (ApplyPulid, PulidModelLoader, PulidInsightFaceLoader, PulidEvaClipLoader), InstantID (ApplyInstantID, InstantIDModelLoader, InstantIDFaceAnalysis), IPAdapter FaceID and ReActor. These inject identity from an ArcFace embedding - the same representation MICA consumes - so the correct decomposition is PuLID/InstantID for identity and the FLAME depth ControlNet for pose. Within the agreed boundary: the user's own consented photos, local only, tailnet-bounded; gallery identities remain excluded.",
+  "commands": [
+    "python - (2 identities x 3 seeds through ComfyUI, cv2 tiled grid)",
+    "ComfyClient.object_info() node survey"
+  ],
+  "files": [
+    "C:/Users/Administrator/Desktop/kfc-flame-myownidentity/.compare/seeds/seed_grid.png"
+  ],
+  "planPath": "",
+  "contentHash": "090b30494572a4fe714c3189009ee86b99b9f5fdfc93e1448cc5caefb6df7564",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

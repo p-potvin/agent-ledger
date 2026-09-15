@@ -1,0 +1,48 @@
+{
+  "id": "20260911-071752-461-vault-cacophony-9e5df24d",
+  "createdAt": "2026-09-11T11:17:52.4618964Z",
+  "createdAtLocal": "2026-09-11 07:17",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-11 07:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Could NOT reproduce the 82-word / 32-min-gap nemotron-3.5 failure on the 111-min podcast, across every path: CLI 18,984 words; CLI --language auto 18,984 (byte-identical); CLI NEMO_SPEECH_RELPOS_MAX_Q=512 18,984 (byte-identical); CLI --vad-segmentation 19,000; resident-server path via subtitles_asr.py 19,543 words / 2231 cues; parakeet-tdt 20,565. Also verified the pipeline's no-separation extraction (subtitles_separator.py -s none) produces a BYTE-IDENTICAL wav to my ffmpeg one (214,085,088 bytes, 6690.156563s, 16000 Hz mono), so the input is not the variable. LIKELY EXPLANATION: the server path needs 1335s wall (RTFx 5.01) for this file, and before commit e11d83c the transcription request timeout was a flat 300s - so any better-subtitles run on a 2-hour file before that fix could not complete, which matches the user's earlier 'ASR times out after the separator has finished' report. Need the exact invocation and whether it predates e11d83c. SEPARATE FINDING worth acting on: the resident server path is ~4x SLOWER than the CLI on identical input (RTFx 5.01 vs 19.7, 1335s vs 339s) - real optimization target. And on long-form monolingual English parakeet-tdt clearly beats nemotron-3.5 (20,565 vs 18,984 words, 3.6 vs 14.2 min of gaps, 59s vs 339s), which argues against better-subtitles defaulting to nemotron-3.5.",
+  "commands": [
+    "subtitles_asr.py against resident server",
+    "subtitles_separator.py -s none",
+    "ffprobe comparison"
+  ],
+  "files": [
+    "cli/utils/subtitles_separator.py",
+    "cli/utils/subtitles_asr.py"
+  ],
+  "planPath": "",
+  "contentHash": "9e5df24d9e7f301bd09c67480711a315a2546fa47f8343a61a1d857aba139795",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

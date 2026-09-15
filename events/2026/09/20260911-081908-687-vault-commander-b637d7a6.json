@@ -1,0 +1,51 @@
+{
+  "id": "20260911-081908-687-vault-commander-b637d7a6",
+  "createdAt": "2026-09-11T12:19:08.6879311Z",
+  "createdAtLocal": "2026-09-11 08:19",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-11 08:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Verified live-subtitles and riva-live-subtitles are FUNCTIONAL. Static: both .ps1 parse clean and have no undeclared variables (checked with an AST pass for the exact bug class that killed Start-SubtitlesBiased). Runtime deps all present: PySide6, sounddevice, numpy, deep_translator, llama_cpp. live_subs_overlay.py imports cleanly; 68 input/loopback devices enumerate. LIVE ASR: uses nemo_asr.NemoSpeechTranscriber which delegates to subtitles_server.start_server, so it shares the resident server singleton - transcriber ready in 2.1s, 12s of audio transcribed in 0.1s, correct text across a FR->EN switch. Its MODEL_ID is already parakeet-tdt, consistent with the new better-subtitles default; note the overlay exposes no model selector, so the live path is parakeet-only (no language tagging, no word boosting). RIVA TRANSLATION: RivaEngine loads the v2 GGUF lazily and translated en->es and en->fr correctly, 7.52s first call (model load) then 0.19s per cue. ONE DEAD CONFIG FIXED (commit 525450d): Start-RivaLiveSubtitles.ps1 defaulted ModelPath to audio.cpp/models/Riva-Translate-4B-Instruct.i1-Q4_K_M.gguf which does not exist; it was harmless only because a Test-Path guard skipped it and riva_engine's discovery found the v2 file, so the line read like live config while doing nothing. Repointed at the file on disk.",
+  "commands": [
+    "AST undeclared-variable scan",
+    "NemoSpeechTranscriber.transcribe_array",
+    "RivaEngine.translate en->es/fr",
+    "git commit 525450d"
+  ],
+  "files": [
+    "cli/Start-LiveSubtitles.ps1",
+    "cli/Start-RivaLiveSubtitles.ps1",
+    "cli/utils/live_subs_overlay.py",
+    "cli/utils/nemo_asr.py"
+  ],
+  "planPath": "",
+  "contentHash": "b637d7a67be3735ce4e161988efb4d0d3360b7b75788f58a87306bad0e892cf5",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

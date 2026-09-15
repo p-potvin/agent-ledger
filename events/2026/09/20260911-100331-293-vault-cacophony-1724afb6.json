@@ -1,0 +1,54 @@
+{
+  "id": "20260911-100331-293-vault-cacophony-1724afb6",
+  "createdAt": "2026-09-11T14:03:31.2933498Z",
+  "createdAtLocal": "2026-09-11 10:03",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-cacophony",
+  "kind": "commands",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5-1\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, Read, WebSearch, WebFetch, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-11 10:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5-1",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Read",
+      "WebSearch",
+      "WebFetch",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "font-cloning runtime: user approved the stable-diffusion.cpp download. Installed release master-853-b68d586 (sd-master-b68d586-bin-win-cuda12-x64.zip, 336 MB) to D:\\AI\\sdcpp\\sd. Did NOT download the 563 MB cudart bundle: cudart64_12.dll, cublas64_12.dll and cublasLt64_12.dll were copied from the torch wheel in vault-cacophony\\.venv\\Lib\\site-packages\\torch\\lib (the consolidated venv the user pointed at). sd-cli --list-devices reports CUDA0 NVIDIA GeForce RTX 3060, 12287 MiB. Help output confirms flags: --llm / --llm_vision for the Qwen2.5-VL gguf + mmproj, -r repeatable for reference images, --model-args qwen_image_zero_cond_t, --flow-shift, --offload-to-cpu, --diffusion-fa, --max-vram, --lora-model-dir with <lora:name:strength> in the prompt. Built the E test input locally (comp_A.png = plate with the real Canada Dry A pasted, ref_N.png = N matted on plate colour) and queued a three-way timed chain in the background, gated on ComfyUI's queue being empty: klein 4B fp8 + qwen_3_4b; Qwen-Image-Edit 2511 Q4_0 + Qwen2.5-VL Q4_K_S + mmproj Q8 + Lightning LoRA 4 steps; klein 9B Q8_0 + qwen_3_8b_fp8mixed (user asked for 9B quantized as a candidate). First attempt of the chain died on the first line because Git Bash has no /usr/bin/time; relaunched using bash SECONDS. ComfyUI style-copy run (real A pasted, N as image3, chars EOS, prompt minimal): E rendered in 163 s as a correct Canada Dry serif E in the right red, but as a fuzzy 3D object with a cast shadow rather than flat print. O and S still running 15+ minutes later at 11.5 GB VRAM and 16.5 GB RSS - far slower than the 122 s per glyph measured earlier, suspected RAM pressure from the second reference image. README section 11 documents the capture",
+  "commands": [
+    "curl -L sd-master-b68d586-bin-win-cuda12-x64.zip -> D:\\AI\\sdcpp",
+    "cp torch/lib/{cudart64_12,cublas64_12,cublasLt64_12}.dll D:\\AI\\sdcpp\\sd",
+    "sd-cli --list-devices",
+    "sd-cli --diffusion-model flux-2-klein-4b-fp8 --llm qwen_3_4b -r comp_A.png -r ref_N.png --steps 4 --cfg-scale 1.0 --offload-to-cpu --diffusion-fa",
+    "sd-cli --diffusion-model qwen-image-edit-2511-Q4_0.gguf --llm Qwen2.5-VL Q4_K_S --llm_vision mmproj Q8 --model-args qwen_image_zero_cond_t=true --flow-shift 3"
+  ],
+  "files": [
+    "font-cloning/text-style-transfer/README.md",
+    "D:/AI/sdcpp/sd/sd-cli.exe"
+  ],
+  "planPath": "",
+  "contentHash": "1724afb643ae8730d8551436056638220c2e3fe721c60e5421dcbc5fde7d9680",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}
