@@ -3,6 +3,1427 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-09-17 17:20 - vaultwares-studio (formerly usd-playground)</strong> <code>documentation</code> - Queued thorough3 splat training (40000 iterations, stop_split_at 36000, l4x1, est 66 min, ~USD 0.95, 1.5GB upload). Wrote docs/apple-livephoto-metadata-20260917.md recording the...</summary>
+
+- Kind: documentation
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): huggingface
+  Time: 2026-09-17 17:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: Queued thorough3 splat training (40000 iterations, stop_split_at 36000, l4x1, est 66 min, ~USD 0.95, 1.5GB upload). Wrote docs/apple-livephoto-metadata-20260917.md recording the user's LivePhotoInfo anatomy (temporal sync CMTime pairs / Core Motion vitality scores / 6-9 float affine alignment transform) checked against the bytes I decoded. Findings that support the affine reading: record 0 carries exactly six floats in a run shaped like a near-identity transform (two ~0, two small, two ~1); 1.00390625 is EXACTLY 257/256, a dyadic rational and therefore a fixed hardware ratio not a measurement; 1.0253164768219 is constant across all 9332 frames. Supporting the CMTime reading: slots 28/29 and 30/31 read as denormal floats ~1.21e-40, the signature of an int64 split across two int32 slots, and slots 29/31 take only 37 distinct values across 9332 frames like a slowly incrementing high word. Flagged the highest-value next test: slots 25/26 (range +/-0.00068, lag-1 autocorrelation 1.0000) against DA3's per-frame cx/cy residual after median removal - if they correlate, the 4.3% per-frame focal spread documented in camera_calibration.py is partly a REAL OIS lens shift we can subtract rather than noise to average away. Also added memory iphone-per-frame-motion-track.
+- Commands:
+  - `python tools/prepare_zerogpu_training.py --job zerogpu-thorough3-2000-loop075-20260917 --iterations 40000 --scheduling-timeout 900 --submit`
+- Files:
+  - `docs/apple-livephoto-metadata-20260917.md`
+  - `C:/Users/Administrator/.claude/projects/C--Users-Administrator-Desktop-Github-Repos-vaultwares-studio/memory/iphone_per_frame_motion_track.md`
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 17:08 - vaultwares-studio</strong> <code>verification</code> - thorough3 SfM landed and is by far the best pose set yet: 447 GPU s, 2000/2000 posed, imported as zerogpu-thorough3-2000-loop075-20260917. Trajectory: closure ratio 0.001 (vs 0....</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): huggingface
+  Time: 2026-09-17 17:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: thorough3 SfM landed and is by far the best pose set yet: 447 GPU s, 2000/2000 posed, imported as zerogpu-thorough3-2000-loop075-20260917. Trajectory: closure ratio 0.001 (vs 0.017 sunny500 / 0.092 cloudy1000 / 0.035 merged1600), clip seams INVISIBLE at 0.003 and 0.002 against a median step of 0.0382 (the merged1600 seam was 0.538 = 25x median), max step only 4x median, 17 loop pairs of which 8 are cross-clip (previous best 6, one cross-clip). Extent 10.03x2.38x9.52, path 75.92. Drift test: 126 verified revisits across 17 independent events, median ratio 2.016 overall / 1.734 by event - NOT better than sunny500's 1.71, but sunny500 measured only 2 events so its figure was barely sampled. Where loop closure actually acts (half<->front, the global closure) drift is 1.086-1.191, much better than anything measured before; the half<->back revisits run 1.6-2.37. Drift appears within clips too (front<->front 1.55 and 2.06), so it is not a clip-join artefact. 37 of 211 frames rejected as failed ground fits (17.5%) vs 4% sunny / 27% cloudy. Training bundle built and fully verified (2000 frames 1920x1080, rescale fired 960x540->1920x1080 giving fl_x 902.67, names consistent across all three archives, sparse_pc 72MB, poses finite, 1497MB upload) but NOT submitted - awaiting the user's go-ahead for the paid run.
+- Commands:
+  - `python tools/import_zerogpu_artifact.py`
+  - `python tools/measure_scale_drift.py --job zerogpu-thorough3-2000-loop075-20260917`
+  - `python tools/prepare_zerogpu_training.py --iterations 40000 (no --submit)`
+- Files:
+  - `D:/vaultwares-studio-jobs/data/jobs/zerogpu-thorough3-2000-loop075-20260917`
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 16:59 - vaultwares-studio</strong> <code>code-change</code> - Drift test delivered (tools/measure_scale_drift.py). It settles the question the user pushed back on: my camera-above-own-ground metric mixed terrain, estimator and drift, and c...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): Bash, PowerShell, Write, Edit
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 16:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: Drift test delivered (tools/measure_scale_drift.py). It settles the question the user pushed back on: my camera-above-own-ground metric mixed terrain, estimator and drift, and could not separate them. This tool holds terrain fixed by construction - it compares only frame pairs verified by SIFT/RANSAC to be at the same physical spot with similar viewing direction, where the ground and the photographer's arm are the same by definition, so any height difference is scale inconsistency alone. RESULT: sunny500 median ratio 1.70 across 13 revisits in 2 independent events (whole-capture spread 2.06); cloudy1000 median 3.13 across 3 revisits in 2 events (spread 9.53). So drift is real and is the dominant term, but the user was right that terrain contributes - it is the gap between 1.70 and 2.06. First run returned a median of 11.86 and a max of 281x on cloudy1000; that was 13 of 16 pairs having a failed ground-plane fit (height near zero), so I added a self-calibrating floor at 0.34x the capture's own median and a count of independent revisit events, since a start-versus-end revisit alone can supply dozens of pairs that are one observation. Cloudy1000 also rejects 64 of 239 frames as failed fits (27%), which validates the keep-ground-in-frame capture advice. Suite 327.
+- Commands:
+  - `python tools/measure_scale_drift.py --job zerogpu-backyard134-loop-20260913 --stride 2 --min-separation 40 --min-inliers 70 --max-view-angle 45`
+  - `pytest tests -q (327 passed)`
+- Files:
+  - `tools/measure_scale_drift.py`
+  - `D:/vaultwares-studio-jobs/data/review/sep17/drift_zerogpu-backyard134-loop-20260913.json`
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 16:52 - vaultwares-studio</strong> <code>verification</code> - New capture thorough-yard-with-pairs-20260917 (3 clips, 1920x1080, 59.94fps, shot 15:36-15:44 same lighting) pre-flight verified. The user&#39;s door-checkpoint protocol WORKED: eve...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): Bash, PowerShell, Read
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 16:52 (TZ: Eastern Standard Time)
+  ```
+- Summary: New capture thorough-yard-with-pairs-20260917 (3 clips, 1920x1080, 59.94fps, shot 15:36-15:44 same lighting) pre-flight verified. The user's door-checkpoint protocol WORKED: every start/end frame pair across all three clips matches under SIFT/RANSAC. Strongest chain is also the shooting order - halfyard_end<->backyard_start 1332 inliers, backyard_end<->frontyard_start 900, and frontyard_end<->halfyard_start 692 closes the global loop. Each clip self-closes too (frontyard 423). Concatenated in that order at 29.97fps: 14480 frames, 483.1s, 1080p (965MB, local training) + 540p (233MB, upload). Queued ZeroGPU at 2000 frames / loop 0.75 = 4.14 frames per second of walking, beating the sunny500 benchmark of 3.7. METADATA FINDING (corrects a user assumption): LivePhotoInfo is NOT a GPS track. GPS is a single static coordinate per video with 19.79m horizontal accuracy. The user's LivePhotoInfo string is record 0 of a per-frame mebx track (ffprobe stream 4, 9332 records of 144 bytes, one per video frame, CoreMotionVersion 3077.0.4). That track DOES carry real device motion: slots 19/20/22/23 sit in [-0.9,0.9] with lag-1 autocorrelation 1.0000, so they are smooth physical signals not noise. No contiguous triple or quadruple has unit norm, so the layout is not a plain quaternion or gravity vector and remains undecoded. Worth decoding later - per-frame attitude would replace the PCA-skewness gravity heuristic that sometimes guesses up-down backwards.
+- Commands:
+  - `ffprobe stream inventory`
+  - `exiftool -ee -G1 -a`
+  - `per-frame mebx record decode + autocorrelation`
+  - `python tools/run_zerogpu_da3.py --frames 2000 --loop-similarity 0.75`
+- Files:
+  - `D:/vaultwares-studio-jobs/data/jobs/thorough-yard-with-pairs-20260917`
+  - `D:/3D Reconstruction/inputs/merged/thorough3_half_back_front_1080p.mp4`
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 15:02 - vaultwares-studio</strong> <code>verification</code> - Provenance of zerogpu-backyard134-loop-20260913 verified after a user query: the job IS backyard_134s_sunny.mp4. Its DA3 input frames and training frames agree index-for-index, ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): Bash, PowerShell, Read, SendUserFile
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 15:02 (TZ: Eastern Standard Time)
+  ```
+- Summary: Provenance of zerogpu-backyard134-loop-20260913 verified after a user query: the job IS backyard_134s_sunny.mp4. Its DA3 input frames and training frames agree index-for-index, and both match the named video at exactly the expected candidate indices (mean abs diff 1.3-2.1 on 160x90, i.e. identical). No hard cuts in the video (frame-to-frame diff median 21.85, max 50.02, cut threshold 131). The video is one continuous lap around a whole property - back patio/woodpile, driveway, front porch, street, side lawn, bin alley, back patio - which is why parts look like different places; the 'backyard' name is a misnomer. User confirmed false alarm. NEW FINDING that reframes the more-frames strategy: consecutive-frame verified SIFT/RANSAC matches are sunny500 median 370 (2% below 50), cloudy1000 median 212 (10% below 50), merged1600 median 240 (8% below 50). More frames did NOT buy more overlap because the cloudy video is 2.6x longer: effective sampling is 3.7 frames per second of walking for sunny500 vs 2.9 for cloudy1000. Matching sunny's overlap needs ~1300 frames on the 348s clip and ~1800 on the 482s merged clip.
+- Commands:
+  - `consecutive-frame SIFT/RANSAC overlap measurement across three runs`
+  - `cut detection on backyard_134s_sunny.mp4`
+- Files:
+  - `D:/vaultwares-studio-jobs/data/jobs/zerogpu-backyard134-loop-20260913`
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 14:59 - vaultwares-studio</strong> <code>verification</code> - Merged-1600 splat trained successfully on HF Jobs l4x1: job 6aac28d1b1dc2b62dc58f02d, 3459s, ~USD 0.77, 384,175 gaussians, checkpoint step-000029999 retained in model.zip for a ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): Bash, PowerShell, Read
+  MCP servers accessed (this reply): huggingface
+  Time: 2026-09-17 14:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: Merged-1600 splat trained successfully on HF Jobs l4x1: job 6aac28d1b1dc2b62dc58f02d, 3459s, ~USD 0.77, 384,175 gaussians, checkpoint step-000029999 retained in model.zip for a refine. Intrinsics rescale landed (fl_x 912.95, within 3% of this phone's COLMAP 886.85). Quality assessment: raw gaussian count is the lowest of any run (384k vs 1.64M on 13 Sep) BUT volumetric density is comparable (1.25M vs 1.18M gaussians per unit^3 of the 2-98pct box) because the trainer's normalisation makes the merged scene diagonal 1.81 vs 2.85 - so the count alone is NOT evidence of a worse splat. Mild under-training signs: opacity p50 0.646 vs 0.811, size/diagonal p99 0.0102 vs 0.0051, consistent with 18.75 iterations per view vs 40 on 13 Sep. Offscreen renders inconclusive: the viewer camera lands inside a halo of oversized gaussians on BOTH runs, so it does not discriminate. Note: 'ns-train --vis none' is unsupported in the deployed July nerfstudio and was auto-substituted with tensorboard; stop-split-at 27000 was accepted.
+- Commands:
+  - `python tools/viewport_screenshot.py`
+  - `gaussian scale/opacity distribution comparison`
+- Files:
+  - `data/jobs/zerogpu-merged1600-loop075-20260917/reconstruction/cloud.ply`
+  - `data/jobs/zerogpu-merged1600-loop075-20260917/reconstruction/summary.json`
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 13:50 - vaultwares-studio</strong> <code>code-change</code> - Pre-flight checks before queueing the merged-1600 splat caught a silent killer: the merged job was posed from a 960x540 upload, so processed/transforms.json declared w=960,fl_x=...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): Bash, PowerShell, Write, Edit, Read
+  MCP servers accessed (this reply): huggingface
+  Time: 2026-09-17 13:50 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pre-flight checks before queueing the merged-1600 splat caught a silent killer: the merged job was posed from a 960x540 upload, so processed/transforms.json declared w=960,fl_x=456.5, while training frames are 1920x1080. nerfstudio would take that at face value and every gaussian would land wrong, with no error. Fixed in tools/prepare_zerogpu_training.py: new rescale_transforms_to_frames() makes the frames on disk the authority, rescaling top-level AND per-frame intrinsics via CameraCalibration.scaled_to (distortion is normalised, carried unchanged), refusing aspect-ratio changes (crop, unrecoverable principal point). Result fl_x 912.95, consistent with the COLMAP-measured 886.85 for this phone. Also validated the frame replay: local 1080p candidates at the console's selected indices match the console's retained RGB (mean abs diff 2-7 vs 42-49 for the neighbouring candidate). Bundle verified: 1600 frames 1920x1080, names match across frames.zip/processed_min.zip/transforms, sparse_pc 51MB, worker.zip 4 files, poses finite. Submitted 30000 iterations (stop_split_at 27000), --keep-checkpoint so a refine can extend without redoing it, --scheduling-timeout 900. 6 new tests in tests/test_transforms_rescale.py.
+- Commands:
+  - `python tools/prepare_zerogpu_training.py --job zerogpu-merged1600-loop075-20260917 --iterations 30000 --scheduling-timeout 900 --submit`
+  - `pytest tests/test_transforms_rescale.py -q`
+- Files:
+  - `tools/prepare_zerogpu_training.py`
+  - `tests/test_transforms_rescale.py`
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 13:31 - vaultwares-studio</strong> <code>verification</code> - Merged-clip SfM evaluated. CORRECTION: earlier I reported ~1006 SALAD loop pairs on the user&#39;s 1000-frame run; that was the file&#39;s line count including its 1000-line image path ...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): Bash, PowerShell, Write, Edit, Read
+  MCP servers accessed (this reply): huggingface
+  Time: 2026-09-17 13:31 (TZ: Eastern Standard Time)
+  ```
+- Summary: Merged-clip SfM evaluated. CORRECTION: earlier I reported ~1006 SALAD loop pairs on the user's 1000-frame run; that was the file's line count including its 1000-line image path list. Actual pairs: sunny500=2, cloudy1000=4, merged1600=6. Merged 1600-frame run (sunny134+cloudy348 concatenated, 540p, loop 0.75) completed: 338 GPU s, 1600/1600 posed, path 43.84, closure ratio 0.035, 312 walked cells vs 216 (cloudy1000) and 186 (sunny500). Merge verified GOOD via new tools/find_cross_clip_overlaps.py (DINOv2 shortlist + SIFT/RANSAC): 46 verified cross-clip overlaps, which land 3-7 camera steps apart in the merged reconstruction, not scene-scale apart. cloudy1000 closure 2.88 is genuine (end of walk sees nothing of the start, 0 SIFT inliers), not drift. Added tools/nanovdb_to_mesh.py (isosurface PLY from .nvdb, signed fill + observed-cube mask), tools/splice_clip_order.py, GUI drag-and-drop for .ply/.splat/.ksplat. Suite 321 passing. Nothing committed.
+- Commands:
+  - `python tools/find_cross_clip_overlaps.py --split 941 --stride 2`
+  - `python tools/import_zerogpu_artifact.py (merged1600, cloudy1000)`
+  - `python tools/fuse_nanovdb.py (cloudy1000: 1.15M voxels, 36s)`
+  - `pytest tests -q (321 passed)`
+- Files:
+  - `tools/find_cross_clip_overlaps.py`
+  - `tools/nanovdb_to_mesh.py`
+  - `tools/splice_clip_order.py`
+  - `gui/viewport.py`
+  - `gui/main_window.py`
+  - `tests/test_viewport_drop.py`
+  - `tests/test_nanovdb_to_mesh.py`
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 12:42 - vaultwares-studio</strong> <code>verification</code> - Read-only assessment of zerogpu-1000frames-20260917 (user ran it): 1000/1000 posed, 223.5 GPU s, ~1006 SALAD loop pairs at 0.85 (vs 2 on the 134 s run), path 31.3 / closure 2.88...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-fable-5-1
+  Thinking: medium
+  Mode: chat
+  Permissions: bypass (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): Bash
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 12:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Read-only assessment of zerogpu-1000frames-20260917 (user ran it): 1000/1000 posed, 223.5 GPU s, ~1006 SALAD loop pairs at 0.85 (vs 2 on the 134 s run), path 31.3 / closure 2.88 DA3 units. Crude per-block camera-to-ground check (trajectory-normal as up) shows p90/p10 spread 4.7, so chunk scale drift likely persists. Advised: import artifact via tools/import_zerogpu_artifact.py, train splat on L4 as new baseline, then a single streaming pass over both videos concatenated for the merge; EXIF not involved in Y inversion (ffmpeg applies MOV rotation side-data on decode).
+- Commands:
+  - `python -c per-block ground metric on zerogpu-1000frames-20260917`
+- Files:
+  - `D:/vaultwares-studio-jobs/data/jobs/zerogpu-1000frames-20260917`
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 12:08 - vaultwares-studio</strong> <code>code-change</code> - Occupancy free space: added ray_pass_counts/carve_free_space and grid_from_depth_frames (per-frame ground plane, camera-height ruler, majority obstacle rule) in robot_lab/occupa...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-fable-5-1
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): Bash, Write, Edit, Read, hf_fs
+  MCP servers accessed (this reply): huggingface
+  Time: 2026-09-17 12:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Occupancy free space: added ray_pass_counts/carve_free_space and grid_from_depth_frames (per-frame ground plane, camera-height ruler, majority obstacle rule) in robot_lab/occupancy.py; tools/occupancy_from_volume.py builds level-set, carved and frame-local grids with a cameras-in-FREE metric (0.22 -> 0.79 on zerogpu-backyard134). Finding: DA3-Streaming volume has per-chunk vertical scale drift (camera-to-own-ground 0.7-1.9 apparent m), so the level set cannot feed a metric body band; frames can. docs/occupancy-free-space-20260917.md. 13 new tests, suite 315. Also: ZeroGPU console now takes keep_frames (cap 1200) and loop_similarity (Space commit 5425e30, upload copy excludes the uncommitted telemetry hook); the 1000-frame cloudyday2 run failed at the 1 GB Gradio upload (server disconnected), no GPU minutes used; fps=3 candidates (1043) extracted to D:\vaultwares-studio-jobs\data\review\sep17\cloudy348-candidates. Nothing committed.
+- Commands:
+  - `python tools/occupancy_from_volume.py --job zerogpu-backyard134-loop-20260913`
+  - `pytest tests -q (315 passed)`
+  - `python tools/run_zerogpu_da3.py --frames 1000 (failed: upload)`
+- Files:
+  - `vaultwares_studio/robot_lab/occupancy.py`
+  - `tools/occupancy_from_volume.py`
+  - `tests/test_free_space.py`
+  - `docs/occupancy-free-space-20260917.md`
+  - `spaces/da3-zerogpu/app.py`
+  - `spaces/da3-zerogpu/core.py`
+  - `tools/run_zerogpu_da3.py`
+  - `tests/test_zerogpu_console.py`
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 10:48 - vaultwares-studio</strong> <code>handoff</code> - Completed all three integration steps plus a handoff. Commit dba4dbf: (1) PIPELINE - camera_staging authors volume.usda from volume.nvdb on demand, references it from the compos...</summary>
+
+- Kind: handoff
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, Write, Edit, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 10:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed all three integration steps plus a handoff. Commit dba4dbf: (1) PIPELINE - camera_staging authors volume.usda from volume.nvdb on demand, references it from the composed stage alongside the mesh, adds both as artifacts, and rewrites the layer whenever it is older than the grid so a re-fuse cannot leave a stale asset. (2) USD - new vaultwares_studio/volume_asset.py authors a UsdVolVolume holding a UsdVolOpenVDBAsset with filePath relative to the layer, fieldClass levelSet, fieldDataType float, and the field relationship that actually connects them (missing relationship = opens cleanly, renders nothing). Schema says OpenVDB, file is NanoVDB - Omniverse reads it, a strict OpenVDB reader will not. (3) OCCUPANCY - grid_from_level_set FEEDS grid_from_points rather than replacing it, per the user's call. On the real 13 Sep capture it agrees with the incumbent splat-preview grid on extent (37x48 vs 39x47) and floor (-0.175 vs -0.154) and is BETTER where it differs: 13.0 pct free vs 9.2, 50.8 pct occupied vs 62.7, because the splat's gaussians bleed into space and read as obstacles. scene_transform must be camera_scene.scene_frame_transform(job_dir); the gravity rotation alone puts the floor 3 m out because the trainer normalisation carries a scale (measured, not assumed). Free space still unused - level set distinguishes empty from never-observed and could fill the 36 pct UNKNOWN cells, flagged as the next increment. 8 new tests; three failed first and all three were the test's fault (fixture slab reached into the body band, asset-path assertion named the wrong file, empty-band case needed a grid without exact zeros). Suite 300 passing. Commit f1b080d: docs/HANDOFF-20260917.md,
+- Commands:
+  - `pytest tests/ -q`
+  - `git commit dba4dbf / f1b080d`
+- Files:
+  - `vaultwares_studio/volume_asset.py`
+  - `vaultwares_studio/robot_lab/occupancy.py`
+  - `vaultwares_studio/stages/camera_staging.py`
+  - `vaultwares_studio/camera_scene.py`
+  - `tests/test_volume_asset.py`
+  - `docs/HANDOFF-20260917.md`
+- Plan: `docs/HANDOFF-20260917.md`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=2b64c66
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 08:26 - vaultwares-studio</strong> <code>code-change</code> - Commit 9b669ed: TSDF -&gt; NanoVDB level set, end to end and verified. New vaultwares_studio/tsdf_volume.py promotes the benchmark integrator into a module; new tools/fuse_nanovdb....</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, Write, Edit, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 08:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Commit 9b669ed: TSDF -> NanoVDB level set, end to end and verified. New vaultwares_studio/tsdf_volume.py promotes the benchmark integrator into a module; new tools/fuse_nanovdb.py runs depth maps to .nvdb with nanovdb_read.verify as the write gate. Key correction from the benchmark: distances are stored in WORLD UNITS, not signed/sdf_trunc clipped to [-1,1]. OpenVDB and NanoVDB level sets hold metres from the surface in a narrow band; normalised values render fine with the isosurface displaced by the truncation factor. REAL RUN on the 13 Sep backyard capture: 500 frames / 70.6M depth samples loaded in 8.3s, fused in 12.7s to 1,202,544 touched voxels at voxel 0.0156 band +/-0.0624, 1,114,552 kept after dropping 87,992 (7.3 pct) below weight 2, written in 0.4s as a 15.9 MB .nvdb with 6115 leaves / 19 lower / 8 upper, verified 1,114,552 voxels walked, total 21.5s. Independently validated with NVIDIA's PNanoVDB reader: identical header fields (gridType 1, gridClass 1, voxelSize 0.0156, leaf=6115 lower=19 upper=8 voxels=1114552, bbox -299,-43,-265..134,72,66) and bit-identical values at eight probes spread through the scene including negative coordinates. Also documented the camera convention that was previously only implied: integrate builds rays as (x,y,1) so c2w must be OpenCV +Z forward, which is what DA3-Streaming's camera_poses.txt holds; nerfstudio transforms.json is OpenGL and must be rebased via hybrid_seed.OPENGL_TO_OPENCV first. My own first test asserted the opposite convention and failed - the code was right and the docstring was silent. 11 new tests on synthetic planes (zero crossing on the surface, world units not normalised, repeat observations average rather than accumulate, poses actually applied). Suite
+- Commands:
+  - `python tools/fuse_nanovdb.py --streaming <streaming> --out volume.nvdb`
+  - `pnvalidate.exe volume.nvdb <8 probes>`
+  - `pytest tests/ -q`
+- Files:
+  - `vaultwares_studio/tsdf_volume.py`
+  - `tools/fuse_nanovdb.py`
+  - `tests/test_tsdf_volume.py`
+  - `data/jobs/zerogpu-backyard134-loop-20260913/reconstruction/volume.nvdb`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=2b64c66
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 05:53 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>code-change</code> - Fixed admin visibility and revertibility for disabled pornstars, studios, categories, and videos; synchronized PornXP scrubber preview speed 1:1 with video; bumped to v0.3.47 an...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 05:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed admin visibility and revertibility for disabled pornstars, studios, categories, and videos; synchronized PornXP scrubber preview speed 1:1 with video; bumped to v0.3.47 and pushed to main
+- Git: repo=shared-tube, branch=main, head=0a419a5
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 03:39 - vault-commander</strong> <code>code-change</code> - Three live-subs fixes. (1) Two lines per language restored: the translation panel had no history of its own and bilingual forced overlay._history=1, so each box held one cue. Ad...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-gallery-g-default
+  Tools used (this reply): Bash, Grep, Read, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 03:39 (TZ: Eastern Standard Time)
+  ```
+- Summary: Three live-subs fixes. (1) Two lines per language restored: the translation panel had no history of its own and bilingual forced overlay._history=1, so each box held one cue. Added _lines_tr with the same rolling trim as _lines, show_translated appends to it, show_partial_translation renders last-final + partial to mirror the caption box, clear_text resets it, and the _history=1 override is gone. Verified by screenshot: 2 English lines over 2 French lines. (2) Prompt echo root-caused from the user's riva-prompt-shape.txt: the Riva chat template wraps every cue as 'What is the <target> translation of the sentence: <text>', so a cue with no sentence leaves an instruction and nothing to translate and the model completes by rendering that instruction in French. riva_engine only guards 'not text.strip()', which punctuation passes. Added has_lexical_content (drops '...', '-', music glyphs before they reach any engine) and looks_like_prompt_echo (len(out) > max(60, 4*len(src)) -> return source, never cached so it cannot poison the cache). 6/6 unit cases pass. (3) Trimmed beginnings: reset_after cut exactly at the cue end so the next window started mid-word; added FINAL_LOOKBACK_S=0.20 rewind and widened the last_final_end guard to match, restoring the overlap _drop_carryover was already written for. Measured on 102s: captured words 92->98. Dominant factor is the user's own -MinSilence 0.2: at 0.2 37 fragmented cues / 0.366 similarity, at 0.6 16 full-phrase cues / 0.554.
+- Commands:
+  - `python cue_probe.py cand_norm.wav 0.2`
+  - `python cue_probe.py cand_norm.wav 0.6`
+  - `python guard.py`
+- Files:
+  - `cli/utils/live_subs_overlay.py`
+- Git: repo=vault-commander, branch=vw-codex-gallery-g-default, head=38788e0
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 03:09 - vault-commander</strong> <code>code-change</code> - Bilingual partials + server test knobs for live-subs. Root cause of the language mixing: with --translate-partials, TranslateWorker.partial_done was wired to overlay.show_partia...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-gallery-g-default
+  Tools used (this reply): Bash, Grep, Read, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 03:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Bilingual partials + server test knobs for live-subs. Root cause of the language mixing: with --translate-partials, TranslateWorker.partial_done was wired to overlay.show_partial, which renders into the caption box - the box bilingual mode reserves for the source language - so the box alternated between English finals and French partials on every ASR pass. Added SubtitleOverlay.show_partial_translation (sets label_tr only, never touches _lines) and split the wiring: bilingual now connects partial_shown to BOTH overlay.show_partial (source keeps the caption box) and translator.submit_partial (Direct), with partial_done routed to show_partial_translation; non-bilingual is unchanged. Exposed server-start geometry for testing: --relpos-max-q and --chunk-sec on the overlay, plumbed through AsrWorker and NemoSpeechTranscriber into subtitles_server.start_server, plus -RelposMaxQ/-ChunkSec on Start-LiveSubtitles.ps1 (PSBoundParameters-gated so 0 stays settable) and vw-commands.ps1 registry entries. nemo_asr now warns when a server is already listening, since neither setting is visible on /ready so nothing restarts for them. Fixed the now-false 'Partials stay in the source language' status line. Verified: screenshot shows English in the caption box and French in the panel simultaneously; spawn-capture proves NEMO_SPEECH_RELPOS_MAX_Q=2048, --asr-model nemotron-3.5, --asr.streaming.chunk_size 0.32; wrapper forwards every flag; server up on nemotron-3.5.
+- Commands:
+  - `python live_subs_overlay.py --asr-model nemotron-3.5 --relpos-max-q 2048 --chunk-sec 0.32`
+  - `Start-LiveSubtitles.ps1 -AsrModel nemotron-3.5 -RelposMaxQ 2048 -Bilingual -TranslatePartials`
+  - `python subtitles_server.py status`
+- Files:
+  - `cli/utils/live_subs_overlay.py`
+  - `cli/utils/nemo_asr.py`
+  - `cli/Start-LiveSubtitles.ps1`
+  - `cli/vw-commands.ps1`
+- Git: repo=vault-commander, branch=vw-codex-gallery-g-default, head=38788e0
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 00:43 - shared-tube</strong> <code>code-change</code> - Fixed studio video fetching, disabled items visibility, removed input persistence, unified term viewing, converted VideoDetail to full page with all editable fields, and enabled...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 00:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed studio video fetching, disabled items visibility, removed input persistence, unified term viewing, converted VideoDetail to full page with all editable fields, and enabled native new-tab links
+- Git: repo=shared-tube, branch=main, head=2a478d9
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 00:35 - shared-tube</strong> <code>verification</code> - Researched disabled item suppression and designed implementation plan for admin panel improvements</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 00:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Researched disabled item suppression and designed implementation plan for admin panel improvements
+- Git: repo=shared-tube, branch=main, head=2a478d9
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 22:52 - vaultwares-studio</strong> <code>code-change</code> - NanoVDB writer built and INDEPENDENTLY VERIFIED. Commits 340eaac (writer + 16 tests) and 0fb7a84 (PNanoVDB reference validator). No sample .nvdb exists on GitHub or this machine...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, Write, Edit, PowerShell, WebFetch
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 22:52 (TZ: Eastern Standard Time)
+  ```
+- Summary: NanoVDB writer built and INDEPENDENTLY VERIFIED. Commits 340eaac (writer + 16 tests) and 0fb7a84 (PNanoVDB reference validator). No sample .nvdb exists on GitHub or this machine, so instead found PNanoVDB.h - the portable C99/HLSL reference reader shipped with OpenVDB - which states every byte offset as an explicit #define plus a per-grid-type table of node sizes. That is an independent statement of the format from the C++ structs, and both agree with nanovdb_read's transcription made before either was consulted. Float row: leaf 2144, lower 33856, upper 270400, root 64 + 32/tile, leaf_off_table 96. Writer builds the fixed four-level tree (root, 32^3 upper spanning 4096^3, 16^3 lower spanning 128^3, 8^3 leaves) with relative signed child offsets, value/child masks, node bboxes, per-node stats, checksum left EMPTY (defined as disabled). Subtlety: RootData's key casts signed coords to uint32 BEFORE shifting, so negatives must not sign-extend. VERIFICATION: compiled pnvalidate.c against PNanoVDB.h with MSVC 18 (setting INCLUDE/LIB directly rather than vcvars64.bat which takes minutes). NVIDIA's reader walked our sphere-SDF file through its read accessor and returned gridMagic 0x314244566f6e614e, gridType 1, gridClass 1, voxelSize 0.25, leaf=60 lower=8 upper=8 voxels=11178, bbox -15..15 - all matching the writer's report - and values at six probes including negative coordinates matching the analytic sphere to float32 precision. That traverses root->upper->lower->leaf via our child masks and offsets, so the whole structure is validated, not just the header. The validator's own first run failed MAGIC FAIL with the magic shifted one byte: nameSize is at metadata offset 136 not 148 - a bug in the validator, recorded in
+- Commands:
+  - `cl /nologo /O2 /I. pnvalidate.c`
+  - `pnvalidate.exe sphere.nvdb -15 0 0 -7 -8 -1 7 8 0`
+  - `pytest tests/ -q`
+- Files:
+  - `vaultwares_studio/nanovdb_write.py`
+  - `vaultwares_studio/nanovdb_read.py`
+  - `tests/test_nanovdb_write.py`
+  - `tools/nanovdb_validate/pnvalidate.c`
+  - `tools/nanovdb_validate/README.md`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=2b64c66
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 22:47 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>verification</code> - Confirmed GPU throughput benchmarks and telemetry isolation</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 22:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Confirmed GPU throughput benchmarks and telemetry isolation
+- Git: repo=agent-ledger, branch=main, head=d744685a
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 22:46 - agent-ledger</strong> <code>code-change</code> - Optimized better-subtitles separation chunking to full-file one-shot by default (RTFx 9x-12x separation, &gt;110x ASR)</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 22:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Optimized better-subtitles separation chunking to full-file one-shot by default (RTFx 9x-12x separation, >110x ASR)
+- Git: repo=agent-ledger, branch=main, head=d744685a
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 22:31 - agent-ledger</strong> <code>code-change</code> - Added Audio.cpp CLI category with Mel-Band RoFormer vocal separation in better-subtitles and E2E audio pipeline</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 22:31 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added Audio.cpp CLI category with Mel-Band RoFormer vocal separation in better-subtitles and E2E audio pipeline
+- Git: repo=agent-ledger, branch=main, head=d744685a
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 21:59 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares &#226; Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares &#226; Project Rename Refactoring (Phase 5), VaultWares &#226; Project Rename Refactoring (Phase 5 PR Workflow), VaultWares &#226; System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>verification</code> - Validated real-condition telemetry, test harness spools, and poller test suite pass</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 21:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: Validated real-condition telemetry, test harness spools, and poller test suite pass
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 21:56 - General Tasks</strong> <code>verification</code> - Verified telemetry stack health, active scheduled tasks, and run spool output</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash (High)
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 21:56 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified telemetry stack health, active scheduled tasks, and run spool output
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 21:55 - agent-ledger</strong> <code>code-change</code> - Implement full AI telemetry expansion: Antigravity transcript parser, OpenAI-compat port range 8080-8100, Step 1 wrappers (streaming, explorer, studio, zipper), cacophony test t...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 21:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implement full AI telemetry expansion: Antigravity transcript parser, OpenAI-compat port range 8080-8100, Step 1 wrappers (streaming, explorer, studio, zipper), cacophony test telemetry, and HF spaces/jobs evaluation
+- Git: repo=agent-ledger, branch=main, head=d744685a
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 20:27 - agent-ledger</strong> <code>verification</code> - Verify audiodg exclusion, NeMo port 8123 poller tests, and vw CLI run telemetry persistence</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 20:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verify audiodg exclusion, NeMo port 8123 poller tests, and vw CLI run telemetry persistence
+- Git: repo=agent-ledger, branch=main, head=d744685a
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 20:25 - agent-ledger</strong> <code>code-change</code> - Fix nemo port 8123, exclude audiodg, wire centralized CLI telemetry into vw.ps1</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 20:25 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fix nemo port 8123, exclude audiodg, wire centralized CLI telemetry into vw.ps1
+- Git: repo=agent-ledger, branch=main, head=d744685a
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 20:00 - General Tasks</strong> <code>verification</code> - Live verification: verified speech watchdog process termination on idle, active process preservation, and live telemetry poller residency capture for audiocpp and nemo</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 20:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: Live verification: verified speech watchdog process termination on idle, active process preservation, and live telemetry poller residency capture for audiocpp and nemo
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 19:57 - General Tasks</strong> <code>code-change</code> - Add speech watchdog scheduled task to health-ledger and add audiocpp and nemo to AI telemetry pollers</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 19:57 (TZ: Eastern Standard Time)
+  ```
+- Summary: Add speech watchdog scheduled task to health-ledger and add audiocpp and nemo to AI telemetry pollers
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 19:40 - General Tasks</strong> <code>general</code> - Advise on Windows process inactivity watchdog for nemo-speech.cpp with resident weights</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 19:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Advise on Windows process inactivity watchdog for nemo-speech.cpp with resident weights
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 14:40 - ColONEL-KFC</strong> <code>verification</code> - Verified live IMDb scraper real-world conditions (live presence true/false, state reload, batch zip extraction to JPEG on disk) and captured targeted visual proof of weak identi...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 14:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified live IMDb scraper real-world conditions (live presence true/false, state reload, batch zip extraction to JPEG on disk) and captured targeted visual proof of weak identities review dashboard.
+- Git: repo=ColONEL-KFC, branch=main, head=204199a
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 14:32 - ColONEL-KFC</strong> <code>code-change</code> - Isolated weakest benchmark and skipped identities for visual review with interactive HTML dashboard, and upgraded IMDb Star Meter sequential scraper with presence dictionary cac...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 14:32 (TZ: Eastern Standard Time)
+  ```
+- Summary: Isolated weakest benchmark and skipped identities for visual review with interactive HTML dashboard, and upgraded IMDb Star Meter sequential scraper with presence dictionary caching, smart scrolling, master URL trimming, batch zip downloads, and extraction.
+- Git: repo=ColONEL-KFC, branch=main, head=204199a
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 09:11 - ColONEL-KFC-qt-demo</strong> <code>documentation</code> - Wrote the ColONEL-KFC gallery/demo handoff, verified 83 tests plus compile and diff checks, committed 2444c71 on vw-codex-colonel-qt-demo, pushed it, and opened PR #5 with @p-po...</summary>
+
+- Kind: documentation
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 09:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Wrote the ColONEL-KFC gallery/demo handoff, verified 83 tests plus compile and diff checks, committed 2444c71 on vw-codex-colonel-qt-demo, pushed it, and opened PR #5 with @p-potvin tagged for review.
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=2444c71
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 08:31 - ColONEL-KFC-qt-demo</strong> <code>verification</code> - Verified completed held-identity benchmark: all 108 identities processed with zero failures, 4,618 detectable-face comparisons, 98.0 percent at or above threshold, and reports r...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 08:31 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified completed held-identity benchmark: all 108 identities processed with zero failures, 4,618 detectable-face comparisons, 98.0 percent at or above threshold, and reports retained for later reindex review. Presentation refresh also completed.
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-16 01:31 - vault-cacophony</strong> <code>code-change</code> - Transcribed vocals with speech_timestamps.json via audiocpp_cli streaming and created scripts/transcribe_with_vad.py</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-16 01:31 (TZ: Eastern Standard Time)
+  ```
+- Summary: Transcribed vocals with speech_timestamps.json via audiocpp_cli streaming and created scripts/transcribe_with_vad.py
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=2b64c66
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 21:22 - vaultwares-api (formerly vaultwares-pipelines, vaultwares-api + shared-tube, vaultwares-webhooks, vaultwares-api)</strong> <code>code-change</code> - Upgraded TPDB query engine with smart candidate generation and scoring, enhanced title category patterns, backfilled 28k+ videos (+39k links) to 41.2% category coverage, and exp...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 21:22 (TZ: Eastern Standard Time)
+  ```
+- Summary: Upgraded TPDB query engine with smart candidate generation and scoring, enhanced title category patterns, backfilled 28k+ videos (+39k links) to 41.2% category coverage, and expanded fuzzy search
+- Git: repo=vaultwares-api, branch=main, head=5b314b8
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 21:05 - ColONEL-KFC-qt-demo</strong> <code>code-change</code> - Added and launched a non-mutating held-identity archive benchmark: stages/tags 108 deferred identities, compares every detectable face including multi-face and obstructed cases ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 21:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added and launched a non-mutating held-identity archive benchmark: stages/tags 108 deferred identities, compares every detectable face including multi-face and obstructed cases against existing multivector references, and writes per-identity/aggregate similarity distributions without reindexing.
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 20:59 - wallpaper-foundry</strong> <code>documentation</code> - Updated implementation plan with offline taxonomy classification, search fuzziness, and proper TPDB query strategies</summary>
+
+- Kind: documentation
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\wallpaper-foundry  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 20:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated implementation plan with offline taxonomy classification, search fuzziness, and proper TPDB query strategies
+- Git: repo=wallpaper-foundry, branch=main, head=2877c91
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 20:57 - ColONEL-KFC-qt-demo</strong> <code>code-change</code> - Removed the redundant Qt telemetry drawer and expanded gallery grid to 4/5 cards; improved card thumbnail source selection/cropping; added ArcFace-normalized evidence images plu...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 20:57 (TZ: Eastern Standard Time)
+  ```
+- Summary: Removed the redundant Qt telemetry drawer and expanded gallery grid to 4/5 cards; improved card thumbnail source selection/cropping; added ArcFace-normalized evidence images plus persisted FLAME depth, normal, shaded, and mask controls; launched presentation-only refresh for G:\Gallery.
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 20:40 - shared-tube</strong> <code>verification</code> - Validated prototype category mining against live OVH Postgres database (42% instant title match rate) and updated implementation plan</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 20:40 (TZ: Eastern Standard Time)
+  ```
+- Summary: Validated prototype category mining against live OVH Postgres database (42% instant title match rate) and updated implementation plan
+- Git: repo=shared-tube, branch=main, head=2a478d9
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 20:39 - shared-tube</strong> <code>documentation</code> - Created implementation plan to overhaul fetcher taxonomy matching, fix source extractors, and build multi-stage backfill engine</summary>
+
+- Kind: documentation
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 20:39 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created implementation plan to overhaul fetcher taxonomy matching, fix source extractors, and build multi-stage backfill engine
+- Git: repo=shared-tube, branch=main, head=2a478d9
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 17:55 - ColONEL-KFC-qt-demo</strong> <code>verification</code> - Checked active missing-identity dataset import: 292 identities and 4,761 face crops now indexed; 181 queued visual asset jobs have all completed successfully; importer continues...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 17:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: Checked active missing-identity dataset import: 292 identities and 4,761 face crops now indexed; 181 queued visual asset jobs have all completed successfully; importer continues processing remaining pools.
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 17:19 - vaultwares-studio</strong> <code>code-change</code> - Commit fa6086c: vaultwares_studio/nanovdb_read.py - a NanoVDB .nvdb reader/verifier, written BEFORE the writer and sharing no code with it, because a writer validated by its own...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, Write, WebFetch, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 17:19 (TZ: Eastern Standard Time)
+  ```
+- Summary: Commit fa6086c: vaultwares_studio/nanovdb_read.py - a NanoVDB .nvdb reader/verifier, written BEFORE the writer and sharing no code with it, because a writer validated by its own reader only proves the two agree. Layout transcribed from nanovdb/NanoVDB.h: WebFetch summarised and was useless for byte-exact layout, so the headers were downloaded with curl and read directly. All four sizes NanoVDB.h static_asserts match the transcription - FileHeader 16, FileMetaData 176, GridData 672, TreeData 64 - which is the evidence the layout is right. Caught and fixed my own off-by-one in the FileMetaData field indices (nameSize is index 21 not 22, version 31 not 32, which would have raised IndexError) by computing the index map explicitly rather than counting by eye. Reader parses file header, per-grid metadata, GridData (magic, grid size, name, Map translation at offset 528, voxel size at 608, class/type at 632), TreeData, and walks leaves directly from mNodeOffset[0] decoding 64-byte value masks with voxel index n = x<<6 | y<<3 | z. verify() cross-checks metadata vs grid header vs tree, and its strongest internal check is walking every leaf mask and comparing the count against TreeData.mVoxelCount - a tree with wrong node offsets or masks fails there and nowhere else. 15 tests with fixtures assembled by hand via struct.pack from the spec so positive cases are not circular; suite 268 passing. EXPLICIT LIMITATION recorded in the docstring and commit: this does not establish that the layout is what OpenVDB itself writes. No .vdb or .nvdb exists anywhere on this machine to check against; only a real file or
+- Commands:
+  - `curl NanoVDB.h + IO.h from openvdb master`
+  - `pytest tests/test_nanovdb_read.py -q`
+- Files:
+  - `vaultwares_studio/nanovdb_read.py`
+  - `tests/test_nanovdb_read.py`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=2b64c66
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 16:45 - ColONEL-KFC-qt-demo</strong> <code>verification</code> - Verified active dataset missing-identity import progress: 236 identities and 4,423 crops now indexed, 130 staged pools totaling 5,104 images, with 125 asset jobs completed and n...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 16:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified active dataset missing-identity import progress: 236 identities and 4,423 crops now indexed, 130 staged pools totaling 5,104 images, with 125 asset jobs completed and no new worker errors.
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 16:14 - shared-tube</strong> <code>verification</code> - Confirmed commit 2a478d9 landed on origin/main and live version v0.3.46 active on GreenCloud</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 16:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Confirmed commit 2a478d9 landed on origin/main and live version v0.3.46 active on GreenCloud
+- Git: repo=shared-tube, branch=main, head=2a478d9
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 15:31 - ColONEL-KFC-qt-demo</strong> <code>code-change</code> - Added and launched the missing-only labelled dataset archive importer for G:\Gallery: parses name plus ten underscores plus hash, groups 574 archives by identity, preserves sour...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 15:31 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added and launched the missing-only labelled dataset archive importer for G:\Gallery: parses name plus ten underscores plus hash, groups 574 archives by identity, preserves sources in resumable staging, avoids zip-slip, uses zero-padded conflict names, and holds existing identities for later comparison. Added regression tests.
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 13:58 - ColONEL-KFC-qt-demo</strong> <code>verification</code> - Checked the active offline IMDb celebrity pipeline: 26 identities created so far, 54 identities and 325 indexed crops in the gallery database, with no recorded hard failures; re...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 13:58 (TZ: Eastern Standard Time)
+  ```
+- Summary: Checked the active offline IMDb celebrity pipeline: 26 identities created so far, 54 identities and 325 indexed crops in the gallery database, with no recorded hard failures; remaining skips are strict eligibility/insufficient-clean-face outcomes.
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 13:36 - ColONEL-KFC-qt-demo</strong> <code>verification</code> - Verified the live IMDb offline pipeline candidate rules: strict tagged one-person bootstrap, auto-rotation during antelopev2 inference, and multi-face matching only after an ide...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 13:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified the live IMDb offline pipeline candidate rules: strict tagged one-person bootstrap, auto-rotation during antelopev2 inference, and multi-face matching only after an identity exists.
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 13:33 - ColONEL-KFC-qt-demo</strong> <code>commands</code> - Started the authorized offline IMDb celebrity identity pipeline against 100 staging folders and 4,880 downloaded images; strict tagging, validation, indexing, and asset queue ar...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 13:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: Started the authorized offline IMDb celebrity identity pipeline against 100 staging folders and 4,880 downloaded images; strict tagging, validation, indexing, and asset queue are running in the background.
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 12:35 - vaultwares-studio</strong> <code>verification</code> - Answered the &#39;will this lock my PC for 45 minutes&#39; question with measurement, commit 013e75f. TSDF voxelisation is nowhere near COLMAP&#39;s 43 minutes and structurally could not be...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
+  Tools used (this reply): Bash, Write, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 12:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: Answered the 'will this lock my PC for 45 minutes' question with measurement, commit 013e75f. TSDF voxelisation is nowhere near COLMAP's 43 minutes and structurally could not be: COLMAP's cost is feature matching (quadratic-ish in image count, descriptor search per pair) while TSDF integration is linear in pixels. Measured on the 13 Sep backyard capture, 500 frames / 70.6M depth samples, on the local machine: voxel 0.0312 stride1 49.2s 277,320 voxels; stride2 13.1s 263,083. voxel 0.0156 (production setting) stride1 55.3s 1,309,784 voxels ~37MB nvdb; stride2 12.8s 1,202,544 ~34MB. voxel 0.0078 stride1 63.1s 6,225,862 ~174MB; stride2 16.1s 5,499,900. Worst case 63 seconds and 2.2 GB peak. Load of 500 npz is 6.8s. KEY RESULT: at production voxel size, pixel stride 2 is 4.3x faster for only 8 pct fewer voxels, because the 504x280 depth maps sample finer than the 0.0156 grid so most discarded pixels landed in voxels their neighbours already filled. Recommended config: voxel 0.0156, stride 2, ~13s. Also: first numpy integrator took 5.1s for FORTY frames due to a Python dict merge (~130k iterations/frame); packing voxel coords into one int64 (21 bits/axis) with batched np.unique made it 5x faster at an identical voxel count. Open3D is 20-60x faster still (C++, 0.6-2.0s) but exposes voxels only via extract_voxel_point_cloud with TSDF packed into a colour channel, which is why the numpy path exists - the voxels are the deliverable, not the mesh. User decisions this turn: OpenVDB NOT installed, build .nvdb from numpy directly; start with TSDF not splat. Next: the NanoVDB .nvdb writer.
+- Commands:
+  - `python tools/bench_tsdf_voxels.py --streaming <streaming> --frames 500`
+- Files:
+  - `tools/bench_tsdf_voxels.py`
+  - `vaultwares_studio/depth_fusion.py`
+- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=2b64c66
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 11:52 - ColONEL-KFC-qt-demo</strong> <code>code-change</code> - Fixed IMDb Patchright batch scraping by disabling headless mode and reading currentSrc for lazy-loaded media; verified one-person smoke test downloaded 3 images without errors; ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 11:52 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed IMDb Patchright batch scraping by disabling headless mode and reading currentSrc for lazy-loaded media; verified one-person smoke test downloaded 3 images without errors; restarted 100-person batch.
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 08:17 - ColONEL-KFC-qt-demo</strong> <code>commands</code> - Verified the supplied IMDb mediaindex page returns 122 image elements and normalized original URLs; restarted the Patchright IMDb scraper for 100 people with 50 images per perso...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 08:17 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified the supplied IMDb mediaindex page returns 122 image elements and normalized original URLs; restarted the Patchright IMDb scraper for 100 people with 50 images per person in the celebrity gallery.
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 08:00 - ColONEL-KFC-qt-demo</strong> <code>commands</code> - Paused IMDb Patchright collection while awaiting confirmation for uBlock Origin Lite browser installation</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 08:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: Paused IMDb Patchright collection while awaiting confirmation for uBlock Origin Lite browser installation
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 07:09 - ColONEL-KFC-qt-demo</strong> <code>code-change</code> - Restarted IMDb Patchright scraper with browser-like image headers and in-place retry of previously empty media folders</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 07:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Restarted IMDb Patchright scraper with browser-like image headers and in-place retry of previously empty media folders
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 06:43 - ColONEL-KFC-qt-demo</strong> <code>commands</code> - Started detached offline identity processing for 100 staged IMDb folders with strict tagging and local asset queue</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 06:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Started detached offline identity processing for 100 staged IMDb folders with strict tagging and local asset queue
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 05:04 - shared-tube</strong> <code>verification</code> - Complete live Playwright UI verification, GreenCloud LRU persistence and on-demand cache regeneration proof</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 05:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: Complete live Playwright UI verification, GreenCloud LRU persistence and on-demand cache regeneration proof
+- Git: repo=shared-tube, branch=main, head=89379a8
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 04:48 - shared-tube</strong> <code>code-change</code> - Added media cache to video fetcher, implemented daily 7-day idle pruner, purged &gt;30-day cache on GreenCloud (3.75GB freed), verified live on-demand regeneration</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 04:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added media cache to video fetcher, implemented daily 7-day idle pruner, purged >30-day cache on GreenCloud (3.75GB freed), verified live on-demand regeneration
+- Git: repo=shared-tube, branch=main, head=89379a8
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 04:15 - ColONEL-KFC-qt-demo</strong> <code>code-change</code> - Reworked IMDb fallback collector to reuse visible Patchright browser and restarted 100-person Star Meter media scrape</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 04:15 (TZ: Eastern Standard Time)
+  ```
+- Summary: Reworked IMDb fallback collector to reuse visible Patchright browser and restarted 100-person Star Meter media scrape
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 04:09 - ColONEL-KFC-qt-demo</strong> <code>code-change</code> - Switched online celebrity collection from slow Commons scraping to the operator&#39;s Patchright IMDb Star Meter/mediaindex fallback; retained offline processing pipeline</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 04:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Switched online celebrity collection from slow Commons scraping to the operator's Patchright IMDb Star Meter/mediaindex fallback; retained offline processing pipeline
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
+<summary><strong>2026-09-15 03:07 - ColONEL-KFC-qt-demo</strong> <code>code-change</code> - Diagnosed slow scraper as sequential Wikimedia image retries; added bounded per-file timeouts and concurrent thumbnail downloads, restarted online-only collector</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: GPT-5
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-15 03:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Diagnosed slow scraper as sequential Wikimedia image retries; added bounded per-file timeouts and concurrent thumbnail downloads, restarted online-only collector
+- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
+
+</details>
+
+<details>
 <summary><strong>2026-09-15 00:23 - ColONEL-KFC-qt-demo</strong> <code>code-change</code> - Stopped mixed GPU-bound importer and launched fast online-only Commons staging phase with offline processing split</summary>
 
 - Kind: code-change
@@ -311,7 +1732,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-14 03:35 - vaultwares-studio (formerly usd-playground)</strong> <code>verification</code> - COLMAP CPU job SUCCEEDED after the multiple_models fix: 491/500 registered, and for the first time the bundle is self-consistent - transforms.json has 491 posed frames and spars...</summary>
+<summary><strong>2026-09-14 03:35 - vaultwares-studio</strong> <code>verification</code> - COLMAP CPU job SUCCEEDED after the multiple_models fix: 491/500 registered, and for the first time the bundle is self-consistent - transforms.json has 491 posed frames and spars...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -361,7 +1782,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-14 00:42 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>verification</code> - Verify live video player timeline scrubbing and sprite sheet rendering across all 3 tube sites</summary>
+<summary><strong>2026-09-14 00:42 - shared-tube</strong> <code>verification</code> - Verify live video player timeline scrubbing and sprite sheet rendering across all 3 tube sites</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -521,7 +1942,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-13 22:33 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Built the local Qt6 Doom-93-style ColONEL-KFC identity demo with bilingual gallery CRUD, face landmark overlay, MICA-to-FLAME mesh viewer, and local Qwen Edit/FLUX2 Klein recrea...</summary>
+<summary><strong>2026-09-13 22:33 - agent-ledger</strong> <code>code-change</code> - Built the local Qt6 Doom-93-style ColONEL-KFC identity demo with bilingual gallery CRUD, face landmark overlay, MICA-to-FLAME mesh viewer, and local Qwen Edit/FLUX2 Klein recrea...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -3334,7 +4755,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-09 23:44 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares &#226; Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares &#226; Project Rename Refactoring (Phase 5), VaultWares &#226; Project Rename Refactoring (Phase 5 PR Workflow), VaultWares &#226; System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>verification</code> - Continued Clopeux resource-monitoring handoff: verified Work Impact DNS proxy remains HTTP 200 and confirmed Health Ledger PR #10, VaultWares API PR #89, and Vault Monitor PR #1...</summary>
+<summary><strong>2026-09-09 23:44 - General Tasks</strong> <code>verification</code> - Continued Clopeux resource-monitoring handoff: verified Work Impact DNS proxy remains HTTP 200 and confirmed Health Ledger PR #10, VaultWares API PR #89, and Vault Monitor PR #1...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -7885,1643 +9306,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-02 02:47 - vault-commander</strong> <code>verification</code> - Read-only audit of vault-commander command input/output parameter normalization candidates, file-versus-directory support opportunities, and exceptions; no repository files chan...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-command-help
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-02 02:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Read-only audit of vault-commander command input/output parameter normalization candidates, file-versus-directory support opportunities, and exceptions; no repository files changed.
-- Git: repo=vault-commander, branch=vw-codex-command-help, head=44552b5
-
-</details>
-
-<details>
-<summary><strong>2026-09-02 01:59 - vault-commander</strong> <code>code-change</code> - Updated PR #12 after merging origin/main: removed CLI parameter and duplicate command aliases, retained only -h/--help, removed alias documentation/completion/editor support, co...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-command-help
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-02 01:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Updated PR #12 after merging origin/main: removed CLI parameter and duplicate command aliases, retained only -h/--help, removed alias documentation/completion/editor support, converted examples to canonical names, resolved vw.ps1 conflict, committed 44552b5, and pushed the branch.
-- Git: repo=vault-commander, branch=vw-codex-command-help, head=44552b5
-
-</details>
-
-<details>
-<summary><strong>2026-09-02 01:43 - vault-commander</strong> <code>code-change</code> - Aligned vw command registry and help output: normalized all target-script parameters with descriptions, made global help use curated descriptions, and cleaned command-help examp...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-command-help
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-02 01:43 (TZ: Eastern Standard Time)
-  ```
-- Summary: Aligned vw command registry and help output: normalized all target-script parameters with descriptions, made global help use curated descriptions, and cleaned command-help examples.
-- Git: repo=vault-commander, branch=vw-codex-command-help, head=526ba65
-
-</details>
-
-<details>
-<summary><strong>2026-09-01 02:32 - vault-cacophony</strong> <code>verification</code> - Verified live Riva V2 automatic language detection with system role auto on GPU</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-01 02:32 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified live Riva V2 automatic language detection with system role auto on GPU
-- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
-
-</details>
-
-<details>
-<summary><strong>2026-09-01 02:31 - vault-cacophony</strong> <code>documentation</code> - Conducted full research on NeMo-Speech.cpp architecture, model configs for ASR, DIAR, NMT, and TTS, and aligned auto language handling in Riva V2</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-01 02:31 (TZ: Eastern Standard Time)
-  ```
-- Summary: Conducted full research on NeMo-Speech.cpp architecture, model configs for ASR, DIAR, NMT, and TTS, and aligned auto language handling in Riva V2
-- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
-
-</details>
-
-<details>
-<summary><strong>2026-09-01 01:48 - vault-cacophony</strong> <code>verification</code> - Validated streamlined ASR/translation pipeline proof in real environment</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-01 01:48 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated streamlined ASR/translation pipeline proof in real environment
-- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
-
-</details>
-
-<details>
-<summary><strong>2026-09-01 01:47 - vault-cacophony</strong> <code>code-change</code> - Streamlined pipeline: Single-invocation CUDA vocal separation, official NeMo-Speech ASR without language tag clutter, and auto language resolution in Riva V2</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-01 01:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Streamlined pipeline: Single-invocation CUDA vocal separation, official NeMo-Speech ASR without language tag clutter, and auto language resolution in Riva V2
-- Git: repo=vault-cacophony, branch=main, head=2c3c2eb
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 21:53 - ColONEL-KFC</strong> <code>verification</code> - Execute live end-to-end proofs and SQLite state verification on real gallery datasets and commit verified state</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 21:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Execute live end-to-end proofs and SQLite state verification on real gallery datasets and commit verified state
-- Git: repo=ColONEL-KFC, branch=main, head=7ed12b9
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 21:51 - ColONEL-KFC</strong> <code>code-change</code> - Sync ColONEL-KFC commands and face_organizer package to vault-commander vw CLI registry and commit working trees</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 21:51 (TZ: Eastern Standard Time)
-  ```
-- Summary: Sync ColONEL-KFC commands and face_organizer package to vault-commander vw CLI registry and commit working trees
-- Git: repo=ColONEL-KFC, branch=main, head=7ed12b9
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 21:40 - ColONEL-KFC</strong> <code>verification</code> - Validated live end-to-end smart exemplar picker, SQLite crop state persistence, and folder clean execution</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 21:40 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated live end-to-end smart exemplar picker, SQLite crop state persistence, and folder clean execution
-- Git: repo=ColONEL-KFC, branch=main, head=044b77d
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 21:21 - vault-automatron</strong> <code>code-change</code> - Built vault-automatron: a zero-runtime-dependency Node/TS generator that creates a VaultWares tailnet app (React/Vite+Tailwind v4 or FastAPI) and registers it across every contr...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-automatron  Branch: main
-  Tools used (this reply): Bash, PowerShell, Write, Edit, AskUserQuestion
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 21:21 (TZ: Eastern Standard Time)
-  ```
-- Summary: Built vault-automatron: a zero-runtime-dependency Node/TS generator that creates a VaultWares tailnet app (React/Vite+Tailwind v4 or FastAPI) and registers it across every control-plane surface from one interview. Architecture: AppSpec (validated, serialisable) -> Steps that DECLARE Mutations -> shared executor drives both 'plan' (writes nothing) and 'apply' (local files only). Ten steps: scaffold, github, jira-sync, health-ledger, api-crud, network, webhookd, docs, commander, telemetry. Every server-mutating action is kind:'manual' - printed with a reason, never executed; no secret value ever leaves VaultWarden. Templates encode the deploy invariants from deployment-flow (no git fetch by SHA, rsync -rltD not -a, lock under /var/lib/vw-deploy, vwdeploy ownership) and the docs page ships EN+QC. Verified: 32 tests pass; generated React app installs, typechecks and builds clean with the v0.1.0 HTML comment in head; FastAPI variant generates unit+vhost; all four sibling-repo patchers confirmed to land correctly against the LIVE config.yaml, services.yaml and services-inventory.mdx via a read-only probe. Four real bugs found and fixed during verification: YAML section at byte 0 was never matched; entries landed below the comment block introducing the next section; nginx vhost hardcoded greencloud IP for every runner; FastAPI deploy restarted a systemd unit nothing created. No commits made and no sibling repo modified - user did not ask for commits.
-- Commands:
-  - `npx vitest run`
-  - `npx tsc -b --pretty false`
-  - `npx tsx src/cli.ts plan --spec scratch/vault-recipes.spec.json`
-  - `npx vite build`
-- Files:
-  - `vault-automatron/src/spec.ts`
-  - `vault-automatron/src/render.ts`
-  - `vault-automatron/src/lib/patch.ts`
-  - `vault-automatron/src/plan/executor.ts`
-  - `vault-automatron/src/steps/webhookd.ts`
-  - `vault-automatron/templates/infra/deploy.sh.tmpl`
-  - `vault-automatron/README.md`
-- Git: repo=vault-automatron, branch=main
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 21:16 - vault-cacophony</strong> <code>verification</code> - Validated Riva V2 live inference, chat template formatting, and model auto-discovery</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 21:16 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated Riva V2 live inference, chat template formatting, and model auto-discovery
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 21:15 - vault-cacophony</strong> <code>code-change</code> - Upgraded riva_engine.py and Start-RivaTranslate.ps1 to Riva-Translate-4B-Instruct-v2 using official language-pair system prompt schema</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 21:15 (TZ: Eastern Standard Time)
-  ```
-- Summary: Upgraded riva_engine.py and Start-RivaTranslate.ps1 to Riva-Translate-4B-Instruct-v2 using official language-pair system prompt schema
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 21:13 - ColONEL-KFC</strong> <code>code-change</code> - Upgraded smart candidate exemplar picker with dominant cluster discovery and multi-shoot diversity, enabled auto_rotate by default, and calibrated recognition threshold to 0.45</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 21:13 (TZ: Eastern Standard Time)
-  ```
-- Summary: Upgraded smart candidate exemplar picker with dominant cluster discovery and multi-shoot diversity, enabled auto_rotate by default, and calibrated recognition threshold to 0.45
-- Git: repo=ColONEL-KFC, branch=main, head=044b77d
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 20:53 - vault-cacophony</strong> <code>verification</code> - Fetched upstream NeMo-Speech.cpp, patched Windows vcvars/PATH buffer logic in build.ps1, rebuilt full CUDA stack with NMT/Riva/ASR/TTS capabilities, and verified GPU translation...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 20:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fetched upstream NeMo-Speech.cpp, patched Windows vcvars/PATH buffer logic in build.ps1, rebuilt full CUDA stack with NMT/Riva/ASR/TTS capabilities, and verified GPU translation execution
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 16:57 - vault-cacophony</strong> <code>documentation</code> - Documented exact invocation options for Nemotron ASR, Riva-Translate-4B, and Silero TE</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 16:57 (TZ: Eastern Standard Time)
-  ```
-- Summary: Documented exact invocation options for Nemotron ASR, Riva-Translate-4B, and Silero TE
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 16:34 - vault-cacophony</strong> <code>verification</code> - Validated comprehensive pipeline tests for CUDA GPU offload, mojibake sanitization, Silero TE punctuation, and 3-minute chunked separation</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 16:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated comprehensive pipeline tests for CUDA GPU offload, mojibake sanitization, Silero TE punctuation, and 3-minute chunked separation
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 16:34 - vault-cacophony</strong> <code>code-change</code> - Fixed CUDA execution, CP437 console mojibake, subtitle 1-word-per-cue distribution with Silero TE, and 3-minute RoFormer chunked separation</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 16:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed CUDA execution, CP437 console mojibake, subtitle 1-word-per-cue distribution with Silero TE, and 3-minute RoFormer chunked separation
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 16:26 - vault-automatron</strong> <code>plan</code> - ROUTER routine run for a new request: automate end-to-end creation of tailnet React/Vite (and FastAPI) VaultWares apps from a scaffolder repo (vault-automatron, currently empty)...</summary>
-
-- Kind: plan
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: plan
-  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-automatron  Branch: n/a
-  Tools used (this reply): Bash, PowerShell, AskUserQuestion
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 16:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: ROUTER routine run for a new request: automate end-to-end creation of tailnet React/Vite (and FastAPI) VaultWares apps from a scaffolder repo (vault-automatron, currently empty). Selected categories: SOURCE_OF_TRUTH, SUBMODULE_BOUNDARIES, SECURITY_POSTURE, SECRETS_HANDLING, NETWORK_INFRASTRUCTURE, PROJECT_CREATION, FILE_CHANGES, BRAND_TOKENS_UI, DOCS_STANDARDS, GIT_BRANCH_POLICY, AUTOMATION_POLICY, DEPLOYMENT_POLICY, VERIFICATION, LONG_RUNNING_TASKS (overlay). Read summaries plus operations/project-bootstrap, deployment-flow, services-inventory, health-ledger. Surveyed reference apps vault-tv/vault-music/vault-streaming, health-ledger services.yaml, vw-jira-sync config.yaml, vault-commander, vaultwares-themes/vaultsqware. Estimate ~40000 output tokens so LONG_RUNNING_TASKS applies; hitting the interview gate with one question about the deliverable shape (PowerShell vw command vs Node generator vs API-driven service vs agent skill) before writing code.
-- Commands:
-  - `cat vaultwares-docs/instructions/ROUTER.md`
-  - `cat docs-content/operations/project-bootstrap.mdx`
-  - `sed -n 1,80p health-ledger/services.yaml`
-- Files:
-  - `vaultwares-docs/instructions/ROUTER.md`
-  - `vaultwares-docs/docs-content/operations/project-bootstrap.mdx`
-  - `vaultwares-docs/docs-content/operations/deployment-flow.mdx`
-  - `health-ledger/services.yaml`
-  - `vw-jira-sync/config.yaml`
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 16:04 - vault-cacophony</strong> <code>verification</code> - Verified llama-cpp-python CUDA runtime loading in vault-cacophony virtual environment</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 16:04 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified llama-cpp-python CUDA runtime loading in vault-cacophony virtual environment
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 16:04 - vault-cacophony</strong> <code>documentation</code> - Created implementation plan for CUDA execution, mojibake sanitization, subtitle 1-word-per-cue fix, and RoFormer chunked separation</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 16:04 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created implementation plan for CUDA execution, mojibake sanitization, subtitle 1-word-per-cue fix, and RoFormer chunked separation
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 15:28 - vault-cacophony</strong> <code>verification</code> - Validated state.vscdb protobuf deserialization and persistence across 52 live conversation records</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 15:28 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated state.vscdb protobuf deserialization and persistence across 52 live conversation records
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 15:27 - vault-cacophony</strong> <code>verification</code> - Repaired Antigravity IDE state.vscdb trajectorySummaries protobuf structure and explained conversation history recall</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 15:27 (TZ: Eastern Standard Time)
-  ```
-- Summary: Repaired Antigravity IDE state.vscdb trajectorySummaries protobuf structure and explained conversation history recall
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 15:22 - vault-cacophony</strong> <code>verification</code> - Verified state.vscdb trajectorySummaries protobuf payload integrity</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 15:22 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified state.vscdb trajectorySummaries protobuf payload integrity
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 15:22 - vault-cacophony</strong> <code>code-change</code> - Created reindex_antigravity_history.py and updated state.vscdb index and trajectorySummaries protobuf with 117 conversations</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 15:22 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created reindex_antigravity_history.py and updated state.vscdb index and trajectorySummaries protobuf with 117 conversations
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 14:33 - vault-cacophony</strong> <code>general</code> - Provided IDE window reload and workspace guidance for conversation history refresh</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 14:33 (TZ: Eastern Standard Time)
-  ```
-- Summary: Provided IDE window reload and workspace guidance for conversation history refresh
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 14:29 - vault-cacophony</strong> <code>verification</code> - Validated Antigravity-Storage-Sync scheduled task and NTFS junction traversal</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 14:29 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated Antigravity-Storage-Sync scheduled task and NTFS junction traversal
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 14:29 - vault-cacophony</strong> <code>commands</code> - Created NTFS junctions between ~/.gemini/antigravity and ~/.gemini/antigravity-ide and registered Antigravity-Storage-Sync scheduled task</summary>
-
-- Kind: commands
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 14:29 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created NTFS junctions between ~/.gemini/antigravity and ~/.gemini/antigravity-ide and registered Antigravity-Storage-Sync scheduled task
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 14:22 - vault-cacophony</strong> <code>verification</code> - Verified recall-chat tool, JSON serialization, and generated walkthrough artifact</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 14:22 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified recall-chat tool, JSON serialization, and generated walkthrough artifact
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 14:22 - vault-cacophony</strong> <code>code-change</code> - Created permanent recall-chat skill, recall_chat.py script, conversation recall rule, and vw chat-history CLI command</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 14:22 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created permanent recall-chat skill, recall_chat.py script, conversation recall rule, and vw chat-history CLI command
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 14:15 - vault-cacophony</strong> <code>verification</code> - Recovered and summarized past conversations in vault-cacophony including the latest Riva translation session</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 14:15 (TZ: Eastern Standard Time)
-  ```
-- Summary: Recovered and summarized past conversations in vault-cacophony including the latest Riva translation session
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 13:31 - vault-cacophony</strong> <code>code-change</code> - Added -Overwrite and -SkipCompleted flags across translation CLI commands, fixed Nemotron subword and SentencePiece token boundaries in words_to_srt.py, branched cleanly from ma...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/riva-translation-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 13:31 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added -Overwrite and -SkipCompleted flags across translation CLI commands, fixed Nemotron subword and SentencePiece token boundaries in words_to_srt.py, branched cleanly from main excluding font-cloning, and opened PR #22 (vault-cacophony) and PR #10 (vault-commander)
-- Git: repo=vault-cacophony, branch=vw-codex/riva-translation-pipeline, head=4c2f14f
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 12:20 - vault-cacophony</strong> <code>code-change</code> - Added AI Vocal Separation (BS-RoFormer) user toggles in the main settings modals of both vault-explorer and vault-streaming with full UI hydration, persistence, and live subtitl...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 12:20 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added AI Vocal Separation (BS-RoFormer) user toggles in the main settings modals of both vault-explorer and vault-streaming with full UI hydration, persistence, and live subtitle wiring
-- Git: repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 12:09 - vault-cacophony</strong> <code>code-change</code> - Enabled BS-RoFormer vocal separation by default on riva commands (-NoSeparate to bypass); updated vault-explorer (live and batch subtitle/translation paths) and vault-streaming ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 12:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Enabled BS-RoFormer vocal separation by default on riva commands (-NoSeparate to bypass); updated vault-explorer (live and batch subtitle/translation paths) and vault-streaming (live subtitles) to use local NVIDIA Riva-Translate-4B GGUF on CUDA
-- Git: repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 11:44 - vault-cacophony</strong> <code>verification</code> - Ran 20-minute E2E benchmark (YouTube FrR4SBvL0Ck) comparing baseline ASR, sequential batch BS-RoFormer, and pipelined chunked separation on RTX 3060 (RTFX, TTFC latency, word re...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 11:44 (TZ: Eastern Standard Time)
-  ```
-- Summary: Ran 20-minute E2E benchmark (YouTube FrR4SBvL0Ck) comparing baseline ASR, sequential batch BS-RoFormer, and pipelined chunked separation on RTX 3060 (RTFX, TTFC latency, word recognition, VRAM)
-- Git: repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 11:18 - vault-cacophony</strong> <code>code-change</code> - Added optional BS-RoFormer and HTDemucs vocal stem separation flags (-Separate, -Separator, -SepPasses) to speech_to_translated_srt.py, Start-TranslationPipeline.ps1, and vw riv...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 11:18 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added optional BS-RoFormer and HTDemucs vocal stem separation flags (-Separate, -Separator, -SepPasses) to speech_to_translated_srt.py, Start-TranslationPipeline.ps1, and vw riva-translate
-- Git: repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 10:50 - vault-cacophony</strong> <code>code-change</code> - Added vw riva-live-subtitles command in vault-commander modeled after live-subs with native Riva-Translate-4B engine; verified explicit source language parameter support and bil...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 10:50 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added vw riva-live-subtitles command in vault-commander modeled after live-subs with native Riva-Translate-4B engine; verified explicit source language parameter support and bilingual overlay routing
-- Git: repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 08:06 - vault-cacophony</strong> <code>code-change</code> - Added vw riva-translate command to vault-commander supporting SRT, text, and media translation; benchmarked Nemotron-3.5 ASR vs Audio Flamingo 3 on 250 LibriSpeech clean rows wi...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 08:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added vw riva-translate command to vault-commander supporting SRT, text, and media translation; benchmarked Nemotron-3.5 ASR vs Audio Flamingo 3 on 250 LibriSpeech clean rows with OpenASR normalized WER
-- Git: repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 06:32 - vault-cacophony</strong> <code>code-change</code> - Built decoupled Riva-Translate-4B translation engine, translate_srt_riva.py, end-to-end speech_to_translated_srt.py, Start-TranslationPipeline.ps1, and unit tests</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 06:32 (TZ: Eastern Standard Time)
-  ```
-- Summary: Built decoupled Riva-Translate-4B translation engine, translate_srt_riva.py, end-to-end speech_to_translated_srt.py, Start-TranslationPipeline.ps1, and unit tests
-- Git: repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 06:13 - vault-cacophony</strong> <code>documentation</code> - Explored NeMo-Speech.cpp and Riva-Translate-4B GGUF; created implementation plan for standalone Speech-to-Text Translation pipeline with .srt creation</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 06:13 (TZ: Eastern Standard Time)
-  ```
-- Summary: Explored NeMo-Speech.cpp and Riva-Translate-4B GGUF; created implementation plan for standalone Speech-to-Text Translation pipeline with .srt creation
-- Git: repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 03:23 - python-zipper</strong> <code>handoff</code> - Wrote a session handoff artifact and saved it to project memory. Investigated the three reported problems rather than restating them. Smart naming: _finalize_stream_name reads d...</summary>
-
-- Kind: handoff
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: fix/dont-record-plain-resizes
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 03:23 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wrote a session handoff artifact and saved it to project memory. Investigated the three reported problems rather than restating them. Smart naming: _finalize_stream_name reads ds_jobs.get_job, the in-process store from the retired local server that the worker never populates, so the title is always empty and naming can never fire - fix is to thread the title parameter that download_stream already receives. Barber pole: both progress bars are 3px tall so a 45deg stripe cannot render; secondary suspect is total_bytes_estimate making a live capture take the determinate branch. Insights: queried the live API - 28 files across 4 domains, but by_kind returns 18 unknown and only chaturbate has byte totals, because the in-page hover button records grabs with an empty facts object; the background can fill kind/bytes from the tab's media log. Also flagged 10 files typed video totalling 11KB as unexplained. To build: hide streams whose preview fails (toggle with a count, never hide while loading), and clear stale streams on main_frame navigation - sniffer.ts is the only store missing the listener media_log and harvest_store both have. Artifact: https://claude.ai/code/artifact/9cdf37db-352e-4227-a873-810e1c1d59ba
-- Git: repo=python-zipper, branch=fix/dont-record-plain-resizes, head=632e556
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 02:37 - agent-ledger</strong> <code>verification</code> - Verified the live Vault Monitor Work Impact page directly: it renders 4,004 Events and 3,840 Commits. Events apply the 2026-03-11 cutoff (70 of 4,074 DB rows excluded); all comm...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 02:37 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified the live Vault Monitor Work Impact page directly: it renders 4,004 Events and 3,840 Commits. Events apply the 2026-03-11 cutoff (70 of 4,074 DB rows excluded); all commit samples are post-cutoff, so the remaining 164 is an independent-aggregate difference, not an uncommitted-entry count.
-- Git: repo=agent-ledger, branch=main, head=08427502
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 02:28 - agent-ledger</strong> <code>verification</code> - Explained production Work Impact drift: events are agent_ledger_events rows while commits are independently collected ProjectCommit samples; confirmed the KPI has no rounding an...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 02:28 (TZ: Eastern Standard Time)
-  ```
-- Summary: Explained production Work Impact drift: events are agent_ledger_events rows while commits are independently collected ProjectCommit samples; confirmed the KPI has no rounding and the live API currently returns 4,074 events / 3,840 commit samples.
-- Git: repo=agent-ledger, branch=main, head=08427502
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 02:15 - python-zipper</strong> <code>code-change</code> - Acted on real livestream failure reports. 1) Chunklists are now offered: isSegmentOrChunkUrl no longer rejects chunklist/llhls/rendition when the URL is a manifest, because live...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper\extension  Branch: fix/dont-record-plain-resizes
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 02:15 (TZ: Eastern Standard Time)
-  ```
-- Summary: Acted on real livestream failure reports. 1) Chunklists are now offered: isSegmentOrChunkUrl no longer rejects chunklist/llhls/rendition when the URL is a manifest, because live sites like mmcdn publish no master at all and rejecting on filename meant those streams could never be recorded; subtitles and audio-track renditions are still rejected, and masters still collapse their variants via foldVariants. Verified against all 7 URL shapes. 2) Added record_with_ffmpeg as a fallback in download_stream when yt-dlp produces nothing - evidence-led, since ffmpeg decodes preview frames from the exact livemediahost URL that yt-dlp's generic extractor 403s on with identical captured headers, so the failure is how yt-dlp asks rather than auth or an expired token. Uses -c copy to mpegts so a cut-short capture stays playable, reports bytes via -progress, registers in PROCESSES so Stop reaches it. Verified end to end: 50KB valid 6s TS recorded, progress reported, dead URL reports its reason. Fixed a bug found while testing: -headers/-user_agent/-rw_timeout/-http_proxy are HTTP-only and made ffmpeg exit 'Option not found' on non-http inputs; now gated behind _is_http in both preview_stream and record_with_ffmpeg. 3) Probe and preview jobs no longer appear in the Downloads list or popup - opening a stream page was showing two failed 'downloads' nobody asked for. 18 naming tests, 57 extension checks, typecheck clean, web-ext 0 errors.
-- Git: repo=python-zipper, branch=fix/dont-record-plain-resizes, head=632e556
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 02:05 - agent-ledger</strong> <code>verification</code> - Audited production Work Impact drift: 4,072 ledger entries, 3,840 unrelated ProjectCommit records, 3,133 entries with explicit Git hashes representing 733 distinct ledger-linked...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 02:05 (TZ: Eastern Standard Time)
-  ```
-- Summary: Audited production Work Impact drift: 4,072 ledger entries, 3,840 unrelated ProjectCommit records, 3,133 entries with explicit Git hashes representing 733 distinct ledger-linked commits, and 939 unassociated entries including tracked-project code changes. Historical association policy requires user direction.
-- Git: repo=agent-ledger, branch=main, head=08427502
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 01:53 - vault-music</strong> <code>verification</code> - Validated live health and 35GB storage quota endpoint after commit and push to origin/vw-codex-project-runtime-logs</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 01:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated live health and 35GB storage quota endpoint after commit and push to origin/vw-codex-project-runtime-logs
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=ced597e
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 01:53 - vault-music</strong> <code>commands</code> - Sanitized .env.example with safe placeholders, preserved local .env config, bumped version to v1.1.0, committed and pushed to origin/vw-codex-project-runtime-logs as ced597e</summary>
-
-- Kind: commands
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 01:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Sanitized .env.example with safe placeholders, preserved local .env config, bumped version to v1.1.0, committed and pushed to origin/vw-codex-project-runtime-logs as ced597e
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=ced597e
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 01:49 - python-zipper</strong> <code>code-change</code> - Smart livestream naming. Added stream_basename / next_stream_index / stream_filename to ds_streams: cut the tab title at the first room|live|cam (plurals included), strip a trai...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper\extension  Branch: fix/dont-record-plain-resizes
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 01:49 (TZ: Eastern Standard Time)
-  ```
-- Summary: Smart livestream naming. Added stream_basename / next_stream_index / stream_filename to ds_streams: cut the tab title at the first room|live|cam (plurals included), strip a trailing possessive including the curly U+2019 apostrophe, sanitize, then append 'Stream #dd' zero-padded. The index is scanned from disk rather than counted in memory so recordings survive restarts and multiple workers without overwriting session one. A title that yields nothing usable returns empty so the caller falls back instead of naming a file after nobody. Wired into _finalize_stream_name and _rcat_target. Added dataset_builder/tests/test_stream_naming.py, 18 unittest cases (repo uses unittest not pytest), all passing. Also diagnosed the two reported failures: verified the sniffer's isSegmentOrChunkUrl DOES reject the mmcdn chunklist_..._llhls URL, so we never offered it - that URL is what yt-dlp resolved to internally from the master we handed it; and verified build_ytdlp_header_args does pass Cookie/Origin/Referer, so the livemediahost 403 on an extensionless signed index.ll URL is most likely a dead token rather than missing headers. Both are the class the new ffmpeg preview catches before clicking.
-- Git: repo=python-zipper, branch=fix/dont-record-plain-resizes, head=632e556
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 01:37 - vault-music</strong> <code>commands</code> - Committed and pushed Vault Music service-script bundle with project-level runtime logging to main as 7cd8078; excluded unrelated application worktree edits.</summary>
-
-- Kind: commands
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 01:37 (TZ: Eastern Standard Time)
-  ```
-- Summary: Committed and pushed Vault Music service-script bundle with project-level runtime logging to main as 7cd8078; excluded unrelated application worktree edits.
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=7cd8078
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 01:37 - vault-streaming</strong> <code>commands</code> - Committed and pushed Vault Streaming project-level runtime launcher logging to main as 9481df5; excluded unrelated application worktree edits.</summary>
-
-- Kind: commands
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 01:37 (TZ: Eastern Standard Time)
-  ```
-- Summary: Committed and pushed Vault Streaming project-level runtime launcher logging to main as 9481df5; excluded unrelated application worktree edits.
-- Git: repo=vault-streaming, branch=vw-codex-project-runtime-logs, head=9481df5
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 00:47 - python-zipper</strong> <code>code-change</code> - Stream previews, barber-pole bars, button repositioning. Preview: new preview_stream in ds_streams runs ffmpeg with the captured headers to decode ONE frame to a 320px JPEG data...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper\extension  Branch: fix/dont-record-plain-resizes
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 00:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Stream previews, barber-pole bars, button repositioning. Preview: new preview_stream in ds_streams runs ffmpeg with the captured headers to decode ONE frame to a 320px JPEG data URL (single frame not a clip - a clip costs an encode pass and adds recognisability, not diagnostic power, since every failure mode is upstream of the first decoded frame). New preview job kind claimed by the worker; a failed preview completes with the reason as payload rather than failing the job. Extension: Api.previewStream plus a stream:preview background route that queues and waits (90s, since ffmpeg alone gets 25s). Sidebar renders the frame, or the ffmpeg error with a Retry, in the same slot at the same size - failures are shown, never used to hide streams. Requested once per stream on render via queueMicrotask, not on hover: the job queue's latency makes hover worse than useless, and a page has a handful of streams not hundreds of rows. Verified end to end against a real generated HLS playlist (5.3KB JPEG) and a dead URL (clear I/O error). Barber pole: job-fill-live / bar-fill-live with a 45deg repeating gradient, applied whenever bytes_total is absent, honouring prefers-reduced-motion. Injected button moved from top-right to bottom-right; removed the 10px/5% rule; only video elements get a lift, 40px for the control bar, capped at a third of the height.
-- Git: repo=python-zipper, branch=fix/dont-record-plain-resizes, head=632e556
-
-</details>
-
-<details>
-<summary><strong>2026-08-31 00:08 - python-zipper</strong> <code>code-change</code> - Added livestream recording to the sidebar. New src/common/streams.ts holds the quality/job helpers shared by popup and sidebar (probe format_ids are selectable, HLS master varia...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper\extension  Branch: fix/dont-record-plain-resizes
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-31 00:08 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added livestream recording to the sidebar. New src/common/streams.ts holds the quality/job helpers shared by popup and sidebar (probe format_ids are selectable, HLS master variants are shown disabled until the probe returns; progressLabel falls back to bytes taken since a live broadcast has no total so a percentage never leaves zero). MediaCandidate gained typed streamKey/streamType instead of the as-any smuggling. New StreamRow in capture.tsx renders streams as pinned rows above the file list in both grid and list views, with quality picker, Record and Stop; stream records are fetched via streams:get on scan and on peek so no new polling loop. Excluded streams from defaultSelection - the biggest-video rule would otherwise tick the manifest on pages where the stream is the only video, leaving a ticked item the download buttons must skip - with a regression check added (ranking 22/22). Popup refactored onto the shared helpers. 57/57 checks, typecheck clean, web-ext 0 errors.
-- Git: repo=python-zipper, branch=fix/dont-record-plain-resizes, head=632e556
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 23:56 - python-zipper</strong> <code>code-change</code> - Fixed livestream handling and restored Explorer opening. Root bug: HLS/DASH segments were classified as videos, so a livestream page produced hundreds of undownloadable 2-second...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper\extension  Branch: fix/dont-record-plain-resizes
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 23:56 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed livestream handling and restored Explorer opening. Root bug: HLS/DASH segments were classified as videos, so a livestream page produced hundreds of undownloadable 2-second chunks. Added isStreamSegment in media_log (MIME, extension, numbered-fragment and same-directory-as-a-tracked-manifest tests) dropping them at ingest; the sniffer's existing isSegmentOrChunkUrl was unusable here since it also rejects jpg/png/mp3. Detected streams are now folded into the sidebar snapshot as single kind=stream candidates, added a stream pill so video no longer means livestream, and streams are excluded from the zip/queue paths since a manifest is not a file. Popup rebuilt: all streams instead of 4, quality picker from probe formats (HLS master variants shown disabled until the probe returns), progress bar and stop. Local/server labelling fixed - queued jobs run on the local python worker, so on server disk became on disk and only a confirmed rclone handoff counts as remote; archives and the save_dir are clickable to reveal in Explorer, and revealDefaultDownloadFolder now resolves the worker dest_dir from the API instead of the hardcoded error I left. Injected download button offset down by min(10px, 5% height) so a page's corner X stays reachable. Also cut the toolbar badge poll from 2s to 20s - it was 30 remote API calls a minute after the migration. Added checks/segments.check.ts, 19 checks. 56/56 checks pass, typecheck clean, web-ext 0 errors.
-- Git: repo=python-zipper, branch=fix/dont-record-plain-resizes, head=632e556
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 22:26 - vault-music</strong> <code>verification</code> - Verified live real-condition isolation: QBITTORRENT_URL points to port 8082, live queue endpoint queries port 8082 without touching personal instance on port 8081, and profile i...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 22:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified live real-condition isolation: QBITTORRENT_URL points to port 8082, live queue endpoint queries port 8082 without touching personal instance on port 8081, and profile ini persistence verified on disk
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=81a363a
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 22:25 - vault-music</strong> <code>code-change</code> - Created isolated VaultStreaming qBittorrent profile on port 8082 with dedicated configuration and service scripts, ensuring zero interference with pre-existing torrents or port ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 22:25 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created isolated VaultStreaming qBittorrent profile on port 8082 with dedicated configuration and service scripts, ensuring zero interference with pre-existing torrents or port 8081 instance
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=81a363a
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 21:59 - vault-music</strong> <code>verification</code> - Validated live Apple Music safe backup, 35GB storage quota endpoint, and disk persistence on live server port 8733</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 21:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated live Apple Music safe backup, 35GB storage quota endpoint, and disk persistence on live server port 8733
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=81a363a
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 21:58 - vault-music</strong> <code>code-change</code> - Implemented offline Apple Music playlist reconstructor: safe clone in G:\Music\AppleMusic_Backup, 35GB storage guardrail, local Jackett + qBittorrent pipeline with 128k priority...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 21:58 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implemented offline Apple Music playlist reconstructor: safe clone in G:\Music\AppleMusic_Backup, 35GB storage guardrail, local Jackett + qBittorrent pipeline with 128k priority, and automated MusicBrainz post-download metadata tagging
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=81a363a
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 21:30 - vault-music</strong> <code>documentation</code> - Updated implementation plan for offline Apple Music reconstructor: safe clone in G:\Music\AppleMusic_Backup, local Jackett + qBittorrent pipeline, 35GB storage guardrail, and mu...</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 21:30 (TZ: Eastern Standard Time)
-  ```
-- Summary: Updated implementation plan for offline Apple Music reconstructor: safe clone in G:\Music\AppleMusic_Backup, local Jackett + qBittorrent pipeline, 35GB storage guardrail, and music indexers list
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=81a363a
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 21:26 - vault-cacophony</strong> <code>verification</code> - Stage 0 smoke run COMPLETE and pipeline validated end-to-end. Qwen3-0.6B full SFT, 2000 samples, 1 epoch: peak 11.8/12.3GB VRAM, 21min train + 4min eval, 1.16 samples/s, train l...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning  Branch: vw-codex/af3-timing
-  Tools used (this reply): Bash, Read
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 21:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: Stage 0 smoke run COMPLETE and pipeline validated end-to-end. Qwen3-0.6B full SFT, 2000 samples, 1 epoch: peak 11.8/12.3GB VRAM, 21min train + 4min eval, 1.16 samples/s, train loss 0.796->0.492, eval loss 0.583 on OOD-decontaminated fonts. Greedy decode gave 9/13 valid <path> elements; generated SVG is syntactically perfect (well-formed absolute M/L/Q, coords in correct 0-1000 range) but geometry is wrong (blobs not letterforms) - expected, 2000 samples is ~1.4pct of one epoch over the 142170-sample split. 4 failures were runaway generations hitting the 1600-token cap. Confirmed: LLaMA-Factory trains on this box without OOM at known VRAM ceiling, dataset wires up with zero conversion, model learns output grammar fast, tools/svg_glyph.py renders real model output, generate->parse->render closed. Measured cost of real run: full split ~34h/epoch (impractical), 300 fonts ~4.6h/epoch (matches upstream a-z-300_fonts config), so Stage 0b is an overnight job needing user sign-off on GPU time. Recorded results in font-cloning/README.md section 7.
-- Commands:
-  - `llamafactory-cli train configs/stage0-qwen3_0_6b-smoke.yaml`
-  - `python tools/generate.py --model saves/stage0-qwen3_0_6b-smoke --greedy`
-- Files:
-  - `font-cloning/README.md`
-  - `font-cloning/saves/stage0-qwen3_0_6b-smoke/trainer_log.jsonl`
-  - `font-cloning/out/stage0_greedy.png`
-- Git: repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 20:59 - vault-cacophony</strong> <code>code-change</code> - Stage 0 training pipeline built and running. Created isolated font-cloning/.venv-train (torch 2.8.0+cu129, LLaMA-Factory 0.9.6.dev0 from main, transformers 5.8) separate from re...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning  Branch: vw-codex/af3-timing
-  Tools used (this reply): Bash, WebSearch, WebFetch, Write, gh
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 20:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Stage 0 training pipeline built and running. Created isolated font-cloning/.venv-train (torch 2.8.0+cu129, LLaMA-Factory 0.9.6.dev0 from main, transformers 5.8) separate from repo .venv which has transformers 5.14 and drives ASR - installing LF in place would have downgraded it. Pinned torchaudio to 2.8.0 (LF pulls 2.11.0, ABI-incompatible with torch 2.8, WinError 127 on import); torchvision 0.24.0+cu129 has no Windows wheel so pinned the 2.8.0/0.23.0 pair. Downloaded VecGlypher Google-Fonts 250910-alphanumeric-abs_coord (527MB, 142170 train / 15751 ood_decon) - already ships in LLaMA-Factory alpaca format, zero conversion. Scanned 3000 records: path grammar is only M/L/Q absolute, no Z; wrote dependency-free tools/svg_glyph.py parser + even-odd XOR rasteriser (no cairo needed on Windows), validated against ground truth. Wrote tools/generate.py harness. Stage 0 smoke run training now: Qwen3-0.6B full SFT, 2000 samples, cutoff_len 2048, bs1 x accum8, adamw_bnb_8bit + grad checkpointing, 11.8/12.3GB VRAM, loss 0.80 -> 0.46 by step 110/250. Switched Stage 1 base from gemma-3-4b-it to gemma-4-E4B-it (Apache 2.0 ungated, 8B raw / 4.5B effective PLE, 331 GGUF quants exist, LF has gemma4/gemma4n templates with vision plugins). Added font-cloning/.gitignore.
-- Commands:
-  - `uv venv --python 3.11 .venv-train`
-  - `uv pip install llamafactory@git+https://github.com/hiyouga/LLaMA-Factory.git`
-  - `llamafactory-cli train configs/stage0-qwen3_0_6b-smoke.yaml`
-- Files:
-  - `font-cloning/configs/stage0-qwen3_0_6b-smoke.yaml`
-  - `font-cloning/tools/svg_glyph.py`
-  - `font-cloning/tools/generate.py`
-  - `font-cloning/.gitignore`
-  - `font-cloning/README.md`
-- Git: repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 20:31 - vault-cacophony</strong> <code>verification</code> - Added elapsed transcription_seconds and timed-row RTFx support in PR #21. Resumed AF3 LibriSpeech test-clean from the 1723-row checkpoint; timed resume is active at 1732/2620 wi...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/af3-timing
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 20:31 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added elapsed transcription_seconds and timed-row RTFx support in PR #21. Resumed AF3 LibriSpeech test-clean from the 1723-row checkpoint; timed resume is active at 1732/2620 with 9 elapsed-time records and one serial local AF3 process.
-- Git: repo=vault-cacophony, branch=vw-codex/af3-timing, head=b9f0cee
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 20:06 - vault-music</strong> <code>documentation</code> - Created implementation plan for Apple Music Playlist Reconstructor with low-quality 128kbps Lidarr preference and lossless confirmation gate</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 20:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created implementation plan for Apple Music Playlist Reconstructor with low-quality 128kbps Lidarr preference and lossless confirmation gate
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=81a363a
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 20:03 - vault-cacophony</strong> <code>verification</code> - Calculated local AF3 LibriSpeech test-clean partial-split metrics for 1723/2620 rows: 1.54% normalized WER, 4.07% raw WER, 0.98% raw CER, 76.84% normalized exact match, and 0 du...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-codex/openasr-metrics
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 20:03 (TZ: Eastern Standard Time)
-  ```
-- Summary: Calculated local AF3 LibriSpeech test-clean partial-split metrics for 1723/2620 rows: 1.54% normalized WER, 4.07% raw WER, 0.98% raw CER, 76.84% normalized exact match, and 0 duplicate IDs over 4.62 hours of audio. Added corrected reusable metrics reporter in PR #20.
-- Git: repo=vault-cacophony, branch=vw-codex/openasr-metrics, head=6cdda0e
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 19:19 - vault-music</strong> <code>documentation</code> - Provided architectural analysis and integration options for Apple Music support (MusicKit JS, local iTunes XML parser, and playlist importer)</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 19:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: Provided architectural analysis and integration options for Apple Music support (MusicKit JS, local iTunes XML parser, and playlist importer)
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=81a363a
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 19:02 - vault-cacophony</strong> <code>plan</code> - Locked font-cloning track: Latin only, glyph images now / font files later, train our own 4B VecGlypher-style model instead of quantizing the 27B. Measured real dataset stats by...</summary>
-
-- Kind: plan
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: plan
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony\font-cloning  Branch: main
-  Tools used (this reply): Bash, WebSearch, WebFetch, gh, datasets
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 19:02 (TZ: Eastern Standard Time)
-  ```
-- Summary: Locked font-cloning track: Latin only, glyph images now / font files later, train our own 4B VecGlypher-style model instead of quantizing the 27B. Measured real dataset stats by streaming VecGlypher/Google-Fonts-Dataset (800 records, Qwen3 tokenizer): one record = one glyph, 64 content chars (A-Z a-z 0-9 apostrophe hyphen), output mean 612 tok / p90 1013 / max 1300, prompt mean 102 tok. So 26 glyphs ~16k tokens; 27B Q4_K_M on 12GB 3060 needs ~35pct CPU offload = 1-2h per 26-glyph set vs ~5min for a 4B on-GPU. Confirmed method is plain LLaMA-Factory SFT (cross-entropy next-token on prompt->SVG path), NOT vectorization+reranking - vectorization is offline in dataset construction via fontTools. Confirmed LLaMA-Factory ships a gemma3 template with mm_plugin. Found google/gemma-3-4b-it is gated=manual (needs one-time license accept on clopeux HF account); Qwen3-VL-4B-Instruct is ungated fallback. Wrote 3-stage plan into font-cloning/README.md (Stage 0 Qwen3-0.6B text-ref to validate loop, Stage 1 gemma-3-4b-it QLoRA image-ref, Stage 2 fontTools assembly).
-- Commands:
-  - `python tok_stats.py`
-  - `gh api repos/xk-huang/VecGlypher/contents/src/sft/configs/train/qwen3_0_6b-full_sft.yaml`
-- Files:
-  - `font-cloning/README.md`
-- Git: repo=vault-cacophony, branch=main, head=8fc9acf
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 18:55 - vault-music</strong> <code>verification</code> - Validated live E2E persistence and desktop player seek bar and batch download features</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 18:55 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated live E2E persistence and desktop player seek bar and batch download features
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=81a363a
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 18:55 - vault-music</strong> <code>code-change</code> - Added time/duration display, previous button, and interactive seek bar to floating player on desktop UI; added batch offline download buttons to Album, Artist, and Playlist views</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 18:55 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added time/duration display, previous button, and interactive seek bar to floating player on desktop UI; added batch offline download buttons to Album, Artist, and Playlist views
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=81a363a
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 18:47 - vault-cacophony</strong> <code>code-change</code> - Bootstrapped font-cloning pipeline. Made vendored FontDiffuser HF Space run on the shared .venv (torch 2.8.0+cu129, py3.12) instead of upstream torch 1.13.1/CPU: patched app.py ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
-  Tools used (this reply): Bash, WebSearch, WebFetch, Write, gh
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 18:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Bootstrapped font-cloning pipeline. Made vendored FontDiffuser HF Space run on the shared .venv (torch 2.8.0+cu129, py3.12) instead of upstream torch 1.13.1/CPU: patched app.py for CUDA auto-detect + configurable host/port; added gradio5/diffusers/pygame/fonttools to existing venv (no second torch env, C: only 45GB free). Verified e2e: pipeline load on cuda:0, Chinese style transfer ~3s on RTX 3060, character-input pygame.freetype path, Gradio HTTP 200. Empirically probed Latin: FontDiffuser transfers style but destroys Latin content (Chinese-trained content encoder) - added probe_latin.py harness + probe_latin.png. Researched SOTA: VecGlypher (CVPR26, Gemma-3-27B-IT emitting SVG path tokens, Latin, GGUF-convertible via llama.cpp mtmd), HFH-Font (SIGGRAPH Asia 24, CJK 1024px), DRG-Font (Apr 26, Latin+CJK raster), DeepVecFont-v2/DualVector/VecFusion. Wrote font-cloning/README.md with landscape + GGML analysis + open decision (script choice, TTF vs raster).
-- Commands:
-  - `uv pip install gradio>=5,<6 diffusers>=0.31 pygame fonttools`
-  - `python app.py`
-  - `python probe_latin.py`
-- Files:
-  - `font-cloning/README.md`
-  - `font-cloning/run_fontdiffuser.ps1`
-  - `font-cloning/probe_latin.py`
-  - `font-cloning/FontDiffuser-Gradio/app.py`
-- Git: repo=vault-cacophony, branch=main, head=8fc9acf
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 18:23 - vault-music</strong> <code>code-change</code> - Resolved playlist pin 404/JSON parse error, added Shuffle All buttons across Songs, Playlists, Albums, Artists views and shuffle toggle with Catppuccin mauve glow to floating pl...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 18:23 (TZ: Eastern Standard Time)
-  ```
-- Summary: Resolved playlist pin 404/JSON parse error, added Shuffle All buttons across Songs, Playlists, Albums, Artists views and shuffle toggle with Catppuccin mauve glow to floating player
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=81a363a
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 18:23 - vault-music</strong> <code>code-change</code> - Fixed POST /api/v1/profiles/pin route and JSON error; added Shuffle All buttons across Songs, Playlists, Albums, Artists views and shuffle mode to mini player and sheet</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.7 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 18:23 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed POST /api/v1/profiles/pin route and JSON error; added Shuffle All buttons across Songs, Playlists, Albums, Artists views and shuffle mode to mini player and sheet
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=81a363a
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 04:00 - vault-music</strong> <code>code-change</code> - Moved VaultMusic runtime logs into the project, added fatal launcher logging, and replaced detached-conhost PowerShell piping with direct cmd redirection to avoid broken-pipe su...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 04:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Moved VaultMusic runtime logs into the project, added fatal launcher logging, and replaced detached-conhost PowerShell piping with direct cmd redirection to avoid broken-pipe supervisor exits.
-- Git: repo=vault-music, branch=vw-codex-project-runtime-logs, head=81a363a
-
-</details>
-
-<details>
-<summary><strong>2026-08-30 04:00 - vault-streaming</strong> <code>code-change</code> - Moved VaultStreamingWeb runtime logs into the project, added fatal launcher logging, and replaced detached-conhost PowerShell piping with direct cmd redirection to avoid broken-...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-08-30 04:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Moved VaultStreamingWeb runtime logs into the project, added fatal launcher logging, and replaced detached-conhost PowerShell piping with direct cmd redirection to avoid broken-pipe supervisor exits.
-- Git: repo=vault-streaming, branch=vw-codex-project-runtime-logs, head=7d2a7b9
-
-</details>
-
-<details>
 <summary><strong>2026-06-02 00:06 - General Tasks</strong> <code>general</code> - Midnight project file sync: processed DAILY_RECAP 2026-05-30/31, updated vault-explorer/TASKS.md (Gemini PR note), agent-ledger/TODO.md (3 dashboard tasks), verified all project...</summary>
 
 - Kind: general
@@ -12861,7 +12645,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 10:07 - vaultwares-api (formerly vaultwares-pipelines, vaultwares-api + shared-tube, vaultwares-webhooks, vaultwares-api)</strong> <code>commands,verification</code> - Rotation compl&#195;&#168;te de VW_GITHUB_WEBHOOK_SECRET (sans GitHub Actions): nouveau secret install&#195;&#169; dans /etc/vw-webhookd/env (sans espace), webhooks GitHub mis &#195;&#160; jour pour les repo...</summary>
+<summary><strong>2026-05-26 10:07 - vaultwares-api</strong> <code>commands,verification</code> - Rotation compl&#195;&#168;te de VW_GITHUB_WEBHOOK_SECRET (sans GitHub Actions): nouveau secret install&#195;&#169; dans /etc/vw-webhookd/env (sans espace), webhooks GitHub mis &#195;&#160; jour pour les repo...</summary>
 
 - Kind: commands,verification
 - Actor: AI Agent

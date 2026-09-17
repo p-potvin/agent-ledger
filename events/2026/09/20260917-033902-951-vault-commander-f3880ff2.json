@@ -1,0 +1,49 @@
+{
+  "id": "20260917-033902-951-vault-commander-f3880ff2",
+  "createdAt": "2026-09-17T07:39:02.9518120Z",
+  "createdAtLocal": "2026-09-17 03:39",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: vw-codex-gallery-g-default\r\nTools used (this reply): Bash, Grep, Read, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-17 03:39 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Grep",
+      "Read",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+  "summary": "Three live-subs fixes. (1) Two lines per language restored: the translation panel had no history of its own and bilingual forced overlay._history=1, so each box held one cue. Added _lines_tr with the same rolling trim as _lines, show_translated appends to it, show_partial_translation renders last-final + partial to mirror the caption box, clear_text resets it, and the _history=1 override is gone. Verified by screenshot: 2 English lines over 2 French lines. (2) Prompt echo root-caused from the user's riva-prompt-shape.txt: the Riva chat template wraps every cue as 'What is the <target> translation of the sentence: <text>', so a cue with no sentence leaves an instruction and nothing to translate and the model completes by rendering that instruction in French. riva_engine only guards 'not text.strip()', which punctuation passes. Added has_lexical_content (drops '...', '-', music glyphs before they reach any engine) and looks_like_prompt_echo (len(out) > max(60, 4*len(src)) -> return source, never cached so it cannot poison the cache). 6/6 unit cases pass. (3) Trimmed beginnings: reset_after cut exactly at the cue end so the next window started mid-word; added FINAL_LOOKBACK_S=0.20 rewind and widened the last_final_end guard to match, restoring the overlap _drop_carryover was already written for. Measured on 102s: captured words 92->98. Dominant factor is the user's own -MinSilence 0.2: at 0.2 37 fragmented cues / 0.366 similarity, at 0.6 16 full-phrase cues / 0.554.",
+  "commands": [
+    "python cue_probe.py cand_norm.wav 0.2",
+    "python cue_probe.py cand_norm.wav 0.6",
+    "python guard.py"
+  ],
+  "files": [
+    "cli/utils/live_subs_overlay.py"
+  ],
+  "planPath": "",
+  "contentHash": "f3880ff2f923575b74ee06841b9eb991f80245b39ee3caf1b9aab8ec09df1a2d",
+  "git": {
+    "repo": "vault-commander",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+    "branch": "vw-codex-gallery-g-default",
+    "head": "38788e0",
+    "hasChanges": true
+  }
+}

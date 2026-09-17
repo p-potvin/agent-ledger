@@ -1,0 +1,48 @@
+{
+  "id": "20260917-150241-675-vaultwares-studio-7b2825a9",
+  "createdAt": "2026-09-17T19:02:41.6757311Z",
+  "createdAtLocal": "2026-09-17 15:02",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Read, SendUserFile\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-17 15:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "SendUserFile"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Provenance of zerogpu-backyard134-loop-20260913 verified after a user query: the job IS backyard_134s_sunny.mp4. Its DA3 input frames and training frames agree index-for-index, and both match the named video at exactly the expected candidate indices (mean abs diff 1.3-2.1 on 160x90, i.e. identical). No hard cuts in the video (frame-to-frame diff median 21.85, max 50.02, cut threshold 131). The video is one continuous lap around a whole property - back patio/woodpile, driveway, front porch, street, side lawn, bin alley, back patio - which is why parts look like different places; the 'backyard' name is a misnomer. User confirmed false alarm. NEW FINDING that reframes the more-frames strategy: consecutive-frame verified SIFT/RANSAC matches are sunny500 median 370 (2% below 50), cloudy1000 median 212 (10% below 50), merged1600 median 240 (8% below 50). More frames did NOT buy more overlap because the cloudy video is 2.6x longer: effective sampling is 3.7 frames per second of walking for sunny500 vs 2.9 for cloudy1000. Matching sunny's overlap needs ~1300 frames on the 348s clip and ~1800 on the 482s merged clip.",
+  "commands": [
+    "consecutive-frame SIFT/RANSAC overlap measurement across three runs",
+    "cut detection on backyard_134s_sunny.mp4"
+  ],
+  "files": [
+    "D:/vaultwares-studio-jobs/data/jobs/zerogpu-backyard134-loop-20260913"
+  ],
+  "planPath": "",
+  "contentHash": "7b2825a90897403b722c96c7a0e772c104bf2763069efccf9b40ac929366fa74",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

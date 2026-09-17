@@ -1,0 +1,52 @@
+{
+  "id": "20260917-082615-181-vaultwares-studio-81313a1b",
+  "createdAt": "2026-09-17T12:26:15.1818274Z",
+  "createdAtLocal": "2026-09-17 08:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-17 08:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Commit 9b669ed: TSDF -> NanoVDB level set, end to end and verified. New vaultwares_studio/tsdf_volume.py promotes the benchmark integrator into a module; new tools/fuse_nanovdb.py runs depth maps to .nvdb with nanovdb_read.verify as the write gate. Key correction from the benchmark: distances are stored in WORLD UNITS, not signed/sdf_trunc clipped to [-1,1]. OpenVDB and NanoVDB level sets hold metres from the surface in a narrow band; normalised values render fine with the isosurface displaced by the truncation factor. REAL RUN on the 13 Sep backyard capture: 500 frames / 70.6M depth samples loaded in 8.3s, fused in 12.7s to 1,202,544 touched voxels at voxel 0.0156 band +/-0.0624, 1,114,552 kept after dropping 87,992 (7.3 pct) below weight 2, written in 0.4s as a 15.9 MB .nvdb with 6115 leaves / 19 lower / 8 upper, verified 1,114,552 voxels walked, total 21.5s. Independently validated with NVIDIA's PNanoVDB reader: identical header fields (gridType 1, gridClass 1, voxelSize 0.0156, leaf=6115 lower=19 upper=8 voxels=1114552, bbox -299,-43,-265..134,72,66) and bit-identical values at eight probes spread through the scene including negative coordinates. Also documented the camera convention that was previously only implied: integrate builds rays as (x,y,1) so c2w must be OpenCV +Z forward, which is what DA3-Streaming's camera_poses.txt holds; nerfstudio transforms.json is OpenGL and must be rebased via hybrid_seed.OPENGL_TO_OPENCV first. My own first test asserted the opposite convention and failed - the code was right and the docstring was silent. 11 new tests on synthetic planes (zero crossing on the surface, world units not normalised, repeat observations average rather than accumulate, poses actually applied). Suite",
+  "commands": [
+    "python tools/fuse_nanovdb.py --streaming <streaming> --out volume.nvdb",
+    "pnvalidate.exe volume.nvdb <8 probes>",
+    "pytest tests/ -q"
+  ],
+  "files": [
+    "vaultwares_studio/tsdf_volume.py",
+    "tools/fuse_nanovdb.py",
+    "tests/test_tsdf_volume.py",
+    "data/jobs/zerogpu-backyard134-loop-20260913/reconstruction/volume.nvdb"
+  ],
+  "planPath": "",
+  "contentHash": "81313a1bac7a8cec1d86b8cdfe4de0b0c8d4e772cf1cde4bd134ab4575d950ab",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

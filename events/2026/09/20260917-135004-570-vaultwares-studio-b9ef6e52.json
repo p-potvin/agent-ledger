@@ -1,0 +1,50 @@
+{
+  "id": "20260917-135004-570-vaultwares-studio-b9ef6e52",
+  "createdAt": "2026-09-17T17:50:04.5702991Z",
+  "createdAtLocal": "2026-09-17 13:50",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Read\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-17 13:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Pre-flight checks before queueing the merged-1600 splat caught a silent killer: the merged job was posed from a 960x540 upload, so processed/transforms.json declared w=960,fl_x=456.5, while training frames are 1920x1080. nerfstudio would take that at face value and every gaussian would land wrong, with no error. Fixed in tools/prepare_zerogpu_training.py: new rescale_transforms_to_frames() makes the frames on disk the authority, rescaling top-level AND per-frame intrinsics via CameraCalibration.scaled_to (distortion is normalised, carried unchanged), refusing aspect-ratio changes (crop, unrecoverable principal point). Result fl_x 912.95, consistent with the COLMAP-measured 886.85 for this phone. Also validated the frame replay: local 1080p candidates at the console's selected indices match the console's retained RGB (mean abs diff 2-7 vs 42-49 for the neighbouring candidate). Bundle verified: 1600 frames 1920x1080, names match across frames.zip/processed_min.zip/transforms, sparse_pc 51MB, worker.zip 4 files, poses finite. Submitted 30000 iterations (stop_split_at 27000), --keep-checkpoint so a refine can extend without redoing it, --scheduling-timeout 900. 6 new tests in tests/test_transforms_rescale.py.",
+  "commands": [
+    "python tools/prepare_zerogpu_training.py --job zerogpu-merged1600-loop075-20260917 --iterations 30000 --scheduling-timeout 900 --submit",
+    "pytest tests/test_transforms_rescale.py -q"
+  ],
+  "files": [
+    "tools/prepare_zerogpu_training.py",
+    "tests/test_transforms_rescale.py"
+  ],
+  "planPath": "",
+  "contentHash": "b9ef6e52e5c9e61e8ab83d6dd0d1fab98fba6b260e726c2b167441cd270c63b3",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

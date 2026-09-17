@@ -1,0 +1,57 @@
+{
+  "id": "20260917-133122-446-vaultwares-studio-69998940",
+  "createdAt": "2026-09-17T17:31:22.4460416Z",
+  "createdAtLocal": "2026-09-17 13:31",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Read\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-17 13:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Merged-clip SfM evaluated. CORRECTION: earlier I reported ~1006 SALAD loop pairs on the user's 1000-frame run; that was the file's line count including its 1000-line image path list. Actual pairs: sunny500=2, cloudy1000=4, merged1600=6. Merged 1600-frame run (sunny134+cloudy348 concatenated, 540p, loop 0.75) completed: 338 GPU s, 1600/1600 posed, path 43.84, closure ratio 0.035, 312 walked cells vs 216 (cloudy1000) and 186 (sunny500). Merge verified GOOD via new tools/find_cross_clip_overlaps.py (DINOv2 shortlist + SIFT/RANSAC): 46 verified cross-clip overlaps, which land 3-7 camera steps apart in the merged reconstruction, not scene-scale apart. cloudy1000 closure 2.88 is genuine (end of walk sees nothing of the start, 0 SIFT inliers), not drift. Added tools/nanovdb_to_mesh.py (isosurface PLY from .nvdb, signed fill + observed-cube mask), tools/splice_clip_order.py, GUI drag-and-drop for .ply/.splat/.ksplat. Suite 321 passing. Nothing committed.",
+  "commands": [
+    "python tools/find_cross_clip_overlaps.py --split 941 --stride 2",
+    "python tools/import_zerogpu_artifact.py (merged1600, cloudy1000)",
+    "python tools/fuse_nanovdb.py (cloudy1000: 1.15M voxels, 36s)",
+    "pytest tests -q (321 passed)"
+  ],
+  "files": [
+    "tools/find_cross_clip_overlaps.py",
+    "tools/nanovdb_to_mesh.py",
+    "tools/splice_clip_order.py",
+    "gui/viewport.py",
+    "gui/main_window.py",
+    "tests/test_viewport_drop.py",
+    "tests/test_nanovdb_to_mesh.py"
+  ],
+  "planPath": "",
+  "contentHash": "699989402bdfe453a72e0ce10bc8794f243e29434c4092ec46d59280f6e1642b",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

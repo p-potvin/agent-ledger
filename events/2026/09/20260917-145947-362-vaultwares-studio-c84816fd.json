@@ -1,0 +1,48 @@
+{
+  "id": "20260917-145947-362-vaultwares-studio-c84816fd",
+  "createdAt": "2026-09-17T18:59:47.3620931Z",
+  "createdAtLocal": "2026-09-17 14:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Read\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-17 14:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Merged-1600 splat trained successfully on HF Jobs l4x1: job 6aac28d1b1dc2b62dc58f02d, 3459s, ~USD 0.77, 384,175 gaussians, checkpoint step-000029999 retained in model.zip for a refine. Intrinsics rescale landed (fl_x 912.95, within 3% of this phone's COLMAP 886.85). Quality assessment: raw gaussian count is the lowest of any run (384k vs 1.64M on 13 Sep) BUT volumetric density is comparable (1.25M vs 1.18M gaussians per unit^3 of the 2-98pct box) because the trainer's normalisation makes the merged scene diagonal 1.81 vs 2.85 - so the count alone is NOT evidence of a worse splat. Mild under-training signs: opacity p50 0.646 vs 0.811, size/diagonal p99 0.0102 vs 0.0051, consistent with 18.75 iterations per view vs 40 on 13 Sep. Offscreen renders inconclusive: the viewer camera lands inside a halo of oversized gaussians on BOTH runs, so it does not discriminate. Note: 'ns-train --vis none' is unsupported in the deployed July nerfstudio and was auto-substituted with tensorboard; stop-split-at 27000 was accepted.",
+  "commands": [
+    "python tools/viewport_screenshot.py",
+    "gaussian scale/opacity distribution comparison"
+  ],
+  "files": [
+    "data/jobs/zerogpu-merged1600-loop075-20260917/reconstruction/cloud.ply",
+    "data/jobs/zerogpu-merged1600-loop075-20260917/reconstruction/summary.json"
+  ],
+  "planPath": "",
+  "contentHash": "c84816fdb86f399c6f7d2985a66653246784480690eb8db5208fc8e6025b52f0",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

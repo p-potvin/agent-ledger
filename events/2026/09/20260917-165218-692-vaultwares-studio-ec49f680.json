@@ -1,0 +1,50 @@
+{
+  "id": "20260917-165218-692-vaultwares-studio-ec49f680",
+  "createdAt": "2026-09-17T20:52:18.6922446Z",
+  "createdAtLocal": "2026-09-17 16:52",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-17 16:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "New capture thorough-yard-with-pairs-20260917 (3 clips, 1920x1080, 59.94fps, shot 15:36-15:44 same lighting) pre-flight verified. The user's door-checkpoint protocol WORKED: every start/end frame pair across all three clips matches under SIFT/RANSAC. Strongest chain is also the shooting order - halfyard_end<->backyard_start 1332 inliers, backyard_end<->frontyard_start 900, and frontyard_end<->halfyard_start 692 closes the global loop. Each clip self-closes too (frontyard 423). Concatenated in that order at 29.97fps: 14480 frames, 483.1s, 1080p (965MB, local training) + 540p (233MB, upload). Queued ZeroGPU at 2000 frames / loop 0.75 = 4.14 frames per second of walking, beating the sunny500 benchmark of 3.7. METADATA FINDING (corrects a user assumption): LivePhotoInfo is NOT a GPS track. GPS is a single static coordinate per video with 19.79m horizontal accuracy. The user's LivePhotoInfo string is record 0 of a per-frame mebx track (ffprobe stream 4, 9332 records of 144 bytes, one per video frame, CoreMotionVersion 3077.0.4). That track DOES carry real device motion: slots 19/20/22/23 sit in [-0.9,0.9] with lag-1 autocorrelation 1.0000, so they are smooth physical signals not noise. No contiguous triple or quadruple has unit norm, so the layout is not a plain quaternion or gravity vector and remains undecoded. Worth decoding later - per-frame attitude would replace the PCA-skewness gravity heuristic that sometimes guesses up-down backwards.",
+  "commands": [
+    "ffprobe stream inventory",
+    "exiftool -ee -G1 -a",
+    "per-frame mebx record decode + autocorrelation",
+    "python tools/run_zerogpu_da3.py --frames 2000 --loop-similarity 0.75"
+  ],
+  "files": [
+    "D:/vaultwares-studio-jobs/data/jobs/thorough-yard-with-pairs-20260917",
+    "D:/3D Reconstruction/inputs/merged/thorough3_half_back_front_1080p.mp4"
+  ],
+  "planPath": "",
+  "contentHash": "ec49f680d69e6c627b7bab0b7a06725ba6b0c9772d6faad2614d0db95698fdbd",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

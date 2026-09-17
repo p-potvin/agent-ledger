@@ -1,0 +1,42 @@
+{
+  "id": "20260917-124217-951-vaultwares-studio-35f3a29f",
+  "createdAt": "2026-09-17T16:42:17.9510520Z",
+  "createdAtLocal": "2026-09-17 12:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5-1\r\nThinking: medium\r\nMode: chat\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-17 12:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5-1",
+    "thinking": "medium",
+    "mode": "chat",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": "Bash",
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Read-only assessment of zerogpu-1000frames-20260917 (user ran it): 1000/1000 posed, 223.5 GPU s, ~1006 SALAD loop pairs at 0.85 (vs 2 on the 134 s run), path 31.3 / closure 2.88 DA3 units. Crude per-block camera-to-ground check (trajectory-normal as up) shows p90/p10 spread 4.7, so chunk scale drift likely persists. Advised: import artifact via tools/import_zerogpu_artifact.py, train splat on L4 as new baseline, then a single streaming pass over both videos concatenated for the merge; EXIF not involved in Y inversion (ffmpeg applies MOV rotation side-data on decode).",
+  "commands": [
+    "python -c per-block ground metric on zerogpu-1000frames-20260917"
+  ],
+  "files": [
+    "D:/vaultwares-studio-jobs/data/jobs/zerogpu-1000frames-20260917"
+  ],
+  "planPath": "",
+  "contentHash": "35f3a29f4b1d21d04beec85ef969ce50a83ab908ace8f17c63d4864ce25d3122",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

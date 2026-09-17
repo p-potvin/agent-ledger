@@ -1,0 +1,47 @@
+{
+  "id": "20260917-170805-419-vaultwares-studio-6f646ee4",
+  "createdAt": "2026-09-17T21:08:05.4196923Z",
+  "createdAtLocal": "2026-09-17 17:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-17 17:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "thorough3 SfM landed and is by far the best pose set yet: 447 GPU s, 2000/2000 posed, imported as zerogpu-thorough3-2000-loop075-20260917. Trajectory: closure ratio 0.001 (vs 0.017 sunny500 / 0.092 cloudy1000 / 0.035 merged1600), clip seams INVISIBLE at 0.003 and 0.002 against a median step of 0.0382 (the merged1600 seam was 0.538 = 25x median), max step only 4x median, 17 loop pairs of which 8 are cross-clip (previous best 6, one cross-clip). Extent 10.03x2.38x9.52, path 75.92. Drift test: 126 verified revisits across 17 independent events, median ratio 2.016 overall / 1.734 by event - NOT better than sunny500's 1.71, but sunny500 measured only 2 events so its figure was barely sampled. Where loop closure actually acts (half<->front, the global closure) drift is 1.086-1.191, much better than anything measured before; the half<->back revisits run 1.6-2.37. Drift appears within clips too (front<->front 1.55 and 2.06), so it is not a clip-join artefact. 37 of 211 frames rejected as failed ground fits (17.5%) vs 4% sunny / 27% cloudy. Training bundle built and fully verified (2000 frames 1920x1080, rescale fired 960x540->1920x1080 giving fl_x 902.67, names consistent across all three archives, sparse_pc 72MB, poses finite, 1497MB upload) but NOT submitted - awaiting the user's go-ahead for the paid run.",
+  "commands": [
+    "python tools/import_zerogpu_artifact.py",
+    "python tools/measure_scale_drift.py --job zerogpu-thorough3-2000-loop075-20260917",
+    "python tools/prepare_zerogpu_training.py --iterations 40000 (no --submit)"
+  ],
+  "files": [
+    "D:/vaultwares-studio-jobs/data/jobs/zerogpu-thorough3-2000-loop075-20260917"
+  ],
+  "planPath": "",
+  "contentHash": "6f646ee4cfe363f42729ed36f6731b501f5d656dda2c3405d43babc29202e097",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

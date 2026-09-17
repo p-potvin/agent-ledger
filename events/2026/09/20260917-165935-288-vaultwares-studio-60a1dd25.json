@@ -1,0 +1,49 @@
+{
+  "id": "20260917-165935-288-vaultwares-studio-60a1dd25",
+  "createdAt": "2026-09-17T20:59:35.2880613Z",
+  "createdAtLocal": "2026-09-17 16:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-17 16:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Drift test delivered (tools/measure_scale_drift.py). It settles the question the user pushed back on: my camera-above-own-ground metric mixed terrain, estimator and drift, and could not separate them. This tool holds terrain fixed by construction - it compares only frame pairs verified by SIFT/RANSAC to be at the same physical spot with similar viewing direction, where the ground and the photographer's arm are the same by definition, so any height difference is scale inconsistency alone. RESULT: sunny500 median ratio 1.70 across 13 revisits in 2 independent events (whole-capture spread 2.06); cloudy1000 median 3.13 across 3 revisits in 2 events (spread 9.53). So drift is real and is the dominant term, but the user was right that terrain contributes - it is the gap between 1.70 and 2.06. First run returned a median of 11.86 and a max of 281x on cloudy1000; that was 13 of 16 pairs having a failed ground-plane fit (height near zero), so I added a self-calibrating floor at 0.34x the capture's own median and a count of independent revisit events, since a start-versus-end revisit alone can supply dozens of pairs that are one observation. Cloudy1000 also rejects 64 of 239 frames as failed fits (27%), which validates the keep-ground-in-frame capture advice. Suite 327.",
+  "commands": [
+    "python tools/measure_scale_drift.py --job zerogpu-backyard134-loop-20260913 --stride 2 --min-separation 40 --min-inliers 70 --max-view-angle 45",
+    "pytest tests -q (327 passed)"
+  ],
+  "files": [
+    "tools/measure_scale_drift.py",
+    "D:/vaultwares-studio-jobs/data/review/sep17/drift_zerogpu-backyard134-loop-20260913.json"
+  ],
+  "planPath": "",
+  "contentHash": "60a1dd2578fb54f8c96fe8bec94fb09039f40a8f56b9650e0a0004961caedb91",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

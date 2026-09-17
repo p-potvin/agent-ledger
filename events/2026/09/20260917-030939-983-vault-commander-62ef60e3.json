@@ -1,0 +1,52 @@
+{
+  "id": "20260917-030939-983-vault-commander-62ef60e3",
+  "createdAt": "2026-09-17T07:09:39.9831247Z",
+  "createdAtLocal": "2026-09-17 03:09",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: vw-codex-gallery-g-default\r\nTools used (this reply): Bash, Grep, Read, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-17 03:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Grep",
+      "Read",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+  "summary": "Bilingual partials + server test knobs for live-subs. Root cause of the language mixing: with --translate-partials, TranslateWorker.partial_done was wired to overlay.show_partial, which renders into the caption box - the box bilingual mode reserves for the source language - so the box alternated between English finals and French partials on every ASR pass. Added SubtitleOverlay.show_partial_translation (sets label_tr only, never touches _lines) and split the wiring: bilingual now connects partial_shown to BOTH overlay.show_partial (source keeps the caption box) and translator.submit_partial (Direct), with partial_done routed to show_partial_translation; non-bilingual is unchanged. Exposed server-start geometry for testing: --relpos-max-q and --chunk-sec on the overlay, plumbed through AsrWorker and NemoSpeechTranscriber into subtitles_server.start_server, plus -RelposMaxQ/-ChunkSec on Start-LiveSubtitles.ps1 (PSBoundParameters-gated so 0 stays settable) and vw-commands.ps1 registry entries. nemo_asr now warns when a server is already listening, since neither setting is visible on /ready so nothing restarts for them. Fixed the now-false 'Partials stay in the source language' status line. Verified: screenshot shows English in the caption box and French in the panel simultaneously; spawn-capture proves NEMO_SPEECH_RELPOS_MAX_Q=2048, --asr-model nemotron-3.5, --asr.streaming.chunk_size 0.32; wrapper forwards every flag; server up on nemotron-3.5.",
+  "commands": [
+    "python live_subs_overlay.py --asr-model nemotron-3.5 --relpos-max-q 2048 --chunk-sec 0.32",
+    "Start-LiveSubtitles.ps1 -AsrModel nemotron-3.5 -RelposMaxQ 2048 -Bilingual -TranslatePartials",
+    "python subtitles_server.py status"
+  ],
+  "files": [
+    "cli/utils/live_subs_overlay.py",
+    "cli/utils/nemo_asr.py",
+    "cli/Start-LiveSubtitles.ps1",
+    "cli/vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "62ef60e3d927bddf12ed54cf5078d61be01d470506a22c298d2ff38edb0882e8",
+  "git": {
+    "repo": "vault-commander",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+    "branch": "vw-codex-gallery-g-default",
+    "head": "38788e0",
+    "hasChanges": true
+  }
+}

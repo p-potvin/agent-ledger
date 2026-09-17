@@ -1,0 +1,57 @@
+{
+  "id": "20260917-120816-330-vaultwares-studio-3e0a4d0c",
+  "createdAt": "2026-09-17T16:08:16.3304762Z",
+  "createdAtLocal": "2026-09-17 12:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-fable-5-1\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, Write, Edit, Read, hf_fs\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-17 12:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-fable-5-1",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "Read",
+      "hf_fs"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Occupancy free space: added ray_pass_counts/carve_free_space and grid_from_depth_frames (per-frame ground plane, camera-height ruler, majority obstacle rule) in robot_lab/occupancy.py; tools/occupancy_from_volume.py builds level-set, carved and frame-local grids with a cameras-in-FREE metric (0.22 -> 0.79 on zerogpu-backyard134). Finding: DA3-Streaming volume has per-chunk vertical scale drift (camera-to-own-ground 0.7-1.9 apparent m), so the level set cannot feed a metric body band; frames can. docs/occupancy-free-space-20260917.md. 13 new tests, suite 315. Also: ZeroGPU console now takes keep_frames (cap 1200) and loop_similarity (Space commit 5425e30, upload copy excludes the uncommitted telemetry hook); the 1000-frame cloudyday2 run failed at the 1 GB Gradio upload (server disconnected), no GPU minutes used; fps=3 candidates (1043) extracted to D:\\vaultwares-studio-jobs\\data\\review\\sep17\\cloudy348-candidates. Nothing committed.",
+  "commands": [
+    "python tools/occupancy_from_volume.py --job zerogpu-backyard134-loop-20260913",
+    "pytest tests -q (315 passed)",
+    "python tools/run_zerogpu_da3.py --frames 1000 (failed: upload)"
+  ],
+  "files": [
+    "vaultwares_studio/robot_lab/occupancy.py",
+    "tools/occupancy_from_volume.py",
+    "tests/test_free_space.py",
+    "docs/occupancy-free-space-20260917.md",
+    "spaces/da3-zerogpu/app.py",
+    "spaces/da3-zerogpu/core.py",
+    "tools/run_zerogpu_da3.py",
+    "tests/test_zerogpu_console.py"
+  ],
+  "planPath": "",
+  "contentHash": "3e0a4d0c1d5a1aeb2bcae40853b645cdc003762198f87405b3cff531a3fede8b",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "20260915-123530-011-vaultwares-studio-5fcb8316",
+  "createdAt": "2026-09-15T16:35:30.0110726Z",
+  "createdAtLocal": "2026-09-15 12:35",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): Bash, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-15 12:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+  "summary": "Answered the 'will this lock my PC for 45 minutes' question with measurement, commit 013e75f. TSDF voxelisation is nowhere near COLMAP's 43 minutes and structurally could not be: COLMAP's cost is feature matching (quadratic-ish in image count, descriptor search per pair) while TSDF integration is linear in pixels. Measured on the 13 Sep backyard capture, 500 frames / 70.6M depth samples, on the local machine: voxel 0.0312 stride1 49.2s 277,320 voxels; stride2 13.1s 263,083. voxel 0.0156 (production setting) stride1 55.3s 1,309,784 voxels ~37MB nvdb; stride2 12.8s 1,202,544 ~34MB. voxel 0.0078 stride1 63.1s 6,225,862 ~174MB; stride2 16.1s 5,499,900. Worst case 63 seconds and 2.2 GB peak. Load of 500 npz is 6.8s. KEY RESULT: at production voxel size, pixel stride 2 is 4.3x faster for only 8 pct fewer voxels, because the 504x280 depth maps sample finer than the 0.0156 grid so most discarded pixels landed in voxels their neighbours already filled. Recommended config: voxel 0.0156, stride 2, ~13s. Also: first numpy integrator took 5.1s for FORTY frames due to a Python dict merge (~130k iterations/frame); packing voxel coords into one int64 (21 bits/axis) with batched np.unique made it 5x faster at an identical voxel count. Open3D is 20-60x faster still (C++, 0.6-2.0s) but exposes voxels only via extract_voxel_point_cloud with TSDF packed into a colour channel, which is why the numpy path exists - the voxels are the deliverable, not the mesh. User decisions this turn: OpenVDB NOT installed, build .nvdb from numpy directly; start with TSDF not splat. Next: the NanoVDB .nvdb writer.",
+  "commands": [
+    "python tools/bench_tsdf_voxels.py --streaming <streaming> --frames 500"
+  ],
+  "files": [
+    "tools/bench_tsdf_voxels.py",
+    "vaultwares_studio/depth_fusion.py"
+  ],
+  "planPath": "",
+  "contentHash": "5fcb831649a1090371948c188300ea996fca79df88b495a33473ef9879fecdb2",
+  "git": {
+    "repo": "vault-cacophony",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+    "branch": "vw-claude/plurilingual-eval",
+    "head": "2b64c66",
+    "hasChanges": true
+  }
+}

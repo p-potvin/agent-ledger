@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260915-205702-055-colonel-kfc-qt-demo-75a96522",
+    "createdAt":  "2026-09-16T00:57:02.0555600Z",
+    "createdAtLocal":  "2026-09-15 20:57",
+    "timezone":  "Eastern Standard Time",
+    "project":  "ColONEL-KFC-qt-demo",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: GPT-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-15 20:57 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC-qt-demo",
+    "summary":  "Removed the redundant Qt telemetry drawer and expanded gallery grid to 4/5 cards; improved card thumbnail source selection/cropping; added ArcFace-normalized evidence images plus persisted FLAME depth, normal, shaded, and mask controls; launched presentation-only refresh for G:\\Gallery.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "75a965225922354b981768152bc6164851dab7c59d326c869449e54f62147b68",
+    "git":  {
+                "repo":  "ColONEL-KFC-qt-demo",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/ColONEL-KFC-qt-demo",
+                "branch":  "vw-codex-colonel-qt-demo",
+                "head":  "d57ae7a",
+                "hasChanges":  true
+            }
+}
