@@ -1,0 +1,50 @@
+{
+  "id": "20260917-183445-468-vaultwares-studio-ab4bc8c6",
+  "createdAt": "2026-09-17T22:34:45.4687928Z",
+  "createdAtLocal": "2026-09-17 18:34",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Write, Read, SendUserFile\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-17 18:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Read",
+      "SendUserFile"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "nVDB status answered with artifacts. Fused volume.nvdb for the new thorough3 capture: 2000 frames, 282.2M depth samples, 3,916,401 touched voxels, 3,710,904 kept after the weight-2 drop (5.2%), 38.9MB, verified by the independent reader, 47.2s total. That is 3.3x the sunny500 volume (1.11M voxels) and index bbox 761x218x661. Exported volume_isosurface.ply (1,281,233 verts / 2,284,708 faces, 13.9s, 91MB) so it is viewable in any mesh viewer without Omniverse. Rendered three angles with a numpy z-buffer after Open3D's OffscreenRenderer failed (no GL context available in this environment). Geometry reads as a coherent property: ground plane, wall structures, driveway; the radial fan artefacts are the known far-field depth errors. Viewable NOW: volume_isosurface.ply (drag-and-drop into the viewport, or MeshLab/Blender/imagetostl), plus occupancy.png for sunny500. volume.nvdb + volume.usda remain Omniverse-only. Occupancy for thorough3 must wait for the splat because scene_frame_transform needs the trainer's dataparser_transforms - that job is running.",
+  "commands": [
+    "python tools/fuse_nanovdb.py --streaming .../thorough3/reconstruction/remote_out/streaming",
+    "python tools/nanovdb_to_mesh.py .../thorough3/reconstruction/volume.nvdb"
+  ],
+  "files": [
+    "D:/vaultwares-studio-jobs/data/jobs/zerogpu-thorough3-2000-loop075-20260917/reconstruction/volume.nvdb",
+    "D:/vaultwares-studio-jobs/data/jobs/zerogpu-thorough3-2000-loop075-20260917/reconstruction/volume_isosurface.ply"
+  ],
+  "planPath": "",
+  "contentHash": "ab4bc8c6d32e27929a392011330d52ed9de7353969d8fc1ac966180f31e3873b",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

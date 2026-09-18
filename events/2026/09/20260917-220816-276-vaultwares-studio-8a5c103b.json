@@ -1,0 +1,49 @@
+{
+  "id": "20260917-220816-276-vaultwares-studio-8a5c103b",
+  "createdAt": "2026-09-18T02:08:16.2767146Z",
+  "createdAtLocal": "2026-09-17 22:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-17 22:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "POSTMORTEM + FIX. The thorough3 training job died OOMKilled (exit 137) after 271 min running, ~USD 3.62 billed, nothing uploaded. MY DIAGNOSIS DURING THE RUN WAS WRONG: I told the user it was at risk of hitting a 165-min remote timeout at 20:06; it actually ran to 271 min and died of memory, so both the mechanism and the deadline I gave were incorrect. Real cause, and it was computable in advance: --pipeline.datamanager.cache-images cpu holds every training image in host RAM uncompressed. 2000 frames at 1920x1080x3 = 12.4 GB of an l4x1's 30 GB before splatfacto allocates the model, Adam moments and densification buffers - and this scene is ~3x the volume of previous ones so those are larger too. Evidence line: 500 frames 3.1GB (10%) completed; 1600 frames 10.0GB (33%) completed; 2000 frames 12.4GB (41%) OOMKilled. FIX: tools/prepare_zerogpu_training.py now has FLAVOR_RAM_GB (from HfApi.list_jobs_hardware), image_cache_gb() and check_host_memory(), gating at CACHE_SHARE_LIMIT = 1/3 - the largest share that has actually survived - BEFORE any upload or billing. The refusal names the concrete remedies (--subsample N or --flavor a10g-large, 46GB) and requires --allow-memory-risk to override. Verified: rerunning the exact configuration that died is now refused with that message. 7 new tests, suite 334. NOT yet retried - awaiting the user's choice of remedy.",
+  "commands": [
+    "python tools/prepare_zerogpu_training.py --iterations 25000 --submit (now REFUSED by the guard)",
+    "pytest tests/test_training_memory_guard.py -q (7 passed)"
+  ],
+  "files": [
+    "tools/prepare_zerogpu_training.py",
+    "tests/test_training_memory_guard.py"
+  ],
+  "planPath": "",
+  "contentHash": "8a5c103b87a1cdda72b1f116a95f241018cdd56aeee9bce57fd9548d88fe5688",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

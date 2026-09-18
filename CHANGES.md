@@ -3,7 +3,361 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-09-17 17:20 - vaultwares-studio (formerly usd-playground)</strong> <code>documentation</code> - Queued thorough3 splat training (40000 iterations, stop_split_at 36000, l4x1, est 66 min, ~USD 0.95, 1.5GB upload). Wrote docs/apple-livephoto-metadata-20260917.md recording the...</summary>
+<summary><strong>2026-09-17 22:08 - vaultwares-studio (formerly usd-playground)</strong> <code>code-change</code> - POSTMORTEM + FIX. The thorough3 training job died OOMKilled (exit 137) after 271 min running, ~USD 3.62 billed, nothing uploaded. MY DIAGNOSIS DURING THE RUN WAS WRONG: I told t...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): Bash, PowerShell, Write, Edit
+  MCP servers accessed (this reply): huggingface
+  Time: 2026-09-17 22:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: POSTMORTEM + FIX. The thorough3 training job died OOMKilled (exit 137) after 271 min running, ~USD 3.62 billed, nothing uploaded. MY DIAGNOSIS DURING THE RUN WAS WRONG: I told the user it was at risk of hitting a 165-min remote timeout at 20:06; it actually ran to 271 min and died of memory, so both the mechanism and the deadline I gave were incorrect. Real cause, and it was computable in advance: --pipeline.datamanager.cache-images cpu holds every training image in host RAM uncompressed. 2000 frames at 1920x1080x3 = 12.4 GB of an l4x1's 30 GB before splatfacto allocates the model, Adam moments and densification buffers - and this scene is ~3x the volume of previous ones so those are larger too. Evidence line: 500 frames 3.1GB (10%) completed; 1600 frames 10.0GB (33%) completed; 2000 frames 12.4GB (41%) OOMKilled. FIX: tools/prepare_zerogpu_training.py now has FLAVOR_RAM_GB (from HfApi.list_jobs_hardware), image_cache_gb() and check_host_memory(), gating at CACHE_SHARE_LIMIT = 1/3 - the largest share that has actually survived - BEFORE any upload or billing. The refusal names the concrete remedies (--subsample N or --flavor a10g-large, 46GB) and requires --allow-memory-risk to override. Verified: rerunning the exact configuration that died is now refused with that message. 7 new tests, suite 334. NOT yet retried - awaiting the user's choice of remedy.
+- Commands:
+  - `python tools/prepare_zerogpu_training.py --iterations 25000 --submit (now REFUSED by the guard)`
+  - `pytest tests/test_training_memory_guard.py -q (7 passed)`
+- Files:
+  - `tools/prepare_zerogpu_training.py`
+  - `tests/test_training_memory_guard.py`
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 21:53 - vault-streaming</strong> <code>verification</code> - Validated live Comet on OVH and VaultWares API endpoints and recorded live proof in walkthrough</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-ios-container
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 21:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: Validated live Comet on OVH and VaultWares API endpoints and recorded live proof in walkthrough
+- Git: repo=vault-streaming, branch=vw-codex-ios-container, head=9e56ce8
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 21:52 - vault-streaming</strong> <code>code-change</code> - Updated iOS default server endpoint to Comet on OVH (100.67.25.118:5173) and transcode dispatch via vaultwares-api</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-ios-container
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 21:52 (TZ: Eastern Standard Time)
+  ```
+- Summary: Updated iOS default server endpoint to Comet on OVH (100.67.25.118:5173) and transcode dispatch via vaultwares-api
+- Git: repo=vault-streaming, branch=vw-codex-ios-container, head=9e56ce8
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 20:47 - vault-streaming</strong> <code>code-change</code> - Ported vault-streaming web app to native iOS container and GitHub Actions CI unsigned build pipeline with mobile-first styling and AI omission</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-ios-container
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 20:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ported vault-streaming web app to native iOS container and GitHub Actions CI unsigned build pipeline with mobile-first styling and AI omission
+- Git: repo=vault-streaming, branch=vw-codex-ios-container, head=9e56ce8
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 20:34 - vault-streaming</strong> <code>documentation</code> - Created implementation plan to port vault-streaming to a native iOS app container and GitHub Actions CI unsigned build pipeline</summary>
+
+- Kind: documentation
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-project-runtime-logs
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 20:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created implementation plan to port vault-streaming to a native iOS app container and GitHub Actions CI unsigned build pipeline
+- Git: repo=vault-streaming, branch=vw-codex-project-runtime-logs, head=9e56ce8
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 18:34 - vaultwares-studio</strong> <code>verification</code> - nVDB status answered with artifacts. Fused volume.nvdb for the new thorough3 capture: 2000 frames, 282.2M depth samples, 3,916,401 touched voxels, 3,710,904 kept after the weigh...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5
+  Thinking: high
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local workstation)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
+  Tools used (this reply): Bash, PowerShell, Write, Read, SendUserFile
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 18:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: nVDB status answered with artifacts. Fused volume.nvdb for the new thorough3 capture: 2000 frames, 282.2M depth samples, 3,916,401 touched voxels, 3,710,904 kept after the weight-2 drop (5.2%), 38.9MB, verified by the independent reader, 47.2s total. That is 3.3x the sunny500 volume (1.11M voxels) and index bbox 761x218x661. Exported volume_isosurface.ply (1,281,233 verts / 2,284,708 faces, 13.9s, 91MB) so it is viewable in any mesh viewer without Omniverse. Rendered three angles with a numpy z-buffer after Open3D's OffscreenRenderer failed (no GL context available in this environment). Geometry reads as a coherent property: ground plane, wall structures, driveway; the radial fan artefacts are the known far-field depth errors. Viewable NOW: volume_isosurface.ply (drag-and-drop into the viewport, or MeshLab/Blender/imagetostl), plus occupancy.png for sunny500. volume.nvdb + volume.usda remain Omniverse-only. Occupancy for thorough3 must wait for the splat because scene_frame_transform needs the trainer's dataparser_transforms - that job is running.
+- Commands:
+  - `python tools/fuse_nanovdb.py --streaming .../thorough3/reconstruction/remote_out/streaming`
+  - `python tools/nanovdb_to_mesh.py .../thorough3/reconstruction/volume.nvdb`
+- Files:
+  - `D:/vaultwares-studio-jobs/data/jobs/zerogpu-thorough3-2000-loop075-20260917/reconstruction/volume.nvdb`
+  - `D:/vaultwares-studio-jobs/data/jobs/zerogpu-thorough3-2000-loop075-20260917/reconstruction/volume_isosurface.ply`
+- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 18:26 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares &#226; Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares &#226; Project Rename Refactoring (Phase 5), VaultWares &#226; Project Rename Refactoring (Phase 5 PR Workflow), VaultWares &#226; System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>verification</code> - Confirmed .gitignore persistence and verified clean working tree on vw-codex-ios-app-and-pipeline</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 18:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: Confirmed .gitignore persistence and verified clean working tree on vw-codex-ios-app-and-pipeline
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 18:25 - General Tasks</strong> <code>verification</code> - Verified successful GitHub Actions build 35281851140 and downloaded VaultWarden-unsigned.ipa locally</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 18:25 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified successful GitHub Actions build 35281851140 and downloaded VaultWarden-unsigned.ipa locally
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 18:24 - General Tasks</strong> <code>code-change</code> - Pushed feature branch vw-codex-ios-app-and-pipeline to GitHub and initiated CI build 35281851140</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 18:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Pushed feature branch vw-codex-ios-app-and-pipeline to GitHub and initiated CI build 35281851140
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 18:20 - General Tasks</strong> <code>general</code> - Provided complete step-by-step pipeline options from codebase to iPhone installation</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 18:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: Provided complete step-by-step pipeline options from codebase to iPhone installation
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 18:18 - General Tasks</strong> <code>verification</code> - Completed verification reflection gate for vault-warden iOS app and pipeline</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 18:18 (TZ: Eastern Standard Time)
+  ```
+- Summary: Completed verification reflection gate for vault-warden iOS app and pipeline
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 18:18 - General Tasks</strong> <code>code-change</code> - Scaffolded native iOS app for VaultWarden with Face ID, persistent storage, and unsigned GitHub Actions CI pipeline</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 18:18 (TZ: Eastern Standard Time)
+  ```
+- Summary: Scaffolded native iOS app for VaultWarden with Face ID, persistent storage, and unsigned GitHub Actions CI pipeline
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 18:11 - General Tasks</strong> <code>documentation</code> - Created iOS app architecture and unsigned CI pipeline blueprint for vault-warden</summary>
+
+- Kind: documentation
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 18:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created iOS app architecture and unsigned CI pipeline blueprint for vault-warden
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 18:02 - General Tasks</strong> <code>general</code> - Requested details from user on workflow/correction to capture in /learn</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 18:02 (TZ: Eastern Standard Time)
+  ```
+- Summary: Requested details from user on workflow/correction to capture in /learn
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 18:01 - General Tasks</strong> <code>general</code> - Initiated /learn workflow and prompted user for behavior to retain</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 18:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Initiated /learn workflow and prompted user for behavior to retain
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 18:00 - General Tasks</strong> <code>general</code> - Reviewed Antigravity customization system guide</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-09-17 18:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: Reviewed Antigravity customization system guide
+
+</details>
+
+<details>
+<summary><strong>2026-09-17 17:20 - vaultwares-studio</strong> <code>documentation</code> - Queued thorough3 splat training (40000 iterations, stop_split_at 36000, l4x1, est 66 min, ~USD 0.95, 1.5GB upload). Wrote docs/apple-livephoto-metadata-20260917.md recording the...</summary>
 
 - Kind: documentation
 - Actor: AI Agent
@@ -582,7 +936,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-16 21:59 - General Tasks (formerly VaultWares SSOT, VaultWares SSOT (20 repos), VaultWares Infrastructure, VaultWares Project File Sync, VaultWares &#226; Post-Refactoring Cleanup &amp; Infrastructure Verification, VaultWares &#226; Project Rename Refactoring (Phase 5), VaultWares &#226; Project Rename Refactoring (Phase 5 PR Workflow), VaultWares &#226; System Verification &amp; Maintenance Complete, vaultwares-themes, vaultwares-adk, vaultwares-realtime, vaultwares-media-processing, deploy-flow-unification)</strong> <code>verification</code> - Validated real-condition telemetry, test harness spools, and poller test suite pass</summary>
+<summary><strong>2026-09-16 21:59 - General Tasks</strong> <code>verification</code> - Validated real-condition telemetry, test harness spools, and poller test suite pass</summary>
 
 - Kind: verification
 - Actor: AI Agent
