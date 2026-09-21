@@ -1,0 +1,49 @@
+{
+  "id": "20260918-131438-320-vaultwares-studio-c0208ceb",
+  "createdAt": "2026-09-18T17:14:38.3201850Z",
+  "createdAtLocal": "2026-09-18 13:14",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Write, WebSearch, WebFetch\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-18 13:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "WebSearch",
+      "WebFetch"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Two deliverables while the 25000-iteration run trains. (1) LOG FEED FIXED without SSH. SSH to the job was refused (publickey) because the local id_ed25519 is not registered on the HF account, and HfApi exposes no SSH-key management, so that needs the user to add the key at huggingface.co/settings/keys. But the diagnosis changed the fix: a FRESH fetch_job_logs stream works perfectly, so the stall is in the long-lived stream the launcher opens at submit time and holds for the life of the job. New tools/tail_job_logs.py reconnects on stall, dedupes lines by content+occurrence count since the log has no cursor, appends to any file, and exits on terminal stage. Running against the live job; 20 heartbeat lines now in train.log where there were none. CONFIRMS the heartbeat works: 'step 10000, 8.3 it/s | cgroup 34.9/50.0 GB (70%)'. Rate recovered from 5 to 8.3 it/s, so 25000 projects to ~50 min of training, comfortably inside the 106 min cap. Memory flat at 70% and slightly declining. (2) SPLATFACTO MCMC researched: nerfstudio SplatfactoModelConfig DOES expose strategy: Literal['default','mcmc'] = 'default', with max_gs_num (default 1,000,000) as the hard gaussian cap, plus noise_lr 5e5, mcmc_opacity_reg 0.01, mcmc_scale_reg 0.01. Highly relevant to us because max_gs_num bounds the model size directly, which is the allocation that grows with the scene and contributed to the OOM - it converts an unbounded densification into a fixed budget. NOT yet verified against the deployed July image; filter_supported_flags would silently drop the flags if that nerfstudio predates them, and the drop is logged, so a cheap cpu-upgrade probe job",
+  "commands": [
+    "ssh 6aad6bec...@ssh.hf.jobs (Permission denied publickey)",
+    "python tools/tail_job_logs.py --job-id 6aad6bec51992417dfcc7457 --out train.log"
+  ],
+  "files": [
+    "tools/tail_job_logs.py"
+  ],
+  "planPath": "",
+  "contentHash": "c0208ceba642eeb7a301f1864658a0e51887ee22087a701912848b9c3d95ad64",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

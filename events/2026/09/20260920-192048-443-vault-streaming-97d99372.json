@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260920-192048-443-vault-streaming-97d99372",
+    "createdAt":  "2026-09-20T23:20:48.4437084Z",
+    "createdAtLocal":  "2026-09-20 19:20",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-streaming",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 2.5 Pro\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-codex-ios-container\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-20 19:20 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 2.5 Pro",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+    "summary":  "Investigated French stream availability, diagnosed Real-Debrid DMCA takedowns and Prowlarr French tracker gap, fixed TMDB natural language query sanitization and OpenSubtitles 301 redirects",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "97d9937271dfb01c6b86b84196528164caa36fe6cc5f85c93f22706c352ca89c",
+    "git":  {
+                "repo":  "vault-streaming",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+                "branch":  "vw-codex-ios-container",
+                "head":  "c88018d",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20260920-053257-115-python-zipper-c4cbb114",
+  "createdAt": "2026-09-20T09:32:57.1157347Z",
+  "createdAtLocal": "2026-09-20 05:32",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: agent/extension-stream-detection\r\nTools used (this reply): Bash, Edit, Write\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-09-20 05:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Mid-recording URL refresh: confirmed against the API's OpenAPI schema that the progress endpoint takes a fixed field set and 'result' is the only free-form one, so the extension publishes {stream_url,at} there once a minute (alarm-driven, event page safe) for streams with a live jobId, and the worker reads it via refresh_url only when its URL dies. download_stream is now a bounded resume loop (20 resumes, 20s floor between attempts) with per-attempt output files joined by ffmpeg -c copy and byte counts banked across attempts. Smart naming rewritten as an explicit chain: performer from tab title, whole tab title, yt-dlp filename, then site label from page_url or the [hostname] prefix; generic labels and self-produced names (joined/resume/capture) refused; everything with a label is numbered. 11 resume tests + 12 naming tests added; 69 python tests and 99 extension checks green.",
+  "commands": [
+    "curl https://api.vaultwares.ca/openapi.json",
+    "python -m unittest dataset_builder.tests.test_stream_resume",
+    "npm run check"
+  ],
+  "files": [
+    "dataset_builder/ds_streams.py",
+    "dataset_builder/worker.py",
+    "extension/src/background/index.ts",
+    "extension/public/manifest.json"
+  ],
+  "planPath": "",
+  "contentHash": "c4cbb114e09467fc822a8048a49ac13fa647f693de88879dfc00d7e97dc1dd36",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "agent/extension-stream-detection",
+    "head": "7899cce",
+    "hasChanges": true
+  }
+}

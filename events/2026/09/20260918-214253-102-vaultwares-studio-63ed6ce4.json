@@ -1,0 +1,50 @@
+{
+  "id": "20260918-214253-102-vaultwares-studio-63ed6ce4",
+  "createdAt": "2026-09-19T01:42:53.1026482Z",
+  "createdAtLocal": "2026-09-18 21:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-18 21:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "RESEARCH, no runs. Root-caused the user's 'no scenery' observation and it is upstream of splatfacto. The 14 Jun run used matching_method 'sequential' = COLMAP; every run since uses DA3-Streaming. Gaussians beyond 5x the core radius: COLMAP 3.6% and 1.1% beyond 10x; ALL THREE DA3 runs exactly 0.0% beyond 5x - a wall, not a falloff. Seed clouds explain it: COLMAP sparse_pc p95 6.58 / max 90.34 / ratio 13.7 vs DA3 combined_pcd p95 6.49 / max 9.20 / ratio 1.42. The two AGREE at p95, so DA3 is not worse in the near or mid field (18 Sep is denser there with 26x more points); what it lacks is the 0.1% tail between 20 and 90 units, which is the background houses and far trees. Cause: DA3 monocular depth truncated by depth_threshold 15.0 in the Space's _config plus conf_threshold_coef 0.75; COLMAP triangulates distant matches without such a limit. streaming_convert.py already documented the 1.4 max/p95 ratio as a reason to SKIP the spatial filter - the evidence was in a docstring before anyone looked for it. Same root cause as the neighbour's-house-collapse artefact. Culling order documented: depth_threshold (the one that matters) > conf_threshold_coef > splat_filter (deliberately skipped on this path) > cull_alpha_thresh > fuse_nanovdb depth-trunc (volume only). Observation 2 (haze worse in enclosed spaces) is consistent with the per-view opacity trend: translucent under-converged gaussians accumulate along rays that cross several layers of foliage/fabric, so the same deficiency is several times more visible in a nook than in the open; revisiting cannot fix an iteration-budget problem. VRAM: never",
+  "commands": [
+    "radial distribution of gaussians across 4 runs",
+    "seed cloud radius comparison COLMAP vs DA3",
+    "pytest tests -q (338 passed)"
+  ],
+  "files": [
+    "docs/scenery-and-scene-bounds-20260918.md",
+    "tools/run_train_only_with_retention.py"
+  ],
+  "planPath": "",
+  "contentHash": "63ed6ce4601ab1f0a714123ca30765702240363139abce4303f8c0f2d2539017",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

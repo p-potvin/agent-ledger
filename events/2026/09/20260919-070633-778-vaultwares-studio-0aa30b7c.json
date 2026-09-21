@@ -1,0 +1,51 @@
+{
+  "id": "20260919-070633-778-vaultwares-studio-0aa30b7c",
+  "createdAt": "2026-09-19T11:06:33.7782165Z",
+  "createdAtLocal": "2026-09-19 07:06",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, Grep, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-19 07:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Grep",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Root-caused repeated half-hour global bundle adjustments in the COLMAP mapper: the pipeline had never passed a single --Mapper.ba_* flag, so it ran COLMAP defaults. ba_global_max_refinements=5 re-solves the entire global BA up to five times per trigger (that is the back-to-back pair the user saw), ba_global_frames_ratio=1.1 fires a trigger every 10 percent growth (~25 over 1100 images), and ba_global_function_tolerance=0 disables Ceres early exit so every solve runs all 50 iterations. Added mapper_ba_options() to docker/worker/recon_entrypoint.py with defaults 2 / 1.3 / 1e-6 / 30 iterations, wired into both the main mapper call and retry_mapper, exposed via new CLI flags on the entrypoint and tools/queue_colmap_sfm.py, plus ba_use_gpu opt-in. Flags are probed from 'colmap mapper --help' because COLMAP 3.12 renamed ba_global_images_* to ba_global_frames_* and COLMAP aborts on unknown options; the July worker image version is unknown. Added tests/test_mapper_ba_options.py (6 tests). Suite 347 -> 353 passed, same 1 pre-existing failure. VERSION 1.4.1, pushed directly to main per user authorisation. Flagged the accuracy trade-off: fewer refinements and looser tolerance mean a less converged global solution while drift is still an open question.",
+  "commands": [
+    "git commit",
+    "git push origin main",
+    ".venv/Scripts/python.exe -m pytest -q"
+  ],
+  "files": [
+    "docker/worker/recon_entrypoint.py",
+    "tools/queue_colmap_sfm.py",
+    "tests/test_mapper_ba_options.py",
+    "VERSION"
+  ],
+  "planPath": "",
+  "contentHash": "0aa30b7cd3eddd4a993af25c6be62ca55c1437e9aa67625b16552f9ba9f036b2",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "c5098d5",
+    "hasChanges": true
+  }
+}

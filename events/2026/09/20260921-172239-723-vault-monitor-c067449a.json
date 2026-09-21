@@ -1,0 +1,50 @@
+{
+  "id": "20260921-172239-723-vault-monitor-c067449a",
+  "createdAt": "2026-09-21T21:22:39.7232078Z",
+  "createdAtLocal": "2026-09-21 17:22",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local plus Tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, ssh, curl, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-21 17:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local plus Tailscale",
+    "toolsUsed": [
+      "Bash",
+      "ssh",
+      "curl",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Correction: my earlier claim that Work Impact still rendered while other tabs failed was wrong. Work Impact fails identically. I had reasoned from the nginx 'location = /monitor/work-impact' block on greencloud, assuming the browser used same-origin paths; it does not, because the deployed bundle has absolute https://api.vaultwares.ca baked in, so that nginx block is never reached and is dead code for the deployed app. Verified all seven endpoints the app calls (monitor/services, monitor/changes, monitor/work-impact, monitor/deploys, projects/aliases, api/identities/stats/summary, api/telemetry/ai-sessions/summary) return HTTP 200 with zero access-control-allow-origin headers for Origin https://monitor.vaultwares.ca. Uniform single cause. Also confirmed same-origin https://monitor.vaultwares.ca/monitor/work-impact returns 200 while /monitor/services and /projects/aliases return 502, showing the Sep 9 nginx workaround does function but is unused by the browser, which is why it was believed fixed after curl-only validation. Matches user report: JSON arrives on the wire but is withheld from scripts. No changes made.",
+  "commands": [
+    "curl -H 'Origin: https://monitor.vaultwares.ca' https://api.vaultwares.ca/monitor/work-impact",
+    "curl https://monitor.vaultwares.ca/monitor/work-impact"
+  ],
+  "files": [
+    "src/api.ts",
+    "/etc/nginx/sites-enabled/monitor.vaultwares.ca.conf",
+    "/opt/vaultwares-api/api/app.py"
+  ],
+  "planPath": "",
+  "contentHash": "c067449a057e3c563ed0a34bd75785224cbcd0b94748b49d6511b05cfb234c48",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "4141e98",
+    "hasChanges": false
+  }
+}

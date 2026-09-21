@@ -1,0 +1,58 @@
+{
+  "id": "20260921-180237-766-vault-monitor-8b8dcb25",
+  "createdAt": "2026-09-21T22:02:37.7666644Z",
+  "createdAtLocal": "2026-09-21 18:02",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local plus Tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, ssh, scp, curl, python, npm, systemctl\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-21 18:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local plus Tailscale",
+    "toolsUsed": [
+      "Bash",
+      "ssh",
+      "scp",
+      "curl",
+      "python",
+      "npm",
+      "systemctl"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Completed four fixes. (1) CORS wildcard: added CORS_ALLOW_ORIGIN_REGEX and a shared origin_allowed() predicate to vaultwares-api api/app.py matching any https vaultwares.ca host plus tailnet 100.64.0.0/10 over http/https with optional port; rewired the duplicate _origin_allowed helpers in api/middleware.py and api/routes_auth.py to use it so all three checks share one source of truth; passed allow_origin_regex to CORSMiddleware. Unit-tested the regex against 10 allow and 10 deny cases including the vaultwares.ca.evil.com and evil-vaultwares.ca suffix attacks. Deployed the three files to the VPS (backup in /opt/vaultwares-api/.bak-20260921) and deleted the 29-entry CORS_ORIGINS line from .env so no third list remains. Verified brand-new-thing.vaultwares.ca is allowed with no list edit and both attack origins are rejected. (2) Normalized the work-impact nginx special case: removed the location = /monitor/work-impact block from greencloud monitor.vaultwares.ca.conf now that the general /monitor/ block reaches the API, and synced the stale sites-available copy (was from 2026-07-07). Caught and fixed my own error where the .bak landed inside sites-enabled, which nginx globs and which produced conflicting server name warnings; moved it to /etc/nginx/backup. (3) Added committed .env.production to vault-monitor pinning VITE_MONITOR_API_BASE empty so worktree and fresh-clone builds stay same-origin; verified by building with .env moved aside, producing 0 absolute URL occurrences where the same build previously produced 2. Documented in-file that ?? must NOT be changed to || since that would discard the empty value; this reverses my earlier recommendation. (4) journald: disk healthy at 68% with no I/O errors, so raised WatchdogSec from 3min to 10min via drop-in 60-vw-watchdog.conf to stop the SIGABRT kill and journal corruption cycle (5 watchdog",
+  "commands": [
+    "systemctl restart vaultwares-api",
+    "nginx -t && systemctl reload nginx",
+    "npm run build",
+    "systemctl restart systemd-journald"
+  ],
+  "files": [
+    "vaultwares-api/api/app.py",
+    "vaultwares-api/api/middleware.py",
+    "vaultwares-api/api/routes_auth.py",
+    "vault-monitor/.env.production",
+    "/etc/nginx/sites-enabled/monitor.vaultwares.ca.conf",
+    "/etc/systemd/system/systemd-journald.service.d/60-vw-watchdog.conf"
+  ],
+  "planPath": "",
+  "contentHash": "8b8dcb25878f9ef36116c9ef530aa73502918b5a508072459c0ba55a74bdb359",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "4141e98",
+    "hasChanges": true
+  }
+}

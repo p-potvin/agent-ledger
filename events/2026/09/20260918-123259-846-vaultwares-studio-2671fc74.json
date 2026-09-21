@@ -1,0 +1,51 @@
+{
+  "id": "20260918-123259-846-vaultwares-studio-2671fc74",
+  "createdAt": "2026-09-18T16:32:59.8464431Z",
+  "createdAtLocal": "2026-09-18 12:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-18 12:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Retry queued on a10g-large (46GB, USD 1.50/h) at 25000 iterations with SSH enabled, after three fixes. (1) SSH: HF Jobs have no Spaces-style dev mode, but run_job takes ssh=True - wired through as a --ssh flag on prepare_zerogpu_training and the runner now prints JobStatus.ssh_url as soon as it appears. (2) Progress/memory heartbeat in tools/run_train_only_with_retention.py: a daemon thread logs every 60s the elapsed time, the highest checkpoint step (parsed from step-*.ckpt filenames, since --steps-per-save 1000 writes them), the derived it/s, and cgroup + /proc memory. This is the signal that was missing yesterday - the OOM arrived with zero warning because the only output was the child's stdout and nerfstudio's Rich withholds its progress table when stdout is a pipe. (3) Memory gate from the postmortem now passes at 12.4GB of 46GB = 27%. SDPA/FlashAttention: does NOT apply to this job. --train-only runs ns-train splatfacto, which is gsplat CUDA rasterisation with no transformer and no attention. Attention in this codebase is DA3's multi-view attention in the SfM stage, which already ran free on ZeroGPU for this capture. Test double _FakeHub.run_job had drifted from the real signature and broke 6 tests on the ssh kwarg; updated and pinned with two new tests that ssh defaults off and forwards when asked. Suite 336.",
+  "commands": [
+    "python tools/prepare_zerogpu_training.py --job zerogpu-thorough3-2000-loop075-20260917 --iterations 25000 --flavor a10g-large --flavor l4x1 --scheduling-timeout 900 --ssh --submit",
+    "pytest tests -q (336 passed)"
+  ],
+  "files": [
+    "tools/run_train_only_with_retention.py",
+    "vaultwares_studio/runners/hf_jobs.py",
+    "tools/prepare_zerogpu_training.py",
+    "tests/test_flavor_fallback.py"
+  ],
+  "planPath": "",
+  "contentHash": "2671fc7431b548307d181a4167930f9d18cad665f010f7acbe414dc806062254",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

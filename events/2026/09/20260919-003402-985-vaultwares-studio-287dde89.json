@@ -1,0 +1,48 @@
+{
+  "id": "20260919-003402-985-vaultwares-studio-287dde89",
+  "createdAt": "2026-09-19T04:34:02.9853923Z",
+  "createdAtLocal": "2026-09-19 00:34",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-19 00:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Compared the user's local COLMAP DB (2000 images, D:/3D Reconstruction/runs/colmap-sept18-2026-local) against our 14 Sep cpu-upgrade job DB (500 images) and found a REAL DEFECT in our COLMAP path. Our feature_extractor sets single_camera and camera_model OPENCV but never passes ImageReader.camera_params, so COLMAP invents focal = 1.2 x max_dimension = 2304px (focal/width exactly 1.200, prior_focal_length 0) against ~890 measured for this phone - 2.4x too long. With prior_focal 0 COLMAP verifies pairs via the fundamental matrix, not the essential matrix. Result: config 2 CALIBRATED 0.0%, config 3 UNCALIBRATED 82.3%, median 36 matches/pair, 46% of pairs verified. The user's local run passed fx 948 (prior_focal 1) and got config 2 CALIBRATED 85.1%, median 754 matches/pair, 83% verified - 20x the matches per pair. Keypoints also confirm the user's instinct: ours median 11,486/image (COLMAP default cap) vs theirs 4,939 with max_num_features 4096, and theirs matched far better, so more keypoints was actively harmful. FIX in docker/worker/recon_entrypoint.py: new colmap_camera_params() builds fx,fy,cx,cy,k1,k2,p1,p2 from a calibration JSON, scaled to the resolution COLMAP will actually read, refusing on aspect-ratio mismatch (a crop cannot be scaled) and leaving distortion unscaled since it is normalised; new --calibration and --sift-max-num-features (default 4096) args; the extractor passes camera_params when known and prints an explicit WARNING naming UNCALIBRATED when it is not. 5 new tests. Suite 343. NOT yet wired into queue_colmap_sfm.py and no run submitted.",
+  "commands": [
+    "sqlite comparison of cameras/keypoints/matches/two_view_geometries across both DBs",
+    "pytest tests/test_colmap_camera_params.py -q (5 passed)"
+  ],
+  "files": [
+    "docker/worker/recon_entrypoint.py",
+    "tests/test_colmap_camera_params.py"
+  ],
+  "planPath": "",
+  "contentHash": "287dde89bcf1bfb94b4af0dfcdab9914678001b06f7d581b630d242096797b79",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20260921-185558-391-vault-monitor-aba8663d",
+  "createdAt": "2026-09-21T22:55:58.3913855Z",
+  "createdAtLocal": "2026-09-21 18:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local plus Tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, git, ssh, npm, curl\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-21 18:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local plus Tailscale",
+    "toolsUsed": [
+      "Bash",
+      "git",
+      "ssh",
+      "npm",
+      "curl"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Deployed vault-monitor and audited uncommitted work. Discovered a CI/webhook deploy pipeline for vault-monitor does exist, contradicting my earlier statement that none fired: the webroot on greencloud updated at 18:49 immediately after my push, serving v2.4.5 with 0 absolute URLs, proving .env.production works in CI. Corrected that claim (I had checked the API service timestamp, not the monitor webroot). Found index.html carried two version markers, a templated one outside head and a hardcoded stale <!-- v2.4.4 --> inside it; moved the templated comment into head and removed the duplicate so it tracks package.json and matches the CLAUDE.md convention. Committed as bb0afe1 with version bump 2.4.5 to 2.4.6 and shipped through the pipeline rather than overwriting the webroot by hand. Verified deploy at 18:55:07: exactly one <!-- v2.4.6 --> comment, 0 absolute URLs, live page 200, and all four same-origin API paths 200, so production is now fully same-origin. Webroot backup at /root/monitor-webroot-backup-20260921.tar.gz on greencloud. Also audited 30 repos for uncommitted work; both vault-monitor worktrees under Documents/Codex are confirmed merged into origin/main and are now safe to remove.",
+  "commands": [
+    "npm run build",
+    "git push origin main",
+    "tar czf /root/monitor-webroot-backup-20260921.tar.gz"
+  ],
+  "files": [
+    "vault-monitor/index.html",
+    "vault-monitor/package.json"
+  ],
+  "planPath": "",
+  "contentHash": "aba8663d9ca75c35b8430b80821c2082175b25a5a279366effebf42e88c3d0d5",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "bb0afe1",
+    "hasChanges": false
+  }
+}

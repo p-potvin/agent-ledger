@@ -1,0 +1,49 @@
+{
+  "id": "20260920-051205-555-python-zipper-cef4a403",
+  "createdAt": "2026-09-20T09:12:05.5552544Z",
+  "createdAtLocal": "2026-09-20 05:12",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: agent/extension-stream-detection\r\nTools used (this reply): Bash, Edit\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-09-20 05:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Diagnosed the chaturbate 403 as LL-HLS Delivery Directives: the captured URL was a blocking request for one part (sn=10176&_HLS_part=0), so yt-dlp retried a frozen sequence number for ~5 min then 403'd, and the ffmpeg fallback failed identically on the same URL. Added stripDeliveryDirectives (extension, at stream-store ingest) and strip_delivery_directives (worker, via _sanitize_stream_url, now applied in download_stream), dropping _HLS_msn/_HLS_part/_HLS_skip/_HLS_report plus host companion sn only when a directive is present; tokens and expiries untouched. 16 new checks/tests. Also confirmed the native messaging host is a single-shot reveal_path handler and cannot carry video, so a VDH-style hover preview needs MSE + hls.js in the sidebar, not the native host and not WASM. 99 extension checks and 47 python tests green.",
+  "commands": [
+    "npm run check",
+    "python -m unittest dataset_builder.tests.test_stream_capture"
+  ],
+  "files": [
+    "dataset_builder/ds_streams.py",
+    "extension/src/common/streams.ts",
+    "extension/src/background/sniffer.ts",
+    "extension/checks/segments.check.ts"
+  ],
+  "planPath": "",
+  "contentHash": "cef4a4031c1370db969bd3585047c961d8ae3a319b9a1131615c5fd715f672ec",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "agent/extension-stream-detection",
+    "head": "80f3f7b",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260919-170131-474-vault-commander-a4c77ed3",
+    "createdAt":  "2026-09-19T21:01:31.4747329Z",
+    "createdAtLocal":  "2026-09-19 17:01",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-commander",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: vw-codex-gallery-g-default\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-19 17:01 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+    "summary":  "Wired exact better-subtitles (French Nemotron-3.5 + BoostWords), live-subs, audio.cpp (sep, asr, e2e), and video facial recognition commands with bulletproof argument escaping across AHK companion, MPC menu, mpv lua, and Explorer shell",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "a4c77ed3f3402aa1861708cf3b80a588eacc987fd736506006a4e7ebead0bb89",
+    "git":  {
+                "repo":  "vault-commander",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+                "branch":  "vw-codex-gallery-g-default",
+                "head":  "38788e0",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "20260919-010531-225-vaultwares-studio-79ca487f",
+  "createdAt": "2026-09-19T05:05:31.2253989Z",
+  "createdAtLocal": "2026-09-19 01:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "handoff",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-19 01:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Wrote docs/HANDOFF-20260919.md for the next chat. Opens with the LIVE job 6aae148351992417dfcc885e (cpu-upgrade, no remote timeout, 1600 frames from the merged 3-clip video, threads -1, 4096 features, calibration passed as camera_params) and how to watch it with tools/tail_job_logs.py. Covers: the scenery root cause (COLMAP seed max/p95 13.7 vs DA3 1.42, agreeing at p95, DA3 zero gaussians past 5x core radius); our COLMAP running uncalibrated (focal 2304 = 1.2x width guess, 0% config-2 pairs, 36 median matches vs the user's 948/85%/754) and the recon_entrypoint fix; five explicit corrections of things I reported wrongly (the OOM misdiagnosed as a timeout, the 1006 loop-pair miscount, the densification-slowdown prediction that reversed, the unsafe fallback chain, the confounded drift metric and its own bad first result); what the capture protocol bought (closure 0.001, 17 loop pairs, seams at 0.08x median step); probe facts including MCMC NOT available so it needs an image rebuild; new tooling table; spend table incl. the USD 3.62 loss; and a 6-item next-steps list in evidence order. Also answered the user's frame mapping: my frame_00937 of 1600 = t 283.000s = their frame_01172 of 2000, exact 0ms match, rule of thumb yours = mine x 1.25. Confirmed I re-ran ffmpeg (fps=4, 1933 candidates, selected 1600) rather than subsampling the existing fps=8 3865-candidate set, and flagged the tradeoff that this costs exact frame-level comparability with the DA3 run. Suite 343. Nothing committed.",
+  "commands": [
+    "python tools/queue_colmap_sfm.py --no-timeout --yes",
+    "frame index mapping between the 1600 and 2000 sets"
+  ],
+  "files": [
+    "docs/HANDOFF-20260919.md"
+  ],
+  "planPath": "",
+  "contentHash": "79ca487f2f5df5027d0160739b68b1da444d1820b04ef6d20e02fbc7a31a2353",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

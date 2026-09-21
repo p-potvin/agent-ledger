@@ -1,0 +1,56 @@
+{
+  "id": "20260920-021117-453-python-zipper-8041c8a6",
+  "createdAt": "2026-09-20T06:11:17.4533441Z",
+  "createdAtLocal": "2026-09-20 02:11",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: agent/extension-stream-detection\r\nTools used (this reply): Bash, Edit, Claude_Browser\r\nMCP servers accessed (this reply): ccd_session, Claude_Browser\r\nTime: 2026-09-20 02:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": [
+      "ccd_session",
+      "Claude_Browser"
+    ]
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Second batch: fixed the upscaler model ordering (recommended model leads instead of os.listdir order) and un-ignored dataset_builder/tests so the suite is tracked. Scoring rework: dimensionsFromUrl parses WxH from paths/params and is trusted, Resource Timing API fills missing byte sizes, unmeasurable candidates get a facts.unknown penalty so they no longer clear INTERESTING, pre-selection refuses clusters it cannot judge, sort sinks unknowns. Verified on the reported CDN that the -640x480 variant is the LARGER file (47KB vs 16KB), so no thumbnail rewrite. Stream work: barber pole given 8px and switched to is_live rather than bytes_total, eager probing via setOnNewStream, streams parked by page URL on navigation, idle streams folded behind a count, and media-log ingest now believes a media Content-Type over a disguised .js/.css/.woff extension. 90 extension checks and 41 python tests green.",
+  "commands": [
+    "npm run typecheck",
+    "npm run check",
+    "python -m unittest dataset_builder.tests.test_server_pipeline",
+    "yt-dlp -F (apple reference master)"
+  ],
+  "files": [
+    "extension/src/common/harvest.ts",
+    "extension/src/common/scoring.ts",
+    "extension/src/common/page_rank.ts",
+    "extension/src/background/sniffer.ts",
+    "extension/src/background/media_log.ts"
+  ],
+  "planPath": "",
+  "contentHash": "8041c8a647ae4b2e7ab5dfcfe26e1fdb69aacf402b6330ec75b4d8c3723716e3",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "agent/extension-stream-detection",
+    "head": "ace73e8",
+    "hasChanges": true
+  }
+}
