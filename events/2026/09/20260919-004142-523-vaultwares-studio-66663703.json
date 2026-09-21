@@ -1,0 +1,46 @@
+{
+  "id": "20260919-004142-523-vaultwares-studio-66663703",
+  "createdAt": "2026-09-19T04:41:42.5233568Z",
+  "createdAtLocal": "2026-09-19 00:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-19 00:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Camera question settled by measurement, and a second thread-cap finding. The user flagged that the footage is iPhone 11 video at 0.5x (ultra-wide), NOT the device default, so our calibration might not transfer. It does: horizontal FOV agrees across every capture - calibration file 94.5 deg (fx 886.8), DA3 sunny500 94.9 (881.9), DA3 cloudy1000 93.3 (906.1), DA3 thorough3 93.5 (902.7). Same lens and zoom throughout, so the 14 Jun calibration is valid for the new footage. But 94 deg is emphatically NOT the iPhone 11 main camera (~69 deg), and the filename iphone-1920x1080.json implies a device default, so I rewrote its 'source' field to record the 0.5x ultra-wide lens, the 94.5 deg FOV, an explicit warning not to reuse it for 1x footage, and the three-way cross-check. The user's local prior of 948 px = 90.7 deg is ~7% long against the measured 886.8; COLMAP's bundle adjustment will refine it, so not worth interrupting their run. THROUGHPUT: our HF job did 500 images in 167 min = 3.0 img/min; the user's local run projects 2000 in ~120 min = 16.7 img/min, a 5.6x difference, on a 10-thread PC versus a 64-vCPU cpu-upgrade box. Our extraction uses 4 threads and matching 8, capped because 8 threads x full-res SIFT pyramid was measured at ~28GB against cpu-upgrade's 32GB. That cap was sized for UNCAPPED features (median 11,486); with max_num_features now 4096 and max_image_size 1280 the per-thread footprint is far smaller, so the caps are likely over-conservative by a wide margin. Raising them is the obvious next lever but",
+  "commands": [
+    "FOV comparison across calibration file and three DA3 captures",
+    "throughput comparison HF job vs local"
+  ],
+  "files": [
+    "config/calibrations/iphone-1920x1080.json"
+  ],
+  "planPath": "",
+  "contentHash": "66663703af7ac451c50f571ceacaeccc248b63e3455847530cad241d7a7bd0c6",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

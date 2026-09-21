@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260921-143137-764-vault-streaming-30899d1a",
+    "createdAt":  "2026-09-21T18:31:37.7649514Z",
+    "createdAtLocal":  "2026-09-21 14:31",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-streaming",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming  Branch: vw-codex-ios-container\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-21 14:31 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-streaming",
+    "summary":  "Fixed subtitle WebVTT rendering, integrated Start-BetterSubtitles.ps1 with temp/process cleanup, and transformed iOS layout to native app design with touch long-press",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "30899d1a5d9264dfd2a3ed705718592953696c28b90634678e9318537ee0aa67",
+    "git":  {
+                "repo":  "vault-streaming",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-streaming",
+                "branch":  "vw-codex-ios-container",
+                "head":  "c88018d",
+                "hasChanges":  true
+            }
+}

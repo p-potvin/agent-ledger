@@ -1,0 +1,51 @@
+{
+  "id": "20260918-124359-498-vaultwares-studio-f5c01b8a",
+  "createdAt": "2026-09-18T16:43:59.4987275Z",
+  "createdAtLocal": "2026-09-18 12:43",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Write, TaskStop\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-18 12:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Caught and fixed a hazard I introduced 10 minutes earlier. I queued the retry with flavour chain [a10g-large, l4x1] and a 900s scheduling timeout; the memory gate only validated flavors[0]. a10g-large did not schedule, so at the 15-minute mark the runner would have fallen back to l4x1 - the exact 12.4GB/30GB = 41% configuration that was OOMKilled for USD 3.62. A safe head with an unsafe tail is the unsafe configuration on a delay. Stopped the local task and cancelled HF job 6aad67e152d0dbd7f1d6a9a6 while still SCHEDULING; final durations None, so it was never billed (zero cost). FIX: check_host_memory now validates EVERY flavour in the chain and returns the filtered list, which submit() then uses; it raises only when nothing fits, and --allow-memory-risk keeps the whole chain. 3 new tests including the exact [a10g-large, l4x1] chain. Suite 338. Resubmitted as [a10g-large, a10g-largex2] (46GB / 92GB, both inside the safe share) with --scheduling-timeout 1800 since a10g-large was slow to schedule, --ssh, 25000 iterations. SSH endpoint from the cancelled attempt confirmed the feature works: ssh://<job-id>@ssh.hf.jobs.",
+  "commands": [
+    "TaskStop b3iad2obq",
+    "cancel_job 6aad67e152d0dbd7f1d6a9a6 (SCHEDULING, unbilled)",
+    "python tools/prepare_zerogpu_training.py --flavor a10g-large --flavor a10g-largex2 --scheduling-timeout 1800 --ssh --submit",
+    "pytest tests -q (338 passed)"
+  ],
+  "files": [
+    "tools/prepare_zerogpu_training.py",
+    "tests/test_training_memory_guard.py"
+  ],
+  "planPath": "",
+  "contentHash": "f5c01b8a1bec70bff7a22cc360086f1d85d408922b3f3e184073cc2ef2de2532",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

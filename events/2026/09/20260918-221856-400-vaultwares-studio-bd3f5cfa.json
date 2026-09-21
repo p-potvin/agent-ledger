@@ -1,0 +1,47 @@
+{
+  "id": "20260918-221856-400-vaultwares-studio-bd3f5cfa",
+  "createdAt": "2026-09-19T02:18:56.4007003Z",
+  "createdAtLocal": "2026-09-18 22:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-18 22:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "CPU COLMAP confirmed REAL, not a note: tools/queue_colmap_sfm.py exists and ran on 14 Sep producing colmap_database.db (1.01GB) + processed_min.zip (822MB), 500 frames / 491 registered, matching_used sequential, process_data_sequential_s 10039 (167 min) with vocab_tree_match_s 5997. Cost evidence from the job history: a cpu-upgrade job ran 316 min for ~USD 0.21, i.e. the USD 0.04/hr rate holds. So COLMAP on CPU is cheap in money and slow in wall clock. Added tools/probe_worker_env.py (throwaway cpu-upgrade job, no inputs/outputs, under a cent) and ran it against the DA3 training image. DECISIVE RESULT - MCMC IS NOT AVAILABLE in the deployed image: splatfacto.strategy False, max_gs_num False, noise_lr False, mcmc_opacity_reg False, mcmc_scale_reg False, splatfacto_field_count 36, and 'help_has --pipeline.model.strategy' False against 40317 chars of help text. filter_supported_flags would have silently dropped the flags. MCMC therefore needs an image rebuild, which the user already suggested. Other environment facts now known rather than assumed: torch 2.1.2+cu118, gsplat 1.4.0, numpy 1.26.4, xformers MISSING, nerfstudio has no __version__; SDPA present with flash_sdp_enabled and mem_efficient_sdp_enabled both True (so SDPA is already on, and remains irrelevant to splatfacto which has no attention); COLMAP 3.9.1 at /usr/local/bin/colmap built WITH CUDA; cpu-upgrade has 64 vCPU and a 32GB cgroup limit (host reports 517GB). The 64 vCPU is material for COLMAP feature matching. stop-split-at and cull-alpha-thresh ARE supported, confirming the flags used so far were not being dropped.",
+  "commands": [
+    "python tools/probe_worker_env.py --yes",
+    "python tools/tail_job_logs.py --job-id 6aadf0a552d0dbd7f1d6ca85"
+  ],
+  "files": [
+    "tools/probe_worker_env.py"
+  ],
+  "planPath": "",
+  "contentHash": "bd3f5cfa821c652c0f9871b7b60d2ed78ea4b7e42f33e3a12bb060342130046c",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "20260918-124754-881-vaultwares-studio-5080ad2c",
+  "createdAt": "2026-09-18T16:47:54.8810816Z",
+  "createdAtLocal": "2026-09-18 12:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths\r\nTools used (this reply): Bash, PowerShell, Write, TaskStop\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-18 12:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "TaskStop"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "Per the user: cap under 30 min and do not let the large GPU schedule. Cancelled job 6aad6a7552d0dbd7f1d6aa36 while SCHEDULING (unbilled, durations None) and removed a10g-largex2 (USD 3.00/h) from the chain entirely. Added --max-minutes to tools/prepare_zerogpu_training.py: previously timeout_seconds was always est_minutes*60*2.5, derived from a 650 iter/min constant measured on one scene - the formula put a 40000-iteration run at 66 min and it was still going at 271. --max-minutes sets the remote cap directly, and HF enforces it rather than the launcher. REDUCED ITERATIONS 25000 -> 8000, which is a judgement call the user did not explicitly make and needs confirming: a hard 30-min cap uploads NOTHING when it fires, so 25000 under that cap was a guaranteed total loss. Sizing: merged1600 managed 8.95 it/s on l4x1 with a smaller scene; thorough3 has 3.3x the volume so more gaussians and a slower iteration, estimate 5-7 it/s, giving roughly 8-11k iterations in the ~26 min left after startup. --keep-checkpoint is already passed, so --refine-mode can resume to 25000 later without repeating this. Submitted a10g-large only, --max-minutes 29, --ssh, scheduling timeout 1800s. Suite 338.",
+  "commands": [
+    "TaskStop bktnd0mms",
+    "cancel_job 6aad6a7552d0dbd7f1d6aa36 (SCHEDULING, unbilled)",
+    "python tools/prepare_zerogpu_training.py --iterations 8000 --flavor a10g-large --max-minutes 29 --ssh --submit"
+  ],
+  "files": [
+    "tools/prepare_zerogpu_training.py"
+  ],
+  "planPath": "",
+  "contentHash": "5080ad2c0bf505bb9d111ad3c0eccd9db5a8e560d48c630e9a1bd8174d6674f3",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "vw-codex/native-splats-camera-paths",
+    "head": "f1b080d",
+    "hasChanges": true
+  }
+}

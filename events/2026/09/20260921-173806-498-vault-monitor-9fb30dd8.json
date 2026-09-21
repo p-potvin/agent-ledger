@@ -1,0 +1,51 @@
+{
+  "id": "20260921-173806-498-vault-monitor-9fb30dd8",
+  "createdAt": "2026-09-21T21:38:06.4981036Z",
+  "createdAtLocal": "2026-09-21 17:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local plus Tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, ssh, curl, journalctl, git\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-21 17:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local plus Tailscale",
+    "toolsUsed": [
+      "Bash",
+      "ssh",
+      "curl",
+      "journalctl",
+      "git"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Answered last-API-deployment question and tested the recent-change hypothesis. Last deployment: code rsynced to /opt/vaultwares-api Sep 19 16:03 UTC (commits through 41b798f, all promking OnlyFans sprite/fetcher work, no vault-streaming); /etc/nginx/sites-enabled/api.vaultwares.ca.conf on the VPS rewritten Sep 20 08:46:34 UTC; service restarted Sep 20 08:46:55 UTC. The nginx rewrite added client_max_body_size 25M and rotated X-VW-Gateway-Secret, consistent with transcoding job payloads, but diff against the June backup proves it did NOT touch CORS. Retracted my mid-investigation smoking-gun claim about that timestamp. Proved the app itself never emits access-control-allow-origin for the monitor origin even on loopback 127.0.0.1:9001, with or without the gateway secret, so nginx is not involved and the cause is purely the app allowlist. Browser cross-origin traffic to api.vaultwares.ca with a monitor referer has been continuous since Sep 7 with no step change on Sep 20. Confirmed user browsed the monitor Sep 20 at 04:30:31 and 04:35 EDT, but nginx logs HTTP 200 for CORS-blocked responses too, so logs cannot distinguish worked from blocked. Investigated the reported 4-minute outage 14:33:56-14:37:56: no service stop on either host in UTC or EDT interpretation; only systemd-journald restarted on greencloud at 14:36:52. No changes made.",
+  "commands": [
+    "diff /etc/nginx/backup/api.vaultwares.ca.conf.bak-20260612130327 /etc/nginx/sites-enabled/api.vaultwares.ca.conf",
+    "curl -H 'Origin: https://monitor.vaultwares.ca' http://127.0.0.1:9001/monitor/services"
+  ],
+  "files": [
+    "/etc/nginx/sites-enabled/api.vaultwares.ca.conf",
+    "/opt/vaultwares-api/api/app.py",
+    "/opt/vaultwares-api/.env"
+  ],
+  "planPath": "",
+  "contentHash": "9fb30dd8f5ba32ce88d2bf1977436b7762bdc8c76067ff11a953940c2f98904c",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "4141e98",
+    "hasChanges": false
+  }
+}

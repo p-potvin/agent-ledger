@@ -1,0 +1,47 @@
+{
+  "id": "20260919-122513-901-vaultwares-studio-40eee78c",
+  "createdAt": "2026-09-19T16:25:13.9014344Z",
+  "createdAtLocal": "2026-09-19 12:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-studio",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-09-19 12:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-studio",
+  "summary": "COLMAP job 6aae148351992417dfcc885e: HF reports ERROR / 'Job timeout' after 41446s (11.5h) but the work COMPLETED AND UPLOADED - log ends with '[recon] registered images (sequential): 1600/1600', '[sfm-only] complete', '[vw-stage] exit code: 0', '[vw-stage] outputs uploaded', and all five artifacts are in the repo. The ERROR is the container being reaped after its work finished; do not read it as a failure. RESULTS: 1600/1600 registered (100%, vs 491/500 = 98% on the uncalibrated 14 Sep run), avg_keypoints 6123.9, raw_match_pairs 51239 with avg_raw_matches 432.0, verified_pairs 34542, mapper elapsed 548 min of the 690 total. THE CALIBRATION FIX WORKED: log shows '[recon] COLMAP camera_params: 886.849300,885.547297,965.085623,541.743659,0.014108,-0.014671,-0.000195,-0.000431' and the output transforms carry fl_x 888.57 - COLMAP refined our 886.85 prior by 0.2%, confirming the measurement. THREADS -1 IS SAFE: heartbeat peaked at 20.3/32 GB (63%) on 64 vCPU, and fell to 6-11 GB later, so the old 4/8 thread caps were far too conservative. SCENERY TEST, the point of the run: new seed 508,955 points, p95 8.68, p99.9 19.22, max 41.90, max/p95 = 4.8 - versus DA3's 1.4 wall and the 14 Jun COLMAP's 13.7. So COLMAP on OUR footage does produce the far tail DA3 cannot, 3.4x DA3's ratio, though less extreme than the 14 Jun run (which was uncalibrated and 500 frames, so not directly comparable). Cost ~USD 0.46. NOTE: --no-timeout propagated (it ran 11.5h, past the preset's 6h cap) but HF appears to impose its own ceiling near 11.5h.",
+  "commands": [
+    "fetch_job_logs 6aae148351992417dfcc885e",
+    "hf_hub_download processed_min.zip",
+    "radial tail measurement of the new COLMAP seed"
+  ],
+  "files": [
+    "D:/vaultwares-studio-jobs/data/jobs/colmap-merged1600-20260919/reconstruction_sfm/remote_out"
+  ],
+  "planPath": "",
+  "contentHash": "40eee78c529d991c746ef550d80ff69b1750c7aa8073c28af6901866297b7f9b",
+  "git": {
+    "repo": "vaultwares-studio",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-studio",
+    "branch": "main",
+    "head": "c5098d5",
+    "hasChanges": true
+  }
+}

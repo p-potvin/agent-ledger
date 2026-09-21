@@ -1,0 +1,51 @@
+{
+  "id": "20260921-171014-197-vault-monitor-6382241b",
+  "createdAt": "2026-09-21T21:10:14.1970712Z",
+  "createdAtLocal": "2026-09-21 17:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local plus Tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, ssh, git, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-21 17:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local plus Tailscale",
+    "toolsUsed": [
+      "Bash",
+      "ssh",
+      "git",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Traced origin of vault-monitor CORS break. Correction to earlier finding: .env was never removed. It is still at Desktop/Github Repos/vault-monitor/.env, mtime 2026-09-05 21:35, unchanged. Real cause: the live bundle was built from a git worktree under Documents/Codex/2026-09-03/c/work/ (branches vw-codex-clopeux-resources and vw-codex-resource-monitor). Worktrees do not receive gitignored files, so .env was absent and the ?? fallback in src/api.ts:89 baked in absolute https://api.vaultwares.ca. Verified: both worktree dist bundles contain 2 occurrences of the absolute URL, main repo dist contains 0, live bundle contains 2. Deployed to /var/www/monitor.vaultwares.ca 2026-09-10 00:03. Separately confirmed the AI bot mitigation is real but unrelated: /etc/nginx/conf.d/protect_stream.conf authored 2026-09-09 01:06 in the same Codex scratch dir, blocks GPTBot/ClaudeBot/PerplexityBot etc from tube-site stream proxying, plus per-IP stream conn limit raised 3 to 6 at 22:29. Also found ledger events 20260909-232232 and 20260909-234240 showing the 100.67.25.118:9001 502 was already known on 09-09 and worked around with a single /monitor/work-impact location rather than fixing the loopback bind. No changes made.",
+  "commands": [
+    "git worktree list",
+    "grep -c https://api.vaultwares.ca dist/assets/*.js"
+  ],
+  "files": [
+    "src/api.ts",
+    ".env",
+    "/etc/nginx/conf.d/protect_stream.conf",
+    "/etc/nginx/sites-enabled/monitor.vaultwares.ca.conf"
+  ],
+  "planPath": "",
+  "contentHash": "6382241b2367eec5b7af9ad4de3f75db62f457e9775cda1d54d3bd1934de8a8e",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "4141e98",
+    "hasChanges": false
+  }
+}

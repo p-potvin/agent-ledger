@@ -1,0 +1,51 @@
+{
+  "id": "20260921-175027-594-vault-monitor-c9f88ff7",
+  "createdAt": "2026-09-21T21:50:27.5947571Z",
+  "createdAtLocal": "2026-09-21 17:50",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local plus Tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, ssh, curl, python3, systemctl\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-21 17:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local plus Tailscale",
+    "toolsUsed": [
+      "Bash",
+      "ssh",
+      "curl",
+      "python3",
+      "systemctl"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Applied two prod fixes on vps-ovhcloud (100.67.25.118) with user authorization. Backed up /opt/vaultwares-api/.env to .env.bak-20260921-cors-bind. (1) Binding: API_HOST changed 127.0.0.1 to 0.0.0.0 so greencloud can reach 100.67.25.118:9001; verified UFW already restricts 9001/tcp to the tailscale0 interface only, and confirmed the VPS public IP 51.79.55.113:9001 does not answer after the change. (2) CORS: added CORS_ORIGINS with 29 entries covering vaultwares.ca plus 17 https subdomains, the three tailnet host IPs over http and https, and the localhost dev origins. Restarted vaultwares-api. Verified: api.vaultwares.ca now returns access-control-allow-origin https://monitor.vaultwares.ca with vary Origin; the previously 502 same-origin proxy paths /monitor/services, /projects/aliases and /monitor/work-impact all return 200; OPTIONS preflight now returns 200 with full CORS headers where it previously returned 400. Separately identified the 4-minute Uptime Kuma outage on 2026-09-20 14:33-14:38 EDT as a Tailscale DERP relay timeout on greencloud (Ashburn relay unheard for up to 4m29s) coinciding with a systemd-journald watchdog timeout and journal corruption, which explains why greencloud-hosted services alarmed while the VPS-local API did not.",
+  "commands": [
+    "systemctl restart vaultwares-api",
+    "ss -ltnp | grep 9001",
+    "curl -H 'Origin: https://monitor.vaultwares.ca' https://api.vaultwares.ca/monitor/services"
+  ],
+  "files": [
+    "/opt/vaultwares-api/.env",
+    "/opt/vaultwares-api/.env.bak-20260921-cors-bind"
+  ],
+  "planPath": "",
+  "contentHash": "c9f88ff7a4aade87c886317af359001dd4f3ecb07d9528150b3a74484bec89af",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "4141e98",
+    "hasChanges": false
+  }
+}

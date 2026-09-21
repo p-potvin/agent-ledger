@@ -1,0 +1,51 @@
+{
+  "id": "20260921-164143-652-vault-monitor-eb0eef34",
+  "createdAt": "2026-09-21T20:41:43.6523044Z",
+  "createdAtLocal": "2026-09-21 16:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-monitor",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local plus Tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor  Branch: main\r\nTools used (this reply): Bash, ssh, curl, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-21 16:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local plus Tailscale",
+    "toolsUsed": [
+      "Bash",
+      "ssh",
+      "curl",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-monitor",
+  "summary": "Diagnosed vault-monitor 'API degraded'. API is genuinely up (200 over tailnet). Cause 1: deployed bundle at monitor.vaultwares.ca has absolute https://api.vaultwares.ca baked in, because .env (which sets VITE_MONITOR_API_BASE empty) is gitignored and absent at build time, so the ?? fallback at src/api.ts:89 applied. Requests become cross-origin, and vaultwares-api CORS allowlist (api/app.py:143) holds only localhost/127.0.0.1 dev origins since CORS_ORIGINS and ALLOWED_ORIGINS are unset in /opt/vaultwares-api/.env, so no access-control-allow-origin comes back for the monitor origin and the browser blocks it. Cause 2 (independent): same-origin fallback proxy /monitor/ and /projects/ in greencloud monitor.vaultwares.ca.conf targets 100.67.25.118:9001 and 502s with connection refused, because API_HOST=127.0.0.1 binds uvicorn to loopback only. No changes made; diagnosis only.",
+  "commands": [
+    "curl -H 'Origin: https://monitor.vaultwares.ca' https://api.vaultwares.ca/monitor/services",
+    "ssh root@100.67.25.118 ss -ltnp"
+  ],
+  "files": [
+    "src/api.ts",
+    ".env",
+    "/etc/nginx/sites-enabled/monitor.vaultwares.ca.conf",
+    "/opt/vaultwares-api/api/app.py"
+  ],
+  "planPath": "",
+  "contentHash": "eb0eef3465562a245cd6f756624360f2253d349cc3b9abbb62c3a516bedf313b",
+  "git": {
+    "repo": "vault-monitor",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-monitor",
+    "branch": "main",
+    "head": "4141e98",
+    "hasChanges": false
+  }
+}
