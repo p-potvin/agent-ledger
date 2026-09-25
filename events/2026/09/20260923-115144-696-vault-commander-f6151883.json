@@ -1,0 +1,50 @@
+{
+  "id": "20260923-115144-696-vault-commander-f6151883",
+  "createdAt": "2026-09-23T15:51:44.6967472Z",
+  "createdAtLocal": "2026-09-23 11:51",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: plan\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: agent/extension-stream-detection\r\nTools used (this reply): Agent, Edit, PowerShell\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-09-23 11:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "plan",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Agent",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Folded the sidecar survey into the media-records plan. Corrections: there are TWO competing sidecar families, video '<file.ext>.meta.json' (enhancements/enhancementDetails/enhancedPath + flat ffprobe fields, absolute paths) owned by vault-explorer vw_media, and image '<stem>.json' (image block) owned by image_tagger and read by ColONEL-KFC; they overlap on the <file>.meta.json candidate so one file can legally hold both. Organize-Mp4Sidecars would normalise one onto the other - only prevented today by a commented-out regex at :152-153. Also: .enhanced/ has two live naming conventions (<base><ext> and <base>_enhanced.mp4), subtitles are written to BOTH original and enhanced copy plus .vtt shadows (up to 4 files per language), the global .thumbs/ bakes the relpath into the filename so moves invalidate it by design, and identities do NOT obey sidecar-is-truth because gallery.db holds the record keyed on image_path/rel_path - making the identities phase the riskiest, not a repeat of the file case. Confirmed no content hashing and no embedded metadata anywhere first-party, which validates the fingerprint and ADS choices. Plan updated, still not executed.",
+  "commands": [
+    "read vw_media/state.py",
+    "read image_tagger/sidecar.py"
+  ],
+  "files": [
+    "C:\\Users\\Administrator\\.claude\\plans\\composed-wandering-fountain.md",
+    "vault-explorer/python-scripts/vw_media/state.py",
+    "vault-commander/cli/Organize-Mp4Sidecars.ps1",
+    "ColONEL-KFC/face_organizer/db.py"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\composed-wandering-fountain.md",
+  "contentHash": "f6151883e88f139627b49e975166c6ddb3ee6ddcbbab0e35b5431cecfa22cc6f",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "agent/extension-stream-detection",
+    "head": "98f0b43",
+    "hasChanges": true
+  }
+}

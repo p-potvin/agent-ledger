@@ -1,0 +1,46 @@
+{
+  "id": "20260923-143859-060-colonel-kfc-a86df3fe",
+  "createdAt": "2026-09-23T18:38:59.0601113Z",
+  "createdAtLocal": "2026-09-23 14:38",
+  "timezone": "Eastern Standard Time",
+  "project": "ColONEL-KFC",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: agent/extension-stream-detection\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-09-23 14:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "F:\\amd\\gallery rebuild finished and verified. New DB 53.6MB: legacy 'centroid' column gone, identities and face_crops schemas now byte-match both G:\\Gallery and G:\\Galleries\\Celebrities, image_path corrected from F:\\amd\\Gallery to F:\\amd\\gallery. 269 identities (was 209), 6,756 face_crops (was 6,503), 188 indexed / 81 insufficient. CORRECTION to an earlier claim: the 'invalid' status DOES still get produced by current code - 81 identities now carry it, up from 25 - my earlier statement that it would not come back was wrong. Diagnosed the 81 failures: 41 identities holding 6,341 images have NO sidecars at all (never run through tag-images, so the tagged-single-person gate has nothing to read), 16 are fully tagged but genuinely short of the 6-photo minimum, and 24 are empty folders. So roughly half the failures are recoverable by running vw tag-images on those 41 folders and reindexing, rather than being a face-detection problem.",
+  "commands": [
+    "Reindex-Gallery.ps1 -Gallery F:\\amd\\gallery -Execute",
+    "sqlite pragma table_info comparison"
+  ],
+  "files": [
+    "F:\\amd\\gallery\\gallery.db"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\composed-wandering-fountain.md",
+  "contentHash": "a86df3fe3fbaad04c02ce8d29f38d5c973dc95298f8242a688ad1d7b242e6e37",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "agent/extension-stream-detection",
+    "head": "98f0b43",
+    "hasChanges": true
+  }
+}

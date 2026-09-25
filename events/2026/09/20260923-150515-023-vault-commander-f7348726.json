@@ -1,0 +1,45 @@
+{
+  "id": "20260923-150515-023-vault-commander-f7348726",
+  "createdAt": "2026-09-23T19:05:15.0238254Z",
+  "createdAtLocal": "2026-09-23 15:05",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: agent/extension-stream-detection\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-09-23 15:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Rescan with the 52 path exclusions confirms they removed exactly the right thing. Masters 180,399 -> 126,628 (-53,771) and of that reduction 53,171 were masters with NO sidecar - i.e. tooling folders full of untracked images, not library. Sidecar counts barely moved: stem 81,692->81,406, canonical 14,903 unchanged, meta 3,506->3,192, so only ~600 sidecars lived in excluded areas. Library intact. Real migration scope now: ~99,500 sidecars, 32,938 masters needing a new sidecar, 5,811 doubles of which 5,793 conflict on the image block, 3,403 sidecars carrying an absolute path, 88 ambiguous. The 88 ambiguous all now sit in F:\\amd\\gallery and are a real pattern, not noise: same stem in two formats (jpg+png, jpg+webp) sharing one <stem>.json - inspected aubreyxx/1536x2048_...edited where a 3.8MB .jpg and 3.7MB .png both claim one 1,404-byte sidecar holding a single image block. The migration needs an explicit rule for these since the tags describe the picture, not the encoding - most likely copy the sidecar to both formats under the canonical name.",
+  "commands": [
+    "python scan.py D:/ E:/ F:/ G:/ --json"
+  ],
+  "files": [
+    "vault-commander/cli/utils/media_records/scan.py"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\composed-wandering-fountain.md",
+  "contentHash": "f734872658852e04e0a7bb8d4cfee932ca36b1492b88a04a347ccfd429f042b3",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "agent/extension-stream-detection",
+    "head": "98f0b43",
+    "hasChanges": true
+  }
+}

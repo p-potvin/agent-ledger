@@ -1,0 +1,48 @@
+{
+  "id": "20260923-130403-310-vault-commander-e1995e33",
+  "createdAt": "2026-09-23T17:04:03.3108081Z",
+  "createdAtLocal": "2026-09-23 13:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: agent/extension-stream-detection\r\nTools used (this reply): Write, Bash, PowerShell\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-09-23 13:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Write",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Refactored companions_for into a declarative COMPANION_RULES table so adding a companion type is one entry rather than editing logic; added a bounded per-directory listing cache. Added Plex/Jellyfin/Emby to scan exclusions (.stash already present; Plex found at E:\\Plex Media Server, Jellyfin is on C: off the media roots). Wrote cli/utils/Remove-ToRecycleBin.ps1 - the shared Recycle Bin helper the CLI never had - which refuses volumes with no bin (UNC/removable, where the shell API silently hard-deletes) and refuses items over -MaxSizeGB (which Windows would also hard-delete), supports -WhatIf, and was verified to bin and restore. Used it to remove G:\\Galleries\\Celebrities\\.commons-imports (1,680 files, 0.26 GB, 207 folders) per the user; recoverable from the bin. Kicked off the full four-root dry run (past 64,000 masters, still walking). Investigated the three galleries: F:\\amd\\gallery is on the OLD schema - its identities table still carries the legacy 'centroid' column the other two dropped, plus 25 rows with an 'invalid' status current code does not produce - 270 dirs / 30,295 images / 209 identities / 6,503 face_crops. Not started the rebuild; awaiting scope decision.",
+  "commands": [
+    "Remove-ToRecycleBin -Path .commons-imports",
+    "python scan.py D:/ E:/ F:/ G:/ --json"
+  ],
+  "files": [
+    "vault-commander/cli/utils/media_records/scan.py",
+    "vault-commander/cli/utils/Remove-ToRecycleBin.ps1"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\composed-wandering-fountain.md",
+  "contentHash": "e1995e339395356f04861eb944418ff9fc7470cba9a25bfcc52c96e9d995f3aa",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "agent/extension-stream-detection",
+    "head": "98f0b43",
+    "hasChanges": true
+  }
+}
