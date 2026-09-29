@@ -1,0 +1,47 @@
+{
+  "id": "20260927-202054-377-qa-automation-e6f403ea",
+  "createdAt": "2026-09-28T00:20:54.3772339Z",
+  "createdAtLocal": "2026-09-27 20:20",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-27 20:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Read-only QA audit. greencloud /opt/qa-automation at eafd459 (behind local 1c1117d, git fetch fails: no creds), docker qa_runner 'Up 2 months' but hung 67 days on npm run report:search-visibility since 22 Jul 15:04 (earlier own-domain-stealth exit 1, search-visibility -15). No QA systemd timers/cron on greencloud. Local Windows task 'Prom-King Full QA Tor Run' is manual-only (one-shot trigger +1y by design), last run 26 Sep 20:45 ok. Local Tor runs 25 Aug-26 Sep mostly clean (3 sites x ~40-48 pages, failures=0) but ads=0 on every run except 26 Aug; crashes 1 Sep and 13 Sep (browser closed). Local qa-automation has someone's uncommitted edits to 5 mjs files. Awaiting user choice on how to deploy pills spec.",
+  "commands": [
+    "ssh root@100.73.93.84 docker top/logs qa_runner",
+    "Get-ScheduledTask"
+  ],
+  "files": [
+    "/opt/qa-automation/run_continuous_qa.py",
+    "qa-automation/scripts/scratch/register-scheduled-task.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "e6f403ea554337142ca63b52fe876a2b8a70ca6d2cb8203dad2a43047d104666",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "9eaf227",
+    "hasChanges": false
+  }
+}

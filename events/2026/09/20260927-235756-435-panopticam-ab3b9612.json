@@ -1,0 +1,55 @@
+{
+  "id": "20260927-235756-435-panopticam-ab3b9612",
+  "createdAt": "2026-09-28T03:57:56.4358437Z",
+  "createdAtLocal": "2026-09-27 23:57",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows workstation (local) + OVH VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-27 23:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows workstation (local) + OVH VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled loop session: shipped Performers view (v0.10.0-0.10.2). Backend /api/performers list+detail, persona rename (persona_names table, overrides Atlas labels on cards/panel), POST /api/performers/{id}/drop ('Not them') storing links.drop_key; vision/atlas.py apply_links now splits the named room. Web #/performers list (cross-site/named/all, live filter, search, collage cards) and per-performer page (7-day per-room timeline, usual hours with simulcasts folded, simulcast %, wall/favourite all, rename, room table). Tests 25 backend + atlas pass. Deployed via push to main; vision worker scheduled task restarted. STATE.md updated with operator asks.",
+  "commands": [
+    "python deploy/bump.py minor",
+    "uv run pytest",
+    "git push origin main",
+    "Stop/Start-ScheduledTask 'Panopticam Vision'"
+  ],
+  "files": [
+    "backend/src/panopticam/vision.py",
+    "backend/src/panopticam/app.py",
+    "backend/src/panopticam/index.py",
+    "vision/atlas.py",
+    "web/src/components/Performers.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "ab3b96128ff193c58a304c041e29b23614cd8b3e444ae1fb903d51c38e430507",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "81ec199",
+    "hasChanges": false
+  }
+}

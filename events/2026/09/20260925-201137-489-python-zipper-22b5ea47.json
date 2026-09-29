@@ -1,0 +1,55 @@
+{
+  "id": "20260925-201137-489-python-zipper-22b5ea47",
+  "createdAt": "2026-09-26T00:11:37.4895138Z",
+  "createdAtLocal": "2026-09-25 20:11",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: agent/extension-stream-detection\r\nTools used (this reply): Bash, PowerShell, Write, Edit, patchright\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-25 20:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "patchright"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Extension v1.67.0: chaturbate/camsoda site adapters (common/sites.ts, background/sites.ts) - one row per room via sniffer claim hook, room-API levels with exact audio pairs (CB master AUDIO groups; camsoda tracks-vNa2/mono.m3u8), working quality picker (lvl:<h>), live thumbnails, room stats + Insights Rooms section, dedup by site_key, per-minute token refresh from room APIs incl. closed tabs. DNR fingerprinting ruleset (FPJS, Fossil, iovation) with setting. Worker: recorder hint ffmpeg, site_info in sidecar. Userscript thumbs 1s refresh. iovation blackbox decoder (DES key from static_wdp.js). Checks 155/155, py stream tests 61 OK. Worker restart + live Firefox test pending.",
+  "commands": [
+    "npm run check",
+    "npm run build",
+    "python -m unittest dataset_builder.tests.test_stream_capture"
+  ],
+  "files": [
+    "extension/src/common/sites.ts",
+    "extension/src/background/sites.ts",
+    "extension/public/rules/fingerprinting.json",
+    "dataset_builder/ds_streams.py",
+    "userscripts/iovation_decode.py",
+    "userscripts/chaturbate-roomlist-thumbs.user.js"
+  ],
+  "planPath": " ",
+  "contentHash": "22b5ea47809698bc357e30df184dfcd0b65de5e6b98d0a94052a917d8edb7870",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "agent/extension-stream-detection",
+    "head": "22099a1",
+    "hasChanges": true
+  }
+}

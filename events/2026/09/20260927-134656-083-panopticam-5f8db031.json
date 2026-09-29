@@ -1,0 +1,53 @@
+{
+  "id": "20260927-134656-083-panopticam-5f8db031",
+  "createdAt": "2026-09-27T17:46:56.0833662Z",
+  "createdAtLocal": "2026-09-27 13:46",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + SSH to OVH over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Claude_Browser\r\nMCP servers accessed (this reply): Claude_Browser\r\nTime: 2026-09-27 13:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + SSH to OVH over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": "Claude_Browser"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.2.2: Privado WireGuard (Chicago) as gluetun container panopticam-vpn on OVH (/opt/panopticam-vpn, proxy 127.0.0.1:8897, DNS blocklists off because they block camsoda) wired as PANOPTICAM_PROXIES fallback; conf gitignored. Stripchat adapter (listing ~8.3k, snapshots, stats; no playback/recording by decision: MOUFLON obfuscation = access control); default-order wide-batch paging (ranked sorts repeat 1/3 rows). Alert rules (online/spike/threshold/show -> notify/wall/record, cooldown) + 30-day activity log + Alerts page; heat metric + Hot right now sort. Seeded rule 'Blowing up'. docs/STATE.md created as loop memory; memory entry panopticam-state. Steady state 19% of one core, 140MB.",
+  "commands": [
+    "docker compose up -d (/opt/panopticam-vpn)",
+    "git push (webhook deploys v0.2.0-0.2.2)"
+  ],
+  "files": [
+    "panopticam/backend/src/panopticam/alerts.py",
+    "panopticam/backend/src/panopticam/sites.py",
+    "panopticam/web/src/components/Alerts.tsx",
+    "panopticam/deploy/vpn/docker-compose.yml",
+    "panopticam/docs/STATE.md"
+  ],
+  "planPath": "panopticam/docs/STATE.md",
+  "contentHash": "5f8db0313b081f4cd78344b5d320e0add0d225b85fef6a3737962b7d4ba25117",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "c1f8549",
+    "hasChanges": false
+  }
+}

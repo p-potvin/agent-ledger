@@ -1,0 +1,53 @@
+{
+  "id": "20260927-205810-240-qa-automation-54b022ad",
+  "createdAt": "2026-09-28T00:58:10.2408425Z",
+  "createdAtLocal": "2026-09-27 20:58",
+  "timezone": "Eastern Standard Time",
+  "project": "qa-automation",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Bash, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-27 20:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Full greencloud QA refresh. qa-automation commits 17c1e04, 0288e1c, a430679 (v1.2.4): Linux Tor in qa_runner (docker/torrc mirrors torrc_rotator ports 20000-20020 + control 9051; docker/start-qa.sh supervises tor since run-full-qa-tor.mjs pkills it), Dockerfile adds tor, tor-geoipdb, Google Chrome (channel chrome), python-dotenv; compose uses prebuilt qa-automation_wireproxy image (build context gone), PROXY_URL->Tor, restart unless-stopped; fixed patchright.config.ts syntax typo from abf04e8; added tests/short-link-pills.spec.ts + test:pills + deploy/greencloud systemd timer. Greencloud /opt/qa-automation fast-forwarded eafd459->a430679 (package-lock drift stashed), image rebuilt, hung 67-day container replaced; loop running, Tor bootstrapped, crawl HTTP 200. qa-pills.timer daily 09:00 America/Toronto; first run 21/21 passed. Other party's local WIP in 5 mjs untouched.",
+  "commands": [
+    "docker-compose build qa-runner; docker-compose up -d --no-deps qa-runner",
+    "systemctl enable --now qa-pills.timer"
+  ],
+  "files": [
+    "docker/torrc",
+    "docker/start-qa.sh",
+    "Dockerfile",
+    "docker-compose.yml",
+    "tests/short-link-pills.spec.ts",
+    "deploy/greencloud/qa-pills.timer",
+    "patchright.config.ts"
+  ],
+  "planPath": "",
+  "contentHash": "54b022ad9d7cd7880510c26e73de6b9587148c82ff6c151897fb7a2440f72c4a",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "9eaf227",
+    "hasChanges": false
+  }
+}

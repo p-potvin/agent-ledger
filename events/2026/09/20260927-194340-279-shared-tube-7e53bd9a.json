@@ -1,0 +1,46 @@
+{
+  "id": "20260927-194340-279-shared-tube-7e53bd9a",
+  "createdAt": "2026-09-27T23:43:40.2791888Z",
+  "createdAtLocal": "2026-09-27 19:43",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Bash, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-27 19:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Wrote Playwright spec for homepage short-link pills (delivered in chat, not committed). Mocks /api/promking/short-links/** and stubs exe.io/cuty.io so no real links are minted; opt-in PILLS_LIVE=1 live test. Ran a temp patchright copy in qa-automation against fullxxx.video, sexyprn.lol, 1pornhub.vip: 18 passed, 3 live skipped; temp file and results removed. Found commit efb6c98 moved pills before Featured Scenes; test made position-agnostic.",
+  "commands": [
+    "npx patchright test tests/zz-tmp-pills.spec.ts (temp, removed)"
+  ],
+  "files": [
+    "scratchpad/short-link-pills.spec.ts"
+  ],
+  "planPath": "",
+  "contentHash": "7e53bd9acf8d7ecfaa569769f22c8d3caa797a110dfff479879bf009881af2e8",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "9eaf227",
+    "hasChanges": false
+  }
+}

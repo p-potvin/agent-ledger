@@ -1,0 +1,51 @@
+{
+  "id": "20260927-205751-216-panopticam-ea1540de",
+  "createdAt": "2026-09-28T00:57:51.2160360Z",
+  "createdAtLocal": "2026-09-27 20:57",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + OVH over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-27 20:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + OVH over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.9.x: Atlas switched to F:\\amd\\gallery (240 cam identities; G:\\Gallery produced only false positives; my 29 false-positive inbox crops deleted; atlas DB moved), thresholds calibrated on username ground truth (0.50: recall 0.80, 0 wrong), Review page (keyboard same/not/skip) whose verdicts sync to Atlas (merge/split), first twins pass waits for index, self-declared age filter. Probed CB biocontext for dataset-harvester design; questions pending to operator.",
+  "commands": [
+    "git push (webhook deploys)",
+    "Move-Item atlas DB to F:\\amd\\gallery"
+  ],
+  "files": [
+    "panopticam/vision/atlas.py",
+    "panopticam/web/src/components/Review.tsx",
+    "panopticam/backend/src/panopticam/vision.py",
+    "panopticam/docs/STATE.md"
+  ],
+  "planPath": "panopticam/docs/STATE.md",
+  "contentHash": "ea1540de822956f2e3a92bb87c7770186ed2befa2d58fe26c2ba1504b9e958fe",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "d6aadfd",
+    "hasChanges": false
+  }
+}

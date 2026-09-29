@@ -1,0 +1,55 @@
+{
+  "id": "20260928-232259-140-panopticam-b6f49882",
+  "createdAt": "2026-09-29T03:22:59.1406268Z",
+  "createdAtLocal": "2026-09-28 23:22",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop) + OVH VPS via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-28 23:22 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop) + OVH VPS via tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.13.5-0.13.6: recording playback (operator chose option a). vision/recordings.py in the worker serves the zipper streams folder on 127.0.0.1:8766 (token, folder-confined, Range, ts->mp4 remux cache 20GB) via watched reverse ssh tunnel to OVH 127.0.0.1:9096; OVH proxies /api/recordings/<job>/video, marks playable; Recordings page player. Verified 4/5 play in browser. Fixed Atlas revalidation splitting the room's majority persona instead of the verified persona's strays (116 moved once, 0 after; 0 unvouched left). Restarted OVH after operator rotated the Telegram token. Stale-tunnel cleanup on worker start.",
+  "commands": [
+    "git push origin main (46a395b..6935c1a)",
+    "sudo systemctl restart panopticam",
+    "Stop/Start-ScheduledTask 'Panopticam Vision'"
+  ],
+  "files": [
+    "vision/recordings.py",
+    "vision/atlas.py",
+    "vision/worker.py",
+    "backend/src/panopticam/app.py",
+    "web/src/components/Recordings.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "b6f498825ac137ee53e96de8faadb8ae1d44a88e96b9fbcb149465b8177a3024",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "6935c1a",
+    "hasChanges": false
+  }
+}

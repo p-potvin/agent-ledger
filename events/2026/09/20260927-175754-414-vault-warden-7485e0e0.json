@@ -1,0 +1,48 @@
+{
+  "id": "20260927-175754-414-vault-warden-7485e0e0",
+  "createdAt": "2026-09-27T21:57:54.4149775Z",
+  "createdAtLocal": "2026-09-27 17:57",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-warden",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-warden  Branch: vw-codex-ios-app-and-pipeline\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-27 17:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "windows local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-warden",
+  "summary": "Reworked iOS app to the identity-manager key contract (NFKC+Argon2id -> master key via /v1/account/key -> sealed keychain vw:keychain:v1 -> ML-KEM-768/ML-DSA-65 envelopes via /v1/identity/sync). First build had followed the non-compliant CLI format; caught before push. Vendored PQClean + ref Argon2 (CC0), verified both directions vs noble with MSVC harness. Native read/edit/delete, phone enrollment, Face ID, AutoFill ext. Server: identity-sync push last-writer-wins (extension pushed stale full set -> would clobber phone edits/resurrect deletes); unit + Postgres e2e tests pass. CI (macos-15): 14/14 XCTest contract tests, IPA built with AutoFill entitlement. PR p-potvin/vault-warden#8 open. Not device-tested; free-signing AutoFill entitlement unverified. Suggested follow-up task: update identity-manager docs that say native iOS not planned.",
+  "commands": [
+    "gh workflow run ios-unsigned-build.yml",
+    "python tests/test_identity_sync_lww.py"
+  ],
+  "files": [
+    "ios/Shared/Core/VaultCrypto.swift",
+    "ios/Shared/Core/EnvelopeCodec.swift",
+    "ios/Vendor/README.md",
+    "ios/Tests/IdentityContractTests.swift",
+    "vault_warden/app.py",
+    "tests/test_identity_sync_lww.py"
+  ],
+  "planPath": "",
+  "contentHash": "7485e0e0e66b532860e639bdcc39dc13d2d38d419ea945b8c86a0e9a4e7dc0d8",
+  "git": {
+    "repo": "vault-warden",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-warden",
+    "branch": "vw-codex-ios-app-and-pipeline",
+    "head": "21ad122",
+    "hasChanges": false
+  }
+}
