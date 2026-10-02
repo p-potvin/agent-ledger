@@ -1,0 +1,51 @@
+{
+  "id": "20260930-123812-632-panopticam-fa1d9571",
+  "createdAt": "2026-09-30T16:38:12.6326823Z",
+  "createdAtLocal": "2026-09-30 12:38",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation + Prom-King VPS over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam\\backend\\src\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 12:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation + Prom-King VPS over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam\\backend\\src\\panopticam",
+  "summary": "YOLO GPU bug fixed: ColONEL-KFC venv had torchvision 0.28.0+cpu beside torch 2.13.0+cu126 (torchvision::nms not on CUDA); installed torchvision 0.28.0+cu126 --no-deps, verified nms on cuda:0; Initialize-Environment.ps1 now installs torchvision from the cu126 index (edited, not committed: KFC repo has unrelated uncommitted work). Panopticam v0.21.4: BongaCams (15 s, women/couples/trans, idle 0-viewer rows dropped, tokenless edge HLS with mobile-edge fallback) and CAM4 (30 s, 60/page directory, listing master) adapters; playback, recording, Bonga in clips/stills; web labels/colours; tests; live-verified 1,865 + 1,720 rooms, CORS * on both CDNs.",
+  "commands": [
+    "uv pip install --no-deps --reinstall torchvision==0.28.0+cu126",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/sites.py",
+    "backend/tests/test_sites.py",
+    "docs/STATE.md",
+    "ColONEL-KFC/Initialize-Environment.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "fa1d95714fa349b8ab50a5b842602600c6d0ca198b359f121634759a47e11a29",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "41e5914",
+    "hasChanges": false
+  }
+}

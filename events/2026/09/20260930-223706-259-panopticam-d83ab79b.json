@@ -1,0 +1,56 @@
+{
+  "id": "20260930-223706-259-panopticam-d83ab79b",
+  "createdAt": "2026-10-01T02:37:06.2592531Z",
+  "createdAtLocal": "2026-09-30 22:37",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation + OVH Prom-King VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Monitor\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 22:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation + OVH Prom-King VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Monitor"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.25.0/v0.27.0-0.27.3 (operator round Thu 01 Oct 2026): alert rule 3 'Big tip' (1000 tokens, 3 h cooldown, Telegram); CamSoda chat (guest node token, lobby discover, template codec; tips, notices, Lovense vibrate -> runs with real length; 30 rooms); BongaCams chat parked (obfuscated host + Cloudflare, not bypassed; operator to paste WS URL); empty-room frames per identity -> E:\\3DGS-Rooms-Reconstruction with YOLOv8n person check + dark/flat filter after first batch showed performers (32 bad frames to Recycle Bin, 5 kept); restarted PC vision worker (stale recordings tunnel cleared).",
+  "commands": [
+    "uv run pytest -q tests/",
+    "yolo export yolov8n onnx (CPU)",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/chat.py",
+    "backend/src/panopticam/roomframes.py",
+    "backend/src/panopticam/persons.py",
+    "backend/src/panopticam/chattruth.py",
+    "vision/toys.py",
+    "vision/worker.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "d83ab79bb4cd4f14b8985d6a55033fb63031efb28b97761e3e95a6eddcd2f3a0",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "d154d9b",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20260930-204940-871-miniville-aee8da54",
+  "createdAt": "2026-10-01T00:49:40.8713290Z",
+  "createdAtLocal": "2026-09-30 20:49",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-1.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 20:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-1.6",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville avatar cast complete + G007 perf: 415/590 residents cast to D:\\miniville (F=G:\\Gallery 930 pool, M=Celebrities ~90 pool, 175 males deferred until IMDb StarMeter growth); 415 PuLID identity.safetensors (~3min); 381 FLAME .head reused + 34 fitting in bg via New-FaceHead.ps1 direct call (vw wrapper drops -Identity); avatars served via /avatars mount + resident card render verified (200 image/jpeg); G007: rebuild_day_plans venue-ctx cache + executemany -> 2.4k bench mean 158->49ms, p99 2796->460ms; extract_pulid_batch.py retries all source images on no-face",
+  "commands": [
+    "build_avatar_gallery.py (415 cast, 175 deferred)",
+    "extract_pulid_batch.py (415/415)",
+    "benchmark 2.4k (49ms mean, 460ms p99)",
+    "New-FaceHead.ps1 batch x34 bg",
+    "pytest -q (12 passed)"
+  ],
+  "files": [
+    "scripts/build_avatar_gallery.py",
+    "scripts/extract_pulid_batch.py",
+    "src/miniville/schedules.py",
+    "src/miniville/ui/server.py",
+    "src/miniville/ui/static/app.js",
+    "src/miniville/ui/static/style.css",
+    "docs/AVATARS.md",
+    "docs/STATE.md",
+    "TODO.md"
+  ],
+  "planPath": "",
+  "contentHash": "aee8da54a2291aaa39a098480cfdbdcd6c9e244df6e70780bb0916f16eed58c9",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "5e0ab25",
+    "hasChanges": false
+  }
+}

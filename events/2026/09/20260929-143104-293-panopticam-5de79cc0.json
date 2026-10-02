@@ -1,0 +1,53 @@
+{
+  "id": "20260929-143104-293-panopticam-5de79cc0",
+  "createdAt": "2026-09-29T18:31:04.2938252Z",
+  "createdAtLocal": "2026-09-29 14:31",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation, tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-29 14:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation, tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Tue, 29 Sep 2026 14:35. 502 was the old OVH address (backend stopped): OVH nginx now 301-redirects vps-ovhcloud to ovh-panopticam (backup in /root). v0.14.12: Index.in_scope (women, couples, unknown, favourites) gates vision queue, clip sampler and action scoring; men/trans answers kept but excluded from training (trainer v3). Harvest/OnlyFans SOCKS egress moved to the new VPS (vision.env + hosts.py default; egress IP 148.113.255.142). Benchmarked worker models on the VPS (SigLIP int8 278 ms, glintr100 256, CLAP 162, SCRFD 72, NudeNet 25 per call, 1 thread); proposed plan to run the continuous vision/sound tower on the VPS, faces stay on the PC; awaiting operator go.",
+  "commands": [
+    "nginx return 301 on OVH",
+    "scp worker models to VPS",
+    "onnxruntime benchmark",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/index.py",
+    "backend/src/panopticam/clips.py",
+    "backend/src/panopticam/vision.py",
+    "backend/src/panopticam/actions.py",
+    "vision/hosts.py"
+  ],
+  "planPath": "",
+  "contentHash": "5de79cc09361caa2643277aee0e7006a7a69e2c377bcc392e000b51ee430c340",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "3a9e096",
+    "hasChanges": false
+  }
+}

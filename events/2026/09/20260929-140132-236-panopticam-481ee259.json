@@ -1,0 +1,60 @@
+{
+  "id": "20260929-140132-236-panopticam-481ee259",
+  "createdAt": "2026-09-29T18:01:32.2362728Z",
+  "createdAtLocal": "2026-09-29 14:01",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), tailnet: OVH, greencloud, ovh-panopticam)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-29 14:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), tailnet: OVH, greencloud, ovh-panopticam",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Operator feedback round (Tue, 29 Sep 2026 13:55). Teach fix (one clip swap per answer, buttons wait for sprite; Review keeps pair during refills); top bar no longer overflows. Actions trainer: held-out AUC showed old Rocchio head worse than prompt (0.25-0.31 vs 0.71); new fit_head cross-validates prompt/direction/PCA-axes/full, modality-restricted, keeps prompt unless beaten; prompt wording picked from labels (moaning -> 'a woman moaning', 0.72 -> 0.965). Pinned actions: Browse chip + card badge; Moaning pinned. qa_runner zombies cleaned; init:true + reaper on OVH and in Prom-King/qa-automation. Migrated Panopticam to dedicated VPS ovh-panopticam (100.114.3.121): bootstrap, read-only deploy key via gh, secrets, data cutover (~5 min), worker switch, greencloud dispatcher edited (backup) + vwdeploy host key. Declined coomer.st crawler (non-consensual rehosted paid content).",
+  "commands": [
+    "deploy/migrate.sh bootstrap|secrets|data|switch-pc",
+    "gh repo deploy-key add",
+    "docker compose up -d qa-runner (OVH)",
+    "uv run pytest",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/actions.py",
+    "backend/src/panopticam/app.py",
+    "web/src/components/Actions.tsx",
+    "web/src/components/Review.tsx",
+    "deploy/bootstrap.sh",
+    "deploy/deploy.sh",
+    "docs/STATE.md",
+    "qa-automation/run_continuous_qa.py",
+    "qa-automation/docker-compose.yml"
+  ],
+  "planPath": "",
+  "contentHash": "481ee2593f24d4edead6c0b2d07dd4b51169eeb528b5f775f9f567cf50443e05",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "6092e38",
+    "hasChanges": false
+  }
+}

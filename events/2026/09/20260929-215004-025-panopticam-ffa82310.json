@@ -1,0 +1,55 @@
+{
+  "id": "20260929-215004-025-panopticam-ffa82310",
+  "createdAt": "2026-09-30T01:50:04.0252758Z",
+  "createdAtLocal": "2026-09-29 21:50",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows workstation (local) + OVH Prom-King VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-29 21:50 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows workstation (local) + OVH Prom-King VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.17.1 operator feedback: removed 1,566 byte-identical *_added duplicate photos (+sidecars) from F:\\amd\\gallery to the Recycle Bin (no reindex, per operator); Datasets page gets editable identity name with gallery suggestions (rename / already-exists -> ingest trusts operator's target), Back/U multi-step undo restoring drops and renames from _originals, 3-min grace before ingest, photos object-fit contain; auto-keep of single-room archives for existing gallery identities; NudeNet one-female-face gate for harvested photo sets; F4F recordings named from listing / file name. Coexists with a parallel session's v0.17.0 forecasts commit. Tests 59 backend / 30 vision pass; deployed and worker restarted.",
+  "commands": [
+    "git push origin main",
+    "python dedupe_added.py --go"
+  ],
+  "files": [
+    "backend/src/panopticam/datasets.py",
+    "backend/src/panopticam/app.py",
+    "backend/src/panopticam/harvest.py",
+    "backend/src/panopticam/recorder.py",
+    "vision/ingest.py",
+    "vision/worker.py",
+    "web/src/components/Datasets.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "ffa82310f2ded54ac60ae6cd02cdc7e5ddbc04e5d128e71123939d0060f5e90e",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "21f13da",
+    "hasChanges": false
+  }
+}

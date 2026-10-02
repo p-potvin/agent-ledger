@@ -1,0 +1,50 @@
+{
+  "id": "20260930-085453-324-panopticam-5b647d8e",
+  "createdAt": "2026-09-30T12:54:53.3244198Z",
+  "createdAtLocal": "2026-09-30 08:54",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 08:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.19.1 + VPS rebalance (operator OK): qa_runner capped at 1.5 CPUs and stopped 24 h (transient systemd timer qa-runner-resume restarts it Thu 01 Oct 11:37 UTC). Tower CPUQuota 300%, MemoryMax 3.5G, 2 clip threads, 4 frames/clip (env on VPS, backup vision.env.bak-20260930). Clip throughput 98 -> 138 per 120 s with double the frames; sys time 20% -> 4%. Checked Unsloth Studio: LLM/VLM LoRA trainer only, no MCP, no YOLO. Documented multi-person handling and next step.",
+  "commands": [
+    "docker update --cpus 1.5 qa_runner",
+    "docker stop qa_runner",
+    "systemd-run --on-active=24h docker start qa_runner",
+    "git push origin main"
+  ],
+  "files": [
+    "vision/worker.py",
+    "deploy/panopticam-vision.service",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "5b647d8ee0daa6332cf05b7a8f5762739def9738b72028840273e0c521bb7d9b",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "e41bb56",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "20260929-055443-236-panopticam-0c7a33a7",
+  "createdAt": "2026-09-29T09:54:43.2368888Z",
+  "createdAtLocal": "2026-09-29 05:54",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation + OVH VPS via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, hf_fs\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-29 05:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation + OVH VPS via tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "hf_fs"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.14.3-0.14.4: RAM - vectors only for live/3-day rooms with SQLite lazy reads, idle SigLIP/CLAP text towers unload after 15 min (measured: fp16 text identical but -68MB, int8 -350MB but top-50 overlap 82% -> kept fp32; GGML declined with reasons). Migration kit for the operator's new dedicated OVHcloud VPS (Ubuntu 26.04): deploy/bootstrap.sh, deploy/migrate.sh (bootstrap/secrets/data cutover/switch-pc/rollback), docs/MIGRATION.md; recordings queue via public api.vaultwares.ca (verified); deploy.sh uses uv python 3.12; vision/hosts.py makes PC helper hosts configurable (PANOPTICAM_SSH, PANOPTICAM_EGRESS_SSH).",
+  "commands": [
+    "git push origin main (79e96c1..)",
+    "OVH model quality/memory probes",
+    "Stop/Start-ScheduledTask 'Panopticam Vision'"
+  ],
+  "files": [
+    "backend/src/panopticam/vision.py",
+    "backend/src/panopticam/actions.py",
+    "deploy/bootstrap.sh",
+    "deploy/migrate.sh",
+    "deploy/deploy.sh",
+    "docs/MIGRATION.md",
+    "vision/hosts.py"
+  ],
+  "planPath": "",
+  "contentHash": "0c7a33a775fecded0f0d2f60fe0cfc97b2de4fcbe72041d200bba17565b740a3",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "55ecf6a",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20261001-004026-693-panopticam-a3944386",
+  "createdAt": "2026-10-01T04:40:26.6937022Z",
+  "createdAtLocal": "2026-10-01 00:40",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): PowerShell, Bash, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-01 00:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Vision worker cleanup (operator request, 1 Oct 2026): found 24 orphaned Start-VisionWorker.ps1 launcher loops since 28 Sep (Stop-ScheduledTask leaves the loop, which relaunches the worker after kills). Added named mutexes to launcher and worker.py (Windows only), new vision/Restart-VisionWorker.ps1 that stops task + launchers + workers + helpers and restarts; verified one launcher/one worker, second worker exits in 0.3 s. STATE.md restart recipe updated.",
+  "commands": [
+    "Restart-VisionWorker.ps1",
+    "git push origin main"
+  ],
+  "files": [
+    "vision/worker.py",
+    "vision/Start-VisionWorker.ps1",
+    "vision/Restart-VisionWorker.ps1",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "a3944386f40902987554f18dcd9729bd534e5273c2b65a2719742e9155ccfd8d",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "2d1d50f",
+    "hasChanges": true
+  }
+}

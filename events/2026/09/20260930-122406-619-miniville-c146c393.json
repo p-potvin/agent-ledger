@@ -1,0 +1,53 @@
+{
+  "id": "20260930-122406-619-miniville-c146c393",
+  "createdAt": "2026-09-30T16:24:06.6190297Z",
+  "createdAtLocal": "2026-09-30 12:24",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-1.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 12:24 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-1.6",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville v0.2 story depth on autodev (5508105): life.py daily lottery (hire/fire/illness via conditions table/household moves), dating arc sweetheart->partner->spouse with marriage life events, romance gated on marital availability, gossip propagation on positive chats, deviations.py mood-driven overrides. 7-day verified: 90 life events, 672 gossips, moods content 557/lonely 28/miserable 5. Added scripts/inspect_db.py.",
+  "commands": [
+    "pytest -q (5 passed)",
+    "miniville run --ticks 336 (7 days)",
+    "scripts/inspect_db.py"
+  ],
+  "files": [
+    "src/miniville/life.py",
+    "src/miniville/deviations.py",
+    "src/miniville/encounters.py",
+    "src/miniville/engine.py",
+    "src/miniville/events.py",
+    "src/miniville/needs.py",
+    "src/miniville/db.py",
+    "scripts/inspect_db.py",
+    "docs/STATE.md",
+    "TODO.md"
+  ],
+  "planPath": "",
+  "contentHash": "c146c393440de3e84e242aa40b193030758820a34aa8ee845d1e8f07e832eb24",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "5508105",
+    "hasChanges": false
+  }
+}

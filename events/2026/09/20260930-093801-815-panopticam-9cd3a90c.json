@@ -1,0 +1,52 @@
+{
+  "id": "20260930-093801-815-panopticam-9cd3a90c",
+  "createdAt": "2026-09-30T13:38:01.8158782Z",
+  "createdAtLocal": "2026-09-30 09:38",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 09:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.20.0 guests: Atlas.guest_of tags a known face (gallery identity or established persona) that is clearly not the room's host; multi-face frames now checked instead of dropped; confirmed at 2 sightings or 1 strong; VPS guests table, room panel Guests, performer page Guest in. Faces worker restarted. Diagnosed operator's ultralytics setup: torch cu126 + RTX 3060 fine in KFC venv, yolo.exe not on PATH. Answered training questions (domain match, label semantics).",
+  "commands": [
+    "git push origin main",
+    "Stop/Start-ScheduledTask Panopticam Vision",
+    "yolo checks"
+  ],
+  "files": [
+    "vision/atlas.py",
+    "vision/worker.py",
+    "backend/src/panopticam/vision.py",
+    "web/src/components/RoomPanel.tsx",
+    "web/src/components/Performers.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "9cd3a90ccd1174b1e087fca7337432d7b45d2d832a6b454234b304aad6741d57",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "6125e4f",
+    "hasChanges": false
+  }
+}

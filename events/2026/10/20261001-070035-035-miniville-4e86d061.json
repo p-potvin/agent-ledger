@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261001-070035-035-miniville-4e86d061",
+    "createdAt":  "2026-10-01T11:00:35.0351079Z",
+    "createdAtLocal":  "2026-10-01 07:00",
+    "timezone":  "Eastern Standard Time",
+    "project":  "miniville",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: DeepSeek V4.1 Flash High\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-01 07:00 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "DeepSeek V4.1 Flash High",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+    "summary":  "Celebrity gallery re-embed + sex-vote fix (local/avatar work). Investigated the operator\u0027s hypothesis that sex mislabels came from a pre-smart-picker gallery with stale embeddings. Measured: FALSE - the gallery is already smart-picked (select_smart_exemplars(valid,6) returns exactly the stored six crops for nicole_kidman/tom_hanks/kaya_scodelario) and embeddings reproduce to 3dp on a fresh FaceEngine run. Root cause of the 201-resident bug: pool() read the per-crop face_crops.gender column (90.3% accurate) instead of an identity-level majority (99.4%). Tagger face_female/face_male tags are only 61% accurate (calls Tom Hanks female) - unusable. Did the worthwhile part: new scripts/reembed_celebrity_gallery.py re-ran ArcFace over every tag-eligible photo and stores EVERY kept crop not just 6 exemplars - crops 949-\u003e2015, exemplars unchanged 949, identity-level vote 99.4%-\u003e100% vs TMDB, Nicole Kidman fixed (M4/F2 -\u003e F6/M4). Fixed verify_celebrity_gender.py to vote over ALL crops (first-6 sampling left lola_petticrew undecided at an exact 2:1 tie). ColONEL-KFC embed_tagged_gallery.py gate prob\u003e=0.90 rejects 71/71 sampled images so it would rewrite nothing. Gallery backed up to D:\\miniville\\gallery.db.bak-preembed-20261001. Docs: AVATARS.md method+measurements, STATE.md, AGENT_SYNC.md. BLOCKED: male pool - 171 residents still deferred, all 112 folders missing from gallery.db have 0 tag-eligible images; tagger (vault-commander cli/utils/tag_images.py) cannot run, rapidocr missing from that venv. Commit 47fe44a pushed to autodev. 82 tests pass.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "4e86d0618556f5854b0c3479517a1543c12ba6005243be19ce2b0f73aacfe6fc",
+    "git":  {
+                "repo":  "miniville",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/miniville",
+                "branch":  "autodev",
+                "head":  "47fe44a",
+                "hasChanges":  false
+            }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "20260930-165244-636-miniville-eaacfeb9",
+  "createdAt": "2026-09-30T20:52:44.6363470Z",
+  "createdAtLocal": "2026-09-30 16:52",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-1.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 16:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-1.6",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville v0.3 autopilot: favors/IOU debts + work_buddy + gated affair/betrayal/separation drama; read-only FastAPI observer UI (feed/venues/residents/chronicle/bonds/IOUs); backup+daily+benchmark CLI cmds; mood rebalance (social decay 0.35, home trickle); avatar schema+spec+manifest; 14-day soak verified (3 affairs, content 534/590); 2.4k scale test 158ms mean. Ultragoal iteration-2 goals written; G006 avatars blocked on operator, G007 5k pending. 12 tests green.",
+  "commands": [
+    "pytest -q (12 passed)",
+    "benchmark (21ms@590, 158ms@2.4k)",
+    "14-day soak on DB copy",
+    "TestClient hostile probes (SQLi safe)"
+  ],
+  "files": [
+    "src/miniville/favors.py",
+    "src/miniville/backup.py",
+    "src/miniville/ui/server.py",
+    "src/miniville/ui/static/index.html",
+    "src/miniville/ui/static/app.js",
+    "src/miniville/ui/static/style.css",
+    "src/miniville/encounters.py",
+    "src/miniville/engine.py",
+    "src/miniville/events.py",
+    "src/miniville/needs.py",
+    "src/miniville/db.py",
+    "src/miniville/cli.py",
+    "tests/test_favors.py",
+    "tests/test_ui.py",
+    "scripts/daily.ps1",
+    "scripts/gen_avatars.py",
+    "docs/AVATARS.md",
+    "docs/STATE.md",
+    "TODO.md",
+    ".omx/ultragoal/goals.json"
+  ],
+  "planPath": "",
+  "contentHash": "eaacfeb9b1d7d7ccc33efdeaee1236f1e2523a65b0dfe317b6e762bc8e1e09cf",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "5271476",
+    "hasChanges": false
+  }
+}

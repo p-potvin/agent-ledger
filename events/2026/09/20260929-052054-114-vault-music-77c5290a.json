@@ -1,0 +1,46 @@
+﻿{
+    "id":  "20260929-052054-114-vault-music-77c5290a",
+    "createdAt":  "2026-09-29T09:20:54.1148479Z",
+    "createdAtLocal":  "2026-09-29 05:20",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-music",
+    "kind":  "code-change",
+    "actor":  "POST /api/v1/metadata/populate",
+    "agentHeader":  "Agent: POST /api/v1/metadata/populate (role: main)\r\nModel: SWE-2 High\r\nThinking: Start-ScheduledTask VaultStreaming-qBittorrent\r\nMode: src/musicbrainz/client.js\r\nPermissions: src/musicbrainz/local-db.js (network: src/services/metadata-service.js)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-music  Branch: main\r\nTools used (this reply): src/services/local-download-reconstructor.js\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-29 05:20 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "SWE-2 High",
+                    "thinking":  "Start-ScheduledTask VaultStreaming-qBittorrent",
+                    "mode":  "src/musicbrainz/client.js",
+                    "permissions":  "src/musicbrainz/local-db.js",
+                    "network":  "src/services/metadata-service.js",
+                    "toolsUsed":  "src/services/local-download-reconstructor.js",
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-music",
+    "summary":  "Fixed broken mobile bottom bar (orphaned CSS block killed .apple-bottom-bar rule). Diagnosed+fixed MusicBrainz pipeline: local sqlite dump has empty tracks/medium/release_groups tables so no release info -\u003e remote API enrichment added; escaped LIKE wildcards; fixed rate-limiter redirect deadlock that hung populate forever (isRunning stuck). Verified artwork downloads (cover.jpg 500x500). Fixed qBittorrent isolation: reconstructor hardcoded port 8081 (user\u0027s instance, no auth) -\u003e now uses configured 8082 VaultStreaming profile + auth. Verified live: test torrent landed on isolated instance, user\u0027s untouched. npm test 9/9 pass.",
+    "commands":  [
+                     "node --check src/**/*.js"
+                 ],
+    "files":  [
+                  "src/public/style.css"
+              ],
+    "planPath":  "npm test",
+    "contentHash":  "77c5290aa93b90cd4332aecc82948d1316aa811441709cb72b43ae8525051bfe",
+    "git":  {
+                "repo":  "vault-music",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-music",
+                "branch":  "main",
+                "head":  "d408048",
+                "hasChanges":  true
+            }
+}
