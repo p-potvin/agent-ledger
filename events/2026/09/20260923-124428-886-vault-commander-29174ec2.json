@@ -1,0 +1,53 @@
+{
+  "id": "20260923-124428-886-vault-commander-29174ec2",
+  "createdAt": "2026-09-23T16:44:28.8866215Z",
+  "createdAtLocal": "2026-09-23 12:44",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: agent/extension-stream-detection\r\nTools used (this reply): Write, Edit, Bash, PowerShell\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-09-23 12:44 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Write",
+      "Edit",
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Built the read-only media-index dry run and updated every sidecar consumer/writer across three repos. New shared resolver sidecar_names.py (canonical <file.ext>.json, reads all four historical names, refuses a stem-form sidecar when a sibling master shares the stem) copied verbatim into vault-commander, vault-explorer/vw_media, vault-commander/meth/vw_media and ColONEL-KFC/face_organizer, plus a JS twin at vault-explorer/src/sidecar-names.js verified to match Python case for case. Wired into vault-explorer's 5 hardcoded '.meta.json' sites, image_tagger/sidecar.py, and 4 ColONEL-KFC sites - two of which (embed_tagged_gallery, quarantine_embedding_outliers) would have MISSED canonical sidecars entirely, and two (merge_tagged_gallery_folders, organizer.py grouping) had a pre-existing bug orphaning the ~31k <stem>.json sidecars from their images on every move. Added media_records/record.py (v2 merge with conflict + lost-key detection) and scan.py, plus Invoke-MediaIndex.ps1 and a vw registry entry. Dry run on F: over 2,501 masters: 399 with no sidecar, 1 with two (correctly flagged an 'image' block conflict), 0 merges lose a key, name forms 1539 stem / 350 canonical / 213 meta. MAJOR FINDING: os.path.exists and os.stat both return true for absent alternate data streams on real files (first run reported 1500/1501 gallery images carrying EncodedHEVC; truth is 0) - only open() is reliable, and paths need normpath. This would have broken the planned vw.id anchor. Nothing committed.",
+  "commands": [
+    "python scan.py F:/ --limit 2500",
+    "vw media-index -Root ... -Limit 40",
+    "node --check"
+  ],
+  "files": [
+    "vault-commander/cli/utils/media_records/sidecar_names.py",
+    "vault-commander/cli/utils/media_records/scan.py",
+    "vault-explorer/src/sidecar-names.js",
+    "ColONEL-KFC/face_organizer/organizer.py",
+    "vault-commander/cli/vw-commands.ps1"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\composed-wandering-fountain.md",
+  "contentHash": "29174ec2bea56b7c4d9a8a8e52bf24194199459b833f6f3abc818be8ba780b18",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "agent/extension-stream-detection",
+    "head": "98f0b43",
+    "hasChanges": true
+  }
+}

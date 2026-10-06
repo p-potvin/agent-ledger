@@ -1,0 +1,51 @@
+{
+  "id": "20260930-221834-021-panopticam-806a3aa8",
+  "createdAt": "2026-10-01T02:18:34.0219928Z",
+  "createdAtLocal": "2026-09-30 22:18",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 22:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.24.0 look tags + v0.26.0 habit alerts (session B, parallel to session A). Measured SigLIP calibration on 79k room looks (checkpoint logit_scale/bias read via HTTP range): sigmoid calibration and single prompts fail on averaged int8 looks; competing prompt groups (wearing/hair/place, softmax at scale 117.33, >=0.6) give plausible shares, naked vs NudeNet per-room record AUC 0.72. Tags accumulate in room_traits; room panel Looks like; Top Habits by tag. New alert event 'habit' (goes live and usually X by its record). Memory checked: API 1.8-2.0 GB, swings with SigLIP text tower reloads, no leak.",
+  "commands": [
+    "git push origin main",
+    "read-only probes on VPS",
+    "HTTP range read of siglip safetensors header"
+  ],
+  "files": [
+    "backend/src/panopticam/traits.py",
+    "backend/src/panopticam/alerts.py",
+    "backend/src/panopticam/vision.py",
+    "web/src/components/Alerts.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "806a3aa8a1f71740e1af14b09210fec346c8bb7be8a7c760a4ea6a245c5fbdf9",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "cd563e1",
+    "hasChanges": true
+  }
+}

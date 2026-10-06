@@ -1,0 +1,50 @@
+{
+  "id": "20260930-203744-065-miniville-ce1a7707",
+  "createdAt": "2026-10-01T00:37:44.0650216Z",
+  "createdAtLocal": "2026-09-30 20:37",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-1.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 20:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-1.6",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville avatars v2: dropped ComfyUI per operator; built gallery-casting pipeline (build_avatar_gallery.py) pulling antelopev2 exemplars+embeddings from G:\\Gallery (F) and G:\\Galleries\\Celebrities (M, gender/age cols in face_crops) into D:\\miniville\\gallery.db + 256px portraits to D:\\miniville\\avatars served at /avatars; no identity reuse, deferred ids listed in avatar_mapping.json; IMDb StarMeter importer documented for male pool growth; benchmarked StandalonePuLIDExtractor: 16.3s load, ~0.2s/img warm on RTX 3060 (~3min for 590 tokens); FLAME via vw new-face-head optional",
+  "commands": [
+    "PuLID extract benchmark (16.3s load + 0.16s/img)",
+    "pytest -q (12 passed)",
+    "gallery.db schema probes on both galleries"
+  ],
+  "files": [
+    "scripts/build_avatar_gallery.py",
+    "docs/AVATARS.md",
+    "src/miniville/ui/server.py",
+    "src/miniville/ui/static/app.js",
+    "src/miniville/ui/static/style.css",
+    "TODO.md",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "ce1a77073ed00bfb2353efc0a8a68e2fb8481749d492c6e3223147e8f6351d53",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "3e5293e",
+    "hasChanges": false
+  }
+}

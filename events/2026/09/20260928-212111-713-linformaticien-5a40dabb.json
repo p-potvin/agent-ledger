@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260928-212111-713-linformaticien-5a40dabb",
+    "createdAt":  "2026-09-29T01:21:11.7130955Z",
+    "createdAtLocal":  "2026-09-28 21:21",
+    "timezone":  "Eastern Standard Time",
+    "project":  "linformaticien",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: SWE-2 High\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-28 21:21 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "SWE-2 High",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\linformaticien",
+    "summary":  "Verified Devin Review config for user: fetched official docs (app.devin.ai/review is a separate review UI; GitHub write-back needs the GitHub App + \u0027Post as PR comments\u0027 toggles; auto-review needs repo enrollment or user self-enrollment). Checked repo\u0027s 5 PRs via gh api — only coderabbitai[bot] activity, no Devin checks/comments/links, so Devin Review has never posted here.",
+    "commands":  [
+                     "gh pr list --state all"
+                 ],
+    "files":  [
+                  "gh pr checks 5"
+              ],
+    "planPath":  "gh api repos/{owner}/{repo}/pulls/N/comments|reviews",
+    "contentHash":  "5a40dabb60ce77410fedc4fe89e2b66e3d58b37eddc517775bb3c2beb5be5ef9",
+    "git":  {
+                "repo":  "linformaticien",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/linformaticien",
+                "branch":  "main",
+                "head":  "ca5df5f",
+                "hasChanges":  false
+            }
+}

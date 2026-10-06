@@ -1,0 +1,44 @@
+﻿{
+    "id":  "20260929-095723-249-vault-music-e1c027f2",
+    "createdAt":  "2026-09-29T13:57:23.2499036Z",
+    "createdAtLocal":  "2026-09-29 09:57",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-music",
+    "kind":  "code-change",
+    "actor":  "start-qbittorrent.ps1 idempotence check",
+    "agentHeader":  "Agent: start-qbittorrent.ps1 idempotence check (role: main)\r\nModel: GPT-6 Luna Medium Thinking\r\nThinking: map_apple_music_artwork.py --resolve-torrent-title Daft_Punk_-_Random_Access_Memories_(2013)_FLAC_24bit\r\nMode: PowerShell parser checks\r\nPermissions: git diff --check (network: service/start-qbittorrent.ps1)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-music  Branch: main\r\nTools used (this reply): service/setup-vaultstreaming-qbittorrent.ps1\r\nMCP servers accessed (this reply): map_apple_music_artwork.py\r\nTime: 2026-09-29 09:57 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-6 Luna Medium Thinking",
+                    "thinking":  "map_apple_music_artwork.py --resolve-torrent-title Daft_Punk_-_Random_Access_Memories_(2013)_FLAC_24bit",
+                    "mode":  "PowerShell parser checks",
+                    "permissions":  "git diff --check",
+                    "network":  "service/start-qbittorrent.ps1",
+                    "toolsUsed":  "service/setup-vaultstreaming-qbittorrent.ps1",
+                    "mcpServersAccessed":  "map_apple_music_artwork.py"
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-music",
+    "summary":  "Wired VaultStreaming qBittorrent launcher into VaultMusic service startup; verified WebUI readiness, corrected qBittorrent CLI to --profile=\u003cdir\u003e, and updated task setup. Added map_apple_music_artwork.py with configurable Apple library paths, safe default export cap/explicit export mode, read-only cache parsing, and iTunes Search/UPC resolver that extracts collectionId from torrent-style titles. Corrected nested Library.musicdb chunk parsing. Verified Daft Punk Random Access Memories maps to collectionId 617154241; parsed local library 3446 albums/15792 tracks. npm test passes 9/9; VaultMusic and both qBittorrent instances verified.",
+    "commands":  [
+                     "npm test"
+                 ],
+    "files":  [
+                  "service/start-service.ps1"
+              ],
+    "planPath":  "start-service.ps1 restart integration",
+    "contentHash":  "e1c027f28657bac2a6e4f5364edb6feef2d4b62f33e1fcfd3b9c47e0e5acb8a2",
+    "git":  {
+                "repo":  "vault-music",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-music",
+                "branch":  "main",
+                "head":  "d408048",
+                "hasChanges":  true
+            }
+}

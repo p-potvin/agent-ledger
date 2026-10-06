@@ -1,0 +1,57 @@
+{
+  "id": "20260927-173303-110-panopticam-4b3b6947",
+  "createdAt": "2026-09-27T21:33:03.1100985Z",
+  "createdAtLocal": "2026-09-27 17:33",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + OVH over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Claude_Browser, HF MCP\r\nMCP servers accessed (this reply): Claude_Browser, huggingface\r\nTime: 2026-09-27 17:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + OVH over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Claude_Browser",
+      "HF MCP"
+    ],
+    "mcpServersAccessed": [
+      "Claude_Browser",
+      "huggingface"
+    ]
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.3-0.8.1: Telegram alerts (Prom-King bot), hover-preview sound, deep links, Flirt4Free listing (embedded __homePageData__), visual search (SigLIP, PC worker in KFC venv + OVH text encoder), cross-site identity/twins, Atlas face store tied read-only to ColONEL-KFC G:\\Gallery (stricter thresholds, 2-vote rule, inbox staging, celebrity gallery excluded), NudeNet frame states + state alerts, Looks chips, scheduled task 'Panopticam Vision'. STATE.md updated.",
+  "commands": [
+    "Register-VisionTask.ps1",
+    "git push (webhook deploys)"
+  ],
+  "files": [
+    "panopticam/vision/worker.py",
+    "panopticam/vision/atlas.py",
+    "panopticam/vision/nudity.py",
+    "panopticam/backend/src/panopticam/vision.py",
+    "panopticam/backend/src/panopticam/notify.py"
+  ],
+  "planPath": "panopticam/docs/STATE.md",
+  "contentHash": "4b3b6947b969213bcd1f3f648e6b6d14f191f02edb010020ce3f3e2a20bf5376",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "44edb63",
+    "hasChanges": false
+  }
+}

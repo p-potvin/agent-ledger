@@ -1,0 +1,53 @@
+{
+  "id": "20260929-201442-519-panopticam-fc04ba85",
+  "createdAt": "2026-09-30T00:14:42.5193540Z",
+  "createdAtLocal": "2026-09-29 20:14",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows workstation (local) + OVH Prom-King VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Monitor\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-29 20:14 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows workstation (local) + OVH Prom-King VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Monitor"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.16.1-0.16.4: stills supplement rounds (rooms of gallery identities under 50 photos get another stills pass 2 days later, folder names the identity); Atlas reloads the gallery after ingest and ties new identities to their persona; fixed ingest bug where new identities were matched on only 6 crops (reindex-face-model after every add, retried with eligible count, lock kept) plus one-off backfill; ingest no longer re-adds new-face-model's 6 samples as _added1 duplicates; Flirt4Free numeric names fall back to room display name. Operator triage 113 kept / 2 rejected. Tests: backend 49, vision 28 pass. Deployed via push to main; PC worker restarted twice at safe points.",
+  "commands": [
+    "git push origin main",
+    "vw reindex-face-model -Model peisinoe -Samples 11 -Lock -Device cpu"
+  ],
+  "files": [
+    "backend/src/panopticam/stills.py",
+    "backend/src/panopticam/app.py",
+    "vision/ingest.py",
+    "vision/atlas.py",
+    "vision/datasets.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "fc04ba852c652113e7211b20c1fe38ca83b0e182fe6e09deffc034228f25bcbf",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "cb633cf",
+    "hasChanges": false
+  }
+}

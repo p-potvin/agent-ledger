@@ -1,0 +1,55 @@
+{
+  "id": "20260923-202605-380-python-zipper-a8296f46",
+  "createdAt": "2026-09-24T00:26:05.3801619Z",
+  "createdAtLocal": "2026-09-23 20:26",
+  "timezone": "Eastern Standard Time",
+  "project": "python-zipper",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: agent/extension-stream-detection\r\nTools used (this reply): Bash, PowerShell, Write, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-23 20:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Stream recordings: v2 <file.ext>.json sidecar (ds_records.py: provenance/capture/ffprobe, URLs query-stripped, header names only); richer filename (label Stream #dd - username - site - date - height - duration); ask-to-name after a recording ends via worker status 'naming' + extension notification, in-page toast and sidebar card, auto-save after N s (settings askNameOnFinish/autoSaveAfterSec); camsoda Flussonic index.ll.m3u8 recorded as classic index.m3u8 with LL fallback (explains the 6s one-chunk captures, unverified live); worker int-casts speed/eta (fixes 422s dropping progress); worker stdout utf-8 (fixes cp1252 crash after save). Tests 79/79, extension check+tsc+build pass, worker service restarted. Uncommitted on agent/extension-stream-detection.",
+  "commands": [
+    "python -m unittest tests.test_stream_records tests.test_stream_naming tests.test_stream_capture tests.test_stream_resume",
+    "npm run check; npx tsc --noEmit; npm run build",
+    "Restart-Service 'Python Zipper Worker'"
+  ],
+  "files": [
+    "dataset_builder/ds_records.py",
+    "dataset_builder/ds_streams.py",
+    "dataset_builder/worker.py",
+    "extension/src/background/naming.ts",
+    "extension/src/sidebar/naming.tsx",
+    "extension/src/background/index.ts",
+    "extension/src/common/settings.ts"
+  ],
+  "planPath": "",
+  "contentHash": "a8296f468332ab105945fe8ce41d020cce4810a201f5eb0aec74449fd90b14c5",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "agent/extension-stream-detection",
+    "head": "98f0b43",
+    "hasChanges": true
+  }
+}

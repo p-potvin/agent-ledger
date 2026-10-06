@@ -1,0 +1,53 @@
+{
+  "id": "20261005-032113-429-miniville-1d04bc46",
+  "createdAt": "2026-10-05T07:21:13.4294734Z",
+  "createdAtLocal": "2026-10-05 03:21",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-05 03:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville v0.10: affiliations layer (groups + memberships) - phase 1 of religion/politics/power. Faith parsed from each persona's own cultural_background (28% name a tradition; the rest are left silent, matching the generator's 71.9% no-mention mix measured across 272,728 personas); children inherit the household's. Groups shape who is where when: a meeting is a schedule slot (gathering activity, social +3.5) and encounters do the social work; a gathering never pulls anyone off a shift. Clubs stay small (5-18) and a crowd splits into several clubs named by district; congregations need a quorum of 6. Group standing = mean member standing. CLI form-groups/groups, /api/groups, memberships on the resident card, init founds a new town's groups. Live world: 35 groups, 505 memberships across 360 of 636 residents, 58 gathering slots, interactions 119->883 on meeting days. 141 tests. Phases 2-3 (council/elections with real policy levers, influence index, organized conflict) documented in STATE as not started.",
+  "commands": [
+    "form-groups",
+    "groups",
+    "pytest -q",
+    "soak.py --days 730"
+  ],
+  "files": [
+    "src/miniville/groups.py",
+    "src/miniville/db.py",
+    "src/miniville/schedules.py",
+    "src/miniville/needs.py",
+    "src/miniville/engine.py",
+    "src/miniville/cli.py",
+    "src/miniville/ui/server.py",
+    "tests/test_groups.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "1d04bc464951d2ee44b5bdaf425e54e8145ba349051327a9c2279da6990d7f39",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "4ee6951",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "20261002-080022-997-panopticam-31b85a31",
+  "createdAt": "2026-10-02T12:00:22.9972177Z",
+  "createdAtLocal": "2026-10-02 08:00",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, Write, Edit, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-02 08:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS",
+    "toolsUsed": [
+      "Bash",
+      "Write",
+      "Edit",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.32.0-0.32.2: Moments - Director-picked minutes (tips/toy/audience jump) captured through the existing long-clip loop with the same daily budget (credit bucket, moments first), hard-linked into clips/moments, 4 days / 900 MB, star to keep; #/moments reel page with hover scrub. Fixed long clips writing into an old inode on replace. Alert toasts for tip/soon/habit events. Tested a hand-made toy 'hum' audio descriptor offline on 114 labelled clips: refuted (music is more tonal), not shipped. Verified live: first moment captured and playing. Committed only own hunks beside a parallel session (email notices).",
+  "commands": [
+    "pytest backend/tests (107 passed)",
+    "npx tsc --noEmit",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/moments.py",
+    "backend/src/panopticam/clips.py",
+    "backend/src/panopticam/app.py",
+    "web/src/components/Moments.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "31b85a319c1c25856121b11ae7510385042b80a24e3412e2aec2352452ea1426",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "6964f3a",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20260930-121913-518-miniville-0907a6a9",
+  "createdAt": "2026-09-30T16:19:13.5189659Z",
+  "createdAtLocal": "2026-09-30 12:19",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-1.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 12:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-1.6",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville narration layer + MCP repair: added digest/narrate-write self-narration loop (agent authors prose, stored in narratives table), auto schema migration on connect, docs/NARRATION.md; repaired vaultwares-mcp ledger on vps-ovhcloud (root-owned files chowned to ubuntu, /opt/CHANGES.* pre-created; render_ledger verified 940 events). ColONEL-KFC surveyed for future resident avatars.",
+  "commands": [
+    "pytest -q (5 passed)",
+    "miniville digest --day 3",
+    "miniville narrate-write --day 3",
+    "ssh ubuntu@100.67.25.118 chown -R ubuntu:ubuntu /opt/agent-ledger",
+    "mcp render_ledger (940 events)"
+  ],
+  "files": [
+    "src/miniville/cli.py",
+    "src/miniville/chronicle.py",
+    "src/miniville/db.py",
+    "docs/NARRATION.md",
+    "docs/STATE.md",
+    "TODO.md"
+  ],
+  "planPath": "",
+  "contentHash": "0907a6a9df573a92282d2082c6ff8d403ef18f1486ac9220aa7fd12515b7abca",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "93b46d7",
+    "hasChanges": false
+  }
+}

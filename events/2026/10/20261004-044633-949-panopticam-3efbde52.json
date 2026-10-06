@@ -1,0 +1,55 @@
+{
+  "id": "20261004-044633-949-panopticam-3efbde52",
+  "createdAt": "2026-10-04T08:46:33.9499564Z",
+  "createdAtLocal": "2026-10-04 04:46",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-04 04:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.37.0-0.37.1: archive offload to D:\\panopticam-archives (VPS placeholders in _offloaded, verified sizes, local-first fetch; passes 1-2 moved 5,983 archives / 7.9 GB, VPS 90% -> 76%), ingest lanes 3 (measured ~114/h vs ~170/h with 2: per-call vw start-up and disk D: saturation, not lanes), Atlas inbox off + recycled, 4 abandoned import folders recycled, 643 empty _pending dirs removed, VPS hourly prune of offline rooms' sample files > 48 h. docs/FOLDERS.md inventory. Embedding speed: 3 vw process starts per archive, 6 s start-up on an empty folder.",
+  "commands": [
+    "rclone offload via worker",
+    "Restart-VisionWorker.ps1",
+    "git push origin main"
+  ],
+  "files": [
+    "vision/ingest.py",
+    "vision/atlas.py",
+    "backend/src/panopticam/datasets.py",
+    "backend/src/panopticam/clips.py",
+    "docs/FOLDERS.md",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "3efbde526d299c2ad6a09617f6b5cd6a8db3bc1e9cedd19b48588b3cc75b0eb8",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "8d60d9d",
+    "hasChanges": false
+  }
+}

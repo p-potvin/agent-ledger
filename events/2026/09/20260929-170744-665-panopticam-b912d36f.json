@@ -1,0 +1,53 @@
+{
+  "id": "20260929-170744-665-panopticam-b912d36f",
+  "createdAt": "2026-09-29T21:07:44.6657655Z",
+  "createdAtLocal": "2026-09-29 17:07",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows workstation (local) + Prom-King OVH VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-29 17:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows workstation (local) + Prom-King OVH VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.16.0: operator-kept dataset archives now flow into the face gallery (vision/ingest.py, thread in the vision worker): rclone copy from VPS, extract, remove zip, vw ingest-video-faces (videos only), vw tag-images, vw compare-face-gallery; >=3 and half of faced photos matching one identity -> vw add-model-images (cap 50 per identity), else vw new-face-model -Status locked + add-model-images. Always -Gallery F:\\amd\\gallery (wrappers default to G:\\Gallery), CPU only, below-normal priority. VPS endpoints /api/vision/datasets + report; ingested zips move to _ingested/. Datasets page shows outcomes. Diagnosed a failed rclone push (0/269; manual push moved all 590 files) and added exit-code logging. Not yet run on a real archive: waits for the operator's first kept verdict.",
+  "commands": [
+    "vw tag-images/compare-face-gallery/new-face-model -DryRun (manual test on one archive in scratch)",
+    "git push origin main",
+    "Restart scheduled task 'Panopticam Vision'"
+  ],
+  "files": [
+    "vision/ingest.py",
+    "vision/test_ingest.py",
+    "backend/src/panopticam/datasets.py",
+    "backend/src/panopticam/app.py",
+    "web/src/components/Datasets.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "b912d36f4c8f5c7d3227f8cc6225a79253e7e50b371899bf06a4ea5c5c257365",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "706b5d6",
+    "hasChanges": false
+  }
+}

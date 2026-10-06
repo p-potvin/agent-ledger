@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260925-022001-437-colonel-kfc-b413a0d5",
+    "createdAt":  "2026-09-25T06:20:01.4378394Z",
+    "createdAtLocal":  "2026-09-25 02:20",
+    "timezone":  "Eastern Standard Time",
+    "project":  "ColONEL-KFC",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 3.8 Flash\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC  Branch: feat/face-occlusion-and-cli-tools\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-25 02:20 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.8 Flash",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC",
+    "summary":  "Add eyeball size, iris size, height, and gaze controls to 3D head viewer and texture builder; complete hair, shoulders, and accessories architecture research",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "b413a0d5eb99a75cf4c3d2e4be5747c8a83bcaeffb32fc3fe0693fa304b33909",
+    "git":  {
+                "repo":  "ColONEL-KFC",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/ColONEL-KFC",
+                "branch":  "feat/face-occlusion-and-cli-tools",
+                "head":  "8995b23",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "20261005-023530-715-miniville-c3a26e40",
+  "createdAt": "2026-10-05T06:35:30.7152251Z",
+  "createdAtLocal": "2026-10-05 02:35",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-05 02:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville v0.9: closed the money loop, added careers and reputation (operator asked me to pursue the 'alive and legible' goal). ECONOMY: rent was destroyed and public-service payroll was minted (revenue faked to equal payroll) while the levy's non-rebated share vanished despite its comment saying it funded public services - measured -734,088 over 60 days (7.8% of supply). Added town_account purse: rent credits it, levy share credits it, public payroll debits it (shortfall = town_deficit event), purse keeps 6 weeks of payroll and rebates the surplus via the dividend. Result: +108,944 over 90 days, wallets flat, purse bounded, zero deficit; 486-day soak holds (money 9.15M->9.57M, unemployment 33%->11%). CAREERS: jobs.started_tick + rank, weekly pass gives tenure yearly raises and worker->senior->head promotions (+12% pay, NOTABLE event); education finally matters (degree promotes 0.75/yr vs 0.55). REPUTATION: new reputation.py accrues standing from the ledger (favours/marriages/promotions up; betrayals/separations/downsizing down), decays a point a month; encounters warm or cool by the pair's standing; hiring prefers the better-regarded candidate; death emits an obituary naming regard and how many residents actually knew them; chronicle gains a Standing section. Also: db.snapshot_to (WAL-safe copies), backup never overwrites, town purse in CLI/UI. 132 tests. Pushed 65dc52c..47cb600.",
+  "commands": [
+    "scripts/_money_audit.py 90",
+    "soak.py --days 730",
+    "pytest -q"
+  ],
+  "files": [
+    "src/miniville/reputation.py",
+    "src/miniville/jobs.py",
+    "src/miniville/economy.py",
+    "src/miniville/db.py",
+    "src/miniville/encounters.py",
+    "src/miniville/mortality.py",
+    "src/miniville/chronicle.py",
+    "src/miniville/backup.py",
+    "tests/test_reputation.py",
+    "tests/test_jobs.py",
+    "tests/test_economy.py",
+    "docs/ECONOMY.md",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "c3a26e40f5b2498ad3765a060c2656058128cc5349d2c694414d6dfc96457812",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "47cb600",
+    "hasChanges": false
+  }
+}

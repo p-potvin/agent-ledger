@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260925-133212-429-vault-commander-f4b177f0",
+    "createdAt":  "2026-09-25T17:32:12.4296014Z",
+    "createdAtLocal":  "2026-09-25 13:32",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-commander",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-themes\\vaultsqware  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-25 13:32 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-themes\\vaultsqware",
+    "summary":  "Conductor moved into vault-commander/conductor (branch conductor, commit 18f536f, not pushed; old Github Repos/vault-conductor 12 GB duplicate deleted). Governor reworked: commit-charge memory gate, evict-then-oversubscribe VRAM, ComfyUI fixed 8188, 97% kill replaced by NVML heat alerts (70C/15s warn, thermal slowdown critical) + app/Windows notifications, per-process SM% via NVML, dynamic /estimate, veto allows same folder. Added GPEN face.restore (verified), Ollama adapter (verified gemma4, unload works). colonel.mesh verified after moving FLAME2023Open to D:\\\\HuggingFace and adding FLAME2023_ROOT in ColONEL-KFC (uncommitted there). Shared venv vault-commander/.venv.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "f4b177f00d2ebfccab8821af432838b082f56d06de7053563503dce2811a8daf",
+    "git":  {
+                "repo":  "vaultwares-themes",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-themes",
+                "branch":  "main",
+                "head":  "5de71da",
+                "hasChanges":  true
+            }
+}

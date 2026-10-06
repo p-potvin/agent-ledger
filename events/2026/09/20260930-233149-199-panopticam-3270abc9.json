@@ -1,0 +1,54 @@
+{
+  "id": "20260930-233149-199-panopticam-3270abc9",
+  "createdAt": "2026-10-01T03:31:49.1997458Z",
+  "createdAtLocal": "2026-09-30 23:31",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop) + Prom-King VPS over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 23:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop) + Prom-King VPS over tailnet",
+    "toolsUsed": [
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.28.0-0.29.2 (scheduled loop). Backups: nightly VPS DB snapshot without worker-refilled tables (69 MB gz, 10 s), POST /api/backup, watchdog checks; PC worker pulls to D:\\panopticam-backups\\vps (7 kept) and snapshots the Atlas daily (3 kept); restore runbook in MIGRATION.md; restore drill passed. Director (#/director): auto-cutting single player ranked from in-memory tips, toy runs, audience heat and rarity-weighted pinned actions, with hysteresis, on-deck list, N/H/M keys; verified live in browser. PC vision worker restarted to load the backup thread.",
+  "commands": [
+    "git push origin main (x4, deploy)",
+    "POST /api/backup",
+    "Restart-ScheduledTask Panopticam Vision"
+  ],
+  "files": [
+    "backend/src/panopticam/backup.py",
+    "backend/src/panopticam/director.py",
+    "vision/backups.py",
+    "web/src/components/Director.tsx",
+    "docs/STATE.md",
+    "docs/MIGRATION.md"
+  ],
+  "planPath": "",
+  "contentHash": "3270abc9f574ebf28d7805a801767efa86ffd68ddbf612e39a7f78d0bba3102d",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "a968420",
+    "hasChanges": true
+  }
+}

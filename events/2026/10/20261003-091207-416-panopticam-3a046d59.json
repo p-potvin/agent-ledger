@@ -1,0 +1,55 @@
+{
+  "id": "20261003-091207-416-panopticam-3a046d59",
+  "createdAt": "2026-10-03T13:12:07.4166056Z",
+  "createdAtLocal": "2026-10-03 09:12",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (local) + Prom-King VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-03 09:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (local) + Prom-King VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.35.1-0.36.1 (scheduled loop, Sat 03 Oct 2026 13:00-13:45 UTC): habit labels now need 3 days seen (v0.35.0 had boxed 183 rooms 'Often in private' and 511 'Leaves mid-show' after 5 h); CB gap label says 'likely privates: N%' once 40+ followed-chat gaps calibrated; calibration + CB status words persist in room_shows _calib; /api/status habits.labels counts. Moments log pre-pick sound (column pre). New alert trigger 'elsewhere' (private on one site, public twin on another; CB via followed chat status); seeded rule id 4 feed-only; ~270 firings/h live; dedup of public_on. 127 backend tests pass, tsc clean, deployed and checked in browser. STATE.md updated with operator to-dos.",
+  "commands": [
+    "uv run --frozen pytest -q",
+    "python deploy/bump.py",
+    "git push origin main",
+    "POST /api/rules (rule 4)"
+  ],
+  "files": [
+    "backend/src/panopticam/habits.py",
+    "backend/src/panopticam/alerts.py",
+    "backend/src/panopticam/moments.py",
+    "backend/src/panopticam/app.py",
+    "backend/src/panopticam/notify.py",
+    "web/src/components/Alerts.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "3a046d5900b56d1990444f281be7ff4cb1f2bb672df4654b66bc7c116c2ef449",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "c2bc1ea",
+    "hasChanges": false
+  }
+}

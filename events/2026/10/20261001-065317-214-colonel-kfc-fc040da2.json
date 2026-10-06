@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261001-065317-214-colonel-kfc-fc040da2",
+    "createdAt":  "2026-10-01T10:53:17.2149652Z",
+    "createdAtLocal":  "2026-10-01 06:53",
+    "timezone":  "Eastern Standard Time",
+    "project":  "ColONEL-KFC",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Antigravity\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC  Branch: feat/face-occlusion-and-cli-tools\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-01 06:53 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Antigravity",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC",
+    "summary":  "Running TripoSplat full-room reconstruction with lens undistortion and BiRefNet bypassed",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "fc040da22d823bef7163a16a6d74ae0b9a3f6fda7e0047cbfaa05d1855d140f7",
+    "git":  {
+                "repo":  "ColONEL-KFC",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/ColONEL-KFC",
+                "branch":  "feat/face-occlusion-and-cli-tools",
+                "head":  "8995b23",
+                "hasChanges":  true
+            }
+}

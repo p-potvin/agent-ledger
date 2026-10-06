@@ -1,0 +1,57 @@
+{
+  "id": "20261006-034220-736-panopticam-32dabf56",
+  "createdAt": "2026-10-06T07:42:20.7366967Z",
+  "createdAtLocal": "2026-10-06 03:42",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation + OVH VPS over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Monitor\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 03:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation + OVH VPS over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Monitor"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Tue 06 Oct 2026 (v0.37.20-0.37.21): fixed moment/long-clip video corruption (playlist follower appended older window segments after the newest -> ~12 s backwards timestamps; now next_segments in order); reels v2 on the PC (4/day: best/toys/tips/more, title card, name card, stats bar, fades, old clips skip broken start) - rebuilt for 2-5 Oct; Teach 'Sort of' answer (y=2 -> 0.5 target, excluded from AUC); removed 33,634 empty _pending folders, 27 stale ingest work folders, stale _panopticam_inbox (Recycle Bin); removed Panopticam leftovers from old OVH vps-ovhcloud (services, nginx site, VPN container, 4.7 GB data; operator-approved).",
+  "commands": [
+    "git push origin main",
+    "Restart-VisionWorker.ps1",
+    "ssh ubuntu@100.67.25.118 cleanup (systemctl disable, rm -rf panopticam paths, docker compose down)"
+  ],
+  "files": [
+    "backend/src/panopticam/clips.py",
+    "backend/src/panopticam/actions.py",
+    "vision/moments_pull.py",
+    "vision/datasets.py",
+    "vision/ingest.py",
+    "web/src/components/Actions.tsx",
+    "docs/STATE.md",
+    "docs/MIGRATION.md"
+  ],
+  "planPath": "",
+  "contentHash": "32dabf56baebd701f66ff001423c245e8d1a1d7ea055257d409ca88f72859735",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "753a3c7",
+    "hasChanges": false
+  }
+}

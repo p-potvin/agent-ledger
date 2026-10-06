@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260927-114021-144-python-zipper-1f7fb64a",
+    "createdAt":  "2026-09-27T15:40:21.1448652Z",
+    "createdAtLocal":  "2026-09-27 11:40",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-zipper",
+    "kind":  "code-change",
+    "actor":  "claude-code",
+    "agentHeader":  "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension  Branch: agent/extension-stream-detection\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-27 11:40 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "low",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
+    "summary":  "v1.73.0 + worker: recordings now recorded in zipper.history (record_history had no caller -\u003e Insights missed all video); optional lossless TS-\u003eMP4 remux after recording (setting, default on); archive naming prompt before Zip here (setting, default on), proposed \u003cmodel\u003e-\u003cdomain\u003e-\u003cdate\u003e-\u003cn\u003e. Backfill script for 139 past recordings (8.4 GB) written, dry-run only, not sent. Worker restarted 11:40 after it finished a naming wait. Tests: py 98 OK, extension checks 168/168.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "1f7fb64a2b37bcd799755c8b0a00130da05eb10dade1c4930ecb12af001afd0b",
+    "git":  {
+                "repo":  "python-zipper",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+                "branch":  "agent/extension-stream-detection",
+                "head":  "22099a1",
+                "hasChanges":  true
+            }
+}

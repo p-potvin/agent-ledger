@@ -1,0 +1,49 @@
+{
+  "id": "20260930-224934-791-panopticam-e5f75f5b",
+  "createdAt": "2026-10-01T02:49:34.7914405Z",
+  "createdAtLocal": "2026-09-30 22:49",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation + OVH Prom-King VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 22:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation + OVH Prom-King VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.27.4-0.27.5: room-frame folders named by operator name > gallery identity > room name (renamed existing persona-* folders on E: and VPS); overlay cards (BRB/OBS) rejected as graphic (flat/saturation measured on 11 frames, 2 recycled). Probed Bonga's Lovense display socket from VPS: 401 without ntoken; token source not found in h.js/c1cu2.js, stopped before crawling CDN chunks; asked operator for the request returning ntoken. Operator's pasted token not stored.",
+  "commands": [
+    "uv run pytest -q tests/test_roomframes.py",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/roomframes.py",
+    "backend/tests/test_roomframes.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "e5f75f5ba2ea1d85d59e96c638fe309ce054213455a61ca8cb7267c2877a0d46",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "969dcd6",
+    "hasChanges": true
+  }
+}

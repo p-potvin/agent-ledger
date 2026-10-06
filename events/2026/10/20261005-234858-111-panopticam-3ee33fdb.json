@@ -1,0 +1,47 @@
+{
+  "id": "20261005-234858-111-panopticam-3ee33fdb",
+  "createdAt": "2026-10-06T03:48:58.1110786Z",
+  "createdAtLocal": "2026-10-05 23:48",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation + OVH VPS over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-05 23:48 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation + OVH VPS over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Tue 06 Oct 2026: qa_runner kept stopped on the Panopticam VPS until Thu 08 Oct 04:00 UTC (old transient resume timer from 30 Sep replaced via systemd-run --on-calendar). Answered ingest outlook: gallery 27,546 identities, D: backlog 4,434 zips at ~1,100/h (done ~08:00 UTC), then ~2k new women's rooms/day. Rewrote operator to-do in STATE.md as a ranked top 5 + background.",
+  "commands": [
+    "sudo systemctl stop qa-runner-resume.timer",
+    "sudo systemd-run --unit=qa-runner-resume --on-calendar='2026-10-08 04:00:00 UTC' /usr/bin/docker start qa_runner"
+  ],
+  "files": [
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "3ee33fdbaee752c723456542ad2374888c8cb749f5a44e2b2581c47bdd2e2788",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "338dd36",
+    "hasChanges": false
+  }
+}

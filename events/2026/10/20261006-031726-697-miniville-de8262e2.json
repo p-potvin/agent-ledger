@@ -1,0 +1,47 @@
+{
+  "id": "20261006-031726-697-miniville-de8262e2",
+  "createdAt": "2026-10-06T07:17:26.6971820Z",
+  "createdAtLocal": "2026-10-06 03:17",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 03:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: turned soak analysis into standing infrastructure and fixed what it found. New scripts/soak_check.py asserts 11 invariants a living town should hold (money conserved, no deficit spiral, employment in band, venues staffed, venues able to pay their way, wages not compounding, businesses not churning, graph has structure, town has friction, people content, town stays eventful); pointed at the pre-fix soak it reproduces by itself what took hours to find by hand. It found: (1) commercial venues paid 1.07x what they took in (diner 1.20, Old Mill 1.23, tavern 1.20, grocer 1.14) -> 30 closures in 3 years, each deleting its whole staff; fixed with a 25% price correction so takings cover payroll with a margin; (2) the park/marina/library employ people and charge nobody, and were not in PUBLIC_TAGS, so their payroll bled them to the failure line (park -57k) - amenities are now town-funded like the hospital. Also fixed my own measurement error (dividing a soak's cumulative revenue by the copied history's day count understated takings ~4x and briefly made me think the price fix had failed). Final state: 11/11 invariants hold over 200 days - money -0.4%/y, 0 deficits, 10.1% unemployment, 4 closures (was 30), 99 rivalries, 178 events/day. 158 tests. AGENTS.md documents soak+soak_check as the standard step. Commits cd4d94a..HEAD.",
+  "commands": [
+    "soak_check.py data/soak-pol2y.db",
+    "soak.py --days 200 --tag fixcheck",
+    "soak_check.py data/soak-fixcheck.db",
+    "pytest -q"
+  ],
+  "files": [
+    "scripts/soak_check.py",
+    "src/miniville/economy.py",
+    "AGENTS.md"
+  ],
+  "planPath": "",
+  "contentHash": "de8262e224dbb275bc52771f4f207b56c338d8739b0825426e1fff663781e9b1",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "9dfe2bd",
+    "hasChanges": false
+  }
+}

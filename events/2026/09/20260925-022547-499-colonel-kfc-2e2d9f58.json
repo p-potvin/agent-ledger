@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260925-022547-499-colonel-kfc-2e2d9f58",
+    "createdAt":  "2026-09-25T06:25:47.4993721Z",
+    "createdAtLocal":  "2026-09-25 02:25",
+    "timezone":  "Eastern Standard Time",
+    "project":  "ColONEL-KFC",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 3.8 Flash\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC  Branch: feat/face-occlusion-and-cli-tools\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-25 02:25 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.8 Flash",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC",
+    "summary":  "Complete real conditions browser verification of eyeball and iris controls with visual proof screenshot and recording",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "2e2d9f58c880df7b5f041c3fc45204b21bcf05401b6090ca875ba7473832f190",
+    "git":  {
+                "repo":  "ColONEL-KFC",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/ColONEL-KFC",
+                "branch":  "feat/face-occlusion-and-cli-tools",
+                "head":  "8995b23",
+                "hasChanges":  true
+            }
+}

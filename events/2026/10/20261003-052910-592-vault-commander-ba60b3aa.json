@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261003-052910-592-vault-commander-ba60b3aa",
+    "createdAt":  "2026-10-03T09:29:10.5928488Z",
+    "createdAtLocal":  "2026-10-03 05:29",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-commander",
+    "kind":  "code-change",
+    "actor":  "Devin",
+    "agentHeader":  "Agent: Devin (role: main)\r\nModel: SWE-2 Max\r\nThinking: cli/vw-commands.ps1\r\nMode: agent\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-03 05:29 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "SWE-2 Max",
+                    "thinking":  "cli/vw-commands.ps1",
+                    "mode":  "agent",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+    "summary":  "Added \u0027vw extract-thumbs\u0027 command: new cli/Extract-Thumbs.ps1 wraps \u0027ffmpeg -i input -vf fps=\u003crate\u003e,scale=\u003cWidth\u003e:-1 name_%04d.png\u0027 for a video file or directory (-Recurse). -Count N derives fps from ffprobe duration for N evenly-spaced thumbs; -Fps overrides with a literal rate. -Name sets the output pattern (verbatim if it contains %d), -Output redirects the dir, and a warning fires when a shared -Name would collide across videos. Registered in vw-commands.ps1 under FFmpeg Commands. Verified: help render, single file (10x 320px PNGs), dir non-recursive vs -Recurse, -Count/-Width/-Name/-Output variants, collision warning. On branch vw-codex-extract-thumbs, uncommitted.",
+    "commands":  [
+                     "vw extract-thumbs -Input sample.mp4"
+                 ],
+    "files":  [
+                  "cli/Extract-Thumbs.ps1"
+              ],
+    "planPath":  "vw extract-thumbs -Input D:\\Videos -Count 6 -Width 480 -Recurse",
+    "contentHash":  "ba60b3aa4f448b0ea13a8b84246161ba4995edce1ba3949cf38b101a21ae696f",
+    "git":  {
+                "repo":  "miniville",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/miniville",
+                "branch":  "autodev",
+                "head":  "10702cc",
+                "hasChanges":  false
+            }
+}

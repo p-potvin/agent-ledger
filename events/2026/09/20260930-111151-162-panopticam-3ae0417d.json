@@ -1,0 +1,54 @@
+{
+  "id": "20260930-111151-162-panopticam-3ae0417d",
+  "createdAt": "2026-09-30T15:11:51.1622755Z",
+  "createdAtLocal": "2026-09-30 11:11",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation + OVH VPS over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 11:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation + OVH VPS over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled loop session (parallel to another). v0.21.1: backend memory 2.3 GB -> ~1.1 GB (streamed startup loads, face centroids summed per room, malloc_trim after loads + every 5 min, MALLOC_ARENA_MAX=2, float16 action features with 48 h RAM horizon; deploy.sh installs panopticam.service). v0.21.2: health watchdog (health.py) -> Telegram on site/worker/memory/disk problems + recovery, /api/status health, top-bar chip; tower SigLIP in runs of 8 (ONNX arena 1.45 -> 0.37 GB, faster, same quality), tower 2.4 -> ~0.93 GB, clip throughput unchanged (145/120 s). v0.21.3: compute_twins dict snapshot fix; STATE.md notes; CAM4/BongaCams probed once each (open) and proposed to operator.",
+  "commands": [
+    "git push origin main (x3)",
+    "ssh ubuntu@100.114.3.121 memory profiling on DB copy"
+  ],
+  "files": [
+    "backend/src/panopticam/heap.py",
+    "backend/src/panopticam/health.py",
+    "backend/src/panopticam/vision.py",
+    "backend/src/panopticam/actions.py",
+    "vision/worker.py",
+    "deploy/panopticam.service",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "3ae0417d67f6fa57a66a5c9633f2c8311b0a700cf25fc4ed7e0ea8ea9561cc5b",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "f15904a",
+    "hasChanges": false
+  }
+}

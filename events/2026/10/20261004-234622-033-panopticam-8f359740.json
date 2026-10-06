@@ -1,0 +1,53 @@
+{
+  "id": "20261004-234622-033-panopticam-8f359740",
+  "createdAt": "2026-10-05T03:46:22.0333136Z",
+  "createdAtLocal": "2026-10-04 23:46",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-04 23:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Ingest speed (v0.37.2-0.37.3): bottleneck was the gallery-write lock (new-face-model+add-model-images serialized, 83% busy), not tagging. Added vision/gallery_host.py: resident KFC process (CPU, below normal, 4 threads) doing create/add with antelopev2 loaded once and face reads cached by file sha1; ingest.GalleryHost client with vw fallback. Cross-process safety for extra lanes: file claims in .dataset-imports/panopticam/.claims + msvcrt GalleryLock. Measured 137/h -> 250/h on 3 lanes (create 16->9.4 s, add 12.2->3.0 s); lanes raised to 5. STATE.md updated (bottleneck numbers, Defender exclusion suggestion as operator to-do).",
+  "commands": [
+    "python deploy/bump.py",
+    "vision/Restart-VisionWorker.ps1",
+    "pytest vision/test_ingest.py"
+  ],
+  "files": [
+    "vision/gallery_host.py",
+    "vision/ingest.py",
+    "vision/test_ingest.py",
+    "vision/Restart-VisionWorker.ps1",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "8f3597402eb68c637f023067885dbdc8709b020eece33e245bc8ad2af7fe822f",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "89aebd5",
+    "hasChanges": false
+  }
+}

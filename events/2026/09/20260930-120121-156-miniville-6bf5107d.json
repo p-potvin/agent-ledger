@@ -1,0 +1,53 @@
+{
+  "id": "20260930-120121-156-miniville-6bf5107d",
+  "createdAt": "2026-09-30T16:01:21.1569397Z",
+  "createdAtLocal": "2026-09-30 12:01",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-1.6\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 12:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-1.6",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville v0.1.0 bootstrap on branch autodev: deterministic town sim seeded by Nemotron-Personas-USA — ingest to SQLite, 48-tick/day schedules, needs/moods, venue encounters -> relationship graph, event ledger, daily chronicle, opt-in Ollama narrator. 590 residents, ~540 interactions/day over 3 days, pytest 5/5. VW_STATE_REF resumeId=miniville-bootstrap-2026-09-30, overlaysApplied=LONG_RUNNING_TASKS. Narrator batch calls need operator approval.",
+  "commands": [
+    "pytest -q",
+    "miniville init --agents 500",
+    "miniville run --ticks 144",
+    "miniville narrate --day 3 --max 1"
+  ],
+  "files": [
+    "src/miniville",
+    "docs/STATE.md",
+    "docs/DESIGN.md",
+    "AGENTS.md",
+    "ROADMAP.md",
+    "TODO.md",
+    "README.md",
+    "pyproject.toml",
+    "tests/test_smoke.py"
+  ],
+  "planPath": "",
+  "contentHash": "6bf5107d6e74590fbd99df34f05ec4661ee21c6fdb5b8d5964cd1fcd579eb32d",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "4fb1598",
+    "hasChanges": false
+  }
+}

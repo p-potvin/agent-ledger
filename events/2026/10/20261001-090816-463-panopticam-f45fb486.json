@@ -1,0 +1,53 @@
+{
+  "id": "20261001-090816-463-panopticam-f45fb486",
+  "createdAt": "2026-10-01T13:08:16.4635505Z",
+  "createdAtLocal": "2026-10-01 09:08",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation + OVH Prom-King VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Monitor\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-01 09:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation + OVH Prom-King VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Monitor"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Bulk ingest by name (v0.30.0 + worker): every unjudged face archive auto-kept; ingest drops compare-face-gallery, adds to tied identity or creates new (namesake -> name-2 unless same photos already present), defers reindex until backlog empty; measured 27 s/archive (was 72), ~5 days for 17.5k. Added vision/name_matches.py duplicate-name report. One duplicate (01ashleyy-2) from a restart race, fixed in code, left for operator to merge in KFC.",
+  "commands": [
+    "Restart-VisionWorker.ps1",
+    "python vision/name_matches.py",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/datasets.py",
+    "backend/src/panopticam/config.py",
+    "vision/ingest.py",
+    "vision/name_matches.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "f45fb4864de01099015cb542ad0810ce670ec47cebf89a4b389010cd59d05c07",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "7660fd7",
+    "hasChanges": true
+  }
+}

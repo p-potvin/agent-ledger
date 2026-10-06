@@ -1,0 +1,56 @@
+{
+  "id": "20261005-002817-780-miniville-5624a2f9",
+  "createdAt": "2026-10-05T04:28:17.7806815Z",
+  "createdAtLocal": "2026-10-05 00:28",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-05 00:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville v0.8 labour market (simulation workstream, per operator: back to the sim). New src/miniville/jobs.py owns hiring: venue staffing targets from capacity+customer traffic scaled so posts = 92% of working-age adults, weekly hiring pass, voluntary turnover, retirement at 65 with pressure when work is scarce, rebalance-jobs migration. Fixed: economy.open_workplaces listed only kind='workplace' so the tavern/bean/theater/gym (all the customer traffic) could never be staffed; ingest matcher + the life lottery's untargeted hire funnelled 348 of 435 jobs into Town Hall; immigration inserted minors as job-holding adults (115); P_FIRE was 180%/yr separations; db copies were not WAL-safe (a soak copy came out malformed) - new db.snapshot_to used by soak/benchmark/backup. Live world migrated (backup t001955): Town Hall 348->7, unemployment 13.9%. Soak evidence: old code jobs 435->396, unemployment 13->20%, wage index 0.99->0.69, reserves 7x; new code unemployment 33->15% and falling, venues at target, wage index 0.99->0.89. 121 tests. Open finding: money supply drains in both runs (rent destroys faster than wages mint) - documented in STATE.",
+  "commands": [
+    "soak.py --days 730",
+    "rebalance-jobs",
+    "pytest -q",
+    "benchmark --days 2"
+  ],
+  "files": [
+    "src/miniville/jobs.py",
+    "src/miniville/engine.py",
+    "src/miniville/economy.py",
+    "src/miniville/ingest.py",
+    "src/miniville/growth.py",
+    "src/miniville/life.py",
+    "src/miniville/db.py",
+    "src/miniville/backup.py",
+    "src/miniville/cli.py",
+    "tests/test_jobs.py",
+    "scripts/soak.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "5624a2f9917f7c57fda22191b382929967730632abb75841c0b6f50e213da1d0",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "cc02f35",
+    "hasChanges": false
+  }
+}

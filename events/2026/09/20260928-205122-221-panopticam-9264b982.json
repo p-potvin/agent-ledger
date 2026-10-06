@@ -1,0 +1,55 @@
+{
+  "id": "20260928-205122-221-panopticam-9264b982",
+  "createdAt": "2026-09-29T00:51:22.2215969Z",
+  "createdAtLocal": "2026-09-28 20:51",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop) + OVH VPS via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-28 20:51 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop) + OVH VPS via tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.13.3-0.13.4 (scheduled loop session): bounded storage on both sides (Atlas.compact every 6h: expire one-room provisional personas unseen 10d, cap 24 most-varied faces per room/persona, rebuild matrix; first pass trimmed 16,333; OVH Vision.prune hourly for rooms gone 21d; vision.log rotation). Fixed match_gallery scoring only pre-filtered crops (one lucky crop tied rooms; revalidation undid 50-120 per restart). Fixed overlapping sessions from listing flaps (reopen within 180s; one-off merge 654k->410k rows, recount live_seconds). New #/top leaderboards (/api/top, avg/hours/peak/broadcasts x day/week/all). httpx INFO logging off (leaked Telegram bot token to OVH journal - operator asked to rotate). uvicorn graceful shutdown 10s. Deployed and verified live.",
+  "commands": [
+    "git push origin main (5942d11, 9cb4d6d, ae9b812)",
+    "Stop/Start-ScheduledTask 'Panopticam Vision'"
+  ],
+  "files": [
+    "vision/atlas.py",
+    "vision/worker.py",
+    "backend/src/panopticam/store.py",
+    "backend/src/panopticam/vision.py",
+    "backend/src/panopticam/app.py",
+    "web/src/components/Top.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "9264b982388e4cca27cfe4821d9067278e48b2d82788f1cd9f515ec49baaf0a3",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "ae9b812",
+    "hasChanges": false
+  }
+}

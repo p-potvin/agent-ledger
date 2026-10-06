@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260927-112458-240-vault-commander-64f3241a",
+    "createdAt":  "2026-09-27T15:24:58.2403670Z",
+    "createdAtLocal":  "2026-09-27 11:24",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-commander",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Antigravity\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: conductor\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-27 11:24 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Antigravity",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+    "summary":  "Added Winget Gyan.FFmpeg ffprobe resolution as primary duration extractor, verified nemotron-3.5 speech translation via /v1/audio/translations, tested Start-BetterSubtitles.ps1 with nemotron-3.5, and committed subtitle fixes to conductor branch (commit 5ccd605)",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "64f3241a072c1a4c2a1dd65e3720ef49b93f2c99c88bea0f89ef9e96c82d6451",
+    "git":  {
+                "repo":  "vault-commander",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+                "branch":  "conductor",
+                "head":  "5ccd605",
+                "hasChanges":  true
+            }
+}

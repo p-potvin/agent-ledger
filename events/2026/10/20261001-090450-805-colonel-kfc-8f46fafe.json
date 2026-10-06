@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261001-090450-805-colonel-kfc-8f46fafe",
+    "createdAt":  "2026-10-01T13:04:50.8050477Z",
+    "createdAtLocal":  "2026-10-01 09:04",
+    "timezone":  "Eastern Standard Time",
+    "project":  "ColONEL-KFC",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Antigravity (Gemini 2.5 Pro)\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC  Branch: feat/face-occlusion-and-cli-tools\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-01 09:04 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Antigravity (Gemini 2.5 Pro)",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC",
+    "summary":  "Synthesized architectural room boundaries (walls, ceiling, floor, window, trim) matching inferred photo style, with collision culling, 3DGS integration (377k splats), unit tests (22/22 pass), and real-conditions visual proof.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "8f46fafe45e89b81d98143dc67d4285fc6f2b86ca7e2776ff404c2d632c1d2ad",
+    "git":  {
+                "repo":  "ColONEL-KFC",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/ColONEL-KFC",
+                "branch":  "feat/face-occlusion-and-cli-tools",
+                "head":  "8995b23",
+                "hasChanges":  true
+            }
+}

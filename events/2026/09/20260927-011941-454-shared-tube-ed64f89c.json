@@ -1,0 +1,47 @@
+{
+  "id": "20260927-011941-454-shared-tube-ed64f89c",
+  "createdAt": "2026-09-27T05:19:41.4549105Z",
+  "createdAtLocal": "2026-09-27 01:19",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-27 01:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Deployed short-link pills + other agent's term-merge/account-page work. shared-tube: committed bb930f0 on feature/term-merge-placeholders-account on top of 86c941e, fast-forwarded main, pushed (81 tests, 3 site builds ok); webhook restarted fxv/oneporn/sexyprn, live v0.3.52. vaultwares-api: pushed 16304e4 (76 tests). Webhook deploy synced files but aborted under set -e on pre-existing rsync code 23 (root-owned /opt/vaultwares-api/.bak-20260921 undeletable, broken since 21 Sep) so service not restarted; manually ran remaining script steps (py_compile, systemctl restart, healthz ok). /short-links/stats 200, public /lucky returns 2 distinct fxv videos as plain-URL fallback because EXEIO_API_TOKEN/CUTY_API_TOKEN not yet in /opt/vaultwares-api/.env (awaiting user OK).",
+  "commands": [
+    "git merge --ff-only; git push origin main (both repos)",
+    "ssh ubuntu@100.67.25.118 systemctl restart vaultwares-api.service"
+  ],
+  "files": [
+    "/usr/local/bin/deploy-vaultwares-api.sh",
+    "/opt/vaultwares-api/.bak-20260921"
+  ],
+  "planPath": "",
+  "contentHash": "ed64f89cef325a805f28ec172e908ef9af053637692c842d53d99c850f2cd147",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "bb930f0",
+    "hasChanges": false
+  }
+}

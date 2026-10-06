@@ -1,0 +1,51 @@
+{
+  "id": "20260928-191729-400-panopticam-4e3770e6",
+  "createdAt": "2026-09-28T23:17:29.4008091Z",
+  "createdAtLocal": "2026-09-28 19:17",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local + OVH over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-28 19:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local + OVH over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam OnlyFans: session-expiry detection + Telegram notice via /api/vision/notify (v0.13.2); installed curl_cffi in global python; first live crawl OK (amyparker 27 files, aria_brown 23); OF daily subscription limit hit at ~5 -> cap 4/day, limit-text detection blocks 24h, only revisit subscribed profiles; scheduled task 'Panopticam OnlyFans' daily 04:00 30 min. Cam harvest cycle produced 7 archives (183 photos kept).",
+  "commands": [
+    "pip install curl_cffi",
+    "Register-OnlyFansTask.ps1",
+    "git push"
+  ],
+  "files": [
+    "panopticam/vision/onlyfans.py",
+    "panopticam/vision/Register-OnlyFansTask.ps1",
+    "panopticam/backend/src/panopticam/app.py",
+    "panopticam/docs/STATE.md"
+  ],
+  "planPath": "panopticam/docs/STATE.md",
+  "contentHash": "4e3770e693a4e7531859d02c95cea89f232f5dc4fe8d8ccbdb51833e040cca0e",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "4ed8bcc",
+    "hasChanges": false
+  }
+}

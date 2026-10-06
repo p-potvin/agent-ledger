@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260929-095800-066-vault-music-2e0d5e3e",
+    "createdAt":  "2026-09-29T13:58:00.0660061Z",
+    "createdAtLocal":  "2026-09-29 09:58",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-music",
+    "kind":  "verification",
+    "actor":  "start-qbittorrent.ps1",
+    "agentHeader":  "Agent: start-qbittorrent.ps1 (role: main)\r\nModel: GPT-6 Luna Medium Thinking\r\nThinking: service/start-qbittorrent.ps1\r\nMode: service/setup-vaultstreaming-qbittorrent.ps1\r\nPermissions: map_apple_music_artwork.py (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-music  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-29 09:58 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "GPT-6 Luna Medium Thinking",
+                    "thinking":  "service/start-qbittorrent.ps1",
+                    "mode":  "service/setup-vaultstreaming-qbittorrent.ps1",
+                    "permissions":  "map_apple_music_artwork.py",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-music",
+    "summary":  "Finished verification after the user’s qBittorrent CLI correction: service restart launched the isolated instance with --profile=\u003cdir\u003e; VaultMusic serves 1174 tracks, qBittorrent WebUI v5.1.0 is live on 8082, and personal instance remains on 8081. Full npm test suite passed 9/9. Apple iTunes title resolver returns Daft Punk collectionId 617154241; Apple Music parser reads 3446 albums and 15792 tracks. Changes remain uncommitted.",
+    "commands":  [
+                     "npm test"
+                 ],
+    "files":  [
+                  "service/start-service.ps1"
+              ],
+    "planPath":  "start-service.ps1 restart",
+    "contentHash":  "2e0d5e3ecb1ac0f4336e529f06de3c9b36a6da71281e965d9e138cc43d8294c4",
+    "git":  {
+                "repo":  "vault-music",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-music",
+                "branch":  "main",
+                "head":  "d408048",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "20260927-130122-867-panopticam-24fe9bb9",
+  "createdAt": "2026-09-27T17:01:22.8678708Z",
+  "createdAtLocal": "2026-09-27 13:01",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop) + SSH to OVH/greencloud over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King  Branch: n/a\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Claude_Browser\r\nMCP servers accessed (this reply): Claude_Browser\r\nTime: 2026-09-27 13:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop) + SSH to OVH/greencloud over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": "Claude_Browser"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
+  "summary": "New Prom-King project Panopticam (private repo Prom-King/panopticam, v0.1.1): FastAPI+curl_cffi backend polling Chaturbate (10s) and CamSoda (5s) listings (operator-agreed rates), SQLite sessions/samples, stream resolver (CB master served as text because tokens are single-use), zipper recording via vaultwares-api with token refresh + favourite auto-record; Preact+hls.js web app (live grid, hover previews, room panel with audience chart/week map, multi-stream wall, favourites, recordings). Deployed on OVH: panopticam.service on 127.0.0.1:9095 behind nginx tailnet vhost https://vps-ovhcloud.tail1764b8.ts.net (tailscale cert + weekly renew timer); webhook deploy via vw-webhookd target + deploy-panopticam.sh on greencloud (config backed up). Docs: Prom-King docs project page/router/infra, vaultwares-docs network-map + services-inventory rows. One short test recording (camsoda saraiminx, ~1.4MB) left in python-zipper/.downloaded/streams.",
+  "commands": [
+    "gh repo create Prom-King/panopticam --private",
+    "deploy/deploy.sh on OVH",
+    "tailscale cert vps-ovhcloud.tail1764b8.ts.net",
+    "gh api repos/Prom-King/panopticam/hooks"
+  ],
+  "files": [
+    "panopticam/backend/src/panopticam/*.py",
+    "panopticam/web/src/**",
+    "panopticam/deploy/*",
+    "docs/docs-content/projects/panopticam.md",
+    "/etc/vw-webhookd/config.yml (greencloud)",
+    "/etc/nginx/sites-available/panopticam.conf (OVH)"
+  ],
+  "planPath": " ",
+  "contentHash": "24fe9bb98fc55ad66c32e09f4ee243310d110559802fb2fe52fc5449c8051d02",
+  "git": null
+}

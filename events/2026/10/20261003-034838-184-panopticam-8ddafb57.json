@@ -1,0 +1,56 @@
+{
+  "id": "20261003-034838-184-panopticam-8ddafb57",
+  "createdAt": "2026-10-03T07:48:38.1847222Z",
+  "createdAtLocal": "2026-10-03 03:48",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Monitor, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-03 03:48 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Monitor",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.34.0 Moments learn from the operator's ratings: folder sorting of 2 Oct's 86 moments read as ratings (gold/more/okay/doesn't react/low quality), sent to server + rate buttons on #/moments (3 2 1 0 L); vision/moment_quality.py life score (CLAP silence+moaning, frame movement, tips; LOO AUC 0.74) refit from ratings; picks weighted by per-room taste x0.6-1.5, audience jump alone no longer qualifies (heat x0.75); reel finds moved files, drops rated-down. 2 Oct reel built (was silently skipped because all mp4s were moved). Fixed 3 stale ingest tests. Worker restarted; 84 ratings sent, 95 minutes scored.",
+  "commands": [
+    "python deploy/bump.py minor",
+    "git push origin main",
+    "vision/Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "backend/src/panopticam/moments.py",
+    "backend/src/panopticam/app.py",
+    "vision/moment_quality.py",
+    "vision/moments_pull.py",
+    "web/src/components/Moments.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "8ddafb57b48812bf2ff01020172ea23385d29660f5114360bc1b79aa45f71877",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "f937926",
+    "hasChanges": false
+  }
+}

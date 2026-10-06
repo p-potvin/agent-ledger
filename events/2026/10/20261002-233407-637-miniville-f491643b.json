@@ -1,0 +1,52 @@
+{
+  "id": "20261002-233407-637-miniville-f491643b",
+  "createdAt": "2026-10-03T03:34:07.6378166Z",
+  "createdAtLocal": "2026-10-02 23:34",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-02 23:34 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: purged 364 adult-gallery casts from the pool DB (kept 218 celeb casts incl all male actors, nulled avatar_path); wrote tag_celebrity_bounded.py (<=12 imgs/folder via TaggerEngine then reembed --resume) now running over 759 folders; build_avatar_gallery draws both sexes from celeb gallery with TMDB+60%-crop-vote sex check and --only-missing recast mode; shipped Pixi.js Map tab (/api/map, district tiles, venue squares, 636 activity-colored dots, pan/zoom, resident click-through) verified live via patchright. 99 tests pass; pushed 112db0a, c8c568b, 10702cc.",
+  "commands": [
+    "pytest -x -q",
+    "python scripts/purge_bad_casts.py",
+    "patchright-cli open http://127.0.0.1:8787",
+    "git push origin autodev"
+  ],
+  "files": [
+    "scripts/purge_bad_casts.py",
+    "scripts/tag_celebrity_bounded.py",
+    "scripts/build_avatar_gallery.py",
+    "src/miniville/ui/server.py",
+    "src/miniville/ui/static/map.js",
+    "src/miniville/ui/static/index.html",
+    "src/miniville/ui/static/app.js",
+    "tests/test_ui.py"
+  ],
+  "planPath": "",
+  "contentHash": "f491643b726842cab0d458b16b8ec790b652bc704de8a9e1a6c9abd102e40189",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "10702cc",
+    "hasChanges": false
+  }
+}

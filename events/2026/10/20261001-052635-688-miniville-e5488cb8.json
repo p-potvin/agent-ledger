@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261001-052635-688-miniville-e5488cb8",
+    "createdAt":  "2026-10-01T09:26:35.6880578Z",
+    "createdAtLocal":  "2026-10-01 05:26",
+    "timezone":  "Eastern Standard Time",
+    "project":  "miniville",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Devin (cloud session)\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-01 05:26 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Devin (cloud session)",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+    "summary":  "LEDGER BACKFILL for the CLOUD Devin session (Thu 01 Oct 2026 ~09:00 UTC) which had no record-agent-change.ps1 on its VM. That session built v0.5 seasons/holidays/birthdays: src/miniville/seasons.py (365-day calendar, 9 fixed holidays with venue/tick-window/day_off/attendance-p, school breaks Jun15-Aug31 + Dec22-Jan2, seasonal outdoor appeal, seasonal weather, per-agent hash-derived birthdays + coming-of-age at 18), encounters.py holiday crowd mingling (uncapped pairs + stranger mixing at active holiday venues), chronicle/digest/status/UI date+season+holiday display, agents.birth_day column + guarded migration, and PR #1 review fixes (wages only on worked days, orphans fostered into adult households, memories keep event tick, immigration reservoir per tick, UI moods exclude dead, Gazette selector refresh, avatar scripts stop caching transient TMDB failures). Found and fixed: growth.age_children was dead code so nobody ever aged. Also authored docs/AGENT_SYNC.md coordination protocol. Verified on synthetic worlds only (no dataset/live DB on the VM). Tests 54 pass there.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "e5488cb8a19f1dd27a1ded841c84b7b94005211c35bdecda83ba1ccdcf3784d5",
+    "git":  {
+                "repo":  "miniville",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/miniville",
+                "branch":  "autodev",
+                "head":  "d91f46b",
+                "hasChanges":  true
+            }
+}

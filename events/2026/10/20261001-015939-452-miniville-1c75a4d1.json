@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261001-015939-452-miniville-1c75a4d1",
+    "createdAt":  "2026-10-01T05:59:39.4523804Z",
+    "createdAtLocal":  "2026-10-01 01:59",
+    "timezone":  "Eastern Standard Time",
+    "project":  "miniville",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: DeepSeek V4.1 Flash High\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-01 01:59 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "DeepSeek V4.1 Flash High",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+    "summary":  "v0.6 economy (commit 3abd4bd, on autodev, NOT pushed). New src/miniville/economy.py: rent by district, groceries/dining/shopping/leisure prices, business P\u0026L with closure+layoffs+reopening, price_index, wage_index labour-market drift, weekly levy + civic dividend, economy_days time series. New CLI \u0027economy\u0027 cmd, /api/economy + observer UI Economy tab, chronicle Economy section, Gazette back page, docs/ECONOMY.md. Fixed 2 bugs: unbalanced hire/fire lottery (town shed every job; unemployment 14-\u003e33% over 120d) and wages paid 7 days/week despite jobs.work_days=Mon-Fri (wages raised 7/5 via economy_v2). Migrations economy_v1 x2.0 / economy_v2 x1.4. Verified 120 sim days on a copy of the live world: supply flat, median wallet -20/day, unemployment 12-19%, businesses solvent, moods unchanged. 22 new tests, 72 total pass. Also committed 0854e96 (v0.5 seasons+holidays, 12 holidays, school breaks, focal venue sync, child aging).",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "1c75a4d11c9e3e41be9969ef33b9714ce9339c651272dca7ac8e3d16cbb9d4d6",
+    "git":  {
+                "repo":  "miniville",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/miniville",
+                "branch":  "autodev",
+                "head":  "3abd4bd",
+                "hasChanges":  false
+            }
+}

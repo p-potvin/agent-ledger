@@ -1,0 +1,50 @@
+{
+  "id": "20260929-035403-963-panopticam-bf705c8e",
+  "createdAt": "2026-09-29T07:54:03.9633614Z",
+  "createdAtLocal": "2026-09-29 03:54",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation + OVH VPS via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-29 03:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation + OVH VPS via tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam 504 incident fixed (v0.14.2): backend event loop blocked in asyncio.create_subprocess_exec (clip sampler ffmpeg) because OVH host was out of RAM and forking the 1.9 GB process stalled. Restarted service to restore, then moved ffmpeg to asyncio.to_thread(subprocess.run), cut sampler tasks 6->3, stored vision vectors as float16 in memory (RSS 1.9->1.6 GB, host free RAM 140 MB->1.2 GB). Verified 12/12 public requests 200 in 0.12-0.29 s with sampler active.",
+  "commands": [
+    "sudo systemctl restart panopticam",
+    "py-spy dump (installed to /tmp/pyspy on OVH)",
+    "git push origin main (8461cec)"
+  ],
+  "files": [
+    "backend/src/panopticam/clips.py",
+    "backend/src/panopticam/vision.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "bf705c8e6f129364fd588743342632f06c8feaf9d8857fb1a6d897f4e5d29da6",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "aa29ec0",
+    "hasChanges": false
+  }
+}

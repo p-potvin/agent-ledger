@@ -1,0 +1,51 @@
+{
+  "id": "20260923-150801-900-vault-commander-27ec3154",
+  "createdAt": "2026-09-23T19:08:01.9006078Z",
+  "createdAtLocal": "2026-09-23 15:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: agent/extension-stream-detection\r\nTools used (this reply): Write, Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-09-23 15:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Write",
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Made the media scanner configuration-driven instead of code-driven. New cli/media-records.yaml holds roots, kinds (video/image/audio), exclude_paths, exclude_names, protected_paths and protected_names; new utils/media_records/config.py loads it from \\, then %USERPROFILE%\\.vaultwares\\media-records.yaml, then the repo copy - first wins, so a machine with a different drive layout never has to edit a tracked file. Defaults are deliberately permissive: a missing config means index everything under the roots except obvious noise, never index nothing. Kept exclude_names (basename at any depth) and exclude_paths (absolute prefix) as separate mechanisms because conflating them would prune folders named AI/Music/Programs inside the galleries. Added the protected concept for Apple Music and iTunes: indexed so they stay visible, but never written to, renamed or reorganised - matched by NAME as well as path so relocating the folder to another drive keeps the protection (verified Z:\\Backup\\Apple Music\\... is still protected). Enabled audio so music is indexed; G:\\Music is a loose flac collection, not Apple Music's managed tree. Invoke-MediaIndex.ps1 -Root is now optional and defaults to the config, plus a -Exclude flag for one-off subtrees. Verified 9 exclusion/protection cases and the user-override precedence end to end through vw.",
+  "commands": [
+    "vw media-index -Limit 30",
+    "python scan.py --json"
+  ],
+  "files": [
+    "vault-commander/cli/media-records.yaml",
+    "vault-commander/cli/utils/media_records/config.py",
+    "vault-commander/cli/utils/media_records/scan.py",
+    "vault-commander/cli/Invoke-MediaIndex.ps1"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\composed-wandering-fountain.md",
+  "contentHash": "27ec31546aceebe1dbc9a65e59e94f60897619448e4225660608945a014712b5",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "agent/extension-stream-detection",
+    "head": "98f0b43",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260925-080131-343-colonel-kfc-e3b82c05",
+    "createdAt":  "2026-09-25T12:01:31.3435621Z",
+    "createdAtLocal":  "2026-09-25 08:01",
+    "timezone":  "Eastern Standard Time",
+    "project":  "ColONEL-KFC",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 2.5 Flash\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC  Branch: feat/face-occlusion-and-cli-tools\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-25 08:01 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 2.5 Flash",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\ColONEL-KFC",
+    "summary":  "Overhauled head viewer with Hierarchical Scene Graph (Bust, Head, Hair, Eyeballs), LookAt gaze tracking, reduced anatomical iris slider (30%-140%) with presets, and resolved eye corner patch artifact",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "e3b82c05d3f41dec1b683157d6f28caf47bf63179ea38003b01fe67b5f1926d8",
+    "git":  {
+                "repo":  "ColONEL-KFC",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/ColONEL-KFC",
+                "branch":  "feat/face-occlusion-and-cli-tools",
+                "head":  "8995b23",
+                "hasChanges":  true
+            }
+}

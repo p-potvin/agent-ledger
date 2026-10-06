@@ -1,0 +1,51 @@
+{
+  "id": "20260930-181028-461-panopticam-972c3cd2",
+  "createdAt": "2026-09-30T22:10:28.4619276Z",
+  "createdAtLocal": "2026-09-30 18:10",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 18:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.22.0-0.22.3 chat: Chaturbate chat via their Ably push (anonymous, subscribe-only) for live favourites + busiest toy-tagged rooms (60) + open rooms; room panel live feed, 24 h tips/top tippers; chat_tips/chat_toys tables; toy 'runs now' notices queue sure YOLO positives (__chat__). Fixed: menu/advert notices misread as runs (11 wrong frames quarantined to _chat_false folders on VPS and E:\\YoloTraining\\BBOX\\lush), curl_cffi max_clients=10 capping websockets at 10. Now 60/60 connected, ~45 tips/min, RSS 1.25 GB.",
+  "commands": [
+    "git push origin main",
+    "probes on VPS via /srv/panopticam/.venv/bin/python"
+  ],
+  "files": [
+    "backend/src/panopticam/chat.py",
+    "backend/src/panopticam/toyframes.py",
+    "backend/src/panopticam/app.py",
+    "web/src/components/RoomPanel.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "972c3cd284b208bc005b869f6e4f1211da67b587a128d9ca9c97315e4d72cc0a",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "43de25d",
+    "hasChanges": false
+  }
+}

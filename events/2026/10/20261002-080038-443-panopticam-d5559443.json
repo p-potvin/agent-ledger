@@ -1,0 +1,55 @@
+{
+  "id": "20261002-080038-443-panopticam-d5559443",
+  "createdAt": "2026-10-02T12:00:38.4432624Z",
+  "createdAtLocal": "2026-10-02 08:00",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local + OVH VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): PowerShell, Bash, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-02 08:00 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local + OVH VPS",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.32.1: operational notices (watchdog, OF logout via /api/vision/notify, failed auto-records) go by email via new mail.py direct to MX mx1.alias.proton.me from VPS 148.113.255.142, From panopticam@alerts.prom-king.xyz, 30/day cap, POST /api/mail/test; PANOPTICAM_MAIL_TO=panopticam@prom-king.xyz added to VPS env; test mail accepted by Proton MX. OnlyFans crawl no longer auto-subscribes (--subscribe opt-in; 24h lockout at 10 follows confirmed by operator); 'list' command writes onlyfans-to-follow.html (114 links, gitignored). Operator to-do: Porkbun TXT alerts.prom-king.xyz v=spf1 ip4:148.113.255.142 -all.",
+  "commands": [
+    "python vision/onlyfans.py list",
+    "uv run pytest",
+    "git push (webhook deploy)",
+    "curl -X POST /api/mail/test"
+  ],
+  "files": [
+    "backend/src/panopticam/mail.py",
+    "backend/src/panopticam/app.py",
+    "backend/src/panopticam/notify.py",
+    "backend/src/panopticam/config.py",
+    "vision/onlyfans.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "d5559443803de9c819922fb9fee9140be238b9ef4e0b502d59843262000cf6ec",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "6964f3a",
+    "hasChanges": true
+  }
+}

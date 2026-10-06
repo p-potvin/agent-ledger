@@ -1,0 +1,54 @@
+{
+  "id": "20261005-065506-349-miniville-28d3fcfc",
+  "createdAt": "2026-10-05T10:55:06.3492525Z",
+  "createdAtLocal": "2026-10-05 06:55",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-05 06:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville v0.11: politics (phase 2 of religion/politics/power). New politics.py + council/elections/motions tables. Every policy is a number economy.py reads: levy_rate, dividend_share, rent_multiplier, min_wage (bounded). One seat per district (a town-wide top-5 seated only well-off backers and left the rent lever dead at 2-3 every time). The political axis emerges from the town's books: rent and the levy fund public payroll and the dividend, so a district leaning on the town votes them up and one paying its own way votes them down; poorer districts want the wage floor up. Fixed my own first cut which had the comfortable districts voting themselves a rent rise. Two-year soak: 28 motions, all 3-2/2-3, stable 3-2 majority cutting levy 5->3% and dividend 35->20%, poorer districts permanently outvoted, ZERO municipal deficits (closed economy survives), purse 158k. Dead councillors vacate and trigger a by-election. CLI council/election/motion, /api/council, chronicle names who governs. 150 tests. Commits e389f38..HEAD.",
+  "commands": [
+    "election",
+    "council",
+    "motion",
+    "scripts/_motion_sweep.py",
+    "scripts/_politics_probe.py",
+    "pytest -q"
+  ],
+  "files": [
+    "src/miniville/politics.py",
+    "src/miniville/economy.py",
+    "src/miniville/engine.py",
+    "src/miniville/cli.py",
+    "src/miniville/ui/server.py",
+    "src/miniville/chronicle.py",
+    "tests/test_politics.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "28d3fcfc95d0f5217d41ad7f3032b053388592a8c9a0da3e4445da75fb3cb737",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "41c9ce1",
+    "hasChanges": false
+  }
+}

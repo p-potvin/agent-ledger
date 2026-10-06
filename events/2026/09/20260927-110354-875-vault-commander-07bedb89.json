@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20260927-110354-875-vault-commander-07bedb89",
+    "createdAt":  "2026-09-27T15:03:54.8752957Z",
+    "createdAtLocal":  "2026-09-27 11:03",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-commander",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Antigravity\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: conductor\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-27 11:03 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Antigravity",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+    "summary":  "Fixed NeMo-Speech resident server VRAM bloat and multi-process duplicate model load: stabilized subtitles_server daemon process group, protected subtitles_translator against CUDA CLI duplicate model spawn when resident server is active, fixed nmt_model signature in translate_cues_riva, added wave fallback for duration, and verified stable ~4.4GB resident VRAM usage",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "07bedb893c312de5a565dd33fdf24b85b7d47bb75170705926f34658c06844f3",
+    "git":  {
+                "repo":  "vault-commander",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+                "branch":  "conductor",
+                "head":  "18f536f",
+                "hasChanges":  true
+            }
+}

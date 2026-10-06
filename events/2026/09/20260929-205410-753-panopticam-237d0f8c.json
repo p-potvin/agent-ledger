@@ -1,0 +1,53 @@
+{
+  "id": "20260929-205410-753-panopticam-237d0f8c",
+  "createdAt": "2026-09-30T00:54:10.7537278Z",
+  "createdAtLocal": "2026-09-29 20:54",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (local) + OVH VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-29 20:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (local) + OVH VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.17.0 (scheduled loop, Tue 29 Sep 2026 20:40-21:00): forecasts - forecast.py + /api/soon (chance of being live in next 3 h from same-time-of-day history, shrunk to overall on-air share, usual start = weighted median), Top 'Next 3 h' mode, room panel stat, Favourites column. Ingest: new-face-model gets single-person photos first (KFC YOLO-pose counts posters/poses as people; 3 of 31 archives failed); <6 = clear skip. Deployed via push to main, verified live in the browser; vision worker restarted (F4F naming active). STATE.md updated with operator to-dos.",
+  "commands": [
+    "git push origin main",
+    "Stop/Start-ScheduledTask 'Panopticam Vision'"
+  ],
+  "files": [
+    "backend/src/panopticam/forecast.py",
+    "backend/src/panopticam/app.py",
+    "backend/src/panopticam/store.py",
+    "vision/ingest.py",
+    "web/src/components/Top.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "237d0f8c35403b06887ea32e46ac5b03ee75722506bc82cf2580a137e3efee0c",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "44e4d01",
+    "hasChanges": false
+  }
+}

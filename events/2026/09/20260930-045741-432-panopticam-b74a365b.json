@@ -1,0 +1,53 @@
+{
+  "id": "20260930-045741-432-panopticam-b74a365b",
+  "createdAt": "2026-09-30T08:57:41.4321079Z",
+  "createdAtLocal": "2026-09-30 04:57",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-30 04:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.19.0 long clips (operator OK 30 Sep): ~300 women's rooms/day followed 60 s at lowest level on the VPS (favourites first), MP4 kept 2 days, 8-frame sprite, 10 s audio, 11-dim motion profile (stillness, bursts, cuts, rhythm, 0.3-1.5/1.5-4 Hz power, coverage). Action features 1282->1293 with widen() for old labels/heads, trainer v4, extras L2 1e-3. Visual actions teach on minute videos (Teach page plays MP4). Tower embeds all 8 frames. 70 tests pass. Measured 4.7-5.5 MB per clip, VPS load unchanged.",
+  "commands": [
+    "python deploy/bump.py minor",
+    "git push origin main",
+    "uv run pytest"
+  ],
+  "files": [
+    "backend/src/panopticam/clips.py",
+    "backend/src/panopticam/actions.py",
+    "backend/src/panopticam/app.py",
+    "vision/clipwork.py",
+    "web/src/components/Actions.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "b74a365b7fdf0a3914854e6279e4abf01625df15e9fb4d10fb2d5ede6c1e7500",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "4bbe442",
+    "hasChanges": false
+  }
+}

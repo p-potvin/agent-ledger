@@ -1,0 +1,52 @@
+{
+  "id": "20261003-092534-765-panopticam-a74db484",
+  "createdAt": "2026-10-03T13:25:34.7650895Z",
+  "createdAtLocal": "2026-10-03 09:25",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-03 09:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.36.2: Teach no longer waits on the refit (label returns at once, background retrain coalesced, next clip preloaded and shown immediately); habits F4F floor 10 cr (5 = spy price), muted = no audio stream (-90.0 sentinel), silent track separate, sound counts restarted. Resource census: VPS disk 90% (25 GB of 18,994 archives waiting for PC ingest), harvester paused below 8 GB free, 9.2k of 158k women's rooms harvested, ingest ~3.4k/day (~5.5 days left). Asked operator about moving the archive queue to the PC and more ingest lanes.",
+  "commands": [
+    "python deploy/bump.py patch",
+    "git push origin main",
+    "ssh df/du/sqlite (read-only)"
+  ],
+  "files": [
+    "backend/src/panopticam/actions.py",
+    "backend/src/panopticam/habits.py",
+    "backend/src/panopticam/traits.py",
+    "web/src/components/Actions.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "a74db4844462050bca01d6a16f62d206c5bff106b632986557f4cf053f68ee90",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "c5c2ae2",
+    "hasChanges": false
+  }
+}

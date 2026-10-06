@@ -1,0 +1,57 @@
+{
+  "id": "20260929-033052-522-panopticam-4124d440",
+  "createdAt": "2026-09-29T07:30:52.5222058Z",
+  "createdAtLocal": "2026-09-29 03:30",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation + OVH VPS via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser, hf_fs\r\nMCP servers accessed (this reply): none\r\nTime: 2026-09-29 03:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation + OVH VPS via tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser",
+      "hf_fs"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.14.0-0.14.1: search by action (sight and sound). OVH clip sampler (operator-approved 4/s cap; ~1/s effective, worker-bound): lowest HLS level, last 2 segments, ffmpeg 4-frame sprite + opus audio. Worker thread: mean SigLIP of frames, motion, CLAP audio embeddings (downloaded Xenova/clap-htsat-unfused ONNX, operator-approved; numpy log-mel verified vs transformers). OVH actions.py: per-action logistic heads initialised from SigLIP/CLAP text prompts, retrained by gradient descent on operator yes/no labels (Rocchio + low-dim fit, full fit past 50/side). UI #/actions (Live, Teach flipbook+sound), Browse 'Doing' ranking, alert event 'action'. Seeded 3 example actions without labels. Worker ~25% of 12 cores, 1.8 GB.",
+  "commands": [
+    "git push origin main (f56287a..1a628f5)",
+    "curl HF model downloads (PC + OVH)",
+    "Stop/Start-ScheduledTask 'Panopticam Vision'"
+  ],
+  "files": [
+    "backend/src/panopticam/clips.py",
+    "backend/src/panopticam/actions.py",
+    "vision/sound.py",
+    "vision/clipwork.py",
+    "web/src/components/Actions.tsx",
+    "backend/src/panopticam/alerts.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "4124d4409135b09146ce61380de1aa73402df5da9f8697c54356a2e1e88cd8a9",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "1a628f5",
+    "hasChanges": false
+  }
+}

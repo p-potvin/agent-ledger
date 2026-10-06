@@ -1,0 +1,49 @@
+{
+  "id": "20261001-071838-733-panopticam-4b167110",
+  "createdAt": "2026-10-01T11:18:38.7334741Z",
+  "createdAtLocal": "2026-10-01 07:18",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation + OVH Prom-King VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-01 07:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation + OVH Prom-King VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "VPS disk full incident fixed: one CamSoda profile's 206 free videos (13 GB) in harvest/work; trimmed to 12 smallest (15 GB free); harvest caps per room + harvest/stills pause under 8 GB free (v0.29.3). Coverage numbers collected (stills 21.5k/42.8k women's rooms live in 24h; 20.2k/26.1k with audience; 17,497 untriaged archives = 23 GB). OF crawler: sync_following reads the account's follow list each run. Bonga HAR had no WS messages.",
+  "commands": [
+    "ssh VPS du/df",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/harvest.py",
+    "backend/src/panopticam/stills.py",
+    "vision/onlyfans.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "4b167110e5e6effae71c40419446df215767d5c7da81f1eee89e6f0fed982d68",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "a69ede7",
+    "hasChanges": true
+  }
+}

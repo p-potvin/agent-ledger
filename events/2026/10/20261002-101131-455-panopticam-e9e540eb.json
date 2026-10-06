@@ -1,0 +1,48 @@
+{
+  "id": "20261002-101131-455-panopticam-e9e540eb",
+  "createdAt": "2026-10-02T14:11:31.4557146Z",
+  "createdAtLocal": "2026-10-02 10:11",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation + OVH Prom-King VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-02 10:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation + OVH Prom-King VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Atlas follow-up to operator's gallery merges: Atlas dataset_names still held 8 merged names; renamed 4 personas to surviving names (audreyviau, aliciabiden, angelicallure, bellaagrace), merged jessey-adams/bella_adams_ via same-person link (applied by worker), 3 had no rooms. name_matches.py --aliases now also repoints Atlas names and lists pairs needing a link.",
+  "commands": [
+    "sqlite update panopticam-atlas.db dataset_names",
+    "PUT /api/links",
+    "python vision/name_matches.py --aliases"
+  ],
+  "files": [
+    "vision/name_matches.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "e9e540eb89ca91d6f238e780ec9912e351867ff93ee1f1091ba0fa4785d672eb",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "4030b9f",
+    "hasChanges": true
+  }
+}

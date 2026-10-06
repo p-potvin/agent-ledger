@@ -1,0 +1,45 @@
+{
+  "id": "20260923-145913-305-vault-commander-084812d9",
+  "createdAt": "2026-09-23T18:59:13.3052046Z",
+  "createdAtLocal": "2026-09-23 14:59",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5\r\nThinking: high\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: agent/extension-stream-detection\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): ccd_session\r\nTime: 2026-09-23 14:59 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": "ccd_session"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+  "summary": "Added SKIP_PATHS to the media scanner: whole-subtree exclusions matched by absolute path prefix rather than by basename, plus a repeatable --exclude CLI flag. This distinction matters - SKIP_DIRS matches a basename at any depth, so excluding 'AI', 'Music' or 'Programs' that way would prune folders of those names anywhere inside the galleries; verified D:\\comfyUI and children are pruned while G:\\Gallery\\aaliyahlove\\AI survives and D:\\AIRPORT is not caught by a naive startswith. Chose the 52 excluded subtrees by measurement rather than by name: profiled every root-level folder on D/E/G for media count and sidecar density, which cleanly separates library from tooling - G:\\Gallery and G:\\Galleries are 100% sidecar-bearing, FirefoxDownloads 34% and mega 22% (all kept), while every single folder on D: and E: measured 0-2% including ones that sound like media. Re-running the full four-root scan with exclusions in the background. Left a handful genuinely ambiguous and not excluded pending the user: D:\\Media Streaming, D:\\Wallpapers_Minimalism, E:\\Telegram Data, E:\\Proton, G:\\Music, G:\\Backups, G:\\ChromeDownloads.",
+  "commands": [
+    "python scan.py D:/ E:/ F:/ G:/ --json"
+  ],
+  "files": [
+    "vault-commander/cli/utils/media_records/scan.py"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\composed-wandering-fountain.md",
+  "contentHash": "084812d9d858bfd024129d430a5f8bc25ec3039fde0aca4a521fff4bec5b477a",
+  "git": {
+    "repo": "python-zipper",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+    "branch": "agent/extension-stream-detection",
+    "head": "98f0b43",
+    "hasChanges": true
+  }
+}
