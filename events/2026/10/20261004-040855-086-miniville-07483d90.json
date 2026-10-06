@@ -1,0 +1,48 @@
+{
+  "id": "20261004-040855-086-miniville-07483d90",
+  "createdAt": "2026-10-04T08:08:55.0863667Z",
+  "createdAtLocal": "2026-10-04 04:08",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-04 04:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: cleared the perf gate - 5k day-start p99 41.3s->3.2s. Profiled engine._day_start on a fresh 6,085-agent bench world (init --agents 5000): collect_rent was 34.8s because the per-household agents JOIN had no index on household_id (4k full scans x 6k rows). Added idx_agents_household in db.py schema + applied to live db -> 73ms (480x). Rebuild now dominates at 2.7s which is fine once/day. Also: verify_celebrity_gender running (~60%), caught+fixed a .assets/.head consolidation gotcha (old identities' flat images moved; imread fails; added vote_sex_db fallback so their labels aren't clobbered). Embed finished: 900 identities/22k crops. Map crowd-count labels shipped. Live world advanced to day 41. TODO fully cleared - night-shift + perf + bond wheel all checked off.",
+  "commands": [
+    "init --agents 5000 (bench5k.db)",
+    "benchmark --days 2",
+    "collect_rent 34.8s->73ms",
+    "verify_celebrity_gender.py"
+  ],
+  "files": [
+    "src/miniville/db.py",
+    "src/miniville/ui/static/map.js",
+    "scripts/verify_celebrity_gender.py",
+    "TODO.md"
+  ],
+  "planPath": "",
+  "contentHash": "07483d90aba1d58af6cf4d8961d20ab13f11b8e83c52d6552c1f35d0275397a1",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "c3240c5",
+    "hasChanges": true
+  }
+}

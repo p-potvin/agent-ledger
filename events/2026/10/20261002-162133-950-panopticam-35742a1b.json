@@ -1,0 +1,52 @@
+{
+  "id": "20261002-162133-950-panopticam-35742a1b",
+  "createdAt": "2026-10-02T20:21:33.9506393Z",
+  "createdAtLocal": "2026-10-02 16:21",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, Edit, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-02 16:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (local)",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled loop session (v0.32.3): offline check of the first toy YOLO (ColONEL-KFC toy_yolov8n.onnx, 51 boxed toys) on 2,118 unboxed frames - near chance (AUC 0.57-0.61, fires on <1%), not wired in. Moments day-1 review: 72 used by 17:44 UTC, 17 audience-jump-only (dips/promotion). Fixed Tracked.heat_parts (return from a dip is not a jump; affects Director, Moments, spike rules) and paced Moments (credits 72/day, burst 3, adaptive bar 2.5/3.25). Tests 111 pass. docs/STATE.md updated with notes + operator to-dos. Pushed to main (deploy).",
+  "commands": [
+    "pytest",
+    "python deploy/bump.py",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/index.py",
+    "backend/src/panopticam/moments.py",
+    "backend/tests/test_moments.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "35742a1b9afa21c6362338b4c82482e3f995d9a8cfe20d464ee2cc8ec8956959",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "adf3aa2",
+    "hasChanges": true
+  }
+}

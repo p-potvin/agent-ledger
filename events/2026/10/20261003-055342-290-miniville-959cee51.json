@@ -1,0 +1,49 @@
+{
+  "id": "20261003-055342-290-miniville-959cee51",
+  "createdAt": "2026-10-03T09:53:42.2907484Z",
+  "createdAtLocal": "2026-10-03 05:53",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-03 05:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville PR#2 review: addressed all 5 workstation findings - builder+recase write src=celebrity:<sex>:<name> so repeat purges can't delete new celebrity casts (dry-run 0/218); _sex_votes imports verifier MIN_VOTES/VOTE_MARGIN (>2:1) closing the 4-2 loophole; verify_celebrity_gender stores n_crops so re-embeds auto-invalidate stale labels; _*.py diagnostics untracked+gitignored; AVATARS.md casting section rewritten celebrity-only. Replied to all 5 review comments. 108 tests pass. Bounded tagger finished 759/759 folders; embed phase running. Pushed 51e8552.",
+  "commands": [
+    "git pull --ff-only",
+    "pytest -x -q",
+    "gh api repos/p-potvin/miniville/pulls/2/comments"
+  ],
+  "files": [
+    "scripts/purge_bad_casts.py",
+    "scripts/build_avatar_gallery.py",
+    "scripts/verify_celebrity_gender.py",
+    "scripts/recase_avatars.py",
+    "docs/AVATARS.md",
+    "docs/AGENT_SYNC.md"
+  ],
+  "planPath": "",
+  "contentHash": "959cee511b6a82cf342c0b7fe6a22007761e99240e803177eec72e9483546ce5",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "51e8552",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "20261004-050656-073-miniville-b3cab228",
+  "createdAt": "2026-10-04T09:06:56.0738341Z",
+  "createdAtLocal": "2026-10-04 05:06",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-04 05:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: completed the purge+recast arc. Embed finished 900 identities/22k crops; verify_celebrity_gender resolved 832/1010 (506M/338F) with a new vote_sex_db fallback for identities whose flat images were consolidated into .assets/.head. Recast 507 residents, 0 wrong-sex identities, 129 deferred (female pool exhausted). Portrait quality: gender auditor 73->7 mismatched, 32->6 unreadable after re-cropping portraits from an exemplar whose own detected sex matches the identity. Fixed: builder dry-run was writing the mapping (1286 entries for 636 residents); merge was blind-append (now keyed by resident, stale dirs dropped); pool() offered identities whose source images no longer exist (56 broken avatars); 78 casts from the second adult gallery F:\\amd\\gallery escaped the first purge - purge now unions both galleries case-folded and keeps per-crop gender on copy.",
+  "commands": [
+    "reembed --resume",
+    "verify_celebrity_gender.py",
+    "build_avatar_gallery.py --only-missing",
+    "audit_avatar_gender.py"
+  ],
+  "files": [
+    "scripts/build_avatar_gallery.py",
+    "scripts/purge_bad_casts.py",
+    "scripts/verify_celebrity_gender.py",
+    "docs/AVATARS.md",
+    "docs/AGENT_SYNC.md"
+  ],
+  "planPath": "",
+  "contentHash": "b3cab2280c4579e2865bd038964a90ac5ae5733b2f701c12d79925e537c0ebd9",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "6ef24f7",
+    "hasChanges": true
+  }
+}

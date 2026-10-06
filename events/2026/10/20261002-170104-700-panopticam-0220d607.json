@@ -1,0 +1,45 @@
+{
+  "id": "20261002-170104-700-panopticam-0220d607",
+  "createdAt": "2026-10-02T21:01:04.7000201Z",
+  "createdAtLocal": "2026-10-02 17:01",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "documentation",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-02 17:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "After operator stop: re-checked state instead of running a glob rm -rf on a computed scratch path (would have been rm -rf /* if cygpath returned empty; not run, scratch left in place). Found parallel session v0.33.0 (194e362) on top of my v0.32.3; my pacing is live (credits/bar in status). Corrected STATE.md: toy bridge now used for proposals at conf 0.10 (~3% of frames per my offline scores); merged my toy to-do into theirs. Pushed 4d2b2b5.",
+  "commands": [
+    "git push origin main"
+  ],
+  "files": [
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "0220d60704f88d980d44fd0734e82455d8ffc9070dcb0efb9c065f2ec0baa66b",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "4d2b2b5",
+    "hasChanges": false
+  }
+}

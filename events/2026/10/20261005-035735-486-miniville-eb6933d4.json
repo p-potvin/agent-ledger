@@ -1,0 +1,49 @@
+{
+  "id": "20261005-035735-486-miniville-eb6933d4",
+  "createdAt": "2026-10-05T07:57:35.4868462Z",
+  "createdAtLocal": "2026-10-05 03:57",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-05 03:57 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: made affiliations matter. Built the groups layer (congregations/clubs/societies, faith parsed from personas), then measured it with a controlled A/B (60 days, same snapshot, memberships cleared in one world) and found the clubs were a rounding error: 53.7% vs 50.4% of club-mates meeting, 76241 vs 76008 relationships. Diagnosed encounters.py as the cause - it shuffled everyone present and paired 12 random pairs per venue per tick, ~9800 pair-encounters/day, mixing the town into a fog (92% of relationships at familiarity 1-3). Rewrote pairing to be scarce and chosen: 4 conversations per venue per half-hour from the best-scoring of 14 candidates, scored for repeat contact +3, shared group +2, faith +1, similar age +0.75, hobbies +0.5; one batched 'who knows whom' query per venue (tick p50 30.8ms). Re-measured: club-mates 2.1x more familiar with groups (10.24 vs 4.84), total ties unchanged. Also fixed: gatherings no longer override meal windows, and children were only ever eating dinner (the school branch won breakfast/lunch ticks) - town hunger 140 -> 3, content 475 -> 626 of 634. 141 tests. Commits 4ee6951..ff74c81.",
+  "commands": [
+    "scripts/_ab_groups.py",
+    "scripts/_clustering_probe.py",
+    "benchmark --days 2",
+    "pytest -q"
+  ],
+  "files": [
+    "src/miniville/groups.py",
+    "src/miniville/encounters.py",
+    "src/miniville/schedules.py",
+    "tests/test_groups.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "eb6933d4b1b3ced2b18e6e6e720ed22dd10e02428852d0d3c0479287f7fc1e83",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "ff74c81",
+    "hasChanges": false
+  }
+}

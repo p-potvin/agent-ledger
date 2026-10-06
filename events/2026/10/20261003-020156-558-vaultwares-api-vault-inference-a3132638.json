@@ -1,0 +1,49 @@
+{
+  "id": "20261003-020156-558-vaultwares-api-vault-inference-a3132638",
+  "createdAt": "2026-10-03T06:01:56.5586686Z",
+  "createdAtLocal": "2026-10-03 02:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-api,vault-inference",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: medium\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-03 02:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
+  "summary": "Read-only audit of AI-run telemetry ingestion. DB has 1145 runs / 6 providers but newest row is 2026-09-26; ingestion stalled. ROOT CAUSE PROVEN: 19,131 records (25 MB) sit unsent in D:\\AiHistory\\run-spool\\cli-*.jsonl since 2026-09-20, produced by source vw-cli (tasks vision-metadata WD14-ConvNeXt, media-pipeline); records omit provider and runtime, which AiRunBatch requires, so every batch is rejected and stays spooled. Validated a spooled record locally against the API model: 'Field required' for provider and runtime. Other findings: vault-inference gateway has zero rows (unused); \\.72 HF cost attributed to vaultwares-studio hf-job, with many \\.27 rows at 0ms duration and identical timestamps (likely phantom/duplicate cost); test pollution recurring from other repos (_FakeHub.run_job TypeError x12, runtime=pytest x8); host key split Clopeux-Desktop vs CLOPEUX-DESKTOP; ComfyUI 383 runs with project=unknown; total_tokens=0 (no active token-reporting source). Earlier \\ test rows confirmed removed. No changes made.",
+  "commands": [
+    "GET /api/telemetry/ai-runs/summary",
+    "GET /api/telemetry/ai-runs/errors",
+    "GET /api/telemetry/ai-runs/runs",
+    "AiRunBatch local validation"
+  ],
+  "files": [
+    "D:\\AiHistory\\run-spool",
+    "vaultwares-api/app/routers/telemetry/ai_runs.py"
+  ],
+  "planPath": "",
+  "contentHash": "a313263862206124a813c73ea6ba156b517c31ac074df0cead4d47e86342c1f4",
+  "git": {
+    "repo": "vaultwares-api",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-api",
+    "branch": "main",
+    "head": "814a9fd",
+    "hasChanges": false
+  }
+}

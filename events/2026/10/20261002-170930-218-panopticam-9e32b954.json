@@ -1,0 +1,51 @@
+{
+  "id": "20261002-170930-218-panopticam-9e32b954",
+  "createdAt": "2026-10-02T21:09:30.2185350Z",
+  "createdAtLocal": "2026-10-02 17:09",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, Edit, Write, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-02 17:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Took a shot at the KFC cleo_cam single-image room: found and fixed 3 bugs (proof renderer BGR/RGB swap; TripoSplat content y-down vs y-up shell -> 180deg-about-z turn, not a mirror; TripoSplat closing front-face slab culled by density fall) in ColONEL-KFC architectural_synthesizer.py + verify script (left uncommitted in KFC: untracked WIP); fixed result in runs/room_architectural_claude/cleo_cam + Desktop proof. Panopticam: vision/review_toys.py OpenCV reviewer for YOLO toy proposals (81 queued) + tests; STATE notes. Commits local (2 ahead), not pushed to avoid a redeploy.",
+  "commands": [
+    "pytest vision test_review_toys",
+    "KFC venv render of fixed splat"
+  ],
+  "files": [
+    "vision/review_toys.py",
+    "ColONEL-KFC/face_organizer/room_reconstruction/architectural_synthesizer.py",
+    "ColONEL-KFC/tests/verify_architectural_room_synthesis.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "9e32b954872db51a64d94a3d81fc8d15c78700a6c0554bbc0300f598c83e17f4",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "054a0bb",
+    "hasChanges": false
+  }
+}

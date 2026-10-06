@@ -1,0 +1,50 @@
+{
+  "id": "20261002-155303-738-miniville-8ae2b874",
+  "createdAt": "2026-10-02T19:53:03.7388571Z",
+  "createdAtLocal": "2026-10-02 15:53",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-02 15:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: shipped v0.7 god-mode shocks (took over inactive cloud agent's claim). New shocks.py (closure/fire/festival via inject+apply_due), businesses.reopen_day migration, seasons.holiday_for surfaces festivals as one-day holidays, engine._day_start wiring, CLI shock/shocks, /api/shocks, Gazette sections, deviations skip closed venues, life.py cohabitation+no-bigamy guard. 97 tests pass; live-copy smoke verified (fire=5 layoffs, festival day=1448 interactions). Committed de6c969, pushed autodev, restarted observer server on :8787.",
+  "commands": [
+    "pytest -x -q",
+    "git push origin autodev"
+  ],
+  "files": [
+    "src/miniville/shocks.py",
+    "tests/test_shocks.py",
+    "src/miniville/engine.py",
+    "src/miniville/economy.py",
+    "src/miniville/seasons.py",
+    "src/miniville/life.py",
+    "docs/AGENT_SYNC.md",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "8ae2b874aec02a9a3f97687ac8ca838f08969ff186defedc009bdc4aa45f4a73",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "de6c969",
+    "hasChanges": true
+  }
+}

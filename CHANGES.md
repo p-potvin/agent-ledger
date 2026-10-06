@@ -3,6 +3,2003 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
+<summary><strong>2026-10-05 23:50 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>verification</code> - Added unit &amp; live gateway tests verifying ai-runs live JSON response and non-JSON HTML rejection</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 23:50 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added unit & live gateway tests verifying ai-runs live JSON response and non-JSON HTML rejection
+- Git: repo=vault-monitor, branch=main, head=444a83a
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 23:48 - panopticam</strong> <code>commands</code> - Tue 06 Oct 2026: qa_runner kept stopped on the Panopticam VPS until Thu 08 Oct 04:00 UTC (old transient resume timer from 30 Sep replaced via systemd-run --on-calendar). Answere...</summary>
+
+- Kind: commands
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation + OVH VPS over tailnet)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 23:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tue 06 Oct 2026: qa_runner kept stopped on the Panopticam VPS until Thu 08 Oct 04:00 UTC (old transient resume timer from 30 Sep replaced via systemd-run --on-calendar). Answered ingest outlook: gallery 27,546 identities, D: backlog 4,434 zips at ~1,100/h (done ~08:00 UTC), then ~2k new women's rooms/day. Rewrote operator to-do in STATE.md as a ranked top 5 + background.
+- Commands:
+  - `sudo systemctl stop qa-runner-resume.timer`
+  - `sudo systemd-run --unit=qa-runner-resume --on-calendar='2026-10-08 04:00:00 UTC' /usr/bin/docker start qa_runner`
+- Files:
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=338dd36
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 23:48 - vault-monitor</strong> <code>verification</code> - Fixed JSON.parse error on /model-runs by adding /api/ proxy on greencloud nginx and adding content-type validation in api.ts</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 23:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed JSON.parse error on /model-runs by adding /api/ proxy on greencloud nginx and adding content-type validation in api.ts
+- Git: repo=vault-monitor, branch=main, head=444a83a
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 21:27 - miniville</strong> <code>code-change</code> - miniville v0.12: phase 3 - influence + conflict. New conflict.py + boycotts table. Influence is a reading (standing, rank, wealth, council seat, flock led) and gates who can sta...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 21:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville v0.12: phase 3 - influence + conflict. New conflict.py + boycotts table. Influence is a reading (standing, rank, wealth, council seat, flock led) and gates who can start something. Three acts with real consequences: slander (standing loss scaled by the gossip's reach), boycott (group withdraws custom, members stop spending at the venue, traffic decays, business can fail), schism (a congregation splits, leavers found their own). MEASURED AND NOTHING HAPPENED: zero rivalries in town, worst affinity -2.7 of 53k relationships - the tone table only goes hostile below -20 which nothing could reach. Fixed: slights compound between people who already dislike each other, small chance of friction between the merely familiar, plus two sources of grievance (lost election -> runners-up resent winners; passed over for promotion). Result: min affinity -38.4, 5 rivalries, slander + 2 boycotts in the first month. ALSO found+fixed a bug I had introduced: SENIORITY_MAX was defined but never applied, so 2%/yr compounded forever -> wages outgrew prices -> 27 businesses failed over 870 days, each closure deleting its whole staff (Library/Gym/Theater at 0-4 staff vs targets 6-42), posts 270->227. Now base_wage_cents caps a career at ~1.8x. Also: accidentally overwrote tests/test_jobs.py with a stub, restored from git immediately (215 lines, 13 tests). 158 tests. Commits 3fff922..HEAD.
+- Commands:
+  - `influence --top 8`
+  - `scripts/_affinity_probe.py`
+  - `scripts/_market_probe2.py`
+  - `scripts/_flows2.py`
+  - `pytest -q`
+- Files:
+  - `src/miniville/conflict.py`
+  - `src/miniville/encounters.py`
+  - `src/miniville/politics.py`
+  - `src/miniville/jobs.py`
+  - `src/miniville/db.py`
+  - `tests/test_conflict.py`
+  - `tests/test_jobs.py`
+  - `docs/STATE.md`
+- Git: repo=miniville, branch=autodev, head=3795e47
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 21:23 - panopticam</strong> <code>code-change</code> - Tue 06 Oct 2026 (v0.37.18-0.37.19): action head refits moved to one spawned process (fit_head_apart, in-thread fallback) - stalls during a ~50 s refit dropped from one every few...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation + OVH VPS over tailnet)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Edit, Monitor
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 21:23 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tue 06 Oct 2026 (v0.37.18-0.37.19): action head refits moved to one spawned process (fit_head_apart, in-thread fallback) - stalls during a ~50 s refit dropped from one every few seconds to one; gc.freeze after startup loads; stills dhash JPEG draft decode (~3x faster); verified habits labels live (9,239 live rooms labelled); STATE.md + operator to-do (spot-check 'Public only').
+- Commands:
+  - `git push origin main (deploy)`
+  - `sudo -n journalctl -u panopticam`
+- Files:
+  - `backend/src/panopticam/actions.py`
+  - `backend/src/panopticam/app.py`
+  - `backend/src/panopticam/stills.py`
+  - `backend/tests/test_actions.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=331e0c0
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 06:55 - miniville</strong> <code>code-change</code> - miniville v0.11: politics (phase 2 of religion/politics/power). New politics.py + council/elections/motions tables. Every policy is a number economy.py reads: levy_rate, dividen...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 06:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville v0.11: politics (phase 2 of religion/politics/power). New politics.py + council/elections/motions tables. Every policy is a number economy.py reads: levy_rate, dividend_share, rent_multiplier, min_wage (bounded). One seat per district (a town-wide top-5 seated only well-off backers and left the rent lever dead at 2-3 every time). The political axis emerges from the town's books: rent and the levy fund public payroll and the dividend, so a district leaning on the town votes them up and one paying its own way votes them down; poorer districts want the wage floor up. Fixed my own first cut which had the comfortable districts voting themselves a rent rise. Two-year soak: 28 motions, all 3-2/2-3, stable 3-2 majority cutting levy 5->3% and dividend 35->20%, poorer districts permanently outvoted, ZERO municipal deficits (closed economy survives), purse 158k. Dead councillors vacate and trigger a by-election. CLI council/election/motion, /api/council, chronicle names who governs. 150 tests. Commits e389f38..HEAD.
+- Commands:
+  - `election`
+  - `council`
+  - `motion`
+  - `scripts/_motion_sweep.py`
+  - `scripts/_politics_probe.py`
+  - `pytest -q`
+- Files:
+  - `src/miniville/politics.py`
+  - `src/miniville/economy.py`
+  - `src/miniville/engine.py`
+  - `src/miniville/cli.py`
+  - `src/miniville/ui/server.py`
+  - `src/miniville/chronicle.py`
+  - `tests/test_politics.py`
+  - `docs/STATE.md`
+- Git: repo=miniville, branch=autodev, head=41c9ce1
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 04:45 - panopticam</strong> <code>code-change</code> - Scheduled session Mon 05 Oct 2026 (v0.37.7-0.37.17): /api/debug/heap census; room-panel identity scan chunked (was ~480 MB per call, the 4.3 GB peaks) and moved off the event lo...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation + OVH VPS over tailnet)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Edit, Monitor
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 04:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Scheduled session Mon 05 Oct 2026 (v0.37.7-0.37.17): /api/debug/heap census; room-panel identity scan chunked (was ~480 MB per call, the 4.3 GB peaks) and moved off the event loop; traits/habits records of offline rooms kept as JSON bytes (traits.Cold) - startup RSS 2003->1691 MB; habit labels refresh live rooms only; net.get wraps network failures in FetchError (11 thumb 500s/12h) with CB/CAM4 sweeps still failing whole on timeouts; event-loop lag gauge + stall thread dumps + GC timing in /api/status (GC ruled out; refits+PIL contention on a loaded 4-core VPS cause 0.5-0.9 s late ticks). STATE.md updated.
+- Commands:
+  - `git push origin main (deploy)`
+  - `ssh ubuntu@100.114.3.121 sudo -n journalctl -u panopticam`
+- Files:
+  - `backend/src/panopticam/heap.py`
+  - `backend/src/panopticam/vision.py`
+  - `backend/src/panopticam/traits.py`
+  - `backend/src/panopticam/habits.py`
+  - `backend/src/panopticam/net.py`
+  - `backend/src/panopticam/app.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=68ed922
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 04:14 - vault-monitor</strong> <code>verification</code> - Validated real SQLite database conditions across F:, G:, D: drives and captured targeted visual proof for Identities UI</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 04:14 (TZ: Eastern Standard Time)
+  ```
+- Summary: Validated real SQLite database conditions across F:, G:, D: drives and captured targeted visual proof for Identities UI
+- Git: repo=vault-monitor, branch=main, head=444a83a
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 04:08 - vault-monitor</strong> <code>general</code> - Committed and pushed v2.4.7 to main: Identities module refactored to reflect real PC galleries (15,000 models, 130,591 ArcFace crops)</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 04:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Committed and pushed v2.4.7 to main: Identities module refactored to reflect real PC galleries (15,000 models, 130,591 ArcFace crops)
+- Git: repo=vault-monitor, branch=main, head=cc41017
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 04:04 - vault-monitor</strong> <code>code-change</code> - Refactored Identities module to reflect real multi-gallery stats from PC (15,000 models, 130,591 ArcFace vectors across F:, G:, D: drives)</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 04:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: Refactored Identities module to reflect real multi-gallery stats from PC (15,000 models, 130,591 ArcFace vectors across F:, G:, D: drives)
+- Git: repo=vault-monitor, branch=main, head=bb0afe1
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 03:57 - miniville</strong> <code>code-change</code> - miniville: made affiliations matter. Built the groups layer (congregations/clubs/societies, faith parsed from personas), then measured it with a controlled A/B (60 days, same sn...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 03:57 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville: made affiliations matter. Built the groups layer (congregations/clubs/societies, faith parsed from personas), then measured it with a controlled A/B (60 days, same snapshot, memberships cleared in one world) and found the clubs were a rounding error: 53.7% vs 50.4% of club-mates meeting, 76241 vs 76008 relationships. Diagnosed encounters.py as the cause - it shuffled everyone present and paired 12 random pairs per venue per tick, ~9800 pair-encounters/day, mixing the town into a fog (92% of relationships at familiarity 1-3). Rewrote pairing to be scarce and chosen: 4 conversations per venue per half-hour from the best-scoring of 14 candidates, scored for repeat contact +3, shared group +2, faith +1, similar age +0.75, hobbies +0.5; one batched 'who knows whom' query per venue (tick p50 30.8ms). Re-measured: club-mates 2.1x more familiar with groups (10.24 vs 4.84), total ties unchanged. Also fixed: gatherings no longer override meal windows, and children were only ever eating dinner (the school branch won breakfast/lunch ticks) - town hunger 140 -> 3, content 475 -> 626 of 634. 141 tests. Commits 4ee6951..ff74c81.
+- Commands:
+  - `scripts/_ab_groups.py`
+  - `scripts/_clustering_probe.py`
+  - `benchmark --days 2`
+  - `pytest -q`
+- Files:
+  - `src/miniville/groups.py`
+  - `src/miniville/encounters.py`
+  - `src/miniville/schedules.py`
+  - `tests/test_groups.py`
+  - `docs/STATE.md`
+- Git: repo=miniville, branch=autodev, head=ff74c81
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 03:21 - miniville</strong> <code>code-change</code> - miniville v0.10: affiliations layer (groups + memberships) - phase 1 of religion/politics/power. Faith parsed from each persona&#39;s own cultural_background (28% name a tradition; ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 03:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville v0.10: affiliations layer (groups + memberships) - phase 1 of religion/politics/power. Faith parsed from each persona's own cultural_background (28% name a tradition; the rest are left silent, matching the generator's 71.9% no-mention mix measured across 272,728 personas); children inherit the household's. Groups shape who is where when: a meeting is a schedule slot (gathering activity, social +3.5) and encounters do the social work; a gathering never pulls anyone off a shift. Clubs stay small (5-18) and a crowd splits into several clubs named by district; congregations need a quorum of 6. Group standing = mean member standing. CLI form-groups/groups, /api/groups, memberships on the resident card, init founds a new town's groups. Live world: 35 groups, 505 memberships across 360 of 636 residents, 58 gathering slots, interactions 119->883 on meeting days. 141 tests. Phases 2-3 (council/elections with real policy levers, influence index, organized conflict) documented in STATE as not started.
+- Commands:
+  - `form-groups`
+  - `groups`
+  - `pytest -q`
+  - `soak.py --days 730`
+- Files:
+  - `src/miniville/groups.py`
+  - `src/miniville/db.py`
+  - `src/miniville/schedules.py`
+  - `src/miniville/needs.py`
+  - `src/miniville/engine.py`
+  - `src/miniville/cli.py`
+  - `src/miniville/ui/server.py`
+  - `tests/test_groups.py`
+  - `docs/STATE.md`
+- Git: repo=miniville, branch=autodev, head=4ee6951
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 02:59 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>verification</code> - 1000-video backfill completed: 97 recent videos upgraded to 7x1.5s clips; identified expired CDN tokens on older upstream videos</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 02:59 (TZ: Eastern Standard Time)
+  ```
+- Summary: 1000-video backfill completed: 97 recent videos upgraded to 7x1.5s clips; identified expired CDN tokens on older upstream videos
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 02:35 - miniville</strong> <code>code-change</code> - miniville v0.9: closed the money loop, added careers and reputation (operator asked me to pursue the &#39;alive and legible&#39; goal). ECONOMY: rent was destroyed and public-service pa...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 02:35 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville v0.9: closed the money loop, added careers and reputation (operator asked me to pursue the 'alive and legible' goal). ECONOMY: rent was destroyed and public-service payroll was minted (revenue faked to equal payroll) while the levy's non-rebated share vanished despite its comment saying it funded public services - measured -734,088 over 60 days (7.8% of supply). Added town_account purse: rent credits it, levy share credits it, public payroll debits it (shortfall = town_deficit event), purse keeps 6 weeks of payroll and rebates the surplus via the dividend. Result: +108,944 over 90 days, wallets flat, purse bounded, zero deficit; 486-day soak holds (money 9.15M->9.57M, unemployment 33%->11%). CAREERS: jobs.started_tick + rank, weekly pass gives tenure yearly raises and worker->senior->head promotions (+12% pay, NOTABLE event); education finally matters (degree promotes 0.75/yr vs 0.55). REPUTATION: new reputation.py accrues standing from the ledger (favours/marriages/promotions up; betrayals/separations/downsizing down), decays a point a month; encounters warm or cool by the pair's standing; hiring prefers the better-regarded candidate; death emits an obituary naming regard and how many residents actually knew them; chronicle gains a Standing section. Also: db.snapshot_to (WAL-safe copies), backup never overwrites, town purse in CLI/UI. 132 tests. Pushed 65dc52c..47cb600.
+- Commands:
+  - `scripts/_money_audit.py 90`
+  - `soak.py --days 730`
+  - `pytest -q`
+- Files:
+  - `src/miniville/reputation.py`
+  - `src/miniville/jobs.py`
+  - `src/miniville/economy.py`
+  - `src/miniville/db.py`
+  - `src/miniville/encounters.py`
+  - `src/miniville/mortality.py`
+  - `src/miniville/chronicle.py`
+  - `src/miniville/backup.py`
+  - `tests/test_reputation.py`
+  - `tests/test_jobs.py`
+  - `tests/test_economy.py`
+  - `docs/ECONOMY.md`
+  - `docs/STATE.md`
+- Git: repo=miniville, branch=autodev, head=47cb600
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 02:24 - shared-tube</strong> <code>verification</code> - Verified live DB persistence, 10.6s ffprobe duration, and HTTPS streaming for upgraded backfill video 180246</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 02:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified live DB persistence, 10.6s ffprobe duration, and HTTPS streaming for upgraded backfill video 180246
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 02:23 - shared-tube</strong> <code>code-change</code> - Created media-cache backfill script and launched 1000-video 7x1.5s preview upgrade on OVH</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 02:23 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created media-cache backfill script and launched 1000-video 7x1.5s preview upgrade on OVH
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 02:08 - shared-tube</strong> <code>verification</code> - Confirmed deployment and live verification of VideoCard volume 0.5 and audio-preview 7x1.5s generator across greencloud and OVH</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 02:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Confirmed deployment and live verification of VideoCard volume 0.5 and audio-preview 7x1.5s generator across greencloud and OVH
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 02:06 - shared-tube</strong> <code>code-change</code> - Deployed 7x1.5s audio preview generator to OVH and rebuilt tube apps on greencloud</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 02:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: Deployed 7x1.5s audio preview generator to OVH and rebuilt tube apps on greencloud
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 01:50 - shared-tube</strong> <code>verification</code> - Verified live HTTPS Range streaming, ffprobe audio/video streams, and storage.ts hash handling under real environment conditions</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 01:50 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified live HTTPS Range streaming, ffprobe audio/video streams, and storage.ts hash handling under real environment conditions
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 01:48 - shared-tube</strong> <code>code-change</code> - Fixed double-hashing bug in media cache storage and added fallback in vaultwares-api media routes</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 01:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed double-hashing bug in media cache storage and added fallback in vaultwares-api media routes
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 01:27 - panopticam</strong> <code>code-change</code> - v0.37.4-0.37.6: resident tagger (tag_host.py) + 2-tagger pool; both ingest helpers on CUDA at operator&#39;s request (PANOPTICAM_HOST_DEVICE, ~4.3 GB VRAM total); ingest measured 13...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: code
+  Permissions: bypass (network: Windows 11 workstation (Clopeux-Desktop) + Prom-King VPS via tailnet)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Edit, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 01:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: v0.37.4-0.37.6: resident tagger (tag_host.py) + 2-tagger pool; both ingest helpers on CUDA at operator's request (PANOPTICAM_HOST_DEVICE, ~4.3 GB VRAM total); ingest measured 137/h -> ~1,270/h (5 lanes). VPS API memory: loader profile on a guarded DB copy (vision +680 MB, traits +300, actions +134, habits +117); look vectors now 2 days in RAM (CLIP_RAM_DAYS), faces 21; API 2.49 -> 2.34 GB, remaining ~1.2 GB growth after start still to profile. Killed own leftover /tmp/memprof.py on VPS (held deleted 2 GB DB). Defender suggestion withdrawn per operator.
+- Commands:
+  - `vision/Restart-VisionWorker.ps1`
+  - `python deploy/bump.py`
+  - `pytest backend/tests`
+  - `ssh ubuntu@100.114.3.121 memprof2.py (guarded)`
+- Files:
+  - `vision/tag_host.py`
+  - `vision/gallery_host.py`
+  - `vision/ingest.py`
+  - `backend/src/panopticam/vision.py`
+  - `backend/tests/test_vision.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=0c7bf1b
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 01:26 - miniville</strong> <code>general</code> - miniville: conversational turn - operator asked what the end goal is and whether more is coming. Answered from README/DESIGN/STATE: the goal is a persistent deterministic town w...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 01:26 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville: conversational turn - operator asked what the end goal is and whether more is coming. Answered from README/DESIGN/STATE: the goal is a persistent deterministic town whose events ledger generates emergent story (economy/jobs/relationships are substrate, not the point), all five complexity strata now exist (sim -> narration -> UI -> seasons/economy/lifecycle -> god-mode), so the frontier is depth not new strata. Named the biggest gap: the money-supply drain (rent destroys faster than wages mint) which makes long runs drift deflationary, plus deep-time proof and story-depth items (careers, reputation, education effects, inheritance, governance). No code changes this turn.
+- Git: repo=miniville, branch=autodev, head=cc02f35
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 00:28 - miniville</strong> <code>code-change</code> - miniville v0.8 labour market (simulation workstream, per operator: back to the sim). New src/miniville/jobs.py owns hiring: venue staffing targets from capacity+customer traffic...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 00:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville v0.8 labour market (simulation workstream, per operator: back to the sim). New src/miniville/jobs.py owns hiring: venue staffing targets from capacity+customer traffic scaled so posts = 92% of working-age adults, weekly hiring pass, voluntary turnover, retirement at 65 with pressure when work is scarce, rebalance-jobs migration. Fixed: economy.open_workplaces listed only kind='workplace' so the tavern/bean/theater/gym (all the customer traffic) could never be staffed; ingest matcher + the life lottery's untargeted hire funnelled 348 of 435 jobs into Town Hall; immigration inserted minors as job-holding adults (115); P_FIRE was 180%/yr separations; db copies were not WAL-safe (a soak copy came out malformed) - new db.snapshot_to used by soak/benchmark/backup. Live world migrated (backup t001955): Town Hall 348->7, unemployment 13.9%. Soak evidence: old code jobs 435->396, unemployment 13->20%, wage index 0.99->0.69, reserves 7x; new code unemployment 33->15% and falling, venues at target, wage index 0.99->0.89. 121 tests. Open finding: money supply drains in both runs (rent destroys faster than wages mint) - documented in STATE.
+- Commands:
+  - `soak.py --days 730`
+  - `rebalance-jobs`
+  - `pytest -q`
+  - `benchmark --days 2`
+- Files:
+  - `src/miniville/jobs.py`
+  - `src/miniville/engine.py`
+  - `src/miniville/economy.py`
+  - `src/miniville/ingest.py`
+  - `src/miniville/growth.py`
+  - `src/miniville/life.py`
+  - `src/miniville/db.py`
+  - `src/miniville/backup.py`
+  - `src/miniville/cli.py`
+  - `tests/test_jobs.py`
+  - `scripts/soak.py`
+  - `docs/STATE.md`
+- Git: repo=miniville, branch=autodev, head=cc02f35
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 00:24 - shared-tube</strong> <code>code-change</code> - Fixed PostgreSQL site enum cast in promking fetcher persistence and verified multi-page crawls</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-05 00:24 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed PostgreSQL site enum cast in promking fetcher persistence and verified multi-page crawls
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-04 23:46 - panopticam</strong> <code>code-change</code> - Ingest speed (v0.37.2-0.37.3): bottleneck was the gallery-write lock (new-face-model+add-model-images serialized, 83% busy), not tagging. Added vision/gallery_host.py: resident ...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: code
+  Permissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Edit, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-10-04 23:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: Ingest speed (v0.37.2-0.37.3): bottleneck was the gallery-write lock (new-face-model+add-model-images serialized, 83% busy), not tagging. Added vision/gallery_host.py: resident KFC process (CPU, below normal, 4 threads) doing create/add with antelopev2 loaded once and face reads cached by file sha1; ingest.GalleryHost client with vw fallback. Cross-process safety for extra lanes: file claims in .dataset-imports/panopticam/.claims + msvcrt GalleryLock. Measured 137/h -> 250/h on 3 lanes (create 16->9.4 s, add 12.2->3.0 s); lanes raised to 5. STATE.md updated (bottleneck numbers, Defender exclusion suggestion as operator to-do).
+- Commands:
+  - `python deploy/bump.py`
+  - `vision/Restart-VisionWorker.ps1`
+  - `pytest vision/test_ingest.py`
+- Files:
+  - `vision/gallery_host.py`
+  - `vision/ingest.py`
+  - `vision/test_ingest.py`
+  - `vision/Restart-VisionWorker.ps1`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=89aebd5
+
+</details>
+
+<details>
+<summary><strong>2026-10-04 23:33 - shared-tube</strong> <code>commands</code> - Cleaned orphaned CUDA venv, browser caches, pip cache, and docker images on greencloud; reclaimed 15.9 GB disk space (69% used, 19 GB free)</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-04 23:33 (TZ: Eastern Standard Time)
+  ```
+- Summary: Cleaned orphaned CUDA venv, browser caches, pip cache, and docker images on greencloud; reclaimed 15.9 GB disk space (69% used, 19 GB free)
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-04 23:23 - shared-tube</strong> <code>general</code> - Identified origin of 34k cached MP4 clips and produced comprehensive greencloud disk cleanup plan (~17.4 GB reclaimable)</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-04 23:23 (TZ: Eastern Standard Time)
+  ```
+- Summary: Identified origin of 34k cached MP4 clips and produced comprehensive greencloud disk cleanup plan (~17.4 GB reclaimable)
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-04 22:54 - miniville</strong> <code>code-change</code> - miniville: gallery cleanup + pool forensics per operator request. clean_gallery_images.py keeps only 1-person facing-camera photos (21,085 kept / 54,626 quarantined to .rejected...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-04 22:54 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville: gallery cleanup + pool forensics per operator request. clean_gallery_images.py keeps only 1-person facing-camera photos (21,085 kept / 54,626 quarantined to .rejected, reversible) - 72% of the gallery was multi-person scenes, which had polluted the identity sex votes. verify_celebrity_gender --force re-voted on clean crops; identity_crops now filters to existing files ordered by quality so --max-crops samples readable images. Answer to the operator's question: 1013 folders but only 734 identities have a determinable sex (452M/282F), 274 females already worn, 8 free; ~130 folders are empty (.assets/.head consumed) and 237 have no solo photo at all; relaxing facing-camera revives 1 identity. Recast: 593 residents cast (305M/288F), 43 deferred (all female), 0 wrong-sex identities, 0 duplicate identities. 110 tests pass.
+- Commands:
+  - `clean_gallery_images.py --dry-run`
+  - `clean_gallery_images.py`
+  - `verify_celebrity_gender.py --force --max-crops 8`
+  - `build_avatar_gallery.py --only-missing`
+  - `pytest -x -q`
+- Files:
+  - `scripts/clean_gallery_images.py`
+  - `scripts/verify_celebrity_gender.py`
+  - `docs/AVATARS.md`
+- Git: repo=miniville, branch=autodev, head=60a6739
+
+</details>
+
+<details>
+<summary><strong>2026-10-04 22:28 - shared-tube</strong> <code>verification</code> - Audited video cache storage across servers and confirmed fetcher-only clip generation policy</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-04 22:28 (TZ: Eastern Standard Time)
+  ```
+- Summary: Audited video cache storage across servers and confirmed fetcher-only clip generation policy
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-04 22:01 - shared-tube</strong> <code>code-change</code> - Implement 7-segment staggered video previews at 0.5 volume in shared-tube and vaultwares-api</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-04 22:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implement 7-segment staggered video previews at 0.5 volume in shared-tube and vaultwares-api
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-04 21:55 - shared-tube</strong> <code>code-change</code> - Implemented 7-capture 1.5s staggered video preview splicing at 0.5 volume across generator and media cache pipelines</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-04 21:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implemented 7-capture 1.5s staggered video preview splicing at 0.5 volume across generator and media cache pipelines
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-04 05:06 - miniville</strong> <code>code-change</code> - miniville: completed the purge+recast arc. Embed finished 900 identities/22k crops; verify_celebrity_gender resolved 832/1010 (506M/338F) with a new vote_sex_db fallback for ide...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-04 05:06 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville: completed the purge+recast arc. Embed finished 900 identities/22k crops; verify_celebrity_gender resolved 832/1010 (506M/338F) with a new vote_sex_db fallback for identities whose flat images were consolidated into .assets/.head. Recast 507 residents, 0 wrong-sex identities, 129 deferred (female pool exhausted). Portrait quality: gender auditor 73->7 mismatched, 32->6 unreadable after re-cropping portraits from an exemplar whose own detected sex matches the identity. Fixed: builder dry-run was writing the mapping (1286 entries for 636 residents); merge was blind-append (now keyed by resident, stale dirs dropped); pool() offered identities whose source images no longer exist (56 broken avatars); 78 casts from the second adult gallery F:\amd\gallery escaped the first purge - purge now unions both galleries case-folded and keeps per-crop gender on copy.
+- Commands:
+  - `reembed --resume`
+  - `verify_celebrity_gender.py`
+  - `build_avatar_gallery.py --only-missing`
+  - `audit_avatar_gender.py`
+- Files:
+  - `scripts/build_avatar_gallery.py`
+  - `scripts/purge_bad_casts.py`
+  - `scripts/verify_celebrity_gender.py`
+  - `docs/AVATARS.md`
+  - `docs/AGENT_SYNC.md`
+- Git: repo=miniville, branch=autodev, head=6ef24f7
+
+</details>
+
+<details>
+<summary><strong>2026-10-04 04:46 - panopticam</strong> <code>code-change</code> - v0.37.0-0.37.1: archive offload to D:\panopticam-archives (VPS placeholders in _offloaded, verified sizes, local-first fetch; passes 1-2 moved 5,983 archives / 7.9 GB, VPS 90% -...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Edit, Write, AskUserQuestion
+  MCP servers accessed (this reply): none
+  Time: 2026-10-04 04:46 (TZ: Eastern Standard Time)
+  ```
+- Summary: v0.37.0-0.37.1: archive offload to D:\panopticam-archives (VPS placeholders in _offloaded, verified sizes, local-first fetch; passes 1-2 moved 5,983 archives / 7.9 GB, VPS 90% -> 76%), ingest lanes 3 (measured ~114/h vs ~170/h with 2: per-call vw start-up and disk D: saturation, not lanes), Atlas inbox off + recycled, 4 abandoned import folders recycled, 643 empty _pending dirs removed, VPS hourly prune of offline rooms' sample files > 48 h. docs/FOLDERS.md inventory. Embedding speed: 3 vw process starts per archive, 6 s start-up on an empty folder.
+- Commands:
+  - `rclone offload via worker`
+  - `Restart-VisionWorker.ps1`
+  - `git push origin main`
+- Files:
+  - `vision/ingest.py`
+  - `vision/atlas.py`
+  - `backend/src/panopticam/datasets.py`
+  - `backend/src/panopticam/clips.py`
+  - `docs/FOLDERS.md`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=8d60d9d
+
+</details>
+
+<details>
+<summary><strong>2026-10-04 04:08 - miniville</strong> <code>code-change</code> - miniville: cleared the perf gate - 5k day-start p99 41.3s-&gt;3.2s. Profiled engine._day_start on a fresh 6,085-agent bench world (init --agents 5000): collect_rent was 34.8s becau...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-04 04:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville: cleared the perf gate - 5k day-start p99 41.3s->3.2s. Profiled engine._day_start on a fresh 6,085-agent bench world (init --agents 5000): collect_rent was 34.8s because the per-household agents JOIN had no index on household_id (4k full scans x 6k rows). Added idx_agents_household in db.py schema + applied to live db -> 73ms (480x). Rebuild now dominates at 2.7s which is fine once/day. Also: verify_celebrity_gender running (~60%), caught+fixed a .assets/.head consolidation gotcha (old identities' flat images moved; imread fails; added vote_sex_db fallback so their labels aren't clobbered). Embed finished: 900 identities/22k crops. Map crowd-count labels shipped. Live world advanced to day 41. TODO fully cleared - night-shift + perf + bond wheel all checked off.
+- Commands:
+  - `init --agents 5000 (bench5k.db)`
+  - `benchmark --days 2`
+  - `collect_rent 34.8s->73ms`
+  - `verify_celebrity_gender.py`
+- Files:
+  - `src/miniville/db.py`
+  - `src/miniville/ui/static/map.js`
+  - `scripts/verify_celebrity_gender.py`
+  - `TODO.md`
+- Git: repo=miniville, branch=autodev, head=c3240c5
+
+</details>
+
+<details>
+<summary><strong>2026-10-04 02:08 - miniville</strong> <code>code-change</code> - miniville: shipped bond wheel tab (/api/graph ego network + radial Pixi graph.js, click-recentre, resident-card + list wiring, verified live via patchright 144 nodes); fixed nig...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-04 02:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville: shipped bond wheel tab (/api/graph ego network + radial Pixi graph.js, click-recentre, resident-card + list wiring, verified live via patchright 144 nodes); fixed night-shift edge cases (wrap-around shifts now cover the window, post-shift eat before sleep check, mid break wraps mod 48); fixed tag_bounded spawnv->subprocess handoff; addressed PR#2 review (5 findings: src=celebrity marker, MIN_VOTES/VOTE_MARGIN parity, n_crops invalidation, _*.py untracked, AVATARS.md) + posted replies; PR#2 merged. 110 tests pass. Bounded embed ~35% through 759 folders; verify+recast queued for the 364 purged residents. Pushed 51e8552,53c1985,46e897b,f39d283,ddd99bc.
+- Commands:
+  - `pytest -x -q`
+  - `patchright-cli open http://127.0.0.1:8787`
+  - `git pull --rebase`
+  - `git push origin autodev`
+- Files:
+  - `src/miniville/ui/server.py`
+  - `src/miniville/ui/static/graph.js`
+  - `src/miniville/schedules.py`
+  - `scripts/build_avatar_gallery.py`
+  - `scripts/purge_bad_casts.py`
+  - `scripts/verify_celebrity_gender.py`
+  - `tests/test_ui.py`
+  - `tests/test_seasons.py`
+- Git: repo=miniville, branch=autodev, head=a07f8f4
+
+</details>
+
+<details>
+<summary><strong>2026-10-03 09:25 - panopticam</strong> <code>code-change</code> - v0.36.2: Teach no longer waits on the refit (label returns at once, background retrain coalesced, next clip preloaded and shown immediately); habits F4F floor 10 cr (5 = spy pri...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Edit
+  MCP servers accessed (this reply): none
+  Time: 2026-10-03 09:25 (TZ: Eastern Standard Time)
+  ```
+- Summary: v0.36.2: Teach no longer waits on the refit (label returns at once, background retrain coalesced, next clip preloaded and shown immediately); habits F4F floor 10 cr (5 = spy price), muted = no audio stream (-90.0 sentinel), silent track separate, sound counts restarted. Resource census: VPS disk 90% (25 GB of 18,994 archives waiting for PC ingest), harvester paused below 8 GB free, 9.2k of 158k women's rooms harvested, ingest ~3.4k/day (~5.5 days left). Asked operator about moving the archive queue to the PC and more ingest lanes.
+- Commands:
+  - `python deploy/bump.py patch`
+  - `git push origin main`
+  - `ssh df/du/sqlite (read-only)`
+- Files:
+  - `backend/src/panopticam/actions.py`
+  - `backend/src/panopticam/habits.py`
+  - `backend/src/panopticam/traits.py`
+  - `web/src/components/Actions.tsx`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=c5c2ae2
+
+</details>
+
+<details>
+<summary><strong>2026-10-03 09:12 - panopticam</strong> <code>code-change</code> - Panopticam v0.35.1-0.36.1 (scheduled loop, Sat 03 Oct 2026 13:00-13:45 UTC): habit labels now need 3 days seen (v0.35.0 had boxed 183 rooms &#39;Often in private&#39; and 511 &#39;Leaves mi...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation (local) + Prom-King VPS)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Claude_Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-10-03 09:12 (TZ: Eastern Standard Time)
+  ```
+- Summary: Panopticam v0.35.1-0.36.1 (scheduled loop, Sat 03 Oct 2026 13:00-13:45 UTC): habit labels now need 3 days seen (v0.35.0 had boxed 183 rooms 'Often in private' and 511 'Leaves mid-show' after 5 h); CB gap label says 'likely privates: N%' once 40+ followed-chat gaps calibrated; calibration + CB status words persist in room_shows _calib; /api/status habits.labels counts. Moments log pre-pick sound (column pre). New alert trigger 'elsewhere' (private on one site, public twin on another; CB via followed chat status); seeded rule id 4 feed-only; ~270 firings/h live; dedup of public_on. 127 backend tests pass, tsc clean, deployed and checked in browser. STATE.md updated with operator to-dos.
+- Commands:
+  - `uv run --frozen pytest -q`
+  - `python deploy/bump.py`
+  - `git push origin main`
+  - `POST /api/rules (rule 4)`
+- Files:
+  - `backend/src/panopticam/habits.py`
+  - `backend/src/panopticam/alerts.py`
+  - `backend/src/panopticam/moments.py`
+  - `backend/src/panopticam/app.py`
+  - `backend/src/panopticam/notify.py`
+  - `web/src/components/Alerts.tsx`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=c2bc1ea
+
+</details>
+
+<details>
+<summary><strong>2026-10-03 05:53 - miniville</strong> <code>code-change</code> - miniville PR#2 review: addressed all 5 workstation findings - builder+recase write src=celebrity:&lt;sex&gt;:&lt;name&gt; so repeat purges can&#39;t delete new celebrity casts (dry-run 0/218); ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-03 05:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville PR#2 review: addressed all 5 workstation findings - builder+recase write src=celebrity:<sex>:<name> so repeat purges can't delete new celebrity casts (dry-run 0/218); _sex_votes imports verifier MIN_VOTES/VOTE_MARGIN (>2:1) closing the 4-2 loophole; verify_celebrity_gender stores n_crops so re-embeds auto-invalidate stale labels; _*.py diagnostics untracked+gitignored; AVATARS.md casting section rewritten celebrity-only. Replied to all 5 review comments. 108 tests pass. Bounded tagger finished 759/759 folders; embed phase running. Pushed 51e8552.
+- Commands:
+  - `git pull --ff-only`
+  - `pytest -x -q`
+  - `gh api repos/p-potvin/miniville/pulls/2/comments`
+- Files:
+  - `scripts/purge_bad_casts.py`
+  - `scripts/build_avatar_gallery.py`
+  - `scripts/verify_celebrity_gender.py`
+  - `scripts/recase_avatars.py`
+  - `docs/AVATARS.md`
+  - `docs/AGENT_SYNC.md`
+- Git: repo=miniville, branch=autodev, head=51e8552
+
+</details>
+
+<details>
+<summary><strong>2026-10-03 05:47 - vault-commander</strong> <code>code-change</code> - extract-thumbs: added first-collision overwrite prompt for default per-basename patterns (which restart at 1 and would overwrite). Interactive shells get Read-Host once: y=overw...</summary>
+
+- Kind: code-change
+- Actor: Devin
+- Agent Header:
+  ```text
+  Agent: Devin (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-03 05:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: extract-thumbs: added first-collision overwrite prompt for default per-basename patterns (which restart at 1 and would overwrite). Interactive shells get Read-Host once: y=overwrite all following, n=skip colliding files, a=abort. Non-interactive stdin auto-skips (safe). Shared -Name patterns still continue the global counter via -start_number and never collide. Verified: re-run skipped without overwriting (Skipped:1), -Name append unaffected.
+- Files:
+  - `cli/Extract-Thumbs.ps1`
+- Git: repo=miniville, branch=autodev, head=10702cc
+
+</details>
+
+<details>
+<summary><strong>2026-10-03 05:39 - vault-commander</strong> <code>code-change</code> - extract-thumbs: shared -Name patterns now use a global zero-padded counter instead of colliding. Get-NextSequenceIndex scans the output dir for the pattern&#39;s highest index; ffmp...</summary>
+
+- Kind: code-change
+- Actor: Devin
+- Agent Header:
+  ```text
+  Agent: Devin (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-03 05:39 (TZ: Eastern Standard Time)
+  ```
+- Summary: extract-thumbs: shared -Name patterns now use a global zero-padded counter instead of colliding. Get-NextSequenceIndex scans the output dir for the pattern's highest index; ffmpeg -start_number continues from max+1, so sequences run globally across videos AND across re-runs (frame_0001.. appended as frame_0005.. then 0009.. on rerun). Collision warning removed; -Name param doc + registry updated.
+- Commands:
+  - `cli/vw-commands.ps1`
+- Files:
+  - `cli/Extract-Thumbs.ps1`
+- Git: repo=miniville, branch=autodev, head=10702cc
+
+</details>
+
+<details>
+<summary><strong>2026-10-03 05:36 - vault-commander</strong> <code>general</code> - Answered user question on vw extract-thumbs -Name semantics: a shared -Name pattern collides across videos in one output dir (ffmpeg %04d restarts at 1 per file, -y overwrites, ...</summary>
+
+- Kind: general
+- Actor: Devin
+- Agent Header:
+  ```text
+  Agent: Devin (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: chat
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-03 05:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Answered user question on vw extract-thumbs -Name semantics: a shared -Name pattern collides across videos in one output dir (ffmpeg %04d restarts at 1 per file, -y overwrites, warning fires). Omit -Name for per-video <basename>_%04d.png.
+- Git: repo=miniville, branch=autodev, head=10702cc
+
+</details>
+
+<details>
+<summary><strong>2026-10-03 05:29 - vault-commander</strong> <code>code-change</code> - Added &#39;vw extract-thumbs&#39; command: new cli/Extract-Thumbs.ps1 wraps &#39;ffmpeg -i input -vf fps=&lt;rate&gt;,scale=&lt;Width&gt;:-1 name_%04d.png&#39; for a video file or directory (-Recurse). -Co...</summary>
+
+- Kind: code-change
+- Actor: Devin
+- Agent Header:
+  ```text
+  Agent: Devin (role: main)
+  Model: SWE-2 Max
+  Thinking: cli/vw-commands.ps1
+  Mode: agent
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-03 05:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added 'vw extract-thumbs' command: new cli/Extract-Thumbs.ps1 wraps 'ffmpeg -i input -vf fps=<rate>,scale=<Width>:-1 name_%04d.png' for a video file or directory (-Recurse). -Count N derives fps from ffprobe duration for N evenly-spaced thumbs; -Fps overrides with a literal rate. -Name sets the output pattern (verbatim if it contains %d), -Output redirects the dir, and a warning fires when a shared -Name would collide across videos. Registered in vw-commands.ps1 under FFmpeg Commands. Verified: help render, single file (10x 320px PNGs), dir non-recursive vs -Recurse, -Count/-Width/-Name/-Output variants, collision warning. On branch vw-codex-extract-thumbs, uncommitted.
+- Commands:
+  - `vw extract-thumbs -Input sample.mp4`
+- Files:
+  - `cli/Extract-Thumbs.ps1`
+- Plan: `vw extract-thumbs -Input D:\Videos -Count 6 -Width 480 -Recurse`
+- Git: repo=miniville, branch=autodev, head=10702cc
+
+</details>
+
+<details>
+<summary><strong>2026-10-03 05:01 - panopticam</strong> <code>code-change</code> - v0.35.0 Habits (operator&#39;s behaviour patterns): habits.py per-room show history (public/private time, private episodes + durations, price floor per site learned from listings: C...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Edit, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-10-03 05:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: v0.35.0 Habits (operator's behaviour patterns): habits.py per-room show history (public/private time, private episodes + durations, price floor per site learned from listings: CB 6, SC 8, F4F 5; CB privates via followed chat RoomStatusTopic, sockets held through a private up to 1 h, no new requests; CB listing gaps calibrated by followed rooms), sound per clip (muted / talking / music / moaning / buzzing), labels with evidence, Browse habit chips, 'private on <site>' card chip, room panel Habits. Moments: per-room boosts removed (closed loop), only week-long x0.6 for 'doesn't react'. Fixed vision.status dict-iteration race. 125 backend tests pass; deployed, floors and sweeps verified live.
+- Commands:
+  - `python deploy/bump.py minor`
+  - `git push origin main`
+- Files:
+  - `backend/src/panopticam/habits.py`
+  - `backend/src/panopticam/chat.py`
+  - `backend/src/panopticam/index.py`
+  - `backend/src/panopticam/traits.py`
+  - `backend/src/panopticam/moments.py`
+  - `web/src/components/Browse.tsx`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=84ccb3e
+
+</details>
+
+<details>
+<summary><strong>2026-10-03 04:03 - vault-warden</strong> <code>code-change</code> - Built VaultWares Capture (desktop/VaultCapture, branch vw-codex-secret-capture, uncommitted): .NET 10 WPF tray app, Ctrl+Alt+O overlay in vaultsqware console theme with live sec...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: code
+  Permissions: bypass (network: windows local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden\desktop\VaultCapture\VaultCapture.App\bin  Branch: vw-codex-secret-capture
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-03 04:03 (TZ: Eastern Standard Time)
+  ```
+- Summary: Built VaultWares Capture (desktop/VaultCapture, branch vw-codex-secret-capture, uncommitted): .NET 10 WPF tray app, Ctrl+Alt+O overlay in vaultsqware console theme with live secret detection (prefix rules, .env, label:value, PEM, entropy), auto-naming, editable preview, status bar keycaps; Recent window (search/rename/copy/show/delete), recovery kit + restore, backup folder copy. Vault: ML-KEM-1024 (Windows CNG) + AES-256-GCM per-entry envelopes byte-compatible with crypto-vault.ts; seed under DPAPI + Argon2id recovery kit (Konscious). Clipboard cleared after capture, copies excluded from history, windows excluded from capture. Verified: 36 checks pass (detector, naming, vault, Argon2id vs noble, envelopes both directions vs crypto-vault.js), UI screenshots of overlay/dump/recent, Release build has no debug hooks. Caveat: DPAPI doesn't stop same-user processes.
+- Commands:
+  - `dotnet run --project desktop/VaultCapture/VaultCapture.Checks`
+- Files:
+  - `desktop/VaultCapture/VaultCapture.Core/SecretVault.cs`
+  - `desktop/VaultCapture/VaultCapture.Core/SecretDetector.cs`
+  - `desktop/VaultCapture/VaultCapture.App/CaptureWindow.xaml`
+  - `desktop/VaultCapture/README.md`
+- Git: repo=vault-warden, branch=vw-codex-secret-capture, head=6a7e652
+
+</details>
+
+<details>
+<summary><strong>2026-10-03 03:48 - panopticam</strong> <code>code-change</code> - v0.34.0 Moments learn from the operator&#39;s ratings: folder sorting of 2 Oct&#39;s 86 moments read as ratings (gold/more/okay/doesn&#39;t react/low quality), sent to server + rate buttons...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Edit, Write, Monitor, Claude_Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-10-03 03:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: v0.34.0 Moments learn from the operator's ratings: folder sorting of 2 Oct's 86 moments read as ratings (gold/more/okay/doesn't react/low quality), sent to server + rate buttons on #/moments (3 2 1 0 L); vision/moment_quality.py life score (CLAP silence+moaning, frame movement, tips; LOO AUC 0.74) refit from ratings; picks weighted by per-room taste x0.6-1.5, audience jump alone no longer qualifies (heat x0.75); reel finds moved files, drops rated-down. 2 Oct reel built (was silently skipped because all mp4s were moved). Fixed 3 stale ingest tests. Worker restarted; 84 ratings sent, 95 minutes scored.
+- Commands:
+  - `python deploy/bump.py minor`
+  - `git push origin main`
+  - `vision/Restart-VisionWorker.ps1`
+- Files:
+  - `backend/src/panopticam/moments.py`
+  - `backend/src/panopticam/app.py`
+  - `vision/moment_quality.py`
+  - `vision/moments_pull.py`
+  - `web/src/components/Moments.tsx`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=f937926
+
+</details>
+
+<details>
+<summary><strong>2026-10-03 02:58 - vault-warden</strong> <code>plan</code> - Design review (no code): evaluated tailscale/setec (tsnet server, Tailscale ACL grants tailscale.com/cap/secrets per-secret, versioned/activated secrets, AWS KMS or Linux TPM2 (...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: chat
+  Permissions: bypass (network: windows local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-03 02:58 (TZ: Eastern Standard Time)
+  ```
+- Summary: Design review (no code): evaluated tailscale/setec (tsnet server, Tailscale ACL grants tailscale.com/cap/secrets per-secret, versioned/activated secrets, AWS KMS or Linux TPM2 (/dev/tpmrm0) to unseal DB, --dev static key insecure, Go client with polling/Updater/FileCache, BSD-3). Findings: Brume2 (GL-MT2500 OpenWrt) has no TPM and carries the tinyproxy residential egress that all video playback depends on; Windows PC can't use setec TPM mode -> both would need --dev or AWS KMS. Suggested home mini-PC with TPM2, or adopting setec's ACL-capability model inside vault-warden. Proposed frictionless capture: hotkey/paste inbox, auto-detect provider by prefix, auto-name, triage later, name only when granting to an app.
+- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=07a6305
+
+</details>
+
+<details>
+<summary><strong>2026-10-03 02:08 - vault-warden</strong> <code>plan</code> - Design review (no code): user proposes running a local vault-warden holding all API keys encrypted, with every VaultWares app decrypting via a vault-warden module before executi...</summary>
+
+- Kind: plan
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: unknown
+  Mode: chat
+  Permissions: bypass (network: windows local)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-03 02:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Design review (no code): user proposes running a local vault-warden holding all API keys encrypted, with every VaultWares app decrypting via a vault-warden module before execution and agents receiving keys safely. Advised: keep greencloud as single source of truth (existing org_machine/machine-secrets path + loopback token), deliver secrets by reference via a 'vw run' style injector rather than plaintext in agent context, per-consumer envelopes (ML-KEM per app/host) for least privilege, sealed local cache for availability, output redaction, and an optional auth-injecting proxy so agents never hold keys. Flagged: encryption at rest does not stop a process that can decrypt from leaking; unattended-unlock key custody is the crux. Asked user which shape they want.
+- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=07a6305
+
+</details>
+
+<details>
+<summary><strong>2026-10-03 02:01 - vaultwares-api,vault-inference</strong> <code>verification</code> - Read-only audit of AI-run telemetry ingestion. DB has 1145 runs / 6 providers but newest row is 2026-09-26; ingestion stalled. ROOT CAUSE PROVEN: 19,131 records (25 MB) sit unse...</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: medium
+  Mode: agent
+  Permissions: bypass (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-api  Branch: main
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-10-03 02:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Read-only audit of AI-run telemetry ingestion. DB has 1145 runs / 6 providers but newest row is 2026-09-26; ingestion stalled. ROOT CAUSE PROVEN: 19,131 records (25 MB) sit unsent in D:\AiHistory\run-spool\cli-*.jsonl since 2026-09-20, produced by source vw-cli (tasks vision-metadata WD14-ConvNeXt, media-pipeline); records omit provider and runtime, which AiRunBatch requires, so every batch is rejected and stays spooled. Validated a spooled record locally against the API model: 'Field required' for provider and runtime. Other findings: vault-inference gateway has zero rows (unused); \.72 HF cost attributed to vaultwares-studio hf-job, with many \.27 rows at 0ms duration and identical timestamps (likely phantom/duplicate cost); test pollution recurring from other repos (_FakeHub.run_job TypeError x12, runtime=pytest x8); host key split Clopeux-Desktop vs CLOPEUX-DESKTOP; ComfyUI 383 runs with project=unknown; total_tokens=0 (no active token-reporting source). Earlier \ test rows confirmed removed. No changes made.
+- Commands:
+  - `GET /api/telemetry/ai-runs/summary`
+  - `GET /api/telemetry/ai-runs/errors`
+  - `GET /api/telemetry/ai-runs/runs`
+  - `AiRunBatch local validation`
+- Files:
+  - `D:\AiHistory\run-spool`
+  - `vaultwares-api/app/routers/telemetry/ai_runs.py`
+- Git: repo=vaultwares-api, branch=main, head=814a9fd
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 23:42 - panopticam</strong> <code>code-change</code> - First new room angle without ComfyUI: ColONEL-KFC face_organizer/room_reconstruction/klein_room.py runs FLUX.2 klein 4B standalone (diffusers) from local ComfyUI weights (fp8 de...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation (Clopeux-Desktop), RTX 3060)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, Edit, Write, Read
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 23:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: First new room angle without ComfyUI: ColONEL-KFC face_organizer/room_reconstruction/klein_room.py runs FLUX.2 klein 4B standalone (diffusers) from local ComfyUI weights (fp8 dequant while streaming, no mmap), room photo + TELEA-filled warp as reference tokens, masked flow-matching fill of warp holes. DA3 depth enabled (deps installed --no-deps where they wanted Pillow 11/numpy 2) and rescaled to metric (median 3 m). Result Desktop/cleo_cam_new_angle_klein.jpg, ~1 min, 10.2 GB VRAM. Found standalone_pulid_flux.py has no Flux model. KFC venv: diffusers 0.40, transformers 5.18, accelerate, moviepy 1.0.3, addict, plyfile, pycolmap, trimesh, e3nn, evo, pillow_heif; hf-hub 2.0->1.33; numpy/torch unchanged.
+- Commands:
+  - `uv pip install --python KFC venv diffusers transformers accelerate`
+  - `python -m face_organizer.room_reconstruction.klein_room ...`
+- Files:
+  - `ColONEL-KFC/face_organizer/room_reconstruction/klein_room.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=1cf7539
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 23:34 - miniville</strong> <code>code-change</code> - miniville: purged 364 adult-gallery casts from the pool DB (kept 218 celeb casts incl all male actors, nulled avatar_path); wrote tag_celebrity_bounded.py (&lt;=12 imgs/folder via ...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 23:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville: purged 364 adult-gallery casts from the pool DB (kept 218 celeb casts incl all male actors, nulled avatar_path); wrote tag_celebrity_bounded.py (<=12 imgs/folder via TaggerEngine then reembed --resume) now running over 759 folders; build_avatar_gallery draws both sexes from celeb gallery with TMDB+60%-crop-vote sex check and --only-missing recast mode; shipped Pixi.js Map tab (/api/map, district tiles, venue squares, 636 activity-colored dots, pan/zoom, resident click-through) verified live via patchright. 99 tests pass; pushed 112db0a, c8c568b, 10702cc.
+- Commands:
+  - `pytest -x -q`
+  - `python scripts/purge_bad_casts.py`
+  - `patchright-cli open http://127.0.0.1:8787`
+  - `git push origin autodev`
+- Files:
+  - `scripts/purge_bad_casts.py`
+  - `scripts/tag_celebrity_bounded.py`
+  - `scripts/build_avatar_gallery.py`
+  - `src/miniville/ui/server.py`
+  - `src/miniville/ui/static/map.js`
+  - `src/miniville/ui/static/index.html`
+  - `src/miniville/ui/static/app.js`
+  - `tests/test_ui.py`
+- Git: repo=miniville, branch=autodev, head=10702cc
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 22:49 - panopticam</strong> <code>code-change</code> - KFC room viewer: fixed colour byte offset (12 -&gt; 24: was reading scale floats) and forced y flip (new y_up flag); verified cleo_cam viewer upright with real colours. Found Flux2...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, Edit, Write, Claude_Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 22:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: KFC room viewer: fixed colour byte offset (12 -> 24: was reading scale floats) and forced y flip (new y_up flag); verified cleo_cam viewer upright with real colours. Found Flux2KleinBridge never runs Flux (cv2 TELEA). New-angle attempt: wrote ColONEL-KFC/tools/room_new_angle.py (Qwen-Image-Edit-2511 multiple-angles LoRA, Q4 GGUF) but ComfyUI Desktop env is mid-update (no torch; user-site CPU torch shadows); installed only comfy-aimdo 0.5.3 + comfy-kitchen 0.2.33 --no-deps; no CUDA torch install. Toy reviewer: C key relabels; labelling rules documented. Panopticam commits local (3 ahead).
+- Commands:
+  - `pip install --no-deps comfy-aimdo==0.5.3 comfy-kitchen==0.2.33 (ComfyUI standalone-env)`
+  - `ComfyUI headless start attempts on 127.0.0.1:8189 (failed, env)`
+- Files:
+  - `ColONEL-KFC/face_organizer/room_reconstruction/room_viewer.py`
+  - `ColONEL-KFC/tools/room_new_angle.py`
+  - `vision/review_toys.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=bc82763
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 19:05 - miniville</strong> <code>code-change</code> - miniville: fixed duplicate &#39;moved in together&#39; events - describe() now names both partners canonically, /api/feed + chronicle merge identical lines to (xN), and found the real r...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 19:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville: fixed duplicate 'moved in together' events - describe() now names both partners canonically, /api/feed + chronicle merge identical lines to (xN), and found the real root cause: interact() recomputed sweetheart from rom>80, demoting partner back so the arc re-fired; ARC_LABELS (partner/spouse/widowed/estranged) now pinned. 98 tests pass, pushed 3b95678+docs. Reported ingestion status (1013 folders, gallery.db still 256 pending embed pass). Delivered 2D/2.5D map+graph viz research summary for future observer UI.
+- Commands:
+  - `pytest -x -q`
+  - `git push origin autodev`
+- Files:
+  - `src/miniville/events.py`
+  - `src/miniville/encounters.py`
+  - `src/miniville/ui/server.py`
+  - `src/miniville/chronicle.py`
+  - `tests/test_shocks.py`
+  - `docs/STATE.md`
+  - `docs/AGENT_SYNC.md`
+- Git: repo=miniville, branch=autodev, head=1758b0c
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 18:47 - vault-music</strong> <code>code-change</code> - Verified Jackett indexers, explained Stooges track vs album query behavior, fixed Queue Selected button logic, and split Reconstructor into Mode A and Mode B</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.6 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-apple-music-suggestions
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 18:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified Jackett indexers, explained Stooges track vs album query behavior, fixed Queue Selected button logic, and split Reconstructor into Mode A and Mode B
+- Git: repo=vault-music, branch=vw-codex-apple-music-suggestions, head=1dcfc71
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 18:47 - vault-music</strong> <code>code-change</code> - Verified Jackett indexers on Ethernet 2, fixed Stooges album search explanation, resolved Queue Selected button bugs, and redesigned Reconstructor into clear Mode A (Singles) an...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.6 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-apple-music-suggestions
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 18:47 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified Jackett indexers on Ethernet 2, fixed Stooges album search explanation, resolved Queue Selected button bugs, and redesigned Reconstructor into clear Mode A (Singles) and Mode B (Full Albums) workflows
+- Git: repo=vault-music, branch=vw-codex-apple-music-suggestions, head=1dcfc71
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 18:18 - shared-tube</strong> <code>verification</code> - Verified live video merge API and DB persistence under real conditions; fixed disabled_at column in get_video</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 18:18 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verified live video merge API and DB persistence under real conditions; fixed disabled_at column in get_video
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 18:08 - shared-tube</strong> <code>code-change</code> - Unified global video catalog across network, added video merge backend API, and redesigned VideoDetail UI in admin</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Antigravity
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 18:08 (TZ: Eastern Standard Time)
+  ```
+- Summary: Unified global video catalog across network, added video merge backend API, and redesigned VideoDetail UI in admin
+- Git: repo=shared-tube, branch=main, head=74632ee
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 17:32 - miniville</strong> <code>code-change</code> - miniville: stopped IMDb media fetcher on operator request (gallery ~428-&gt;872 folders, enough for backlog); left scan_and_add ingester running; deferred PuLID/FLAME 3D reconstruc...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 17:32 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville: stopped IMDb media fetcher on operator request (gallery ~428->872 folders, enough for backlog); left scan_and_add ingester running; deferred PuLID/FLAME 3D reconstruction until UI is built out; live-world shock demo - fire at Riverside Diner (5 laid off, 3 hurt, reopens day 51) + festival at Lush Meadow Park (326 celebrating live); advanced world to tick 1859 Day 39; rebound observer to 0.0.0.0:8787 + firewall rule for LAN spectators; docs updated and pushed.
+- Commands:
+  - `miniville.cli shock fire`
+  - `miniville.cli shock festival`
+  - `git push origin autodev`
+- Files:
+  - `docs/STATE.md`
+  - `docs/AGENT_SYNC.md`
+- Git: repo=miniville, branch=autodev, head=a469959
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 17:20 - shared-tube</strong> <code>code-change</code> - Fixed disabled videos visibility on terms page and audio preview streaming pipeline</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.6 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 17:20 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed disabled videos visibility on terms page and audio preview streaming pipeline
+- Git: repo=shared-tube, branch=main, head=0bdc05e
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 17:09 - panopticam</strong> <code>code-change</code> - Took a shot at the KFC cleo_cam single-image room: found and fixed 3 bugs (proof renderer BGR/RGB swap; TripoSplat content y-down vs y-up shell -&gt; 180deg-about-z turn, not a mir...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, Edit, Write, Read
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 17:09 (TZ: Eastern Standard Time)
+  ```
+- Summary: Took a shot at the KFC cleo_cam single-image room: found and fixed 3 bugs (proof renderer BGR/RGB swap; TripoSplat content y-down vs y-up shell -> 180deg-about-z turn, not a mirror; TripoSplat closing front-face slab culled by density fall) in ColONEL-KFC architectural_synthesizer.py + verify script (left uncommitted in KFC: untracked WIP); fixed result in runs/room_architectural_claude/cleo_cam + Desktop proof. Panopticam: vision/review_toys.py OpenCV reviewer for YOLO toy proposals (81 queued) + tests; STATE notes. Commits local (2 ahead), not pushed to avoid a redeploy.
+- Commands:
+  - `pytest vision test_review_toys`
+  - `KFC venv render of fixed splat`
+- Files:
+  - `vision/review_toys.py`
+  - `ColONEL-KFC/face_organizer/room_reconstruction/architectural_synthesizer.py`
+  - `ColONEL-KFC/tests/verify_architectural_room_synthesis.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=054a0bb
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 17:01 - panopticam</strong> <code>documentation</code> - After operator stop: re-checked state instead of running a glob rm -rf on a computed scratch path (would have been rm -rf /* if cygpath returned empty; not run, scratch left in ...</summary>
+
+- Kind: documentation
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation (local))
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 17:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: After operator stop: re-checked state instead of running a glob rm -rf on a computed scratch path (would have been rm -rf /* if cygpath returned empty; not run, scratch left in place). Found parallel session v0.33.0 (194e362) on top of my v0.32.3; my pacing is live (credits/bar in status). Corrected STATE.md: toy bridge now used for proposals at conf 0.10 (~3% of frames per my offline scores); merged my toy to-do into theirs. Pushed 4d2b2b5.
+- Commands:
+  - `git push origin main`
+- Files:
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=4d2b2b5
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 16:44 - panopticam</strong> <code>code-change</code> - Panopticam v0.33.0: audience.py estimates real viewers from the operator&#39;s inflation patterns (CamSoda curve, rough Chaturbate log-log, CB top band &gt;= 10k treated as site-set: n...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, Edit, Write, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 16:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Panopticam v0.33.0: audience.py estimates real viewers from the operator's inflation patterns (CamSoda curve, rough Chaturbate log-log, CB top band >= 10k treated as site-set: no heat); shown on cards, Top '~ Real' column/sort. Moments captured at best level <= 480p; vision/moments_pull.py archives every moment to D:\panopticam-moments\<date> and builds a captioned daily _reel.mp4 of the best 15 (drawtext expansion=none fix). Gemini's toy_detector_bridge wired CPU-only as YOLO box proposals in E:\YoloTraining\BBOX\lush\_proposals (80/2327 frames boxed). 3DGS ideas noted in STATE. Worker restarted; 72 moments archived.
+- Commands:
+  - `pytest backend (115) + vision (5)`
+  - `git push origin main`
+  - `Restart-VisionWorker.ps1`
+- Files:
+  - `backend/src/panopticam/audience.py`
+  - `vision/moments_pull.py`
+  - `vision/toys.py`
+  - `vision/toy_detector_bridge.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=194e362
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 16:21 - panopticam</strong> <code>code-change</code> - Scheduled loop session (v0.32.3): offline check of the first toy YOLO (ColONEL-KFC toy_yolov8n.onnx, 51 boxed toys) on 2,118 unboxed frames - near chance (AUC 0.57-0.61, fires o...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation (local))
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, Edit, Write, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 16:21 (TZ: Eastern Standard Time)
+  ```
+- Summary: Scheduled loop session (v0.32.3): offline check of the first toy YOLO (ColONEL-KFC toy_yolov8n.onnx, 51 boxed toys) on 2,118 unboxed frames - near chance (AUC 0.57-0.61, fires on <1%), not wired in. Moments day-1 review: 72 used by 17:44 UTC, 17 audience-jump-only (dips/promotion). Fixed Tracked.heat_parts (return from a dip is not a jump; affects Director, Moments, spike rules) and paced Moments (credits 72/day, burst 3, adaptive bar 2.5/3.25). Tests 111 pass. docs/STATE.md updated with notes + operator to-dos. Pushed to main (deploy).
+- Commands:
+  - `pytest`
+  - `python deploy/bump.py`
+  - `git push origin main`
+- Files:
+  - `backend/src/panopticam/index.py`
+  - `backend/src/panopticam/moments.py`
+  - `backend/tests/test_moments.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=adf3aa2
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 15:53 - miniville</strong> <code>code-change</code> - miniville: shipped v0.7 god-mode shocks (took over inactive cloud agent&#39;s claim). New shocks.py (closure/fire/festival via inject+apply_due), businesses.reopen_day migration, se...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 15:53 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville: shipped v0.7 god-mode shocks (took over inactive cloud agent's claim). New shocks.py (closure/fire/festival via inject+apply_due), businesses.reopen_day migration, seasons.holiday_for surfaces festivals as one-day holidays, engine._day_start wiring, CLI shock/shocks, /api/shocks, Gazette sections, deviations skip closed venues, life.py cohabitation+no-bigamy guard. 97 tests pass; live-copy smoke verified (fire=5 layoffs, festival day=1448 interactions). Committed de6c969, pushed autodev, restarted observer server on :8787.
+- Commands:
+  - `pytest -x -q`
+  - `git push origin autodev`
+- Files:
+  - `src/miniville/shocks.py`
+  - `tests/test_shocks.py`
+  - `src/miniville/engine.py`
+  - `src/miniville/economy.py`
+  - `src/miniville/seasons.py`
+  - `src/miniville/life.py`
+  - `docs/AGENT_SYNC.md`
+  - `docs/STATE.md`
+- Git: repo=miniville, branch=autodev, head=de6c969
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 12:49 - miniville</strong> <code>general</code> - miniville: answered user question on upcoming features and local-project integrations. Reviewed ROADMAP.md, TODO.md, AGENT_SYNC.md &#226;€” confirmed cloud coworker holds an open cla...</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 12:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville: answered user question on upcoming features and local-project integrations. Reviewed ROADMAP.md, TODO.md, AGENT_SYNC.md â€” confirmed cloud coworker holds an open claim on v0.7 god-mode shocks (shocks.py etc., not yet pushed), so local side stays on avatars/live runs. Verified web server still up and IMDb scraper running in background.
+- Git: repo=miniville, branch=autodev, head=86b2905
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 12:05 - vault-music</strong> <code>verification</code> - Verification &amp; proof reflection gate passed for tiered release selection, live service integration, and visual proof</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 3.7 Sonnet
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-apple-music-suggestions
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 12:05 (TZ: Eastern Standard Time)
+  ```
+- Summary: Verification & proof reflection gate passed for tiered release selection, live service integration, and visual proof
+- Git: repo=vault-music, branch=vw-codex-apple-music-suggestions, head=1dcfc71
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 12:00 - vault-music</strong> <code>code-change</code> - Implement release selection algorithm with tiered sizing (5MB/10MB/30MB per track) and lexical token matching for Jackett queries in vault-music</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Claude 3.7 Sonnet
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-music  Branch: vw-codex-apple-music-suggestions
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 12:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implement release selection algorithm with tiered sizing (5MB/10MB/30MB per track) and lexical token matching for Jackett queries in vault-music
+- Git: repo=vault-music, branch=vw-codex-apple-music-suggestions, head=1dcfc71
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 10:11 - panopticam</strong> <code>code-change</code> - Atlas follow-up to operator&#39;s gallery merges: Atlas dataset_names still held 8 merged names; renamed 4 personas to surviving names (audreyviau, aliciabiden, angelicallure, bella...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation + OVH Prom-King VPS)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 10:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Atlas follow-up to operator's gallery merges: Atlas dataset_names still held 8 merged names; renamed 4 personas to surviving names (audreyviau, aliciabiden, angelicallure, bellaagrace), merged jessey-adams/bella_adams_ via same-person link (applied by worker), 3 had no rooms. name_matches.py --aliases now also repoints Atlas names and lists pairs needing a link.
+- Commands:
+  - `sqlite update panopticam-atlas.db dataset_names`
+  - `PUT /api/links`
+  - `python vision/name_matches.py --aliases`
+- Files:
+  - `vision/name_matches.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=4030b9f
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 10:07 - panopticam</strong> <code>code-change</code> - After operator merged duplicate identities: derived .aliases.json (143 merged names -&gt; surviving identity) from .ours.txt vs gallery; renamed the one queued archive with a merge...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation + OVH Prom-King VPS)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Edit
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 10:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: After operator merged duplicate identities: derived .aliases.json (143 merged names -> surviving identity) from .ours.txt vs gallery; renamed the one queued archive with a merged name (aliciabiden2 -> aliciabiden) via Datasets API; ingest now maps names through aliases; name_matches.py --aliases rebuilds the map; 2 ingest lanes (~4,300/day). Docker prune declined (QA runner).
+- Commands:
+  - `name_matches.py --aliases`
+  - `POST /api/datasets/<file> rename`
+  - `Restart-VisionWorker.ps1`
+- Files:
+  - `vision/ingest.py`
+  - `vision/name_matches.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=60e5755
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 08:10 - panopticam</strong> <code>commands</code> - Operator reported duplicate identities appearing in F:\amd\gallery; stopped the vision worker (ingest) to halt gallery writes, checked: no new -N folders since 2026-10-01 17:22,...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): PowerShell, Bash
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 08:10 (TZ: Eastern Standard Time)
+  ```
+- Summary: Operator reported duplicate identities appearing in F:\amd\gallery; stopped the vision worker (ingest) to halt gallery writes, checked: no new -N folders since 2026-10-01 17:22, no _added duplicates, no case dupes. Operator found the no-dash duplicates stopped after ~03:55 (likely fixed elsewhere) and asked to restart; worker restarted, single ingest lane. Docker prune declined (QA runner's image/cache).
+- Commands:
+  - `Restart-VisionWorker.ps1 -StopOnly`
+  - `Start-ScheduledTask Panopticam Vision`
+- Git: repo=panopticam, branch=main, head=6964f3a
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 08:00 - panopticam</strong> <code>code-change</code> - v0.32.1: operational notices (watchdog, OF logout via /api/vision/notify, failed auto-records) go by email via new mail.py direct to MX mx1.alias.proton.me from VPS 148.113.255....</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: code
+  Permissions: bypass (network: Windows 11 local + OVH VPS)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): PowerShell, Bash, Edit, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 08:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: v0.32.1: operational notices (watchdog, OF logout via /api/vision/notify, failed auto-records) go by email via new mail.py direct to MX mx1.alias.proton.me from VPS 148.113.255.142, From panopticam@alerts.prom-king.xyz, 30/day cap, POST /api/mail/test; PANOPTICAM_MAIL_TO=panopticam@prom-king.xyz added to VPS env; test mail accepted by Proton MX. OnlyFans crawl no longer auto-subscribes (--subscribe opt-in; 24h lockout at 10 follows confirmed by operator); 'list' command writes onlyfans-to-follow.html (114 links, gitignored). Operator to-do: Porkbun TXT alerts.prom-king.xyz v=spf1 ip4:148.113.255.142 -all.
+- Commands:
+  - `python vision/onlyfans.py list`
+  - `uv run pytest`
+  - `git push (webhook deploy)`
+  - `curl -X POST /api/mail/test`
+- Files:
+  - `backend/src/panopticam/mail.py`
+  - `backend/src/panopticam/app.py`
+  - `backend/src/panopticam/notify.py`
+  - `backend/src/panopticam/config.py`
+  - `vision/onlyfans.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=6964f3a
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 08:00 - panopticam</strong> <code>code-change</code> - Panopticam v0.32.0-0.32.2: Moments - Director-picked minutes (tips/toy/audience jump) captured through the existing long-clip loop with the same daily budget (credit bucket, mom...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation (Clopeux-Desktop) + Prom-King OVH VPS)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, Write, Edit, Claude_Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 08:00 (TZ: Eastern Standard Time)
+  ```
+- Summary: Panopticam v0.32.0-0.32.2: Moments - Director-picked minutes (tips/toy/audience jump) captured through the existing long-clip loop with the same daily budget (credit bucket, moments first), hard-linked into clips/moments, 4 days / 900 MB, star to keep; #/moments reel page with hover scrub. Fixed long clips writing into an old inode on replace. Alert toasts for tip/soon/habit events. Tested a hand-made toy 'hum' audio descriptor offline on 114 labelled clips: refuted (music is more tonal), not shipped. Verified live: first moment captured and playing. Committed only own hunks beside a parallel session (email notices).
+- Commands:
+  - `pytest backend/tests (107 passed)`
+  - `npx tsc --noEmit`
+  - `git push origin main`
+- Files:
+  - `backend/src/panopticam/moments.py`
+  - `backend/src/panopticam/clips.py`
+  - `backend/src/panopticam/app.py`
+  - `web/src/components/Moments.tsx`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=6964f3a
+
+</details>
+
+<details>
+<summary><strong>2026-10-02 07:29 - panopticam</strong> <code>code-change</code> - OnlyFans crawler fixes: follow list URL moved to /my/collections/user-lists/subscriptions/active (old one &#39;page not available&#39;, runs read 0 follows); waits survive closed page a...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: code
+  Permissions: bypass (network: Windows 11 local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): PowerShell, Bash, Edit, Monitor
+  MCP servers accessed (this reply): none
+  Time: 2026-10-02 07:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: OnlyFans crawler fixes: follow list URL moved to /my/collections/user-lists/subscriptions/active (old one 'page not available', runs read 0 follows); waits survive closed page and loop reopens it; crash traceback + 'crawl ended' logged; rolling 10 subs/24h cap (operator: 10 follows/day incl. manual); refusals store OF text, 24h count, screenshot; limit text only counted when new after click. Test run 2 Oct 07:14-07:29: 27 follows, 20 profiles, ~388 files, clean end. Commit 568c9d2.
+- Commands:
+  - `python onlyfans.py crawl --hours 0.33`
+  - `git commit/push`
+- Files:
+  - `vision/onlyfans.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=568c9d2
+
+</details>
+
+<details>
 <summary><strong>2026-10-01 22:59 - vaultwares-api (formerly vaultwares-pipelines, vaultwares-api + shared-tube, vaultwares-webhooks, vaultwares-api)</strong> <code>code-change</code> - Fixed fetcher duplicate video addition and hex hash slug suffixing in shared-tube engine and vaultwares-api</summary>
 
 - Kind: code-change
@@ -1969,7 +3966,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-29 20:23 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>verification</code> - Captured visual browser verification of WCAG search header layout and verified GTM tags on live fullxxx.video</summary>
+<summary><strong>2026-09-29 20:23 - shared-tube</strong> <code>verification</code> - Captured visual browser verification of WCAG search header layout and verified GTM tags on live fullxxx.video</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -5615,7 +7612,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-21 18:55 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>code-change</code> - Deployed vault-monitor and audited uncommitted work. Discovered a CI/webhook deploy pipeline for vault-monitor does exist, contradicting my earlier statement that none fired: th...</summary>
+<summary><strong>2026-09-21 18:55 - vault-monitor</strong> <code>code-change</code> - Deployed vault-monitor and audited uncommitted work. Discovered a CI/webhook deploy pipeline for vault-monitor does exist, contradicting my earlier statement that none fired: th...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -6284,2636 +8281,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-09-20 02:11 - python-zipper</strong> <code>code-change</code> - Second batch: fixed the upscaler model ordering (recommended model leads instead of os.listdir order) and un-ignored dataset_builder/tests so the suite is tracked. Scoring rewor...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: agent/extension-stream-detection
-  Tools used (this reply): Bash, Edit, Claude_Browser
-  MCP servers accessed (this reply): ccd_session, Claude_Browser
-  Time: 2026-09-20 02:11 (TZ: Eastern Standard Time)
-  ```
-- Summary: Second batch: fixed the upscaler model ordering (recommended model leads instead of os.listdir order) and un-ignored dataset_builder/tests so the suite is tracked. Scoring rework: dimensionsFromUrl parses WxH from paths/params and is trusted, Resource Timing API fills missing byte sizes, unmeasurable candidates get a facts.unknown penalty so they no longer clear INTERESTING, pre-selection refuses clusters it cannot judge, sort sinks unknowns. Verified on the reported CDN that the -640x480 variant is the LARGER file (47KB vs 16KB), so no thumbnail rewrite. Stream work: barber pole given 8px and switched to is_live rather than bytes_total, eager probing via setOnNewStream, streams parked by page URL on navigation, idle streams folded behind a count, and media-log ingest now believes a media Content-Type over a disguised .js/.css/.woff extension. 90 extension checks and 41 python tests green.
-- Commands:
-  - `npm run typecheck`
-  - `npm run check`
-  - `python -m unittest dataset_builder.tests.test_server_pipeline`
-  - `yt-dlp -F (apple reference master)`
-- Files:
-  - `extension/src/common/harvest.ts`
-  - `extension/src/common/scoring.ts`
-  - `extension/src/common/page_rank.ts`
-  - `extension/src/background/sniffer.ts`
-  - `extension/src/background/media_log.ts`
-- Git: repo=python-zipper, branch=agent/extension-stream-detection, head=ace73e8
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 21:09 - python-zipper</strong> <code>code-change</code> - Resolved the main-&gt;agent/extension-stream-detection merge (panel/userscript deletions accepted, version 1.60.0 kept). Fixed smart naming (title threaded into _finalize_stream_na...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: agent/extension-stream-detection
-  Tools used (this reply): Bash, Edit, Artifact
-  MCP servers accessed (this reply): ccd_session
-  Time: 2026-09-19 21:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Resolved the main->agent/extension-stream-detection merge (panel/userscript deletions accepted, version 1.60.0 kept). Fixed smart naming (title threaded into _finalize_stream_name instead of the retired local server's job store; also strip the [hostname] prefix and trailing filler), silent recordings (-f <fid>+ba/<fid>, verified against Apple's reference HLS master and on the stdout/rcat path), stale streams after navigation (main_frame clear in sniffer.ts keeping live jobs), and the Insights grab facts (in-page button and sidebar single-download now send kind/dimensions; background fills bytes/mime from the media log via a new pure mergeGrabFacts module + 11 checks). 68 extension checks and 26 python stream tests green; one pre-existing upscaler-ordering test failure untouched.
-- Commands:
-  - `git commit merge 748855d`
-  - `npm run typecheck`
-  - `npm run check`
-  - `python -m unittest dataset_builder.tests.test_stream_capture`
-- Files:
-  - `dataset_builder/ds_streams.py`
-  - `extension/src/background/sniffer.ts`
-  - `extension/src/background/index.ts`
-  - `extension/src/common/grab_facts.ts`
-  - `extension/src/content/inject_button.ts`
-- Git: repo=python-zipper, branch=agent/extension-stream-detection, head=b7796d7
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 17:01 - vault-commander</strong> <code>code-change</code> - Wired exact better-subtitles (French Nemotron-3.5 + BoostWords), live-subs, audio.cpp (sep, asr, e2e), and video facial recognition commands with bulletproof argument escaping a...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-gallery-g-default
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 17:01 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wired exact better-subtitles (French Nemotron-3.5 + BoostWords), live-subs, audio.cpp (sep, asr, e2e), and video facial recognition commands with bulletproof argument escaping across AHK companion, MPC menu, mpv lua, and Explorer shell
-- Git: repo=vault-commander, branch=vw-codex-gallery-g-default, head=38788e0
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 15:41 - vault-warden</strong> <code>verification</code> - Validated all gating requirements: CLI player-menu rewiring, pwsh 7 Primitives.dll fix, AutoHotkey v2 companion syntax and Startup persistence</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 15:41 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated all gating requirements: CLI player-menu rewiring, pwsh 7 Primitives.dll fix, AutoHotkey v2 companion syntax and Startup persistence
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=ffc48e6
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 15:39 - vault-warden</strong> <code>code-change</code> - Fixed CS1069 Primitives.dll reference in Start-VwPlayerDaemon for PowerShell 7 and rewired vw player-menu to Show-VwPlayerMenu.ps1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 15:39 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed CS1069 Primitives.dll reference in Start-VwPlayerDaemon for PowerShell 7 and rewired vw player-menu to Show-VwPlayerMenu.ps1
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=ffc48e6
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 15:37 - vault-warden</strong> <code>code-change</code> - Created AutoHotkey v2 companion (vw-player.ahk) with instant native Win32 context menu, Alt+Shift+A global hotkey, and Alt+RightClick in-player trigger for MPC-HC/BE/VLC</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 15:37 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created AutoHotkey v2 companion (vw-player.ahk) with instant native Win32 context menu, Alt+Shift+A global hotkey, and Alt+RightClick in-player trigger for MPC-HC/BE/VLC
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=ffc48e6
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 15:33 - vault-warden</strong> <code>verification</code> - Verified MPC-HC real-time media and subtitle detection, tray daemon compilation, and visual proof across pwsh and powershell 5.1</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 15:33 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified MPC-HC real-time media and subtitle detection, tray daemon compilation, and visual proof across pwsh and powershell 5.1
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=ffc48e6
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 15:33 - vault-warden</strong> <code>code-change</code> - Fixed MPC-HC active file and subtitle detection via default.mpcpl in K-Lite, resolved C# 5 Add-Type compiler issue in tray daemon, updated hotkey to Alt+Shift+A, and added live ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 15:33 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed MPC-HC active file and subtitle detection via default.mpcpl in K-Lite, resolved C# 5 Add-Type compiler issue in tray daemon, updated hotkey to Alt+Shift+A, and added live AI subtitle overlay action
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=ffc48e6
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 14:25 - vault-warden</strong> <code>code-change</code> - Created video player integration suite for MPC-BE, MPC-HC, mpv, and Explorer context menu with vw CLI tools</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 14:25 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created video player integration suite for MPC-BE, MPC-HC, mpv, and Explorer context menu with vw CLI tools
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=ffc48e6
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 14:22 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Created VaultWares media player contextual menu integrations for MPC-HC, MPC-BE, mpv, and Windows File Explorer</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.6 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 14:22 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created VaultWares media player contextual menu integrations for MPC-HC, MPC-BE, mpv, and Windows File Explorer
-- Git: repo=agent-ledger, branch=main, head=6116f29c
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 12:25 - vaultwares-studio (formerly usd-playground)</strong> <code>verification</code> - COLMAP job 6aae148351992417dfcc885e: HF reports ERROR / &#39;Job timeout&#39; after 41446s (11.5h) but the work COMPLETED AND UPLOADED - log ends with &#39;[recon] registered images (sequen...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: main
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-19 12:25 (TZ: Eastern Standard Time)
-  ```
-- Summary: COLMAP job 6aae148351992417dfcc885e: HF reports ERROR / 'Job timeout' after 41446s (11.5h) but the work COMPLETED AND UPLOADED - log ends with '[recon] registered images (sequential): 1600/1600', '[sfm-only] complete', '[vw-stage] exit code: 0', '[vw-stage] outputs uploaded', and all five artifacts are in the repo. The ERROR is the container being reaped after its work finished; do not read it as a failure. RESULTS: 1600/1600 registered (100%, vs 491/500 = 98% on the uncalibrated 14 Sep run), avg_keypoints 6123.9, raw_match_pairs 51239 with avg_raw_matches 432.0, verified_pairs 34542, mapper elapsed 548 min of the 690 total. THE CALIBRATION FIX WORKED: log shows '[recon] COLMAP camera_params: 886.849300,885.547297,965.085623,541.743659,0.014108,-0.014671,-0.000195,-0.000431' and the output transforms carry fl_x 888.57 - COLMAP refined our 886.85 prior by 0.2%, confirming the measurement. THREADS -1 IS SAFE: heartbeat peaked at 20.3/32 GB (63%) on 64 vCPU, and fell to 6-11 GB later, so the old 4/8 thread caps were far too conservative. SCENERY TEST, the point of the run: new seed 508,955 points, p95 8.68, p99.9 19.22, max 41.90, max/p95 = 4.8 - versus DA3's 1.4 wall and the 14 Jun COLMAP's 13.7. So COLMAP on OUR footage does produce the far tail DA3 cannot, 3.4x DA3's ratio, though less extreme than the 14 Jun run (which was uncalibrated and 500 frames, so not directly comparable). Cost ~USD 0.46. NOTE: --no-timeout propagated (it ran 11.5h, past the preset's 6h cap) but HF appears to impose its own ceiling near 11.5h.
-- Commands:
-  - `fetch_job_logs 6aae148351992417dfcc885e`
-  - `hf_hub_download processed_min.zip`
-  - `radial tail measurement of the new COLMAP seed`
-- Files:
-  - `D:/vaultwares-studio-jobs/data/jobs/colmap-merged1600-20260919/reconstruction_sfm/remote_out`
-- Git: repo=vaultwares-studio, branch=main, head=c5098d5
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 12:04 - General Tasks</strong> <code>verification</code> - Verified commit 41b798f on GitHub origin/main and OVH remote host with version 0.1.33 and live HTTP 200 API status</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 12:04 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified commit 41b798f on GitHub origin/main and OVH remote host with version 0.1.33 and live HTTP 200 API status
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 12:04 - General Tasks</strong> <code>code-change</code> - Benchmarked tiled sprite pipeline vs single frame seek (tiled was faster at 17.26s vs 20.06s and produces full 30-tile grid), committed and pushed vaultwares-api v0.1.33 to main</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 12:04 (TZ: Eastern Standard Time)
-  ```
-- Summary: Benchmarked tiled sprite pipeline vs single frame seek (tiled was faster at 17.26s vs 20.06s and produces full 30-tile grid), committed and pushed vaultwares-api v0.1.33 to main
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 11:58 - General Tasks</strong> <code>verification</code> - Validated programmatic generate_sprite_sheet integration test on production host verifying output files and metadata</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 11:58 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated programmatic generate_sprite_sheet integration test on production host verifying output files and metadata
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 11:57 - General Tasks</strong> <code>code-change</code> - Replaced -t duration with -ss 00:00:00 in FFmpeg sprite generation pipeline; verified live generation on OVH in 8.7s</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 11:57 (TZ: Eastern Standard Time)
-  ```
-- Summary: Replaced -t duration with -ss 00:00:00 in FFmpeg sprite generation pipeline; verified live generation on OVH in 8.7s
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 11:57 - General Tasks</strong> <code>verification</code> - Completed full live verification on production: verified 187/187 records in PostgreSQL, validated JPEG dimensions (960x450) and 30 WebVTT cues, and verified live card rendering ...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 11:57 (TZ: Eastern Standard Time)
-  ```
-- Summary: Completed full live verification on production: verified 187/187 records in PostgreSQL, validated JPEG dimensions (960x450) and 30 WebVTT cues, and verified live card rendering on sexyprn.lol
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 11:56 - General Tasks</strong> <code>code-change</code> - Updated FFmpeg sprite generation in generator.py with -ss 00:00:00 -t duration input options, verified 187/187 OnlyFans videos backfilled on production</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 11:56 (TZ: Eastern Standard Time)
-  ```
-- Summary: Updated FFmpeg sprite generation in generator.py with -ss 00:00:00 -t duration input options, verified 187/187 OnlyFans videos backfilled on production
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 11:00 - General Tasks</strong> <code>code-change</code> - Optimized OnlyFans sprite generation with -skip_frame nokey (17x CPU speedup), bounded concurrency to 2 with timeout cleanup, and restarted live backfill in DESC order so front ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 11:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Optimized OnlyFans sprite generation with -skip_frame nokey (17x CPU speedup), bounded concurrency to 2 with timeout cleanup, and restarted live backfill in DESC order so front page videos are immediately populated
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 10:41 - General Tasks</strong> <code>verification</code> - Validated real-condition NotFans media disk caching, 206 partial stream pipeline, live 30-frame sprite generation, and real-time CLI fetcher logging</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 10:41 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated real-condition NotFans media disk caching, 206 partial stream pipeline, live 30-frame sprite generation, and real-time CLI fetcher logging
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 10:39 - General Tasks</strong> <code>code-change</code> - Fixed OnlyFans thumbnail 403s and stream 502 timeouts, switched hover preview to 30-frame sprite animation, and added real-time fetcher progress logging</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 10:39 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed OnlyFans thumbnail 403s and stream 502 timeouts, switched hover preview to 30-frame sprite animation, and added real-time fetcher progress logging
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 08:26 - General Tasks</strong> <code>verification</code> - Verified end-to-end onlyfans_media persistence, sprite image dimensions (800x270), range streaming, and WebVTT tracks across live DB and test suite</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 08:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified end-to-end onlyfans_media persistence, sprite image dimensions (800x270), range streaming, and WebVTT tracks across live DB and test suite
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 08:25 - General Tasks</strong> <code>code-change</code> - Added onlyfans_media table, thumbnail local caching, animated preview clip extraction, and 15-tile sprite sheet timeline scrubbing for OnlyFans videos</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 08:25 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added onlyfans_media table, thumbnail local caching, animated preview clip extraction, and 15-tile sprite sheet timeline scrubbing for OnlyFans videos
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 07:06 - vaultwares-studio</strong> <code>code-change</code> - Root-caused repeated half-hour global bundle adjustments in the COLMAP mapper: the pipeline had never passed a single --Mapper.ba_* flag, so it ran COLMAP defaults. ba_global_ma...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: main
-  Tools used (this reply): Bash, Grep, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 07:06 (TZ: Eastern Standard Time)
-  ```
-- Summary: Root-caused repeated half-hour global bundle adjustments in the COLMAP mapper: the pipeline had never passed a single --Mapper.ba_* flag, so it ran COLMAP defaults. ba_global_max_refinements=5 re-solves the entire global BA up to five times per trigger (that is the back-to-back pair the user saw), ba_global_frames_ratio=1.1 fires a trigger every 10 percent growth (~25 over 1100 images), and ba_global_function_tolerance=0 disables Ceres early exit so every solve runs all 50 iterations. Added mapper_ba_options() to docker/worker/recon_entrypoint.py with defaults 2 / 1.3 / 1e-6 / 30 iterations, wired into both the main mapper call and retry_mapper, exposed via new CLI flags on the entrypoint and tools/queue_colmap_sfm.py, plus ba_use_gpu opt-in. Flags are probed from 'colmap mapper --help' because COLMAP 3.12 renamed ba_global_images_* to ba_global_frames_* and COLMAP aborts on unknown options; the July worker image version is unknown. Added tests/test_mapper_ba_options.py (6 tests). Suite 347 -> 353 passed, same 1 pre-existing failure. VERSION 1.4.1, pushed directly to main per user authorisation. Flagged the accuracy trade-off: fewer refinements and looser tolerance mean a less converged global solution while drift is still an open question.
-- Commands:
-  - `git commit`
-  - `git push origin main`
-  - `.venv/Scripts/python.exe -m pytest -q`
-- Files:
-  - `docker/worker/recon_entrypoint.py`
-  - `tools/queue_colmap_sfm.py`
-  - `tests/test_mapper_ba_options.py`
-  - `VERSION`
-- Git: repo=vaultwares-studio, branch=main, head=c5098d5
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 06:53 - General Tasks</strong> <code>verification</code> - Validated live database state (22 OnlyFans records persisted), verified count endpoints on production API, confirmed v0.3.49 live deploy</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 06:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated live database state (22 OnlyFans records persisted), verified count endpoints on production API, confirmed v0.3.49 live deploy
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 06:52 - General Tasks</strong> <code>code-change</code> - Committed and pushed shared-tube (7aabc4c, v0.3.49) to main, deployed to greencloud and ovhcloud, verified live v0.3.49</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 06:52 (TZ: Eastern Standard Time)
-  ```
-- Summary: Committed and pushed shared-tube (7aabc4c, v0.3.49) to main, deployed to greencloud and ovhcloud, verified live v0.3.49
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 06:51 - General Tasks</strong> <code>code-change</code> - Fixed NotFans general fetch trigger in VideoBatchActions and added termUrl support in notfans source config</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 06:51 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed NotFans general fetch trigger in VideoBatchActions and added termUrl support in notfans source config
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 04:48 - agent-ledger</strong> <code>code-change</code> - Comet debrid config rebuild, CAM filter port, instant player error handling, native dismiss cleanup, and iOS settings adaptation</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.6 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 04:48 (TZ: Eastern Standard Time)
-  ```
-- Summary: Comet debrid config rebuild, CAM filter port, instant player error handling, native dismiss cleanup, and iOS settings adaptation
-- Git: repo=agent-ledger, branch=main, head=6116f29c
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 04:44 - General Tasks</strong> <code>code-change</code> - Committed and pushed vaultwares-api (12f7c3a) and shared-tube (329972a, v0.3.48) to main, deployed to greencloud and ovhcloud, verified live sites</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 04:44 (TZ: Eastern Standard Time)
-  ```
-- Summary: Committed and pushed vaultwares-api (12f7c3a) and shared-tube (329972a, v0.3.48) to main, deployed to greencloud and ovhcloud, verified live sites
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 03:52 - General Tasks</strong> <code>verification</code> - Verified clean working trees and confirmed implementation plan artifact ready for user approval</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 03:52 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified clean working trees and confirmed implementation plan artifact ready for user approval
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 03:52 - General Tasks</strong> <code>general</code> - Created implementation plan for Comet config rebuild (Torbox removal), streaming player lifecycle &amp; error handling, CAM filters, dismiss behavior, and iOS settings adaptation</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 03:52 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created implementation plan for Comet config rebuild (Torbox removal), streaming player lifecycle & error handling, CAM filters, dismiss behavior, and iOS settings adaptation
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 03:45 - General Tasks</strong> <code>verification</code> - Verified live DB schema, tested onlyfans/terms queries on production, added fetcher done event test and header nav contract test</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 03:45 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified live DB schema, tested onlyfans/terms queries on production, added fetcher done event test and header nav contract test
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 03:42 - General Tasks</strong> <code>code-change</code> - Fixed 500 DB column is_onlyfans error on production, fixed fetcher completion false error toast, and removed categories link from top navigation</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 03:42 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed 500 DB column is_onlyfans error on production, fixed fetcher completion false error toast, and removed categories link from top navigation
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 03:21 - General Tasks</strong> <code>code-change</code> - Committed and pushed iOS icon and endpoint updates to vault-warden and vault-streaming; dispatched CI builds and placed compiled IPAs on Desktop</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 03:21 (TZ: Eastern Standard Time)
-  ```
-- Summary: Committed and pushed iOS icon and endpoint updates to vault-warden and vault-streaming; dispatched CI builds and placed compiled IPAs on Desktop
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 03:18 - General Tasks</strong> <code>general</code> - Explained iOS bundle ID certificate conflict and resolution, prepared commit &amp; rebuild request</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 03:18 (TZ: Eastern Standard Time)
-  ```
-- Summary: Explained iOS bundle ID certificate conflict and resolution, prepared commit & rebuild request
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 03:09 - General Tasks</strong> <code>verification</code> - Executed verification test suite: validated 1024x1024 RGB icons, asset catalog schemas, live streaming web endpoint vs Comet, and AppConfig endpoint</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 03:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Executed verification test suite: validated 1024x1024 RGB icons, asset catalog schemas, live streaming web endpoint vs Comet, and AppConfig endpoint
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 03:09 - General Tasks</strong> <code>code-change</code> - Configured iOS AppIcon catalogs for VaultWarden and VaultStreaming without git commit/rebuild; diagnosed VaultStreaming Comet URL mismatch and updated endpoint to streaming.vaul...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 03:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Configured iOS AppIcon catalogs for VaultWarden and VaultStreaming without git commit/rebuild; diagnosed VaultStreaming Comet URL mismatch and updated endpoint to streaming.vaultwares.ca
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 03:00 - vault-warden</strong> <code>general</code> - Investigated AppIcon asset catalogs for VaultWarden and VaultStreaming, explained Sideloadly icon replacement and Xcode asset catalog configuration</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 03:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Investigated AppIcon asset catalogs for VaultWarden and VaultStreaming, explained Sideloadly icon replacement and Xcode asset catalog configuration
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=8c2061f
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 02:41 - General Tasks</strong> <code>general</code> - Investigated Apple ID security lockout cause in relation to Sideloadly and multi-PC login</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 02:41 (TZ: Eastern Standard Time)
-  ```
-- Summary: Investigated Apple ID security lockout cause in relation to Sideloadly and multi-PC login
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 02:38 - General Tasks</strong> <code>commands</code> - Setup and configured Sideloadly with non-Store iTunes, Apple Mobile Device Support, Bonjour Service, and iCloud; verified iPhone device detection</summary>
-
-- Kind: commands
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 02:38 (TZ: Eastern Standard Time)
-  ```
-- Summary: Setup and configured Sideloadly with non-Store iTunes, Apple Mobile Device Support, Bonjour Service, and iCloud; verified iPhone device detection
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 01:56 - General Tasks</strong> <code>code-change</code> - Added OnlyFans video scraper (notfans), DB schema &amp; query isolation, public site tab, and admin panel management tab; pushed to main in shared-tube and vaultwares-api</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 01:56 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added OnlyFans video scraper (notfans), DB schema & query isolation, public site tab, and admin panel management tab; pushed to main in shared-tube and vaultwares-api
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 01:51 - vaultwares-studio</strong> <code>code-change</code> - Addressed Gemini&#39;s review on PR #15: accepted six safeguards, declined two with recorded reasoning. Fixed tsdf_volume.pack_keys crashing on an empty array (min has no identity),...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: main
-  Tools used (this reply): Bash, Grep, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 01:51 (TZ: Eastern Standard Time)
-  ```
-- Summary: Addressed Gemini's review on PR #15: accepted six safeguards, declined two with recorded reasoning. Fixed tsdf_volume.pack_keys crashing on an empty array (min has no identity), added the missing 21-bit packing range check to nanovdb_write to match tsdf_volume, added a GRID_DATA_SIZE length guard to nanovdb_read._parse_grid, decoded COLMAP image names with surrogateescape rather than the suggested errors=replace so filenames round-trip instead of silently mismatching, guarded cv2.imread returning None in find_cross_clip_overlaps, and closed the unmanaged /proc/loadavg handle in recon_entrypoint. Declined splice_clip_order's 0 < a_local loosening (the asymmetry with b_local is deliberate; commented) and unpack_keys empty guard (verified it already returns (0,3) int32). Added 4 tests: suite 343 -> 347 passed, same 1 pre-existing failure. Merged PR #15 to main by fast-forward on the user's explicit authorisation to work on main; VERSION 1.4.0 now on main.
-- Commands:
-  - `gh api repos/p-potvin/vaultwares-studio/pulls/15/comments`
-  - `git merge --ff-only vw-codex/native-splats-camera-paths`
-  - `git push origin main`
-  - `.venv/Scripts/python.exe -m pytest -q`
-- Files:
-  - `vaultwares_studio/tsdf_volume.py`
-  - `vaultwares_studio/nanovdb_write.py`
-  - `vaultwares_studio/nanovdb_read.py`
-  - `vaultwares_studio/colmap_model.py`
-  - `tools/find_cross_clip_overlaps.py`
-  - `tools/splice_clip_order.py`
-  - `docker/worker/recon_entrypoint.py`
-- Git: repo=vaultwares-studio, branch=main, head=5c92a7a
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 01:28 - shared-tube</strong> <code>verification</code> - Live real-condition verification passed for FullVideos and 1Porn scrapers with FlareSolverr on OVH: 0 duplicate overlap across pages 1 and 2, 48 unique videos across 2 pages, cl...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 01:28 (TZ: Eastern Standard Time)
-  ```
-- Summary: Live real-condition verification passed for FullVideos and 1Porn scrapers with FlareSolverr on OVH: 0 duplicate overlap across pages 1 and 2, 48 unique videos across 2 pages, clean canonicalization and in-run deduplication
-- Git: repo=shared-tube, branch=main, head=0a419a5
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 01:26 - shared-tube</strong> <code>code-change</code> - Fixed KVS scraper pagination loops, site-scoped duplicate detection, and canonical source URL matching across shared-tube and vaultwares-api</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 01:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed KVS scraper pagination loops, site-scoped duplicate detection, and canonical source URL matching across shared-tube and vaultwares-api
-- Git: repo=shared-tube, branch=main, head=0a419a5
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 01:13 - vaultwares-studio</strong> <code>code-change</code> - Landed two days of uncommitted work as 8 scoped commits on vw-codex/native-splats-camera-paths, bumped VERSION 1.3.0 to 1.4.0, pushed and opened PR #15 (calibrated COLMAP camera...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, Grep, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 01:13 (TZ: Eastern Standard Time)
-  ```
-- Summary: Landed two days of uncommitted work as 8 scoped commits on vw-codex/native-splats-camera-paths, bumped VERSION 1.3.0 to 1.4.0, pushed and opened PR #15 (calibrated COLMAP camera_params, host-RAM gate on training, ray-carved free space, console frame/loop params, GUI ply-drop, 5 new tools, worker ModelRun span). Per GIT_BRANCH_POLICY the merge is left to the user. Verified with pytest: 343 passed, 1 failed (test_prepared_da3 retains_failure_without_time_limit, KeyError VW_IN) confirmed pre-existing on main at c69edbc, flagged in the PR rather than fixed. Left output bin scratch files untracked; cosmos-reason2 pointer untouched. Also diagnosed the local COLMAP snapshot at D:\3D Reconstruction\runs\colmap-sept18-2026-local\pcd: 1109 of 2000 registered, 258671 points, median track 5, 2018 observations per image, extent 14.1x4.4x15.7 units, 891 unregistered concentrated in two contiguous blocks (958-1223 and 1470-1918). Not a hang: real bundle adjustment on a well-conditioned partial model.
-- Commands:
-  - `git commit x8`
-  - `git push -u origin vw-codex/native-splats-camera-paths`
-  - `gh pr create --base main`
-  - `.venv/Scripts/python.exe -m pytest -q`
-- Files:
-  - `docker/worker/recon_entrypoint.py`
-  - `tools/prepare_zerogpu_training.py`
-  - `vaultwares_studio/robot_lab/occupancy.py`
-  - `config/calibrations/iphone-1920x1080.json`
-  - `VERSION`
-  - `docs/HANDOFF-20260919.md`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f0dc51f
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 01:05 - vaultwares-studio</strong> <code>handoff</code> - Wrote docs/HANDOFF-20260919.md for the next chat. Opens with the LIVE job 6aae148351992417dfcc885e (cpu-upgrade, no remote timeout, 1600 frames from the merged 3-clip video, thr...</summary>
-
-- Kind: handoff
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-19 01:05 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wrote docs/HANDOFF-20260919.md for the next chat. Opens with the LIVE job 6aae148351992417dfcc885e (cpu-upgrade, no remote timeout, 1600 frames from the merged 3-clip video, threads -1, 4096 features, calibration passed as camera_params) and how to watch it with tools/tail_job_logs.py. Covers: the scenery root cause (COLMAP seed max/p95 13.7 vs DA3 1.42, agreeing at p95, DA3 zero gaussians past 5x core radius); our COLMAP running uncalibrated (focal 2304 = 1.2x width guess, 0% config-2 pairs, 36 median matches vs the user's 948/85%/754) and the recon_entrypoint fix; five explicit corrections of things I reported wrongly (the OOM misdiagnosed as a timeout, the 1006 loop-pair miscount, the densification-slowdown prediction that reversed, the unsafe fallback chain, the confounded drift metric and its own bad first result); what the capture protocol bought (closure 0.001, 17 loop pairs, seams at 0.08x median step); probe facts including MCMC NOT available so it needs an image rebuild; new tooling table; spend table incl. the USD 3.62 loss; and a 6-item next-steps list in evidence order. Also answered the user's frame mapping: my frame_00937 of 1600 = t 283.000s = their frame_01172 of 2000, exact 0ms match, rule of thumb yours = mine x 1.25. Confirmed I re-ran ffmpeg (fps=4, 1933 candidates, selected 1600) rather than subsampling the existing fps=8 3865-candidate set, and flagged the tradeoff that this costs exact frame-level comparability with the DA3 run. Suite 343. Nothing committed.
-- Commands:
-  - `python tools/queue_colmap_sfm.py --no-timeout --yes`
-  - `frame index mapping between the 1600 and 2000 sets`
-- Files:
-  - `docs/HANDOFF-20260919.md`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 00:41 - vaultwares-studio</strong> <code>verification</code> - Camera question settled by measurement, and a second thread-cap finding. The user flagged that the footage is iPhone 11 video at 0.5x (ultra-wide), NOT the device default, so ou...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 00:41 (TZ: Eastern Standard Time)
-  ```
-- Summary: Camera question settled by measurement, and a second thread-cap finding. The user flagged that the footage is iPhone 11 video at 0.5x (ultra-wide), NOT the device default, so our calibration might not transfer. It does: horizontal FOV agrees across every capture - calibration file 94.5 deg (fx 886.8), DA3 sunny500 94.9 (881.9), DA3 cloudy1000 93.3 (906.1), DA3 thorough3 93.5 (902.7). Same lens and zoom throughout, so the 14 Jun calibration is valid for the new footage. But 94 deg is emphatically NOT the iPhone 11 main camera (~69 deg), and the filename iphone-1920x1080.json implies a device default, so I rewrote its 'source' field to record the 0.5x ultra-wide lens, the 94.5 deg FOV, an explicit warning not to reuse it for 1x footage, and the three-way cross-check. The user's local prior of 948 px = 90.7 deg is ~7% long against the measured 886.8; COLMAP's bundle adjustment will refine it, so not worth interrupting their run. THROUGHPUT: our HF job did 500 images in 167 min = 3.0 img/min; the user's local run projects 2000 in ~120 min = 16.7 img/min, a 5.6x difference, on a 10-thread PC versus a 64-vCPU cpu-upgrade box. Our extraction uses 4 threads and matching 8, capped because 8 threads x full-res SIFT pyramid was measured at ~28GB against cpu-upgrade's 32GB. That cap was sized for UNCAPPED features (median 11,486); with max_num_features now 4096 and max_image_size 1280 the per-thread footprint is far smaller, so the caps are likely over-conservative by a wide margin. Raising them is the obvious next lever but
-- Commands:
-  - `FOV comparison across calibration file and three DA3 captures`
-  - `throughput comparison HF job vs local`
-- Files:
-  - `config/calibrations/iphone-1920x1080.json`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-19 00:34 - vaultwares-studio</strong> <code>code-change</code> - Compared the user&#39;s local COLMAP DB (2000 images, D:/3D Reconstruction/runs/colmap-sept18-2026-local) against our 14 Sep cpu-upgrade job DB (500 images) and found a REAL DEFECT ...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write
-  MCP servers accessed (this reply): none
-  Time: 2026-09-19 00:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: Compared the user's local COLMAP DB (2000 images, D:/3D Reconstruction/runs/colmap-sept18-2026-local) against our 14 Sep cpu-upgrade job DB (500 images) and found a REAL DEFECT in our COLMAP path. Our feature_extractor sets single_camera and camera_model OPENCV but never passes ImageReader.camera_params, so COLMAP invents focal = 1.2 x max_dimension = 2304px (focal/width exactly 1.200, prior_focal_length 0) against ~890 measured for this phone - 2.4x too long. With prior_focal 0 COLMAP verifies pairs via the fundamental matrix, not the essential matrix. Result: config 2 CALIBRATED 0.0%, config 3 UNCALIBRATED 82.3%, median 36 matches/pair, 46% of pairs verified. The user's local run passed fx 948 (prior_focal 1) and got config 2 CALIBRATED 85.1%, median 754 matches/pair, 83% verified - 20x the matches per pair. Keypoints also confirm the user's instinct: ours median 11,486/image (COLMAP default cap) vs theirs 4,939 with max_num_features 4096, and theirs matched far better, so more keypoints was actively harmful. FIX in docker/worker/recon_entrypoint.py: new colmap_camera_params() builds fx,fy,cx,cy,k1,k2,p1,p2 from a calibration JSON, scaled to the resolution COLMAP will actually read, refusing on aspect-ratio mismatch (a crop cannot be scaled) and leaving distortion unscaled since it is normalised; new --calibration and --sift-max-num-features (default 4096) args; the extractor passes camera_params when known and prints an explicit WARNING naming UNCALIBRATED when it is not. 5 new tests. Suite 343. NOT yet wired into queue_colmap_sfm.py and no run submitted.
-- Commands:
-  - `sqlite comparison of cameras/keypoints/matches/two_view_geometries across both DBs`
-  - `pytest tests/test_colmap_camera_params.py -q (5 passed)`
-- Files:
-  - `docker/worker/recon_entrypoint.py`
-  - `tests/test_colmap_camera_params.py`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 22:18 - vaultwares-studio</strong> <code>verification</code> - CPU COLMAP confirmed REAL, not a note: tools/queue_colmap_sfm.py exists and ran on 14 Sep producing colmap_database.db (1.01GB) + processed_min.zip (822MB), 500 frames / 491 reg...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-18 22:18 (TZ: Eastern Standard Time)
-  ```
-- Summary: CPU COLMAP confirmed REAL, not a note: tools/queue_colmap_sfm.py exists and ran on 14 Sep producing colmap_database.db (1.01GB) + processed_min.zip (822MB), 500 frames / 491 registered, matching_used sequential, process_data_sequential_s 10039 (167 min) with vocab_tree_match_s 5997. Cost evidence from the job history: a cpu-upgrade job ran 316 min for ~USD 0.21, i.e. the USD 0.04/hr rate holds. So COLMAP on CPU is cheap in money and slow in wall clock. Added tools/probe_worker_env.py (throwaway cpu-upgrade job, no inputs/outputs, under a cent) and ran it against the DA3 training image. DECISIVE RESULT - MCMC IS NOT AVAILABLE in the deployed image: splatfacto.strategy False, max_gs_num False, noise_lr False, mcmc_opacity_reg False, mcmc_scale_reg False, splatfacto_field_count 36, and 'help_has --pipeline.model.strategy' False against 40317 chars of help text. filter_supported_flags would have silently dropped the flags. MCMC therefore needs an image rebuild, which the user already suggested. Other environment facts now known rather than assumed: torch 2.1.2+cu118, gsplat 1.4.0, numpy 1.26.4, xformers MISSING, nerfstudio has no __version__; SDPA present with flash_sdp_enabled and mem_efficient_sdp_enabled both True (so SDPA is already on, and remains irrelevant to splatfacto which has no attention); COLMAP 3.9.1 at /usr/local/bin/colmap built WITH CUDA; cpu-upgrade has 64 vCPU and a 32GB cgroup limit (host reports 517GB). The 64 vCPU is material for COLMAP feature matching. stop-split-at and cull-alpha-thresh ARE supported, confirming the flags used so far were not being dropped.
-- Commands:
-  - `python tools/probe_worker_env.py --yes`
-  - `python tools/tail_job_logs.py --job-id 6aadf0a552d0dbd7f1d6ca85`
-- Files:
-  - `tools/probe_worker_env.py`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 22:09 - vault-streaming</strong> <code>code-change</code> - Implemented Vault-Streaming Track 1: NativePlayerView with hardware acceleration, AVKit, Lock Screen NowPlaying, PiP, Swift-JS playback bridge, Direct-Stream remuxer, lifted sou...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-ios-container
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-18 22:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implemented Vault-Streaming Track 1: NativePlayerView with hardware acceleration, AVKit, Lock Screen NowPlaying, PiP, Swift-JS playback bridge, Direct-Stream remuxer, lifted source caps, and built updated IPA
-- Git: repo=vault-streaming, branch=vw-codex-ios-container, head=ef444ed
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 22:04 - vault-warden</strong> <code>general</code> - Aligned on Proton Pass style zero-knowledge on-demand AutoFill extension model for vault-warden and native playback architecture for vault-streaming</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-18 22:04 (TZ: Eastern Standard Time)
-  ```
-- Summary: Aligned on Proton Pass style zero-knowledge on-demand AutoFill extension model for vault-warden and native playback architecture for vault-streaming
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=8c2061f
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 21:42 - vaultwares-studio</strong> <code>verification</code> - RESEARCH, no runs. Root-caused the user&#39;s &#39;no scenery&#39; observation and it is upstream of splatfacto. The 14 Jun run used matching_method &#39;sequential&#39; = COLMAP; every run since u...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write, Edit
-  MCP servers accessed (this reply): none
-  Time: 2026-09-18 21:42 (TZ: Eastern Standard Time)
-  ```
-- Summary: RESEARCH, no runs. Root-caused the user's 'no scenery' observation and it is upstream of splatfacto. The 14 Jun run used matching_method 'sequential' = COLMAP; every run since uses DA3-Streaming. Gaussians beyond 5x the core radius: COLMAP 3.6% and 1.1% beyond 10x; ALL THREE DA3 runs exactly 0.0% beyond 5x - a wall, not a falloff. Seed clouds explain it: COLMAP sparse_pc p95 6.58 / max 90.34 / ratio 13.7 vs DA3 combined_pcd p95 6.49 / max 9.20 / ratio 1.42. The two AGREE at p95, so DA3 is not worse in the near or mid field (18 Sep is denser there with 26x more points); what it lacks is the 0.1% tail between 20 and 90 units, which is the background houses and far trees. Cause: DA3 monocular depth truncated by depth_threshold 15.0 in the Space's _config plus conf_threshold_coef 0.75; COLMAP triangulates distant matches without such a limit. streaming_convert.py already documented the 1.4 max/p95 ratio as a reason to SKIP the spatial filter - the evidence was in a docstring before anyone looked for it. Same root cause as the neighbour's-house-collapse artefact. Culling order documented: depth_threshold (the one that matters) > conf_threshold_coef > splat_filter (deliberately skipped on this path) > cull_alpha_thresh > fuse_nanovdb depth-trunc (volume only). Observation 2 (haze worse in enclosed spaces) is consistent with the per-view opacity trend: translucent under-converged gaussians accumulate along rays that cross several layers of foliage/fabric, so the same deficiency is several times more visible in a nook than in the open; revisiting cannot fix an iteration-budget problem. VRAM: never
-- Commands:
-  - `radial distribution of gaussians across 4 runs`
-  - `seed cloud radius comparison COLMAP vs DA3`
-  - `pytest tests -q (338 passed)`
-- Files:
-  - `docs/scenery-and-scene-bounds-20260918.md`
-  - `tools/run_train_only_with_retention.py`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 20:19 - vault-warden</strong> <code>verification</code> - Comprehensive architectural code review of vault-streaming and research on iOS native decoding, video playback, transcoding vs direct stream, subtitles, and vault-warden credent...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-18 20:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: Comprehensive architectural code review of vault-streaming and research on iOS native decoding, video playback, transcoding vs direct stream, subtitles, and vault-warden credential provider extension
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=8c2061f
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 19:41 - vault-warden</strong> <code>code-change</code> - Fixed iOS reload loop in vault-warden and vault-streaming, converted CI workflows to manual dispatch and repository signals to save runner minutes, committed and pushed both rep...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-18 19:41 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed iOS reload loop in vault-warden and vault-streaming, converted CI workflows to manual dispatch and repository signals to save runner minutes, committed and pushed both repos, and downloaded VaultStreaming-unsigned.ipa
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=8c2061f
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 19:34 - vault-warden</strong> <code>verification</code> - Diagnosed iOS VaultWarden connection failure (WKWebView infinite reload storm); drafted implementation plan for token navigation fix and CI dispatch triggers</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-18 19:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: Diagnosed iOS VaultWarden connection failure (WKWebView infinite reload storm); drafted implementation plan for token navigation fix and CI dispatch triggers
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=8e17c2a
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 17:51 - General Tasks</strong> <code>verification</code> - Live verification suite passed: verified config persistence across all 3 mcp_config.json files, discovery / health routes on OVH nginx, SSE endpoint announcement, and end-to-end...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash (High)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-18 17:51 (TZ: Eastern Standard Time)
-  ```
-- Summary: Live verification suite passed: verified config persistence across all 3 mcp_config.json files, discovery / health routes on OVH nginx, SSE endpoint announcement, and end-to-end MCP initialize/tools list/tools call execution
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 17:51 - General Tasks</strong> <code>verification</code> - Repaired mcp.vaultwares.ca endpoint routing and configured Antigravity IDE mcp_config.json</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash (High)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-18 17:51 (TZ: Eastern Standard Time)
-  ```
-- Summary: Repaired mcp.vaultwares.ca endpoint routing and configured Antigravity IDE mcp_config.json
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 13:36 - vaultwares-studio</strong> <code>verification</code> - thorough3 splat TRAINED AND LANDED. Job 6aad6bec51992417dfcc7457 COMPLETED: 2352s running (39.2 min) on a10g-large, ~USD 0.98, step 24999, 569,661 gaussians, gravity-aligned 88....</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Read
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-18 13:36 (TZ: Eastern Standard Time)
-  ```
-- Summary: thorough3 splat TRAINED AND LANDED. Job 6aad6bec51992417dfcc7457 COMPLETED: 2352s running (39.2 min) on a10g-large, ~USD 0.98, step 24999, 569,661 gaussians, gravity-aligned 88.7deg, packed .splat 18MB. Rate CLIMBED rather than fell: 5.0 it/s at step 3000, 8.3 at 10000, 10.2 at 19000, 11.3 at 24999 - my warning that densification would slow it toward the cap was backwards, because the early steps carry dataset load and cache warm-up. Judge rate at step 10000, not 3000. Memory 33-36GB of 50 (67-73%) flat and declining all run, then 4GB at export; the same workload had nowhere to go on the 30GB L4, which is the OOM. COMPARATIVE METRICS (cloud.ply, same measurements as the earlier runs): sunny500 1,643,538 gaussians / density 1,178,623 per unit^3 / splat-camera extent 1.16 / opacity p50 0.811; merged1600 384,175 / 1,251,399 / 1.00 / 0.646; thorough3 569,661 / 1,631,279 / 1.01 / 0.585. Density is the highest by 30%, so the capture protocol delivered more reconstructed substance per unit volume. But opacity p50 tracks the per-view iteration budget MONOTONICALLY - 0.811 at 40 iterations/view, 0.646 at 18.75, 0.585 at 12.5 - which is an under-training signal rather than a scene property. Checkpoint at step 24999 is banked in model.zip, so --refine-mode to ~60000 total would give 30 iterations/view for about 52 min and USD 1.30.
-- Commands:
-  - `python tools/prepare_zerogpu_training.py (completed)`
-  - `gaussian density / opacity / extent comparison across three runs`
-  - `tools/viewport_screenshot render`
-- Files:
-  - `data/jobs/zerogpu-thorough3-2000-loop075-20260917/reconstruction/cloud.ply`
-  - `data/jobs/zerogpu-thorough3-2000-loop075-20260917/reconstruction/remote_out/model.zip`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 13:14 - vaultwares-studio</strong> <code>code-change</code> - Two deliverables while the 25000-iteration run trains. (1) LOG FEED FIXED without SSH. SSH to the job was refused (publickey) because the local id_ed25519 is not registered on t...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write, WebSearch, WebFetch
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-18 13:14 (TZ: Eastern Standard Time)
-  ```
-- Summary: Two deliverables while the 25000-iteration run trains. (1) LOG FEED FIXED without SSH. SSH to the job was refused (publickey) because the local id_ed25519 is not registered on the HF account, and HfApi exposes no SSH-key management, so that needs the user to add the key at huggingface.co/settings/keys. But the diagnosis changed the fix: a FRESH fetch_job_logs stream works perfectly, so the stall is in the long-lived stream the launcher opens at submit time and holds for the life of the job. New tools/tail_job_logs.py reconnects on stall, dedupes lines by content+occurrence count since the log has no cursor, appends to any file, and exits on terminal stage. Running against the live job; 20 heartbeat lines now in train.log where there were none. CONFIRMS the heartbeat works: 'step 10000, 8.3 it/s | cgroup 34.9/50.0 GB (70%)'. Rate recovered from 5 to 8.3 it/s, so 25000 projects to ~50 min of training, comfortably inside the 106 min cap. Memory flat at 70% and slightly declining. (2) SPLATFACTO MCMC researched: nerfstudio SplatfactoModelConfig DOES expose strategy: Literal['default','mcmc'] = 'default', with max_gs_num (default 1,000,000) as the hard gaussian cap, plus noise_lr 5e5, mcmc_opacity_reg 0.01, mcmc_scale_reg 0.01. Highly relevant to us because max_gs_num bounds the model size directly, which is the allocation that grows with the scene and contributed to the OOM - it converts an unbounded densification into a fixed budget. NOT yet verified against the deployed July image; filter_supported_flags would silently drop the flags if that nerfstudio predates them, and the drop is logged, so a cheap cpu-upgrade probe job
-- Commands:
-  - `ssh 6aad6bec...@ssh.hf.jobs (Permission denied publickey)`
-  - `python tools/tail_job_logs.py --job-id 6aad6bec51992417dfcc7457 --out train.log`
-- Files:
-  - `tools/tail_job_logs.py`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 12:47 - vaultwares-studio</strong> <code>code-change</code> - Per the user: cap under 30 min and do not let the large GPU schedule. Cancelled job 6aad6a7552d0dbd7f1d6aa36 while SCHEDULING (unbilled, durations None) and removed a10g-largex2...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write, TaskStop
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-18 12:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Per the user: cap under 30 min and do not let the large GPU schedule. Cancelled job 6aad6a7552d0dbd7f1d6aa36 while SCHEDULING (unbilled, durations None) and removed a10g-largex2 (USD 3.00/h) from the chain entirely. Added --max-minutes to tools/prepare_zerogpu_training.py: previously timeout_seconds was always est_minutes*60*2.5, derived from a 650 iter/min constant measured on one scene - the formula put a 40000-iteration run at 66 min and it was still going at 271. --max-minutes sets the remote cap directly, and HF enforces it rather than the launcher. REDUCED ITERATIONS 25000 -> 8000, which is a judgement call the user did not explicitly make and needs confirming: a hard 30-min cap uploads NOTHING when it fires, so 25000 under that cap was a guaranteed total loss. Sizing: merged1600 managed 8.95 it/s on l4x1 with a smaller scene; thorough3 has 3.3x the volume so more gaussians and a slower iteration, estimate 5-7 it/s, giving roughly 8-11k iterations in the ~26 min left after startup. --keep-checkpoint is already passed, so --refine-mode can resume to 25000 later without repeating this. Submitted a10g-large only, --max-minutes 29, --ssh, scheduling timeout 1800s. Suite 338.
-- Commands:
-  - `TaskStop bktnd0mms`
-  - `cancel_job 6aad6a7552d0dbd7f1d6aa36 (SCHEDULING, unbilled)`
-  - `python tools/prepare_zerogpu_training.py --iterations 8000 --flavor a10g-large --max-minutes 29 --ssh --submit`
-- Files:
-  - `tools/prepare_zerogpu_training.py`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 12:43 - vaultwares-studio</strong> <code>code-change</code> - Caught and fixed a hazard I introduced 10 minutes earlier. I queued the retry with flavour chain [a10g-large, l4x1] and a 900s scheduling timeout; the memory gate only validated...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write, TaskStop
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-18 12:43 (TZ: Eastern Standard Time)
-  ```
-- Summary: Caught and fixed a hazard I introduced 10 minutes earlier. I queued the retry with flavour chain [a10g-large, l4x1] and a 900s scheduling timeout; the memory gate only validated flavors[0]. a10g-large did not schedule, so at the 15-minute mark the runner would have fallen back to l4x1 - the exact 12.4GB/30GB = 41% configuration that was OOMKilled for USD 3.62. A safe head with an unsafe tail is the unsafe configuration on a delay. Stopped the local task and cancelled HF job 6aad67e152d0dbd7f1d6a9a6 while still SCHEDULING; final durations None, so it was never billed (zero cost). FIX: check_host_memory now validates EVERY flavour in the chain and returns the filtered list, which submit() then uses; it raises only when nothing fits, and --allow-memory-risk keeps the whole chain. 3 new tests including the exact [a10g-large, l4x1] chain. Suite 338. Resubmitted as [a10g-large, a10g-largex2] (46GB / 92GB, both inside the safe share) with --scheduling-timeout 1800 since a10g-large was slow to schedule, --ssh, 25000 iterations. SSH endpoint from the cancelled attempt confirmed the feature works: ssh://<job-id>@ssh.hf.jobs.
-- Commands:
-  - `TaskStop b3iad2obq`
-  - `cancel_job 6aad67e152d0dbd7f1d6a9a6 (SCHEDULING, unbilled)`
-  - `python tools/prepare_zerogpu_training.py --flavor a10g-large --flavor a10g-largex2 --scheduling-timeout 1800 --ssh --submit`
-  - `pytest tests -q (338 passed)`
-- Files:
-  - `tools/prepare_zerogpu_training.py`
-  - `tests/test_training_memory_guard.py`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-18 12:32 - vaultwares-studio</strong> <code>code-change</code> - Retry queued on a10g-large (46GB, USD 1.50/h) at 25000 iterations with SSH enabled, after three fixes. (1) SSH: HF Jobs have no Spaces-style dev mode, but run_job takes ssh=True...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write, Edit
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-18 12:32 (TZ: Eastern Standard Time)
-  ```
-- Summary: Retry queued on a10g-large (46GB, USD 1.50/h) at 25000 iterations with SSH enabled, after three fixes. (1) SSH: HF Jobs have no Spaces-style dev mode, but run_job takes ssh=True - wired through as a --ssh flag on prepare_zerogpu_training and the runner now prints JobStatus.ssh_url as soon as it appears. (2) Progress/memory heartbeat in tools/run_train_only_with_retention.py: a daemon thread logs every 60s the elapsed time, the highest checkpoint step (parsed from step-*.ckpt filenames, since --steps-per-save 1000 writes them), the derived it/s, and cgroup + /proc memory. This is the signal that was missing yesterday - the OOM arrived with zero warning because the only output was the child's stdout and nerfstudio's Rich withholds its progress table when stdout is a pipe. (3) Memory gate from the postmortem now passes at 12.4GB of 46GB = 27%. SDPA/FlashAttention: does NOT apply to this job. --train-only runs ns-train splatfacto, which is gsplat CUDA rasterisation with no transformer and no attention. Attention in this codebase is DA3's multi-view attention in the SfM stage, which already ran free on ZeroGPU for this capture. Test double _FakeHub.run_job had drifted from the real signature and broke 6 tests on the ssh kwarg; updated and pinned with two new tests that ssh defaults off and forwards when asked. Suite 336.
-- Commands:
-  - `python tools/prepare_zerogpu_training.py --job zerogpu-thorough3-2000-loop075-20260917 --iterations 25000 --flavor a10g-large --flavor l4x1 --scheduling-timeout 900 --ssh --submit`
-  - `pytest tests -q (336 passed)`
-- Files:
-  - `tools/run_train_only_with_retention.py`
-  - `vaultwares_studio/runners/hf_jobs.py`
-  - `tools/prepare_zerogpu_training.py`
-  - `tests/test_flavor_fallback.py`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 22:08 - vaultwares-studio</strong> <code>code-change</code> - POSTMORTEM + FIX. The thorough3 training job died OOMKilled (exit 137) after 271 min running, ~USD 3.62 billed, nothing uploaded. MY DIAGNOSIS DURING THE RUN WAS WRONG: I told t...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write, Edit
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-17 22:08 (TZ: Eastern Standard Time)
-  ```
-- Summary: POSTMORTEM + FIX. The thorough3 training job died OOMKilled (exit 137) after 271 min running, ~USD 3.62 billed, nothing uploaded. MY DIAGNOSIS DURING THE RUN WAS WRONG: I told the user it was at risk of hitting a 165-min remote timeout at 20:06; it actually ran to 271 min and died of memory, so both the mechanism and the deadline I gave were incorrect. Real cause, and it was computable in advance: --pipeline.datamanager.cache-images cpu holds every training image in host RAM uncompressed. 2000 frames at 1920x1080x3 = 12.4 GB of an l4x1's 30 GB before splatfacto allocates the model, Adam moments and densification buffers - and this scene is ~3x the volume of previous ones so those are larger too. Evidence line: 500 frames 3.1GB (10%) completed; 1600 frames 10.0GB (33%) completed; 2000 frames 12.4GB (41%) OOMKilled. FIX: tools/prepare_zerogpu_training.py now has FLAVOR_RAM_GB (from HfApi.list_jobs_hardware), image_cache_gb() and check_host_memory(), gating at CACHE_SHARE_LIMIT = 1/3 - the largest share that has actually survived - BEFORE any upload or billing. The refusal names the concrete remedies (--subsample N or --flavor a10g-large, 46GB) and requires --allow-memory-risk to override. Verified: rerunning the exact configuration that died is now refused with that message. 7 new tests, suite 334. NOT yet retried - awaiting the user's choice of remedy.
-- Commands:
-  - `python tools/prepare_zerogpu_training.py --iterations 25000 --submit (now REFUSED by the guard)`
-  - `pytest tests/test_training_memory_guard.py -q (7 passed)`
-- Files:
-  - `tools/prepare_zerogpu_training.py`
-  - `tests/test_training_memory_guard.py`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 21:53 - vault-streaming</strong> <code>verification</code> - Validated live Comet on OVH and VaultWares API endpoints and recorded live proof in walkthrough</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-ios-container
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 21:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated live Comet on OVH and VaultWares API endpoints and recorded live proof in walkthrough
-- Git: repo=vault-streaming, branch=vw-codex-ios-container, head=9e56ce8
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 21:52 - vault-streaming</strong> <code>code-change</code> - Updated iOS default server endpoint to Comet on OVH (100.67.25.118:5173) and transcode dispatch via vaultwares-api</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-ios-container
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 21:52 (TZ: Eastern Standard Time)
-  ```
-- Summary: Updated iOS default server endpoint to Comet on OVH (100.67.25.118:5173) and transcode dispatch via vaultwares-api
-- Git: repo=vault-streaming, branch=vw-codex-ios-container, head=9e56ce8
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 20:47 - vault-streaming</strong> <code>code-change</code> - Ported vault-streaming web app to native iOS container and GitHub Actions CI unsigned build pipeline with mobile-first styling and AI omission</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-ios-container
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 20:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Ported vault-streaming web app to native iOS container and GitHub Actions CI unsigned build pipeline with mobile-first styling and AI omission
-- Git: repo=vault-streaming, branch=vw-codex-ios-container, head=9e56ce8
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 20:34 - vault-streaming</strong> <code>documentation</code> - Created implementation plan to port vault-streaming to a native iOS app container and GitHub Actions CI unsigned build pipeline</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-project-runtime-logs
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 20:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created implementation plan to port vault-streaming to a native iOS app container and GitHub Actions CI unsigned build pipeline
-- Git: repo=vault-streaming, branch=vw-codex-project-runtime-logs, head=9e56ce8
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 18:34 - vaultwares-studio</strong> <code>verification</code> - nVDB status answered with artifacts. Fused volume.nvdb for the new thorough3 capture: 2000 frames, 282.2M depth samples, 3,916,401 touched voxels, 3,710,904 kept after the weigh...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write, Read, SendUserFile
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 18:34 (TZ: Eastern Standard Time)
-  ```
-- Summary: nVDB status answered with artifacts. Fused volume.nvdb for the new thorough3 capture: 2000 frames, 282.2M depth samples, 3,916,401 touched voxels, 3,710,904 kept after the weight-2 drop (5.2%), 38.9MB, verified by the independent reader, 47.2s total. That is 3.3x the sunny500 volume (1.11M voxels) and index bbox 761x218x661. Exported volume_isosurface.ply (1,281,233 verts / 2,284,708 faces, 13.9s, 91MB) so it is viewable in any mesh viewer without Omniverse. Rendered three angles with a numpy z-buffer after Open3D's OffscreenRenderer failed (no GL context available in this environment). Geometry reads as a coherent property: ground plane, wall structures, driveway; the radial fan artefacts are the known far-field depth errors. Viewable NOW: volume_isosurface.ply (drag-and-drop into the viewport, or MeshLab/Blender/imagetostl), plus occupancy.png for sunny500. volume.nvdb + volume.usda remain Omniverse-only. Occupancy for thorough3 must wait for the splat because scene_frame_transform needs the trainer's dataparser_transforms - that job is running.
-- Commands:
-  - `python tools/fuse_nanovdb.py --streaming .../thorough3/reconstruction/remote_out/streaming`
-  - `python tools/nanovdb_to_mesh.py .../thorough3/reconstruction/volume.nvdb`
-- Files:
-  - `D:/vaultwares-studio-jobs/data/jobs/zerogpu-thorough3-2000-loop075-20260917/reconstruction/volume.nvdb`
-  - `D:/vaultwares-studio-jobs/data/jobs/zerogpu-thorough3-2000-loop075-20260917/reconstruction/volume_isosurface.ply`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 18:26 - General Tasks</strong> <code>verification</code> - Confirmed .gitignore persistence and verified clean working tree on vw-codex-ios-app-and-pipeline</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 18:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: Confirmed .gitignore persistence and verified clean working tree on vw-codex-ios-app-and-pipeline
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 18:25 - General Tasks</strong> <code>verification</code> - Verified successful GitHub Actions build 35281851140 and downloaded VaultWarden-unsigned.ipa locally</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 18:25 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified successful GitHub Actions build 35281851140 and downloaded VaultWarden-unsigned.ipa locally
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 18:24 - General Tasks</strong> <code>code-change</code> - Pushed feature branch vw-codex-ios-app-and-pipeline to GitHub and initiated CI build 35281851140</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 18:24 (TZ: Eastern Standard Time)
-  ```
-- Summary: Pushed feature branch vw-codex-ios-app-and-pipeline to GitHub and initiated CI build 35281851140
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 18:20 - General Tasks</strong> <code>general</code> - Provided complete step-by-step pipeline options from codebase to iPhone installation</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 18:20 (TZ: Eastern Standard Time)
-  ```
-- Summary: Provided complete step-by-step pipeline options from codebase to iPhone installation
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 18:18 - General Tasks</strong> <code>verification</code> - Completed verification reflection gate for vault-warden iOS app and pipeline</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 18:18 (TZ: Eastern Standard Time)
-  ```
-- Summary: Completed verification reflection gate for vault-warden iOS app and pipeline
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 18:18 - General Tasks</strong> <code>code-change</code> - Scaffolded native iOS app for VaultWarden with Face ID, persistent storage, and unsigned GitHub Actions CI pipeline</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 18:18 (TZ: Eastern Standard Time)
-  ```
-- Summary: Scaffolded native iOS app for VaultWarden with Face ID, persistent storage, and unsigned GitHub Actions CI pipeline
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 18:11 - General Tasks</strong> <code>documentation</code> - Created iOS app architecture and unsigned CI pipeline blueprint for vault-warden</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 18:11 (TZ: Eastern Standard Time)
-  ```
-- Summary: Created iOS app architecture and unsigned CI pipeline blueprint for vault-warden
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 18:02 - General Tasks</strong> <code>general</code> - Requested details from user on workflow/correction to capture in /learn</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 18:02 (TZ: Eastern Standard Time)
-  ```
-- Summary: Requested details from user on workflow/correction to capture in /learn
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 18:01 - General Tasks</strong> <code>general</code> - Initiated /learn workflow and prompted user for behavior to retain</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 18:01 (TZ: Eastern Standard Time)
-  ```
-- Summary: Initiated /learn workflow and prompted user for behavior to retain
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 18:00 - General Tasks</strong> <code>general</code> - Reviewed Antigravity customization system guide</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 18:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Reviewed Antigravity customization system guide
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 17:20 - vaultwares-studio</strong> <code>documentation</code> - Queued thorough3 splat training (40000 iterations, stop_split_at 36000, l4x1, est 66 min, ~USD 0.95, 1.5GB upload). Wrote docs/apple-livephoto-metadata-20260917.md recording the...</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-17 17:20 (TZ: Eastern Standard Time)
-  ```
-- Summary: Queued thorough3 splat training (40000 iterations, stop_split_at 36000, l4x1, est 66 min, ~USD 0.95, 1.5GB upload). Wrote docs/apple-livephoto-metadata-20260917.md recording the user's LivePhotoInfo anatomy (temporal sync CMTime pairs / Core Motion vitality scores / 6-9 float affine alignment transform) checked against the bytes I decoded. Findings that support the affine reading: record 0 carries exactly six floats in a run shaped like a near-identity transform (two ~0, two small, two ~1); 1.00390625 is EXACTLY 257/256, a dyadic rational and therefore a fixed hardware ratio not a measurement; 1.0253164768219 is constant across all 9332 frames. Supporting the CMTime reading: slots 28/29 and 30/31 read as denormal floats ~1.21e-40, the signature of an int64 split across two int32 slots, and slots 29/31 take only 37 distinct values across 9332 frames like a slowly incrementing high word. Flagged the highest-value next test: slots 25/26 (range +/-0.00068, lag-1 autocorrelation 1.0000) against DA3's per-frame cx/cy residual after median removal - if they correlate, the 4.3% per-frame focal spread documented in camera_calibration.py is partly a REAL OIS lens shift we can subtract rather than noise to average away. Also added memory iphone-per-frame-motion-track.
-- Commands:
-  - `python tools/prepare_zerogpu_training.py --job zerogpu-thorough3-2000-loop075-20260917 --iterations 40000 --scheduling-timeout 900 --submit`
-- Files:
-  - `docs/apple-livephoto-metadata-20260917.md`
-  - `C:/Users/Administrator/.claude/projects/C--Users-Administrator-Desktop-Github-Repos-vaultwares-studio/memory/iphone_per_frame_motion_track.md`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 17:08 - vaultwares-studio</strong> <code>verification</code> - thorough3 SfM landed and is by far the best pose set yet: 447 GPU s, 2000/2000 posed, imported as zerogpu-thorough3-2000-loop075-20260917. Trajectory: closure ratio 0.001 (vs 0....</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-17 17:08 (TZ: Eastern Standard Time)
-  ```
-- Summary: thorough3 SfM landed and is by far the best pose set yet: 447 GPU s, 2000/2000 posed, imported as zerogpu-thorough3-2000-loop075-20260917. Trajectory: closure ratio 0.001 (vs 0.017 sunny500 / 0.092 cloudy1000 / 0.035 merged1600), clip seams INVISIBLE at 0.003 and 0.002 against a median step of 0.0382 (the merged1600 seam was 0.538 = 25x median), max step only 4x median, 17 loop pairs of which 8 are cross-clip (previous best 6, one cross-clip). Extent 10.03x2.38x9.52, path 75.92. Drift test: 126 verified revisits across 17 independent events, median ratio 2.016 overall / 1.734 by event - NOT better than sunny500's 1.71, but sunny500 measured only 2 events so its figure was barely sampled. Where loop closure actually acts (half<->front, the global closure) drift is 1.086-1.191, much better than anything measured before; the half<->back revisits run 1.6-2.37. Drift appears within clips too (front<->front 1.55 and 2.06), so it is not a clip-join artefact. 37 of 211 frames rejected as failed ground fits (17.5%) vs 4% sunny / 27% cloudy. Training bundle built and fully verified (2000 frames 1920x1080, rescale fired 960x540->1920x1080 giving fl_x 902.67, names consistent across all three archives, sparse_pc 72MB, poses finite, 1497MB upload) but NOT submitted - awaiting the user's go-ahead for the paid run.
-- Commands:
-  - `python tools/import_zerogpu_artifact.py`
-  - `python tools/measure_scale_drift.py --job zerogpu-thorough3-2000-loop075-20260917`
-  - `python tools/prepare_zerogpu_training.py --iterations 40000 (no --submit)`
-- Files:
-  - `D:/vaultwares-studio-jobs/data/jobs/zerogpu-thorough3-2000-loop075-20260917`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 16:59 - vaultwares-studio</strong> <code>code-change</code> - Drift test delivered (tools/measure_scale_drift.py). It settles the question the user pushed back on: my camera-above-own-ground metric mixed terrain, estimator and drift, and c...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write, Edit
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 16:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Drift test delivered (tools/measure_scale_drift.py). It settles the question the user pushed back on: my camera-above-own-ground metric mixed terrain, estimator and drift, and could not separate them. This tool holds terrain fixed by construction - it compares only frame pairs verified by SIFT/RANSAC to be at the same physical spot with similar viewing direction, where the ground and the photographer's arm are the same by definition, so any height difference is scale inconsistency alone. RESULT: sunny500 median ratio 1.70 across 13 revisits in 2 independent events (whole-capture spread 2.06); cloudy1000 median 3.13 across 3 revisits in 2 events (spread 9.53). So drift is real and is the dominant term, but the user was right that terrain contributes - it is the gap between 1.70 and 2.06. First run returned a median of 11.86 and a max of 281x on cloudy1000; that was 13 of 16 pairs having a failed ground-plane fit (height near zero), so I added a self-calibrating floor at 0.34x the capture's own median and a count of independent revisit events, since a start-versus-end revisit alone can supply dozens of pairs that are one observation. Cloudy1000 also rejects 64 of 239 frames as failed fits (27%), which validates the keep-ground-in-frame capture advice. Suite 327.
-- Commands:
-  - `python tools/measure_scale_drift.py --job zerogpu-backyard134-loop-20260913 --stride 2 --min-separation 40 --min-inliers 70 --max-view-angle 45`
-  - `pytest tests -q (327 passed)`
-- Files:
-  - `tools/measure_scale_drift.py`
-  - `D:/vaultwares-studio-jobs/data/review/sep17/drift_zerogpu-backyard134-loop-20260913.json`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 16:52 - vaultwares-studio</strong> <code>verification</code> - New capture thorough-yard-with-pairs-20260917 (3 clips, 1920x1080, 59.94fps, shot 15:36-15:44 same lighting) pre-flight verified. The user&#39;s door-checkpoint protocol WORKED: eve...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Read
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 16:52 (TZ: Eastern Standard Time)
-  ```
-- Summary: New capture thorough-yard-with-pairs-20260917 (3 clips, 1920x1080, 59.94fps, shot 15:36-15:44 same lighting) pre-flight verified. The user's door-checkpoint protocol WORKED: every start/end frame pair across all three clips matches under SIFT/RANSAC. Strongest chain is also the shooting order - halfyard_end<->backyard_start 1332 inliers, backyard_end<->frontyard_start 900, and frontyard_end<->halfyard_start 692 closes the global loop. Each clip self-closes too (frontyard 423). Concatenated in that order at 29.97fps: 14480 frames, 483.1s, 1080p (965MB, local training) + 540p (233MB, upload). Queued ZeroGPU at 2000 frames / loop 0.75 = 4.14 frames per second of walking, beating the sunny500 benchmark of 3.7. METADATA FINDING (corrects a user assumption): LivePhotoInfo is NOT a GPS track. GPS is a single static coordinate per video with 19.79m horizontal accuracy. The user's LivePhotoInfo string is record 0 of a per-frame mebx track (ffprobe stream 4, 9332 records of 144 bytes, one per video frame, CoreMotionVersion 3077.0.4). That track DOES carry real device motion: slots 19/20/22/23 sit in [-0.9,0.9] with lag-1 autocorrelation 1.0000, so they are smooth physical signals not noise. No contiguous triple or quadruple has unit norm, so the layout is not a plain quaternion or gravity vector and remains undecoded. Worth decoding later - per-frame attitude would replace the PCA-skewness gravity heuristic that sometimes guesses up-down backwards.
-- Commands:
-  - `ffprobe stream inventory`
-  - `exiftool -ee -G1 -a`
-  - `per-frame mebx record decode + autocorrelation`
-  - `python tools/run_zerogpu_da3.py --frames 2000 --loop-similarity 0.75`
-- Files:
-  - `D:/vaultwares-studio-jobs/data/jobs/thorough-yard-with-pairs-20260917`
-  - `D:/3D Reconstruction/inputs/merged/thorough3_half_back_front_1080p.mp4`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 15:02 - vaultwares-studio</strong> <code>verification</code> - Provenance of zerogpu-backyard134-loop-20260913 verified after a user query: the job IS backyard_134s_sunny.mp4. Its DA3 input frames and training frames agree index-for-index, ...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Read, SendUserFile
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 15:02 (TZ: Eastern Standard Time)
-  ```
-- Summary: Provenance of zerogpu-backyard134-loop-20260913 verified after a user query: the job IS backyard_134s_sunny.mp4. Its DA3 input frames and training frames agree index-for-index, and both match the named video at exactly the expected candidate indices (mean abs diff 1.3-2.1 on 160x90, i.e. identical). No hard cuts in the video (frame-to-frame diff median 21.85, max 50.02, cut threshold 131). The video is one continuous lap around a whole property - back patio/woodpile, driveway, front porch, street, side lawn, bin alley, back patio - which is why parts look like different places; the 'backyard' name is a misnomer. User confirmed false alarm. NEW FINDING that reframes the more-frames strategy: consecutive-frame verified SIFT/RANSAC matches are sunny500 median 370 (2% below 50), cloudy1000 median 212 (10% below 50), merged1600 median 240 (8% below 50). More frames did NOT buy more overlap because the cloudy video is 2.6x longer: effective sampling is 3.7 frames per second of walking for sunny500 vs 2.9 for cloudy1000. Matching sunny's overlap needs ~1300 frames on the 348s clip and ~1800 on the 482s merged clip.
-- Commands:
-  - `consecutive-frame SIFT/RANSAC overlap measurement across three runs`
-  - `cut detection on backyard_134s_sunny.mp4`
-- Files:
-  - `D:/vaultwares-studio-jobs/data/jobs/zerogpu-backyard134-loop-20260913`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 14:59 - vaultwares-studio</strong> <code>verification</code> - Merged-1600 splat trained successfully on HF Jobs l4x1: job 6aac28d1b1dc2b62dc58f02d, 3459s, ~USD 0.77, 384,175 gaussians, checkpoint step-000029999 retained in model.zip for a ...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Read
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-17 14:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Merged-1600 splat trained successfully on HF Jobs l4x1: job 6aac28d1b1dc2b62dc58f02d, 3459s, ~USD 0.77, 384,175 gaussians, checkpoint step-000029999 retained in model.zip for a refine. Intrinsics rescale landed (fl_x 912.95, within 3% of this phone's COLMAP 886.85). Quality assessment: raw gaussian count is the lowest of any run (384k vs 1.64M on 13 Sep) BUT volumetric density is comparable (1.25M vs 1.18M gaussians per unit^3 of the 2-98pct box) because the trainer's normalisation makes the merged scene diagonal 1.81 vs 2.85 - so the count alone is NOT evidence of a worse splat. Mild under-training signs: opacity p50 0.646 vs 0.811, size/diagonal p99 0.0102 vs 0.0051, consistent with 18.75 iterations per view vs 40 on 13 Sep. Offscreen renders inconclusive: the viewer camera lands inside a halo of oversized gaussians on BOTH runs, so it does not discriminate. Note: 'ns-train --vis none' is unsupported in the deployed July nerfstudio and was auto-substituted with tensorboard; stop-split-at 27000 was accepted.
-- Commands:
-  - `python tools/viewport_screenshot.py`
-  - `gaussian scale/opacity distribution comparison`
-- Files:
-  - `data/jobs/zerogpu-merged1600-loop075-20260917/reconstruction/cloud.ply`
-  - `data/jobs/zerogpu-merged1600-loop075-20260917/reconstruction/summary.json`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 13:50 - vaultwares-studio</strong> <code>code-change</code> - Pre-flight checks before queueing the merged-1600 splat caught a silent killer: the merged job was posed from a 960x540 upload, so processed/transforms.json declared w=960,fl_x=...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write, Edit, Read
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-17 13:50 (TZ: Eastern Standard Time)
-  ```
-- Summary: Pre-flight checks before queueing the merged-1600 splat caught a silent killer: the merged job was posed from a 960x540 upload, so processed/transforms.json declared w=960,fl_x=456.5, while training frames are 1920x1080. nerfstudio would take that at face value and every gaussian would land wrong, with no error. Fixed in tools/prepare_zerogpu_training.py: new rescale_transforms_to_frames() makes the frames on disk the authority, rescaling top-level AND per-frame intrinsics via CameraCalibration.scaled_to (distortion is normalised, carried unchanged), refusing aspect-ratio changes (crop, unrecoverable principal point). Result fl_x 912.95, consistent with the COLMAP-measured 886.85 for this phone. Also validated the frame replay: local 1080p candidates at the console's selected indices match the console's retained RGB (mean abs diff 2-7 vs 42-49 for the neighbouring candidate). Bundle verified: 1600 frames 1920x1080, names match across frames.zip/processed_min.zip/transforms, sparse_pc 51MB, worker.zip 4 files, poses finite. Submitted 30000 iterations (stop_split_at 27000), --keep-checkpoint so a refine can extend without redoing it, --scheduling-timeout 900. 6 new tests in tests/test_transforms_rescale.py.
-- Commands:
-  - `python tools/prepare_zerogpu_training.py --job zerogpu-merged1600-loop075-20260917 --iterations 30000 --scheduling-timeout 900 --submit`
-  - `pytest tests/test_transforms_rescale.py -q`
-- Files:
-  - `tools/prepare_zerogpu_training.py`
-  - `tests/test_transforms_rescale.py`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 13:31 - vaultwares-studio</strong> <code>verification</code> - Merged-clip SfM evaluated. CORRECTION: earlier I reported ~1006 SALAD loop pairs on the user&#39;s 1000-frame run; that was the file&#39;s line count including its 1000-line image path ...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, PowerShell, Write, Edit, Read
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-17 13:31 (TZ: Eastern Standard Time)
-  ```
-- Summary: Merged-clip SfM evaluated. CORRECTION: earlier I reported ~1006 SALAD loop pairs on the user's 1000-frame run; that was the file's line count including its 1000-line image path list. Actual pairs: sunny500=2, cloudy1000=4, merged1600=6. Merged 1600-frame run (sunny134+cloudy348 concatenated, 540p, loop 0.75) completed: 338 GPU s, 1600/1600 posed, path 43.84, closure ratio 0.035, 312 walked cells vs 216 (cloudy1000) and 186 (sunny500). Merge verified GOOD via new tools/find_cross_clip_overlaps.py (DINOv2 shortlist + SIFT/RANSAC): 46 verified cross-clip overlaps, which land 3-7 camera steps apart in the merged reconstruction, not scene-scale apart. cloudy1000 closure 2.88 is genuine (end of walk sees nothing of the start, 0 SIFT inliers), not drift. Added tools/nanovdb_to_mesh.py (isosurface PLY from .nvdb, signed fill + observed-cube mask), tools/splice_clip_order.py, GUI drag-and-drop for .ply/.splat/.ksplat. Suite 321 passing. Nothing committed.
-- Commands:
-  - `python tools/find_cross_clip_overlaps.py --split 941 --stride 2`
-  - `python tools/import_zerogpu_artifact.py (merged1600, cloudy1000)`
-  - `python tools/fuse_nanovdb.py (cloudy1000: 1.15M voxels, 36s)`
-  - `pytest tests -q (321 passed)`
-- Files:
-  - `tools/find_cross_clip_overlaps.py`
-  - `tools/nanovdb_to_mesh.py`
-  - `tools/splice_clip_order.py`
-  - `gui/viewport.py`
-  - `gui/main_window.py`
-  - `tests/test_viewport_drop.py`
-  - `tests/test_nanovdb_to_mesh.py`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 12:42 - vaultwares-studio</strong> <code>verification</code> - Read-only assessment of zerogpu-1000frames-20260917 (user ran it): 1000/1000 posed, 223.5 GPU s, ~1006 SALAD loop pairs at 0.85 (vs 2 on the 134 s run), path 31.3 / closure 2.88...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-fable-5-1
-  Thinking: medium
-  Mode: chat
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 12:42 (TZ: Eastern Standard Time)
-  ```
-- Summary: Read-only assessment of zerogpu-1000frames-20260917 (user ran it): 1000/1000 posed, 223.5 GPU s, ~1006 SALAD loop pairs at 0.85 (vs 2 on the 134 s run), path 31.3 / closure 2.88 DA3 units. Crude per-block camera-to-ground check (trajectory-normal as up) shows p90/p10 spread 4.7, so chunk scale drift likely persists. Advised: import artifact via tools/import_zerogpu_artifact.py, train splat on L4 as new baseline, then a single streaming pass over both videos concatenated for the merge; EXIF not involved in Y inversion (ffmpeg applies MOV rotation side-data on decode).
-- Commands:
-  - `python -c per-block ground metric on zerogpu-1000frames-20260917`
-- Files:
-  - `D:/vaultwares-studio-jobs/data/jobs/zerogpu-1000frames-20260917`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 12:08 - vaultwares-studio</strong> <code>code-change</code> - Occupancy free space: added ray_pass_counts/carve_free_space and grid_from_depth_frames (per-frame ground plane, camera-height ruler, majority obstacle rule) in robot_lab/occupa...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-fable-5-1
-  Thinking: medium
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local workstation)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vaultwares-studio  Branch: vw-codex/native-splats-camera-paths
-  Tools used (this reply): Bash, Write, Edit, Read, hf_fs
-  MCP servers accessed (this reply): huggingface
-  Time: 2026-09-17 12:08 (TZ: Eastern Standard Time)
-  ```
-- Summary: Occupancy free space: added ray_pass_counts/carve_free_space and grid_from_depth_frames (per-frame ground plane, camera-height ruler, majority obstacle rule) in robot_lab/occupancy.py; tools/occupancy_from_volume.py builds level-set, carved and frame-local grids with a cameras-in-FREE metric (0.22 -> 0.79 on zerogpu-backyard134). Finding: DA3-Streaming volume has per-chunk vertical scale drift (camera-to-own-ground 0.7-1.9 apparent m), so the level set cannot feed a metric body band; frames can. docs/occupancy-free-space-20260917.md. 13 new tests, suite 315. Also: ZeroGPU console now takes keep_frames (cap 1200) and loop_similarity (Space commit 5425e30, upload copy excludes the uncommitted telemetry hook); the 1000-frame cloudyday2 run failed at the 1 GB Gradio upload (server disconnected), no GPU minutes used; fps=3 candidates (1043) extracted to D:\vaultwares-studio-jobs\data\review\sep17\cloudy348-candidates. Nothing committed.
-- Commands:
-  - `python tools/occupancy_from_volume.py --job zerogpu-backyard134-loop-20260913`
-  - `pytest tests -q (315 passed)`
-  - `python tools/run_zerogpu_da3.py --frames 1000 (failed: upload)`
-- Files:
-  - `vaultwares_studio/robot_lab/occupancy.py`
-  - `tools/occupancy_from_volume.py`
-  - `tests/test_free_space.py`
-  - `docs/occupancy-free-space-20260917.md`
-  - `spaces/da3-zerogpu/app.py`
-  - `spaces/da3-zerogpu/core.py`
-  - `tools/run_zerogpu_da3.py`
-  - `tests/test_zerogpu_console.py`
-- Git: repo=vaultwares-studio, branch=vw-codex/native-splats-camera-paths, head=f1b080d
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 10:48 - vaultwares-studio</strong> <code>handoff</code> - Completed all three integration steps plus a handoff. Commit dba4dbf: (1) PIPELINE - camera_staging authors volume.usda from volume.nvdb on demand, references it from the compos...</summary>
-
-- Kind: handoff
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): Bash, Write, Edit, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 10:48 (TZ: Eastern Standard Time)
-  ```
-- Summary: Completed all three integration steps plus a handoff. Commit dba4dbf: (1) PIPELINE - camera_staging authors volume.usda from volume.nvdb on demand, references it from the composed stage alongside the mesh, adds both as artifacts, and rewrites the layer whenever it is older than the grid so a re-fuse cannot leave a stale asset. (2) USD - new vaultwares_studio/volume_asset.py authors a UsdVolVolume holding a UsdVolOpenVDBAsset with filePath relative to the layer, fieldClass levelSet, fieldDataType float, and the field relationship that actually connects them (missing relationship = opens cleanly, renders nothing). Schema says OpenVDB, file is NanoVDB - Omniverse reads it, a strict OpenVDB reader will not. (3) OCCUPANCY - grid_from_level_set FEEDS grid_from_points rather than replacing it, per the user's call. On the real 13 Sep capture it agrees with the incumbent splat-preview grid on extent (37x48 vs 39x47) and floor (-0.175 vs -0.154) and is BETTER where it differs: 13.0 pct free vs 9.2, 50.8 pct occupied vs 62.7, because the splat's gaussians bleed into space and read as obstacles. scene_transform must be camera_scene.scene_frame_transform(job_dir); the gravity rotation alone puts the floor 3 m out because the trainer normalisation carries a scale (measured, not assumed). Free space still unused - level set distinguishes empty from never-observed and could fill the 36 pct UNKNOWN cells, flagged as the next increment. 8 new tests; three failed first and all three were the test's fault (fixture slab reached into the body band, asset-path assertion named the wrong file, empty-band case needed a grid without exact zeros). Suite 300 passing. Commit f1b080d: docs/HANDOFF-20260917.md,
-- Commands:
-  - `pytest tests/ -q`
-  - `git commit dba4dbf / f1b080d`
-- Files:
-  - `vaultwares_studio/volume_asset.py`
-  - `vaultwares_studio/robot_lab/occupancy.py`
-  - `vaultwares_studio/stages/camera_staging.py`
-  - `vaultwares_studio/camera_scene.py`
-  - `tests/test_volume_asset.py`
-  - `docs/HANDOFF-20260917.md`
-- Plan: `docs/HANDOFF-20260917.md`
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=2b64c66
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 08:26 - vaultwares-studio</strong> <code>code-change</code> - Commit 9b669ed: TSDF -&gt; NanoVDB level set, end to end and verified. New vaultwares_studio/tsdf_volume.py promotes the benchmark integrator into a module; new tools/fuse_nanovdb....</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): Bash, Write, Edit, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 08:26 (TZ: Eastern Standard Time)
-  ```
-- Summary: Commit 9b669ed: TSDF -> NanoVDB level set, end to end and verified. New vaultwares_studio/tsdf_volume.py promotes the benchmark integrator into a module; new tools/fuse_nanovdb.py runs depth maps to .nvdb with nanovdb_read.verify as the write gate. Key correction from the benchmark: distances are stored in WORLD UNITS, not signed/sdf_trunc clipped to [-1,1]. OpenVDB and NanoVDB level sets hold metres from the surface in a narrow band; normalised values render fine with the isosurface displaced by the truncation factor. REAL RUN on the 13 Sep backyard capture: 500 frames / 70.6M depth samples loaded in 8.3s, fused in 12.7s to 1,202,544 touched voxels at voxel 0.0156 band +/-0.0624, 1,114,552 kept after dropping 87,992 (7.3 pct) below weight 2, written in 0.4s as a 15.9 MB .nvdb with 6115 leaves / 19 lower / 8 upper, verified 1,114,552 voxels walked, total 21.5s. Independently validated with NVIDIA's PNanoVDB reader: identical header fields (gridType 1, gridClass 1, voxelSize 0.0156, leaf=6115 lower=19 upper=8 voxels=1114552, bbox -299,-43,-265..134,72,66) and bit-identical values at eight probes spread through the scene including negative coordinates. Also documented the camera convention that was previously only implied: integrate builds rays as (x,y,1) so c2w must be OpenCV +Z forward, which is what DA3-Streaming's camera_poses.txt holds; nerfstudio transforms.json is OpenGL and must be rebased via hybrid_seed.OPENGL_TO_OPENCV first. My own first test asserted the opposite convention and failed - the code was right and the docstring was silent. 11 new tests on synthetic planes (zero crossing on the surface, world units not normalised, repeat observations average rather than accumulate, poses actually applied). Suite
-- Commands:
-  - `python tools/fuse_nanovdb.py --streaming <streaming> --out volume.nvdb`
-  - `pnvalidate.exe volume.nvdb <8 probes>`
-  - `pytest tests/ -q`
-- Files:
-  - `vaultwares_studio/tsdf_volume.py`
-  - `tools/fuse_nanovdb.py`
-  - `tests/test_tsdf_volume.py`
-  - `data/jobs/zerogpu-backyard134-loop-20260913/reconstruction/volume.nvdb`
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=2b64c66
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 05:53 - shared-tube</strong> <code>code-change</code> - Fixed admin visibility and revertibility for disabled pornstars, studios, categories, and videos; synchronized PornXP scrubber preview speed 1:1 with video; bumped to v0.3.47 an...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash (High)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 05:53 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed admin visibility and revertibility for disabled pornstars, studios, categories, and videos; synchronized PornXP scrubber preview speed 1:1 with video; bumped to v0.3.47 and pushed to main
-- Git: repo=shared-tube, branch=main, head=0a419a5
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 03:39 - vault-commander</strong> <code>code-change</code> - Three live-subs fixes. (1) Two lines per language restored: the translation panel had no history of its own and bilingual forced overlay._history=1, so each box held one cue. Ad...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-gallery-g-default
-  Tools used (this reply): Bash, Grep, Read, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 03:39 (TZ: Eastern Standard Time)
-  ```
-- Summary: Three live-subs fixes. (1) Two lines per language restored: the translation panel had no history of its own and bilingual forced overlay._history=1, so each box held one cue. Added _lines_tr with the same rolling trim as _lines, show_translated appends to it, show_partial_translation renders last-final + partial to mirror the caption box, clear_text resets it, and the _history=1 override is gone. Verified by screenshot: 2 English lines over 2 French lines. (2) Prompt echo root-caused from the user's riva-prompt-shape.txt: the Riva chat template wraps every cue as 'What is the <target> translation of the sentence: <text>', so a cue with no sentence leaves an instruction and nothing to translate and the model completes by rendering that instruction in French. riva_engine only guards 'not text.strip()', which punctuation passes. Added has_lexical_content (drops '...', '-', music glyphs before they reach any engine) and looks_like_prompt_echo (len(out) > max(60, 4*len(src)) -> return source, never cached so it cannot poison the cache). 6/6 unit cases pass. (3) Trimmed beginnings: reset_after cut exactly at the cue end so the next window started mid-word; added FINAL_LOOKBACK_S=0.20 rewind and widened the last_final_end guard to match, restoring the overlap _drop_carryover was already written for. Measured on 102s: captured words 92->98. Dominant factor is the user's own -MinSilence 0.2: at 0.2 37 fragmented cues / 0.366 similarity, at 0.6 16 full-phrase cues / 0.554.
-- Commands:
-  - `python cue_probe.py cand_norm.wav 0.2`
-  - `python cue_probe.py cand_norm.wav 0.6`
-  - `python guard.py`
-- Files:
-  - `cli/utils/live_subs_overlay.py`
-- Git: repo=vault-commander, branch=vw-codex-gallery-g-default, head=38788e0
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 03:09 - vault-commander</strong> <code>code-change</code> - Bilingual partials + server test knobs for live-subs. Root cause of the language mixing: with --translate-partials, TranslateWorker.partial_done was wired to overlay.show_partia...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-gallery-g-default
-  Tools used (this reply): Bash, Grep, Read, PowerShell
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 03:09 (TZ: Eastern Standard Time)
-  ```
-- Summary: Bilingual partials + server test knobs for live-subs. Root cause of the language mixing: with --translate-partials, TranslateWorker.partial_done was wired to overlay.show_partial, which renders into the caption box - the box bilingual mode reserves for the source language - so the box alternated between English finals and French partials on every ASR pass. Added SubtitleOverlay.show_partial_translation (sets label_tr only, never touches _lines) and split the wiring: bilingual now connects partial_shown to BOTH overlay.show_partial (source keeps the caption box) and translator.submit_partial (Direct), with partial_done routed to show_partial_translation; non-bilingual is unchanged. Exposed server-start geometry for testing: --relpos-max-q and --chunk-sec on the overlay, plumbed through AsrWorker and NemoSpeechTranscriber into subtitles_server.start_server, plus -RelposMaxQ/-ChunkSec on Start-LiveSubtitles.ps1 (PSBoundParameters-gated so 0 stays settable) and vw-commands.ps1 registry entries. nemo_asr now warns when a server is already listening, since neither setting is visible on /ready so nothing restarts for them. Fixed the now-false 'Partials stay in the source language' status line. Verified: screenshot shows English in the caption box and French in the panel simultaneously; spawn-capture proves NEMO_SPEECH_RELPOS_MAX_Q=2048, --asr-model nemotron-3.5, --asr.streaming.chunk_size 0.32; wrapper forwards every flag; server up on nemotron-3.5.
-- Commands:
-  - `python live_subs_overlay.py --asr-model nemotron-3.5 --relpos-max-q 2048 --chunk-sec 0.32`
-  - `Start-LiveSubtitles.ps1 -AsrModel nemotron-3.5 -RelposMaxQ 2048 -Bilingual -TranslatePartials`
-  - `python subtitles_server.py status`
-- Files:
-  - `cli/utils/live_subs_overlay.py`
-  - `cli/utils/nemo_asr.py`
-  - `cli/Start-LiveSubtitles.ps1`
-  - `cli/vw-commands.ps1`
-- Git: repo=vault-commander, branch=vw-codex-gallery-g-default, head=38788e0
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 00:43 - shared-tube</strong> <code>code-change</code> - Fixed studio video fetching, disabled items visibility, removed input persistence, unified term viewing, converted VideoDetail to full page with all editable fields, and enabled...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash (High)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 00:43 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fixed studio video fetching, disabled items visibility, removed input persistence, unified term viewing, converted VideoDetail to full page with all editable fields, and enabled native new-tab links
-- Git: repo=shared-tube, branch=main, head=2a478d9
-
-</details>
-
-<details>
-<summary><strong>2026-09-17 00:35 - shared-tube</strong> <code>verification</code> - Researched disabled item suppression and designed implementation plan for admin panel improvements</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-17 00:35 (TZ: Eastern Standard Time)
-  ```
-- Summary: Researched disabled item suppression and designed implementation plan for admin panel improvements
-- Git: repo=shared-tube, branch=main, head=2a478d9
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 22:52 - vaultwares-studio</strong> <code>code-change</code> - NanoVDB writer built and INDEPENDENTLY VERIFIED. Commits 340eaac (writer + 16 tests) and 0fb7a84 (PNanoVDB reference validator). No sample .nvdb exists on GitHub or this machine...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: vw-claude/plurilingual-eval
-  Tools used (this reply): Bash, Write, Edit, PowerShell, WebFetch
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 22:52 (TZ: Eastern Standard Time)
-  ```
-- Summary: NanoVDB writer built and INDEPENDENTLY VERIFIED. Commits 340eaac (writer + 16 tests) and 0fb7a84 (PNanoVDB reference validator). No sample .nvdb exists on GitHub or this machine, so instead found PNanoVDB.h - the portable C99/HLSL reference reader shipped with OpenVDB - which states every byte offset as an explicit #define plus a per-grid-type table of node sizes. That is an independent statement of the format from the C++ structs, and both agree with nanovdb_read's transcription made before either was consulted. Float row: leaf 2144, lower 33856, upper 270400, root 64 + 32/tile, leaf_off_table 96. Writer builds the fixed four-level tree (root, 32^3 upper spanning 4096^3, 16^3 lower spanning 128^3, 8^3 leaves) with relative signed child offsets, value/child masks, node bboxes, per-node stats, checksum left EMPTY (defined as disabled). Subtlety: RootData's key casts signed coords to uint32 BEFORE shifting, so negatives must not sign-extend. VERIFICATION: compiled pnvalidate.c against PNanoVDB.h with MSVC 18 (setting INCLUDE/LIB directly rather than vcvars64.bat which takes minutes). NVIDIA's reader walked our sphere-SDF file through its read accessor and returned gridMagic 0x314244566f6e614e, gridType 1, gridClass 1, voxelSize 0.25, leaf=60 lower=8 upper=8 voxels=11178, bbox -15..15 - all matching the writer's report - and values at six probes including negative coordinates matching the analytic sphere to float32 precision. That traverses root->upper->lower->leaf via our child masks and offsets, so the whole structure is validated, not just the header. The validator's own first run failed MAGIC FAIL with the magic shifted one byte: nameSize is at metadata offset 136 not 148 - a bug in the validator, recorded in
-- Commands:
-  - `cl /nologo /O2 /I. pnvalidate.c`
-  - `pnvalidate.exe sphere.nvdb -15 0 0 -7 -8 -1 7 8 0`
-  - `pytest tests/ -q`
-- Files:
-  - `vaultwares_studio/nanovdb_write.py`
-  - `vaultwares_studio/nanovdb_read.py`
-  - `tests/test_nanovdb_write.py`
-  - `tools/nanovdb_validate/pnvalidate.c`
-  - `tools/nanovdb_validate/README.md`
-- Git: repo=vault-cacophony, branch=vw-claude/plurilingual-eval, head=2b64c66
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 22:47 - agent-ledger</strong> <code>verification</code> - Confirmed GPU throughput benchmarks and telemetry isolation</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash (High)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 22:47 (TZ: Eastern Standard Time)
-  ```
-- Summary: Confirmed GPU throughput benchmarks and telemetry isolation
-- Git: repo=agent-ledger, branch=main, head=d744685a
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 22:46 - agent-ledger</strong> <code>code-change</code> - Optimized better-subtitles separation chunking to full-file one-shot by default (RTFx 9x-12x separation, &gt;110x ASR)</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash (High)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 22:46 (TZ: Eastern Standard Time)
-  ```
-- Summary: Optimized better-subtitles separation chunking to full-file one-shot by default (RTFx 9x-12x separation, >110x ASR)
-- Git: repo=agent-ledger, branch=main, head=d744685a
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 22:31 - agent-ledger</strong> <code>code-change</code> - Added Audio.cpp CLI category with Mel-Band RoFormer vocal separation in better-subtitles and E2E audio pipeline</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash (High)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 22:31 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added Audio.cpp CLI category with Mel-Band RoFormer vocal separation in better-subtitles and E2E audio pipeline
-- Git: repo=agent-ledger, branch=main, head=d744685a
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 21:59 - General Tasks</strong> <code>verification</code> - Validated real-condition telemetry, test harness spools, and poller test suite pass</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash (High)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 21:59 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated real-condition telemetry, test harness spools, and poller test suite pass
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 21:56 - General Tasks</strong> <code>verification</code> - Verified telemetry stack health, active scheduled tasks, and run spool output</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash (High)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 21:56 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified telemetry stack health, active scheduled tasks, and run spool output
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 21:55 - agent-ledger</strong> <code>code-change</code> - Implement full AI telemetry expansion: Antigravity transcript parser, OpenAI-compat port range 8080-8100, Step 1 wrappers (streaming, explorer, studio, zipper), cacophony test t...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 21:55 (TZ: Eastern Standard Time)
-  ```
-- Summary: Implement full AI telemetry expansion: Antigravity transcript parser, OpenAI-compat port range 8080-8100, Step 1 wrappers (streaming, explorer, studio, zipper), cacophony test telemetry, and HF spaces/jobs evaluation
-- Git: repo=agent-ledger, branch=main, head=d744685a
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 20:27 - agent-ledger</strong> <code>verification</code> - Verify audiodg exclusion, NeMo port 8123 poller tests, and vw CLI run telemetry persistence</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 20:27 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verify audiodg exclusion, NeMo port 8123 poller tests, and vw CLI run telemetry persistence
-- Git: repo=agent-ledger, branch=main, head=d744685a
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 20:25 - agent-ledger</strong> <code>code-change</code> - Fix nemo port 8123, exclude audiodg, wire centralized CLI telemetry into vw.ps1</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 20:25 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fix nemo port 8123, exclude audiodg, wire centralized CLI telemetry into vw.ps1
-- Git: repo=agent-ledger, branch=main, head=d744685a
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 20:00 - General Tasks</strong> <code>verification</code> - Live verification: verified speech watchdog process termination on idle, active process preservation, and live telemetry poller residency capture for audiocpp and nemo</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 20:00 (TZ: Eastern Standard Time)
-  ```
-- Summary: Live verification: verified speech watchdog process termination on idle, active process preservation, and live telemetry poller residency capture for audiocpp and nemo
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 19:57 - General Tasks</strong> <code>code-change</code> - Add speech watchdog scheduled task to health-ledger and add audiocpp and nemo to AI telemetry pollers</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 19:57 (TZ: Eastern Standard Time)
-  ```
-- Summary: Add speech watchdog scheduled task to health-ledger and add audiocpp and nemo to AI telemetry pollers
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 19:40 - General Tasks</strong> <code>general</code> - Advise on Windows process inactivity watchdog for nemo-speech.cpp with resident weights</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos  Branch: n/a
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 19:40 (TZ: Eastern Standard Time)
-  ```
-- Summary: Advise on Windows process inactivity watchdog for nemo-speech.cpp with resident weights
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 14:40 - ColONEL-KFC</strong> <code>verification</code> - Verified live IMDb scraper real-world conditions (live presence true/false, state reload, batch zip extraction to JPEG on disk) and captured targeted visual proof of weak identi...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 14:40 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified live IMDb scraper real-world conditions (live presence true/false, state reload, batch zip extraction to JPEG on disk) and captured targeted visual proof of weak identities review dashboard.
-- Git: repo=ColONEL-KFC, branch=main, head=204199a
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 14:32 - ColONEL-KFC</strong> <code>code-change</code> - Isolated weakest benchmark and skipped identities for visual review with interactive HTML dashboard, and upgraded IMDb Star Meter sequential scraper with presence dictionary cac...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 14:32 (TZ: Eastern Standard Time)
-  ```
-- Summary: Isolated weakest benchmark and skipped identities for visual review with interactive HTML dashboard, and upgraded IMDb Star Meter sequential scraper with presence dictionary caching, smart scrolling, master URL trimming, batch zip downloads, and extraction.
-- Git: repo=ColONEL-KFC, branch=main, head=204199a
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 09:11 - ColONEL-KFC-qt-demo</strong> <code>documentation</code> - Wrote the ColONEL-KFC gallery/demo handoff, verified 83 tests plus compile and diff checks, committed 2444c71 on vw-codex-colonel-qt-demo, pushed it, and opened PR #5 with @p-po...</summary>
-
-- Kind: documentation
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 09:11 (TZ: Eastern Standard Time)
-  ```
-- Summary: Wrote the ColONEL-KFC gallery/demo handoff, verified 83 tests plus compile and diff checks, committed 2444c71 on vw-codex-colonel-qt-demo, pushed it, and opened PR #5 with @p-potvin tagged for review.
-- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=2444c71
-
-</details>
-
-<details>
-<summary><strong>2026-09-16 08:31 - ColONEL-KFC-qt-demo</strong> <code>verification</code> - Verified completed held-identity benchmark: all 108 identities processed with zero failures, 4,618 detectable-face comparisons, 98.0 percent at or above threshold, and reports r...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: GPT-5
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC-qt-demo  Branch: vw-codex-colonel-qt-demo
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-16 08:31 (TZ: Eastern Standard Time)
-  ```
-- Summary: Verified completed held-identity benchmark: all 108 identities processed with zero failures, 4,618 detectable-face comparisons, 98.0 percent at or above threshold, and reports retained for later reindex review. Presentation refresh also completed.
-- Git: repo=ColONEL-KFC-qt-demo, branch=vw-codex-colonel-qt-demo, head=d57ae7a
-
-</details>
-
-<details>
 <summary><strong>2026-06-02 00:06 - General Tasks</strong> <code>general</code> - Midnight project file sync: processed DAILY_RECAP 2026-05-30/31, updated vault-explorer/TASKS.md (Gemini PR note), agent-ledger/TODO.md (3 dashboard tasks), verified all project...</summary>
 
 - Kind: general
@@ -8994,7 +8361,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-06-01 12:26 - agent-ledger</strong> <code>code-change</code> - Fixed two issues: (1) LED cards and Chart.js widgets showing -- on page load -- moved initCharts()+render() into window.addEventListener(&#39;load&#39;,...) with try-catch so CDN timing...</summary>
+<summary><strong>2026-06-01 12:26 - agent-ledger (formerly agent-ledger/stats-app)</strong> <code>code-change</code> - Fixed two issues: (1) LED cards and Chart.js widgets showing -- on page load -- moved initCharts()+render() into window.addEventListener(&#39;load&#39;,...) with try-catch so CDN timing...</summary>
 
 - Kind: code-change
 - Actor: claude-sonnet-4-6
@@ -25087,7 +24454,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-12 07:21 - vaultwares-studio</strong> <code>code-change</code> - Reverted COLMAP to v3.9.1 with CUDA support and modified pipeline.py to prioritize COLMAP.bat so SiftExtraction.use_gpu runs correctly again.</summary>
+<summary><strong>2026-05-12 07:21 - vaultwares-studio (formerly usd-playground)</strong> <code>code-change</code> - Reverted COLMAP to v3.9.1 with CUDA support and modified pipeline.py to prioritize COLMAP.bat so SiftExtraction.use_gpu runs correctly again.</summary>
 
 - Kind: code-change
 - Actor: GitHub Copilot

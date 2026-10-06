@@ -1,0 +1,45 @@
+{
+  "id": "20261003-040356-652-vault-warden-6851daf9",
+  "createdAt": "2026-10-03T08:03:56.6523552Z",
+  "createdAtLocal": "2026-10-03 04:03",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-warden",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: code\r\nPermissions: bypass (network: windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-warden\\desktop\\VaultCapture\\VaultCapture.App\\bin  Branch: vw-codex-secret-capture\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-03 04:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "windows local",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-warden\\desktop\\VaultCapture\\VaultCapture.App\\bin",
+  "summary": "Built VaultWares Capture (desktop/VaultCapture, branch vw-codex-secret-capture, uncommitted): .NET 10 WPF tray app, Ctrl+Alt+O overlay in vaultsqware console theme with live secret detection (prefix rules, .env, label:value, PEM, entropy), auto-naming, editable preview, status bar keycaps; Recent window (search/rename/copy/show/delete), recovery kit + restore, backup folder copy. Vault: ML-KEM-1024 (Windows CNG) + AES-256-GCM per-entry envelopes byte-compatible with crypto-vault.ts; seed under DPAPI + Argon2id recovery kit (Konscious). Clipboard cleared after capture, copies excluded from history, windows excluded from capture. Verified: 36 checks pass (detector, naming, vault, Argon2id vs noble, envelopes both directions vs crypto-vault.js), UI screenshots of overlay/dump/recent, Release build has no debug hooks. Caveat: DPAPI doesn't stop same-user processes.",
+  "commands": [
+    "dotnet run --project desktop/VaultCapture/VaultCapture.Checks"
+  ],
+  "files": [
+    "desktop/VaultCapture/VaultCapture.Core/SecretVault.cs",
+    "desktop/VaultCapture/VaultCapture.Core/SecretDetector.cs",
+    "desktop/VaultCapture/VaultCapture.App/CaptureWindow.xaml",
+    "desktop/VaultCapture/README.md"
+  ],
+  "planPath": "",
+  "contentHash": "6851daf94dc5f0b8070b1ef7f08f9faa336ca3938296b57217f6d7314379d0d4",
+  "git": {
+    "repo": "vault-warden",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-warden",
+    "branch": "vw-codex-secret-capture",
+    "head": "6a7e652",
+    "hasChanges": true
+  }
+}

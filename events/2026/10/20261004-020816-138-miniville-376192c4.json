@@ -1,0 +1,52 @@
+{
+  "id": "20261004-020816-138-miniville-376192c4",
+  "createdAt": "2026-10-04T06:08:16.1382609Z",
+  "createdAtLocal": "2026-10-04 02:08",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-04 02:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: shipped bond wheel tab (/api/graph ego network + radial Pixi graph.js, click-recentre, resident-card + list wiring, verified live via patchright 144 nodes); fixed night-shift edge cases (wrap-around shifts now cover the window, post-shift eat before sleep check, mid break wraps mod 48); fixed tag_bounded spawnv->subprocess handoff; addressed PR#2 review (5 findings: src=celebrity marker, MIN_VOTES/VOTE_MARGIN parity, n_crops invalidation, _*.py untracked, AVATARS.md) + posted replies; PR#2 merged. 110 tests pass. Bounded embed ~35% through 759 folders; verify+recast queued for the 364 purged residents. Pushed 51e8552,53c1985,46e897b,f39d283,ddd99bc.",
+  "commands": [
+    "pytest -x -q",
+    "patchright-cli open http://127.0.0.1:8787",
+    "git pull --rebase",
+    "git push origin autodev"
+  ],
+  "files": [
+    "src/miniville/ui/server.py",
+    "src/miniville/ui/static/graph.js",
+    "src/miniville/schedules.py",
+    "scripts/build_avatar_gallery.py",
+    "scripts/purge_bad_casts.py",
+    "scripts/verify_celebrity_gender.py",
+    "tests/test_ui.py",
+    "tests/test_seasons.py"
+  ],
+  "planPath": "",
+  "contentHash": "376192c4c5b768efe30bd7b02ecf517895383f263caa1cebb053d4d76410ee44",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "a07f8f4",
+    "hasChanges": false
+  }
+}

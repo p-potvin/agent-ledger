@@ -1,0 +1,49 @@
+{
+  "id": "20261002-190519-402-miniville-28df4d52",
+  "createdAt": "2026-10-02T23:05:19.4028863Z",
+  "createdAtLocal": "2026-10-02 19:05",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-02 19:05 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: fixed duplicate 'moved in together' events - describe() now names both partners canonically, /api/feed + chronicle merge identical lines to (xN), and found the real root cause: interact() recomputed sweetheart from rom>80, demoting partner back so the arc re-fired; ARC_LABELS (partner/spouse/widowed/estranged) now pinned. 98 tests pass, pushed 3b95678+docs. Reported ingestion status (1013 folders, gallery.db still 256 pending embed pass). Delivered 2D/2.5D map+graph viz research summary for future observer UI.",
+  "commands": [
+    "pytest -x -q",
+    "git push origin autodev"
+  ],
+  "files": [
+    "src/miniville/events.py",
+    "src/miniville/encounters.py",
+    "src/miniville/ui/server.py",
+    "src/miniville/chronicle.py",
+    "tests/test_shocks.py",
+    "docs/STATE.md",
+    "docs/AGENT_SYNC.md"
+  ],
+  "planPath": "",
+  "contentHash": "28df4d5244736d7fbedba6b9057776c3b7c2d750403525d8455e2680be3df425",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "1758b0c",
+    "hasChanges": true
+  }
+}

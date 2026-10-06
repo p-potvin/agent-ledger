@@ -1,0 +1,53 @@
+{
+  "id": "20261005-212711-873-miniville-ea9b53d9",
+  "createdAt": "2026-10-06T01:27:11.8736847Z",
+  "createdAtLocal": "2026-10-05 21:27",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-05 21:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville v0.12: phase 3 - influence + conflict. New conflict.py + boycotts table. Influence is a reading (standing, rank, wealth, council seat, flock led) and gates who can start something. Three acts with real consequences: slander (standing loss scaled by the gossip's reach), boycott (group withdraws custom, members stop spending at the venue, traffic decays, business can fail), schism (a congregation splits, leavers found their own). MEASURED AND NOTHING HAPPENED: zero rivalries in town, worst affinity -2.7 of 53k relationships - the tone table only goes hostile below -20 which nothing could reach. Fixed: slights compound between people who already dislike each other, small chance of friction between the merely familiar, plus two sources of grievance (lost election -> runners-up resent winners; passed over for promotion). Result: min affinity -38.4, 5 rivalries, slander + 2 boycotts in the first month. ALSO found+fixed a bug I had introduced: SENIORITY_MAX was defined but never applied, so 2%/yr compounded forever -> wages outgrew prices -> 27 businesses failed over 870 days, each closure deleting its whole staff (Library/Gym/Theater at 0-4 staff vs targets 6-42), posts 270->227. Now base_wage_cents caps a career at ~1.8x. Also: accidentally overwrote tests/test_jobs.py with a stub, restored from git immediately (215 lines, 13 tests). 158 tests. Commits 3fff922..HEAD.",
+  "commands": [
+    "influence --top 8",
+    "scripts/_affinity_probe.py",
+    "scripts/_market_probe2.py",
+    "scripts/_flows2.py",
+    "pytest -q"
+  ],
+  "files": [
+    "src/miniville/conflict.py",
+    "src/miniville/encounters.py",
+    "src/miniville/politics.py",
+    "src/miniville/jobs.py",
+    "src/miniville/db.py",
+    "tests/test_conflict.py",
+    "tests/test_jobs.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "ea9b53d9808e26ff0b087c87f09bbf4e32b2266301e5798188cb0b5d13bc7ed6",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "3795e47",
+    "hasChanges": false
+  }
+}

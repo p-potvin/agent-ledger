@@ -1,0 +1,50 @@
+{
+  "id": "20261002-100739-504-panopticam-844192d9",
+  "createdAt": "2026-10-02T14:07:39.5046748Z",
+  "createdAtLocal": "2026-10-02 10:07",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation + OVH Prom-King VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-02 10:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation + OVH Prom-King VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "After operator merged duplicate identities: derived .aliases.json (143 merged names -> surviving identity) from .ours.txt vs gallery; renamed the one queued archive with a merged name (aliciabiden2 -> aliciabiden) via Datasets API; ingest now maps names through aliases; name_matches.py --aliases rebuilds the map; 2 ingest lanes (~4,300/day). Docker prune declined (QA runner).",
+  "commands": [
+    "name_matches.py --aliases",
+    "POST /api/datasets/<file> rename",
+    "Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "vision/ingest.py",
+    "vision/name_matches.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "844192d9a51b3f633b6ef6985e3ba17f420ab9b8246e91638a4feeb8d69e48a1",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "60e5755",
+    "hasChanges": true
+  }
+}

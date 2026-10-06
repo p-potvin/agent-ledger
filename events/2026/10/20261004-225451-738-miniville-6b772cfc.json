@@ -1,0 +1,48 @@
+{
+  "id": "20261004-225451-738-miniville-6b772cfc",
+  "createdAt": "2026-10-05T02:54:51.7380937Z",
+  "createdAtLocal": "2026-10-04 22:54",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-04 22:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: gallery cleanup + pool forensics per operator request. clean_gallery_images.py keeps only 1-person facing-camera photos (21,085 kept / 54,626 quarantined to .rejected, reversible) - 72% of the gallery was multi-person scenes, which had polluted the identity sex votes. verify_celebrity_gender --force re-voted on clean crops; identity_crops now filters to existing files ordered by quality so --max-crops samples readable images. Answer to the operator's question: 1013 folders but only 734 identities have a determinable sex (452M/282F), 274 females already worn, 8 free; ~130 folders are empty (.assets/.head consumed) and 237 have no solo photo at all; relaxing facing-camera revives 1 identity. Recast: 593 residents cast (305M/288F), 43 deferred (all female), 0 wrong-sex identities, 0 duplicate identities. 110 tests pass.",
+  "commands": [
+    "clean_gallery_images.py --dry-run",
+    "clean_gallery_images.py",
+    "verify_celebrity_gender.py --force --max-crops 8",
+    "build_avatar_gallery.py --only-missing",
+    "pytest -x -q"
+  ],
+  "files": [
+    "scripts/clean_gallery_images.py",
+    "scripts/verify_celebrity_gender.py",
+    "docs/AVATARS.md"
+  ],
+  "planPath": "",
+  "contentHash": "6b772cfc1f23b221e4d90cb299f911f5b56a4912c564c238edc1a2f1af477287",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "60a6739",
+    "hasChanges": false
+  }
+}
