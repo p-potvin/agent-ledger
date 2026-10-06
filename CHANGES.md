@@ -3,7 +3,216 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-10-05 23:50 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>verification</code> - Added unit &amp; live gateway tests verifying ai-runs live JSON response and non-JSON HTML rejection</summary>
+<summary><strong>2026-10-06 04:36 - panopticam</strong> <code>general</code> - Correction to 20261006-043607-015-panopticam-7d13b363: &#39;panopticam-feature-building-expansion&#39; is a LOCAL Claude desktop scheduled task on Clopeux-Desktop (taskId panopticon-fea...</summary>
+
+- Kind: general
+- Actor: Claude (Remote Control helper)
+- Agent Header:
+  ```text
+  Agent: Claude (Remote Control helper) (role: subagent)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: autopilot (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: chore/ledger-sync-20260921
+  Tools used (this reply): PowerShell, list_scheduled_tasks
+  MCP servers accessed (this reply): scheduled-tasks
+  Time: 2026-10-06 04:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Correction to 20261006-043607-015-panopticam-7d13b363: 'panopticam-feature-building-expansion' is a LOCAL Claude desktop scheduled task on Clopeux-Desktop (taskId panopticon-feature-building-expansion), not a cloud routine. Its cron is '15 4 * * *' (daily at about 04:15-04:28 local time with jitter), not every 12 h. Last run 2026-10-06 08:28 UTC, next run 2026-10-07 08:27 UTC. No repo code changed.
+- Git: repo=agent-ledger, branch=chore/ledger-sync-20260921, head=fc9bb967
+
+</details>
+
+<details>
+<summary><strong>2026-10-06 04:36 - panopticam</strong> <code>general</code> - Setup: a cloud Claude thread in the claude.ai project &#39;Panopticam&#39; created the routine &#39;panopticam-feature-building-expansion&#39; (every 12 h at 00:24/12:24 UTC) on 2026-10-06. Led...</summary>
+
+- Kind: general
+- Actor: Claude (Remote Control helper)
+- Agent Header:
+  ```text
+  Agent: Claude (Remote Control helper) (role: subagent)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: autopilot (network: Windows 11 local (Clopeux-Desktop))
+  CWD: C:\Users\Administrator\Desktop\Github Repos\agent-ledger  Branch: chore/ledger-sync-20260921
+  Tools used (this reply): Read, PowerShell
+  MCP servers accessed (this reply): none
+  Time: 2026-10-06 04:36 (TZ: Eastern Standard Time)
+  ```
+- Summary: Setup: a cloud Claude thread in the claude.ai project 'Panopticam' created the routine 'panopticam-feature-building-expansion' (every 12 h at 00:24/12:24 UTC) on 2026-10-06. Ledger entry recorded by the local Remote Control helper on Clopeux-Desktop; no repo code changed.
+- Git: repo=agent-ledger, branch=chore/ledger-sync-20260921, head=fc9bb967
+
+</details>
+
+<details>
+<summary><strong>2026-10-06 04:11 - panopticam</strong> <code>code-change</code> - Tue 06 Oct 2026 (v0.37.22-0.37.23): Datasets page photos for PC-offloaded archives served via worker tunnel (fixes 404s); new vision/local_sources.py feeds the operator&#39;s .datas...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation + OVH VPS over tailnet)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Write, Monitor
+  MCP servers accessed (this reply): none
+  Time: 2026-10-06 04:11 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tue 06 Oct 2026 (v0.37.22-0.37.23): Datasets page photos for PC-offloaded archives served via worker tunnel (fixes 404s); new vision/local_sources.py feeds the operator's .dataset zips (in place) and .dataset-imports folders (zipped, deleted after) into ingest once the VPS queue is short, registered via new /api/vision/datasets/local as kept and tied to their name; ingest GPU helpers release VRAM after 10 min idle.
+- Commands:
+  - `git push origin main`
+  - `Restart-VisionWorker.ps1`
+- Files:
+  - `vision/local_sources.py`
+  - `vision/ingest.py`
+  - `vision/recordings.py`
+  - `vision/worker.py`
+  - `backend/src/panopticam/datasets.py`
+  - `backend/src/panopticam/app.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=bdf18b4
+
+</details>
+
+<details>
+<summary><strong>2026-10-06 03:42 - panopticam</strong> <code>code-change</code> - Tue 06 Oct 2026 (v0.37.20-0.37.21): fixed moment/long-clip video corruption (playlist follower appended older window segments after the newest -&gt; ~12 s backwards timestamps; now...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows workstation + OVH VPS over tailnet)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Edit, Write, Monitor
+  MCP servers accessed (this reply): none
+  Time: 2026-10-06 03:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Tue 06 Oct 2026 (v0.37.20-0.37.21): fixed moment/long-clip video corruption (playlist follower appended older window segments after the newest -> ~12 s backwards timestamps; now next_segments in order); reels v2 on the PC (4/day: best/toys/tips/more, title card, name card, stats bar, fades, old clips skip broken start) - rebuilt for 2-5 Oct; Teach 'Sort of' answer (y=2 -> 0.5 target, excluded from AUC); removed 33,634 empty _pending folders, 27 stale ingest work folders, stale _panopticam_inbox (Recycle Bin); removed Panopticam leftovers from old OVH vps-ovhcloud (services, nginx site, VPN container, 4.7 GB data; operator-approved).
+- Commands:
+  - `git push origin main`
+  - `Restart-VisionWorker.ps1`
+  - `ssh ubuntu@100.67.25.118 cleanup (systemctl disable, rm -rf panopticam paths, docker compose down)`
+- Files:
+  - `backend/src/panopticam/clips.py`
+  - `backend/src/panopticam/actions.py`
+  - `vision/moments_pull.py`
+  - `vision/datasets.py`
+  - `vision/ingest.py`
+  - `web/src/components/Actions.tsx`
+  - `docs/STATE.md`
+  - `docs/MIGRATION.md`
+- Git: repo=panopticam, branch=main, head=753a3c7
+
+</details>
+
+<details>
+<summary><strong>2026-10-06 03:34 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>code-change</code> - Extracted all 21 Windsurf Cascade clear-text transcripts &amp; metadata, upgraded Devin to full chat_message parser, mirrored and drained 930 sessions to live telemetry</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-06 03:34 (TZ: Eastern Standard Time)
+  ```
+- Summary: Extracted all 21 Windsurf Cascade clear-text transcripts & metadata, upgraded Devin to full chat_message parser, mirrored and drained 930 sessions to live telemetry
+- Git: repo=vault-monitor, branch=main, head=444a83a
+
+</details>
+
+<details>
+<summary><strong>2026-10-06 03:17 - miniville</strong> <code>code-change</code> - miniville: turned soak analysis into standing infrastructure and fixed what it found. New scripts/soak_check.py asserts 11 invariants a living town should hold (money conserved,...</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: SWE-2 Max
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\miniville  Branch: autodev
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-06 03:17 (TZ: Eastern Standard Time)
+  ```
+- Summary: miniville: turned soak analysis into standing infrastructure and fixed what it found. New scripts/soak_check.py asserts 11 invariants a living town should hold (money conserved, no deficit spiral, employment in band, venues staffed, venues able to pay their way, wages not compounding, businesses not churning, graph has structure, town has friction, people content, town stays eventful); pointed at the pre-fix soak it reproduces by itself what took hours to find by hand. It found: (1) commercial venues paid 1.07x what they took in (diner 1.20, Old Mill 1.23, tavern 1.20, grocer 1.14) -> 30 closures in 3 years, each deleting its whole staff; fixed with a 25% price correction so takings cover payroll with a margin; (2) the park/marina/library employ people and charge nobody, and were not in PUBLIC_TAGS, so their payroll bled them to the failure line (park -57k) - amenities are now town-funded like the hospital. Also fixed my own measurement error (dividing a soak's cumulative revenue by the copied history's day count understated takings ~4x and briefly made me think the price fix had failed). Final state: 11/11 invariants hold over 200 days - money -0.4%/y, 0 deficits, 10.1% unemployment, 4 closures (was 30), 99 rivalries, 178 events/day. 158 tests. AGENTS.md documents soak+soak_check as the standard step. Commits cd4d94a..HEAD.
+- Commands:
+  - `soak_check.py data/soak-pol2y.db`
+  - `soak.py --days 200 --tag fixcheck`
+  - `soak_check.py data/soak-fixcheck.db`
+  - `pytest -q`
+- Files:
+  - `scripts/soak_check.py`
+  - `src/miniville/economy.py`
+  - `AGENTS.md`
+- Git: repo=miniville, branch=autodev, head=9dfe2bd
+
+</details>
+
+<details>
+<summary><strong>2026-10-06 02:54 - vault-monitor</strong> <code>verification</code> - Researched and validated clear text transcript extraction methods for Devin (SQLite message_nodes) and Cascade (Connect-RPC via language_server_windows_x64)</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-06 02:54 (TZ: Eastern Standard Time)
+  ```
+- Summary: Researched and validated clear text transcript extraction methods for Devin (SQLite message_nodes) and Cascade (Connect-RPC via language_server_windows_x64)
+- Git: repo=vault-monitor, branch=main, head=444a83a
+
+</details>
+
+<details>
+<summary><strong>2026-10-06 01:49 - vault-monitor</strong> <code>verification</code> - Harvested and drained AI coding assistant history from August to October 2026 (909 sessions, 227.1k messages across Clopeux-Desktop and Clopeux-Laptop)</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-06 01:49 (TZ: Eastern Standard Time)
+  ```
+- Summary: Harvested and drained AI coding assistant history from August to October 2026 (909 sessions, 227.1k messages across Clopeux-Desktop and Clopeux-Laptop)
+- Git: repo=vault-monitor, branch=main, head=444a83a
+
+</details>
+
+<details>
+<summary><strong>2026-10-05 23:50 - vault-monitor</strong> <code>verification</code> - Added unit &amp; live gateway tests verifying ai-runs live JSON response and non-JSON HTML rejection</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -7952,331 +8161,6 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `dataset_builder/worker.py`
   - `README.md`
 - Git: repo=python-zipper, branch=agent/extension-stream-detection, head=7826c5a
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 19:21 - vault-streaming</strong> <code>verification</code> - Validated French subtitle downloading to disk and captured Playwright visual proof for natural language TMDB query sanitization</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-ios-container
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-20 19:21 (TZ: Eastern Standard Time)
-  ```
-- Summary: Validated French subtitle downloading to disk and captured Playwright visual proof for natural language TMDB query sanitization
-- Git: repo=vault-streaming, branch=vw-codex-ios-container, head=c88018d
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 19:20 - vault-streaming</strong> <code>code-change</code> - Investigated French stream availability, diagnosed Real-Debrid DMCA takedowns and Prowlarr French tracker gap, fixed TMDB natural language query sanitization and OpenSubtitles 3...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 2.5 Pro
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-ios-container
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-20 19:20 (TZ: Eastern Standard Time)
-  ```
-- Summary: Investigated French stream availability, diagnosed Real-Debrid DMCA takedowns and Prowlarr French tracker gap, fixed TMDB natural language query sanitization and OpenSubtitles 301 redirects
-- Git: repo=vault-streaming, branch=vw-codex-ios-container, head=c88018d
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 19:04 - vault-streaming</strong> <code>code-change</code> - Fix vault-streaming TMDB IPC collision, Comet stream cache detection, and playback fallback for The Two Popes</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Claude 3.7 Sonnet
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-streaming  Branch: vw-codex-ios-container
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-20 19:04 (TZ: Eastern Standard Time)
-  ```
-- Summary: Fix vault-streaming TMDB IPC collision, Comet stream cache detection, and playback fallback for The Two Popes
-- Git: repo=vault-streaming, branch=vw-codex-ios-container, head=c88018d
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 17:20 - ColONEL-KFC</strong> <code>verification</code> - Added real-conditions verification test tests/verify_reindex_and_catalogue_proof.py proving database state persistence and bimodal separation in luluchu; updated walkthrough.md ...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-20 17:20 (TZ: Eastern Standard Time)
-  ```
-- Summary: Added real-conditions verification test tests/verify_reindex_and_catalogue_proof.py proving database state persistence and bimodal separation in luluchu; updated walkthrough.md with Section 5
-- Git: repo=ColONEL-KFC, branch=main, head=204199a
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 17:19 - ColONEL-KFC</strong> <code>verification</code> - Reindexed luluchu, nicolelove, arialee; indexed naominash, lenapaul, lolasin; analyzed entire catalogues for 6 models (nicolelove, luluchu, abelladanger, naominash, lenapaul, ah...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-20 17:19 (TZ: Eastern Standard Time)
-  ```
-- Summary: Reindexed luluchu, nicolelove, arialee; indexed naominash, lenapaul, lolasin; analyzed entire catalogues for 6 models (nicolelove, luluchu, abelladanger, naominash, lenapaul, ahanureed) for near-threshold scores and false positives
-- Git: repo=ColONEL-KFC, branch=main, head=204199a
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 08:32 - ColONEL-KFC</strong> <code>verification</code> - Completed dataset pipeline: 218 new identities created, 312 held identities benchmarked (13,182 comparisons, 96.72% &gt;= threshold), 125 weak identities isolated into review dashb...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-20 08:32 (TZ: Eastern Standard Time)
-  ```
-- Summary: Completed dataset pipeline: 218 new identities created, 312 held identities benchmarked (13,182 comparisons, 96.72% >= threshold), 125 weak identities isolated into review dashboard; upgraded head thumbnail generator with landmark cranial framing
-- Git: repo=ColONEL-KFC, branch=main, head=204199a
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 05:36 - ColONEL-KFC</strong> <code>code-change</code> - Launched dataset pipeline (task-143) to ingest 209 missing identities, benchmark 312 existing identities, and isolate weak identities; upgraded head thumbnail generator with lan...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-20 05:36 (TZ: Eastern Standard Time)
-  ```
-- Summary: Launched dataset pipeline (task-143) to ingest 209 missing identities, benchmark 312 existing identities, and isolate weak identities; upgraded head thumbnail generator with landmark-aware cranial framing (38% eye-line, hair headroom, reflection padding) and verified with automated tests
-- Git: repo=ColONEL-KFC, branch=main, head=204199a
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 05:32 - python-zipper</strong> <code>code-change</code> - Mid-recording URL refresh: confirmed against the API&#39;s OpenAPI schema that the progress endpoint takes a fixed field set and &#39;result&#39; is the only free-form one, so the extension...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: agent/extension-stream-detection
-  Tools used (this reply): Bash, Edit, Write
-  MCP servers accessed (this reply): ccd_session
-  Time: 2026-09-20 05:32 (TZ: Eastern Standard Time)
-  ```
-- Summary: Mid-recording URL refresh: confirmed against the API's OpenAPI schema that the progress endpoint takes a fixed field set and 'result' is the only free-form one, so the extension publishes {stream_url,at} there once a minute (alarm-driven, event page safe) for streams with a live jobId, and the worker reads it via refresh_url only when its URL dies. download_stream is now a bounded resume loop (20 resumes, 20s floor between attempts) with per-attempt output files joined by ffmpeg -c copy and byte counts banked across attempts. Smart naming rewritten as an explicit chain: performer from tab title, whole tab title, yt-dlp filename, then site label from page_url or the [hostname] prefix; generic labels and self-produced names (joined/resume/capture) refused; everything with a label is numbered. 11 resume tests + 12 naming tests added; 69 python tests and 99 extension checks green.
-- Commands:
-  - `curl https://api.vaultwares.ca/openapi.json`
-  - `python -m unittest dataset_builder.tests.test_stream_resume`
-  - `npm run check`
-- Files:
-  - `dataset_builder/ds_streams.py`
-  - `dataset_builder/worker.py`
-  - `extension/src/background/index.ts`
-  - `extension/public/manifest.json`
-- Git: repo=python-zipper, branch=agent/extension-stream-detection, head=7899cce
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 05:32 - ColONEL-KFC</strong> <code>general</code> - Analyzed G:\Gallery dataset archives (911 archives, 521 identities) and authored implementation plan for missing identity population, existing benchmark, weak identity isolation...</summary>
-
-- Kind: general
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\ColONEL-KFC  Branch: main
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-20 05:32 (TZ: Eastern Standard Time)
-  ```
-- Summary: Analyzed G:\Gallery dataset archives (911 archives, 521 identities) and authored implementation plan for missing identity population, existing benchmark, weak identity isolation, and improved head thumbnail framing
-- Git: repo=ColONEL-KFC, branch=main, head=204199a
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 05:12 - python-zipper</strong> <code>code-change</code> - Diagnosed the chaturbate 403 as LL-HLS Delivery Directives: the captured URL was a blocking request for one part (sn=10176&amp;_HLS_part=0), so yt-dlp retried a frozen sequence numb...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: claude-opus-5
-  Thinking: high
-  Mode: agent
-  Permissions: bypass (network: Windows 11 local)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\python-zipper  Branch: agent/extension-stream-detection
-  Tools used (this reply): Bash, Edit
-  MCP servers accessed (this reply): ccd_session
-  Time: 2026-09-20 05:12 (TZ: Eastern Standard Time)
-  ```
-- Summary: Diagnosed the chaturbate 403 as LL-HLS Delivery Directives: the captured URL was a blocking request for one part (sn=10176&_HLS_part=0), so yt-dlp retried a frozen sequence number for ~5 min then 403'd, and the ffmpeg fallback failed identically on the same URL. Added stripDeliveryDirectives (extension, at stream-store ingest) and strip_delivery_directives (worker, via _sanitize_stream_url, now applied in download_stream), dropping _HLS_msn/_HLS_part/_HLS_skip/_HLS_report plus host companion sn only when a directive is present; tokens and expiries untouched. 16 new checks/tests. Also confirmed the native messaging host is a single-shot reveal_path handler and cannot carry video, so a VDH-style hover preview needs MSE + hls.js in the sidebar, not the native host and not WASM. 99 extension checks and 47 python tests green.
-- Commands:
-  - `npm run check`
-  - `python -m unittest dataset_builder.tests.test_stream_capture`
-- Files:
-  - `dataset_builder/ds_streams.py`
-  - `extension/src/common/streams.ts`
-  - `extension/src/background/sniffer.ts`
-  - `extension/checks/segments.check.ts`
-- Git: repo=python-zipper, branch=agent/extension-stream-detection, head=80f3f7b
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 04:50 - vault-warden</strong> <code>verification</code> - Executed end-to-end production verification test (verify_production_state.ps1): confirmed 0 failing Uptime Kuma monitors, 0 degraded Greencloud services, and successful probe up...</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash (High)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-20 04:50 (TZ: Eastern Standard Time)
-  ```
-- Summary: Executed end-to-end production verification test (verify_production_state.ps1): confirmed 0 failing Uptime Kuma monitors, 0 degraded Greencloud services, and successful probe uploads.
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=ffc48e6
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 04:49 - vault-warden</strong> <code>code-change</code> - Paused retired monitors 67 and 72 on Uptime Kuma (all active monitors now green). Fixed degraded Greencloud services by updating NGINX client_max_body_size to 25M and vaultwares...</summary>
-
-- Kind: code-change
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash (High)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-20 04:49 (TZ: Eastern Standard Time)
-  ```
-- Summary: Paused retired monitors 67 and 72 on Uptime Kuma (all active monitors now green). Fixed degraded Greencloud services by updating NGINX client_max_body_size to 25M and vaultwares-api probe rollup limit from 1MB to 15MB to ingest Greencloud 24h resource telemetry; verified all 24 Greencloud services healthy.
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=ffc48e6
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 04:37 - vault-warden</strong> <code>verification</code> - Confirmed OVH stability and system recovery following qa_runner fix: verified API 200 OK from Greencloud, tube sites online, Uptime Kuma healthy, and zero process leakage.</summary>
-
-- Kind: verification
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini 3.8 Flash (High)
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-warden  Branch: vw-codex-ios-app-and-pipeline
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-20 04:37 (TZ: Eastern Standard Time)
-  ```
-- Summary: Confirmed OVH stability and system recovery following qa_runner fix: verified API 200 OK from Greencloud, tube sites online, Uptime Kuma healthy, and zero process leakage.
-- Git: repo=vault-warden, branch=vw-codex-ios-app-and-pipeline, head=ffc48e6
-
-</details>
-
-<details>
-<summary><strong>2026-09-20 04:35 - vault-commander</strong> <code>bugfix</code> - Diagnosed OVH duplicated jobs: qa_runner leaked 1038 orphaned Chromium and 14 Node processes due to 100-page Tor crawl timeout killing only parent npm. Patched run_continuous_qa...</summary>
-
-- Kind: bugfix
-- Actor: AI Agent
-- Agent Header:
-  ```text
-  Agent: AI Agent (role: main)
-  Model: Gemini
-  Thinking: unknown
-  Mode: unknown
-  Permissions: unknown (network: unknown)
-  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-commander  Branch: vw-codex-gallery-g-default
-  Tools used (this reply): none
-  MCP servers accessed (this reply): none
-  Time: 2026-09-20 04:35 (TZ: Eastern Standard Time)
-  ```
-- Summary: Diagnosed OVH duplicated jobs: qa_runner leaked 1038 orphaned Chromium and 14 Node processes due to 100-page Tor crawl timeout killing only parent npm. Patched run_continuous_qa.py with process group killing (start_new_session + killpg), reduced STEALTH_MAX_PAGES to 15, cleaned NGINX duplicate config, and flushed 2.5GB swap. API and Uptime Kuma 100% healthy.
-- Git: repo=vault-commander, branch=vw-codex-gallery-g-default, head=540fe39
 
 </details>
 
