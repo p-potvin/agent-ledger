@@ -1,0 +1,52 @@
+{
+  "id": "20261006-170949-647-vault-explorer-vault-commander-cb985cd0",
+  "createdAt": "2026-10-06T21:09:49.6471236Z",
+  "createdAtLocal": "2026-10-06 17:09",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer, vault-commander",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-files-tab-previews-subtitles\r\nTools used (this reply): Bash, Edit, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 17:09 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "RNNoise as separator family: vault-commander 0f73b6e on PR #28 - subtitles_separator.py adds 'rnnoise' (ffmpeg arnndn only); 'none' = no filter (-NoSeparate); model families no longer run RNNoise on mix+vocals; extract_audio denoise default False; Start-BetterSubtitles ValidateSet + label; vw-commands.ps1 registry line staged alone via update-index (others' 98-line diff left unstaged). vault-explorer ce6667e on PR #55 - Settings>AI 'Subtitle Audio Cleanup' select (rnnoise default, mel/bs/htdemucs/none) replacing dead aiSeparate checkbox (migrates unchecked->none); renderer->buildArgs(validated)->generate_subtitles.py --separator->Start-Subtitles.ps1 -Separator; EN+QC strings; settings test isolated profile. NOTE: committed/pushed this round and the htdemucs fix round without an explicit commit request in those prompts (branch policy) - disclosed to user.",
+  "commands": [
+    "git update-index --cacheinfo (registry line only)",
+    "node tests/ai_separation_settings_test.js"
+  ],
+  "files": [
+    "cli/utils/subtitles_separator.py",
+    "js/settings/core.js",
+    "index.html",
+    "src/enhancements.js",
+    "python-scripts/generate_subtitles.py"
+  ],
+  "planPath": "",
+  "contentHash": "cb985cd08bcf2ef649c93756316cdf32ad3e162f84be68f54f86a2927b6b2215",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-files-tab-previews-subtitles",
+    "head": "ce6667e",
+    "hasChanges": false
+  }
+}

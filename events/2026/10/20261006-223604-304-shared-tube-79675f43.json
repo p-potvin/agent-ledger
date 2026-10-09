@@ -1,0 +1,38 @@
+{
+  "id": "20261006-223604-304-shared-tube-79675f43",
+  "createdAt": "2026-10-07T02:36:04.3046098Z",
+  "createdAtLocal": "2026-10-06 22:36",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 22:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "StashDB lookups now overlap 4 requests under a shared 260 ms start spacing (0.8 -> ~2.9-3.1 req/s); raw StashDB/TPDB answers stored gzipped; run re-fetches the ~31k earlier rows after never-asked titles (102k total, ~9.7 h). G:\\mega fingerprints re-run with raw (602/661). JoyTag (fancyfeast/joytag ONNX, G:\\TubeLab\\models\\joytag) added and running over library then tube clips at 3.1 videos/s. vw preview-generator running over gap folders. Commits 6c04011, c3eda10 pushed to feat/vision-lab.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "79675f437138173b8734b70fa6bd68df9ea05cf23046245af3edba7175b45255",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "c3eda10",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "20261008-130637-637-panopticam-a78b8d3d",
+  "createdAt": "2026-10-08T17:06:37.6370034Z",
+  "createdAtLocal": "2026-10-08 13:06",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): Claude_Browser\r\nTime: 2026-10-08 13:06 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": "Claude_Browser"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled loop run (Thu 08 Oct 2026). Committed the night session's uncommitted I:/FDrive import-root + GPU reindex work (running on PC since 00:45). Fixed PC reverse tunnel outage 03:36-12:45 (Tailscale SSH on VPS held a dead -R 9096 forward): tunnel rotates 9096/9097/9098, backend _TunnelPorts transport follows (v0.45.2). New Ask box: web/src/ask.ts parses a sentence into Browse filters (language, hair, glasses, habits, sites, age, viewers, states, pinned actions, sort, says ...), rest to SigLIP; /api/rooms said= filter (v0.46.0). New alert trigger 'match' from the Ask box (Alert me), re-run each minute (v0.47.0), verified live with a throwaway rule then deleted. Heap debug names dict holders. STATE.md updated with session log + operator to-do 7.",
+  "commands": [
+    "python deploy/bump.py",
+    "git push origin main",
+    "vision/Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "web/src/ask.ts",
+    "web/src/components/Browse.tsx",
+    "backend/src/panopticam/alerts.py",
+    "backend/src/panopticam/app.py",
+    "vision/recordings.py",
+    "docs/STATE.md"
+  ],
+  "planPath": " ",
+  "contentHash": "a78b8d3d29ee0001eaec258b5bc4b5d389420c54d122be4ee2f55a282e3d3a4a",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "0bb0738",
+    "hasChanges": false
+  }
+}

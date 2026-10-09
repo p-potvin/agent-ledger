@@ -1,0 +1,38 @@
+{
+  "id": "20261009-003541-466-shared-tube-655293e3",
+  "createdAt": "2026-10-09T04:35:41.4662295Z",
+  "createdAtLocal": "2026-10-09 00:35",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 00:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "StashDB tube title run had finished Wed 07 Oct 07:19 (unreported until now): 102,340 answered with raw kept, 67,136 matched (66%), 91.7% performer agreement over 66,605. Probes now also train on StashDB tags (9,220 labelled looks): 28/80 visual categories usable at P>=0.8 (was 9); excluded non-visual and cam-library tags. Experiments not kept: JoyTag features (slightly worse), top-2-frame MIL (+0.02-0.04 AP). Commit c55d60f pushed; lab probes reloaded.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "655293e35b9af9bc1016b4c41429d35d48971193db87c85d12c24319eafa5c10",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "c55d60f",
+    "hasChanges": false
+  }
+}

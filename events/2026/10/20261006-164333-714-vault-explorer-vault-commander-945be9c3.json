@@ -1,0 +1,54 @@
+{
+  "id": "20261006-164333-714-vault-explorer-vault-commander-945be9c3",
+  "createdAt": "2026-10-06T20:43:33.7140311Z",
+  "createdAtLocal": "2026-10-06 16:43",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer, vault-commander",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-files-tab-previews-subtitles\r\nTools used (this reply): Bash, Edit, Write, PowerShell, hf_fs\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 16:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "PowerShell",
+      "hf_fs"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "PR vault-explorer#55 (v4.1.14): Files tab parse fix, preview thumbnail survival + duration cap, subtitles via vw better-subtitles -NoSeparate, ModelRun model= crash fix, transcript language detection in vw_media/subtitles.py (qc never a code). PR vault-commander#28 (v1.0.4): separator default mel_band_roformer; PnC GGUF (NGC punctuation_en_bert converted to vault-cacophony/NeMo-Speech.cpp/models/pnc-bert-base-en.q8_0.gguf, .nemo deleted) always loaded by server but excluded from reuse check, forwarded on -LowMemory; root cause of lost punctuation: engine applies PnC to text only, cues built from words -> apply_text_to_words realignment (ctc 0->99 marks). Parakeet does not report detected language (languages=[]), hence text-based detector. Others' 14 uncommitted files in vault-commander untouched.",
+  "commands": [
+    "gh pr create (vault-explorer #55)",
+    "gh pr create (vault-commander #28)",
+    "convert_model.py --architecture pnc --outtype q8_0"
+  ],
+  "files": [
+    "python-scripts/vw_media/subtitles.py",
+    "python-scripts/generate_subtitles.py",
+    "cli/utils/subtitles_asr.py",
+    "cli/utils/subtitles_server.py",
+    "cli/Start-BetterSubtitles.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "945be9c3312e05380ce860c845d6b8b955ff81485738c9abbfe3f06807fbf81f",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-files-tab-previews-subtitles",
+    "head": "1a2e47f",
+    "hasChanges": false
+  }
+}

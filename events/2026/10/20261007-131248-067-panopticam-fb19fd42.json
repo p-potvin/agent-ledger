@@ -1,0 +1,52 @@
+{
+  "id": "20261007-131248-067-panopticam-fb19fd42",
+  "createdAt": "2026-10-07T17:12:48.0672579Z",
+  "createdAtLocal": "2026-10-07 13:12",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (local) + OVH Prom-King VPS via tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-07 13:12 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (local) + OVH Prom-King VPS via tailnet",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.44.1-0.45.1 (Wed, 07 Oct 2026 16:40-17:30 UTC). Heard: tower Whisper-base now transcribes clips with clear speech (greedy, in-house BPE detok, ~1.7 s CPU/clip, pacing unchanged); OVH keeps 7 days of lines in table heard + FTS5, drops low-logprob/loops/hallucinations; junk text no longer counts for language. New Heard page (#/heard, g h), room panel lines, /api/heard, alert trigger 'said' (phrase). Settled talkers re-heard every 30 min at lowest priority. GC diagnostics: /api/debug/heap gc stats + list owners, PANOPTICAM_GC_THRESHOLD knob; tracked objects grew 180k->539k in 9 h, re-check pending. vocab.json fetched to VPS model dir. STATE.md updated.",
+  "commands": [
+    "git push origin main (x4)",
+    "ssh ubuntu@100.114.3.121 tx_probe timing"
+  ],
+  "files": [
+    "vision/speech.py",
+    "backend/src/panopticam/speech.py",
+    "backend/src/panopticam/alerts.py",
+    "web/src/components/Heard.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "fb19fd4226f1f69f72ce6d64e0042900de733fe20457b214a63d1729b9851736",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "fec967d",
+    "hasChanges": false
+  }
+}

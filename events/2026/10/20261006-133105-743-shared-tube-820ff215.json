@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261006-133105-743-shared-tube-820ff215",
+    "createdAt":  "2026-10-06T17:31:05.7430336Z",
+    "createdAtLocal":  "2026-10-06 13:31",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 13:31 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Moved uv cache to D:\\uv\\cache (robocopy 341,113 files, 0 failed) + junction at %LOCALAPPDATA%\\uv\\cache; C: 40.3-\u003e54.2 GB free (less than 33 GB because cache files were hardlinked into venvs). miniforge3 already a symlink to E:\\miniforge3, nothing to move. vaultwares-docs PR #32 (tubelab ops docs + operator\u0027s instruction edits incl. removal of Torrent \u0026 Debrid Policy, flagged). Full StashDB title lookup started (~102k titles, 260 ms pacing, 429 back-off), log G:\\TubeLab\\jobs\\stashdb-full.log.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "820ff215ac28a190512238cdabe81a9a532f6799ae11f3448ce9815561ee9ea1",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "feat/vision-lab",
+                "head":  "ac33fdd",
+                "hasChanges":  true
+            }
+}

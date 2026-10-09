@@ -1,0 +1,48 @@
+{
+  "id": "20261006-175324-015-miniville-eaab0340",
+  "createdAt": "2026-10-06T21:53:24.0153393Z",
+  "createdAtLocal": "2026-10-06 17:53",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 17:53 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: the written record caught up with the town. Gazette SECTIONS extended to cover everything the town gained (council, clubs/congregations, feuds, careers, obituaries, dividends, rent distress) with an explicit print order - a week where the council cut the levy and a society boycotted the Bijou used to print as if nothing happened. New year-in-review [--year N] reads a year back from the ledger: comings and goings, the council and what the numbers did, who holds influence, grudges acted on, businesses lost, the year's biggest moments, and who died - deterministic prose, no LLM, replayable. Fixed: births were emitted at HISTORIC (same as a death or an election) so quiet weeks headlined babies and the retrospective was a list of them -> now MAJOR; the remember-list is capped at two per kind; the election event is a sentence not a semicolon tally. Also fixed my own test fixture (no household, so births could never fire) and made the birth test deterministic instead of relying on a 0.03%/day roll. 162 tests.",
+  "commands": [
+    "year-in-review --year 1",
+    "publish_week",
+    "pytest -q"
+  ],
+  "files": [
+    "src/miniville/newspaper.py",
+    "src/miniville/cli.py",
+    "src/miniville/growth.py",
+    "src/miniville/politics.py",
+    "tests/test_newspaper.py"
+  ],
+  "planPath": "",
+  "contentHash": "eaab03409fea23249eeac17df7281658d6c7a8166ede230613a3f1d09fc8e4e0",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "0250acf",
+    "hasChanges": false
+  }
+}

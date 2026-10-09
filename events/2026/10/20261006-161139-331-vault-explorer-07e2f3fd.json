@@ -1,0 +1,56 @@
+{
+  "id": "20261006-161139-331-vault-explorer-07e2f3fd",
+  "createdAt": "2026-10-06T20:11:39.3312221Z",
+  "createdAtLocal": "2026-10-06 16:11",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): Bash, Edit, Write, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 16:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "Write",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Files tab broken: half-applied review suggestions (c1c00a6 filters.js, b7ba34a favorites.js) left unterminated duplicate isGlobOrThumbsExcluded; scripts failed to parse so window.applyFilters/displayedItems undefined and directory.js threw. Removed leftovers, same orphan tail in enhance_audio.py; added window.globToRegex (escapes metachars). previews.js: thumbnail promoted before WebM encode (WebM failure no longer deletes it), -t cap when duration probe=0, writeBenchmark best-effort. Subtitles: Start-Subtitles.ps1 now delegates to vw better-subtitles via vw-commands.ps1 registry (avoids vw.ps1 Invoke-Expression quoting); generate_subtitles.py uses it with -NoSeparate, native vw_media.asr fallback, fixed ModelRun missing model= crash, records engine. New tests: renderer_scripts_syntax, preview_thumbnail_survives_webm_failure, generate_subtitles_vw_pipeline. Uncommitted.",
+  "commands": [
+    "node tests/renderer_scripts_syntax_test.js",
+    "node tests/preview_thumbnail_survives_webm_failure_test.js",
+    "node tests/generate_subtitles_vw_pipeline_test.js",
+    "vw better-subtitles -Input benchmark_julien_16k.wav"
+  ],
+  "files": [
+    "js/navigation/filters.js",
+    "js/favorites.js",
+    "js/utils.js",
+    "src/previews.js",
+    "python-scripts/generate_subtitles.py",
+    "scripts/pwsh/Start-Subtitles.ps1",
+    "python-scripts/enhance_audio.py"
+  ],
+  "planPath": "",
+  "contentHash": "07e2f3fd91ea7ef35e23a4ab298af34fde18f4bef503d855b1d87f42673f4b7b",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "354de18",
+    "hasChanges": true
+  }
+}

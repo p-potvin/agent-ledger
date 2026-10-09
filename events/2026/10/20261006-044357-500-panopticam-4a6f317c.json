@@ -1,0 +1,56 @@
+{
+  "id": "20261006-044357-500-panopticam-4a6f317c",
+  "createdAt": "2026-10-06T08:43:57.5003948Z",
+  "createdAtLocal": "2026-10-06 04:43",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 04:43 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.38.0-0.38.1: 'Who is this?' search by photo. New page #/whois (g i): drop/paste/pick a photo -> POST /api/whois -> VPS forwards over the recordings tunnel to the PC worker POST /whois (vision/whois.py: antelopev2 faces, gallery top-5 by mean of 3 best crops, Atlas persona top-5; photo never stored) -> VPS Vision.search_face over ~155k room face centroids (21 days, all sites) + ties to gallery names/personas; one-line answer with live-now chips; flags two gallery names >=0.50 as a likely duplicate (found camilafoox7/camilafoox). Tests added (backend 137, vision whois/recordings). Vision worker restarted. STATE.md session entry + operator to-do; Prom-King docs panopticam page got a current-state block.",
+  "commands": [
+    "python deploy/bump.py minor",
+    "git push origin main",
+    "vision/Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "vision/whois.py",
+    "vision/recordings.py",
+    "vision/worker.py",
+    "backend/src/panopticam/app.py",
+    "backend/src/panopticam/vision.py",
+    "web/src/components/Whois.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "4a6f317c7e28825a600c67df0d5b6418cb4679ddddebde49e2eaa8467bcd2198",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "d9ee4e0",
+    "hasChanges": false
+  }
+}

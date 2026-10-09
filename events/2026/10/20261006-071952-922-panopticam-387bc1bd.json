@@ -1,0 +1,57 @@
+{
+  "id": "20261006-071952-922-panopticam-387bc1bd",
+  "createdAt": "2026-10-06T11:19:52.9222156Z",
+  "createdAtLocal": "2026-10-06 07:19",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 07:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.39.0-0.39.2: one-click gallery identity merges (vision/merge.py: folder renumber by prefix groups, gallery.db crops/identity/task_logs, .dataset-archive renames, Atlas persona fold/rename, ingest alias + reindex, E: room frames, journal + full undo; look-alike scan 1,100 pairs in 22 s; VPS merges.py updates stills/dataset records/personas/names/room queue; page #/merge with bulk >=0.95). Live round trip on charol23-2 found and fixed a filename-collision bug (undone via journal, redone clean). nginx /api/merges 300 s timeout on Prom-King VPS (backup .bak-20261006). Moments captured at 1080p, reels 1080p when HD, AV1 archive of finished days (2 Oct: 108->54 MB). docs/LOOKS_LIKE_EXTRACTION.md for shared-tube. STATE.md + operator to-do updated.",
+  "commands": [
+    "git push origin main (x4)",
+    "Restart-VisionWorker.ps1 (x3)",
+    "ssh 100.114.3.121 nginx -t && systemctl reload nginx"
+  ],
+  "files": [
+    "vision/merge.py",
+    "backend/src/panopticam/merges.py",
+    "web/src/components/Merge.tsx",
+    "vision/moments_archive.py",
+    "vision/moments_pull.py",
+    "backend/src/panopticam/moments.py",
+    "docs/LOOKS_LIKE_EXTRACTION.md",
+    "deploy/nginx-panopticam.conf"
+  ],
+  "planPath": "",
+  "contentHash": "387bc1bd913a983c89b16131eb2db117a0dac803bded2596b8065da1f242c090",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "f1e5255",
+    "hasChanges": false
+  }
+}

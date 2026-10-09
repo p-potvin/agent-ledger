@@ -1,0 +1,47 @@
+{
+  "id": "20261006-165457-179-vault-commander-22bbbb6c",
+  "createdAt": "2026-10-06T20:54:57.1795737Z",
+  "createdAtLocal": "2026-10-06 16:54",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-files-tab-previews-subtitles\r\nTools used (this reply): Bash, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 16:54 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Separator speed check: mel_band_roformer already runs 1 pass (num_overlap honored: 1 pass 8.4 vs 4 passes 4.0 cold). Earlier 4.5 RTFx was the script's default --chunk-sec 10 (18 audiocpp_cli launches, model reload each); 8.4 was a cold first load. Steady-state pipeline-exact runs: mel 11.3-12.7 RTFx end to end (audiocpp inference 18.8, CLI total 13.6), htdemucs 8.3 (inference 12.2). Kept mel default (htdemucs slower). Fixed htdemucs always crashing: separator sent htdemucs.num_overlap, which the session rejects; now only RoFormer families get it. Commit 78ad1e9 pushed to PR vault-commander#28. Noted: RNNoise runs twice (input + separated vocals), ~1.4s each.",
+  "commands": [
+    "subtitles_separator.py -s mel_band_roformer --overlap 1 --chunk-sec 0",
+    "audiocpp_cli --metrics --log"
+  ],
+  "files": [
+    "cli/utils/subtitles_separator.py"
+  ],
+  "planPath": "",
+  "contentHash": "22bbbb6c5e262bbd7ba5f01a0e396530e6a17c1ded3402d322f86f52151e31e3",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-files-tab-previews-subtitles",
+    "head": "1a2e47f",
+    "hasChanges": false
+  }
+}

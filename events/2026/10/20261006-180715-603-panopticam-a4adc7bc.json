@@ -1,0 +1,52 @@
+{
+  "id": "20261006-180715-603-panopticam-a4adc7bc",
+  "createdAt": "2026-10-06T22:07:15.6033192Z",
+  "createdAtLocal": "2026-10-06 18:07",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation + Prom-King OVH VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 18:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation + Prom-King OVH VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.41.0 sticky labels: labels.py (hair/place/lang locks on persona or room, weekly recheck, operator verdicts yes/no/clear, habit vetoes/pins), room_hosts day runs -> rotating/recycled rooms, merges move labels, speech rests on labelled rooms; web Labels section with check/cross, hair filter, badges. Deployed and verified live: 537 locks first tick, hosts for 18k rooms. STATE.md updated with decision (persona-level for cross-site sharing).",
+  "commands": [
+    "python deploy/bump.py minor",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/labels.py",
+    "backend/tests/test_labels.py",
+    "backend/src/panopticam/app.py",
+    "web/src/components/RoomPanel.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "a4adc7bcbb52784f4c08bd70131b692205309139d18c2a8ee48c8c1550cae9f9",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "9ac063c",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "20261006-122631-443-shared-tube-d681a1b5",
+  "createdAt": "2026-10-06T16:26:31.4431445Z",
+  "createdAtLocal": "2026-10-06 12:26",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local workstation (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, Edit, Write, WebSearch, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 12:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "WebSearch",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Pivot of vision lab to the Stash library (feat/vision-lab commits 735a59f, 3d50838; not pushed). Deleted untracked shared/src/media-cache/backfill.ts (hard-coded Postgres password; never in git history). stash-sync reads G:\\.stash\\.db read-only (4,750 scenes, ComfyUI excluded); cam-room hints from filenames (Models/ not sorted by person); faces matched against pornstar (930) + cam (31,416) galleries; library faces precision 96.3% recall 89.7% on 29 enrolled-label videos. Lab bound to 100.71.101.21:8790. Full-library embed+faces running in background. Found Stash scheduled scan/generate tasks failing because stash-win isn't auto-started. No public TPDB/StashDB dumps found.",
+  "commands": [
+    "tubevision stash-sync",
+    "tubevision faces --kind stash",
+    "tubevision faces-report --kind stash"
+  ],
+  "files": [
+    "vision/src/tubevision/stash.py",
+    "vision/src/tubevision/people.py",
+    "vision/src/tubevision/identities.py",
+    "vision/src/tubevision/api.py"
+  ],
+  "planPath": "",
+  "contentHash": "d681a1b5781597020c2e88ea25ae35f193f2a507972b86ac4f966e8bdf636125",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "3d50838",
+    "hasChanges": true
+  }
+}

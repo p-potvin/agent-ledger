@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261006-202908-041-shared-tube-0e75ce77",
+    "createdAt":  "2026-10-07T00:29:08.0419740Z",
+    "createdAtLocal":  "2026-10-06 20:29",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 20:29 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Pushed feat/vision-lab (latest 663e29f). Stash clean done (3,808 scenes; 20 Sophie Johns files still listed missing; images now 789k). Fingerprint lookups G:\\mega: StashDB 602, TPDB 661, either 676/880, 56 duration-flagged, stored in lab only. Fixed SQLite lock starvation (per-row commits); StashDB title job restarted and resuming (24,659 done). Unknown-performer review queue NOT started (usage limit).",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "0e75ce77b1665950e7b584ebbb248795d730a0d53f20b918d895459188a3c170",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "feat/vision-lab",
+                "head":  "663e29f",
+                "hasChanges":  true
+            }
+}

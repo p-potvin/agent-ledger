@@ -1,0 +1,50 @@
+{
+  "id": "20261007-032136-943-panopticam-feb8f667",
+  "createdAt": "2026-10-07T07:21:36.9431731Z",
+  "createdAtLocal": "2026-10-07 03:21",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation + Prom-King OVH VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-07 03:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation + Prom-King OVH VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "PC CPU cap raised to 80% at operator's request (lanes 5, taggers 2, threads 4; job-object cap guards). v0.44.0 performer page as a profile: person labels with check/cross via label_key, gallery photos via PC tunnel, 7-day tips + top tippers, last 24 Moments with hover-scrub/playback, habits and rotating/recycled per room. Verified on persona 93628 (5 rooms/5 sites): API 0.44 s, photos 200 in <50 ms.",
+  "commands": [
+    "Restart-VisionWorker.ps1",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/app.py",
+    "web/src/components/Performers.tsx",
+    "web/src/components/RoomPanel.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "feb8f6678a26716d9419105249b94f7ea48dbdbdc1c0e9b3ce414e2c38e60b95",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "66484d4",
+    "hasChanges": false
+  }
+}

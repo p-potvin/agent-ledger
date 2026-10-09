@@ -1,0 +1,54 @@
+{
+  "id": "20261006-131648-226-shared-tube-681aa9ad",
+  "createdAt": "2026-10-06T17:16:48.2262477Z",
+  "createdAtLocal": "2026-10-06 13:16",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local workstation + greencloud over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 13:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation + greencloud over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "tubelab.vaultwares.ca live: greencloud nginx vhost (tailnet allowlist, public 403) + LE cert via certbot webroot + dnsmasq host-record -> 100.73.93.84, proxy to 100.71.101.21:8790; dnsmasq conf backed up in /root. Saved memory: never run Stash Identify (only G:\\mega). Queued Stash metadataScan + guarded metadataClean (all roots online, 1,078 missing scene files before scan). StashDB title lookup module (commit 3135270): pilot 70% matched, 95% performer agreement with stricter rules. Faces job commits per video. vaultwares-docs network-map/tailscale edited, not committed. C: space: uv cache pruned (3.3GiB) and being moved to D:\\uv\\cache via robocopy, junction pending.",
+  "commands": [
+    "certbot certonly --webroot -d tubelab.vaultwares.ca",
+    "systemctl reload nginx; systemctl restart dnsmasq",
+    "stash metadataScan/metadataClean via GraphQL",
+    "uv cache prune",
+    "robocopy uv cache D:\\uv\\cache /MOVE"
+  ],
+  "files": [
+    "greencloud:/etc/nginx/sites-available/tubelab.vaultwares.ca.conf",
+    "greencloud:/etc/dnsmasq.d/vaultwares-tailnet.conf",
+    "vision/src/tubevision/stashdb.py",
+    "G:\\TubeLab\\jobs\\stash_scan_clean.py"
+  ],
+  "planPath": "",
+  "contentHash": "681aa9adb216e71174cff84a15cc3a7c5b81de0c78b6b76f8727fc30bcd535eb",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "3135270",
+    "hasChanges": true
+  }
+}

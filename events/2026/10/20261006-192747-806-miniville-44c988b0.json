@@ -1,0 +1,55 @@
+{
+  "id": "20261006-192747-806-miniville-44c988b0",
+  "createdAt": "2026-10-06T23:27:47.8066693Z",
+  "createdAtLocal": "2026-10-06 19:27",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: SWE-2 Max\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 19:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville Gazette/media power: answered operator's challenge by separating simulated ground truth from resident reporting. Gazette now has publisher/editor selected from its staff, an editorial line derived from publisher's council seat/wealth/work/group ties, and agenda selection/headline bias. In conflicts with the owner's line, deterministic council-vote misreport claims can print as fact; stored in newspaper_claims with source event and truth=0, while events remain untouched. Repeated claims reduce issue/profile credibility. Publisher gains +6 influence. Newspaper API + UI show owner, editor, line, accuracy, claims fact-checked against source, and collapsible neutral event ledger. End-to-end Patchright verified (Laverne Miller, business line, 536 ledger events, no console errors). 90-day press soak produced 44 editions, 0 false claims because votes aligned with line, 11/11 soak_check invariants. Opposed-vote falsehood path deterministic-tested. 167 tests. Pushed f208be3.",
+  "commands": [
+    "pytest -q",
+    "soak.py --days 90 --tag press90",
+    "soak_check.py data/soak-press90.db",
+    "patchright-cli open http://127.0.0.1:8787"
+  ],
+  "files": [
+    "src/miniville/newspaper.py",
+    "src/miniville/db.py",
+    "src/miniville/conflict.py",
+    "src/miniville/politics.py",
+    "src/miniville/ui/server.py",
+    "src/miniville/ui/static/app.js",
+    "src/miniville/ui/static/index.html",
+    "tests/test_newspaper.py",
+    "tests/test_ui.py",
+    "docs/DESIGN.md",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "44c988b02043f30ce71b53d5fda9b37da41d8223a19914456842f67fcd4371e6",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "f208be3",
+    "hasChanges": false
+  }
+}

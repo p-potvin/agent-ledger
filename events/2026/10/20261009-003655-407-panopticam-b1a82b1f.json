@@ -1,0 +1,52 @@
+{
+  "id": "20261009-003655-407-panopticam-b1a82b1f",
+  "createdAt": "2026-10-09T04:36:55.4070013Z",
+  "createdAtLocal": "2026-10-09 00:36",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, Edit, PowerShell, hf_fs\r\nMCP servers accessed (this reply): huggingface\r\nTime: 2026-10-09 00:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "PowerShell",
+      "hf_fs"
+    ],
+    "mcpServersAccessed": "huggingface"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Fri 09 Oct 2026: qa_runner on the Prom-King VPS stopped again (operator: pause 3 more days), transient qa-runner-resume.timer starts it Mon 12 Oct 04:30 UTC. Heard upgraded to whisper-small int8 (onnx-community) with KV-cache decoding (decoder_with_past) in vision/speech.py; tower picks it when installed; benched 19 live clips: base 1.5 s vs small int8 ~3.5 s/clip, better text. Models in /var/lib/panopticam/models/tower/whisper-small (int8 only). v0.48.0 deployed, verified new transcripts arriving.",
+  "commands": [
+    "docker stop qa_runner",
+    "systemd-run --on-calendar=2026-10-12 04:30 UTC docker start qa_runner",
+    "curl huggingface whisper-small onnx",
+    "git push origin main"
+  ],
+  "files": [
+    "vision/speech.py",
+    "vision/worker.py",
+    "docs/STATE.md"
+  ],
+  "planPath": " ",
+  "contentHash": "b1a82b1fa91b284953e5a0272cb1484d0a5b85139e4cf8d1023a088e9919a9c1",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "8e5b9c2",
+    "hasChanges": false
+  }
+}

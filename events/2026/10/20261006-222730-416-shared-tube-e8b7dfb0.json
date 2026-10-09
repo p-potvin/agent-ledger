@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261006-222730-416-shared-tube-e8b7dfb0",
+    "createdAt":  "2026-10-07T02:27:30.4169651Z",
+    "createdAtLocal":  "2026-10-06 22:27",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 22:27 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Unknown-performer review queue (commit 6366758, pushed feat/vision-lab): clusters.py groups 2,792 unnamed people into 1,105 clusters (382 in 2+ videos) with name suggestions from hints/performer links/fingerprint+StashDB matches; People page in lab with face crops (re-extracted frames, cached G:\\TubeLab\\crops); naming exports 12 crops to G:\\TubeLab\\inbox\\\u003cgallery\u003e\\\u003cname\u003e\\ for KFC. Cleaner room-name hints. Full library faces: 3,670 videos, precision 95.4% recall 86.6% (290 evaluable), 1,696 named.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "e8b7dfb00dd22867bd0213078810874f42b113757914482965fb5f3d4916d032",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "feat/vision-lab",
+                "head":  "6366758",
+                "hasChanges":  true
+            }
+}

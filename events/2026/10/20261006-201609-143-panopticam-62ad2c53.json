@@ -1,0 +1,57 @@
+{
+  "id": "20261006-201609-143-panopticam-62ad2c53",
+  "createdAt": "2026-10-07T00:16:09.1432881Z",
+  "createdAtLocal": "2026-10-06 20:16",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation + Prom-King OVH VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 20:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation + Prom-King OVH VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.42.0-0.42.2: hair labels from NudeNet head crops (9 colours + highlights, tested on contact sheets), foldable Browse filter bar, speedups (actions live-feature cache, tippers single query + cache, stale-while-revalidate leaderboards/forecasts, room-frames due() on live rooms; status 1 s -> 0.1 s, chat/top 12 s -> 0.02 s). Fixed local_sources batch-tail crash blocking .dataset leftovers and .dataset-imports; restarted PC vision worker. Aborted stuck extension recording z-54adb1ece15e via zipper API at operator's request; diagnosed python-zipper Downloads list limit (probes push running jobs out of newest-50).",
+  "commands": [
+    "python deploy/bump.py",
+    "git push origin main",
+    "Restart-VisionWorker.ps1",
+    "POST /api/zipper/jobs/z-54adb1ece15e/progress aborted"
+  ],
+  "files": [
+    "backend/src/panopticam/labels.py",
+    "backend/src/panopticam/actions.py",
+    "backend/src/panopticam/roomframes.py",
+    "vision/nudity.py",
+    "vision/local_sources.py",
+    "web/src/components/Browse.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "62ad2c5304ad15c2a207dbf93b33f569d493743ba5026ff9ae498d717fe64f15",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "41901ef",
+    "hasChanges": false
+  }
+}

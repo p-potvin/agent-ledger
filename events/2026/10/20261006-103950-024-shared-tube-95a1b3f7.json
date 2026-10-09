@@ -1,0 +1,56 @@
+{
+  "id": "20261006-103950-024-shared-tube-95a1b3f7",
+  "createdAt": "2026-10-06T14:39:50.0245314Z",
+  "createdAtLocal": "2026-10-06 10:39",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local workstation (Clopeux-Desktop) + OVH over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, Write, Edit, Claude_Browser, hf_fs\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 10:39 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation (Clopeux-Desktop) + OVH over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Edit",
+      "Claude_Browser",
+      "hf_fs"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Built offline vision lab (vision/ tubevision package) on branch feat/vision-lab, commit 45928cd, not pushed. SigLIP looks (GPU fp16, 26.6 videos/s), catalogue export via one read-only ssh to OVH, local SQLite at G:\\TubeLab, describe-search/similar/zero-shot groups, per-category logistic probes (9/60 usable at P>=0.8, low recall, needs more data), SCRFD+glintr100 faces on onnxruntime matching gallery.db (cos 0.99+), faces-eval: thumbnails 97.8% precision / 41.5% recall. FastAPI lab page on 127.0.0.1:8790. Copied OVH media cache (28.7k files) to G:\\TubeLab\\clips. Request plan for missing previews/thumbnails written in vision/README.md, awaiting operator go. Flagged hard-coded Postgres password in uncommitted shared/src/media-cache/backfill.ts (other session).",
+  "commands": [
+    "tubevision sync",
+    "tubevision embed",
+    "tubevision probes --top 60 --min-pos 120",
+    "tubevision faces-eval --limit 400",
+    "ssh ubuntu@100.67.25.118 tar media cache"
+  ],
+  "files": [
+    "vision/src/tubevision/*.py",
+    "vision/src/tubevision/lab.html",
+    "vision/README.md",
+    ".claude/launch.json"
+  ],
+  "planPath": "",
+  "contentHash": "95a1b3f744953c8bffffd8beb40259e5a474356ed51f2d8079e39229cbed5aa5",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "45928cd",
+    "hasChanges": true
+  }
+}

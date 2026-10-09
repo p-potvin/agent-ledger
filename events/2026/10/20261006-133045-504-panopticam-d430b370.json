@@ -1,0 +1,48 @@
+{
+  "id": "20261006-133045-504-panopticam-d430b370",
+  "createdAt": "2026-10-06T17:30:45.5044221Z",
+  "createdAtLocal": "2026-10-06 13:30",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "verification",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation + Prom-King OVH VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 13:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation + Prom-King OVH VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.40.1: Speaks queue now prioritises rooms with a confident but unconfirmed language (retry 10 min); verified live: 7 rooms settled within 7 min, country agreement 4/4. STATE.md updated.",
+  "commands": [
+    "python deploy/bump.py",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/speech.py",
+    "backend/tests/test_speech.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "d430b370d0a2563da797994b2afa58eb4c57b57fdb6134e85095ca2ee4b03ff5",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "cd3ea0a",
+    "hasChanges": false
+  }
+}

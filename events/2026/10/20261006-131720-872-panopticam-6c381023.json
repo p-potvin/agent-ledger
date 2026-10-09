@@ -1,0 +1,53 @@
+{
+  "id": "20261006-131720-872-panopticam-6c381023",
+  "createdAt": "2026-10-06T17:17:20.8729463Z",
+  "createdAtLocal": "2026-10-06 13:17",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop) + Prom-King OVH VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, hf_fs\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-06 13:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop) + Prom-King OVH VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "hf_fs"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.40.0 Speaks: Whisper-base (ONNX) language detection on the VPS tower for clip audio (vision/speech.py, numpy log-mel verified vs transformers, one decoder step -> no-speech + language probs, paced 1 clip/6 s); backend speech.py queues due rooms' audible clips, settles room language (>=2 confident clips, >=60%), table room_speech, /api/speech/*, /api/rooms?speaks=; Browse language picker, card badge, room panel section. /api/debug/heap?gc_types=true census. STATE.md session entry + operator announcement. Deployed via push to main.",
+  "commands": [
+    "python deploy/bump.py minor",
+    "git push origin main",
+    "curl whisper-base ONNX from HF to /var/lib/panopticam/models/tower/whisper-base"
+  ],
+  "files": [
+    "vision/speech.py",
+    "backend/src/panopticam/speech.py",
+    "backend/src/panopticam/app.py",
+    "web/src/components/Browse.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "6c38102324ca2fbcb7101b18c7cf9f9f47562184c88048918eb5a02890e8b332",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "184aa0e",
+    "hasChanges": true
+  }
+}
