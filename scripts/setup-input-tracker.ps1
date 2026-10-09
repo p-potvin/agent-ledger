@@ -98,7 +98,7 @@ if ($LASTEXITCODE -ne 0) {
 Write-Host ""
 Write-Host "Registering scheduled task: $TrackerTask ..." -ForegroundColor Yellow
 
-Unregister-ScheduledTask -TaskName $TrackerTask -Confirm:$false -ErrorAction SilentlyContinue | Out-Null
+Unregister-ScheduledTask -TaskName $TrackerTask -TaskPath '\VaultWares\' -Confirm:$false -ErrorAction SilentlyContinue | Out-Null
 
 $taskConhost = (Get-Command "conhost.exe" -ErrorAction Stop).Source
 $taskPowerShell = (Get-Command "pwsh.exe" -ErrorAction Stop).Source
@@ -126,7 +126,7 @@ $trackerSettings = New-ScheduledTaskSettingsSet `
 $trackerPrincipal = New-ScheduledTaskPrincipal -GroupId "BUILTIN\Administrators" -RunLevel Highest
 
 Register-ScheduledTask `
-    -TaskName   $TrackerTask `
+    -TaskName   $TrackerTask -TaskPath '\VaultWares\' `
     -Action     $trackerAction `
     -Trigger    $trackerTriggerLogon `
     -Settings   $trackerSettings `
@@ -143,9 +143,9 @@ Write-Host "  Task '$TrackerTask' registered — starts at every logon." -Foregr
 if ($StartNow) {
     Write-Host ""
     Write-Host "Starting tracker now..." -ForegroundColor Yellow
-    Start-ScheduledTask -TaskName $TrackerTask
+    Start-ScheduledTask -TaskName $TrackerTask -TaskPath '\VaultWares\'
     Start-Sleep -Milliseconds 800
-    $state = (Get-ScheduledTask -TaskName $TrackerTask).State
+    $state = (Get-ScheduledTask -TaskName $TrackerTask -TaskPath '\VaultWares\').State
     Write-Host "  Tracker state: $state" -ForegroundColor Cyan
 }
 
@@ -170,5 +170,5 @@ Write-Host ""
 Write-Host "To start tracker immediately without rebooting:" -ForegroundColor DarkGray
 Write-Host "  .\setup-input-tracker.ps1 -StartNow" -ForegroundColor White
 Write-Host "  — or —" -ForegroundColor DarkGray
-Write-Host "  Start-ScheduledTask -TaskName '$TrackerTask'" -ForegroundColor White
+Write-Host "  Start-ScheduledTask -TaskName '$TrackerTask' -TaskPath '\VaultWares\'" -ForegroundColor White
 Write-Host ""
