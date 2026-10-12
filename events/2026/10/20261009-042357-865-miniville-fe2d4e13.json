@@ -1,0 +1,50 @@
+{
+  "id": "20261009-042357-865-miniville-fe2d4e13",
+  "createdAt": "2026-10-09T08:23:57.8653460Z",
+  "createdAtLocal": "2026-10-09 04:23",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "verification",
+  "actor": "workstation",
+  "agentHeader": "Agent: workstation (role: main)\r\nModel: SWE-2 Max\r\nThinking: high\r\nMode: agent\r\nPermissions: unknown (network: local Windows workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 04:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "local Windows workstation",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: logged the Claude Code cloud session's owed v0.14 ledger entry (its VM has no record-agent-change.ps1) as an attributed ledger event, and cleared the ledger-debt note in docs/STATE.md. Then verified v0.14 on the real town and ran it live: soak_check.py --run 365 --tag v14live (copy from tick 19248) holds 11/11 invariants with 0 municipal deficits (money -0.2%/y, unemployment 12.5%->6.6%, commercial pay/take 0.84x, 4 closures 1.4/y, 60% one-off ties, 110 rivalries, 1.0% miserable/hungry, 250 events/day). The feared pension deficits never appeared; rent+levy inflow covers ~87 pensioners. Took a WAL-safe backup (backups/miniville-t019248-pre-v014.db), let the live world migrate (8 of 17 venues got resident owners, ema_revenue seeded from all-time takings) and ran Days 402-410: 0 deficits, purse 145.7k -> 212.4k, 2 new estates. 198 tests pass. Updated STATE.md resume pointer to Day 411 and AGENT_SYNC.md; committed/pushed b78e6b9.",
+  "commands": [
+    "python -m pytest -q",
+    "python scripts/soak_check.py --run 365 --tag v14live --source data/miniville.db",
+    "python -m miniville.cli run --ticks 96",
+    "python -m miniville.cli run --ticks 336",
+    "python -m miniville.cli status",
+    "git push origin autodev"
+  ],
+  "files": [
+    "docs/STATE.md",
+    "docs/AGENT_SYNC.md",
+    "data/miniville.db",
+    "backups/miniville-t019248-pre-v014.db"
+  ],
+  "planPath": "",
+  "contentHash": "fe2d4e1344896f98ebe2eaf969778166469360fc5fafc5cdbd4bedf5aafb4bf4",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "b78e6b9",
+    "hasChanges": false
+  }
+}

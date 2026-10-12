@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261010-083737-024-python-zipper-4e32dc98",
+    "createdAt":  "2026-10-10T12:37:37.0248594Z",
+    "createdAtLocal":  "2026-10-10 08:37",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-zipper",
+    "kind":  "code-change",
+    "actor":  "ssh root@100.73.93.84 nginx -t \u0026\u0026 systemctl reload nginx",
+    "agentHeader":  "Agent: ssh root@100.73.93.84 nginx -t \u0026\u0026 systemctl reload nginx (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: skyvern_adapter/start_gemma_llama.ps1\r\nMode: skyvern_adapter/start_skyvern_ui.ps1\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-10 08:37 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude Haiku 5.5 Medium",
+                    "thinking":  "skyvern_adapter/start_gemma_llama.ps1",
+                    "mode":  "skyvern_adapter/start_skyvern_ui.ps1",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+    "summary":  "Skyvern: llama-server stopped; start_skyvern_api.ps1 no longer starts Gemma; added start_gemma_llama.ps1 and start_skyvern_ui.ps1. Registered \\VaultWares\\Skyvern-API (logon, restart x3) and \\VaultWares\\Gemma-llama (manual, trigger 1 year out). Skyvern-API running, /docs 200 on 100.71.101.21:8792. Cloned skyvern v1.0.48 skyvern-frontend (sparse) to Github Repos\\skyvern, npm install + build, .env written (key not printed), vite.config preview.allowedHosts for skyvern.vaultwares.ca. UI preview on 100.71.101.21:8795. Greencloud nginx skyvern.vaultwares.ca now routes / to UI:8795 and /api,/docs,/openapi.json to API:8792; root returns 504 because the tailnet cannot reach 8795 (Tailscale ACL). Security blocker: vaultwares artifactServer.js (skyvern-frontend) serves any file path on :9090 and listens on all interfaces, so it is not exposed. Not done: Skyvern-UI logon task, watchdog rename, vaultwares-docs update.",
+    "commands":  [
+                     "Register-ScheduledTask \\VaultWares\\Skyvern-API, \\VaultWares\\Gemma-llama"
+                 ],
+    "files":  [
+                  "skyvern_adapter/start_skyvern_api.ps1"
+              ],
+    "planPath":  "npm --prefix skyvern-frontend install; npm run build; npm run preview -- --port 8795",
+    "contentHash":  "4e32dc981072378153d5bb5f1ff52f0f5668bb6a800a17ccdb6a12f6ac878f03",
+    "git":  {
+                "repo":  "python-zipper",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+                "branch":  "main",
+                "head":  "2542eae",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "20261009-035517-248-miniville-89de92a2",
+  "createdAt": "2026-10-09T07:55:17.2485403Z",
+  "createdAtLocal": "2026-10-09 03:55",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "cloud (Claude Code)",
+  "agentHeader": "Agent: cloud (Claude Code) (role: main)\r\nModel: Claude Opus 5.5\r\nThinking: high\r\nMode: agent\r\nPermissions: unknown (network: cloud VM (Devin container))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 03:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Opus 5.5",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "cloud VM (Devin container)",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville v0.14 (cloud session, Claude Code; shipped on autodev, merged to main as PR #3). Year-long soaks on a synthetic 612-resident town found: the dead kept their wallets (savings frozen out of circulation); retirees had no income (70 of 105 broke households were retirees); Flats->Flats downsizing every fortnight; downsized households left children behind; ~700 random moves/yr ignoring rent; no council for two years in a fresh town (hence 0 rivalries); venues overstaffed for their takings; failed businesses minted money; soak.py --mortality-scale never worked (env set after import). Built: mortality estate settlement spouse->household->purse (estates_v1); weekly town pension from the purse (policy pension, default 0.50 median working week); enterprise.py (resident owners, owner draws, buying closed venues, founding, owners answer debts, inheritance); housing.py (affordability-driven moves, finite homes); crime.py (hardship theft, Town Hall catch chance, cells, Gazette blotter); jobs staffing cap for venues in the red, shed posts to public services; economy_days.total_money_cents for conservation; map tinted by district wealth; scripts/synth_personas.py for cloud soaks. soak_check now uses enterprise.is_commercial. 198 tests; 11/11 invariants on the synthetic soak.",
+  "commands": [
+    "python -m pytest -q",
+    "python scripts/soak.py --days 365 --tag v14",
+    "python scripts/soak_check.py data/soak-v14.db"
+  ],
+  "files": [
+    "src/miniville/enterprise.py",
+    "src/miniville/housing.py",
+    "src/miniville/crime.py",
+    "src/miniville/mortality.py",
+    "src/miniville/economy.py",
+    "src/miniville/jobs.py",
+    "src/miniville/db.py",
+    "scripts/synth_personas.py",
+    "scripts/soak.py",
+    "scripts/soak_check.py",
+    "tests/test_enterprise.py",
+    "tests/test_housing.py",
+    "tests/test_crime.py",
+    "docs/STATE.md",
+    "docs/ECONOMY.md"
+  ],
+  "planPath": "",
+  "contentHash": "89de92a28cc7f97bfac96132a6c6639ec245701092c61a516c624b39e4104c03",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "34892aa",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261010-110724-514-python-zipper-16bd7783",
+    "createdAt":  "2026-10-10T15:07:24.5144514Z",
+    "createdAtLocal":  "2026-10-10 11:07",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-zipper",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-10 11:07 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude Haiku 5.5 Medium",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+    "summary":  "User reported \u0027gemma doesn\u0027t start\u0027. Checked: Gemma-llama task last ran 11:02 result 0, llama-server listening 127.0.0.1:8794 with model loaded; /health 200, /v1/models 401 no/bad key, 200 with sk-whatever; real chat completion succeeded. Skyvern forwards OPENAI_COMPATIBLE_API_KEY via config_registry.py litellm_params. The \u0027failure\u0027 was the intended 401 on unauthenticated probes. Left llama-server running; asked user if it should be stopped.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "16bd7783bec359f8ab9ad5e4070d1dd2a479a8b2e52692b8f62849939f7f9e40",
+    "git":  {
+                "repo":  "python-zipper",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+                "branch":  "main",
+                "head":  "2542eae",
+                "hasChanges":  true
+            }
+}

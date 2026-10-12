@@ -1,0 +1,50 @@
+{
+  "id": "20261009-130239-398-shared-tube-3c3dc087",
+  "createdAt": "2026-10-09T17:02:39.3981505Z",
+  "createdAtLocal": "2026-10-09 13:02",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 workstation (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, Claude_Browser, Skill:dataviz\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 13:02 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser",
+      "Skill:dataviz"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Tube lab Settings page (233b45e): preferences in lab DB (theme system/dark/light with basic light theme, 3D viewer toggle, items per page incl. 'last one used', start page, default search/scope, hover previews/sound, scores, confirm destructive); Library (Stash folders via configureGeneral, mirrored in library_folders, add/remove/scan); Tasks (Stash scan/generate/clean dry-run/clean-generated/auto-tag/optimise/backup/stop, never Identify; tracked lab tubevision tasks with logs); Logs (lab-app.log, worker/task logs, Stash file + in-memory, levels, filter, follow). Restored People/person/names/Duplicates views dropped by 1783e2c. Page served no-cache. Memory updated: lab may write to Stash. Tested: stash-sync task exit 0, Stash clean dry run started, light theme, tabs in browser; theme reset to system.",
+  "commands": [
+    "Stash GraphQL configureGeneral/metadataClean dryRun",
+    "tubevision stash-sync via /tasks"
+  ],
+  "files": [
+    "vision/src/tubevision/admin.py",
+    "vision/src/tubevision/stashapi.py",
+    "vision/src/tubevision/lab.html"
+  ],
+  "planPath": "",
+  "contentHash": "3c3dc0878a8c361ad08b944c4f311a2a5034c44ae75c0f6b8efb26fc6ad1bf88",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "233b45e",
+    "hasChanges": false
+  }
+}

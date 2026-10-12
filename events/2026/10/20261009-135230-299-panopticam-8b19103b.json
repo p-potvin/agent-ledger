@@ -1,0 +1,54 @@
+{
+  "id": "20261009-135230-299-panopticam-8b19103b",
+  "createdAt": "2026-10-09T17:52:30.2990409Z",
+  "createdAtLocal": "2026-10-09 13:52",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 13:52 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled loop run (Fri, 09 Oct 2026 12:40-14:00). v0.50.0 Moments 'Similar': PC sends EmbeddingGemma 2 picture+sound vectors + toy-by-sound score to VPS hourly (/api/vision/moments/vecs, 100 per call); /api/moments/<id>/similar (0.65 pic + 0.35 sound cosine, other rooms); Moments page button / S key, reel plays neighbours. Verified live. EG2 'liked' probe evaluated and not wired (edge only on low-res, already fixed upstream; life model wins on 'reacts'). GC threshold fix confirmed (full GCs 200/h -> 3/h, stalls 500 -> 19/day). OnlyFans crawl: start-up log lines + faulthandler stack dumps after a silent 04:00 run. Incident: my backgrounded numpy eval ran at ~9.4 cores 12:50-13:28, starving the BelowNormal worker restart (37 min); killed. STATE.md updated.",
+  "commands": [
+    "git push origin main (be043d6, 3e7973a)",
+    "vision/Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "backend/src/panopticam/moments.py",
+    "backend/src/panopticam/app.py",
+    "vision/moments_embed.py",
+    "vision/onlyfans.py",
+    "web/src/components/Moments.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "8b19103b481cc22d85728900ad2c9c5b4e3ee2a72d73ef0feb6c63207f20c8c2",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "3e7973a",
+    "hasChanges": false
+  }
+}

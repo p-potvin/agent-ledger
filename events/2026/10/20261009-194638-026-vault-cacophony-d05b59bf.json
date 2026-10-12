@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261009-194638-026-vault-cacophony-d05b59bf",
+    "createdAt":  "2026-10-09T23:46:38.0269058Z",
+    "createdAtLocal":  "2026-10-09 19:46",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 3.7 Flash\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: vw-claude/plurilingual-eval\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 19:46 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 3.7 Flash",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Diagnosed 80GB Windows.db growth: confirmed Windows Search Indexer indexing git/embedding repos vs Everything",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "d05b59bf10a418845313c40ad19d55858f660d7e9796f584d4f8a94068818768",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "vw-claude/plurilingual-eval",
+                "head":  "bbb833c",
+                "hasChanges":  true
+            }
+}

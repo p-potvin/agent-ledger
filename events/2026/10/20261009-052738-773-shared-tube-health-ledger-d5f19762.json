@@ -1,0 +1,51 @@
+{
+  "id": "20261009-052738-773-shared-tube-health-ledger-d5f19762",
+  "createdAt": "2026-10-09T09:27:38.7737178Z",
+  "createdAtLocal": "2026-10-09 05:27",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube + health-ledger",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 workstation (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 05:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Token Joker (health-ledger PR #13, branch feat/token-joker-refresh running on clopeux): new jwt_file check (exp + /auth/me probe) and refresh: block (ssh mint via ops/mint-promking-token.py at 7 days left or on rejection, atomic write, token_refresh events, values never logged); promking-admin-token added; live refresh verified (not_after 8 Nov), task restarted, pass ok. Spliced previews live: publish-previews --send switched 569 videos (1 test + 500 + 68, 0 errors); verified fxv page uses new clip, API streams from lab (~0.2s warm), Range 206, fallback 302 when clip missing on PC. 166/569 have external fallback, 403 were pruned fetcher clips. HANDOFF updated (271facb).",
+  "commands": [
+    "tubevision publish-previews --send",
+    "node --test scripts/token-joker.test.mjs",
+    "Stop/Start-ScheduledTask HealthLedgerTokenJoker"
+  ],
+  "files": [
+    "health-ledger/scripts/token-joker.mjs",
+    "health-ledger/tokens.yaml",
+    "health-ledger/ops/mint-promking-token.py",
+    "vision/HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "d5f19762c63f0880b5ed142159857654326a3bac9332ca9b105db06ca6cacecb",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "271facb",
+    "hasChanges": false
+  }
+}

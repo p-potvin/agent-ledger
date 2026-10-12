@@ -1,0 +1,47 @@
+{
+  "id": "20261009-071023-854-shared-tube-f30d6251",
+  "createdAt": "2026-10-09T11:10:23.8543641Z",
+  "createdAtLocal": "2026-10-09 07:10",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 workstation (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 07:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "health-ledger back on main after PR #13 merge (fa36018), TokenJoker restarted. Created Windows task 'Tube Lab Publish Previews' (operator-approved): every 6 h runs G:\\TubeLab\\jobs\\publish_previews.ps1 = tubevision publish-previews --send, BelowNormal, IgnoreNew, 30 min limit, log G:\\TubeLab\\jobs\\publish_previews.log. First run 564 switched, 0 errors (1,133 live). HANDOFF 27ff3f9.",
+  "commands": [
+    "Register-ScheduledTask 'Tube Lab Publish Previews'",
+    "git switch main (health-ledger)"
+  ],
+  "files": [
+    "G:\\TubeLab\\jobs\\publish_previews.ps1",
+    "vision/HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "f30d625128bbbdb2f3d65f6f6f76c1ca2a3ec24aaa2b16a4a66bc498ba62fd0b",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "27ff3f9",
+    "hasChanges": false
+  }
+}

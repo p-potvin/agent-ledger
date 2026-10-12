@@ -1,0 +1,48 @@
+{
+  "id": "20261009-121330-839-vaultwares-adk-d69765ff",
+  "createdAt": "2026-10-09T16:13:30.8396199Z",
+  "createdAtLocal": "2026-10-09 12:13",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-adk",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 workstation (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 12:13 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Autofix p-potvin/vaultwares-adk#32 review: setup-model-pollers.ps1 and setup-run-spool-drain.ps1 now Stop + Unregister the pre-move root copy before the \\VaultWares\\ one (9c010af). Folder-missing finding answered without change: verified Register-ScheduledTask -TaskPath creates a missing folder (probe task in \\zz-probe-folder\\, removed). Replied + resolved 4 threads; temp clone deleted.",
+  "commands": [
+    "git commit/push chore/task-folders",
+    "gh api replies + resolveReviewThread"
+  ],
+  "files": [
+    "scripts/setup-model-pollers.ps1",
+    "scripts/setup-run-spool-drain.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "d69765ffb142a0d044ac788f33d1ed4762f5e04f67878ef6acacae4b962e8a0d",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "5d75ccd",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20261009-104020-361-shared-tube-054a49e9",
+  "createdAt": "2026-10-09T14:40:20.3612379Z",
+  "createdAtLocal": "2026-10-09 10:40",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 workstation (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 10:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "After PC restart (+RTX 2060): restarted PC pullers (died with reboot; OVH site-preview download finished 90,172 ok). Added EmbeddingGemma 2 support to tubevision via Panopticam's embed server (127.0.0.1:8791): gemma.py (picture+sound vectors, mm_looks/mm_failures, A/B-first order, resumable), model-aware probes (--model/--dim, stored as model@dim), probes-compare. Smoke test 8 videos ok. Started G:\\TubeLab\\jobs\\gemma_embed.ps1 (full run, A/B 14,667 first, ~0.3 v/s) and siglip_after_pull.ps1 (waits for puller, SigLIP on 3060 pinned by UUID). Commits 146e914, 6e43dde on feat/vision-lab.",
+  "commands": [
+    "tubevision gemma-embed",
+    "Start-Process pull_previews.sh / pull_spliced.sh",
+    "siglip_after_pull.ps1"
+  ],
+  "files": [
+    "vision/src/tubevision/gemma.py",
+    "vision/src/tubevision/probes.py",
+    "vision/src/tubevision/store.py",
+    "G:\\TubeLab\\jobs\\gemma_embed.ps1",
+    "G:\\TubeLab\\jobs\\siglip_after_pull.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "054a49e950dad3d4a140baa9590f25ba7afb39bfc9bf0d4d40df4680752d26c6",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "6e43dde",
+    "hasChanges": false
+  }
+}

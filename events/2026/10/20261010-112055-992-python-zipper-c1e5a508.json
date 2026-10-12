@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261010-112055-992-python-zipper-c1e5a508",
+    "createdAt":  "2026-10-10T15:20:55.9921421Z",
+    "createdAtLocal":  "2026-10-10 11:20",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-zipper",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-10 11:20 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude Haiku 5.5 Medium",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+    "summary":  "Fixed \u0027table workflows has no column reuse_browser_session\u0027: .skyvern-server\\data.db had been create_all\u0027d by Skyvern 1.0.48 and never migrated (no alembic_version; wheel ships no migration scripts). Backed up DB to .skyvern-server\\db-backup-20261010-1117, recreated via API bootstrap (current 1.0.55 schema, 42 workflow cols). This surfaced a second latent bug: .env SKYVERN_API_KEY had invalid base64 padding -\u003e jwt.decode \u0027Invalid header padding\u0027 -\u003e 403 \u0027Could not validate credentials\u0027; localServer had been serving a cached ui-session token. Synced the valid api JWT from organization_auth_tokens into both .skyvern-server\\.env and skyvern-frontend\\.env (value not logged). Verified: orgkey x-api-key /api/v1/tasks 200, fresh /ui-session mint + session token /tasks 200. Bootstrap re-registered same org id and api key.",
+    "commands":  [
+                     "skyvern-frontend/.env"
+                 ],
+    "files":  [
+                  ".skyvern-server/.env"
+              ],
+    "planPath":  "",
+    "contentHash":  "c1e5a5083368485415f31df4ad023eeaf97b2544073e4acba90f070c85f5eedc",
+    "git":  {
+                "repo":  "python-zipper",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+                "branch":  "main",
+                "head":  "2542eae",
+                "hasChanges":  true
+            }
+}

@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261010-102517-197-python-zipper-48f6b1ca",
+    "createdAt":  "2026-10-10T14:25:17.1976329Z",
+    "createdAtLocal":  "2026-10-10 10:25",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-zipper",
+    "kind":  "code-change",
+    "actor":  "skyvern_adapter/start_skyvern_ui.ps1",
+    "agentHeader":  "Agent: skyvern_adapter/start_skyvern_ui.ps1 (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-10 10:25 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude Haiku 5.5 Medium",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+    "summary":  "Bound Skyvern API (8792) and UI preview (8795) to 127.0.0.1 only; nginx config left in place (public URL now returns 504 as expected). Diagnosed \u0027Waiting for a browser session token\u0027: in 1.0.55 the UI fetches /ui-session from its own origin, which needs the org key held server-side (localServer.js mints it). vite preview does not serve /ui-session, so the baked key is no longer what the UI uses.",
+    "commands":  [
+                     "Stop/Start-ScheduledTask Skyvern-API, Skyvern-UI"
+                 ],
+    "files":  [
+                  "skyvern_adapter/start_skyvern_api.ps1"
+              ],
+    "planPath":  "Get-NetTCPConnection verify 127.0.0.1",
+    "contentHash":  "48f6b1ca25c462f3c21b2a5c5e5980714efd4867570e079f9651534faca53619",
+    "git":  {
+                "repo":  "python-zipper",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+                "branch":  "main",
+                "head":  "2542eae",
+                "hasChanges":  true
+            }
+}

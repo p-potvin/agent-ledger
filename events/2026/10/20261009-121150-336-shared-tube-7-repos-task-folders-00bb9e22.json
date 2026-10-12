@@ -1,0 +1,55 @@
+{
+  "id": "20261009-121150-336-shared-tube-7-repos-task-folders-00bb9e22",
+  "createdAt": "2026-10-09T16:11:50.3361620Z",
+  "createdAtLocal": "2026-10-09 12:11",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube + 7 repos (task folders)",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 workstation (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, gh, WebSearch, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 12:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh",
+      "WebSearch",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Restarted 11 running tasks under their new folders (killed orphaned trees, Start-ScheduledTask -TaskPath; Start without -TaskPath fails). -TaskPath PRs: health-ledger#14, vaultwares-epg#1, qa-automation#8, vault-music#4, vaultwares-adk#32, agent-ledger#22, vaultwares-docs#33 (dirty repos via temp clones, deleted). Fixed puller pgrep self-match (never exited; SigLIP waiter blocked). Built EmbeddingGemma lab features (mmlab.py + lab.html): multimodal search + image search, moments (gemma-moments), chapters, sound tags, For you (Stash ratings read-only), collections, Teach, identities (gemma-identities), tag ideas; Store per-thread SQLite connections (fixes InterfaceError races). gemma_queue.ps1 chains identities -> moments -> cam identities. Commit 5d75ccd.",
+  "commands": [
+    "Start-ScheduledTask -TaskPath",
+    "gh pr create x7",
+    "tubevision gemma-identities/gemma-moments",
+    "gemma_queue.ps1"
+  ],
+  "files": [
+    "vision/src/tubevision/mmlab.py",
+    "vision/src/tubevision/lab.html",
+    "vision/src/tubevision/gemma.py",
+    "vision/src/tubevision/store.py",
+    "G:\\TubeLab\\jobs\\gemma_queue.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "00bb9e22ca5174ae939cf7a2e60fd68f1631e7d9606c3256786e143162fadf94",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "5d75ccd",
+    "hasChanges": false
+  }
+}

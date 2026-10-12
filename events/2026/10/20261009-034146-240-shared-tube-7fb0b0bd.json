@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261009-034146-240-shared-tube-7fb0b0bd",
+    "createdAt":  "2026-10-09T07:41:46.2408653Z",
+    "createdAtLocal":  "2026-10-09 03:41",
+    "timezone":  "Eastern Standard Time",
+    "project":  "shared-tube",
+    "kind":  "handoff",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 03:41 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+    "summary":  "Handoff written: vision/HANDOFF.md (commit on feat/vision-lab). Running: OVH site-preview downloader (28k/90k, ~2.8/s) + PC puller; OVH spliced 7x1.5s preview backfill (gen_spliced.mts reusing shared-tube fetcher extractor/generator, nice 19, 2 jobs, ~13 days, rejects audio-only clips; found pornxp renditions that are audio-only and main\u0027s generator fallback saving audio-only files) + PC puller into G:\\TubeLab\\spliced. Pending PRs: vaultwares-api media route PC fallback, pruner keep generated, generator video check, bulk preview_url endpoint. EmbeddingGemma 2 (multimodal, D:\\HuggingFace\\embeddinggemma-2) exploration noted.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "7fb0b0bd04cf59ca7e41889cdde903d72a4aaa994a37f364476f9d669769fb86",
+    "git":  {
+                "repo":  "shared-tube",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+                "branch":  "feat/vision-lab",
+                "head":  "945f64e",
+                "hasChanges":  false
+            }
+}

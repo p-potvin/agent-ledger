@@ -1,0 +1,51 @@
+{
+  "id": "20261009-105819-093-shared-tube-windows-tasks-fb0ef5b4",
+  "createdAt": "2026-10-09T14:58:19.0938856Z",
+  "createdAtLocal": "2026-10-09 10:58",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube + Windows tasks",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 workstation (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 10:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Moved scheduled tasks into folders (export XML, re-register, unregister; running processes unaffected): \\tubevision\\ (Tube Lab, Publish Previews, + new logon tasks Tube Lab Pull Previews / Pull Spliced via conhost --headless), \\Prom-King QA\\ (8), \\HealthLedger\\ (6), \\VaultWares\\ (12 Vault* + existing Stash/CollectAiHistory). Run history reset by the move. Re-prioritised embedding per operator: stash-sync (4,134 library), gemma-embed library first then newest 5000 tube (--all for the rest); SigLIP library already 4,126/4,134; siglip wrapper does newest 5000 tube after puller. Wrappers use cmd redirection so logs stay readable. Commit f4b1fa7.",
+  "commands": [
+    "Export/Register/Unregister-ScheduledTask",
+    "tubevision stash-sync",
+    "gemma_embed.ps1",
+    "siglip_after_pull.ps1"
+  ],
+  "files": [
+    "vision/src/tubevision/gemma.py",
+    "G:\\TubeLab\\jobs\\gemma_embed.ps1",
+    "G:\\TubeLab\\jobs\\siglip_after_pull.ps1",
+    "vision/HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "fb0ef5b406909fa0c37903b362a033392f7692ba272f4d8b5e336d32f80bcf38",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "f4b1fa7",
+    "hasChanges": false
+  }
+}

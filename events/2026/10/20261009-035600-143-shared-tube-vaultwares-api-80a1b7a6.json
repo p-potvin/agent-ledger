@@ -1,0 +1,50 @@
+{
+  "id": "20261009-035600-143-shared-tube-vaultwares-api-80a1b7a6",
+  "createdAt": "2026-10-09T07:56:00.1435191Z",
+  "createdAtLocal": "2026-10-09 03:56",
+  "timezone": "Eastern Standard Time",
+  "project": "shared-tube + vaultwares-api",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 workstation (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 03:56 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Spliced previews on tube sites, external side. shared-tube PR #5 (fix/keep-generated-previews, v0.3.56): pruner never deletes generated:true clips; fetcher/backfill mark clips generated + fallbackUrl; generateAudioPreviewClip rejects output without video stream. vaultwares-api PR #91 (feat/promking-remote-previews, v0.1.37): first commit = media WIP live on OVH since 5 Oct but uncommitted (byte-identical to prod); /media/cache/<hash> streams from lab over tailnet, 30s cooldown, 302 to original preview (data/media-remote.sqlite), POST /videos/batch/remote-previews + /revert; 79/79 promking tests. Lab (feat/vision-lab): GET /cache/<hash> verified from OVH, lab restarted; tubevision publish-previews (dry run default, not sent).",
+  "commands": [
+    "gh pr create (x2)",
+    "pytest -k promking",
+    "vitest run src/media-cache"
+  ],
+  "files": [
+    "shared/src/media-cache/pruner.ts",
+    "app/routers/promking/media/remote.py",
+    "vision/src/tubevision/publish.py"
+  ],
+  "planPath": "",
+  "contentHash": "80a1b7a645b5573397c91d7053bd05d0436d0341bb7b5b1c03089af37d5d0b46",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "ebcfd91",
+    "hasChanges": false
+  }
+}

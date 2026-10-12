@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261010-101121-227-python-zipper-cb86db11",
+    "createdAt":  "2026-10-10T14:11:21.2279388Z",
+    "createdAtLocal":  "2026-10-10 10:11",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-zipper",
+    "kind":  "code-change",
+    "actor":  "Register-ScheduledTask \\VaultWares\\Skyvern-Browser",
+    "agentHeader":  "Agent: Register-ScheduledTask \\VaultWares\\Skyvern-Browser (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: gemma_runner --cdp http://127.0.0.1:9222\r\nMode: skyvern_adapter/start_gemma_llama.ps1\r\nPermissions: skyvern_adapter/start_skyvern_browser.ps1 (network: skyvern_adapter/gemma_runner.py)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-10 10:11 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude Haiku 5.5 Medium",
+                    "thinking":  "gemma_runner --cdp http://127.0.0.1:9222",
+                    "mode":  "skyvern_adapter/start_gemma_llama.ps1",
+                    "permissions":  "skyvern_adapter/start_skyvern_browser.ps1",
+                    "network":  "skyvern_adapter/gemma_runner.py",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+    "summary":  "Moved Skyvern to the latest release: frontend clone to v1.0.55 (allowedHosts re-added, VITE_ENVIRONMENT=local, VITE_ENABLE_2FA_NOTIFICATIONS=false because the UI\u0027s notifications socket has no backend route in 1.0.55). Backend in a dedicated uv venv (~/.skyvern-server/venv) with skyvern[server,local]==1.0.55 + patchright, litellm, structlog. Skyvern-API and Gemma-llama launchers use the venv python. Added Skyvern-Browser task: Chrome with DevTools on 127.0.0.1:9222 (loopback only; skyvern browser serve binds 0.0.0.0). gemma_runner gained browser_address/--cdp. Verified a CDP-attached task end to end.",
+    "commands":  [
+                     "uv venv + uv pip install skyvern[server,local]==1.0.55"
+                 ],
+    "files":  [
+                  "skyvern_adapter/start_skyvern_api.ps1"
+              ],
+    "planPath":  "npm run build (skyvern-frontend v1.0.55)",
+    "contentHash":  "cb86db11008ac34c7fb5069f1e487ec1a54c42d0a0f52ca9302956674cfbfd93",
+    "git":  {
+                "repo":  "python-zipper",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+                "branch":  "main",
+                "head":  "2542eae",
+                "hasChanges":  true
+            }
+}

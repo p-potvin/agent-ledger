@@ -1,0 +1,47 @@
+{
+  "id": "20261009-060812-417-miniville-9c55d2ab",
+  "createdAt": "2026-10-09T10:08:12.4176754Z",
+  "createdAtLocal": "2026-10-09 06:08",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "verification",
+  "actor": "workstation",
+  "agentHeader": "Agent: workstation (role: main)\r\nModel: SWE-2 Max\r\nThinking: high\r\nMode: agent\r\nPermissions: unknown (network: local Windows workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 06:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "local Windows workstation",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: traced the live ledger's 17 stray future-dated rows to their cause and added a guard. The agent-ledger entry for the v0.11 politics session (20261005-065506-349-miniville-28d3fcfc, 2026-10-05 06:55, head 41c9ce1) lists scripts/_motion_sweep.py among its commands; that probe opened data/miniville.db directly and swept 24 months of future motions into it. Effects: (1) 17 motion events (ids 70802-70818) and 17 motions rows (ids 11-27) dated ticks 22080-50880 (days 460-1060) while the clock is at tick 19680 (day 410); (2) the probe also set the policy levers via set_meta, so the live world runs on levy_rate 0.03 and rent_multiplier 1.00, while the town's own surviving motions imply levy 0.05 (day-370 raise rejected) and rent 1.10 (days 220/250 raises carried, 310/390 rejected); dividend 0.20 is explained by the real day-360 motion. Added: cli status prints a 'ledger/clock mismatch' warning when any event is dated after the clock (tests/test_cli.py, 2 new tests), and scripts/_motion_sweep.py now snapshots the live DB and runs on the copy. 207 tests. Documented root cause and the two cleanup options in STATE.md; deletion of live rows deferred pending operator approval (destructive). Pushed 3c3c781.",
+  "commands": [
+    "python -m pytest -q",
+    "python -m miniville.cli status",
+    "git push origin autodev"
+  ],
+  "files": [
+    "src/miniville/cli.py",
+    "tests/test_cli.py",
+    "scripts/_motion_sweep.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "9c55d2abc3c5a70e8d398acffcfc112f5a48d6bc408ac673791fd439f2dde2d3",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "3c3c781",
+    "hasChanges": false
+  }
+}

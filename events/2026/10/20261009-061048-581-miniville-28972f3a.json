@@ -1,0 +1,49 @@
+{
+  "id": "20261009-061048-581-miniville-28972f3a",
+  "createdAt": "2026-10-09T10:10:48.5815463Z",
+  "createdAtLocal": "2026-10-09 06:10",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "workstation",
+  "agentHeader": "Agent: workstation (role: main)\r\nModel: SWE-2 Max\r\nThinking: high\r\nMode: agent\r\nPermissions: unknown (network: local Windows workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 06:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "local Windows workstation",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: repaired the live-world contamination from the 2026-10-05 probe, with operator approval. Backed up data/miniville.db to backups/miniville-t019680-pre-repair.db (WAL-safe snapshot), deleted the 17 stray future-dated events (ids 70802-70818) and 17 stray motions (ids 11-27), and reset the two probe-touched levers to what the town's own surviving motions imply: levy_rate 0.05, rent_multiplier 1.10 (dividend_share 0.20 was already legitimate). No newspaper_claims referenced the deleted events. Verified: 0 future-dated rows, cli status quiet, max event tick 19676 <= clock. Ran the world Days 411-419 after the repair; the +10% rent was absorbed cleanly (weekly rent-day distress fell from 18-19 households at rent 1.00 to 11-15 at rent 1.10, one downsize, 628 content). 207 tests pass. Live world now at Day 419, tick 20112. Committed/pushed db78bb8.",
+  "commands": [
+    "python -m pytest -q",
+    "python -m miniville.cli run --ticks 192",
+    "python -m miniville.cli run --ticks 240",
+    "python -m miniville.cli status",
+    "git push origin autodev"
+  ],
+  "files": [
+    "docs/STATE.md",
+    "docs/AGENT_SYNC.md",
+    "data/miniville.db",
+    "backups/miniville-t019680-pre-repair.db"
+  ],
+  "planPath": "",
+  "contentHash": "28972f3abd1e218e2cf1db2e7fb7805ef2ce2d09106f5e517ebbbc7958886fed",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "db78bb8",
+    "hasChanges": false
+  }
+}

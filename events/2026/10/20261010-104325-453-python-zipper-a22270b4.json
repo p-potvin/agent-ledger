@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261010-104325-453-python-zipper-a22270b4",
+    "createdAt":  "2026-10-10T14:43:25.4531623Z",
+    "createdAtLocal":  "2026-10-10 10:43",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-zipper",
+    "kind":  "code-change",
+    "actor":  "Register-ScheduledTask Skyvern-API/Skyvern-UI (description)",
+    "agentHeader":  "Agent: Register-ScheduledTask Skyvern-API/Skyvern-UI (description) (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: skyvern_adapter/start_skyvern_api.ps1\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-10 10:43 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude Haiku 5.5 Medium",
+                    "thinking":  "skyvern_adapter/start_skyvern_api.ps1",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+    "summary":  "Skyvern UI now served by the official localServer.js on 127.0.0.1:8795 (session token minted server-side, org key kept out of the bundle; port/host from env, open() removed). Build uses loopback API URL. Removed skyvern.vaultwares.ca from greencloud: nginx vhost and symlink, dnsmasq local/host-record (backup kept at vaultwares-tailnet.conf.bak.20261010-0806), certbot cert deleted, and my backup and moved files removed. Verified: /ui-session 200, /api/v1/tasks with session token 200, diagnostics 200 from loopback. Remaining: Tailscale console ports 8792/8795 can be removed (manual); ledger history still mentions the hostname.",
+    "commands":  [
+                     "ssh root@100.73.93.84: nginx/dnsmasq cleanup, certbot delete --cert-name skyvern.vaultwares.ca"
+                 ],
+    "files":  [
+                  "skyvern_adapter/start_skyvern_ui.ps1"
+              ],
+    "planPath":  "npm run build (skyvern-frontend)",
+    "contentHash":  "a22270b4ec2e0cc97126dfafab9d9e5b097ad4aa95a564f7f490cc6157edd9b7",
+    "git":  {
+                "repo":  "python-zipper",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+                "branch":  "main",
+                "head":  "2542eae",
+                "hasChanges":  true
+            }
+}

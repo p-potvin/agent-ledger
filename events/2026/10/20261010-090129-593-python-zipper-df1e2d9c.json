@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261010-090129-593-python-zipper-df1e2d9c",
+    "createdAt":  "2026-10-10T13:01:29.5934861Z",
+    "createdAtLocal":  "2026-10-10 09:01",
+    "timezone":  "Eastern Standard Time",
+    "project":  "python-zipper",
+    "kind":  "code-change",
+    "actor":  "curl https://skyvern.vaultwares.ca/",
+    "agentHeader":  "Agent: curl https://skyvern.vaultwares.ca/ (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-10 09:01 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude Haiku 5.5 Medium",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
+    "summary":  "Registered \\VaultWares\\Skyvern-UI (logon, restart x3, start_skyvern_ui.ps1) on 100.71.101.21:8795; stopped the manual preview. Verified 8795 reachable from greencloud (200) and https://skyvern.vaultwares.ca/ returns 200. Reviewed artifactServer.js against the UI code: file:// URIs only, so the artifact server is not needed for the tailnet and is not exposed. Artifact patch not applied. UI sends x-api-key from VITE_SKYVERN_API_KEY or a session-stored key.",
+    "commands":  [
+                     "Register-ScheduledTask \\VaultWares\\Skyvern-UI"
+                 ],
+    "files":  [
+                  "skyvern_adapter/start_skyvern_ui.ps1"
+              ],
+    "planPath":  "Start-ScheduledTask \\VaultWares\\Skyvern-UI",
+    "contentHash":  "df1e2d9c791a0d8614a68719a024a758893314437a4558d908ad5f03dc9d8b3e",
+    "git":  {
+                "repo":  "python-zipper",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/python-zipper",
+                "branch":  "main",
+                "head":  "2542eae",
+                "hasChanges":  true
+            }
+}

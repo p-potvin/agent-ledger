@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261010-184118-695-vault-cacophony-371cbf0a",
+    "createdAt":  "2026-10-10T22:41:18.6955353Z",
+    "createdAtLocal":  "2026-10-10 18:41",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-cacophony",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Claude 3.7 Sonnet\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-10 18:41 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Claude 3.7 Sonnet",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-cacophony",
+    "summary":  "Tuned speaker cadences (WSOLA 1.22x for Kai), calibrated openai/gpt-oss-20b:deepinfra brain, and generated verified 5-minute multi-speaker conversation simulation with room-wide 0.10-0.20s barge-in overlaps",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "371cbf0aca35145f3d597f9c67790a3bbfec5c917cf63743aee35a19de1571f5",
+    "git":  {
+                "repo":  "vault-cacophony",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-cacophony",
+                "branch":  "main",
+                "head":  "229d9de",
+                "hasChanges":  true
+            }
+}

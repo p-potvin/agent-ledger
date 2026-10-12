@@ -1,0 +1,38 @@
+{
+  "id": "20261009-071112-301-panopticam-6ffe6361",
+  "createdAt": "2026-10-09T11:11:12.3017064Z",
+  "createdAtLocal": "2026-10-09 07:11",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam\\vision\\experiments  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-09 07:11 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam\\vision\\experiments",
+  "summary": "Fri 09 Oct 2026: merges as background jobs (202 + polling, VPS side always applied); PANOPTICAM_GPU pins GPU helpers to the RTX 2060 (vision.env set); renamed 00000->infiniti, 111111->meganstar01; reboot readiness checked (autologon + logon task). EmbeddingGemma 2 quantization: bitsandbytes int8/nf4 cut weights but not peak VRAM and break the audio tower (cos 0.83/0.71); keep bf16 (2 GB peak), per-batch on the 2060. v0.48.2.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "6ffe6361244f62775456c585f24c49349bf623641258210f22903407f07c8585",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "b55ac2f",
+    "hasChanges": false
+  }
+}
