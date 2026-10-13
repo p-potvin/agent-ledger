@@ -3,7 +3,397 @@
 Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scripts/record-agent-change.ps1`.
 
 <details>
-<summary><strong>2026-10-11 19:27 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>code-change</code> - Fix shared-tube catalog issues: NotFans performer parser and &#39;ts&#39; filter, undesirable terms state &amp; detachment, studio FapHouse cleanup, multi-video merge &amp; search bar, video de...</summary>
+<summary><strong>2026-10-12 17:07 - vision-lab</strong> <code>code-change</code> - Split tubevision lab out of shared-tube feat/vision-lab into new private repo Prom-King/vision-lab (git subtree split, 29 commits kept), new venv, repointed \tubevision\Tube Lab...</summary>
+
+- Kind: code-change
+- Actor: Claude Code
+- Agent Header:
+  ```text
+  Agent: Claude Code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/vision-lab
+  Tools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 17:07 (TZ: Eastern Standard Time)
+  ```
+- Summary: Split tubevision lab out of shared-tube feat/vision-lab into new private repo Prom-King/vision-lab (git subtree split, 29 commits kept), new venv, repointed \tubevision\Tube Lab task + G:\TubeLab\jobs ps1 scripts. Lab had been down since Sun 11 Oct 18:52 (shared-tube checkout moved to main). Lab back up, publisher catch-up 5,285 switched / 0 errors, Gemma queue resumed (moments + cam identities), gemma-moments now retries on 'database is locked' (write_locked). Started SigLIP embed for 85k tube clips then probes retrain (old probes backed up to probes_bak_20261012). Docs: CLAUDE.md/AGENTS.md, HANDOFF, Prom-King docs project page + ROUTER row (local commit, not pushed).
+- Commands:
+  - `git subtree split --prefix=vision`
+  - `gh repo create Prom-King/vision-lab --private --push`
+  - `uv sync --python 3.12`
+  - `Set-ScheduledTask \tubevision\Tube Lab`
+  - `G:\TubeLab\jobs\siglip_all_then_probes.ps1`
+- Files:
+  - `vision-lab/CLAUDE.md`
+  - `vision-lab/HANDOFF.md`
+  - `vision-lab/src/tubevision/gemma.py`
+  - `G:\TubeLab\jobs\siglip_all_then_probes.ps1`
+  - `docs/docs-content/projects/vision-lab.md`
+- Git: repo=shared-tube, branch=feat/vision-lab, head=233b45e
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 17:01 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>code-change</code> - Implement 7-month interactive evolution timeline and minute-spool time machine with agent contract matrix</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 17:01 (TZ: Eastern Standard Time)
+  ```
+- Summary: Implement 7-month interactive evolution timeline and minute-spool time machine with agent contract matrix
+- Git: repo=vault-monitor, branch=main, head=444a83a
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 16:58 - vault-monitor</strong> <code>code-change</code> - Review &amp; fix time-machine.html minute scrubbing, month jumps, budget categories, project event volume realism, and live test timeout</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: subagent)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 16:58 (TZ: Eastern Standard Time)
+  ```
+- Summary: Review & fix time-machine.html minute scrubbing, month jumps, budget categories, project event volume realism, and live test timeout
+- Git: repo=vault-monitor, branch=main, head=444a83a
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 16:44 - vault-monitor</strong> <code>code-change</code> - Created interactive Evolution Time Machine page and standalone time-machine.html with 216-day scrub, minute spool inspector, and human-agent contract matrix</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: subagent)
+  Model: Claude 3.7 Sonnet
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-monitor  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 16:44 (TZ: Eastern Standard Time)
+  ```
+- Summary: Created interactive Evolution Time Machine page and standalone time-machine.html with 216-day scrub, minute spool inspector, and human-agent contract matrix
+- Git: repo=vault-monitor, branch=main, head=444a83a
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 14:55 - panopticam</strong> <code>code-change</code> - Operator round 12 Oct: ssh.exe in Task Manager = Panopticam recordings reverse tunnel (9096-&gt;8766), no Comet/Prowlarr. F4F in-app playback on by default again (v0.52.1); zipper ...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Write, AskUserQuestion
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 14:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: Operator round 12 Oct: ssh.exe in Task Manager = Panopticam recordings reverse tunnel (9096->8766), no Comet/Prowlarr. F4F in-app playback on by default again (v0.52.1); zipper probe hypothesis rejected by operator, cause still open. Moments: keys 4/3/2/1 + 0 bad sound (rating -3), Low-res removed, capture-phase keys, smaller overlay. Matches: cached face matrix (4-8 s -> 0.6 s), plausibility filters, instant votes (v0.52.2). Rooms in hash ?room= + middle/ctrl-click new tab (v0.52.3). Deleted onlyfans.py.bak.
+- Commands:
+  - `git push origin main`
+- Files:
+  - `backend/src/panopticam/vision.py`
+  - `web/src/state.ts`
+  - `web/src/components/Moments.tsx`
+  - `web/src/components/RoomPanel.tsx`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=07989cf
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 13:42 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>commands</code> - Diagnosed OVH Cloud API outage caused by zombie supervisor state after worker termination, restarted vaultwares-api.service, verified port 9001 healthz, database queries, and al...</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/catalog-fixes-and-undesirable-state
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 13:42 (TZ: Eastern Standard Time)
+  ```
+- Summary: Diagnosed OVH Cloud API outage caused by zombie supervisor state after worker termination, restarted vaultwares-api.service, verified port 9001 healthz, database queries, and all greencloud tube sites
+- Git: repo=shared-tube, branch=feat/catalog-fixes-and-undesirable-state, head=2a05981
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 13:04 - panopticam</strong> <code>code-change</code> - Panopticam v0.52.0 live taste: measured that the operator&#39;s Moments ratings transfer to the tower&#39;s live short-clip features (SigLIP+CLAP+motion+loudness; rooms-held-out AUC 0.7...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Write, Read
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 13:04 (TZ: Eastern Standard Time)
+  ```
+- Summary: Panopticam v0.52.0 live taste: measured that the operator's Moments ratings transfer to the tower's live short-clip features (SigLIP+CLAP+motion+loudness; rooms-held-out AUC 0.77 per clip, 0.82 per minute). PC vision/live_taste.py cuts rated minutes into 3 live-like windows, fits a logistic head hourly (inside moments_embed loop), posts to /api/vision/taste. Server taste.py scores rooms' last 3 clips; Director taste part (top 10% by rank), Moments counts it toward event (never alone), Browse sort 'Your kind, now' + card badge. Deployed (push to main), head sent (501 windows), vision worker restarted. STATE.md updated.
+- Commands:
+  - `python vision/live_taste.py --send --once`
+  - `python deploy/bump.py minor`
+  - `git push origin main`
+- Files:
+  - `backend/src/panopticam/taste.py`
+  - `vision/live_taste.py`
+  - `backend/src/panopticam/director.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=41162d2
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 10:48 - shared-tube</strong> <code>commands</code> - Truncated bloated Docker container logs on OVH Cloud freeing 8.3GB, configured /etc/docker/daemon.json log rotation, and restored flaresolverr and comet-postgres to healthy states</summary>
+
+- Kind: commands
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/catalog-fixes-and-undesirable-state
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 10:48 (TZ: Eastern Standard Time)
+  ```
+- Summary: Truncated bloated Docker container logs on OVH Cloud freeing 8.3GB, configured /etc/docker/daemon.json log rotation, and restored flaresolverr and comet-postgres to healthy states
+- Git: repo=shared-tube, branch=feat/catalog-fixes-and-undesirable-state, head=2a05981
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 08:45 - shared-tube</strong> <code>verification</code> - Added unit tests verifying peak concurrency bounding (peak=2) and single-threaded ffmpeg execution across vaultwares-api and shared-tube</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/catalog-fixes-and-undesirable-state
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 08:45 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added unit tests verifying peak concurrency bounding (peak=2) and single-threaded ffmpeg execution across vaultwares-api and shared-tube
+- Git: repo=shared-tube, branch=feat/catalog-fixes-and-undesirable-state, head=2a05981
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 08:43 - shared-tube</strong> <code>code-change</code> - Fixed fetcher preview transcoding concurrency to 2 processes with 1 thread each and diagnosed OVH storage exhaustion root causes</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/catalog-fixes-and-undesirable-state
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 08:43 (TZ: Eastern Standard Time)
+  ```
+- Summary: Fixed fetcher preview transcoding concurrency to 2 processes with 1 thread each and diagnosed OVH storage exhaustion root causes
+- Git: repo=shared-tube, branch=feat/catalog-fixes-and-undesirable-state, head=2a05981
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 08:41 - panopticam</strong> <code>code-change</code> - Scheduled loop session (Mon, 12 Oct 2026). Found ~110 new Moments ratings (11-12 Oct). Built a taste probe on the PC (moments_embed.refit_taste: EmbeddingGemma 2 picture+sound +...</summary>
+
+- Kind: code-change
+- Actor: claude-code
+- Agent Header:
+  ```text
+  Agent: claude-code (role: main)
+  Model: claude-opus-5-5
+  Thinking: low
+  Mode: agent
+  Permissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\panopticam  Branch: main
+  Tools used (this reply): Bash, PowerShell, Write
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 08:41 (TZ: Eastern Standard Time)
+  ```
+- Summary: Scheduled loop session (Mon, 12 Oct 2026). Found ~110 new Moments ratings (11-12 Oct). Built a taste probe on the PC (moments_embed.refit_taste: EmbeddingGemma 2 picture+sound + life features, logistic, rooms-held-out AUC 0.835 vs 0.71-0.76 for the life model); its score replaces each minute's life (badge, Liveliest order, reel pick) via the existing /life route. Committed the found 10 Oct OnlyFans pacing edits + faulthandler.enable. Tests added (12 pass). v0.51.0 pushed/deployed, vision worker restarted. STATE.md entry + operator to-do 8 updated.
+- Commands:
+  - `git push origin main`
+  - `vision/Restart-VisionWorker.ps1`
+- Files:
+  - `vision/moments_embed.py`
+  - `vision/moments_pull.py`
+  - `vision/worker.py`
+  - `vision/onlyfans.py`
+  - `docs/STATE.md`
+- Git: repo=panopticam, branch=main, head=4df9bf8
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 08:25 - shared-tube</strong> <code>verification</code> - Located interrupted conversation 5a87d9a7-d810-4a60-aebd-cd317f1a459b regarding fetcher ffmpeg concurrency and mounted storage</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.8 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/catalog-fixes-and-undesirable-state
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 08:25 (TZ: Eastern Standard Time)
+  ```
+- Summary: Located interrupted conversation 5a87d9a7-d810-4a60-aebd-cd317f1a459b regarding fetcher ffmpeg concurrency and mounted storage
+- Git: repo=shared-tube, branch=feat/catalog-fixes-and-undesirable-state, head=2a05981
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 05:55 - vault-cacophony</strong> <code>general</code> - Provided audio.cpp voice cloning commands and model installation instructions for Qwen3-TTS, PocketTTS, and Chatterbox</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.7 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 05:55 (TZ: Eastern Standard Time)
+  ```
+- Summary: Provided audio.cpp voice cloning commands and model installation instructions for Qwen3-TTS, PocketTTS, and Chatterbox
+- Git: repo=vault-cacophony, branch=main, head=229d9de
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 05:51 - vault-cacophony</strong> <code>general</code> - Provided audio.cpp commands for voice state extraction and vocal source separation from .wav</summary>
+
+- Kind: general
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 3.7 Flash
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Github Repos\vault-cacophony  Branch: main
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 05:51 (TZ: Eastern Standard Time)
+  ```
+- Summary: Provided audio.cpp commands for voice state extraction and vocal source separation from .wav
+- Git: repo=vault-cacophony, branch=main, head=229d9de
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 00:29 - shared-tube</strong> <code>verification</code> - Added and verified automated test coverage for PR review fixes</summary>
+
+- Kind: verification
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/catalog-fixes-and-undesirable-state
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 00:29 (TZ: Eastern Standard Time)
+  ```
+- Summary: Added and verified automated test coverage for PR review fixes
+- Git: repo=shared-tube, branch=feat/catalog-fixes-and-undesirable-state, head=2a05981
+
+</details>
+
+<details>
+<summary><strong>2026-10-12 00:27 - shared-tube</strong> <code>code-change</code> - Addressed review comments across shared-tube PR #6 and vaultwares-api PR #93</summary>
+
+- Kind: code-change
+- Actor: AI Agent
+- Agent Header:
+  ```text
+  Agent: AI Agent (role: main)
+  Model: Gemini 2.5 Pro
+  Thinking: unknown
+  Mode: unknown
+  Permissions: unknown (network: unknown)
+  CWD: C:\Users\Administrator\Desktop\Prom-King\shared-tube  Branch: feat/catalog-fixes-and-undesirable-state
+  Tools used (this reply): none
+  MCP servers accessed (this reply): none
+  Time: 2026-10-12 00:27 (TZ: Eastern Standard Time)
+  ```
+- Summary: Addressed review comments across shared-tube PR #6 and vaultwares-api PR #93
+- Git: repo=shared-tube, branch=feat/catalog-fixes-and-undesirable-state, head=2a05981
+
+</details>
+
+<details>
+<summary><strong>2026-10-11 19:27 - shared-tube</strong> <code>code-change</code> - Fix shared-tube catalog issues: NotFans performer parser and &#39;ts&#39; filter, undesirable terms state &amp; detachment, studio FapHouse cleanup, multi-video merge &amp; search bar, video de...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -3695,7 +4085,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-10-06 03:34 - vault-monitor (formerly vault-monitor vaultwares-pipelines)</strong> <code>code-change</code> - Extracted all 21 Windsurf Cascade clear-text transcripts &amp; metadata, upgraded Devin to full chat_message parser, mirrored and drained 930 sessions to live telemetry</summary>
+<summary><strong>2026-10-06 03:34 - vault-monitor</strong> <code>code-change</code> - Extracted all 21 Windsurf Cascade clear-text transcripts &amp; metadata, upgraded Devin to full chat_message parser, mirrored and drained 930 sessions to live telemetry</summary>
 
 - Kind: code-change
 - Actor: AI Agent

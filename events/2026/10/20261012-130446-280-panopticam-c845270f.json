@@ -1,0 +1,52 @@
+{
+  "id": "20261012-130446-280-panopticam-c845270f",
+  "createdAt": "2026-10-12T17:04:46.2804556Z",
+  "createdAtLocal": "2026-10-12 13:04",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-12 13:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.52.0 live taste: measured that the operator's Moments ratings transfer to the tower's live short-clip features (SigLIP+CLAP+motion+loudness; rooms-held-out AUC 0.77 per clip, 0.82 per minute). PC vision/live_taste.py cuts rated minutes into 3 live-like windows, fits a logistic head hourly (inside moments_embed loop), posts to /api/vision/taste. Server taste.py scores rooms' last 3 clips; Director taste part (top 10% by rank), Moments counts it toward event (never alone), Browse sort 'Your kind, now' + card badge. Deployed (push to main), head sent (501 windows), vision worker restarted. STATE.md updated.",
+  "commands": [
+    "python vision/live_taste.py --send --once",
+    "python deploy/bump.py minor",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/taste.py",
+    "vision/live_taste.py",
+    "backend/src/panopticam/director.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "c845270fc84feb1e465ab5a36db64d683f94346547751e46d1fae0c96913bbe5",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "41162d2",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20261012-145556-611-panopticam-ddb458e1",
+  "createdAt": "2026-10-12T18:55:56.6112510Z",
+  "createdAtLocal": "2026-10-12 14:55",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-12 14:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Operator round 12 Oct: ssh.exe in Task Manager = Panopticam recordings reverse tunnel (9096->8766), no Comet/Prowlarr. F4F in-app playback on by default again (v0.52.1); zipper probe hypothesis rejected by operator, cause still open. Moments: keys 4/3/2/1 + 0 bad sound (rating -3), Low-res removed, capture-phase keys, smaller overlay. Matches: cached face matrix (4-8 s -> 0.6 s), plausibility filters, instant votes (v0.52.2). Rooms in hash ?room= + middle/ctrl-click new tab (v0.52.3). Deleted onlyfans.py.bak.",
+  "commands": [
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/vision.py",
+    "web/src/state.ts",
+    "web/src/components/Moments.tsx",
+    "web/src/components/RoomPanel.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "ddb458e1264a88e359a1264c185d2e8de87fe6c7cf22ed441f25ed2fd5a8fd3e",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "07989cf",
+    "hasChanges": false
+  }
+}

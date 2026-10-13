@@ -1,0 +1,56 @@
+{
+  "id": "20261012-170723-897-vision-lab-9acde6f6",
+  "createdAt": "2026-10-12T21:07:23.8977337Z",
+  "createdAtLocal": "2026-10-12 17:07",
+  "timezone": "Eastern Standard Time",
+  "project": "vision-lab",
+  "kind": "code-change",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-12 17:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Split tubevision lab out of shared-tube feat/vision-lab into new private repo Prom-King/vision-lab (git subtree split, 29 commits kept), new venv, repointed \\tubevision\\Tube Lab task + G:\\TubeLab\\jobs ps1 scripts. Lab had been down since Sun 11 Oct 18:52 (shared-tube checkout moved to main). Lab back up, publisher catch-up 5,285 switched / 0 errors, Gemma queue resumed (moments + cam identities), gemma-moments now retries on 'database is locked' (write_locked). Started SigLIP embed for 85k tube clips then probes retrain (old probes backed up to probes_bak_20261012). Docs: CLAUDE.md/AGENTS.md, HANDOFF, Prom-King docs project page + ROUTER row (local commit, not pushed).",
+  "commands": [
+    "git subtree split --prefix=vision",
+    "gh repo create Prom-King/vision-lab --private --push",
+    "uv sync --python 3.12",
+    "Set-ScheduledTask \\tubevision\\Tube Lab",
+    "G:\\TubeLab\\jobs\\siglip_all_then_probes.ps1"
+  ],
+  "files": [
+    "vision-lab/CLAUDE.md",
+    "vision-lab/HANDOFF.md",
+    "vision-lab/src/tubevision/gemma.py",
+    "G:\\TubeLab\\jobs\\siglip_all_then_probes.ps1",
+    "docs/docs-content/projects/vision-lab.md"
+  ],
+  "planPath": "",
+  "contentHash": "9acde6f6276820152e99325b2b0fea96e7d675fc673914175ee3313ad0f21b5c",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "233b45e",
+    "hasChanges": false
+  }
+}

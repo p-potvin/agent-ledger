@@ -1,0 +1,51 @@
+{
+  "id": "20261012-084134-893-panopticam-2c5dd929",
+  "createdAt": "2026-10-12T12:41:34.8933289Z",
+  "createdAtLocal": "2026-10-12 08:41",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-12 08:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled loop session (Mon, 12 Oct 2026). Found ~110 new Moments ratings (11-12 Oct). Built a taste probe on the PC (moments_embed.refit_taste: EmbeddingGemma 2 picture+sound + life features, logistic, rooms-held-out AUC 0.835 vs 0.71-0.76 for the life model); its score replaces each minute's life (badge, Liveliest order, reel pick) via the existing /life route. Committed the found 10 Oct OnlyFans pacing edits + faulthandler.enable. Tests added (12 pass). v0.51.0 pushed/deployed, vision worker restarted. STATE.md entry + operator to-do 8 updated.",
+  "commands": [
+    "git push origin main",
+    "vision/Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "vision/moments_embed.py",
+    "vision/moments_pull.py",
+    "vision/worker.py",
+    "vision/onlyfans.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "2c5dd9295427249eab765b99f827ff959430157eaab4f9629bffd5a82a74e7f6",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "4df9bf8",
+    "hasChanges": true
+  }
+}
