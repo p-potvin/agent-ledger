@@ -1,0 +1,51 @@
+{
+  "id": "20261013-125836-344-panopticam-f242f0e7",
+  "createdAt": "2026-10-13T16:58:36.3445911Z",
+  "createdAtLocal": "2026-10-13 12:58",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-13 12:58 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled loop session Tue 13 Oct 2026: read memguard (PC commit steady ~40/57 GB). v0.53.0 Wall opens on 'Live' (top 8 live rooms, one big + seven small, click swaps without reload, staggered start, pager, Director/Your kind/Hot/Most viewers sources). v0.54.0-0.54.1 English as a level (fluent/some/none from Whisper tally + mean log-prob; Browse menu, card +en, room panel, Ask phrases, /api/rooms?english=). STATE.md updated with entries and a fresh operator to-do (A-D). Browser preview declined (unattended), verified by tsc/build/pytest and VPS API.",
+  "commands": [
+    "git push origin main",
+    "uv run pytest",
+    "npm run build"
+  ],
+  "files": [
+    "web/src/components/Wall.tsx",
+    "backend/src/panopticam/speech.py",
+    "backend/src/panopticam/app.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "f242f0e79835d4eed343540f68a8e2513c794703762976c6d28a3d64596b1ffe",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "e8d40b7",
+    "hasChanges": true
+  }
+}

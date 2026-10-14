@@ -1,0 +1,49 @@
+{
+  "id": "20261014-142006-095-panopticam-1b776a9e",
+  "createdAt": "2026-10-14T18:20:06.0953705Z",
+  "createdAtLocal": "2026-10-14 14:20",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-14 14:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Wed 14 Oct 2026 (v0.56.2): verified .dataset-archive arrivals: since the harvest fix 123 of 127 archives are new rooms. Found and fixed name2 duplicates (Atlas remembered dataset names per persona; regrouped rooms came back as name2): ArchiveRooms keeps room->first archive name, datasets.py reuses it when still a gallery identity and the face matches. Worker restarted; first catches logged (scarletskyee, soleyxo).",
+  "commands": [
+    "git push origin main",
+    "Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "vision/ingest.py",
+    "vision/datasets.py",
+    "vision/worker.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "1b776a9e144ac39735da8eb8074a1bfbbe3cf7c38716cca8caf5ae6b01b679d3",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "0448351",
+    "hasChanges": false
+  }
+}

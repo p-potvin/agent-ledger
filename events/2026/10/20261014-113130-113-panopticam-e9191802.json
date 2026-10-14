@@ -1,0 +1,53 @@
+{
+  "id": "20261014-113130-113-panopticam-e9191802",
+  "createdAt": "2026-10-14T15:31:30.1130301Z",
+  "createdAtLocal": "2026-10-14 11:31",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-14 11:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Operator round Wed 14 Oct 2026 (v0.54.2-0.55.1): .dataset-archive growth traced to harvest REVISIT_DAYS=14 re-harvesting every room (65.6k zips/147 GB, 66% of a day's names repeats); rooms with media now harvested once, PC ingest sets revisit archives aside (ArchiveRooms index of sidecars). Double-ingest after a 502 report fixed (unreported reports kept and resent). Identities merges batched in one gallery-lock hold, page non-blocking. All pages menu + shortcuts entry, card badge row fix, Whisper speech makes Talks, second language at 12%. Vision worker restarted twice.",
+  "commands": [
+    "git push origin main",
+    "Restart-VisionWorker.ps1",
+    "uv run pytest"
+  ],
+  "files": [
+    "backend/src/panopticam/harvest.py",
+    "vision/ingest.py",
+    "vision/merge.py",
+    "web/src/app.tsx",
+    "web/src/components/Merge.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "e919180262ebbdad73f5266434125365d5dd24b96a6fb473695ac66661b5e283",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "2f1db5a",
+    "hasChanges": false
+  }
+}

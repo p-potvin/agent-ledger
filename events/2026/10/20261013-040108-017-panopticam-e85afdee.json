@@ -1,0 +1,49 @@
+{
+  "id": "20261013-040108-017-panopticam-e85afdee",
+  "createdAt": "2026-10-13T08:01:08.0173428Z",
+  "createdAtLocal": "2026-10-13 04:01",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-13 04:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "13 Oct: F4F kicks traced (operator saw VPS IP 148.113.255.142 on their F4F account): net.Net shared one curl_cffi cookie jar across sites for the service lifetime while F4F resolves call login_room. Now per-site sessions + F4F cookies cleared after each request; restart flushed jars. Automatic recordings bounded (3 running, 12/day, 6 h per room, 30 min each). v0.52.4 deployed, 170 backend tests pass. Verified ?room= links live in the browser. Memory: PC UI testing OK.",
+  "commands": [
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/net.py",
+    "backend/src/panopticam/recorder.py",
+    "backend/tests/test_recorder_limits.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "e85afdee83dc89213a47ac946aa9274a5563186ea3e35cb5d92952217df95463",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "fac2c4c",
+    "hasChanges": false
+  }
+}

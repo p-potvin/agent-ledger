@@ -1,0 +1,50 @@
+{
+  "id": "20261013-062956-037-panopticam-1a391e6e",
+  "createdAt": "2026-10-13T10:29:56.0372448Z",
+  "createdAtLocal": "2026-10-13 06:29",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-13 06:29 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "13 Oct: vision/memguard.py (commit per Panopticam process logged every 15 min / on +2 GB, helpers recycled >6 GB, idle helpers stopped + Telegram above 85% system commit, embed server/worker restarted >12 GB) after the operator lost RDP to ~70-80 GB committed. Auto recordings: 10 min, 540p, 36/day, no per-room gap. v0.52.5 deployed, worker restarted, memguard live (system 29.2 of 57.6 GB).",
+  "commands": [
+    "git push origin main",
+    "vision/Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "vision/memguard.py",
+    "vision/worker.py",
+    "backend/src/panopticam/recorder.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "1a391e6ea9f92167ea36d8a55ec39221cb05f968fdeb215105e78510b9f70a1a",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "822ea85",
+    "hasChanges": false
+  }
+}
