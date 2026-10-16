@@ -1,0 +1,53 @@
+{
+  "id": "20261015-073635-032-vault-explorer-552fd69c",
+  "createdAt": "2026-10-15T11:36:35.0329882Z",
+  "createdAtLocal": "2026-10-15 07:36",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: unknown\r\nMode: agent\r\nPermissions: autopilot (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-ai-subtitles-vw\r\nTools used (this reply): read, grep, edit, write, exec, todo_write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-15 07:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Haiku 5.5 Medium",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows local",
+    "toolsUsed": [
+      "read",
+      "grep",
+      "edit",
+      "write",
+      "exec",
+      "todo_write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Pushed AI subtitle commit 3949835 to vw-codex-ai-subtitles-vw. Committed and pushed f6f43b3: saveSettings retries EBUSY/EPERM/EACCES on Windows file locks and the Save button now reports failure instead of success; favorites with missing files are pruned from settings on fresh render and persisted (new filter-existing-paths IPC). Verified by reproducing the EBUSY lock against a copy of the settings file, and by tests/favorites_prune_test.js plus existing static tests. GUI not verified.",
+  "commands": [],
+  "files": [
+    "main.js",
+    "preload.js",
+    "src/scanner.js",
+    "js/favorites.js",
+    "js/settings/core.js",
+    "js/app.js",
+    "tests/favorites_prune_test.js"
+  ],
+  "planPath": "",
+  "contentHash": "552fd69c6b6d4de656e2d0effbcab23c4cbdf5ca22ddf9d52194094ca0d8adf9",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-ai-subtitles-vw",
+    "head": "f6f43b3",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "20261014-153754-558-panopticam-71ee7219",
+  "createdAt": "2026-10-14T19:37:54.5581087Z",
+  "createdAtLocal": "2026-10-14 15:37",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-14 15:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Wed 14 Oct 2026 (v0.57.0-0.57.4): batch merge endpoint + review list; merges sped up (gallery re-read once per run, under the gallery lock; fixed a batch hang); 706 identities merged (name+digits and face>=0.60), 5 stale failures. .dataset-archive trim: archives hashed vs VPS harvest_media; 3,859 zips / 47.2 GB moved to F:\\amd\\gallery\\.dataset-archive-trim (sidecars kept). Documented free-media video use and the OnlyFans crawler (onlyfans.py daily task) vs cam free media.",
+  "commands": [
+    "POST /api/merges/batch",
+    "Restart-VisionWorker.ps1",
+    "trim/plan.py --move"
+  ],
+  "files": [
+    "vision/merge.py",
+    "vision/recordings.py",
+    "vision/worker.py",
+    "backend/src/panopticam/app.py",
+    "web/src/components/Merge.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "71ee72196e73f18760ba323f26d3bec1639682ce53369fcc1de9975e40cfc73b",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "8e6dec4",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "20261015-083049-464-vault-explorer-3206805b",
+  "createdAt": "2026-10-15T12:30:49.4646161Z",
+  "createdAtLocal": "2026-10-15 08:30",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: unknown\r\nMode: agent\r\nPermissions: autopilot (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-startup-folder\r\nTools used (this reply): read, grep, edit, exec, write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-15 08:30 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Haiku 5.5 Medium",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows local",
+    "toolsUsed": [
+      "read",
+      "grep",
+      "edit",
+      "exec",
+      "write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "PR #60 (vw-codex-startup-folder): app no longer opens the repo on launch. npm start's '.' placeholder is ignored by the launch-intent parser, and on first Files load the defaultFolder setting takes precedence over lastPath. Added tests/startup_folder_test.js. Static checks pass; GUI not verified. Not merged.",
+  "commands": [],
+  "files": [
+    "main.js",
+    "js/navigation/tabs.js",
+    "tests/startup_folder_test.js"
+  ],
+  "planPath": "",
+  "contentHash": "3206805b6d258c400c8ef7f18eb3d99ee8c952551719ad5ba1b502cf0a0519e0",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-startup-folder",
+    "head": "f25a0c1",
+    "hasChanges": false
+  }
+}

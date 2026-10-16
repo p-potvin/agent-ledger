@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261015-023002-584-vaultwares-decompile-e3b2462f",
+    "createdAt":  "2026-10-15T06:30:02.5843528Z",
+    "createdAtLocal":  "2026-10-15 02:30",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-decompile",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 4 Argon Medium\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile  Branch: agent/decompile-submodule-main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-15 02:30 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 4 Argon Medium",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile",
+    "summary":  "Built Rust vw-decompile v0.2.0 workspace (decompile-core + decompile-cli + vaultsqware Studio server) with CDP (:9222), EmbeddingGemma2 (:8791), and Gemma 4 E2B (:8794); ran blind ground-truth extraction against panopticam.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "e3b2462f2c670b507618a2171f2584b5baa2a9140d0a745deb7009706fe2918f",
+    "git":  {
+                "repo":  "vaultwares-decompile",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-decompile",
+                "branch":  "agent/decompile-submodule-main",
+                "head":  "d491c2f",
+                "hasChanges":  true
+            }
+}

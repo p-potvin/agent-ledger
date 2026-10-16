@@ -1,0 +1,47 @@
+{
+  "id": "20261014-180747-972-general-tasks-599d940a",
+  "createdAt": "2026-10-14T22:07:47.9721457Z",
+  "createdAtLocal": "2026-10-14 18:07",
+  "timezone": "Eastern Standard Time",
+  "project": "General Tasks",
+  "kind": "commands",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): PowerShell, Bash, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-14 18:07 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "PowerShell",
+      "Bash",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "C: drive space: burst of ~0.9 GB/min writes with no process write counters (operator suspects Apple Music) stopped by itself; ffmpeg transcode writes to G:, not C:. Moved 7 profile folders (25.6 GB) to D:\\C-offload\\Users\\Administrator\\<same path> with directory junctions left at the original paths: Desktop\\myvids, Desktop\\Medias, .unsloth, .nuget, .cache\\huggingface, .cache\\crispasr, AppData\\Local\\NeMoSpeech. First staged on I: (USB HDD), then rehomed to D: per operator; copies verified by file count + bytes before removing originals. C: free 39.0 -> 63.0 GB. Not touched: AppData (operator rule), Desktop\\Executables (Stash service), .cache\\codex-runtimes, Temp (16 GB, 5.7 GB VS installer payload) pending operator.",
+  "commands": [
+    "robocopy /E /COPY:DAT /DCOPY:DAT /XJ",
+    "New-Item -ItemType Junction"
+  ],
+  "files": [
+    "D:\\C-offload\\Users\\Administrator"
+  ],
+  "planPath": "",
+  "contentHash": "599d940a62d09e9328987a2fbb5e81ccde7dfec3616486b150d34aac90fbc6a6",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "233b45e",
+    "hasChanges": false
+  }
+}

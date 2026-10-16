@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261015-014256-288-vaultwares-decompile-e13d6d28",
+    "createdAt":  "2026-10-15T05:42:56.2887512Z",
+    "createdAtLocal":  "2026-10-15 01:42",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vaultwares-decompile",
+    "kind":  "plan",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini 4 Argon Medium\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile  Branch: agent/decompile-submodule-main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-15 01:42 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini 4 Argon Medium",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile",
+    "summary":  "Refined vaultwares-decompile architecture plan: Rust/oxc + CDP (:9122 Patchright/Skyvern) + EmbeddingGemma2 (:8791) + Gemma4 E2B (:8794) + agent/HF synthesis into JSON + OpenAPI + Markdown blueprint.",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "e13d6d28790a003d20c42b9e8c2f1f5d8d3bb82c29cc1ff700da7d3050c7297b",
+    "git":  {
+                "repo":  "vaultwares-decompile",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vaultwares-decompile",
+                "branch":  "agent/decompile-submodule-main",
+                "head":  "d491c2f",
+                "hasChanges":  true
+            }
+}

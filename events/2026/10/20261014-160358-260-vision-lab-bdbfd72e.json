@@ -1,0 +1,53 @@
+{
+  "id": "20261014-160358-260-vision-lab-bdbfd72e",
+  "createdAt": "2026-10-14T20:03:58.2604508Z",
+  "createdAtLocal": "2026-10-14 16:03",
+  "timezone": "Eastern Standard Time",
+  "project": "vision-lab",
+  "kind": "code-change",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-14 16:03 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Panopticam overlap audit: no duplicated embedding (Panopticam EG2 = 917 cam moments; lab = tube site previews + spliced + library). Found 22,064 spliced previews never used by the lab (wrong hash lookup) - fixed (embed.spliced_clip/tube_clip), queued 19,528 for EG2 first. New identity-sync (crossref.py): follows Panopticam gallery merges (notes + aliases), digit-name rule gated by face score >=0.45 (16 pairs all <0.45, left apart), dropped 1,483 stale EG2 identity looks, confirmed 85 clusters (locked identities + Panopticam verified rule 0.50/0.06), confirmed badge on People. Backups *_bak_20261014. Running gemma_spliced.ps1 (cam identities 1,634, then 19.5k spliced). Spliced generator not restarted per operator.",
+  "commands": [
+    "tubevision identity-sync --apply",
+    "G:\\TubeLab\\jobs\\gemma_spliced.ps1"
+  ],
+  "files": [
+    "vision-lab/src/tubevision/crossref.py",
+    "vision-lab/src/tubevision/embed.py",
+    "vision-lab/src/tubevision/gemma.py",
+    "vision-lab/src/tubevision/lab.html",
+    "vision-lab/HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "bdbfd72e774c92cf42a06f5ab81375a4414426b5aa63cde09ed762641275f8b4",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "233b45e",
+    "hasChanges": false
+  }
+}

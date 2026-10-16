@@ -1,0 +1,54 @@
+{
+  "id": "20261015-053938-149-vaultwares-decompile-0ef2618e",
+  "createdAt": "2026-10-15T09:39:38.1492566Z",
+  "createdAtLocal": "2026-10-15 05:39",
+  "timezone": "Eastern Standard Time",
+  "project": "vaultwares-decompile",
+  "kind": "code-change",
+  "actor": "devin",
+  "agentHeader": "Agent: devin (role: main)\r\nModel: Gemini 4 Argon Medium\r\nThinking: low\r\nMode: agent\r\nPermissions: autopilot (network: windows-local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile  Branch: agent/decompile-submodule-main\r\nTools used (this reply): read, edit, exec, todo_write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-15 05:39 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Gemini 4 Argon Medium",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "windows-local",
+    "toolsUsed": [
+      "read",
+      "edit",
+      "exec",
+      "todo_write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile",
+  "summary": "Committed and pushed Rust blueprint compiler engine, CLI, Studio UI, and panopticam blueprint to agent/decompile-submodule-main. Queried ovh-panopticam (100.114.3.121) and ran vw-decompile against live Flirt4Free and ovh-panopticam endpoints, enhancing analyzer.rs to extract PHP/ws/webservices routes, window.__homePageData__ stores/schemas, and live OpenAPI specs.",
+  "commands": [
+    "git commit",
+    "git push origin agent/decompile-submodule-main",
+    "vw-decompile extract https://www.flirt4free.com/?service=girls",
+    "vw-decompile extract https://ovh-panopticam.tail1764b8.ts.net",
+    "vw-decompile search"
+  ],
+  "files": [
+    "crates/decompile-core/src/analyzer.rs",
+    "crates/decompile-cli/src/main.rs",
+    "blueprints/flirt4free/OVERVIEW.md",
+    "blueprints/ovh-panopticam-live/OVERVIEW.md"
+  ],
+  "planPath": " ",
+  "contentHash": "0ef2618ec12624adf6c115b42bb8efb2f2cc2c5141e5270e5091da81bc5c9ea5",
+  "git": {
+    "repo": "vaultwares-decompile",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vaultwares-decompile",
+    "branch": "agent/decompile-submodule-main",
+    "head": "c553a6d",
+    "hasChanges": true
+  }
+}

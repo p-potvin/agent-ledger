@@ -1,0 +1,53 @@
+{
+  "id": "20261014-222640-122-vision-lab-080c42cd",
+  "createdAt": "2026-10-15T02:26:40.1221083Z",
+  "createdAtLocal": "2026-10-14 22:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vision-lab",
+  "kind": "commands",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-14 22:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Ran vw tag-images -MoveInvalid on .dataset-to-identify (575 tagged, 52 invalid, 177 dupes), re-matched by operator folder rules (265 staged / 84 identities, RTX 2060), ingested through KFC add-model-images into F:\\amd\\gallery: staged 225/264 accepted, 39 .dataset-imports folders 538/560. Reindex queue (kfc_followup.ps1; fixed a -Lock splatting bug, soft identities never locked; mercirose soft kept) then lab inbox enrolment (449 folders) running. Shared items: Panopticam toy_sound/taste probes rank lab moments (/mm/moments/probe), tattoos look label + hidden unreliable wearing tags in zeroshot.",
+  "commands": [
+    "vw tag-images -MoveInvalid",
+    "vw add-model-images -Execute",
+    "vw reindex-face-model -Lock",
+    "vw new-face-model"
+  ],
+  "files": [
+    "G:\\TubeLab\\jobs\\identify\\kfc_ingest.ps1",
+    "G:\\TubeLab\\jobs\\identify\\kfc_followup.ps1",
+    "vision-lab/src/tubevision/mmlab.py",
+    "vision-lab/src/tubevision/zeroshot.py"
+  ],
+  "planPath": "",
+  "contentHash": "080c42cd4b469e4c0d0308ba9f0c2621ffbb6a2d366bd5e74057830fef150623",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "233b45e",
+    "hasChanges": false
+  }
+}

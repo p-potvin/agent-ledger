@@ -1,0 +1,47 @@
+{
+  "id": "20261014-205535-206-vision-lab-cbb54687",
+  "createdAt": "2026-10-15T00:55:35.2064839Z",
+  "createdAtLocal": "2026-10-14 20:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vision-lab",
+  "kind": "commands",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-14 20:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Applied .dataset-to-identify assignments with operator corrections: staged 616 files / 39 identities into F:\\amd\\gallery\\.dataset-imports\\<name>_batch_identify20261014 (atomic rename from .staging-*, for Panopticam local_sources ingest); high tier raised to >=0.70 after operator flagged lakshmi (0.651) as wrong (= vicioushorses, 36 files staged as new set); confirmed natalie=natalycampbell, rayshell=elizabethbluee, lapetitemort=gothdolll. Remaining 655 grouped under .dataset-to-identify\\_review (new-person-NN, medium, conflicts, strays, unconfirmed, videos), _small-sets-confident, _singles-unmatched, _no-face. Manifest moves-20261014.jsonl (1,310 lines).",
+  "commands": [
+    "apply_moves.py --apply"
+  ],
+  "files": [
+    "G:\\TubeLab\\jobs\\identify\\dataset-to-identify\\moves-20261014.jsonl",
+    "vision-lab/HANDOFF.md"
+  ],
+  "planPath": "",
+  "contentHash": "cbb546879b4adef3644c18e3097dc23545061425b67ae6a73b2a0d10935edaad",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "233b45e",
+    "hasChanges": false
+  }
+}

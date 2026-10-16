@@ -1,0 +1,49 @@
+{
+  "id": "20261014-154129-126-vision-lab-0f137341",
+  "createdAt": "2026-10-14T19:41:29.1262635Z",
+  "createdAtLocal": "2026-10-14 15:41",
+  "timezone": "Eastern Standard Time",
+  "project": "vision-lab",
+  "kind": "verification",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-14 15:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Checked overnight jobs: SigLIP full embed done (85,239), probe retrain 48/80 categories at P>=0.8 (was 28/80), Gemma moments + cam identities done; POST /reload on the lab. probes-compare: Gemma 768 mean AP 0.396/25 usable vs SigLIP 0.359/18 on 4,563 shared videos. Found OVH spliced generator stopped Mon 12 Oct 11:27 at 22,600/101,967 (no OOM, imports OK); not restarted pending operator OK. HANDOFF updated.",
+  "commands": [
+    "tubevision probes-compare --dims 768,256",
+    "POST /reload",
+    "ssh ovh tail spliced.log"
+  ],
+  "files": [
+    "vision-lab/HANDOFF.md",
+    "G:\\TubeLab\\jobs\\probes-compare.log"
+  ],
+  "planPath": "",
+  "contentHash": "0f137341294ddfde8a6d5785d52cdd146fe5fab107c615024da4116864dec395",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "233b45e",
+    "hasChanges": false
+  }
+}

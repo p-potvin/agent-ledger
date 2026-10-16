@@ -1,0 +1,54 @@
+{
+  "id": "20261014-171954-238-panopticam-b5955f5e",
+  "createdAt": "2026-10-14T21:19:54.2387966Z",
+  "createdAtLocal": "2026-10-14 17:19",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-14 17:19 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled loop v0.57.5: embed server was left down 30 min after memguard's 16:17 restart because Restart-EmbedServer.ps1 matched its own command line (*Start-EmbedServer.ps1*) and killed itself; fixed (skip PID/self, stop task first). Growth cause: Gemma image processor converted full-size 8k gallery photos (vision-lab tubevision identity burst, ~6,500 image_path calls) to float arrays -> 7->12 GB committed + MemoryErrors; server now decodes JPEGs with draft at <=1024 px (cos 0.997-1.0 vs old vectors, commit flat, 1.5x faster). memguard restarts embed server when /health silent 10 min and tells operator. Restarted embed server and vision worker; pushed main (deployed, VPS reports 0.57.5). STATE.md entry + operator to-do D (PC commit 40-49/57 GB).",
+  "commands": [
+    "Restart-EmbedServer.ps1",
+    "Restart-VisionWorker.ps1",
+    "uvx py-spy dump",
+    "git push origin main"
+  ],
+  "files": [
+    "embed/server.py",
+    "embed/Restart-EmbedServer.ps1",
+    "vision/memguard.py",
+    "vision/test_memguard.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "b5955f5eec412924090d49f7257469b6e9018a2736baf06f4b5ddd25b9c7e1fa",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "eb35999",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "20261015-083738-918-vault-explorer-2468bcc5",
+  "createdAt": "2026-10-15T12:37:38.9184935Z",
+  "createdAtLocal": "2026-10-15 08:37",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: unknown\r\nMode: agent\r\nPermissions: autopilot (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-startup-folder\r\nTools used (this reply): read, grep, edit, write, exec, ask_user_question\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-15 08:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Haiku 5.5 Medium",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows local",
+    "toolsUsed": [
+      "read",
+      "grep",
+      "edit",
+      "write",
+      "exec",
+      "ask_user_question"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "PR #60 updated (edd71ba): npm start runs scripts/start.js, which reads defaultFolder from %APPDATA%\\vault-explorer\\vault-settings.json and passes it to electron as the launch folder. Reverted the defaultFolder-before-lastPath precedence change in tabs.js. Kept the '.' entry-placeholder skip in main.js, which is required for the launch folder to win. Static tests pass; GUI not verified. Not merged.",
+  "commands": [],
+  "files": [
+    "package.json",
+    "scripts/start.js",
+    "main.js",
+    "js/navigation/tabs.js",
+    "tests/startup_folder_test.js"
+  ],
+  "planPath": "",
+  "contentHash": "2468bcc563a2b2997fc7f455f79685b97999b627cca647f76ebde6efab6de2b1",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-startup-folder",
+    "head": "edd71ba",
+    "hasChanges": false
+  }
+}

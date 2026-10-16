@@ -1,0 +1,50 @@
+{
+  "id": "20261015-072122-555-vault-explorer-418774ea",
+  "createdAt": "2026-10-15T11:21:22.5553185Z",
+  "createdAtLocal": "2026-10-15 07:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: unknown\r\nMode: agent\r\nPermissions: autopilot (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-ai-subtitles-vw\r\nTools used (this reply): read, grep, edit, write, exec, todo_write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-15 07:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Haiku 5.5 Medium",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows local",
+    "toolsUsed": [
+      "read",
+      "grep",
+      "edit",
+      "write",
+      "exec",
+      "todo_write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "AI subtitles now generate via 'vw better-subtitles -Input <video> -Separator <setting, default rnnoise>' (no language tags) and load the resulting <video>.srt/.vtt through the normal subtitle track path, so they match loaded subtitles in style and position (line -4 via raiseTrackCues). Replaced the audiocpp streaming pipeline in src/live-subtitles.js, trimmed preload live-cue bindings, and added a 2x Web Audio gain (VIDEO_VOLUME_BOOST) to the local player. Verified: node --check on changed files; AI paths, local subtitles, subtitle/ASR options, explorer cleanup and generate-subtitles vw pipeline static tests pass; end-to-end backend run with a stub vw on PATH produced the SRT/VTT and SUCCESS event. Not verified: real vw transcription, GUI rendering (Electron launch blocked here), packaged_ai_actions_test (needs dist build). Changes left uncommitted on branch vw-codex-ai-subtitles-vw.",
+  "commands": [],
+  "files": [
+    "src/live-subtitles.js",
+    "js/player/subtitles.js",
+    "js/player/player.js",
+    "preload.js"
+  ],
+  "planPath": "",
+  "contentHash": "418774ea58ca12a614abcb5eee7bcee78577d99dd3ecc711086a2bdd86c2479f",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-ai-subtitles-vw",
+    "head": "0a3d67f",
+    "hasChanges": true
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "20261015-080149-436-vault-explorer-7b124e18",
+  "createdAt": "2026-10-15T12:01:49.4365080Z",
+  "createdAtLocal": "2026-10-15 08:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: unknown\r\nMode: agent\r\nPermissions: autopilot (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-ai-subtitles-vw\r\nTools used (this reply): read, grep, edit, write, exec, ask_user_question\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-15 08:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Haiku 5.5 Medium",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows local",
+    "toolsUsed": [
+      "read",
+      "grep",
+      "edit",
+      "write",
+      "exec",
+      "ask_user_question"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Opened PR #58 (vw-codex-ai-subtitles-vw -> main). Reviews existed (Devin, Gemini, CodeRabbit), so not merged. Pushed 7f7e742 addressing findings: AI subtitles via Start-Subtitles.ps1 delegator, freshness by mtime change, regex-free cue count, guard against late sidecar, favorites pruned only when root reachable and race-safe, empty-list guard, serialised settings writes, draft-then-commit settings save. Tests: favorites_prune_test (incl. race case) and existing static tests pass. Left open: volume boost on remote streams (accepted limitation), language picker kept. CI: CodeQL and CodeRabbit pass.",
+  "commands": [],
+  "files": [
+    "main.js",
+    "src/scanner.js",
+    "src/live-subtitles.js",
+    "js/favorites.js",
+    "js/settings/core.js",
+    "js/player/subtitles.js",
+    "tests/favorites_prune_test.js"
+  ],
+  "planPath": "",
+  "contentHash": "7b124e1820063e01939c20f1660bd93c2265badf37ceaddf274b9157d925bb41",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-ai-subtitles-vw",
+    "head": "7f7e742",
+    "hasChanges": false
+  }
+}
