@@ -15,7 +15,7 @@
     "git show --numstat --pretty=format: bf41e828402041582589345a2b04a88fe95be0e1"
   ],
   "files": [
-    "fullxxx-video/includes/admin-settings.php",
+    "tube-platform-video/includes/admin-settings.php",
     "promking-tube/includes/video-fetcher.php"
   ],
   "planPath": "",

@@ -58,7 +58,7 @@
     "shared-tube/scripts/deploy-shared-tube.sh",
     "shared-tube/scripts/systemd/fxv.service",
     "shared-tube/scripts/systemd/pkt.service",
-    "shared-tube/scripts/nginx/fullxxx.video.conf",
+    "shared-tube/scripts/nginx/tube-platform.internal.conf",
     "shared-tube/scripts/nginx/prom-king.xyz.conf",
     "shared-tube/scripts/vw-webhookd.targets.yml",
     "shared-tube/scripts/README.md",

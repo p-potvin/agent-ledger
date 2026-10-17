@@ -32,7 +32,7 @@
   ],
   "files": [
     "panopticam/vision/browser.py",
-    "panopticam/vision/onlyfans.py"
+    "panopticam/vision/creator-platform.py"
   ],
   "planPath": "panopticam/docs/STATE.md",
   "contentHash": "34a6037423dea0bab381f2144e1e9a768210aac366749c31fc7bf04d46a5bc0a",

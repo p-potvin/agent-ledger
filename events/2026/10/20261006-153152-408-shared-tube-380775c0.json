@@ -23,7 +23,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-  "summary": "Lab media for Stash items now prefers the library's .thumbs sidecars (<folder>\\.thumbs\\<stem>.jpg/.webm from vw preview-generator) with Stash previews as fallback (commit c098d84); verified via tubelab.vaultwares.ca. 1,237 of 3,709 existing library files lack .thumbs. Library faces partial result: 94.4% precision / 88.4% recall on 173 evaluable videos, 1,035 named, 1,548 unnamed people; resume job running. Stash scan still running.",
+  "summary": "Lab media for Catalog items now prefers the library's .thumbs sidecars (<folder>\\.thumbs\\<stem>.jpg/.webm from vw preview-generator) with Stash previews as fallback (commit c098d84); verified via tubelab.vaultwares.ca. 1,237 of 3,709 existing library files lack .thumbs. Library faces partial result: 94.4% precision / 88.4% recall on 173 evaluable videos, 1,035 named, 1,548 unnamed people; resume job running. Stash scan still running.",
   "commands": [],
   "files": [],
   "planPath": "",

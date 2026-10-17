@@ -33,10 +33,10 @@
   "summary": "Added a Firefox-profile crawler runner that launches a headed persistent Firefox context from a copied user profile to preserve add-ons/state, with optional FIREFOX_EXECUTABLE_PATH and FIREFOX_LAUNCH_TIMEOUT_MS.",
   "commands": [
     "npx playwright install firefox",
-    "npm run test:fullxxx:crawl:firefox-profile"
+    "npm run test:tube-platform:crawl:firefox-profile"
   ],
   "files": [
-    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\scripts\\run-fullxxx-crawl-firefox-profile.mjs",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\scripts\\run-tube-platform-crawl-firefox-profile.mjs",
     "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\package.json",
     "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\.env.example",
     "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\README.md"

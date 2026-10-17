@@ -1,0 +1,49 @@
+{
+  "id": "20261016-083536-003-vault-explorer-7023a384",
+  "createdAt": "2026-10-16T12:35:36.0039747Z",
+  "createdAtLocal": "2026-10-16 08:35",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: unknown\r\nMode: agent\r\nPermissions: autopilot (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-player-fixes\r\nTools used (this reply): read, grep, edit, exec, todo_write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-16 08:35 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Haiku 5.5 Medium",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows local",
+    "toolsUsed": [
+      "read",
+      "grep",
+      "edit",
+      "exec",
+      "todo_write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "PR #61 (vw-codex-player-fixes): space no longer plays the focused card while the player is open; grid scroll persistence skips empty grid and saves debounced (was saveSettings per scroll event); 2x gain replaced by htmlAGC-style compressor+gain; live subtitle failure shows full output tail. Could not reproduce the 'All parameters are case-insensitive' error with the real delegator; sort redraw cost not profiled. GUI not verified. Not merged.",
+  "commands": [],
+  "files": [
+    "js/navigation/card.js",
+    "js/navigation/directory.js",
+    "js/player/player.js",
+    "src/live-subtitles.js"
+  ],
+  "planPath": "",
+  "contentHash": "7023a38429fac313716102a36a0ea5d269e4140ae5b8294c8aa2825c7051eaab",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-player-fixes",
+    "head": "2080050",
+    "hasChanges": false
+  }
+}

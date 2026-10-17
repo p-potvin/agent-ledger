@@ -28,7 +28,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Panopticam v0.13.7: recordings captured as MP4 (zipper container option), delete recordings to the workstation Recycle Bin via worker (SHFileOperationW), OVH DELETE /api/recordings/<job>/file + UI; Stripchat demoted to identity-only (hidden from Browse unless picked, vision re-look every 6h, frees ~45% worker CPU). Wrote action-search plan in STATE.md (clip sampler on OVH = new request loop, awaiting operator OK; CLAP model download needs OK).",
+  "summary": "Panopticam v0.13.7: recordings captured as MP4 (zipper container option), delete recordings to the workstation Recycle Bin via worker (SHFileOperationW), OVH DELETE /api/recordings/<job>/file + UI; LiveStreamPlatform demoted to identity-only (hidden from Browse unless picked, vision re-look every 6h, frees ~45% worker CPU). Wrote action-search plan in STATE.md (clip sampler on OVH = new request loop, awaiting operator OK; CLAP model download needs OK).",
   "commands": [
     "git push origin main (df65286, 665b362)",
     "Stop/Start-ScheduledTask 'Panopticam Vision'"

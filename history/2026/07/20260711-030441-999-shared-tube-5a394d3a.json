@@ -30,7 +30,7 @@
   "commands": [
     ".\\\\node_modules\\\\.bin\\\\vitest.CMD run shared/src/admin/persistent-state.test.ts",
     ".\\\\node_modules\\\\.bin\\\\tsc.CMD -p shared\\\\tsconfig.json --noEmit",
-    ".\\\\node_modules\\\\.bin\\\\astro.CMD check in apps/fxv, apps/oneporn, apps/sexyprn"
+    ".\\\\node_modules\\\\.bin\\\\astro.CMD check in apps/fxv, apps/oneporn, apps/media-portal-gamma"
   ],
   "files": [
     "shared/src/admin/Catalog/BatchActions.tsx",

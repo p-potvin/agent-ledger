@@ -23,7 +23,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Fri 09 Oct 2026: EmbeddingGemma 2 one-off experiment on PC GPU (throwaway venv, KFC torch borrowed): on moments, sound probe predicts chat-reported toy running at AUC 0.81 (room-held-out) vs CLAP 0.57; video probe 0.80 for operator liked-vs-rejected (picture quality); life model still better for 'reacts'; zero-shot weak; not wired in. Added identity rename (merge into a new name, undoable) and renamed 9 Flirt4Free numeric gallery identities to their room names via /api/merges; v0.48.1.",
+  "summary": "Fri 09 Oct 2026: EmbeddingGemma 2 one-off experiment on PC GPU (throwaway venv, KFC torch borrowed): on moments, sound probe predicts chat-reported toy running at AUC 0.81 (room-held-out) vs CLAP 0.57; video probe 0.80 for operator liked-vs-rejected (picture quality); life model still better for 'reacts'; zero-shot weak; not wired in. Added identity rename (merge into a new name, undoable) and renamed 9 LiveStreamProvider numeric gallery identities to their room names via /api/merges; v0.48.1.",
   "commands": [],
   "files": [],
   "planPath": "",

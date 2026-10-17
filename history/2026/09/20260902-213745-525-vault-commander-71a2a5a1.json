@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
-    "summary":  "Created the bounded Pornpics Patchright scraper source. Attempted the authorized five-page run but the only PATH Patchright executable and its neighboring Python environment both failed ModuleNotFoundError: patchright. Stopped failed PID 37580 before any page crawl or image download. Awaiting a working Patchright installation path; no Pornpics dataset files were created.",
+    "summary":  "Created the bounded ImageArchive Patchright scraper source. Attempted the authorized five-page run but the only PATH Patchright executable and its neighboring Python environment both failed ModuleNotFoundError: patchright. Stopped failed PID 37580 before any page crawl or image download. Awaiting a working Patchright installation path; no ImageArchive dataset files were created.",
     "commands":  [
 
                  ],

@@ -29,7 +29,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Panopticam v0.2.2: Privado WireGuard (Chicago) as gluetun container panopticam-vpn on OVH (/opt/panopticam-vpn, proxy 127.0.0.1:8897, DNS blocklists off because they block camsoda) wired as PANOPTICAM_PROXIES fallback; conf gitignored. Stripchat adapter (listing ~8.3k, snapshots, stats; no playback/recording by decision: MOUFLON obfuscation = access control); default-order wide-batch paging (ranked sorts repeat 1/3 rows). Alert rules (online/spike/threshold/show -> notify/wall/record, cooldown) + 30-day activity log + Alerts page; heat metric + Hot right now sort. Seeded rule 'Blowing up'. docs/STATE.md created as loop memory; memory entry panopticam-state. Steady state 19% of one core, 140MB.",
+  "summary": "Panopticam v0.2.2: Privado WireGuard (Chicago) as gluetun container panopticam-vpn on OVH (/opt/panopticam-vpn, proxy 127.0.0.1:8897, DNS blocklists off because they block stream-provider) wired as PANOPTICAM_PROXIES fallback; conf gitignored. LiveStreamPlatform adapter (listing ~8.3k, snapshots, stats; no playback/recording by decision: MOUFLON obfuscation = access control); default-order wide-batch paging (ranked sorts repeat 1/3 rows). Alert rules (online/spike/threshold/show -> notify/wall/record, cooldown) + 30-day activity log + Alerts page; heat metric + Hot right now sort. Seeded rule 'Blowing up'. docs/STATE.md created as loop memory; memory entry panopticam-state. Steady state 19% of one core, 140MB.",
   "commands": [
     "docker compose up -d (/opt/panopticam-vpn)",
     "git push (webhook deploys v0.2.0-0.2.2)"

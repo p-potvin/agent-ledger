@@ -23,7 +23,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "v0.50.1: F4F no longer played from the operator's PC browser (counted as a second session). /api/rooms/flirt4free/*/stream answers external unless play_f4f; room panel switch 'F4F here' (off by default). Deployed, verified.",
+  "summary": "v0.50.1: F4F no longer played from the operator's PC browser (counted as a second session). /api/rooms/live-stream-provider/*/stream answers external unless play_f4f; room panel switch 'F4F here' (off by default). Deployed, verified.",
   "commands": [],
   "files": [],
   "planPath": "",

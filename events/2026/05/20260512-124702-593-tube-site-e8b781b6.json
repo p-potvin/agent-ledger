@@ -19,19 +19,19 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\business",
-  "summary": "Stabilized the FullXXX and PromKing scraper/admin flows: manual fetch is now distinct from scheduled behavior, FullXXX derives active sources from the allowlist and only gates manual candidates on source/detail page hosts, remote scrape URLs are sanitized before fetches, backfill cursors can resume older pages and be reset from admin, last fetch results now include mode/page/candidate counts, and success notices auto-dismiss instead of lingering.",
+  "summary": "Stabilized the TubePlatform and PromKing scraper/admin flows: manual fetch is now distinct from scheduled behavior, TubePlatform derives active sources from the allowlist and only gates manual candidates on source/detail page hosts, remote scrape URLs are sanitized before fetches, backfill cursors can resume older pages and be reset from admin, last fetch results now include mode/page/candidate counts, and success notices auto-dismiss instead of lingering.",
   "commands": [
-    "php -l fullxxx-video/includes/helpers.php",
-    "php -l fullxxx-video/includes/video-fetcher.php",
-    "php -l fullxxx-video/includes/admin-settings.php",
+    "php -l tube-platform-video/includes/helpers.php",
+    "php -l tube-platform-video/includes/video-fetcher.php",
+    "php -l tube-platform-video/includes/admin-settings.php",
     "php -l promking-tube/includes/video-fetcher.php",
     "scp plugin dirs to VPS and reload php-fpm/nginx",
     "wp eval-file on VPS to verify active sources/manual allowlist behavior"
   ],
   "files": [
-    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\helpers.php",
-    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\video-fetcher.php",
-    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\admin-settings.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\tube-platform-video\\includes\\helpers.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\tube-platform-video\\includes\\video-fetcher.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\tube-platform-video\\includes\\admin-settings.php",
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\video-fetcher.php"
   ],
   "planPath": "",

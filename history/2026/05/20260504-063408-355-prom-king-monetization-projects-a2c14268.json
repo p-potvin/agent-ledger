@@ -8,7 +8,7 @@
   "actor": "AI Agent",
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\business",
-  "summary": "Implemented Prom King tube pagination and back-catalog retention: added video source/remote/takedown fields and migration, active/not-removed filtering, paginated tRPC endpoints, URL-aware /tube pagination, redesigned React tube headers/watch surfaces with remote-only copy, removed stale Vite config that made builds use the wrong root app, removed WordPress scrape-on-browse, added WP preview metadata and tag archive routing, clarified FullXXX DMCA/retention language, rendered shared tube-shell header nav, added link-sharing plan with May 2026 host comparison, and expanded QA/docs. Verified prelanding check/test/build, QA list/tsc, and Playwright smoke against /tube?page=2. PHP CLI unavailable for native lint.",
+  "summary": "Implemented Prom King tube pagination and back-catalog retention: added video source/remote/takedown fields and migration, active/not-removed filtering, paginated tRPC endpoints, URL-aware /tube pagination, redesigned React tube headers/watch surfaces with remote-only copy, removed stale Vite config that made builds use the wrong root app, removed WordPress scrape-on-browse, added WP preview metadata and tag archive routing, clarified TubePlatform DMCA/retention language, rendered shared tube-shell header nav, added link-sharing plan with May 2026 host comparison, and expanded QA/docs. Verified prelanding check/test/build, QA list/tsc, and Playwright smoke against /tube?page=2. PHP CLI unavailable for native lint.",
   "commands": [
     "corepack pnpm run check",
     "corepack pnpm test",
@@ -22,7 +22,7 @@
     "prelanding-page/server/tubeRouter.ts",
     "prelanding-page/drizzle/0004_tube_back_catalog.sql",
     "tube-site/promking-tube/includes/video-fetcher.php",
-    "tube-site/fullxxx-video/includes/dmca.php",
+    "tube-site/tube-platform-video/includes/dmca.php",
     "tube-shell-theme/tube-shell/header.php",
     "link-sharing/README.md",
     "qa-automation/tests/age-gate-wordpress.spec.ts"

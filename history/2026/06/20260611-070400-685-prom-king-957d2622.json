@@ -36,11 +36,11 @@
     "commands":  [
                      "pnpm build",
                      "git push origin main",
-                     "node ./scripts/run-fullxxx-crawl-firefox-profile.mjs"
+                     "node ./scripts/run-tube-platform-crawl-firefox-profile.mjs"
                  ],
     "files":  [
                   "shared-tube/shared/src/components/Layout.astro",
-                  "qa-automation/scripts/run-fullxxx-crawl-firefox-profile.mjs"
+                  "qa-automation/scripts/run-tube-platform-crawl-firefox-profile.mjs"
               ],
     "planPath":  "",
     "contentHash":  "957d26223e02c137fb8390bac541a2fbb28e515aa7bc6146ce97809ac3b73577",

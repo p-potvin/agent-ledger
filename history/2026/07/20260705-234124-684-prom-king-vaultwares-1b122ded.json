@@ -39,7 +39,7 @@
     "files":  [
                   "shared/src/admin/Catalog/VideoBatchActions.tsx",
                   "README.md",
-                  "apps/sexyprn/src/middleware.ts"
+                  "apps/media-portal-gamma/src/middleware.ts"
               ],
     "planPath":  "",
     "contentHash":  "1b122dedb6f51a7f1828afed186874770b64d9edc78a5e97d15d8d38d8e6bda4",

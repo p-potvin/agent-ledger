@@ -45,7 +45,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
-  "summary": "Implemented search visibility SERP runner for Prom King and FullXXX. Added npm report command, documented environment switches and safety boundaries, verified syntax, TypeScript, diff whitespace, and a one-session DuckDuckGo smoke run. Full run defaults cover 84 engine-keyword sessions through SERP page 12 with browser rotation, optional IP rotation, per-session SafeSearch, organic result collection, target-domain first appearance reporting, and own-domain-only stealth checks after landing on prom-king.xyz or fullxxx.video.",
+  "summary": "Implemented search visibility SERP runner for Prom King and TubePlatform. Added npm report command, documented environment switches and safety boundaries, verified syntax, TypeScript, diff whitespace, and a one-session DuckDuckGo smoke run. Full run defaults cover 84 engine-keyword sessions through SERP page 12 with browser rotation, optional IP rotation, per-session SafeSearch, organic result collection, target-domain first appearance reporting, and own-domain-only stealth checks after landing on prom-king.xyz or tube-platform.internal.",
   "commands": [
     "node -c .\\scripts\\run-search-visibility-report.mjs",
     "npx tsc --noEmit",

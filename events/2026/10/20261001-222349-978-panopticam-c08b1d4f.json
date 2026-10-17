@@ -28,13 +28,13 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
-  "summary": "Status check for operator: OnlyFans crawler resumed via 04:00 task (30 Sep 4 subs, 1 Oct 5 subs; 12 profiles done, 190 files, 118 queued); no refusals since 29 Sep; 1 Oct run stalled after hourly pace wait ~05:00, 20:25 run failed (browser closed, 0 follows read). Listed loop work 29 Sep-1 Oct from git log.",
+  "summary": "Status check for operator: CreatorPlatform crawler resumed via 04:00 task (30 Sep 4 subs, 1 Oct 5 subs; 12 profiles done, 190 files, 118 queued); no refusals since 29 Sep; 1 Oct run stalled after hourly pace wait ~05:00, 20:25 run failed (browser closed, 0 follows read). Listed loop work 29 Sep-1 Oct from git log.",
   "commands": [
     "git log --since 2026-09-28",
-    "sqlite onlyfans.db summary"
+    "sqlite creator-platform.db summary"
   ],
   "files": [
-    "vision/onlyfans.py"
+    "vision/creator-platform.py"
   ],
   "planPath": "",
   "contentHash": "c08b1d4facf25aaf322a8bd14aad76bcf37a496d271a5e25a708832f9080021e",

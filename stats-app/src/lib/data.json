@@ -1809,8 +1809,8 @@
         "Prom-King tube-sites",
         "Prom-King/shared-tube + vaultwares-api",
         "Monitoring and Prom-King tube operations",
-        "Prom-King/fullxxx-video-and-qa-automation",
-        "Prom-King/fullxxx-webhook-deploy-qa",
+        "Prom-King/tube-platform-qa-automation",
+        "Prom-King/tube-platform-webhook-deploy-qa",
         "Prom-King/shared-tube + vaultwares-docs",
         "Prom-King/shared-tube + vaultwares-mcp",
         "Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs",
@@ -1833,7 +1833,7 @@
         "Backfill: commit 9fb8698 (2026-04-23T11:37:13-04:00) - Initial commit | files=1 +2 -0",
         "Backfill: commit 622bb00 (2026-04-29T13:20:32-04:00) - Add PromKing Tube WordPress plugin v1.0.0 - full tube site with CrakRevenue ad zones, affiliate link integration, and video management | files=12 +1341 -0",
         "Backfill: commit 140e628 (2026-04-29T13:55:08-04:00) - feat: add automated video fetcher (15/day, no duplicates, WP cron) | files=2 +516 -0",
-        "Backfill: commit b9e63a6 (2026-04-29T16:11:26-04:00) - feat: add fullxxx-video WordPress plugin v2.0 — multi-source scraper (pornxp.fo, topvid.tv, freesexvideos.xxx), duration deduplication, hotlinked thumbnails, hover previews, natural CrakRevenue ad integration, DMCA compliance | files=11 +1467 -0",
+        "Backfill: commit b9e63a6 (2026-04-29T16:11:26-04:00) - feat: add tube-platform-video WordPress plugin v2.0 — multi-source scraper (pornxp.fo, topvid.tv, media-archive.xxx), duration deduplication, hotlinked thumbnails, hover previews, natural CrakRevenue ad integration, DMCA compliance | files=11 +1467 -0",
         "Backfill: commit 3615591 (2026-05-01T04:05:43-04:00) - pushing claude changes | files=6 +265 -12"
       ]
     },
@@ -2043,7 +2043,7 @@
         "Tube-sites deploy verified; PK palette updated",
         "GTM per-site enforcement + GA4-via-GTM playbook",
         "PKT now injects GTM-WXGQJ7PR (shared container)",
-        "Benchmarked IPoasis residential proxy for Prom-King qa-automation: checked proxy traffic before/after, ran 8 shallow SERP sessions across Google/DDG/Bing/Brave with SafeSearch off and target clicks disabled, ran capped own-domain stealth crawl for prom-king.xyz and fullxxx.video, and patched SERP runner status classification for DDG challenge text and zero-result extraction states. No CAPTCHA/challenge bypass attempted and no secret values recorded.",
+        "Benchmarked IPoasis residential proxy for Prom-King qa-automation: checked proxy traffic before/after, ran 8 shallow SERP sessions across Google/DDG/Bing/Brave with SafeSearch off and target clicks disabled, ran capped own-domain stealth crawl for prom-king.xyz and tube-platform.internal, and patched SERP runner status classification for DDG challenge text and zero-result extraction states. No CAPTCHA/challenge bypass attempted and no secret values recorded.",
         "Designed the Joker production health and incident-response architecture: continuous probes on greencloud-vps and operator PC, health-ledger metrics/dashboard, one-shot high-severity incident gate, silent-observer lockout, tailnet recovery webhook, and guarded AI remediation via single leased incident agent and PR/review/deploy verification. Reviewed VaultWares router summaries plus deployment-flow, services-inventory, webhook-secret-rotation, and deploy-alerts before drafting the plan."
       ]
     },

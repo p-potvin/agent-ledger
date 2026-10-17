@@ -28,7 +28,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Scheduled loop run. Panopticam v0.31.0: Browse folds simulcasts into one card per performer (Index.fold; /api/rooms?fold=1; 'One per person' chip, default on). Same person = confirmed link, Atlas persona, or face sim >= 0.60. Live: 1,152 of 7,645 women's rooms folded (3,533 with Stripchat). Test added (104+1 pass). STATE.md updated: health check, ingest ~2.7k archives/day, VPS disk 89%, Toy buzzing sound model weak (AUC 0.69), hum-descriptor idea for later.",
+  "summary": "Scheduled loop run. Panopticam v0.31.0: Browse folds simulcasts into one card per performer (Index.fold; /api/rooms?fold=1; 'One per person' chip, default on). Same person = confirmed link, Atlas persona, or face sim >= 0.60. Live: 1,152 of 7,645 women's rooms folded (3,533 with LiveStreamPlatform). Test added (104+1 pass). STATE.md updated: health check, ingest ~2.7k archives/day, VPS disk 89%, Toy buzzing sound model weak (AUC 0.69), hum-descriptor idea for later.",
   "commands": [
     "uv run pytest",
     "npm run build",

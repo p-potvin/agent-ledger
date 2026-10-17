@@ -1,0 +1,53 @@
+{
+  "id": "20261016-142730-927-vault-commander-a3aa8291",
+  "createdAt": "2026-10-16T18:27:30.9279847Z",
+  "createdAtLocal": "2026-10-16 14:27",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-16 14:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "TranslateGemma 4B wired into vw better-subtitles and live-subs as the default translation engine: new cli/utils/translategemma.py (resident llama-server b11696 on 127.0.0.1:8798, -c 4096 -np 4, q8_0 KV, flash attn, --sleep-idle-seconds 900; template-exact prompts; parallel with sequential retry of empty/unchanged answers), subtitles_translator.py --engine translategemma|riva|google (fallback chain), live_subs_overlay.py engine + warm-up, Start-LiveSubtitles.ps1 default translategemma, vw-commands.ps1 help. Start-BetterSubtitles.ps1 gained -TranslateEngine (Riva only loaded for -TranslateEngine riva) but is left uncommitted because it also holds the operator's WIP. Tested: SRT es->en / es->fr, overlay auto-source es/ru.",
+  "commands": [
+    "vw sync-commands",
+    "subtitles_translator.py --engine translategemma"
+  ],
+  "files": [
+    "vault-commander/cli/utils/translategemma.py",
+    "vault-commander/cli/utils/subtitles_translator.py",
+    "vault-commander/cli/utils/live_subs_overlay.py",
+    "vault-commander/cli/Start-LiveSubtitles.ps1",
+    "vault-commander/cli/Start-BetterSubtitles.ps1",
+    "vault-commander/cli/vw-commands.ps1"
+  ],
+  "planPath": "",
+  "contentHash": "a3aa8291cb6ba80a90d0a8344d5186a1b096ce7c9785fcf6e239de5d1b147dec",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "4f231c3",
+    "hasChanges": false
+  }
+}

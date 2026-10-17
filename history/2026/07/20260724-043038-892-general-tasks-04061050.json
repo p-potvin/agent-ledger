@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator",
-    "summary":  "Refactored qa-automation runner scripts (run-full-qa-tor.mjs, run-tube-sites-direct.mjs, run-own-domain-stealth.mjs, run-fullxxx-crawl-firefox-profile.mjs) to simulate a continuous Random Walk session driven by ACTION_SELECTORS instead of using a Breadth-First Search queue.",
+    "summary":  "Refactored qa-automation runner scripts (run-full-qa-tor.mjs, run-tube-sites-direct.mjs, run-own-domain-stealth.mjs, run-tube-platform-crawl-firefox-profile.mjs) to simulate a continuous Random Walk session driven by ACTION_SELECTORS instead of using a Breadth-First Search queue.",
     "commands":  [
 
                  ],

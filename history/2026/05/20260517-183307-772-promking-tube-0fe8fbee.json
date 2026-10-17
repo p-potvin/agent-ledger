@@ -23,13 +23,13 @@
                 },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
-    "summary":  "Decoupled PromKing ecosystem (promking-tube and fullxxx-video) visually and code-wise from the VaultWares stack. Created pkt-player.css and pkt-player.bundle.js unbranded assets, registered them in the enqueuers, deleted legacy vault-player assets, and updated the author tag to PromKing. Renamed all visual/copy occurrences of \u0027watch page\u0027 to \u0027video page\u0027.",
+    "summary":  "Decoupled PromKing ecosystem (promking-tube and tube-platform-video) visually and code-wise from the VaultWares stack. Created pkt-player.css and pkt-player.bundle.js unbranded assets, registered them in the enqueuers, deleted legacy vault-player assets, and updated the author tag to PromKing. Renamed all visual/copy occurrences of \u0027watch page\u0027 to \u0027video page\u0027.",
     "commands":  [
                      "Remove-Item"
                  ],
     "files":  [
                   "promking-tube/promking-tube.php",
-                  "fullxxx-video/fullxxx-video.php",
+                  "tube-platform-video/tube-platform-video.php",
                   "tube-shared/tube-shared.php"
               ],
     "planPath":  "",

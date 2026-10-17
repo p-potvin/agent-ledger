@@ -23,7 +23,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
-  "summary": "Network topology audit: updated network-map.mdx, services-inventory.mdx, tailscale.mdx; created host-inventory.mdx. Corrected Prom-King/fullxxx/link-sharing routing to greencloud, added Comet/Uptime-Kuma/Decypharr/MCP-SSE/Stash/python-zipper/Tor services, added OVH+GC ops surfaces, Docker containers, timers, and Clopeux local services. 4 files changed, 514 insertions, 108 deletions.",
+  "summary": "Network topology audit: updated network-map.mdx, services-inventory.mdx, tailscale.mdx; created host-inventory.mdx. Corrected Prom-King/tube-platform/link-sharing routing to greencloud, added Comet/Uptime-Kuma/Decypharr/MCP-SSE/Stash/python-zipper/Tor services, added OVH+GC ops surfaces, Docker containers, timers, and Clopeux local services. 4 files changed, 514 insertions, 108 deletions.",
   "commands": [],
   "files": [
     "docs-content/operations/network-map.mdx",

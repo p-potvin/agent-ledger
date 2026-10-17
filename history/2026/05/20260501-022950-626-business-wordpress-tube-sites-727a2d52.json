@@ -8,10 +8,10 @@
   "actor": "AI Agent",
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\business",
-  "summary": "Set up prom-king.xyz and fullxxx.video WordPress sites. Uploaded and activated a minimal shared Tube Shell theme on both domains, created shortcode-driven homepages, configured static front pages, flushed permalinks, created/verified FullXXX DMCA and 2257 pages, updated FullXXX plugin package to include missing CSS/JS assets and remote-only thumbnail fixes, updated PromKing plugin parser/enqueue/REST meta support, ran fetchers, and verified live pages. No secrets logged.",
+  "summary": "Set up prom-king.xyz and tube-platform.internal WordPress sites. Uploaded and activated a minimal shared Tube Shell theme on both domains, created shortcode-driven homepages, configured static front pages, flushed permalinks, created/verified TubePlatform DMCA and 2257 pages, updated TubePlatform plugin package to include missing CSS/JS assets and remote-only thumbnail fixes, updated PromKing plugin parser/enqueue/REST meta support, ran fetchers, and verified live pages. No secrets logged.",
   "commands": [
     "Uploaded Tube Shell theme through WordPress admin",
-    "Uploaded fixed FullXXX plugin package through WordPress admin",
+    "Uploaded fixed TubePlatform plugin package through WordPress admin",
     "Uploaded fixed PromKing plugin package through WordPress admin",
     "Ran WordPress fetchers and permalink flushes",
     "Verified public pages with Invoke-WebRequest"
@@ -19,10 +19,10 @@
   "files": [
     "C:\\Users\\Administrator\\Desktop\\business\\tube-shell-theme\\tube-shell\\style.css",
     "C:\\Users\\Administrator\\Desktop\\business\\tube-shell-theme\\tube-shell\\functions.php",
-    "C:\\Users\\Administrator\\Desktop\\business\\fullxxx-video-work\\fullxxx-video\\includes\\video-fetcher.php",
-    "C:\\Users\\Administrator\\Desktop\\business\\fullxxx-video-work\\fullxxx-video\\includes\\shortcodes.php",
-    "C:\\Users\\Administrator\\Desktop\\business\\fullxxx-video-work\\fullxxx-video\\assets\\css\\tube.css",
-    "C:\\Users\\Administrator\\Desktop\\business\\fullxxx-video-work\\fullxxx-video\\assets\\js\\tube.js",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-platform-video-work\\tube-platform-video\\includes\\video-fetcher.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-platform-video-work\\tube-platform-video\\includes\\shortcodes.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-platform-video-work\\tube-platform-video\\assets\\css\\tube.css",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-platform-video-work\\tube-platform-video\\assets\\js\\tube.js",
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\promking-tube.php",
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\video-fetcher.php"
   ],

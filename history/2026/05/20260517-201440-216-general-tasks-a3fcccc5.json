@@ -30,7 +30,7 @@
     "business/_transfer/tailscale-policy.json",
     "business/_transfer/tailscale-devices.json",
     "vaultwares-website/.github/workflows/deploy.yml",
-    "business/tube-site/.github/workflows/deploy-fullxxx-video.yml",
+    "business/tube-site/.github/workflows/deploy-tube-platform-video.yml",
     "business/tube-site/.github/workflows/deploy-promking-tube.yml",
     "dispatch-wares/backend/prisma.config.ts",
     "deconstructed-website-a-la-mode/.env.example"

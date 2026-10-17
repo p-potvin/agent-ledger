@@ -23,15 +23,15 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business",
   "cwd": "C:\\Users\\Administrator\\Desktop\\business",
-  "summary": "Fixed FullXXX fetch/backfill pagination and section targeting: pornxp now paginates via /?page=N (previous /videos?page=N returned empty), freesexvideos now paginates via /latest-updates/N/ (previous /page/N/ 404), and topvid no longer pretends to paginate; it only scrapes the first Popular grid and filters out nav/podcast-like paths. Increased manual/bulk candidate pool per listing page to avoid underfill and made manual page-count semantics clearer in admin UI.",
+  "summary": "Fixed TubePlatform fetch/backfill pagination and section targeting: pornxp now paginates via /?page=N (previous /videos?page=N returned empty), media-archive now paginates via /latest-updates/N/ (previous /page/N/ 404), and topvid no longer pretends to paginate; it only scrapes the first Popular grid and filters out nav/podcast-like paths. Increased manual/bulk candidate pool per listing page to avoid underfill and made manual page-count semantics clearer in admin UI.",
   "commands": [
-    "php -l tube-site/fullxxx-video/includes/video-fetcher.php",
-    "php -l tube-site/fullxxx-video/includes/admin-settings.php",
-    "curl checks for pornxp/?page=2 and freesexvideos/latest-updates/2"
+    "php -l tube-site/tube-platform-video/includes/video-fetcher.php",
+    "php -l tube-site/tube-platform-video/includes/admin-settings.php",
+    "curl checks for pornxp/?page=2 and media-archive/latest-updates/2"
   ],
   "files": [
-    "tube-site/fullxxx-video/includes/video-fetcher.php",
-    "tube-site/fullxxx-video/includes/admin-settings.php"
+    "tube-site/tube-platform-video/includes/video-fetcher.php",
+    "tube-site/tube-platform-video/includes/admin-settings.php"
   ],
   "planPath": "",
   "contentHash": "ceb2519b4efa512428ed474eb013bd6a03900292d4d0f464926a2a887e77df53",

@@ -33,7 +33,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-    "summary":  "Added result counts to public site headers (sexyprn, oneporn, fxv) and reworked the admin panel Terms grid to display TPDB images as thumbnails.",
+    "summary":  "Added result counts to public site headers (media-portal-gamma, oneporn, fxv) and reworked the admin panel Terms grid to display TPDB images as thumbnails.",
     "commands":  [
                      "node update_headers.cjs",
                      "npm run build"

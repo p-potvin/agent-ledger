@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-    "summary":  "Pushed feat/vision-lab (latest 663e29f). Stash clean done (3,808 scenes; 20 Sophie Johns files still listed missing; images now 789k). Fingerprint lookups G:\\mega: StashDB 602, TPDB 661, either 676/880, 56 duration-flagged, stored in lab only. Fixed SQLite lock starvation (per-row commits); StashDB title job restarted and resuming (24,659 done). Unknown-performer review queue NOT started (usage limit).",
+    "summary":  "Pushed feat/vision-lab (latest 663e29f). Stash clean done (3,808 scenes; 20 Sophie Johns files still listed missing; images now 789k). Fingerprint lookups G:\\mega: MediaDatabase 602, TPDB 661, either 676/880, 56 duration-flagged, stored in lab only. Fixed SQLite lock starvation (per-row commits); MediaDatabase title job restarted and resuming (24,659 done). Unknown-performer review queue NOT started (usage limit).",
     "commands":  [
 
                  ],

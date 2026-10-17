@@ -26,7 +26,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "BongaCams chat: from operator's a20g8.js the chat is JSON-RPC ({id,name,args}; events {type,body}); VPS probes: joinRoom with room args -> Internal error, ChatModule.connect -> silent, amf.php getRoomData -> status error. Join args come from an onRegister subclass in another chunk plus probably a per-visitor key from the obfuscated direct service. Asked operator for that file. STATE.md updated.",
+  "summary": "LiveStreamPlatform chat: from operator's a20g8.js the chat is JSON-RPC ({id,name,args}; events {type,body}); VPS probes: joinRoom with room args -> Internal error, ChatModule.connect -> silent, amf.php getRoomData -> status error. Join args come from an onRegister subclass in another chunk plus probably a per-visitor key from the obfuscated direct service. Asked operator for that file. STATE.md updated.",
   "commands": [
     "4 JSON-RPC probe calls from VPS",
     "1 amf.php POST"

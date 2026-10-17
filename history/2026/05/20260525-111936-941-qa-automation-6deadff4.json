@@ -25,7 +25,7 @@
       "provider": "edge",
       "runs": "2",
       "engines": "duckduckgo,bing,brave",
-      "keywords": "prom king full xxx videos,fullxxx.video,prom-king.xyz",
+      "keywords": "prom king full xxx videos,tube-platform.internal,prom-king.xyz",
       "max_pages": "12",
       "proxy": "scrapingant"
     },
@@ -42,7 +42,7 @@
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
   "summary": "Ran two 9-session SERP visibility batches on DuckDuckGo/Bing/Brave (3 keywords, depth 12) using ScrapingAnt proxy + Edge provider. Captured report artifacts for both runs. Researched cheaper proxy alternatives vs ScrapingAnt paid tier pricing.",
   "commands": [
-    "='duckduckgo,bing,brave'; ='prom king full xxx videos,fullxxx.video,prom-king.xyz'; ='12'; ='0'; ='0'; ='1'; ='edge'; ='1'; ='0'; ='0'; npm run report:search-visibility",
+    "='duckduckgo,bing,brave'; ='prom king full xxx videos,tube-platform.internal,prom-king.xyz'; ='12'; ='0'; ='0'; ='1'; ='edge'; ='1'; ='0'; ='0'; npm run report:search-visibility",
     "web research: compared proxy pricing providers (Webshare, PacketStream, IPRoyal, Decodo, Proxy-Cheap, Rayobyte, SOAX)"
   ],
   "files": [

@@ -27,7 +27,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Wed 14 Oct 2026 (v0.57.0-0.57.4): batch merge endpoint + review list; merges sped up (gallery re-read once per run, under the gallery lock; fixed a batch hang); 706 identities merged (name+digits and face>=0.60), 5 stale failures. .dataset-archive trim: archives hashed vs VPS harvest_media; 3,859 zips / 47.2 GB moved to F:\\amd\\gallery\\.dataset-archive-trim (sidecars kept). Documented free-media video use and the OnlyFans crawler (onlyfans.py daily task) vs cam free media.",
+  "summary": "Wed 14 Oct 2026 (v0.57.0-0.57.4): batch merge endpoint + review list; merges sped up (gallery re-read once per run, under the gallery lock; fixed a batch hang); 706 identities merged (name+digits and face>=0.60), 5 stale failures. .dataset-archive trim: archives hashed vs VPS harvest_media; 3,859 zips / 47.2 GB moved to F:\\amd\\gallery\\.dataset-archive-trim (sidecars kept). Documented free-media video use and the CreatorPlatform crawler (creator-platform.py daily task) vs cam free media.",
   "commands": [
     "POST /api/merges/batch",
     "Restart-VisionWorker.ps1",

@@ -36,7 +36,7 @@
     "opkg install tinyproxy on brume2",
     "uci set tinyproxy + add firewall accept on tailscale0",
     "git push origin main (shared-tube 1511f4c)",
-    "curl -i -r 0-262143 https://1pornhub.vip/api/stream/...?site=oneporn"
+    "curl -i -r 0-262143 https://portal-beta.internal/api/stream/...?site=oneporn"
   ],
   "files": [
     "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\fxv\\src\\pages\\api\\stream\\[slug].ts",

@@ -26,7 +26,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "BongaCams chat protocol, round 3: operator files checked - ws_sv_object_exposed.json is a localStorage dump (no protocol, nothing copied), b3b80.js is the models-list/thumbnail-player chunk (chatHost only for preview video URLs). Declined using patchright to get past Cloudflare (bot-detection bypass); gave the operator a console hook to log the socket's frames in their own browser.",
+  "summary": "LiveStreamPlatform chat protocol, round 3: operator files checked - ws_sv_object_exposed.json is a localStorage dump (no protocol, nothing copied), b3b80.js is the models-list/thumbnail-player chunk (chatHost only for preview video URLs). Declined using patchright to get past Cloudflare (bot-detection bypass); gave the operator a console hook to log the socket's frames in their own browser.",
   "commands": [
     "python grep of provided files"
   ],

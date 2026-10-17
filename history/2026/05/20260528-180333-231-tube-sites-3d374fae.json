@@ -25,7 +25,7 @@
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
   "summary": "Re-applied prior tube-site overhaul (edits had been reverted in the working tree between sessions) and pushed to origin/main. Commit f5b0378 on top of 7bd9c85. 15 files, +809 -181. GTM-WXGQJ7PR + ga4_via_gtm_enabled defaults preserved (parallel assistant's analytics work intact). Vercel/main-push deploy will pick up the changes.",
   "commands": [
-    "git add fullxxx-video/ promking-tube/",
+    "git add tube-platform-video/ promking-tube/",
     "git commit -m 'FXV/PKT tube sites: owned-player overhaul + fetcher hardening'",
     "git push origin main",
     "php -l on all 11 modified PHP files (clean)"

@@ -24,7 +24,7 @@
                 },
     "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\business\\tube-site",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
-    "summary":  "Researched pornhub-api library, identified it as Python, and mapped the user\u0027s concurrency requirements to a PHP curl_multi_init architecture. Re-wrote the implementation plan to encompass the massive scope of work requested: concurrent fetching, IP rotation, Fastify database consolidation to MariaDB, shared auth modals, UI/branding decoupling from VaultWares, and database cleanup of Trust and Safety videos.",
+    "summary":  "Researched stream-platform-api library, identified it as Python, and mapped the user\u0027s concurrency requirements to a PHP curl_multi_init architecture. Re-wrote the implementation plan to encompass the massive scope of work requested: concurrent fetching, IP rotation, Fastify database consolidation to MariaDB, shared auth modals, UI/branding decoupling from VaultWares, and database cleanup of Trust and Safety videos.",
     "commands":  [
 
                  ],

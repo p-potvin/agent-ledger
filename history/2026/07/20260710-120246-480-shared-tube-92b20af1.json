@@ -26,18 +26,18 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
-  "summary": "Fri, 10 Jul 2026 11:52 America/Toronto - Fixed FullXXX admin WebAuthn origin by adding X-Forwarded-Host to Greencloud fullxxx.video /api/promking/ and /auth/ nginx proxy locations while preserving upstream Host api.vaultwares.ca for TLS/SNI. Live nginx reloaded; public POST https://fullxxx.video/auth/passkey/login now returns rpId fullxxx.video. Persisted shared-tube template and version bump 0.2.47 in commit 484b0ee pushed to main.",
+  "summary": "Fri, 10 Jul 2026 11:52 America/Toronto - Fixed TubePlatform admin WebAuthn origin by adding X-Forwarded-Host to Greencloud tube-platform.internal /api/promking/ and /auth/ nginx proxy locations while preserving upstream Host api.vaultwares.ca for TLS/SNI. Live nginx reloaded; public POST https://platform-alpha.internal/auth/passkey/login now returns rpId tube-platform.internal. Persisted shared-tube template and version bump 0.2.47 in commit 484b0ee pushed to main.",
   "commands": [
     "nginx -t",
     "systemctl reload nginx",
-    "curl -X POST https://fullxxx.video/auth/passkey/login",
+    "curl -X POST https://platform-alpha.internal/auth/passkey/login",
     "git commit",
     "git push origin main"
   ],
   "files": [
-    "Prom-King/shared-tube/scripts/nginx/fullxxx.video.conf",
+    "Prom-King/shared-tube/scripts/nginx/tube-platform.internal.conf",
     "Prom-King/shared-tube/package.json",
-    "/etc/nginx/sites-enabled/fullxxx.video.conf"
+    "/etc/nginx/sites-enabled/tube-platform.internal.conf"
   ],
   "planPath": "",
   "contentHash": "92b20af143c1e142f8b12df4953108a5fb55f72563af80ef325c9dc2e6fe09bb",

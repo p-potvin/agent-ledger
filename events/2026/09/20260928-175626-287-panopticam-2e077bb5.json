@@ -27,7 +27,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Panopticam v0.13.1: fixed harvest browser (removed host-resolver-rules DNS guard that stalled page loads; verified onlyfans/google load via OVH egress on a throwaway profile), stopped a stale SSH tunnel of mine; harvester now women-only and skips rooms whose cam faces split into two people. STATE.md updated.",
+  "summary": "Panopticam v0.13.1: fixed harvest browser (removed host-resolver-rules DNS guard that stalled page loads; verified creator-platform/google load via OVH egress on a throwaway profile), stopped a stale SSH tunnel of mine; harvester now women-only and skips rooms whose cam faces split into two people. STATE.md updated.",
   "commands": [
     "git push (webhook deploys)"
   ],

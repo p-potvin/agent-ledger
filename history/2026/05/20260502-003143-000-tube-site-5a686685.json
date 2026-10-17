@@ -8,16 +8,16 @@
   "actor": "AI Agent",
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
-  "summary": "Backfill: commit 8167dfa (2026-05-02T04:31:43Z) - Fix silent deploy failures and trigger fullxxx.video deployment | files=3 +19 -14",
+  "summary": "Backfill: commit 8167dfa (2026-05-02T04:31:43Z) - Fix silent deploy failures and trigger tube-platform.internal deployment | files=3 +19 -14",
   "commands": [
     "git log --since=2026-05-01T21:47:54.9552777Z --pretty=format:%H^%cI^%s",
     "git show --name-only --pretty=format: 8167dfa6cb05c2422cc554340061cc2402986fb2",
     "git show --numstat --pretty=format: 8167dfa6cb05c2422cc554340061cc2402986fb2"
   ],
   "files": [
-    ".github/workflows/deploy-fullxxx-video.yml",
+    ".github/workflows/deploy-tube-platform-video.yml",
     ".github/workflows/deploy-promking-tube.yml",
-    "fullxxx-video/README.md"
+    "tube-platform-video/README.md"
   ],
   "planPath": "",
   "contentHash": "5a686685aef704b695f131458c3c3c908f594e06f15a2fe3abe53bd6576efc4e",

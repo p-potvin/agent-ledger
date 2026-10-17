@@ -142,7 +142,7 @@
     {
       "canonical": "qa-automation",
       "aliases": [],
-      "notes": "Namespace-prefixed variant from agent input. fullxxx variants moved to tube-sites."
+      "notes": "Namespace-prefixed variant from agent input. tube-platform variants moved to tube-sites."
     },
     {
       "canonical": "prelanding-page",
@@ -251,9 +251,9 @@
         "promking-tube",
         "Prom-King tube-sites",
         "prom-king.xyz",
-        "fullxxx.video",
-        "fullxxx-video-and-qa-automation",
-        "fullxxx-webhook-deploy-qa",
+        "tube-platform.internal",
+        "tube-platform-qa-automation",
+        "tube-platform-webhook-deploy-qa",
         "Prom-King Keep2Share & ShareVerge Pipeline",
         "Prom-King & VaultWares API",
         "Monitoring and Prom-King tube operations"

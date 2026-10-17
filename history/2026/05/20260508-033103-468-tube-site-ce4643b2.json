@@ -19,7 +19,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\business",
-  "summary": "Provisioned the Debian 12 VPS at 212.193.6.35: generated and installed a dedicated SSH key, added 1GB swap, installed nginx/php8.2-fpm/mariadb/certbot/tailscale, disabled redis and packagekit to save RAM, created two WordPress instances for prom-king.xyz and fullxxx.video, copied and activated the repo plugins, updated GitHub admin secrets to the new VPS WordPress users, and enabled key-only SSH hardening plus UFW with 22/80/443. Final memory footprint is about 495 MB used with 1 GB swap free. Tailscale is joined and configured locally for exit-node advertisement, but admin-console approval may still be needed before it shows as an active exit node.",
+  "summary": "Provisioned the Debian 12 VPS at 212.193.6.35: generated and installed a dedicated SSH key, added 1GB swap, installed nginx/php8.2-fpm/mariadb/certbot/tailscale, disabled redis and packagekit to save RAM, created two WordPress instances for prom-king.xyz and tube-platform.internal, copied and activated the repo plugins, updated GitHub admin secrets to the new VPS WordPress users, and enabled key-only SSH hardening plus UFW with 22/80/443. Final memory footprint is about 495 MB used with 1 GB swap free. Tailscale is joined and configured locally for exit-node advertisement, but admin-console approval may still be needed before it shows as an active exit node.",
   "commands": [
     "ssh ... free -m",
     "ssh ... wp plugin list",
@@ -29,7 +29,7 @@
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\infra\\vps\\create-wordpress-site.sh",
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\infra\\vps\\php-fpm\\wordpress-site-pool.conf.template",
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-promking-tube.yml",
-    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-fullxxx-video.yml"
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-tube-platform-video.yml"
   ],
   "planPath": "",
   "contentHash": "ce4643b24f44e8e3d64e47029139e2ae1b5d3ed07638b8f57a703273019e3f8a",

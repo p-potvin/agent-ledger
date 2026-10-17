@@ -19,7 +19,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\business\\qa-automation",
-  "summary": "Updated qa_automation_routine.py to test a sequence of URLs, defaulting to https://prom-king.xyz and https://fullxxx.video as requested.",
+  "summary": "Updated qa_automation_routine.py to test a sequence of URLs, defaulting to https://prom-king.xyz and https://platform-alpha.internal as requested.",
   "commands": [],
   "files": [
     "qa_automation_routine.py"

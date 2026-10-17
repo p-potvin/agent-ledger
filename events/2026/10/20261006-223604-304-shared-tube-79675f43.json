@@ -23,7 +23,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-  "summary": "StashDB lookups now overlap 4 requests under a shared 260 ms start spacing (0.8 -> ~2.9-3.1 req/s); raw StashDB/TPDB answers stored gzipped; run re-fetches the ~31k earlier rows after never-asked titles (102k total, ~9.7 h). G:\\mega fingerprints re-run with raw (602/661). JoyTag (fancyfeast/joytag ONNX, G:\\TubeLab\\models\\joytag) added and running over library then tube clips at 3.1 videos/s. vw preview-generator running over gap folders. Commits 6c04011, c3eda10 pushed to feat/vision-lab.",
+  "summary": "MediaDatabase lookups now overlap 4 requests under a shared 260 ms start spacing (0.8 -> ~2.9-3.1 req/s); raw MediaDatabase/TPDB answers stored gzipped; run re-fetches the ~31k earlier rows after never-asked titles (102k total, ~9.7 h). G:\\mega fingerprints re-run with raw (602/661). JoyTag (fancyfeast/joytag ONNX, G:\\TubeLab\\models\\joytag) added and running over library then tube clips at 3.1 videos/s. vw preview-generator running over gap folders. Commits 6c04011, c3eda10 pushed to feat/vision-lab.",
   "commands": [],
   "files": [],
   "planPath": "",

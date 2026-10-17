@@ -30,7 +30,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-    "summary":  "Checked deployments on OVH (oneporn, sexyprn) and GreenCloud (fxv, pkt). Discovered permissions issues (root-owned files in shared/src/admin/Links) on OVH blocking recent deploys. Fixed ownership on OVH and successfully rerun deployment script to update all sites to v0.2.25. Fixed Layout.astro which rendered HTML version comment fragment inside html tag but before head, causing double head tag parser bugs.",
+    "summary":  "Checked deployments on OVH (oneporn, media-portal-gamma) and GreenCloud (fxv, pkt). Discovered permissions issues (root-owned files in shared/src/admin/Links) on OVH blocking recent deploys. Fixed ownership on OVH and successfully rerun deployment script to update all sites to v0.2.25. Fixed Layout.astro which rendered HTML version comment fragment inside html tag but before head, causing double head tag parser bugs.",
     "commands":  [
                      "ssh -o StrictHostKeyChecking=no ubuntu@100.67.25.118 \u0027sudo chown -R ubuntu:ubuntu /srv/repos/Prom-King/shared-tube\u0027",
                      "ssh root@100.73.93.84 \u0027sudo -u vwdeploy env VW_AFTER=d0b45b7d2f100ef40083ffdeb6ed5afd8d60111a /var/www/deploy-scripts/deploy-shared-tube.sh\u0027"

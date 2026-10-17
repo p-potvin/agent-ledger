@@ -39,7 +39,7 @@
   },
   "workspaceRoot": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
-  "summary": "Implemented own-domain stealth crawl runner (Node/Playwright) that generates rotating IPoasis proxies per domain session (via proxy-chain anonymization), crawls same-domain links up to depth 4 with conservative page cap, blocks heavy resources (image/media/font) and optionally third-party requests to protect bandwidth, and runs human-like behavior + age-gate handling only on prom-king.xyz/fullxxx.video. Executed a run with default limits and wrote JSON artifacts.",
+  "summary": "Implemented own-domain stealth crawl runner (Node/Playwright) that generates rotating IPoasis proxies per domain session (via proxy-chain anonymization), crawls same-domain links up to depth 4 with conservative page cap, blocks heavy resources (image/media/font) and optionally third-party requests to protect bandwidth, and runs human-like behavior + age-gate handling only on prom-king.xyz/tube-platform.internal. Executed a run with default limits and wrote JSON artifacts.",
   "commands": [
     "npm run report:own-domain-stealth",
     "node -c .\\\\scripts\\\\run-own-domain-stealth.mjs"
@@ -52,7 +52,7 @@
     "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\README.md",
     "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\own-domain-stealth\\\\20260526-153952\\\\summary.json",
     "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\own-domain-stealth\\\\20260526-153952\\\\prom-king.xyz\\\\stealth-results.json",
-    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\own-domain-stealth\\\\20260526-153952\\\\fullxxx.video\\\\stealth-results.json"
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\own-domain-stealth\\\\20260526-153952\\\\tube-platform.internal\\\\stealth-results.json"
   ],
   "planPath": "",
   "contentHash": "f99089a1021bdae06b3abf01b97777a30f0785f5157f4ee925175a5dc4a50b84",

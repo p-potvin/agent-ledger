@@ -28,7 +28,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
-  "summary": "shared-tube v0.2.25 (583be76..d0b45b7) + vaultwares-api (72029c1..92efd68) pushed. (1) Stream proxy no longer 302's to raw CDN URL when sourceUrl empty — was root cause of sexyprn/oneporn 403 (browser hit CDN direct, IP mismatch on signed URL). Returns 502 with re-fetch hint. (2) Default quality flipped 720p->480p to reduce residential-proxy bytes. (3) SOCKS5 STREAM_OUTBOUND_PROXY refused at init with clear error (undici ProxyAgent is HTTP-only); ops guidance: front SOCKS5 with gost -L=http://:8888 -F=socks5://.... (4) Fetcher tab gains Daily schedule card writing settings.fetcher_cron; new POST /fetcher/cron/reload hot-reloads APScheduler. Existing _drive_subprocess duplicate-zone logic already caps runs at ~4 known-row streak.",
+  "summary": "shared-tube v0.2.25 (583be76..d0b45b7) + vaultwares-api (72029c1..92efd68) pushed. (1) Stream proxy no longer 302's to raw CDN URL when sourceUrl empty — was root cause of media-portal-gamma/oneporn 403 (browser hit CDN direct, IP mismatch on signed URL). Returns 502 with re-fetch hint. (2) Default quality flipped 720p->480p to reduce residential-proxy bytes. (3) SOCKS5 STREAM_OUTBOUND_PROXY refused at init with clear error (undici ProxyAgent is HTTP-only); ops guidance: front SOCKS5 with gost -L=http://:8888 -F=socks5://.... (4) Fetcher tab gains Daily schedule card writing settings.fetcher_cron; new POST /fetcher/cron/reload hot-reloads APScheduler. Existing _drive_subprocess duplicate-zone logic already caps runs at ~4 known-row streak.",
   "commands": [
     "pnpm --filter @promking/shared-tube typecheck",
     "pnpm -r build",

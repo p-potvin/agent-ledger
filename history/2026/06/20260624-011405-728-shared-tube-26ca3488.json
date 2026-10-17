@@ -27,7 +27,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-    "summary":  "Pushed version bump (0.2.8 / 0.2.9) and admin auth CORS fix to origin main. Verified tailnet webhook receiver triggered dispatcher on greencloud, which dispatched to vps-ovhcloud via Tailscale SSH. Rebuild/redeploy succeeded, restarting services (pkt, fxv, oneporn, sexyprn). Curl probes to https://prom-king.xyz/2257 and https://fullxxx.video/2257 returned HTTP 200 successfully.",
+    "summary":  "Pushed version bump (0.2.8 / 0.2.9) and admin auth CORS fix to origin main. Verified tailnet webhook receiver triggered dispatcher on greencloud, which dispatched to vps-ovhcloud via Tailscale SSH. Rebuild/redeploy succeeded, restarting services (pkt, fxv, oneporn, media-portal-gamma). Curl probes to https://prom-king.xyz/2257 and https://platform-alpha.internal/2257 returned HTTP 200 successfully.",
     "commands":  [
                      "git push origin main",
                      "ssh root@100.73.93.84 \u0027curl -I -k ...\u0027"

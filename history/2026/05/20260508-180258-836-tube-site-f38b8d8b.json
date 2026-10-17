@@ -26,11 +26,11 @@
     "rsync restored uploads/themes",
     "wp user create/delete/list",
     "curl https://prom-king.xyz",
-    "curl https://fullxxx.video"
+    "curl https://platform-alpha.internal"
   ],
   "files": [
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\shortcodes.php",
-    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\shortcodes.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\tube-platform-video\\includes\\shortcodes.php",
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\prelanding-page\\src\\App.jsx"
   ],
   "planPath": "",

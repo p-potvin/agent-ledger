@@ -42,7 +42,7 @@
     "qa-automation/lib/qa-mouse-paths.mjs",
     "qa-automation/scripts/compile-natural-mouse-paths.mjs",
     "qa-automation/tests/age-gate-wordpress.spec.ts",
-    "qa-automation/tests/fullxxx-crawl.spec.ts",
+    "qa-automation/tests/tube-platform-crawl.spec.ts",
     "qa-automation/tests/weekly-smoke.spec.ts",
     "qa-automation/tests/support/site.ts",
     "qa-automation/package.json",

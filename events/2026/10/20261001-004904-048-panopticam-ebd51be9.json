@@ -26,7 +26,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "BongaCams chat probe: wss://chat04.bcccdn.com/websocket accepts anonymous connect from VPS but waits for the client to speak first; client code lives in a lazy chunk not in h.js. Lovense get_model_tip_sett gives tokens->level/seconds table. Asked operator for the first sent frames and the tip-settings request URL; operator-pasted ntoken not stored. STATE.md updated.",
+  "summary": "LiveStreamPlatform chat probe: wss://chat04.bcccdn.com/websocket accepts anonymous connect from VPS but waits for the client to speak first; client code lives in a lazy chunk not in h.js. Lovense get_model_tip_sett gives tokens->level/seconds table. Asked operator for the first sent frames and the tip-settings request URL; operator-pasted ntoken not stored. STATE.md updated.",
   "commands": [
     "ws probe from VPS"
   ],

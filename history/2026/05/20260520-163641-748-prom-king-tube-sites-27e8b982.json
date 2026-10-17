@@ -29,16 +29,16 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
-  "summary": "Fix multi-source scraper: pornxp was blocked because embed URLs now resolve to hosts like sn.porn-xp.com (outside allowlist). Added allowlist expansion per active source + updated pornxp/topvid domain map, and used effective allowlist when validating candidates so pornxp + freesexvideos can insert again.",
+  "summary": "Fix multi-source scraper: pornxp was blocked because embed URLs now resolve to hosts like sn.porn-xp.com (outside allowlist). Added allowlist expansion per active source + updated pornxp/topvid domain map, and used effective allowlist when validating candidates so pornxp + media-archive can insert again.",
   "commands": [
     "Invoke-WebRequest to fetch sample pages and confirm pornxp embed host sn.porn-xp.com",
     "gh issue create (Prom-King/tube-sites#22)",
-    "php -l fullxxx-video/includes/{helpers,video-fetcher,admin-settings}.php"
+    "php -l tube-platform-video/includes/{helpers,video-fetcher,admin-settings}.php"
   ],
   "files": [
-    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\admin-settings.php",
-    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\helpers.php",
-    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\video-fetcher.php"
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\tube-platform-video\\includes\\admin-settings.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\tube-platform-video\\includes\\helpers.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\tube-platform-video\\includes\\video-fetcher.php"
   ],
   "planPath": "",
   "contentHash": "27e8b982a0e3c1cf21a9b2ea25b34e86c3ed8aede95479016c3fd4d2e00a892f",

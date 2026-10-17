@@ -30,21 +30,21 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-  "summary": "Investigated urgent OPH/SPN admin dashboard regression. Created GitHub issue Prom-King/shared-tube#1, verified current origin/main commit c685158 contains the OPH/SPN admin dashboard implementation and matching admin site prop support, ran targeted oneporn/sexyprn typechecks and builds successfully, and browser-smoked both local /admin pages plus /contact navigation with no console/page/request errors. Also stopped the earlier Telethon run on request; health-ledger local input-tracker heartbeat removal and python-zipper PYLOAD_API_URL override remain as earlier local edits.",
+  "summary": "Investigated urgent OPH/SPN admin dashboard regression. Created GitHub issue Prom-King/shared-tube#1, verified current origin/main commit c685158 contains the OPH/SPN admin dashboard implementation and matching admin site prop support, ran targeted oneporn/media-portal-gamma typechecks and builds successfully, and browser-smoked both local /admin pages plus /contact navigation with no console/page/request errors. Also stopped the earlier Telethon run on request; health-ledger local input-tracker heartbeat removal and python-zipper PYLOAD_API_URL override remain as earlier local edits.",
   "commands": [
     "gh issue create --repo Prom-King/shared-tube --title \"Fix OPH/SPN admin dashboards to match FXV/PKT\"",
     "pnpm --filter @promking/site-oneporn typecheck",
-    "pnpm --filter @promking/site-sexyprn typecheck",
+    "pnpm --filter @promking/site-media-portal-gamma typecheck",
     "pnpm --filter @promking/site-oneporn build",
-    "pnpm --filter @promking/site-sexyprn build",
-    "Playwright Python smoke: /admin and /contact on local oneporn/sexyprn previews",
+    "pnpm --filter @promking/site-media-portal-gamma build",
+    "Playwright Python smoke: /admin and /contact on local oneporn/media-portal-gamma previews",
     "gh issue comment 1 --repo Prom-King/shared-tube ..."
   ],
   "files": [
     "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\oneporn\\src\\admin\\App.tsx",
-    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\sexyprn\\src\\admin\\App.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\media-portal-gamma\\src\\admin\\App.tsx",
     "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\oneporn\\src\\pages\\videos\\[slug].astro",
-    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\sexyprn\\src\\pages\\videos\\[slug].astro"
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\media-portal-gamma\\src\\pages\\videos\\[slug].astro"
   ],
   "planPath": "",
   "contentHash": "f2fd3852d8e1a6376f34322d122e823bd6317ba103daf8a4b4378e1d604183e9",

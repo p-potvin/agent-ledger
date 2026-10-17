@@ -26,7 +26,7 @@
                 },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
-    "summary":  "Planned a complete VaultWares-compliant PQC login and signup flow for promking-tube and fullxxx-video websites, utilizing ML-KEM to ensure the server never reconstructs private keys.",
+    "summary":  "Planned a complete VaultWares-compliant PQC login and signup flow for promking-tube and tube-platform-video websites, utilizing ML-KEM to ensure the server never reconstructs private keys.",
     "commands":  [
 
                  ],

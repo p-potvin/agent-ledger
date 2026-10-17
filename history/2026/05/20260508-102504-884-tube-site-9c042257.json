@@ -25,11 +25,11 @@
     "wp post create ... [promking_tube]",
     "wp post create ... [fxv_grid]",
     "curl https://prom-king.xyz",
-    "curl https://fullxxx.video"
+    "curl https://platform-alpha.internal"
   ],
   "files": [
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\shortcodes.php",
-    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\shortcodes.php"
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\tube-platform-video\\includes\\shortcodes.php"
   ],
   "planPath": "3\\ limit=\\24\\] and [fxv_grid count=\\24\\], set them as page_on_front, and removed the sample posts. Public domains now render the shortcode-driven tube surfaces with the expected empty-state message instead of a zero-length or generic WordPress page.",
   "contentHash": "9c042257102b106996acbf5bebd7a1601837957981408b28a0887899dab7292d",

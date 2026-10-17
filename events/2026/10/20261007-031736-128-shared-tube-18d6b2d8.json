@@ -23,7 +23,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\vision",
-  "summary": "Tube Lab Windows scheduled task (logon trigger, conhost --headless running tubevision serve directly; restart-on-failure only, no respawn loop per operator). Added per-video 'not this person' removal with persistent exclusions, similar-name merge suggestions page (7 pairs found), named-cluster merge with inbox crops following; tests 16 passing. Commit 2f35c10 pushed. StashDB 80%+ done (~2-3 req/s), JoyTag tube pass finished.",
+  "summary": "Tube Lab Windows scheduled task (logon trigger, conhost --headless running tubevision serve directly; restart-on-failure only, no respawn loop per operator). Added per-video 'not this person' removal with persistent exclusions, similar-name merge suggestions page (7 pairs found), named-cluster merge with inbox crops following; tests 16 passing. Commit 2f35c10 pushed. MediaDatabase 80%+ done (~2-3 req/s), JoyTag tube pass finished.",
   "commands": [],
   "files": [],
   "planPath": "",

@@ -21,12 +21,12 @@
   "cwd": "C:\\Users\\Administrator\\Desktop\\business",
   "summary": "Reworked tube plugin deployment verification: removed brittle success-string matching and replaced with (a) extract plugin file param from update response when possible, (b) fetch plugins.php and fail fast if it returns login form, (c) verify plugin file path appears (raw or URL-encoded), and (d) parse the nearby 'Version X.Y.Z' and fail if installed version != repo Version header (catches installed-but-not-updated).",
   "commands": [
-    "Get-Content .github/workflows/deploy-fullxxx-video.yml",
+    "Get-Content .github/workflows/deploy-tube-platform-video.yml",
     "Get-Content .github/workflows/deploy-promking-tube.yml",
     "git diff --name-only"
   ],
   "files": [
-    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-fullxxx-video.yml",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-tube-platform-video.yml",
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-promking-tube.yml"
   ],
   "planPath": "",

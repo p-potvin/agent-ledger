@@ -43,7 +43,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
-  "summary": "Made IP rotation mandatory in the SERP visibility runner. Sessions now fail fast with rotation_failed when rotation cannot be performed, and startup now requires a valid rotation path. Updated README and env example accordingly. Ran two 12-session batches: an initial 12-session slice and a distributed 12-scenario run across Google, DuckDuckGo, Bing, and Brave. Distributed run completed with rotation status rotated in all 12 sessions; result statuses were 7 ok, 4 blocked_or_challenged, 1 failed; no appearances for prom-king.xyz or fullxxx.video through checked depth.",
+  "summary": "Made IP rotation mandatory in the SERP visibility runner. Sessions now fail fast with rotation_failed when rotation cannot be performed, and startup now requires a valid rotation path. Updated README and env example accordingly. Ran two 12-session batches: an initial 12-session slice and a distributed 12-scenario run across Google, DuckDuckGo, Bing, and Brave. Distributed run completed with rotation status rotated in all 12 sessions; result statuses were 7 ok, 4 blocked_or_challenged, 1 failed; no appearances for prom-king.xyz or tube-platform.internal through checked depth.",
   "commands": [
     "node -c .\\scripts\\run-search-visibility-report.mjs",
     "npx tsc --noEmit",

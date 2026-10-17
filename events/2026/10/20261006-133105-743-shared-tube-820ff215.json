@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-    "summary":  "Moved uv cache to D:\\uv\\cache (robocopy 341,113 files, 0 failed) + junction at %LOCALAPPDATA%\\uv\\cache; C: 40.3-\u003e54.2 GB free (less than 33 GB because cache files were hardlinked into venvs). miniforge3 already a symlink to E:\\miniforge3, nothing to move. vaultwares-docs PR #32 (tubelab ops docs + operator\u0027s instruction edits incl. removal of Torrent \u0026 Debrid Policy, flagged). Full StashDB title lookup started (~102k titles, 260 ms pacing, 429 back-off), log G:\\TubeLab\\jobs\\stashdb-full.log.",
+    "summary":  "Moved uv cache to D:\\uv\\cache (robocopy 341,113 files, 0 failed) + junction at %LOCALAPPDATA%\\uv\\cache; C: 40.3-\u003e54.2 GB free (less than 33 GB because cache files were hardlinked into venvs). miniforge3 already a symlink to E:\\miniforge3, nothing to move. vaultwares-docs PR #32 (tubelab ops docs + operator\u0027s instruction edits incl. removal of Torrent \u0026 Debrid Policy, flagged). Full MediaDatabase title lookup started (~102k titles, 260 ms pacing, 429 back-off), log G:\\TubeLab\\jobs\\media-database-full.log.",
     "commands":  [
 
                  ],

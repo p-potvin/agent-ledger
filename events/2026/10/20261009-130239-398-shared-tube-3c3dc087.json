@@ -30,8 +30,8 @@
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
   "summary": "Tube lab Settings page (233b45e): preferences in lab DB (theme system/dark/light with basic light theme, 3D viewer toggle, items per page incl. 'last one used', start page, default search/scope, hover previews/sound, scores, confirm destructive); Library (Stash folders via configureGeneral, mirrored in library_folders, add/remove/scan); Tasks (Stash scan/generate/clean dry-run/clean-generated/auto-tag/optimise/backup/stop, never Identify; tracked lab tubevision tasks with logs); Logs (lab-app.log, worker/task logs, Stash file + in-memory, levels, filter, follow). Restored People/person/names/Duplicates views dropped by 1783e2c. Page served no-cache. Memory updated: lab may write to Stash. Tested: stash-sync task exit 0, Stash clean dry run started, light theme, tabs in browser; theme reset to system.",
   "commands": [
-    "Stash GraphQL configureGeneral/metadataClean dryRun",
-    "tubevision stash-sync via /tasks"
+    "Catalog GraphQL configureGeneral/metadataClean dryRun",
+    "tubevision catalog-sync via /tasks"
   ],
   "files": [
     "vision/src/tubevision/admin.py",

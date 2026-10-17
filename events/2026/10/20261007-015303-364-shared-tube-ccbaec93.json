@@ -23,7 +23,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\vision",
-  "summary": "Load reduction: lab jobs set BelowNormal; JoyTag restarted with --duty 0.5 (commit ca88610); StashDB job restarted after transient SQLite disk I/O error (DB quick_check ok) with retry logic; measured Panopticam tag_host ~52% CPU as main load (untouched). Lab server restarted detached (pid 36316) on 100.71.101.21:8790 after 502; verified 200 via tubelab.vaultwares.ca.",
+  "summary": "Load reduction: lab jobs set BelowNormal; JoyTag restarted with --duty 0.5 (commit ca88610); MediaDatabase job restarted after transient SQLite disk I/O error (DB quick_check ok) with retry logic; measured Panopticam tag_host ~52% CPU as main load (untouched). Lab server restarted detached (pid 36316) on 100.71.101.21:8790 after 502; verified 200 via tubelab.vaultwares.ca.",
   "commands": [],
   "files": [],
   "planPath": "",

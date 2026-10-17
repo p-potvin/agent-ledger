@@ -33,7 +33,7 @@
     "npm.cmd run test:list",
     "python .\\tests\\test_qa_mouse_paths_python.py",
     "python -m py_compile .\\qa_automation_routine.py .\\run_continuous_qa.py",
-    "node --check .\\lib\\qa-mouse-paths.mjs; node --check .\\scripts\\run-own-domain-stealth.mjs; node --check .\\scripts\\run-search-visibility-report.mjs; node --check .\\scripts\\run-fullxxx-crawl-firefox-profile.mjs"
+    "node --check .\\lib\\qa-mouse-paths.mjs; node --check .\\scripts\\run-own-domain-stealth.mjs; node --check .\\scripts\\run-search-visibility-report.mjs; node --check .\\scripts\\run-tube-platform-crawl-firefox-profile.mjs"
   ],
   "files": [
     "lib/qa-mouse-paths.ts",
@@ -44,7 +44,7 @@
     "qa_automation_routine.py",
     "scripts/run-own-domain-stealth.mjs",
     "scripts/run-search-visibility-report.mjs",
-    "scripts/run-fullxxx-crawl-firefox-profile.mjs",
+    "scripts/run-tube-platform-crawl-firefox-profile.mjs",
     ".env.example",
     "README.md"
   ],

@@ -15,17 +15,17 @@
     "git show --numstat --pretty=format: de6268dd1b86477ede6053ba272faf9abcfa9d48"
   ],
   "files": [
-    "fullxxx-video/assets/css/tube.css",
-    "fullxxx-video/assets/js/tube.js",
-    "fullxxx-video/fullxxx-video.php",
-    "fullxxx-video/includes/admin-settings.php",
-    "fullxxx-video/includes/dmca.php",
-    "fullxxx-video/includes/helpers.php",
-    "fullxxx-video/includes/template-loader.php",
-    "fullxxx-video/includes/video-fetcher.php",
-    "fullxxx-video/templates/archive-fxv_video.php",
-    "fullxxx-video/templates/single-fxv_video.php",
-    "fullxxx-video/templates/taxonomy-fxv_category.php"
+    "tube-platform-video/assets/css/tube.css",
+    "tube-platform-video/assets/js/tube.js",
+    "tube-platform-video/tube-platform-video.php",
+    "tube-platform-video/includes/admin-settings.php",
+    "tube-platform-video/includes/dmca.php",
+    "tube-platform-video/includes/helpers.php",
+    "tube-platform-video/includes/template-loader.php",
+    "tube-platform-video/includes/video-fetcher.php",
+    "tube-platform-video/templates/archive-fxv_video.php",
+    "tube-platform-video/templates/single-fxv_video.php",
+    "tube-platform-video/templates/taxonomy-fxv_category.php"
   ],
   "planPath": "",
   "contentHash": "acdbe73a7c37aa79c79c97ce55cdc5a39a806d3617202849d9bb619b3ae0214f",

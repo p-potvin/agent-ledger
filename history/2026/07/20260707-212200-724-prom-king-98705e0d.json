@@ -27,7 +27,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King",
-    "summary":  "Fixed build failure on OVH by explicitly adding node-fetch and https-proxy-agent to the package.json dependencies of fxv, oneporn, and sexyprn.",
+    "summary":  "Fixed build failure on OVH by explicitly adding node-fetch and https-proxy-agent to the package.json dependencies of fxv, oneporn, and media-portal-gamma.",
     "commands":  [
 
                  ],

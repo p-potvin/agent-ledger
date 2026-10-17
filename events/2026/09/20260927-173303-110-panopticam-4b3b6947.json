@@ -33,7 +33,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Panopticam v0.3-0.8.1: Telegram alerts (Prom-King bot), hover-preview sound, deep links, Flirt4Free listing (embedded __homePageData__), visual search (SigLIP, PC worker in KFC venv + OVH text encoder), cross-site identity/twins, Atlas face store tied read-only to ColONEL-KFC G:\\Gallery (stricter thresholds, 2-vote rule, inbox staging, celebrity gallery excluded), NudeNet frame states + state alerts, Looks chips, scheduled task 'Panopticam Vision'. STATE.md updated.",
+  "summary": "Panopticam v0.3-0.8.1: Telegram alerts (Prom-King bot), hover-preview sound, deep links, LiveStreamProvider listing (embedded __homePageData__), visual search (SigLIP, PC worker in KFC venv + OVH text encoder), cross-site identity/twins, Atlas face store tied read-only to ColONEL-KFC G:\\Gallery (stricter thresholds, 2-vote rule, inbox staging, celebrity gallery excluded), NudeNet frame states + state alerts, Looks chips, scheduled task 'Panopticam Vision'. STATE.md updated.",
   "commands": [
     "Register-VisionTask.ps1",
     "git push (webhook deploys)"

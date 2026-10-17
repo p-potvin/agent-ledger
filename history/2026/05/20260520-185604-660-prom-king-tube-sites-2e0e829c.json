@@ -27,14 +27,14 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
-  "summary": "Merged PR #24 into main (commit ff48d64) to ship FreeSexVideos /latest-updates/{page}/ pattern + 404-with-body tolerance. Note: Jira sync workflow was failing on PR with GITHUB_TOKEN 403 (Resource not accessible by integration). main now updated to ff48d64.",
+  "summary": "Merged PR #24 into main (commit ff48d64) to ship MediaArchive /latest-updates/{page}/ pattern + 404-with-body tolerance. Note: Jira sync workflow was failing on PR with GITHUB_TOKEN 403 (Resource not accessible by integration). main now updated to ff48d64.",
   "commands": [
     "gh pr merge 24 --squash --delete-branch",
     "git log -3 --oneline --decorate"
   ],
   "files": [
-    "fullxxx-video/includes/video-fetcher.php",
-    "fullxxx-video/includes/player.php"
+    "tube-platform-video/includes/video-fetcher.php",
+    "tube-platform-video/includes/player.php"
   ],
   "planPath": "",
   "contentHash": "2e0e829c24af588e6aa54ce94670194c879a4b237e06f295616c11b6899ce6b7",

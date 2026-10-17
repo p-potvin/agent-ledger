@@ -28,7 +28,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Panopticam v0.16.1-0.16.4: stills supplement rounds (rooms of gallery identities under 50 photos get another stills pass 2 days later, folder names the identity); Atlas reloads the gallery after ingest and ties new identities to their persona; fixed ingest bug where new identities were matched on only 6 crops (reindex-face-model after every add, retried with eligible count, lock kept) plus one-off backfill; ingest no longer re-adds new-face-model's 6 samples as _added1 duplicates; Flirt4Free numeric names fall back to room display name. Operator triage 113 kept / 2 rejected. Tests: backend 49, vision 28 pass. Deployed via push to main; PC worker restarted twice at safe points.",
+  "summary": "Panopticam v0.16.1-0.16.4: stills supplement rounds (rooms of gallery identities under 50 photos get another stills pass 2 days later, folder names the identity); Atlas reloads the gallery after ingest and ties new identities to their persona; fixed ingest bug where new identities were matched on only 6 crops (reindex-face-model after every add, retried with eligible count, lock kept) plus one-off backfill; ingest no longer re-adds new-face-model's 6 samples as _added1 duplicates; LiveStreamProvider numeric names fall back to room display name. Operator triage 113 kept / 2 rejected. Tests: backend 49, vision 28 pass. Deployed via push to main; PC worker restarted twice at safe points.",
   "commands": [
     "git push origin main",
     "vw reindex-face-model -Model peisinoe -Samples 11 -Lock -Device cpu"

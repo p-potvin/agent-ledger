@@ -27,7 +27,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-  "summary": "Wrote Playwright spec for homepage short-link pills (delivered in chat, not committed). Mocks /api/promking/short-links/** and stubs exe.io/cuty.io so no real links are minted; opt-in PILLS_LIVE=1 live test. Ran a temp patchright copy in qa-automation against fullxxx.video, sexyprn.lol, 1pornhub.vip: 18 passed, 3 live skipped; temp file and results removed. Found commit efb6c98 moved pills before Featured Scenes; test made position-agnostic.",
+  "summary": "Wrote Playwright spec for homepage short-link pills (delivered in chat, not committed). Mocks /api/promking/short-links/** and stubs exe.io/cuty.io so no real links are minted; opt-in PILLS_LIVE=1 live test. Ran a temp patchright copy in qa-automation against tube-platform.internal, portal-gamma.internal, portal-beta.internal: 18 passed, 3 live skipped; temp file and results removed. Found commit efb6c98 moved pills before Featured Scenes; test made position-agnostic.",
   "commands": [
     "npx patchright test tests/zz-tmp-pills.spec.ts (temp, removed)"
   ],

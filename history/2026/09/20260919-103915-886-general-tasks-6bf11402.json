@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
-    "summary":  "Fixed OnlyFans thumbnail 403s and stream 502 timeouts, switched hover preview to 30-frame sprite animation, and added real-time fetcher progress logging",
+    "summary":  "Fixed CreatorPlatform thumbnail 403s and stream 502 timeouts, switched hover preview to 30-frame sprite animation, and added real-time fetcher progress logging",
     "commands":  [
 
                  ],

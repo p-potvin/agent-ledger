@@ -39,7 +39,7 @@
     "files":  [
                   "apps/oneporn/src/pages/api/stream/[slug].ts",
                   "apps/fxv/src/pages/api/stream/[slug].ts",
-                  "apps/sexyprn/src/pages/api/stream/[slug].ts",
+                  "apps/media-portal-gamma/src/pages/api/stream/[slug].ts",
                   "shared/src/components/PlayerModal.astro"
               ],
     "planPath":  "brain/e90f477f-b9e8-4263-83ad-3ff91391c7ae/implementation_plan.md",

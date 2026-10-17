@@ -27,12 +27,12 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-    "summary":  "Consolidated duplicate admin code across 4 apps fxv pkt oneporn sexyprn into shared src admin. Created SharedAdminApp component exported all admin components updated package.json exports replaced each app App.tsx with thin wrapper cleaned up duplicate files fixed gender filter defaults",
+    "summary":  "Consolidated duplicate admin code across 4 apps fxv pkt oneporn media-portal-gamma into shared src admin. Created SharedAdminApp component exported all admin components updated package.json exports replaced each app App.tsx with thin wrapper cleaned up duplicate files fixed gender filter defaults",
     "commands":  [
                      "git add -A,git commit"
                  ],
     "files":  [
-                  "shared/src/admin/,shared/package.json,apps/fxv/src/admin/App.tsx,apps/pkt/src/admin/App.tsx,apps/oneporn/src/admin/App.tsx,apps/sexyprn/src/admin/App.tsx,shared/src/api/promking-api.ts,shared-tube/CHANGES.md"
+                  "shared/src/admin/,shared/package.json,apps/fxv/src/admin/App.tsx,apps/pkt/src/admin/App.tsx,apps/oneporn/src/admin/App.tsx,apps/media-portal-gamma/src/admin/App.tsx,shared/src/api/promking-api.ts,shared-tube/CHANGES.md"
               ],
     "planPath":  "",
     "contentHash":  "d485e8ee36d7f41fd506b6a29a5cf856ff0146042b749c6c5c448e2e188ffb37",

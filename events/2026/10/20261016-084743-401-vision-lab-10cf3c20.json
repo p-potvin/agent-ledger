@@ -1,0 +1,45 @@
+{
+  "id": "20261016-084743-401-vision-lab-10cf3c20",
+  "createdAt": "2026-10-16T12:47:43.4012689Z",
+  "createdAtLocal": "2026-10-16 08:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vision-lab",
+  "kind": "general",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: feat/vision-lab\r\nTools used (this reply): Bash, PowerShell, Read\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-16 08:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Checked KFC follow-up (137 reindexed, 52 inbox names added to existing identities, 92 new identities, 305 too few usable crops). Diagnosed Panopticam moments not embedding since 06:45: embed server alive but /health takes 8-15 s (telemetry.stats per call) vs moments_embed's 5 s timeout; proposed fix, not applied (Panopticam's code). Reviewed MNRL_Training.md and F:\\amd\\LoRAs_Datasets (10.4k files, source-named, empty concept folders; label quality varies 30-80% by source via contact sheets); recommendations given in chat.",
+  "commands": [],
+  "files": [
+    "C:\\Users\\Administrator\\Desktop\\MNRL_Training.md",
+    "F:\\amd\\LoRAs_Datasets"
+  ],
+  "planPath": "",
+  "contentHash": "10cf3c20a05071be4cb1a6ace61a87731735bbc8e83e2db5693df970509f24c5",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "feat/vision-lab",
+    "head": "233b45e",
+    "hasChanges": false
+  }
+}

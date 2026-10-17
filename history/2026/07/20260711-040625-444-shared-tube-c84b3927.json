@@ -30,11 +30,11 @@
   "commands": [
     "vitest footer/search/persistent-state tests",
     "tsc shared --noEmit",
-    "astro check fxv/oneporn/sexyprn",
-    "astro build fxv/oneporn/sexyprn",
+    "astro check fxv/oneporn/media-portal-gamma",
+    "astro build fxv/oneporn/media-portal-gamma",
     "psql migration 0007_taxonomy_merge_aliases on OVH",
     "git push origin main",
-    "live HTTP probes fullxxx.video/1pornhub.vip/sexyprn.lol"
+    "live HTTP probes tube-platform.internal/portal-beta.internal/portal-gamma.internal"
   ],
   "files": [
     "CHANGES.md",
@@ -51,7 +51,7 @@
     "shared/src/seo/search.ts",
     "apps/fxv/src/pages/videos/[slug].astro",
     "apps/oneporn/src/pages/videos/[slug].astro",
-    "apps/sexyprn/src/pages/videos/[slug].astro"
+    "apps/media-portal-gamma/src/pages/videos/[slug].astro"
   ],
   "planPath": "",
   "contentHash": "c84b3927620ff3f5e54d553328ba357137e5e8e36b11a9f9680c3e39d7408f5e",

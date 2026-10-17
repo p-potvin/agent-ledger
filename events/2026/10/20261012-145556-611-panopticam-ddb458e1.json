@@ -28,7 +28,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Operator round 12 Oct: ssh.exe in Task Manager = Panopticam recordings reverse tunnel (9096->8766), no Comet/Prowlarr. F4F in-app playback on by default again (v0.52.1); zipper probe hypothesis rejected by operator, cause still open. Moments: keys 4/3/2/1 + 0 bad sound (rating -3), Low-res removed, capture-phase keys, smaller overlay. Matches: cached face matrix (4-8 s -> 0.6 s), plausibility filters, instant votes (v0.52.2). Rooms in hash ?room= + middle/ctrl-click new tab (v0.52.3). Deleted onlyfans.py.bak.",
+  "summary": "Operator round 12 Oct: ssh.exe in Task Manager = Panopticam recordings reverse tunnel (9096->8766), no Comet/Prowlarr. F4F in-app playback on by default again (v0.52.1); zipper probe hypothesis rejected by operator, cause still open. Moments: keys 4/3/2/1 + 0 bad sound (rating -3), Low-res removed, capture-phase keys, smaller overlay. Matches: cached face matrix (4-8 s -> 0.6 s), plausibility filters, instant votes (v0.52.2). Rooms in hash ?room= + middle/ctrl-click new tab (v0.52.3). Deleted creator-platform.py.bak.",
   "commands": [
     "git push origin main"
   ],

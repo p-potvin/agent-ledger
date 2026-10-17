@@ -24,14 +24,14 @@
                 },
     "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\business\\link-sharing",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\link-sharing",
-    "summary":  "Configured Nginx virtual hosts for redirect domains lnk.prom-king.xyz and lnk.fullxxx.video on the VPS. Secured both domains using Let\u0027s Encrypt SSL certificates via Certbot with automatic HTTPS redirections. Verified they both proxy successfully to the Fastify redirect service on port 3001 and return healthy status checks.",
+    "summary":  "Configured Nginx virtual hosts for redirect domains lnk.prom-king.xyz and lnk.tube-platform.internal on the VPS. Secured both domains using Let\u0027s Encrypt SSL certificates via Certbot with automatic HTTPS redirections. Verified they both proxy successfully to the Fastify redirect service on port 3001 and return healthy status checks.",
     "commands":  [
                      "certbot",
                      "systemctl reload nginx"
                  ],
     "files":  [
                   "lnk.prom-king.xyz.conf",
-                  "lnk.fullxxx.video.conf"
+                  "lnk.tube-platform.internal.conf"
               ],
     "planPath":  "",
     "contentHash":  "0383985b113401c232fa6ae0b270ac26c3859c8503a2cf1ab484b7908ed1e516",

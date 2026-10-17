@@ -23,19 +23,19 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
-  "summary": "Deployed updated FullXXX + PromKing plugins to the public GreenCloud host (vaultwares.ca / 173.249.194.15 via Tailscale 100.73.93.84), added MU loader for tube-shared, fixed loader quoting bug that caused HTTP 500, restarted php8.2-fpm, and verified fullxxx /videos now serves new Tubeshell UI (Featured this week + Go Premium + tubeshell base/theme + tube-auth). Cancelled queued GitHub Actions deploy run (26414737967) since no self-hosted runner is registered.",
+  "summary": "Deployed updated TubePlatform + PromKing plugins to the public GreenCloud host (vaultwares.ca / 173.249.194.15 via Tailscale 100.73.93.84), added MU loader for tube-shared, fixed loader quoting bug that caused HTTP 500, restarted php8.2-fpm, and verified tube-platform /videos now serves new Tubeshell UI (Featured this week + Go Premium + tubeshell base/theme + tube-auth). Cancelled queued GitHub Actions deploy run (26414737967) since no self-hosted runner is registered.",
   "commands": [
-    "gh workflow run deploy-fullxxx-video.yml (queued; cancelled)",
+    "gh workflow run deploy-tube-platform-video.yml (queued; cancelled)",
     "gh run cancel 26414737967",
     "ssh root@100.73.93.84 (deploy plugin dirs)",
     "scp tube-shared-loader.php to both sites",
     "systemctl restart php8.2-fpm",
-    "curl/Invoke-WebRequest fullxxx.video/videos for markers"
+    "curl/Invoke-WebRequest tube-platform.internal/videos for markers"
   ],
   "files": [
-    "/var/www/fullxxx.video/public/wp-content/plugins/fullxxx-video/* (deployed)",
-    "/var/www/fullxxx.video/public/wp-content/plugins/tube-shared/* (deployed)",
-    "/var/www/fullxxx.video/public/wp-content/mu-plugins/tube-shared-loader.php (fixed)",
+    "/var/www/tube-platform.internal/public/wp-content/plugins/tube-platform-video/* (deployed)",
+    "/var/www/tube-platform.internal/public/wp-content/plugins/tube-shared/* (deployed)",
+    "/var/www/tube-platform.internal/public/wp-content/mu-plugins/tube-shared-loader.php (fixed)",
     "/var/www/prom-king.xyz/public/wp-content/plugins/promking-tube/* (deployed)",
     "/var/www/prom-king.xyz/public/wp-content/plugins/tube-shared/* (deployed)",
     "/var/www/prom-king.xyz/public/wp-content/mu-plugins/tube-shared-loader.php (fixed)"

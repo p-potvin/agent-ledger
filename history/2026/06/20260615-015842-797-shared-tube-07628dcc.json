@@ -32,20 +32,20 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-  "summary": "Deployed OPH/SPN admin dashboard and passkey parity to OVH by fast-forwarding shared-tube from b018500 to c685158, rebuilding oneporn/sexyprn, restarting services, and verifying live admin/passkey/API behavior.",
+  "summary": "Deployed OPH/SPN admin dashboard and passkey parity to OVH by fast-forwarding shared-tube from b018500 to c685158, rebuilding oneporn/media-portal-gamma, restarting services, and verifying live admin/passkey/API behavior.",
   "commands": [
     "ssh -F none -i $env:USERPROFILE\\.ssh\\tube-site-vps ubuntu@100.67.25.118 git/status/service checks",
-    "ssh -F none ... git pull --ff-only; corepack pnpm install --frozen-lockfile; corepack pnpm --filter @promking/site-oneporn build; corepack pnpm --filter @promking/site-sexyprn build; sudo systemctl restart oneporn sexyprn",
-    "curl live /admin, /auth/login/options, /api/promking/stats for 1pornhub.vip and sexyprn.lol",
+    "ssh -F none ... git pull --ff-only; corepack pnpm install --frozen-lockfile; corepack pnpm --filter @promking/site-oneporn build; corepack pnpm --filter @promking/site-media-portal-gamma build; sudo systemctl restart oneporn media-portal-gamma",
+    "curl live /admin, /auth/login/options, /api/promking/stats for portal-beta.internal and portal-gamma.internal",
     "pnpm --filter @promking/site-oneporn typecheck",
-    "pnpm --filter @promking/site-sexyprn typecheck",
+    "pnpm --filter @promking/site-media-portal-gamma typecheck",
     "Python Playwright authenticated-shell smoke against live OPH/SPN dashboards with /auth/me mocked only"
   ],
   "files": [
     "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\oneporn\\src\\admin\\App.tsx",
-    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\sexyprn\\src\\admin\\App.tsx",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\media-portal-gamma\\src\\admin\\App.tsx",
     "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\oneporn\\src\\admin\\webauthn.ts",
-    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\sexyprn\\src\\admin\\webauthn.ts",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\media-portal-gamma\\src\\admin\\webauthn.ts",
     "/srv/repos/Prom-King/shared-tube on vps-26883e66"
   ],
   "planPath": "",

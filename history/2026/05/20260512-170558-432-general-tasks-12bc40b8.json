@@ -19,17 +19,17 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business",
   "cwd": "C:\\Users\\Administrator\\Desktop\\business",
-  "summary": "After DNS propagation to 173.249.194.15 for prom-king.xyz/www and fullxxx.video/www, issued Lets Encrypt certs on the new VPS using certbot nginx plugin and verified both sites return 200 over HTTPS.",
+  "summary": "After DNS propagation to 173.249.194.15 for prom-king.xyz/www and tube-platform.internal/www, issued Lets Encrypt certs on the new VPS using certbot nginx plugin and verified both sites return 200 over HTTPS.",
   "commands": [
     "nslookup prom-king.xyz 1.1.1.1",
-    "nslookup fullxxx.video 1.1.1.1",
-    "certbot --nginx -d prom-king.xyz -d www.prom-king.xyz -d fullxxx.video -d www.fullxxx.video",
+    "nslookup tube-platform.internal 1.1.1.1",
+    "certbot --nginx -d prom-king.xyz -d www.prom-king.xyz -d tube-platform.internal -d www.tube-platform.internal",
     "curl -I https://prom-king.xyz/",
-    "curl -I https://fullxxx.video/"
+    "curl -I https://platform-alpha.internal/"
   ],
   "files": [
     "/etc/nginx/sites-enabled/prom-king.xyz.conf",
-    "/etc/nginx/sites-enabled/fullxxx.video.conf"
+    "/etc/nginx/sites-enabled/tube-platform.internal.conf"
   ],
   "planPath": "",
   "contentHash": "12bc40b88534d0806e7bb26844075b74a81457374ffa7092955da9a49933a55f",

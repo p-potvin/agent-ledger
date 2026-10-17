@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-    "summary":  "Unknown-performer review queue (commit 6366758, pushed feat/vision-lab): clusters.py groups 2,792 unnamed people into 1,105 clusters (382 in 2+ videos) with name suggestions from hints/performer links/fingerprint+StashDB matches; People page in lab with face crops (re-extracted frames, cached G:\\TubeLab\\crops); naming exports 12 crops to G:\\TubeLab\\inbox\\\u003cgallery\u003e\\\u003cname\u003e\\ for KFC. Cleaner room-name hints. Full library faces: 3,670 videos, precision 95.4% recall 86.6% (290 evaluable), 1,696 named.",
+    "summary":  "Unknown-performer review queue (commit 6366758, pushed feat/vision-lab): clusters.py groups 2,792 unnamed people into 1,105 clusters (382 in 2+ videos) with name suggestions from hints/performer links/fingerprint+MediaDatabase matches; People page in lab with face crops (re-extracted frames, cached G:\\TubeLab\\crops); naming exports 12 crops to G:\\TubeLab\\inbox\\\u003cgallery\u003e\\\u003cname\u003e\\ for KFC. Cleaner room-name hints. Full library faces: 3,670 videos, precision 95.4% recall 86.6% (290 evaluable), 1,696 named.",
     "commands":  [
 
                  ],

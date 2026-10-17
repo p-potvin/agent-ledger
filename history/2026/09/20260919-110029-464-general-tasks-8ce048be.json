@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
-    "summary":  "Optimized OnlyFans sprite generation with -skip_frame nokey (17x CPU speedup), bounded concurrency to 2 with timeout cleanup, and restarted live backfill in DESC order so front page videos are immediately populated",
+    "summary":  "Optimized CreatorPlatform sprite generation with -skip_frame nokey (17x CPU speedup), bounded concurrency to 2 with timeout cleanup, and restarted live backfill in DESC order so front page videos are immediately populated",
     "commands":  [
 
                  ],

@@ -27,14 +27,14 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Panopticam OnlyFans: session-expiry detection + Telegram notice via /api/vision/notify (v0.13.2); installed curl_cffi in global python; first live crawl OK (amyparker 27 files, aria_brown 23); OF daily subscription limit hit at ~5 -> cap 4/day, limit-text detection blocks 24h, only revisit subscribed profiles; scheduled task 'Panopticam OnlyFans' daily 04:00 30 min. Cam harvest cycle produced 7 archives (183 photos kept).",
+  "summary": "Panopticam CreatorPlatform: session-expiry detection + Telegram notice via /api/vision/notify (v0.13.2); installed curl_cffi in global python; first live crawl OK (amyparker 27 files, aria_brown 23); OF daily subscription limit hit at ~5 -> cap 4/day, limit-text detection blocks 24h, only revisit subscribed profiles; scheduled task 'Panopticam CreatorPlatform' daily 04:00 30 min. Cam harvest cycle produced 7 archives (183 photos kept).",
   "commands": [
     "pip install curl_cffi",
     "Register-OnlyFansTask.ps1",
     "git push"
   ],
   "files": [
-    "panopticam/vision/onlyfans.py",
+    "panopticam/vision/creator-platform.py",
     "panopticam/vision/Register-OnlyFansTask.ps1",
     "panopticam/backend/src/panopticam/app.py",
     "panopticam/docs/STATE.md"

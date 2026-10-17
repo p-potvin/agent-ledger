@@ -28,18 +28,18 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-  "summary": "tubelab.vaultwares.ca live: greencloud nginx vhost (tailnet allowlist, public 403) + LE cert via certbot webroot + dnsmasq host-record -> 100.73.93.84, proxy to 100.71.101.21:8790; dnsmasq conf backed up in /root. Saved memory: never run Stash Identify (only G:\\mega). Queued Stash metadataScan + guarded metadataClean (all roots online, 1,078 missing scene files before scan). StashDB title lookup module (commit 3135270): pilot 70% matched, 95% performer agreement with stricter rules. Faces job commits per video. vaultwares-docs network-map/tailscale edited, not committed. C: space: uv cache pruned (3.3GiB) and being moved to D:\\uv\\cache via robocopy, junction pending.",
+  "summary": "tubelab.vaultwares.ca live: greencloud nginx vhost (tailnet allowlist, public 403) + LE cert via certbot webroot + dnsmasq host-record -> 100.73.93.84, proxy to 100.71.101.21:8790; dnsmasq conf backed up in /root. Saved memory: never run Stash Identify (only G:\\mega). Queued Stash metadataScan + guarded metadataClean (all roots online, 1,078 missing scene files before scan). MediaDatabase title lookup module (commit 3135270): pilot 70% matched, 95% performer agreement with stricter rules. Faces job commits per video. vaultwares-docs network-map/tailscale edited, not committed. C: space: uv cache pruned (3.3GiB) and being moved to D:\\uv\\cache via robocopy, junction pending.",
   "commands": [
     "certbot certonly --webroot -d tubelab.vaultwares.ca",
     "systemctl reload nginx; systemctl restart dnsmasq",
-    "stash metadataScan/metadataClean via GraphQL",
+    "catalog metadataScan/metadataClean via GraphQL",
     "uv cache prune",
     "robocopy uv cache D:\\uv\\cache /MOVE"
   ],
   "files": [
     "greencloud:/etc/nginx/sites-available/tubelab.vaultwares.ca.conf",
     "greencloud:/etc/dnsmasq.d/vaultwares-tailnet.conf",
-    "vision/src/tubevision/stashdb.py",
+    "vision/src/tubevision/media-database.py",
     "G:\\TubeLab\\jobs\\stash_scan_clean.py"
   ],
   "planPath": "",

@@ -1,0 +1,53 @@
+{
+  "id": "20261016-112037-128-panopticam-0ae2de6f",
+  "createdAt": "2026-10-16T15:20:37.1284959Z",
+  "createdAtLocal": "2026-10-16 11:20",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (local) + OVH VPS via ssh)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Monitor\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-16 11:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (local) + OVH VPS via ssh",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Monitor"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled loop 16 Oct: health pass found PC faces worker silent ~2h. Causes: Atlas gallery re-read held atlas.lock while reading 472k crops (261 s) -> now read outside the lock and incremental by crop id (~1 s); datasets.cycle (up to 74 min) ran on the faces loop thread -> own thread. API memory: expired view lists (382 MB), traceback-free cached stream errors, idle Top cache dropped; RSS 2.47->1.53 GB, gen-2 GC 5-7 s -> ~1 s. v0.57.8 deployed. Found VPS swapping 3 GB (qa-automation continuous Chrome/Tor loop ~3 GB) and PC near commit limit: operator to-do E/F. Stopped 2 stray pytest processes from 14 Oct.",
+  "commands": [
+    "Restart-VisionWorker.ps1 (x2)",
+    "git push origin main (v0.57.8)"
+  ],
+  "files": [
+    "vision/atlas.py",
+    "vision/worker.py",
+    "backend/src/panopticam/streams.py",
+    "backend/src/panopticam/vision.py",
+    "backend/src/panopticam/app.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "0ae2de6f075112ff3c105337a2a17113b4b33c9a712f0fbb626264701c3cd90d",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "90b4862",
+    "hasChanges": false
+  }
+}

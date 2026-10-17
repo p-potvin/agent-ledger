@@ -32,7 +32,7 @@
     "ssh root@100.73.93.84 systemctl status vw-webhookd vaultwares-hooks",
     "export VW_AFTER=6183940733...; /var/www/deploy-scripts/deploy-tube-sites.sh",
     "export VW_AFTER=c4757d1852...; /var/www/deploy-scripts/deploy-tube-sites.sh",
-    "curl https://fullxxx.video/",
+    "curl https://platform-alpha.internal/",
     "curl https://prom-king.xyz/"
   ],
   "files": [

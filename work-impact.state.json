@@ -390,11 +390,11 @@
       "20260524-040507-563-prom-king-prelanding-page-177a2be2",
       "20260524-040540-453-vault-explorer-bb372470",
       "20260524-045938-587-vault-explorer-27a3d6c4",
-      "20260524-063711-262-prom-king-fullxxx-video-and-qa-automation-c0d8a3e7",
+      "20260524-063711-262-prom-king-tube-platform-qa-automation-c0d8a3e7",
       "20260524-063716-683-vault-flows-68f304c0",
       "20260524-063803-236-vault-explorer-fe0933b3",
       "20260524-071107-473-vault-explorer-8f613c7a",
-      "20260524-072502-701-prom-king-fullxxx-webhook-deploy-qa-0ee30f99",
+      "20260524-072502-701-prom-king-tube-platform-webhook-deploy-qa-0ee30f99",
       "20260524-080705-554-vault-explorer-6f925bd1",
       "20260524-082008-899-vault-explorer-1d23edcf",
       "20260524-084156-503-prom-king-qa-automation-f7d80d18",
@@ -6333,7 +6333,7 @@
         {
           "recent": [
             "Fri, 10 Jul 2026 10:55 - Fixed tube-site Catalog API unreachable after API loopback cutover. Root cause was Astro SSR bundles and service envs still using baked fallback http://...",
-            "Fri, 10 Jul 2026 11:52 America/Toronto - Fixed FullXXX admin WebAuthn origin by adding X-Forwarded-Host to Greencloud fullxxx.video /api/promking/ and /auth/ nginx proxy locatio...",
+            "Fri, 10 Jul 2026 11:52 America/Toronto - Fixed TubePlatform admin WebAuthn origin by adding X-Forwarded-Host to Greencloud tube-platform.internal /api/promking/ and /auth/ nginx proxy locatio...",
             "Sat, 11 Jul 2026 03:04 - Raised admin taxonomy bulk-select cap to 50000, persisted admin list settings in localStorage, added public create-account nav link, and added taxonomy ..."
           ],
           "flagCounts": {
@@ -6556,8 +6556,8 @@
         {
           "recent": [
             "Censored sensitive IPs and proxy details in shared-tube/.env.example to placeholders.",
-            "Wed, 08 Jul 2026 00:11 - Restored prom-king.xyz by recreating Greencloud pkt.service for content-site on port 4322, disabled dead 1PornHub/SexyPRN link-sharing monitors in Uptim...",
-            "Fixed hardcoded .com extensions in Admin UI external links. Created getSiteDomain helper to properly map sites to their correct TLDs (fullxxx.video, 1pornhub.vip, sexyprn.lol)."
+            "Wed, 08 Jul 2026 00:11 - Restored prom-king.xyz by recreating Greencloud pkt.service for content-site on port 4322, disabled dead StreamPlatformBeta/MediaPortalGamma link-sharing monitors in Uptim...",
+            "Fixed hardcoded .com extensions in Admin UI external links. Created getSiteDomain helper to properly map sites to their correct TLDs (tube-platform.internal, portal-beta.internal, portal-gamma.internal)."
           ],
           "flagCounts": {
             "external_live_red_team_run": 1,
@@ -7214,7 +7214,7 @@
         },
         {
           "recent": [
-            "Refactored redirect.ts in link-sharing to implement tracked premium redirect prelanders (/zip/:slug, /video/:slug, /file/:slug, /d/:slug) with custom themes (fullxxx and promkin...",
+            "Refactored redirect.ts in link-sharing to implement tracked premium redirect prelanders (/zip/:slug, /video/:slug, /file/:slug, /d/:slug) with custom themes (tube-platform and promkin...",
             "Implemented Link-Sharing Admin Dashboard integration across vaultwares-api and shared-tube. Created GET /link-sharing/links endpoint with pagination and source resolution. Built...",
             "Bumped vaultwares-api version to 0.1.12 and shared-tube version to 0.2.21. Fixed TypeScript int/number error in Dashboard.tsx. Manually deployed vaultwares-api on OVH and shared..."
           ],
@@ -7339,8 +7339,8 @@
         },
         {
           "recent": [
-            "Finished the shared-tube account-creation flow + UI in shared/src/components/AccountPage.astro (used by fxv/oneporn/sexyprn /account pages). Replaced the placeholder prompt()-ba...",
-            "Shipped the account-creation flow: bumped shared-tube monorepo 0.2.43 -> 0.2.44 across all 5 package.json (root, shared, fxv, oneporn, sexyprn), committed ONLY the AccountPage.a...",
+            "Finished the shared-tube account-creation flow + UI in shared/src/components/AccountPage.astro (used by fxv/oneporn/media-portal-gamma /account pages). Replaced the placeholder prompt()-ba...",
+            "Shipped the account-creation flow: bumped shared-tube monorepo 0.2.43 -> 0.2.44 across all 5 package.json (root, shared, fxv, oneporn, media-portal-gamma), committed ONLY the AccountPage.a...",
             "COMPLETE: (1) Removed global gold-star ::before on pornstar links (Layout.astro). (2) Sidebar rail now sort=hot: recency-weighted popularity SUM((views+1)*exp(-age/21d)) x deter..."
           ],
           "flagCounts": {
@@ -8728,7 +8728,7 @@
           "recent": [
             "Sun, 28 Jun 2026 10:52 - Documented Prom-King shared-tube deploy auth as GitHub App based in the Prom-King docs infrastructure and shared-tube project pages. Verified the touche...",
             "Sun, 28 Jun 2026 11:24 - Pulled main, documented GitHub App deploy auth, removed old PAT references from deploy docs where appropriate, added sabnzbd.ini to gitignore because th...",
-            "Sun, 05 Jul 2026 05:06 America/Toronto - Updated Prom-King documentation for the approved current hosting model: content-site and wallpaper-foundry on OVH, FullXXX on Greencloud..."
+            "Sun, 05 Jul 2026 05:06 America/Toronto - Updated Prom-King documentation for the approved current hosting model: content-site and wallpaper-foundry on OVH, TubePlatform on Greencloud..."
           ],
           "flagCounts": {},
           "lastDay": "2026-07-05",
@@ -9230,7 +9230,7 @@
         },
         {
           "recent": [
-            "Updated Tube Shell theme and both WordPress tube plugins for prom-king.xyz and fullxxx.video. Removed header navigation while keeping the sticky brand bar, added contact footer ..."
+            "Updated Tube Shell theme and both WordPress tube plugins for prom-king.xyz and tube-platform.internal. Removed header navigation while keeping the sticky brand bar, added contact footer ..."
           ],
           "flagCounts": {},
           "lastDay": "2026-05-01",
@@ -9456,7 +9456,7 @@
         },
         {
           "recent": [
-            "Set up prom-king.xyz and fullxxx.video WordPress sites. Uploaded and activated a minimal shared Tube Shell theme on both domains, created shortcode-driven homepages, configured ..."
+            "Set up prom-king.xyz and tube-platform.internal WordPress sites. Uploaded and activated a minimal shared Tube Shell theme on both domains, created shortcode-driven homepages, configured ..."
           ],
           "flagCounts": {},
           "lastDay": "2026-05-01",
@@ -10121,7 +10121,7 @@
           "models": [
             "Claude Opus 4.6",
             "claude-opus-4-7",
-            "fullxxx-video/includes/video-fetcher.php",
+            "tube-platform-video/includes/video-fetcher.php",
             "Gemini 3 Flash",
             "Gemini 3.1 Pro",
             "Gemini 3.1 Pro (High)",
@@ -10137,7 +10137,7 @@
             "Antigravity",
             "Claude Opus 4.7",
             "Codex",
-            "Fix: Re-add spankbang to allowlist",
+            "Fix: Re-add media-archive to allowlist",
             "gpt-5.2-codex"
           ]
         },
@@ -11271,7 +11271,7 @@
           5
         ],
         [
-          "Fix: Re-add spankbang to allowlist",
+          "Fix: Re-add media-archive to allowlist",
           2
         ],
         [
@@ -11545,7 +11545,7 @@
           2
         ],
         [
-          "fullxxx-video/includes/video-fetcher.php",
+          "tube-platform-video/includes/video-fetcher.php",
           2
         ],
         [

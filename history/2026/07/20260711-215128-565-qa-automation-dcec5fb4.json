@@ -29,7 +29,7 @@
   "summary": "Sat, 11 Jul 2026 21:51 - Wired detailed QA trace/cookie overlay handling, fixed ad recovery/admin tab filtering, stopped interrupted direct tube QA run, and summarized partial artifacts.",
   "commands": [
     "node --test tests\\qa-run-trace.test.mjs",
-    "node --check lib\\qa-run-trace.mjs scripts\\run-own-domain-stealth.mjs scripts\\run-tube-sites-direct.mjs scripts\\run-fullxxx-crawl-firefox-profile.mjs",
+    "node --check lib\\qa-run-trace.mjs scripts\\run-own-domain-stealth.mjs scripts\\run-tube-sites-direct.mjs scripts\\run-tube-platform-crawl-firefox-profile.mjs",
     "python -m py_compile qa_automation_routine.py run_continuous_qa.py",
     "npm.cmd run report:tube-sites-direct"
   ],
@@ -37,7 +37,7 @@
     "lib\\qa-run-trace.mjs",
     "scripts\\run-own-domain-stealth.mjs",
     "scripts\\run-tube-sites-direct.mjs",
-    "scripts\\run-fullxxx-crawl-firefox-profile.mjs",
+    "scripts\\run-tube-platform-crawl-firefox-profile.mjs",
     "qa_automation_routine.py",
     "README.md",
     ".env.example",

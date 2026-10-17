@@ -26,13 +26,13 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Panopticam OnlyFans: replaced daily cap with adaptive subscription backoff (4/hour pace; refusal pauses 1h doubling to 12h, reset on accept; refusals logged to learn the window); crawl waits out pauses inside its run; scheduled task now daily 04:00 up to 4h; existing 24h block reset to 1h.",
+  "summary": "Panopticam CreatorPlatform: replaced daily cap with adaptive subscription backoff (4/hour pace; refusal pauses 1h doubling to 12h, reset on accept; refusals logged to learn the window); crawl waits out pauses inside its run; scheduled task now daily 04:00 up to 4h; existing 24h block reset to 1h.",
   "commands": [
     "Register-OnlyFansTask.ps1",
     "git push"
   ],
   "files": [
-    "panopticam/vision/onlyfans.py",
+    "panopticam/vision/creator-platform.py",
     "panopticam/vision/Register-OnlyFansTask.ps1",
     "panopticam/docs/STATE.md"
   ],

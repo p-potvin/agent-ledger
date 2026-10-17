@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\.claude\\projects\\C--Users-Administrator-Desktop-Github-Repos-python-zipper\\memory",
-    "summary":  "Committed+pushed stream work (PR p-potvin/python-zipper#16). Merged origin/main (sidecar changes) into checked-out branches of vault-commander, vault-explorer, ColONEL-KFC (local, unpushed); 3 stale branches conflict and were left. Extension: removed PhotoSwipe deep scan, ported OF Alt+Q userscript with Pornpics naming (gallery_naming.ts + parity check), pushed 22099a1. OF userscript on Desktop bumped to 2.3 with same naming. F:\\amd\\gallery rebuild: old 269 folders + DB moved to F:\\amd\\.gallery-previous-2026-09-23, 497 archives / 259 identities staged, per-identity vw pipeline running in background (report F:\\amd\\gallery\\amd-rebuild-report.json).",
+    "summary":  "Committed+pushed stream work (PR p-potvin/python-zipper#16). Merged origin/main (sidecar changes) into checked-out branches of vault-commander, vault-explorer, ColONEL-KFC (local, unpushed); 3 stale branches conflict and were left. Extension: removed PhotoSwipe deep scan, ported OF Alt+Q userscript with ImageArchive naming (gallery_naming.ts + parity check), pushed 22099a1. OF userscript on Desktop bumped to 2.3 with same naming. F:\\amd\\gallery rebuild: old 269 folders + DB moved to F:\\amd\\.gallery-previous-2026-09-23, 497 archives / 259 identities staged, per-identity vw pipeline running in background (report F:\\amd\\gallery\\amd-rebuild-report.json).",
     "commands":  [
 
                  ],

@@ -28,7 +28,7 @@
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
   "summary": "Committed and pushed scraper allowlist fix to origin/main (commit 39686e6).",
   "commands": [
-    "git add fullxxx-video/includes/admin-settings.php fullxxx-video/includes/helpers.php fullxxx-video/includes/video-fetcher.php",
+    "git add tube-platform-video/includes/admin-settings.php tube-platform-video/includes/helpers.php tube-platform-video/includes/video-fetcher.php",
     "git commit -m \"fix(scraper): allow pornxp/fsv embeds via expanded allowlist\"",
     "git push origin main"
   ],

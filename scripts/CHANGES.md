@@ -418,7 +418,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-14 21:16 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, fullxxx.video, prom-king/fullxxx-video-and-qa-automation, prom-king/fullxxx-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>code-change</code> - Tue, 14 Jul 2026 - Modal plan steps 3-6 done (shared-tube 67f76d9, v0.2.61, deployed). STEP 3 overlay-&gt;page: TermDetail now renders in the document flow where the terms list was...</summary>
+<summary><strong>2026-07-14 21:16 - shared-tube (formerly Prom-King/shared-tube, Prom-King/shared-tube + vaultwares-pipelines, Prom-King/shared-tube + vaultwares-api, Prom-King/shared-tube + vaultwares-mcp, Prom-King/shared-tube + vaultwares-docs, Prom-King/shared-tube + VaultWares/vaultwares-mcp + vaultwares-docs, shared-tube + brume2, tube-sites, tube-site, promking-tube, Prom-King\tube-sites, Prom-King/tube-sites, Prom-King tube-sites, Prom-King\\tube-sites, prom-king.xyz, tube-platform.internal, prom-king/tube-platform-qa-automation, prom-king/tube-platform-webhook-deploy-qa, Prom-King Keep2Share &amp; ShareVerge Pipeline, Prom-King &amp; VaultWares API, Monitoring and Prom-King tube operations)</strong> <code>code-change</code> - Tue, 14 Jul 2026 - Modal plan steps 3-6 done (shared-tube 67f76d9, v0.2.61, deployed). STEP 3 overlay-&gt;page: TermDetail now renders in the document flow where the terms list was...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -629,11 +629,11 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): ccd_session
   Time: 2026-07-14 09:32 (TZ: Eastern Standard Time)
   ```
-- Summary: Tue, 14 Jul 2026 - (1) Committed+pushed everything: shared-tube c5a8b7a (v0.2.58, 4-col favourites grid), both repos clean. (2) VERIFIED admin deletes DO leak - answer to the user's question is NO, deleted things still show up. Soft-delete flags are honoured by LIST queries but NOT by DETAIL/filter queries. Evidence: video 'winter-tail' disabled in admin 2026-07-05 still serves at https://fullxxx.video/videos/winter-tail -> http 200, full title, NO noindex, player present and playable; systematic across 307 disabled videos (spot-checked missy-s-audition, stunt-hogs-part-1 - same). Cause: get_video uses 'WHERE slug = \' with no disabled_at filter and doesn't even SELECT the column (hence disabled_at:None in responses). Sitemap DOES exclude them (1867 urls, no winter-tail), so they're unlinked but live - DMCA/takedown exposure since disabling a video does not take it down. Same shape for taxonomy: 206 pornstars + 45 studios soft-deleted, yet /pornstar/angel-youngs (deleted 2026-07-07) serves 200 with 281 video cards, because build_video_filters' actor/studio/category joins match on slug with no deleted_at check. (3) FIXED MY OWN REGRESSION from bb42271 (shipped earlier today, now dbcf4a1): neither /search/suggest nor the new q taxonomy-matching filtered deleted_at, so the typeahead offered deleted terms (verified live: suggested 'Angel Youngs') and q='angel youngs' matched 22 videos through a deleted term. Both now filter deleted_at IS NULL; verified on prod copy: Angel Youngs drops from suggest, q 22->0, live control q='angela white' unchanged at 59. Tests 174 passed. (4) MODAL ROOT CAUSES CONFIRMED for the plan: Bulk.tsx:114-115 wires onActionSuccess IDENTICALLY to onClose - both navigate() without slug, and the overlay only renders when route.slug is set, so ANY
+- Summary: Tue, 14 Jul 2026 - (1) Committed+pushed everything: shared-tube c5a8b7a (v0.2.58, 4-col favourites grid), both repos clean. (2) VERIFIED admin deletes DO leak - answer to the user's question is NO, deleted things still show up. Soft-delete flags are honoured by LIST queries but NOT by DETAIL/filter queries. Evidence: video 'winter-tail' disabled in admin 2026-07-05 still serves at https://platform-alpha.internal/videos/winter-tail -> http 200, full title, NO noindex, player present and playable; systematic across 307 disabled videos (spot-checked missy-s-audition, stunt-hogs-part-1 - same). Cause: get_video uses 'WHERE slug = \' with no disabled_at filter and doesn't even SELECT the column (hence disabled_at:None in responses). Sitemap DOES exclude them (1867 urls, no winter-tail), so they're unlinked but live - DMCA/takedown exposure since disabling a video does not take it down. Same shape for taxonomy: 206 pornstars + 45 studios soft-deleted, yet /pornstar/angel-youngs (deleted 2026-07-07) serves 200 with 281 video cards, because build_video_filters' actor/studio/category joins match on slug with no deleted_at check. (3) FIXED MY OWN REGRESSION from bb42271 (shipped earlier today, now dbcf4a1): neither /search/suggest nor the new q taxonomy-matching filtered deleted_at, so the typeahead offered deleted terms (verified live: suggested 'Angel Youngs') and q='angel youngs' matched 22 videos through a deleted term. Both now filter deleted_at IS NULL; verified on prod copy: Angel Youngs drops from suggest, q 22->0, live control q='angela white' unchanged at 59. Tests 174 passed. (4) MODAL ROOT CAUSES CONFIRMED for the plan: Bulk.tsx:114-115 wires onActionSuccess IDENTICALLY to onClose - both navigate() without slug, and the overlay only renders when route.slug is set, so ANY
 - Commands:
   - `git push origin main`
   - `psql (deleted_at/disabled_at leak analysis)`
-  - `Invoke-WebRequest https://fullxxx.video/videos/winter-tail`
+  - `Invoke-WebRequest https://platform-alpha.internal/videos/winter-tail`
   - `pytest tests/ -q`
 - Files:
   - `vaultwares-api/app/routers/promking/search.py`
@@ -720,7 +720,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `git push origin main`
   - `git update-index --force-remove`
   - `node adclick.mjs (playwright interception)`
-  - `Invoke-WebRequest https://fullxxx.video/videos/`
+  - `Invoke-WebRequest https://platform-alpha.internal/videos/`
 - Files:
   - `shared/src/components/NativeVideoAd.astro`
   - `shared/src/components/VideoGrid.astro`
@@ -750,11 +750,11 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): ccd_session
   Time: 2026-07-14 08:13 (TZ: Eastern Standard Time)
   ```
-- Summary: Tue, 14 Jul 2026 - Audited the ad injection + click-tracking system (read-only, no code changed). ANSWER: ad click tracking is wired but effectively DEAD - ad_clicks has 1 row ever and it is 'test_ad' from 2026-07-11 (manual test), vs video_plays=1148, search_logs=516 from the same pipe, so analytics works and ad clicks specifically are broken. FOUR causes: (1) native_ad NEVER RENDERS - VideoGrid derives site from videos[0].site but the API returns site:None on every item (field is marked 'Deprecated, ignored, catalog is now global'), so NativeVideoAd's if (site) is false, code='', and the grey 'Sponsored/Premium studio pick' placeholder renders instead; verified on live fullxxx.video/videos/: st-native-ad--filled=0, placeholders=2, configured vlmai-1.com href=0. (2) banner clicks untrackable - Layout.astro initAdClickTracking queries '.st-aff-banner' which exists NOWHERE; AffiliateAds renders '.aff-banner-sticky'. (3) tracker only binds <a> elements, but video_overlay/popover/interstitial/cam_widget/popunder snippets are all <script> injectors (crakPopIn affstitial-min.js, mnpw3.js) whose clicks happen in injected iframes/new windows - invisible to the parent page by design. (4) ad_id is captured as the href URL, not the admin snippet id/label, so a click cannot be tied back to the configured creative. ALSO: AdSlot.astro is a dead placeholder - it takes an optional code prop and NO caller anywhere passes it, and it never reads settings; 4 positions (under-nav, bottom-banner, sidebar, inplayer) render dashed 'Advertisement' boxes with no admin mapping and no AD_TYPES key. CONFIRMED the search-box click hijacker from the earlier session is the configured popunder: static.scptp9.com/mnpw3.js -> t.ajrkmx1.com, active on fxv. Config state fxv: banner/native_ad/popunder/cam_widget/head_tags/body_tags isActive=true; video_overlay/popover/interstitial isActive=false. /postback (S2S conversions -> postbacks table) is separately wired
+- Summary: Tue, 14 Jul 2026 - Audited the ad injection + click-tracking system (read-only, no code changed). ANSWER: ad click tracking is wired but effectively DEAD - ad_clicks has 1 row ever and it is 'test_ad' from 2026-07-11 (manual test), vs video_plays=1148, search_logs=516 from the same pipe, so analytics works and ad clicks specifically are broken. FOUR causes: (1) native_ad NEVER RENDERS - VideoGrid derives site from videos[0].site but the API returns site:None on every item (field is marked 'Deprecated, ignored, catalog is now global'), so NativeVideoAd's if (site) is false, code='', and the grey 'Sponsored/Premium studio pick' placeholder renders instead; verified on live tube-platform.internal/videos/: st-native-ad--filled=0, placeholders=2, configured vlmai-1.com href=0. (2) banner clicks untrackable - Layout.astro initAdClickTracking queries '.st-aff-banner' which exists NOWHERE; AffiliateAds renders '.aff-banner-sticky'. (3) tracker only binds <a> elements, but video_overlay/popover/interstitial/cam_widget/popunder snippets are all <script> injectors (crakPopIn affstitial-min.js, mnpw3.js) whose clicks happen in injected iframes/new windows - invisible to the parent page by design. (4) ad_id is captured as the href URL, not the admin snippet id/label, so a click cannot be tied back to the configured creative. ALSO: AdSlot.astro is a dead placeholder - it takes an optional code prop and NO caller anywhere passes it, and it never reads settings; 4 positions (under-nav, bottom-banner, sidebar, inplayer) render dashed 'Advertisement' boxes with no admin mapping and no AD_TYPES key. CONFIRMED the search-box click hijacker from the earlier session is the configured popunder: static.scptp9.com/mnpw3.js -> t.ajrkmx1.com, active on fxv. Config state fxv: banner/native_ad/popunder/cam_widget/head_tags/body_tags isActive=true; video_overlay/popover/interstitial isActive=false. /postback (S2S conversions -> postbacks table) is separately wired
 - Commands:
   - `psql (ad_clicks/postbacks/settings introspection)`
   - `curl /api/promking/videos (site field check)`
-  - `Invoke-WebRequest https://fullxxx.video/videos/`
+  - `Invoke-WebRequest https://platform-alpha.internal/videos/`
 - Files:
   - `shared/src/components/Layout.astro`
   - `shared/src/components/AffiliateAds.astro`
@@ -836,7 +836,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-14 06:31 - shared-tube</strong> <code>verification</code> - Tue, 14 Jul 2026 - Pushed + deployed viewer accounts, caught and fixed a 500 via live e2e. shared-tube f0244d3 (v0.2.54) deployed: fxv.service on greencloud, oneporn+sexyprn on ...</summary>
+<summary><strong>2026-07-14 06:31 - shared-tube</strong> <code>verification</code> - Tue, 14 Jul 2026 - Pushed + deployed viewer accounts, caught and fixed a 500 via live e2e. shared-tube f0244d3 (v0.2.54) deployed: fxv.service on greencloud, oneporn+media-portal-gamma on ...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -852,7 +852,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): ccd_session
   Time: 2026-07-14 06:31 (TZ: Eastern Standard Time)
   ```
-- Summary: Tue, 14 Jul 2026 - Pushed + deployed viewer accounts, caught and fixed a 500 via live e2e. shared-tube f0244d3 (v0.2.54) deployed: fxv.service on greencloud, oneporn+sexyprn on OVH, all exit=0. vaultwares-api pushed as 3 commits (1b06e7e analytics API half matching shared-tube aebacdc; 16e9622 viewer accounts; 0db1c02 chore drop stale nginx example), then aba9073 fix. CORRECTION to earlier claim: users.disabled_at ALREADY EXISTED in prod (added out-of-band, in no migration/schema.ts) - so admin endpoints worked in prod and only broke on fresh/local DBs; CHANGES.md corrected. Migration 0006 applied to prod promking (OVH 127.0.0.1:5433, NOT greencloud): DELETE 0 (prod had 0 dup favourites), disabled_at skipped as present, unique index created, no data touched. BUG FOUND BY E2E: merge endpoint 500d on every call - DatatypeMismatchError, user_id integer vs text. Cause: INSERT..SELECT resolves select-list types before matching target cols, so bare \ had no inference context and asyncpg defaulted it to text. Fixed with \::int + comment marking the cast load-bearing. Could not have been caught locally (dev DB predates video_sites/0004 which the query joins). Live e2e after fix, all green: register OK, /auth/me created_at populated, merge merged=1, re-run merged=0 total=1 (idempotent), list correct slug, toggle off favourited=false, disabled account 403 on both /auth/me and login. Test user removed, prod residue 0. SCHEMA DRIFT flagged: prod has pornstars/video_pornstars while schema.ts says actors/video_actors; do NOT run drizzle-kit push against prod.
+- Summary: Tue, 14 Jul 2026 - Pushed + deployed viewer accounts, caught and fixed a 500 via live e2e. shared-tube f0244d3 (v0.2.54) deployed: fxv.service on greencloud, oneporn+media-portal-gamma on OVH, all exit=0. vaultwares-api pushed as 3 commits (1b06e7e analytics API half matching shared-tube aebacdc; 16e9622 viewer accounts; 0db1c02 chore drop stale nginx example), then aba9073 fix. CORRECTION to earlier claim: users.disabled_at ALREADY EXISTED in prod (added out-of-band, in no migration/schema.ts) - so admin endpoints worked in prod and only broke on fresh/local DBs; CHANGES.md corrected. Migration 0006 applied to prod promking (OVH 127.0.0.1:5433, NOT greencloud): DELETE 0 (prod had 0 dup favourites), disabled_at skipped as present, unique index created, no data touched. BUG FOUND BY E2E: merge endpoint 500d on every call - DatatypeMismatchError, user_id integer vs text. Cause: INSERT..SELECT resolves select-list types before matching target cols, so bare \ had no inference context and asyncpg defaulted it to text. Fixed with \::int + comment marking the cast load-bearing. Could not have been caught locally (dev DB predates video_sites/0004 which the query joins). Live e2e after fix, all green: register OK, /auth/me created_at populated, merge merged=1, re-run merged=0 total=1 (idempotent), list correct slug, toggle off favourited=false, disabled account 403 on both /auth/me and login. Test user removed, prod residue 0. SCHEMA DRIFT flagged: prod has pornstars/video_pornstars while schema.ts says actors/video_actors; do NOT run drizzle-kit push against prod.
 - Commands:
   - `git push origin main`
   - `psql -f 0006_viewer_accounts.sql (prod)`
@@ -1836,7 +1836,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `qa-automation/lib/qa-mouse-paths.mjs`
   - `qa-automation/scripts/compile-natural-mouse-paths.mjs`
   - `qa-automation/tests/age-gate-wordpress.spec.ts`
-  - `qa-automation/tests/fullxxx-crawl.spec.ts`
+  - `qa-automation/tests/tube-platform-crawl.spec.ts`
   - `qa-automation/tests/weekly-smoke.spec.ts`
   - `qa-automation/tests/support/site.ts`
   - `qa-automation/package.json`
@@ -1872,7 +1872,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-12 03:00 - Prom-King/shared-tube</strong> <code>handoff</code> - Committed+pushed analytics fix (f66175e, v0.2.53): per-site GTM containers pinned in shared/src/analytics/gtm.ts (fxv GTM-KKVHWM4N, oneporn GTM-P6ZCKNH4, sexyprn GTM-K4JG875S) i...</summary>
+<summary><strong>2026-07-12 03:00 - Prom-King/shared-tube</strong> <code>handoff</code> - Committed+pushed analytics fix (f66175e, v0.2.53): per-site GTM containers pinned in shared/src/analytics/gtm.ts (fxv GTM-KKVHWM4N, oneporn GTM-P6ZCKNH4, media-portal-gamma GTM-K4JG875S) i...</summary>
 
 - Kind: handoff
 - Actor: AI Agent
@@ -1888,7 +1888,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-12 03:00 (TZ: Eastern Standard Time)
   ```
-- Summary: Committed+pushed analytics fix (f66175e, v0.2.53): per-site GTM containers pinned in shared/src/analytics/gtm.ts (fxv GTM-KKVHWM4N, oneporn GTM-P6ZCKNH4, sexyprn GTM-K4JG875S) injected on every page by Layout, Consent Mode v2 default + repaired consent banner, removed placeholder IDs/env mismatch/dead gtmId plumbing. DEPLOY BLOCKED: GitHub Actions deploy-ovh.yml has NO self-hosted runner registered (total_count=0) so workflow_dispatch run 29179066449 stuck queued (cancelled). Live fullxxx.video serves v0.2.50 = pipeline down well before this work; main now at v0.2.53. Also: fxv already injects GTM-KKVHWM4N via admin Marketing head_tags, so deploying code-pinned GTM would double-fire until admin GA/GTM snippets are cleared (user action, admin UI). Awaiting user decision on deploy path (manual SSH deploy of deploy-shared-tube.sh vs fix runner vs hold) and architecture (code-pinned+clear-admin vs revert to admin-SSoT + fix spn snippet). Domains: fullxxx.video, 1pornhub.vip, sexyprn.lol.
+- Summary: Committed+pushed analytics fix (f66175e, v0.2.53): per-site GTM containers pinned in shared/src/analytics/gtm.ts (fxv GTM-KKVHWM4N, oneporn GTM-P6ZCKNH4, media-portal-gamma GTM-K4JG875S) injected on every page by Layout, Consent Mode v2 default + repaired consent banner, removed placeholder IDs/env mismatch/dead gtmId plumbing. DEPLOY BLOCKED: GitHub Actions deploy-ovh.yml has NO self-hosted runner registered (total_count=0) so workflow_dispatch run 29179066449 stuck queued (cancelled). Live tube-platform.internal serves v0.2.50 = pipeline down well before this work; main now at v0.2.53. Also: fxv already injects GTM-KKVHWM4N via admin Marketing head_tags, so deploying code-pinned GTM would double-fire until admin GA/GTM snippets are cleared (user action, admin UI). Awaiting user decision on deploy path (manual SSH deploy of deploy-shared-tube.sh vs fix runner vs hold) and architecture (code-pinned+clear-admin vs revert to admin-SSoT + fix spn snippet). Domains: tube-platform.internal, portal-beta.internal, portal-gamma.internal.
 - Files:
   - `shared/src/analytics/gtm.ts`
   - `shared/src/components/Layout.astro`
@@ -2092,7 +2092,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-11 21:52 (TZ: Eastern Standard Time)
   ```
-- Summary: Sorted out Google/analytics tags. Root causes: (1) config-driven gtmId injection (Layout.astro) competed with admin head_tags injection -> double-count on fxv, bogus placeholder IDs G-OPH1234567/G-SPN1234567 firing, env name mismatch (GTM_ID_ONEPORN/SEXYPRN vs .env.example GTM_ID_OPH/SPN); (2) tag only passed to ~21/48 pages so category/pornstar/studio/search/legal had no analytics; (3) ConsentBanner was a dead skeleton, analytics fired without consent vs privacy policy. Fix: removed config gtmId injection + all 33 gtmId props + config fields (admin Marketing tab now single source of truth, fires on every page via headTagsCode); added Google Consent Mode v2 default (denied, honours DNT) in Layout head before any tag; rewrote ConsentBanner as functional cookie-gated banner firing gtag consent update; neutralized placeholder IDs; created docs/analytics.md. The 'spn shows 1ph' is a Google-console/admin-DB issue (spn admin snippet carries oneporn Measurement ID) documented for manual fix. typecheck 0/0/0 on all 3 sites, fxv build OK, verified consent scaffolding present in built HTML incl. previously-untagged 2257 page.
+- Summary: Sorted out Google/analytics tags. Root causes: (1) config-driven gtmId injection (Layout.astro) competed with admin head_tags injection -> double-count on fxv, bogus placeholder IDs G-OPH1234567/G-SPN1234567 firing, env name mismatch (GTM_ID_PORTAL_BETA/PORTAL_GAMMA vs .env.example GTM_ID_OPH/SPN); (2) tag only passed to ~21/48 pages so category/pornstar/studio/search/legal had no analytics; (3) ConsentBanner was a dead skeleton, analytics fired without consent vs privacy policy. Fix: removed config gtmId injection + all 33 gtmId props + config fields (admin Marketing tab now single source of truth, fires on every page via headTagsCode); added Google Consent Mode v2 default (denied, honours DNT) in Layout head before any tag; rewrote ConsentBanner as functional cookie-gated banner firing gtag consent update; neutralized placeholder IDs; created docs/analytics.md. The 'spn shows 1ph' is a Google-console/admin-DB issue (spn admin snippet carries oneporn Measurement ID) documented for manual fix. typecheck 0/0/0 on all 3 sites, fxv build OK, verified consent scaffolding present in built HTML incl. previously-untagged 2257 page.
 - Files:
   - `shared/src/components/Layout.astro`
   - `shared/src/components/ConsentBanner.astro`
@@ -2123,14 +2123,14 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Summary: Sat, 11 Jul 2026 21:51 - Wired detailed QA trace/cookie overlay handling, fixed ad recovery/admin tab filtering, stopped interrupted direct tube QA run, and summarized partial artifacts.
 - Commands:
   - `node --test tests\qa-run-trace.test.mjs`
-  - `node --check lib\qa-run-trace.mjs scripts\run-own-domain-stealth.mjs scripts\run-tube-sites-direct.mjs scripts\run-fullxxx-crawl-firefox-profile.mjs`
+  - `node --check lib\qa-run-trace.mjs scripts\run-own-domain-stealth.mjs scripts\run-tube-sites-direct.mjs scripts\run-tube-platform-crawl-firefox-profile.mjs`
   - `python -m py_compile qa_automation_routine.py run_continuous_qa.py`
   - `npm.cmd run report:tube-sites-direct`
 - Files:
   - `lib\qa-run-trace.mjs`
   - `scripts\run-own-domain-stealth.mjs`
   - `scripts\run-tube-sites-direct.mjs`
-  - `scripts\run-fullxxx-crawl-firefox-profile.mjs`
+  - `scripts\run-tube-platform-crawl-firefox-profile.mjs`
   - `qa_automation_routine.py`
   - `README.md`
   - `.env.example`
@@ -2201,7 +2201,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-11 13:39 - qa-automation</strong> <code>verification</code> - Sat, 11 Jul 2026 13:39 - Ran approved direct no-proxy Playwright tube-site QA against fullxxx.video, 1pornhub.vip, and sexyprn.lol with max depth 10, max 50 pages/session, scrol...</summary>
+<summary><strong>2026-07-11 13:39 - qa-automation</strong> <code>verification</code> - Sat, 11 Jul 2026 13:39 - Ran approved direct no-proxy Playwright tube-site QA against tube-platform.internal, portal-beta.internal, and portal-gamma.internal with max depth 10, max 50 pages/session, scrol...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -2217,15 +2217,15 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-11 13:39 (TZ: Eastern Standard Time)
   ```
-- Summary: Sat, 11 Jul 2026 13:39 - Ran approved direct no-proxy Playwright tube-site QA against fullxxx.video, 1pornhub.vip, and sexyprn.lol with max depth 10, max 50 pages/session, scroll/click/register/video actions, natural mouse paths, and ad popup handling.
+- Summary: Sat, 11 Jul 2026 13:39 - Ran approved direct no-proxy Playwright tube-site QA against tube-platform.internal, portal-beta.internal, and portal-gamma.internal with max depth 10, max 50 pages/session, scroll/click/register/video actions, natural mouse paths, and ad popup handling.
 - Commands:
-  - `Direct node --input-type=module Playwright run: targets fullxxx.video, 1pornhub.vip, sexyprn.lol; maxDepth=10; maxPages=50; delayMs=300; no proxy/no IP rotation`
+  - `Direct node --input-type=module Playwright run: targets tube-platform.internal, portal-beta.internal, portal-gamma.internal; maxDepth=10; maxPages=50; delayMs=300; no proxy/no IP rotation`
   - `PowerShell summary extraction from test-results/tube-sites-direct/2026-07-11T17-17-08-277Z/summary.json`
 - Files:
   - `test-results/tube-sites-direct/2026-07-11T17-17-08-277Z/summary.json`
-  - `test-results/tube-sites-direct/2026-07-11T17-17-08-277Z/fullxxx.video/results.json`
-  - `test-results/tube-sites-direct/2026-07-11T17-17-08-277Z/1pornhub.vip/results.json`
-  - `test-results/tube-sites-direct/2026-07-11T17-17-08-277Z/sexyprn.lol/results.json`
+  - `test-results/tube-sites-direct/2026-07-11T17-17-08-277Z/tube-platform.internal/results.json`
+  - `test-results/tube-sites-direct/2026-07-11T17-17-08-277Z/portal-beta.internal/results.json`
+  - `test-results/tube-sites-direct/2026-07-11T17-17-08-277Z/portal-gamma.internal/results.json`
 
 </details>
 
@@ -2313,7 +2313,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `npm.cmd run test:list`
   - `python .\tests\test_qa_mouse_paths_python.py`
   - `python -m py_compile .\qa_automation_routine.py .\run_continuous_qa.py`
-  - `node --check .\lib\qa-mouse-paths.mjs; node --check .\scripts\run-own-domain-stealth.mjs; node --check .\scripts\run-search-visibility-report.mjs; node --check .\scripts\run-fullxxx-crawl-firefox-profile.mjs`
+  - `node --check .\lib\qa-mouse-paths.mjs; node --check .\scripts\run-own-domain-stealth.mjs; node --check .\scripts\run-search-visibility-report.mjs; node --check .\scripts\run-tube-platform-crawl-firefox-profile.mjs`
 - Files:
   - `lib/qa-mouse-paths.ts`
   - `lib/qa-mouse-paths.mjs`
@@ -2323,7 +2323,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `qa_automation_routine.py`
   - `scripts/run-own-domain-stealth.mjs`
   - `scripts/run-search-visibility-report.mjs`
-  - `scripts/run-fullxxx-crawl-firefox-profile.mjs`
+  - `scripts/run-tube-platform-crawl-firefox-profile.mjs`
   - `.env.example`
   - `README.md`
 
@@ -2513,7 +2513,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-11 09:01 (TZ: Eastern Standard Time)
   ```
-- Summary: Compiled 732 natural mouse-path events from agent-ledger input-spool and input-state into a privacy-reduced QA path library. Added opt-in random path replay before shared route, WordPress, weekly smoke, and fullxxx crawl navigations; replay remains disabled by default and excluded from stealth anti-bot assertions.
+- Summary: Compiled 732 natural mouse-path events from agent-ledger input-spool and input-state into a privacy-reduced QA path library. Added opt-in random path replay before shared route, WordPress, weekly smoke, and tube-platform crawl navigations; replay remains disabled by default and excluded from stealth anti-bot assertions.
 - Commands:
   - `node scripts/compile-natural-mouse-paths.mjs`
   - `npx tsc --noEmit`
@@ -2523,7 +2523,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `scripts/compile-natural-mouse-paths.mjs`
   - `lib/qa-mouse-paths.ts`
   - `tests/support/site.ts`
-  - `tests/fullxxx-crawl.spec.ts`
+  - `tests/tube-platform-crawl.spec.ts`
   - `tests/age-gate-wordpress.spec.ts`
   - `tests/weekly-smoke.spec.ts`
   - `package.json`
@@ -2548,17 +2548,17 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-11 08:19 (TZ: Eastern Standard Time)
   ```
-- Summary: 4 follow-ups done. #4 API->api.vaultwares.ca: SSR already migrated (shared client default + all 3 app configs = https://api.vaultwares.ca, no host env override); migrated oneporn/sexyprn CLIENT-side nginx (/api/promking + /auth) from 127.0.0.1:9001 to https://api.vaultwares.ca matching fxv - applied live on OVH sites-enabled (backup+nginx -t+reload; verified 1pornhub.vip & sexyprn.lol /api return 200) + updated repo templates. #2 versions: realigned all 5 package.json to 0.2.50 (were root 0.2.49 / apps 0.2.46). #3: resynced greencloud installed /var/www/deploy-scripts/deploy-shared-tube.sh to the repo version (now identical - restores write_status/status.json + CI=true + the generalized ownership guard). #1 root-poisoning: no cron/timer/service does it (fxv+pkt run as vwdeploy); confirmed source is manual root SSH sessions from 100.71.101.21 (user's PC) running pnpm/build - guard self-heals. Committed+pushed 50e2498 (nginx templates + versions, v0.2.50); sites live at v0.2.50. Gotcha hit+fixed: nginx backup files must NOT live in sites-enabled/ (duplicate upstream). OPEN/minor: stale sites-available (100.67.25.118) unused; docs/.env.example/scratch.py/bootstrap still cite tailscale IP (non-functional); prom-king.xyz.conf vestigial.
+- Summary: 4 follow-ups done. #4 API->api.vaultwares.ca: SSR already migrated (shared client default + all 3 app configs = https://api.vaultwares.ca, no host env override); migrated oneporn/media-portal-gamma CLIENT-side nginx (/api/promking + /auth) from 127.0.0.1:9001 to https://api.vaultwares.ca matching fxv - applied live on OVH sites-enabled (backup+nginx -t+reload; verified portal-beta.internal & portal-gamma.internal /api return 200) + updated repo templates. #2 versions: realigned all 5 package.json to 0.2.50 (were root 0.2.49 / apps 0.2.46). #3: resynced greencloud installed /var/www/deploy-scripts/deploy-shared-tube.sh to the repo version (now identical - restores write_status/status.json + CI=true + the generalized ownership guard). #1 root-poisoning: no cron/timer/service does it (fxv+pkt run as vwdeploy); confirmed source is manual root SSH sessions from 100.71.101.21 (user's PC) running pnpm/build - guard self-heals. Committed+pushed 50e2498 (nginx templates + versions, v0.2.50); sites live at v0.2.50. Gotcha hit+fixed: nginx backup files must NOT live in sites-enabled/ (duplicate upstream). OPEN/minor: stale sites-available (100.67.25.118) unused; docs/.env.example/scratch.py/bootstrap still cite tailscale IP (non-functional); prom-king.xyz.conf vestigial.
 - Commands:
   - `ssh OVH: nginx api.vaultwares.ca migration + reload`
   - `git commit+push 50e2498 (v0.2.50)`
   - `ssh greencloud: resync deploy script`
   - `investigate cron/timers/root-logins`
 - Files:
-  - `shared-tube/scripts/nginx/1pornhub.vip.conf`
-  - `shared-tube/scripts/nginx/sexyprn.lol.conf`
+  - `shared-tube/scripts/nginx/portal-beta.internal.conf`
+  - `shared-tube/scripts/nginx/portal-gamma.internal.conf`
   - `shared-tube/package.json (+4 pkg)`
-  - `/etc/nginx/sites-enabled/{1pornhub.vip,sexyprn.lol}.conf (OVH)`
+  - `/etc/nginx/sites-enabled/{portal-beta.internal,portal-gamma.internal}.conf (OVH)`
   - `/var/www/deploy-scripts/deploy-shared-tube.sh (greencloud)`
 
 </details>
@@ -2652,11 +2652,11 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Commands:
   - `vitest footer/search/persistent-state tests`
   - `tsc shared --noEmit`
-  - `astro check fxv/oneporn/sexyprn`
-  - `astro build fxv/oneporn/sexyprn`
+  - `astro check fxv/oneporn/media-portal-gamma`
+  - `astro build fxv/oneporn/media-portal-gamma`
   - `psql migration 0007_taxonomy_merge_aliases on OVH`
   - `git push origin main`
-  - `live HTTP probes fullxxx.video/1pornhub.vip/sexyprn.lol`
+  - `live HTTP probes tube-platform.internal/portal-beta.internal/portal-gamma.internal`
 - Files:
   - `CHANGES.md`
   - `shared/drizzle/0007_taxonomy_merge_aliases.sql`
@@ -2672,7 +2672,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `shared/src/seo/search.ts`
   - `apps/fxv/src/pages/videos/[slug].astro`
   - `apps/oneporn/src/pages/videos/[slug].astro`
-  - `apps/sexyprn/src/pages/videos/[slug].astro`
+  - `apps/media-portal-gamma/src/pages/videos/[slug].astro`
 - Git: repo=shared-tube, branch=main, head=66c19b0
 
 </details>
@@ -2698,7 +2698,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Commands:
   - `.\\node_modules\\.bin\\vitest.CMD run shared/src/admin/persistent-state.test.ts`
   - `.\\node_modules\\.bin\\tsc.CMD -p shared\\tsconfig.json --noEmit`
-  - `.\\node_modules\\.bin\\astro.CMD check in apps/fxv, apps/oneporn, apps/sexyprn`
+  - `.\\node_modules\\.bin\\astro.CMD check in apps/fxv, apps/oneporn, apps/media-portal-gamma`
 - Files:
   - `shared/src/admin/Catalog/BatchActions.tsx`
   - `shared/src/admin/Catalog/VideoBatchActions.tsx`
@@ -2740,7 +2740,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-10 12:02 - shared-tube</strong> <code>general</code> - Fri, 10 Jul 2026 11:52 America/Toronto - Fixed FullXXX admin WebAuthn origin by adding X-Forwarded-Host to Greencloud fullxxx.video /api/promking/ and /auth/ nginx proxy locatio...</summary>
+<summary><strong>2026-07-10 12:02 - shared-tube</strong> <code>general</code> - Fri, 10 Jul 2026 11:52 America/Toronto - Fixed TubePlatform admin WebAuthn origin by adding X-Forwarded-Host to Greencloud tube-platform.internal /api/promking/ and /auth/ nginx proxy locatio...</summary>
 
 - Kind: general
 - Actor: AI Agent
@@ -2756,17 +2756,17 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-10 12:02 (TZ: Eastern Standard Time)
   ```
-- Summary: Fri, 10 Jul 2026 11:52 America/Toronto - Fixed FullXXX admin WebAuthn origin by adding X-Forwarded-Host to Greencloud fullxxx.video /api/promking/ and /auth/ nginx proxy locations while preserving upstream Host api.vaultwares.ca for TLS/SNI. Live nginx reloaded; public POST https://fullxxx.video/auth/passkey/login now returns rpId fullxxx.video. Persisted shared-tube template and version bump 0.2.47 in commit 484b0ee pushed to main.
+- Summary: Fri, 10 Jul 2026 11:52 America/Toronto - Fixed TubePlatform admin WebAuthn origin by adding X-Forwarded-Host to Greencloud tube-platform.internal /api/promking/ and /auth/ nginx proxy locations while preserving upstream Host api.vaultwares.ca for TLS/SNI. Live nginx reloaded; public POST https://platform-alpha.internal/auth/passkey/login now returns rpId tube-platform.internal. Persisted shared-tube template and version bump 0.2.47 in commit 484b0ee pushed to main.
 - Commands:
   - `nginx -t`
   - `systemctl reload nginx`
-  - `curl -X POST https://fullxxx.video/auth/passkey/login`
+  - `curl -X POST https://platform-alpha.internal/auth/passkey/login`
   - `git commit`
   - `git push origin main`
 - Files:
-  - `Prom-King/shared-tube/scripts/nginx/fullxxx.video.conf`
+  - `Prom-King/shared-tube/scripts/nginx/tube-platform.internal.conf`
   - `Prom-King/shared-tube/package.json`
-  - `/etc/nginx/sites-enabled/fullxxx.video.conf`
+  - `/etc/nginx/sites-enabled/tube-platform.internal.conf`
 
 </details>
 
@@ -2850,7 +2850,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-10 10:21 (TZ: Eastern Standard Time)
   ```
-- Summary: Fri, 10 Jul 2026 10:55 - Fixed missing Prom-King TPDB batch route behind nginx. Root cause: tpdb.py existed with POST /tpdb/resolve-batch but promking __init__.py did not include tpdb_router, so browser POST /api/promking/tpdb/resolve-batch returned FastAPI 404. Live API patched and restarted; local vaultwares-api checkout updated with tpdb_router import/include. Verification: python py_compile passed locally and remotely; POST https://api.vaultwares.ca/api/promking/tpdb/resolve-batch with empty items returned 200; browser same-origin POST returned 200 on 1pornhub.vip, sexyprn.lol, and fullxxx.video.
+- Summary: Fri, 10 Jul 2026 10:55 - Fixed missing Prom-King TPDB batch route behind nginx. Root cause: tpdb.py existed with POST /tpdb/resolve-batch but promking __init__.py did not include tpdb_router, so browser POST /api/promking/tpdb/resolve-batch returned FastAPI 404. Live API patched and restarted; local vaultwares-api checkout updated with tpdb_router import/include. Verification: python py_compile passed locally and remotely; POST https://api.vaultwares.ca/api/promking/tpdb/resolve-batch with empty items returned 200; browser same-origin POST returned 200 on portal-beta.internal, portal-gamma.internal, and tube-platform.internal.
 - Commands:
   - `remote patch /opt/vaultwares-api/app/routers/promking/__init__.py`
   - `python -m py_compile`
@@ -2881,7 +2881,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-10 10:21 (TZ: Eastern Standard Time)
   ```
-- Summary: Fri, 10 Jul 2026 10:55 - Fixed tube-site Catalog API unreachable after API loopback cutover. Root cause was Astro SSR bundles and service envs still using baked fallback http://100.67.25.118:9001 while direct 9001 is intentionally disabled. Live fixes: OVH oneporn/sexyprn envs set VAULTWARES_API_BASE=https://api.vaultwares.ca, Greencloud fxv env set the same, live server bundles/source patched to replace old direct API URL, OVH oneporn/sexyprn nginx templates live already loopback, Greencloud fullxxx nginx /api and /auth proxy updated to https://api.vaultwares.ca with SNI/Host api.vaultwares.ca. Source changes: shared API default and per-app config fallbacks now use https://api.vaultwares.ca; nginx templates updated for OVH loopback and Greencloud API vhost routing. Verification: Playwright/Chrome visited 1pornhub.vip, sexyprn.lol, and fullxxx.video; all had hasCatalogError=false, same-origin TPDB batch POST returned 200 on all three, visible catalog counts rendered. Local pnpm build/typecheck were blocked before execution by approved-builds policy for native packages after pnpm recreated node_modules.
+- Summary: Fri, 10 Jul 2026 10:55 - Fixed tube-site Catalog API unreachable after API loopback cutover. Root cause was Astro SSR bundles and service envs still using baked fallback http://100.67.25.118:9001 while direct 9001 is intentionally disabled. Live fixes: OVH oneporn/media-portal-gamma envs set VAULTWARES_API_BASE=https://api.vaultwares.ca, Greencloud fxv env set the same, live server bundles/source patched to replace old direct API URL, OVH oneporn/media-portal-gamma nginx templates live already loopback, Greencloud tube-platform nginx /api and /auth proxy updated to https://api.vaultwares.ca with SNI/Host api.vaultwares.ca. Source changes: shared API default and per-app config fallbacks now use https://api.vaultwares.ca; nginx templates updated for OVH loopback and Greencloud API vhost routing. Verification: Playwright/Chrome visited portal-beta.internal, portal-gamma.internal, and tube-platform.internal; all had hasCatalogError=false, same-origin TPDB batch POST returned 200 on all three, visible catalog counts rendered. Local pnpm build/typecheck were blocked before execution by approved-builds policy for native packages after pnpm recreated node_modules.
 - Commands:
   - `Playwright Chrome visual/network reproduction before and after`
   - `remote env patch and service restarts on OVH and Greencloud`
@@ -2892,15 +2892,15 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Files:
   - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\shared\src\api\promking-api.ts`
   - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\apps\oneporn\src\config.ts`
-  - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\apps\sexyprn\src\config.ts`
+  - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\apps\media-portal-gamma\src\config.ts`
   - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\apps\fxv\src\config.ts`
-  - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\scripts\nginx\1pornhub.vip.conf`
-  - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\scripts\nginx\sexyprn.lol.conf`
-  - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\scripts\nginx\fullxxx.video.conf`
+  - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\scripts\nginx\portal-beta.internal.conf`
+  - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\scripts\nginx\portal-gamma.internal.conf`
+  - `C:\Users\Administrator\Desktop\Prom-King\shared-tube\scripts\nginx\tube-platform.internal.conf`
   - `/etc/shared-tube/oneporn.env`
-  - `/etc/shared-tube/sexyprn.env`
+  - `/etc/shared-tube/media-portal-gamma.env`
   - `/etc/shared-tube/fxv.env`
-  - `/etc/nginx/sites-enabled/fullxxx.video.conf`
+  - `/etc/nginx/sites-enabled/tube-platform.internal.conf`
 
 </details>
 
@@ -2936,8 +2936,8 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Files:
   - `/opt/vaultwares-api/app/routers/promking/fetcher.py`
   - `/opt/vaultwares-api/.env`
-  - `/etc/nginx/sites-enabled/1pornhub.vip.conf`
-  - `/etc/nginx/sites-enabled/sexyprn.lol.conf`
+  - `/etc/nginx/sites-enabled/portal-beta.internal.conf`
+  - `/etc/nginx/sites-enabled/portal-gamma.internal.conf`
   - `/etc/systemd/resolved.conf`
   - `/etc/logrotate.d/rsyslog`
   - `/root/ovh-fix-backups-20260710-1355`
@@ -2979,8 +2979,8 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Files:
   - `/opt/vaultwares-api/app/routers/promking/fetcher.py`
   - `/opt/vaultwares-api/.env`
-  - `/etc/nginx/sites-enabled/1pornhub.vip.conf`
-  - `/etc/nginx/sites-enabled/sexyprn.lol.conf`
+  - `/etc/nginx/sites-enabled/portal-beta.internal.conf`
+  - `/etc/nginx/sites-enabled/portal-gamma.internal.conf`
   - `/etc/systemd/resolved.conf`
   - `/etc/logrotate.d/rsyslog`
   - `/root/ovh-fix-backups-20260710-1355`
@@ -3022,8 +3022,8 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Files:
   - `/opt/vaultwares-api/app/routers/promking/fetcher.py`
   - `/opt/vaultwares-api/.env`
-  - `/etc/nginx/sites-enabled/1pornhub.vip.conf`
-  - `/etc/nginx/sites-enabled/sexyprn.lol.conf`
+  - `/etc/nginx/sites-enabled/portal-beta.internal.conf`
+  - `/etc/nginx/sites-enabled/portal-gamma.internal.conf`
   - `/etc/systemd/resolved.conf`
   - `/etc/logrotate.d/rsyslog`
   - `/root/ovh-fix-backups-20260710-1355`
@@ -3471,7 +3471,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-09 23:12 (TZ: Eastern Standard Time)
   ```
-- Summary: Fri, 10 Jul 2026 01:04 - Moved shared-tube fxv off Brume2 by deploying the existing Proton/Gluetun OpenVPN proxy stack on Greencloud with localhost-only bindings, then changing fxv STREAM_OUTBOUND_PROXY and THUMB_OUTBOUND_PROXY to http://127.0.0.1:8889. Confirmed Greencloud Proton healthy and exiting through Proton, fxv active with runtime env on localhost proxy, and local fxv HTTP 200. Confirmed OVH oneporn and sexyprn were already running on the OVH Proton proxy and active. API had no Brume/proxy env references.
+- Summary: Fri, 10 Jul 2026 01:04 - Moved shared-tube fxv off Brume2 by deploying the existing Proton/Gluetun OpenVPN proxy stack on Greencloud with localhost-only bindings, then changing fxv STREAM_OUTBOUND_PROXY and THUMB_OUTBOUND_PROXY to http://127.0.0.1:8889. Confirmed Greencloud Proton healthy and exiting through Proton, fxv active with runtime env on localhost proxy, and local fxv HTTP 200. Confirmed OVH oneporn and media-portal-gamma were already running on the OVH Proton proxy and active. API had no Brume/proxy env references.
 - Commands:
   - `copy /opt/vw-protonvpn from OVH to Greencloud without printing contents`
   - `bind Greencloud Proton proxy to 127.0.0.1:8889 and 127.0.0.1:8890`
@@ -3485,7 +3485,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `/etc/shared-tube/fxv.env`
   - `/etc/shared-tube/fxv.env.bak-Thu_09_Jul_2026_2308`
   - `/etc/shared-tube/oneporn.env`
-  - `/etc/shared-tube/sexyprn.env`
+  - `/etc/shared-tube/media-portal-gamma.env`
 
 </details>
 
@@ -3568,7 +3568,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-09 19:20 (TZ: Eastern Standard Time)
   ```
-- Summary: COMPLETE: (1) Removed global gold-star ::before on pornstar links (Layout.astro). (2) Sidebar rail now sort=hot: recency-weighted popularity SUM((views+1)*exp(-age/21d)) x deterministic per-(term,6h-bucket) md5 jitter -> rotates instead of A-Z. New sort=hot in vaultwares-api taxonomies.py (validated live; fixed a 500 where the bucket bound as int but used as \::text -> pass str). shared-tube 0.2.44->0.2.45; vaultwares-api ->0.2.15 (concurrent agent bumped). (3) Deploy failure was THREE stacked permission errors, all fixed: (a) /run/vw-github-app missing after tmpfs reboot -> git auth fail; fixed via /etc/tmpfiles.d on greencloud(vwdeploy)+OVH(ubuntu); (b) root-owned node_modules/.pnpm blocked pnpm recreate -> lucide-react missing; (c) root-owned per-app .vite caches blocked astro build. Chowned full checkout to deploy user on both hosts, cleared .vite. FINAL: deploy 6aceb53 built cleanly, dispatched greencloud->OVH, all 3 sites active at v0.2.45, stars gone, rail hot-sorted matching API. Left a concurrent agent's uncommitted vaultwares-api work untouched; also left unrelated sexyprn favicon SVG->PNG changes unstaged.
+- Summary: COMPLETE: (1) Removed global gold-star ::before on pornstar links (Layout.astro). (2) Sidebar rail now sort=hot: recency-weighted popularity SUM((views+1)*exp(-age/21d)) x deterministic per-(term,6h-bucket) md5 jitter -> rotates instead of A-Z. New sort=hot in vaultwares-api taxonomies.py (validated live; fixed a 500 where the bucket bound as int but used as \::text -> pass str). shared-tube 0.2.44->0.2.45; vaultwares-api ->0.2.15 (concurrent agent bumped). (3) Deploy failure was THREE stacked permission errors, all fixed: (a) /run/vw-github-app missing after tmpfs reboot -> git auth fail; fixed via /etc/tmpfiles.d on greencloud(vwdeploy)+OVH(ubuntu); (b) root-owned node_modules/.pnpm blocked pnpm recreate -> lucide-react missing; (c) root-owned per-app .vite caches blocked astro build. Chowned full checkout to deploy user on both hosts, cleared .vite. FINAL: deploy 6aceb53 built cleanly, dispatched greencloud->OVH, all 3 sites active at v0.2.45, stars gone, rail hot-sorted matching API. Left a concurrent agent's uncommitted vaultwares-api work untouched; also left unrelated media-portal-gamma favicon SVG->PNG changes unstaged.
 - Commands:
   - `git push (shared-tube ac233dd,aaec56c,6aceb53)`
   - `git push (vaultwares-api d53e542,07c00d4)`
@@ -3830,7 +3830,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-09 17:52 - Prom-King/shared-tube</strong> <code>handoff</code> - Shipped the account-creation flow: bumped shared-tube monorepo 0.2.43 -&gt; 0.2.44 across all 5 package.json (root, shared, fxv, oneporn, sexyprn), committed ONLY the AccountPage.a...</summary>
+<summary><strong>2026-07-09 17:52 - Prom-King/shared-tube</strong> <code>handoff</code> - Shipped the account-creation flow: bumped shared-tube monorepo 0.2.43 -&gt; 0.2.44 across all 5 package.json (root, shared, fxv, oneporn, media-portal-gamma), committed ONLY the AccountPage.a...</summary>
 
 - Kind: handoff
 - Actor: AI Agent
@@ -3846,7 +3846,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-09 17:52 (TZ: Eastern Standard Time)
   ```
-- Summary: Shipped the account-creation flow: bumped shared-tube monorepo 0.2.43 -> 0.2.44 across all 5 package.json (root, shared, fxv, oneporn, sexyprn), committed ONLY the AccountPage.astro rewrite + version bumps (commit e25753a), and pushed origin/main (f682c19..e25753a). Deliberately left an unrelated in-progress sexyprn favicon/logo SVG->PNG migration unstaged, and removed the apps/fxv/.cache/ dir my dev-server run created. Push to main triggers the signed GitHub webhook -> greencloud vw-webhookd dispatcher -> auto-deploy (fxv on greencloud, oneporn/sexyprn on OVH via Tailscale SSH). Rendered version comment <!-- v0.2.44 --> comes from root package.json via Layout.astro. NOT done: CHANGES.md entry (skipped to avoid a second version-churn push+deploy for a changelog line) - flagged to user.
+- Summary: Shipped the account-creation flow: bumped shared-tube monorepo 0.2.43 -> 0.2.44 across all 5 package.json (root, shared, fxv, oneporn, media-portal-gamma), committed ONLY the AccountPage.astro rewrite + version bumps (commit e25753a), and pushed origin/main (f682c19..e25753a). Deliberately left an unrelated in-progress media-portal-gamma favicon/logo SVG->PNG migration unstaged, and removed the apps/fxv/.cache/ dir my dev-server run created. Push to main triggers the signed GitHub webhook -> greencloud vw-webhookd dispatcher -> auto-deploy (fxv on greencloud, oneporn/media-portal-gamma on OVH via Tailscale SSH). Rendered version comment <!-- v0.2.44 --> comes from root package.json via Layout.astro. NOT done: CHANGES.md entry (skipped to avoid a second version-churn push+deploy for a changelog line) - flagged to user.
 - Commands:
   - `git add <6 files>`
   - `git commit -F (v0.2.44)`
@@ -3856,7 +3856,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `shared-tube/package.json`
   - `shared-tube/apps/fxv/package.json`
   - `shared-tube/apps/oneporn/package.json`
-  - `shared-tube/apps/sexyprn/package.json`
+  - `shared-tube/apps/media-portal-gamma/package.json`
 
 </details>
 
@@ -3927,7 +3927,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-09 17:26 - Prom-King/shared-tube</strong> <code>code-change</code> - Finished the shared-tube account-creation flow + UI in shared/src/components/AccountPage.astro (used by fxv/oneporn/sexyprn /account pages). Replaced the placeholder prompt()-ba...</summary>
+<summary><strong>2026-07-09 17:26 - Prom-King/shared-tube</strong> <code>code-change</code> - Finished the shared-tube account-creation flow + UI in shared/src/components/AccountPage.astro (used by fxv/oneporn/media-portal-gamma /account pages). Replaced the placeholder prompt()-ba...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -3943,7 +3943,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): Claude_Browser
   Time: 2026-07-09 17:26 (TZ: Eastern Standard Time)
   ```
-- Summary: Finished the shared-tube account-creation flow + UI in shared/src/components/AccountPage.astro (used by fxv/oneporn/sexyprn /account pages). Replaced the placeholder prompt()-based registration with a proper inline auth card: segmented Sign in / Create account tabs, real register form (email, password w/ show-hide reveal, confirm password, 18+ confirmation checkbox), full client-side validation matching the /auth/register backend rules (email regex, min 8 chars, passwords match), friendly server-error mapping (409 email taken, 401 bad creds, 400 detail), busy/disabled submit states. Added noindex to the account Layout. Fixed a CSS gotcha where .st-auth-form display:grid (author origin) defeated the [hidden] attribute used to toggle tabs -> scoped to :not([hidden]). Verified via astro dev on fxv:4321: page 200, tab toggle, all 4 validation branches, password reveal, brand-token styling, busy states. Full API round-trip not exercisable locally (needs nginx x-vw-gateway-secret). Not yet committed/deployed; version bump + CHANGES.md entry pending on push.
+- Summary: Finished the shared-tube account-creation flow + UI in shared/src/components/AccountPage.astro (used by fxv/oneporn/media-portal-gamma /account pages). Replaced the placeholder prompt()-based registration with a proper inline auth card: segmented Sign in / Create account tabs, real register form (email, password w/ show-hide reveal, confirm password, 18+ confirmation checkbox), full client-side validation matching the /auth/register backend rules (email regex, min 8 chars, passwords match), friendly server-error mapping (409 email taken, 401 bad creds, 400 detail), busy/disabled submit states. Added noindex to the account Layout. Fixed a CSS gotcha where .st-auth-form display:grid (author origin) defeated the [hidden] attribute used to toggle tabs -> scoped to :not([hidden]). Verified via astro dev on fxv:4321: page 200, tab toggle, all 4 validation branches, password reveal, brand-token styling, busy states. Full API round-trip not exercisable locally (needs nginx x-vw-gateway-secret). Not yet committed/deployed; version bump + CHANGES.md entry pending on push.
 - Commands:
   - `pnpm -C shared-tube --filter @promking/site-fxv dev --port 4321`
 - Files:
@@ -4334,7 +4334,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-08 06:55 - prom-king</strong> <code>code-change</code> - Fixed hardcoded .com extensions in Admin UI external links. Created getSiteDomain helper to properly map sites to their correct TLDs (fullxxx.video, 1pornhub.vip, sexyprn.lol).</summary>
+<summary><strong>2026-07-08 06:55 - prom-king</strong> <code>code-change</code> - Fixed hardcoded .com extensions in Admin UI external links. Created getSiteDomain helper to properly map sites to their correct TLDs (tube-platform.internal, portal-beta.internal, portal-gamma.internal).</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -4350,7 +4350,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-08 06:55 (TZ: Eastern Standard Time)
   ```
-- Summary: Fixed hardcoded .com extensions in Admin UI external links. Created getSiteDomain helper to properly map sites to their correct TLDs (fullxxx.video, 1pornhub.vip, sexyprn.lol).
+- Summary: Fixed hardcoded .com extensions in Admin UI external links. Created getSiteDomain helper to properly map sites to their correct TLDs (tube-platform.internal, portal-beta.internal, portal-gamma.internal).
 - Commands:
   - `npm run build`
 - Files:
@@ -4423,7 +4423,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-07 23:51 - Prom-King</strong> <code>general</code> - Wed, 08 Jul 2026 00:11 - Restored prom-king.xyz by recreating Greencloud pkt.service for content-site on port 4322, disabled dead 1PornHub/SexyPRN link-sharing monitors in Uptim...</summary>
+<summary><strong>2026-07-07 23:51 - Prom-King</strong> <code>general</code> - Wed, 08 Jul 2026 00:11 - Restored prom-king.xyz by recreating Greencloud pkt.service for content-site on port 4322, disabled dead StreamPlatformBeta/MediaPortalGamma link-sharing monitors in Uptim...</summary>
 
 - Kind: general
 - Actor: AI Agent
@@ -4439,7 +4439,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-07 23:51 (TZ: Eastern Standard Time)
   ```
-- Summary: Wed, 08 Jul 2026 00:11 - Restored prom-king.xyz by recreating Greencloud pkt.service for content-site on port 4322, disabled dead 1PornHub/SexyPRN link-sharing monitors in Uptime Kuma, verified FullXXX legal routes green, and removed a stale shared-tube pnpm process from Jun 17.
+- Summary: Wed, 08 Jul 2026 00:11 - Restored prom-king.xyz by recreating Greencloud pkt.service for content-site on port 4322, disabled dead StreamPlatformBeta/MediaPortalGamma link-sharing monitors in Uptime Kuma, verified TubePlatform legal routes green, and removed a stale shared-tube pnpm process from Jun 17.
 
 </details>
 
@@ -4605,7 +4605,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-07 21:22 - prom-king</strong> <code>code-change</code> - Fixed build failure on OVH by explicitly adding node-fetch and https-proxy-agent to the package.json dependencies of fxv, oneporn, and sexyprn.</summary>
+<summary><strong>2026-07-07 21:22 - prom-king</strong> <code>code-change</code> - Fixed build failure on OVH by explicitly adding node-fetch and https-proxy-agent to the package.json dependencies of fxv, oneporn, and media-portal-gamma.</summary>
 
 - Kind: code-change
 - Actor: Antigravity
@@ -4621,7 +4621,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-07 21:22 (TZ: Eastern Standard Time)
   ```
-- Summary: Fixed build failure on OVH by explicitly adding node-fetch and https-proxy-agent to the package.json dependencies of fxv, oneporn, and sexyprn.
+- Summary: Fixed build failure on OVH by explicitly adding node-fetch and https-proxy-agent to the package.json dependencies of fxv, oneporn, and media-portal-gamma.
 
 </details>
 
@@ -5845,7 +5845,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Files:
   - `shared/src/admin/Catalog/VideoBatchActions.tsx`
   - `README.md`
-  - `apps/sexyprn/src/middleware.ts`
+  - `apps/media-portal-gamma/src/middleware.ts`
 - Git: repo=agent-ledger, branch=main, head=27d2108b
 
 </details>
@@ -6006,7 +6006,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Commands:
   - `chown -R vwdeploy:vwdeploy /srv/repos/Prom-King/shared-tube/apps/*/dist`
 - Files:
-  - `apps/sexyprn/src/pages/category/[slug].astro`
+  - `apps/media-portal-gamma/src/pages/category/[slug].astro`
   - `apps/oneporn/src/pages/category/[slug].astro`
 - Git: repo=shared-tube, branch=main, head=73a912a
 
@@ -6057,7 +6057,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Commands:
   - `git push`
 - Files:
-  - `apps/sexyprn/src/pages/category/[slug].astro`
+  - `apps/media-portal-gamma/src/pages/category/[slug].astro`
   - `apps/oneporn/src/pages/category/[slug].astro`
 - Git: repo=shared-tube, branch=main, head=d372642
 
@@ -6168,7 +6168,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-05 20:15 - Prom-King/shared-tube</strong> <code>code-change</code> - Added result counts to public site headers (sexyprn, oneporn, fxv) and reworked the admin panel Terms grid to display TPDB images as thumbnails.</summary>
+<summary><strong>2026-07-05 20:15 - Prom-King/shared-tube</strong> <code>code-change</code> - Added result counts to public site headers (media-portal-gamma, oneporn, fxv) and reworked the admin panel Terms grid to display TPDB images as thumbnails.</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -6184,7 +6184,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-05 20:15 (TZ: Eastern Standard Time)
   ```
-- Summary: Added result counts to public site headers (sexyprn, oneporn, fxv) and reworked the admin panel Terms grid to display TPDB images as thumbnails.
+- Summary: Added result counts to public site headers (media-portal-gamma, oneporn, fxv) and reworked the admin panel Terms grid to display TPDB images as thumbnails.
 - Commands:
   - `node update_headers.cjs`
   - `npm run build`
@@ -6292,7 +6292,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-05 16:16 (TZ: Eastern Standard Time)
   ```
-- Summary: Admin hash-based routing + per-entity detail overlays + public-site 'Edit in admin' chip. New shared/src/admin/router.ts with useAdminRoute() hook parsing #/<tab>[/<subtab>][/<kind>][/<slug>][?params]; supports #/catalog/pornstars/juniper-ren shorthand and #/catalog/videos/office-cum. 13 vitest cases including round-trip serialization. App.tsx + Catalog/Bulk.tsx now read tab/subtab/kind/slug from the URL; navigate() pushes history entries so the browser back button naturally closes overlays. BatchActions.tsx accepts activeKind/onKindChange/onOpenTerm; VideoBatchActions accepts onOpenVideo. New VideoDetail.tsx overlay: renders GET /videos/{slug}, editable title/source/status, inline TaxonomyEditor calling /videos/batch/add-taxonomy with array-of-one. New TermDetail.tsx overlay: rename/slug-update/gender-update/merge/delete via existing /taxonomies/{kind}/batch/* endpoints, plus 'View videos' and 'Open on live site'. Public-site: new OpenInAdmin.astro chip revealed by client-side localStorage check on promking_admin_token; wired into VideoActionBar for /videos/{slug} and injected via Layout.astro's new adminEntity prop on all 12 taxonomy pages (fxv/oneporn/sexyprn/pkt x pornstar/studio/category). Pushed to Prom-King/shared-tube 435f208 (v0.2.33). Verify: typecheck clean, 44/44 vitest pass, fxv production build clean.
+- Summary: Admin hash-based routing + per-entity detail overlays + public-site 'Edit in admin' chip. New shared/src/admin/router.ts with useAdminRoute() hook parsing #/<tab>[/<subtab>][/<kind>][/<slug>][?params]; supports #/catalog/pornstars/juniper-ren shorthand and #/catalog/videos/office-cum. 13 vitest cases including round-trip serialization. App.tsx + Catalog/Bulk.tsx now read tab/subtab/kind/slug from the URL; navigate() pushes history entries so the browser back button naturally closes overlays. BatchActions.tsx accepts activeKind/onKindChange/onOpenTerm; VideoBatchActions accepts onOpenVideo. New VideoDetail.tsx overlay: renders GET /videos/{slug}, editable title/source/status, inline TaxonomyEditor calling /videos/batch/add-taxonomy with array-of-one. New TermDetail.tsx overlay: rename/slug-update/gender-update/merge/delete via existing /taxonomies/{kind}/batch/* endpoints, plus 'View videos' and 'Open on live site'. Public-site: new OpenInAdmin.astro chip revealed by client-side localStorage check on promking_admin_token; wired into VideoActionBar for /videos/{slug} and injected via Layout.astro's new adminEntity prop on all 12 taxonomy pages (fxv/oneporn/media-portal-gamma/pkt x pornstar/studio/category). Pushed to Prom-King/shared-tube 435f208 (v0.2.33). Verify: typecheck clean, 44/44 vitest pass, fxv production build clean.
 - Commands:
   - `pnpm --filter @promking/shared-tube typecheck && test`
   - `git push origin main`
@@ -6327,7 +6327,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-05 09:27 (TZ: Eastern Standard Time)
   ```
-- Summary: Marketing snippets finally rendering + docs refresh. TWO bugs stacked: (1) asyncpg pool had no jsonb codec, so /api/promking/settings/{site} returned affiliate_settings as a JSON STRING. Both Layout.astro line 63 and Settings.tsx line 99 do normalizeAffiliateConfig(x) with a typeof===object guard that flips false on a string — every marketing snippet silently returned an empty config for weeks. Fix in vaultwares-api 0.2.10: register json/jsonb codec on every asyncpg connection; refactored 4 jsonb writes (settings, fetcher cursor, fetch_runs.log, videos.qualities) to pass raw dicts instead of json.dumps+::jsonb. (2) After that fix the response is a real object, but snakeToCamel in promking-api.ts:52 rewrote spots.head_tags -> spots.headTags recursively, so normalizeAffiliateConfig read the wrong key. Fix in shared-tube 0.2.32: req() takes {transformKeys:false}; getSettings opts out. Verified end-to-end: sexyprn=GTM-K4JG875S, fxv=GTM-KKVHWM4N, oneporn=GTM-P6ZCKNH4 all present in live HTML. Also client-side defensive JSON.parse in normalizeAffiliateConfig (0.2.31) as belt-and-braces. Docs pass: new tech-oracle.md (bare systemd on greencloud, NOT docker; 8B+70B NVIDIA NIM; LanceDB+SQLite; Eleventy static); rewrote content-site.md (PKT pivot done, Vite/React/Express standalone on OVH); wallpaper-foundry.md (honest state — scripts live on desktop next to ComfyUI, wallpaper-foundry.service not installed on OVH, PK Wallpaper Sync task disabled); content-disseminator.md refresh (per-platform state); shared-tube.md (pkt row retired); ROUTER.md, overview.md, architecture.md, infrastructure.md all updated. Pushed to Prom-King/shared-tube 8e0abe8, p-potvin/vaultwares-api 46ccdeb, Prom-King/docs e66e97c.
+- Summary: Marketing snippets finally rendering + docs refresh. TWO bugs stacked: (1) asyncpg pool had no jsonb codec, so /api/promking/settings/{site} returned affiliate_settings as a JSON STRING. Both Layout.astro line 63 and Settings.tsx line 99 do normalizeAffiliateConfig(x) with a typeof===object guard that flips false on a string — every marketing snippet silently returned an empty config for weeks. Fix in vaultwares-api 0.2.10: register json/jsonb codec on every asyncpg connection; refactored 4 jsonb writes (settings, fetcher cursor, fetch_runs.log, videos.qualities) to pass raw dicts instead of json.dumps+::jsonb. (2) After that fix the response is a real object, but snakeToCamel in promking-api.ts:52 rewrote spots.head_tags -> spots.headTags recursively, so normalizeAffiliateConfig read the wrong key. Fix in shared-tube 0.2.32: req() takes {transformKeys:false}; getSettings opts out. Verified end-to-end: media-portal-gamma=GTM-K4JG875S, fxv=GTM-KKVHWM4N, oneporn=GTM-P6ZCKNH4 all present in live HTML. Also client-side defensive JSON.parse in normalizeAffiliateConfig (0.2.31) as belt-and-braces. Docs pass: new tech-oracle.md (bare systemd on greencloud, NOT docker; 8B+70B NVIDIA NIM; LanceDB+SQLite; Eleventy static); rewrote content-site.md (PKT pivot done, Vite/React/Express standalone on OVH); wallpaper-foundry.md (honest state — scripts live on desktop next to ComfyUI, wallpaper-foundry.service not installed on OVH, PK Wallpaper Sync task disabled); content-disseminator.md refresh (per-platform state); shared-tube.md (pkt row retired); ROUTER.md, overview.md, architecture.md, infrastructure.md all updated. Pushed to Prom-King/shared-tube 8e0abe8, p-potvin/vaultwares-api 46ccdeb, Prom-King/docs e66e97c.
 - Commands:
   - `ssh ovh systemctl restart vaultwares-api.service`
   - `POST /rebuild`
@@ -6893,7 +6893,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-05 04:59 - Prom-King docs</strong> <code>code-change,verification</code> - Sun, 05 Jul 2026 05:06 America/Toronto - Updated Prom-King documentation for the approved current hosting model: content-site and wallpaper-foundry on OVH, FullXXX on Greencloud...</summary>
+<summary><strong>2026-07-05 04:59 - Prom-King docs</strong> <code>code-change,verification</code> - Sun, 05 Jul 2026 05:06 America/Toronto - Updated Prom-King documentation for the approved current hosting model: content-site and wallpaper-foundry on OVH, TubePlatform on Greencloud...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -6909,7 +6909,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-05 04:59 (TZ: Eastern Standard Time)
   ```
-- Summary: Sun, 05 Jul 2026 05:06 America/Toronto - Updated Prom-King documentation for the approved current hosting model: content-site and wallpaper-foundry on OVH, FullXXX on Greencloud, 1PornHub and SexyPRN on OVH under shared-tube, link-sharing split by tube host, Clopeux ComfyUI as an unmonitored dependency, and retired WordPress/prelanding monitor assumptions.
+- Summary: Sun, 05 Jul 2026 05:06 America/Toronto - Updated Prom-King documentation for the approved current hosting model: content-site and wallpaper-foundry on OVH, TubePlatform on Greencloud, StreamPlatformBeta and MediaPortalGamma on OVH under shared-tube, link-sharing split by tube host, Clopeux ComfyUI as an unmonitored dependency, and retired WordPress/prelanding monitor assumptions.
 - Commands:
   - `rg -n WordPress across Prom-King docs and related worktrees`
   - `git diff --check`
@@ -7251,7 +7251,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Files:
   - `apps/oneporn/src/pages/api/stream/[slug].ts`
   - `apps/fxv/src/pages/api/stream/[slug].ts`
-  - `apps/sexyprn/src/pages/api/stream/[slug].ts`
+  - `apps/media-portal-gamma/src/pages/api/stream/[slug].ts`
   - `shared/src/components/PlayerModal.astro`
 - Plan: `brain/e90f477f-b9e8-4263-83ad-3ff91391c7ae/implementation_plan.md`
 - Git: repo=shared-tube, branch=main, head=9a51b79
@@ -7288,7 +7288,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-04 02:44 - shared-tube</strong> <code>code-change</code> - Fixed CDN rejection on OVH by copying proxy logic from fxv to sexyprn and oneporn. Implemented a fully custom HTML5 video player UI in PlayerModal.astro based on vault-explorer.</summary>
+<summary><strong>2026-07-04 02:44 - shared-tube</strong> <code>code-change</code> - Fixed CDN rejection on OVH by copying proxy logic from fxv to media-portal-gamma and oneporn. Implemented a fully custom HTML5 video player UI in PlayerModal.astro based on vault-explorer.</summary>
 
 - Kind: code-change
 - Actor: Antigravity
@@ -7304,12 +7304,12 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-04 02:44 (TZ: Eastern Standard Time)
   ```
-- Summary: Fixed CDN rejection on OVH by copying proxy logic from fxv to sexyprn and oneporn. Implemented a fully custom HTML5 video player UI in PlayerModal.astro based on vault-explorer.
+- Summary: Fixed CDN rejection on OVH by copying proxy logic from fxv to media-portal-gamma and oneporn. Implemented a fully custom HTML5 video player UI in PlayerModal.astro based on vault-explorer.
 - Commands:
   - `git push origin main`
   - `pnpm -r build`
 - Files:
-  - `apps/sexyprn/src/pages/api/stream/[slug].ts`
+  - `apps/media-portal-gamma/src/pages/api/stream/[slug].ts`
   - `apps/oneporn/src/pages/api/stream/[slug].ts`
   - `shared/src/components/PlayerModal.astro`
 - Plan: `C:\Users\Administrator\.gemini\antigravity-ide\brain\e90f477f-b9e8-4263-83ad-3ff91391c7ae\implementation_plan.md`
@@ -7382,7 +7382,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-07-04 01:35 - shared-tube</strong> <code>code-change</code> - Checked deployments on OVH (oneporn, sexyprn) and GreenCloud (fxv, pkt). Discovered permissions issues (root-owned files in shared/src/admin/Links) on OVH blocking recent deploy...</summary>
+<summary><strong>2026-07-04 01:35 - shared-tube</strong> <code>code-change</code> - Checked deployments on OVH (oneporn, media-portal-gamma) and GreenCloud (fxv, pkt). Discovered permissions issues (root-owned files in shared/src/admin/Links) on OVH blocking recent deploy...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -7398,7 +7398,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-04 01:35 (TZ: Eastern Standard Time)
   ```
-- Summary: Checked deployments on OVH (oneporn, sexyprn) and GreenCloud (fxv, pkt). Discovered permissions issues (root-owned files in shared/src/admin/Links) on OVH blocking recent deploys. Fixed ownership on OVH and successfully rerun deployment script to update all sites to v0.2.25. Fixed Layout.astro which rendered HTML version comment fragment inside html tag but before head, causing double head tag parser bugs.
+- Summary: Checked deployments on OVH (oneporn, media-portal-gamma) and GreenCloud (fxv, pkt). Discovered permissions issues (root-owned files in shared/src/admin/Links) on OVH blocking recent deploys. Fixed ownership on OVH and successfully rerun deployment script to update all sites to v0.2.25. Fixed Layout.astro which rendered HTML version comment fragment inside html tag but before head, causing double head tag parser bugs.
 - Commands:
   - `ssh -o StrictHostKeyChecking=no ubuntu@100.67.25.118 'sudo chown -R ubuntu:ubuntu /srv/repos/Prom-King/shared-tube'`
   - `ssh root@100.73.93.84 'sudo -u vwdeploy env VW_AFTER=d0b45b7d2f100ef40083ffdeb6ed5afd8d60111a /var/www/deploy-scripts/deploy-shared-tube.sh'`
@@ -7978,7 +7978,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-07-02 13:21 (TZ: Eastern Standard Time)
   ```
-- Summary: shared-tube v0.2.25 (583be76..d0b45b7) + vaultwares-api (72029c1..92efd68) pushed. (1) Stream proxy no longer 302's to raw CDN URL when sourceUrl empty — was root cause of sexyprn/oneporn 403 (browser hit CDN direct, IP mismatch on signed URL). Returns 502 with re-fetch hint. (2) Default quality flipped 720p->480p to reduce residential-proxy bytes. (3) SOCKS5 STREAM_OUTBOUND_PROXY refused at init with clear error (undici ProxyAgent is HTTP-only); ops guidance: front SOCKS5 with gost -L=http://:8888 -F=socks5://.... (4) Fetcher tab gains Daily schedule card writing settings.fetcher_cron; new POST /fetcher/cron/reload hot-reloads APScheduler. Existing _drive_subprocess duplicate-zone logic already caps runs at ~4 known-row streak.
+- Summary: shared-tube v0.2.25 (583be76..d0b45b7) + vaultwares-api (72029c1..92efd68) pushed. (1) Stream proxy no longer 302's to raw CDN URL when sourceUrl empty — was root cause of media-portal-gamma/oneporn 403 (browser hit CDN direct, IP mismatch on signed URL). Returns 502 with re-fetch hint. (2) Default quality flipped 720p->480p to reduce residential-proxy bytes. (3) SOCKS5 STREAM_OUTBOUND_PROXY refused at init with clear error (undici ProxyAgent is HTTP-only); ops guidance: front SOCKS5 with gost -L=http://:8888 -F=socks5://.... (4) Fetcher tab gains Daily schedule card writing settings.fetcher_cron; new POST /fetcher/cron/reload hot-reloads APScheduler. Existing _drive_subprocess duplicate-zone logic already caps runs at ~4 known-row streak.
 - Commands:
   - `pnpm --filter @promking/shared-tube typecheck`
   - `pnpm -r build`
@@ -9097,7 +9097,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Files:
   - `shared-tube\shared\src\components\Header.astro`
   - `shared-tube\shared\src\security\safe-mode.ts`
-  - `shared-tube\apps\sexyprn\src\admin\Affiliates\Settings.tsx`
+  - `shared-tube\apps\media-portal-gamma\src\admin\Affiliates\Settings.tsx`
 
 </details>
 
@@ -10518,14 +10518,14 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Commands:
   - `php -l (10 files)`
 - Files:
-  - `fullxxx-video/includes/template-loader.php`
-  - `fullxxx-video/includes/helpers.php`
-  - `fullxxx-video/templates/archive-fxv_video.php`
-  - `fullxxx-video/templates/taxonomy-fxv_category.php`
-  - `fullxxx-video/templates/page-fxv_home.php`
-  - `fullxxx-video/templates/page-fxv_shell.php`
-  - `fullxxx-video/templates/single-fxv_video.php`
-  - `fullxxx-video/assets/css/tubeshell/base.css`
+  - `tube-platform-video/includes/template-loader.php`
+  - `tube-platform-video/includes/helpers.php`
+  - `tube-platform-video/templates/archive-fxv_video.php`
+  - `tube-platform-video/templates/taxonomy-fxv_category.php`
+  - `tube-platform-video/templates/page-fxv_home.php`
+  - `tube-platform-video/templates/page-fxv_shell.php`
+  - `tube-platform-video/templates/single-fxv_video.php`
+  - `tube-platform-video/assets/css/tubeshell/base.css`
   - `.extras/tube-shell-theme/tube-shell/header.php`
   - `.extras/tube-shell-theme/tube-shell/footer.php`
   - `.extras/tube-shell-theme/tube-shell/functions.php`
@@ -10842,7 +10842,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-29 18:49 (TZ: Eastern Standard Time)
   ```
-- Summary: FXV UI/UX + functional verification pass complete. (1) Webhook secret synced server->GitHub across 30 hooks (4 Prom-King + 26 p-potvin). (2) Deploy chain verified end-to-end with empty commit, 4bf2c70 deployed in ~1s. (3) Cleanup handler trashed 91 duplicate /2257/ pages; canonical kept at post 71. Republished /privacy-policy/ (id=3) which had been left in draft. (4) Migrated stored fxv_settings DB option: dropped freesexvideos, added eporner, regenerated provider_profiles_json from plugin defaults (cleared junk allowlistdomains key). (5) Visual walkthrough via Chrome headless: HEADER is now unified across all 5 templates (single helper fxv_render_primary_nav), but duplicate FOOTER persists (theme + plugin both render). Age gate is invasive on every page EXCEPT home. Categories taxonomy has 380 terms polluted with actor/studio names; fxv_actor and fxv_studio taxonomies are still empty. (6) GTM-WXGQJ7PR loads; dataLayer + ns.html fallback present. (7) Inline fix shipped (commit 5a39e51): unified nav helper - Videos/Categories/Actors/Studios/DMCA/2257/Contact/Privacy. Replaces broken /studios/ link and dead /pricing/ link in 5 templates. PUNCH LIST DEFERRED: (a) /2257/ has WordPress redirect_canonical 301 loop - slug=2257 status=publish in DB but request loops to itself; (b) duplicate footer; (c) age gate inconsistent placement; (d) 380 fxv_category terms need to be split into fxv_actor/fxv_studio (data migration); (e) search input has no submit handler; (f) home hero takes >100vh, content below fold.
+- Summary: FXV UI/UX + functional verification pass complete. (1) Webhook secret synced server->GitHub across 30 hooks (4 Prom-King + 26 p-potvin). (2) Deploy chain verified end-to-end with empty commit, 4bf2c70 deployed in ~1s. (3) Cleanup handler trashed 91 duplicate /2257/ pages; canonical kept at post 71. Republished /privacy-policy/ (id=3) which had been left in draft. (4) Migrated stored fxv_settings DB option: dropped media-archive, added media-archive, regenerated provider_profiles_json from plugin defaults (cleared junk allowlistdomains key). (5) Visual walkthrough via Chrome headless: HEADER is now unified across all 5 templates (single helper fxv_render_primary_nav), but duplicate FOOTER persists (theme + plugin both render). Age gate is invasive on every page EXCEPT home. Categories taxonomy has 380 terms polluted with actor/studio names; fxv_actor and fxv_studio taxonomies are still empty. (6) GTM-WXGQJ7PR loads; dataLayer + ns.html fallback present. (7) Inline fix shipped (commit 5a39e51): unified nav helper - Videos/Categories/Actors/Studios/DMCA/2257/Contact/Privacy. Replaces broken /studios/ link and dead /pricing/ link in 5 templates. PUNCH LIST DEFERRED: (a) /2257/ has WordPress redirect_canonical 301 loop - slug=2257 status=publish in DB but request loops to itself; (b) duplicate footer; (c) age gate inconsistent placement; (d) 380 fxv_category terms need to be split into fxv_actor/fxv_studio (data migration); (e) search input has no submit handler; (f) home hero takes >100vh, content below fold.
 - Commands:
   - `gh api PATCH x30 repo hooks`
   - `git push origin main 5a39e51`
@@ -10850,8 +10850,8 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `wp option update fxv_settings`
 - Files:
   - `commit 5a39e51`
-  - `fullxxx-video/includes/helpers.php`
-  - `fullxxx-video/templates/*.php (5 files)`
+  - `tube-platform-video/includes/helpers.php`
+  - `tube-platform-video/templates/*.php (5 files)`
 - Git: repo=tube-sites, branch=main, head=5a39e51
 
 </details>
@@ -10982,7 +10982,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-28 19:05 - General Tasks</strong> <code>code-change</code> - Removed the two legacy GitHub Actions deployment workflows (deploy-fullxxx-video.yml and deploy-promking-tube.yml) from tube-sites/.github/workflows/ to adhere to the Tailscale ...</summary>
+<summary><strong>2026-05-28 19:05 - General Tasks</strong> <code>code-change</code> - Removed the two legacy GitHub Actions deployment workflows (deploy-tube-platform-video.yml and deploy-promking-tube.yml) from tube-sites/.github/workflows/ to adhere to the Tailscale ...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -10998,9 +10998,9 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-28 19:05 (TZ: Eastern Standard Time)
   ```
-- Summary: Removed the two legacy GitHub Actions deployment workflows (deploy-fullxxx-video.yml and deploy-promking-tube.yml) from tube-sites/.github/workflows/ to adhere to the Tailscale webhook-based deployment architecture.
+- Summary: Removed the two legacy GitHub Actions deployment workflows (deploy-tube-platform-video.yml and deploy-promking-tube.yml) from tube-sites/.github/workflows/ to adhere to the Tailscale webhook-based deployment architecture.
 - Files:
-  - `c:\Users\Administrator\Desktop\Prom-King\tube-sites\.github\workflows\deploy-fullxxx-video.yml`
+  - `c:\Users\Administrator\Desktop\Prom-King\tube-sites\.github\workflows\deploy-tube-platform-video.yml`
   - `c:\Users\Administrator\Desktop\Prom-King\tube-sites\.github\workflows\deploy-promking-tube.yml`
 - Git: repo=tube-sites, branch=main, head=8e1a6c2
 
@@ -11097,7 +11097,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-28 18:31 (TZ: Eastern Standard Time)
   ```
-- Summary: 2257-page duplicate bug fixed + deploy-runner verified. (1) Pushed commit 8e1a6c2 hardening fxv_create_page_if_missing (cache-bypass get_posts query, once-per-request + once-per-hour throttle on admin_init) and adding admin-post handler fxv_cleanup_legal_dupes that trashes everything but the oldest /2257/, /contact/, /privacy-policy/ page. Button surfaced on FXV settings page. (2) Deploy-runner investigation on greencloud-vps (tailnet 100.73.93.84): vw-webhookd + vaultwares-hooks both active and listening (9033/8787/9444), hooks.vaultwares.ca/health returns 200. Deployed source /var/www/tube-sites-src was stuck at 7bd9c85 (pre-overhaul). GitHub webhook deliveries for Prom-King/tube-sites have been returning HTTP 401 (bad_signature) since at least 2026-05-28 09:08 UTC — every Prom-King repo push gets denied, while p-potvin/agent-ledger pushes succeed normally. Root cause: VW_GITHUB_WEBHOOK_SECRET mismatch between /etc/vw-webhookd/env and the secret configured on Prom-King webhooks at GitHub. Confirmed via gh api repos/Prom-King/tube-sites/hooks: last_response.code=401. Manually ran VW_AFTER=8e1a6c28bf6258c0387fde37f07f2ba790e427c8 /var/www/deploy-scripts/deploy-tube-sites.sh as root — succeeded, /var/www/tube-sites-src HEAD now at 8e1a6c2, WP plugin dirs synced (verified eporner/requireDirectSource/URL_REJECT_PATTERNS/handle_wipe_and_backfill/cleanup handler all present in deployed copies). Action required from user: rotate or sync the webhook secret per vaultwares-docs/docs-content/operations/webhook-secret-rotation.mdx. I did NOT touch the secret myself.
+- Summary: 2257-page duplicate bug fixed + deploy-runner verified. (1) Pushed commit 8e1a6c2 hardening fxv_create_page_if_missing (cache-bypass get_posts query, once-per-request + once-per-hour throttle on admin_init) and adding admin-post handler fxv_cleanup_legal_dupes that trashes everything but the oldest /2257/, /contact/, /privacy-policy/ page. Button surfaced on FXV settings page. (2) Deploy-runner investigation on greencloud-vps (tailnet 100.73.93.84): vw-webhookd + vaultwares-hooks both active and listening (9033/8787/9444), hooks.vaultwares.ca/health returns 200. Deployed source /var/www/tube-sites-src was stuck at 7bd9c85 (pre-overhaul). GitHub webhook deliveries for Prom-King/tube-sites have been returning HTTP 401 (bad_signature) since at least 2026-05-28 09:08 UTC — every Prom-King repo push gets denied, while p-potvin/agent-ledger pushes succeed normally. Root cause: VW_GITHUB_WEBHOOK_SECRET mismatch between /etc/vw-webhookd/env and the secret configured on Prom-King webhooks at GitHub. Confirmed via gh api repos/Prom-King/tube-sites/hooks: last_response.code=401. Manually ran VW_AFTER=8e1a6c28bf6258c0387fde37f07f2ba790e427c8 /var/www/deploy-scripts/deploy-tube-sites.sh as root — succeeded, /var/www/tube-sites-src HEAD now at 8e1a6c2, WP plugin dirs synced (verified media-archive/requireDirectSource/URL_REJECT_PATTERNS/handle_wipe_and_backfill/cleanup handler all present in deployed copies). Action required from user: rotate or sync the webhook secret per vaultwares-docs/docs-content/operations/webhook-secret-rotation.mdx. I did NOT touch the secret myself.
 - Commands:
   - `git push origin main (8e1a6c2)`
   - `ssh root@100.73.93.84 'VW_AFTER=8e1a6c28b... bash /var/www/deploy-scripts/deploy-tube-sites.sh'`
@@ -11128,7 +11128,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Summary: Re-applied prior tube-site overhaul (edits had been reverted in the working tree between sessions) and pushed to origin/main. Commit f5b0378 on top of 7bd9c85. 15 files, +809 -181. GTM-WXGQJ7PR + ga4_via_gtm_enabled defaults preserved (parallel assistant's analytics work intact). Vercel/main-push deploy will pick up the changes.
 - Commands:
-  - `git add fullxxx-video/ promking-tube/`
+  - `git add tube-platform-video/ promking-tube/`
   - `git commit -m 'FXV/PKT tube sites: owned-player overhaul + fetcher hardening'`
   - `git push origin main`
   - `php -l on all 11 modified PHP files (clean)`
@@ -11168,7 +11168,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-28 17:05 - tube-sites</strong> <code>code-change,plan</code> - FXV + PKT tube site overhaul. FXV: dropped iframe-only providers (freesexvideos, spankbang); rewired provider profiles for owned-player only (mp4/HLS); added eporner as new dire...</summary>
+<summary><strong>2026-05-28 17:05 - tube-sites</strong> <code>code-change,plan</code> - FXV + PKT tube site overhaul. FXV: dropped iframe-only providers (media-archive, media-archive); rewired provider profiles for owned-player only (mp4/HLS); added media-archive as new dire...</summary>
 
 - Kind: code-change,plan
 - Actor: AI Agent
@@ -11184,26 +11184,26 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-28 17:05 (TZ: Eastern Standard Time)
   ```
-- Summary: FXV + PKT tube site overhaul. FXV: dropped iframe-only providers (freesexvideos, spankbang); rewired provider profiles for owned-player only (mp4/HLS); added eporner as new direct-stream source with detail-page extraction (fxv_extract_eporner_source); added fxv_actor + fxv_studio taxonomies; per-source actor/studio extraction; hardened per-source fetchers to skip candidates without extractable direct mp4/m3u8/webm URLs (topvid now requires HLS manifest extraction inline); fxv_resolve_runtime_embed falls back to 'unsupported' instead of 'iframe'; updated source catalog + domain map + admin allowlist hints. PKT: added pkt_actor + pkt_studio taxonomies; tightened per-source XPath (xvideos requires video_<digits> + non-channel anchor, xhamster requires /videos/ link, spankbang requires /<key>/video/); added URL_REJECT_PATTERNS (channels/playlists/profiles/series) and CONTENT_REJECT_PATTERNS ('Trust and Safety', 'podcast', 'episode', etc.) to fix prior PH-podcast contamination; redtube API handler now extracts actors from stars/models/pornstars + applies same content filters; added handle_wipe_and_backfill admin handler (requires typed WIPE confirmation) that deletes every pkt_video post, clears seen+cursors+poisoned keywords, then runs bulk fetch across xvideos+xhamster+spankbang+redtube targeting ~50 pages each. Shared: rewrote pkt-player.bundle.js to support hls.js via jsdelivr CDN for non-Safari browsers, added 'unsupported' player mode with source-page link CTA, removed automatic iframe fallback on HLS failures; mirrored JS+CSS to both plugins. Templates: reduced FXV archive inline ad (12->24), removed FXV in-player overlay ad, reduced PKT archive inline ad (3->15), removed PKT below-embed ad slot, added actor+studio chip rows to single-video templates. CSS: added .pkt-player-modal__unsupported + credit chip styles; harmonized PKT brand-icon fallback paths and play-icon fallback SVG (removed lone emoji). All modified PHP lints clean.
+- Summary: FXV + PKT tube site overhaul. FXV: dropped iframe-only providers (media-archive, media-archive); rewired provider profiles for owned-player only (mp4/HLS); added media-archive as new direct-stream source with detail-page extraction (fxv_extract_media_archive_source); added fxv_actor + fxv_studio taxonomies; per-source actor/studio extraction; hardened per-source fetchers to skip candidates without extractable direct mp4/m3u8/webm URLs (topvid now requires HLS manifest extraction inline); fxv_resolve_runtime_embed falls back to 'unsupported' instead of 'iframe'; updated source catalog + domain map + admin allowlist hints. PKT: added pkt_actor + pkt_studio taxonomies; tightened per-source XPath (stream-platform requires video_<digits> + non-channel anchor, xhamster requires /videos/ link, media-archive requires /<key>/video/); added URL_REJECT_PATTERNS (channels/playlists/profiles/series) and CONTENT_REJECT_PATTERNS ('Trust and Safety', 'podcast', 'episode', etc.) to fix prior PH-podcast contamination; redtube API handler now extracts actors from stars/models/pornstars + applies same content filters; added handle_wipe_and_backfill admin handler (requires typed WIPE confirmation) that deletes every pkt_video post, clears seen+cursors+poisoned keywords, then runs bulk fetch across stream-platform+xhamster+media-archive+redtube targeting ~50 pages each. Shared: rewrote pkt-player.bundle.js to support hls.js via jsdelivr CDN for non-Safari browsers, added 'unsupported' player mode with source-page link CTA, removed automatic iframe fallback on HLS failures; mirrored JS+CSS to both plugins. Templates: reduced FXV archive inline ad (12->24), removed FXV in-player overlay ad, reduced PKT archive inline ad (3->15), removed PKT below-embed ad slot, added actor+studio chip rows to single-video templates. CSS: added .pkt-player-modal__unsupported + credit chip styles; harmonized PKT brand-icon fallback paths and play-icon fallback SVG (removed lone emoji). All modified PHP lints clean.
 - Commands:
   - `php -l (8 files, all clean)`
-  - `cp pkt-player.bundle.js + pkt-player.css to fullxxx-video`
+  - `cp pkt-player.bundle.js + pkt-player.css to tube-platform-video`
 - Files:
-  - `tube-sites/fullxxx-video/includes/player.php`
-  - `tube-sites/fullxxx-video/includes/video-fetcher.php`
-  - `tube-sites/fullxxx-video/includes/helpers.php`
-  - `tube-sites/fullxxx-video/includes/post-types.php`
-  - `tube-sites/fullxxx-video/includes/admin-settings.php`
-  - `tube-sites/fullxxx-video/templates/single-fxv_video.php`
-  - `tube-sites/fullxxx-video/templates/archive-fxv_video.php`
+  - `tube-sites/tube-platform-video/includes/player.php`
+  - `tube-sites/tube-platform-video/includes/video-fetcher.php`
+  - `tube-sites/tube-platform-video/includes/helpers.php`
+  - `tube-sites/tube-platform-video/includes/post-types.php`
+  - `tube-sites/tube-platform-video/includes/admin-settings.php`
+  - `tube-sites/tube-platform-video/templates/single-fxv_video.php`
+  - `tube-sites/tube-platform-video/templates/archive-fxv_video.php`
   - `tube-sites/promking-tube/includes/video-fetcher.php`
   - `tube-sites/promking-tube/includes/post-types.php`
   - `tube-sites/promking-tube/templates/single-pkt_video.php`
   - `tube-sites/promking-tube/templates/archive-pkt_video.php`
   - `tube-sites/promking-tube/assets/css/pkt-player.css`
   - `tube-sites/promking-tube/assets/js/pkt-player.bundle.js`
-  - `tube-sites/fullxxx-video/assets/css/pkt-player.css`
-  - `tube-sites/fullxxx-video/assets/js/pkt-player.bundle.js`
+  - `tube-sites/tube-platform-video/assets/css/pkt-player.css`
+  - `tube-sites/tube-platform-video/assets/js/pkt-player.bundle.js`
 
 </details>
 
@@ -11229,7 +11229,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `git push origin main (tube-sites)`
   - `ssh root@100.73.93.84 export VW_AFTER=105bb125...; /var/www/deploy-scripts/deploy-tube-sites.sh`
   - `curl https://prom-king.xyz/ (confirm no GTM id)`
-  - `curl https://fullxxx.video/ (confirm GTM id + consent defaults)`
+  - `curl https://platform-alpha.internal/ (confirm GTM id + consent defaults)`
 - Files:
   - `C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\includes\\admin-settings.php`
   - `C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\docs\\ANALYTICS_GTM_GA4_2026.md`
@@ -11259,7 +11259,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `ssh root@100.73.93.84 systemctl status vw-webhookd vaultwares-hooks`
   - `export VW_AFTER=6183940733...; /var/www/deploy-scripts/deploy-tube-sites.sh`
   - `export VW_AFTER=c4757d1852...; /var/www/deploy-scripts/deploy-tube-sites.sh`
-  - `curl https://fullxxx.video/`
+  - `curl https://platform-alpha.internal/`
   - `curl https://prom-king.xyz/`
 - Files:
   - `C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\promking-tube\\assets\\css\\tubeshell\\theme.css`
@@ -11270,7 +11270,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-28 15:20 - tube-sites</strong> <code>handoff,verification</code> - Verified live fullxxx.video is still serving the old homepage and old fullxxx-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck...</summary>
+<summary><strong>2026-05-28 15:20 - tube-sites</strong> <code>handoff,verification</code> - Verified live tube-platform.internal is still serving the old homepage and old tube-platform-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck...</summary>
 
 - Kind: handoff,verification
 - Actor: AI Agent
@@ -11288,14 +11288,14 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Telemetry:
   - Flags: deploy_status=queued, runner_blocked=True, deploy_run_id=26596556363
-- Summary: Verified live fullxxx.video is still serving the old homepage and old fullxxx-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck queued (self-hosted runner not picking it up).
+- Summary: Verified live tube-platform.internal is still serving the old homepage and old tube-platform-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck queued (self-hosted runner not picking it up).
 - Commands:
-  - `Invoke-WebRequest https://fullxxx.video/ (grep for tubeshell markers)`
-  - `Invoke-WebRequest https://fullxxx.video/wp-content/plugins/fullxxx-video/assets/css/tubeshell/theme.css (saw old light palette)`
-  - `gh workflow run 'Deploy fullxxx-video to fullxxx.video'`
+  - `Invoke-WebRequest https://platform-alpha.internal/ (grep for tubeshell markers)`
+  - `Invoke-WebRequest https://platform-alpha.internal/wp-content/plugins/tube-platform-video/assets/css/tubeshell/theme.css (saw old light palette)`
+  - `gh workflow run 'Deploy tube-platform-video to tube-platform.internal'`
   - `gh run view 26596556363`
 - Files:
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\.github\workflows\deploy-fullxxx-video.yml`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\.github\workflows\deploy-tube-platform-video.yml`
 
 </details>
 
@@ -11324,18 +11324,18 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `git merge --no-ff vw-codex-unify-deploy-flow`
   - `git push origin main`
 - Files:
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\template-loader.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\templates\page-fxv_shell.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\templates\page-fxv_home.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\legal-pages.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\post-types.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\seo-discovery.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\assets\css\tubeshell\theme.css`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\template-loader.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\templates\page-fxv_shell.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\templates\page-fxv_home.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\legal-pages.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\post-types.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\seo-discovery.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\assets\css\tubeshell\theme.css`
 
 </details>
 
 <details>
-<summary><strong>2026-05-28 14:00 - tube-sites</strong> <code>code-change,verification</code> - Switched FullXXX brand mark icons to UI_Kit fx-dot.svg (matches the configured favicon style) across archive/tax/single templates and the auth modal branding.</summary>
+<summary><strong>2026-05-28 14:00 - tube-sites</strong> <code>code-change,verification</code> - Switched TubePlatform brand mark icons to UI_Kit fx-dot.svg (matches the configured favicon style) across archive/tax/single templates and the auth modal branding.</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -11352,21 +11352,21 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   Time: 2026-05-28 14:00 (TZ: Eastern Standard Time)
   ```
 - Telemetry:
-  - Flags: estimated_output_tokens=450, fullxxx_brand_icon=fx-dot.svg
-- Summary: Switched FullXXX brand mark icons to UI_Kit fx-dot.svg (matches the configured favicon style) across archive/tax/single templates and the auth modal branding.
+  - Flags: estimated_output_tokens=450, tube_platform_brand_icon=fx-dot.svg
+- Summary: Switched TubePlatform brand mark icons to UI_Kit fx-dot.svg (matches the configured favicon style) across archive/tax/single templates and the auth modal branding.
 - Commands:
-  - `rg fullxxx-lockup-soft.svg (ensure removed)`
-  - `php -l fullxxx-video/templates/*.php fullxxx-video/includes/auth-bridge.php`
+  - `rg tube-platform-lockup-soft.svg (ensure removed)`
+  - `php -l tube-platform-video/templates/*.php tube-platform-video/includes/auth-bridge.php`
 - Files:
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\templates\archive-fxv_video.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\templates\taxonomy-fxv_category.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\templates\single-fxv_video.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\auth-bridge.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\templates\archive-fxv_video.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\templates\taxonomy-fxv_category.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\templates\single-fxv_video.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\auth-bridge.php`
 
 </details>
 
 <details>
-<summary><strong>2026-05-28 13:33 - tube-sites</strong> <code>code-change,verification</code> - Updated FullXXX (theme-fx) to the new dark black/white/hot-pink visual system to match the /videos design; aligned &lt;meta name=theme-color&gt;.</summary>
+<summary><strong>2026-05-28 13:33 - tube-sites</strong> <code>code-change,verification</code> - Updated TubePlatform (theme-fx) to the new dark black/white/hot-pink visual system to match the /videos design; aligned &lt;meta name=theme-color&gt;.</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -11384,13 +11384,13 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Telemetry:
   - Flags: estimated_output_tokens=650, ui_theme_fx_dark=True
-- Summary: Updated FullXXX (theme-fx) to the new dark black/white/hot-pink visual system to match the /videos design; aligned <meta name=theme-color>.
+- Summary: Updated TubePlatform (theme-fx) to the new dark black/white/hot-pink visual system to match the /videos design; aligned <meta name=theme-color>.
 - Commands:
-  - `git diff fullxxx-video/assets/css/tubeshell/theme.css fullxxx-video/includes/template-loader.php`
-  - `php -l fullxxx-video/includes/template-loader.php`
+  - `git diff tube-platform-video/assets/css/tubeshell/theme.css tube-platform-video/includes/template-loader.php`
+  - `php -l tube-platform-video/includes/template-loader.php`
 - Files:
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\assets\css\tubeshell\theme.css`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\template-loader.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\assets\css\tubeshell\theme.css`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\template-loader.php`
 
 </details>
 
@@ -11419,15 +11419,15 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `git status --porcelain`
 - Files:
   - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\promking-tube\includes\admin-settings.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\admin-settings.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\helpers.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\admin-settings.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\helpers.php`
   - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\promking-tube\README.md`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\README.md`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\README.md`
 
 </details>
 
 <details>
-<summary><strong>2026-05-28 10:24 - tube-sites</strong> <code>code-change,verification</code> - Added configurable GTM + GA4 wiring, Consent Mode v2 defaults/updates, and a lightweight consent banner for both tube plugins (promking-tube + fullxxx-video). Added optional pri...</summary>
+<summary><strong>2026-05-28 10:24 - tube-sites</strong> <code>code-change,verification</code> - Added configurable GTM + GA4 wiring, Consent Mode v2 defaults/updates, and a lightweight consent banner for both tube plugins (promking-tube + tube-platform-video). Added optional pri...</summary>
 
 - Kind: code-change,verification
 - Actor: AI Agent
@@ -11445,7 +11445,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Telemetry:
   - Flags: request_rate_limiting_needed=False, consent_mode_v2=True, estimated_output_tokens=1800, overlays_applied=
-- Summary: Added configurable GTM + GA4 wiring, Consent Mode v2 defaults/updates, and a lightweight consent banner for both tube plugins (promking-tube + fullxxx-video). Added optional prior-blocking for plugin-injected marketing scripts (ad snippets) until Marketing consent is granted.
+- Summary: Added configurable GTM + GA4 wiring, Consent Mode v2 defaults/updates, and a lightweight consent banner for both tube plugins (promking-tube + tube-platform-video). Added optional prior-blocking for plugin-injected marketing scripts (ad snippets) until Marketing consent is granted.
 - Commands:
   - `rg -n gtag/GTM/GA4 references`
   - `php -l (changed PHP files)`
@@ -11458,13 +11458,13 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\promking-tube\promking-tube.php`
   - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\promking-tube\templates\single-pkt_video.php`
   - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\promking-tube\README.md`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\admin-settings.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\ads.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\helpers.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\assets\js\tube-consent.js`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\assets\css\tube-consent.css`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\fullxxx-video.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\README.md`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\admin-settings.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\ads.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\helpers.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\assets\js\tube-consent.js`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\assets\css\tube-consent.css`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\tube-platform-video.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\README.md`
 
 </details>
 
@@ -12442,8 +12442,8 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Telemetry:
   - Flags: max_pages=40_default, bandwidth_guardrails=block image,media,font; block_third_party=1, own_domain_only=true, ip_rotation=ipoasis_rotate_per_domain_session, stealth_behavior=enabled_on_own_domains, max_depth=4
-  - Metrics: {"prom_king_pages":4,"fullxxx_pages":40,"blocked":0,"failures":0}
-- Summary: Implemented own-domain stealth crawl runner (Node/Playwright) that generates rotating IPoasis proxies per domain session (via proxy-chain anonymization), crawls same-domain links up to depth 4 with conservative page cap, blocks heavy resources (image/media/font) and optionally third-party requests to protect bandwidth, and runs human-like behavior + age-gate handling only on prom-king.xyz/fullxxx.video. Executed a run with default limits and wrote JSON artifacts.
+  - Metrics: {"prom_king_pages":4,"tube_platform_pages":40,"blocked":0,"failures":0}
+- Summary: Implemented own-domain stealth crawl runner (Node/Playwright) that generates rotating IPoasis proxies per domain session (via proxy-chain anonymization), crawls same-domain links up to depth 4 with conservative page cap, blocks heavy resources (image/media/font) and optionally third-party requests to protect bandwidth, and runs human-like behavior + age-gate handling only on prom-king.xyz/tube-platform.internal. Executed a run with default limits and wrote JSON artifacts.
 - Commands:
   - `npm run report:own-domain-stealth`
   - `node -c .\\scripts\\run-own-domain-stealth.mjs`
@@ -12455,7 +12455,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\README.md`
   - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\own-domain-stealth\\20260526-153952\\summary.json`
   - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\own-domain-stealth\\20260526-153952\\prom-king.xyz\\stealth-results.json`
-  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\own-domain-stealth\\20260526-153952\\fullxxx.video\\stealth-results.json`
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\own-domain-stealth\\20260526-153952\\tube-platform.internal\\stealth-results.json`
 - Git: repo=qa-automation, branch=main, head=393f6b4
 
 </details>
@@ -12511,7 +12511,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-26 14:48 - agent-ledger</strong> <code>code-change,handoff,verification</code> - Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections — tube-sites absorbs fullxxx, vw-jira-sync split out, dropped &#39;form...</summary>
+<summary><strong>2026-05-26 14:48 - agent-ledger</strong> <code>code-change,handoff,verification</code> - Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections — tube-sites absorbs tube-platform, vw-jira-sync split out, dropped &#39;form...</summary>
 
 - Kind: code-change,handoff,verification
 - Actor: AI Agent
@@ -12527,7 +12527,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-26 14:48 (TZ: Eastern Standard Time)
   ```
-- Summary: Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections — tube-sites absorbs fullxxx, vw-jira-sync split out, dropped 'formerly' from UI. B: Dashboard layout — log-scale heatmap, 4 new chart widgets (ActivityPulse, TopProjectsVelocity, CommitChurnSparkline, Activity24) in 12-col grid. C: Animated LEDs — pulse keyframes, Led component in Nav and section headers. D: Categorized TSX icon library (7 categories, barrel export) in vaultwares-themes + copied into site. E: New V+coil logo (gold #D6A441 + ink #241e36), archived 7 old minimal-V PNGs. F: Multi-kind ledger entries — kind-utils.ps1 shared library, lenient comma-separated validation, split-on-read in PS + TS consumers, parseKinds/isKnownKind in types.ts, multi-kind badge rendering in ChangesPage, agent-ledger-schema.mdx doc, CLAUDE.md kind enum references, memory file. Updated README.md, branding-QC.mdx, GLYPHS_ICONS.md, assets/README.md. Added IconClock/IconFolder to ChangesPage event rows. Build passes clean (63 modules, 267kB). Pushed agent-ledger to main (webhook deploy confirmed 200). PRs created for vaultwares-themes (#17) and vaultwares-docs (#20).
+- Summary: Completed VaultWares Branding Overhaul + Ledger Schema Upgrade (6-section plan). A: Project alias corrections — tube-sites absorbs tube-platform, vw-jira-sync split out, dropped 'formerly' from UI. B: Dashboard layout — log-scale heatmap, 4 new chart widgets (ActivityPulse, TopProjectsVelocity, CommitChurnSparkline, Activity24) in 12-col grid. C: Animated LEDs — pulse keyframes, Led component in Nav and section headers. D: Categorized TSX icon library (7 categories, barrel export) in vaultwares-themes + copied into site. E: New V+coil logo (gold #D6A441 + ink #241e36), archived 7 old minimal-V PNGs. F: Multi-kind ledger entries — kind-utils.ps1 shared library, lenient comma-separated validation, split-on-read in PS + TS consumers, parseKinds/isKnownKind in types.ts, multi-kind badge rendering in ChangesPage, agent-ledger-schema.mdx doc, CLAUDE.md kind enum references, memory file. Updated README.md, branding-QC.mdx, GLYPHS_ICONS.md, assets/README.md. Added IconClock/IconFolder to ChangesPage event rows. Build passes clean (63 modules, 267kB). Pushed agent-ledger to main (webhook deploy confirmed 200). PRs created for vaultwares-themes (#17) and vaultwares-docs (#20).
 - Commands:
   - `npx tsc --noEmit`
   - `npm run build`
@@ -12683,7 +12683,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-26 10:26 (TZ: Eastern Standard Time)
   ```
-- Summary: Add simple, mandatory ops documentation: (1) webhook secret rotation checklist (EN+QC) for VW_GITHUB_WEBHOOK_SECRET, (2) services inventory table (EN+QC) including Prom-King/FullXXX sites and link-sharing, and (3) link these from deployment-flow + network-map + project-bootstrap; update vaultwares-docs AGENTS/CLAUDE mandatory-reading pointers and DEPLOYMENT_POLICY summary. Regenerated page resources and pushed to main for deploy.
+- Summary: Add simple, mandatory ops documentation: (1) webhook secret rotation checklist (EN+QC) for VW_GITHUB_WEBHOOK_SECRET, (2) services inventory table (EN+QC) including Prom-King/TubePlatform sites and link-sharing, and (3) link these from deployment-flow + network-map + project-bootstrap; update vaultwares-docs AGENTS/CLAUDE mandatory-reading pointers and DEPLOYMENT_POLICY summary. Regenerated page resources and pushed to main for deploy.
 - Commands:
   - `npm run generate:page-resources`
   - `npm ci`
@@ -14631,11 +14631,11 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Telemetry:
   - Flags: proxy_chain=proxy-chain anonymizeProxy, safesearch_default=off, proxy_provider=ipoasis, rotation_mandatory=true, own_domain_stealth_only=true, google_result=captcha_blocked, secrets_not_printed=true
   - Metrics: {"google_sessions":1,"google_blocked":1,"google_pages_checked":1}
-- Summary: Set SafeSearch default to off. Integrated IPoasis dynamic residential proxies via API token and enabled proxy-chain anonymization so Chromium can use authenticated upstream proxies for HTTPS CONNECT. Added configurable navigation timeout and improved screenshot capture (no phantom paths on failure). Ran one Google session for keyword "fullxxx video"; Google returned a Sorry/CAPTCHA challenge (blocked_or_challenged), with screenshots saved.
+- Summary: Set SafeSearch default to off. Integrated IPoasis dynamic residential proxies via API token and enabled proxy-chain anonymization so Chromium can use authenticated upstream proxies for HTTPS CONNECT. Added configurable navigation timeout and improved screenshot capture (no phantom paths on failure). Ran one Google session for keyword "tube-platform video"; Google returned a Sorry/CAPTCHA challenge (blocked_or_challenged), with screenshots saved.
 - Commands:
   - `npm install`
   - `node -c .\\scripts\\run-search-visibility-report.mjs`
-  - `='google'; ='fullxxx video'; ='1'; ='1'; ='edge'; ='1'; ='0'; ='1'; ='0'; ='120000'; ='off'; npm run report:search-visibility`
+  - `='google'; ='tube-platform video'; ='1'; ='1'; ='edge'; ='1'; ='0'; ='1'; ='0'; ='120000'; ='off'; npm run report:search-visibility`
 - Files:
   - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\scripts\\run-search-visibility-report.mjs`
   - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\package.json`
@@ -14644,7 +14644,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\README.md`
   - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\search-visibility\\20260525-145902\\results.json`
   - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\search-visibility\\20260525-145902\\summary.md`
-  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\search-visibility\\20260525-145902\\screenshots\\001-google-fullxxx-video-blocked-p1.png`
+  - `C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation\\test-results\\search-visibility\\20260525-145902\\screenshots\\001-google-tube-platform-video-blocked-p1.png`
 - Git: repo=qa-automation, branch=main, head=393f6b4
 
 </details>
@@ -14675,7 +14675,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-25 14:49 - shared-tube</strong> <code>verification</code> - Deployed updated FullXXX + PromKing plugins to the public GreenCloud host (vaultwares.ca / 173.249.194.15 via Tailscale 100.73.93.84), added MU loader for tube-shared, fixed loa...</summary>
+<summary><strong>2026-05-25 14:49 - shared-tube</strong> <code>verification</code> - Deployed updated TubePlatform + PromKing plugins to the public GreenCloud host (vaultwares.ca / 173.249.194.15 via Tailscale 100.73.93.84), added MU loader for tube-shared, fixed loa...</summary>
 
 - Kind: verification
 - Actor: AI Agent
@@ -14691,18 +14691,18 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   MCP servers accessed (this reply): none
   Time: 2026-05-25 14:49 (TZ: Eastern Standard Time)
   ```
-- Summary: Deployed updated FullXXX + PromKing plugins to the public GreenCloud host (vaultwares.ca / 173.249.194.15 via Tailscale 100.73.93.84), added MU loader for tube-shared, fixed loader quoting bug that caused HTTP 500, restarted php8.2-fpm, and verified fullxxx /videos now serves new Tubeshell UI (Featured this week + Go Premium + tubeshell base/theme + tube-auth). Cancelled queued GitHub Actions deploy run (26414737967) since no self-hosted runner is registered.
+- Summary: Deployed updated TubePlatform + PromKing plugins to the public GreenCloud host (vaultwares.ca / 173.249.194.15 via Tailscale 100.73.93.84), added MU loader for tube-shared, fixed loader quoting bug that caused HTTP 500, restarted php8.2-fpm, and verified tube-platform /videos now serves new Tubeshell UI (Featured this week + Go Premium + tubeshell base/theme + tube-auth). Cancelled queued GitHub Actions deploy run (26414737967) since no self-hosted runner is registered.
 - Commands:
-  - `gh workflow run deploy-fullxxx-video.yml (queued; cancelled)`
+  - `gh workflow run deploy-tube-platform-video.yml (queued; cancelled)`
   - `gh run cancel 26414737967`
   - `ssh root@100.73.93.84 (deploy plugin dirs)`
   - `scp tube-shared-loader.php to both sites`
   - `systemctl restart php8.2-fpm`
-  - `curl/Invoke-WebRequest fullxxx.video/videos for markers`
+  - `curl/Invoke-WebRequest tube-platform.internal/videos for markers`
 - Files:
-  - `/var/www/fullxxx.video/public/wp-content/plugins/fullxxx-video/* (deployed)`
-  - `/var/www/fullxxx.video/public/wp-content/plugins/tube-shared/* (deployed)`
-  - `/var/www/fullxxx.video/public/wp-content/mu-plugins/tube-shared-loader.php (fixed)`
+  - `/var/www/tube-platform.internal/public/wp-content/plugins/tube-platform-video/* (deployed)`
+  - `/var/www/tube-platform.internal/public/wp-content/plugins/tube-shared/* (deployed)`
+  - `/var/www/tube-platform.internal/public/wp-content/mu-plugins/tube-shared-loader.php (fixed)`
   - `/var/www/prom-king.xyz/public/wp-content/plugins/promking-tube/* (deployed)`
   - `/var/www/prom-king.xyz/public/wp-content/plugins/tube-shared/* (deployed)`
   - `/var/www/prom-king.xyz/public/wp-content/mu-plugins/tube-shared-loader.php (fixed)`
@@ -14850,11 +14850,11 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   Time: 2026-05-25 11:19 (TZ: Eastern Standard Time)
   ```
 - Telemetry:
-  - Flags: provider=edge, runs=2, engines=duckduckgo,bing,brave, keywords=prom king full xxx videos,fullxxx.video,prom-king.xyz, max_pages=12, proxy=scrapingant
-  - Metrics: {"run1_ok":4,"run1_failed":5,"run2_ok":3,"run2_failed":6,"found_prom_king":0,"found_fullxxx":0}
+  - Flags: provider=edge, runs=2, engines=duckduckgo,bing,brave, keywords=prom king full xxx videos,tube-platform.internal,prom-king.xyz, max_pages=12, proxy=scrapingant
+  - Metrics: {"run1_ok":4,"run1_failed":5,"run2_ok":3,"run2_failed":6,"found_prom_king":0,"found_tube_platform":0}
 - Summary: Ran two 9-session SERP visibility batches on DuckDuckGo/Bing/Brave (3 keywords, depth 12) using ScrapingAnt proxy + Edge provider. Captured report artifacts for both runs. Researched cheaper proxy alternatives vs ScrapingAnt paid tier pricing.
 - Commands:
-  - `='duckduckgo,bing,brave'; ='prom king full xxx videos,fullxxx.video,prom-king.xyz'; ='12'; ='0'; ='0'; ='1'; ='edge'; ='1'; ='0'; ='0'; npm run report:search-visibility`
+  - `='duckduckgo,bing,brave'; ='prom king full xxx videos,tube-platform.internal,prom-king.xyz'; ='12'; ='0'; ='0'; ='1'; ='edge'; ='1'; ='0'; ='0'; npm run report:search-visibility`
   - `web research: compared proxy pricing providers (Webshare, PacketStream, IPRoyal, Decodo, Proxy-Cheap, Rayobyte, SOAX)`
 - Files:
   - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\test-results\search-visibility\20260525-110501\results.json`
@@ -15341,8 +15341,8 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Telemetry:
   - Flags: vw_state_logged_only=true, own_domain_stealth_only=true, run_type=distributed_4_engines_x_3_keywords, browser_rotation=firefox-profile,kameleo-chroma,kameleo-junglefox,edge, scenario_count=12, search_visibility=true, ip_rotation_mandatory=true
-  - Metrics: {"sessions_total":12,"rotation_rotated":12,"status_ok":7,"status_blocked_or_challenged":4,"status_failed":1,"prom_king_found_sessions":0,"fullxxx_found_sessions":0}
-- Summary: Made IP rotation mandatory in the SERP visibility runner. Sessions now fail fast with rotation_failed when rotation cannot be performed, and startup now requires a valid rotation path. Updated README and env example accordingly. Ran two 12-session batches: an initial 12-session slice and a distributed 12-scenario run across Google, DuckDuckGo, Bing, and Brave. Distributed run completed with rotation status rotated in all 12 sessions; result statuses were 7 ok, 4 blocked_or_challenged, 1 failed; no appearances for prom-king.xyz or fullxxx.video through checked depth.
+  - Metrics: {"sessions_total":12,"rotation_rotated":12,"status_ok":7,"status_blocked_or_challenged":4,"status_failed":1,"prom_king_found_sessions":0,"tube_platform_found_sessions":0}
+- Summary: Made IP rotation mandatory in the SERP visibility runner. Sessions now fail fast with rotation_failed when rotation cannot be performed, and startup now requires a valid rotation path. Updated README and env example accordingly. Ran two 12-session batches: an initial 12-session slice and a distributed 12-scenario run across Google, DuckDuckGo, Bing, and Brave. Distributed run completed with rotation status rotated in all 12 sessions; result statuses were 7 ok, 4 blocked_or_challenged, 1 failed; no appearances for prom-king.xyz or tube-platform.internal through checked depth.
 - Commands:
   - `node -c .\scripts\run-search-visibility-report.mjs`
   - `npx tsc --noEmit`
@@ -15445,7 +15445,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-24 09:53 - qa-automation</strong> <code>code-change</code> - Implemented search visibility SERP runner for Prom King and FullXXX. Added npm report command, documented environment switches and safety boundaries, verified syntax, TypeScript...</summary>
+<summary><strong>2026-05-24 09:53 - qa-automation</strong> <code>code-change</code> - Implemented search visibility SERP runner for Prom King and TubePlatform. Added npm report command, documented environment switches and safety boundaries, verified syntax, TypeScript...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -15464,7 +15464,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Telemetry:
   - Flags: engines=google,duckduckgo,bing,brave, max_serp_pages=12, own_domain_stealth_only=true, chat_vw_state_output=suppressed, ip_rotation=pre_session_when_configured, vw_state_resume_id=prom-king-search-visibility-2026-05-24, browser_rotation=firefox-profile,kameleo-chroma,kameleo-junglefox,edge, search_visibility=true, smoke_session_count=1, session_count_full=84, safe_search=once_per_session_ip_random_by_default
   - Metrics: {"smoke_sessions":1,"smoke_pages_checked":1,"static_checks_passed":3,"blocked_states":0}
-- Summary: Implemented search visibility SERP runner for Prom King and FullXXX. Added npm report command, documented environment switches and safety boundaries, verified syntax, TypeScript, diff whitespace, and a one-session DuckDuckGo smoke run. Full run defaults cover 84 engine-keyword sessions through SERP page 12 with browser rotation, optional IP rotation, per-session SafeSearch, organic result collection, target-domain first appearance reporting, and own-domain-only stealth checks after landing on prom-king.xyz or fullxxx.video.
+- Summary: Implemented search visibility SERP runner for Prom King and TubePlatform. Added npm report command, documented environment switches and safety boundaries, verified syntax, TypeScript, diff whitespace, and a one-session DuckDuckGo smoke run. Full run defaults cover 84 engine-keyword sessions through SERP page 12 with browser rotation, optional IP rotation, per-session SafeSearch, organic result collection, target-domain first appearance reporting, and own-domain-only stealth checks after landing on prom-king.xyz or tube-platform.internal.
 - Commands:
   - `node -c .\scripts\run-search-visibility-report.mjs`
   - `npx tsc --noEmit`
@@ -15560,9 +15560,9 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 - Summary: Added a Firefox-profile crawler runner that launches a headed persistent Firefox context from a copied user profile to preserve add-ons/state, with optional FIREFOX_EXECUTABLE_PATH and FIREFOX_LAUNCH_TIMEOUT_MS.
 - Commands:
   - `npx playwright install firefox`
-  - `npm run test:fullxxx:crawl:firefox-profile`
+  - `npm run test:tube-platform:crawl:firefox-profile`
 - Files:
-  - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\scripts\run-fullxxx-crawl-firefox-profile.mjs`
+  - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\scripts\run-tube-platform-crawl-firefox-profile.mjs`
   - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\package.json`
   - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\.env.example`
   - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\README.md`
@@ -15626,7 +15626,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-24 07:25 - shared-tube</strong> <code>code-change</code> - Reverted mistaken GitHub Actions deployment workflow edits (deploy is tailnet webhook, not GH runner), verified DNS points fullxxx.video to 173.249.194.15 (not the old VPS), and...</summary>
+<summary><strong>2026-05-24 07:25 - shared-tube</strong> <code>code-change</code> - Reverted mistaken GitHub Actions deployment workflow edits (deploy is tailnet webhook, not GH runner), verified DNS points tube-platform.internal to 173.249.194.15 (not the old VPS), and...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -15644,16 +15644,16 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Telemetry:
   - Flags: dns_origin_mismatch=173.249.194.15, qa_allow_category_404=true, deploy_assumption_fix=true, no_vw_state_in_chat=true
-- Summary: Reverted mistaken GitHub Actions deployment workflow edits (deploy is tailnet webhook, not GH runner), verified DNS points fullxxx.video to 173.249.194.15 (not the old VPS), and updated qa-automation crawler to optionally tolerate legacy /category/* 404s via CRAWL_ALLOW_CATEGORY_404.
+- Summary: Reverted mistaken GitHub Actions deployment workflow edits (deploy is tailnet webhook, not GH runner), verified DNS points tube-platform.internal to 173.249.194.15 (not the old VPS), and updated qa-automation crawler to optionally tolerate legacy /category/* 404s via CRAWL_ALLOW_CATEGORY_404.
 - Commands:
-  - `Resolve-DnsName fullxxx.video`
+  - `Resolve-DnsName tube-platform.internal`
   - `git revert fa6496f 677641a`
   - `git push origin main (tube-sites)`
   - `npx tsc --noEmit`
   - `git commit/push (qa-automation)`
 - Files:
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\.github\workflows\deploy-fullxxx-video.yml`
-  - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\tests\fullxxx-crawl.spec.ts`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\.github\workflows\deploy-tube-platform-video.yml`
+  - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\tests\tube-platform-crawl.spec.ts`
   - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\.env.example`
   - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\README.md`
   - `C:\Users\Administrator\Desktop\Github Repos\vaultwares-docs\AGENTS.md`
@@ -15752,7 +15752,7 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
 </details>
 
 <details>
-<summary><strong>2026-05-24 06:37 - shared-tube</strong> <code>code-change</code> - Added FullXXX SEO/GEO discovery assets, packaged the plugin zip, finished qa-automation depth-4 crawler, and launched the live crawl. The live crawl reached fullxxx.video and fa...</summary>
+<summary><strong>2026-05-24 06:37 - shared-tube</strong> <code>code-change</code> - Added TubePlatform SEO/GEO discovery assets, packaged the plugin zip, finished qa-automation depth-4 crawler, and launched the live crawl. The live crawl reached tube-platform.internal and fa...</summary>
 
 - Kind: code-change
 - Actor: AI Agent
@@ -15770,27 +15770,27 @@ Generated from `agent-ledger/events`. Do not edit by hand; use `agent-ledger/scr
   ```
 - Telemetry:
   - Flags: qa_crawl_depth=4, live_crawl_found_category_404s=true, same_domain_only=true, live_crawl_launched=true, seo=true, geo=true
-- Summary: Added FullXXX SEO/GEO discovery assets, packaged the plugin zip, finished qa-automation depth-4 crawler, and launched the live crawl. The live crawl reached fullxxx.video and failed on current live category 404s before the local plugin package is deployed.
+- Summary: Added TubePlatform SEO/GEO discovery assets, packaged the plugin zip, finished qa-automation depth-4 crawler, and launched the live crawl. The live crawl reached tube-platform.internal and failed on current live category 404s before the local plugin package is deployed.
 - Commands:
   - `npm install`
   - `npx playwright install chromium`
   - `npx tsc --noEmit`
-  - `npm run test:list -- tests/fullxxx-crawl.spec.ts --project=chromium`
+  - `npm run test:list -- tests/tube-platform-crawl.spec.ts --project=chromium`
   - `python -m py_compile qa_automation_routine.py`
-  - `npm run test:fullxxx:crawl with CRAWL_MAX_DEPTH=4 CRAWL_MAX_PAGES=500`
-  - `npm run test:fullxxx:crawl with CRAWL_MAX_PAGES=1 smoke`
-  - `php -l fullxxx-video/includes/seo-discovery.php`
-  - `php -l fullxxx-video/includes/template-loader.php`
-  - `php -l fullxxx-video/includes/post-types.php`
-  - `php -l fullxxx-video/fullxxx-video.php`
+  - `npm run test:tube-platform:crawl with CRAWL_MAX_DEPTH=4 CRAWL_MAX_PAGES=500`
+  - `npm run test:tube-platform:crawl with CRAWL_MAX_PAGES=1 smoke`
+  - `php -l tube-platform-video/includes/seo-discovery.php`
+  - `php -l tube-platform-video/includes/template-loader.php`
+  - `php -l tube-platform-video/includes/post-types.php`
+  - `php -l tube-platform-video/tube-platform-video.php`
   - `git diff --check`
 - Files:
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\fullxxx-video.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\template-loader.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\seo-discovery.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video\includes\post-types.php`
-  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\fullxxx-video.zip`
-  - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\tests\fullxxx-crawl.spec.ts`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\tube-platform-video.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\template-loader.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\seo-discovery.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video\includes\post-types.php`
+  - `C:\Users\Administrator\Desktop\Prom-King\tube-sites\tube-platform-video.zip`
+  - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\tests\tube-platform-crawl.spec.ts`
   - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\package.json`
   - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\.env.example`
   - `C:\Users\Administrator\Desktop\Prom-King\qa-automation\README.md`

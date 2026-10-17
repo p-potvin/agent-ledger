@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
-    "summary":  "v1.71.0: flirt4free site adapter (room = model_id from stream URLs; hls.vscdns master with key=nil, muxed TS up to 1080p, tokenless; login_room for name/name_seo/sample image/status; pageRoomIsKey=false, username field for naming and current-page match). DNR rules for flirt4free iovation (/iovation/, /iojs/), /metrics/ FPJS v3, vsfingerprint, atsptp (playback unverifiable in automation). Checks 168/168. Wrote docs/room-browser-handoff.md for the Prom-King room browser project (APIs, CORS findings: media CDNs ACAO *, APIs none; camsoda needs browser TLS).",
+    "summary":  "v1.71.0: live-stream-provider site adapter (room = model_id from stream URLs; hls.vscdns master with key=nil, muxed TS up to 1080p, tokenless; login_room for name/name_seo/sample image/status; pageRoomIsKey=false, username field for naming and current-page match). DNR rules for live-stream-provider iovation (/iovation/, /iojs/), /metrics/ FPJS v3, vsfingerprint, atsptp (playback unverifiable in automation). Checks 168/168. Wrote docs/room-browser-handoff.md for the Prom-King room browser project (APIs, CORS findings: media CDNs ACAO *, APIs none; stream-provider needs browser TLS).",
     "commands":  [
 
                  ],

@@ -29,7 +29,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
-  "summary": "Extension v1.67.0: chaturbate/camsoda site adapters (common/sites.ts, background/sites.ts) - one row per room via sniffer claim hook, room-API levels with exact audio pairs (CB master AUDIO groups; camsoda tracks-vNa2/mono.m3u8), working quality picker (lvl:<h>), live thumbnails, room stats + Insights Rooms section, dedup by site_key, per-minute token refresh from room APIs incl. closed tabs. DNR fingerprinting ruleset (FPJS, Fossil, iovation) with setting. Worker: recorder hint ffmpeg, site_info in sidecar. Userscript thumbs 1s refresh. iovation blackbox decoder (DES key from static_wdp.js). Checks 155/155, py stream tests 61 OK. Worker restart + live Firefox test pending.",
+  "summary": "Extension v1.67.0: stream-platform/stream-provider site adapters (common/sites.ts, background/sites.ts) - one row per room via sniffer claim hook, room-API levels with exact audio pairs (CB master AUDIO groups; stream-provider tracks-vNa2/mono.m3u8), working quality picker (lvl:<h>), live thumbnails, room stats + Insights Rooms section, dedup by site_key, per-minute token refresh from room APIs incl. closed tabs. DNR fingerprinting ruleset (FPJS, Fossil, iovation) with setting. Worker: recorder hint ffmpeg, site_info in sidecar. Userscript thumbs 1s refresh. iovation blackbox decoder (DES key from static_wdp.js). Checks 155/155, py stream tests 61 OK. Worker restart + live Firefox test pending.",
   "commands": [
     "npm run check",
     "npm run build",
@@ -41,7 +41,7 @@
     "extension/public/rules/fingerprinting.json",
     "dataset_builder/ds_streams.py",
     "userscripts/iovation_decode.py",
-    "userscripts/chaturbate-roomlist-thumbs.user.js"
+    "userscripts/stream-platform-roomlist-thumbs.user.js"
   ],
   "planPath": " ",
   "contentHash": "22b5ea47809698bc357e30df184dfcd0b65de5e6b98d0a94052a917d8edb7870",

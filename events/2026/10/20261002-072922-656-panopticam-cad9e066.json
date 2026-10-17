@@ -28,13 +28,13 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "OnlyFans crawler fixes: follow list URL moved to /my/collections/user-lists/subscriptions/active (old one 'page not available', runs read 0 follows); waits survive closed page and loop reopens it; crash traceback + 'crawl ended' logged; rolling 10 subs/24h cap (operator: 10 follows/day incl. manual); refusals store OF text, 24h count, screenshot; limit text only counted when new after click. Test run 2 Oct 07:14-07:29: 27 follows, 20 profiles, ~388 files, clean end. Commit 568c9d2.",
+  "summary": "CreatorPlatform crawler fixes: follow list URL moved to /my/collections/user-lists/subscriptions/active (old one 'page not available', runs read 0 follows); waits survive closed page and loop reopens it; crash traceback + 'crawl ended' logged; rolling 10 subs/24h cap (operator: 10 follows/day incl. manual); refusals store OF text, 24h count, screenshot; limit text only counted when new after click. Test run 2 Oct 07:14-07:29: 27 follows, 20 profiles, ~388 files, clean end. Commit 568c9d2.",
   "commands": [
-    "python onlyfans.py crawl --hours 0.33",
+    "python creator-platform.py crawl --hours 0.33",
     "git commit/push"
   ],
   "files": [
-    "vision/onlyfans.py",
+    "vision/creator-platform.py",
     "docs/STATE.md"
   ],
   "planPath": "",

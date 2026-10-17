@@ -15,9 +15,9 @@
     "git show --numstat --pretty=format: 1bbd1b003c9d0325089eca986a90a103d9384911"
   ],
   "files": [
-    "fullxxx-video/includes/admin-settings.php",
-    "fullxxx-video/includes/video-fetcher.php",
-    "fullxxx-video/templates/single-fxv_video.php",
+    "tube-platform-video/includes/admin-settings.php",
+    "tube-platform-video/includes/video-fetcher.php",
+    "tube-platform-video/templates/single-fxv_video.php",
     "promking-tube/includes/admin-settings.php",
     "promking-tube/includes/video-fetcher.php",
     "promking-tube/templates/single-pkt_video.php"

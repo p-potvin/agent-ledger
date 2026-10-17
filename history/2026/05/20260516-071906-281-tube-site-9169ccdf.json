@@ -42,8 +42,8 @@
                   "tube-shared-auth/assets/css/tube-auth.css",
                   "promking-tube/includes/auth-bridge.php",
                   "promking-tube/assets/css/pkt-auth.css",
-                  "fullxxx-video/includes/auth-bridge.php",
-                  "fullxxx-video/assets/css/fxv-auth.css"
+                  "tube-platform-video/includes/auth-bridge.php",
+                  "tube-platform-video/assets/css/fxv-auth.css"
               ],
     "planPath":  "",
     "contentHash":  "9169ccdfdec313992bbf0d1955c20fb6e0788cc83d63728e3d310620eea0bc14",

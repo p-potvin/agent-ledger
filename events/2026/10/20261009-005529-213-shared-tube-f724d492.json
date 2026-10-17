@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-    "summary":  "Started fetching 90,433 tube site previews (StashDB-matched first) on OVH at \u003c=4 req/s (~3.4/s, ~650 KB each, ~58 GB) with a PC puller every 3 min into G:\\TubeLab\\clips (OVH copy deleted after pull). Investigated OVH load 5.2/4 cores: qa-automation qa_runner container (run-full-qa-tor.mjs + headless Chrome) uses ~2 cores; mullvad-gateway unhealthy; memory tight (2.9 GB swap). Spliced 7x1.5s preview backfill planned (OVH stream-copy segments + PC encode + vaultwares-api fallback to PC + pruner fix), not started.",
+    "summary":  "Started fetching 90,433 tube site previews (MediaDatabase-matched first) on OVH at \u003c=4 req/s (~3.4/s, ~650 KB each, ~58 GB) with a PC puller every 3 min into G:\\TubeLab\\clips (OVH copy deleted after pull). Investigated OVH load 5.2/4 cores: qa-automation qa_runner container (run-full-qa-tor.mjs + headless Chrome) uses ~2 cores; mullvad-gateway unhealthy; memory tight (2.9 GB swap). Spliced 7x1.5s preview backfill planned (OVH stream-copy segments + PC encode + vaultwares-api fallback to PC + pruner fix), not started.",
     "commands":  [
 
                  ],

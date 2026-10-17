@@ -32,7 +32,7 @@
     "git push origin main (tube-sites)",
     "ssh root@100.73.93.84 export VW_AFTER=105bb125...; /var/www/deploy-scripts/deploy-tube-sites.sh",
     "curl https://prom-king.xyz/ (confirm no GTM id)",
-    "curl https://fullxxx.video/ (confirm GTM id + consent defaults)"
+    "curl https://platform-alpha.internal/ (confirm GTM id + consent defaults)"
   ],
   "files": [
     "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\tube-sites\\\\promking-tube\\\\includes\\\\admin-settings.php",

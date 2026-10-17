@@ -32,7 +32,7 @@
                      "chown -R vwdeploy:vwdeploy /srv/repos/Prom-King/shared-tube/apps/*/dist"
                  ],
     "files":  [
-                  "apps/sexyprn/src/pages/category/[slug].astro",
+                  "apps/media-portal-gamma/src/pages/category/[slug].astro",
                   "apps/oneporn/src/pages/category/[slug].astro"
               ],
     "planPath":  "",

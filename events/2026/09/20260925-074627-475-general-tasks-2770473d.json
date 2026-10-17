@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-themes\\vaultsqware",
-    "summary":  "vps-ovhcloud: synced renewed docs.vaultwares.ca (to 15 Nov) and media.vaultwares.ca (to 20 Nov) certs from greencloud, backups in /root/docs-cert.bak and /root/media-cert.bak, nginx -t ok + reload; verified api/uptime/flaresolverr serve new certs. Deleted expired OVH certbot lineages prom-king.xyz, 1pornhub.vip, sexyprn.lol (no nginx refs). Found health-ledger Token Joker has no TLS cert check type (tokens.yaml: age_only/http_get/smtp_auth only).",
+    "summary":  "vps-ovhcloud: synced renewed docs.vaultwares.ca (to 15 Nov) and media.vaultwares.ca (to 20 Nov) certs from greencloud, backups in /root/docs-cert.bak and /root/media-cert.bak, nginx -t ok + reload; verified api/uptime/flaresolverr serve new certs. Deleted expired OVH certbot lineages prom-king.xyz, portal-beta.internal, portal-gamma.internal (no nginx refs). Found health-ledger Token Joker has no TLS cert check type (tokens.yaml: age_only/http_get/smtp_auth only).",
     "commands":  [
 
                  ],

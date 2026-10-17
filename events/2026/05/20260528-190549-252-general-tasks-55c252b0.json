@@ -29,12 +29,12 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites",
-    "summary":  "Removed the two legacy GitHub Actions deployment workflows (deploy-fullxxx-video.yml and deploy-promking-tube.yml) from tube-sites/.github/workflows/ to adhere to the Tailscale webhook-based deployment architecture.",
+    "summary":  "Removed the two legacy GitHub Actions deployment workflows (deploy-tube-platform-video.yml and deploy-promking-tube.yml) from tube-sites/.github/workflows/ to adhere to the Tailscale webhook-based deployment architecture.",
     "commands":  [
 
                  ],
     "files":  [
-                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\.github\\workflows\\deploy-fullxxx-video.yml",
+                  "c:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\.github\\workflows\\deploy-tube-platform-video.yml",
                   "c:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\.github\\workflows\\deploy-promking-tube.yml"
               ],
     "planPath":  "",

@@ -1,0 +1,51 @@
+{
+  "id": "20261017-114601-830-vault-commander-17953855",
+  "createdAt": "2026-10-17T15:46:01.8301492Z",
+  "createdAtLocal": "2026-10-17 11:46",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-commander",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\vision-lab  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-17 11:46 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local workstation",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\vision-lab",
+  "summary": "Media records revised per operator: .ts dropped (one ext list), own vw-media.db with read-only import copy of the catalog DB (1.83M files, 5,960 scenes), ntfs.py MFT+USN reader replacing Everything journal dependency, vwid.py (vw.id ULID in ADS + sidecar), vision/sound producer sections, merge origin fix. 15 unit tests pass. Branch feat/media-records-own-data d5917f4 (not merged/pushed). Resolver copies in vault-explorer/ColONEL-KFC edited, uncommitted. Plan revised; vision-lab handoff a4d41b3.",
+  "commands": [
+    "store.py --import-stash",
+    "tests/test_media_records.py"
+  ],
+  "files": [
+    "cli/utils/media_records/ntfs.py",
+    "cli/utils/media_records/store.py",
+    "cli/utils/media_records/vwid.py",
+    "cli/utils/media_records/record.py"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\composed-wandering-fountain.md",
+  "contentHash": "179538551437f02fa3194208fddeb3481f5eb37412a147ce1879b9ff03560115",
+  "git": {
+    "repo": "vision-lab",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/vision-lab",
+    "branch": "main",
+    "head": "a4d41b3",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "20261016-133257-167-vision-lab-47f35e7d",
+  "createdAt": "2026-10-16T17:32:57.1678781Z",
+  "createdAtLocal": "2026-10-16 13:32",
+  "timezone": "Eastern Standard Time",
+  "project": "vision-lab",
+  "kind": "verification",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-16 13:32 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "BF16 mmproj (982 MB) tested for EG2 on llama.cpp b11696: images still 0.95-0.97, video 0.96 vs transformers (text 0.9999, audio 0.998). Pre-resizing to the HF grid and dropping image-min-tokens did not help; cause is llama.cpp #30195 (EG2 vision ignores image token limits). Operator: no re-embedding -> not switching. Router stopped, preset back to Q8 mmproj, parity test saved as vision-lab/tools/eg2_parity.py for a retest once fixed; HANDOFF updated.",
+  "commands": [],
+  "files": [
+    "vision-lab/tools/eg2_parity.py",
+    "D:\\HuggingFace\\gguf\\router-presets.ini"
+  ],
+  "planPath": "",
+  "contentHash": "47f35e7db90d0615597d987d4632316b12ea2995a1b3bba2d9e43555fab689e8",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "4f231c3",
+    "hasChanges": false
+  }
+}

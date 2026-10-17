@@ -27,7 +27,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\docs",
-  "summary": "Sun, 05 Jul 2026 05:06 America/Toronto - Updated Prom-King documentation for the approved current hosting model: content-site and wallpaper-foundry on OVH, FullXXX on Greencloud, 1PornHub and SexyPRN on OVH under shared-tube, link-sharing split by tube host, Clopeux ComfyUI as an unmonitored dependency, and retired WordPress/prelanding monitor assumptions.",
+  "summary": "Sun, 05 Jul 2026 05:06 America/Toronto - Updated Prom-King documentation for the approved current hosting model: content-site and wallpaper-foundry on OVH, TubePlatform on Greencloud, StreamPlatformBeta and MediaPortalGamma on OVH under shared-tube, link-sharing split by tube host, Clopeux ComfyUI as an unmonitored dependency, and retired WordPress/prelanding monitor assumptions.",
   "commands": [
     "rg -n WordPress across Prom-King docs and related worktrees",
     "git diff --check"

@@ -26,7 +26,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "VPS disk full incident fixed: one CamSoda profile's 206 free videos (13 GB) in harvest/work; trimmed to 12 smallest (15 GB free); harvest caps per room + harvest/stills pause under 8 GB free (v0.29.3). Coverage numbers collected (stills 21.5k/42.8k women's rooms live in 24h; 20.2k/26.1k with audience; 17,497 untriaged archives = 23 GB). OF crawler: sync_following reads the account's follow list each run. Bonga HAR had no WS messages.",
+  "summary": "VPS disk full incident fixed: one StreamProvider profile's 206 free videos (13 GB) in harvest/work; trimmed to 12 smallest (15 GB free); harvest caps per room + harvest/stills pause under 8 GB free (v0.29.3). Coverage numbers collected (stills 21.5k/42.8k women's rooms live in 24h; 20.2k/26.1k with audience; 17,497 untriaged archives = 23 GB). OF crawler: sync_following reads the account's follow list each run. Bonga HAR had no WS messages.",
   "commands": [
     "ssh VPS du/df",
     "git push origin main"
@@ -34,7 +34,7 @@
   "files": [
     "backend/src/panopticam/harvest.py",
     "backend/src/panopticam/stills.py",
-    "vision/onlyfans.py",
+    "vision/creator-platform.py",
     "docs/STATE.md"
   ],
   "planPath": "",

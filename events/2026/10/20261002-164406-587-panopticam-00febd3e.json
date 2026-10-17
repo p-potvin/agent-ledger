@@ -28,7 +28,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Panopticam v0.33.0: audience.py estimates real viewers from the operator's inflation patterns (CamSoda curve, rough Chaturbate log-log, CB top band >= 10k treated as site-set: no heat); shown on cards, Top '~ Real' column/sort. Moments captured at best level <= 480p; vision/moments_pull.py archives every moment to D:\\panopticam-moments\\<date> and builds a captioned daily _reel.mp4 of the best 15 (drawtext expansion=none fix). Gemini's toy_detector_bridge wired CPU-only as YOLO box proposals in E:\\YoloTraining\\BBOX\\lush\\_proposals (80/2327 frames boxed). 3DGS ideas noted in STATE. Worker restarted; 72 moments archived.",
+  "summary": "Panopticam v0.33.0: audience.py estimates real viewers from the operator's inflation patterns (StreamProvider curve, rough StreamPlatform log-log, CB top band >= 10k treated as site-set: no heat); shown on cards, Top '~ Real' column/sort. Moments captured at best level <= 480p; vision/moments_pull.py archives every moment to D:\\panopticam-moments\\<date> and builds a captioned daily _reel.mp4 of the best 15 (drawtext expansion=none fix). Gemini's toy_detector_bridge wired CPU-only as YOLO box proposals in E:\\YoloTraining\\BBOX\\lush\\_proposals (80/2327 frames boxed). 3DGS ideas noted in STATE. Worker restarted; 72 moments archived.",
   "commands": [
     "pytest backend (115) + vision (5)",
     "git push origin main",

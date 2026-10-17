@@ -27,7 +27,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Scheduled loop session (Mon, 12 Oct 2026). Found ~110 new Moments ratings (11-12 Oct). Built a taste probe on the PC (moments_embed.refit_taste: EmbeddingGemma 2 picture+sound + life features, logistic, rooms-held-out AUC 0.835 vs 0.71-0.76 for the life model); its score replaces each minute's life (badge, Liveliest order, reel pick) via the existing /life route. Committed the found 10 Oct OnlyFans pacing edits + faulthandler.enable. Tests added (12 pass). v0.51.0 pushed/deployed, vision worker restarted. STATE.md entry + operator to-do 8 updated.",
+  "summary": "Scheduled loop session (Mon, 12 Oct 2026). Found ~110 new Moments ratings (11-12 Oct). Built a taste probe on the PC (moments_embed.refit_taste: EmbeddingGemma 2 picture+sound + life features, logistic, rooms-held-out AUC 0.835 vs 0.71-0.76 for the life model); its score replaces each minute's life (badge, Liveliest order, reel pick) via the existing /life route. Committed the found 10 Oct CreatorPlatform pacing edits + faulthandler.enable. Tests added (12 pass). v0.51.0 pushed/deployed, vision worker restarted. STATE.md entry + operator to-do 8 updated.",
   "commands": [
     "git push origin main",
     "vision/Restart-VisionWorker.ps1"
@@ -36,7 +36,7 @@
     "vision/moments_embed.py",
     "vision/moments_pull.py",
     "vision/worker.py",
-    "vision/onlyfans.py",
+    "vision/creator-platform.py",
     "docs/STATE.md"
   ],
   "planPath": "",

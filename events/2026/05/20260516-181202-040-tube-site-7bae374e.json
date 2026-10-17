@@ -26,7 +26,7 @@
                 },
     "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\business\\tube-site",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
-    "summary":  "Replaced Pornhub scraper with SpankBang in promking-tube. This change removes the problematic podcast-polluted Pornhub source and replaces it with a stable video-only source. Updated source configurations, normalization logic for SpankBang embed patterns, admin source selection, and player profiles.",
+    "summary":  "Replaced StreamPlatform scraper with MediaArchive in promking-tube. This change removes the problematic podcast-polluted StreamPlatform source and replaces it with a stable video-only source. Updated source configurations, normalization logic for MediaArchive embed patterns, admin source selection, and player profiles.",
     "commands":  [
 
                  ],

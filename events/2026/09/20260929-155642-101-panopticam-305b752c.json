@@ -27,7 +27,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Tue, 29 Sep 2026 16:25. v0.14.15-16: stills worker on the VPS (women's public CB/CS/F4F rooms, 720p frames, 15 kept per room over visits 15 min apart, NudeNet one-female-face pre-filter, hand-off to harvest ready/ for PC datasets; 1.5 visits/s after 4/s loaded VPS to 6; own work folders after a collision with the CamSoda harvest; Stripchat dropped, 270x360 snapshots). Review auto-accept at face sim >= 0.60 (first pass 2000 pairs, all >= 0.80). datasets.py pushes finished zips to /srv/panopticam-datasets on the VPS. Declined PC 'browsing' for stills (CDN segments reach the home IP).",
+  "summary": "Tue, 29 Sep 2026 16:25. v0.14.15-16: stills worker on the VPS (women's public CB/CS/F4F rooms, 720p frames, 15 kept per room over visits 15 min apart, NudeNet one-female-face pre-filter, hand-off to harvest ready/ for PC datasets; 1.5 visits/s after 4/s loaded VPS to 6; own work folders after a collision with the StreamProvider harvest; LiveStreamPlatform dropped, 270x360 snapshots). Review auto-accept at face sim >= 0.60 (first pass 2000 pairs, all >= 0.80). datasets.py pushes finished zips to /srv/panopticam-datasets on the VPS. Declined PC 'browsing' for stills (CDN segments reach the home IP).",
   "commands": [
     "PANOPTICAM_STILLS=true in VPS env",
     "git push origin main",

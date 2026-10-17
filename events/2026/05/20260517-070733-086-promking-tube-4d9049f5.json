@@ -24,7 +24,7 @@
                 },
     "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\business\\tube-site",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
-    "summary":  "Executed full database and media assets migration from the legacy VPS (100.73.93.84) to the new GreenCloud VPS (100.73.57.6). Transferred promking_wp and fullxxx_wp databases via compressed SSH streaming pipelines. Transferred wp-content/uploads folders over direct SSH tar pipelines and corrected ownership to www-data. Re-packaged and deployed the latest plugin builds for promking-tube and fullxxx-video containing our unified fetcher and SpankBang allowlist integrations directly into the active WordPress instance on the new VPS.",
+    "summary":  "Executed full database and media assets migration from the legacy VPS (100.73.93.84) to the new GreenCloud VPS (100.73.57.6). Transferred promking_wp and fullxxx_wp databases via compressed SSH streaming pipelines. Transferred wp-content/uploads folders over direct SSH tar pipelines and corrected ownership to www-data. Re-packaged and deployed the latest plugin builds for promking-tube and tube-platform-video containing our unified fetcher and MediaArchive allowlist integrations directly into the active WordPress instance on the new VPS.",
     "commands":  [
                      "mysqldump",
                      "tar",
@@ -32,7 +32,7 @@
                  ],
     "files":  [
                   "promking-tube.php",
-                  "fullxxx-video.php",
+                  "tube-platform-video.php",
                   "video-fetcher.php"
               ],
     "planPath":  "",

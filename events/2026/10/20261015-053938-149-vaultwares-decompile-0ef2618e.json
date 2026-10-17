@@ -28,18 +28,18 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile",
-  "summary": "Committed and pushed Rust blueprint compiler engine, CLI, Studio UI, and panopticam blueprint to agent/decompile-submodule-main. Queried ovh-panopticam (100.114.3.121) and ran vw-decompile against live Flirt4Free and ovh-panopticam endpoints, enhancing analyzer.rs to extract PHP/ws/webservices routes, window.__homePageData__ stores/schemas, and live OpenAPI specs.",
+  "summary": "Committed and pushed Rust blueprint compiler engine, CLI, Studio UI, and panopticam blueprint to agent/decompile-submodule-main. Queried ovh-panopticam (100.114.3.121) and ran vw-decompile against live LiveStreamProvider and ovh-panopticam endpoints, enhancing analyzer.rs to extract PHP/ws/webservices routes, window.__homePageData__ stores/schemas, and live OpenAPI specs.",
   "commands": [
     "git commit",
     "git push origin agent/decompile-submodule-main",
-    "vw-decompile extract https://www.flirt4free.com/?service=girls",
+    "vw-decompile extract https://www.live-stream-provider.com/?service=girls",
     "vw-decompile extract https://ovh-panopticam.tail1764b8.ts.net",
     "vw-decompile search"
   ],
   "files": [
     "crates/decompile-core/src/analyzer.rs",
     "crates/decompile-cli/src/main.rs",
-    "blueprints/flirt4free/OVERVIEW.md",
+    "blueprints/live-stream-provider/OVERVIEW.md",
     "blueprints/ovh-panopticam-live/OVERVIEW.md"
   ],
   "planPath": " ",

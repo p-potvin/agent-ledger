@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261016-031805-367-qa-automation-54455ce9",
+    "createdAt":  "2026-10-16T07:18:05.3670883Z",
+    "createdAtLocal":  "2026-10-16 03:18",
+    "timezone":  "Eastern Standard Time",
+    "project":  "qa-automation",
+    "kind":  "code-change",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Antigravity\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-16 03:18 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Antigravity",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
+    "summary":  "Switched tech-oracle to local GPU embeddinggemma-2 on :8791 (768d Matryoshka), migrated LanceDB, resolved Privado yyz-005 egress IP, clarified bug decision logic, added vendor-fix filtering, and purged inappropriate article from theitguyde.com",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "54455ce90fe9f0a4fdac82c5719e481b54ef760dfb2d2b4cbe587d97e950a6ee",
+    "git":  {
+                "repo":  "qa-automation",
+                "root":  "C:/Users/Administrator/Desktop/Prom-King/qa-automation",
+                "branch":  "main",
+                "head":  "f419575",
+                "hasChanges":  false
+            }
+}

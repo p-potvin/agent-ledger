@@ -1,0 +1,49 @@
+{
+  "id": "20261016-120845-465-vault-explorer-fd7fffbf",
+  "createdAt": "2026-10-16T16:08:45.4656781Z",
+  "createdAtLocal": "2026-10-16 12:08",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "verification",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: unknown\r\nMode: agent\r\nPermissions: autopilot (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: main\r\nTools used (this reply): read, grep, exec, todo_write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-16 12:08 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Haiku 5.5 Medium",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows local",
+    "toolsUsed": [
+      "read",
+      "grep",
+      "exec",
+      "todo_write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "Diagnosis only, no code changes. Installed app (AppData\\Local\\Programs, 9:37) predates the scroll-save fix; dist\\win-unpacked (9:40) contains it, so the two builds differ though both report version 4.1.16. Machine has AMD iGPU + RTX 3060 + RTX 2060; other apps are pinned to NVIDIA 10DE&2504 in UserGpuPreferences, vault-explorer.exe is not pinned. Favorites render all items without paging and images use full-size originals as thumbnails (scanner poster=filePath). Image filter queues up to 60 ImageMagick enhance jobs per render. Not verified: Chromium GPU choice (probe returned no result), packaged vs dev behaviour.",
+  "commands": [],
+  "files": [
+    "js/navigation/card.js",
+    "js/navigation/directory.js",
+    "src/scanner.js",
+    "js/navigation/filters.js",
+    "src/previews.js"
+  ],
+  "planPath": "",
+  "contentHash": "fd7fffbf0da3b781c69a9d3b5364c2cf1aa898d403cc0b0347604a59904691bc",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "main",
+    "head": "81b5159",
+    "hasChanges": false
+  }
+}

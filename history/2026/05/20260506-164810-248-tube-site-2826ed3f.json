@@ -26,10 +26,10 @@
     "git diff --name-only"
   ],
   "files": [
-    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-fullxxx-video.yml",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-tube-platform-video.yml",
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\.github\\workflows\\deploy-promking-tube.yml",
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\ads.php",
-    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\ads.php"
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\tube-platform-video\\includes\\ads.php"
   ],
   "planPath": "",
   "contentHash": "2826ed3f910eeb90834389701d283d8f5ed74b41e641394caa1fa7b6afa45288",

@@ -1,0 +1,43 @@
+{
+  "id": "20261016-140419-366-vision-lab-bf7fdc2a",
+  "createdAt": "2026-10-16T18:04:19.3661661Z",
+  "createdAtLocal": "2026-10-16 14:04",
+  "timezone": "Eastern Standard Time",
+  "project": "vision-lab",
+  "kind": "verification",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-16 14:04 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "TranslateGemma 4B IQ3_S on llama.cpp b11696 (-c 4096, q8_0 KV, flash attn, CUDA0): +2.18 GB VRAM, ~0.3 s/line at ~90 tok/s warm (12 s first call), good on es/ru/pt/de/fr/it chat lines but sanitised slang ('me quito todo' -> 'give you all the credit'). Gemma 4 E2B on 8794 with enable_thinking=false translated it correctly in 0.7 s. Test server stopped; script saved as vision-lab/tools/translate_test.py.",
+  "commands": [],
+  "files": [
+    "vision-lab/tools/translate_test.py"
+  ],
+  "planPath": "",
+  "contentHash": "bf7fdc2afb219938f974801b443a6d364aa0ddbfc361978b7748e7f5207d2523",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "4f231c3",
+    "hasChanges": false
+  }
+}

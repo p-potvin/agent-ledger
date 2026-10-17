@@ -24,7 +24,7 @@
                 },
     "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\business\\tube-site",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
-    "summary":  "Pushed Pornhub-to-SpankBang replacement to main branch. This change removes the problematic Pornhub source (which was picking up podcasts) and replaces it with SpankBang for both manual and bulk fetch modes. Updated player profiles and allowlists for the new source.",
+    "summary":  "Pushed StreamPlatform-to-MediaArchive replacement to main branch. This change removes the problematic StreamPlatform source (which was picking up podcasts) and replaces it with MediaArchive for both manual and bulk fetch modes. Updated player profiles and allowlists for the new source.",
     "commands":  [
                      "git push origin main"
                  ],

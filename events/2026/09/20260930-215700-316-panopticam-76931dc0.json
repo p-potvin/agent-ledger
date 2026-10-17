@@ -30,7 +30,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Panopticam v0.23.0-0.23.2 (scheduled run, Thu 01 Oct 2026): chattruth.py - Chaturbate toy-app notices label Toy buzzing clips (yes when an announced run covers the sound window at latencies 3/6/9 s; no when the app speaks lately but stayed quiet around the clip), Sampler.want targets long runs, action_labels src/p columns, prospective chat-checked AUC on Actions page, retrain every 30 min; Top -> Tips leaderboard + biggest tippers (/api/chat/top); alert event 'tip' (one tip >= tip_min); toy notices seeded from SQLite after restarts. Verified live: tips board renders, first chat yes/no labels and retrain. Parallel session shipped v0.24.0 on top, no conflict.",
+  "summary": "Panopticam v0.23.0-0.23.2 (scheduled run, Thu 01 Oct 2026): chattruth.py - StreamPlatform toy-app notices label Toy buzzing clips (yes when an announced run covers the sound window at latencies 3/6/9 s; no when the app speaks lately but stayed quiet around the clip), Sampler.want targets long runs, action_labels src/p columns, prospective chat-checked AUC on Actions page, retrain every 30 min; Top -> Tips leaderboard + biggest tippers (/api/chat/top); alert event 'tip' (one tip >= tip_min); toy notices seeded from SQLite after restarts. Verified live: tips board renders, first chat yes/no labels and retrain. Parallel session shipped v0.24.0 on top, no conflict.",
   "commands": [
     "uv run pytest -q tests/",
     "git push origin main"

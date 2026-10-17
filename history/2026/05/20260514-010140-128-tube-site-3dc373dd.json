@@ -25,14 +25,14 @@
   "summary": "Fixed 'player modal too zoomed / controls not visible' by making the Vault player modal body scrollable and capping surface height relative to viewport; also added cache-busting via filemtime-based asset versions for CSS/JS enqueues in both plugins so updates propagate immediately.",
   "commands": [
     "scp updated vault-player.css + plugin php to VPS",
-    "curl fullxxx watch page | grep vault-player.css?ver"
+    "curl tube-platform watch page | grep vault-player.css?ver"
   ],
   "files": [
-    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\fullxxx-video\\\\assets\\\\css\\\\vault-player.css",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\tube-platform-video\\\\assets\\\\css\\\\vault-player.css",
     "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\promking-tube\\\\assets\\\\css\\\\vault-player.css",
-    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\fullxxx-video\\\\fullxxx-video.php",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\tube-platform-video\\\\tube-platform-video.php",
     "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\promking-tube\\\\promking-tube.php",
-    "/var/www/fullxxx.video/public/wp-content/plugins/fullxxx-video/assets/css/vault-player.css",
+    "/var/www/tube-platform.internal/public/wp-content/plugins/tube-platform-video/assets/css/vault-player.css",
     "/var/www/prom-king.xyz/public/wp-content/plugins/promking-tube/assets/css/vault-player.css"
   ],
   "planPath": "",

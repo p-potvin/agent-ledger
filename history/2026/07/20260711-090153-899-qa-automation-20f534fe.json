@@ -32,7 +32,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Prom-King",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
-  "summary": "Compiled 732 natural mouse-path events from agent-ledger input-spool and input-state into a privacy-reduced QA path library. Added opt-in random path replay before shared route, WordPress, weekly smoke, and fullxxx crawl navigations; replay remains disabled by default and excluded from stealth anti-bot assertions.",
+  "summary": "Compiled 732 natural mouse-path events from agent-ledger input-spool and input-state into a privacy-reduced QA path library. Added opt-in random path replay before shared route, WordPress, weekly smoke, and tube-platform crawl navigations; replay remains disabled by default and excluded from stealth anti-bot assertions.",
   "commands": [
     "node scripts/compile-natural-mouse-paths.mjs",
     "npx tsc --noEmit",
@@ -43,7 +43,7 @@
     "scripts/compile-natural-mouse-paths.mjs",
     "lib/qa-mouse-paths.ts",
     "tests/support/site.ts",
-    "tests/fullxxx-crawl.spec.ts",
+    "tests/tube-platform-crawl.spec.ts",
     "tests/age-gate-wordpress.spec.ts",
     "tests/weekly-smoke.spec.ts",
     "package.json",

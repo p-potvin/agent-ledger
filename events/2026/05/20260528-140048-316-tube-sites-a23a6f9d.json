@@ -30,16 +30,16 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
-  "summary": "Switched FullXXX brand mark icons to UI_Kit fx-dot.svg (matches the configured favicon style) across archive/tax/single templates and the auth modal branding.",
+  "summary": "Switched TubePlatform brand mark icons to UI_Kit fx-dot.svg (matches the configured favicon style) across archive/tax/single templates and the auth modal branding.",
   "commands": [
-    "rg fullxxx-lockup-soft.svg (ensure removed)",
-    "php -l fullxxx-video/templates/*.php fullxxx-video/includes/auth-bridge.php"
+    "rg tube-platform-lockup-soft.svg (ensure removed)",
+    "php -l tube-platform-video/templates/*.php tube-platform-video/includes/auth-bridge.php"
   ],
   "files": [
-    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\templates\\archive-fxv_video.php",
-    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\templates\\taxonomy-fxv_category.php",
-    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\templates\\single-fxv_video.php",
-    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\fullxxx-video\\includes\\auth-bridge.php"
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\tube-platform-video\\templates\\archive-fxv_video.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\tube-platform-video\\templates\\taxonomy-fxv_category.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\tube-platform-video\\templates\\single-fxv_video.php",
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\tube-platform-video\\includes\\auth-bridge.php"
   ],
   "planPath": "",
   "contentHash": "a23a6f9d168681764034e6a30dd2556e266d08690823ff2b7634385feeb8ada9",

@@ -27,7 +27,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Tue, 29 Sep 2026 15:40. v0.14.13: private price per minute on cards + sort; harvest skips Chaturbate (70% empty pending folders); clip sound ~10 s from best CB audio, Opus 96k. v0.14.14: vision split - role-aware work queues/results in backend (tower: NudeNet+SigLIP looks hourly+clips; faces: daily per room), room look = mean of distinct views; worker.py PANOPTICAM_ROLE; panopticam-vision.service on the VPS (CPUQuota 200%, nice 10) running, PC worker switched to role=faces. Measured tower ~1.5 cores/1.2 GB during backlog, site 0.13 s.",
+  "summary": "Tue, 29 Sep 2026 15:40. v0.14.13: private price per minute on cards + sort; harvest skips StreamPlatform (70% empty pending folders); clip sound ~10 s from best CB audio, Opus 96k. v0.14.14: vision split - role-aware work queues/results in backend (tower: NudeNet+SigLIP looks hourly+clips; faces: daily per room), room look = mean of distinct views; worker.py PANOPTICAM_ROLE; panopticam-vision.service on the VPS (CPUQuota 200%, nice 10) running, PC worker switched to role=faces. Measured tower ~1.5 cores/1.2 GB during backlog, site 0.13 s.",
   "commands": [
     "systemctl enable --now panopticam-vision",
     "Set PANOPTICAM_ROLE=faces on PC + restart task",

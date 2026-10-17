@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile",
-    "summary":  "vaultwares-decompile: added live-harvest provenance boundaries, disabled proxy use for extraction clients, tagged routes/models/stores/views/slices by source origin, restricted OpenAPI contract ingestion to validated target-scoped specs, constrained LLM summaries against unobserved backend claims, regenerated clean Flirt4Free blueprint, and verified Studio hash navigation/back-forward plus route origin chips.",
+    "summary":  "vaultwares-decompile: added live-harvest provenance boundaries, disabled proxy use for extraction clients, tagged routes/models/stores/views/slices by source origin, restricted OpenAPI contract ingestion to validated target-scoped specs, constrained LLM summaries against unobserved backend claims, regenerated clean LiveStreamProvider blueprint, and verified Studio hash navigation/back-forward plus route origin chips.",
     "commands":  [
 
                  ],

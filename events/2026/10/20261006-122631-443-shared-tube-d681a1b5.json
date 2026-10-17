@@ -30,10 +30,10 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-  "summary": "Pivot of vision lab to the Stash library (feat/vision-lab commits 735a59f, 3d50838; not pushed). Deleted untracked shared/src/media-cache/backfill.ts (hard-coded Postgres password; never in git history). stash-sync reads G:\\.stash\\.db read-only (4,750 scenes, ComfyUI excluded); cam-room hints from filenames (Models/ not sorted by person); faces matched against pornstar (930) + cam (31,416) galleries; library faces precision 96.3% recall 89.7% on 29 enrolled-label videos. Lab bound to 100.71.101.21:8790. Full-library embed+faces running in background. Found Stash scheduled scan/generate tasks failing because stash-win isn't auto-started. No public TPDB/StashDB dumps found.",
+  "summary": "Pivot of vision lab to the Media catalog library (feat/vision-lab commits 735a59f, 3d50838; not pushed). Deleted untracked shared/src/media-cache/backfill.ts (hard-coded Postgres password; never in git history). stash-sync reads G:\\.stash\\.db read-only (4,750 scenes, ComfyUI excluded); cam-room hints from filenames (Models/ not sorted by person); faces matched against pornstar (930) + cam (31,416) galleries; library faces precision 96.3% recall 89.7% on 29 enrolled-label videos. Lab bound to 100.71.101.21:8790. Full-library embed+faces running in background. Found Stash scheduled scan/generate tasks failing because stash-win isn't auto-started. No public TPDB/MediaDatabase dumps found.",
   "commands": [
-    "tubevision stash-sync",
-    "tubevision faces --kind stash",
+    "tubevision catalog-sync",
+    "tubevision faces --kind catalog",
     "tubevision faces-report --kind stash"
   ],
   "files": [

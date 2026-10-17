@@ -27,10 +27,10 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "greencloud-vps: issued Let's Encrypt certs for cams.fullxxx.video and cams.1pornhub.vip (webroot /var/www/_acme), new nginx vhost /etc/nginx/sites-available/cams-whitelabels.conf serving a placeholder from /var/www/cams-placeholder (both verified 200, valid to 29 Dec 2026). Found renewals never reloaded nginx: added /etc/letsencrypt/renewal-hooks/deploy/reload-nginx.sh. ledger.vaultwares.ca renewal failed on the port-80 redirect: added ACME location (backup /root/ledger.vaultwares.ca.bak-20260930), renewed to 29 Dec. docs.vaultwares.ca combined cert (14 names incl. api.vaultwares.ca, expires 15 Nov) fails dry-run on 11 names - reported, not changed. YOLO: predict via KFC venv works on CPU; training failure likely from empty settings datasets_dir resolving relative data.yaml paths - reported.",
+  "summary": "greencloud-vps: issued Let's Encrypt certs for cams.tube-platform.internal and cams.portal-beta.internal (webroot /var/www/_acme), new nginx vhost /etc/nginx/sites-available/cams-whitelabels.conf serving a placeholder from /var/www/cams-placeholder (both verified 200, valid to 29 Dec 2026). Found renewals never reloaded nginx: added /etc/letsencrypt/renewal-hooks/deploy/reload-nginx.sh. ledger.vaultwares.ca renewal failed on the port-80 redirect: added ACME location (backup /root/ledger.vaultwares.ca.bak-20260930), renewed to 29 Dec. docs.vaultwares.ca combined cert (14 names incl. api.vaultwares.ca, expires 15 Nov) fails dry-run on 11 names - reported, not changed. YOLO: predict via KFC venv works on CPU; training failure likely from empty settings datasets_dir resolving relative data.yaml paths - reported.",
   "commands": [
-    "certbot certonly --webroot -w /var/www/_acme -d cams.fullxxx.video",
-    "certbot certonly --webroot -w /var/www/_acme -d cams.1pornhub.vip",
+    "certbot certonly --webroot -w /var/www/_acme -d cams.tube-platform.internal",
+    "certbot certonly --webroot -w /var/www/_acme -d cams.portal-beta.internal",
     "certbot renew --cert-name ledger.vaultwares.ca",
     "certbot renew --cert-name docs.vaultwares.ca --dry-run"
   ],

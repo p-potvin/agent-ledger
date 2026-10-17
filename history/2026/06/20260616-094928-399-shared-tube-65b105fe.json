@@ -30,7 +30,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
-  "summary": "Brand mark v2 + copy differentiation. FXV: replaced split-panel logo with user-supplied dark-chip + lowercase italic 'fx' + hot pink dot, applied across logo/monogram/3 favicons. SPN: 'spn' abbreviation was ambiguous, replaced logo.svg with full 'sexyprn' wordmark on cyan gradient (128x64 horizontal pill); favicons keep 'sp'/'s' abbreviation. OPH '1Ph' unchanged. Copy work: rewrote per-site longName, tagline, description, menuItems, trendingSearches for OPH (hot/trending/viral voice) and SPN (daily-curated/playful voice); polished PKT (broad-appeal) and FXV (premium-editorial). SPN displayName lowercased to 'sexyprn' to match new logo. OPH menu now Hot Now/Trending Today/Viral Clips/Fresh Drops/Hot Pornstars/Breaking Studios/This Week/Categories. SPN menu now Today's Picks/Fresh Drops/Sweet & Sexy/HD Sexy/Pornstars/Studios We Love/Categories/Morning Picks. Version 0.1.5 -> 0.1.6.",
+  "summary": "Brand mark v2 + copy differentiation. FXV: replaced split-panel logo with user-supplied dark-chip + lowercase italic 'fx' + hot pink dot, applied across logo/monogram/3 favicons. SPN: 'spn' abbreviation was ambiguous, replaced logo.svg with full 'media-portal-gamma' wordmark on cyan gradient (128x64 horizontal pill); favicons keep 'sp'/'s' abbreviation. OPH '1Ph' unchanged. Copy work: rewrote per-site longName, tagline, description, menuItems, trendingSearches for OPH (hot/trending/viral voice) and SPN (daily-curated/playful voice); polished PKT (broad-appeal) and FXV (premium-editorial). SPN displayName lowercased to 'media-portal-gamma' to match new logo. OPH menu now Hot Now/Trending Today/Viral Clips/Fresh Drops/Hot Pornstars/Breaking Studios/This Week/Categories. SPN menu now Today's Picks/Fresh Drops/Sweet & Sexy/HD Sexy/Pornstars/Studios We Love/Categories/Morning Picks. Version 0.1.5 -> 0.1.6.",
   "commands": [],
   "files": [
     "shared-tube/apps/fxv/public/logo.svg",
@@ -39,11 +39,11 @@
     "shared-tube/apps/fxv/public/favicon-32x32.svg",
     "shared-tube/apps/fxv/public/favicon-48x48.svg",
     "shared-tube/apps/fxv/public/monogram.svg",
-    "shared-tube/apps/sexyprn/public/logo.svg",
+    "shared-tube/apps/media-portal-gamma/public/logo.svg",
     "shared-tube/apps/fxv/src/config.ts",
     "shared-tube/apps/pkt/src/config.ts",
     "shared-tube/apps/oneporn/src/config.ts",
-    "shared-tube/apps/sexyprn/src/config.ts"
+    "shared-tube/apps/media-portal-gamma/src/config.ts"
   ],
   "planPath": "",
   "contentHash": "65b105feb8a58f061b9ce816613ed84e287b2edd2ca9ac9fd9a9398c8ffd03fd",

@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
-    "summary":  "Verified live DB schema, tested onlyfans/terms queries on production, added fetcher done event test and header nav contract test",
+    "summary":  "Verified live DB schema, tested creator-platform/terms queries on production, added fetcher done event test and header nav contract test",
     "commands":  [
 
                  ],

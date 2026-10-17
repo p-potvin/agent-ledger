@@ -1,0 +1,47 @@
+{
+  "id": "20261016-135525-068-vision-lab-57921d47",
+  "createdAt": "2026-10-16T17:55:25.0683372Z",
+  "createdAtLocal": "2026-10-16 13:55",
+  "timezone": "Eastern Standard Time",
+  "project": "vision-lab",
+  "kind": "code-change",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Bash, PowerShell, Grep, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-16 13:55 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Grep",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Found what regenerated Stash screenshots/*.mp4 previews after the operator deleted ~80 GB: scheduled task \\VaultWares\\Stash Generate (daily 04:30) runs C:\\Users\\Administrator\\.stash\\stash-task.ps1 -Task generate with previews:true (803 rebuilt 04:30-11:20 today; folder since deleted). Set previews:false there (covers/sprites/phashes kept). Lab Settings > Tasks > Generate no longer requests previews/sprites by default (vision-lab 9fd5eea). No other code calls metadataGenerate. Also reviewed T5Gemma 2 270M-270M (pretrained enc-dec, needs fine-tuning) and EG2's non-embedding uses.",
+  "commands": [],
+  "files": [
+    "C:\\Users\\Administrator\\.stash\\stash-task.ps1",
+    "vision-lab/src/tubevision/admin.py",
+    "vision-lab/src/tubevision/stashapi.py"
+  ],
+  "planPath": "",
+  "contentHash": "57921d471bce111c843440b717761abdd9e69bb8188c69f1033f432b4e74b62c",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "4f231c3",
+    "hasChanges": false
+  }
+}

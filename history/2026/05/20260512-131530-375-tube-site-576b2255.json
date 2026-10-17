@@ -19,16 +19,16 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\business",
-  "summary": "Added explicit manual page-count controls to both FullXXX and PromKing fetch tools. Manual fetch now reads a user-supplied page count from the admin form, uses it instead of the old hidden 6-page cap, and reports the chosen page budget in the completion message before resuming backfill.",
+  "summary": "Added explicit manual page-count controls to both TubePlatform and PromKing fetch tools. Manual fetch now reads a user-supplied page count from the admin form, uses it instead of the old hidden 6-page cap, and reports the chosen page budget in the completion message before resuming backfill.",
   "commands": [
-    "php -l fullxxx-video/includes/admin-settings.php",
-    "php -l fullxxx-video/includes/video-fetcher.php",
+    "php -l tube-platform-video/includes/admin-settings.php",
+    "php -l tube-platform-video/includes/video-fetcher.php",
     "php -l promking-tube/includes/video-fetcher.php",
     "scp plugin dirs to VPS and reload php-fpm/nginx"
   ],
   "files": [
-    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\admin-settings.php",
-    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\includes\\video-fetcher.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\tube-platform-video\\includes\\admin-settings.php",
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\tube-platform-video\\includes\\video-fetcher.php",
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\includes\\video-fetcher.php"
   ],
   "planPath": "",

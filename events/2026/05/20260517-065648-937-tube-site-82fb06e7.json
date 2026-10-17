@@ -26,7 +26,7 @@
                 },
     "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\business\\tube-site",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
-    "summary":  "Unified and centralized video fetcher orchestration under the Tube_Fetcher_Orchestrator pattern in both promking-tube and fullxxx-video plugins. Established PKT_Video_Fetcher_Delegate and FXV_Video_Fetcher_Delegate. Resolved git merge conflicts in both video-fetcher.php files, including duration Â±5s and thumbnail matching for duplicate detection, and successfully pushed clean rebased commits to origin/main.",
+    "summary":  "Unified and centralized video fetcher orchestration under the Tube_Fetcher_Orchestrator pattern in both promking-tube and tube-platform-video plugins. Established PKT_Video_Fetcher_Delegate and FXV_Video_Fetcher_Delegate. Resolved git merge conflicts in both video-fetcher.php files, including duration Â±5s and thumbnail matching for duplicate detection, and successfully pushed clean rebased commits to origin/main.",
     "commands":  [
                      "git add",
                      "git commit",
@@ -35,7 +35,7 @@
                  ],
     "files":  [
                   "promking-tube/includes/video-fetcher.php",
-                  "fullxxx-video/includes/video-fetcher.php",
+                  "tube-platform-video/includes/video-fetcher.php",
                   "tube-shared/includes/class-fetcher-orchestrator.php"
               ],
     "planPath":  "",

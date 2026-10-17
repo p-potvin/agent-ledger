@@ -26,7 +26,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-api",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos",
-  "summary": "Fri, 10 Jul 2026 10:55 - Fixed missing Prom-King TPDB batch route behind nginx. Root cause: tpdb.py existed with POST /tpdb/resolve-batch but promking __init__.py did not include tpdb_router, so browser POST /api/promking/tpdb/resolve-batch returned FastAPI 404. Live API patched and restarted; local vaultwares-api checkout updated with tpdb_router import/include. Verification: python py_compile passed locally and remotely; POST https://api.vaultwares.ca/api/promking/tpdb/resolve-batch with empty items returned 200; browser same-origin POST returned 200 on 1pornhub.vip, sexyprn.lol, and fullxxx.video.",
+  "summary": "Fri, 10 Jul 2026 10:55 - Fixed missing Prom-King TPDB batch route behind nginx. Root cause: tpdb.py existed with POST /tpdb/resolve-batch but promking __init__.py did not include tpdb_router, so browser POST /api/promking/tpdb/resolve-batch returned FastAPI 404. Live API patched and restarted; local vaultwares-api checkout updated with tpdb_router import/include. Verification: python py_compile passed locally and remotely; POST https://api.vaultwares.ca/api/promking/tpdb/resolve-batch with empty items returned 200; browser same-origin POST returned 200 on portal-beta.internal, portal-gamma.internal, and tube-platform.internal.",
   "commands": [
     "remote patch /opt/vaultwares-api/app/routers/promking/__init__.py",
     "python -m py_compile",

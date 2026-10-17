@@ -22,7 +22,7 @@
   "summary": "Completed DNS/TLS and exit-node validation: both domains now resolve to 212.193.6.35, apex HTTPS is live on the VPS, WordPress home/siteurl are forced to HTTPS, and nginx accepts both apex and www hostnames. Tailscale exit-node functionality was verified end-to-end from the desktop by temporarily routing through ci-egress-vps, observing the public IP change from 74.57.201.206 to 212.193.6.35, then resetting back.",
   "commands": [
     "Resolve-DnsName prom-king.xyz -Type A",
-    "Resolve-DnsName fullxxx.video -Type A",
+    "Resolve-DnsName tube-platform.internal -Type A",
     "certbot --nginx ...",
     "tailscale set --exit-node=ci-egress-vps",
     "Invoke-RestMethod https://api.ipify.org?format=json"

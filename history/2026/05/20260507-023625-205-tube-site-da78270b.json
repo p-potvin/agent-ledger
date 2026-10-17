@@ -19,14 +19,14 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\business",
-  "summary": "Added a harmless blank line at the top of each plugin README so you can trigger GitHub Actions deployments by touching README.md under promking-tube/ or fullxxx-video/.",
+  "summary": "Added a harmless blank line at the top of each plugin README so you can trigger GitHub Actions deployments by touching README.md under promking-tube/ or tube-platform-video/.",
   "commands": [
     "Get-Content promking-tube/README.md -TotalCount 2",
-    "Get-Content fullxxx-video/README.md -TotalCount 2"
+    "Get-Content tube-platform-video/README.md -TotalCount 2"
   ],
   "files": [
     "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\promking-tube\\README.md",
-    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\fullxxx-video\\README.md"
+    "C:\\Users\\Administrator\\Desktop\\business\\tube-site\\tube-platform-video\\README.md"
   ],
   "planPath": "",
   "contentHash": "da78270b9d987a32220410080a12e5446b1e6867a20e921cebad054d851ccffc",

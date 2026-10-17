@@ -40,7 +40,7 @@
     "files":  [
                   "shared-tube\\shared\\src\\components\\Header.astro",
                   "shared-tube\\shared\\src\\security\\safe-mode.ts",
-                  "shared-tube\\apps\\sexyprn\\src\\admin\\Affiliates\\Settings.tsx"
+                  "shared-tube\\apps\\media-portal-gamma\\src\\admin\\Affiliates\\Settings.tsx"
               ],
     "planPath":  "",
     "contentHash":  "ddbaa4b9a9e1e7b5c8788df5a9877e14560ffe86b4766bd74692d4e26af15200",

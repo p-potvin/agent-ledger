@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-decompile",
-    "summary":  "vaultwares-decompile: completed provenance-safe live extraction hardening and regenerated Flirt4Free blueprint. Third-party CDN code from cdn5.vscdns.com is included only as host-tagged target-declared evidence; foreign OpenAPI/proxy evidence stays rejected; local LLM/embedding clients use no_proxy; cluster cross-links capped to top-3 high-confidence matches. Cargo check/tests/release pass; Studio smoke navigation verified; regenerated output has zero Panopticam/foreign-origin matches.",
+    "summary":  "vaultwares-decompile: completed provenance-safe live extraction hardening and regenerated LiveStreamProvider blueprint. Third-party CDN code from cdn5.vscdns.com is included only as host-tagged target-declared evidence; foreign OpenAPI/proxy evidence stays rejected; local LLM/embedding clients use no_proxy; cluster cross-links capped to top-3 high-confidence matches. Cargo check/tests/release pass; Studio smoke navigation verified; regenerated output has zero Panopticam/foreign-origin matches.",
     "commands":  [
 
                  ],

@@ -31,7 +31,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-    "summary":  "Added actual production domains (sexyprn.lol, 1pornhub.vip, etc.) to KNOWN_ORIGINS in shared/src/admin/auth.ts to resolve CORS issues and prevent getApiBase from falling back to fxv.porn on refresh.",
+    "summary":  "Added actual production domains (portal-gamma.internal, portal-beta.internal, etc.) to KNOWN_ORIGINS in shared/src/admin/auth.ts to resolve CORS issues and prevent getApiBase from falling back to fxv.porn on refresh.",
     "commands":  [
                      "pnpm build"
                  ],

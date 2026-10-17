@@ -28,9 +28,9 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "v0.32.1: operational notices (watchdog, OF logout via /api/vision/notify, failed auto-records) go by email via new mail.py direct to MX mx1.alias.proton.me from VPS 148.113.255.142, From panopticam@alerts.prom-king.xyz, 30/day cap, POST /api/mail/test; PANOPTICAM_MAIL_TO=panopticam@prom-king.xyz added to VPS env; test mail accepted by Proton MX. OnlyFans crawl no longer auto-subscribes (--subscribe opt-in; 24h lockout at 10 follows confirmed by operator); 'list' command writes onlyfans-to-follow.html (114 links, gitignored). Operator to-do: Porkbun TXT alerts.prom-king.xyz v=spf1 ip4:148.113.255.142 -all.",
+  "summary": "v0.32.1: operational notices (watchdog, OF logout via /api/vision/notify, failed auto-records) go by email via new mail.py direct to MX mx1.alias.proton.me from VPS 148.113.255.142, From panopticam@alerts.prom-king.xyz, 30/day cap, POST /api/mail/test; PANOPTICAM_MAIL_TO=panopticam@prom-king.xyz added to VPS env; test mail accepted by Proton MX. CreatorPlatform crawl no longer auto-subscribes (--subscribe opt-in; 24h lockout at 10 follows confirmed by operator); 'list' command writes creator-platform-to-follow.html (114 links, gitignored). Operator to-do: Porkbun TXT alerts.prom-king.xyz v=spf1 ip4:148.113.255.142 -all.",
   "commands": [
-    "python vision/onlyfans.py list",
+    "python vision/creator-platform.py list",
     "uv run pytest",
     "git push (webhook deploy)",
     "curl -X POST /api/mail/test"
@@ -40,7 +40,7 @@
     "backend/src/panopticam/app.py",
     "backend/src/panopticam/notify.py",
     "backend/src/panopticam/config.py",
-    "vision/onlyfans.py",
+    "vision/creator-platform.py",
     "docs/STATE.md"
   ],
   "planPath": "",

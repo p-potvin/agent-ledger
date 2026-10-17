@@ -23,12 +23,12 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs",
-  "summary": "Migrated oneporn + sexyprn from OVH to greencloud. All 3 apps now on greencloud (fxv:4321, oneporn:4323, sexyprn:4324). Obtained letsencrypt certs, installed nginx configs, fixed dnsmasq on both servers (flaresolverr/sabnzbd/uptime -> OVH), updated deploy script (removed OVH dispatch), added deploy-greencloud.yml workflow, updated health-ledger services.yaml, updated vaultwares-docs (5 files), killed old services on OVH. Committed 48adebe + pushed vaultwares-docs 32a40be.",
+  "summary": "Migrated oneporn + media-portal-gamma from OVH to greencloud. All 3 apps now on greencloud (fxv:4321, oneporn:4323, media-portal-gamma:4324). Obtained letsencrypt certs, installed nginx configs, fixed dnsmasq on both servers (flaresolverr/sabnzbd/uptime -> OVH), updated deploy script (removed OVH dispatch), added deploy-greencloud.yml workflow, updated health-ledger services.yaml, updated vaultwares-docs (5 files), killed old services on OVH. Committed 48adebe + pushed vaultwares-docs 32a40be.",
   "commands": [],
   "files": [
     "scripts/deploy-shared-tube.sh",
     "scripts/systemd/oneporn.service",
-    "scripts/systemd/sexyprn.service",
+    "scripts/systemd/media-portal-gamma.service",
     ".github/workflows/deploy-greencloud.yml",
     "AGENTS.md",
     "CHANGES.md"

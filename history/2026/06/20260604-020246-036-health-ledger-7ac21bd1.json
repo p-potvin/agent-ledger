@@ -44,7 +44,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger",
-  "summary": "Implemented Health Ledger Probe Joker and CI Joker, fixed and deployed Prom-King link-sharing plus fullxxx.video 2257 monitoring fixes, deployed greencloud and Clopeux probe loops, added vault-guardian non-production routing, and verified current Clopeux scheduled probe is 18/18 OK.",
+  "summary": "Implemented Health Ledger Probe Joker and CI Joker, fixed and deployed Prom-King link-sharing plus tube-platform.internal 2257 monitoring fixes, deployed greencloud and Clopeux probe loops, added vault-guardian non-production routing, and verified current Clopeux scheduled probe is 18/18 OK.",
   "commands": [
     "pnpm build",
     "pnpm --filter ./server exec vitest run tests/ssrf.test.ts",

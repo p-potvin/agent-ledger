@@ -26,7 +26,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
-  "summary": "Fixed unhandled 'Receiving end does not exist' rejection: background sniffer notify() no longer messages the tab (no content-script listener since streams moved to popup) — just updates the badge. Wired all popup toolbar buttons with feedback: refresh (spin+repoll), open downloads folder (toast w/ path or offline error), clear (detections + delete finished jobs, toast), No video? (recapture toast+close), gear -> Settings popover (server online/offline dot, endpoint, version, save dir, open/clear actions), help -> How-to popover. Added toast + popover UI, serverOnline tracking from jobs:get. Noted Ably/websocket errors are Chaturbate's own site scripts, not the extension. Verified tsc clean, build OK, web-ext lint 0 errors/0 notices.",
+  "summary": "Fixed unhandled 'Receiving end does not exist' rejection: background sniffer notify() no longer messages the tab (no content-script listener since streams moved to popup) — just updates the badge. Wired all popup toolbar buttons with feedback: refresh (spin+repoll), open downloads folder (toast w/ path or offline error), clear (detections + delete finished jobs, toast), No video? (recapture toast+close), gear -> Settings popover (server online/offline dot, endpoint, version, save dir, open/clear actions), help -> How-to popover. Added toast + popover UI, serverOnline tracking from jobs:get. Noted Ably/websocket errors are StreamPlatform's own site scripts, not the extension. Verified tsc clean, build OK, web-ext lint 0 errors/0 notices.",
   "commands": [
     "npx tsc --noEmit",
     "npm run build",

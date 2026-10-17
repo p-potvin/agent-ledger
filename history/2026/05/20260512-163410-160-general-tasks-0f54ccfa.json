@@ -22,17 +22,17 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business",
   "cwd": "C:\\Users\\Administrator\\Desktop\\business",
-  "summary": "Brought up new GreenCloud VPS 173.249.194.15 (Debian 12). Installed nginx/php8.2-fpm/MariaDB/certbot/ufw/fail2ban/rsync, joined Tailscale tailnet (VPS tailnet IP 100.120.212.57), migrated both WordPress tube sites (prom-king.xyz + fullxxx.video) by copying web roots and importing DB dumps, and deployed vaultwares docs static dist with vaultwares.ca redirect. Added api.vaultwares.ca reverse proxy over Tailscale to PC 100.71.101.21:9001 (tailnet-only). Proxy currently times out because backend is not reachable/listening on that port yet.",
+  "summary": "Brought up new GreenCloud VPS 173.249.194.15 (Debian 12). Installed nginx/php8.2-fpm/MariaDB/certbot/ufw/fail2ban/rsync, joined Tailscale tailnet (VPS tailnet IP 100.120.212.57), migrated both WordPress tube sites (prom-king.xyz + tube-platform.internal) by copying web roots and importing DB dumps, and deployed vaultwares docs static dist with vaultwares.ca redirect. Added api.vaultwares.ca reverse proxy over Tailscale to PC 100.71.101.21:9001 (tailnet-only). Proxy currently times out because backend is not reachable/listening on that port yet.",
   "commands": [
     "apt-get install nginx php8.2-fpm mariadb-server certbot fail2ban ufw",
     "tailscale up --advertise-exit-node",
     "tar/rsync wp roots from old VPS",
     "mysqldump old WP DBs; import on new",
-    "nginx site configs for prom-king.xyz, fullxxx.video, docs.vaultwares.ca, vaultwares.ca, api.vaultwares.ca"
+    "nginx site configs for prom-king.xyz, tube-platform.internal, docs.vaultwares.ca, vaultwares.ca, api.vaultwares.ca"
   ],
   "files": [
     "/etc/nginx/sites-available/prom-king.xyz.conf",
-    "/etc/nginx/sites-available/fullxxx.video.conf",
+    "/etc/nginx/sites-available/tube-platform.internal.conf",
     "/etc/nginx/sites-available/docs.vaultwares.ca.conf",
     "/etc/nginx/sites-available/vaultwares.ca.conf",
     "/etc/nginx/sites-available/api.vaultwares.ca.conf"

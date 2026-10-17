@@ -1,0 +1,49 @@
+{
+  "id": "20261017-112311-050-vision-lab-6088b4cb",
+  "createdAt": "2026-10-17T15:23:11.0504742Z",
+  "createdAtLocal": "2026-10-17 11:23",
+  "timezone": "Eastern Standard Time",
+  "project": "vision-lab",
+  "kind": "handoff",
+  "actor": "Claude Code",
+  "agentHeader": "Agent: Claude Code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube  Branch: main\r\nTools used (this reply): Bash, PowerShell, Grep, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-17 11:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Grep",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
+  "summary": "Handoff for a new chat: vision lab state + media-records (sidecar v2) findings at vision-lab/docs/HANDOFF-2026-10-17-media-records.md. Found the original design (Claude plan C:\\Users\\Administrator\\.claude\\plans\\composed-wandering-fountain.md, 23 Sep). Implemented: resolver (4 copies in sync), config, record builder, scan (vw media-index), normalize (executed on G:\\Gallery only, 25,404 renames; undo journal not found). Measured today: G:\\Gallery canonical; F:\\amd\\Models mostly .meta.json (2,110/2,441 sample), G:\\mega 213 .meta.json; cam gallery mostly no sidecars. Issues: .ts removed from config.VIDEO_EXTS today but kept elsewhere; record.merge __from__ never set; vw.ps1 Read-Host and 3 hard deletes remain (phase 2 undone); Everything 1.5.0.1423b installed. Phases 1c/3/4/5/6 not started.",
+  "commands": [
+    "scan.py <root> --limit 3000 --json"
+  ],
+  "files": [
+    "vision-lab/docs/HANDOFF-2026-10-17-media-records.md",
+    "C:\\Users\\Administrator\\.claude\\plans\\composed-wandering-fountain.md",
+    "vault-commander/cli/utils/media_records"
+  ],
+  "planPath": "",
+  "contentHash": "6088b4cb1d6eb40ff77502c0fa2454f5b5f541085180d4c638719aa2a201ada4",
+  "git": {
+    "repo": "shared-tube",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/shared-tube",
+    "branch": "main",
+    "head": "4f231c3",
+    "hasChanges": false
+  }
+}

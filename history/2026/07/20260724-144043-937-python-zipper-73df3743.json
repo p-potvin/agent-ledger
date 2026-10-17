@@ -26,7 +26,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
-  "summary": "Diagnosed flirt4free non-download: sniffer dropped auth headers. Widened header capture — pickHeaders now keeps ALL request headers except hop-by-hop noise (SKIP_HEADERS), so Authorization/Proxy-Authorization (bearer for user's 10.64.0.1 proxy) + referer/origin/cookie are forwarded to yt-dlp. Added PYTHON_ZIPPER_PROXY env -> yt-dlp --proxy for probe+download (Basic only; Bearer proxy noted as unsupported). download_stream now prints yt-dlp error tail to server console on failure (no secret cmd logged) so the real reason is visible. Verified py_compile OK, tsc clean, build OK. Pending: confirm proxy topology (transparent WG vs explicit Bearer proxy) to finalize.",
+  "summary": "Diagnosed live-stream-provider non-download: sniffer dropped auth headers. Widened header capture — pickHeaders now keeps ALL request headers except hop-by-hop noise (SKIP_HEADERS), so Authorization/Proxy-Authorization (bearer for user's 10.64.0.1 proxy) + referer/origin/cookie are forwarded to yt-dlp. Added PYTHON_ZIPPER_PROXY env -> yt-dlp --proxy for probe+download (Basic only; Bearer proxy noted as unsupported). download_stream now prints yt-dlp error tail to server console on failure (no secret cmd logged) so the real reason is visible. Verified py_compile OK, tsc clean, build OK. Pending: confirm proxy topology (transparent WG vs explicit Bearer proxy) to finalize.",
   "commands": [
     "py_compile",
     "npx tsc --noEmit",

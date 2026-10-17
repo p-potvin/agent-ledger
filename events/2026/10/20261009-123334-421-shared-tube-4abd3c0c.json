@@ -29,7 +29,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-  "summary": "Tube lab: Stats section (stats.py: Stash library stats read-only, watching timeline/heatmap/most watched/on this day, lab coverage; lab_events own watch history via POST /events) and identity pages (identity.py: KFC gallery.db stats, photos, MICA/FLAME/consensus/TRELLIS reports, renders, Stash performer, lab clusters/videos, Gemma look-alikes) with three.js 3D viewer for .ply/.obj/.glb; identities browse by name or look. SVG charts per dataviz skill (palette validated on #17191e). Verified in browser: charts render, MICA ply / TRELLIS glb / consensus obj load, no console errors; test events removed. Commit 1783e2c.",
+  "summary": "Tube lab: Stats section (stats.py: Media catalog library stats read-only, watching timeline/heatmap/most watched/on this day, lab coverage; lab_events own watch history via POST /events) and identity pages (identity.py: KFC gallery.db stats, photos, MICA/FLAME/consensus/TRELLIS reports, renders, Stash performer, lab clusters/videos, Gemma look-alikes) with three.js 3D viewer for .ply/.obj/.glb; identities browse by name or look. SVG charts per dataviz skill (palette validated on #17191e). Verified in browser: charts render, MICA ply / TRELLIS glb / consensus obj load, no console errors; test events removed. Commit 1783e2c.",
   "commands": [
     "validate_palette.js",
     "browser checks",

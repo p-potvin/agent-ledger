@@ -36,14 +36,14 @@
     "php -l (10 files)"
   ],
   "files": [
-    "fullxxx-video/includes/template-loader.php",
-    "fullxxx-video/includes/helpers.php",
-    "fullxxx-video/templates/archive-fxv_video.php",
-    "fullxxx-video/templates/taxonomy-fxv_category.php",
-    "fullxxx-video/templates/page-fxv_home.php",
-    "fullxxx-video/templates/page-fxv_shell.php",
-    "fullxxx-video/templates/single-fxv_video.php",
-    "fullxxx-video/assets/css/tubeshell/base.css",
+    "tube-platform-video/includes/template-loader.php",
+    "tube-platform-video/includes/helpers.php",
+    "tube-platform-video/templates/archive-fxv_video.php",
+    "tube-platform-video/templates/taxonomy-fxv_category.php",
+    "tube-platform-video/templates/page-fxv_home.php",
+    "tube-platform-video/templates/page-fxv_shell.php",
+    "tube-platform-video/templates/single-fxv_video.php",
+    "tube-platform-video/assets/css/tubeshell/base.css",
     ".extras/tube-shell-theme/tube-shell/header.php",
     ".extras/tube-shell-theme/tube-shell/footer.php",
     ".extras/tube-shell-theme/tube-shell/functions.php"

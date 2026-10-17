@@ -53,7 +53,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\health-ledger",
-  "summary": "Answered Health Ledger architecture questions, clarified API gateway TLS/secret state, split Prom-King/FullXXX service inventory into explicit prelanding, tube, and link-sharing records, added Ollama resource sampling to Probe Joker, redeployed Health Ledger to greencloud and restarted Clopeux probe loop.",
+  "summary": "Answered Health Ledger architecture questions, clarified API gateway TLS/secret state, split Prom-King/TubePlatform service inventory into explicit prelanding, tube, and link-sharing records, added Ollama resource sampling to Probe Joker, redeployed Health Ledger to greencloud and restarted Clopeux probe loop.",
   "commands": [
     "node -c scripts/probe-joker.mjs",
     "JOKER_PROBE_LOCATION=Clopeux-Desktop node scripts/probe-joker.mjs --once -> 22/22 ok + 1 ollama_resource_sample",

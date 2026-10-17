@@ -31,7 +31,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-    "summary":  "Fixed all TypeScript compilation/strict-mode errors across the @promking/shared-tube workspace monorepo. Fixed strict option element access in BatchActions.tsx, guarded index accesses in VideoBatchActions.tsx, and corrected invalid relative api imports in Settings.tsx across fxv, pkt, oneporn, and sexyprn apps. Verified clean build locally via \u0027pnpm -r build\u0027. Updated deployment-flow.mdx to document multi-node deployment invariants for shared-tube.",
+    "summary":  "Fixed all TypeScript compilation/strict-mode errors across the @promking/shared-tube workspace monorepo. Fixed strict option element access in BatchActions.tsx, guarded index accesses in VideoBatchActions.tsx, and corrected invalid relative api imports in Settings.tsx across fxv, pkt, oneporn, and media-portal-gamma apps. Verified clean build locally via \u0027pnpm -r build\u0027. Updated deployment-flow.mdx to document multi-node deployment invariants for shared-tube.",
     "commands":  [
                      "pnpm -r build"
                  ],
@@ -41,7 +41,7 @@
                   "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\pkt\\src\\admin\\Affiliates\\Settings.tsx",
                   "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\fxv\\src\\admin\\Affiliates\\Settings.tsx",
                   "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\oneporn\\src\\admin\\Affiliates\\Settings.tsx",
-                  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\sexyprn\\src\\admin\\Affiliates\\Settings.tsx",
+                  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\apps\\media-portal-gamma\\src\\admin\\Affiliates\\Settings.tsx",
                   "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube\\shared\\src\\admin\\index.ts",
                   "C:\\Users\\Administrator\\Desktop\\Github Repos\\vaultwares-docs\\docs-content\\operations\\deployment-flow.mdx"
               ],

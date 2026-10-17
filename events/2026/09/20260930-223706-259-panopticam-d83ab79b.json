@@ -29,7 +29,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Panopticam v0.25.0/v0.27.0-0.27.3 (operator round Thu 01 Oct 2026): alert rule 3 'Big tip' (1000 tokens, 3 h cooldown, Telegram); CamSoda chat (guest node token, lobby discover, template codec; tips, notices, Lovense vibrate -> runs with real length; 30 rooms); BongaCams chat parked (obfuscated host + Cloudflare, not bypassed; operator to paste WS URL); empty-room frames per identity -> E:\\3DGS-Rooms-Reconstruction with YOLOv8n person check + dark/flat filter after first batch showed performers (32 bad frames to Recycle Bin, 5 kept); restarted PC vision worker (stale recordings tunnel cleared).",
+  "summary": "Panopticam v0.25.0/v0.27.0-0.27.3 (operator round Thu 01 Oct 2026): alert rule 3 'Big tip' (1000 tokens, 3 h cooldown, Telegram); StreamProvider chat (guest node token, lobby discover, template codec; tips, notices, Lovense vibrate -> runs with real length; 30 rooms); LiveStreamPlatform chat parked (obfuscated host + Cloudflare, not bypassed; operator to paste WS URL); empty-room frames per identity -> E:\\3DGS-Rooms-Reconstruction with YOLOv8n person check + dark/flat filter after first batch showed performers (32 bad frames to Recycle Bin, 5 kept); restarted PC vision worker (stale recordings tunnel cleared).",
   "commands": [
     "uv run pytest -q tests/",
     "yolo export yolov8n onnx (CPU)",

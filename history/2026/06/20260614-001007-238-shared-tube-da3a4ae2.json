@@ -30,7 +30,7 @@
     "summary":  "Configured Nginx blocks on OVH VPS, generated Let\u0027s Encrypt certificates using Certbot, enabled/started systemd services under User=ubuntu, and verified public HTTPS connections return 200 OK.",
     "commands":  [
                      "sudo certbot certonly ...",
-                     "sudo systemctl enable/start oneporn sexyprn",
+                     "sudo systemctl enable/start oneporn media-portal-gamma",
                      "curl.exe -I -k ..."
                  ],
     "files":  [

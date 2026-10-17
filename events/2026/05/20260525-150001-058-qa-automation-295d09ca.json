@@ -39,11 +39,11 @@
   },
   "workspaceRoot": "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\qa-automation",
-  "summary": "Set SafeSearch default to off. Integrated IPoasis dynamic residential proxies via API token and enabled proxy-chain anonymization so Chromium can use authenticated upstream proxies for HTTPS CONNECT. Added configurable navigation timeout and improved screenshot capture (no phantom paths on failure). Ran one Google session for keyword \"fullxxx video\"; Google returned a Sorry/CAPTCHA challenge (blocked_or_challenged), with screenshots saved.",
+  "summary": "Set SafeSearch default to off. Integrated IPoasis dynamic residential proxies via API token and enabled proxy-chain anonymization so Chromium can use authenticated upstream proxies for HTTPS CONNECT. Added configurable navigation timeout and improved screenshot capture (no phantom paths on failure). Ran one Google session for keyword \"tube-platform video\"; Google returned a Sorry/CAPTCHA challenge (blocked_or_challenged), with screenshots saved.",
   "commands": [
     "npm install",
     "node -c .\\\\scripts\\\\run-search-visibility-report.mjs",
-    "='google'; ='fullxxx video'; ='1'; ='1'; ='edge'; ='1'; ='0'; ='1'; ='0'; ='120000'; ='off'; npm run report:search-visibility"
+    "='google'; ='tube-platform video'; ='1'; ='1'; ='edge'; ='1'; ='0'; ='1'; ='0'; ='120000'; ='off'; npm run report:search-visibility"
   ],
   "files": [
     "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\scripts\\\\run-search-visibility-report.mjs",
@@ -53,7 +53,7 @@
     "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\README.md",
     "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\search-visibility\\\\20260525-145902\\\\results.json",
     "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\search-visibility\\\\20260525-145902\\\\summary.md",
-    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\search-visibility\\\\20260525-145902\\\\screenshots\\\\001-google-fullxxx-video-blocked-p1.png"
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\Prom-King\\\\qa-automation\\\\test-results\\\\search-visibility\\\\20260525-145902\\\\screenshots\\\\001-google-tube-platform-video-blocked-p1.png"
   ],
   "planPath": "",
   "contentHash": "295d09ca513e89c14f01036c1e8d33a5250aa64033eee79594608c87f58f7f69",

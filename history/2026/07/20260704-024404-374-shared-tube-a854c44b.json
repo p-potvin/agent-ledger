@@ -32,13 +32,13 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-    "summary":  "Fixed CDN rejection on OVH by copying proxy logic from fxv to sexyprn and oneporn. Implemented a fully custom HTML5 video player UI in PlayerModal.astro based on vault-explorer.",
+    "summary":  "Fixed CDN rejection on OVH by copying proxy logic from fxv to media-portal-gamma and oneporn. Implemented a fully custom HTML5 video player UI in PlayerModal.astro based on vault-explorer.",
     "commands":  [
                      "git push origin main",
                      "pnpm -r build"
                  ],
     "files":  [
-                  "apps/sexyprn/src/pages/api/stream/[slug].ts",
+                  "apps/media-portal-gamma/src/pages/api/stream/[slug].ts",
                   "apps/oneporn/src/pages/api/stream/[slug].ts",
                   "shared/src/components/PlayerModal.astro"
               ],

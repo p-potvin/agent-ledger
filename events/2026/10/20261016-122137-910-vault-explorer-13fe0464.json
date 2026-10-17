@@ -1,0 +1,58 @@
+{
+  "id": "20261016-122137-910-vault-explorer-13fe0464",
+  "createdAt": "2026-10-16T16:21:37.9108398Z",
+  "createdAtLocal": "2026-10-16 12:21",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-explorer",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: Claude Haiku 5.5 Medium\r\nThinking: unknown\r\nMode: agent\r\nPermissions: autopilot (network: Windows local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer  Branch: vw-codex-build-version-thumbs\r\nTools used (this reply): read, grep, edit, write, exec, todo_write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-16 12:21 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "Claude Haiku 5.5 Medium",
+    "thinking": "unknown",
+    "mode": "agent",
+    "permissions": "autopilot",
+    "network": "Windows local",
+    "toolsUsed": [
+      "read",
+      "grep",
+      "edit",
+      "write",
+      "exec",
+      "todo_write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-explorer",
+  "summary": "PR #62 (vw-codex-build-version-thumbs): predist bumps patch version and writes build-info.json (version, commit SHA with -dirty, branch, builtAt); window title and startup log show it. Favorites paged via renderMore (targets favorites grid). Images use generated 320px JPEG thumbnails in .thumbs on scroll-into-view (3 concurrent magick jobs) instead of original files; albums too. Tests pass; bump script checked in scratch copy; GUI not verified. Not merged.",
+  "commands": [],
+  "files": [
+    "scripts/bump-version.js",
+    "package.json",
+    "main.js",
+    "js/favorites.js",
+    "js/navigation/filters.js",
+    "js/navigation/card.js",
+    "js/albums.js",
+    "src/previews.js",
+    "src/scanner.js",
+    "preload.js",
+    "tests/favorites_prune_test.js",
+    ".gitignore"
+  ],
+  "planPath": "",
+  "contentHash": "13fe0464c1681bb1995764ab73f0ef6aabf295c066515e7518cf66c09787d1fa",
+  "git": {
+    "repo": "vault-explorer",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-explorer",
+    "branch": "vw-codex-build-version-thumbs",
+    "head": "22cbed9",
+    "hasChanges": false
+  }
+}

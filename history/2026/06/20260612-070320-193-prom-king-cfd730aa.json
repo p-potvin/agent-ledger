@@ -44,7 +44,7 @@
                   "shared-tube/.env.local",
                   "shared-tube/.env.example",
                   "shared-tube/scripts/bootstrap-greencloud.sh",
-                  "shared-tube/scripts/nginx/fullxxx.video.conf",
+                  "shared-tube/scripts/nginx/tube-platform.internal.conf",
                   "shared-tube/scripts/nginx/prom-king.xyz.conf"
               ],
     "planPath":  "C:\\Users\\Administrator\\.gemini\\antigravity\\brain\\0b4efc5b-0936-46da-8370-2250d51d4176\\implementation_plan.md",

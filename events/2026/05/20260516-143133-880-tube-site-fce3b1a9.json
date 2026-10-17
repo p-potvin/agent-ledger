@@ -23,19 +23,19 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
   "cwd": "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
-  "summary": "Implemented and hardened the shared selector-based Tube_Video_Fetcher engine, ensured tube-shared loads it with the legacy URL constant, refactored/kept PromKing and FullXXX fetch paths on shared selector configs, added a PromKing transient execution lock, capped shared HTTP requests at 10 seconds, sanitized extracted values, removed PHP 8 union return types from touched fetcher functions, and verified PHP syntax for all touched files.",
+  "summary": "Implemented and hardened the shared selector-based Tube_Video_Fetcher engine, ensured tube-shared loads it with the legacy URL constant, refactored/kept PromKing and TubePlatform fetch paths on shared selector configs, added a PromKing transient execution lock, capped shared HTTP requests at 10 seconds, sanitized extracted values, removed PHP 8 union return types from touched fetcher functions, and verified PHP syntax for all touched files.",
   "commands": [
     "php -l tube-shared/includes/class-video-fetcher.php",
     "php -l tube-shared/tube-shared.php",
     "php -l promking-tube/includes/video-fetcher.php",
-    "php -l fullxxx-video/includes/video-fetcher.php",
+    "php -l tube-platform-video/includes/video-fetcher.php",
     "rg -n timeout/str_starts_with/union-type compatibility scan"
   ],
   "files": [
     "tube-shared/includes/class-video-fetcher.php",
     "tube-shared/tube-shared.php",
     "promking-tube/includes/video-fetcher.php",
-    "fullxxx-video/includes/video-fetcher.php"
+    "tube-platform-video/includes/video-fetcher.php"
   ],
   "planPath": "",
   "contentHash": "fce3b1a9955cd05e4c7dee969bba3018f0d0907c676e77619472394d9e62af2a",

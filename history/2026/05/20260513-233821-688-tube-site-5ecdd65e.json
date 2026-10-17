@@ -29,9 +29,9 @@
     "scp player.php -> /tmp/pkt-player.php; install to plugin dir"
   ],
   "files": [
-    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\fullxxx-video\\\\includes\\\\helpers.php",
+    "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\tube-platform-video\\\\includes\\\\helpers.php",
     "C:\\\\Users\\\\Administrator\\\\Desktop\\\\business\\\\tube-site\\\\promking-tube\\\\includes\\\\player.php",
-    "/var/www/fullxxx.video/public/wp-content/plugins/fullxxx-video/includes/helpers.php",
+    "/var/www/tube-platform.internal/public/wp-content/plugins/tube-platform-video/includes/helpers.php",
     "/var/www/prom-king.xyz/public/wp-content/plugins/promking-tube/includes/player.php"
   ],
   "planPath": "",

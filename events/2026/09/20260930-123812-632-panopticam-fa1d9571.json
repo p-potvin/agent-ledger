@@ -28,7 +28,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam\\backend\\src\\panopticam",
-  "summary": "YOLO GPU bug fixed: ColONEL-KFC venv had torchvision 0.28.0+cpu beside torch 2.13.0+cu126 (torchvision::nms not on CUDA); installed torchvision 0.28.0+cu126 --no-deps, verified nms on cuda:0; Initialize-Environment.ps1 now installs torchvision from the cu126 index (edited, not committed: KFC repo has unrelated uncommitted work). Panopticam v0.21.4: BongaCams (15 s, women/couples/trans, idle 0-viewer rows dropped, tokenless edge HLS with mobile-edge fallback) and CAM4 (30 s, 60/page directory, listing master) adapters; playback, recording, Bonga in clips/stills; web labels/colours; tests; live-verified 1,865 + 1,720 rooms, CORS * on both CDNs.",
+  "summary": "YOLO GPU bug fixed: ColONEL-KFC venv had torchvision 0.28.0+cpu beside torch 2.13.0+cu126 (torchvision::nms not on CUDA); installed torchvision 0.28.0+cu126 --no-deps, verified nms on cuda:0; Initialize-Environment.ps1 now installs torchvision from the cu126 index (edited, not committed: KFC repo has unrelated uncommitted work). Panopticam v0.21.4: LiveStreamPlatform (15 s, women/couples/trans, idle 0-viewer rows dropped, tokenless edge HLS with mobile-edge fallback) and CAM4 (30 s, 60/page directory, listing master) adapters; playback, recording, Bonga in clips/stills; web labels/colours; tests; live-verified 1,865 + 1,720 rooms, CORS * on both CDNs.",
   "commands": [
     "uv pip install --no-deps --reinstall torchvision==0.28.0+cu126",
     "git push origin main"

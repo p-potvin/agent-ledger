@@ -23,7 +23,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-  "summary": "Lab UI rewrite with hash routes (new-tab links, back/forward), home page, video page with person links + JoyTag; people: refuse/restore/couple/merge/auto-merge on same name, similar-cluster suggestions, gender model flag (antelopev2 genderage, likely-male hidden by default; scan running); naming now instant (background crop export); duplicate finder (193 groups, 60.1 GB redundant, review only). Commit 9156ab6 pushed to feat/vision-lab. StashDB (~3.3 req/s), JoyTag tube pass, preview-generator still running.",
+  "summary": "Lab UI rewrite with hash routes (new-tab links, back/forward), home page, video page with person links + JoyTag; people: refuse/restore/couple/merge/auto-merge on same name, similar-cluster suggestions, gender model flag (antelopev2 genderage, likely-male hidden by default; scan running); naming now instant (background crop export); duplicate finder (193 groups, 60.1 GB redundant, review only). Commit 9156ab6 pushed to feat/vision-lab. MediaDatabase (~3.3 req/s), JoyTag tube pass, preview-generator still running.",
   "commands": [],
   "files": [],
   "planPath": "",

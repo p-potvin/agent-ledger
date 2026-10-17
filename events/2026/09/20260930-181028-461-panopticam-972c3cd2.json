@@ -27,7 +27,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Panopticam v0.22.0-0.22.3 chat: Chaturbate chat via their Ably push (anonymous, subscribe-only) for live favourites + busiest toy-tagged rooms (60) + open rooms; room panel live feed, 24 h tips/top tippers; chat_tips/chat_toys tables; toy 'runs now' notices queue sure YOLO positives (__chat__). Fixed: menu/advert notices misread as runs (11 wrong frames quarantined to _chat_false folders on VPS and E:\\YoloTraining\\BBOX\\lush), curl_cffi max_clients=10 capping websockets at 10. Now 60/60 connected, ~45 tips/min, RSS 1.25 GB.",
+  "summary": "Panopticam v0.22.0-0.22.3 chat: StreamPlatform chat via their Ably push (anonymous, subscribe-only) for live favourites + busiest toy-tagged rooms (60) + open rooms; room panel live feed, 24 h tips/top tippers; chat_tips/chat_toys tables; toy 'runs now' notices queue sure YOLO positives (__chat__). Fixed: menu/advert notices misread as runs (11 wrong frames quarantined to _chat_false folders on VPS and E:\\YoloTraining\\BBOX\\lush), curl_cffi max_clients=10 capping websockets at 10. Now 60/60 connected, ~45 tips/min, RSS 1.25 GB.",
   "commands": [
     "git push origin main",
     "probes on VPS via /srv/panopticam/.venv/bin/python"

@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator",
-    "summary":  "Investigated SSL and DNS routing for live.sexyprn.lol white label on greencloud VPS; verified 208.122.212.245 origin cert behavior",
+    "summary":  "Investigated SSL and DNS routing for live.portal-gamma.internal white label on greencloud VPS; verified 208.122.212.245 origin cert behavior",
     "commands":  [
 
                  ],

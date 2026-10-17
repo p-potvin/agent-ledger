@@ -28,13 +28,13 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper",
-  "summary": "Probed chaturbate window.hlsInstance live via patchright (main-world script injection; patchright eval runs isolated). hls.js 1.6.14 exposes master llhls.m3u8 URL with token, per-level chunklist URLs with session, audio track URL, init/segment/part URLs. Added userscripts/chaturbate-roomlist-thumbs.user.js: MutationObserver on .RoomlistDropdown inserting thumb.live.mmcdn.com/riw/<name>.jpg images.",
+  "summary": "Probed stream-platform window.hlsInstance live via patchright (main-world script injection; patchright eval runs isolated). hls.js 1.6.14 exposes master llhls.m3u8 URL with token, per-level chunklist URLs with session, audio track URL, init/segment/part URLs. Added userscripts/stream-platform-roomlist-thumbs.user.js: MutationObserver on .RoomlistDropdown inserting thumb.live.mmcdn.com/riw/<name>.jpg images.",
   "commands": [
-    "uvx patchright-cli open https://chaturbate.com/emmiep/",
+    "uvx patchright-cli open https://stream-platform.com/emmiep/",
     "uvx patchright-cli eval --file=probe.js"
   ],
   "files": [
-    "userscripts/chaturbate-roomlist-thumbs.user.js"
+    "userscripts/stream-platform-roomlist-thumbs.user.js"
   ],
   "planPath": "",
   "contentHash": "0a980f69d02690378a9824272404c43e6c9d191beb5dad16ef9223f2925c3d45",

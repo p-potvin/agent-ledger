@@ -29,7 +29,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Scheduled loop run (Fri, 09 Oct 2026 12:40-14:00). v0.50.0 Moments 'Similar': PC sends EmbeddingGemma 2 picture+sound vectors + toy-by-sound score to VPS hourly (/api/vision/moments/vecs, 100 per call); /api/moments/<id>/similar (0.65 pic + 0.35 sound cosine, other rooms); Moments page button / S key, reel plays neighbours. Verified live. EG2 'liked' probe evaluated and not wired (edge only on low-res, already fixed upstream; life model wins on 'reacts'). GC threshold fix confirmed (full GCs 200/h -> 3/h, stalls 500 -> 19/day). OnlyFans crawl: start-up log lines + faulthandler stack dumps after a silent 04:00 run. Incident: my backgrounded numpy eval ran at ~9.4 cores 12:50-13:28, starving the BelowNormal worker restart (37 min); killed. STATE.md updated.",
+  "summary": "Scheduled loop run (Fri, 09 Oct 2026 12:40-14:00). v0.50.0 Moments 'Similar': PC sends EmbeddingGemma 2 picture+sound vectors + toy-by-sound score to VPS hourly (/api/vision/moments/vecs, 100 per call); /api/moments/<id>/similar (0.65 pic + 0.35 sound cosine, other rooms); Moments page button / S key, reel plays neighbours. Verified live. EG2 'liked' probe evaluated and not wired (edge only on low-res, already fixed upstream; life model wins on 'reacts'). GC threshold fix confirmed (full GCs 200/h -> 3/h, stalls 500 -> 19/day). CreatorPlatform crawl: start-up log lines + faulthandler stack dumps after a silent 04:00 run. Incident: my backgrounded numpy eval ran at ~9.4 cores 12:50-13:28, starving the BelowNormal worker restart (37 min); killed. STATE.md updated.",
   "commands": [
     "git push origin main (be043d6, 3e7973a)",
     "vision/Restart-VisionWorker.ps1"
@@ -38,7 +38,7 @@
     "backend/src/panopticam/moments.py",
     "backend/src/panopticam/app.py",
     "vision/moments_embed.py",
-    "vision/onlyfans.py",
+    "vision/creator-platform.py",
     "web/src/components/Moments.tsx",
     "docs/STATE.md"
   ],

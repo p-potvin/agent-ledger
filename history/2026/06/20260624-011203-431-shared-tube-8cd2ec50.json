@@ -31,7 +31,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-    "summary":  "Fixed admin authentication by expanding KNOWN_ORIGINS in auth.ts to include the active production domains fullxxx.video and prom-king.xyz (including www/http variants) and adding Tailscale IP pattern to getApiBase dev fallback. This prevents auth requests from falling back to incorrect domains and hitting CORS blocks. Rebuilt workspace monorepo successfully.",
+    "summary":  "Fixed admin authentication by expanding KNOWN_ORIGINS in auth.ts to include the active production domains tube-platform.internal and prom-king.xyz (including www/http variants) and adding Tailscale IP pattern to getApiBase dev fallback. This prevents auth requests from falling back to incorrect domains and hitting CORS blocks. Rebuilt workspace monorepo successfully.",
     "commands":  [
                      "pnpm -r build"
                  ],

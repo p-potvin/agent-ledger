@@ -11,7 +11,7 @@ export const ALIASES: Record<string, string[]> = {
   'vaultwares-docs':               ['tmp-app'],
   'vaultwares-identity-manager':   ['vaultwares-auto-signup'],
   'vaultwares-cli':                [],
-  'tube-sites':                    ['tube-site', 'promking-tube', 'Prom-King\\tube-sites', 'Prom-King/tube-sites', 'Prom-King tube-sites', 'Prom-King\\\\tube-sites', 'prom-king.xyz', 'fullxxx.video', 'prom-king/fullxxx-video-and-qa-automation', 'prom-king/fullxxx-webhook-deploy-qa'],
+  'tube-sites':                    ['tube-site', 'promking-tube', 'Prom-King\\tube-sites', 'Prom-King/tube-sites', 'Prom-King tube-sites', 'Prom-King\\\\tube-sites', 'prom-king.xyz', 'tube-platform.internal', 'prom-king/tube-platform-qa-automation', 'prom-king/tube-platform-webhook-deploy-qa'],
   'vaultwares-themes':             ['vault-themes'],
   'vaultwares-adk':                ['vaultwares-agentciation'],
   'vaultwares-api':                ['vaultwares-pipelines'],

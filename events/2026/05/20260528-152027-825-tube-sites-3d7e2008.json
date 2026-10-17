@@ -27,15 +27,15 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King",
-  "summary": "Verified live fullxxx.video is still serving the old homepage and old fullxxx-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck queued (self-hosted runner not picking it up).",
+  "summary": "Verified live tube-platform.internal is still serving the old homepage and old tube-platform-video theme.css; attempted to trigger deployment via workflow_dispatch, but the deploy job is stuck queued (self-hosted runner not picking it up).",
   "commands": [
-    "Invoke-WebRequest https://fullxxx.video/ (grep for tubeshell markers)",
-    "Invoke-WebRequest https://fullxxx.video/wp-content/plugins/fullxxx-video/assets/css/tubeshell/theme.css (saw old light palette)",
-    "gh workflow run 'Deploy fullxxx-video to fullxxx.video'",
+    "Invoke-WebRequest https://platform-alpha.internal/ (grep for tubeshell markers)",
+    "Invoke-WebRequest https://platform-alpha.internal/wp-content/plugins/tube-platform-video/assets/css/tubeshell/theme.css (saw old light palette)",
+    "gh workflow run 'Deploy tube-platform-video to tube-platform.internal'",
     "gh run view 26596556363"
   ],
   "files": [
-    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\.github\\workflows\\deploy-fullxxx-video.yml"
+    "C:\\Users\\Administrator\\Desktop\\Prom-King\\tube-sites\\.github\\workflows\\deploy-tube-platform-video.yml"
   ],
   "planPath": "",
   "contentHash": "3d7e20083f7932287f206f5d3253fc432749be301fbad78c05074a6d0040acea",

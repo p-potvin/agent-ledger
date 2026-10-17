@@ -15,7 +15,7 @@
     "git show --numstat --pretty=format: 353fe6d3ffa9029f0d063aa90f0901be3f94f9d5"
   ],
   "files": [
-    ".github/workflows/deploy-fullxxx-video.yml",
+    ".github/workflows/deploy-tube-platform-video.yml",
     ".github/workflows/deploy-promking-tube.yml"
   ],
   "planPath": "",

@@ -15,9 +15,9 @@
     "git show --numstat --pretty=format: ca526cf5e1d79ec5746d2fc5ab519cab855db246"
   ],
   "files": [
-    "fullxxx-video/README.md",
-    "fullxxx-video/includes/dmca.php",
-    "fullxxx-video/templates/single-fxv_video.php",
+    "tube-platform-video/README.md",
+    "tube-platform-video/includes/dmca.php",
+    "tube-platform-video/templates/single-fxv_video.php",
     "promking-tube/README.md",
     "promking-tube/includes/template-loader.php",
     "promking-tube/includes/video-fetcher.php",

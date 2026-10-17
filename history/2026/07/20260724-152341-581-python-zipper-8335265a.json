@@ -27,7 +27,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\python-zipper\\extension",
-  "summary": "Root-caused flirt4free 401: player fires a placeholder manifest.m3u8?key=null before the real keyed request; our origin+path dedup kept the FRESHEST url, so key=null clobbered the good keyed URL -> probe/download 401. Fix in sniffer: isBadAuthUrl() detects auth params (key/token/sig/etc) valued null/undefined/empty; register() now only overwrites stored url when new one is no worse, and upgrading bad->good resets probed/meta to re-probe. enrichIfNeeded cooldown re-keyed by URL so an upgraded URL re-probes immediately. For live, freshest KEYED url still tracked. Popup: detected card now shows probe error (shortErr extracts 'HTTP Error 401' etc.) instead of bare 'probe failed'. Verified tsc clean, build OK, web-ext lint 0/0.",
+  "summary": "Root-caused live-stream-provider 401: player fires a placeholder manifest.m3u8?key=null before the real keyed request; our origin+path dedup kept the FRESHEST url, so key=null clobbered the good keyed URL -> probe/download 401. Fix in sniffer: isBadAuthUrl() detects auth params (key/token/sig/etc) valued null/undefined/empty; register() now only overwrites stored url when new one is no worse, and upgrading bad->good resets probed/meta to re-probe. enrichIfNeeded cooldown re-keyed by URL so an upgraded URL re-probes immediately. For live, freshest KEYED url still tracked. Popup: detected card now shows probe error (shortErr extracts 'HTTP Error 401' etc.) instead of bare 'probe failed'. Verified tsc clean, build OK, web-ext lint 0/0.",
   "commands": [
     "npx tsc --noEmit",
     "npm run build",

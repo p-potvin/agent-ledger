@@ -28,7 +28,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Scheduled loop session (parallel to another). v0.21.1: backend memory 2.3 GB -> ~1.1 GB (streamed startup loads, face centroids summed per room, malloc_trim after loads + every 5 min, MALLOC_ARENA_MAX=2, float16 action features with 48 h RAM horizon; deploy.sh installs panopticam.service). v0.21.2: health watchdog (health.py) -> Telegram on site/worker/memory/disk problems + recovery, /api/status health, top-bar chip; tower SigLIP in runs of 8 (ONNX arena 1.45 -> 0.37 GB, faster, same quality), tower 2.4 -> ~0.93 GB, clip throughput unchanged (145/120 s). v0.21.3: compute_twins dict snapshot fix; STATE.md notes; CAM4/BongaCams probed once each (open) and proposed to operator.",
+  "summary": "Scheduled loop session (parallel to another). v0.21.1: backend memory 2.3 GB -> ~1.1 GB (streamed startup loads, face centroids summed per room, malloc_trim after loads + every 5 min, MALLOC_ARENA_MAX=2, float16 action features with 48 h RAM horizon; deploy.sh installs panopticam.service). v0.21.2: health watchdog (health.py) -> Telegram on site/worker/memory/disk problems + recovery, /api/status health, top-bar chip; tower SigLIP in runs of 8 (ONNX arena 1.45 -> 0.37 GB, faster, same quality), tower 2.4 -> ~0.93 GB, clip throughput unchanged (145/120 s). v0.21.3: compute_twins dict snapshot fix; STATE.md notes; CAM4/LiveStreamPlatform probed once each (open) and proposed to operator.",
   "commands": [
     "git push origin main (x3)",
     "ssh ubuntu@100.114.3.121 memory profiling on DB copy"

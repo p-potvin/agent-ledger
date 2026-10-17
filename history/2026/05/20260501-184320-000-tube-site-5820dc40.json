@@ -15,9 +15,9 @@
     "git show --numstat --pretty=format: 2d21fcaa69f9369b5d2f9f5d8ca4f18e0eb4f1c1"
   ],
   "files": [
-    "fullxxx-video/includes/admin-settings.php",
-    "fullxxx-video/includes/video-fetcher.php",
-    "fullxxx-video/templates/single-fxv_video.php"
+    "tube-platform-video/includes/admin-settings.php",
+    "tube-platform-video/includes/video-fetcher.php",
+    "tube-platform-video/templates/single-fxv_video.php"
   ],
   "planPath": "",
   "contentHash": "5820dc40456c43d8c8a6b324dfdac832301fabd467d5518696ee7a7233f82317",

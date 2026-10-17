@@ -29,7 +29,7 @@
   "summary": "Moved scheduled tasks into folders (export XML, re-register, unregister; running processes unaffected): \\tubevision\\ (Tube Lab, Publish Previews, + new logon tasks Tube Lab Pull Previews / Pull Spliced via conhost --headless), \\Prom-King QA\\ (8), \\HealthLedger\\ (6), \\VaultWares\\ (12 Vault* + existing Stash/CollectAiHistory). Run history reset by the move. Re-prioritised embedding per operator: stash-sync (4,134 library), gemma-embed library first then newest 5000 tube (--all for the rest); SigLIP library already 4,126/4,134; siglip wrapper does newest 5000 tube after puller. Wrappers use cmd redirection so logs stay readable. Commit f4b1fa7.",
   "commands": [
     "Export/Register/Unregister-ScheduledTask",
-    "tubevision stash-sync",
+    "tubevision catalog-sync",
     "gemma_embed.ps1",
     "siglip_after_pull.ps1"
   ],

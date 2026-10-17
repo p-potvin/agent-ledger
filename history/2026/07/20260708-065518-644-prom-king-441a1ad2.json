@@ -30,7 +30,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King",
-    "summary":  "Fixed hardcoded .com extensions in Admin UI external links. Created getSiteDomain helper to properly map sites to their correct TLDs (fullxxx.video, 1pornhub.vip, sexyprn.lol).",
+    "summary":  "Fixed hardcoded .com extensions in Admin UI external links. Created getSiteDomain helper to properly map sites to their correct TLDs (tube-platform.internal, portal-beta.internal, portal-gamma.internal).",
     "commands":  [
                      "npm run build"
                  ],

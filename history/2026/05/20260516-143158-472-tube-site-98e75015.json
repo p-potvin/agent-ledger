@@ -25,14 +25,14 @@
                 },
     "workspaceRoot":  "c:\\Users\\Administrator\\Desktop\\business\\tube-site",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\business\\tube-site",
-    "summary":  "Successfully unified the video fetching architecture across Prom-King and FullXXX-Video plugins. The implementation was delegated to a Codex subagent using the spawn-agent skill. The subagent created a shared Tube_Video_Fetcher engine in tube-shared, refactored both site plugins to use it, hardened the engine with 10s timeouts, and verified syntax. A small compatibility issue (str_starts_with in rate-limiter) was noted for PHP 7.4.",
+    "summary":  "Successfully unified the video fetching architecture across Prom-King and TubePlatform-Video plugins. The implementation was delegated to a Codex subagent using the spawn-agent skill. The subagent created a shared Tube_Video_Fetcher engine in tube-shared, refactored both site plugins to use it, hardened the engine with 10s timeouts, and verified syntax. A small compatibility issue (str_starts_with in rate-limiter) was noted for PHP 7.4.",
     "commands":  [
                      "spawn-agent"
                  ],
     "files":  [
                   "tube-shared/includes/class-video-fetcher.php",
                   "promking-tube/includes/video-fetcher.php",
-                  "fullxxx-video/includes/video-fetcher.php"
+                  "tube-platform-video/includes/video-fetcher.php"
               ],
     "planPath":  "",
     "contentHash":  "98e75015b4b29c2bc1521346d25d3751f7dc5bf5058de43aa4a28d95bfb072b8",

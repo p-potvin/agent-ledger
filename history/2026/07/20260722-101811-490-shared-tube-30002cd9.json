@@ -23,7 +23,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-  "summary": "Undid incorrect fxv.service install on OVH (fxv lives on greencloud). Deployed b16f5e1 to greencloud (fxv) which auto-dispatched to OVH (oneporn+sexyprn). All 3 sites verified 200. OVH load avg 9.55 on 4 cores — media stack + 22 docker containers + postgres are saturating it.",
+  "summary": "Undid incorrect fxv.service install on OVH (fxv lives on greencloud). Deployed b16f5e1 to greencloud (fxv) which auto-dispatched to OVH (oneporn+media-portal-gamma). All 3 sites verified 200. OVH load avg 9.55 on 4 cores — media stack + 22 docker containers + postgres are saturating it.",
   "commands": [],
   "files": [],
   "planPath": "",

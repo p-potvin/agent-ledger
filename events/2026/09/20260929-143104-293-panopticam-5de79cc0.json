@@ -27,7 +27,7 @@
   },
   "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
   "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
-  "summary": "Tue, 29 Sep 2026 14:35. 502 was the old OVH address (backend stopped): OVH nginx now 301-redirects vps-ovhcloud to ovh-panopticam (backup in /root). v0.14.12: Index.in_scope (women, couples, unknown, favourites) gates vision queue, clip sampler and action scoring; men/trans answers kept but excluded from training (trainer v3). Harvest/OnlyFans SOCKS egress moved to the new VPS (vision.env + hosts.py default; egress IP 148.113.255.142). Benchmarked worker models on the VPS (SigLIP int8 278 ms, glintr100 256, CLAP 162, SCRFD 72, NudeNet 25 per call, 1 thread); proposed plan to run the continuous vision/sound tower on the VPS, faces stay on the PC; awaiting operator go.",
+  "summary": "Tue, 29 Sep 2026 14:35. 502 was the old OVH address (backend stopped): OVH nginx now 301-redirects vps-ovhcloud to ovh-panopticam (backup in /root). v0.14.12: Index.in_scope (women, couples, unknown, favourites) gates vision queue, clip sampler and action scoring; men/trans answers kept but excluded from training (trainer v3). Harvest/CreatorPlatform SOCKS egress moved to the new VPS (vision.env + hosts.py default; egress IP 148.113.255.142). Benchmarked worker models on the VPS (SigLIP int8 278 ms, glintr100 256, CLAP 162, SCRFD 72, NudeNet 25 per call, 1 thread); proposed plan to run the continuous vision/sound tower on the VPS, faces stay on the PC; awaiting operator go.",
   "commands": [
     "nginx return 301 on OVH",
     "scp worker models to VPS",

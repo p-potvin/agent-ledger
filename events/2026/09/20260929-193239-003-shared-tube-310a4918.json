@@ -29,7 +29,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop\\Prom-King\\shared-tube",
-    "summary":  "Fixed FXV GTM tag emission (empty-string env override bug in gtm.ts and fxv.env), bumped to v0.3.54, committed and pushed to main, verified live deployment across fullxxx.video, 1pornhub.vip, sexyprn.lol",
+    "summary":  "Fixed FXV GTM tag emission (empty-string env override bug in gtm.ts and fxv.env), bumped to v0.3.54, committed and pushed to main, verified live deployment across tube-platform.internal, portal-beta.internal, portal-gamma.internal",
     "commands":  [
 
                  ],

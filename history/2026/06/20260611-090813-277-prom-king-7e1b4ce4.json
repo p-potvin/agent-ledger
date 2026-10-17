@@ -33,7 +33,7 @@
                   },
     "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
     "cwd":  "C:\\Users\\Administrator\\Desktop",
-    "summary":  "Pushed streaming fix to main branch (feat: implement dynamic server-side stream proxy endpoint to resolve expired CDN links). Verified that the live production server deployed the change and successfully processes streaming requests on fullxxx.video, resolving to valid, fresh signed .mp4 CDN URLs.",
+    "summary":  "Pushed streaming fix to main branch (feat: implement dynamic server-side stream proxy endpoint to resolve expired CDN links). Verified that the live production server deployed the change and successfully processes streaming requests on tube-platform.internal, resolving to valid, fresh signed .mp4 CDN URLs.",
     "commands":  [
                      "git push origin main"
                  ],
