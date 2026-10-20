@@ -1,0 +1,56 @@
+{
+  "id": "20261018-184254-174-panopticam-ea1bab83",
+  "createdAt": "2026-10-18T22:42:54.1740094Z",
+  "createdAtLocal": "2026-10-18 18:42",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Monitor, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-18 18:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Monitor",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.62.0-0.63.1 (Sun, 18 Oct 2026). Goals: CB tip-goal countdowns parsed from listing subjects every sweep (62% of top rooms), closing speed -> ETA, outcomes + prediction track record in table goals; Director/Moments goal part, Browse sort, card badge, room panel Goal bar, goal alert trigger, /api/goals. Fixes after live check: /api/goals rooms list, goals first seen at 0. Mail sender -> panopticam.alerts@prom-king.xyz (apex SPF must add VPS IP: operator to-do K). LLM: shared metered client llm.py; News editions every 3 h (editions.py); room talk summaries from Whisper lines (talk.py). 214 tests pass; deployed and verified live (first edition written by gpt-oss).",
+  "commands": [
+    "python deploy/bump.py",
+    "git push origin main",
+    "pytest -q",
+    "POST /api/editions/run"
+  ],
+  "files": [
+    "backend/src/panopticam/goals.py",
+    "backend/src/panopticam/llm.py",
+    "backend/src/panopticam/editions.py",
+    "backend/src/panopticam/talk.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "ea1bab834fa610000c5d91c41fe746e5ac511dfcd18cec9cb4f8d4d64d856445",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "badf2a2",
+    "hasChanges": false
+  }
+}

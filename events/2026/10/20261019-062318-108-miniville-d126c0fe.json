@@ -1,0 +1,48 @@
+{
+  "id": "20261019-062318-108-miniville-d126c0fe",
+  "createdAt": "2026-10-19T10:23:18.1085798Z",
+  "createdAtLocal": "2026-10-19 06:23",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "workstation",
+  "agentHeader": "Agent: workstation (role: main)\r\nModel: SWE-2 Max\r\nThinking: medium\r\nMode: agent\r\nPermissions: unknown (network: local Windows workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-19 06:23 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "medium",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "local Windows workstation",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: compacted the 10-foot TV HUD per operator request - keep the map canvas as-is, shrink all chrome ~30%. style.css TV block rebuilt: fonts/paddings reduced across the clock, vitality, controls, cards, inspector; right rail slimmer (min(390px,34vw) -> min(280px,26vw)); top bar (clock + vitality + controls) is now flex-wrap:nowrap so the 3 elements always fit on one line (desktop/TV only, no mobile adaptation); lower-third broadcast wire has a fixed 40px height with always-on padding and smaller type (.7rem items) so it never changes height as the ticker rolls; ticker strip overflow hidden, items full-height. tv.js: both spotlight cards got a collapse toggle (.tv-card-toggle) - collapsed cards hide all but the head and shrink to a ~32px tab, the collapsed state survives the 4s refresh cycle (button glyph syncs with the card class), clicking a card still opens the inspector (toggle stops propagation). Verified with patchright at 1280x720: top bar single line (clock/vitality/controls side by side), rail 280px, cards collapse 284->32px and re-expand, wire bar stable at 40px across refresh cycles with 6 ticker items, 0 console errors. Also carried the v0.47 zip's pyproject version bump (0.43.0) and hf_inference_sample model tweak that were sitting in the working tree. Committed/pushed 5867fe4.",
+  "commands": [
+    "node --check src/miniville/ui/static/tv.js",
+    "patchright-cli open http://100.71.101.21:8751/?tv=1",
+    "patchright-cli eval (layout measurements)",
+    "git push origin autodev"
+  ],
+  "files": [
+    "src/miniville/ui/static/style.css",
+    "src/miniville/ui/static/tv.js",
+    "pyproject.toml",
+    "hf_inference_sample.py"
+  ],
+  "planPath": "",
+  "contentHash": "d126c0fe54dc81f45cf1e564c3ea6db44ac2eb5d5c90e62821da5ca84c992524",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "5867fe4",
+    "hasChanges": false
+  }
+}

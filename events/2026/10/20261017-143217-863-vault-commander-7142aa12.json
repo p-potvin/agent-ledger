@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261017-143217-863-vault-commander-7142aa12",
+    "createdAt":  "2026-10-17T18:32:17.8639676Z",
+    "createdAtLocal":  "2026-10-17 14:32",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-commander",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Gemini\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-17 14:32 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Gemini",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+    "summary":  "Verified default HF translation (CohereLabs/command-a-translate-08-2025) live on real hardware across vault-commander, vault-explorer, and vault-streaming",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "7142aa12432941c767f5978575e3282c2dc3f8435028a30f90a0282159921dfc",
+    "git":  {
+                "repo":  "vault-commander",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+                "branch":  "main",
+                "head":  "c1c0123",
+                "hasChanges":  true
+            }
+}

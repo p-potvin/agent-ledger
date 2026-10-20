@@ -1,0 +1,51 @@
+{
+  "id": "20261019-123718-630-panopticam-14ca5f88",
+  "createdAt": "2026-10-19T16:37:18.6303257Z",
+  "createdAtLocal": "2026-10-19 12:37",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop) + Panopticam VPS over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-19 12:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop) + Panopticam VPS over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.66.0 Identities: co-live time as a second opinion on gallery look-alike pairs (mergehints.py). Rooms live in step = same person, separate shows at the same time = two people (on Review verdicts 148/286 not-same vs 14/1051 same). 578 of 1,630 pairs folded, 38 sure pairs merge as one reviewed batch. Ghost gallery rows without a folder now merge (vision/merge.py). Goals model checked by day: precision 0.58 / recall 0.49. Operator usage tallied from nginx: Identities dominates. PC vision worker restarted. STATE entry + operator to-do L.",
+  "commands": [
+    "git push origin main (71ac371, 8073455)",
+    "vision/Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "backend/src/panopticam/mergehints.py",
+    "backend/src/panopticam/app.py",
+    "web/src/components/Merge.tsx",
+    "vision/merge.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "14ca5f883633d549402d5b31c38d2c3a95b1c17cc1bef9cd4efcdc40f01bd343",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "8073455",
+    "hasChanges": false
+  }
+}

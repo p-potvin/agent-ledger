@@ -1,0 +1,64 @@
+{
+  "id": "20261019-054119-493-miniville-8d0a4ae4",
+  "createdAt": "2026-10-19T09:41:19.4935740Z",
+  "createdAtLocal": "2026-10-19 05:41",
+  "timezone": "Eastern Standard Time",
+  "project": "miniville",
+  "kind": "code-change",
+  "actor": "workstation",
+  "agentHeader": "Agent: workstation (role: main)\r\nModel: SWE-2 Max\r\nThinking: high\r\nMode: agent\r\nPermissions: unknown (network: local Windows workstation + greencloud)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville  Branch: autodev\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-19 05:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "SWE-2 Max",
+    "thinking": "high",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "local Windows workstation + greencloud",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\miniville",
+  "summary": "miniville: (1) merged the Gemini v0.44-v0.47 10-foot TV mode (tv.py director snapshot/step API, cli tv, serve --live-step, calm living map.js, auto-director camera + broadcast HUD tv.js, interactive takeover with auto-resume, tests/test_tv.py), re-applying the press work on top (opinion-aware council API, Gazette readership, opinion bars, ledger/clock guard) since the Gemini lineage still has no press.py; fixed tv.py's treasury reading a nonexistent meta key -> now economy.town_balance (was , is ). 264 tests pass. Pushed 33ff297. (2) Deployed the observer as a tailnet service miniville.vaultwares.ca: greencloud dnsmasq host-record + nginx (port 80 ACME + redirect, port 443 tailnet-only proxy -> 100.71.101.21:8751), Let's Encrypt cert issued (expires 2027-01-17, webroot auto-renew), Windows scheduled task \\VaultWares\\Miniville Observer registered with the conhost --headless model running scripts/Start-Observer.ps1 (cli serve --host 100.71.101.21 --port 8751 --live-step 8, mutex + 30s restart, log %LOCALAPPDATA%\\VaultWares\\miniville\\observer.log). Registered in vaultwares-docs services-inventory + host-inventory (pushed 0cffe5c). Verified end-to-end: https://miniville.vaultwares.ca/?tv=1 -> 200 via greencloud proxy, /api/tv responds, town auto-advancing (tick 26256 -> 26267), task status Running. Tailscale DNS record and ACL remain the operator's step (greencloud->PC:8751 already works).",
+  "commands": [
+    "python -m pytest -q",
+    "ssh root@100.73.93.84 (dnsmasq/nginx/certbot)",
+    "certbot certonly --webroot -d miniville.vaultwares.ca",
+    "schtasks /run /tn \\VaultWares\\Miniville Observer",
+    "curl https://miniville.vaultwares.ca/?tv=1",
+    "git push origin autodev",
+    "git -C vaultwares-docs push origin main"
+  ],
+  "files": [
+    "src/miniville/tv.py",
+    "src/miniville/cli.py",
+    "src/miniville/ui/server.py",
+    "src/miniville/ui/static/tv.js",
+    "src/miniville/ui/static/map.js",
+    "src/miniville/ui/static/app.js",
+    "src/miniville/ui/static/index.html",
+    "src/miniville/ui/static/style.css",
+    "tests/test_tv.py",
+    "scripts/Start-Observer.ps1",
+    "scripts/Register-ObserverTask.ps1",
+    "deploy/miniville.vaultwares.ca.conf",
+    "deploy/miniville-http.conf",
+    "docs/STATE.md",
+    "docs/AGENT_SYNC.md",
+    "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs/docs-content/operations/services-inventory.mdx",
+    "C:/Users/Administrator/Desktop/Github Repos/vaultwares-docs/docs-content/operations/host-inventory.mdx"
+  ],
+  "planPath": "",
+  "contentHash": "8d0a4ae4c76bc9ef35cca3c4ffe16e5115de6fd5a56c51dcf29ade55a6a5e8d1",
+  "git": {
+    "repo": "miniville",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/miniville",
+    "branch": "autodev",
+    "head": "cfe9866",
+    "hasChanges": true
+  }
+}

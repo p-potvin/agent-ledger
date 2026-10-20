@@ -1,0 +1,51 @@
+{
+  "id": "20261019-062733-380-panopticam-a4c22754",
+  "createdAt": "2026-10-19T10:27:33.3808272Z",
+  "createdAtLocal": "2026-10-19 06:27",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (local) + Prom-King VPS over ssh)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-19 06:27 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (local) + Prom-King VPS over ssh",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled run (Mon, 19 Oct 2026 07:00): replayed 11,579 stored goal countdowns offline; replaced the goal call rule (eta <= 180 s, held-out precision 0.483 / recall 0.379) with a fitted logistic p(hit within 5 min) at 0.5 (0.533 / 0.503). goals.features/chance_of/CALL_P; Director, Browse sort, card badge, room panel, goal alerts, Questions room lookup use it; backend/scripts/fit_goal_calls.py refits. v0.65.0 pushed to main (deploy), live and verified (/api/goals, loop calm). STATE entry + announcement added.",
+  "commands": [
+    "backend/scripts/fit_goal_calls.py goals.tsv",
+    "pytest (222 passed)",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/goals.py",
+    "backend/scripts/fit_goal_calls.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "a4c22754260fb59d5230ca2ffc5c79ad6acb84e9334fc024b329962c7aafab97",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "631184f",
+    "hasChanges": false
+  }
+}

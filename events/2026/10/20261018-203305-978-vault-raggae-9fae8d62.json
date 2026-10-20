@@ -1,0 +1,47 @@
+{
+  "id": "20261018-203305-978-vault-raggae-9fae8d62",
+  "createdAt": "2026-10-19T00:33:05.9788178Z",
+  "createdAtLocal": "2026-10-18 20:33",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\vision-lab  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-18 20:33 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\vision-lab",
+  "summary": "Phase 1 of the enrichment gateway: vault-raggae moved out of paused projects, made private, rebuilt as FastAPI on 127.0.0.1/100.71.101.21:8750 (+127.0.0.1:8791 compat), task \\VaultWares\\Enrichment Gateway. EmbeddingGemma 2 moved in from Panopticam (parity cosine 1.000000 text/256/image/video/audio); old task disabled. Stats on every request. Catalog (vw-catalog.db) + media index served read-only: /v1/resolve, /v1/catalog/search fts/semantic/hybrid, /v1/media; MusicBrainz lookup fixed. Clients repointed+pushed: panopticam (memguard) v0.63.2, tech-oracle v0.1.1 (+.env), vision-lab v0.1.1, vault-qbit v0.2.1; vaultwares-docs inventories. 15 tests. Catalog write cutover waits for the running ingest.",
+  "commands": [
+    "scripts\\Setup-Venv.ps1",
+    "tools\\parity.py",
+    "pytest"
+  ],
+  "files": [
+    "vault-raggae/app/main.py",
+    "vault-raggae/app/embed.py",
+    "vault-raggae/app/catalog/service.py",
+    "panopticam/vision/memguard.py"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\alright-we-really-extended-distributed-minsky.md",
+  "contentHash": "9fae8d625627cdae14e5f7d8d6951e5cef80f672879daa70ae0ca797a4093499",
+  "git": {
+    "repo": "vision-lab",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/vision-lab",
+    "branch": "main",
+    "head": "9e6f130",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "20261017-194857-096-panopticam-f656361a",
+  "createdAt": "2026-10-17T23:48:57.0964976Z",
+  "createdAtLocal": "2026-10-17 19:48",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-17 19:48 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.58.1: verified v0.58.0 socials live (156 CB bios read, 49 OF handles). OF feeds linked from a cam performer's bio now use the cam room's Atlas faces as reference and file under the room's identity (onlyfans.py profiles.cam_key + feed meta; datasets.py cam-linked branch). Backfilled 50 cam-linked handles (47 rooms with faces, none followed yet). Tests test_datasets_cam.py; vision suite 90 passed. Vision worker restarted. STATE.md entry + to-do G updated; pushed to main.",
+  "commands": [
+    "pytest vision",
+    "python vision\\onlyfans.py list",
+    "Restart-VisionWorker.ps1",
+    "git push origin main"
+  ],
+  "files": [
+    "vision/datasets.py",
+    "vision/onlyfans.py",
+    "vision/test_datasets_cam.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "f656361a7280555c849e8862be000adc11236c7dad95847da0feda89cf3f1613",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "975dd4d",
+    "hasChanges": false
+  }
+}

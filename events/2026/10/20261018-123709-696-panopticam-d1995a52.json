@@ -1,0 +1,49 @@
+{
+  "id": "20261018-123709-696-panopticam-d1995a52",
+  "createdAt": "2026-10-18T16:37:09.6969570Z",
+  "createdAtLocal": "2026-10-18 12:37",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: unknown (network: local Windows workstation)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-18 12:37 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "unknown",
+    "network": "local Windows workstation",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.61.2/0.61.4: 'recycled' room label was Atlas persona renumbering (7,942 rooms; ~98% same face before/after, median cos 0.82). Labels now wait for an Atlas face check (GET/POST /api/vision/hostchecks, worker answers 200 every 10 min): <0.35 recycled, >=0.5 runs folded into one host, else no label. Chronicle hair compares base colour only; old recycled/hair events dropped once. Fixed 500 on asks endpoint (response type). Verified live: first batch 200 asked, 29 folded, 0 new, 171 too few faces. Left a parallel session's brief.py change alone (they pushed it as a82de17).",
+  "commands": [
+    "python deploy/bump.py",
+    "git push origin main",
+    "vision/Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "backend/src/panopticam/labels.py",
+    "backend/src/panopticam/chronicle.py",
+    "backend/src/panopticam/app.py",
+    "vision/atlas.py",
+    "vision/worker.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "d1995a520e08cfd226e1ff39557f5c3ff0748956118e41661f8f690e29b0e7bb",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "a5d6037",
+    "hasChanges": false
+  }
+}

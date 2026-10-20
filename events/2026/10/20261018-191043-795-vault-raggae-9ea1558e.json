@@ -1,0 +1,38 @@
+{
+  "id": "20261018-191043-795-vault-raggae-9ea1558e",
+  "createdAt": "2026-10-18T23:10:43.7959170Z",
+  "createdAtLocal": "2026-10-18 19:10",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "plan",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: plan\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\vision-lab  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-18 19:10 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "plan",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\vision-lab",
+  "summary": "Planned the enrichment gateway: vault-raggae repurposed as a tailnet-only FastAPI service on Clopeux :8750 (port verified free). It takes over vault-qbit's catalog (vw-catalog.db: IMDb/MusicBrainz/OpenLibrary) and Panopticam's EmbeddingGemma 2 server (:8791 left to the Health Ledger), reads vw-media.db, galleries, tubevision, Panopticam moments/atlas, tech-oracle LanceDB, room artifacts, voices. Stats on every request via middleware + ADK ModelRun. Vectors in numpy now, LanceDB past ~1M rows. Read-only explore + plan only, no code changed.",
+  "commands": [],
+  "files": [],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\alright-we-really-extended-distributed-minsky.md",
+  "contentHash": "9ea1558e04ad793b653b4f6943fac9395e97920cf787566613275dfd79a9c069",
+  "git": {
+    "repo": "vision-lab",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/vision-lab",
+    "branch": "main",
+    "head": "0d237bb",
+    "hasChanges": false
+  }
+}

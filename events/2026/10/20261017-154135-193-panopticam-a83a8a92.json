@@ -1,0 +1,49 @@
+{
+  "id": "20261017-154135-193-panopticam-a83a8a92",
+  "createdAt": "2026-10-17T19:41:35.1939779Z",
+  "createdAtLocal": "2026-10-17 15:41",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "commands",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-17 15:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Operator OK: paused qa-automation (docker stop qa_runner, restart policy unless-stopped) on the Prom-King VPS until 1 Nov; persistent qa-runner-resume.timer starts it 2026-11-01 04:00 UTC. swapoff/swapon pulled 1.5 GB back into RAM; swap I/O 0 after. Measured (not built): EG2 picture vector for toy-in-use is confounded by Lovense rooms (0.67 within toy rooms vs sound 0.74); only 5 of 80 OF feeds tie to cam personas. Proposed CB socials-only bio pass (operator to-do H), OF follows stalled since 2 Oct (to-do G).",
+  "commands": [
+    "sudo docker stop qa_runner",
+    "systemctl enable --now qa-runner-resume.timer",
+    "swapoff -a && swapon -a"
+  ],
+  "files": [
+    "docs/STATE.md",
+    "/etc/systemd/system/qa-runner-resume.timer"
+  ],
+  "planPath": "",
+  "contentHash": "a83a8a921457aa86a410b3709fe119db640f63dc8e410727765c871b43557b9a",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "eb58d21",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "20261018-224716-238-vault-raggae-4381e05e",
+  "createdAt": "2026-10-19T02:47:16.2385850Z",
+  "createdAtLocal": "2026-10-18 22:47",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "AI Agent",
+  "agentHeader": "Agent: AI Agent (role: main)\r\nModel: claude-opus-5-5\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\vision-lab  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-18 22:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "unknown",
+    "mode": "unknown",
+    "permissions": "unknown",
+    "network": "unknown",
+    "toolsUsed": null,
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\vision-lab",
+  "summary": "Catalog cutover: vault-raggae v0.3.0 owns vw-catalog.db (write mode, ingest + embed backfill moved, \\VaultWares\\Catalog Embed/Sync IMDb/Sync OpenLibrary tasks), vault-qbit v0.2.2 resolves/searches via gateway, its 3 catalog tasks disabled. Verified resolve+search via vault-qbit. Open: music/books have 0 rows (old ingest never imported them); trial 2k-row MB/OL import was running at cutoff; full OL is ~40M works - needs operator decision. vault-qbit has someone else's uncommitted WIP (4 files) left untouched.",
+  "commands": [],
+  "files": [],
+  "planPath": "",
+  "contentHash": "4381e05eca66f838919609b99015fa8e8667f5b2152e0fe170f08af8341856e4",
+  "git": {
+    "repo": "vision-lab",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/vision-lab",
+    "branch": "main",
+    "head": "9e6f130",
+    "hasChanges": false
+  }
+}

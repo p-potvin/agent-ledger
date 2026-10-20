@@ -1,0 +1,51 @@
+{
+  "id": "20261020-004145-151-panopticam-3d2b2034",
+  "createdAt": "2026-10-20T04:41:45.1513425Z",
+  "createdAtLocal": "2026-10-20 00:41",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (local) + Prom-King VPS over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-20 00:41 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (local) + Prom-King VPS over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled run 20 Oct 2026. Usage tally (nginx 13-19 Oct): Browse dominates, mostly Flirt4Free, name box typed in fragments. Built v0.67.0-0.67.3: finder.py (fuzzy name index over all ~425k rooms, ~15 MB, hourly rebuild in a thread), /api/find (people by name across sites, live or not, with forecasts, OF handles, gallery names), Browse 'Named like ... beyond this grid' row (Found.tsx) with favourite-all star. Tests 232 pass; deployed via push to main; verified live in the browser. STATE.md 20 Oct entry + operator to-do N.",
+  "commands": [
+    "pytest backend/tests",
+    "python deploy/bump.py",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/finder.py",
+    "backend/src/panopticam/app.py",
+    "web/src/components/Found.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "3d2b2034b81e4fdd4dc284e1d7685e111e7f86ddd2cd5bfef93d22778d23a3b2",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "caa6ec1",
+    "hasChanges": false
+  }
+}
