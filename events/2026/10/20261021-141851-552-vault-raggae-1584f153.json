@@ -1,0 +1,60 @@
+{
+  "id": "20261021-141851-552-vault-raggae-1584f153",
+  "createdAt": "2026-10-21T18:18:51.5522936Z",
+  "createdAtLocal": "2026-10-21 14:18",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Read, Grep\r\nMCP servers accessed (this reply): ccd_session, ccd_turn\r\nTime: 2026-10-21 14:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": [
+      "ccd_session",
+      "ccd_turn"
+    ]
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "v0.4.0-0.5.1 pushed to main: LanceDB on-disk catalog index (714k vectors, 0.78 GB, ~135 ms); FTS keyed by rowid (MusicBrainz import a week -> ~30 min; 4.47M running); compat 8791 dropped; OpenLibrary task disabled. Scene catalog ingest (app/scenes, vw-scenes.db, 250 ms/source, resumable) running in background. Transcript store (app/transcripts, vw-transcripts.db): F: 4,328 srt, 339k cues, 96k chunks, FTS + EG2 semantic search; chunk embedding running. tech-oracle: greencloud item store merged (315 -> 16,859, backup kept); articles already identical on PC; re-embed of 16.5k items + 7.4k predictions staged, awaiting approval. certifi critical CVE fixed. Plan updated with miniville/who-is decision.",
+  "commands": [
+    "scripts\\Sync-Catalog.ps1 -Source index",
+    "scripts\\Sync-Scenes.ps1",
+    "python -m app.transcripts.ingest --root F:\\ / --embed",
+    "git push origin main"
+  ],
+  "files": [
+    "app/catalog/vectors.py",
+    "app/catalog/db.py",
+    "app/scenes/*",
+    "app/transcripts/*",
+    "README.md",
+    "AGENTS.md"
+  ],
+  "planPath": "",
+  "contentHash": "1584f15336530a65ea494bf59a3734cf35b778b59a9f5d06b9207e86fef885f3",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "259fe74",
+    "hasChanges": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "id": "20261021-203602-581-vault-raggae-aee36e6c",
+  "createdAt": "2026-10-22T00:36:02.5812679Z",
+  "createdAtLocal": "2026-10-21 20:36",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux) + greencloud via SSH)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-21 20:36 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux) + greencloud via SSH",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "catalogs.vaultwares.ca hosted (greencloud nginx vhost from the Miniville template: tailnet allowlist, Let's Encrypt via webroot, dnsmasq host-record; public 403 verified) + vaultwares-docs inventories updated (8a5f2d8). Panel phase 2 (v0.7.0, pushed 71d0577): Scenes/Performers/Studios/Library/Transcripts sections and gateway routes (/v1/scenes, performers, studios, media/files, transcripts/files). Fixed: transcript store lock blocked searches, restart race left half the listeners. G: (USB SSD) is saturated by the OpenLibrary import (14.2M/41.7M, ~6 h left) so G:-backed sections are slow until it finishes; browse indexes build after.",
+  "commands": [
+    "certbot certonly --webroot -d catalogs.vaultwares.ca",
+    "systemctl reload nginx; systemctl restart dnsmasq",
+    "npx vite build",
+    "git push origin main"
+  ],
+  "files": [
+    "deploy/catalogs.vaultwares.ca.conf",
+    "app/scenes/service.py",
+    "web/src/pages/Scenes.tsx",
+    "web/src/pages/Library.tsx",
+    "web/src/pages/Transcripts.tsx"
+  ],
+  "planPath": "",
+  "contentHash": "aee36e6cd83fa2b2397a2e514162912caa94ccda83fdab4a49e4b009a21b9d19",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "71d0577",
+    "hasChanges": false
+  }
+}

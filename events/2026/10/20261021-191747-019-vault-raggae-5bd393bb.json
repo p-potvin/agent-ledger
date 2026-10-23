@@ -1,0 +1,59 @@
+﻿{
+    "id":  "20261021-191747-019-vault-raggae-5bd393bb",
+    "createdAt":  "2026-10-21T23:17:47.0192345Z",
+    "createdAtLocal":  "2026-10-21 19:17",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-raggae",
+    "kind":  "code-change",
+    "actor":  "claude-code",
+    "agentHeader":  "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-21 19:17 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "claude-opus-5-5",
+                    "thinking":  "low",
+                    "mode":  "code",
+                    "permissions":  "bypass",
+                    "network":  "Windows 11 local (Clopeux)",
+                    "toolsUsed":  [
+                                      "Bash",
+                                      "PowerShell",
+                                      "Edit",
+                                      "Write",
+                                      "Claude_Browser"
+                                  ],
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+    "summary":  "Catalogs panel phase 1 (v0.6.0, pushed): web/ React 19 + vaultsqware (Manrope, changed in vaultwares-themes 38f8e40), Overview + Catalog, served by the gateway on 8752 (/ = web/dist, /api = /v1); /v1/img, /v1/catalog/browse, /v1/ops/jobs. Fixed: /v1/health blocked \u003e5 min and queued requests (now background readings), catalog reads per-thread read-only connections, Restart-Gateway left a second gateway on the ports. TPDB by-URL done: 1,507/1,620 found, 113 misses sent to operator. Keep-rule purge then full scene walk running; OpenLibrary import running (G: USB SSD saturated); browse indexes queued after it.",
+    "commands":  [
+                     "npm install --before=2026-10-07",
+                     "npx vite build",
+                     "scripts\\Restart-Gateway.ps1",
+                     "git push origin main"
+                 ],
+    "files":  [
+                  "web/src/App.tsx",
+                  "web/src/pages/Catalog.tsx",
+                  "app/panel.py",
+                  "app/images.py",
+                  "app/main.py"
+              ],
+    "planPath":  "",
+    "contentHash":  "5bd393bb2dec63bb92410bea2e441e72be23cbfbd8e5ee587f8b7739fbca8f41",
+    "git":  {
+                "repo":  "vault-raggae",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+                "branch":  "main",
+                "head":  "921f16f",
+                "hasChanges":  false
+            }
+}

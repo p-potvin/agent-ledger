@@ -1,0 +1,52 @@
+{
+  "id": "20261021-002836-505-panopticam-4484dbf0",
+  "createdAt": "2026-10-21T04:28:36.5051502Z",
+  "createdAtLocal": "2026-10-21 00:28",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-21 00:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.70.0-0.70.1: morning brief looks ahead (favourites usually on later today with time+chance from forecast.py, busiest 8 on now + count, 10 likeliest later), non-favourite news only from CB/CamSoda/F4F, keep_names() repairs LLM-mangled performer names. 236 backend tests pass; deployed and previewed live via /api/brief/run?send=false (no Telegram send). Stopped a leftover pytest from 18 Oct. STATE entry + operator to-do Q.",
+  "commands": [
+    "pytest -q",
+    "python deploy/bump.py",
+    "git push origin main",
+    "POST /api/brief/run?send=false"
+  ],
+  "files": [
+    "backend/src/panopticam/brief.py",
+    "backend/src/panopticam/app.py",
+    "backend/tests/test_brief.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "4484dbf06a927fa250f49cc7532351ef79407b259a0614f6bab62e0433d19a28",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "9a1100d",
+    "hasChanges": false
+  }
+}

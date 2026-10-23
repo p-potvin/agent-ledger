@@ -1,0 +1,58 @@
+{
+  "id": "20261022-061724-102-panopticam-67905b35",
+  "createdAt": "2026-10-22T10:17:24.1026640Z",
+  "createdAtLocal": "2026-10-22 06:17",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation + Prom-King VPS over Tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Agent\r\nMCP servers accessed (this reply): Claude_Browser\r\nTime: 2026-10-22 06:17 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation + Prom-King VPS over Tailscale",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Agent"
+    ],
+    "mcpServersAccessed": "Claude_Browser"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Operator round 22 Oct: (1) audience.py + STATE note that the real-people curves are the operator's observations; first counted CB reading (valerieh ~150 verified of 33.6k) recorded, no refit. (2) vision/moments_offload.py (v0.73.2): finished Moments days go to pixeldrain (per file) and Google Drive gdrive:PK-archive/moments (one rclone copy per day), hashed names, SHA-256 checked, then removed from D:; today+yesterday stay; fetch CLI. live_taste/moments_pull adjusted. (3) Merged PR #2 (galleries through vault-raggae gateway), STATE conflict resolved, worker restarted. (4) Removed qa-automation container/image/volume/build cache/units and /opt/qa-automation from the Panopticam VPS at operator's word (backups exist elsewhere); disk 52->37 GB used.",
+  "commands": [
+    "git push origin main",
+    "gh pr view 2",
+    "docker rm/rmi/volume rm/builder prune on 100.114.3.121",
+    "rm -rf /opt/qa-automation",
+    "Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "vision/moments_offload.py",
+    "vision/live_taste.py",
+    "vision/moments_pull.py",
+    "vision/worker.py",
+    "backend/src/panopticam/audience.py",
+    "docs/STATE.md",
+    "docs/FOLDERS.md"
+  ],
+  "planPath": "",
+  "contentHash": "67905b351cecb6853751fc55403b1e1183505f7bcc1a497e495f2fbfcccbc6f9",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "f2c57d5",
+    "hasChanges": false
+  }
+}

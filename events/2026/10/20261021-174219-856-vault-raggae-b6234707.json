@@ -1,0 +1,52 @@
+{
+  "id": "20261021-174219-856-vault-raggae-b6234707",
+  "createdAt": "2026-10-21T21:42:19.8568297Z",
+  "createdAtLocal": "2026-10-21 17:42",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-21 17:42 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "v0.5.3 pushed: TPDB keep rule (studio-site kept; clip-store kept only with linked performer or StashDB URL/fingerprint match), scene_keys table, --apply-keep-rule purge running then full walk restarts. TPDB by-URL test stopped by rule after 688 lookups (16/30 empty): analtherapyxxx 86/86, cockninjastudios 194/209, familytherapyxxx 363/393; misses are the site's old back-catalogue (TPDB has 381 of 644) and dotted slugs; 4 sites not reached. OpenLibrary full ingest running (~6 h at 1.8k/s under contention, no vectors). tech-oracle done: 16,544 items re-embedded, predictions 9 -> 7,332.",
+  "commands": [
+    "python -m app.scenes.by_url",
+    "python -m app.scenes.ingest --apply-keep-rule",
+    "Sync-Catalog.ps1 -Source openlibrary -NoDownload"
+  ],
+  "files": [
+    "app/scenes/sources.py",
+    "app/scenes/store.py",
+    "app/scenes/ingest.py",
+    "app/scenes/by_url.py"
+  ],
+  "planPath": "",
+  "contentHash": "b6234707271753ced82b68bcd0c844ffa2e1ccde4cf398f11ab17cad9468ba3d",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "b91b155",
+    "hasChanges": false
+  }
+}

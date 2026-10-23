@@ -1,0 +1,55 @@
+{
+  "id": "20261022-052634-328-vault-raggae-1511262e",
+  "createdAt": "2026-10-22T09:26:34.3286240Z",
+  "createdAtLocal": "2026-10-22 05:26",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Claude_Browser, gh\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-22 05:26 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser",
+      "gh"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "v0.10.0: gateway owns every catalog except miniville and Atlas. app/stores.py (one writer per store, read pool, SQL bridge POST /v1/sql/{store} with sessions + paged cursors, /v1/stores, backup), client/raggae_sql.py stdlib drop-in for sqlite3.connect (vendored by tools/sync_client.py). Switched + pushed: vault-commander media-records, ColONEL-KFC (GalleryDB + scripts), vision-lab (tubevision, galleries, old library DB), tech-oracle article store, vault-qbit (only my hunks committed). Panopticam vision on draft PR Prom-King/panopticam#2 (main deploys). media.role library/derived via triggers (768,585 rows; 8,823 derived), Library filter + hollow LED. Tube Lab was down ~20 min during restarts (a startup hung at 05:03; restarted, serving again); Panopticam worker restarted via its script, slow start due to F: at 98% busy.",
+  "commands": [
+    "pytest raggae 54 passed",
+    "vision-lab 16 passed",
+    "panopticam vision 48 passed",
+    "Restart-Gateway.ps1",
+    "Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "app/stores.py",
+    "client/raggae_sql.py",
+    "app/media_roles.py",
+    "tools/sync_client.py",
+    "docs/PLAN-20261022-CATALOG-OWNERSHIP.md"
+  ],
+  "planPath": "",
+  "contentHash": "1511262e65688bf47bd03ab80f412c6019081328e3d379b9572dad29365ee6b8",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "61e7bd0",
+    "hasChanges": false
+  }
+}

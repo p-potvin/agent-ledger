@@ -1,0 +1,49 @@
+{
+  "id": "20261020-061847-375-panopticam-4ccfa42f",
+  "createdAt": "2026-10-20T10:18:47.3750683Z",
+  "createdAtLocal": "2026-10-20 06:18",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local + ssh to Prom-King VPS)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-20 06:18 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local + ssh to Prom-King VPS",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled loop session (Tue, 20 Oct 2026 06:10-06:45). No operator usage overnight to steer by. Closed v0.67 finder's known limit: 5-7 letter name queries missing a letter or with one wrong letter (natsha, tamera, scrlett) now match via one regex over the skeleton index (finder._like), only when <50 names hold the query as typed; 3-10 ms regex, 56-117 ms fuzzy rooms() on the real 426k-line index; /api/find 0.35-0.45 s live. Test added (233 backend tests pass). v0.67.4 deployed by push to main; STATE.md entry + to-do N note.",
+  "commands": [
+    "python deploy/bump.py",
+    "uv run pytest -q",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/finder.py",
+    "backend/tests/test_finder.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "4ccfa42f8fdc17bd7edd0e7af7cc23ab44eac5302f3d8ca147f4f1673a64f77e",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "db087b4",
+    "hasChanges": false
+  }
+}

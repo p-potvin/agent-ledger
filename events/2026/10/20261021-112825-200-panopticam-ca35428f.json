@@ -1,0 +1,57 @@
+{
+  "id": "20261021-112825-200-panopticam-ca35428f",
+  "createdAt": "2026-10-21T15:28:25.2008387Z",
+  "createdAtLocal": "2026-10-21 11:28",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (local) + Prom-King VPS via ssh)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Monitor, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-21 11:28 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (local) + Prom-King VPS via ssh",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Monitor",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "v0.72.0 (operator round): batch-merge review photos by file name from merge journals (PC Merger.shown/locate, /merge/shown, /gallery/<n>/photo?f=; server fills items' shown once; page uses names) - fixes blank/mismatched sides; asyncio lock on kv merge_batches read-modify-writes (review clicks no longer overwrite each other, All look right = one request, page remembers answered rows); mail.py can log in to a provider SMTP (mail_user/password/port) for Gmail app password after Proton ends 4 Nov (operator to-do S). PC worker restarted; live: 82/82 rows named, 8/8 photos load. Tests added.",
+  "commands": [
+    "python deploy/bump.py minor",
+    "git push origin main",
+    "vision\\Restart-VisionWorker.ps1"
+  ],
+  "files": [
+    "vision/merge.py",
+    "vision/recordings.py",
+    "vision/whois.py",
+    "backend/src/panopticam/app.py",
+    "backend/src/panopticam/mail.py",
+    "backend/src/panopticam/config.py",
+    "web/src/components/Merge.tsx",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "ca35428fe5b8292b764897f30c4f1d7d389a42b9cdb5aab1031d184e07671eb7",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "a859536",
+    "hasChanges": false
+  }
+}

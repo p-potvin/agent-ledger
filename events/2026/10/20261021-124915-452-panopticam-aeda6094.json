@@ -1,0 +1,54 @@
+{
+  "id": "20261021-124915-452-panopticam-aeda6094",
+  "createdAt": "2026-10-21T16:49:15.4526909Z",
+  "createdAtLocal": "2026-10-21 12:49",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows workstation (Clopeux-Desktop) + Prom-King VPS over tailnet)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Read\r\nMCP servers accessed (this reply): ccd_turn\r\nTime: 2026-10-21 12:49 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows workstation (Clopeux-Desktop) + Prom-King VPS over tailnet",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read"
+    ],
+    "mcpServersAccessed": "ccd_turn"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled loop session (Wed, 21 Oct 2026 12:10-12:50). Usage tally (14 d nginx): Identities dominates; clip-made pages barely used. Found the Identities queue not draining (1,049 -> 1,012 despite ~110 merges): ingest minted name2 identities when one performer on two sites was harvested minutes apart and the first identity had no crops yet (251 since 7 Oct, 113 merged by hand). v0.72.1: Atlas._taken_by_them checks the face (identity crops >= 0.50, or the archive persona centroid >= 0.55 when crop-less) before minting name2; replay 4/133 would join (look-alikes), 129 stay apart; 2 new tests + stale float64 test fixed (48 vision tests pass). PC worker restarted. Tower profiled with py-spy for the 1 Nov host question (SigLIP on clip frames ~55%); to-do M gets option 4 (Pi 5 + slim tower). v0.72.2: deploy.sh no longer sources panopticam.env (it printed part of the mail app password into the deploy log; 8 lines redacted). All deployed and verified live.",
+  "commands": [
+    "py-spy record on panopticam-vision",
+    "python deploy/bump.py patch",
+    "vision/Restart-VisionWorker.ps1",
+    "git push origin main"
+  ],
+  "files": [
+    "vision/atlas.py",
+    "vision/datasets.py",
+    "vision/test_atlas.py",
+    "deploy/deploy.sh",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "aeda6094525f402a2b47db86ae0155f8e30d5a1dab1d87077969d07f17b6d534",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "f9a0df6",
+    "hasChanges": false
+  }
+}

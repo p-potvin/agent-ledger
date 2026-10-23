@@ -1,0 +1,50 @@
+{
+  "id": "20261021-111634-114-vault-raggae-91585d5c",
+  "createdAt": "2026-10-21T15:16:34.1143366Z",
+  "createdAtLocal": "2026-10-21 11:16",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "general",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: chat\r\nPermissions: bypass (network: Windows 11 local (Clopeux))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-21 11:16 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "chat",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Status review of vault-raggae (read-only): v0.3.0 live 2.5 days, catalog cutover done, full catalog embedded (712k), no compat:8791 callers in 24h, books/music only 2000 rows each, README status stale (says v0.2.0). Next: drop compat port, full MB/OL ingest, README refresh, phase 2 adapters.",
+  "commands": [
+    "GET /v1/health",
+    "GET /v1/stats",
+    "Get-ScheduledTask"
+  ],
+  "files": [
+    "README.md",
+    "app/catalog/ingest.py"
+  ],
+  "planPath": "",
+  "contentHash": "91585d5cdf2f5a6189fb1871567fd8e0b1c05d2baad26b2c4444310b78427e15",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "955f78e",
+    "hasChanges": false
+  }
+}

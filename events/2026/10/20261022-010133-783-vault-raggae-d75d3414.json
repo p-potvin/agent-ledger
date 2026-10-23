@@ -1,0 +1,51 @@
+{
+  "id": "20261022-010133-783-vault-raggae-d75d3414",
+  "createdAt": "2026-10-22T05:01:33.7830985Z",
+  "createdAtLocal": "2026-10-22 01:01",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-22 01:01 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Panel v0.9.1: domain signal (teal ring 'Catalog record' vs orange square 'File on disk') on rail groups, page headers and sheets; vaultsqware: SUSE Mono replaces Victor Mono, domain tokens, .vwsq-main overflow-y auto instead of hidden; vault-commander media-records fingerprints labelled source vw-media (766,688 existing sidecars still say stash, rewrite awaits operator go); found no code reads Everything (vault-commander has its own MFT/USN reader) but Everything.exe still runs; wrote docs/PLAN-20261022-CATALOG-OWNERSHIP.md: raggae owns every catalog but miniville and Atlas, per-store cutover, KFC inbox dropped.",
+  "commands": [
+    "npm run build",
+    "pytest (49 + 21 passed)",
+    "scripts\\Restart-Gateway.ps1"
+  ],
+  "files": [
+    "web/src/components/Domain.tsx",
+    "docs/PLAN-20261022-CATALOG-OWNERSHIP.md",
+    "vaultwares-themes/vaultsqware/fonts/fonts.css",
+    "vault-commander/cli/utils/media_records/index.py"
+  ],
+  "planPath": "",
+  "contentHash": "d75d34142cba14027abaa8e1d90f4226c96cb30c70f4555f1b858ded37324ba2",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "059d7cc",
+    "hasChanges": false
+  }
+}

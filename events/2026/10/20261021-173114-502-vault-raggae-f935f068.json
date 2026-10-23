@@ -1,0 +1,53 @@
+{
+  "id": "20261021-173114-502-vault-raggae-f935f068",
+  "createdAt": "2026-10-21T21:31:14.5024449Z",
+  "createdAtLocal": "2026-10-21 17:31",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-21 17:31 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "v0.5.2 pushed: FTS re-rank (exact title/prefix/log votes), MEDIA_ROOTS + NO_SCAN_DRIVES (C: never scanned), StashDB partial-date window crash fixed (walk had stopped at '2021'; state restored), embed backfill skips books via rowid cursor, TPDB by-URL lookup (app/scenes/by_url.py) running on 7 site lists (TPDB walk paused meanwhile). tech-oracle re-embed approved and run with repo .venv (global uv tool is stale at BGE 384-d): 16,544 items done, predictions importing. Transcripts: +2,799 files from D/E/G/I -> 7,127 files, 509k cues, 140k chunks. OpenLibrary estimate: 41.7M works, ~2.5-4.5 h, ~30 GB, no vectors.",
+  "commands": [
+    "python -m app.scenes.by_url",
+    "python -m tech_oracle.cli rag index",
+    "git push origin main"
+  ],
+  "files": [
+    "app/catalog/db.py",
+    "app/config.py",
+    "app/scenes/by_url.py",
+    "app/scenes/ingest.py",
+    "app/catalog/ingest.py"
+  ],
+  "planPath": "",
+  "contentHash": "f935f068079d2476c903054e4744ba8a934f2589bfe55cf7cb6c3f6b40c732f3",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "68e3c0d",
+    "hasChanges": false
+  }
+}

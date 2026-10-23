@@ -1,0 +1,54 @@
+{
+  "id": "20261021-112517-929-vault-raggae-2f35ecd8",
+  "createdAt": "2026-10-21T15:25:17.9292953Z",
+  "createdAtLocal": "2026-10-21 11:25",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Read, Grep\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-21 11:25 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Read",
+      "Grep"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Phase-1 cleanup (v0.3.1, uncommitted): dropped the 127.0.0.1:8791 compat port by default (RAGGAE_COMPAT_PORTS now empty; no compat callers since Sun 18 Oct 23:20), test now monkeypatches the port, task description updated, README status refreshed. Gateway restarted twice, healthy on 8750 only. Full MB/OL ingest NOT run: ~4.5M MB release groups + ~tens of millions of OL works; the numpy vector index (full reload per count change, fp32 copy per query) will not scale, and the 15 Nov OpenLibrary task would import the full dump unattended.",
+  "commands": [
+    "scripts\\Restart-Gateway.ps1",
+    "pytest"
+  ],
+  "files": [
+    "app/config.py",
+    "tests/test_api.py",
+    "README.md",
+    "scripts/Register-GatewayTask.ps1",
+    "pyproject.toml",
+    "app/__init__.py"
+  ],
+  "planPath": "",
+  "contentHash": "2f35ecd87ea069734b28f70d2af15f82b8b8db0e28500bdcfffde98b7ea0953e",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "955f78e",
+    "hasChanges": true
+  }
+}

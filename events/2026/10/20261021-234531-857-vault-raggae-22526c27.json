@@ -1,0 +1,56 @@
+{
+  "id": "20261021-234531-857-vault-raggae-22526c27",
+  "createdAt": "2026-10-22T03:45:31.8575429Z",
+  "createdAtLocal": "2026-10-21 23:45",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "handoff",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser, AskUserQuestion\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-21 23:45 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser",
+      "AskUserQuestion"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "Panel phase 4 (v0.9.0, d737d36): edits in every section through app/edits.py, every write audited in audit.db (before/after, tailnet actor) and undoable (Changes page, toasts). Catalog edit/hide/merge/re-enrich, scenes edit/hide/link, performers/studios edit, by-URL miss retry, transcripts language/video/hide/duplicate/re-parse+re-embed, bulk hide. People: requests + photos to G:\\Catalogs\\kfc-inbox (Tube Lab pattern), gallery.db never written. Verified live edit+undo. Handoff: docs/HANDOFF-20261021-AFTER-PHASE4.md (ff1e97c). Suggested next: a KFC-side script applying the inbox.",
+  "commands": [
+    "npx vite build",
+    "pytest (49)",
+    "git push origin main"
+  ],
+  "files": [
+    "app/edits.py",
+    "app/audit.py",
+    "web/src/edit.tsx",
+    "web/src/pages/Changes.tsx",
+    "web/src/components/KfcRequests.tsx",
+    "docs/HANDOFF-20261021-AFTER-PHASE4.md"
+  ],
+  "planPath": "C:\\Users\\Administrator\\.claude\\plans\\functional-prancing-mccarthy.md",
+  "contentHash": "22526c27bb9461779ecc29e48f173d5abaa71e09b69934b264f6c305d6a58bd3",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "ff1e97c",
+    "hasChanges": false
+  }
+}

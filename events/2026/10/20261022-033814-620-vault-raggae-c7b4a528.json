@@ -1,0 +1,50 @@
+{
+  "id": "20261022-033814-620-vault-raggae-c7b4a528",
+  "createdAt": "2026-10-22T07:38:14.6205231Z",
+  "createdAtLocal": "2026-10-22 03:38",
+  "timezone": "Eastern Standard Time",
+  "project": "vault-raggae",
+  "kind": "plan",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: code\r\nPermissions: bypass (network: Windows 11 local (Clopeux-Desktop))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae  Branch: main\r\nTools used (this reply): Bash, PowerShell, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-22 03:38 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "code",
+    "permissions": "bypass",
+    "network": "Windows 11 local (Clopeux-Desktop)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-raggae",
+  "summary": "v0.9.2: SUSE Mono font-face 400-800 (never thinner), record domain LED now a solid teal triangle. Plan revised (docs/PLAN-20261022-CATALOG-OWNERSHIP.md): media first then galleries; vault-qbit DB and tech-oracle articles taken over; TubeLab inventoried (tubevision.db 3 GB is a second catalog: video records, StashDB matches, identity copy; clips 49 GB) with take-over recommendation; sidecar stash-label fix deferred to next sidecar write with own oshash; vault-explorer/browser-browser/python-zipper to consume new size index; gallery operations spec from reading KFC code (matching is max-sim over all crops, vision-lab uses top-3 mean + margin, no averaging).",
+  "commands": [
+    "npm run build",
+    "du G:\\TubeLab",
+    "sqlite ro inspection of tubevision.db"
+  ],
+  "files": [
+    "docs/PLAN-20261022-CATALOG-OWNERSHIP.md",
+    "web/src/app.css",
+    "vaultwares-themes/vaultsqware/fonts/fonts.css"
+  ],
+  "planPath": "",
+  "contentHash": "c7b4a5287bd3abdc8210b58a13e8ee06c0e605e19dd23d65bf4f8c53419ba47d",
+  "git": {
+    "repo": "vault-raggae",
+    "root": "C:/Users/Administrator/Desktop/Github Repos/vault-raggae",
+    "branch": "main",
+    "head": "60570a5",
+    "hasChanges": false
+  }
+}

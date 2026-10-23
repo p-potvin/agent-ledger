@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261021-222050-566-vault-commander-3ad83126",
+    "createdAt":  "2026-10-22T02:20:50.5663053Z",
+    "createdAtLocal":  "2026-10-21 22:20",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-commander",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Antigravity\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-21 22:20 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Antigravity",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+    "summary":  "Benchmarked stock NeMo-Speech Oct 7 vs vault-cacophony vs vw better-subtitles on Alan Watts 20.5m track confirming offline unbounded VRAM spike in both Nemotron and Parakeet",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "3ad83126777ab43fc0bfd51af3c5371c8b5a6420b32d84e1c1c2fa49ee20c3aa",
+    "git":  {
+                "repo":  "vault-commander",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+                "branch":  "main",
+                "head":  "7dbf208",
+                "hasChanges":  true
+            }
+}

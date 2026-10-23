@@ -1,0 +1,53 @@
+{
+  "id": "20261022-004056-415-panopticam-0d279f02",
+  "createdAt": "2026-10-22T04:40:56.4159707Z",
+  "createdAtLocal": "2026-10-22 00:40",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop) + Prom-King VPS over Tailscale)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Edit, Write, Claude_Browser\r\nMCP servers accessed (this reply): Claude_Browser\r\nTime: 2026-10-22 00:40 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop) + Prom-King VPS over Tailscale",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Edit",
+      "Write",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": "Claude_Browser"
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.73.0-0.73.1 (scheduled loop run): followed chats count distinct people who wrote/tipped in the last hour; card/panel 'real' estimate never under that count; Room panel 'Real people'; Browse sort 'Most real people'; hourly chat_heads table to refit the Chaturbate audience curve. Tip analysis (47 h): CamSoda curve holds, CB top band may be ~5x high - unchanged, operator asked (to-do U). New read-only backend/scripts/backtest_eta.py: eta unbiased over 16 days, kept. Forecast calibration and brief picks checked. Deployed via push to main, checked live.",
+  "commands": [
+    "git push origin main",
+    "ssh ubuntu@100.114.3.121 (read-only analyses)"
+  ],
+  "files": [
+    "backend/src/panopticam/chat.py",
+    "backend/src/panopticam/index.py",
+    "backend/src/panopticam/app.py",
+    "backend/scripts/backtest_eta.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "0d279f028e4a14c1837accfb601907367752979d44461b976cc2fa51083ac85e",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "7a22536",
+    "hasChanges": false
+  }
+}

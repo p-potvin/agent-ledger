@@ -1,0 +1,50 @@
+{
+  "id": "20261020-124746-955-panopticam-18a7a6a1",
+  "createdAt": "2026-10-20T16:47:46.9553195Z",
+  "createdAtLocal": "2026-10-20 12:47",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (local))\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, PowerShell, Claude_Browser\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-20 12:47 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (local)",
+    "toolsUsed": [
+      "Bash",
+      "PowerShell",
+      "Claude_Browser"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Panopticam v0.68.0-0.68.2 (scheduled loop run, Tue 20 Oct 2026). v0.68.0: Find anyone from any page (Ctrl+K, top-bar search button, / without a box) on /api/find; FindAnyone.tsx, Keys.tsx, app.tsx. v0.68.1: keys typed right after Ctrl+K go into the palette, never the page under it (Identities n = two people; checked: no verdict was recorded). v0.68.2: API froze ~10 min after a deploy: roomframes.status rglob over 25,738 empty room folders, parallel walks took every threadpool thread; now one background count at a time plus rmdir of folders empty over 1 h. Verified live: status 0.2-0.5 s, folders 25.7k to 199, clean second restart. 234 backend tests. STATE.md entry, to-do N/O.",
+  "commands": [
+    "git push origin main (x4)",
+    "uv run pytest",
+    "npm run build"
+  ],
+  "files": [
+    "web/src/components/FindAnyone.tsx",
+    "backend/src/panopticam/roomframes.py",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "18a7a6a1774a7ea8a7dedcf02735cae71efaa98de89506b120f4554df092e275",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "eb9eb7a",
+    "hasChanges": false
+  }
+}

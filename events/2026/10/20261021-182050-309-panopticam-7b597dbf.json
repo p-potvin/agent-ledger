@@ -1,0 +1,53 @@
+{
+  "id": "20261021-182050-309-panopticam-7b597dbf",
+  "createdAt": "2026-10-21T22:20:50.3091979Z",
+  "createdAtLocal": "2026-10-21 18:20",
+  "timezone": "Eastern Standard Time",
+  "project": "panopticam",
+  "kind": "code-change",
+  "actor": "claude-code",
+  "agentHeader": "Agent: claude-code (role: main)\r\nModel: claude-opus-5-5\r\nThinking: low\r\nMode: agent\r\nPermissions: bypass (network: Windows 11 workstation (Clopeux-Desktop), local)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam  Branch: main\r\nTools used (this reply): Bash, Edit, PowerShell\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-21 18:20 (TZ: Eastern Standard Time)",
+  "runtime": {
+    "role": "main",
+    "model": "claude-opus-5-5",
+    "thinking": "low",
+    "mode": "agent",
+    "permissions": "bypass",
+    "network": "Windows 11 workstation (Clopeux-Desktop), local",
+    "toolsUsed": [
+      "Bash",
+      "Edit",
+      "PowerShell"
+    ],
+    "mcpServersAccessed": null
+  },
+  "telemetry": {
+    "flags": {},
+    "metrics": null
+  },
+  "workspaceRoot": "C:\\Users\\Administrator\\Desktop\\Github Repos",
+  "cwd": "C:\\Users\\Administrator\\Desktop\\Prom-King\\panopticam",
+  "summary": "Scheduled loop run 21 Oct 2026: re-scored 875 standing identity merges from their journals (read-only); 13 of 14 merges in the 0.45-0.50 band had name hints, while 900 of 998 open pairs were faint faces-only. v0.72.4 folds faint pairs (score<0.50, no name hint, not live in step) away on Identities like apart pairs, with a Show toggle. Tests 242 pass; pushed to main (deploy). STATE entry + operator note T.",
+  "commands": [
+    "pytest tests",
+    "npm run build",
+    "python deploy/bump.py",
+    "git push origin main"
+  ],
+  "files": [
+    "backend/src/panopticam/mergehints.py",
+    "backend/src/panopticam/app.py",
+    "web/src/components/Merge.tsx",
+    "web/src/api.ts",
+    "docs/STATE.md"
+  ],
+  "planPath": "",
+  "contentHash": "7b597dbf7cd62bdbb0c5d468b2dfc5fdca180d107da9a28f3d61e3dddc5331c1",
+  "git": {
+    "repo": "panopticam",
+    "root": "C:/Users/Administrator/Desktop/Prom-King/panopticam",
+    "branch": "main",
+    "head": "02618af",
+    "hasChanges": false
+  }
+}

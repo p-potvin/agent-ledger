@@ -1,0 +1,48 @@
+﻿{
+    "id":  "20261021-213806-162-vault-commander-ee87164c",
+    "createdAt":  "2026-10-22T01:38:06.1621805Z",
+    "createdAtLocal":  "2026-10-21 21:38",
+    "timezone":  "Eastern Standard Time",
+    "project":  "vault-commander",
+    "kind":  "verification",
+    "actor":  "AI Agent",
+    "agentHeader":  "Agent: AI Agent (role: main)\r\nModel: Antigravity\r\nThinking: unknown\r\nMode: unknown\r\nPermissions: unknown (network: unknown)\r\nCWD: C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander  Branch: main\r\nTools used (this reply): none\r\nMCP servers accessed (this reply): none\r\nTime: 2026-10-21 21:38 (TZ: Eastern Standard Time)",
+    "runtime":  {
+                    "role":  "main",
+                    "model":  "Antigravity",
+                    "thinking":  "unknown",
+                    "mode":  "unknown",
+                    "permissions":  "unknown",
+                    "network":  "unknown",
+                    "toolsUsed":  {
+
+                                  },
+                    "mcpServersAccessed":  {
+
+                                           }
+                },
+    "telemetry":  {
+                      "flags":  {
+
+                                },
+                      "metrics":  null
+                  },
+    "workspaceRoot":  "C:\\Users\\Administrator\\Desktop\\Github Repos",
+    "cwd":  "C:\\Users\\Administrator\\Desktop\\Github Repos\\vault-commander",
+    "summary":  "Diagnosed \u003e8GB VRAM spike in vw better-subtitles with parakeet-tdt due to offline unsegmented FastConformer relative position attention matrix",
+    "commands":  [
+
+                 ],
+    "files":  [
+
+              ],
+    "planPath":  "",
+    "contentHash":  "ee87164c8cfe5ef4a4f74b0fc43a42af2d0883302655fd47d04680bf2c070220",
+    "git":  {
+                "repo":  "vault-commander",
+                "root":  "C:/Users/Administrator/Desktop/Github Repos/vault-commander",
+                "branch":  "main",
+                "head":  "7dbf208",
+                "hasChanges":  true
+            }
+}
